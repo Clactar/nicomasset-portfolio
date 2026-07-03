@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Matias — Vues aériennes par drone · Immobilier &amp; tourisme dans les Landes</title>
+<meta name="description" content="Photographe et vidéaste drone dans les Landes. Télépilote certifié DGAC : visites immobilières aériennes, films de territoire, hôtels, gîtes et domaines vus d'en haut." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0e1922; --ink2:#13222e; --paper:#f4f2ec; --paper2:#eae6db;
+    --teal:#0f8f86; --teal-d:#0a6d66; --teal-xd:#074f49; --teal-l:#7fe3da;
+    --gold:#c0843a; --mut:#5d6b73; --line:#e1dccf;
+    --r-s:8px; --r-m:14px; --r-l:18px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --maxw:1220px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--teal-d);color:#fff}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--teal-d);outline-offset:3px}
+  .hero a:focus-visible,.cinema a:focus-visible,.quotes a:focus-visible,footer a:focus-visible,header a:focus-visible,.burger:focus-visible{outline-color:var(--teal-l)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .serif{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.04;letter-spacing:-.012em}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--teal-d)}
+  .eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.75}
+  .cinema .eyebrow,.quotes .eyebrow,.immo .eyebrow{color:var(--teal-l)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.79rem;letter-spacing:.08em;padding:15px 30px;border-radius:var(--r-s);transition:background .25s,color .25s,border-color .25s,transform .25s;cursor:pointer;border:1px solid transparent}
+  .btn:active{transform:translateY(1px)}
+  .btn-teal{background:var(--teal-d);color:#fff}
+  .btn-teal:hover{background:var(--teal-xd)}
+  .btn-out{border-color:rgba(255,255,255,.55);color:#fff}
+  .btn-out:hover{background:#fff;border-color:#fff;color:var(--ink)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--teal-d)}
+  .btn-light{background:#fff;color:var(--ink)}
+  .btn-light:hover{background:var(--teal-l);color:var(--ink)}
+  .ico{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  header{position:fixed;inset:0 0 auto;z-index:60;transition:.35s}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:22px}
+  .brand{display:flex;flex-direction:column;line-height:1.1}
+  .brand .b1{font-family:"Fraunces",serif;font-weight:600;font-size:1.5rem;letter-spacing:.02em;color:#fff}
+  .brand .b2{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#cfe7e4;margin-top:3px}
+  .menu{display:flex;gap:30px;align-items:center}
+  .menu a{font-size:.78rem;font-weight:500;letter-spacing:.04em;color:#eef3f2;opacity:.9;transition:.2s}
+  .menu a:hover{color:#fff;opacity:1}
+  .menu a.cta{padding:11px 20px;border:1px solid rgba(255,255,255,.5);border-radius:4px;opacity:1}
+  .menu a.cta:hover{background:#fff;color:var(--ink)}
+  header.scrolled{background:rgba(14,25,34,.93);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  /* blur sur un pseudo-élément : backdrop-filter sur header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;padding:6px}
+  .burger span{width:28px;height:2px;background:#fff;transition:.3s var(--ease)}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:#000 center/cover no-repeat;
+    background-image:url('https://images.unsplash.com/photo-1667666672445-a2c9d1e78d71?auto=format&fit=crop&w=2000&h=1300&q=80');
+    transform:scale(1.05);will-change:transform}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,16,22,.8) 0%,rgba(8,16,22,.42) 45%,rgba(8,16,22,.16) 100%),linear-gradient(0deg,rgba(8,16,22,.65),transparent 42%)}
+  .hero-inner{position:relative;z-index:2;width:100%;max-width:760px;padding:120px 0 60px}
+  .hero>.wrap{width:100%}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(8,16,22,.62);border:1px solid rgba(255,255,255,.42);backdrop-filter:blur(6px);padding:9px 18px;border-radius:50px;font-size:.76rem;font-weight:600;letter-spacing:.04em;margin-bottom:26px;box-shadow:0 6px 20px -8px rgba(0,0,0,.5)}
+  .chip b{color:#fff}
+  .chip .ico{color:var(--teal-l)}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);margin:.1em 0 .32em;color:#fff;font-weight:600;text-shadow:0 2px 30px rgba(8,16,22,.55)}
+  .hero h1 em{font-style:italic;color:#a9ebe4;font-weight:400}
+  .hero .lead{font-size:1.16rem;max-width:520px;color:#eef2f2;margin-bottom:2em;text-shadow:0 1px 14px rgba(8,16,22,.45)}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap}
+  .scrollcue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
+  .scrollcue::after{content:"";width:1px;height:34px;background:linear-gradient(#fff,transparent);animation:cue 2.2s var(--ease) infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  .trust-strip{background:var(--ink);color:#cfe0de;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .trust-strip .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;font-size:.82rem;letter-spacing:.02em}
+  .trust-strip .wrap>div{display:inline-flex;align-items:center;gap:9px}
+  .trust-strip b{color:#fff}
+  .trust-strip .ico{color:var(--teal-l)}
+
+  section{padding:118px 0;position:relative}
+  .head{max-width:720px;margin-bottom:58px}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .head h2{font-size:clamp(2.1rem,4.6vw,3.4rem);margin:.28em 0;font-weight:600}
+  .head p{color:var(--mut);font-size:1.06rem}
+
+  /* WHAT I SHOOT */
+  .domains{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;background:#fff;box-shadow:0 18px 44px -36px rgba(14,25,34,.35)}
+  .dom{display:flex;gap:20px;padding:36px 34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .35s var(--ease)}
+  .dom:nth-child(2n){border-right:0}
+  .dom:nth-last-child(-n+2){border-bottom:0}
+  .dom:hover{background:#fbfaf6}
+  .dom .num{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--teal-d);font-weight:600;min-width:42px;transition:transform .35s var(--ease)}
+  .dom:hover .num{transform:translateY(-3px)}
+  .dom h3{font-size:1.18rem;margin-bottom:.3em}
+  .dom p{color:var(--mut);font-size:.93rem}
+
+  /* CINEMA GALLERY */
+  .cinema{background:var(--ink);color:#fff}
+  .cinema .head h2{color:#fff}
+  .cinema .head p{color:#a7b6bc}
+  .gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:140px;gap:14px}
+  .gal figure{position:relative;overflow:hidden;border-radius:12px;margin:0}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+  .gal figcaption{position:absolute;left:16px;bottom:13px;z-index:2;font-size:.72rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.55);transition:.4s var(--ease)}
+  .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,16,22,.62),transparent 46%);opacity:.85;transition:.4s var(--ease)}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figure:hover::after{opacity:1}
+  .gal figure:hover figcaption{transform:translateY(-3px)}
+  .c1{grid-column:span 8;grid-row:span 3}
+  .c2{grid-column:span 4;grid-row:span 3}
+  .c3{grid-column:span 4;grid-row:span 2}
+  .c4{grid-column:span 4;grid-row:span 2}
+  .c5{grid-column:span 4;grid-row:span 2}
+  .c6{grid-column:span 6;grid-row:span 2}
+  .c7{grid-column:span 6;grid-row:span 2}
+  .c8{grid-column:span 12;grid-row:span 2}
+  .note{text-align:center;margin-top:24px;font-size:.82rem;color:#8ea0a6;font-style:italic}
+
+  /* APPROACH */
+  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+  .split .imgwrap{position:relative;border-radius:var(--r-l);overflow:hidden;aspect-ratio:5/4;box-shadow:0 30px 60px -34px rgba(14,25,34,.6)}
+  .split .imgwrap::before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.35);border-radius:calc(var(--r-l) - 8px);z-index:2;pointer-events:none}
+  .split .imgwrap img{width:100%;height:100%;object-fit:cover}
+  .split h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:.5em;font-weight:600}
+  .split p{color:var(--mut);margin-bottom:1.1em}
+  .badge-dgac{display:inline-flex;align-items:center;gap:10px;background:var(--paper2);border:1px solid var(--teal-d);border-radius:var(--r-s);padding:13px 18px;font-size:.86rem;font-weight:600;color:var(--teal-xd)}
+  .badge-dgac .ico{width:17px;height:17px;flex:none}
+  .sign{font-family:"Fraunces",serif;font-style:italic;font-size:1.5rem;color:var(--ink);margin-top:20px}
+  .sign small{display:block;font-family:Inter;font-style:normal;font-weight:600;font-size:.74rem;letter-spacing:.08em;color:var(--teal-d);text-transform:uppercase;margin-top:6px}
+
+  /* STATS */
+  .stats{background:var(--paper2)}
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat{text-align:center;padding:14px}
+  .stat .n{font-family:"Fraunces",serif;font-size:2.8rem;font-weight:600;color:var(--teal-d);line-height:1}
+  .stat .l{margin-top:8px;font-weight:600;font-size:.94rem}
+  .stat .s{font-size:.82rem;color:var(--mut)}
+
+  /* SERVICES */
+  .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .svc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(14,25,34,.4)}
+  .svc .top{height:168px;background:center/cover no-repeat;position:relative}
+  .svc .top::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,25,34,.28),transparent 55%)}
+  .svc .bd{display:flex;flex-direction:column;flex:1;padding:28px 26px}
+  .svc h3{font-size:1.22rem;margin-bottom:.4em;font-weight:600}
+  .svc p{color:var(--mut);font-size:.92rem}
+  .svc .go{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--teal-d)}
+  .svc .go .ico{transition:transform .3s var(--ease)}
+  .svc:hover .go .ico{transform:translateX(4px)}
+
+  /* IMMO BANNER */
+  .immo{background:linear-gradient(118deg,var(--teal-xd) 0%,#0b3f44 55%,var(--ink) 100%);color:#fff;padding:88px 0}
+  .immo .inner{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+  .immo h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:#fff;margin:.35em 0 .45em}
+  .immo p.big{color:#d7ebe8;font-size:1.04rem;max-width:560px}
+  .immo ul{list-style:none;margin-top:26px;display:grid;gap:12px}
+  .immo li{display:flex;align-items:flex-start;gap:11px;font-size:.92rem;color:#eef7f5}
+  .immo li .ico{margin-top:4px;color:var(--teal-l)}
+  .immo .cta-box{display:flex;flex-direction:column;align-items:flex-start;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-l);padding:34px 32px;backdrop-filter:blur(4px)}
+  .immo .cta-box .t{font-family:"Fraunces",serif;font-size:1.3rem;line-height:1.3}
+  .immo .cta-box .s{font-size:.85rem;color:#cfe4e1}
+  .immo .exnote{margin-top:34px;font-size:.78rem;font-style:italic;color:#9fc4bf}
+
+  /* QUOTES */
+  .quotes{background:var(--ink);color:#fff}
+  .quotes .head h2{color:#fff}
+  .qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .q{padding:38px;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-l);background:rgba(255,255,255,.02);transition:border-color .35s var(--ease)}
+  .q:hover{border-color:rgba(255,255,255,.3)}
+  .q .st{color:var(--gold);letter-spacing:.2em;margin-bottom:14px}
+  .q p{font-family:"Fraunces",serif;font-style:italic;font-size:1.32rem;line-height:1.5;margin-bottom:16px}
+  .q .who{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:#a7b6bc}
+
+  /* CONTACT */
+  .contact{background:var(--paper);text-align:center}
+  .contact h2{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:600}
+  .contact .sub{color:var(--mut);max-width:520px;margin:16px auto 40px}
+  form{max-width:560px;margin:0 auto;display:grid;gap:14px;text-align:left}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,textarea,select{width:100%;padding:15px 16px;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);color:var(--ink);font:inherit;transition:border-color .2s,box-shadow .2s}
+  input::placeholder,textarea::placeholder{color:#8b979c}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--teal-d);box-shadow:0 0 0 3px rgba(15,143,134,.18)}
+  form button{justify-self:center;margin-top:6px;border:0}
+  .trust{margin-top:22px;font-size:.82rem;color:var(--mut)}
+  .trust b{color:var(--teal-xd)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  footer{background:var(--ink);color:#9fb1b7;padding:60px 0 40px;font-size:.88rem}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:32px}
+  .fgrid a:hover{color:#fff}
+  .fcol h4{color:#fff;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+  .fcol p{margin:5px 0}
+  .seo{font-size:.74rem;color:#5f7077;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;line-height:1.7}
+
+  .demo{position:fixed;right:18px;bottom:18px;z-index:90;max-width:330px;background:rgba(14,25,34,.97);color:#eef3f2;border:1px solid var(--teal);border-radius:14px;padding:16px 42px 16px 18px;font-size:.82rem;line-height:1.5;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+  .demo b{color:#5fd7cf}
+  .demo a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+  .demo .x{position:absolute;top:10px;right:13px;cursor:pointer;font-size:1.15rem;opacity:.6}
+  .demo .x:hover{opacity:1}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:.9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  /* stagger par décalage initial : ne retarde jamais les états hover */
+  .svcgrid .svc.reveal:not(.in):nth-child(2){transform:translateY(52px)}
+  .svcgrid .svc.reveal:not(.in):nth-child(3){transform:translateY(74px)}
+  .statgrid .stat.reveal:not(.in):nth-child(2){transform:translateY(44px)}
+  .statgrid .stat.reveal:not(.in):nth-child(3){transform:translateY(58px)}
+  .statgrid .stat.reveal:not(.in):nth-child(4){transform:translateY(72px)}
+  .qgrid .q.reveal:not(.in):nth-child(2){transform:translateY(52px)}
+  .domains.reveal .dom{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),background .35s var(--ease)}
+  .domains.reveal.in .dom{opacity:1;transform:none}
+  .domains.reveal:not(.in) .dom:nth-child(2){transform:translateY(30px)}
+  .domains.reveal:not(.in) .dom:nth-child(3){transform:translateY(44px)}
+  .domains.reveal:not(.in) .dom:nth-child(4){transform:translateY(58px)}
+  .gal.reveal figure{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .gal.reveal.in figure{opacity:1;transform:none}
+  .gal.reveal figure:nth-child(2){transition-delay:.07s}
+  .gal.reveal figure:nth-child(3){transition-delay:.14s}
+  .gal.reveal figure:nth-child(4){transition-delay:.21s}
+  .gal.reveal figure:nth-child(5){transition-delay:.28s}
+  .gal.reveal figure:nth-child(6){transition-delay:.35s}
+  .gal.reveal figure:nth-child(7){transition-delay:.42s}
+  .gal.reveal figure:nth-child(8){transition-delay:.49s}
+  /* une fois révélées, les cartes retrouvent des transitions hover rapides */
+  .svc.reveal.in{transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .q.reveal.in{transition:border-color .35s var(--ease)}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;transition-delay:0s!important}
+    .reveal,.domains.reveal .dom,.gal.reveal figure{opacity:1!important;transform:none!important}
+    .scrollcue::after{animation:none}
+  }
+
+  @media(max-width:900px){
+    .menu{position:fixed;inset:0 0 0 32%;background:var(--ink2);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.4s var(--ease);box-shadow:-30px 0 60px -30px rgba(0,0,0,.5)}
+    .menu.open{transform:none}
+    .burger{display:flex}
+    .split{grid-template-columns:1fr;gap:36px}
+    .domains{grid-template-columns:1fr}
+    .dom{border-right:0}
+    .dom:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+    .dom:last-child{border-bottom:0}
+    .statgrid{grid-template-columns:repeat(2,1fr);gap:34px 24px}
+    .svcgrid,.qgrid{grid-template-columns:1fr}
+    .immo .inner{grid-template-columns:1fr;gap:36px}
+    .immo .cta-box{width:100%}
+    .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 1;grid-row:span 1}
+    .c1,.c8{grid-column:span 2}
+  }
+  @media(max-width:560px){
+    section{padding:78px 0}
+    .immo{padding:70px 0}
+    .immo .cta-box .btn{width:100%;justify-content:center;padding-inline:14px}
+    .frow{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr;grid-auto-rows:auto}
+    .gal figure{aspect-ratio:16/10}
+    .c1,.c8{grid-column:span 1}
+    .hero-inner{padding-bottom:210px}
+    .demo{left:12px;right:12px;max-width:none}
+    .scrollcue{display:none}
+  }
+</style>
+</head>
+<body id="top">
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="b1">Matias</span><span class="b2">Vues aériennes · Landes</span></a>
+    <nav class="menu" id="menu">
+      <a href="#domaines">Ce que je filme</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#approche">L'approche</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#immobilier">Agences &amp; immo</a>
+      <a href="#contact" class="cta">Demander un devis</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="wrap"><div class="hero-inner">
+    <span class="chip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M6.8 6.8l3 3M17.2 6.8l-3 3M6.8 17.2l3-3M17.2 17.2l-3-3"/><rect x="10.1" y="10.1" width="3.8" height="3.8" rx="1"/></svg> <b>Télépilote certifié DGAC</b></span>
+    <h1 class="serif">Votre territoire,<br><em>vu d'en haut.</em></h1>
+    <p class="lead">Photographe &amp; vidéaste drone dans les Landes. Je révèle vos biens, vos domaines et vos paysages depuis le ciel — avec un rendu cinéma qui donne envie de venir.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-teal">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a href="#portfolio" class="btn btn-out">Voir les vues aériennes</a>
+    </div>
+  </div></div>
+  <div class="scrollcue">défilez</div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>Télépilote certifié DGAC</b></div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Vols déclarés &amp; assurés</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Photo + vidéo 4K</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Livraison sous 48 h</div>
+  </div>
+</div>
+
+<section id="domaines">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ce que je filme</span>
+      <h2 class="serif">Le drone, au service de votre image.</h2>
+      <p>Du bien immobilier au domaine viticole, je mets l'altitude au service de ce que vous voulez montrer.</p>
+    </div>
+    <div class="domains reveal">
+      <div class="dom"><div class="num serif">01</div><div><h3>Immobilier &amp; prestige</h3><p>Visites aériennes qui situent le bien, son terrain et son environnement en quelques secondes.</p></div></div>
+      <div class="dom"><div class="num serif">02</div><div><h3>Tourisme &amp; territoire</h3><p>Films de destination pour offices de tourisme, communes et événements — la côte landaise vue comme jamais.</p></div></div>
+      <div class="dom"><div class="num serif">03</div><div><h3>Hôtels &amp; gîtes</h3><p>Mettez en valeur la piscine, le parc, l'emplacement : des images qui font réserver.</p></div></div>
+      <div class="dom"><div class="num serif">04</div><div><h3>Domaines &amp; vignobles</h3><p>Survol des parcelles et des bâtisses, pour raconter l'histoire d'un terroir avec ampleur.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cinema" id="portfolio">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="serif">Quelques vues récentes.</h2>
+      <p>Immobilier, littoral, forêt landaise et domaines — saisis depuis le ciel.</p>
+    </div>
+    <div class="gal reveal">
+      <figure class="c1"><img src="https://images.unsplash.com/photo-1723322907381-f23ad0e246a0?auto=format&fit=crop&w=1300&h=900&q=80" alt="Villa avec piscine et jardin vue du ciel" loading="lazy"><figcaption>Immobilier de prestige</figcaption></figure>
+      <figure class="c2"><img src="https://images.unsplash.com/photo-1674905334776-1ce78f58cec8?auto=format&fit=crop&w=700&h=1000&q=80" alt="Forêt de pins vue du ciel" loading="lazy"><figcaption>Forêt landaise</figcaption></figure>
+      <figure class="c3"><img src="https://images.unsplash.com/photo-1667666670819-e6136e5eeca2?auto=format&fit=crop&w=800&h=520&q=80" alt="Plage atlantique vue du ciel" loading="lazy"><figcaption>Côte atlantique</figcaption></figure>
+      <figure class="c4"><img src="https://images.unsplash.com/photo-1656898882128-9abaea910371?auto=format&fit=crop&w=800&h=520&q=80" alt="Vignobles et parcelles vus du ciel" loading="lazy"><figcaption>Domaines &amp; vignobles</figcaption></figure>
+      <figure class="c5"><img src="https://images.unsplash.com/photo-1665252228310-01273daf009c?auto=format&fit=crop&w=800&h=520&q=80" alt="Maisons et village vus du ciel" loading="lazy"><figcaption>Villages &amp; terroir</figcaption></figure>
+      <figure class="c6"><img src="https://images.unsplash.com/photo-1652400096982-83e5d7c480e0?auto=format&fit=crop&w=900&h=560&q=80" alt="Propriété avec piscine vue du ciel" loading="lazy"><figcaption>Villas &amp; propriétés</figcaption></figure>
+      <figure class="c7"><img src="https://images.unsplash.com/photo-1781622196107-66d4d813fdff?auto=format&fit=crop&w=900&h=560&q=80" alt="Route sinueuse dans la campagne" loading="lazy"><figcaption>Routes &amp; tourisme</figcaption></figure>
+      <figure class="c8"><img src="https://images.unsplash.com/photo-1667666670830-a5baab881608?auto=format&fit=crop&w=1400&h=520&q=80" alt="Banc de sable et océan atlantique vus du ciel" loading="lazy"><figcaption>Littoral atlantique</figcaption></figure>
+    </div>
+    <p class="note">Vues d'illustration — sur votre site, vos propres prises de vue prendront cette place.</p>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="wrap split">
+    <div class="imgwrap reveal">
+      <img src="https://images.unsplash.com/photo-1469313785555-277fa0c1dc9e?auto=format&fit=crop&w=1000&h=800&q=80" alt="Télépilote de drone aux commandes" loading="lazy" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">L'approche</span>
+      <h2 class="serif">La précision du pilote, l'œil du photographe.</h2>
+      <p>Une belle image aérienne, ce n'est pas seulement décoller. C'est connaître la lumière, les angles qui valorisent un lieu, et voler en toute sécurité dans le respect de la réglementation.</p>
+      <p>Télépilote certifié DGAC, je gère les autorisations de vol, la captation et le montage. Vous recevez des photos et des vidéos prêtes à publier, pensées pour vendre, faire réserver ou faire découvrir.</p>
+      <span class="badge-dgac"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 9.5C8 19.4 5 15.4 5 11V6l7-3z"/><path d="M9 12l2.2 2.2L15.5 9.7"/></svg> Télépilote certifié DGAC — vols déclarés &amp; assurés</span>
+      <p class="sign">Matias<small>Vues aériennes — Landes &amp; Sud-Ouest</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat reveal"><div class="n serif">4K</div><div class="l">Vidéo cinéma</div><div class="s">Photo haute résolution incluse</div></div>
+      <div class="stat reveal"><div class="n serif">DGAC</div><div class="l">Télépilote certifié</div><div class="s">Vols déclarés &amp; assurés</div></div>
+      <div class="stat reveal"><div class="n serif">48 h</div><div class="l">Livraison</div><div class="s">Fichiers prêts à publier</div></div>
+      <div class="stat reveal"><div class="n serif">40</div><div class="l">Basé dans les Landes</div><div class="s">Déplacements dans tout le Sud-Ouest</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="prestations">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Prestations</span>
+      <h2 class="serif">Des formules claires, selon votre projet.</h2>
+    </div>
+    <div class="svcgrid">
+      <a href="#contact" class="svc reveal" aria-label="Visite immobilière aérienne — demander un devis"><div class="top" style="background-image:url('https://images.unsplash.com/photo-1711110066231-cb235d6e117e?auto=format&fit=crop&w=700&h=400&q=78')" role="img" aria-label="Maison avec piscine vue du ciel"></div><div class="bd"><h3>Visite immobilière aérienne</h3><p>Photos + courte vidéo qui situent le bien et son environnement. Idéal agences, notaires, ventes de prestige.</p><span class="go">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div></a>
+      <a href="#contact" class="svc reveal" aria-label="Film de territoire et tourisme — demander un devis"><div class="top" style="background-image:url('https://images.unsplash.com/photo-1752241962029-12a23cc57a27?auto=format&fit=crop&w=700&h=400&q=78')" role="img" aria-label="Toits d'un village du Sud-Ouest vus du ciel"></div><div class="bd"><h3>Film de territoire &amp; tourisme</h3><p>Un film de destination pour communes, offices de tourisme et événements. La région vue d'en haut, en grand.</p><span class="go">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div></a>
+      <a href="#contact" class="svc reveal" aria-label="Hôtels, gîtes et domaines — demander un devis"><div class="top" style="background-image:url('https://images.unsplash.com/photo-1652400096808-8f318e2ac1d8?auto=format&fit=crop&w=700&h=400&q=78')" role="img" aria-label="Propriété avec piscine dans la verdure vue du ciel"></div><div class="bd"><h3>Hôtels, gîtes &amp; domaines</h3><p>Mettez en valeur piscine, parc et emplacement avec des images qui donnent envie de réserver.</p><span class="go">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="immo" id="immobilier" aria-label="Offre dédiée aux professionnels de l'immobilier">
+  <div class="wrap">
+    <div class="inner">
+      <div class="reveal">
+        <span class="eyebrow">Pour les agences &amp; mandataires</span>
+        <h2 class="serif">Vos biens vus du ciel,<br>livrés sous 48 h.</h2>
+        <p class="big">L'angle qui manque à vos annonces : situer le bien, son terrain et son environnement en une image. De quoi décrocher le mandat — et le vendre.</p>
+        <ul>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Photos aériennes HDR + courte vidéo, prêtes à publier sur vos annonces</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Vols déclarés &amp; assurés — télépilote certifié DGAC</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Livraison sous 48 h, dans les Landes et le Sud-Ouest</li>
+        </ul>
+        <p class="exnote">Encart d'exemple pour votre cible immobilière — contenu à affiner ensemble.</p>
+      </div>
+      <div class="cta-box reveal">
+        <span class="t">Un bien à mettre en valeur cette semaine ?</span>
+        <span class="s">Décrivez-le en deux lignes, je vous réponds sous 48 h.</span>
+        <a href="#contact" class="btn btn-light">Demander un devis immo <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" id="avis">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ils en parlent</span>
+      <h2 class="serif">La confiance des pros du coin.</h2>
+      <p style="color:#8d9ea4;font-size:.82rem;margin-top:8px"><em>(avis d'illustration — à remplacer par vos vrais témoignages)</em></p>
+    </div>
+    <div class="qgrid">
+      <div class="q reveal"><div class="st">★★★★★</div><p>« Les vues aériennes ont transformé notre annonce. Le bien est parti deux fois plus vite. »</p><div class="who">Agence immobilière — Landes</div></div>
+      <div class="q reveal"><div class="st">★★★★★</div><p>« Un rendu vraiment cinéma, et tout était carré côté autorisations. On a refait appel à lui pour la saison. »</p><div class="who">Domaine viticole — Sud-Ouest</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center">Devis &amp; disponibilités</span>
+      <h2 class="serif">Un projet à filmer d'en haut ?</h2>
+      <p class="sub">Décrivez-moi votre lieu et votre besoin — je vous réponds sous 48 h avec une proposition claire.</p>
+    </div>
+    <form class="reveal" id="cform">
+      <div class="frow">
+        <div><label class="sr-only" for="f-nom">Votre nom ou structure</label><input id="f-nom" name="nom" type="text" placeholder="Votre nom / structure" autocomplete="name" required></div>
+        <div><label class="sr-only" for="f-projet">Type de projet</label><input id="f-projet" name="projet" type="text" placeholder="Type de projet (immo, tourisme…)"></div>
+      </div>
+      <div class="frow">
+        <div><label class="sr-only" for="f-email">Votre e-mail</label><input id="f-email" name="email" type="email" placeholder="Votre e-mail" autocomplete="email" required></div>
+        <div><label class="sr-only" for="f-lieu">Lieu du projet</label><input id="f-lieu" name="lieu" type="text" placeholder="Lieu (commune)"></div>
+      </div>
+      <div><label class="sr-only" for="f-msg">Votre projet en quelques mots</label><textarea id="f-msg" name="message" rows="4" placeholder="Votre projet en quelques mots…"></textarea></div>
+      <button class="btn btn-dark" type="submit">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    </form>
+    <p class="trust"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" style="display:inline-block;vertical-align:-3px;color:var(--teal-xd)"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg> <b>Connexion sécurisée (HTTPS)</b> &nbsp;·&nbsp; Réponse sous 48 h &nbsp;·&nbsp; Sans engagement</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol" style="max-width:280px">
+        <div class="brand"><span class="b1" style="font-size:1.4rem">Matias</span><span class="b2">Vues aériennes · Landes</span></div>
+        <p style="margin-top:14px;color:#5f7077">Photographe &amp; vidéaste drone, télépilote certifié DGAC. Landes &amp; Sud-Ouest.</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><p><a href="#domaines">Ce que je filme</a></p><p><a href="#portfolio">Portfolio</a></p><p><a href="#approche">L'approche</a></p><p><a href="#contact">Contact</a></p></div>
+      <div class="fcol"><h4>Contact</h4><p>Coordonnées masquées (maquette)</p><p>Landes (40) — Sud-Ouest</p><p><a href="#contact">Demander un devis</a></p></div>
+    </div>
+    <p class="seo">Photographe drone Landes · Vidéaste aérien Sud-Ouest · Visite immobilière par drone · Film de tourisme &amp; territoire · Photos hôtels, gîtes &amp; domaines · Télépilote certifié DGAC.</p>
+  </div>
+</footer>
+
+<a class="pfbar" href="/" role="note" aria-label="Maquette-concept, retour au portfolio de Nicolas Masset">
+  <span class="pfbar-tag">Maquette-concept</span>
+  <span class="pfbar-txt">Design et code par <b>Nicolas Masset</b> · voir le portfolio ›</span>
+</a>
+<style>
+  .pfbar{position:fixed;left:18px;bottom:18px;z-index:95;display:inline-flex;align-items:center;gap:12px;background:rgba(14,25,34,.96);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 18px 9px 9px;font-size:.78rem;color:#eef3f2;box-shadow:0 18px 44px -16px rgba(0,0,0,.7);backdrop-filter:blur(10px);transition:transform .25s,border-color .25s;text-decoration:none}
+  .pfbar:hover{transform:translateY(-2px);border-color:var(--teal-l)}
+  .pfbar-tag{background:var(--teal);color:#fff;font-weight:800;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .pfbar-txt b{color:#fff}
+  @media(max-width:560px){.pfbar{left:12px;right:12px;justify-content:flex-start}.pfbar-txt{font-size:.7rem}}
+</style>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>50);
+    var b=document.getElementById('heroBg'); if(b&&scrollY<900) b.style.transform='scale(1.05) translateY('+(scrollY*0.16)+'px)';});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  burger.onclick=function(){var o=menu.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)};
+  menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},1400)});
+  document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();this.innerHTML='<p style="text-align:center;font-size:1.3rem;color:var(--ink);padding:30px 0">Merci ! Votre demande a bien été envoyée — réponse sous 48 h. ✦</p>'});
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
