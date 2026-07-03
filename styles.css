@@ -171,7 +171,8 @@ section{scroll-margin-top:72px}
 .panel:nth-child(2){background:#0d0f17}
 .panel:nth-child(3){background:#0a0d14}
 .panel:nth-child(4){background:#0e1019}
-.panel-grid{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,14fr);gap:clamp(28px,4vw,72px);align-items:center;width:100%;padding:96px 0}
+/* padding-block uniquement : le shorthand écraserait le padding horizontal de .wrap (même élément) */
+.panel-grid{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,14fr);gap:clamp(28px,4vw,72px);align-items:center;width:100%;padding-block:96px}
 .panel-idx{
   font-family:"Clash Display",sans-serif;font-weight:600;
   font-size:clamp(4rem,9vw,8rem);line-height:.9;color:transparent;
@@ -256,7 +257,7 @@ section{scroll-margin-top:72px}
 /* ---------------- Manifeste / garantie ---------------- */
 .pledge{position:relative;background:var(--acc-deep);color:#fff;overflow:clip}
 .pledge::before{content:"";position:absolute;inset:-30% auto auto -10%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 62%);pointer-events:none}
-.pledge-inner{padding:clamp(96px,13vw,180px) 0}
+.pledge-inner{padding-block:clamp(96px,13vw,180px)}
 .pledge-title{
   font-family:"Clash Display",sans-serif;font-weight:600;
   font-size:clamp(2.2rem,5.6vw,4.8rem);line-height:1.08;letter-spacing:-.022em;
@@ -281,7 +282,7 @@ section{scroll-margin-top:72px}
 
 /* ---------------- À propos ---------------- */
 .about{background:var(--bg)}
-.about-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,88px);align-items:start;padding:clamp(84px,11vw,150px) 0}
+.about-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,88px);align-items:start;padding-block:clamp(84px,11vw,150px)}
 .about h2{margin-bottom:24px}
 .about-copy p{color:var(--ink-soft);margin-bottom:1.05em;max-width:60ch}
 .about-copy p:first-of-type{font-size:1.3rem;color:var(--ink);font-weight:500;line-height:1.5}
@@ -351,7 +352,7 @@ section{scroll-margin-top:72px}
 /* ---------------- Responsive ---------------- */
 @media(max-width:1024px){
   .film{width:52%;inset:-12% -14% -12% auto;opacity:.5}
-  .panel-grid{grid-template-columns:1fr;gap:30px;padding:80px 0 60px}
+  .panel-grid{grid-template-columns:1fr;gap:30px;padding-block:80px 60px}
   .panel-idx{font-size:clamp(3rem,8vw,5rem)}
   .about-grid{grid-template-columns:1fr;gap:44px}
   .mock-grid{grid-template-columns:1fr 1fr}
@@ -381,7 +382,7 @@ section{scroll-margin-top:72px}
   .film::after{background:linear-gradient(180deg,transparent 55%,var(--bg) 100%)}
   .film-col-inner{animation-duration:60s}
   .panel{min-height:auto;position:relative}
-  .panel-grid{padding:56px 0}
+  .panel-grid{padding-block:56px}
   .mock-grid{grid-template-columns:1fr}
   .mock-grid .mock:last-child{grid-column:auto}
   .marquee span{font-size:1.05rem}
