@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#152b1c" />
+<title>Allées &amp; Jardins — Paysagiste à Sarzeau · Création &amp; entretien de jardins, Presqu'île de Rhuys</title>
+<meta name="description" content="Paysagiste à Sarzeau (Morbihan) : création d'allées, pavages, terrasses, clôtures, murets et jardins — et entretien avec crédit d'impôt de 50 %. De Sarzeau à Vannes, Auray et Damgan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1776757979931-73fc57866fed?auto=format&fit=crop&w=2000&h=1250&q=80" />
+<style>
+  :root{
+    --pine:#152b1c; --pine2:#1d3a26; --leaf:#275939; --leaf-d:#1e4a2e;
+    --paper:#f5f1e6; --paper2:#ebe4d1; --ink:#20281f; --mut:#59614f;
+    --line:#ddd4bf; --ochre:#8f5e1a; --ochre-l:#dcaa5e; --sage:#c9d4c0;
+    --r-s:10px; --r-m:16px; --r-l:20px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --maxw:1220px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Karla",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--leaf);color:#fff}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--leaf);outline-offset:3px}
+  .hero a:focus-visible,.upkeep a:focus-visible,.quotes a:focus-visible,footer a:focus-visible,header a:focus-visible,.burger:focus-visible,.zone a:focus-visible{outline-color:var(--ochre-l)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.04;letter-spacing:-.005em}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--leaf)}
+  .eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.75}
+  .upkeep .eyebrow,.quotes .eyebrow,.zone .eyebrow{color:var(--ochre-l)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.8rem;letter-spacing:.07em;padding:16px 30px;border-radius:50px;transition:background .25s,color .25s,border-color .25s,transform .25s;cursor:pointer;border:1px solid transparent}
+  .btn:active{transform:translateY(1px)}
+  .btn-leaf{background:var(--leaf);color:#fff}
+  .btn-leaf:hover{background:var(--leaf-d)}
+  .btn-out{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(15,30,19,.22);backdrop-filter:blur(4px)}
+  .btn-out:hover{background:#fff;border-color:#fff;color:var(--pine)}
+  .btn-paper{background:var(--paper);color:var(--pine)}
+  .btn-paper:hover{background:#fff}
+  .ico{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .leafmark{width:16px;height:16px;flex:none;fill:currentColor;stroke:none}
+
+  /* HEADER */
+  header{position:fixed;inset:0 0 auto;z-index:60;transition:.35s}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px}
+  .brand{display:flex;align-items:center;gap:12px;line-height:1.05}
+  .brand .mark{width:40px;height:40px;flex:none;border:1.5px solid rgba(255,255,255,.75);border-radius:50%;display:grid;place-items:center;color:#fff;transition:.3s}
+  .brand .mark svg{width:20px;height:20px}
+  .brand .bt{display:flex;flex-direction:column}
+  .brand .b1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:1.42rem;letter-spacing:.01em;color:#fff}
+  .brand .b2{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:#e3d9be;margin-top:3px}
+  .menu{display:flex;gap:28px;align-items:center}
+  .menu a{font-size:.8rem;font-weight:600;letter-spacing:.04em;color:#f2f0e6;opacity:.92;transition:.2s}
+  .menu a:hover{color:#fff;opacity:1}
+  .menu a.cta{padding:11px 22px;border:1px solid rgba(255,255,255,.55);border-radius:50px;opacity:1}
+  .menu a.cta:hover{background:#fff;color:var(--pine)}
+  header.scrolled{background:rgba(21,43,28,.94);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  /* blur sur un pseudo-élément : backdrop-filter sur header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;padding:6px}
+  .burger span{width:28px;height:2px;background:#fff;transition:.3s var(--ease)}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:#0d1b11 center/cover no-repeat;
+    background-image:url('https://images.unsplash.com/photo-1776757979931-73fc57866fed?auto=format&fit=crop&w=2000&h=1250&q=80');
+    transform:scale(1.05);will-change:transform}
+  .hero::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(88deg,rgba(13,26,16,.86) 0%,rgba(13,26,16,.55) 42%,rgba(13,26,16,.14) 78%),
+    linear-gradient(0deg,rgba(13,26,16,.72),transparent 38%),
+    linear-gradient(180deg,rgba(13,26,16,.45),transparent 30%)}
+  .hero-inner{position:relative;z-index:2;width:100%;max-width:720px;padding:130px 0 90px}
+  .hero>.wrap{width:100%}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(13,26,16,.6);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px);padding:9px 18px;border-radius:50px;font-size:.76rem;font-weight:600;letter-spacing:.03em;margin-bottom:26px;color:#f4f1e4}
+  .chip .leafmark{color:var(--ochre-l)}
+  .hero h1{font-size:clamp(2.9rem,7.2vw,5.7rem);margin:.08em 0 .3em;color:#fff;text-shadow:0 2px 30px rgba(10,20,12,.6)}
+  .hero h1 em{font-style:italic;font-weight:500;color:#e8d9ae}
+  .hero .lead{font-size:1.14rem;max-width:520px;color:#f0efe4;margin-bottom:2.1em;text-shadow:0 1px 14px rgba(10,20,12,.5)}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap}
+  .scrollcue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
+  .scrollcue::after{content:"";width:1px;height:34px;background:linear-gradient(#fff,transparent);animation:cue 2.2s var(--ease) infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* TRUST STRIP */
+  .trust-strip{background:var(--pine);color:#dfe7d9;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .trust-strip .wrap{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;font-size:.83rem;letter-spacing:.02em}
+  .trust-strip .wrap>div{display:inline-flex;align-items:center;gap:9px}
+  .trust-strip b{color:#fff}
+  .trust-strip .ico{color:var(--ochre-l)}
+
+  section{padding:clamp(80px,9vw,120px) 0;position:relative;scroll-margin-top:60px}
+  .head{max-width:720px;margin-bottom:56px}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .head h2{font-size:clamp(2.2rem,4.6vw,3.5rem);margin:.28em 0;color:var(--pine)}
+  .head h2 em{font-style:italic;font-weight:500;color:var(--leaf)}
+  .head p{color:var(--mut);font-size:1.05rem}
+
+  /* DEUX MÉTIERS */
+  .duogrid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .duo{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;box-shadow:0 22px 48px -38px rgba(21,43,28,.5);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .duo:hover{transform:translateY(-6px);box-shadow:0 30px 56px -32px rgba(21,43,28,.55)}
+  .duo .top{height:230px;background:center/cover no-repeat;position:relative}
+  .duo .top::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,26,16,.55),transparent 55%)}
+  .duo .top .tt{position:absolute;left:24px;bottom:18px;z-index:2;color:#fff;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.7rem;text-shadow:0 1px 12px rgba(10,20,12,.6)}
+  .duo .top .imgnote{position:absolute;right:14px;top:12px;z-index:2;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(13,26,16,.65);padding:4px 10px;border-radius:50px}
+  .duo .bd{display:flex;flex-direction:column;flex:1;padding:30px 28px 28px}
+  .duo .who{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre);margin-bottom:12px}
+  .duo p.intro{color:var(--mut);font-size:.95rem;margin-bottom:18px}
+  .duo ul{list-style:none;display:grid;gap:9px;margin-bottom:22px}
+  .duo li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem}
+  .duo li .leafmark{margin-top:4px;color:var(--leaf)}
+  .duo .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
+  .duo .go .ico{transition:transform .3s var(--ease)}
+  .duo:hover .go .ico{transform:translateX(4px)}
+
+  /* STATS */
+  .stats{background:var(--paper2);padding:64px 0}
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat{text-align:center;padding:12px}
+  .stat .n{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:2.9rem;color:var(--leaf);line-height:1}
+  .stat .l{margin-top:8px;font-weight:700;font-size:.93rem;color:var(--pine)}
+  .stat .s{font-size:.8rem;color:var(--mut);line-height:1.45;margin-top:2px}
+
+  /* PRESTATIONS CRÉATION */
+  .domains{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;background:#fff;box-shadow:0 18px 44px -36px rgba(21,43,28,.4)}
+  .dom{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .35s var(--ease)}
+  .dom:nth-child(3n){border-right:0}
+  .dom:nth-last-child(-n+3){border-bottom:0}
+  .dom:hover{background:#fbf9f2}
+  .dom .num{font-family:"Cormorant Garamond",serif;font-size:1.45rem;color:var(--ochre);font-weight:700;margin-bottom:10px;transition:transform .35s var(--ease)}
+  .dom:hover .num{transform:translateY(-3px)}
+  .dom h3{font-size:1.14rem;margin-bottom:.35em;color:var(--pine)}
+  .dom p{color:var(--mut);font-size:.9rem}
+  .also{margin-top:26px;text-align:center;font-size:.9rem;color:var(--mut)}
+  .also b{color:var(--pine);font-weight:700}
+
+  /* GALERIE */
+  .works{background:var(--pine);color:#fff}
+  .works .head h2{color:#fff}
+  .works .head h2 em{color:var(--ochre-l)}
+  .works .head p{color:#b9c6b4}
+  .gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:14px}
+  .gal figure{position:relative;overflow:hidden;border-radius:12px;margin:0}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+  .gal figcaption{position:absolute;left:16px;bottom:13px;right:14px;z-index:2;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.6);transition:.4s var(--ease)}
+  .gal figcaption small{display:block;font-size:.6rem;font-weight:500;letter-spacing:.1em;color:#d8dfd2;margin-top:2px}
+  .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,20,12,.68),transparent 48%);opacity:.9;transition:.4s var(--ease)}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figure:hover::after{opacity:1}
+  .gal figure:hover figcaption{transform:translateY(-3px)}
+  .w1{grid-column:span 5;grid-row:span 3}
+  .w2{grid-column:span 7;grid-row:span 3}
+  .w3{grid-column:span 4;grid-row:span 2}
+  .w4{grid-column:span 4;grid-row:span 2}
+  .w5{grid-column:span 4;grid-row:span 2}
+  .w6{grid-column:span 12;grid-row:span 2}
+  .note{text-align:center;margin-top:24px;font-size:.83rem;color:#a8b8a2;font-style:italic}
+
+  /* ENTRETIEN */
+  .upkeep{background:linear-gradient(150deg,var(--pine2) 0%,var(--pine) 68%);color:#fff}
+  .upkeep .inner{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .upkeep h2{font-size:clamp(2.1rem,4.2vw,3.1rem);color:#fff;margin:.3em 0 .45em}
+  .upkeep h2 em{font-style:italic;font-weight:500;color:var(--ochre-l)}
+  .upkeep p.big{color:#d5e0cf;font-size:1.03rem;max-width:540px}
+  .upkeep ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+  .upkeep li{display:flex;align-items:flex-start;gap:11px;font-size:.93rem;color:#eef3e9}
+  .upkeep li .leafmark{margin-top:4px;color:var(--ochre-l)}
+  .taxbox{margin-top:30px;display:flex;gap:18px;align-items:center;background:rgba(220,170,94,.1);border:1px solid rgba(220,170,94,.45);border-radius:var(--r-m);padding:22px 24px;max-width:560px}
+  .taxbox .pct{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:2.6rem;color:var(--ochre-l);line-height:1;flex:none}
+  .taxbox .tx{font-size:.88rem;color:#f0ead8;line-height:1.5}
+  .taxbox .tx b{color:#fff}
+  .taxbox .tx small{display:block;color:#c9c4ac;font-size:.74rem;margin-top:4px}
+  .upkeep .imgcol{display:grid;gap:16px}
+  .upkeep .imgwrap{position:relative;border-radius:var(--r-l);overflow:hidden;box-shadow:0 30px 60px -34px rgba(0,0,0,.65)}
+  .upkeep .imgwrap img{width:100%;height:100%;object-fit:cover}
+  .upkeep .imgwrap.tall{aspect-ratio:4/4.6}
+  .upkeep .imgwrap .imgnote{position:absolute;right:12px;top:10px;z-index:2;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(13,26,16,.65);padding:4px 10px;border-radius:50px}
+  .upkeep .cta-line{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .upkeep .cta-line .or{font-size:.85rem;color:#c2cfbc}
+  .upkeep .cta-line a.tel{font-weight:700;color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+  /* APPROCHE */
+  .split{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+  .split .imgwrap{position:relative;border-radius:var(--r-l);overflow:hidden;aspect-ratio:4/4.7;box-shadow:0 30px 60px -34px rgba(21,43,28,.55)}
+  .split .imgwrap::before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.5);border-radius:calc(var(--r-l) - 8px);z-index:2;pointer-events:none}
+  .split .imgwrap img{width:100%;height:100%;object-fit:cover}
+  .split .imgwrap .imgnote{position:absolute;right:14px;bottom:12px;z-index:3;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(13,26,16,.65);padding:4px 10px;border-radius:50px}
+  .split h2{font-size:clamp(2.1rem,4vw,3rem);margin-bottom:.5em;color:var(--pine)}
+  .split h2 em{font-style:italic;font-weight:500;color:var(--leaf)}
+  .split p{color:var(--mut);margin-bottom:1.1em}
+  .split p b{color:var(--pine);font-weight:700}
+  .plan3d{display:inline-flex;align-items:center;gap:12px;background:var(--paper2);border:1px solid var(--leaf);border-radius:var(--r-s);padding:14px 18px;font-size:.87rem;font-weight:600;color:var(--leaf-d)}
+  .plan3d .ico{width:18px;height:18px}
+  .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:1.65rem;color:var(--pine);margin-top:22px}
+  .sign small{display:block;font-family:Karla;font-style:normal;font-weight:700;font-size:.72rem;letter-spacing:.14em;color:var(--ochre);text-transform:uppercase;margin-top:6px}
+
+  /* ZONE */
+  .zone{background:var(--pine);color:#fff;padding:88px 0}
+  .zone .inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .zone h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin:.3em 0 .4em}
+  .zone h2 em{font-style:italic;font-weight:500;color:var(--ochre-l)}
+  .zone p.big{color:#d5e0cf;font-size:1.02rem;max-width:520px}
+  .towns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .town{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:10px 20px;font-size:.88rem;font-weight:600;color:#f2f0e6;background:rgba(255,255,255,.04)}
+  .town .ico{color:var(--ochre-l);width:13px;height:13px}
+  .town.main{background:var(--paper);color:var(--pine);border-color:var(--paper)}
+  .town.main .ico{color:var(--leaf)}
+  .zone .freebox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-l);padding:34px 32px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+  .zone .freebox .t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.5rem;line-height:1.25}
+  .zone .freebox .s{font-size:.88rem;color:#ccd8c6}
+
+  /* AVIS */
+  .qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .q{padding:38px 36px;border:1px solid var(--line);border-radius:var(--r-l);background:#fff;transition:border-color .35s var(--ease),transform .35s var(--ease)}
+  .q:hover{border-color:var(--leaf);transform:translateY(-4px)}
+  .q .st{color:var(--ochre);letter-spacing:.2em;margin-bottom:14px}
+  .q p{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:1.38rem;line-height:1.45;margin-bottom:16px;color:var(--pine)}
+  .q .who{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+  .illus-note{color:var(--mut);font-size:.82rem;margin-top:8px}
+
+  /* CONTACT */
+  .contact{background:var(--paper);text-align:center}
+  .contact h2{font-size:clamp(2.4rem,5vw,3.9rem);color:var(--pine)}
+  .contact h2 em{font-style:italic;font-weight:500;color:var(--leaf)}
+  .contact .sub{color:var(--mut);max-width:540px;margin:16px auto 28px}
+  .direct{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+  .direct a{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;border-radius:50px;padding:14px 26px;font-weight:700;font-size:.95rem;color:var(--pine);transition:border-color .25s,transform .25s}
+  .direct a:hover{border-color:var(--leaf);transform:translateY(-2px)}
+  .direct a .ico{color:var(--leaf);width:17px;height:17px}
+  form{max-width:560px;margin:0 auto;display:grid;gap:14px;text-align:left}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,textarea{width:100%;padding:15px 16px;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);color:var(--ink);font:inherit;transition:border-color .2s,box-shadow .2s}
+  input::placeholder,textarea::placeholder{color:#6b7367}
+  input:focus,textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 3px rgba(39,89,57,.16)}
+  textarea{resize:vertical;min-height:110px}
+  form button{justify-self:center;margin-top:6px;border:0}
+  .formdemo{margin-top:18px;font-size:.8rem;color:var(--mut)}
+  .formdemo b{color:var(--pine)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  footer{background:#0f2114;color:#9fb39d;padding:60px 0 40px;font-size:.88rem}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:32px}
+  .fgrid a:hover{color:#fff}
+  .fcol h4{color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+  .fcol p{margin:5px 0}
+  .siret{font-size:.76rem;color:#7e937c;line-height:1.7;margin-top:12px}
+  .seo{font-size:.74rem;color:#85987f;border-top:1px solid rgba(255,255,255,.1);padding-top:22px;line-height:1.7}
+
+  /* BADGE MAQUETTE */
+  .demo{position:fixed;right:18px;bottom:18px;z-index:90;max-width:330px;background:rgba(15,33,20,.97);color:#eef3ea;border:1px solid var(--ochre-l);border-radius:14px;padding:15px 42px 15px 18px;font-size:.8rem;line-height:1.5;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+  .demo b{color:var(--ochre-l)}
+  .demo a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+  .demo .x{position:absolute;top:8px;right:11px;cursor:pointer;font-size:1.15rem;opacity:.65;background:none;border:0;color:inherit;line-height:1;padding:2px 6px}
+  .demo .x:hover{opacity:1}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:.9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .duogrid .duo.reveal:not(.in):nth-child(2){transform:translateY(52px)}
+  .statgrid .stat.reveal:not(.in):nth-child(2){transform:translateY(44px)}
+  .statgrid .stat.reveal:not(.in):nth-child(3){transform:translateY(58px)}
+  .statgrid .stat.reveal:not(.in):nth-child(4){transform:translateY(72px)}
+  .qgrid .q.reveal:not(.in):nth-child(2){transform:translateY(52px)}
+  .domains.reveal .dom{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),background .35s var(--ease)}
+  .domains.reveal.in .dom{opacity:1;transform:none}
+  .domains.reveal:not(.in) .dom:nth-child(2){transform:translateY(28px)}
+  .domains.reveal:not(.in) .dom:nth-child(3){transform:translateY(40px)}
+  .domains.reveal:not(.in) .dom:nth-child(4){transform:translateY(52px)}
+  .domains.reveal:not(.in) .dom:nth-child(5){transform:translateY(64px)}
+  .domains.reveal:not(.in) .dom:nth-child(6){transform:translateY(76px)}
+  .gal.reveal figure{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .gal.reveal.in figure{opacity:1;transform:none}
+  .gal.reveal figure:nth-child(2){transition-delay:.07s}
+  .gal.reveal figure:nth-child(3){transition-delay:.14s}
+  .gal.reveal figure:nth-child(4){transition-delay:.21s}
+  .gal.reveal figure:nth-child(5){transition-delay:.28s}
+  .gal.reveal figure:nth-child(6){transition-delay:.35s}
+  .duo.reveal.in{transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .q.reveal.in{transition:border-color .35s var(--ease),transform .35s var(--ease)}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;transition-delay:0s!important}
+    .reveal,.domains.reveal .dom,.gal.reveal figure{opacity:1!important;transform:none!important}
+    .scrollcue::after{animation:none}
+  }
+
+  @media(max-width:940px){
+    .menu{position:fixed;inset:0 0 0 30%;background:var(--pine2);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.4s var(--ease);box-shadow:-30px 0 60px -30px rgba(0,0,0,.55)}
+    .menu.open{transform:none}
+    .burger{display:flex}
+    .duogrid{grid-template-columns:1fr}
+    .domains{grid-template-columns:1fr 1fr}
+    .dom{border-right:1px solid var(--line)}
+    .dom:nth-child(2n){border-right:0}
+    .dom:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+    .dom:nth-last-child(-n+2){border-bottom:0}
+    .statgrid{grid-template-columns:repeat(2,1fr);gap:34px 22px}
+    .split{grid-template-columns:1fr;gap:36px}
+    .split .imgwrap{aspect-ratio:4/3.2}
+    .upkeep .inner,.zone .inner{grid-template-columns:1fr;gap:40px}
+    .upkeep .imgwrap.tall{aspect-ratio:16/10}
+    .qgrid{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+    .w1,.w2,.w3,.w4,.w5,.w6{grid-column:span 1;grid-row:span 1}
+    .w2,.w6{grid-column:span 2}
+  }
+  @media(max-width:560px){
+    section{padding:76px 0}
+    .wrap{padding:0 22px}
+    .zone{padding:70px 0}
+    .domains{grid-template-columns:1fr}
+    .dom{border-right:0}
+    .dom:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+    .dom:last-child{border-bottom:0}
+    .frow{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr;grid-auto-rows:auto}
+    .gal figure{aspect-ratio:4/3}
+    .w2,.w6{grid-column:span 1}
+    .hero-inner{padding-bottom:150px}
+    .hero .row{flex-direction:column;align-items:stretch;max-width:340px}
+    .hero .row .btn{justify-content:center}
+    .duo .top{height:190px}
+    .taxbox{flex-direction:column;align-items:flex-start;gap:10px}
+    .zone .freebox .btn{width:100%;justify-content:center}
+    .direct{flex-direction:column;align-items:center}
+    .demo{left:12px;right:12px;max-width:none;font-size:.74rem;padding:12px 36px 12px 14px}
+    footer{padding-bottom:150px}
+    .scrollcue{display:none}
+  }
+</style>
+</head>
+<body id="top">
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Allées et Jardins — retour en haut">
+      <span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-6 0-10 0-13M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="bt"><span class="b1">Allées &amp; Jardins</span><span class="b2">Paysagiste · Sarzeau</span></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#metiers">Nos métiers</a>
+      <a href="#creations">Créations</a>
+      <a href="#entretien">Entretien</a>
+      <a href="#zone">Zone d'intervention</a>
+      <a href="#contact" class="cta">Devis gratuit</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="wrap"><div class="hero-inner">
+    <span class="chip"><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3C9 5 5 10 5 17c0 1.5.3 2.9.9 4l1.8-1.4C7.2 18.8 7 17.9 7 17c0-5.8 3.2-9.9 10-11.7V3zm2 2v2.3C13.5 9 11 12.2 11 17c0 .6 0 1.2.1 1.8l2-.3A11 11 0 0 1 13 17c0-4 2-6.6 6-7.7V5z" fill="currentColor" stroke="none"/></svg> Déplacement gratuit pour votre devis — de Sarzeau à Vannes</span>
+    <h1 class="serif">Votre coin de paradis, <em>de l'allée au jardin.</em></h1>
+    <p class="lead">Paysagiste à Sarzeau, sur la presqu'île de Rhuys. Création d'allées, pavages, terrasses, clôtures et jardins — et entretien toute l'année. Un espace de vie personnalisé, élaboré ensemble.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-leaf">Demander un devis gratuit <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a href="#creations" class="btn btn-out">Voir les créations</a>
+    </div>
+  </div></div>
+  <div class="scrollcue">défilez</div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>Devis gratuit à domicile</b></div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Création &amp; entretien</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Crédit d'impôt 50 % sur l'entretien</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Sarzeau · Vannes · Auray · Damgan</div>
+  </div>
+</div>
+
+<section id="metiers">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Nos métiers</span>
+      <h2 class="serif">Deux entreprises, <em>un seul interlocuteur.</em></h2>
+      <p>De la création de votre jardin rêvé à l'entretien de votre havre de paix : Allées et Jardins fait la part belle à vos envies.</p>
+    </div>
+    <div class="duogrid">
+      <a href="#creations" class="duo reveal">
+        <div class="top" style="background-image:url('https://images.unsplash.com/photo-1761637824276-a75efae3adcf?auto=format&fit=crop&w=900&h=500&q=78')" role="img" aria-label="Escalier en pierre dans un jardin structuré — image d'illustration">
+          <span class="imgnote">Image d'illustration</span>
+          <span class="tt">Création</span>
+        </div>
+        <div class="bd">
+          <div class="who">Allées et Jardins</div>
+          <p class="intro">La réalisation complète de vos aménagements extérieurs, du plan 3D au dernier coup de balai.</p>
+          <ul>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Allées, cours, pavages &amp; dallages</li>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Terrasses bois &amp; composite</li>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Clôtures, portails, murets &amp; plantations</li>
+          </ul>
+          <span class="go">Découvrir les créations <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="#entretien" class="duo reveal">
+        <div class="top" style="background-image:url('https://images.unsplash.com/photo-1767610077733-dfe810cc5308?auto=format&fit=crop&w=900&h=500&q=78')" role="img" aria-label="Allée menant à une maison entre deux grandes haies taillées — image d'illustration">
+          <span class="imgnote">Image d'illustration</span>
+          <span class="tt">Entretien</span>
+        </div>
+        <div class="bd">
+          <div class="who">Allées et Jardins Services</div>
+          <p class="intro">L'entretien de votre havre de paix, en intervention ponctuelle ou contrat annuel — avec 50&nbsp;% de crédit d'impôt.</p>
+          <ul>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tontes annuelles &amp; taille de haies</li>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Taille d'arbustes &amp; d'arbres fruitiers</li>
+            <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Copropriétés &amp; espaces professionnels</li>
+          </ul>
+          <span class="go">Découvrir l'entretien <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat reveal"><div class="n serif">0&nbsp;€</div><div class="l">Devis &amp; déplacement</div><div class="s">Visite gratuite à domicile pour étudier votre projet</div></div>
+      <div class="stat reveal"><div class="n serif">−50&nbsp;%</div><div class="l">Crédit d'impôt</div><div class="s">Agrément Services à la personne, sur l'entretien</div></div>
+      <div class="stat reveal"><div class="n serif">3D</div><div class="l">Plans de conception</div><div class="s">Votre aménagement visualisé avant les travaux</div></div>
+      <div class="stat reveal"><div class="n serif">56</div><div class="l">Morbihan sud</div><div class="s">De Sarzeau à Vannes, en passant par Auray et Damgan</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="prestations">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Côté création</span>
+      <h2 class="serif">Tout l'aménagement extérieur, <em>d'une seule main.</em></h2>
+      <p>Allées, cours, clôtures, dallages, murets, pavages, plantations… chaque réalisation est pensée pour votre terrain et vos usages.</p>
+    </div>
+    <div class="domains reveal">
+      <div class="dom"><div class="num">01</div><h3>Allées &amp; cours</h3><p>Enrobé, bi-couche, graviers, béton désactivé, pas japonais : des accès propres et durables, dessinés avec soin.</p></div>
+      <div class="dom"><div class="num">02</div><h3>Pavage &amp; dallage</h3><p>Pavés granit, pierre bleue, dallages multiformats ou opus incertum — la noblesse de la pierre pour vos terrasses et cheminements.</p></div>
+      <div class="dom"><div class="num">03</div><h3>Terrasses bois &amp; composite</h3><p>Ipé, cumaru, douglas, pin ou composite : une pièce à vivre en plus, posée dans les règles de l'art.</p></div>
+      <div class="dom"><div class="num">04</div><h3>Clôtures &amp; portails</h3><p>Aluminium, grillage rigide, composite, occultations bois : l'intimité et le style, du portillon au portail.</p></div>
+      <div class="dom"><div class="num">05</div><h3>Murets &amp; maçonnerie paysagère</h3><p>Moellons de granit, gabions, palis d'ardoise, murs enduits avec couvertines — le caractère breton de votre extérieur.</p></div>
+      <div class="dom"><div class="num">06</div><h3>Massifs, plantations &amp; gazon</h3><p>Engazonnement, massifs structurés, paillage d'ardoise, bordures acier corten : un jardin vivant, beau en toute saison.</p></div>
+    </div>
+    <p class="also">Et aussi&nbsp;: <b>voiles d'ombrage, abris de jardin, carrés potagers, bassins</b> — parlez-nous de votre envie.</p>
+  </div>
+</section>
+
+<section class="works" id="creations">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" style="color:var(--ochre-l)">Créations</span>
+      <h2 class="serif">La matière, la pierre, <em>le végétal.</em></h2>
+      <p>Un aperçu de l'esprit recherché — sobriété, matériaux nobles et lignes nettes.</p>
+    </div>
+    <div class="gal reveal">
+      <figure class="w1"><img src="https://images.unsplash.com/photo-1713383659120-5d8013d3348a?auto=format&fit=crop&w=800&h=1050&q=78" alt="Allée en pavés bordée d'hortensias et de verdure — image d'illustration" loading="lazy"><figcaption>Allée pavée &amp; hortensias<small>Image d'illustration</small></figcaption></figure>
+      <figure class="w2"><img src="https://images.unsplash.com/photo-1761637822930-fb1c1a3df94d?auto=format&fit=crop&w=1100&h=760&q=78" alt="Dallage contemporain avec muret en pierre et massif de graminées — image d'illustration" loading="lazy"><figcaption>Dallage, muret &amp; graminées<small>Image d'illustration</small></figcaption></figure>
+      <figure class="w3"><img src="https://images.unsplash.com/photo-1780838446281-9394772d07a8?auto=format&fit=crop&w=800&h=560&q=78" alt="Patio circulaire en pavés entouré d'une bordure de pierre — image d'illustration" loading="lazy"><figcaption>Patio pavé, bordure granit<small>Image d'illustration</small></figcaption></figure>
+      <figure class="w4"><img src="https://images.unsplash.com/photo-1766776668825-b7ebbc7c51d6?auto=format&fit=crop&w=800&h=560&q=78" alt="Muret en pierre sèche couvert de lierre — image d'illustration" loading="lazy"><figcaption>Muret en pierre sèche<small>Image d'illustration</small></figcaption></figure>
+      <figure class="w5"><img src="https://images.unsplash.com/photo-1700960266354-4ba3b992a43d?auto=format&fit=crop&w=800&h=560&q=78" alt="Allée entre deux haies parfaitement taillées — image d'illustration" loading="lazy"><figcaption>Haies structurées<small>Image d'illustration</small></figcaption></figure>
+      <figure class="w6"><img src="https://images.unsplash.com/photo-1776757845288-3e71e234e3d3?auto=format&fit=crop&w=1400&h=560&q=78" alt="Jardin clos avec allée en gravier, pergola et massifs fleuris — image d'illustration" loading="lazy"><figcaption>Jardin structuré, allée en gravier<small>Image d'illustration</small></figcaption></figure>
+    </div>
+    <p class="note">Photos d'illustration — sur votre site, vos propres réalisations (dallages, clôtures, terrasses, massifs…) prendront cette place.</p>
+  </div>
+</section>
+
+<section class="upkeep" id="entretien">
+  <div class="wrap">
+    <div class="inner">
+      <div class="reveal">
+        <span class="eyebrow">Côté entretien</span>
+        <h2 class="serif">Un jardin impeccable, <em>toute l'année.</em></h2>
+        <p class="big">De la tonte à la taille de haies, en passant par la taille de vos arbres fruitiers : l'équipe d'Allées et Jardins Services répond à vos besoins, en intervention ponctuelle ou contrat annuel.</p>
+        <ul>
+          <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tontes annuelles &amp; entretien des pelouses</li>
+          <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Taille de haies, d'arbustes &amp; d'arbres fruitiers</li>
+          <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Interventions ponctuelles ou contrat annuel</li>
+          <li><svg class="leafmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Entretien de copropriétés &amp; d'espaces professionnels</li>
+        </ul>
+        <div class="taxbox">
+          <div class="pct">−50&nbsp;%</div>
+          <div class="tx"><b>Crédit d'impôt sur vos prestations d'entretien.</b> Notre agrément Services à la personne vous donne droit à un crédit d'impôt de 50&nbsp;%.<small>Selon la réglementation en vigueur — détails lors du devis.</small></div>
+        </div>
+        <div class="cta-line">
+          <a href="#contact" class="btn btn-paper">Demander un devis entretien <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <span class="or">ou appelez le <a class="tel" href="tel:+33671697513">06&nbsp;71&nbsp;69&nbsp;75&nbsp;13</a></span>
+        </div>
+      </div>
+      <div class="imgcol reveal">
+        <div class="imgwrap tall">
+          <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=800&h=950&q=78" alt="Mains gantées plantant un jeune plant en pleine terre — image d'illustration" loading="lazy" />
+          <span class="imgnote">Image d'illustration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="wrap split">
+    <div class="imgwrap reveal">
+      <img src="https://images.unsplash.com/photo-1713383659120-5d8013d3348a?auto=format&fit=crop&w=900&h=1060&q=78" alt="Jardin luxuriant avec allée pavée et hortensias — image d'illustration" loading="lazy" />
+      <span class="imgnote">Image d'illustration</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">L'approche</span>
+      <h2 class="serif">Un espace de vie personnalisé, <em>élaboré ensemble.</em></h2>
+      <p>Chez Allées et Jardins, nous avons à cœur de réaliser votre coin de paradis. Chaque projet commence par une rencontre chez vous, <b>gratuite et sans engagement</b> : on écoute vos envies, on regarde le terrain, on imagine ensemble.</p>
+      <p>Pour les aménagements, votre projet peut être <b>dessiné en plans 3D</b> avant le premier coup de pelle — vous voyez votre futur jardin avant de décider.</p>
+      <span class="plan3d"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg> Conception de plans 3D de vos aménagements extérieurs</span>
+      <p class="sign">Guillaume Grosvalet<small>Allées &amp; Jardins — Sarzeau</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap">
+    <div class="inner">
+      <div class="reveal">
+        <span class="eyebrow">Zone d'intervention</span>
+        <h2 class="serif">La presqu'île de Rhuys <em>et ses alentours.</em></h2>
+        <p class="big">Basés à Sarzeau, nous intervenons de la presqu'île de Rhuys jusqu'à Vannes, autour du golfe du Morbihan.</p>
+        <div class="towns">
+          <span class="town main"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.5-6.5-10.2A6.5 6.5 0 0 1 12 4.5a6.5 6.5 0 0 1 6.5 6.3C18.5 15.5 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></svg>Sarzeau</span>
+          <span class="town"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.5-6.5-10.2A6.5 6.5 0 0 1 12 4.5a6.5 6.5 0 0 1 6.5 6.3C18.5 15.5 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></svg>Vannes</span>
+          <span class="town"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.5-6.5-10.2A6.5 6.5 0 0 1 12 4.5a6.5 6.5 0 0 1 6.5 6.3C18.5 15.5 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></svg>Auray</span>
+          <span class="town"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.5-6.5-10.2A6.5 6.5 0 0 1 12 4.5a6.5 6.5 0 0 1 6.5 6.3C18.5 15.5 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></svg>Damgan</span>
+          <span class="town"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.5-6.5-10.2A6.5 6.5 0 0 1 12 4.5a6.5 6.5 0 0 1 6.5 6.3C18.5 15.5 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></svg>Presqu'île de Rhuys</span>
+        </div>
+      </div>
+      <div class="freebox reveal">
+        <span class="t">Le déplacement pour votre devis&nbsp;? Gratuit.</span>
+        <span class="s">Nous venons chez vous, nous regardons le terrain ensemble et nous chiffrons votre projet — sans engagement.</span>
+        <a href="#contact" class="btn btn-paper">Prendre rendez-vous <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ils en parlent</span>
+      <h2 class="serif">La confiance des voisins, <em>ça se cultive.</em></h2>
+      <p class="illus-note"><em>(avis d'illustration — à remplacer par vos vrais témoignages clients)</em></p>
+    </div>
+    <div class="qgrid">
+      <div class="q reveal"><div class="st" aria-hidden="true">★★★★★</div><p>«&nbsp;Du devis à la dernière plantation, tout était carré. Notre cour en pavés a transformé l'entrée de la maison.&nbsp;»</p><div class="who">Avis d'illustration — particulier, presqu'île de Rhuys</div></div>
+      <div class="q reveal"><div class="st" aria-hidden="true">★★★★★</div><p>«&nbsp;Le contrat annuel d'entretien nous simplifie la vie, et le crédit d'impôt divise la facture par deux.&nbsp;»</p><div class="who">Avis d'illustration — résidence secondaire, Morbihan</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center">Devis gratuit</span>
+      <h2 class="serif">Et si on parlait de <em>votre jardin&nbsp;?</em></h2>
+      <p class="sub">Décrivez-nous votre projet — création ou entretien — et nous convenons d'une visite gratuite chez vous.</p>
+      <div class="direct">
+        <a href="tel:+33671697513"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06&nbsp;71&nbsp;69&nbsp;75&nbsp;13</a>
+        <a href="mailto:allees.jardins56@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>allees.jardins56@gmail.com</a>
+      </div>
+    </div>
+    <form class="reveal" id="cform">
+      <div class="frow">
+        <div><label class="sr-only" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Votre nom" autocomplete="name" required></div>
+        <div><label class="sr-only" for="f-tel">Votre téléphone</label><input id="f-tel" name="tel" type="tel" placeholder="Votre téléphone" autocomplete="tel"></div>
+      </div>
+      <div class="frow">
+        <div><label class="sr-only" for="f-email">Votre e-mail</label><input id="f-email" name="email" type="email" placeholder="Votre e-mail" autocomplete="email" required></div>
+        <div><label class="sr-only" for="f-commune">Votre commune</label><input id="f-commune" name="commune" type="text" placeholder="Votre commune (Sarzeau, Vannes…)"></div>
+      </div>
+      <div><label class="sr-only" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Votre projet en quelques mots : allée, terrasse, clôture, entretien…"></textarea></div>
+      <button class="btn btn-leaf" type="submit">Demander un devis gratuit <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    </form>
+    <p class="formdemo">Formulaire de <b>démonstration</b> (maquette) — il n'envoie aucun message. Pour un vrai devis&nbsp;: téléphone ou e-mail ci-dessus.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol" style="max-width:300px">
+        <div class="brand"><span class="mark" style="border-color:rgba(255,255,255,.5)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-6 0-10 0-13M12 8C12 5 10 3 6.5 3 6.5 6.5 8.5 8.5 12 8zM12 12c0-3 2-5 5.5-5 0 3.5-2 5.5-5.5 5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="bt"><span class="b1" style="font-size:1.3rem">Allées &amp; Jardins</span><span class="b2">Guillaume Grosvalet · Sarzeau</span></span></div>
+        <p style="margin-top:14px;color:#7e937c">Création et entretien de jardins sur la presqu'île de Rhuys — de Sarzeau à Vannes, Auray et Damgan.</p>
+        <p class="siret">Allées et Jardins (création) — SIRET&nbsp;824&nbsp;306&nbsp;419<br>Allées et Jardins Services (entretien) — SIRET&nbsp;824&nbsp;150&nbsp;759</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><p><a href="#metiers">Nos métiers</a></p><p><a href="#prestations">Prestations</a></p><p><a href="#creations">Créations</a></p><p><a href="#entretien">Entretien</a></p><p><a href="#zone">Zone d'intervention</a></p></div>
+      <div class="fcol"><h4>Contact</h4><p><a href="tel:+33671697513">06 71 69 75 13</a></p><p><a href="mailto:allees.jardins56@gmail.com">allees.jardins56@gmail.com</a></p><p>Sarzeau — Morbihan (56)</p><p><a href="#contact">Demander un devis gratuit</a></p></div>
+    </div>
+    <p class="seo">Paysagiste Sarzeau · Création d'allées, pavage, dallage, terrasse bois &amp; composite · Clôtures, portails, murets · Entretien de jardins presqu'île de Rhuys · Tonte, taille de haies Vannes, Auray, Damgan · Crédit d'impôt services à la personne.</p>
+  </div>
+</footer>
+
+<div class="demo" id="demo" role="note">
+  <button class="x" type="button" aria-label="Fermer" onclick="document.getElementById('demo').remove()">×</button>
+  <b>✦ Maquette — aperçu non contractuel</b>, réalisée par <b>Nicolas Masset</b> à partir de votre univers. La version finale est <b>100 % sur-mesure</b> (vos photos, vos réalisations). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a>
+</div>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>50);
+    var b=document.getElementById('heroBg'); if(b&&scrollY<900) b.style.transform='scale(1.05) translateY('+(scrollY*0.16)+'px)';});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  burger.onclick=function(){var o=menu.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)};
+  menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},1400)});
+  document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();this.innerHTML='<p style="text-align:center;font-size:1.05rem;color:var(--ink);padding:26px 10px;line-height:1.7">Ceci est une <b>maquette de démonstration</b> — le formulaire n\'envoie rien.<br>Pour un vrai devis : <a href="tel:+33671697513" style="font-weight:700;text-decoration:underline">06 71 69 75 13</a> ou <a href="mailto:allees.jardins56@gmail.com" style="font-weight:700;text-decoration:underline">allees.jardins56@gmail.com</a></p>'});
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
