@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#2a2027" />
+<title>Merveille d'Ourse : massages bien-être à domicile, Dompierre-sur-Yon et alentours (Vendée)</title>
+<meta name="description" content="Massages bien-être à domicile autour de Dompierre-sur-Yon : californien, coquillages chauds, hawaïen, moments partagés. Un cadre doux, sécurisant et professionnel." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --night:#2a2027; --night2:#332831; --paper:#f9f4f1; --paper2:#f1e8e3;
+    --ink:#332830; --mut:#6e5e66; --rose:#96453e; --rose-d:#7d3832; --rose-l:#c99a90;
+    --star:#ecd3c4; --line:#e4d6cf;
+    --r:14px; --ease:cubic-bezier(.22,.7,.25,1); --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Figtree",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--rose);color:#fff}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+  .night a:focus-visible,.night button:focus-visible{outline-color:var(--star)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .disp{font-family:"Bricolage Grotesque","Figtree",sans-serif;font-weight:600;line-height:1.06;letter-spacing:-.015em}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+  .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:.85rem;letter-spacing:.02em;padding:15px 28px;border-radius:50px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+  .btn:active{transform:translateY(1px)}
+  .btn-rose{background:var(--rose);color:#fff}
+  .btn-rose:hover{background:var(--rose-d)}
+  .btn-ghost{border-color:#cbb4ac;color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--rose);color:var(--rose)}
+  .btn-paper{background:var(--paper);color:var(--night)}
+  .btn-paper:hover{background:#fff}
+  .ico{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Constellation (Grande Ourse) : marque de la praticienne, motif justifié */
+  .ourse{fill:none;stroke:currentColor;stroke-width:1.1}
+  .ourse circle{fill:currentColor;stroke:none}
+
+  /* HEADER */
+  header{position:fixed;inset:0 0 auto;z-index:60;transition:background .3s,box-shadow .3s}
+  header.scrolled{background:rgba(249,244,241,.94);box-shadow:0 1px 0 rgba(51,40,48,.09)}
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:16px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:42px;height:42px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--night);color:var(--star)}
+  .brand .mark svg{width:24px;height:24px}
+  .brand .bt{display:flex;flex-direction:column;line-height:1.08}
+  .brand .b1{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.18rem;color:var(--ink)}
+  .brand .b2{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+  .menu{display:flex;gap:26px;align-items:center}
+  .menu a{font-size:.85rem;font-weight:600;color:var(--ink);opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--rose)}
+  .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--rose);color:#fff;opacity:1}
+  .menu a.cta:hover{background:var(--rose-d);color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--ink);transition:.3s var(--ease)}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{position:relative;padding:150px 0 84px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:9px 18px;border-radius:50px;font-size:.78rem;font-weight:600;color:var(--mut);margin-bottom:24px}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--rose)}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);color:var(--ink);margin-bottom:.42em}
+  .hero h1 i{font-style:italic;font-weight:500;color:var(--rose);line-height:1.1;padding-bottom:.06em;display:inline-block}
+  .hero .lead{font-size:1.12rem;color:var(--mut);max-width:460px;margin-bottom:2em}
+  .hero .row{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-visual{position:relative}
+  .hero-visual .ph{border-radius:26px 120px 26px 26px;overflow:hidden;box-shadow:0 34px 70px -42px rgba(51,40,48,.55)}
+  .hero-visual .ph img{width:100%;height:520px;object-fit:cover}
+  .hero-visual .tag{position:absolute;left:-14px;bottom:26px;background:var(--night);color:var(--star);padding:14px 20px;border-radius:var(--r);font-size:.82rem;line-height:1.45;box-shadow:0 18px 40px -20px rgba(42,32,39,.7);max-width:250px}
+  .hero-visual .tag b{display:block;color:#fff;font-size:.9rem}
+  .hero-const{position:absolute;right:-30px;top:-36px;width:150px;color:var(--rose-l);opacity:.55;pointer-events:none}
+
+  section{padding:clamp(72px,8.5vw,110px) 0;scroll-margin-top:70px}
+  .head{max-width:660px;margin-bottom:52px}
+  .head h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--ink);margin-bottom:.35em}
+  .head h2 i{font-style:italic;font-weight:500;color:var(--rose);line-height:1.1;display:inline-block;padding-bottom:.06em}
+  .head p{color:var(--mut);font-size:1.03rem}
+
+  /* BANDE RÉASSURANCE */
+  .assure{background:var(--paper2);padding:26px 0;border-block:1px solid var(--line)}
+  .assure .wrap{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;font-size:.9rem}
+  .assure .wrap>div{display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
+  .assure .ico{color:var(--rose);width:17px;height:17px}
+
+  /* DEUX APPROCHES */
+  .duo{display:grid;grid-template-columns:1fr 1fr;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .duo>article{padding:46px 44px;display:flex;flex-direction:column}
+  .duo>article+article{border-left:1px solid var(--line)}
+  .duo .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.55rem;margin-bottom:6px}
+  .duo .s{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose);margin-bottom:18px}
+  .duo p{color:var(--mut);font-size:.97rem;margin-bottom:16px}
+  .duo ul{list-style:none;display:grid;gap:9px;margin:4px 0 22px}
+  .duo li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem}
+  .duo li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose);margin-top:9px;flex:none}
+  .duo .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose)}
+  .duo .go .ico{transition:transform .3s var(--ease)}
+  .duo article:hover .go .ico{transform:translateX(4px)}
+  .commun{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;margin-top:26px;background:var(--night);color:#eee3e8;border-radius:22px;padding:34px 40px}
+  .commun .ph{width:170px;height:170px;border-radius:18px;overflow:hidden;flex:none}
+  .commun .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+  .commun h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;color:#fff;margin-bottom:8px}
+  .commun p{font-size:.95rem;color:#d9c9d1}
+  .commun p+p{margin-top:8px}
+
+  /* MASSAGES & TARIFS */
+  .tarifs{background:var(--paper2)}
+  .mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+  .mcard{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .mcard:hover{transform:translateY(-5px);box-shadow:0 26px 46px -34px rgba(51,40,48,.45)}
+  .mcard.half{grid-column:span 3}
+  .mcard.wide{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  .mcard h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.28rem;margin-bottom:8px}
+  .mcard .duree{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+  .mcard p{color:var(--mut);font-size:.93rem;margin-bottom:18px}
+  .mcard .prix{margin-top:auto;display:flex;align-items:baseline;gap:7px}
+  .mcard .prix b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.9rem;font-weight:700;color:var(--ink)}
+  .mcard .prix span{font-size:.85rem;color:var(--mut)}
+  .mods{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .mods div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 8px;text-align:center}
+  .mods .t{display:block;font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
+  .mods .p{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.12rem;color:var(--ink);margin-top:2px}
+  .tnote{margin-top:22px;font-size:.88rem;color:var(--mut);max-width:640px}
+
+  /* NUIT : L'OURSE / OLIVIA */
+  .night{background:var(--night);color:#efe4e9;position:relative;overflow:hidden}
+  .night .stars{position:absolute;inset:0;pointer-events:none;opacity:.5}
+  .night .stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--star)}
+  .night-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative;z-index:2}
+  .night .eyebrow{color:var(--rose-l)}
+  .night h2{font-size:clamp(1.9rem,4vw,2.9rem);color:#fff;margin:0.25em 0 .5em}
+  .night h2 i{font-style:italic;font-weight:500;color:var(--star);line-height:1.1;display:inline-block;padding-bottom:.06em}
+  .night .story p{color:#d9c9d1;font-size:1rem;margin-bottom:15px}
+  .night .story b{color:#fff;font-weight:600}
+  .night-const{width:190px;color:var(--star);opacity:.7;margin-bottom:26px}
+  .formations{background:var(--night2);border:1px solid rgba(236,211,196,.16);border-radius:20px;padding:36px 34px}
+  .formations h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;color:#fff;margin-bottom:18px}
+  .formations ul{list-style:none;display:grid;gap:14px}
+  .formations li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;color:#d9c9d1}
+  .formations li svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--star)}
+  .formations li b{color:#fff;font-weight:600}
+  .cadre{margin-top:22px;padding:18px 20px;border-radius:14px;background:rgba(150,69,62,.18);border:1px solid rgba(201,154,144,.35);font-size:.9rem;color:#eadbe1}
+  .cadre b{color:#fff}
+
+  /* ZONE */
+  .zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .pills span{background:#fff;border:1px solid var(--line);border-radius:50px;padding:9px 18px;font-size:.88rem;font-weight:600;color:var(--ink)}
+  .pills span.home{background:var(--rose);border-color:var(--rose);color:#fff}
+  .jeudi{background:var(--night);color:#eee3e8;border-radius:20px;padding:38px 36px;position:relative;overflow:hidden}
+  .jeudi h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;color:#fff;margin-bottom:10px}
+  .jeudi p{font-size:.97rem;color:#d9c9d1}
+  .jeudi p+p{margin-top:8px}
+  .jeudi .adr{margin-top:16px;padding-top:16px;border-top:1px solid rgba(236,211,196,.2);font-size:.92rem;color:var(--star)}
+  .jeudi .oc{position:absolute;right:-24px;bottom:-18px;width:130px;color:var(--star);opacity:.22}
+
+  /* BONS CADEAUX */
+  .cadeau .band{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .cadeau .ph{position:relative;min-height:330px}
+  .cadeau .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .cadeau .bd{padding:52px 50px;display:flex;flex-direction:column;justify-content:center}
+  .cadeau h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:.4em}
+  .cadeau p{color:var(--mut);font-size:1rem;margin-bottom:14px;max-width:480px}
+  .cadeau .bd .btn{align-self:flex-start;margin-top:10px}
+
+  /* CONTACT */
+  .contact{background:var(--paper2)}
+  .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .c-left h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.4em}
+  .c-left p{color:var(--mut);font-size:1.02rem;max-width:440px;margin-bottom:26px}
+  .direct{display:grid;gap:13px}
+  .direct a{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;color:var(--ink)}
+  .direct a:hover{color:var(--rose)}
+  .direct .ico{width:18px;height:18px;color:var(--rose)}
+  form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 32px;display:grid;gap:14px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label.lbl{font-size:.82rem;font-weight:700;color:var(--ink);display:block;margin-bottom:6px}
+  input,textarea{width:100%;font:inherit;font-size:.95rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:13px 15px;transition:border-color .2s}
+  input::placeholder,textarea::placeholder{color:#9d8d95}
+  input:focus,textarea:focus{border-color:var(--rose);outline:none}
+  .formdemo{margin-top:14px;font-size:.82rem;color:var(--mut)}
+
+  /* FOOTER */
+  footer{background:var(--night);color:#cbb9c2;padding:58px 0 40px;position:relative;overflow:hidden}
+  .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;position:relative;z-index:2}
+  .fcol h4{font-family:"Bricolage Grotesque",sans-serif;color:#fff;font-size:.95rem;margin-bottom:14px}
+  .fcol p{font-size:.9rem;margin-bottom:8px}
+  .fcol a:hover{color:#fff}
+  footer .brand .b1{color:#fff}
+  footer .brand .b2{color:var(--star)}
+  footer .brand .mark{background:rgba(236,211,196,.12)}
+  .siret{margin-top:14px;font-size:.78rem;color:#9d8d95;line-height:1.6}
+  .seo{margin-top:34px;padding-top:22px;border-top:1px solid rgba(236,211,196,.14);font-size:.78rem;color:#9d8d95;position:relative;z-index:2}
+
+  /* BANDEAU MAQUETTE */
+  .demo{position:fixed;left:16px;bottom:16px;z-index:80;max-width:330px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--rose);border-radius:12px;padding:14px 38px 14px 16px;font-size:.8rem;line-height:1.5;color:var(--ink);box-shadow:0 18px 44px -18px rgba(51,40,48,.4)}
+  .demo b{color:var(--rose-d)}
+  .demo a{font-weight:700;text-decoration:underline;color:var(--rose-d)}
+  .demo .x{position:absolute;right:8px;top:8px;width:24px;height:24px;border:0;border-radius:50%;background:var(--paper2);color:var(--ink);font-size:15px;line-height:1;cursor:pointer}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .mcard,.duo article,.btn{transition:none}
+  }
+
+  @media (max-width:1020px){
+    .menu{position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .35s var(--ease)}
+    .menu.open{transform:none}
+    .menu a{font-size:1.2rem}
+    .burger{display:flex}
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .hero-visual .ph img{height:420px}
+    .mgrid{grid-template-columns:1fr 1fr}
+    .mcard,.mcard.half{grid-column:span 1}
+    .mcard.wide{grid-column:1/-1;grid-template-columns:1fr}
+    .night-grid,.zone-grid,.c-grid{grid-template-columns:1fr;gap:44px}
+    .duo{grid-template-columns:1fr}
+    .duo>article+article{border-left:0;border-top:1px solid var(--line)}
+  }
+  @media (max-width:768px){
+    .wrap{padding:0 20px}
+    .hero{padding-top:120px}
+    .mgrid{grid-template-columns:1fr}
+    .mcard,.mcard.half,.mcard.wide{grid-column:1/-1}
+    .commun{grid-template-columns:1fr}
+    .commun .ph{width:100%;height:200px}
+    .cadeau .band{grid-template-columns:1fr}
+    .cadeau .bd{padding:36px 26px}
+    .frow{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr;gap:30px}
+    .assure .wrap{flex-direction:column;gap:14px;align-items:flex-start}
+    .demo{left:10px;right:10px;max-width:none}
+    .hero-visual .tag{left:10px}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="Merveille d'Ourse, retour en haut">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 70" class="ourse"><polyline points="8,18 24,26 38,32 52,40"/><polyline points="52,40 56,58 78,60 74,42 52,40"/><circle cx="8" cy="18" r="2.6"/><circle cx="24" cy="26" r="2.2"/><circle cx="38" cy="32" r="2.2"/><circle cx="52" cy="40" r="2.6"/><circle cx="56" cy="58" r="2.2"/><circle cx="78" cy="60" r="2.6"/><circle cx="74" cy="42" r="2.2"/></svg>
+      </span>
+      <span class="bt"><span class="b1">Merveille d'Ourse</span><span class="b2">Massages bien-être</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#approches">Les massages</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#olivia">Qui vous accueille</a>
+      <a href="#zone">Où je me déplace</a>
+      <a class="cta" href="#contact">Prendre rendez-vous</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip"><span class="dot" aria-hidden="true"></span>À domicile, autour de Dompierre-sur-Yon</span>
+      <h1 class="disp">Le plaisir simple&nbsp;d'être <i>dans son corps</i></h1>
+      <p class="lead">Massages bien-être à domicile en Vendée. Un moment pour ralentir, respirer et relâcher les tensions, à votre rythme.</p>
+      <div class="row">
+        <a class="btn btn-rose" href="#contact">Prendre rendez-vous <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#approches">Découvrir les massages</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <svg class="hero-const ourse" viewBox="0 0 100 70" aria-hidden="true"><polyline points="8,18 24,26 38,32 52,40"/><polyline points="52,40 56,58 78,60 74,42 52,40"/><circle cx="8" cy="18" r="2.2"/><circle cx="24" cy="26" r="1.8"/><circle cx="38" cy="32" r="1.8"/><circle cx="52" cy="40" r="2.2"/><circle cx="56" cy="58" r="1.8"/><circle cx="78" cy="60" r="2.2"/><circle cx="74" cy="42" r="1.8"/></svg>
+      <div class="ph"><img src="assets/ourse/coquillages.jpg" alt="Coquillages chauds et bougies préparés pour un massage bien-être" width="1024" height="683" /></div>
+      <div class="tag"><b>Chaque séance commence par un échange</b>pour comprendre votre besoin et poser un cadre sécurisant.</div>
+    </div>
+  </div>
+</section>
+
+<div class="assure" role="note">
+  <div class="wrap">
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Je viens chez vous, avec tout le matériel</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>De 30 minutes à 2 heures, selon votre besoin</div>
+    <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg>Cadre strictement professionnel et respectueux</div>
+  </div>
+</div>
+
+<section id="approches" aria-label="Les deux approches">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2 class="disp">Deux approches, <i>selon votre besoin</i> du moment</h2>
+      <p>Une pause douce dans votre quotidien, ou un accompagnement du corps plus profond : vous choisissez, je m'adapte.</p>
+    </div>
+    <div class="duo reveal">
+      <article>
+        <h3 class="n disp">Il en faut peu pour être heureux</h3>
+        <p class="s">Moments de détente accessibles et partagés</p>
+        <p>Des prestations pensées pour souffler et retrouver du confort dans votre corps. Ici il n'y a rien à faire, seulement profiter.</p>
+        <ul>
+          <li>Le massage aux coquillages chauds</li>
+          <li>Les Chouch'Ours : courts massages en petit groupe</li>
+          <li>D'ores et d'Ourson : un atelier massage pour votre enfant</li>
+        </ul>
+        <a class="go" href="#tarifs">Voir les tarifs <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article>
+        <h3 class="n disp">Les soins de l'Ourse</h3>
+        <p class="s">Massages profonds et accompagnement du corps</p>
+        <p>Pour celles et ceux qui ressentent le besoin d'aller plus loin dans le relâchement : une écoute du corps où les tensions physiques, parfois émotionnelles, peuvent se déposer. Rien n'est forcé, rien n'est attendu.</p>
+        <ul>
+          <li>Le massage californien corps et émotions</li>
+          <li>Le massage hawaïen (Lomi Lomi)</li>
+          <li>Le massage Deep Tissue, avec le HBC Dompierrois</li>
+        </ul>
+        <a class="go" href="#tarifs">Voir les tarifs <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+    <div class="commun reveal">
+      <div class="ph"><img src="assets/ourse/mains.jpg" alt="Main de la praticienne tenant celle d'une personne massée" width="954" height="1024" loading="lazy" /></div>
+      <div>
+        <h3>Une approche commune : présence, écoute, respect</h3>
+        <p>Chaque prestation est unique. Je vous accueille toujours par un temps d'échange pour comprendre vos besoins et poser un cadre sécurisant. Les gestes sont réalisés avec simplicité, précision et attention.</p>
+        <p>Il peut arriver que des sensations ou des émotions émergent pendant le massage, sans que cela soit recherché : vous restez libre à chaque instant. Le cas échéant, je vous oriente vers d'autres professionnels du corps et de l'esprit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs" id="tarifs" aria-label="Massages et tarifs">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Tarifs</span>
+      <h2 class="disp">Des massages <i>à votre mesure</i></h2>
+      <p>Des formats courts aux séances longues, chaque massage s'adapte à votre rythme. Les prix indiqués sont ceux pratiqués à domicile.</p>
+    </div>
+    <div class="mgrid">
+      <div class="mcard wide reveal">
+        <div>
+          <h3 class="disp">Le massage californien corps et émotions</h3>
+          <p class="duree">Modulable de 30 minutes à 2 heures</p>
+          <p>À l'huile, fait d'effleurages, de lissages et de quelques mobilisations. Il réduit le stress, invite à ressentir positivement son corps et peut permettre une libération de tensions physiques comme émotionnelles. Pratiqué avec beaucoup d'écoute du corps : nous créons ensemble le massage dont vous avez besoin.</p>
+        </div>
+        <div class="mods" role="list" aria-label="Tarifs du massage californien par durée">
+          <div role="listitem"><span class="t">30 min</span><span class="p">45&nbsp;€</span></div>
+          <div role="listitem"><span class="t">45 min</span><span class="p">65&nbsp;€</span></div>
+          <div role="listitem"><span class="t">60 min</span><span class="p">70&nbsp;€</span></div>
+          <div role="listitem"><span class="t">75 min</span><span class="p">83&nbsp;€</span></div>
+          <div role="listitem"><span class="t">90 min</span><span class="p">95&nbsp;€</span></div>
+          <div role="listitem"><span class="t">120 min</span><span class="p">122&nbsp;€</span></div>
+        </div>
+      </div>
+      <div class="mcard reveal">
+        <h3 class="disp">Coquillages chauds</h3>
+        <p class="duree">75 minutes</p>
+        <p>Un massage à l'huile prodigué avec de véritables palourdes tigrées. Leur chaleur diffuse des ions calcium à travers la peau et renforce la détente musculaire. Des sensations uniques.</p>
+        <p class="prix"><b>90&nbsp;€</b><span>la séance</span></p>
+      </div>
+      <div class="mcard reveal">
+        <h3 class="disp">Hawaïen (Lomi Lomi)</h3>
+        <p class="duree">75 minutes</p>
+        <p>Inspiré du mouvement des vagues, pratiqué avec une importante quantité d'huile et l'incorporation des avant-bras. Un soin corps-esprit qui alterne douceur et puissance.</p>
+        <p class="prix"><b>85&nbsp;€</b><span>la séance</span></p>
+      </div>
+      <div class="mcard reveal">
+        <h3 class="disp">Les Chouch'Ours</h3>
+        <p class="duree">30 ou 45 minutes, à 2, 3 ou 4</p>
+        <p>Le spa s'invite chez vous : chacun profite d'un court massage pendant que l'autre prend le relais auprès des enfants. Aussi ouvert aux après-midis entre amies ou en couple.</p>
+        <p class="prix"><b>dès 30&nbsp;€</b><span>par personne</span></p>
+      </div>
+      <div class="mcard half reveal">
+        <h3 class="disp">D'ores et d'Ourson</h3>
+        <p class="duree">Atelier parent-enfant</p>
+        <p>Un massage de bien-être prodigué à votre enfant, par vous et avec moi, dans des conditions pensées pour lui : consentement recherché, manœuvres adaptées, écoute maximale.</p>
+        <p class="prix"><b>Sur demande</b><span>contactez-moi</span></p>
+      </div>
+      <div class="mcard half reveal">
+        <h3 class="disp">Deep Tissue</h3>
+        <p class="duree">En partenariat avec le HBC Dompierrois</p>
+        <p>Un massage lent et profond des tissus, conseillé aux sportifs avant ou après l'effort. Réservable dans le cadre du partenariat avec le club de handball de Dompierre-sur-Yon.</p>
+        <p class="prix"><b>Via le club</b><span>réservation HelloAsso</span></p>
+      </div>
+    </div>
+    <p class="tnote reveal">Les massages proposés ne sont jamais d'ordre thérapeutique ou médical. Aucune pratique à caractère sexuel ou érotique n'est proposée : chaque séance se déroule dans un cadre strictement professionnel, respectueux du corps et de l'intimité.</p>
+  </div>
+</section>
+
+<section class="night" id="olivia" aria-label="Qui vous accueille">
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="wrap night-grid">
+    <div class="story reveal">
+      <svg class="night-const ourse" viewBox="0 0 100 70" aria-hidden="true"><polyline points="8,18 24,26 38,32 52,40"/><polyline points="52,40 56,58 78,60 74,42 52,40"/><circle cx="8" cy="18" r="2.4"/><circle cx="24" cy="26" r="2"/><circle cx="38" cy="32" r="2"/><circle cx="52" cy="40" r="2.4"/><circle cx="56" cy="58" r="2"/><circle cx="78" cy="60" r="2.4"/><circle cx="74" cy="42" r="2"/></svg>
+      <span class="eyebrow">Qui vous accueille</span>
+      <h2 class="disp">Olivia, <i>l'Ourse</i> derrière les massages</h2>
+      <p>En 2018, un soin en réflexologie plantaire m'a bouleversée jusqu'au fond de l'âme. J'ai alors démarré une pratique personnelle du massage de bien-être, puis je suis allée à la rencontre de professionnels, d'école en école.</p>
+      <p>Je me suis imprégnée d'influences variées pour construire une pratique qui me ressemble : <b>le massage m'ancre</b>, et je me sens faite pour cela. Depuis l'enfance, le corps, l'émotion et le mieux-être sont des sujets qui me questionnent : donner au corps la place de s'exprimer est parfois l'amorce suffisante pour se remettre en chemin.</p>
+      <p>J'ai conscience de mes limites : si besoin, je vous oriente avec plaisir vers d'autres professionnels de santé en qui j'ai toute confiance.</p>
+    </div>
+    <div class="reveal">
+      <div class="formations">
+        <h3>Un parcours certifié, d'école en école</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span><b>Massage californien</b> : certification officielle LETIS Formation, obtenue en février 2025</span></li>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span><b>Anatomie, physiologie, aromathérapie</b> et manœuvres fondamentales : institut Hypoténuse, Nantes</span></li>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span><b>Coquillages chauds, hawaïen (Lomi Lomi), Deep Tissue</b> : Centre Harmonie Bien-Être, Château-Gontier</span></li>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span><b>Détentes psychocorporelles des 4-12 ans</b> : Ker'Ananda, Rennes</span></li>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span><b>Réflexologie plantaire intégrative</b> : première initiation à Vertou (44)</span></li>
+        </ul>
+        <div class="cadre"><b>Un cadre clair.</b> Un échange de vive voix avant chaque premier rendez-vous, une écoute à chaque instant, et le respect absolu du corps et de l'intimité.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zone" aria-label="Zone d'intervention">
+  <div class="wrap zone-grid">
+    <div class="reveal">
+      <h2 class="disp" style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.4em">Je me déplace <i style="font-style:italic;font-weight:500;color:var(--rose)">chez vous</i></h2>
+      <p style="color:var(--mut);max-width:440px">À domicile autour de Dompierre-sur-Yon, avec ma table et tout le matériel. Vous n'avez rien à prévoir, seulement à profiter.</p>
+      <div class="pills" aria-label="Communes desservies">
+        <span class="home">Dompierre-sur-Yon</span>
+        <span>La Roche-sur-Yon</span>
+        <span>Le Poiré-sur-Vie</span>
+        <span>Bellevigny</span>
+        <span>La Ferrière</span>
+        <span>Mouilleron-le-Captif</span>
+        <span>La Merlatière</span>
+        <span>Saint-Denis-la-Chevasse</span>
+        <span>Chauché</span>
+        <span>Les Lucs-sur-Boulogne</span>
+      </div>
+    </div>
+    <div class="jeudi reveal">
+      <svg class="oc ourse" viewBox="0 0 100 70" aria-hidden="true"><polyline points="8,18 24,26 38,32 52,40"/><polyline points="52,40 56,58 78,60 74,42 52,40"/><circle cx="8" cy="18" r="2.4"/><circle cx="24" cy="26" r="2"/><circle cx="38" cy="32" r="2"/><circle cx="52" cy="40" r="2.4"/><circle cx="56" cy="58" r="2"/><circle cx="78" cy="60" r="2.4"/><circle cx="74" cy="42" r="2"/></svg>
+      <h3>Nouveau : les jeudis en cabinet</h3>
+      <p>Vous préférez venir à moi ? Retrouvez-moi chaque jeudi au cabinet infirmier de l'Angelmière, à La Roche-sur-Yon.</p>
+      <p class="adr">Cabinet infirmier de l'Angelmière<br />32 rue Lamarck, La Roche-sur-Yon</p>
+    </div>
+  </div>
+</section>
+
+<section class="cadeau" aria-label="Bons cadeaux">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="ph"><img src="assets/ourse/bon-cadeau.jpg" alt="Bon cadeau personnalisé Merveille d'Ourse sur papier grammé" width="1024" height="700" loading="lazy" /></div>
+      <div class="bd">
+        <h2 class="disp">Offrir un massage, <i style="font-style:italic;font-weight:500;color:var(--rose)">ça se fait</i></h2>
+        <p>Les bons cadeaux sont disponibles pour toutes les prestations : personnalisés sur papier grammé, à récupérer, ou imprimables à personnaliser vous-même.</p>
+        <a class="btn btn-rose" href="#contact">Offrir un bon cadeau <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-label="Contact">
+  <div class="wrap c-grid">
+    <div class="c-left reveal">
+      <h2 class="disp">On en parle <i style="font-style:italic;font-weight:500;color:var(--rose)">de vive voix ?</i></h2>
+      <p>Avant votre premier rendez-vous, nous échangeons toujours par téléphone : c'est le meilleur moyen de créer ensemble des conditions favorables.</p>
+      <div class="direct">
+        <a href="tel:+33686605870"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06&nbsp;86&nbsp;60&nbsp;58&nbsp;70</a>
+        <a href="mailto:merveilledourse@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>merveilledourse@gmail.com</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <form id="cform">
+        <div class="frow">
+          <div><label class="lbl" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Camille Aubert" autocomplete="name" required /></div>
+          <div><label class="lbl" for="f-tel">Votre téléphone</label><input id="f-tel" name="tel" type="tel" placeholder="06 12 34 56 78" autocomplete="tel" /></div>
+        </div>
+        <div><label class="lbl" for="f-com">Votre commune</label><input id="f-com" name="commune" type="text" placeholder="Dompierre-sur-Yon" /></div>
+        <div><label class="lbl" for="f-msg">Votre envie du moment</label><textarea id="f-msg" name="message" rows="4" placeholder="Un massage californien d'une heure, un bon cadeau, une question..."></textarea></div>
+        <button class="btn btn-rose" type="submit">Envoyer ma demande <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <p class="formdemo">Formulaire de <b>démonstration</b> (maquette) : il n'envoie aucun message. Pour un vrai rendez-vous, téléphone ou e-mail ci-contre.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol" style="max-width:320px">
+        <a class="brand" href="#">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 100 70" class="ourse" style="width:24px;height:24px;color:var(--star)"><polyline points="8,18 24,26 38,32 52,40"/><polyline points="52,40 56,58 78,60 74,42 52,40"/><circle cx="8" cy="18" r="2.6"/><circle cx="24" cy="26" r="2.2"/><circle cx="38" cy="32" r="2.2"/><circle cx="52" cy="40" r="2.6"/><circle cx="56" cy="58" r="2.2"/><circle cx="78" cy="60" r="2.6"/><circle cx="74" cy="42" r="2.2"/></svg></span>
+          <span class="bt"><span class="b1">Merveille d'Ourse</span><span class="b2">Massages bien-être</span></span>
+        </a>
+        <p style="margin-top:14px">Massages bien-être à domicile autour de Dompierre-sur-Yon, et les jeudis au cabinet infirmier de l'Angelmière, La Roche-sur-Yon.</p>
+        <p class="siret">E.I. Olivia Benson-Limes · <span style="white-space:nowrap">SIRET 933 818 312 000 11</span><br />Médiation de la consommation : La Société Médiation Professionnelle, mediateurconsommation-smp.fr</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><p><a href="#approches">Les massages</a></p><p><a href="#tarifs">Tarifs</a></p><p><a href="#olivia">Qui vous accueille</a></p><p><a href="#zone">Où je me déplace</a></p></div>
+      <div class="fcol"><h4>Contact</h4><p><a href="tel:+33686605870">06 86 60 58 70</a></p><p><a href="mailto:merveilledourse@gmail.com">merveilledourse@gmail.com</a></p><p>Dompierre-sur-Yon, Vendée</p><p><a href="#contact">Prendre rendez-vous</a></p></div>
+    </div>
+    <p class="seo">Massage bien-être Dompierre-sur-Yon · Massage à domicile La Roche-sur-Yon · Massage californien, coquillages chauds, hawaïen Lomi Lomi, Deep Tissue · Bons cadeaux massage Vendée.</p>
+  </div>
+</footer>
+
+<div class="demo" id="demo" role="note">
+  <button class="x" type="button" aria-label="Fermer" onclick="document.getElementById('demo').remove()">×</button>
+  <b>Maquette : aperçu non contractuel</b>, réalisée par <b>Nicolas Masset</b> à partir de votre univers. La version finale est <b>100 % sur-mesure</b> (vos photos, vos textes). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a>
+</div>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>40)},{passive:true});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  burger.onclick=function(){var o=menu.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)};
+  menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},1400)});
+  /* ciel étoilé discret de la section nuit (déterministe) */
+  (function(){var s=document.getElementById('stars');if(!s)return;var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  for(var i=0;i<70;i++){var st=document.createElement('i');st.style.left=(rnd()*100)+'%';st.style.top=(rnd()*100)+'%';st.style.opacity=(.25+rnd()*.6).toFixed(2);var sz=(rnd()<.2?3:2);st.style.width=sz+'px';st.style.height=sz+'px';s.appendChild(st)}})();
+  document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();this.innerHTML='<p style="text-align:center;font-size:1rem;padding:22px 8px;line-height:1.7">Ceci est une <b>maquette de démonstration</b> : le formulaire n\'envoie rien.<br>Pour un vrai rendez-vous : <a href="tel:+33686605870" style="font-weight:700;text-decoration:underline">06 86 60 58 70</a> ou <a href="mailto:merveilledourse@gmail.com" style="font-weight:700;text-decoration:underline">merveilledourse@gmail.com</a></p>'});
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}.stars{display:none}</style></noscript>
+</body>
+</html>
