@@ -113,6 +113,10 @@ body.halo-on .halo{opacity:1}
 /* ---------------- Hero ---------------- */
 .hero{position:relative;min-height:100dvh;display:flex;align-items:center;overflow:clip;padding-top:72px}
 .hero-inner{position:relative;z-index:2;width:100%}
+.hero-kicker{
+  margin:0 0 18px;font-size:clamp(.82rem,1.1vw,.95rem);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--acc-txt);font-weight:600;
+}
 .hero h1{
   font-size:clamp(2.7rem,7.2vw,6rem);
   line-height:1;letter-spacing:-.028em;color:var(--ink);
@@ -138,7 +142,8 @@ body.halo-on .halo{opacity:1}
 
 /* entrée hero */
 .js .hero h1 .wd>i{transform:translateY(110%);animation:wordUp .9s var(--ease) forwards}
-.js .hero-sub,.js .hero-ctas{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
+.js .hero-sub,.js .hero-ctas,.js .hero-kicker{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
+.js .hero-kicker{animation-delay:.02s}
 .js .hero-sub{animation-delay:.5s}
 .js .hero-ctas{animation-delay:.62s}
 .js .film{opacity:0;animation:fadeIn 1.4s var(--ease) .3s forwards}

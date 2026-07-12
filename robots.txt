@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /apercus/
+Disallow: /realisations/
+
+Sitemap: https://nicomasset.com/sitemap.xml
