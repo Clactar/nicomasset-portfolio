@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#08090d">
+<title>Æra Drone Production · Vanessa Druel : drone, photographe et scan 3D à Rouen, Normandie</title>
+<meta name="description" content="Vanessa Druel, télépilote de drone professionnelle certifiée DGAC et photographe près de Rouen : photo et vidéo aériennes, inspection, photogrammétrie, portraits, packshot, films, timelapse et relevés scan 3D. Normandie et toute la France.">
+<link rel="preload" href="/assets/fonts/ClashDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   Æra Drone Production · maquette v2 (aperçu non contractuel)
+   Déclinaison de la DA nicomasset.com : nuit d'encre bleutée,
+   accent cobalt unique, Clash Display + Satoshi, cartes 18px,
+   boutons pill, grain, halo curseur.
+   z : halo 30, header 40, menu 50, burger 60, grain 90.
+   ============================================================ */
+
+@font-face{font-family:"Clash Display";src:url("/assets/fonts/ClashDisplay-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Clash Display";src:url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/assets/fonts/Satoshi-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/assets/fonts/Satoshi-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/assets/fonts/Satoshi-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/assets/fonts/Satoshi-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+
+:root{
+  --bg:#08090d;
+  --bg-2:#0d0f16;
+  --surface:#12141d;
+  --ink:#f2f4fa;
+  --ink-soft:#b9bfce;
+  --muted:#8b93a8;
+  --line:rgba(242,244,250,.1);
+  --acc:#4d68ff;
+  --acc-deep:#2b41d6;
+  --acc-txt:#93a4ff;
+  --r-card:18px;
+  --maxw:1280px;
+  --nav-h:72px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Satoshi",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.6;font-size:1.0625rem;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,44px)}
+
+h1,h2,h3{font-family:"Clash Display","Satoshi",sans-serif;font-weight:600;letter-spacing:-.015em;text-wrap:balance}
+p{text-wrap:pretty}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--acc);color:#fff;padding:10px 18px;border-radius:0 0 10px 0;z-index:100}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc-txt);outline-offset:3px;border-radius:6px}
+input:focus-visible,textarea:focus-visible{outline:2px solid var(--acc-txt);outline-offset:2px}
+
+.kicker{
+  font-size:clamp(.8rem,1vw,.92rem);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--acc-txt);font-weight:600;
+}
+
+/* ---------------- Halo curseur + grain ---------------- */
+.halo{
+  position:fixed;left:0;top:0;width:640px;height:640px;z-index:30;
+  pointer-events:none;opacity:0;
+  background:radial-gradient(circle,rgba(77,104,255,.22) 0%,rgba(77,104,255,.06) 38%,transparent 68%);
+  mix-blend-mode:screen;
+  transition:opacity .5s var(--ease);
+  will-change:transform;
+}
+body.halo-on .halo{opacity:1}
+.grain{
+  position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------- Bandeau aperçu ---------------- */
+.previewbar{background:var(--bg-2);border-bottom:1px solid var(--line);padding-block:9px;position:relative}
+.previewbar p{font-size:.76rem;letter-spacing:.05em;color:var(--muted);text-align:center}
+.previewbar b{color:var(--ink-soft);font-weight:700}
+.previewbar a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-soft)}
+.previewbar a:hover{color:var(--acc-txt)}
+
+/* ---------------- Header ---------------- */
+.io-sentinel{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+.hdr{position:sticky;top:0;z-index:40;transition:box-shadow .3s var(--ease)}
+/* le flou vit sur un pseudo-élément : backdrop-filter sur .hdr en ferait
+   le containing block du menu mobile (position:fixed) et le casserait */
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(8,9,13,.78);backdrop-filter:blur(14px);opacity:0;transition:opacity .3s var(--ease)}
+.hdr.scrolled{box-shadow:0 1px 0 var(--line)}
+.hdr.scrolled::before{opacity:1}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
+.brand{display:inline-flex;align-items:center;gap:12px}
+.brand-mark{
+  flex:none;width:34px;height:34px;border-radius:10px;background:var(--ink);
+  display:grid;place-items:center;
+  font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.05rem;color:var(--bg);
+  transition:background .25s;
+}
+.brand:hover .brand-mark{background:var(--acc-txt)}
+.brand-txt{display:flex;flex-direction:column;line-height:1.12}
+.brand-name{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:-.01em}
+.brand-sub{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.menu{display:flex;align-items:center;gap:26px}
+.menu a{font-weight:500;font-size:.94rem;color:var(--ink-soft);transition:color .2s}
+.menu a:hover{color:var(--ink)}
+.menu .nav-cta{color:#fff;background:var(--acc-deep);padding:10px 20px;border-radius:999px;transition:background .2s,transform .2s var(--ease)}
+.menu .nav-cta:hover{background:#3b53e0;color:#fff;transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:44px;height:44px;background:none;border:0;cursor:pointer;z-index:60;position:relative}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+body.menu-open{overflow:hidden}
+
+/* ---------------- Boutons ---------------- */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:700;font-size:.98rem;padding:16px 30px;border-radius:999px;
+  border:1.5px solid transparent;cursor:pointer;overflow:hidden;font-family:inherit;
+  transition:transform .18s var(--ease),background .18s var(--ease),color .18s,border-color .18s,box-shadow .18s var(--ease);
+}
+.btn:active{transform:scale(.97)}
+.btn-solid{background:var(--acc-deep);color:#fff}
+.btn-line{border-color:rgba(242,244,250,.28);color:var(--ink)}
+.btn .btn-fill{position:absolute;inset:0;background:#fff;clip-path:inset(0 0 100% 0);transition:clip-path .32s var(--ease);pointer-events:none}
+.btn span{position:relative;z-index:1}
+@media(hover:hover) and (pointer:fine){
+  .btn-solid:hover{color:var(--bg);box-shadow:0 18px 42px -16px rgba(77,104,255,.7)}
+  .btn-solid:hover .btn-fill{clip-path:inset(0 0 0 0)}
+  .btn-line:hover{border-color:var(--ink)}
+}
+
+/* ---------------- Hero ---------------- */
+.hero{position:relative;margin-top:calc(var(--nav-h) * -1);min-height:100svh;display:flex;align-items:center;overflow:clip}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0}
+.hero-veil{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(100deg,rgba(8,9,13,.95) 0%,rgba(8,9,13,.82) 40%,rgba(8,9,13,.42) 72%,rgba(8,9,13,.62) 100%);
+}
+.hero-veil::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;background:linear-gradient(to bottom,rgba(8,9,13,.85),transparent)}
+.hero-veil::after{content:"";position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(to top,var(--bg),transparent)}
+.hero-inner{position:relative;z-index:2;width:100%;padding-block:calc(var(--nav-h) + clamp(56px,9vh,110px)) clamp(64px,9vh,110px)}
+.hero h1{
+  margin-top:18px;
+  font-size:clamp(2rem,4.6vw,4.1rem);
+  line-height:1.06;letter-spacing:-.025em;color:var(--ink);
+}
+.hero h1 .h1-line{display:block}
+.hero h1 em{font-style:normal;color:var(--acc-txt)}
+.hero h1 .h1-name{
+  display:block;margin-top:20px;
+  font-family:"Satoshi",sans-serif;font-weight:500;
+  font-size:clamp(1rem,1.4vw,1.2rem);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.hero-tagline{
+  margin-top:26px;
+  font-weight:500;font-size:clamp(1.25rem,2.3vw,1.8rem);
+  letter-spacing:-.01em;color:var(--ink);max-width:26ch;
+}
+.hero-services{margin-top:12px;font-size:clamp(.82rem,1.1vw,.95rem);letter-spacing:.16em;text-transform:uppercase;color:var(--acc-txt);font-weight:600}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.hero-badges{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+.hero-badges li{
+  font-size:.82rem;font-weight:500;color:var(--ink-soft);
+  border:1px solid var(--line);border-radius:999px;padding:9px 16px;
+  background:rgba(8,9,13,.55);
+}
+.js .hero-kicker,.js .hero h1,.js .hero-tagline,.js .hero-services,.js .hero-ctas,.js .hero-badges{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
+.js .hero h1{animation-delay:.1s}
+.js .hero-tagline{animation-delay:.24s}
+.js .hero-services{animation-delay:.34s}
+.js .hero-ctas{animation-delay:.46s}
+.js .hero-badges{animation-delay:.58s}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+/* ---------------- Marquee ---------------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:20px;overflow:hidden;white-space:nowrap;background:var(--bg-2)}
+.marquee-track{display:inline-flex;animation:slide 48s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{font-family:"Clash Display",sans-serif;font-weight:500;font-size:1.2rem;color:var(--ink-soft);padding:0 10px}
+.marquee span::after{content:"/";color:var(--acc);margin-left:20px;font-weight:500}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------------- Sections ---------------- */
+section{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.sec-head{max-width:760px;padding-block:clamp(84px,11vw,140px) clamp(38px,5vw,58px)}
+.sec-head h2{margin-top:14px;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.06;letter-spacing:-.02em}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:1.06rem;max-width:58ch}
+.sec-pad{padding-block:0 clamp(84px,11vw,140px)}
+
+/* ---------------- Cartes spotlight (bord lumineux au curseur) ---------------- */
+.spot{--mx:50%;--my:50%;position:relative}
+.spot::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:radial-gradient(320px circle at var(--mx) var(--my),rgba(147,164,255,.85),transparent 42%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  opacity:0;transition:opacity .3s;z-index:2;
+}
+.spot::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(420px circle at var(--mx) var(--my),rgba(77,104,255,.1),transparent 50%);
+}
+@media(hover:hover) and (pointer:fine){
+  .spot:hover::before,.spot:hover::after{opacity:1}
+}
+
+/* ---------------- Prestations ---------------- */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,26px)}
+.svc{
+  display:flex;flex-direction:column;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;
+  transition:transform .28s var(--ease);
+}
+@media(hover:hover) and (pointer:fine){.svc:hover{transform:translateY(-6px)}}
+.svc-media{position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line)}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+@media(hover:hover) and (pointer:fine){.svc:hover .svc-media img{transform:scale(1.05)}}
+.svc-idx{
+  position:absolute;left:14px;top:14px;z-index:1;
+  font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);background:rgba(8,9,13,.72);border:1px solid var(--line);
+  border-radius:999px;padding:6px 13px;
+}
+.svc-media-typo{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+  padding:22px 24px;
+  background:radial-gradient(120% 100% at 85% 0%,rgba(77,104,255,.18),transparent 55%),linear-gradient(165deg,#151827,#0d0f16);
+}
+.svc-media-typo .svc-giga{
+  font-family:"Clash Display",sans-serif;font-weight:600;line-height:.9;
+  font-size:clamp(4rem,7vw,6.4rem);color:transparent;
+  -webkit-text-stroke:1.5px rgba(147,164,255,.38);
+  position:absolute;right:20px;top:16px;pointer-events:none;
+}
+.svc-media-typo .svc-place{font-size:.85rem;color:var(--muted);font-style:italic;max-width:26ch}
+.svc-body{display:flex;flex-direction:column;gap:12px;padding:24px 26px 28px;flex:1}
+.svc-body h3{font-size:1.35rem;letter-spacing:-.01em}
+.svc-body>p{color:var(--ink-soft);font-size:.95rem}
+.svc-list{list-style:none;margin-top:4px}
+.svc-list li{
+  display:flex;align-items:baseline;gap:11px;
+  padding-block:8px;border-top:1px solid var(--line);
+  font-size:.92rem;color:var(--ink-soft);
+}
+.svc-list li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--acc-txt);transform:translateY(-2px)}
+.svc-note{margin-top:clamp(24px,3vw,36px);font-size:.9rem;color:var(--muted);font-style:italic}
+.svc-feat{grid-column:span 2}
+@media(min-width:901px){
+  .svc-feat{flex-direction:row}
+  .svc-feat .svc-media{flex:0 0 52%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line)}
+  .svc-feat .svc-body{justify-content:center}
+}
+
+/* ---------------- Packs (bloc cobalt) ---------------- */
+.packs-sec{position:relative;background:var(--acc-deep);color:#fff;overflow:clip}
+.packs-sec::before{content:"";position:absolute;inset:-30% auto auto -10%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 62%);pointer-events:none}
+.packs-inner{padding-block:clamp(88px,12vw,160px)}
+.packs-inner .kicker{color:#cdd6ff}
+.packs-title{margin-top:14px;font-size:clamp(2rem,4.8vw,3.8rem);line-height:1.08;letter-spacing:-.022em;max-width:22ch}
+.packs-sub{margin-top:22px;max-width:56ch;font-size:1.1rem;color:#dde2ff}
+.packs{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,36px);margin-top:clamp(48px,6vw,80px)}
+.pack{
+  display:flex;flex-direction:column;gap:14px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);
+  border-radius:var(--r-card);padding:30px 28px 32px;
+}
+.pack-n{
+  font-family:"Clash Display",sans-serif;font-weight:600;font-size:clamp(2.4rem,4vw,3.4rem);line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.75);
+}
+.pack h3{font-size:1.22rem;color:#fff;letter-spacing:-.01em}
+.pack p{font-size:.96rem;color:#d4daff;line-height:1.55;flex:1}
+.pack-tag{
+  align-self:flex-start;font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:7px 15px;
+}
+
+/* ---------------- Portfolio ---------------- */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,19vw,236px);grid-auto-flow:dense;gap:clamp(12px,1.6vw,20px)}
+.g-item{
+  position:relative;grid-column:span 2;border-radius:var(--r-card);overflow:hidden;
+  border:1px solid var(--line);background:var(--surface);
+}
+.g-wide{grid-column:span 4}
+.g-tall{grid-row:span 2}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+@media(hover:hover) and (pointer:fine){.g-item:hover img{transform:scale(1.04)}}
+.g-item figcaption{
+  position:absolute;inset:auto 0 0 0;padding:34px 16px 13px;
+  font-size:.8rem;font-weight:500;color:var(--ink-soft);
+  background:linear-gradient(to top,rgba(8,9,13,.88),transparent);
+  opacity:0;transition:opacity .3s;
+}
+@media(hover:hover) and (pointer:fine){.g-item:hover figcaption{opacity:1}}
+@media(hover:none){.g-item figcaption{opacity:1}}
+.g-slot{
+  grid-column:span 4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  text-align:center;border-radius:var(--r-card);
+  border:1px dashed rgba(147,164,255,.42);background:rgba(77,104,255,.04);
+  padding:26px 24px;
+}
+.g-slot .g-plus{font-family:"Clash Display",sans-serif;font-weight:600;font-size:2.4rem;line-height:1;color:var(--acc-txt)}
+.g-slot strong{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.12rem;letter-spacing:-.01em;color:var(--ink)}
+.g-slot p{font-size:.86rem;color:var(--muted);font-style:italic;max-width:32ch}
+.g-slot .g-badge{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc-txt);margin-bottom:2px}
+
+/* ---------------- Blog ---------------- */
+.blog-sec{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px)}
+.post{
+  display:flex;flex-direction:column;gap:12px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:26px 26px 30px;transition:transform .28s var(--ease);
+}
+@media(hover:hover) and (pointer:fine){.post:hover{transform:translateY(-6px)}}
+.post-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.post-cat{font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--acc-txt)}
+.badge{
+  flex:0 0 auto;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;border:1.5px solid rgba(242,244,250,.3);color:var(--ink-soft);
+}
+.post h3{font-size:1.22rem;line-height:1.25;letter-spacing:-.01em}
+.post p{font-size:.93rem;color:var(--muted);line-height:1.55}
+.blog-note{margin-top:clamp(26px,3vw,40px);font-size:.95rem;color:var(--ink-soft);max-width:66ch}
+.blog-note strong{color:var(--ink)}
+
+/* ---------------- À propos ---------------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,88px);align-items:start;padding-block:0 clamp(84px,11vw,140px)}
+.about-copy p{color:var(--ink-soft);margin-bottom:1.05em;max-width:60ch}
+.about-copy p:first-of-type{font-size:1.28rem;color:var(--ink);font-weight:500;line-height:1.5}
+.about-side{display:grid;gap:26px}
+.about-ph{border-radius:var(--r-card);overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 90px -40px rgba(0,0,0,.85)}
+.about-ph img{width:100%;aspect-ratio:9/10;object-fit:cover}
+.about-facts{list-style:none}
+.about-facts li{border-top:1px solid var(--line);padding-block:18px;display:grid;gap:3px;transition:transform .3s var(--ease)}
+.about-facts li:last-child{border-bottom:1px solid var(--line)}
+@media(hover:hover) and (pointer:fine){.about-facts li:hover{transform:translateX(12px)}}
+.about-facts strong{font-weight:700;font-size:1rem;color:var(--ink)}
+.about-facts span{color:var(--muted);font-size:.92rem}
+
+/* ---------------- Contact ---------------- */
+.contact-sec{background:var(--bg-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,72px);align-items:start;padding-block:0 clamp(84px,11vw,140px)}
+.c-direct{display:grid;gap:22px}
+.c-item{display:grid;gap:4px}
+.c-item .c-k{font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--acc-txt)}
+.c-item a{
+  font-family:"Clash Display",sans-serif;font-weight:600;letter-spacing:-.01em;
+  font-size:clamp(1.3rem,2.2vw,1.7rem);color:var(--ink);overflow-wrap:anywhere;
+  transition:color .2s;
+}
+.c-item a:hover{color:var(--acc-txt)}
+.c-item address{font-style:normal;color:var(--ink-soft);font-size:1rem;line-height:1.5}
+.c-assur{
+  margin-top:6px;padding:16px 20px;border-radius:var(--r-card);
+  border:1px solid rgba(147,164,255,.3);background:rgba(77,104,255,.07);
+  font-size:.92rem;color:var(--ink-soft);
+}
+.c-assur strong{color:var(--ink)}
+.cform{
+  display:grid;gap:16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r-card);
+  padding:clamp(24px,3vw,36px);
+}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px}
+.field label{font-size:.85rem;font-weight:700;color:var(--ink)}
+.field input,.field textarea{
+  width:100%;font:inherit;font-size:.96rem;color:var(--ink);
+  background:var(--bg-2);border:1px solid rgba(242,244,250,.22);border-radius:12px;
+  padding:13px 16px;transition:border-color .2s;
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted)}
+.field input:focus,.field textarea:focus{border-color:var(--acc-txt)}
+.form-note{font-size:.85rem;color:var(--muted)}
+.form-sent{
+  padding:16px 20px;border-radius:12px;border:1px solid rgba(147,164,255,.35);
+  background:rgba(77,104,255,.08);font-size:.95rem;color:var(--ink);
+}
+
+/* ---------------- Mentions ---------------- */
+.mentions{border-top:1px solid var(--line);background:var(--bg)}
+.mentions-inner{padding-block:clamp(52px,6vw,80px)}
+.mentions h2{font-size:1.3rem;letter-spacing:-.01em}
+.mentions p{margin-top:14px;font-size:.9rem;color:var(--muted);max-width:78ch;line-height:1.7}
+.mentions strong{color:var(--ink-soft)}
+
+/* ---------------- Footer ---------------- */
+.foot{border-top:1px solid var(--line);padding-block:28px;background:var(--bg-2)}
+.foot-row{display:flex;align-items:center;justify-content:space-between;gap:14px 26px;flex-wrap:wrap;font-size:.88rem;color:var(--muted)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-row a{color:var(--ink-soft);border-bottom:1px solid transparent;transition:border-color .2s}
+.foot-row a:hover{border-color:var(--ink-soft)}
+
+/* ---------------- Reveal ---------------- */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------------- Reduced motion ---------------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .halo,.grain{display:none}
+  .marquee-track{animation:none;display:block;white-space:normal}
+  .marquee{white-space:normal}
+  .js .hero-kicker,.js .hero h1,.js .hero-tagline,.js .hero-services,.js .hero-ctas,.js .hero-badges{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.svc,.post,.about-facts li,.g-item img,.svc-media img{transition:none}
+  .btn .btn-fill{display:none}
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .packs{grid-template-columns:1fr;max-width:560px}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:900px){
+  .menu{
+    position:fixed;inset:0;background:var(--bg);z-index:50;
+    flex-direction:column;justify-content:center;gap:30px;
+    transform:translateY(-100%);visibility:hidden;
+    transition:transform .45s var(--ease),visibility 0s .45s;
+  }
+  .menu.open{transform:none;visibility:visible;transition:transform .45s var(--ease),visibility 0s 0s}
+  .menu a{font-family:"Clash Display",sans-serif;font-size:1.45rem;font-weight:600;color:var(--ink)}
+  .menu .nav-cta{font-size:1.1rem}
+  .burger{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-feat{grid-column:auto}
+  .post-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  body{font-size:1rem}
+  :root{--nav-h:64px}
+  .hero{min-height:auto}
+  .hero h1{font-size:clamp(1.75rem,8.2vw,2.4rem)}
+  .hero-ctas .btn{flex:1 1 100%}
+  .brand-sub{display:none}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(118px,30vw,190px)}
+  .g-item{grid-column:span 1}
+  .g-wide,.g-slot{grid-column:span 2}
+  .frow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="io-sentinel" id="topSentinel" aria-hidden="true"></div>
+<div class="halo" id="halo" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<div class="previewbar" role="note">
+  <div class="wrap">
+    <p>Aperçu non contractuel proposé par <b>Nicolas Masset</b> · <a href="https://nicomasset.com" target="_blank" rel="noopener">nicomasset.com</a></p>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap nav">
+    <a href="#main" class="brand" aria-label="Æra, retour en haut de page">
+      <span class="brand-mark" aria-hidden="true">Æ</span>
+      <span class="brand-txt">
+        <span class="brand-name">Æra</span>
+        <span class="brand-sub">Drone · Photographie · Scan</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#prestations">Prestations</a>
+      <a href="#packs">Packs</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#blog">Blog</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-label="Introduction">
+  <img class="hero-bg" src="https://static.wixstatic.com/media/aba3f4_12122af2a4ed4f2d96750b864e70dd5a~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85/vallee-de-seine-normandie-drone.jpg" alt="La vallée de la Seine en Normandie photographiée par drone, méandres du fleuve entre forêts et prairies" width="1800" height="1100" fetchpriority="high">
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="kicker hero-kicker">Photographe et télépilote de drone professionnelle · Normandie</p>
+    <h1>
+      <span class="h1-line"><em>Æra</em> Drone Production</span>
+      <span class="h1-line"><em>Æra</em> Photographie</span>
+      <span class="h1-line"><em>Æra</em> Scan</span>
+      <span class="h1-name">Vanessa Druel</span>
+    </h1>
+    <h2 class="hero-tagline">L’art de la perspective, du sol au ciel</h2>
+    <p class="hero-services">Photographie · Vidéo · Drone · Scan 3D</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#contact"><span class="btn-fill"></span><span>Demander un devis</span></a>
+      <a class="btn btn-line" href="#portfolio"><span>Voir le portfolio</span></a>
+    </div>
+    <ul class="hero-badges" role="list">
+      <li>Certifiée DGAC · exploitant ED 14188</li>
+      <li>Assurée Atlantas AIG · 2,5 M€</li>
+      <li>Normandie · déplacements dans toute la France</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Photographie aérienne</span><span>Vidéo par drone</span><span>Inspection technique</span><span>Photogrammétrie</span><span>Mariage</span><span>Portrait studio</span><span>Packshot</span><span>Architecture</span><span>Films corporate</span><span>Timelapse</span><span>Suivi de chantier</span><span>Scan 3D</span><span>Jumeaux numériques</span><span>Initiations au drone</span>
+    <span>Photographie aérienne</span><span>Vidéo par drone</span><span>Inspection technique</span><span>Photogrammétrie</span><span>Mariage</span><span>Portrait studio</span><span>Packshot</span><span>Architecture</span><span>Films corporate</span><span>Timelapse</span><span>Suivi de chantier</span><span>Scan 3D</span><span>Jumeaux numériques</span><span>Initiations au drone</span>
+  </div>
+</div>
+
+<!-- ===================== PRESTATIONS ===================== -->
+<section id="prestations" aria-label="Prestations">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Prestations</p>
+      <h2>Six univers, une même exigence.</h2>
+      <p>Du portrait en studio au nuage de points géoréférencé, chaque mission est préparée, cadrée et livrée avec le même soin, par une seule et même interlocutrice.</p>
+    </header>
+
+    <div class="svc-grid sec-pad">
+      <article class="svc spot svc-feat reveal">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_0a860defe146495786e64768bfe14e71~mv2.png/v1/fill/w_1600,h_1000,al_c,q_85/falaises-littoral-drone.jpg" alt="Falaises et littoral photographiés par drone, route côtière et mer turquoise" width="1600" height="1000" loading="lazy">
+          <span class="svc-idx">01 · Drone</span>
+        </div>
+        <div class="svc-body">
+          <h3>Drone</h3>
+          <p>Le cœur d’Æra : la prise de vue et la donnée aériennes, au service de l’image comme de la technique.</p>
+          <ul class="svc-list" role="list">
+            <li>Photo aérienne</li>
+            <li>Vidéo aérienne</li>
+            <li>Inspection technique</li>
+            <li>Photogrammétrie</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc spot reveal">
+        <div class="svc-media svc-media-typo">
+          <span class="svc-giga" aria-hidden="true">02</span>
+          <p class="svc-place">Vos photos prendront place ici</p>
+        </div>
+        <div class="svc-body">
+          <h3>Photographie, particuliers</h3>
+          <p>Les moments et les visages qui comptent, photographiés avec justesse.</p>
+          <ul class="svc-list" role="list">
+            <li>Mariage</li>
+            <li>Événement privé</li>
+            <li>Photographie d’iris</li>
+            <li>Photo d’identité</li>
+            <li>Portraits en studio ou en extérieur</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc spot reveal">
+        <div class="svc-media svc-media-typo">
+          <span class="svc-giga" aria-hidden="true">03</span>
+          <p class="svc-place">Vos photos prendront place ici</p>
+        </div>
+        <div class="svc-body">
+          <h3>Photographie, professionnels</h3>
+          <p>Des images qui portent votre marque, vos équipes et vos réalisations.</p>
+          <ul class="svc-list" role="list">
+            <li>Packshot</li>
+            <li>Corporate</li>
+            <li>Architecture</li>
+            <li>Portraits professionnels en studio</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc spot reveal">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_6a9c9cf6b42c4638864f4606ae0ced8f~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/batiment-entreprise-bord-de-seine-drone.jpg" alt="Bâtiment d’entreprise en bord de Seine, photographié par drone" width="900" height="620" loading="lazy">
+          <span class="svc-idx">04 · Films</span>
+        </div>
+        <div class="svc-body">
+          <h3>Films et timelapse</h3>
+          <p>Raconter un lieu, un métier, un chantier : du tournage à la post-production.</p>
+          <ul class="svc-list" role="list">
+            <li>Films corporate</li>
+            <li>Suivi de chantier</li>
+            <li>Tourisme</li>
+            <li>Mise en valeur des entreprises, des métiers et des collaborateurs</li>
+            <li>Clips musicaux</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc spot reveal">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_64720cb57ced4795a8aaa86fee57bf90~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/nuage-de-points-photogrammetrie.jpg" alt="Nuage de points issu d’un relevé par photogrammétrie, bâtisse restituée en 3D" width="900" height="620" loading="lazy">
+          <span class="svc-idx">05 · Scan 3D</span>
+        </div>
+        <div class="svc-body">
+          <h3>Scan 3D et jumeaux numériques</h3>
+          <p>Le relevé TQC (tel que construit) par scan Faro, pour une connaissance exacte de l’existant.</p>
+          <ul class="svc-list" role="list">
+            <li>Relevé TQC par scan Faro</li>
+            <li>Jumeaux numériques</li>
+            <li>Réalisation de plans</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc spot reveal">
+        <div class="svc-media svc-media-typo">
+          <span class="svc-giga" aria-hidden="true">06</span>
+        </div>
+        <div class="svc-body">
+          <h3>Initiations au drone</h3>
+          <p>Vanessa propose également des initiations au drone : la découverte et la prise en main du pilotage, dans un cadre réglementaire sécurisé.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="svc-note sec-pad reveal">Ces listes ne sont pas exhaustives : chaque demande particulière est étudiée, et fait l’objet d’un devis sur mesure.</p>
+  </div>
+</section>
+
+<!-- ===================== PACKS ===================== -->
+<section id="packs" class="packs-sec" aria-label="Packs et solutions complètes">
+  <div class="wrap packs-inner">
+    <p class="kicker">Solutions complètes</p>
+    <h2 class="packs-title">Un seul interlocuteur, du sol au ciel.</h2>
+    <p class="packs-sub">Trois formules pour les projets qui mêlent plusieurs regards. Chaque pack est établi sur devis, selon le lieu, la durée et les livrables attendus.</p>
+    <ol class="packs" role="list">
+      <li class="pack reveal">
+        <span class="pack-n" aria-hidden="true">1</span>
+        <h3>Photo, vidéo et drone</h3>
+        <p>Un reportage complet, au sol et en vol : les images fixes, la vidéo et les vues aériennes d’un même projet, cohérentes du cadrage à la post-production.</p>
+        <span class="pack-tag">Sur devis</span>
+      </li>
+      <li class="pack reveal">
+        <span class="pack-n" aria-hidden="true">2</span>
+        <h3>Suivi de chantier complet</h3>
+        <p>Des décollages drone réguliers, des photos au sol, un timelapse et une vidéo : la mémoire complète de votre chantier, des fondations à la livraison.</p>
+        <span class="pack-tag">Sur devis</span>
+      </li>
+      <li class="pack reveal">
+        <span class="pack-n" aria-hidden="true">3</span>
+        <h3>Scan 3D et relevé drone</h3>
+        <p>Le relevé scan 3D au sol et le relevé par drone, assemblés en post-production : un jumeau numérique complet, jusque dans les zones inaccessibles.</p>
+        <span class="pack-tag">Sur devis</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section id="portfolio" aria-label="Portfolio">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2>Le regard Æra.</h2>
+      <p>Une sélection de prises de vues réalisées par Vanessa Druel. Le site final accueillera ses galeries complètes, classées par univers.</p>
+    </header>
+
+    <div class="gal sec-pad">
+      <figure class="g-item g-wide reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_764d1865c1a044738df7a60ff6060ffe~mv2.jpg/v1/fill/w_1800,h_720,al_t,q_85/panorama-rouen-drone.jpg" alt="Panorama aérien de Rouen, ses ponts, ses quais et sa cathédrale" width="1800" height="720" loading="lazy">
+        <figcaption>Rouen, panorama aérien</figcaption>
+      </figure>
+      <figure class="g-item g-tall reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_fb860a582b8444dd9f649d2834fa6a62~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85/coucher-de-soleil-station-balneaire-drone.jpg" alt="Coucher de soleil sur une station balnéaire de la côte normande, vu par drone" width="900" height="1100" loading="lazy">
+        <figcaption>Coucher de soleil sur la côte</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_2df8f61139e44c0581adc91a226f1ac3~mv2.jpg/v1/fill/w_900,h_620,al_t,q_85/maison-normande-vue-par-drone.jpg" alt="Maison normande et son jardin vus par drone" width="900" height="620" loading="lazy">
+        <figcaption>Immobilier, maison normande</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_4a7c9d5adffa403b98ec128ddda86c8e~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/orthophotographie-facade.jpg" alt="Orthophotographie d’une façade, image redressée sans déformation" width="900" height="620" loading="lazy">
+        <figcaption>Orthophotographie de façade</figcaption>
+      </figure>
+      <figure class="g-item g-wide reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_6f07cad6e96c433d9c80c4d0135a4e96~mv2.jpg/v1/fill/w_1800,h_720,al_c,q_85/coeur-de-ville-normand-drone.jpg" alt="Cœur de ville normand au drone, villas et rues arborées à la lumière du soir" width="1800" height="720" loading="lazy">
+        <figcaption>Cœur de ville normand</figcaption>
+      </figure>
+      <figure class="g-item g-tall reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_4cd10df79b6d46d482b91680e623f044~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85/coeur-dessine-sur-le-sable-drone.jpg" alt="Cœur ornementé et message de bienvenue dessinés sur le sable d’une plage, photographiés par drone" width="900" height="1100" loading="lazy">
+        <figcaption>Événementiel, œuvre sur le sable</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_13790819611e4d979cbe576171ade80b~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/maquette-3d-texturee-photogrammetrie.jpg" alt="Maquette 3D texturée d’une maison à colombages, issue de photogrammétrie" width="900" height="620" loading="lazy">
+        <figcaption>Maquette 3D texturée, photogrammétrie</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_1bacf655398842ad9f4553a6f5334500~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/parcelles-agricoles-drone.jpg" alt="Parcelles agricoles vues du ciel, traces de passage dans les cultures" width="900" height="620" loading="lazy">
+        <figcaption>Agriculture, parcelles</figcaption>
+      </figure>
+      <figure class="g-item g-wide reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_5d25845327c149afbaa038f55823947b~mv2.jpg/v1/fill/w_1800,h_900,al_c,q_85/realite-virtuelle-360-village.jpg" alt="Vue aérienne à 360 degrés d’un village, en projection sphérique" width="1800" height="900" loading="lazy">
+        <figcaption>Vue immersive à 360 degrés</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_34db091b379949cc898d20868d09d828~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/monument-en-restauration-vue-zenithale-drone.jpg" alt="Tour d’un monument historique sous échafaudage, vue zénithale par drone" width="900" height="620" loading="lazy">
+        <figcaption>Inspection d’ouvrage en restauration</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <img src="https://static.wixstatic.com/media/aba3f4_335748759c084f23993eef744c6cc71e~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/terrassement-chantier-drone.jpg" alt="Terrassement d’un chantier vu du ciel, engins à l’œuvre sur la parcelle" width="900" height="620" loading="lazy">
+        <figcaption>Suivi de chantier</figcaption>
+      </figure>
+      <div class="g-slot reveal">
+        <span class="g-badge">Emplacement</span>
+        <span class="g-plus" aria-hidden="true">+</span>
+        <strong>Vos galeries mariage, portrait et studio</strong>
+        <p>Vos photos prendront place ici, dans des galeries dédiées à chaque univers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOG ===================== -->
+<section id="blog" class="blog-sec" aria-label="Blog">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2>Carnet de bord.</h2>
+      <p>Chantiers suivis, coulisses de relevés, conseils de préparation : des articles qui montrent le métier et nourrissent le référencement du site.</p>
+    </header>
+
+    <div class="post-grid">
+      <article class="post spot reveal">
+        <div class="post-top">
+          <p class="post-cat">Chantier</p>
+          <span class="badge">Exemple</span>
+        </div>
+        <h3>Suivre un chantier par drone : ce que vos clients voient enfin</h3>
+        <p>Pourquoi des décollages réguliers changent la communication d’un chantier, de la première pierre à la livraison.</p>
+      </article>
+      <article class="post spot reveal">
+        <div class="post-top">
+          <p class="post-cat">Scan 3D</p>
+          <span class="badge">Exemple</span>
+        </div>
+        <h3>Dans les coulisses d’un relevé scan 3D, du nuage de points au plan</h3>
+        <p>Comment un scan Faro devient un jumeau numérique exploitable, et à quels projets ce relevé rend service.</p>
+      </article>
+      <article class="post spot reveal">
+        <div class="post-top">
+          <p class="post-cat">Portrait</p>
+          <span class="badge">Exemple</span>
+        </div>
+        <h3>Bien préparer sa séance de portrait professionnel en studio</h3>
+        <p>Tenue, lumière, posture : quelques repères simples pour arriver serein le jour de la séance.</p>
+      </article>
+    </div>
+
+    <p class="blog-note sec-pad reveal"><strong>Articles présentés à titre d’exemple.</strong> Sur le site final, Vanessa rédige, publie et modifie ses articles elle-même, depuis un espace d’édition simple, sans WordPress.</p>
+  </div>
+</section>
+
+<!-- ===================== À PROPOS ===================== -->
+<section id="apropos" aria-label="À propos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2>Vanessa Druel, du studio au ciel.</h2>
+    </header>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>Photographe et télépilote de drone professionnelle, Vanessa Druel conjugue deux regards : celui du studio et celui du ciel.</p>
+        <p>Télépilote certifiée DGAC (exploitant ED 14188), elle prépare chaque vol dans le respect de la réglementation aérienne, et chaque mission est couverte par une assurance Atlantas AIG à hauteur de 2 500 000 €. Au sol, elle photographie les personnes, les lieux et les objets avec la même exigence de lumière et de composition.</p>
+        <p>Basée à La Vaupalière, aux portes de Rouen, elle intervient en Normandie et se déplace dans toute la France. Chaque projet est mené de bout en bout, du repérage à la post-production, avec une interlocutrice unique et des livrables soignés.</p>
+      </div>
+      <div class="about-side reveal">
+        <div class="about-ph">
+          <img src="https://static.wixstatic.com/media/aba3f4_ef17460ccfef41dbb191c4e805801575~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85/trois-mats-rouen-drone.jpg" alt="Trois mâts sur la Seine à Rouen à la lumière dorée, prise de vue par drone de Vanessa Druel" width="900" height="1100" loading="lazy">
+        </div>
+        <ul class="about-facts" role="list">
+          <li><strong>La Vaupalière (76)</strong><span>Aux portes de Rouen</span></li>
+          <li><strong>Certifiée DGAC</strong><span>Télépilote professionnelle, exploitant ED 14188</span></li>
+          <li><strong>Assurée Atlantas AIG</strong><span>À hauteur de 2 500 000 €</span></li>
+          <li><strong>Normandie et toute la France</strong><span>Déplacements selon votre projet</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact-sec" aria-label="Contact">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2>Parlons de votre projet.</h2>
+      <p>Décrivez votre besoin : lieu, période, livrable attendu. Vanessa vous répond avec une proposition sur mesure, et le devis est gratuit.</p>
+    </header>
+    <div class="contact-grid">
+      <div class="c-direct reveal">
+        <div class="c-item">
+          <span class="c-k">Téléphone</span>
+          <a href="tel:+33786874177">07 86 87 41 77</a>
+        </div>
+        <div class="c-item">
+          <span class="c-k">Email</span>
+          <a href="mailto:aera-drone@orange.fr">aera-drone@orange.fr</a>
+        </div>
+        <div class="c-item">
+          <span class="c-k">Adresse</span>
+          <address>1301 route de Duclair<br>76150 La Vaupalière</address>
+        </div>
+        <p class="c-assur"><strong>Chaque vol est préparé et assuré.</strong> Æra Drone Production est assurée chez Atlantas AIG à hauteur de 2 500 000 €, et respecte les délais réglementaires de déclaration propres à chaque zone de vol.</p>
+      </div>
+      <form class="cform reveal" id="cform" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="f-nom">Votre nom</label>
+            <input id="f-nom" name="nom" type="text" autocomplete="name" placeholder="Marie Lefebvre">
+          </div>
+          <div class="field">
+            <label for="f-contact">Votre email ou téléphone</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="marie@exemple.fr">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-projet">Votre projet</label>
+          <textarea id="f-projet" name="projet" rows="5" placeholder="Un exemple : suivi mensuel d’un chantier près de Rouen, photos au sol et vues par drone"></textarea>
+        </div>
+        <button class="btn btn-solid" type="submit"><span class="btn-fill"></span><span>Envoyer ma demande</span></button>
+        <p class="form-sent" id="formNote" hidden>Ce formulaire est une démonstration : il n’envoie aucun message. Pour une vraie demande, appelez le <a href="tel:+33786874177"><strong>07 86 87 41 77</strong></a> ou écrivez à <a href="mailto:aera-drone@orange.fr"><strong>aera-drone@orange.fr</strong></a>.</p>
+        <p class="form-note">Formulaire de démonstration : sur le site final, il transmettra votre demande directement à Vanessa.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENTIONS ===================== -->
+<section id="mentions" class="mentions" aria-label="Mentions, confidentialité et CGV">
+  <div class="wrap mentions-inner">
+    <h2>Mentions, confidentialité et CGV</h2>
+    <p><strong>Æra Drone Production · Vanessa Druel</strong> · 1301 route de Duclair, 76150 La Vaupalière · SIRET 899 899 082 00015 · Télépilote professionnelle certifiée DGAC, exploitant ED 14188 · Assurée Atlantas AIG à hauteur de 2 500 000 €. Photographies : Æra Drone Production, tous droits réservés.</p>
+    <p>Cette page est une maquette de démonstration. Le site final comprendra une page <strong>Politique de confidentialité</strong> conforme au RGPD (traitement des données du formulaire de contact) ainsi que des <strong>Conditions générales de vente</strong> consultables à tout moment : les liens du pied de page y conduiront.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p>© 2026 Æra Drone Production · Vanessa Druel · SIRET 899 899 082 00015</p>
+    <nav class="foot-links" aria-label="Liens légaux">
+      <a href="#mentions">Politique de confidentialité</a>
+      <a href="#mentions">CGV</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  new IntersectionObserver(function(entries){
+    hdr.classList.toggle('scrolled',!entries[0].isIntersecting);
+  }).observe(document.getElementById('topSentinel'));
+
+  var menu=document.getElementById('menu');
+  var burger=document.getElementById('burger');
+  function setMenu(open){
+    menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+    document.body.classList.toggle('menu-open',open);
+  }
+  burger.addEventListener('click',function(){
+    setMenu(!menu.classList.contains('open'));
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){setMenu(false)});
+  });
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')});
+    },1600);
+  });
+
+  var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(fine&&!reduced){
+    var halo=document.getElementById('halo');
+    addEventListener('mousemove',function(e){
+      halo.style.transform='translate('+(e.clientX-320)+'px,'+(e.clientY-320)+'px)';
+      document.body.classList.add('halo-on');
+    },{passive:true});
+    document.querySelectorAll('.spot').forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        card.style.setProperty('--mx',(e.clientX-r.left)+'px');
+        card.style.setProperty('--my',(e.clientY-r.top)+'px');
+      },{passive:true});
+    });
+  }
+
+  var form=document.getElementById('cform');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('formNote').hidden=false;
+  });
+})();
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
