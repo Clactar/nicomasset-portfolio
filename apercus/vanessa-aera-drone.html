@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#0a111f" />
+<title>Æra Drone Production : imagerie technique aérienne par drone à Rouen, Normandie</title>
+<meta name="description" content="Æra Drone Production, télépilote professionnelle certifiée DGAC près de Rouen : immobilier, inspection technique, suivi de chantier, photogrammétrie, orthophotographie, réalité virtuelle 360° et agriculture. Déplacements dans toute la France." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* Palette « vol de nuit » : bleu nuit profond + cyan signal (accent unique).
+     Rayons courts (cartes 10px, chips 4px, boutons 6px) : registre technique,
+     volontairement distinct des maquettes précédentes. */
+  :root{
+    --bg:#0a111f; --bg2:#0d1626; --panel:#121d31; --panel2:#16233b;
+    --txt:#e9f0f7; --mut:#a3b2c5; --mut2:#7e8fa3; --mut3:#8fa0b4;
+    --cyan:#54d6ef; --cyan-l:#8ce6f6; --cyan-ink:#06222c;
+    --cyan-dim:rgba(84,214,239,.12);
+    --line:rgba(233,240,247,.14); --line-soft:rgba(233,240,247,.07);
+    --ease:cubic-bezier(.22,.7,.25,1); --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--cyan);color:var(--cyan-ink)}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .disp{font-family:"Space Grotesk","Inter",sans-serif;font-weight:600;line-height:1.06;letter-spacing:-.015em}
+  .disp em{font-style:normal;color:var(--cyan)}
+  .mono{font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mut3)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:.88rem;letter-spacing:.01em;padding:15px 26px;border-radius:6px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+  .btn:active{transform:translateY(1px)}
+  .btn-cyan{background:var(--cyan);color:var(--cyan-ink)}
+  .btn-cyan:hover{background:var(--cyan-l)}
+  .btn-ghost{border-color:rgba(233,240,247,.4);color:var(--txt);background:transparent}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan-l)}
+  .ico{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* BANDEAU APERÇU (discret, en haut, dans le flux) */
+  .previewbar{background:var(--bg2);border-bottom:1px solid var(--line-soft);padding:9px 0;position:relative;z-index:61}
+  .previewbar .wrap{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;text-align:center}
+  .previewbar p{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.06em;color:var(--mut3)}
+  .previewbar b{color:var(--cyan);font-weight:500}
+  .previewbar a{text-decoration:underline;color:var(--mut)}
+  .previewbar a:hover{color:var(--cyan-l)}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:60;transition:background .3s,box-shadow .3s}
+  header.scrolled{background:rgba(10,17,31,.92);box-shadow:0 1px 0 var(--line-soft)}
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:15px}
+  .brand{display:flex;flex-direction:column;line-height:1.05}
+  .brand .b1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.28rem;color:var(--txt);letter-spacing:-.01em}
+  .brand .b1 span{color:var(--cyan)}
+  .brand .b2{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut3);margin-top:4px}
+  .menu{display:flex;gap:26px;align-items:center}
+  .menu a{font-size:.87rem;font-weight:500;color:var(--txt);opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--cyan-l)}
+  .menu a.cta{padding:11px 20px;border-radius:6px;background:var(--cyan);color:var(--cyan-ink);font-weight:600;opacity:1}
+  .menu a.cta:hover{background:var(--cyan-l);color:var(--cyan-ink)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;padding:6px;position:relative}
+  .burger span{width:26px;height:2px;background:var(--txt);transition:.3s var(--ease)}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO : image aérienne pleine largeur + télémétrie */
+  .hero{position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center;padding:96px 0 150px}
+  .hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,17,31,.94) 0%,rgba(10,17,31,.78) 42%,rgba(10,17,31,.3) 75%,rgba(10,17,31,.55) 100%)}
+  .hero .veil::after{content:"";position:absolute;inset:auto 0 0 0;height:170px;background:linear-gradient(to top,var(--bg),transparent)}
+  .hero .grid-deco{position:absolute;inset:0;background-image:linear-gradient(rgba(233,240,247,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(233,240,247,.045) 1px,transparent 1px);background-size:90px 90px;pointer-events:none;mask-image:linear-gradient(to bottom,transparent,black 20%,black 80%,transparent)}
+  .hero .wrap{position:relative}
+  .hero-coord{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;padding:7px 14px;border:1px solid var(--line);border-radius:4px;background:rgba(10,17,31,.55)}
+  .hero-coord .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+  .hero h1{font-size:clamp(2.4rem,5.4vw,4rem);max-width:15ch;margin-bottom:.4em}
+  .hero .wink{font-size:.95rem;font-style:italic;color:var(--mut);margin-bottom:1.2em}
+  .hero .lead{font-size:1.1rem;color:var(--mut);max-width:520px;margin-bottom:2.1em}
+  .hero .row{display:flex;gap:13px;flex-wrap:wrap}
+
+  /* TÉLÉMÉTRIE : bandeau certifications ancré sous le hero */
+  .telem{position:relative;margin-top:-78px;z-index:5}
+  .telem .box{display:grid;grid-template-columns:repeat(4,1fr);background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .telem .cell{padding:22px 24px;border-left:1px solid var(--line-soft)}
+  .telem .cell:first-child{border-left:0}
+  .telem .cell .k{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:7px}
+  .telem .cell .v{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.02rem;line-height:1.3;color:var(--txt)}
+  .telem .cell .s{font-size:.8rem;color:var(--mut2);margin-top:4px;color:var(--mut3)}
+
+  section{padding:clamp(72px,9vw,110px) 0;scroll-margin-top:80px}
+  .head{max-width:700px;margin-bottom:52px}
+  .head h2{font-size:clamp(1.85rem,4vw,2.7rem);margin-bottom:.4em}
+  .head p{color:var(--mut);font-size:1.02rem}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
+
+  /* PRESTATIONS : grille de marchés */
+  .prest{padding-top:clamp(56px,7vw,84px)}
+  .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .p-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .3s var(--ease),border-color .3s}
+  .p-card:hover{transform:translateY(-4px);border-color:rgba(84,214,239,.45)}
+  .p-card .im{position:relative;overflow:hidden}
+  .p-card .im img{width:100%;height:200px;object-fit:cover;object-position:center top;transition:transform .5s var(--ease)}
+  .p-card:hover .im img{transform:scale(1.04)}
+  .p-card .im .idx{position:absolute;left:12px;top:12px;font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.12em;color:var(--txt);background:rgba(10,17,31,.78);border:1px solid var(--line);border-radius:4px;padding:4px 9px}
+  .p-card .bd{padding:22px 24px 26px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .p-card h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.18rem;letter-spacing:-.01em}
+  .p-card p{color:var(--mut);font-size:.92rem}
+
+  /* VR 360 : bande immersive */
+  .vr{position:relative;border-radius:10px;overflow:hidden;margin-top:20px;min-height:420px;display:flex;align-items:center}
+  .vr>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .vr .veil{position:absolute;inset:0;background:linear-gradient(95deg,rgba(10,17,31,.9) 0%,rgba(10,17,31,.72) 44%,rgba(10,17,31,.18) 100%)}
+  .vr .txt{position:relative;padding:52px 54px;max-width:600px}
+  .vr h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px;letter-spacing:-.01em}
+  .vr p{color:#c9d5e2;font-size:.98rem;margin-bottom:20px}
+
+  /* AUDIOVISUEL / ÉVÉNEMENTIEL : duo sol et vol */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+  .duo .d-card{position:relative;border-radius:10px;overflow:hidden;min-height:320px;display:flex;align-items:flex-end}
+  .duo .d-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .duo .d-card .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,17,31,.94) 0%,rgba(10,17,31,.4) 55%,rgba(10,17,31,.15) 100%)}
+  .duo .d-card .txt{position:relative;padding:26px 28px}
+  .duo .d-card h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.22rem;margin-bottom:7px}
+  .duo .d-card p{color:#c9d5e2;font-size:.92rem;max-width:440px}
+
+  /* MÉTHODE : 4 engagements numérotés */
+  .methode{background:var(--bg2);border-block:1px solid var(--line-soft)}
+  .m-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .m-cell{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:26px 26px 30px;position:relative}
+  .m-cell .num{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;color:var(--cyan);display:block;margin-bottom:16px}
+  .m-cell h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.12rem;margin-bottom:9px}
+  .m-cell p{color:var(--mut);font-size:.9rem}
+
+  /* À PROPOS : les Drones de Dame */
+  .apropos-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+  .apropos .story p{color:var(--mut);font-size:1.02rem;margin-bottom:15px;max-width:560px}
+  .apropos .story b{color:var(--txt);font-weight:600}
+  .apropos h2{font-size:clamp(1.85rem,4vw,2.7rem);margin-bottom:.5em}
+  .apropos .quote{margin:24px 0;padding:18px 22px;border-left:2px solid var(--cyan);background:var(--cyan-dim);border-radius:0 10px 10px 0;font-family:"Space Grotesk",sans-serif;font-size:1.08rem;color:var(--txt)}
+  .apropos .pilote{display:flex;gap:16px;align-items:flex-start;margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+  .apropos .pilote .badge{flex:none;width:52px;height:52px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;color:var(--cyan)}
+  .apropos .pilote .badge svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .apropos .pilote b{display:block;font-family:"Space Grotesk",sans-serif;font-size:1.05rem;font-weight:600}
+  .apropos .pilote .role{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin:3px 0 8px}
+  .apropos .pilote p{color:var(--mut);font-size:.93rem;max-width:460px}
+  .apropos .ph{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 40px 80px -44px rgba(0,0,0,.85)}
+  .apropos .ph img{width:100%;height:600px;object-fit:cover}
+  .apropos .ph .cap{position:absolute;left:14px;bottom:14px;font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.1em;color:var(--txt);background:rgba(10,17,31,.78);border:1px solid var(--line);border-radius:4px;padding:5px 10px}
+
+  /* ZONE D'INTERVENTION */
+  .zonesec{padding-bottom:0}
+  .zone-band{position:relative;min-height:440px;display:flex;align-items:center;overflow:hidden}
+  .zone-band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+  .zone-band .veil{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,17,31,.92) 0%,rgba(10,17,31,.66) 48%,rgba(10,17,31,.25) 100%)}
+  .zone-band .veil::before{content:"";position:absolute;inset:0 0 auto 0;height:120px;background:linear-gradient(to bottom,var(--bg),transparent)}
+  .zone-band .veil::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(to top,var(--bg),transparent)}
+  .zone-band .wrap{position:relative;width:100%}
+  .zone-band .txt{max-width:560px;padding:64px 0}
+  .zone-band h2{font-size:clamp(1.85rem,4vw,2.6rem);margin-bottom:.45em}
+  .zone-band p{color:#c9d5e2;font-size:1rem;margin-bottom:14px}
+  .zone-band .pins{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .zone-band .pin{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--txt);background:rgba(10,17,31,.72);border:1px solid var(--line);border-radius:4px;padding:8px 13px}
+  .zone-band .pin svg{width:13px;height:13px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* CONTACT */
+  .contact{background:var(--bg2);border-top:1px solid var(--line-soft)}
+  .c-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+  .c-left h2{font-size:clamp(1.85rem,4vw,2.7rem);margin-bottom:.4em}
+  .c-left>p{color:var(--mut);font-size:1.02rem;max-width:440px;margin-bottom:26px}
+  .direct{display:grid;gap:13px}
+  .direct a,.direct .adr{display:inline-flex;align-items:flex-start;gap:12px;font-weight:600;font-size:1.02rem;color:var(--txt)}
+  .direct a:hover{color:var(--cyan-l)}
+  .direct .ico{width:18px;height:18px;color:var(--cyan);margin-top:4px}
+  .direct .adr span{font-weight:400;color:var(--mut)}
+  .c-note{margin-top:26px;padding:18px 20px;border-radius:10px;background:var(--cyan-dim);border:1px solid rgba(84,214,239,.3);font-size:.92rem;color:var(--txt)}
+  .c-note b{color:var(--cyan-l)}
+  .socials{display:flex;gap:12px;margin-top:24px}
+  .socials a{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:9px 15px;transition:.2s}
+  .socials a:hover{color:var(--cyan-l);border-color:rgba(84,214,239,.45)}
+  form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:34px 32px;display:grid;gap:15px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  label.lbl{font-size:.82rem;font-weight:600;color:var(--txt);display:block;margin-bottom:6px}
+  input,textarea{width:100%;font:inherit;font-size:.95rem;color:var(--txt);background:var(--bg);border:1px solid rgba(233,240,247,.28);border-radius:6px;padding:13px 15px;transition:border-color .2s}
+  input::placeholder,textarea::placeholder{color:#71819a}
+  input:focus,textarea:focus{border-color:var(--cyan);outline:none}
+  .formdemo{margin-top:14px;font-size:.82rem;color:var(--mut3)}
+  .formdemo b{color:var(--mut)}
+
+  /* FOOTER */
+  footer{background:#070d18;color:var(--mut);padding:56px 0 40px}
+  .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px}
+  .fcol h4{font-family:"Space Grotesk",sans-serif;color:var(--txt);font-size:.95rem;margin-bottom:14px;font-weight:600}
+  .fcol p{font-size:.9rem;margin-bottom:8px}
+  .fcol a:hover{color:var(--cyan-l)}
+  .fnote{margin-top:14px;font-size:.78rem;color:var(--mut3);line-height:1.7}
+  .fnote b{color:var(--mut)}
+  .flegal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft);font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--mut3);display:flex;flex-wrap:wrap;gap:8px 22px}
+
+  /* RÉVÉLATIONS AU SCROLL */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .p-card,.btn,.p-card .im img{transition:none}
+  }
+
+  @media (max-width:1020px){
+    .menu{position:fixed;inset:0;z-index:55;background:var(--bg);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s}
+    .menu.open{transform:none;visibility:visible;transition:transform .35s var(--ease),visibility 0s 0s}
+    body.menu-open{overflow:hidden}
+    .menu a{font-size:1.2rem}
+    .burger{display:flex}
+    .telem .box{grid-template-columns:1fr 1fr}
+    .telem .cell{border-top:1px solid var(--line-soft)}
+    .telem .cell:nth-child(-n+2){border-top:0}
+    .telem .cell:nth-child(odd){border-left:0}
+    .p-grid{grid-template-columns:1fr 1fr}
+    .m-grid{grid-template-columns:1fr 1fr}
+    .apropos-grid{grid-template-columns:1fr;gap:40px}
+    .apropos .ph img{height:440px}
+    .c-grid{grid-template-columns:1fr;gap:36px}
+  }
+  @media (max-width:768px){
+    .wrap{padding:0 20px}
+    .hero{min-height:0;padding:72px 0 150px}
+    .hero .veil{background:linear-gradient(170deg,rgba(10,17,31,.92) 0%,rgba(10,17,31,.72) 55%,rgba(10,17,31,.55) 100%)}
+    .telem .box{grid-template-columns:1fr}
+    .telem .cell{border-left:0;border-top:1px solid var(--line-soft);padding:18px 20px}
+    .telem .cell:first-child{border-top:0}
+    .p-grid{grid-template-columns:1fr}
+    .vr{min-height:0}
+    .vr .txt{padding:40px 24px}
+    .duo{grid-template-columns:1fr}
+    .duo .d-card{min-height:280px}
+    .m-grid{grid-template-columns:1fr}
+    .apropos .ph img{height:380px}
+    .zone-band .txt{padding:56px 0}
+    .frow{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr;gap:30px}
+  }
+</style>
+</head>
+<body>
+<div id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:60px;pointer-events:none"></div>
+
+<div class="previewbar" role="note">
+  <div class="wrap">
+    <p>Aperçu non contractuel proposé par <b>Nicolas Masset</b>, développeur indépendant · <a href="mailto:nicolas.masset@icloud.com">nicolas.masset@icloud.com</a></p>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="Æra Drone Production, retour en haut">
+      <span class="b1">Æra <span>Drone</span></span>
+      <span class="b2">Production · Imagerie aérienne</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#prestations">Prestations</a>
+      <a href="#methode">Engagements</a>
+      <a href="#apropos">Qui pilote ?</a>
+      <a href="#zone">Zone d'intervention</a>
+      <a class="cta" href="#contact">Demander un devis</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" aria-label="Introduction">
+  <img class="bgimg" src="https://static.wixstatic.com/media/aba3f4_12122af2a4ed4f2d96750b864e70dd5a~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85/vallee-de-seine-normandie-drone.jpg" alt="La vallée de la Seine en Normandie photographiée par drone, entre forêts, prairies et fleuve" width="1800" height="1100" fetchpriority="high" />
+  <div class="veil" aria-hidden="true"></div>
+  <div class="grid-deco" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="hero-coord mono"><span class="dot" aria-hidden="true"></span>49.5° N · 1.0° E · La Vaupalière, Normandie</p>
+    <h1 class="disp">La Terre est plus belle <em>vue du ciel</em></h1>
+    <p class="wink">Et d'en bas, ce n'est pas mal non plus...</p>
+    <p class="lead">Æra Drone Production met l'imagerie technique aérienne au service de vos projets : immobilier, inspection, chantiers, relevés 3D, prises de vues au sol comme en vol.</p>
+    <div class="row">
+      <a class="btn btn-cyan" href="#contact">Demander un devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#prestations">Découvrir les prestations</a>
+    </div>
+  </div>
+</section>
+
+<div class="telem" aria-label="Certifications et garanties">
+  <div class="wrap">
+    <div class="box reveal">
+      <div class="cell">
+        <p class="k">Certification</p>
+        <p class="v">DGAC ED 14188</p>
+        <p class="s">Télépilote professionnelle certifiée</p>
+      </div>
+      <div class="cell">
+        <p class="k">Assurance</p>
+        <p class="v">Atlantas AIG · 2,5 M€</p>
+        <p class="s">Chaque mission couverte</p>
+      </div>
+      <div class="cell">
+        <p class="k">Matériel</p>
+        <p class="v">Capteurs 20 MP · 4K/UHD</p>
+        <p class="s">Tournage au sol jusqu'en 4K/60 ips</p>
+      </div>
+      <div class="cell">
+        <p class="k">Réglementation</p>
+        <p class="v">Déclarations de vol</p>
+        <p class="s">Missions menées en toute sécurité</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="prest" id="prestations" aria-label="Prestations">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Prestations</span>
+      <h2 class="disp">Un drone, six terrains <em>d'intervention</em></h2>
+      <p>De la photographie immobilière au nuage de points géoréférencés : des livrables techniques et esthétiques, gérés de bout en bout, sans intermédiaire.</p>
+    </div>
+    <div class="p-grid">
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/aba3f4_2df8f61139e44c0581adc91a226f1ac3~mv2.jpg/v1/fill/w_900,h_620,al_t,q_85/maison-normande-vue-par-drone.jpg" alt="Maison normande et son jardin photographiés par drone pour une vente immobilière" width="900" height="620" loading="lazy" />
+          <span class="idx">01 / IMMO</span>
+        </div>
+        <div class="bd">
+          <h3>Immobilier</h3>
+          <p>Des vues aériennes qui replacent votre bien dans son environnement, valorisent jardins et dépendances, et créent le coup de cœur qui facilite la décision des acheteurs.</p>
+        </div>
+      </article>
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/82c08d3efb804aa5a2af21ab98acde29.jpg/v1/fill/w_900,h_620,al_c,q_85/eoliennes-panneaux-solaires-inspection.jpg" alt="Éoliennes et panneaux solaires, structures en hauteur inspectées par drone" width="900" height="620" loading="lazy" />
+          <span class="idx">02 / INSP</span>
+        </div>
+        <div class="bd">
+          <h3>Inspection technique</h3>
+          <p>Identifier et analyser l'état des structures en hauteur (toitures, éoliennes, falaises) avec rapidité et en toute sécurité, sans échafaudage ni nacelle.</p>
+        </div>
+      </article>
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/nsplsh_e1b128a4f0a842c4b3b843abc4fa871b~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/chantier-vu-du-ciel.jpg" alt="Chantier de construction vu du ciel, grues et fondations en cours" width="900" height="620" loading="lazy" />
+          <span class="idx">03 / CHTR</span>
+        </div>
+        <div class="bd">
+          <h3>Suivi de chantier</h3>
+          <p>Suivre l'avancement de vos chantiers dans le temps : un outil idéal pour la communication, la relation client et l'identification d'éventuelles malfaçons.</p>
+        </div>
+      </article>
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/aba3f4_64720cb57ced4795a8aaa86fee57bf90~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/nuage-de-points-photogrammetrie.jpg" alt="Nuage de points 3D d'une bâtisse obtenu par photogrammétrie" width="900" height="620" loading="lazy" />
+          <span class="idx">04 / PHGR</span>
+        </div>
+        <div class="bd">
+          <h3>Photogrammétrie et 3D</h3>
+          <p>Un nuage de points géoréférencés pour dessiner vos projets en 3D sur le relevé des existants : par drone, au sol, ou en complément d'un scan 3D pour les zones inaccessibles. Modélisation et maquette possibles.</p>
+        </div>
+      </article>
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/aba3f4_4a7c9d5adffa403b98ec128ddda86c8e~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/orthophotographie-facade.jpg" alt="Orthophotographie d'une orangerie : façade redressée sans déformation" width="900" height="620" loading="lazy" />
+          <span class="idx">05 / ORTH</span>
+        </div>
+        <div class="bd">
+          <h3>Orthophotographie</h3>
+          <p>Des centaines de photos assemblées en une seule image sans déformation : la solution idéale pour les plans d'existants, les expertises et la vue globale d'un projet.</p>
+        </div>
+      </article>
+      <article class="p-card reveal">
+        <div class="im">
+          <img src="https://static.wixstatic.com/media/aba3f4_1bacf655398842ad9f4553a6f5334500~mv2.jpg/v1/fill/w_900,h_620,al_c,q_85/parcelles-agricoles-drone.jpg" alt="Parcelles agricoles photographiées par drone, traces de passage dans les cultures" width="900" height="620" loading="lazy" />
+          <span class="idx">06 / AGRI</span>
+        </div>
+        <div class="bd">
+          <h3>Agriculture</h3>
+          <p>Des vues géolocalisées des cultures pour détecter les zones à traiter, adapter les apports d'engrais et suivre l'évolution des parcelles : une agriculture raisonnée.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="vr reveal" aria-label="Réalité virtuelle 360 degrés">
+      <img src="https://static.wixstatic.com/media/aba3f4_5d25845327c149afbaa038f55823947b~mv2.jpg/v1/fill/w_1800,h_900,al_c,q_85/realite-virtuelle-360-village.jpg" alt="Prise de vue aérienne à 360 degrés en projection sphérique au-dessus d'un village" width="1800" height="900" loading="lazy" />
+      <div class="veil" aria-hidden="true"></div>
+      <div class="txt">
+        <span class="eyebrow">Réalité virtuelle 360°</span>
+        <h3 class="disp">L'immersion totale, <em>vue d'en haut</em></h3>
+        <p>Des prises de vues aériennes à 360° qui plongent l'internaute en immersion dans un paysage ou un patrimoine architectural. De quoi attirer l'attention et sublimer vos supports numériques de façon originale.</p>
+        <a class="btn btn-cyan" href="#contact">Parler de votre projet <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="duo">
+      <article class="d-card reveal">
+        <img src="https://static.wixstatic.com/media/608639aea5aa4bc5a9e54c35e927229c.jpg/v1/fill/w_900,h_620,al_c,q_85/drone-et-radiocommande.jpg" alt="Drone et radiocommande en gros plan, matériel de captation vidéo" width="900" height="620" loading="lazy" />
+        <div class="veil" aria-hidden="true"></div>
+        <div class="txt">
+          <h3>Audiovisuel</h3>
+          <p>Photographies 20 MP, captations 4K et post-production pour vos publicités, films institutionnels et clips. Licence d'utilisation au projet ou cession des livrables, selon votre budget.</p>
+        </div>
+      </article>
+      <article class="d-card reveal">
+        <img src="https://static.wixstatic.com/media/77a6c5b2ca924e06b195dddc2bcb121f.jpg/v1/fill/w_900,h_620,al_c,q_85/evenement-en-plein-air.jpg" alt="Éclairages d'une scène de concert en plein air, captée pour un événement" width="900" height="620" loading="lazy" />
+        <div class="veil" aria-hidden="true"></div>
+        <div class="txt">
+          <h3>Événementiel</h3>
+          <p>Faire prendre de la hauteur à vos événements en plein air : mariages, fêtes, vernissages, avec diffusion possible en direct sur écran et supports numériques.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="methode" id="methode" aria-label="Engagements">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Méthode</span>
+      <h2 class="disp">Quatre engagements, <em>à chaque mission</em></h2>
+      <p>La satisfaction des clients avant tout : une méthode de travail claire, du premier échange à la livraison.</p>
+    </div>
+    <div class="m-grid">
+      <article class="m-cell reveal">
+        <span class="num">01</span>
+        <h3>Écoute</h3>
+        <p>Définir vos besoins avec vous, vous conseiller et respecter votre cahier des charges, pour un résultat final à la hauteur de vos attentes.</p>
+      </article>
+      <article class="m-cell reveal">
+        <span class="num">02</span>
+        <h3>Professionnalisme</h3>
+        <p>Respect des procédures et de la réglementation aérienne en vigueur, pour des missions menées en toute sécurité par une télépilote certifiée et qualifiée.</p>
+      </article>
+      <article class="m-cell reveal">
+        <span class="num">03</span>
+        <h3>Qualité</h3>
+        <p>Des drones équipés de capteurs de 20 MP et une qualité vidéo jusqu'en 4K/UHD, avec tournage au sol jusqu'en 4K à 60 images par seconde.</p>
+      </article>
+      <article class="m-cell reveal">
+        <span class="num">04</span>
+        <h3>Réactivité</h3>
+        <p>Une réponse dans les meilleurs délais, en tenant compte de vos contraintes de calendrier et des temps obligatoires pour les déclarations de vol.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="apropos" id="apropos" aria-label="Qui pilote">
+  <div class="wrap apropos-grid">
+    <div class="story reveal">
+      <span class="eyebrow">Qui pilote ?</span>
+      <h2 class="disp">Les Drones <em>de Dame</em></h2>
+      <p>Basée près de Rouen, <b>Æra Drone se déplace dans toute la France</b> pour répondre à vos besoins, vos envies et vos exigences, avec originalité, dans le respect de la réglementation en vigueur et en mettant un point d'honneur à la sécurité de ses vols.</p>
+      <p>Forte d'un sens artistique aiguisé, Vanessa a acquis le sens des formes, des volumes et de la beauté, avec le souci du détail. <b>Formée à la photogrammétrie et au montage vidéo</b>, elle vous propose un panel de services complet, sans intermédiaire.</p>
+      <div class="quote">« Elle saura utiliser ses Drones de Dame pour vous satisfaire. »</div>
+      <div class="pilote">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+        <div>
+          <b>Vanessa Druel</b>
+          <p class="role">Télépilote certifiée ED 14188</p>
+          <p>Passionnée par les drones, les belles images et le travail rigoureux avec une touche d'originalité, elle aura à cœur votre projet et sera votre interlocutrice privilégiée tout au long de votre démarche.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ph reveal">
+      <img src="https://static.wixstatic.com/media/aba3f4_ef17460ccfef41dbb191c4e805801575~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85/trois-mats-rouen-drone.jpg" alt="Trois-mâts à quai sur la Seine à Rouen, photographié par drone à la lumière dorée" width="900" height="1100" loading="lazy" />
+      <span class="cap">Rouen · prise de vue Æra Drone</span>
+    </div>
+  </div>
+</section>
+
+<section class="zonesec" id="zone" aria-label="Zone d'intervention">
+  <div class="zone-band">
+    <img src="https://static.wixstatic.com/media/aba3f4_764d1865c1a044738df7a60ff6060ffe~mv2.jpg/v1/fill/w_1800,h_720,al_t,q_85/panorama-rouen-drone.jpg" alt="Panorama aérien de Rouen et de sa cathédrale sous un ciel de traîne" width="1800" height="720" loading="lazy" />
+    <div class="veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="txt reveal">
+        <span class="eyebrow">Zone d'intervention</span>
+        <h2 class="disp">De Rouen à <em>toute la France</em></h2>
+        <p>Æra Drone est basée à La Vaupalière, aux portes de Rouen. Les missions s'organisent en Normandie comme dans toute la France, en tenant compte des délais réglementaires de déclaration de vol propres à chaque zone.</p>
+        <div class="pins">
+          <span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Base · La Vaupalière (76)</span>
+          <span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17"/></svg>Rouen et sa métropole</span>
+          <span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l7-2 2-7 2 7 7 2-7 2-2 7-2-7z"/></svg>Déplacements toute la France</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-label="Contact">
+  <div class="wrap c-grid">
+    <div class="c-left reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="disp">Parlons de <em>votre projet</em></h2>
+      <p>Décrivez votre besoin : lieu, période, livrable attendu. Vanessa vous répond rapidement avec une proposition adaptée. Le devis est gratuit, pour les professionnels comme pour les particuliers.</p>
+      <div class="direct">
+        <a href="tel:+33786874177"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>07&nbsp;86&nbsp;87&nbsp;41&nbsp;77</a>
+        <a href="mailto:aera-drone@orange.fr"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>aera-drone@orange.fr</a>
+        <span class="adr"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span>1301 route de Duclair<br />76150 La Vaupalière</span></span>
+      </div>
+      <div class="c-note"><b>Chaque vol est déclaré et assuré.</b> Æra Drone est assurée chez Atlantas AIG à hauteur de 2 500 000 €, et respecte les temps réglementaires de déclaration selon la zone de vol.</div>
+      <div class="socials">
+        <a href="https://www.facebook.com/%C3%86ra-Drone-100789379107517/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/in/vanessa-d-749213128/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <form id="cform">
+        <div class="frow">
+          <div><label class="lbl" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Marie Lefebvre" autocomplete="name" required /></div>
+          <div><label class="lbl" for="f-tel">Votre téléphone ou e-mail</label><input id="f-tel" name="contact" type="text" placeholder="06 12 34 56 78" /></div>
+        </div>
+        <div><label class="lbl" for="f-lieu">Lieu et période souhaitée</label><input id="f-lieu" name="lieu" type="text" placeholder="Rouen, courant septembre" /></div>
+        <div><label class="lbl" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Vente d'une maison avec grand jardin : photos aériennes et quelques vues au sol..."></textarea></div>
+        <button class="btn btn-cyan" type="submit">Envoyer ma demande <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <p class="formdemo">Formulaire de <b>démonstration</b> (maquette) : il n'envoie aucun message. Pour une vraie demande, téléphone ou e-mail ci-contre.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol" style="max-width:340px">
+        <a class="brand" href="#">
+          <span class="b1">Æra <span>Drone</span></span>
+          <span class="b2">Production · Imagerie aérienne</span>
+        </a>
+        <p style="margin-top:14px">Imagerie technique aérienne par drone près de Rouen : immobilier, inspection, chantiers, photogrammétrie, orthophotographie, réalité virtuelle 360° et agriculture, dans toute la France.</p>
+        <p class="fnote">Maquette pensée pour un futur <b>domaine à votre nom</b>, avec espace d'édition et blog.<br />Photographies : Æra Drone, tous droits réservés.</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><p><a href="#prestations">Prestations</a></p><p><a href="#methode">Engagements</a></p><p><a href="#apropos">Qui pilote ?</a></p><p><a href="#zone">Zone d'intervention</a></p><p><a href="#contact">Contact</a></p></div>
+      <div class="fcol"><h4>Contact</h4><p><a href="tel:+33786874177">07 86 87 41 77</a></p><p><a href="mailto:aera-drone@orange.fr">aera-drone@orange.fr</a></p><p>1301 route de Duclair<br />76150 La Vaupalière</p></div>
+    </div>
+    <div class="flegal">
+      <span>DGAC ED 14188</span>
+      <span>SIRET 899 899 082 00015</span>
+      <span>Assurée Atlantas AIG · 2 500 000 €</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  new IntersectionObserver(function(es){hdr.classList.toggle('scrolled',!es[0].isIntersecting)}).observe(document.getElementById('top-sentinel'));
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  function setMenu(o){menu.classList.toggle('open',o);burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.body.classList.toggle('menu-open',o)}
+  burger.onclick=function(){setMenu(!menu.classList.contains('open'))};
+  menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){setMenu(false)}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},1400)});
+  document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();this.innerHTML='<p style="text-align:center;font-size:1rem;padding:22px 8px;line-height:1.7">Ceci est une <b>maquette de démonstration</b> : le formulaire n\'envoie rien.<br>Pour une vraie demande : <a href="tel:+33786874177" style="font-weight:700;text-decoration:underline">07 86 87 41 77</a> ou <a href="mailto:aera-drone@orange.fr" style="font-weight:700;text-decoration:underline">aera-drone@orange.fr</a></p>'});
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
