@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#f4f1ec" />
+<title>Wagner Carrelage : artisan carreleur à Gerstheim (Bas-Rhin)</title>
+<meta name="description" content="Pascal Wagner, artisan carreleur à Gerstheim (Bas-Rhin) : rénovation de salle de bain clé en main, carrelage grand format, pierre naturelle, terrasses. 16 ans d'expérience, garantie décennale." />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
+<style>
+  /* Palette « atelier » : fond plâtre chaud, encre anthracite, terre cuite en accent unique. */
+  :root{
+    --paper:#f4f1ec; --paper2:#ece7df; --card:#ffffff;
+    --ink:#26221e; --mut:#5d564e; --mut2:#6b645b;
+    --terra:#a8502a; --terra-d:#8a3f1f; --terra-tint:rgba(168,80,42,.09);
+    --line:rgba(38,34,30,.14); --line-soft:rgba(38,34,30,.08);
+    --ease:cubic-bezier(.22,.7,.25,1); --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Switzer",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--terra);color:var(--paper)}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .disp{font-family:"Clash Display","Switzer",sans-serif;font-weight:600;line-height:1.05;letter-spacing:-.015em}
+  .disp b{font-weight:700;color:var(--terra)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:.88rem;letter-spacing:.01em;padding:15px 28px;border-radius:50px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+  .btn:active{transform:translateY(1px)}
+  .btn-terra{background:var(--terra);color:#f8f4f0}
+  .btn-terra:hover{background:var(--terra-d)}
+  .btn-ghost{border-color:rgba(38,34,30,.35);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
+  .ico{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* ---------- header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(244,241,236,.92);border-color:var(--line-soft);box-shadow:0 8px 30px rgba(38,34,30,.06)}
+  /* blur sur un pseudo-élément : backdrop-filter sur le header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(12px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"Clash Display",sans-serif;font-weight:700;font-size:1.04rem;letter-spacing:.01em}
+  .brand small{display:block;font-family:"Switzer",sans-serif;font-weight:500;font-size:.68rem;color:var(--mut);letter-spacing:.05em;margin-top:-1px}
+  .menu{display:flex;gap:24px;align-items:center}
+  .menu a{font-size:.87rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--terra)}
+  .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--terra);color:#f8f4f0;opacity:1;font-weight:600}
+  .menu a.cta:hover{background:var(--terra-d)}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
+  .burger span{display:block;width:16px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:150px 0 84px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--terra);margin-bottom:22px}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--terra)}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.6rem);margin-bottom:20px}
+  .hero p.lead{font-size:1.06rem;color:var(--mut);max-width:520px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative}
+  .hero-img img{border-radius:18px;width:100%;height:520px;object-fit:cover;box-shadow:0 30px 60px rgba(38,34,30,.18)}
+  .hero-badge{position:absolute;left:-18px;bottom:26px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:14px 20px;box-shadow:0 16px 40px rgba(38,34,30,.14)}
+  .hero-badge b{font-family:"Clash Display",sans-serif;font-size:1.35rem;color:var(--terra);display:block;line-height:1.1}
+  .hero-badge span{font-size:.78rem;color:var(--mut)}
+
+  /* ---------- bandeau points forts ---------- */
+  .strip{background:var(--ink);color:#efe9e2;padding:26px 0}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .strip .it{display:flex;gap:12px;align-items:flex-start}
+  .strip .ico{width:20px;height:20px;stroke:#d99a72;margin-top:3px}
+  .strip b{display:block;font-size:.92rem;font-weight:600}
+  .strip span{font-size:.8rem;color:rgba(239,233,226,.66)}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:640px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px 0 16px}
+  .sec-head p{color:var(--mut)}
+
+  /* savoir-faire */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;transition:transform .3s var(--ease),box-shadow .3s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(38,34,30,.1)}
+  .card .pic{width:46px;height:46px;border-radius:12px;background:var(--terra-tint);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .pic .ico{width:22px;height:22px;stroke:var(--terra)}
+  .card h3{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.12rem;margin-bottom:10px}
+  .card p{font-size:.92rem;color:var(--mut)}
+  .reseau{margin-top:26px;background:var(--paper2);border-radius:16px;padding:26px 30px;display:flex;gap:16px;align-items:flex-start}
+  .reseau .ico{width:22px;height:22px;stroke:var(--terra);margin-top:4px}
+  .reseau p{font-size:.94rem;color:var(--mut)}
+  .reseau b{color:var(--ink)}
+
+  /* méthode */
+  .method{background:var(--paper2)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden}
+  .step img{width:100%;height:230px;object-fit:cover}
+  .step .txt{padding:22px 24px 26px}
+  .step .num{font-family:"Clash Display",sans-serif;font-weight:700;color:var(--terra);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  .step h3{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.08rem;margin:6px 0 8px}
+  .step p{font-size:.9rem;color:var(--mut)}
+
+  /* réalisations */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal figure{position:relative;border-radius:16px;overflow:hidden;background:var(--paper2)}
+  .gal img{width:100%;height:300px;object-fit:cover;transition:transform .5s var(--ease)}
+  .gal figure:hover img{transform:scale(1.04)}
+  .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 18px 14px;font-size:.82rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(20,16,12,.78))}
+  .gal .tall img{height:100%}
+  .gal-note{margin-top:18px;font-size:.85rem;color:var(--mut2)}
+
+  /* petit budget */
+  .forfaits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .forfait{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column}
+  .forfait.mid{border-color:var(--terra);box-shadow:0 18px 44px rgba(168,80,42,.12)}
+  .forfait .tag{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--terra)}
+  .forfait h3{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1.14rem;margin:8px 0 4px}
+  .forfait .prix{font-family:"Clash Display",sans-serif;font-weight:700;font-size:1.7rem;margin:10px 0 4px}
+  .forfait .prix small{font-size:.85rem;font-weight:500;color:var(--mut)}
+  .forfait ul{list-style:none;margin:16px 0 0;flex:1}
+  .forfait li{font-size:.9rem;color:var(--mut);padding:7px 0 7px 26px;position:relative}
+  .forfait li::before{content:"";position:absolute;left:2px;top:14px;width:14px;height:8px;border-left:2px solid var(--terra);border-bottom:2px solid var(--terra);transform:rotate(-45deg)}
+  .forfait .sup{margin-top:16px;font-size:.8rem;color:var(--mut2);border-top:1px solid var(--line-soft);padding-top:14px}
+
+  /* devis */
+  .devis .grid2{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .devis .info p{color:var(--mut);margin-bottom:18px}
+  .devis .zone{background:var(--terra-tint);border-radius:12px;padding:16px 20px;font-size:.9rem;color:var(--ink)}
+  .devis .coord{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+  .devis .coord a{display:flex;gap:12px;align-items:center;font-weight:500;font-size:.95rem}
+  .devis .coord a:hover{color:var(--terra)}
+  .devis .coord .ico{stroke:var(--terra)}
+  form .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .lbl{display:block;font-size:.8rem;font-weight:600;margin:14px 0 6px}
+  input,textarea{width:100%;font:inherit;font-size:.92rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;transition:border-color .2s}
+  input:focus,textarea:focus{border-color:var(--terra)}
+  form .btn{margin-top:20px}
+  .formdemo{margin-top:12px;font-size:.78rem;color:var(--mut2)}
+
+  /* footer */
+  footer{background:var(--ink);color:#efe9e2;padding:60px 0 40px}
+  .f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;margin-bottom:40px}
+  footer h4{font-family:"Clash Display",sans-serif;font-weight:600;font-size:1rem;margin-bottom:12px}
+  footer p,footer a{display:block;font-size:.88rem;color:rgba(239,233,226,.72);margin-bottom:7px}
+  footer a:hover{color:#fff}
+  .legal{border-top:1px solid rgba(239,233,226,.14);padding-top:24px}
+  .legal p{font-size:.78rem;color:rgba(239,233,226,.55)}
+  .legal .avert{margin-top:10px}
+  .legal .avert a{display:inline;color:#d99a72}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-img img{height:420px}
+    .strip .wrap{grid-template-columns:repeat(2,1fr)}
+    .cards,.steps,.gal,.forfaits{grid-template-columns:repeat(2,1fr)}
+    .devis .grid2{grid-template-columns:1fr;gap:40px}
+    .f-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 640px){
+    .menu{position:fixed;inset:0;background:var(--paper);z-index:55;flex-direction:column;justify-content:center;gap:30px;display:none}
+    .menu.open{display:flex}
+    .menu a{font-size:1.15rem}
+    body.menu-open{overflow:hidden}
+    .burger{display:flex}
+    .hero{padding:120px 0 64px}
+    .hero-img img{height:340px}
+    .hero-badge{left:12px;bottom:14px;padding:11px 16px}
+    section{padding:72px 0}
+    .strip{padding:22px 0}
+    .strip .wrap{grid-template-columns:1fr;gap:14px}
+    .cards,.steps,.gal,.forfaits{grid-template-columns:1fr}
+    .gal img{height:260px}
+    form .frow{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr}
+    .reseau{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<div id="top-sentinel" aria-hidden="true"></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">WAGNER CARRELAGE<small>Artisan carreleur · Gerstheim, Bas-Rhin</small></a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#savoirfaire">Savoir-faire</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#petitbudget">Petit budget</a>
+      <a href="#devis" class="cta">Devis gratuit</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-label="Ouvrir le menu" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Carrelage · Pierre naturelle · Parquet</span>
+        <h1 class="disp">La pose soignée, du sol au plafond, <b>en Alsace</b>.</h1>
+        <p class="lead">Pascal Wagner, artisan carreleur à Gerstheim (Bas-Rhin) : rénovation de salle de bain clé en main, carrelage grand format, terrasses et extérieurs. Travail soigné, finitions précises, accompagnement complet de votre projet.</p>
+        <div class="hero-cta">
+          <a class="btn btn-terra" href="#devis">Demander un devis gratuit <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#realisations">Voir les réalisations</a>
+        </div>
+      </div>
+      <div class="hero-img reveal">
+        <img src="https://static.wixstatic.com/media/c9273f_4237de440e91465db5a72c19bcdb8f81~mv2.jpg/v1/fill/w_1200,h_1200,al_c,q_85/c9273f_4237de440e91465db5a72c19bcdb8f81~mv2.jpg" alt="Salle de bain rénovée par Wagner Carrelage : douche à l'italienne, meuble double vasque et miroir LED" width="1200" height="1200" />
+        <div class="hero-badge"><b>16 ans</b><span>d'expérience dans la céramique</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg><div><b>Garantie décennale</b><span>pose garantie et assurée</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><div><b>Réponse sous 48 h</b><span>devis gratuit et détaillé</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><div><b>Intérieur &amp; extérieur</b><span>salle de bain, terrasse, sols</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><b>Réseau d'artisans</b><span>projet coordonné de A à Z</span></div></div>
+    </div>
+  </div>
+
+  <!-- SAVOIR-FAIRE -->
+  <section id="savoirfaire">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Savoir-faire</span>
+        <h2 class="disp">Un artisan, trois spécialités</h2>
+        <p>Matériaux professionnels sélectionnés selon votre support et votre projet, conseils sur toute la durée du chantier : la priorité, c'est la qualité, le respect et la satisfaction.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div>
+          <h3>Rénovation de salle de bain clé en main</h3>
+          <p>Démolition, rattrapage des supports, étanchéité complète, pose murale et sol : une salle de bain refaite de bout en bout, en coordination avec les corps de métier partenaires.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3zM3 15h18M15 3v12"/></svg></div>
+          <h3>Grands formats &amp; pierre naturelle</h3>
+          <p>Pose de carreaux grand format (jusqu'à 120 × 120), pierre naturelle et parquet. Le grand format agrandit visuellement les pièces, même les plus petites.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20M4 20V9l8-6 8 6v11M12 20v-7"/></svg></div>
+          <h3>Terrasses &amp; extérieurs</h3>
+          <p>Carrelage antidérapant, pose sur plots, balcons et terrasses : des extérieurs durables qui résistent au climat alsacien.</p>
+        </div>
+      </div>
+      <div class="reseau reveal">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <p><b>Un projet complet ? Je coordonne mon réseau d'entrepreneurs professionnels du bâtiment</b> (sanitaire, peintre, plaquiste, chauffagiste, menuisier) pour vous offrir un ensemble de services transparent qui répond à tous vos besoins, avec un seul interlocuteur : moi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section class="method" id="methode">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">La méthode</span>
+        <h2 class="disp">Ce qui fait une pose qui dure</h2>
+        <p>Le résultat final ne vaut que par ce qu'on ne voit plus à la fin : la préparation des supports, l'étanchéité, les nattes de désolidarisation. C'est là que se joue la différence.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <img src="https://static.wixstatic.com/media/c9273f_aadf054f31944bdda8bfbc07b231d5a9~mv2.jpg/v1/fill/w_800,h_600,al_c,q_82/c9273f_aadf054f31944bdda8bfbc07b231d5a9~mv2.jpg" alt="Chantier après démolition de l'ancien carrelage" loading="lazy" width="800" height="600" />
+          <div class="txt">
+            <span class="num">Étape 1</span>
+            <h3>Démolition &amp; dépose</h3>
+            <p>Retrait de l'existant ou application d'un primaire d'accrochage sur le carrelage en place, selon le support.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <img src="https://static.wixstatic.com/media/c9273f_fe034eabb4864089a67dfa51d6cd708e~mv2.jpg/v1/fill/w_800,h_600,al_c,q_82/c9273f_fe034eabb4864089a67dfa51d6cd708e~mv2.jpg" alt="Rattrapage des murs au filet de colle avant étanchéité" loading="lazy" width="800" height="600" />
+          <div class="txt">
+            <span class="num">Étape 2</span>
+            <h3>Préparation &amp; étanchéité</h3>
+            <p>Rattrapage des murs, étanchéité et bandes étanches dans la douche, natte de désolidarisation sur les sols qui le demandent.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <img src="https://static.wixstatic.com/media/c9273f_728f6328ac474cf1a6250555702c7d2f~mv2.jpg/v1/fill/w_800,h_600,al_c,q_82/c9273f_728f6328ac474cf1a6250555702c7d2f~mv2.jpg" alt="Douche terminée : carrelage décor posé, finitions précises" loading="lazy" width="800" height="600" />
+          <div class="txt">
+            <span class="num">Étape 3</span>
+            <h3>Pose &amp; finitions</h3>
+            <p>Calepinage, pose, découpes et joints : des finitions précises, contrôlées avec vous à la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section id="realisations">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Réalisations</span>
+        <h2 class="disp">Des chantiers réels, en Alsace</h2>
+        <p>Salles de bains clé en main, terrasses, grands formats : quelques chantiers récents à Dangolsheim, Rumersheim, Mutzig, Oberhausbergen ou Stutzheim-Offenheim.</p>
+      </div>
+      <div class="gal">
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_8f5771535b0849d49abf9ea259cd30d3~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_8f5771535b0849d49abf9ea259cd30d3~mv2.jpg" alt="Baignoire demi-îlot sur carrelage grand format effet marbre noir" loading="lazy" width="900" height="700" /><figcaption>Baignoire demi-îlot, grand format effet marbre</figcaption></figure>
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_47de2fafca63427591d8f87423349ff1~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_47de2fafca63427591d8f87423349ff1~mv2.jpg" alt="Douche walk-in avec robinetterie encastrée et niche de rangement" loading="lazy" width="900" height="700" /><figcaption>Douche walk-in, robinetterie encastrée</figcaption></figure>
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_93b5eff65044447f9e129950ab65f1a1~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_93b5eff65044447f9e129950ab65f1a1~mv2.jpg" alt="WC suspendu sur mur en pierre naturelle patchwork" loading="lazy" width="900" height="700" /><figcaption>Pierre naturelle, WC suspendu</figcaption></figure>
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_f8c67a7342194a2ea6eeb1d3aac427bf~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_f8c67a7342194a2ea6eeb1d3aac427bf~mv2.jpg" alt="Baignoire habillée de carrelage brun avec plage carrelée" loading="lazy" width="900" height="700" /><figcaption>Habillage de baignoire, plage carrelée</figcaption></figure>
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_018e32f041804c188198bdd89ad26ef4~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_018e32f041804c188198bdd89ad26ef4~mv2.jpg" alt="Balcon extérieur : carrelage grand format posé, bardage bois" loading="lazy" width="900" height="700" /><figcaption>Balcon extérieur, grand format</figcaption></figure>
+        <figure class="reveal"><img src="https://static.wixstatic.com/media/c9273f_4237de440e91465db5a72c19bcdb8f81~mv2.jpg/v1/fill/w_900,h_700,al_c,q_82/c9273f_4237de440e91465db5a72c19bcdb8f81~mv2.jpg" alt="Salle de bain complète : douche, double vasque, miroir LED" loading="lazy" width="900" height="700" /><figcaption>Salle de bain clé en main</figcaption></figure>
+      </div>
+      <p class="gal-note">Photos de vos chantiers, reprises de votre site actuel. Sur la version finale : galerie complète par projet, avec les avant/après.</p>
+    </div>
+  </section>
+
+  <!-- PETIT BUDGET -->
+  <section class="method" id="petitbudget">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Petit budget</span>
+        <h2 class="disp">Apprenez à poser avec un pro</h2>
+        <p>Vous êtes prêt à le faire vous-même mais vous ne savez pas par où commencer ? Je vous accompagne, je vous montre, puis vous réalisez. « Satisfaction + économie » garantie.</p>
+      </div>
+      <div class="forfaits">
+        <div class="forfait reveal">
+          <span class="tag">Forfait 1</span>
+          <h3>Conseil &amp; étape</h3>
+          <div class="prix">80 € <small>TTC · 2 heures</small></div>
+          <ul>
+            <li>2 h de rencontre à votre domicile ou sur chantier</li>
+            <li>Conseils sur le choix du revêtement</li>
+            <li>Liste de courses des outils et matériaux</li>
+            <li>Calepinage (plan de pose)</li>
+          </ul>
+          <p class="sup">Heures supplémentaires : 40 € TTC/h</p>
+        </div>
+        <div class="forfait mid reveal">
+          <span class="tag">Forfait 2</span>
+          <h3>Conseil &amp; apprentissage</h3>
+          <div class="prix">200 € <small>TTC · 4 heures</small></div>
+          <ul>
+            <li>Tout le forfait 1</li>
+            <li>Pose à blanc et traçage des repères</li>
+            <li>Préparation de la colle</li>
+            <li>Pose, collage et découpes : je montre, vous réalisez</li>
+          </ul>
+          <p class="sup">Heures supplémentaires : 40 € TTC/h</p>
+        </div>
+        <div class="forfait reveal">
+          <span class="tag">Forfait 3</span>
+          <h3>Conseil &amp; accompagnement</h3>
+          <div class="prix">750 € <small>TTC · 21 h (3 jours)</small></div>
+          <ul>
+            <li>Tout le contenu des forfaits 1 et 2</li>
+            <li>Préparation du sol ou du mur</li>
+            <li>Pose des plinthes</li>
+            <li>Réalisation des joints</li>
+          </ul>
+          <p class="sup">Heures supplémentaires : 40 € TTC/h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS -->
+  <section class="devis" id="devis">
+    <div class="wrap grid2">
+      <div class="info reveal">
+        <span class="kicker">Devis gratuit</span>
+        <h2 class="disp" style="font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px 0 16px">Parlons de votre projet</h2>
+        <p>Décrivez votre projet avec un maximum de précisions : surface à carreler, taille de carreaux souhaitée, type de pose, dépose de l'existant, dates impératives, intérieur ou extérieur. Réponse sous 48 h.</p>
+        <div class="zone"><b>Zone d'intervention :</b> Gerstheim et ses environs, dans le Bas-Rhin et en Alsace.</div>
+        <div class="coord">
+          <a href="tel:+33658082764"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>06 58 08 27 64</a>
+          <a href="mailto:carrelage.wagner@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>carrelage.wagner@gmail.com</a>
+          <span style="display:flex;gap:12px;align-items:center;font-size:.95rem;color:var(--mut)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>3 rue du Moulin, 67150 Gerstheim</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="cform">
+          <div class="frow">
+            <div><label class="lbl" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Martin Schneider" autocomplete="name" required /></div>
+            <div><label class="lbl" for="f-tel">Votre téléphone ou e-mail</label><input id="f-tel" name="contact" type="text" placeholder="06 12 34 56 78" /></div>
+          </div>
+          <div class="frow">
+            <div><label class="lbl" for="f-surface">Surface à carreler (m²)</label><input id="f-surface" name="surface" type="text" placeholder="15 m²" /></div>
+            <div><label class="lbl" for="f-type">Intérieur ou extérieur ?</label><input id="f-type" name="type" type="text" placeholder="Salle de bain, terrasse…" /></div>
+          </div>
+          <div><label class="lbl" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Taille des carreaux souhaitée, faut-il déposer l'existant, dates impératives, plans disponibles…"></textarea></div>
+          <button class="btn btn-terra" type="submit">Envoyer ma demande <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="formdemo">Formulaire de démonstration (maquette) : il n'envoie aucun message. Pour une vraie demande, téléphone ou e-mail ci-contre.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>Wagner Carrelage</h4>
+        <p>Pascal Wagner, artisan carreleur</p>
+        <p>Pose de carrelage, pierre naturelle et parquet</p>
+        <p>3 rue du Moulin, 67150 Gerstheim</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#savoirfaire">Savoir-faire</a>
+        <a href="#methode">La méthode</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#petitbudget">Petit budget</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+33658082764">06 58 08 27 64</a>
+        <a href="mailto:carrelage.wagner@gmail.com">carrelage.wagner@gmail.com</a>
+        <a href="#devis">Demande de devis</a>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Pose garantie, assurance décennale.</p>
+      <p class="avert"><b>Maquette : aperçu non contractuel</b>, réalisée par <b>Nicolas Masset</b> à partir de votre univers. La version finale est <b>100 % sur-mesure</b> (vos photos, vos textes). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.getElementById('header');
+  var sentinel = document.getElementById('top-sentinel');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      header.classList.toggle('scrolled', !entries[0].isIntersecting);
+    }).observe(sentinel);
+
+    var ro = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  } else {
+    header.classList.add('scrolled');
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var form = document.getElementById('cform');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Ceci est une maquette de démonstration : le formulaire n'envoie aucun message. Pour une vraie demande, utilisez le téléphone ou l'e-mail indiqués sur la page.");
+  });
+})();
+</script>
+
+</body>
+</html>
