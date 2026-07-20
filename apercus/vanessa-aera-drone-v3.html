@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>Æra Drone Production · L'art de la perspective, du sol au ciel · Photographie, vidéo, drone et scan 3D en Normandie</title>
+<meta name="description" content="Æra Drone Production, Vanessa Druel : photographie, vidéo, drone et scan 3D en Normandie. Des images qui révèlent, valorisent, documentent et transmettent ce qui compte vraiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   Æra Drone Production · maquette v3 (aperçu non contractuel)
+   DA brief Vanessa 19/07 : fond blanc, épuré, haut de gamme,
+   serif élégante (Cormorant Garamond) + sans discrète (Jost),
+   accent laiton désaturé unique, reveals doux.
+   z : header 50, menu mobile 55, burger 60.
+   ============================================================ */
+
+:root{
+  --paper:#ffffff;
+  --paper-2:#f7f5f1;
+  --ink:#191713;
+  --ink-2:#4f4b44;
+  --muted:#6e6960;
+  --line:rgba(25,23,19,.14);
+  --line-soft:rgba(25,23,19,.08);
+  --brass:#8a7248;        /* décoratif : filets, points */
+  --brass-ink:#75603a;    /* texte petit : contraste AA sur blanc */
+  --maxw:1240px;
+  --nav-h:76px;
+  --pad-x:clamp(22px,4.5vw,48px);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Jost",system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);
+  line-height:1.65;font-size:1.03rem;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x)}
+
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;letter-spacing:.005em;text-wrap:balance;line-height:1.15}
+p{text-wrap:pretty}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 18px;z-index:100}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass-ink);outline-offset:3px}
+
+.kicker{
+  font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--brass-ink);font-weight:500;
+}
+.kicker::after{content:"";display:block;width:36px;height:1px;background:var(--brass);margin-top:16px}
+.kicker.center{display:flex;flex-direction:column;align-items:center}
+
+/* ---------------- Bandeau aperçu ---------------- */
+.previewbar{border-bottom:1px solid var(--line-soft);padding:8px 0;background:var(--paper-2)}
+.previewbar p{font-size:.74rem;letter-spacing:.06em;color:var(--muted);text-align:center}
+.previewbar b{color:var(--ink-2);font-weight:500}
+.previewbar a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
+
+/* ---------------- Header ---------------- */
+.io-sentinel{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+.hdr{position:sticky;top:0;z-index:50}
+/* fond du header sur un pseudo-élément : jamais de backdrop-filter
+   sur .hdr lui-même (containing block du menu mobile fixed) */
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(255,255,255,.97);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+.hdr.scrolled::before{border-bottom-color:var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
+.brand{display:flex;flex-direction:column;line-height:1.15}
+.brand-name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:1.5rem;letter-spacing:.2em}
+.brand-sub{font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.menu{display:flex;align-items:center;gap:clamp(16px,1.8vw,26px)}
+.menu a{
+  position:relative;font-weight:400;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-2);padding:6px 0;transition:color .25s;
+}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.menu a:hover{color:var(--ink)}
+.menu a:hover::after{transform:scaleX(1)}
+.burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:44px;height:44px;background:none;border:0;cursor:pointer;z-index:60;position:relative}
+.burger span{display:block;width:24px;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+body.menu-open{overflow:hidden}
+
+/* ---------------- Boutons ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:inherit;font-size:.76rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  padding:17px 32px;border:1px solid var(--ink);cursor:pointer;
+  transition:background .3s var(--ease),color .3s var(--ease);
+}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-ghost{background:transparent;color:var(--ink)}
+@media(hover:hover) and (pointer:fine){
+  .btn-solid:hover{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+}
+
+/* ---------------- Hero ---------------- */
+/* padding horizontal répété : le shorthand écraserait celui du .wrap */
+.hero-inner{padding:clamp(72px,11vh,130px) var(--pad-x) clamp(56px,8vh,88px);text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero h1{margin-top:30px;font-size:clamp(2.15rem,4.6vw,3.55rem);line-height:1.12}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero-disciplines{margin-top:26px;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-2);font-weight:400}
+.hero-lede{margin-top:20px;max-width:52ch;color:var(--muted);font-size:1.06rem;line-height:1.75}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:42px}
+.js .hero-kicker,.js .hero h1,.js .hero-disciplines,.js .hero-lede,.js .hero-ctas{opacity:0;transform:translateY(16px);animation:rise 1.1s var(--ease) forwards}
+.js .hero h1{animation-delay:.12s}
+.js .hero-disciplines{animation-delay:.26s}
+.js .hero-lede{animation-delay:.36s}
+.js .hero-ctas{animation-delay:.48s}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+.hero-fig{padding:0 clamp(0px,2.5vw,40px)}
+.hero-fig img{width:100%;height:clamp(380px,72vh,720px);object-fit:cover;object-position:center 42%}
+.hero-fig figcaption{max-width:var(--maxw);margin:14px auto 0;padding:0 var(--pad-x);font-size:.74rem;letter-spacing:.08em;color:var(--muted)}
+.js .hero-fig{opacity:0;transform:translateY(20px);animation:rise 1.2s var(--ease) .3s forwards}
+
+/* ---------------- Sections ---------------- */
+section{scroll-margin-top:calc(var(--nav-h) + 10px)}
+.sec{padding:clamp(88px,12vw,148px) 0 0}
+.sec-end{padding-bottom:clamp(88px,12vw,148px)}
+.sec-head{max-width:680px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{margin-top:26px;font-size:clamp(1.7rem,3.2vw,2.5rem)}
+.sec-head p{margin-top:18px;color:var(--muted);font-size:1.02rem;max-width:56ch}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.alt{background:var(--paper-2)}
+
+/* ---------------- Vision ---------------- */
+.vision-inner{max-width:820px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.vision-txt{
+  margin-top:34px;
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-style:italic;
+  font-size:clamp(1.45rem,2.7vw,2rem);line-height:1.5;color:var(--ink);
+}
+.vision-sub{margin-top:24px;color:var(--muted);max-width:52ch;font-size:1rem}
+
+/* ---------------- Ce que nous apportons ---------------- */
+.gains{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(34px,4vw,56px) clamp(28px,3.5vw,48px);margin-top:clamp(48px,6vw,72px)}
+.gain{border-top:1px solid var(--line);padding-top:26px}
+.gain h3{font-size:1.4rem;font-weight:500}
+.gain h3 sup{font-family:"Jost",sans-serif;font-size:.62rem;letter-spacing:.14em;color:var(--brass-ink);font-weight:500;margin-right:10px;vertical-align:.65em}
+.gain p{margin-top:10px;color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ---------------- Nos univers ---------------- */
+.univers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,40px);margin-top:clamp(48px,6vw,72px)}
+.uni{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line-soft)}
+.alt .uni{border-color:transparent;box-shadow:0 1px 0 var(--line-soft),0 24px 60px -40px rgba(25,23,19,.25)}
+.uni-media{overflow:hidden}
+.uni-media img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.1s var(--ease)}
+@media(hover:hover) and (pointer:fine){.uni:hover .uni-media img{transform:scale(1.035)}}
+.uni-body{display:flex;flex-direction:column;flex:1;padding:30px 30px 34px}
+.uni-name{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+.uni-name b{color:var(--brass-ink);font-weight:500}
+.uni-motto{margin-top:12px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.35rem;line-height:1.3;color:var(--ink)}
+.uni-list{list-style:none;margin-top:20px}
+.uni-list li{border-top:1px solid var(--line-soft);padding:9px 2px;font-size:.9rem;color:var(--ink-2)}
+.uni-list li:last-child{border-bottom:1px solid var(--line-soft)}
+
+/* ---------------- Services ---------------- */
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(48px,6vw,72px)}
+.svc{display:block}
+.svc-media{overflow:hidden}
+.svc-media img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.1s var(--ease)}
+@media(hover:hover) and (pointer:fine){.svc:hover .svc-media img{transform:scale(1.04)}}
+.svc-label{margin-top:18px;text-align:center}
+.svc-label h3{font-size:1.5rem;font-weight:500}
+.svc-label span{
+  display:inline-block;margin-top:6px;
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-ink);font-weight:500;
+  border-bottom:1px solid transparent;transition:border-color .3s;
+}
+@media(hover:hover) and (pointer:fine){.svc:hover .svc-label span{border-bottom-color:var(--brass)}}
+.svc-note{margin-top:clamp(40px,5vw,60px);text-align:center;color:var(--muted);font-size:.96rem;max-width:62ch;margin-left:auto;margin-right:auto}
+.svc-note em{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.15em;color:var(--ink)}
+
+/* ---------------- Solutions ---------------- */
+.sols{margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
+.sol{
+  display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr) auto;gap:14px clamp(24px,4vw,64px);
+  align-items:baseline;border-bottom:1px solid var(--line);padding:28px 0 30px;
+}
+.sol h3{font-size:1.45rem;font-weight:500}
+.sol p{color:var(--muted);font-size:.95rem;line-height:1.7}
+.sol-tag{
+  justify-self:end;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass-ink);border:1px solid var(--brass);padding:7px 14px;white-space:nowrap;
+}
+.sols-note{margin-top:26px;color:var(--muted);font-size:.92rem;font-style:italic}
+
+/* ---------------- Réalisations ---------------- */
+.g-row{display:grid;gap:clamp(14px,1.8vw,24px);margin-top:clamp(14px,1.8vw,24px)}
+.g-row:first-of-type{margin-top:clamp(48px,6vw,72px)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-21{grid-template-columns:2fr 1fr}
+.g-row figure{display:flex;flex-direction:column}
+.g-media{overflow:hidden;flex:1}
+.g-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+@media(hover:hover) and (pointer:fine){.g-row figure:hover .g-media img{transform:scale(1.03)}}
+.g-row figcaption{margin-top:10px;font-size:.74rem;letter-spacing:.08em;color:var(--muted)}
+.g-h1 .g-media{height:clamp(280px,44vw,540px)}
+.g-h2 .g-media{height:clamp(220px,30vw,400px)}
+.g-h3 .g-media{height:clamp(200px,26vw,360px)}
+.gal-note{margin-top:clamp(36px,4vw,52px);color:var(--muted);font-size:.94rem;max-width:62ch}
+
+/* ---------------- Clients ---------------- */
+.clients-sec{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.clients-inner{padding:clamp(60px,8vw,96px) 0}
+.clients-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.clients-head h2{margin-top:24px;font-size:clamp(1.5rem,2.6vw,2rem)}
+.cl-marquee{margin-top:clamp(36px,5vw,56px);overflow:hidden;white-space:nowrap;position:relative}
+.cl-marquee::before,.cl-marquee::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:1;pointer-events:none}
+.cl-marquee::before{left:0;background:linear-gradient(to right,var(--paper-2),transparent)}
+.cl-marquee::after{right:0;background:linear-gradient(to left,var(--paper-2),transparent)}
+.cl-track{display:inline-flex;align-items:center;animation:slide 52s linear infinite}
+.cl-marquee:hover .cl-track{animation-play-state:paused}
+.cl-track span{
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:1.3rem;font-weight:500;
+  color:var(--ink-2);padding:0 18px;
+}
+.cl-track span::after{content:"·";color:var(--brass);margin-left:36px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.cl-note{margin-top:26px;text-align:center;font-size:.8rem;color:var(--muted);font-style:italic}
+
+/* ---------------- Notre approche ---------------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(40px,5vw,64px) clamp(28px,3.5vw,48px);margin-top:clamp(48px,6vw,72px)}
+.step{position:relative;padding-top:26px;border-top:1px solid var(--line)}
+.step-n{
+  position:absolute;top:-13px;left:0;background:var(--paper);padding-right:14px;
+  font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.15rem;color:var(--brass-ink);
+}
+.alt .step-n{background:var(--paper-2)}
+.step h3{font-size:1.45rem;font-weight:500}
+.step p{margin-top:10px;color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ---------------- À propos ---------------- */
+.about{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start;margin-top:clamp(48px,6vw,72px)}
+.about-copy p{color:var(--ink-2);margin-bottom:1.1em;max-width:58ch;line-height:1.75}
+.about-copy p:first-of-type{
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;line-height:1.45;color:var(--ink);
+}
+.creds{list-style:none;margin-top:34px;border-top:1px solid var(--line)}
+.creds li{border-bottom:1px solid var(--line);padding:16px 2px;display:grid;gap:2px}
+.creds strong{font-weight:500;font-size:.98rem;color:var(--ink)}
+.creds span{color:var(--muted);font-size:.88rem}
+.creds-k{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-ink);font-weight:500;margin-bottom:12px}
+.about-fig{margin:0}
+.about-fig img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about-fig figcaption{margin-top:10px;font-size:.74rem;letter-spacing:.08em;color:var(--muted)}
+
+/* ---------------- Contact ---------------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);margin-top:clamp(48px,6vw,72px)}
+.c-lede{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.4rem,2.4vw,1.8rem);line-height:1.4;max-width:24ch}
+.c-items{display:grid;gap:24px;margin-top:36px}
+.c-item{display:grid;gap:4px}
+.c-k{font-size:.66rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-ink)}
+.c-item a.c-big{
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(1.35rem,2.4vw,1.75rem);color:var(--ink);overflow-wrap:anywhere;
+  transition:color .25s;
+}
+.c-item a.c-big:hover{color:var(--brass-ink)}
+.c-item address{font-style:normal;color:var(--ink-2);font-size:1rem}
+.c-note{margin-top:30px;color:var(--muted);font-size:.92rem;max-width:48ch}
+.c-gal{
+  border:1px solid var(--line);padding:clamp(28px,3.5vw,44px);
+  display:flex;flex-direction:column;align-items:flex-start;align-self:start;background:var(--paper);
+}
+.c-gal h3{font-size:1.5rem;font-weight:500}
+.c-gal p{margin-top:12px;color:var(--muted);font-size:.94rem;max-width:40ch}
+.c-gal .btn{margin-top:26px}
+.c-gal small{margin-top:16px;font-size:.76rem;color:var(--muted);font-style:italic}
+
+/* ---------------- Mentions ---------------- */
+.mentions{border-top:1px solid var(--line-soft)}
+.mentions-inner{padding:clamp(52px,6vw,76px) var(--pad-x)}
+.mentions h2{font-size:1.35rem;font-weight:500}
+.mentions p{margin-top:14px;font-size:.86rem;color:var(--muted);max-width:80ch;line-height:1.75}
+.mentions strong{color:var(--ink-2);font-weight:500}
+
+/* ---------------- Footer ---------------- */
+.foot{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--paper-2)}
+.foot-row{display:flex;align-items:center;justify-content:space-between;gap:14px 26px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-row a{color:var(--ink-2);border-bottom:1px solid transparent;transition:border-color .25s}
+.foot-row a:hover{border-color:var(--ink-2)}
+
+/* ---------------- Reveal ---------------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------------- Reduced motion ---------------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .hero-kicker,.js .hero h1,.js .hero-disciplines,.js .hero-lede,.js .hero-ctas,.js .hero-fig{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .cl-track{animation:none;white-space:normal;display:block;text-align:center}
+  .cl-marquee{white-space:normal}
+  .uni-media img,.svc-media img,.g-media img,.btn{transition:none}
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1080px){
+  .menu{
+    position:fixed;inset:0;background:var(--paper);z-index:55;
+    flex-direction:column;justify-content:center;gap:26px;
+    transform:translateY(-102%);visibility:hidden;
+    transition:transform .5s var(--ease),visibility 0s .5s;
+  }
+  .menu.open{transform:none;visibility:visible;transition:transform .5s var(--ease),visibility 0s 0s}
+  .menu a{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;letter-spacing:.06em;text-transform:none;color:var(--ink)}
+  .menu a::after{display:none}
+  .burger{display:flex}
+  .gains{grid-template-columns:repeat(2,1fr)}
+  .univers{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .about,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .about-fig{max-width:480px}
+}
+@media(max-width:820px){
+  .svcs{grid-template-columns:repeat(2,1fr)}
+  .sol{grid-template-columns:1fr;gap:10px}
+  .sol-tag{justify-self:start;margin-top:4px}
+  .g-3{grid-template-columns:1fr 1fr}
+  .g-3 figure:last-child{grid-column:span 2}
+  .g-21{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  body{font-size:1rem}
+  :root{--nav-h:66px}
+  .hero h1{font-size:clamp(1.9rem,8.4vw,2.5rem)}
+  .hero-disciplines{font-size:.68rem;letter-spacing:.24em}
+  .hero-ctas{width:100%}
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-fig img{height:clamp(300px,58vh,460px)}
+  .gains{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .svcs{gap:16px 12px}
+  .svc-label h3{font-size:1.25rem}
+  .g-h1 .g-media{height:clamp(200px,52vw,320px)}
+  .g-h2 .g-media,.g-h3 .g-media{height:clamp(160px,44vw,280px)}
+}
+</style>
+</head>
+<body>
+
+<div class="io-sentinel" id="topSentinel" aria-hidden="true"></div>
+<a class="skip" href="#accueil">Aller au contenu</a>
+
+<div class="previewbar" role="note">
+  <div class="wrap">
+    <p>Aperçu non contractuel proposé par <b>Nicolas Masset</b> · <a href="https://nicomasset.com" target="_blank" rel="noopener">nicomasset.com</a></p>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap nav">
+    <a href="#accueil" class="brand" aria-label="Æra Drone Production, retour en haut de page">
+      <span class="brand-name">ÆRA</span>
+      <span class="brand-sub">Drone Production</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#univers">Nos univers</a>
+      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#approche">Notre approche</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section id="accueil" class="hero" aria-label="Introduction">
+  <div class="wrap hero-inner">
+    <p class="kicker center hero-kicker">Æra Drone Production · Normandie</p>
+    <h1>L'art de la perspective.<br><em>Du sol au ciel.</em></h1>
+    <p class="hero-disciplines">Photographie &nbsp;•&nbsp; Vidéo &nbsp;•&nbsp; Drone &nbsp;•&nbsp; Scan 3D</p>
+    <p class="hero-lede">Nous créons des images qui révèlent, valorisent, documentent et transmettent ce qui compte vraiment.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#univers">Découvrir nos univers</a>
+      <a class="btn btn-ghost" href="#contact">Échanger sur votre projet</a>
+    </div>
+  </div>
+  <figure class="hero-fig">
+    <img src="https://static.wixstatic.com/media/aba3f4_12122af2a4ed4f2d96750b864e70dd5a~mv2.jpg/v1/fill/w_2000,h_1200,al_c,q_85/vallee-de-seine-normandie-drone.jpg" alt="Les méandres de la Seine en Normandie photographiés par drone, entre forêts et prairies" width="2000" height="1200" fetchpriority="high">
+    <figcaption>La vallée de la Seine vue par drone. Photographie Æra Drone Production.</figcaption>
+  </figure>
+</section>
+
+<!-- ===================== NOTRE VISION ===================== -->
+<section class="sec sec-end" aria-label="Notre vision">
+  <div class="wrap vision-inner reveal">
+    <p class="kicker center">Notre vision</p>
+    <p class="vision-txt">Une image n'a de valeur que lorsqu'elle valorise, rassure, explique, transmet, inspire ou aide à décider.</p>
+    <p class="vision-sub">C'est cette conviction qui guide chacune de nos missions, du portrait en studio au relevé scan 3D d'un ouvrage.</p>
+  </div>
+</section>
+
+<!-- ===================== CE QUE NOUS APPORTONS ===================== -->
+<section class="sec sec-end alt" aria-label="Ce que nous apportons">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Ce que nous apportons</p>
+      <h2>Six raisons de confier vos images à Æra.</h2>
+    </header>
+    <div class="gains">
+      <div class="gain reveal"><h3><sup>I</sup>Valoriser</h3><p>Mettre en lumière votre activité, vos lieux et votre savoir-faire.</p></div>
+      <div class="gain reveal" style="--d:.08s"><h3><sup>II</sup>Convaincre</h3><p>Créer des contenus qui inspirent confiance.</p></div>
+      <div class="gain reveal" style="--d:.16s"><h3><sup>III</sup>Documenter</h3><p>Conserver une mémoire fidèle de vos projets.</p></div>
+      <div class="gain reveal"><h3><sup>IV</sup>Mesurer</h3><p>Transformer l'image en données fiables.</p></div>
+      <div class="gain reveal" style="--d:.08s"><h3><sup>V</sup>Communiquer</h3><p>Créer des contenus adaptés à tous vos supports.</p></div>
+      <div class="gain reveal" style="--d:.16s"><h3><sup>VI</sup>Simplifier</h3><p>Un seul interlocuteur pour l'ensemble de vos besoins.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NOS UNIVERS ===================== -->
+<section id="univers" class="sec sec-end" aria-label="Nos univers">
+  <div class="wrap">
+    <header class="sec-head center reveal">
+      <p class="kicker center">Nos univers</p>
+      <h2>Trois maisons, une même signature.</h2>
+      <p>De la donnée technique à l'émotion d'un portrait, chaque univers d'Æra porte la même exigence de précision et d'élégance.</p>
+    </header>
+    <div class="univers">
+      <article class="uni reveal">
+        <div class="uni-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_13790819611e4d979cbe576171ade80b~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/maquette-3d-photogrammetrie.jpg" alt="Maquette 3D texturée d'une maison à colombages issue de photogrammétrie" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="uni-body">
+          <p class="uni-name">Æra <b>Tech &amp; Scan</b></p>
+          <p class="uni-motto">Comprendre. Mesurer. Documenter.</p>
+          <ul class="uni-list" role="list">
+            <li>Scan laser 3D</li>
+            <li>Photogrammétrie</li>
+            <li>Orthophotographie</li>
+            <li>Inspection</li>
+            <li>Suivi de chantier</li>
+          </ul>
+        </div>
+      </article>
+      <article class="uni reveal" style="--d:.1s">
+        <div class="uni-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_6a9c9cf6b42c4638864f4606ae0ced8f~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/batiment-entreprise-bord-de-seine-drone.jpg" alt="Bâtiment d'entreprise en bord de Seine photographié par drone" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="uni-body">
+          <p class="uni-name">Æra <b>Prod</b></p>
+          <p class="uni-motto">Créer. Inspirer. Communiquer.</p>
+          <ul class="uni-list" role="list">
+            <li>Drone</li>
+            <li>Film d'entreprise</li>
+            <li>Publicité et tourisme</li>
+            <li>Timelapse</li>
+            <li>Vidéo événementielle</li>
+          </ul>
+        </div>
+      </article>
+      <article class="uni reveal" style="--d:.2s">
+        <div class="uni-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_4cd10df79b6d46d482b91680e623f044~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/coeur-dessine-sur-le-sable-drone.jpg" alt="Cœur ornementé dessiné sur le sable d'une plage, photographié par drone" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="uni-body">
+          <p class="uni-name">Æra <b>Photographie</b></p>
+          <p class="uni-motto">Révéler. Sublimer. Immortaliser.</p>
+          <ul class="uni-list" role="list">
+            <li>Photo d'entreprise</li>
+            <li>Immobilier et patrimoine</li>
+            <li>Portrait professionnel et iris</li>
+            <li>Mariage</li>
+            <li>Packshot</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="sec sec-end alt" aria-label="Services">
+  <div class="wrap">
+    <header class="sec-head center reveal">
+      <p class="kicker center">Services</p>
+      <h2>Quatre savoir-faire, un seul regard.</h2>
+    </header>
+    <div class="svcs">
+      <a class="svc reveal" href="#contact">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_ef17460ccfef41dbb191c4e805801575~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/trois-mats-rouen-drone.jpg" alt="Trois mâts sur la Seine à Rouen à la lumière dorée" width="900" height="1200" loading="lazy">
+        </div>
+        <div class="svc-label"><h3>Photographie</h3><span>Découvrir</span></div>
+      </a>
+      <a class="svc reveal" href="#contact" style="--d:.08s">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_fb860a582b8444dd9f649d2834fa6a62~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/coucher-de-soleil-station-balneaire-drone.jpg" alt="Coucher de soleil sur une station balnéaire de la côte normande, vu par drone" width="900" height="1200" loading="lazy">
+        </div>
+        <div class="svc-label"><h3>Audiovisuel</h3><span>Découvrir</span></div>
+      </a>
+      <a class="svc reveal" href="#contact" style="--d:.16s">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_0a860defe146495786e64768bfe14e71~mv2.png/v1/fill/w_900,h_1200,al_c,q_85/falaises-littoral-drone.jpg" alt="Falaises et littoral photographiés par drone, route côtière et mer turquoise" width="900" height="1200" loading="lazy">
+        </div>
+        <div class="svc-label"><h3>Drone</h3><span>Découvrir</span></div>
+      </a>
+      <a class="svc reveal" href="#contact" style="--d:.24s">
+        <div class="svc-media">
+          <img src="https://static.wixstatic.com/media/aba3f4_64720cb57ced4795a8aaa86fee57bf90~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/nuage-de-points-photogrammetrie.jpg" alt="Nuage de points issu d'un relevé scan 3D, bâtisse restituée en trois dimensions" width="900" height="1200" loading="lazy">
+        </div>
+        <div class="svc-label"><h3>Scan 3D</h3><span>Découvrir</span></div>
+      </a>
+    </div>
+    <p class="svc-note reveal">Le <em>timelapse</em> est également proposé comme un service à part entière : la mémoire du temps long, pour un chantier, un lieu ou une saison.</p>
+  </div>
+</section>
+
+<!-- ===================== SOLUTIONS ===================== -->
+<section id="solutions" class="sec sec-end" aria-label="Solutions">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Solutions</p>
+      <h2>Des solutions pensées par besoin.</h2>
+      <p>Chaque solution réunit les savoir-faire utiles à votre projet. Toutes sont établies sur devis et entièrement personnalisables.</p>
+    </header>
+    <div class="sols">
+      <div class="sol reveal">
+        <h3>Solution Immobilier Premium</h3>
+        <p>Photographie, drone, vidéo et visuels pour vos réseaux sociaux : la mise en valeur complète d'un bien d'exception.</p>
+        <span class="sol-tag">Sur devis</span>
+      </div>
+      <div class="sol reveal">
+        <h3>Solution Entreprise</h3>
+        <p>Film d'entreprise, portraits des équipes, photographie des locaux et contenus adaptés à vos supports de communication.</p>
+        <span class="sol-tag">Sur devis</span>
+      </div>
+      <div class="sol reveal">
+        <h3>Solution Collectivités</h3>
+        <p>Valorisation du territoire et du patrimoine, images touristiques, couverture d'événements et photothèque réutilisable.</p>
+        <span class="sol-tag">Sur devis</span>
+      </div>
+      <div class="sol reveal">
+        <h3>Solution Chantier</h3>
+        <p>Suivi régulier par drone, timelapse, orthophotographie et reportage aux étapes clés, des fondations à la livraison.</p>
+        <span class="sol-tag">Sur devis</span>
+      </div>
+      <div class="sol reveal">
+        <h3>Solution Commerce</h3>
+        <p>Packshot, photographie du point de vente, vidéo promotionnelle et visuels pour vos réseaux sociaux.</p>
+        <span class="sol-tag">Sur devis</span>
+      </div>
+    </div>
+    <p class="sols-note reveal">Chaque solution est un point de départ : elle s'ajuste à votre lieu, votre calendrier et vos livrables.</p>
+  </div>
+</section>
+
+<!-- ===================== RÉALISATIONS ===================== -->
+<section id="realisations" class="sec sec-end" aria-label="Réalisations">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Réalisations</p>
+      <h2>Le regard Æra.</h2>
+    </header>
+
+    <div class="g-row g-h1 reveal">
+      <figure>
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_764d1865c1a044738df7a60ff6060ffe~mv2.jpg/v1/fill/w_1800,h_800,al_t,q_85/panorama-rouen-drone.jpg" alt="Panorama aérien de Rouen, ses ponts, ses quais et sa cathédrale" width="1800" height="800" loading="lazy"></div>
+        <figcaption>Rouen, panorama aérien</figcaption>
+      </figure>
+    </div>
+    <div class="g-row g-3 g-h2">
+      <figure class="reveal">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_fb860a582b8444dd9f649d2834fa6a62~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/coucher-de-soleil-cote-normande.jpg" alt="Coucher de soleil sur la côte normande vu par drone" width="900" height="1200" loading="lazy"></div>
+        <figcaption>Coucher de soleil sur la côte</figcaption>
+      </figure>
+      <figure class="reveal" style="--d:.08s">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_2df8f61139e44c0581adc91a226f1ac3~mv2.jpg/v1/fill/w_1200,h_900,al_t,q_85/maison-normande-vue-par-drone.jpg" alt="Maison normande et son jardin vus par drone" width="1200" height="900" loading="lazy"></div>
+        <figcaption>Immobilier, maison normande</figcaption>
+      </figure>
+      <figure class="reveal" style="--d:.16s">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_4a7c9d5adffa403b98ec128ddda86c8e~mv2.jpg/v1/fill/w_900,h_640,al_c,q_85/orthophotographie-facade.jpg" alt="Orthophotographie d'une façade, image redressée sans déformation" width="900" height="640" loading="lazy"></div>
+        <figcaption>Orthophotographie de façade</figcaption>
+      </figure>
+    </div>
+    <div class="g-row g-21 g-h3">
+      <figure class="reveal">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_6f07cad6e96c433d9c80c4d0135a4e96~mv2.jpg/v1/fill/w_1800,h_800,al_c,q_85/coeur-de-ville-normand-drone.jpg" alt="Cœur de ville normand au drone, villas et rues arborées à la lumière du soir" width="1800" height="800" loading="lazy"></div>
+        <figcaption>Cœur de ville normand</figcaption>
+      </figure>
+      <figure class="reveal" style="--d:.08s">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_34db091b379949cc898d20868d09d828~mv2.jpg/v1/fill/w_900,h_640,al_c,q_85/monument-en-restauration-vue-zenithale-drone.jpg" alt="Tour d'un monument historique sous échafaudage, vue zénithale par drone" width="900" height="640" loading="lazy"></div>
+        <figcaption>Inspection d'ouvrage en restauration</figcaption>
+      </figure>
+    </div>
+    <div class="g-row g-3 g-h3">
+      <figure class="reveal">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_1bacf655398842ad9f4553a6f5334500~mv2.jpg/v1/fill/w_900,h_640,al_c,q_85/parcelles-agricoles-drone.jpg" alt="Parcelles agricoles vues du ciel, traces de passage dans les cultures" width="900" height="640" loading="lazy"></div>
+        <figcaption>Agriculture, parcelles</figcaption>
+      </figure>
+      <figure class="reveal" style="--d:.08s">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_335748759c084f23993eef744c6cc71e~mv2.jpg/v1/fill/w_900,h_640,al_c,q_85/terrassement-chantier-drone.jpg" alt="Terrassement d'un chantier vu du ciel, engins au travail sur la parcelle" width="900" height="640" loading="lazy"></div>
+        <figcaption>Suivi de chantier</figcaption>
+      </figure>
+      <figure class="reveal" style="--d:.16s">
+        <div class="g-media"><img src="https://static.wixstatic.com/media/aba3f4_5d25845327c149afbaa038f55823947b~mv2.jpg/v1/fill/w_1800,h_800,al_c,q_85/realite-virtuelle-360-village.jpg" alt="Vue aérienne à 360 degrés d'un village, en projection sphérique" width="1800" height="800" loading="lazy"></div>
+        <figcaption>Vue immersive à 360 degrés</figcaption>
+      </figure>
+    </div>
+    <p class="gal-note reveal">Toutes les images de cette page sont des prises de vues réalisées par Æra Drone Production. Le site final accueillera les galeries complètes, classées par univers.</p>
+  </div>
+</section>
+
+<!-- ===================== ILS NOUS FONT CONFIANCE ===================== -->
+<section class="clients-sec alt" aria-label="Ils nous font confiance">
+  <div class="clients-inner">
+    <div class="wrap clients-head reveal">
+      <p class="kicker center">Références</p>
+      <h2>Ils nous font confiance.</h2>
+    </div>
+    <div class="cl-marquee" aria-hidden="true">
+      <div class="cl-track">
+        <span>Promoteur immobilier</span><span>Office de tourisme</span><span>Cabinet d'architectes</span><span>Entreprise du BTP</span><span>Collectivité territoriale</span><span>Industrie normande</span><span>Étude notariale</span><span>Agence de communication</span>
+        <span>Promoteur immobilier</span><span>Office de tourisme</span><span>Cabinet d'architectes</span><span>Entreprise du BTP</span><span>Collectivité territoriale</span><span>Industrie normande</span><span>Étude notariale</span><span>Agence de communication</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="cl-note">Secteurs présentés à titre d'exemple pour cet aperçu : le site final affichera les noms et logos de vos clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NOTRE APPROCHE ===================== -->
+<section id="approche" class="sec sec-end" aria-label="Notre approche">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Notre approche</p>
+      <h2>Six temps, une exigence constante.</h2>
+      <p>Chaque mission suit le même chemin, du premier échange à la livraison. C'est ce qui garantit la justesse du résultat, quel que soit le projet.</p>
+    </header>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-n">01</span>
+        <h3>Comprendre</h3>
+        <p>Tout commence par une écoute attentive : votre activité, vos enjeux, ce que vos images doivent accomplir.</p>
+      </div>
+      <div class="step reveal" style="--d:.08s">
+        <span class="step-n">02</span>
+        <h3>Conseiller</h3>
+        <p>Nous recommandons les solutions les plus pertinentes pour votre besoin, sans rien vous proposer d'inutile.</p>
+      </div>
+      <div class="step reveal" style="--d:.16s">
+        <span class="step-n">03</span>
+        <h3>Concevoir</h3>
+        <p>Chaque image est pensée avant d'être produite : cadrage, lumière, storytelling.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-n">04</span>
+        <h3>Produire</h3>
+        <p>Le même niveau d'exigence sur chaque mission, du packshot au relevé scan 3D.</p>
+      </div>
+      <div class="step reveal" style="--d:.08s">
+        <span class="step-n">05</span>
+        <h3>Sublimer</h3>
+        <p>Une post-production signature, qui révèle la matière et la lumière de chaque image.</p>
+      </div>
+      <div class="step reveal" style="--d:.16s">
+        <span class="step-n">06</span>
+        <h3>Accompagner</h3>
+        <p>Une relation durable, avec un interlocuteur unique, du premier échange à la livraison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== À PROPOS ===================== -->
+<section id="apropos" class="sec sec-end alt" aria-label="À propos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">À propos</p>
+      <h2>Vanessa Druel, un regard, deux altitudes.</h2>
+    </header>
+    <div class="about">
+      <div class="about-copy reveal">
+        <p>Derrière Æra Drone Production, il y a Vanessa Druel : photographe et télépilote de drone professionnelle, installée à La Vaupalière, en Normandie.</p>
+        <p>Du studio au ciel, elle mène chaque projet de bout en bout, avec la même attention portée à la lumière, à la composition et au détail. Chaque mission est préparée avec rigueur, dans le respect de la réglementation aérienne et du droit d'auteur.</p>
+        <p class="creds-k" style="margin-top:38px">Vos garanties</p>
+        <ul class="creds" role="list" style="margin-top:0">
+          <li><strong>Télépilote de drone certifiée</strong><span>Certifications A1/A3, BAPD et CATS</span></li>
+          <li><strong>Vols assurés</strong><span>Assurance drone Atlantas</span></li>
+          <li><strong>Activité photographique assurée</strong><span>Responsabilité civile professionnelle Macif</span></li>
+          <li><strong>Membre de la SAIF</strong><span>Société des auteurs des arts visuels et de l'image fixe</span></li>
+          <li><strong>Membre de l'UPP</strong><span>Union des photographes professionnels</span></li>
+        </ul>
+      </div>
+      <figure class="about-fig reveal" style="--d:.1s">
+        <img src="https://static.wixstatic.com/media/aba3f4_ef17460ccfef41dbb191c4e805801575~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/trois-mats-rouen-lumiere-doree.jpg" alt="Trois mâts sur la Seine à Rouen à la lumière dorée, prise de vue par drone de Vanessa Druel" width="900" height="1200" loading="lazy">
+        <figcaption>La Seine à Rouen, photographie par drone</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="sec sec-end" aria-label="Contact">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Contact</p>
+      <h2>Parlons de votre projet.</h2>
+    </header>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="c-lede">Chaque projet commence par un échange simple. Décrivez votre besoin, nous vous répondons avec une proposition sur mesure.</p>
+        <div class="c-items">
+          <div class="c-item">
+            <span class="c-k">Téléphone</span>
+            <a class="c-big" href="tel:+33786874177">07 86 87 41 77</a>
+          </div>
+          <div class="c-item">
+            <span class="c-k">Email</span>
+            <a class="c-big" href="mailto:aera-drone@orange.fr">aera-drone@orange.fr</a>
+          </div>
+          <div class="c-item">
+            <span class="c-k">Studio</span>
+            <address>La Vaupalière, Normandie<br>Déplacements dans toute la France</address>
+          </div>
+        </div>
+        <p class="c-note">Le site final proposera également un formulaire de contact simple, conforme au RGPD.</p>
+      </div>
+      <div class="c-gal reveal" style="--d:.1s">
+        <h3>Vos galeries clients</h3>
+        <p>Retrouvez, visionnez et téléchargez vos photos dans une galerie privée et sécurisée, accessible à tout moment.</p>
+        <a class="btn btn-ghost" href="#" aria-disabled="true">Accéder à mes galeries</a>
+        <small>Lien de démonstration : il conduira vers vos galeries clients sur le site final.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENTIONS ===================== -->
+<section id="mentions" class="mentions" aria-label="Mentions légales, confidentialité et CGV">
+  <div class="wrap mentions-inner">
+    <h2>Mentions légales, confidentialité et CGV</h2>
+    <p><strong>Æra Drone Production · Vanessa Druel</strong> · La Vaupalière (76) · SIRET 899 899 082 00015 · Télépilote de drone professionnelle certifiée (A1/A3, BAPD, CATS) · Vols assurés (Atlantas), responsabilité civile professionnelle photographe (Macif) · Membre de la SAIF et de l'UPP. Photographies : Æra Drone Production, tous droits réservés.</p>
+    <p>Cette page est une maquette de démonstration. Le site final comprendra une page <strong>Mentions légales</strong> complète, une <strong>Politique de confidentialité</strong> conforme au RGPD (traitement des données du formulaire de contact) ainsi que des <strong>Conditions générales de vente</strong> consultables à tout moment : les liens du pied de page y conduiront.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p>© 2026 Æra Drone Production · Vanessa Druel</p>
+    <nav class="foot-links" aria-label="Liens légaux">
+      <a href="#mentions">Mentions légales</a>
+      <a href="#mentions">Politique de confidentialité</a>
+      <a href="#mentions">CGV</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  new IntersectionObserver(function(entries){
+    hdr.classList.toggle('scrolled',!entries[0].isIntersecting);
+  }).observe(document.getElementById('topSentinel'));
+
+  var menu=document.getElementById('menu');
+  var burger=document.getElementById('burger');
+  function setMenu(open){
+    menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+    document.body.classList.toggle('menu-open',open);
+  }
+  burger.addEventListener('click',function(){
+    setMenu(!menu.classList.contains('open'));
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){setMenu(false)});
+  });
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')});
+    },1800);
+  });
+})();
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
