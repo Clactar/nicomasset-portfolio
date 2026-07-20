@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#173f2e">
+<title>Auto-école Horizon · Permis B, conduite accompagnée et code · 78 % de réussite en 2025</title>
+<meta name="description" content="Auto-école Horizon, au cœur du centre-ville : permis B en forfait 20 h, conduite accompagnée dès 15 ans, code en salle et en ligne. 78 % de réussite au permis B en 2025. Tarifs clairs, financement facilité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   Auto-école Horizon · MAQUETTE DE DÉMONSTRATION (fictive)
+   Nicolas Masset · 2026-07-20
+   DA : vert sapin profond + crème + terracotta, chaleureux,
+   Fraunces (display) + Outfit (texte).
+   z : header 50, menu mobile 55, burger 60.
+   Checklist mobile appliquée : fond header sur ::before,
+   burger relative z-60, padding horizontal répété partout.
+   ============================================================ */
+
+:root{
+  --cream:#faf7ef;
+  --cream-2:#f1ead9;
+  --pine:#173f2e;
+  --pine-2:#0f2d20;
+  --pine-soft:#e2ead9;
+  --ink:#1c2a23;
+  --ink-2:#40514a;
+  --muted:#5b6a61;
+  --line:rgba(23,63,46,.16);
+  --line-soft:rgba(23,63,46,.09);
+  --terra:#c56a43;       /* décoratif : filets, formes */
+  --terra-ink:#9c4c2a;   /* texte petit : contraste AA sur crème */
+  --sun:#e3a94f;         /* étoiles, accents sur fond sapin */
+  --maxw:1200px;
+  --nav-h:78px;
+  --pad-x:clamp(24px,4.5vw,48px); /* ≥ 24 px sur mobile (checklist) */
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Outfit",system-ui,sans-serif;
+  background:var(--cream);color:var(--ink);
+  line-height:1.65;font-size:1.02rem;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--pine);color:var(--cream)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x)}
+
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.01em;text-wrap:balance;line-height:1.12;color:var(--pine)}
+p{text-wrap:pretty}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--pine);color:var(--cream);padding:10px 18px;z-index:100}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--terra-ink);outline-offset:3px}
+
+/* Kicker avec marquage routier (pointillés) */
+.kicker{
+  font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--terra-ink);font-weight:600;
+}
+.kicker::after{
+  content:"";display:block;width:64px;height:3px;margin-top:14px;
+  background:repeating-linear-gradient(90deg,var(--terra) 0 10px,transparent 10px 18px);
+  border-radius:2px;
+}
+.kicker.center{display:flex;flex-direction:column;align-items:center}
+
+/* ---------------- Header ---------------- */
+.io-sentinel{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+.hdr{position:sticky;top:0;z-index:50}
+/* fond du header sur un pseudo-élément : jamais de backdrop-filter
+   sur .hdr lui-même (containing block du menu mobile fixed) */
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(250,247,239,.97);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+.hdr.scrolled::before{border-bottom-color:var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:42px;height:42px;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1.12}
+.brand-name{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.22rem;color:var(--pine);letter-spacing:.01em}
+.brand-sub{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--terra-ink);font-weight:600}
+.menu{display:flex;align-items:center;gap:clamp(14px,1.7vw,26px)}
+.menu a{
+  position:relative;font-weight:500;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-2);padding:6px 0;transition:color .25s;
+}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--terra);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.menu a:hover{color:var(--pine)}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .menu-cta{
+  border:1.5px solid var(--pine);border-radius:999px;padding:9px 20px;color:var(--pine);
+  transition:background .3s var(--ease),color .3s var(--ease);
+}
+.menu .menu-cta::after{display:none}
+.menu .menu-cta:hover{background:var(--pine);color:var(--cream)}
+/* burger : relative + z-index 60 > menu 55 → reste cliquable pour REFERMER */
+.burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:44px;height:44px;background:none;border:0;cursor:pointer;z-index:60;position:relative}
+.burger span{display:block;width:24px;height:2px;background:var(--pine);border-radius:2px;transition:transform .3s var(--ease),opacity .3s}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+body.menu-open{overflow:hidden}
+
+/* ---------------- Boutons ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:inherit;font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  padding:17px 32px;border-radius:999px;border:1.5px solid var(--pine);cursor:pointer;
+  transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);
+}
+.btn svg{width:15px;height:15px;flex:none}
+.btn-solid{background:var(--pine);color:var(--cream)}
+.btn-ghost{background:transparent;color:var(--pine)}
+.btn-terra{background:var(--terra-ink);border-color:var(--terra-ink);color:#fff}
+@media(hover:hover) and (pointer:fine){
+  .btn-solid:hover{background:transparent;color:var(--pine)}
+  .btn-ghost:hover{background:var(--pine);color:var(--cream)}
+  .btn-terra:hover{background:transparent;color:var(--terra-ink)}
+}
+
+/* ---------------- Hero ---------------- */
+/* padding horizontal répété : le shorthand écraserait celui du .wrap */
+.hero-inner{
+  padding:clamp(52px,8vh,96px) var(--pad-x) clamp(56px,9vh,104px);
+  display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);
+  gap:clamp(36px,5vw,72px);align-items:center;
+  max-width:var(--maxw);margin:0 auto;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+  font-size:.78rem;font-weight:500;color:var(--ink-2);background:#fff;
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--terra);flex:none}
+.hero h1{margin-top:22px;font-size:clamp(2.3rem,4.7vw,3.7rem)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--terra-ink)}
+.hero-lede{margin-top:20px;max-width:50ch;color:var(--muted);font-size:1.08rem;line-height:1.75}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.hero-meta{display:flex;gap:10px 26px;flex-wrap:wrap;margin-top:34px;font-size:.85rem;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta svg{width:16px;height:16px;flex:none;color:var(--terra-ink)}
+
+.hero-visual{position:relative}
+.hero-car{
+  background:var(--pine);border-radius:26px;padding:clamp(24px,3vw,40px) clamp(20px,2.6vw,34px) 0;
+  overflow:hidden;
+}
+.hero-car svg{width:100%;height:auto}
+.hero-score{
+  display:flex;align-items:center;gap:18px;
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:20px 24px;margin-top:-34px;position:relative;z-index:2;
+  margin-left:clamp(14px,2vw,28px);margin-right:clamp(14px,2vw,28px);
+  box-shadow:0 24px 50px -30px rgba(23,63,46,.4);
+}
+.hero-score-num{
+  font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:clamp(2.4rem,3.6vw,3rem);
+  color:var(--terra-ink);line-height:1;white-space:nowrap;
+}
+.hero-score-num sup{font-size:.5em;font-weight:600}
+.hero-score-txt{font-size:.9rem;color:var(--ink-2);line-height:1.45}
+.hero-score-txt b{color:var(--pine);font-weight:600}
+.js .hero-copy>*{opacity:0;transform:translateY(16px);animation:rise 1s var(--ease) forwards}
+.js .hero-copy>*:nth-child(2){animation-delay:.1s}
+.js .hero-copy>*:nth-child(3){animation-delay:.2s}
+.js .hero-copy>*:nth-child(4){animation-delay:.3s}
+.js .hero-copy>*:nth-child(5){animation-delay:.4s}
+.js .hero-visual{opacity:0;transform:translateY(20px);animation:rise 1.1s var(--ease) .25s forwards}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+/* ---------------- Bande chiffres ---------------- */
+.stats{background:var(--pine);color:var(--cream)}
+.stats-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px clamp(20px,3vw,48px);
+  padding:clamp(40px,5vw,60px) var(--pad-x);
+  max-width:var(--maxw);margin:0 auto;
+}
+.stat{text-align:center}
+.stat-num{
+  font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.7rem);
+  color:var(--sun);line-height:1.1;font-variant-numeric:tabular-nums;
+}
+.stat-num sup{font-size:.55em}
+.stat-lbl{margin-top:6px;font-size:.82rem;letter-spacing:.06em;color:rgba(250,247,239,.82)}
+
+/* ---------------- Sections ---------------- */
+section{scroll-margin-top:calc(var(--nav-h) + 10px)}
+.sec{padding:clamp(76px,10vw,124px) 0}
+.alt{background:var(--cream-2)}
+.sec-head{max-width:660px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{margin-top:24px;font-size:clamp(1.75rem,3.2vw,2.5rem)}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:1.02rem;max-width:56ch}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+
+/* ---------------- Formules & tarifs ---------------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,28px);margin-top:clamp(44px,5vw,64px)}
+.plan{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:22px;padding:32px 28px 30px;position:relative;
+}
+.plan-feat{background:var(--pine);border-color:var(--pine);color:var(--cream)}
+.plan-tag{
+  position:absolute;top:-13px;left:26px;background:var(--terra-ink);color:#fff;
+  font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;
+}
+.plan-ico{width:44px;height:44px;color:var(--terra-ink)}
+.plan-feat .plan-ico{color:var(--sun)}
+.plan h3{margin-top:18px;font-size:1.42rem}
+.plan-feat h3{color:var(--cream)}
+.plan-sub{margin-top:4px;font-size:.85rem;color:var(--muted)}
+.plan-feat .plan-sub{color:rgba(250,247,239,.75)}
+.plan-price{margin-top:20px;display:flex;align-items:baseline;gap:8px}
+.plan-price b{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:2.3rem;color:var(--pine);line-height:1}
+.plan-feat .plan-price b{color:var(--sun)}
+.plan-price span{font-size:.82rem;color:var(--muted)}
+.plan-feat .plan-price span{color:rgba(250,247,239,.75)}
+.plan ul{list-style:none;margin-top:22px;flex:1}
+.plan li{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:9px 0;border-top:1px solid var(--line-soft);
+  font-size:.92rem;color:var(--ink-2);line-height:1.5;
+}
+.plan-feat li{border-top-color:rgba(250,247,239,.14);color:rgba(250,247,239,.9)}
+.plan li svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--terra-ink)}
+.plan-feat li svg{color:var(--sun)}
+.plan .btn{margin-top:26px;width:100%}
+.plan-feat .btn{border-color:var(--cream);color:var(--cream);background:transparent}
+@media(hover:hover) and (pointer:fine){.plan-feat .btn:hover{background:var(--cream);color:var(--pine)}}
+
+.extra{
+  margin-top:clamp(20px,2.4vw,28px);
+  display:flex;align-items:center;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;
+  background:#fff;border:1px dashed var(--line);border-radius:22px;padding:26px 28px;
+}
+.extra-txt h3{font-size:1.18rem}
+.extra-txt p{margin-top:6px;font-size:.92rem;color:var(--muted);max-width:52ch}
+.extra-price{display:flex;align-items:baseline;gap:8px;white-space:nowrap}
+.extra-price b{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.9rem;color:var(--pine)}
+.extra-price span{font-size:.82rem;color:var(--muted)}
+.plans-note{margin-top:26px;font-size:.86rem;color:var(--muted);max-width:72ch}
+
+/* ---------------- Financement ---------------- */
+.fin{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.2vw,28px);margin-top:clamp(44px,5vw,64px)}
+.fin-card{background:#fff;border:1px solid var(--line-soft);border-radius:20px;padding:30px 28px;display:flex;gap:20px;align-items:flex-start}
+.fin-ico{width:46px;height:46px;flex:none;border-radius:14px;background:var(--pine-soft);color:var(--pine);display:flex;align-items:center;justify-content:center}
+.fin-ico svg{width:24px;height:24px}
+.fin-card h3{font-size:1.22rem}
+.fin-card p{margin-top:8px;font-size:.94rem;color:var(--muted);line-height:1.65}
+.fin-card .fin-note{margin-top:10px;display:inline-block;font-size:.78rem;font-weight:600;color:var(--terra-ink);background:rgba(197,106,67,.1);border-radius:999px;padding:4px 12px}
+
+/* ---------------- Équipe ---------------- */
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,420px));justify-content:center;gap:clamp(18px,2.4vw,32px);margin-top:clamp(44px,5vw,64px)}
+.mono{background:#fff;border:1px solid var(--line-soft);border-radius:22px;padding:36px 30px;text-align:center}
+.avatar{
+  width:88px;height:88px;border-radius:50%;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.7rem;
+  background:var(--pine);color:var(--cream);
+}
+.avatar.terra{background:var(--terra-ink);color:#fff}
+.mono h3{margin-top:20px;font-size:1.35rem}
+.mono-role{margin-top:4px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.mono p{margin-top:14px;font-size:.94rem;color:var(--muted);line-height:1.7}
+.mono-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.mono-tags span{font-size:.74rem;font-weight:500;color:var(--pine);background:var(--pine-soft);border-radius:999px;padding:5px 13px}
+
+/* ---------------- Avis ---------------- */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,28px);margin-top:clamp(44px,5vw,64px)}
+.avi{background:#fff;border:1px solid var(--line-soft);border-radius:20px;padding:30px 28px;display:flex;flex-direction:column}
+.avi-stars{display:flex;gap:3px;color:var(--sun)}
+.avi-stars svg{width:17px;height:17px}
+.avi p{margin-top:16px;font-size:.96rem;color:var(--ink-2);line-height:1.7;flex:1}
+.avi p::before{
+  content:"« ";font-family:"Fraunces",Georgia,serif;color:var(--terra-ink);font-weight:600;
+}
+.avi p::after{content:" »";font-family:"Fraunces",Georgia,serif;color:var(--terra-ink);font-weight:600}
+.avi-who{margin-top:18px;display:flex;align-items:center;gap:12px}
+.avi-who .avatar{width:42px;height:42px;font-size:.95rem;margin:0}
+.avi-name{font-weight:600;font-size:.92rem;color:var(--pine)}
+.avi-ctx{font-size:.78rem;color:var(--muted)}
+
+/* ---------------- Infos pratiques ---------------- */
+.infos-grid{display:grid;grid-template-columns:minmax(0,10fr) minmax(0,9fr);gap:clamp(32px,5vw,64px);margin-top:clamp(44px,5vw,64px);align-items:start}
+.hours{list-style:none;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours .d{color:var(--ink-2)}
+.hours .h{font-weight:600;color:var(--pine);font-variant-numeric:tabular-nums;text-align:right}
+.hours .h.off{color:var(--muted);font-weight:400}
+.hours-note{margin-top:14px;font-size:.86rem;color:var(--muted)}
+.c-items{display:grid;gap:20px;margin-top:34px}
+.c-item{display:grid;gap:3px}
+.c-k{font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--terra-ink)}
+.c-item a.c-big{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(1.3rem,2.2vw,1.6rem);color:var(--pine);overflow-wrap:anywhere;
+  transition:color .25s;
+}
+.c-item a.c-big:hover{color:var(--terra-ink)}
+.c-item address{font-style:normal;color:var(--ink-2);font-size:1rem;line-height:1.6}
+.infos-h3{font-size:1.25rem;margin-bottom:18px}
+.map{
+  border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;
+}
+.map svg{width:100%;height:auto}
+.map-cap{padding:16px 22px;border-top:1px solid var(--line-soft);font-size:.82rem;color:var(--muted)}
+.map-cap b{color:var(--pine);font-weight:600}
+
+/* ---------------- CTA final ---------------- */
+.cta{background:var(--pine);color:var(--cream)}
+.cta-inner{
+  padding:clamp(64px,8vw,100px) var(--pad-x);text-align:center;
+  max-width:var(--maxw);margin:0 auto;display:flex;flex-direction:column;align-items:center;
+}
+.cta h2{color:var(--cream);font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.cta p{margin-top:16px;color:rgba(250,247,239,.8);max-width:52ch}
+.cta .btn{margin-top:34px;border-color:var(--sun);background:var(--sun);color:var(--pine-2)}
+@media(hover:hover) and (pointer:fine){.cta .btn:hover{background:transparent;color:var(--sun)}}
+.cta small{margin-top:18px;font-size:.82rem;color:rgba(250,247,239,.65)}
+
+/* ---------------- Footer ---------------- */
+.foot{background:var(--pine-2);color:rgba(250,247,239,.78);padding:clamp(44px,5vw,60px) 0 34px}
+.foot-grid{display:flex;justify-content:space-between;gap:28px 40px;flex-wrap:wrap}
+.foot-brand{max-width:340px}
+.foot-brand .brand-name{color:var(--cream);font-size:1.15rem}
+.foot-brand p{margin-top:12px;font-size:.88rem;line-height:1.7}
+.foot-col h3{font-family:"Outfit",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sun)}
+.foot-col ul{list-style:none;margin-top:14px;display:grid;gap:8px;font-size:.9rem}
+.foot-col a{transition:color .25s}
+.foot-col a:hover{color:var(--cream)}
+.foot-legal{
+  margin-top:38px;padding-top:24px;border-top:1px solid rgba(250,247,239,.14);
+  display:flex;justify-content:space-between;align-items:center;gap:14px 26px;flex-wrap:wrap;
+  font-size:.8rem;color:rgba(250,247,239,.6);
+}
+.demo-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(250,247,239,.08);border:1px solid rgba(250,247,239,.22);border-radius:999px;
+  padding:8px 18px;font-size:.8rem;color:rgba(250,247,239,.85);
+}
+.demo-badge svg{width:14px;height:14px;flex:none;color:var(--sun)}
+
+/* ---------------- Reveal ---------------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------------- Reduced motion ---------------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .hero-copy>*,.js .hero-visual{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.menu a::after{transition:none}
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1040px){
+  .menu{
+    position:fixed;inset:0;background:var(--cream);z-index:55; /* fond opaque plein */
+    flex-direction:column;justify-content:center;gap:24px;
+    transform:translateY(-102%);visibility:hidden;
+    transition:transform .5s var(--ease),visibility 0s .5s;
+  }
+  .menu.open{transform:none;visibility:visible;transition:transform .5s var(--ease),visibility 0s 0s}
+  .menu a{font-family:"Fraunces",Georgia,serif;font-size:1.45rem;letter-spacing:.02em;text-transform:none;color:var(--pine)}
+  .menu a::after{display:none}
+  .menu .menu-cta{font-family:"Outfit",sans-serif;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;padding:13px 30px}
+  .burger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:44px}
+  .hero-visual{max-width:560px}
+  .plans{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+  .plan-feat{order:-1}
+  .extra{max-width:520px;margin-left:auto;margin-right:auto}
+  .avis{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .infos-grid{grid-template-columns:1fr;gap:44px}
+  .map{max-width:560px}
+}
+@media(max-width:820px){
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .fin{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .team{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+}
+@media(max-width:640px){
+  body{font-size:1rem}
+  :root{--nav-h:68px}
+  .hero h1{font-size:clamp(2rem,8.6vw,2.5rem)}
+  .hero-ctas{width:100%}
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-score{gap:14px;padding:18px 18px;margin-left:10px;margin-right:10px}
+  .extra{flex-direction:column;align-items:flex-start}
+  .extra .btn{width:100%}
+  .fin-card{flex-direction:column}
+  .plan .btn,.cta .btn{width:100%}
+  .foot-grid{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="io-sentinel" id="topSentinel" aria-hidden="true"></div>
+<a class="skip" href="#accueil">Aller au contenu</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap nav">
+    <a href="#accueil" class="brand" aria-label="Auto-école Horizon, retour en haut de page">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#173f2e"/>
+        <path d="M8 30c5-8 11-13 16-13s11 5 16 13" fill="none" stroke="#e3a94f" stroke-width="3" stroke-linecap="round"/>
+        <path d="M12 34h24" stroke="#faf7ef" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
+      </svg>
+      <span class="brand-txt">
+        <span class="brand-name">Auto-école Horizon</span>
+        <span class="brand-sub">Permis B · AAC · Code</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#formules">Formules &amp; tarifs</a>
+      <a href="#financement">Financement</a>
+      <a href="#equipe">L'équipe</a>
+      <a href="#avis">Avis</a>
+      <a href="#infos">Infos pratiques</a>
+      <a class="menu-cta" href="#contact">Nous contacter</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section id="accueil" aria-label="Introduction">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-badge"><span class="dot" aria-hidden="true"></span>Agrément préfectoral n° E 00 000 0000 0</p>
+      <h1>Votre permis, <em>en confiance</em>, au cœur du centre-ville.</h1>
+      <p class="hero-lede">Une équipe de moniteurs diplômés, des tarifs affichés sans surprise et un accompagnement personnalisé, de votre première heure de code jusqu'au jour de l'examen.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#formules">Nos formules</a>
+        <a class="btn btn-ghost" href="#contact">Nous contacter</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Boîte manuelle et automatique</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Code en salle et en ligne</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-car" aria-hidden="true">
+        <svg viewBox="0 0 560 330" role="img" aria-label="Illustration d'une voiture d'auto-école stylisée sur la route">
+          <!-- ciel / décor -->
+          <circle cx="450" cy="80" r="46" fill="#e3a94f" opacity=".9"/>
+          <path d="M0 208 Q 140 150 300 196 T 560 186 V 330 H 0 Z" fill="#1e4f3a"/>
+          <path d="M0 236 Q 180 196 360 226 T 560 218 V 330 H 0 Z" fill="#265f46"/>
+          <!-- route -->
+          <rect x="0" y="258" width="560" height="72" fill="#0f2d20"/>
+          <line x1="16" y1="294" x2="560" y2="294" stroke="#faf7ef" stroke-width="4" stroke-dasharray="26 22" stroke-linecap="round" opacity=".85"/>
+          <!-- voiture -->
+          <g>
+            <!-- panneau de toit auto-école -->
+            <rect x="216" y="176" width="128" height="26" rx="8" fill="#faf7ef"/>
+            <text x="280" y="195" text-anchor="middle" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#173f2e" letter-spacing="1">AUTO-ÉCOLE</text>
+            <rect x="270" y="202" width="20" height="8" fill="#faf7ef"/>
+            <!-- carrosserie -->
+            <path d="M150 268 q 0 -26 26 -30 l 30 -4 q 18 -26 52 -26 h 52 q 34 0 56 26 l 40 6 q 24 4 24 28 v 14 q 0 8 -8 8 h -264 q -8 0 -8 -8 z" fill="#c56a43"/>
+            <!-- vitres -->
+            <path d="M216 236 q 14 -20 40 -20 h 20 v 20 z" fill="#faf7ef"/>
+            <path d="M288 216 h 20 q 26 0 40 20 h -60 z" fill="#faf7ef"/>
+            <!-- phares -->
+            <rect x="416" y="252" width="14" height="10" rx="4" fill="#e3a94f"/>
+            <rect x="152" y="254" width="12" height="8" rx="4" fill="#f1ead9" opacity=".8"/>
+            <!-- roues -->
+            <circle cx="212" cy="284" r="22" fill="#12241c"/>
+            <circle cx="212" cy="284" r="9" fill="#faf7ef"/>
+            <circle cx="376" cy="284" r="22" fill="#12241c"/>
+            <circle cx="376" cy="284" r="9" fill="#faf7ef"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-score">
+        <p class="hero-score-num"><span id="scoreNum" data-count="78">0</span>&nbsp;<sup>%</sup></p>
+        <p class="hero-score-txt"><b>de réussite au permis B en 2025</b><br>chez nos élèves présentés à l'examen</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHIFFRES ===================== -->
+<section class="stats" aria-label="Nos chiffres clés">
+  <div class="stats-inner">
+    <div class="stat reveal"><p class="stat-num"><span data-count="92">0</span><sup>&nbsp;%</sup></p><p class="stat-lbl">de réussite au code en 2025</p></div>
+    <div class="stat reveal" style="--d:.08s"><p class="stat-num"><span data-count="15">0</span></p><p class="stat-lbl">années au service des élèves</p></div>
+    <div class="stat reveal" style="--d:.16s"><p class="stat-num"><span data-count="420">0</span><sup>+</sup></p><p class="stat-lbl">permis obtenus depuis l'ouverture</p></div>
+    <div class="stat reveal" style="--d:.24s"><p class="stat-num"><span data-count="4">0</span></p><p class="stat-lbl">véhicules récents à double commande</p></div>
+  </div>
+</section>
+
+<!-- ===================== FORMULES & TARIFS ===================== -->
+<section id="formules" class="sec" aria-label="Formules et tarifs">
+  <div class="wrap">
+    <header class="sec-head center reveal">
+      <p class="kicker center">Formules &amp; tarifs</p>
+      <h2>Des prix affichés, clairs, sans surprise.</h2>
+      <p>Chaque formule détaille exactement ce qu'elle comprend. Le récapitulatif complet des prestations vous est remis avant toute inscription.</p>
+    </header>
+    <div class="plans">
+      <article class="plan reveal">
+        <svg class="plan-ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="8" y="10" width="32" height="24" rx="3"/><path d="M18 40h12M24 34v6M16 20h10M16 26h16"/>
+        </svg>
+        <h3>Code de la route</h3>
+        <p class="plan-sub">Salle + plateforme en ligne</p>
+        <p class="plan-price"><b>350&nbsp;€</b><span>TTC, accès 6 mois</span></p>
+        <ul role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Séances en salle animées par un moniteur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plateforme en ligne accessible 24 h/24</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Examens blancs illimités et suivi des progrès</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Accompagnement à l'inscription à l'examen</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">S'inscrire au code</a>
+      </article>
+
+      <article class="plan plan-feat reveal" style="--d:.08s">
+        <p class="plan-tag">Le plus choisi</p>
+        <svg class="plan-ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 30l4-10q1.5-4 6-4h8q4.5 0 6 4l4 10"/><rect x="6" y="30" width="36" height="8" rx="3"/><circle cx="14" cy="40" r="3"/><circle cx="34" cy="40" r="3"/>
+        </svg>
+        <h3>Permis B · forfait 20 h</h3>
+        <p class="plan-sub">La formation classique complète</p>
+        <p class="plan-price"><b>1&nbsp;290&nbsp;€</b><span>TTC, code inclus</span></p>
+        <ul role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Évaluation de départ + 20 h de conduite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formation au code (salle + en ligne) incluse</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Livret d'apprentissage numérique</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>1 accompagnement à l'examen pratique</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Frais de dossier offerts</li>
+        </ul>
+        <a class="btn" href="#contact">Demander une évaluation</a>
+      </article>
+
+      <article class="plan reveal" style="--d:.16s">
+        <svg class="plan-ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="17" cy="14" r="5"/><circle cx="33" cy="14" r="5"/><path d="M8 38v-4q0-6 9-6t9 6M22 38v-4q0-6 11-6t7 6v4"/>
+        </svg>
+        <h3>Conduite accompagnée</h3>
+        <p class="plan-sub">AAC, dès 15 ans</p>
+        <p class="plan-price"><b>1&nbsp;450&nbsp;€</b><span>TTC, code inclus</span></p>
+        <ul role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formation initiale de 20 h de conduite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Rendez-vous préalable avec les accompagnateurs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>2 rendez-vous pédagogiques inclus</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Le meilleur taux de réussite à l'examen</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Découvrir l'AAC</a>
+      </article>
+    </div>
+
+    <div class="extra reveal">
+      <div class="extra-txt">
+        <h3>Heures supplémentaires</h3>
+        <p>À l'unité ou en pack de 5 h (230&nbsp;€), sur boîte manuelle ou automatique, décomptées sur votre livret numérique.</p>
+      </div>
+      <p class="extra-price"><b>48&nbsp;€</b><span>/ heure TTC</span></p>
+      <a class="btn btn-ghost" href="#contact">Réserver</a>
+    </div>
+    <p class="plans-note reveal">Tarifs TTC de démonstration. L'ensemble des prix et le détail des prestations sont affichés en agence, conformément à la réglementation applicable aux établissements d'enseignement de la conduite.</p>
+  </div>
+</section>
+
+<!-- ===================== FINANCEMENT ===================== -->
+<section id="financement" class="sec alt" aria-label="Financement">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Financement</p>
+      <h2>Un budget permis, plusieurs solutions.</h2>
+      <p>Le permis est un vrai investissement : nous vous aidons à monter le dossier le plus adapté à votre situation, dès le premier rendez-vous.</p>
+    </header>
+    <div class="fin">
+      <article class="fin-card reveal">
+        <span class="fin-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h3.2a1.8 1.8 0 1 1 0 3.6H9.5h3.6a1.8 1.8 0 1 1 0 3.6H9.5"/></svg></span>
+        <div>
+          <h3>Permis à 1&nbsp;€ par jour</h3>
+          <p>Un prêt sans frais ni intérêts pour les 15-25 ans, remboursé à raison de 30&nbsp;€ par mois. Nous préparons le dossier avec vous pour votre banque.</p>
+          <span class="fin-note">Établissement labellisé</span>
+        </div>
+      </article>
+      <article class="fin-card reveal" style="--d:.08s">
+        <span class="fin-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
+        <div>
+          <h3>Paiement en plusieurs fois</h3>
+          <p>Réglez votre formation en 3 ou 4 fois sans frais, directement en agence. L'échéancier est fixé ensemble à l'inscription, noir sur blanc.</p>
+          <span class="fin-note">Sans frais</span>
+        </div>
+      </article>
+      <article class="fin-card reveal" style="--d:.16s">
+        <span class="fin-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5zM5 12v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-4"/></svg></span>
+        <div>
+          <h3>Bourses et aides locales</h3>
+          <p>Bourse au permis de la commune, aides départementales ou dispositifs pour les apprentis : nous faisons le point sur vos droits et fournissons les justificatifs.</p>
+          <span class="fin-note">Selon votre situation</span>
+        </div>
+      </article>
+      <article class="fin-card reveal" style="--d:.24s">
+        <span class="fin-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg></span>
+        <div>
+          <h3>Et le CPF&nbsp;?</h3>
+          <p>Le financement du permis B par le CPF n'est plus disponible depuis la fin du dispositif. Pas de fausse promesse : nous vous orientons vers les solutions ci-dessus, réellement mobilisables.</p>
+          <span class="fin-note">On vous dit les choses</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ÉQUIPE ===================== -->
+<section id="equipe" class="sec" aria-label="L'équipe">
+  <div class="wrap">
+    <header class="sec-head center reveal">
+      <p class="kicker center">L'équipe</p>
+      <h2>Deux moniteurs, une même patience.</h2>
+      <p>Vous gardez le même moniteur du début à la fin de votre formation : il connaît vos progrès, vos points faibles et le parcours d'examen.</p>
+    </header>
+    <div class="team">
+      <article class="mono reveal">
+        <span class="avatar" aria-hidden="true">MD</span>
+        <h3>Marc D.</h3>
+        <p class="mono-role">Moniteur diplômé d'État · Gérant</p>
+        <p>15 ans d'enseignement de la conduite. Spécialiste de la conduite accompagnée et de la préparation à l'examen, il connaît chaque rond-point du secteur par cœur.</p>
+        <div class="mono-tags">
+          <span>Permis B</span><span>AAC</span><span>Perfectionnement</span>
+        </div>
+      </article>
+      <article class="mono reveal" style="--d:.1s">
+        <span class="avatar terra" aria-hidden="true">SL</span>
+        <h3>Sophie L.</h3>
+        <p class="mono-role">Monitrice diplômée d'État</p>
+        <p>Pédagogue et rassurante, Sophie accompagne particulièrement les élèves anxieux et les reprises de conduite. Elle assure aussi les formations sur boîte automatique.</p>
+        <div class="mono-tags">
+          <span>Permis B</span><span>Boîte automatique</span><span>Élèves anxieux</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVIS ===================== -->
+<section id="avis" class="sec alt" aria-label="Avis des élèves">
+  <div class="wrap">
+    <header class="sec-head center reveal">
+      <p class="kicker center">Ils ont eu leur permis</p>
+      <h2>Ce que disent nos élèves.</h2>
+    </header>
+    <div class="avis">
+      <article class="avi reveal">
+        <div class="avi-stars" role="img" aria-label="Note de 5 étoiles sur 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        </div>
+        <p>Permis obtenu du premier coup après ma conduite accompagnée. Les rendez-vous pédagogiques m'ont vraiment mise en confiance, et mes parents aussi&nbsp;!</p>
+        <div class="avi-who">
+          <span class="avatar" aria-hidden="true">L</span>
+          <div><p class="avi-name">Léa</p><p class="avi-ctx">Permis B en AAC · 2025</p></div>
+        </div>
+      </article>
+      <article class="avi reveal" style="--d:.08s">
+        <div class="avi-stars" role="img" aria-label="Note de 5 étoiles sur 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        </div>
+        <p>Après deux échecs dans une autre auto-école, Marc a repris ma formation à zéro. Trois mois plus tard, c'était bon. Merci pour la patience&nbsp;!</p>
+        <div class="avi-who">
+          <span class="avatar terra" aria-hidden="true">T</span>
+          <div><p class="avi-name">Thomas</p><p class="avi-ctx">Permis B · 2025</p></div>
+        </div>
+      </article>
+      <article class="avi reveal" style="--d:.16s">
+        <div class="avi-stars" role="img" aria-label="Note de 5 étoiles sur 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        </div>
+        <p>Je travaille en horaires décalés : Sophie a toujours trouvé des créneaux qui collaient. Formation sur boîte auto impeccable, et le suivi en ligne est très pratique.</p>
+        <div class="avi-who">
+          <span class="avatar" aria-hidden="true">C</span>
+          <div><p class="avi-name">Camille</p><p class="avi-ctx">Permis B boîte auto · 2024</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INFOS PRATIQUES ===================== -->
+<section id="infos" class="sec" aria-label="Infos pratiques">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Infos pratiques</p>
+      <h2>Passez nous voir au bureau.</h2>
+      <p>Le bureau est ouvert en fin de journée et le samedi matin : le reste du temps, nous sommes sur la route avec les élèves. Les leçons de conduite, elles, s'étalent de 8&nbsp;h à 20&nbsp;h, du lundi au samedi.</p>
+    </header>
+    <div class="infos-grid" id="contact">
+      <div class="reveal">
+        <h3 class="infos-h3">Permanences du bureau</h3>
+        <ul class="hours" role="list">
+          <li><span class="d">Lundi</span><span class="h off">Fermé (leçons uniquement)</span></li>
+          <li><span class="d">Mardi</span><span class="h">17&nbsp;h&nbsp;–&nbsp;19&nbsp;h</span></li>
+          <li><span class="d">Mercredi</span><span class="h">17&nbsp;h&nbsp;–&nbsp;19&nbsp;h</span></li>
+          <li><span class="d">Jeudi</span><span class="h">17&nbsp;h&nbsp;–&nbsp;19&nbsp;h</span></li>
+          <li><span class="d">Vendredi</span><span class="h">17&nbsp;h&nbsp;–&nbsp;19&nbsp;h</span></li>
+          <li><span class="d">Samedi</span><span class="h">10&nbsp;h&nbsp;–&nbsp;12&nbsp;h</span></li>
+        </ul>
+        <p class="hours-note">En dehors des permanences, laissez un message : nous rappelons entre deux leçons.</p>
+        <div class="c-items">
+          <div class="c-item">
+            <span class="c-k">Téléphone</span>
+            <a class="c-big" href="tel:+33200000000">02 00 00 00 00</a>
+          </div>
+          <div class="c-item">
+            <span class="c-k">Email</span>
+            <a class="c-big" href="mailto:contact@autoecole-horizon.example">contact@autoecole-horizon.example</a>
+          </div>
+          <div class="c-item">
+            <span class="c-k">Adresse</span>
+            <address>12 place de la Mairie<br>Centre-ville · à 2 minutes de l'arrêt de bus « Mairie »</address>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal" style="--d:.1s">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Plan d'accès stylisé : l'agence se situe au 12 place de la Mairie, au centre-ville">
+          <rect width="520" height="400" fill="#eef1e6"/>
+          <!-- îlots -->
+          <g fill="#dde4d2">
+            <rect x="24" y="24" width="150" height="110" rx="10"/>
+            <rect x="24" y="170" width="150" height="90" rx="10"/>
+            <rect x="210" y="24" width="130" height="80" rx="10"/>
+            <rect x="376" y="24" width="120" height="140" rx="10"/>
+            <rect x="376" y="200" width="120" height="90" rx="10"/>
+            <rect x="24" y="296" width="200" height="80" rx="10"/>
+            <rect x="260" y="316" width="236" height="60" rx="10"/>
+          </g>
+          <!-- place de la mairie -->
+          <circle cx="285" cy="205" r="66" fill="#cfdabb"/>
+          <circle cx="285" cy="205" r="46" fill="#eef1e6"/>
+          <!-- rues -->
+          <g stroke="#faf7ef" stroke-width="18" stroke-linecap="round" fill="none">
+            <path d="M190 0 V 400"/>
+            <path d="M0 150 H 520"/>
+            <path d="M0 280 H 520"/>
+            <path d="M356 0 V 150"/>
+            <path d="M356 280 V 400"/>
+          </g>
+          <g stroke="#c9cfba" stroke-width="2" stroke-dasharray="8 8" fill="none">
+            <path d="M190 0 V 400"/>
+            <path d="M0 150 H 520"/>
+            <path d="M0 280 H 520"/>
+          </g>
+          <!-- noms de rues -->
+          <g font-family="Outfit, sans-serif" font-size="12" fill="#5b6a61">
+            <text x="30" y="144">Rue de la République</text>
+            <text x="30" y="274">Avenue de la Gare</text>
+            <text x="285" y="205" text-anchor="middle" font-size="13" font-weight="600" fill="#40514a">Place de<tspan x="285" dy="15">la Mairie</tspan></text>
+          </g>
+          <!-- épingle agence -->
+          <g transform="translate(285 118)">
+            <path d="M0 46 C -22 22 -24 12 -24 0 a 24 24 0 1 1 48 0 c 0 12 -2 22 -24 46z" fill="#9c4c2a"/>
+            <circle cx="0" cy="-1" r="11" fill="#faf7ef"/>
+            <text x="0" y="3.5" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="700" fill="#9c4c2a">12</text>
+          </g>
+        </svg>
+        <p class="map-cap"><b>Plan d'illustration.</b> Sur le site final : carte interactive, itinéraire et stationnement à proximité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta" aria-label="Inscription">
+  <div class="cta-inner">
+    <p class="kicker center reveal" style="color:var(--sun)">Prêt à démarrer&nbsp;?</p>
+    <h2 class="reveal">Votre évaluation de départ, offerte.</h2>
+    <p class="reveal">Passez au bureau ou appelez-nous : on évalue votre niveau, on estime le nombre d'heures nécessaire et on repart avec un devis clair. Sans engagement.</p>
+    <a class="btn reveal" href="tel:+33200000000">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+      02 00 00 00 00
+    </a>
+    <small>Permanences : du mardi au vendredi 17&nbsp;h&nbsp;–&nbsp;19&nbsp;h, le samedi 10&nbsp;h&nbsp;–&nbsp;12&nbsp;h.</small>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <p class="brand-name">Auto-école Horizon</p>
+        <p>Permis B, conduite accompagnée et code de la route, au cœur du centre-ville. Établissement fictif présenté à titre de démonstration.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Le site</h3>
+        <ul role="list">
+          <li><a href="#formules">Formules &amp; tarifs</a></li>
+          <li><a href="#financement">Financement</a></li>
+          <li><a href="#equipe">L'équipe</a></li>
+          <li><a href="#avis">Avis des élèves</a></li>
+          <li><a href="#infos">Infos pratiques</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Coordonnées</h3>
+        <ul role="list">
+          <li>12 place de la Mairie, Centre-ville</li>
+          <li><a href="tel:+33200000000">02 00 00 00 00</a></li>
+          <li><a href="mailto:contact@autoecole-horizon.example">contact@autoecole-horizon.example</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Mentions</h3>
+        <ul role="list">
+          <li>Agrément n° E 00 000 0000 0</li>
+          <li>Enseignants diplômés d'État</li>
+          <li>Mentions légales · CGV</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>© 2026 Auto-école Horizon · Établissement fictif · Agrément n° E 00 000 0000 0</p>
+      <p class="demo-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg>
+        Maquette de démonstration — Nicolas Masset, création de sites
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  new IntersectionObserver(function(entries){
+    hdr.classList.toggle('scrolled',!entries[0].isIntersecting);
+  }).observe(document.getElementById('topSentinel'));
+
+  var menu=document.getElementById('menu');
+  var burger=document.getElementById('burger');
+  function setMenu(open){
+    menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+    document.body.classList.toggle('menu-open',open);
+  }
+  burger.addEventListener('click',function(){
+    setMenu(!menu.classList.contains('open'));
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){setMenu(false)});
+  });
+
+  /* reveals */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')});
+    },1800);
+  });
+
+  /* compteurs animés */
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animateCount(el){
+    var target=parseInt(el.dataset.count,10);
+    if(reduce){el.textContent=target;return}
+    var t0=null,dur=1400;
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min((t-t0)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased);
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target)}
+    });
+  },{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+})();
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
