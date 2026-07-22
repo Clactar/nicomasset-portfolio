@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- v1.2 (2026-07-22) : mentions légales reprises de l'e-monsite, image hero « le vivant », lien Endocrino-psychologie (URL en attente), accès tram-train, section tarifs avec placeholders [TARIF], espace actualités en texte simple -->
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
@@ -86,6 +87,9 @@
   .cell.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .cell.img h3,.cell.img p{position:relative;z-index:2}
   .cell.img p{color:rgba(246,244,238,.85)}
+  .cell-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.86rem;font-weight:600;color:var(--green);transition:color .2s}
+  .cell-link:hover{color:var(--green-d)}
+  .cell-link .ico{width:14px;height:14px}
   .cell.a{grid-column:span 3}
   .cell.b{grid-column:span 3}
   .cell.c{grid-column:span 2}
@@ -127,6 +131,19 @@
   .blog .btn-paper:hover{background:#ffffff}
   .blog-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:0 26px 60px rgba(0,0,0,.28)}
 
+  /* ---------- tarifs ---------- */
+  .tarifs{padding:96px 0;background:var(--paper2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .tarifs h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:12px}
+  .tarifs .lead{color:var(--mut);max-width:52ch;margin-bottom:40px}
+  .p-list{display:flex;flex-direction:column;gap:0;background:var(--card);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;max-width:720px}
+  .p-row{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:20px 28px}
+  .p-row + .p-row{border-top:1px solid var(--line-soft)}
+  .p-row .p-name{font-weight:600;font-size:.98rem}
+  .p-row .p-name small{display:block;font-weight:400;font-size:.84rem;color:var(--mut2);margin-top:2px}
+  .p-row .p-price{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.05rem;color:var(--green-d);white-space:nowrap}
+  .p-price.ph{font-family:"General Sans",sans-serif;font-weight:600;font-size:.82rem;color:var(--mut2);border:1px dashed rgba(32,41,31,.3);border-radius:8px;padding:5px 12px}
+  .p-note{margin-top:18px;font-size:.84rem;color:var(--mut2);max-width:60ch}
+
   /* ---------- contact ---------- */
   .contact{padding:96px 0}
   .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -135,7 +152,7 @@
   .direct{display:flex;flex-direction:column;gap:14px;margin:30px 0}
   .direct a{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:1.02rem;transition:color .2s}
   .direct a:hover{color:var(--green)}
-  .zone{font-size:.92rem;color:var(--mut);border-left:3px solid var(--green);padding-left:16px;max-width:46ch}
+  .zone{font-size:.92rem;color:var(--mut);background:var(--green-tint);border:1px solid rgba(44,94,70,.15);border-radius:12px;padding:16px 20px;max-width:48ch}
   .zone b{color:var(--ink)}
   form{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:18px}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -179,6 +196,7 @@
     .t-grid{grid-template-columns:1fr}
     .frow{grid-template-columns:1fr}
     .f-grid{grid-template-columns:1fr;gap:28px}
+    .p-row{flex-wrap:wrap;padding:18px 20px;gap:10px}
   }
 </style>
 </head>
@@ -194,6 +212,7 @@
       <a href="#approches">Approches</a>
       <a href="#parcours">Parcours</a>
       <a href="#actualites">Actualités</a>
+      <a href="#tarifs">Tarifs</a>
       <a class="cta" href="#contact">Prendre rendez-vous</a>
     </nav>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -212,8 +231,10 @@
         <a class="btn btn-ghost" href="#naturopathie">Qu'est-ce que la naturopathie ?</a>
       </div>
     </div>
+    <!-- v1.2 : image « le vivant » (canopée, lumière traversant le feuillage) à la place de la fleur aux cailloux.
+         Pourra être remplacée par une photo de plantes de Noémie à réception. -->
     <figure class="hero-visual reveal">
-      <img src="assets/noemie/hero-fleur.jpg" alt="Fleur de gerbera posée entre deux galets, symbole d'équilibre naturel" fetchpriority="high" />
+      <img src="assets/noemie/foret-vivante.jpg" alt="Canopée d'arbres vue depuis le sol, lumière traversant le feuillage vert" fetchpriority="high" />
     </figure>
   </section>
 
@@ -251,6 +272,8 @@
         <div class="cell e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
           <p>Deux approches complémentaires auxquelles Noémie est formée.</p>
+          <!-- URL Endocrino-psychologie à insérer à réception -->
+          <a class="cell-link" href="#">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
       </div>
     </div>
@@ -316,6 +339,33 @@
     </div>
   </section>
 
+  <!-- TARIFS (v1.2 : emplacement prêt, chiffres en attente du mail de Noémie ; ne JAMAIS inventer un montant) -->
+  <section class="tarifs" id="tarifs" aria-label="Tarifs des consultations">
+    <div class="wrap">
+      <h2 class="disp reveal">Tarifs <i>des consultations</i></h2>
+      <p class="lead reveal">Les montants ci-dessous seront remplacés par vos tarifs réels, tels que vous les pratiquez au cabinet, dès réception de votre mail. Les intitulés sont indicatifs et seront repris de votre liste.</p>
+      <div class="p-list reveal">
+        <div class="p-row">
+          <span class="p-name">Première consultation<small>bilan de vitalité personnalisé</small></span>
+          <span class="p-price ph">[TARIF]</span>
+        </div>
+        <div class="p-row">
+          <span class="p-name">Consultation de suivi</span>
+          <span class="p-price ph">[TARIF]</span>
+        </div>
+        <div class="p-row">
+          <span class="p-name">Réflexologie plantaire<small>la séance</small></span>
+          <span class="p-price ph">[TARIF]</span>
+        </div>
+        <div class="p-row">
+          <span class="p-name">Autres prestations<small>selon votre liste de tarifs</small></span>
+          <span class="p-price ph">[TARIF]</span>
+        </div>
+      </div>
+      <p class="p-note reveal">Moyens de paiement et conditions : à préciser selon vos pratiques au cabinet.</p>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact" aria-label="Contact">
     <div class="wrap c-grid">
@@ -326,8 +376,7 @@
           <a href="tel:+33641012708"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06&nbsp;41&nbsp;01&nbsp;27&nbsp;08</a>
           <a href="mailto:noemieachet@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>noemieachet@gmail.com</a>
         </div>
-        <div class="zone"><b>Cabinet au 31 rue Aristide Briand, 44390 Nort-sur-Erdre</b>, à 30 minutes au nord de Nantes.</div>
-        <div class="zone" style="margin-top:14px"><b>Tarifs des consultations :</b> vos tarifs (bilan initial, séances de suivi) seront affichés ici, tels que vous les pratiquez au cabinet.</div>
+        <div class="zone"><b>Cabinet au 31 rue Aristide Briand, 44390 Nort-sur-Erdre.</b><br />Accessible en tram-train depuis Nantes : ligne Nantes-Châteaubriant, arrêt Nort-sur-Erdre, trajet direct d'environ 35 minutes.</div>
       </div>
       <div class="reveal">
         <form id="cform">
@@ -359,6 +408,8 @@
         <a href="#approches">Approches</a>
         <a href="#parcours">Parcours</a>
         <a href="#actualites">Actualités</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#mentions-legales">Mentions légales</a>
       </div>
       <div>
         <h4>Contact</h4>
@@ -367,8 +418,13 @@
         <a href="#contact">Prendre rendez-vous</a>
       </div>
     </div>
-    <div class="legal">
-      <p>La naturopathie ne se substitue pas à un avis ou à un suivi médical.</p>
+    <!-- v1.2 : mentions légales reprises de son site e-monsite actuel (page /pages/mentions-legales.html, relevée le 22/07/2026) -->
+    <div class="legal" id="mentions-legales">
+      <h4 style="font-family:'Cabinet Grotesk',sans-serif;font-size:.92rem;margin-bottom:10px;color:var(--ink)">Mentions légales</h4>
+      <p><b>Éditeur et responsable de la publication :</b> Noémie Achet-Piret, domiciliée au 31 rue Aristide Briand, 44390 Nort-sur-Erdre. Téléphone : 33 (0)6 41 01 27 08. Email : noemieachet@gmail.com.</p>
+      <p>SIRET : 794 877 886 000 67. TVA non applicable, art. 293 B du Code général des impôts.</p>
+      <p>Hébergement du site : [HÉBERGEUR, coordonnées à compléter à la mise en ligne].</p>
+      <p class="avert">La naturopathie ne se substitue pas à un avis ou à un suivi médical.</p>
       <p class="avert"><b>Maquette : aperçu non contractuel</b>, réalisée par <b>Nicolas Masset</b> à partir de votre univers. La version finale est <b>100 % sur-mesure</b> (vos photos, vos textes). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a></p>
     </div>
   </div>
