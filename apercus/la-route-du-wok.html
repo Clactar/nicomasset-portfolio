@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#faf5ec" />
+<title>La Route du Wok : foodtruck et traiteur wok, Angers et Montjean-sur-Loire (49)</title>
+<meta name="description" content="La Route du Wok, foodtruck et traiteur en Anjou : cuisine au wok fraîche et maison, le mercredi au marché Lafayette à Angers, le vendredi soir à Montjean-sur-Loire, et chez vous pour vos événements jusqu'à 300 convives." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+<style>
+  /* Palette : bordeaux du camion (accent unique) sur crème chaude.
+     Interactifs = pilule, surfaces = 16px, champs = 10px.
+     Typo : Young Serif (chaleur artisan) + Karla (corps). */
+  :root{
+    --paper:#faf5ec; --paper2:#f2e9da; --card:#ffffff;
+    --ink:#2a211c; --mut:#6b5e54; --mut2:#7a6d62;
+    --bdx:#8b2635; --bdx-d:#6f1d2a; --bdx-l:#a53a4a;
+    --bdx-tint:rgba(139,38,53,.08);
+    --line:rgba(42,33,28,.15); --line-soft:rgba(42,33,28,.08);
+    --ease:cubic-bezier(.22,.7,.25,1); --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Karla",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--bdx);color:var(--paper)}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--bdx);outline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .disp{font-family:"Young Serif","Karla",serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
+  .disp i{font-style:normal;color:var(--bdx)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:.88rem;letter-spacing:.01em;padding:15px 28px;border-radius:50px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+  .btn:active{transform:translateY(1px)}
+  .btn-bdx{background:var(--bdx);color:#faf3ee}
+  .btn-bdx:hover{background:var(--bdx-d)}
+  .btn-ghost{border-color:rgba(42,33,28,.35);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--bdx);color:var(--bdx)}
+  .ico{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* ---------- header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(250,245,236,.92);border-color:var(--line-soft);box-shadow:0 8px 30px rgba(42,33,28,.06)}
+  /* blur sur pseudo-élément : jamais de backdrop-filter sur le header (containing block du menu fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(12px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"Young Serif",serif;font-weight:400;font-size:1.08rem;letter-spacing:-.01em}
+  .brand small{display:block;font-family:"Karla",sans-serif;font-weight:500;font-size:.66rem;color:var(--mut);letter-spacing:.04em;margin-top:-1px}
+  .menu{display:flex;gap:22px;align-items:center}
+  .menu a{font-size:.87rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--bdx)}
+  .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--bdx);color:#faf3ee;opacity:1;font-weight:700}
+  .menu a.cta:hover{background:var(--bdx-d)}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
+  .burger span{display:block;width:16px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:140px 28px 80px;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+  .notice{display:inline-flex;align-items:center;gap:9px;font-size:.8rem;font-weight:700;color:var(--bdx-d);background:var(--bdx-tint);border:1px solid rgba(139,38,53,.2);border-radius:50px;padding:8px 16px;margin-bottom:22px}
+  .notice::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--bdx);flex:none}
+  .hero h1{font-size:clamp(2.2rem,4.3vw,3.2rem);max-width:15ch}
+  .hero .sub{margin:22px 0 30px;font-size:1.06rem;color:var(--mut);max-width:46ch}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-visual{position:relative}
+  .hero-visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:16px;box-shadow:0 30px 70px rgba(42,33,28,.18)}
+  .hero-visual figcaption{margin-top:12px;font-size:.82rem;color:var(--mut2)}
+
+  /* ---------- bandeau valeurs ---------- */
+  .values{background:var(--bdx);color:#f6ebe3;padding:20px 0}
+  .values ul{list-style:none;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .values li{font-size:.86rem;font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+  .values li::before{content:"";width:5px;height:5px;border-radius:50%;background:rgba(246,235,227,.6);flex:none}
+
+  /* ---------- concept ---------- */
+  .concept{padding:96px 0}
+  .concept h2{font-size:clamp(1.8rem,3.4vw,2.6rem);max-width:22ch;margin-bottom:16px}
+  .concept .lead{color:var(--mut);max-width:56ch;margin-bottom:46px}
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .cell{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;justify-content:center;min-height:230px;position:relative;overflow:hidden}
+  .cell h3{font-family:"Young Serif",serif;font-weight:400;font-size:1.18rem;margin-bottom:8px}
+  .cell p{font-size:.92rem;color:var(--mut);max-width:40ch}
+  .cell.img{justify-content:flex-end;color:#f8f1ea;border:none;min-height:320px}
+  .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,18,14,0) 30%,rgba(30,18,14,.82) 84%);z-index:1}
+  .cell.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .cell.img h3,.cell.img p{position:relative;z-index:2}
+  .cell.img p{color:rgba(248,241,234,.85)}
+  .cell.a{grid-column:span 3}
+  .cell.b{grid-column:span 3}
+  .cell.c{grid-column:span 2}
+  .cell.d{grid-column:span 2}
+  .cell.e{grid-column:span 2}
+
+  /* ---------- où nous trouver ---------- */
+  .ou{background:var(--paper2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:96px 0}
+  .ou h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px}
+  .ou .lead{color:var(--mut);max-width:54ch;margin-bottom:44px}
+  .ou-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:stretch}
+  .spot{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:32px 30px;display:flex;flex-direction:column}
+  .spot .jour{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--bdx);margin-bottom:10px}
+  .spot h3{font-family:"Young Serif",serif;font-weight:400;font-size:1.3rem;margin-bottom:14px}
+  .spot p{font-size:.93rem;color:var(--mut);margin-bottom:8px}
+  .spot p b{color:var(--ink);font-weight:700}
+  .spot .tel-line{margin-top:auto;padding-top:18px}
+  .spot .tel-line a{display:inline-flex;align-items:center;gap:9px;font-weight:700;color:var(--bdx);transition:color .2s}
+  .spot .tel-line a:hover{color:var(--bdx-d)}
+  .spot.moment{background:var(--bdx);border:none;color:#f8ede5}
+  .spot.moment .jour{color:#e8b7a0}
+  .spot.moment h3{color:#fdf6ef}
+  .spot.moment p{color:rgba(248,237,229,.85)}
+  .spot.moment p b{color:#fdf6ef}
+
+  /* ---------- traiteur ---------- */
+  .traiteur{padding:96px 0}
+  .traiteur .head{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end;margin-bottom:46px}
+  .traiteur h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+  .traiteur .head p{color:var(--mut);max-width:46ch}
+  .traiteur .head p b{color:var(--ink)}
+  .galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:34px}
+  .galerie figure{position:relative;border-radius:16px;overflow:hidden;background:var(--paper2)}
+  .galerie img{width:100%;aspect-ratio:3/3.7;object-fit:cover;transition:transform .5s var(--ease)}
+  .galerie figure:hover img{transform:scale(1.04)}
+  .galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;font-size:.8rem;font-weight:700;color:#faf3ee;background:linear-gradient(180deg,rgba(30,18,14,0),rgba(30,18,14,.72))}
+  .t-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---------- témoignages ---------- */
+  .temo{background:var(--paper2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:96px 0}
+  .temo h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:12px}
+  .temo .lead{color:var(--mut);max-width:52ch;margin-bottom:44px}
+  .t-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;align-items:stretch}
+  .t-card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
+  .t-card.lead-card{background:var(--bdx);border:none;color:#f8ede5}
+  .t-card.lead-card .q{font-size:1.22rem;color:#fdf6ef}
+  .t-card.lead-card .who{color:rgba(248,237,229,.75)}
+  .t-card .q{font-family:"Young Serif",serif;font-weight:400;font-size:1.02rem;line-height:1.5}
+  .t-card .who{margin-top:16px;font-size:.84rem;color:var(--mut2)}
+
+  /* ---------- chef ---------- */
+  .chef{padding:96px 0}
+  .chef-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+  .chef-photo img{width:100%;border-radius:16px;box-shadow:0 26px 60px rgba(42,33,28,.16)}
+  .chef h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:22px}
+  .chef .story{color:var(--mut);margin-bottom:16px;max-width:58ch}
+  .chef .story b{color:var(--ink)}
+  .chips-title{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut2);margin:28px 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips span{font-size:.8rem;font-weight:700;padding:9px 16px;border-radius:50px;background:var(--bdx-tint);color:var(--bdx-d);border:1px solid rgba(139,38,53,.18)}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--paper2);border-top:1px solid var(--line-soft);padding:96px 0}
+  .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .c-left h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:18px}
+  .c-left>p{color:var(--mut);max-width:46ch}
+  .direct{display:flex;flex-direction:column;gap:14px;margin:30px 0}
+  .direct a{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;transition:color .2s}
+  .direct a:hover{color:var(--bdx)}
+  .direct a.big{font-family:"Young Serif",serif;font-weight:400;font-size:1.6rem;color:var(--bdx)}
+  .direct a.big:hover{color:var(--bdx-d)}
+  .zone{font-size:.92rem;color:var(--mut);background:var(--bdx-tint);border-radius:12px;padding:16px 18px;max-width:46ch}
+  .zone b{color:var(--ink)}
+  form{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:18px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .lbl{display:block;font-size:.8rem;font-weight:700;margin-bottom:7px;color:var(--ink)}
+  input,textarea{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:13px 15px;font:inherit;font-size:.94rem;color:var(--ink);transition:border-color .2s}
+  input::placeholder,textarea::placeholder{color:#8d7f73}
+  input:focus,textarea:focus{border-color:var(--bdx);outline:none}
+  .formdemo{margin-top:12px;font-size:.8rem;color:var(--mut2)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:#c9beb4;padding:56px 0 40px}
+  .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  .f-grid h4{font-family:"Young Serif",serif;font-weight:400;font-size:.98rem;color:#f3ece4;margin-bottom:12px}
+  .f-grid p,.f-grid a{font-size:.88rem;display:block;margin-bottom:6px}
+  .f-grid a:hover{color:#f3ece4}
+  .legal{border-top:1px solid rgba(201,190,180,.2);padding-top:22px;font-size:.78rem;color:#9c9187}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* ---------- mobile ---------- */
+  @media (max-width: 900px){
+    .burger{display:flex}
+    .menu{position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s;z-index:55}
+    .menu.open{transform:none;visibility:visible;transition:transform .35s var(--ease),visibility 0s 0s}
+    body.menu-open{overflow:hidden}
+    .menu a{font-size:1.15rem}
+    .hero{grid-template-columns:1fr;padding:110px 28px 60px;gap:36px}
+    .hero h1{max-width:none}
+    .values ul{flex-direction:column;gap:10px;align-items:flex-start}
+    .bento{grid-template-columns:1fr}
+    .cell.a,.cell.b,.cell.c,.cell.d,.cell.e{grid-column:span 1}
+    .cell.img{min-height:260px}
+    .ou-grid{grid-template-columns:1fr}
+    .traiteur .head{grid-template-columns:1fr;gap:18px}
+    .galerie{grid-template-columns:1fr 1fr}
+    .t-grid{grid-template-columns:1fr}
+    .chef-grid,.c-grid{grid-template-columns:1fr;gap:40px}
+    .frow{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr;gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<div id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:41px;pointer-events:none"></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">La Route du Wok<small>Foodtruck &amp; traiteur, Angers et Montjean-sur-Loire</small></a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#concept">Le concept</a>
+      <a href="#ou">Où nous trouver</a>
+      <a href="#traiteur">Traiteur &amp; événements</a>
+      <a href="#chef">Le chef</a>
+      <a class="cta" href="tel:+33622180563">06 22 18 05 63</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="wrap hero" aria-label="Présentation">
+    <div>
+      <p class="notice">Camion absent des points de vente jusqu'à fin août. Le traiteur reste disponible.</p>
+      <h1 class="disp">La cuisine au wok, <i>cuisinée devant vous</i></h1>
+      <p class="sub">Foodtruck et traiteur en Anjou : des plats frais et faits maison, sautés minute au wok. Le mercredi au marché Lafayette à Angers, le vendredi soir à Montjean-sur-Loire, et chez vous pour vos événements jusqu'à 300 convives.</p>
+      <div class="ctas">
+        <a class="btn btn-bdx" href="tel:+33622180563"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06 22 18 05 63</a>
+        <a class="btn btn-ghost" href="#contact">Demander un devis traiteur</a>
+      </div>
+    </div>
+    <figure class="hero-visual reveal">
+      <img src="https://larouteduwok.e-monsite.com/medias/album/la-route-du-wok-traiteur-fete-food-truck-camion.jpg" alt="Le camion de La Route du Wok lors d'une fête champêtre, avec des invités qui dansent sous les lampions" fetchpriority="high" />
+      <figcaption>Le camion en service lors d'une fête privée.</figcaption>
+    </figure>
+  </section>
+
+  <!-- BANDEAU VALEURS -->
+  <section class="values" aria-label="Nos engagements">
+    <div class="wrap">
+      <ul>
+        <li>Produits frais</li>
+        <li>Cuisine 100 % maison</li>
+        <li>Producteurs locaux et bio</li>
+        <li>Emballages biodégradables</li>
+        <li>Service rapide et convivial</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept" id="concept" aria-label="Le concept">
+    <div class="wrap">
+      <h2 class="disp reveal">Sauté minute, <i>frais et équilibré</i></h2>
+      <p class="lead reveal">La cuisson rapide du wok à haute température préserve le goût et les vitamines des aliments, avec très peu de matières grasses. Chaque recette associe légumes frais, riz thaï ou nouilles sautées, viandes ou crustacés, fruits secs et sauces parfumées.</p>
+      <div class="bento">
+        <div class="cell img a reveal">
+          <img src="https://larouteduwok.e-monsite.com/medias/album/salade-thai-taiteur-3.jpg" alt="Assiette de salade thaï aux légumes croquants, herbes fraîches et pousses" loading="lazy" />
+          <h3>Des saveurs d'Asie et d'ailleurs</h3>
+          <p>Pâtes de curry, sauce soja, nuoc-mâm, huiles parfumées, herbes fraîches : des inspirations rapportées de Thaïlande et travaillées à la française.</p>
+        </div>
+        <div class="cell b reveal">
+          <h3>Le wok du moment</h3>
+          <p>La recette change au fil des saisons et des arrivages. Elle est annoncée ici chaque semaine, avec au choix son accompagnement : riz thaï ou nouilles sautées. Vous pouvez commander par téléphone et venir récupérer votre plat au camion.</p>
+        </div>
+        <div class="cell c reveal">
+          <h3>Cuisiné devant vous</h3>
+          <p>Les plats chauds sont préparés sous vos yeux, en mode foodtruck.</p>
+        </div>
+        <div class="cell d reveal">
+          <h3>Frais et fait maison</h3>
+          <p>Tout est cuisiné à partir de produits frais, sans plat préparé.</p>
+        </div>
+        <div class="cell e reveal">
+          <h3>Local et bio</h3>
+          <p>Légumes, farine et œufs viennent de producteurs du 49 et du 44, bio dès que possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OÙ NOUS TROUVER -->
+  <section class="ou" id="ou" aria-label="Où nous trouver">
+    <div class="wrap">
+      <h2 class="disp reveal">Où trouver <i>le camion</i></h2>
+      <p class="lead reveal">Deux rendez-vous chaque semaine, à Angers et à Montjean-sur-Loire. Vous pouvez commander à l'avance par téléphone pour éviter l'attente.</p>
+      <div class="ou-grid">
+        <div class="spot reveal">
+          <p class="jour">Le mercredi midi</p>
+          <h3>Marché Lafayette, Angers</h3>
+          <p><b>Service de 8h30 à 13h45.</b></p>
+          <p>Commandes par téléphone de 7h30 à 13h.</p>
+          <div class="tel-line"><a href="tel:+33622180563"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06 22 18 05 63</a></div>
+        </div>
+        <div class="spot reveal">
+          <p class="jour">Le vendredi soir</p>
+          <h3>Montjean-sur-Loire</h3>
+          <p><b>Service de 17h30 à 21h30.</b></p>
+          <p>Commandes par téléphone de 9h à 21h30.</p>
+          <div class="tel-line"><a href="tel:+33622180563"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06 22 18 05 63</a></div>
+        </div>
+        <div class="spot moment reveal">
+          <p class="jour">Bon à savoir</p>
+          <h3>À emporter ou en livraison</h3>
+          <p>Vous recevez du monde ? <b>À partir de 10 personnes</b>, vos plats peuvent être préparés à emporter ou livrés, sans le camion.</p>
+          <p>Une solution simple pour un repas de famille ou un déjeuner d'équipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAITEUR -->
+  <section class="traiteur" id="traiteur" aria-label="Traiteur et événements">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="disp reveal">Le camion s'invite <i>à votre événement</i></h2>
+        <p class="reveal">Mariage, anniversaire, repas d'entreprise : La Route du Wok assure des prestations traiteur complètes, <b>de 10 à 300 convives et plus</b>, avec le service au camion qui crée l'ambiance.</p>
+      </div>
+      <div class="galerie">
+        <figure class="reveal">
+          <img src="https://larouteduwok.e-monsite.com/medias/album/plateau-de-mignardises.jpg" alt="Plateaux de canapés apéritifs : roulés au saumon, toasts et bouchées fraîches" loading="lazy" />
+          <figcaption>Apéritif et mignardises</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://larouteduwok.e-monsite.com/medias/album/pain-de-poisson.jpg" alt="Assiettes dressées servies en extérieur lors d'une réception" loading="lazy" />
+          <figcaption>Service à l'assiette</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://larouteduwok.e-monsite.com/medias/album/plateau-de-fromages.jpg" alt="Plateau de fromages : comté, camembert, bleu et noix" loading="lazy" />
+          <figcaption>Plateau de fromages</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://larouteduwok.e-monsite.com/medias/album/duo-de-desserts.jpg" alt="Rangées de desserts individuels : fondants au chocolat et verrines de panna cotta" loading="lazy" />
+          <figcaption>Desserts maison</figcaption>
+        </figure>
+      </div>
+      <div class="t-ctas reveal">
+        <a class="btn btn-bdx" href="#contact">Vérifier la disponibilité de votre date <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+33622180563">En parler de vive voix</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="temo" aria-label="Livre d'or">
+    <div class="wrap">
+      <h2 class="disp reveal">Extraits du <i>livre d'or</i></h2>
+      <p class="lead reveal">Des mots laissés par les clients après leur événement.</p>
+      <div class="t-grid">
+        <div class="t-card lead-card reveal">
+          <p class="q">« Le wok indonésien a su combler l'ensemble de nos convives pour nos 10 ans de mariage. Il a fait l'unanimité, tant au niveau du plat que du service. C'était tout simplement excellent. »</p>
+          <p class="who">Thomas et Nathalie, 50 convives, mai 2025</p>
+        </div>
+        <div class="t-card reveal">
+          <p class="q">« Une prestation de qualité lors d'un déjeuner d'entreprise. L'équipe a été totalement conquise par la saveur des plats et les échanges lors du service. »</p>
+          <p class="who">Famille Lecomte, mai 2026</p>
+        </div>
+        <div class="t-card reveal">
+          <p class="q">« Tous les invités ont adoré le plat, le concept et la gentillesse de Jérôme. Service à l'assiette très soigné. Je recommande. »</p>
+          <p class="who">Aurélie et Laurent, mai 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF -->
+  <section class="chef" id="chef" aria-label="Le chef">
+    <div class="wrap chef-grid">
+      <div class="chef-photo reveal">
+        <img src="https://larouteduwok.e-monsite.com/medias/images/img-20260415-195006.jpg" alt="Portrait de Jérôme, chef de La Route du Wok, en veste de cuisine" loading="lazy" />
+      </div>
+      <div class="reveal">
+        <h2 class="disp">Jérôme, <i>quinze ans de wok</i></h2>
+        <p class="story">En 2009, Jérôme change de vie pour se consacrer à sa passion : la cuisine. Un voyage en Thaïlande lui fait découvrir le wok, ses saveurs et toute une culture. De retour en France, il se forme en <b>restauration gastronomique</b> dans la région angevine et nantaise, puis se spécialise dans la cuisine au wok, accompagné par la cheffe Corinne Laudrin.</p>
+        <p class="story">Aujourd'hui, La Route du Wok, c'est <b>plus de quinze ans d'expérience</b> et des centaines de prestations réalisées avec la même envie : faire plaisir avec une cuisine généreuse et conviviale.</p>
+        <p class="chips-title">Les producteurs qui nous fournissent</p>
+        <div class="chips">
+          <span>Le Petit Clos, La Pommeraye (bio)</span>
+          <span>Anjou Bio, Angers</span>
+          <span>Vergers de Guillaumai (bio)</span>
+          <span>Fournil des Buhards (bio)</span>
+          <span>Œufs Bricard (bio)</span>
+          <span>Volaille régionale (49 et 44)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-label="Contact et devis">
+    <div class="wrap c-grid">
+      <div class="c-left reveal">
+        <h2 class="disp">Votre date, <i>votre devis</i></h2>
+        <p>Chaque demande est unique. Décrivez votre projet et Jérôme vous répond avec la carte et une proposition adaptée.</p>
+        <div class="direct">
+          <a class="big" href="tel:+33622180563">06 22 18 05 63</a>
+          <a href="mailto:larouteduwok@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>larouteduwok@gmail.com</a>
+        </div>
+        <div class="zone"><b>Basé à Montjean-sur-Loire (49)</b>, entre Angers et Nantes. Déplacements pour vos événements privés ou professionnels.</div>
+      </div>
+      <div class="reveal">
+        <form id="cform">
+          <div class="frow">
+            <div><label class="lbl" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Camille Rousseau" autocomplete="name" required /></div>
+            <div><label class="lbl" for="f-tel">Votre téléphone</label><input id="f-tel" name="tel" type="tel" placeholder="06 12 34 56 78" autocomplete="tel" /></div>
+          </div>
+          <div class="frow">
+            <div><label class="lbl" for="f-date">Date et lieu de la prestation</label><input id="f-date" name="date" type="text" placeholder="Samedi 12 juin, Chalonnes-sur-Loire" /></div>
+            <div><label class="lbl" for="f-nb">Nombre d'adultes et d'enfants</label><input id="f-nb" name="convives" type="text" placeholder="60 adultes, 12 enfants" /></div>
+          </div>
+          <div><label class="lbl" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Mariage le midi, apéritif puis plat servi au camion, avec dessert."></textarea></div>
+          <button class="btn btn-bdx" type="submit">Envoyer ma demande de devis <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="formdemo">Formulaire de démonstration (maquette) : il n'envoie aucun message. Pour une vraie demande, téléphone ou e-mail ci-contre.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>La Route du Wok</h4>
+        <p>Foodtruck et traiteur, cuisine au wok</p>
+        <p>Montjean-sur-Loire (49)</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#concept">Le concept</a>
+        <a href="#ou">Où nous trouver</a>
+        <a href="#traiteur">Traiteur &amp; événements</a>
+        <a href="#chef">Le chef</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+33622180563">06 22 18 05 63</a>
+        <a href="mailto:larouteduwok@gmail.com">larouteduwok@gmail.com</a>
+        <a href="#contact">Demander un devis</a>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Maquette proposée par Nicolas Masset. Aperçu non contractuel, réalisé à partir de vos photos et de vos textes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.getElementById('header');
+  var sentinel = document.getElementById('top-sentinel');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      header.classList.toggle('scrolled', !entries[0].isIntersecting);
+    }).observe(sentinel);
+
+    var ro = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  } else {
+    header.classList.add('scrolled');
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var form = document.getElementById('cform');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Ceci est une maquette de démonstration : le formulaire n'envoie aucun message. Pour une vraie demande, utilisez le téléphone ou l'e-mail indiqués sur la page.");
+  });
+})();
+</script>
+
+</body>
+</html>
