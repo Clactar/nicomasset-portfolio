@@ -9,7 +9,7 @@
 <meta name="description" content="ECOTREN, le partenaire de vos travaux : rénovation complète, agencement, salle de bains, cuisine, électricité, plomberie, verrières atelier. Plus de 20 ans de chantiers à Paris et en Île-de-France. Société RGE, devis détaillé gratuit." />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=zodiak@700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@700,701&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
 <style>
   /* Palette « atelier parisien » : ivoire chaud, encre charbon, vert bouteille en accent unique. */
   :root{
@@ -28,7 +28,7 @@
   a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--vert);outline-offset:3px}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
   .disp{font-family:"Zodiak","General Sans",serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
-  .disp b{color:var(--vert)}
+  .disp b{color:var(--vert);font-style:italic;letter-spacing:0}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:.88rem;letter-spacing:.01em;padding:15px 28px;border-radius:50px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
   .btn:active{transform:translateY(1px)}
   .btn-vert{background:var(--vert);color:#f2f6f3}
@@ -48,6 +48,9 @@
   .menu{display:flex;gap:24px;align-items:center}
   .menu a{font-size:.87rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s}
   .menu a:hover{opacity:1;color:var(--vert)}
+  .menu a:not(.cta){position:relative}
+  .menu a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--vert);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+  .menu a:not(.cta):hover::after{transform:scaleX(1)}
   .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--vert);color:#f2f6f3;opacity:1;font-weight:600}
   .menu a.cta:hover{background:var(--vert-d)}
   .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
@@ -58,14 +61,23 @@
 
   /* ---------- hero ---------- */
   .hero{padding:150px 0 84px;position:relative}
-  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  /* motif verrière : trame fine rappelant les vitrages atelier, signature ECOTREN */
+  .hero::before{content:"";position:absolute;top:0;right:0;width:52%;height:100%;pointer-events:none;
+    background-image:linear-gradient(rgba(34,37,42,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(34,37,42,.055) 1px,transparent 1px);
+    background-size:74px 74px;
+    -webkit-mask-image:linear-gradient(to left,#000 35%,transparent);mask-image:linear-gradient(to left,#000 35%,transparent)}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative}
+  .hero .kicker,.hero h1,.hero p.lead,.hero-cta{opacity:0;transform:translateY(18px);animation:rise .8s var(--ease) forwards}
+  .hero h1{animation-delay:.08s}.hero p.lead{animation-delay:.16s}.hero-cta{animation-delay:.24s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){.hero .kicker,.hero h1,.hero p.lead,.hero-cta{animation:none;opacity:1;transform:none}}
   .kicker{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--vert);margin-bottom:22px}
   .kicker::before{content:"";width:26px;height:2px;background:var(--vert)}
   .hero h1{font-size:clamp(2.3rem,5vw,3.5rem);margin-bottom:20px}
   .hero p.lead{font-size:1.06rem;color:var(--mut);max-width:540px;margin-bottom:32px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .hero-img{position:relative}
-  .hero-img img{border-radius:18px;width:100%;height:540px;object-fit:cover;box-shadow:0 30px 60px rgba(34,37,42,.18)}
+  .hero-img img{border-radius:240px 240px 18px 18px;width:100%;height:540px;object-fit:cover;box-shadow:0 30px 60px rgba(34,37,42,.18)}
   .hero-badge{position:absolute;left:-18px;bottom:26px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:14px 20px;box-shadow:0 16px 40px rgba(34,37,42,.14)}
   .hero-badge b{font-family:"Zodiak",serif;font-size:1.35rem;color:var(--vert);display:block;line-height:1.1}
   .hero-badge span{font-size:.78rem;color:var(--mut)}
@@ -97,25 +109,54 @@
   .global p{font-size:.94rem;color:var(--mut)}
   .global b{color:var(--ink)}
 
+  /* bandeau défilant des savoir-faire */
+  .marq{overflow:hidden;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:20px 0;background:var(--paper)}
+  .marq .inner{display:flex;width:max-content;animation:defile 38s linear infinite}
+  .marq span{font-family:"Zodiak",serif;font-weight:700;font-size:1.08rem;letter-spacing:.03em;color:var(--ink);opacity:.8;padding:0 24px;white-space:nowrap;display:flex;align-items:center;gap:48px}
+  .marq span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--vert);flex:none}
+  @keyframes defile{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){.marq .inner{animation:none}}
+
   /* réalisations */
   .real{background:var(--paper2)}
   .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal figure.large{grid-column:span 2}
+  .gal .reveal:nth-child(2){transition-delay:.07s}
+  .gal .reveal:nth-child(3){transition-delay:.12s}
+  .gal .reveal:nth-child(5){transition-delay:.07s}
+  .gal .reveal:nth-child(6){transition-delay:.12s}
   .gal figure{position:relative;border-radius:16px;overflow:hidden;background:var(--paper)}
   .gal img{width:100%;height:300px;object-fit:cover;transition:transform .5s var(--ease)}
   .gal figure:hover img{transform:scale(1.04)}
   .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 18px 14px;font-size:.82rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(18,20,16,.78))}
   .gal-note{margin-top:18px;font-size:.85rem;color:var(--mut2)}
 
-  /* avant / après */
-  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:860px}
-  .ba{position:relative;border-radius:16px;overflow:hidden}
-  .ba img{width:100%;height:420px;object-fit:cover}
-  .ba .tag{position:absolute;top:14px;left:14px;background:rgba(18,20,16,.72);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:50px}
-  .ba.apres .tag{background:var(--vert)}
-  .ba-note{margin-top:18px;font-size:.9rem;color:var(--mut)}
+  /* avant / après : comparateur interactif */
+  .ba-wrap{display:grid;grid-template-columns:minmax(0,460px) 1fr;gap:60px;align-items:center}
+  .ba-side h3{font-family:"Zodiak",serif;font-weight:700;font-size:1.55rem;margin-bottom:14px}
+  .ba-side p{color:var(--mut);line-height:1.7;max-width:46ch}
+  .ba-slider{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:7/10;max-height:640px;box-shadow:0 30px 60px rgba(34,37,42,.16);touch-action:pan-y}
+  .ba-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ba-slider .img-apres{clip-path:inset(0 0 0 50%);object-position:left center}
+  .ba-slider .bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;box-shadow:0 0 14px rgba(0,0,0,.4);pointer-events:none}
+  .ba-slider .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35);pointer-events:none}
+  .ba-slider .knob .ico{width:20px;height:20px;stroke:var(--ink)}
+  .ba-slider input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;-webkit-appearance:none;appearance:none}
+  .ba-slider .tag{position:absolute;top:14px;background:rgba(18,20,16,.72);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:50px;pointer-events:none}
+  .ba-slider .tag.avant{left:14px}
+  .ba-slider .tag.apres{right:14px;background:var(--vert)}
+  .ba-note{margin-top:18px;font-size:.9rem;color:var(--mut2)}
+
+  /* chiffres */
+  .stats{background:var(--ink);color:#edeae0;padding:70px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+  .stats b{font-family:"Zodiak",serif;font-weight:700;font-size:clamp(2.2rem,4.5vw,3.2rem);color:#8fbca6;display:block;line-height:1}
+  .stats .lbl{font-size:.88rem;color:rgba(237,234,224,.75);display:block;margin-top:10px}
 
   /* livre d'or */
   .avis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .avis .reveal:nth-child(2){transition-delay:.07s}
+  .avis .reveal:nth-child(3){transition-delay:.14s}
   .avis blockquote{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column}
   .avis .stars{color:var(--vert);letter-spacing:3px;font-size:.9rem;margin-bottom:12px}
   .avis p{font-size:.92rem;color:var(--mut);flex:1}
@@ -169,6 +210,8 @@
     .hero-img img{height:440px}
     .strip .wrap{grid-template-columns:repeat(2,1fr)}
     .cards,.steps,.gal,.avis{grid-template-columns:repeat(2,1fr)}
+    .stats .wrap{grid-template-columns:repeat(2,1fr)}
+    .ba-wrap{grid-template-columns:1fr;gap:28px}
     .devis .grid2{grid-template-columns:1fr;gap:40px}
     .f-grid{grid-template-columns:1fr 1fr}
   }
@@ -179,14 +222,17 @@
     body.menu-open{overflow:hidden}
     .burger{display:flex}
     .hero{padding:120px 0 64px}
-    .hero-img img{height:360px}
+    .hero::before{display:none}
+    .hero-img img{height:380px;border-radius:170px 170px 14px 14px}
     .hero-badge{left:12px;bottom:14px;padding:11px 16px}
     section{padding:72px 0}
     .strip{padding:22px 0}
     .strip .wrap{grid-template-columns:1fr;gap:14px}
-    .cards,.steps,.gal,.avis,.ba-grid{grid-template-columns:1fr}
+    .cards,.steps,.gal,.avis{grid-template-columns:1fr}
+    .gal figure.large{grid-column:auto}
     .gal img{height:260px}
-    .ba img{height:320px}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:26px}
+    .marq span{font-size:.95rem;padding:0 16px;gap:32px}
     form .frow{grid-template-columns:1fr}
     .f-grid{grid-template-columns:1fr}
     .global{flex-direction:column}
@@ -290,6 +336,13 @@
     </div>
   </section>
 
+  <!-- BANDEAU DÉFILANT -->
+  <div class="marq" aria-hidden="true">
+    <div class="inner" id="marq-inner">
+      <span>Rénovation complète</span><span>Salle de bains</span><span>Douche italienne</span><span>Cuisine</span><span>Électricité</span><span>Plomberie</span><span>Verrière atelier</span><span>Carrelage</span><span>Parquet</span><span>Peinture</span><span>Menuiserie</span><span>Serrurerie</span>
+    </div>
+  </div>
+
   <!-- RÉALISATIONS -->
   <section class="real" id="realisations">
     <div class="wrap">
@@ -299,7 +352,7 @@
         <p>Rénovations complètes, salles d'eau, verrières sur mesure : quelques chantiers récents à Paris, Puteaux, Méry-sur-Oise, Villepinte ou Boulogne-Billancourt.</p>
       </div>
       <div class="gal">
-        <figure class="reveal"><img src="assets/ecotren/verriere-2portes.jpg" alt="Cloison vitrée type atelier avec deux portes coulissantes, structure acier noir, réalisée à Paris" loading="lazy" width="598" height="595" /><figcaption>Cloison vitrée type atelier, deux portes coulissantes — Paris</figcaption></figure>
+        <figure class="reveal large"><img src="assets/ecotren/verriere-2portes.jpg" alt="Cloison vitrée type atelier avec deux portes coulissantes, structure acier noir, réalisée à Paris" loading="lazy" width="598" height="595" /><figcaption>Cloison vitrée type atelier, deux portes coulissantes — Paris</figcaption></figure>
         <figure class="reveal"><img src="assets/ecotren/douche-banc-paris15.jpg" alt="Douche à l'italienne avec banc et niche habillés de carreaux de ciment, Paris 15e" loading="lazy" width="805" height="808" /><figcaption>Douche italienne, banc et niche en carreaux de ciment — Paris 15e</figcaption></figure>
         <figure class="reveal"><img src="assets/ecotren/sde-vitrage-atelier.jpg" alt="Salle d'eau moderne avec paroi de douche façon vitrage atelier, carrelage gris grand format" loading="lazy" width="599" height="599" /><figcaption>Salle d'eau, paroi façon vitrage atelier — Paris</figcaption></figure>
         <figure class="reveal"><img src="assets/ecotren/escalier-acier-mery.jpg" alt="Escalier acier sur mesure en cours de pose, Méry-sur-Oise" loading="lazy" width="349" height="467" /><figcaption>Escalier acier sur mesure — Méry-sur-Oise (95)</figcaption></figure>
@@ -318,13 +371,34 @@
         <h2 class="disp">Le même endroit, quelques semaines plus tard</h2>
         <p>Une salle d'eau à Villepinte (93) : création complète d'une douche à l'italienne, du chantier brut aux finitions.</p>
       </div>
-      <div class="ba-grid">
-        <div class="ba reveal"><span class="tag">Avant</span><img src="assets/ecotren/villepinte-avant.jpg" alt="Salle d'eau de Villepinte en cours de chantier : receveur brut, faïence en cours de pose" loading="lazy" width="426" height="571" /></div>
-        <div class="ba apres reveal"><span class="tag">Après</span><img src="assets/ecotren/villepinte-apres.jpg" alt="La même salle d'eau terminée : douche à l'italienne, galets au sol, frise mosaïque" loading="lazy" width="291" height="389" /></div>
+      <div class="ba-wrap">
+        <div class="ba-slider reveal" id="ba-slider">
+          <img src="assets/ecotren/villepinte-avant.jpg" alt="Salle d'eau de Villepinte en cours de chantier : receveur brut, faïence en cours de pose" loading="lazy" width="426" height="571" />
+          <img class="img-apres" id="ba-apres" src="assets/ecotren/villepinte-apres.jpg" alt="La même salle d'eau terminée : douche à l'italienne, galets au sol, frise mosaïque" loading="lazy" width="291" height="389" />
+          <div class="bar" id="ba-bar"></div>
+          <div class="knob" id="ba-knob"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
+          <span class="tag avant">Avant</span>
+          <span class="tag apres">Après</span>
+          <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Comparer l'avant et l'après du chantier" />
+        </div>
+        <div class="ba-side reveal">
+          <h3>Salle d'eau — Villepinte</h3>
+          <p>À gauche, le chantier en cours : receveur brut, faïence en cours de pose. À droite, le résultat livré : douche à l'italienne, sol en galets, frise mosaïque.</p>
+          <p class="ba-note">Faites glisser le curseur pour comparer. Sur la version finale du site, chaque projet peut être présenté ainsi : l'avant, l'après, et ce qui a été fait entre les deux.</p>
+        </div>
       </div>
-      <p class="ba-note reveal">Sur la version finale du site, chaque projet peut être présenté ainsi : l'avant, l'après, et ce qui a été fait entre les deux.</p>
     </div>
   </section>
+
+  <!-- CHIFFRES -->
+  <div class="stats">
+    <div class="wrap">
+      <div class="reveal"><b><span data-count="20">0</span>&nbsp;+</b><span class="lbl">années de chantiers</span></div>
+      <div class="reveal"><b><span data-count="58">0</span></b><span class="lbl">avis dans le livre d'or</span></div>
+      <div class="reveal"><b><span data-count="8">0</span></b><span class="lbl">départements couverts</span></div>
+      <div class="reveal"><b><span data-count="1">0</span></b><span class="lbl">interlocuteur, tous corps d'état</span></div>
+    </div>
+  </div>
 
   <!-- LIVRE D'OR -->
   <section class="approche" id="avis">
@@ -487,6 +561,54 @@
     e.preventDefault();
     alert("Ceci est une maquette de démonstration : le formulaire n'envoie aucun message. Pour une vraie demande, utilisez le téléphone ou l'e-mail indiqués sur la page.");
   });
+
+  // bandeau défilant : dupliquer le contenu pour la boucle infinie
+  var marq = document.getElementById('marq-inner');
+  if (marq) marq.innerHTML += marq.innerHTML;
+
+  // comparateur avant / après
+  var range = document.getElementById('ba-range');
+  if (range) {
+    var apres = document.getElementById('ba-apres');
+    var bar = document.getElementById('ba-bar');
+    var knob = document.getElementById('ba-knob');
+    var setPos = function(v){
+      apres.style.clipPath = 'inset(0 0 0 ' + v + '%)';
+      bar.style.left = v + '%';
+      knob.style.left = v + '%';
+    };
+    range.addEventListener('input', function(){ setPos(range.value); });
+    setPos(50);
+  }
+
+  // chiffres animés
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    var animate = function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      if (reduce || !('IntersectionObserver' in window)) { el.textContent = target; return; }
+      var t0 = null;
+      var dur = 1300;
+      var step = function(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window && !reduce) {
+      var co = new IntersectionObserver(function(entries, obs){
+        entries.forEach(function(e){
+          if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.6 });
+      counters.forEach(function(el){ co.observe(el); });
+    } else {
+      counters.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    }
+  }
 })();
 </script>
 
