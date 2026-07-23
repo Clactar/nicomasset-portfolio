@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#f6f4ee" />
+<title>ECOTREN : rénovation et agencement, Paris &amp; Île-de-France</title>
+<meta name="description" content="ECOTREN, le partenaire de vos travaux : rénovation complète, agencement, salle de bains, cuisine, électricité, plomberie, verrières atelier. Plus de 20 ans de chantiers à Paris et en Île-de-France. Société RGE, devis détaillé gratuit." />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<style>
+  /* Palette « atelier parisien » : ivoire chaud, encre charbon, vert bouteille en accent unique. */
+  :root{
+    --paper:#f6f4ee; --paper2:#edeae0; --card:#ffffff;
+    --ink:#22252a; --mut:#585d64; --mut2:#6a6f76;
+    --vert:#2f5d4a; --vert-d:#244b3b; --vert-tint:rgba(47,93,74,.09);
+    --line:rgba(34,37,42,.14); --line-soft:rgba(34,37,42,.08);
+    --ease:cubic-bezier(.22,.7,.25,1); --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"General Sans",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--vert);color:var(--paper)}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--vert);outline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .disp{font-family:"Zodiak","General Sans",serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+  .disp b{color:var(--vert)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:.88rem;letter-spacing:.01em;padding:15px 28px;border-radius:50px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+  .btn:active{transform:translateY(1px)}
+  .btn-vert{background:var(--vert);color:#f2f6f3}
+  .btn-vert:hover{background:var(--vert-d)}
+  .btn-ghost{border-color:rgba(34,37,42,.35);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--vert);color:var(--vert)}
+  .ico{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* ---------- header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(246,244,238,.92);border-color:var(--line-soft);box-shadow:0 8px 30px rgba(34,37,42,.06)}
+  /* blur sur un pseudo-élément : backdrop-filter sur le header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(12px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"Zodiak",serif;font-weight:700;font-size:1.12rem;letter-spacing:.02em}
+  .brand small{display:block;font-family:"General Sans",sans-serif;font-weight:500;font-size:.67rem;color:var(--mut);letter-spacing:.05em;margin-top:-1px}
+  .menu{display:flex;gap:24px;align-items:center}
+  .menu a{font-size:.87rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--vert)}
+  .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--vert);color:#f2f6f3;opacity:1;font-weight:600}
+  .menu a.cta:hover{background:var(--vert-d)}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
+  .burger span{display:block;width:16px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:150px 0 84px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--vert);margin-bottom:22px}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--vert)}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.5rem);margin-bottom:20px}
+  .hero p.lead{font-size:1.06rem;color:var(--mut);max-width:540px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative}
+  .hero-img img{border-radius:18px;width:100%;height:540px;object-fit:cover;box-shadow:0 30px 60px rgba(34,37,42,.18)}
+  .hero-badge{position:absolute;left:-18px;bottom:26px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:14px 20px;box-shadow:0 16px 40px rgba(34,37,42,.14)}
+  .hero-badge b{font-family:"Zodiak",serif;font-size:1.35rem;color:var(--vert);display:block;line-height:1.1}
+  .hero-badge span{font-size:.78rem;color:var(--mut)}
+
+  /* ---------- bandeau points forts ---------- */
+  .strip{background:var(--ink);color:#edeae0;padding:26px 0}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .strip .it{display:flex;gap:12px;align-items:flex-start}
+  .strip .ico{width:20px;height:20px;stroke:#8fbca6;margin-top:3px}
+  .strip b{display:block;font-size:.92rem;font-weight:600}
+  .strip span{font-size:.8rem;color:rgba(237,234,224,.66)}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:660px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px 0 16px}
+  .sec-head p{color:var(--mut)}
+
+  /* savoir-faire */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;transition:transform .3s var(--ease),box-shadow .3s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(34,37,42,.1)}
+  .card .pic{width:46px;height:46px;border-radius:12px;background:var(--vert-tint);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .pic .ico{width:22px;height:22px;stroke:var(--vert)}
+  .card h3{font-family:"Zodiak",serif;font-weight:700;font-size:1.1rem;margin-bottom:10px}
+  .card p{font-size:.92rem;color:var(--mut)}
+  .global{margin-top:26px;background:var(--paper2);border-radius:16px;padding:26px 30px;display:flex;gap:16px;align-items:flex-start}
+  .global .ico{width:22px;height:22px;stroke:var(--vert);margin-top:4px}
+  .global p{font-size:.94rem;color:var(--mut)}
+  .global b{color:var(--ink)}
+
+  /* réalisations */
+  .real{background:var(--paper2)}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal figure{position:relative;border-radius:16px;overflow:hidden;background:var(--paper)}
+  .gal img{width:100%;height:300px;object-fit:cover;transition:transform .5s var(--ease)}
+  .gal figure:hover img{transform:scale(1.04)}
+  .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 18px 14px;font-size:.82rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(18,20,16,.78))}
+  .gal-note{margin-top:18px;font-size:.85rem;color:var(--mut2)}
+
+  /* avant / après */
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:860px}
+  .ba{position:relative;border-radius:16px;overflow:hidden}
+  .ba img{width:100%;height:420px;object-fit:cover}
+  .ba .tag{position:absolute;top:14px;left:14px;background:rgba(18,20,16,.72);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:50px}
+  .ba.apres .tag{background:var(--vert)}
+  .ba-note{margin-top:18px;font-size:.9rem;color:var(--mut)}
+
+  /* livre d'or */
+  .avis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .avis blockquote{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column}
+  .avis .stars{color:var(--vert);letter-spacing:3px;font-size:.9rem;margin-bottom:12px}
+  .avis p{font-size:.92rem;color:var(--mut);flex:1}
+  .avis footer{margin-top:16px;font-size:.85rem;font-weight:600;color:var(--ink)}
+  .avis footer span{display:block;font-weight:400;color:var(--mut2);font-size:.78rem}
+  .avis-note{margin-top:22px;font-size:.9rem;color:var(--mut)}
+  .avis-note b{color:var(--vert)}
+
+  /* approche */
+  .approche{background:var(--paper2)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px}
+  .step .num{font-family:"Zodiak",serif;font-weight:700;color:var(--vert);font-size:1.6rem;line-height:1}
+  .step h3{font-family:"Zodiak",serif;font-weight:700;font-size:1.08rem;margin:12px 0 8px}
+  .step p{font-size:.9rem;color:var(--mut)}
+
+  /* devis */
+  .devis .grid2{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .devis .info p{color:var(--mut);margin-bottom:18px}
+  .devis .zone{background:var(--vert-tint);border-radius:12px;padding:16px 20px;font-size:.9rem;color:var(--ink)}
+  .devis .coord{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+  .devis .coord a{display:flex;gap:12px;align-items:center;font-weight:500;font-size:.95rem}
+  .devis .coord a:hover{color:var(--vert)}
+  .devis .coord .ico{stroke:var(--vert)}
+  form .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .lbl{display:block;font-size:.8rem;font-weight:600;margin:14px 0 6px}
+  input,textarea{width:100%;font:inherit;font-size:.92rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;transition:border-color .2s}
+  input:focus,textarea:focus{border-color:var(--vert)}
+  form .btn{margin-top:20px}
+  .formdemo{margin-top:12px;font-size:.78rem;color:var(--mut2)}
+
+  /* footer */
+  footer.site{background:var(--ink);color:#edeae0;padding:60px 0 40px}
+  .f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;margin-bottom:40px}
+  footer.site h4{font-family:"Zodiak",serif;font-weight:700;font-size:1rem;margin-bottom:12px}
+  footer.site p,footer.site a{display:block;font-size:.88rem;color:rgba(237,234,224,.72);margin-bottom:7px}
+  footer.site a:hover{color:#fff}
+  .legal{border-top:1px solid rgba(237,234,224,.14);padding-top:24px}
+  .legal p{font-size:.78rem;color:rgba(237,234,224,.55)}
+  .legal .avert{margin-top:10px}
+  .legal .avert a{display:inline;color:#8fbca6}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-img img{height:440px}
+    .strip .wrap{grid-template-columns:repeat(2,1fr)}
+    .cards,.steps,.gal,.avis{grid-template-columns:repeat(2,1fr)}
+    .devis .grid2{grid-template-columns:1fr;gap:40px}
+    .f-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 640px){
+    .menu{position:fixed;inset:0;background:var(--paper);z-index:55;flex-direction:column;justify-content:center;gap:30px;display:none}
+    .menu.open{display:flex}
+    .menu a{font-size:1.15rem}
+    body.menu-open{overflow:hidden}
+    .burger{display:flex}
+    .hero{padding:120px 0 64px}
+    .hero-img img{height:360px}
+    .hero-badge{left:12px;bottom:14px;padding:11px 16px}
+    section{padding:72px 0}
+    .strip{padding:22px 0}
+    .strip .wrap{grid-template-columns:1fr;gap:14px}
+    .cards,.steps,.gal,.avis,.ba-grid{grid-template-columns:1fr}
+    .gal img{height:260px}
+    .ba img{height:320px}
+    form .frow{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr}
+    .global{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<div id="top-sentinel" aria-hidden="true"></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">ECOTREN<small>Le partenaire de vos travaux · Paris &amp; Île-de-France</small></a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#savoirfaire">Savoir-faire</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#avis">Livre d'or</a>
+      <a href="#devis" class="cta">Devis gratuit</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-label="Ouvrir le menu" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Rénovation · Agencement · Tous corps d'état</span>
+        <h1 class="disp">Vos travaux, du sol au plafond, <b>un seul interlocuteur</b>.</h1>
+        <p class="lead">ECOTREN rénove et agence votre habitation ou vos bureaux à Paris et dans toute l'Île-de-France : rénovation complète, salle de bains, cuisine, électricité, plomberie, verrières atelier. Plus de 20 ans de chantiers, le travail artisanal allié aux techniques modernes.</p>
+        <div class="hero-cta">
+          <a class="btn btn-vert" href="#devis">Demander un devis gratuit <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#realisations">Voir les réalisations</a>
+        </div>
+      </div>
+      <div class="hero-img reveal">
+        <img src="assets/ecotren/douche-vitrage-paris.jpg" alt="Salle d'eau rénovée par ECOTREN à Paris : douche avec paroi façon vitrage atelier, carrelage grand format, niche murale" width="600" height="901" />
+        <div class="hero-badge"><b>20 ans +</b><span>d'expérience de chantiers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg><div><b>Société RGE</b><span>Reconnu Garant de l'Environnement</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M9 13h6M9 17h6"/></svg><div><b>Devis détaillé gratuit</b><span>étude rapide, sans engagement</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.3l-5.5 3 1-6.2-4.4-4.3 6.1-.9L12 3.3l2.8 5.6 6.1.9-4.4 4.3 1 6.2z"/></svg><div><b>58 avis clients</b><span>dans notre livre d'or</span></div></div>
+      <div class="it"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Paris &amp; Île-de-France</b><span>75, 77, 78, 91, 92, 93, 94, 95</span></div></div>
+    </div>
+  </div>
+
+  <!-- SAVOIR-FAIRE -->
+  <section id="savoirfaire">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Savoir-faire</span>
+        <h2 class="disp">Tous les corps d'état, une seule équipe</h2>
+        <p>Simple rafraîchissement, agencement de l'espace ou rénovation complète : nous prenons en charge votre projet dans sa globalité, en respectant vos goûts, vos souhaits et votre budget.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <h3>Rénovation complète &amp; agencement</h3>
+          <p>Appartements, maisons, bureaux : démolition, ouverture de murs porteurs, redistribution des pièces et finitions, avec un seul interlocuteur du début à la fin.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM12 14v6M8 20h8"/></svg></div>
+          <h3>Salle de bains &amp; douche italienne</h3>
+          <p>Création et réfection de salles de bains et salles d'eau : douche à l'italienne, pierre, mosaïque, carreaux de ciment, parois façon vitrage atelier.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg></div>
+          <h3>Cuisine</h3>
+          <p>Création de cuisines, y compris sur mesure à partir de meubles standards : plomberie, électricité, crédence et pose coordonnées en un seul chantier.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 12.5H11L9 22l8.5-10.5H12z"/></svg></div>
+          <h3>Électricité &amp; plomberie</h3>
+          <p>Mise aux normes, tableaux électriques, installations sanitaires : les lots techniques sont réalisés en interne, sans sous-traitance à coordonner vous-même.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div>
+          <h3>Carrelage, parquet &amp; peinture</h3>
+          <p>Pose de carrelage et faïence, carreaux de ciment, parquets collés ou flottants, ponçage et vitrification, peinture et papier peint.</p>
+        </div>
+        <div class="card reveal">
+          <div class="pic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4zM10 3v18M16 3v18M4 12h16"/></svg></div>
+          <h3>Métallerie &amp; menuiserie</h3>
+          <p>Verrières et cloisons type atelier créées sur mesure, escaliers acier, portes à galandage, dressings, fenêtres PVC, alu ou bois, serrurerie.</p>
+        </div>
+      </div>
+      <div class="global reveal">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <p><b>Nous travaillons régulièrement avec des architectes</b> sur des rénovations complètes et des ouvertures de murs porteurs. Nous nous déplaçons à votre domicile pour comprendre vos besoins et vos envies, puis nous vous proposons un projet qui respecte vos goûts et votre budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section class="real" id="realisations">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Réalisations</span>
+        <h2 class="disp">Des chantiers réels, à Paris et autour</h2>
+        <p>Rénovations complètes, salles d'eau, verrières sur mesure : quelques chantiers récents à Paris, Puteaux, Méry-sur-Oise, Villepinte ou Boulogne-Billancourt.</p>
+      </div>
+      <div class="gal">
+        <figure class="reveal"><img src="assets/ecotren/verriere-2portes.jpg" alt="Cloison vitrée type atelier avec deux portes coulissantes, structure acier noir, réalisée à Paris" loading="lazy" width="598" height="595" /><figcaption>Cloison vitrée type atelier, deux portes coulissantes — Paris</figcaption></figure>
+        <figure class="reveal"><img src="assets/ecotren/douche-banc-paris15.jpg" alt="Douche à l'italienne avec banc et niche habillés de carreaux de ciment, Paris 15e" loading="lazy" width="805" height="808" /><figcaption>Douche italienne, banc et niche en carreaux de ciment — Paris 15e</figcaption></figure>
+        <figure class="reveal"><img src="assets/ecotren/sde-vitrage-atelier.jpg" alt="Salle d'eau moderne avec paroi de douche façon vitrage atelier, carrelage gris grand format" loading="lazy" width="599" height="599" /><figcaption>Salle d'eau, paroi façon vitrage atelier — Paris</figcaption></figure>
+        <figure class="reveal"><img src="assets/ecotren/escalier-acier-mery.jpg" alt="Escalier acier sur mesure en cours de pose, Méry-sur-Oise" loading="lazy" width="349" height="467" /><figcaption>Escalier acier sur mesure — Méry-sur-Oise (95)</figcaption></figure>
+        <figure class="reveal"><img src="assets/ecotren/douche-mery.jpg" alt="Douche à l'italienne en pierre et mosaïque, Méry-sur-Oise" loading="lazy" width="330" height="441" /><figcaption>Douche italienne, pierre et mosaïque — Méry-sur-Oise (95)</figcaption></figure>
+        <figure class="reveal"><img src="assets/ecotren/cuisine-carreaux-ciment.jpg" alt="Transition entre carreaux de ciment graphiques et parquet massif dans une cuisine" loading="lazy" width="603" height="600" style="object-position:center 75%" /><figcaption>Carreaux de ciment &amp; parquet massif — cuisine</figcaption></figure>
+      </div>
+      <p class="gal-note">Photos de vos chantiers, reprises de votre site actuel. Sur la version finale : galerie complète par projet, avec tous vos avant/après.</p>
+    </div>
+  </section>
+
+  <!-- AVANT / APRÈS -->
+  <section id="avantapres">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Avant / Après</span>
+        <h2 class="disp">Le même endroit, quelques semaines plus tard</h2>
+        <p>Une salle d'eau à Villepinte (93) : création complète d'une douche à l'italienne, du chantier brut aux finitions.</p>
+      </div>
+      <div class="ba-grid">
+        <div class="ba reveal"><span class="tag">Avant</span><img src="assets/ecotren/villepinte-avant.jpg" alt="Salle d'eau de Villepinte en cours de chantier : receveur brut, faïence en cours de pose" loading="lazy" width="426" height="571" /></div>
+        <div class="ba apres reveal"><span class="tag">Après</span><img src="assets/ecotren/villepinte-apres.jpg" alt="La même salle d'eau terminée : douche à l'italienne, galets au sol, frise mosaïque" loading="lazy" width="291" height="389" /></div>
+      </div>
+      <p class="ba-note reveal">Sur la version finale du site, chaque projet peut être présenté ainsi : l'avant, l'après, et ce qui a été fait entre les deux.</p>
+    </div>
+  </section>
+
+  <!-- LIVRE D'OR -->
+  <section class="approche" id="avis">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Livre d'or</span>
+        <h2 class="disp">Ce que disent vos clients</h2>
+        <p>Extraits authentiques du livre d'or de votre site actuel, reproduits mot pour mot.</p>
+      </div>
+      <div class="avis">
+        <blockquote class="reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>«&nbsp;L'équipe a su faire preuve d'un grand professionnalisme tout au long du chantier. Mention particulière à Dariusz, le gérant, dont l'écoute, la transparence et l'implication ont été précieuses.&nbsp;»</p>
+          <footer>Sophie &amp; François<span>Embellissement complet d'une maison — juin 2025</span></footer>
+        </blockquote>
+        <blockquote class="reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>«&nbsp;Rénovation complète de mon appartement, tous corps de métier. Travail de qualité, sans défaut, mené dans les délais convenus. Dariusz est très compétent techniquement, fiable, toujours disponible.&nbsp;»</p>
+          <footer>Nicolas L.<span>Restructuration d'un appartement — juillet 2024</span></footer>
+        </blockquote>
+        <blockquote class="reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>«&nbsp;Travailler avec Dariusz est vraiment très agréable et ce depuis de longues années. En tant qu'architecte, je recommande fortement cette entreprise qui est sérieuse et consciencieuse.&nbsp;»</p>
+          <footer>Maud Beaugrand-Bernard<span>Architecte — février 2023</span></footer>
+        </blockquote>
+      </div>
+      <p class="avis-note reveal"><b>58 messages</b> dans le livre d'or, de 2015 à septembre 2025 : ils seraient tous repris sur la version finale du site.</p>
+    </div>
+  </section>
+
+  <!-- APPROCHE -->
+  <section id="approche">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Notre approche</span>
+        <h2 class="disp">Comment se passe votre projet</h2>
+        <p>La méthode ECOTREN, telle que vos clients la décrivent : de la visite conseil à la livraison, en passant par un devis détaillé, gratuit et sans engagement.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">1</div>
+          <h3>Visite &amp; écoute</h3>
+          <p>Nous nous déplaçons chez vous ou dans vos bureaux : vous nous expliquez vos besoins et vos envies, nous apportons expertise et conseils.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">2</div>
+          <h3>Devis détaillé gratuit</h3>
+          <p>Étude rapide, devis détaillé remis dans les meilleurs délais, gratuit et qui ne vous engage en rien. Le projet respecte vos goûts et votre budget.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">3</div>
+          <h3>Chantier tenu, du sol au plafond</h3>
+          <p>Tous les corps d'état coordonnés par un seul interlocuteur, des solutions face aux imprévus, des délais respectés et des finitions soignées.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS -->
+  <section class="devis" id="devis">
+    <div class="wrap grid2">
+      <div class="info reveal">
+        <span class="kicker">Devis gratuit</span>
+        <h2 class="disp" style="font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px 0 16px">Parlons de votre projet</h2>
+        <p>Décrivez votre projet : pièces concernées, surface, nature des travaux (rénovation complète, salle de bains, cuisine, électricité…), dates souhaitées. Nous réalisons une étude rapide et vous remettons un devis détaillé, gratuit et sans engagement.</p>
+        <div class="zone"><b>Zone d'intervention :</b> Paris et toute l'Île-de-France (75, 77, 78, 91, 92, 93, 94, 95), ainsi que les régions voisines.</div>
+        <div class="coord">
+          <a href="tel:+33661831949"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>06 61 83 19 49</a>
+          <a href="mailto:contact.ecotren@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>contact.ecotren@gmail.com</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="cform">
+          <div class="frow">
+            <div><label class="lbl" for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" placeholder="Marie Dupont" autocomplete="name" required /></div>
+            <div><label class="lbl" for="f-tel">Votre téléphone ou e-mail</label><input id="f-tel" name="contact" type="text" placeholder="06 12 34 56 78" /></div>
+          </div>
+          <div class="frow">
+            <div><label class="lbl" for="f-lieu">Ville du chantier</label><input id="f-lieu" name="lieu" type="text" placeholder="Paris 15e" /></div>
+            <div><label class="lbl" for="f-type">Nature des travaux</label><input id="f-type" name="type" type="text" placeholder="Rénovation complète, salle de bains…" /></div>
+          </div>
+          <div><label class="lbl" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Surface, pièces concernées, état actuel, dates souhaitées, plans disponibles…"></textarea></div>
+          <button class="btn btn-vert" type="submit">Envoyer ma demande <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="formdemo">Formulaire de démonstration (maquette) : il n'envoie aucun message. Pour une vraie demande, téléphone ou e-mail ci-contre.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>ECOTREN</h4>
+        <p>Dariusz Uchto, le partenaire de vos travaux</p>
+        <p>Rénovation, agencement et décoration, tous corps d'état</p>
+        <p>Paris &amp; Île-de-France</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#savoirfaire">Savoir-faire</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#avantapres">Avant / Après</a>
+        <a href="#avis">Livre d'or</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+33661831949">06 61 83 19 49</a>
+        <a href="mailto:contact.ecotren@gmail.com">contact.ecotren@gmail.com</a>
+        <a href="#devis">Demande de devis</a>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Société RGE — devis détaillé gratuit et sans engagement.</p>
+      <p class="avert"><b>Maquette : aperçu non contractuel</b>, réalisée par <b>Nicolas Masset</b> à partir de votre univers. La version finale est <b>100 % sur-mesure</b> (vos photos, vos textes, toutes vos pages). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.getElementById('header');
+  var sentinel = document.getElementById('top-sentinel');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      header.classList.toggle('scrolled', !entries[0].isIntersecting);
+    }).observe(sentinel);
+
+    var ro = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  } else {
+    header.classList.add('scrolled');
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var form = document.getElementById('cform');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Ceci est une maquette de démonstration : le formulaire n'envoie aucun message. Pour une vraie demande, utilisez le téléphone ou l'e-mail indiqués sur la page.");
+  });
+})();
+</script>
+
+</body>
+</html>
