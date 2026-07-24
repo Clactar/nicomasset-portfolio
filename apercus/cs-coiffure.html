@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS Coiffure à domicile · Spécialiste coiffure de mariée · Nice, Cannes, Monaco</title>
+<meta name="description" content="Sandrine, styliste visagiste et spécialiste de la coiffure de mariée. Coiffeuse à domicile de Cannes à Monaco : coupe, brushing, coloration, chignon, lissage. Du lundi au samedi de 9h à 21h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivoire:#faf6f0;
+    --creme:#f3ece1;
+    --paper:#fffdf9;
+    --encre:#33291f;
+    --taupe:#7a6a58;
+    --rose:#c9a29a;
+    --rose-pale:#f0e2dd;
+    --or:#a9885a;
+    --or-pale:#e6d8c2;
+    --line:#e7dcCC;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;font-weight:300;background:var(--ivoire);color:var(--encre);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12}
+  .wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--or);font-weight:400}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--or)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:999px;font-family:'Jost',sans-serif;font-size:15px;font-weight:400;letter-spacing:.06em;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-plein{background:var(--encre);color:var(--ivoire);box-shadow:0 10px 30px rgba(51,41,31,.22)}
+  .btn-plein:hover{background:#463829}
+  .btn-ligne{border:1px solid var(--encre);color:var(--encre);background:transparent}
+  .btn-ligne:hover{background:rgba(51,41,31,.05)}
+
+  /* ===== Header ===== */
+  header{position:fixed;inset:0 0 auto;z-index:70;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.pose{background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+  .barre{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .logo{text-decoration:none;line-height:1.05}
+  .logo b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;letter-spacing:.02em;display:block}
+  .logo span{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--or);font-weight:400}
+  nav.principal{display:flex;align-items:center;gap:34px}
+  nav.principal a{text-decoration:none;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe);transition:color .2s}
+  nav.principal a:hover{color:var(--encre)}
+  .nav-tel{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--or);color:var(--encre) !important;border-radius:999px;padding:9px 18px;font-weight:400}
+  .nav-tel:hover{background:var(--or);color:#fff !important}
+  .burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;z-index:70}
+  .burger span{display:block;width:17px;height:1.6px;background:var(--encre);transition:transform .3s var(--ease),opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+  .voile{position:fixed;inset:0;background:var(--ivoire);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+  .voile.ouvert{opacity:1;pointer-events:auto}
+  .voile a{font-family:'Cormorant Garamond',serif;font-size:32px;text-decoration:none;padding:8px 0;color:var(--encre)}
+  .voile a:hover{color:var(--or)}
+  .voile .tel-mobile{font-family:'Jost',sans-serif;font-size:16px;margin-top:18px;border:1px solid var(--or);border-radius:999px;padding:13px 28px;letter-spacing:.08em}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate;padding:120px 0 56px}
+  .hero-img{position:absolute;inset:0;z-index:-2}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(250,246,240,.78) 0%,rgba(250,246,240,0) 26%,rgba(250,246,240,.82) 74%,var(--ivoire) 100%)}
+  @media (min-width:721px){
+    .hero::after{background:
+      linear-gradient(90deg,rgba(250,246,240,.88) 0%,rgba(250,246,240,.55) 34%,rgba(250,246,240,0) 58%),
+      linear-gradient(180deg,rgba(250,246,240,.7) 0%,rgba(250,246,240,0) 26%,rgba(250,246,240,.82) 74%,var(--ivoire) 100%)}
+  }
+  .hero-carte{max-width:640px}
+  .hero .eyebrow{color:#7d5f36;text-shadow:0 1px 10px rgba(250,246,240,.9)}
+  .hero .eyebrow::before{background:#7d5f36}
+  .hero h1{font-size:clamp(40px,7.2vw,74px);margin:18px 0 14px;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--or)}
+  .hero p.accroche{font-size:clamp(17px,2.4vw,20px);color:var(--taupe);max-width:46ch;margin-bottom:28px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-note{margin-top:22px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
+  .hero-note b{font-weight:500;color:var(--encre)}
+
+  /* ===== Ruban réassurance ===== */
+  .ruban{background:var(--paper);border-block:1px solid var(--line)}
+  .ruban .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .ruban article{padding:30px 26px;text-align:center}
+  .ruban article + article{border-left:1px solid var(--line)}
+  .ruban h3{font-size:21px;margin-bottom:6px}
+  .ruban p{font-size:14.5px;color:var(--taupe);max-width:30ch;margin-inline:auto}
+
+  /* ===== Sections communes ===== */
+  section.bloc{padding:96px 0}
+  .titre-bloc{max-width:620px;margin-bottom:52px}
+  .titre-bloc h2{font-size:clamp(32px,4.6vw,50px);margin-top:16px}
+  .titre-bloc h2 em{font-style:italic;color:var(--or)}
+  .titre-bloc p{color:var(--taupe);margin-top:14px}
+
+  /* ===== Mariage ===== */
+  #mariage{background:linear-gradient(180deg,var(--ivoire),var(--rose-pale) 140%)}
+  .duo{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .duo-texte p{color:var(--taupe);margin-bottom:16px}
+  .duo-texte p b{color:var(--encre);font-weight:500}
+  .liste-fine{list-style:none;margin:26px 0 34px;display:grid;gap:12px}
+  .liste-fine li{display:flex;gap:14px;align-items:baseline;font-size:16.5px}
+  .liste-fine li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rose);flex:none;transform:translateY(-2px)}
+  .galerie-mariage{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  .galerie-mariage figure{margin:0;border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 24px 60px rgba(94,66,47,.18)}
+  .galerie-mariage figure:nth-child(2){margin-top:64px;border-radius:18px 18px 200px 200px}
+  .galerie-mariage img{width:100%;height:100%;aspect-ratio:3/4.4;object-fit:cover;transition:transform .6s var(--ease)}
+  .galerie-mariage figure:hover img{transform:scale(1.04)}
+  .citation{margin-top:80px;text-align:center;max-width:700px;margin-inline:auto}
+  .citation blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);line-height:1.35;color:var(--encre)}
+  .citation figcaption{margin-top:16px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+
+  /* ===== À domicile ===== */
+  .grille-prestations{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .presta{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 26px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .presta:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(94,66,47,.1)}
+  .presta h3{font-size:22px;margin-bottom:8px}
+  .presta p{font-size:14.5px;color:var(--taupe)}
+  .note-publics{margin-top:26px;display:flex;align-items:center;gap:14px;font-size:15px;color:var(--taupe)}
+  .note-publics::before{content:"";flex:none;width:34px;height:1px;background:var(--or)}
+  .bande-photos{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:56px}
+  .bande-photos figure{margin:0;border-radius:18px;overflow:hidden}
+  .bande-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+  .bande-photos figure:nth-child(2) img{aspect-ratio:auto;height:100%}
+
+  /* ===== Déroulement ===== */
+  #deroulement{background:var(--creme)}
+  .etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:etape}
+  .etape{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 28px;position:relative}
+  .etape::before{counter-increment:etape;content:counter(etape,decimal-leading-zero);font-family:'Cormorant Garamond',serif;font-size:44px;font-style:italic;color:var(--or);display:block;margin-bottom:14px;line-height:1}
+  .etape h3{font-size:22px;margin-bottom:8px}
+  .etape p{font-size:15px;color:var(--taupe)}
+
+  /* ===== Secteur ===== */
+  .secteur-duo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .secteur-img{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(94,66,47,.16)}
+  .secteur-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+  .villes{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 18px}
+  .villes span{border:1px solid var(--or-pale);background:var(--paper);border-radius:999px;padding:9px 20px;font-size:15px}
+  .villes span.forte{background:var(--encre);color:var(--ivoire);border-color:var(--encre)}
+  .mention-distance{font-size:14px;color:var(--taupe);font-style:italic}
+
+  /* ===== À propos ===== */
+  #apropos .duo-texte{max-width:720px;margin-inline:auto;text-align:center}
+  #apropos .eyebrow{justify-content:center}
+  #apropos .eyebrow::after{content:"";width:28px;height:1px;background:var(--or)}
+  #apropos h2{font-size:clamp(30px,4.2vw,44px);margin:16px 0 20px}
+
+  /* ===== Contact ===== */
+  #contact{background:var(--encre);color:var(--ivoire);border-radius:32px 32px 0 0}
+  #contact .eyebrow{color:var(--or-pale)}
+  #contact .eyebrow::before{background:var(--or-pale)}
+  .contact-grille{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  #contact h2{font-size:clamp(34px,5vw,54px);margin:16px 0 18px}
+  #contact h2 em{font-style:italic;color:var(--or-pale)}
+  #contact p.intro{color:#cdbfae;max-width:44ch}
+  .contact-carte{background:rgba(255,253,249,.06);border:1px solid rgba(230,216,194,.25);border-radius:20px;padding:38px 34px;display:grid;gap:26px}
+  .contact-ligne{display:grid;gap:4px}
+  .contact-ligne small{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--or-pale)}
+  .contact-ligne a{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,30px);text-decoration:none;color:var(--ivoire);word-break:break-all}
+  .contact-ligne a:hover{color:var(--or-pale)}
+  .contact-ligne p{font-size:16px;color:#e8ddcd}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .btn-clair{background:var(--ivoire);color:var(--encre)}
+  .btn-clair:hover{background:#fff}
+  .btn-bord{border:1px solid rgba(250,246,240,.5);color:var(--ivoire)}
+  .btn-bord:hover{background:rgba(250,246,240,.1)}
+
+  footer{background:var(--encre);color:#a4937d;padding:34px 0 44px;font-size:13.5px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid rgba(230,216,194,.15);padding-top:28px}
+  footer a{color:#cdbfae}
+
+  /* ===== Reveal ===== */
+  .rvl{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .rvl.vu{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rvl{opacity:1;transform:none;transition:none}}
+
+  /* ===== Responsive ===== */
+  @media (max-width:920px){
+    .duo,.secteur-duo,.contact-grille{grid-template-columns:1fr;gap:44px}
+    .grille-prestations{grid-template-columns:1fr 1fr}
+    .etapes{grid-template-columns:1fr}
+    .bande-photos{grid-template-columns:1fr}
+    .bande-photos figure:nth-child(2) img{aspect-ratio:16/10;height:auto}
+  }
+  @media (max-width:720px){
+    body{font-size:16px}
+    nav.principal{display:none}
+    .burger{display:flex}
+    section.bloc{padding:68px 0}
+    .ruban .wrap{grid-template-columns:1fr}
+    .ruban article + article{border-left:none;border-top:1px solid var(--line)}
+    .ruban article{padding:22px 10px}
+    .grille-prestations{grid-template-columns:1fr}
+    .galerie-mariage{gap:12px}
+    .galerie-mariage figure:nth-child(2){margin-top:40px}
+    .hero{padding-bottom:44px}
+    .hero-img img{object-position:70% 22%}
+    .hero-actions .btn{width:100%}
+    .contact-carte{padding:28px 22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="entete">
+  <div class="wrap barre">
+    <a class="logo" href="#haut" aria-label="CS Coiffure à domicile, retour en haut">
+      <b>CS Coiffure</b>
+      <span>à domicile · Côte d'Azur</span>
+    </a>
+    <nav class="principal" aria-label="Navigation principale">
+      <a href="#mariage">Mariage</a>
+      <a href="#domicile">À domicile</a>
+      <a href="#secteur">Secteur</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-tel" href="tel:+33610847403">06 10 84 74 03</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu mobile plein écran -->
+<div class="voile" id="menu-mobile" aria-hidden="true">
+  <a href="#mariage">Mariage</a>
+  <a href="#domicile">À domicile</a>
+  <a href="#secteur">Secteur</a>
+  <a href="#contact">Contact</a>
+  <a class="tel-mobile" href="tel:+33610847403">06 10 84 74 03</a>
+</div>
+
+<main id="haut">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-img">
+      <img src="assets/cs-coiffure/hero-mariee.jpg" alt="Chignon de mariée orné d'épingles perlées, vu de dos" fetchpriority="high">
+    </div>
+    <div class="wrap">
+      <div class="hero-carte">
+        <span class="eyebrow">Styliste visagiste · Nice · Cannes · Monaco</span>
+        <h1>Spécialiste de la <em>coiffure de mariée</em></h1>
+        <p class="accroche">Coiffeuse à domicile de Cannes à Monaco. Pour votre mariage comme au quotidien, je viens chez vous avec tout le confort d'un salon.</p>
+        <div class="hero-actions">
+          <a class="btn btn-plein" href="tel:+33610847403">Demander un devis · 06 10 84 74 03</a>
+          <a class="btn btn-ligne" href="mailto:c.s.coiffuredom@gmail.com">M'écrire</a>
+        </div>
+        <p class="hero-note">Du lundi au samedi · <b>de 9h à 21h</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RUBAN RÉASSURANCE ===== -->
+  <div class="ruban">
+    <div class="wrap">
+      <article class="rvl">
+        <h3 class="serif">Je me déplace chez vous</h3>
+        <p>Plus d'attente ni de parking : le salon vient à vous.</p>
+      </article>
+      <article class="rvl">
+        <h3 class="serif">Un vrai salon à domicile</h3>
+        <p>Matériel professionnel adapté et produits de qualité.</p>
+      </article>
+      <article class="rvl">
+        <h3 class="serif">Rien à faire après</h3>
+        <p>À mon départ, tout est nettoyé. Vous n'avez qu'à profiter.</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== MARIAGE ===== -->
+  <section class="bloc" id="mariage">
+    <div class="wrap">
+      <div class="duo">
+        <div class="duo-texte rvl">
+          <span class="eyebrow">Le jour J</span>
+          <h2 class="serif" style="font-size:clamp(32px,4.6vw,50px);margin-top:16px">Votre coiffure de mariée, <em style="color:var(--or);font-style:italic">sans stress</em></h2>
+          <p style="margin-top:18px">Passionnée de coiffure artistique, je suis spécialiste des coiffures stylisées : chignon de mariée, coiffure de cocktail ou chignon d'un soir. Je vous conseille et je vous mets en valeur, en laissant parler ma créativité.</p>
+          <p>Le matin du mariage, vous restez là où vous êtes bien : je viens vous coiffer <b>chez vous, à l'hôtel ou même sur un bateau</b>.</p>
+          <ul class="liste-fine">
+            <li>Chignons et coiffures stylisées, adaptés à votre visage</li>
+            <li>Conseil personnalisé avant le grand jour</li>
+            <li>Déplacement sur votre lieu de préparation, de Cannes à Monaco</li>
+          </ul>
+          <a class="btn btn-plein" href="mailto:c.s.coiffuredom@gmail.com?subject=Coiffure%20de%20mari%C3%A9e%20%C2%B7%20demande%20de%20devis">Parlons de votre mariage</a>
+        </div>
+        <div class="galerie-mariage rvl" aria-hidden="false">
+          <figure>
+            <img src="assets/cs-coiffure/mariage-chignon.jpg" alt="Chignon bas tressé d'une mariée, orné de perles" loading="lazy">
+          </figure>
+          <figure>
+            <img src="assets/cs-coiffure/mariage-boheme.jpg" alt="Coiffure de mariée mi-attachée avec bijou de cheveux fleuri" loading="lazy">
+          </figure>
+        </div>
+      </div>
+      <figure class="citation rvl">
+        <blockquote>« Chaque fois que je coiffe une mariée, elle est très contente. »</blockquote>
+        <figcaption>Sandrine · CS Coiffure</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== À DOMICILE ===== -->
+  <section class="bloc" id="domicile">
+    <div class="wrap">
+      <div class="titre-bloc rvl">
+        <span class="eyebrow">Au quotidien</span>
+        <h2>La coiffure à domicile, <em>comme en salon</em></h2>
+        <p>Pas envie d'attendre votre tour ni de chercher à vous garer ? Je réalise chez vous les mêmes prestations qu'en salon, avec un matériel professionnel adapté et des produits de qualité.</p>
+      </div>
+      <div class="grille-prestations">
+        <article class="presta rvl">
+          <h3>Coupe et brushing</h3>
+          <p>Coupe, shampooing et brushing, pour tous les types et toutes les longueurs de cheveux.</p>
+        </article>
+        <article class="presta rvl">
+          <h3>Coloration</h3>
+          <p>Couleur, éclaircissement et entretien de vos racines, dans le confort de votre salon.</p>
+        </article>
+        <article class="presta rvl">
+          <h3>Mèches et balayage</h3>
+          <p>Du simple dessus de tête à la tête entière, avec patine pour un résultat lumineux.</p>
+        </article>
+        <article class="presta rvl">
+          <h3>Lissage brésilien et japonais</h3>
+          <p>Des cheveux disciplinés et brillants qui durent, sur devis selon votre chevelure.</p>
+        </article>
+        <article class="presta rvl">
+          <h3>Chignons et coiffures d'un soir</h3>
+          <p>Cocktail, soirée, événement : une coiffure stylisée qui tient toute la nuit.</p>
+        </article>
+        <article class="presta rvl">
+          <h3>Permanente et défrisage</h3>
+          <p>Boucles souples ou lissage durable, avec soin protecteur adapté.</p>
+        </article>
+      </div>
+      <p class="note-publics rvl">Femmes, hommes et enfants : toute la famille peut passer sous mes ciseaux.</p>
+      <div class="bande-photos">
+        <figure class="rvl"><img src="assets/cs-coiffure/domicile-brushing.jpg" alt="Cliente souriante pendant son brushing" loading="lazy"></figure>
+        <figure class="rvl"><img src="assets/cs-coiffure/domicile-boucles.jpg" alt="Coiffeuse réalisant des boucles au fer" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DÉROULEMENT ===== -->
+  <section class="bloc" id="deroulement">
+    <div class="wrap">
+      <div class="titre-bloc rvl">
+        <span class="eyebrow">C'est simple</span>
+        <h2>Comment ça se passe <em>chez vous</em></h2>
+      </div>
+      <div class="etapes">
+        <article class="etape rvl">
+          <h3>Vous me contactez</h3>
+          <p>Un appel ou un message : on parle de vos cheveux, de vos envies, et je vous fais un devis.</p>
+        </article>
+        <article class="etape rvl">
+          <h3>J'arrive équipée</h3>
+          <p>Je viens chez vous avec un matériel de coiffure professionnel adapté : vous retrouvez le confort du salon.</p>
+        </article>
+        <article class="etape rvl">
+          <h3>Vous profitez</h3>
+          <p>Soucieuse de votre intérieur, je nettoie tout avant de partir. Vous n'avez rien à faire.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTEUR ===== -->
+  <section class="bloc" id="secteur">
+    <div class="wrap">
+      <div class="secteur-duo">
+        <div class="secteur-img rvl">
+          <img src="assets/cs-coiffure/nice-promenade.jpg" alt="La baie de Nice et la Promenade des Anglais vues d'en haut" loading="lazy">
+        </div>
+        <div class="rvl">
+          <span class="eyebrow">Zone d'intervention</span>
+          <h2 class="serif" style="font-size:clamp(32px,4.6vw,50px);margin-top:16px">De Cannes <em style="font-style:italic;color:var(--or)">à Monaco</em></h2>
+          <p style="color:var(--taupe);margin-top:16px">Je me déplace à domicile sur toute la bande côtière des Alpes-Maritimes, du lundi au samedi, de 9h à 21h. Le soir aussi, quand vos horaires ne vous laissent pas le temps d'aller en salon.</p>
+          <div class="villes">
+            <span class="forte">Nice</span>
+            <span class="forte">Cannes</span>
+            <span class="forte">Monaco</span>
+            <span>Antibes</span>
+            <span>Cagnes-sur-Mer</span>
+            <span>Saint-Laurent-du-Var</span>
+            <span>et leurs environs</span>
+          </div>
+          <p class="mention-distance">Selon la distance, un supplément de déplacement peut s'appliquer : il est toujours annoncé dans le devis, sans surprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="bloc" id="apropos" style="padding-top:20px">
+    <div class="wrap">
+      <div class="duo-texte rvl">
+        <span class="eyebrow">Qui suis-je</span>
+        <h2 class="serif">Sandrine, styliste visagiste</h2>
+        <p style="color:var(--taupe)">Mon expérience, je l'ai construite dans les plus grands salons de coiffure, complétée par de nombreux stages de coupe, de chignon et de coloration. Mon entreprise repose sur une conviction simple : mes clientes et clients passent avant tout. Je m'applique à combler leurs besoins et je mets tout en œuvre pour leur bien-être.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="bloc" id="contact">
+    <div class="wrap">
+      <div class="contact-grille">
+        <div class="rvl">
+          <span class="eyebrow">Contact</span>
+          <h2>Demandez <em>votre devis</em></h2>
+          <p class="intro">Coiffure de mariée, coupe, couleur ou lissage : dites-moi ce dont vous avez envie, je vous réponds rapidement avec un devis adapté.</p>
+          <div class="contact-actions">
+            <a class="btn btn-clair" href="tel:+33610847403">Appeler Sandrine</a>
+            <a class="btn btn-bord" href="mailto:c.s.coiffuredom@gmail.com">Envoyer un email</a>
+          </div>
+        </div>
+        <div class="contact-carte rvl">
+          <div class="contact-ligne">
+            <small>Téléphone</small>
+            <a href="tel:+33610847403">06 10 84 74 03</a>
+          </div>
+          <div class="contact-ligne">
+            <small>Email</small>
+            <a href="mailto:c.s.coiffuredom@gmail.com">c.s.coiffuredom@gmail.com</a>
+          </div>
+          <div class="contact-ligne">
+            <small>Horaires</small>
+            <p>Du lundi au samedi, de 9h à 21h</p>
+          </div>
+          <div class="contact-ligne">
+            <small>Secteur</small>
+            <p>Nice, Cannes, Monaco et leurs environs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>CS Coiffure à domicile · Nice · Cannes · Monaco</p>
+    <p>Maquette non contractuelle réalisée par <a href="mailto:nicolas.masset@icloud.com">Nicolas Masset</a>, développeur indépendant</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var entete = document.getElementById('entete');
+  var poser = function(){ entete.classList.toggle('pose', window.scrollY > 24); };
+  window.addEventListener('scroll', poser, {passive:true});
+  poser();
+
+  var burger = document.getElementById('burger');
+  var voile = document.getElementById('menu-mobile');
+  var basculer = function(ouvert){
+    voile.classList.toggle('ouvert', ouvert);
+    voile.setAttribute('aria-hidden', ouvert ? 'false' : 'true');
+    burger.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+    burger.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = ouvert ? 'hidden' : '';
+  };
+  burger.addEventListener('click', function(){
+    basculer(!voile.classList.contains('ouvert'));
+  });
+  voile.querySelectorAll('a').forEach(function(lien){
+    lien.addEventListener('click', function(){ basculer(false); });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('vu'); obs.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.rvl').forEach(function(el){ obs.observe(el); });
+  } else {
+    document.querySelectorAll('.rvl').forEach(function(el){ el.classList.add('vu'); });
+  }
+})();
+</script>
+
+<!--
+  CRÉDITS PHOTOS (toutes sous licence Unsplash, gratuite y compris usage commercial : https://unsplash.com/license)
+  Sandrine pourra les remplacer par ses propres photos, mêmes noms de fichiers.
+
+  assets/cs-coiffure/hero-mariee.jpg
+    Photographe : Alexander Mass (@alexandermassph)
+    Source : https://unsplash.com/photos/brides-elegant-bun-is-adorned-with-pearl-pins-AStIguZoBNg
+
+  assets/cs-coiffure/mariage-chignon.jpg
+    Photographe : Alexander Mass (@alexandermassph)
+    Source : https://unsplash.com/photos/a-brides-hair-styled-in-an-elegant-updo-uXG_pkbauk8
+
+  assets/cs-coiffure/mariage-boheme.jpg
+    Photographe : Angelo Pantazis (@angelopantazis)
+    Source : https://unsplash.com/photos/woman-wearing-white-floral-hair-accessory-yq2zyWLzaR0
+
+  assets/cs-coiffure/domicile-brushing.jpg
+    Photographe : Theme Photos (@themephotos)
+    Source : https://unsplash.com/photos/woman-wearing-black-top-SYXxlEP5KAA
+
+  assets/cs-coiffure/domicile-boucles.jpg
+    Photographe : Baylee Gramling (@bayleejadegramling)
+    Source : https://unsplash.com/photos/person-holding-gray-hair-curler-MMz03PyCOZg
+
+  assets/cs-coiffure/nice-promenade.jpg
+    Photographe : Jovan Vasiljević (@jovanvasiljevic)
+    Source : https://unsplash.com/photos/a-view-of-a-beach-from-a-high-point-of-view-FJ3O5X5yZmg
+-->
+</body>
+</html>
