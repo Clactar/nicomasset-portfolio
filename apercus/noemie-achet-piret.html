@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- v1.2 (2026-07-22) : mentions légales reprises de l'e-monsite, image hero « le vivant », lien Endocrino-psychologie (URL en attente), accès tram-train, section tarifs avec placeholders [TARIF], espace actualités en texte simple -->
+<!-- v1.3 (2026-07-28) : retour de Noémie du 27/07 21h19 — vert éclairci + complémentaire chaude
+     (rose poudré en surfaces, brique en accents), phytothérapie/aromathérapie renommées
+     phytologie/aromatologie, tarifs réels reçus par mail, lien Endocrino-psychologie posé.
+     v1.2 (2026-07-22) : mentions légales de l'e-monsite, image hero « le vivant », tram-train. -->
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
@@ -12,13 +15,17 @@
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
 <style>
-  /* Palette « forêt » : vert sapin profond (accent unique) sur fond os.
+  /* Palette « forêt claire » (v1.3) : vert végétal éclairci d'un cran, accompagné de sa
+     complémentaire chaude — rose poudré en surfaces douces, brique en accents de détail.
+     Tous les couples texte/fond ci-dessous sont vérifiés au contraste WCAG AA.
      Rayons : interactifs = pilule, surfaces = 16px, champs = 10px. */
   :root{
     --paper:#f3f1ea; --paper2:#ebe8de; --card:#ffffff;
     --ink:#20291f; --mut:#565d4e; --mut2:#646b5a;
-    --green:#2c5e46; --green-d:#214a37; --green-l:#3d7c5e;
-    --green-tint:rgba(44,94,70,.08);
+    --green:#3a7a58; --green-d:#2e6446; --green-l:#5a9c78; --green-deep:#326a4e;
+    --green-tint:rgba(58,122,88,.09);
+    --clay:#a85641; --clay-d:#964b38;
+    --blush:#f0dbd3; --blush-soft:#f8ebe5;
     --line:rgba(32,41,31,.14); --line-soft:rgba(32,41,31,.08);
     --ease:cubic-bezier(.22,.7,.25,1); --maxw:1160px;
   }
@@ -65,11 +72,13 @@
   .hero .sub{margin:22px 0 30px;font-size:1.06rem;color:var(--mut);max-width:44ch}
   .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
   .hero-visual{position:relative}
+  /* v1.3 : halo rose poudré derrière la photo, la première touche chaude de la page */
+  .hero-visual::before{content:"";position:absolute;inset:-26px -22px 34px -30px;border-radius:26px;background:radial-gradient(120% 90% at 20% 12%,var(--blush) 0%,rgba(240,219,211,0) 68%);z-index:-1}
   .hero-visual img{width:100%;aspect-ratio:4/4.6;object-fit:cover;border-radius:16px;box-shadow:0 30px 70px rgba(32,41,31,.16)}
   .hero-visual figcaption{margin-top:12px;font-size:.82rem;color:var(--mut2)}
 
   /* ---------- définition ---------- */
-  .def{background:var(--paper2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:88px 0}
+  .def{background:linear-gradient(180deg,var(--blush-soft) 0%,var(--paper2) 78%);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:88px 0}
   .def blockquote{font-family:"Cabinet Grotesk",sans-serif;font-weight:500;font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.35;letter-spacing:-.01em;max-width:34ch;margin:0 auto;text-align:center}
   .def blockquote b{color:var(--green);font-weight:700}
   .def p{color:var(--mut);text-align:center;max-width:52ch;margin:22px auto 0;font-size:.98rem}
@@ -83,7 +92,7 @@
   .cell h3{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:8px}
   .cell p{font-size:.92rem;color:var(--mut);max-width:38ch}
   .cell.img{color:#f6f4ee;border:none;min-height:320px}
-  .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,33,24,0) 30%,rgba(23,33,24,.82) 82%);z-index:1}
+  .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,45,34,0) 32%,rgba(30,45,34,.78) 84%);z-index:1}
   .cell.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .cell.img h3,.cell.img p{position:relative;z-index:2}
   .cell.img p{color:rgba(246,244,238,.85)}
@@ -105,7 +114,8 @@
   .bio .story{color:var(--mut);margin-bottom:16px;max-width:58ch}
   .bio .story b{color:var(--ink)}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .chips span{font-size:.8rem;font-weight:600;padding:9px 16px;border-radius:50px;background:var(--green-tint);color:var(--green-d);border:1px solid rgba(44,94,70,.18)}
+  /* v1.3 : les diplômes passent en rose poudré, c'est la respiration chaude du bloc parcours */
+  .chips span{font-size:.8rem;font-weight:600;padding:9px 16px;border-radius:50px;background:var(--blush-soft);color:var(--clay-d);border:1px solid rgba(168,86,65,.22)}
 
   /* ---------- témoignages ---------- */
   .temo{padding:96px 0}
@@ -113,20 +123,22 @@
   .temo .lead{color:var(--mut);max-width:52ch;margin-bottom:44px}
   .t-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;align-items:stretch}
   .t-card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
-  .t-card.lead-card{background:var(--green);border:none;color:#f6f4ee}
-  .t-card.lead-card .q{font-size:1.35rem;color:#f6f4ee}
-  .t-card.lead-card .who{color:rgba(246,244,238,.75)}
+  /* v1.3 : le grand témoignage passe du vert plein au rose poudré, texte encre */
+  .t-card.lead-card{background:var(--blush);border:1px solid rgba(168,86,65,.16);color:var(--ink)}
+  .t-card.lead-card .q{font-size:1.35rem;color:var(--ink)}
+  .t-card.lead-card .who{color:var(--clay-d)}
   .t-card .q{font-family:"Cabinet Grotesk",sans-serif;font-weight:500;font-size:1.08rem;line-height:1.4}
   .t-card .who{margin-top:16px;font-size:.84rem;color:var(--mut2)}
 
   /* ---------- blog (panneau vert) ---------- */
-  .blog{background:var(--green-d);color:#f0efe6;padding:96px 0}
+  /* v1.3 : panneau vert éclairci, titre en italique rose poudré */
+  .blog{background:var(--green-deep);color:#f0efe6;padding:96px 0}
   .blog .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
   .blog h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:#f6f4ee}
-  .blog h2 i{color:#a8c9b3}
-  .blog p{color:rgba(240,239,230,.82);margin:18px 0 26px;max-width:50ch}
+  .blog h2 i{color:var(--blush)}
+  .blog p{color:rgba(240,239,230,.9);margin:18px 0 26px;max-width:50ch}
   .blog .topics{display:flex;flex-wrap:wrap;gap:10px}
-  .blog .topics span{font-size:.8rem;font-weight:500;padding:9px 16px;border-radius:50px;border:1px solid rgba(240,239,230,.32);color:rgba(240,239,230,.92)}
+  .blog .topics span{font-size:.8rem;font-weight:500;padding:9px 16px;border-radius:50px;border:1px solid rgba(240,224,216,.4);color:rgba(246,240,236,.94)}
   .blog .btn-paper{background:#f3f1ea;color:var(--green-d)}
   .blog .btn-paper:hover{background:#ffffff}
   .blog-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:0 26px 60px rgba(0,0,0,.28)}
@@ -140,8 +152,11 @@
   .p-row + .p-row{border-top:1px solid var(--line-soft)}
   .p-row .p-name{font-weight:600;font-size:.98rem}
   .p-row .p-name small{display:block;font-weight:400;font-size:.84rem;color:var(--mut2);margin-top:2px}
-  .p-row .p-price{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.05rem;color:var(--green-d);white-space:nowrap}
-  .p-price.ph{font-family:"General Sans",sans-serif;font-weight:600;font-size:.82rem;color:var(--mut2);border:1px dashed rgba(32,41,31,.3);border-radius:8px;padding:5px 12px}
+  .p-row .p-price{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.05rem;color:var(--clay-d);white-space:nowrap}
+  /* v1.3 : intertitres repris de la façon dont Noémie groupe ses tarifs */
+  .p-head{padding:16px 28px 10px;background:var(--blush-soft);font-size:.76rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--clay-d)}
+  .p-head + .p-row{border-top:none}
+  .p-row + .p-head{border-top:1px solid var(--line-soft)}
   .p-note{margin-top:18px;font-size:.84rem;color:var(--mut2);max-width:60ch}
 
   /* ---------- contact ---------- */
@@ -167,7 +182,7 @@
   .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
   .f-grid h4{font-family:"Cabinet Grotesk",sans-serif;font-size:.95rem;margin-bottom:12px}
   .f-grid p,.f-grid a{font-size:.88rem;color:var(--mut);display:block;margin-bottom:6px}
-  .f-grid a:hover{color:var(--green)}
+  .f-grid a:hover{color:var(--green-d)}
   .legal{border-top:1px solid var(--line-soft);padding-top:22px;font-size:.78rem;color:var(--mut2)}
   .legal b{color:var(--mut)}
   .avert{margin-top:10px}
@@ -263,7 +278,7 @@
         <div class="cell img c reveal">
           <img src="assets/noemie/romarin.jpg" alt="Plant de romarin en pot" loading="lazy" />
           <h3>Plantes et huiles</h3>
-          <p>Phytothérapie, aromathérapie et gemmothérapie.</p>
+          <p>Phytologie, aromatologie et gemmothérapie.</p>
         </div>
         <div class="cell d reveal">
           <h3>Réflexologie plantaire</h3>
@@ -272,8 +287,8 @@
         <div class="cell e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
           <p>Deux approches complémentaires auxquelles Noémie est formée.</p>
-          <!-- URL Endocrino-psychologie à insérer à réception -->
-          <a class="cell-link" href="#">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <!-- v1.3 : site de l'Institut Gautier - du Chazaud, à l'origine de la discipline et du système Equilios (vérifié en 200 le 2026-07-28) -->
+          <a class="cell-link" href="https://www.endocrino-psychologie.org/" target="_blank" rel="noopener">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
       </div>
     </div>
@@ -339,27 +354,47 @@
     </div>
   </section>
 
-  <!-- TARIFS (v1.2 : emplacement prêt, chiffres en attente du mail de Noémie ; ne JAMAIS inventer un montant) -->
+  <!-- TARIFS (v1.3 : tarifs réels transmis par Noémie le 2026-07-28 21h19, repris à l'identique,
+       dans ses trois groupes ; aucun montant ajouté, aucun montant modifié) -->
   <section class="tarifs" id="tarifs" aria-label="Tarifs des consultations">
     <div class="wrap">
       <h2 class="disp reveal">Tarifs <i>des consultations</i></h2>
-      <p class="lead reveal">Les montants ci-dessous seront remplacés par vos tarifs réels, tels que vous les pratiquez au cabinet, dès réception de votre mail. Les intitulés sont indicatifs et seront repris de votre liste.</p>
+      <p class="lead reveal">Chaque accompagnement commence par un bilan de vitalité, qui sert de base au suivi.</p>
       <div class="p-list reveal">
+        <div class="p-head">Bilan de vitalité et suivi</div>
         <div class="p-row">
-          <span class="p-name">Première consultation<small>bilan de vitalité personnalisé</small></span>
-          <span class="p-price ph">[TARIF]</span>
+          <span class="p-name">Bilan de vitalité, adulte</span>
+          <span class="p-price">70 €</span>
         </div>
         <div class="p-row">
-          <span class="p-name">Consultation de suivi</span>
-          <span class="p-price ph">[TARIF]</span>
+          <span class="p-name">Bilan de vitalité, enfant<small>moins de 12 ans</small></span>
+          <span class="p-price">50 €</span>
         </div>
         <div class="p-row">
-          <span class="p-name">Réflexologie plantaire<small>la séance</small></span>
-          <span class="p-price ph">[TARIF]</span>
+          <span class="p-name">Consultation de suivi<small>1 heure</small></span>
+          <span class="p-price">50 €</span>
         </div>
         <div class="p-row">
-          <span class="p-name">Autres prestations<small>selon votre liste de tarifs</small></span>
-          <span class="p-price ph">[TARIF]</span>
+          <span class="p-name">Consultation de suivi<small>30 minutes</small></span>
+          <span class="p-price">35 €</span>
+        </div>
+        <div class="p-head">Méthode Equilios</div>
+        <div class="p-row">
+          <span class="p-name">Bilan de vitalité + séance Equilios, adulte</span>
+          <span class="p-price">80 €</span>
+        </div>
+        <div class="p-row">
+          <span class="p-name">Séance Equilios<small>1 heure</small></span>
+          <span class="p-price">40 €</span>
+        </div>
+        <div class="p-row">
+          <span class="p-name">Forfait 5 séances Equilios</span>
+          <span class="p-price">190 €</span>
+        </div>
+        <div class="p-head">Réflexologie</div>
+        <div class="p-row">
+          <span class="p-name">Réflexologie plantaire<small>1 heure</small></span>
+          <span class="p-price">50 €</span>
         </div>
       </div>
       <p class="p-note reveal">Moyens de paiement et conditions : à préciser selon vos pratiques au cabinet.</p>
