@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- v1.3 (2026-07-28) : retour de Noémie du 27/07 21h19 — vert éclairci + complémentaire chaude
+<!-- v1.5 (2026-08-16) : retour de Noémie du 16/08 15h12 — en-tête rose poudré, logo FENA à gauche
+     de l'en-tête, présentation au « je », sa photo (plant aromatique) à la place du romarin.
+     v1.4 (2026-08-15) : définition mot pour mot, moyens de paiement + mutuelle, nom agrandi.
+     v1.3 (2026-07-28) : retour de Noémie du 27/07 21h19 — vert éclairci + complémentaire chaude
      (rose poudré en surfaces, brique en accents), phytothérapie/aromathérapie renommées
      phytologie/aromatologie, tarifs réels reçus par mail, lien Endocrino-psychologie posé.
      v1.2 (2026-07-22) : mentions légales de l'e-monsite, image hero « le vivant », tram-train. -->
@@ -8,7 +11,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
-<meta name="theme-color" content="#f3f1ea" />
+<meta name="theme-color" content="#f0dbd3" />
 <title>Noémie Achet-Piret : naturopathe hildegardienne à Nort-sur-Erdre (44)</title>
 <meta name="description" content="Noémie Achet-Piret, naturopathe hildegardienne certifiée FENA à Nort-sur-Erdre (Loire-Atlantique) : bilan de vitalité personnalisé, rééquilibrage alimentaire, plantes, réflexologie plantaire." />
 <link rel="preconnect" href="https://api.fontshare.com" />
@@ -48,19 +51,22 @@
   .ico{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
   /* ---------- header ---------- */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
-  header.scrolled{background:rgba(243,241,234,.92);border-color:var(--line-soft);box-shadow:0 8px 30px rgba(32,41,31,.06)}
+  /* v1.5 : fond rose poudré permanent (demande Noémie 16/08 : « on la voit très peu ») —
+     couples texte/fond revérifiés AA sur --blush (encre 12:1, liens .85 ≈ 7,5:1, small ≈ 5,1:1) */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--blush);transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid rgba(168,86,65,.14)}
+  header.scrolled{background:rgba(240,219,211,.94);border-color:rgba(168,86,65,.18);box-shadow:0 8px 30px rgba(32,41,31,.06)}
   /* blur sur un pseudo-élément : backdrop-filter sur le header en ferait le containing block du menu mobile (position:fixed) */
   header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(12px)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.26rem;letter-spacing:-.01em}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.26rem;letter-spacing:-.01em}
+  .brand .fena{width:44px;height:44px;flex:none}
   .brand small{display:block;font-family:"General Sans",sans-serif;font-weight:500;font-size:.68rem;color:var(--mut);letter-spacing:.04em;margin-top:-2px}
   .menu{display:flex;gap:24px;align-items:center}
   .menu a{font-size:.87rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s}
   .menu a:hover{opacity:1;color:var(--green)}
   .menu a.cta{padding:11px 22px;border-radius:50px;background:var(--green);color:#f6f4ee;opacity:1;font-weight:600}
   .menu a.cta:hover{background:var(--green-d)}
-  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:transparent;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;z-index:60}
   .burger span{display:block;width:16px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
   .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -198,6 +204,8 @@
   /* ---------- mobile ---------- */
   @media (max-width: 900px){
     .burger{display:flex}
+    .brand{gap:9px}
+    .brand .fena{width:38px;height:38px}
     .menu{position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s;z-index:55}
     .menu.open{transform:none;visibility:visible;transition:transform .35s var(--ease),visibility 0s 0s}
     body.menu-open{overflow:hidden}
@@ -221,7 +229,7 @@
 
 <header id="header">
   <div class="wrap nav">
-    <a class="brand" href="#top">Noémie Achet-Piret<small>Naturopathe hildegardienne, Nort-sur-Erdre</small></a>
+    <a class="brand" href="#top"><img class="fena" src="assets/noemie/logo-fena.png" alt="Certifiée FENA n°02517.20, Fédération Française de Naturopathie" /><span>Noémie Achet-Piret<small>Naturopathe hildegardienne, Nort-sur-Erdre</small></span></a>
     <nav class="menu" id="menu" aria-label="Navigation principale">
       <a href="#naturopathie">La naturopathie</a>
       <a href="#approches">Approches</a>
@@ -275,8 +283,9 @@
           <h3>Rééquilibrage alimentaire</h3>
           <p>Retrouver une alimentation qui soutient votre énergie au quotidien, sans régime et sans frustration. Un accompagnement progressif, adapté à votre rythme de vie et à vos intolérances éventuelles.</p>
         </div>
+        <!-- v1.5 : photo envoyée par Noémie le 16/08 (remplace le romarin) -->
         <div class="cell img c reveal">
-          <img src="assets/noemie/romarin.jpg" alt="Plant de romarin en pot" loading="lazy" />
+          <img src="assets/noemie/persil.jpg" alt="Plant aromatique en pot, feuilles perlées de pluie" loading="lazy" />
           <h3>Plantes et huiles</h3>
           <p>Phytologie, aromatologie et gemmothérapie.</p>
         </div>
@@ -286,7 +295,7 @@
         </div>
         <div class="cell e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
-          <p>Deux approches complémentaires auxquelles Noémie est formée.</p>
+          <p>Deux approches complémentaires auxquelles je suis formée.</p>
           <!-- v1.3 : site de l'Institut Gautier - du Chazaud, à l'origine de la discipline et du système Equilios (vérifié en 200 le 2026-07-28) -->
           <a class="cell-link" href="https://www.endocrino-psychologie.org/" target="_blank" rel="noopener">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
@@ -302,8 +311,9 @@
       </div>
       <div class="reveal">
         <h2 class="disp">Un parcours né d'une <i>expérience vécue</i></h2>
-        <p class="story">Devenue intolérante au gluten et aux laitages de vache vers 20 ans, Noémie a dû repenser entièrement ses habitudes alimentaires. Elle a découvert peu à peu une alimentation et une hygiène de vie qui lui permettent d'être en forme toute la journée, <b>sans régime et en se faisant plaisir</b>.</p>
-        <p class="story">Diplômée en naturopathie de l'Institut Hildegardien, certifiée FENA et Bachelor européen, elle exerce aujourd'hui à Nort-sur-Erdre et fait partie du corps professoral de l'Institut Hildegardien.</p>
+        <!-- v1.5 : présentation passée au « je » (demande Noémie 16/08) -->
+        <p class="story">Devenue intolérante au gluten et aux laitages de vache vers 20 ans, j'ai dû repenser entièrement mes habitudes alimentaires. J'ai découvert peu à peu une alimentation et une hygiène de vie qui me permettent d'être en forme toute la journée, <b>sans régime et en me faisant plaisir</b>.</p>
+        <p class="story">Diplômée en naturopathie de l'Institut Hildegardien, certifiée FENA et Bachelor européen, j'exerce aujourd'hui à Nort-sur-Erdre et je fais partie du corps professoral de l'Institut Hildegardien.</p>
         <div class="chips">
           <span>Institut Hildegardien</span>
           <span>Certifiée FENA</span>
@@ -318,7 +328,7 @@
   <section class="temo" aria-label="Témoignages">
     <div class="wrap">
       <h2 class="disp reveal">Ils ont changé leur <i>hygiène de vie</i></h2>
-      <p class="lead reveal">Des témoignages de personnes accompagnées par Noémie.</p>
+      <p class="lead reveal">Des témoignages de personnes que j'ai accompagnées.</p>
       <div class="t-grid">
         <div class="t-card lead-card reveal">
           <p class="q">« Mes aphtes, mes coups de barre et mes ballonnements ont disparu »</p>
@@ -406,7 +416,7 @@
     <div class="wrap c-grid">
       <div class="c-left reveal">
         <h2 class="disp">Prendre <i>rendez-vous</i></h2>
-        <p>Une question sur la naturopathie ou envie de faire le point sur votre vitalité ? Noémie vous répond rapidement.</p>
+        <p>Une question sur la naturopathie ou envie de faire le point sur votre vitalité ? Je vous réponds rapidement.</p>
         <div class="direct">
           <a href="tel:+33641012708"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>06&nbsp;41&nbsp;01&nbsp;27&nbsp;08</a>
           <a href="mailto:noemieachet@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>noemieachet@gmail.com</a>
