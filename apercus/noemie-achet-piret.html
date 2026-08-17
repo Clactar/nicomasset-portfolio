@@ -98,10 +98,12 @@
   .cell h3{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:8px}
   .cell p{font-size:.92rem;color:var(--mut);max-width:38ch}
   .cell.img{color:#f6f4ee;border:none;min-height:320px}
-  .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,45,34,0) 32%,rgba(30,45,34,.78) 84%);z-index:1}
+  /* v1.6.1 : voile renforcé + ombre portée — la photo hildegardienne (soupe claire) rendait le
+     texte blanc peu lisible sur mobile, retour Nico du 17/08 18h14 */
+  .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,38,29,.14) 0%,rgba(25,38,29,.58) 42%,rgba(25,38,29,.9) 100%);z-index:1}
   .cell.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .cell.img h3,.cell.img p{position:relative;z-index:2}
-  .cell.img p{color:rgba(246,244,238,.85)}
+  .cell.img h3,.cell.img p{position:relative;z-index:2;text-shadow:0 1px 10px rgba(15,25,18,.5)}
+  .cell.img p{color:rgba(246,244,238,.94)}
   .cell-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.86rem;font-weight:600;color:var(--green);transition:color .2s}
   .cell-link:hover{color:var(--green-d)}
   .cell-link .ico{width:14px;height:14px}
@@ -356,11 +358,14 @@
   <section class="blog" id="actualites" aria-label="Actualités du cabinet">
     <div class="wrap inner">
       <div class="reveal">
+        <!-- v1.6.1 : texte réécrit pour les VISITEURS (l'ancien s'adressait à Noémie, logique
+             d'aperçu ; retour Nico du 17/08). Les exemples restent marqués « Exemple » : ils
+             seront remplacés par ses premières vraies actualités à la mise en ligne. -->
         <h2 class="disp">Les actualités <i>du cabinet</i></h2>
-        <p>Un espace que vous mettez à jour vous-même, sans logiciel à installer : horaires d'été, ateliers, conférences, nouveautés du cabinet. Les textes ci-dessous sont des exemples pour montrer l'emplacement.</p>
+        <p>Ateliers, conférences, horaires, nouveautés : les dernières nouvelles du cabinet sont regroupées ici.</p>
         <div class="topics">
-          <span>Exemple : fermeture estivale du cabinet</span>
           <span>Exemple : prochain atelier découverte</span>
+          <span>Exemple : conférence près de Nort-sur-Erdre</span>
           <span>Exemple : nouveaux créneaux le samedi</span>
         </div>
       </div>
