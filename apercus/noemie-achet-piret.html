@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<!-- v1.7 (2026-08-18) : retour de Noémie du 17/08 22h23 — « plantes et huiles » devient « plantes et
+<!-- v1.8 (2026-08-18) : mail de Noémie du 18/08 10h09. (1) Sa photo de fond pour la vignette
+     Equilios est arrivée (balance dessinée sur fond vert) : posée en fond de la carte, son vert
+     accordé au vert profond du site (#0e664e → #326a4e) pour que la jointure soit invisible.
+     (2) Elle signale les roses TRÈS FONCÉS sur son téléphone, impeccables sur ordinateur : la page
+     ne déclarait aucun color-scheme, donc le mode sombre automatique d'Android (Chrome / Samsung
+     Internet) réinterprétait les fonds clairs et noircissait le rose poudré. Corrigé par la
+     déclaration light-only ci-dessous, qui exclut la page de ce forçage.
+     v1.7 (2026-08-18) : retour de Noémie du 17/08 22h23 — « plantes et huiles » devient « plantes et
      essences », textes de la réflexologie plantaire et de l'endocrino-psychologie donnés mot pour mot
-     par elle, et les 3 vignettes blanches de la section approches passent en rose poudré. RESTE DÛ :
-     elle annonce une photo de fond pour la vignette endocrino, pas encore reçue au 18/08 04h30.
+     par elle, et les 3 vignettes blanches de la section approches passent en rose poudré.
      v1.6.1 (2026-08-17) : voile renforcé sur les cartes photo, actualités réécrites.
      v1.6 (2026-08-17) : persil remis droit (EXIF), phrase parcours, 3 photos d'elle.
      v1.5 (2026-08-16) : retour de Noémie du 16/08 15h12 — en-tête rose poudré, logo FENA à gauche
@@ -18,6 +24,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="theme-color" content="#f0dbd3" />
+<!-- v1.8 : la page n'existe qu'en clair. Sans cette déclaration, le mode sombre automatique
+     d'Android (Chrome « Auto dark theme », Samsung Internet) recalcule lui-même les fonds clairs
+     et rend le rose poudré très foncé sur mobile. Retour de Noémie du 18/08 10h09. -->
+<meta name="color-scheme" content="light only" />
 <title>Noémie Achet-Piret : naturopathe hildegardienne à Nort-sur-Erdre (44)</title>
 <meta name="description" content="Noémie Achet-Piret, naturopathe hildegardienne certifiée FENA à Nort-sur-Erdre (Loire-Atlantique) : bilan de vitalité personnalisé, rééquilibrage alimentaire, plantes, réflexologie plantaire." />
 <link rel="preconnect" href="https://api.fontshare.com" />
@@ -29,6 +39,8 @@
      Tous les couples texte/fond ci-dessous sont vérifiés au contraste WCAG AA.
      Rayons : interactifs = pilule, surfaces = 16px, champs = 10px. */
   :root{
+    /* v1.8 : verrou clair, en pendant du <meta color-scheme> ci-dessus (retour Noémie 18/08) */
+    color-scheme: only light;
     --paper:#f3f1ea; --paper2:#ebe8de; --card:#ffffff;
     --ink:#20291f; --mut:#565d4e; --mut2:#646b5a;
     --green:#3a7a58; --green-d:#2e6446; --green-l:#5a9c78; --green-deep:#326a4e;
@@ -108,6 +120,20 @@
      « les 3 vignettes blanches sont trop blanches »). Dégradé très doux pour garder de la
      matière à côté des cartes photo. Contraste revérifié : encre 20:1, texte --mut 6,8:1. */
   .cell.tint{background:linear-gradient(165deg,var(--blush-soft) 0%,var(--blush) 100%);border-color:rgba(168,86,65,.16)}
+  /* v1.8 : vignette Equilios sur la photo de fond envoyée par Noémie le 18/08 (balance dessinée).
+     Le vert du dessin a été accordé à --green-deep dans le fichier image, donc la carte et l'image
+     ne font qu'une surface. Voile léger + ombre du texte : blanc sur fond voilé = 7,9:1 (AAA). */
+  .cell.equilios{background:var(--green-deep);border-color:rgba(246,244,238,.14)}
+  .cell.equilios::before{content:"";position:absolute;inset:0;z-index:0;
+    background:url(assets/noemie/equilios-balance.jpg) no-repeat center / contain;opacity:.72}
+  .cell.equilios::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(22,46,35,.34) 0%,rgba(22,46,35,.52) 100%)}
+  .cell.equilios h3,.cell.equilios p,.cell.equilios .cell-link{position:relative;z-index:2;
+    text-shadow:0 1px 10px rgba(15,25,18,.55)}
+  .cell.equilios h3{color:#f6f4ee}
+  .cell.equilios p{color:rgba(246,244,238,.94)}
+  .cell.equilios .cell-link{color:#f6f4ee}
+  .cell.equilios .cell-link:hover{color:#ffffff}
   /* v1.6.1 : voile renforcé + ombre portée — la photo hildegardienne (soupe claire) rendait le
      texte blanc peu lisible sur mobile, retour Nico du 17/08 18h14 */
   .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,38,29,.14) 0%,rgba(25,38,29,.58) 42%,rgba(25,38,29,.9) 100%);z-index:1}
@@ -311,11 +337,11 @@
           <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23) -->
           <p>Stimulation des zones réflexes des pieds permettant d'agir sur l'équilibre global du corps.</p>
         </div>
-        <div class="cell tint e reveal">
+        <!-- v1.8 : sa photo de fond, reçue le 18/08 10h09, remplace le rose poudré provisoire. -->
+        <div class="cell equilios e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
           <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23), remplace « deux approches
-               complémentaires auxquelles je suis formée ». Sa photo de fond pour cette vignette
-               est annoncée mais pas encore reçue : la carte reste en rose poudré d'ici là. -->
+               complémentaires auxquelles je suis formée ». -->
           <p>Les glandes hormonales sont à la base de tous les processus biologiques humains. Le système Equilios crée une résonance électromagnétique favorisant le rééquilibrage glandulaire global du corps humain.</p>
           <!-- v1.3 : site de l'Institut Gautier - du Chazaud, à l'origine de la discipline et du système Equilios (vérifié en 200 le 2026-07-28) -->
           <a class="cell-link" href="https://www.endocrino-psychologie.org/" target="_blank" rel="noopener">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
