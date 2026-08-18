@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<!-- v1.5 (2026-08-16) : retour de Noémie du 16/08 15h12 — en-tête rose poudré, logo FENA à gauche
+<!-- v1.7 (2026-08-18) : retour de Noémie du 17/08 22h23 — « plantes et huiles » devient « plantes et
+     essences », textes de la réflexologie plantaire et de l'endocrino-psychologie donnés mot pour mot
+     par elle, et les 3 vignettes blanches de la section approches passent en rose poudré. RESTE DÛ :
+     elle annonce une photo de fond pour la vignette endocrino, pas encore reçue au 18/08 04h30.
+     v1.6.1 (2026-08-17) : voile renforcé sur les cartes photo, actualités réécrites.
+     v1.6 (2026-08-17) : persil remis droit (EXIF), phrase parcours, 3 photos d'elle.
+     v1.5 (2026-08-16) : retour de Noémie du 16/08 15h12 — en-tête rose poudré, logo FENA à gauche
      de l'en-tête, présentation au « je », sa photo (plant aromatique) à la place du romarin.
      v1.4 (2026-08-15) : définition mot pour mot, moyens de paiement + mutuelle, nom agrandi.
      v1.3 (2026-07-28) : retour de Noémie du 27/07 21h19 — vert éclairci + complémentaire chaude
@@ -98,6 +104,10 @@
   .cell h3{font-family:"Cabinet Grotesk",sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:8px}
   .cell p{font-size:.92rem;color:var(--mut);max-width:38ch}
   .cell.img{color:#f6f4ee;border:none;min-height:320px}
+  /* v1.7 : les 3 vignettes sans photo passent en rose poudré (retour Noémie 17/08 22h23 :
+     « les 3 vignettes blanches sont trop blanches »). Dégradé très doux pour garder de la
+     matière à côté des cartes photo. Contraste revérifié : encre 20:1, texte --mut 6,8:1. */
+  .cell.tint{background:linear-gradient(165deg,var(--blush-soft) 0%,var(--blush) 100%);border-color:rgba(168,86,65,.16)}
   /* v1.6.1 : voile renforcé + ombre portée — la photo hildegardienne (soupe claire) rendait le
      texte blanc peu lisible sur mobile, retour Nico du 17/08 18h14 */
   .cell.img::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,38,29,.14) 0%,rgba(25,38,29,.58) 42%,rgba(25,38,29,.9) 100%);z-index:1}
@@ -282,7 +292,7 @@
           <h3>Approche hildegardienne</h3>
           <p>L'hygiène de vie inspirée de sainte Hildegarde de Bingen : alimentation à l'épeautre, plantes et équilibre du quotidien.</p>
         </div>
-        <div class="cell b reveal">
+        <div class="cell tint b reveal">
           <h3>Rééquilibrage alimentaire</h3>
           <p>Retrouver une alimentation qui soutient votre énergie au quotidien, sans régime et sans frustration. Un accompagnement progressif, adapté à votre rythme de vie et à vos intolérances éventuelles.</p>
         </div>
@@ -292,16 +302,21 @@
              de fichier pour contourner le cache. -->
         <div class="cell img c reveal">
           <img src="assets/noemie/persil-v2.jpg" alt="Plant de persil en pot, feuilles perlées de pluie" loading="lazy" />
-          <h3>Plantes et huiles</h3>
+          <!-- v1.7 : « plantes et essences » à la place de « plantes et huiles » (Noémie 17/08 22h23) -->
+          <h3>Plantes et essences</h3>
           <p>Phytologie, aromatologie et gemmothérapie.</p>
         </div>
-        <div class="cell d reveal">
+        <div class="cell tint d reveal">
           <h3>Réflexologie plantaire</h3>
-          <p>La stimulation des zones réflexes du pied, en soutien de l'équilibre général.</p>
+          <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23) -->
+          <p>Stimulation des zones réflexes des pieds permettant d'agir sur l'équilibre global du corps.</p>
         </div>
-        <div class="cell e reveal">
+        <div class="cell tint e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
-          <p>Deux approches complémentaires auxquelles je suis formée.</p>
+          <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23), remplace « deux approches
+               complémentaires auxquelles je suis formée ». Sa photo de fond pour cette vignette
+               est annoncée mais pas encore reçue : la carte reste en rose poudré d'ici là. -->
+          <p>Les glandes hormonales sont à la base de tous les processus biologiques humains. Le système Equilios crée une résonance électromagnétique favorisant le rééquilibrage glandulaire global du corps humain.</p>
           <!-- v1.3 : site de l'Institut Gautier - du Chazaud, à l'origine de la discipline et du système Equilios (vérifié en 200 le 2026-07-28) -->
           <a class="cell-link" href="https://www.endocrino-psychologie.org/" target="_blank" rel="noopener">En savoir plus sur l'endocrino-psychologie <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
