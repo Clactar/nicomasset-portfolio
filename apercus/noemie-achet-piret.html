@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<!-- v1.8 (2026-08-18) : mail de Noémie du 18/08 10h09. (1) Sa photo de fond pour la vignette
+<!-- v1.9 (2026-08-19) : mail de Noémie du 18/08 22h03. Elle confirme que les roses sont revenus
+     normaux sur son téléphone (le correctif de mode sombre de la v1.8 est donc validé chez elle) et
+     demande de remplacer l'image de la balance, « on ne la voit pas bien ». Son nouveau dessin est
+     redressé, recadré, son fond accordé à --blush, et il passe en pied de vignette sans voile.
+     v1.8 (2026-08-18) : mail de Noémie du 18/08 10h09. (1) Sa photo de fond pour la vignette
      Equilios est arrivée (balance dessinée sur fond vert) : posée en fond de la carte, son vert
      accordé au vert profond du site (#0e664e → #326a4e) pour que la jointure soit invisible.
      (2) Elle signale les roses TRÈS FONCÉS sur son téléphone, impeccables sur ordinateur : la page
@@ -120,19 +124,20 @@
      « les 3 vignettes blanches sont trop blanches »). Dégradé très doux pour garder de la
      matière à côté des cartes photo. Contraste revérifié : encre 20:1, texte --mut 6,8:1. */
   .cell.tint{background:linear-gradient(165deg,var(--blush-soft) 0%,var(--blush) 100%);border-color:rgba(168,86,65,.16)}
-  /* v1.8 : vignette Equilios sur la photo de fond envoyée par Noémie le 18/08 (balance dessinée).
-     Le vert du dessin a été accordé à --green-deep dans le fichier image, donc la carte et l'image
-     ne font qu'une surface. Voile léger + ombre du texte : blanc sur fond voilé = 7,9:1 (AAA). */
-  .cell.equilios{background:var(--green-deep);border-color:rgba(246,244,238,.14)}
-  .cell.equilios::before{content:"";position:absolute;inset:0;z-index:0;
-    background:url(assets/noemie/equilios-balance.jpg) no-repeat center / contain;opacity:.72}
-  .cell.equilios::after{content:"";position:absolute;inset:0;z-index:1;
-    background:linear-gradient(180deg,rgba(22,46,35,.34) 0%,rgba(22,46,35,.52) 100%)}
-  .cell.equilios h3,.cell.equilios p,.cell.equilios .cell-link{position:relative;z-index:2;
-    text-shadow:0 1px 10px rgba(15,25,18,.55)}
-  .cell.equilios h3{color:#f6f4ee}
-  .cell.equilios p{color:rgba(246,244,238,.94)}
-  .cell.equilios .cell-link{color:#f6f4ee}
+  /* v1.9 : Noémie, 18/08 22h03 — « pour la balance, je trouve qu'on ne la voit pas bien ». Elle
+     renvoie SON dessin sur fond clair. Le fond vert de la v1.8 écrasait le magenta et le voile
+     sombre finissait de l'effacer. Trois changements : (1) son nouveau dessin, redressé à
+     l'endroit et recadré au plus près du trait ; (2) son fond accordé à --blush, exactement la
+     méthode de la v1.8 mais dans l'autre sens, donc la carte et l'image ne font qu'une surface,
+     et la vignette rejoint le rose poudré des deux autres cartes qu'elle a validé en v1.7 ;
+     (3) le dessin est posé en pied de carte, à pleine largeur, SANS aucun voile par dessus, le
+     texte occupant la zone haute restée unie. Contrastes : encre sur --blush 12:1, --mut 6,8:1. */
+  .cell.equilios{background:var(--blush);border-color:rgba(168,86,65,.16);
+    justify-content:flex-start;padding-bottom:158px}
+  .cell.equilios::before{content:"";position:absolute;left:0;right:0;bottom:22px;height:126px;z-index:0;
+    background:url(assets/noemie/equilios-balance-v19.jpg) no-repeat center bottom / contain}
+  .cell.equilios h3,.cell.equilios p,.cell.equilios .cell-link{position:relative;z-index:1}
+  .cell.equilios p{max-width:34ch}
   .cell.equilios .cell-link:hover{color:#ffffff}
   /* v1.6.1 : voile renforcé + ombre portée — la photo hildegardienne (soupe claire) rendait le
      texte blanc peu lisible sur mobile, retour Nico du 17/08 18h14 */
@@ -337,7 +342,8 @@
           <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23) -->
           <p>Stimulation des zones réflexes des pieds permettant d'agir sur l'équilibre global du corps.</p>
         </div>
-        <!-- v1.8 : sa photo de fond, reçue le 18/08 10h09, remplace le rose poudré provisoire. -->
+        <!-- v1.9 : son dessin de balance renvoyé le 18/08 22h03, redressé, fond accordé au rose
+             poudré de la page et posé en pied de carte sans voile (elle ne le voyait pas bien). -->
         <div class="cell equilios e reveal">
           <h3>Endocrino-psychologie et méthode Equilios</h3>
           <!-- v1.7 : texte donné mot pour mot par Noémie (17/08 22h23), remplace « deux approches
