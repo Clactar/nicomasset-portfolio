@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- v1.9 (2026-08-19) : mail de Noémie du 18/08 22h03. Elle confirme que les roses sont revenus
+<!-- v1.10 (2026-08-21) : mail de Noémie du 21/08 15h18, « une dernière chose et je pense que ce sera
+     bon pour moi » — les 2 témoignages restés en fond blanc passent en rose poudré. Même dégradé
+     que les vignettes de la section approches (v1.7). Le grand témoignage garde son aplat plein.
+     v1.9 (2026-08-19) : mail de Noémie du 18/08 22h03. Elle confirme que les roses sont revenus
      normaux sur son téléphone (le correctif de mode sombre de la v1.8 est donc validé chez elle) et
      demande de remplacer l'image de la balance, « on ne la voit pas bien ». Son nouveau dessin est
      redressé, recadré, son fond accordé à --blush, et il passe en pied de vignette sans voile.
@@ -171,13 +174,17 @@
   .temo h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:12px}
   .temo .lead{color:var(--mut);max-width:52ch;margin-bottom:44px}
   .t-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;align-items:stretch}
-  .t-card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
+  /* v1.10 : les 2 derniers témoignages blancs passent en rose poudré (retour Noémie 21/08).
+     Même dégradé que les vignettes de la section approches (v1.7), pour que les deux blocs
+     roses de la page se répondent ; le grand témoignage garde son aplat plein et sa grande
+     typo, donc la hiérarchie tient toujours. Le nom passe en argile foncée comme sur le grand
+     (4,6:1 sur le rose, AA tenu ; l'ancien gris tombait à 4,1:1 sur ce fond). */
+  .t-card{background:linear-gradient(165deg,var(--blush-soft) 0%,var(--blush) 100%);border:1px solid rgba(168,86,65,.16);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
   /* v1.3 : le grand témoignage passe du vert plein au rose poudré, texte encre */
   .t-card.lead-card{background:var(--blush);border:1px solid rgba(168,86,65,.16);color:var(--ink)}
-  .t-card.lead-card .q{font-size:1.35rem;color:var(--ink)}
-  .t-card.lead-card .who{color:var(--clay-d)}
+  .t-card.lead-card .q{font-family:"Cabinet Grotesk",sans-serif;font-size:1.35rem;color:var(--ink)}
   .t-card .q{font-family:"Cabinet Grotesk",sans-serif;font-weight:500;font-size:1.08rem;line-height:1.4}
-  .t-card .who{margin-top:16px;font-size:.84rem;color:var(--mut2)}
+  .t-card .who{margin-top:16px;font-size:.84rem;color:var(--clay-d)}
 
   /* ---------- blog (panneau vert) ---------- */
   /* v1.3 : panneau vert éclairci, titre en italique rose poudré */
