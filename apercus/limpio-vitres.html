@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- v1 (2026-09-09) : aperçu offert pour Nettoyage Limpio Vitres (Bayonne), suite à sa réponse
+     « Ok, faites moi voir » du 09/09 19h00. Contenu repris de son site Wix (prestations, secteur,
+     horaires, coordonnées) ; photos = celles de son site, dont sa photo au travail en héros.
+     Direction : « le coup de raclette » : lumière de vitre propre, bleu profond d'eau et un seul
+     accent vert verre. Aucun chiffre inventé, formulaire de démonstration. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#0d2a33" />
+<title>Nettoyage Limpio Vitres : nettoyage de vitres à Bayonne, Pays basque et sud des Landes</title>
+<meta name="description" content="Entreprise familiale de nettoyage de vitres pour particuliers et professionnels à Bayonne, Anglet, Biarritz, Saint-Jean-de-Luz, Hendaye, Hossegor et Capbreton. Devis gratuit." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#f3f7f8; --paper-2:#e6eef1; --ink:#0d2a33; --ink-soft:#3d5a63; --muted:#5d7780;
+  --glass:#137873; --glass-deep:#0f5f5b; --line:rgba(13,42,51,.12);
+  --fd:"Bricolage Grotesque",system-ui,sans-serif; --ft:"Instrument Sans",system-ui,sans-serif;
+  --wrap:1180px; --pad:28px; --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ft);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:700;line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:pretty}
+h1{font-size:clamp(2.6rem,6.2vw,5.4rem);font-weight:800;font-variation-settings:"opsz" 96}
+h2{font-size:clamp(2rem,4.2vw,3.4rem);font-variation-settings:"opsz" 72}
+h3{font-size:1.35rem;font-weight:600;font-variation-settings:"opsz" 24}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-family:var(--fd);font-weight:600;font-size:.95rem;letter-spacing:.02em;text-transform:uppercase;color:var(--glass);margin:0 0 16px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-family:var(--fd);font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:#fff;transition:transform .25s cubic-bezier(.23,1,.32,1),background .25s}
+.btn:hover{transform:translateY(-2px);background:var(--glass-deep);border-color:var(--glass-deep)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--paper-2)}
+:focus-visible{outline:3px solid var(--glass);outline-offset:3px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+header::before{content:"";position:absolute;inset:0;z-index:-1;background:transparent;transition:background .3s}
+header.scrolled::before{background:rgba(243,247,248,.94);box-shadow:0 1px 0 var(--line)}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad);max-width:var(--wrap);margin:0 auto}
+.brand{font-family:var(--fd);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;text-decoration:none;line-height:1.1}
+.brand small{display:block;font-weight:500;font-size:.8rem;color:var(--glass);letter-spacing:.06em;text-transform:uppercase}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+nav.main a.tel{font-family:var(--fd);font-weight:700;color:var(--ink);padding:10px 18px;border-radius:999px;background:var(--paper-2)}
+.burger{display:none;position:relative;z-index:60;width:46px;height:46px;border:0;background:transparent;cursor:pointer;padding:0}
+.burger span{position:absolute;left:11px;width:24px;height:2px;background:var(--ink);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:30px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
+body.menu-open{overflow:hidden}
+
+/* hero */
+.hero{position:relative;padding:150px var(--pad) 70px;max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{margin-bottom:22px}
+.hero .lead{font-size:1.2rem;color:var(--ink-soft);max-width:34ch;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.glass{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(13,42,51,.45)}
+.glass img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.glass .haze{position:absolute;inset:0;background:rgba(214,228,232,.72);backdrop-filter:blur(7px) saturate(.6);-webkit-backdrop-filter:blur(7px) saturate(.6);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);animation:wipe 1.7s cubic-bezier(.65,0,.2,1) .5s forwards}
+.glass .blade{position:absolute;top:-10%;left:0;width:4px;height:120%;background:var(--ink);opacity:0;transform:rotate(12deg) translateX(-40px);animation:blade 1.7s cubic-bezier(.65,0,.2,1) .5s forwards}
+@keyframes wipe{from{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}to{clip-path:polygon(115% 0,100% 0,100% 100%,140% 100%)}}
+@keyframes blade{0%{opacity:0;transform:rotate(12deg) translateX(-40px)}8%{opacity:1}92%{opacity:1}100%{opacity:0;transform:rotate(12deg) translateX(calc(100% + 560px))}}
+.glass .tag{position:absolute;left:18px;bottom:18px;background:rgba(243,247,248,.94);border-radius:12px;padding:10px 14px;font-size:.9rem;font-weight:500;color:var(--ink);backdrop-filter:blur(6px)}
+@media (prefers-reduced-motion:reduce){.glass .haze,.glass .blade{display:none}.btn:hover{transform:none}}
+
+/* ribbon */
+.ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
+.ribbon ul{list-style:none;margin:0 auto;padding:18px var(--pad);max-width:var(--wrap);display:flex;flex-wrap:wrap;gap:10px 34px;font-size:.98rem;color:var(--ink-soft)}
+.ribbon li{display:flex;align-items:center;gap:10px}
+.ribbon li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--glass)}
+
+/* sections */
+section{padding:96px 0}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+.feature img{border-radius:var(--r);aspect-ratio:3/2;object-fit:cover}
+.feature h3{font-size:2rem;margin-bottom:14px}
+.feature p{color:var(--ink-soft)}
+.list{margin-top:56px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(200px,.6fr) 1.4fr auto;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1.25rem}
+.row p{margin:0;color:var(--ink-soft)}
+.row .pic{width:150px;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.row .pic.empty{visibility:hidden}
+
+/* secteur */
+.secteur{background:var(--ink);color:var(--paper)}
+.secteur .eyebrow{color:#8fd3cd}
+.secteur p{color:#b9cdd3}
+.coast{margin-top:40px;position:relative}
+.coast svg{width:100%;height:auto;display:block}
+.towns{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 26px;font-family:var(--fd);font-weight:700;font-size:clamp(1.3rem,3vw,2.2rem);letter-spacing:-.02em}
+.towns li{position:relative;padding-left:20px}
+.towns li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:#8fd3cd}
+.towns li.landes::before{background:#f0c27b}
+.legend{display:flex;gap:26px;margin-top:22px;font-size:.92rem;color:#b9cdd3}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* saisonnier */
+.saison .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:40px}
+.saison blockquote{margin:0;padding:28px 32px;border-left:4px solid var(--glass);background:var(--paper-2);border-radius:0 var(--r) var(--r) 0;font-family:var(--fd);font-weight:500;font-size:1.3rem;line-height:1.35}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.steps li b{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--glass);padding-top:4px;white-space:nowrap}
+
+/* devis */
+.devis .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:40px;align-items:start}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+input,select,textarea{font:inherit;padding:14px 16px;border-radius:10px;border:1.5px solid rgba(13,42,51,.25);background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--glass);outline:none;box-shadow:0 0 0 3px rgba(19,120,115,.18)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:#fff;border-radius:var(--r);padding:32px;box-shadow:0 20px 40px -30px rgba(13,42,51,.35)}
+.card dl{margin:0;display:grid;gap:18px}
+.card dt{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.card dd{margin:4px 0 0;font-family:var(--fd);font-weight:700;font-size:1.35rem;letter-spacing:-.01em}
+.card dd a{text-decoration:none}
+.card dd small{display:block;font-family:var(--ft);font-weight:400;font-size:.95rem;color:var(--ink-soft);letter-spacing:0;margin-top:2px}
+.merci{display:none;padding:18px 20px;border-radius:10px;background:#e2f3f1;color:var(--glass-deep);font-weight:500}
+form.sent .merci{display:block}
+form.sent .fields{display:none}
+
+footer{background:var(--ink);color:#b9cdd3;padding:44px 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;align-items:center}
+footer strong{color:#fff;font-family:var(--fd)}
+footer a{color:#fff;text-decoration:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.23,1,.32,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding:118px var(--pad) 48px;gap:34px}
+  .glass{aspect-ratio:4/3}
+  .feature,.saison .grid,.devis .grid{grid-template-columns:1fr;gap:32px}
+  .row{grid-template-columns:1fr;gap:10px}
+  .row .pic{width:100%;aspect-ratio:2/1}.row .pic.empty{display:none}
+  section{padding:72px 0}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  nav.main{display:none}
+  .burger{display:block}
+  .brand small{display:none}
+  .brand{font-size:1.15rem}
+  .mobile-menu{display:block;position:fixed;inset:0;z-index:55;background:var(--paper);padding:110px var(--pad) 40px;transform:translateX(100%);transition:transform .35s cubic-bezier(.23,1,.32,1);visibility:hidden}
+  .mobile-menu.open{transform:none;visibility:visible}
+  .mobile-menu a{display:block;font-family:var(--fd);font-weight:700;font-size:1.9rem;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line);letter-spacing:-.02em}
+  .mobile-menu a.tel{margin-top:22px;border:0;font-size:1.3rem;color:var(--glass)}
+  .hero .lead{font-size:1.08rem}
+  .two{grid-template-columns:1fr}
+  .card{padding:24px}
+  .ribbon ul{gap:8px 20px;font-size:.92rem}
+}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <a class="brand" href="#top">Nettoyage Limpio Vitres<small>Bayonne · Pays basque · sud des Landes</small></a>
+    <nav class="main" aria-label="Navigation">
+      <a href="#prestations">Prestations</a>
+      <a href="#secteur">Secteur</a>
+      <a href="#saison">Locations saisonnières</a>
+      <a href="#devis">Devis gratuit</a>
+      <a class="tel" href="tel:+33641739940">06 41 73 99 40</a>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="menu">
+    <a href="#prestations">Prestations</a>
+    <a href="#secteur">Secteur</a>
+    <a href="#saison">Locations saisonnières</a>
+    <a href="#devis">Devis gratuit</a>
+    <a class="tel" href="tel:+33641739940">Appeler le 06 41 73 99 40</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <p class="eyebrow">Entreprise familiale, Bayonne</p>
+    <h1>Des vitres impeccables, du Pays basque au sud des Landes.</h1>
+    <p class="lead">Vitrines, fenêtres, baies vitrées, vérandas. Pour les particuliers, les commerces, les copropriétés et les locations saisonnières.</p>
+    <div class="cta">
+      <a class="btn" href="#devis">Demander un devis gratuit</a>
+      <a class="btn ghost" href="tel:+33641739940">06 41 73 99 40</a>
+    </div>
+  </div>
+  <div class="glass" aria-hidden="true">
+    <img src="assets/limpio-vitres/vitres-travail.jpg" alt="" width="1600" height="1000" fetchpriority="high" />
+    <div class="haze"></div>
+    <div class="blade"></div>
+    <div class="tag">Sur un chantier, à la perche</div>
+  </div>
+</div>
+
+<div class="ribbon">
+  <ul>
+    <li>Devis gratuit et personnalisé</li>
+    <li>Intervention ponctuelle ou régulière</li>
+    <li>Produits respectueux des surfaces et de l'environnement</li>
+    <li>Du lundi au samedi, 8h30 à 19h</li>
+  </ul>
+</div>
+
+<section id="prestations">
+  <div class="wrap">
+    <p class="eyebrow rv">Prestations</p>
+    <h2 class="rv">Les vitres d'abord. Et tout ce qui va avec.</h2>
+    <div class="feature">
+      <img class="rv" src="assets/limpio-vitres/raclette.jpg" alt="Raclette sur une vitre en cours de nettoyage" width="1200" height="800" loading="lazy" />
+      <div class="rv">
+        <h3>Nettoyage de vitres</h3>
+        <p>Chez les particuliers : fenêtres, baies vitrées, vérandas, sur Bayonne, Anglet, Biarritz, Saint-Jean-de-Luz, Hendaye, Hossegor, Capbreton et autour.</p>
+        <p>Chez les professionnels : vitrines, hôtels, restaurants, boutiques, syndics de copropriété. Un passage ponctuel, ou un forfait mensuel ou trimestriel adapté à vos locaux.</p>
+        <a class="btn ghost" href="#devis">Recevoir un devis</a>
+      </div>
+    </div>
+    <div class="list">
+      <div class="row rv">
+        <h3>Locations saisonnières</h3>
+        <p>Entrées et sorties des locataires, avec un ménage en profondeur pour que le séjour suivant commence propre.</p>
+        <img class="pic empty" src="assets/limpio-vitres/moquette.jpg" alt="" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Parties communes d'immeuble</h3>
+        <p>Couloirs, halls, cages d'escalier, ascenseurs, espaces de circulation et gestion des conteneurs, selon les besoins de la copropriété.</p>
+        <img class="pic empty" src="assets/limpio-vitres/moquette.jpg" alt="" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Bureaux et lieux de travail</h3>
+        <p>Nettoyage et entretien de vos locaux, à la fréquence qui vous convient.</p>
+        <img class="pic empty" src="assets/limpio-vitres/moquette.jpg" alt="" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Fin de chantier</h3>
+        <p>Le passage qui rend les lieux livrables : poussières, traces, vitres.</p>
+        <img class="pic empty" src="assets/limpio-vitres/moquette.jpg" alt="" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Toitures</h3>
+        <p>Mousse, lichen, champignons : nettoyage de vos toitures avec des produits biodégradables.</p>
+        <img class="pic" src="assets/limpio-vitres/toiture.jpg" alt="Tuiles couvertes de mousse et de lichen" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Moquettes</h3>
+        <p>Nettoyage en profondeur des moquettes, avec soin et minutie.</p>
+        <img class="pic" src="assets/limpio-vitres/moquette.jpg" alt="Moquette de couloir avant et après nettoyage" width="150" height="100" loading="lazy" />
+      </div>
+      <div class="row rv">
+        <h3>Débarras</h3>
+        <p>Maison, locaux, immeuble, commerce, cave ou grenier : on vide et on évacue.</p>
+        <img class="pic" src="assets/limpio-vitres/debarras.jpg" alt="Garage encombré avant débarras" width="150" height="100" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secteur" id="secteur">
+  <div class="wrap">
+    <p class="eyebrow rv">Secteur d'intervention</p>
+    <h2 class="rv">De Hendaye à Hossegor, toute la côte.</h2>
+    <p class="rv" style="max-width:52ch;margin-top:18px">Pays basque et sud des Landes. Si votre commune n'est pas dans la liste, demandez : on vous répond.</p>
+    <div class="coast rv" aria-hidden="true">
+      <svg viewBox="0 0 1120 120" fill="none" preserveAspectRatio="none">
+        <path d="M0 96 C 140 92, 220 70, 330 64 S 520 76, 640 56 S 860 30, 980 22 S 1080 12, 1120 10" stroke="#8fd3cd" stroke-width="2" stroke-dasharray="6 8" opacity=".7"/>
+        <path d="M0 108 C 160 104, 240 86, 350 80 S 540 92, 660 72 S 880 46, 1000 38 S 1090 28, 1120 26" stroke="#8fd3cd" stroke-width="1" opacity=".35"/>
+      </svg>
+    </div>
+    <ul class="towns">
+      <li class="rv">Hendaye</li>
+      <li class="rv">Saint-Jean-de-Luz</li>
+      <li class="rv">Biarritz</li>
+      <li class="rv">Anglet</li>
+      <li class="rv">Bayonne</li>
+      <li class="rv landes">Labenne</li>
+      <li class="rv landes">Capbreton</li>
+      <li class="rv landes">Hossegor</li>
+    </ul>
+    <div class="legend rv"><span><i style="background:#8fd3cd"></i>Pays basque</span><span><i style="background:#f0c27b"></i>Sud des Landes</span></div>
+  </div>
+</section>
+
+<section class="saison" id="saison">
+  <div class="wrap">
+    <p class="eyebrow rv">Locations saisonnières</p>
+    <h2 class="rv">Entre deux locataires, tout doit être prêt.</h2>
+    <div class="grid">
+      <div class="rv">
+        <blockquote>Nous gérons les entrées et les sorties de vos locations, avec un ménage en profondeur et des produits respectueux de l'environnement, pour que vos locataires passent un agréable séjour.</blockquote>
+        <ul class="steps">
+          <li><b>Le jour du départ</b><span>Passage après le départ des locataires, ménage complet, vitres comprises.</span></li>
+          <li><b>Avant l'arrivée</b><span>Le logement est prêt pour les suivants, à l'heure convenue avec vous.</span></li>
+          <li><b>Toute la saison</b><span>Un interlocuteur unique, joignable du lundi au samedi.</span></li>
+        </ul>
+      </div>
+      <img class="rv" src="assets/limpio-vitres/menage.jpg" alt="Matériel de ménage prêt dans un salon" width="1200" height="800" loading="lazy" style="border-radius:var(--r);aspect-ratio:4/3;object-fit:cover" />
+    </div>
+  </div>
+</section>
+
+<section class="devis" id="devis">
+  <div class="wrap">
+    <p class="eyebrow rv">Devis gratuit</p>
+    <h2 class="rv">Dites-nous ce qu'il faut nettoyer.</h2>
+    <div class="grid">
+      <form class="rv" id="form" novalidate>
+        <div class="fields">
+          <div class="two">
+            <label>Votre nom<input type="text" name="nom" autocomplete="name" required /></label>
+            <label>Téléphone<input type="tel" name="tel" autocomplete="tel" required /></label>
+          </div>
+          <div class="two">
+            <label>Commune<input type="text" name="ville" placeholder="Bayonne, Hossegor…" /></label>
+            <label>Vous êtes<select name="type"><option>Particulier</option><option>Commerce, hôtel, restaurant</option><option>Syndic, copropriété</option><option>Propriétaire d'une location saisonnière</option></select></label>
+          </div>
+          <label>Ce qu'il faut nettoyer<textarea name="msg" rows="4" placeholder="Vitres d'une maison à étage, vitrine de 6 m, parties communes d'un immeuble de 3 étages…"></textarea></label>
+          <div><button class="btn" type="submit">Envoyer ma demande</button></div>
+        </div>
+        <p class="merci">Merci, votre demande est envoyée. Nettoyage Limpio Vitres vous rappelle pour un devis gratuit et personnalisé.</p>
+      </form>
+      <div class="card rv">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33641739940">06 41 73 99 40</a><small>Du lundi au samedi, 8h30 à 19h</small></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:limpiovitres@hotmail.fr">limpiovitres@hotmail.fr</a></dd></div>
+          <div><dt>Secteur</dt><dd>Bayonne<small>Pays basque et sud des Landes</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Nettoyage Limpio Vitres</strong><br />Entreprise familiale, Bayonne. Pays basque et sud des Landes.</div>
+    <div><a href="tel:+33641739940">06 41 73 99 40</a> · <a href="mailto:limpiovitres@hotmail.fr">limpiovitres@hotmail.fr</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.querySelector('header'),b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function onScroll(){h.classList.toggle('scrolled',window.scrollY>24)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  b.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');document.body.classList.toggle('menu-open',o)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')})});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('sent')});
+})();
+</script>
+</body>
+</html>
