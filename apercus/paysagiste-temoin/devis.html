@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Site témoin paysagiste « Terre & Sève », v1 (2026-09-10), page Demande de devis. Entreprise fictive,
+     formulaire de démonstration : il n'envoie rien. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#1f3b2c" />
+<title>Demander un devis : jardin, terrasse, muret ou abords de piscine, Terre & Sève, Vendée</title>
+<meta name="description" content="Décrivez votre terrain et votre projet, Terre & Sève vous rappelle sous 48 heures pour fixer une visite. Site de démonstration." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231f3b2c%27/%3E%3Cpath d=%27M16 26c0-8 3-13 10-16-1 7-4 12-10 16zm0 0c0-6-2-10-8-12 1 6 3 9 8 12z%27 fill=%27%23f4efe6%27/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">Terre & Sève<small>Paysagistes créateurs, Vendée</small></a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="prestations.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="entreprise.html">L'entreprise</a>
+      <a class="cta" href="devis.html" aria-current="page">Demander un devis</a>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="menu">
+    <a href="prestations.html">Prestations</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="entreprise.html">L'entreprise</a>
+    <a href="devis.html">Demander un devis</a>
+    <a class="tel" href="tel:+33639981234">06 39 98 12 34</a>
+  </div>
+</header>
+
+<main>
+<section class="sec" style="padding-top:150px">
+  <div class="wrap">
+    <p class="eyebrow">Demande de devis</p>
+    <h1>Dites-nous ce que vous avez, et ce que vous aimeriez.</h1>
+    <p class="lead" style="margin:16px 0 48px">Deux minutes. Nous vous rappelons sous 48 heures pour fixer la visite, et vous recevez le plan et le devis sous dix jours après.</p>
+    <div class="grid g75" style="align-items:start">
+      <form id="form" novalidate>
+        <div class="fields">
+          <div class="two">
+            <label>Votre nom<input type="text" name="nom" autocomplete="name" required /></label>
+            <label>Téléphone<input type="tel" name="tel" autocomplete="tel" required /></label>
+          </div>
+          <div class="two">
+            <label>E-mail<input type="email" name="email" autocomplete="email" /></label>
+            <label>Commune du terrain<input type="text" name="ville" placeholder="Aizenay, Les Sables-d'Olonne…" /></label>
+          </div>
+          <div class="two">
+            <label>Votre projet<select name="type"><option>Création ou refonte d'un jardin</option><option>Terrasse ou allée</option><option>Muret, escalier, soutènement</option><option>Abords de piscine</option><option>Plusieurs de ces choses</option><option>Je ne sais pas encore</option></select></label>
+            <label>Surface approximative<select name="surface"><option>Moins de 100 m²</option><option>100 à 300 m²</option><option>300 à 800 m²</option><option>Plus de 800 m²</option><option>Je ne sais pas</option></select></label>
+          </div>
+          <label>Décrivez le terrain et ce que vous aimeriez<textarea name="msg" rows="5" placeholder="Terrain en pente derrière la maison, exposé sud, on aimerait une terrasse pour manger dehors et cacher le vis-à-vis du voisin…"></textarea></label>
+          <label>Quand aimeriez-vous que ce soit fait ?<select name="delai"><option>Dès que possible</option><option>Dans les 6 mois</option><option>L'année prochaine</option><option>Je me renseigne</option></select></label>
+          <div><button class="btn" type="submit">Envoyer ma demande</button></div>
+          <p style="font-size:.9rem;color:var(--moss-soft);margin:0">Vos coordonnées servent uniquement à vous rappeler. Nous ne les transmettons à personne.</p>
+        </div>
+        <p class="merci"><b>Merci, votre demande est envoyée.</b><br />Julien vous rappelle sous 48 heures pour fixer la visite. Sur ce site de démonstration, le formulaire n'envoie rien : sur votre vrai site, la demande arrive directement dans votre boîte mail.</p>
+      </form>
+      <aside class="apres">
+        <p class="eyebrow">Et après</p>
+        <ol>
+          <li><b>Sous 48 heures</b>, Julien vous rappelle et fixe la visite.</li>
+          <li><b>La visite</b> dure une heure. Il regarde le sol, l'exposition, les accès pour les engins, et il écoute.</li>
+          <li><b>Sous dix jours</b>, vous recevez un plan à l'échelle et un devis poste par poste.</li>
+          <li><b>Vous décidez</b>, sans relance de notre part. Un devis reste valable trois mois.</li>
+        </ol>
+        <div class="coord">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33639981234">06 39 98 12 34</a><small>Du lundi au vendredi, 8h à 18h</small></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:contact@exemple-paysagiste.fr">contact@exemple-paysagiste.fr</a></dd></div>
+            <div><dt>Atelier</dt><dd>12 rue des Pépinières<small>85000 La Roche-sur-Yon, sur rendez-vous</small></dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><strong>Terre & Sève, paysagistes créateurs</strong><br />12 rue des Pépinières, 85000 La Roche-sur-Yon<br />Du lundi au vendredi, 8h à 18h</div>
+      <div><a href="tel:+33639981234">06 39 98 12 34</a><br /><a href="mailto:contact@exemple-paysagiste.fr">contact@exemple-paysagiste.fr</a><br /><a href="mentions-legales.html">Mentions légales</a></div>
+    </div>
+    <p class="demo">Site de démonstration réalisé par <a href="https://nicomasset.com">Nicolas Masset</a>, création de sites web en Vendée. Terre & Sève est une entreprise fictive : les photos sont des illustrations, les chiffres et les coordonnées sont des exemples.</p>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
