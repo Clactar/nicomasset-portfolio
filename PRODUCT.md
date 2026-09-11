@@ -10,7 +10,7 @@ Artisans et indépendants français (photographes, paysagistes, traiteurs, céra
 
 ## Product Purpose
 
-Portfolio one-page de l'activité « création de sites web » de Nicolas Masset (EI, Vendée). Le site EST la preuve : un visiteur non technique doit se dire « wow, il sait faire tout ça » (demande explicite de Nicolas, 2026-07-03). Succès = un prospect qui répond à l'email ou écrit spontanément après avoir vu le site. AUCUN prix affiché (décision Nicolas 2026-07-03) : la seule promesse chiffrable est la garantie « aperçu gratuit sous 72 h, payé seulement si gardé ».
+Portfolio one-page de l'activité « création de sites web » de Nicolas Masset (EI, Vendée). Le site EST la preuve : un visiteur non technique doit se dire « wow, il sait faire tout ça » (demande explicite de Nicolas, 2026-07-03). Succès = un prospect qui répond à l'email ou écrit spontanément après avoir vu le site. Depuis le 2026-09-11 (décision Nicolas, message de 11h05 : « les nouveaux tarifs, nouveau fonctionnement ») le PRIX EST AFFICHÉ : site complet cinq pages à 1 500 € tout compris, 750 € à la commande, deux tours de corrections, prix connu avant tout travail. L'ancienne promesse « aperçu gratuit sous 72 h, payé seulement si gardé » (décision du 2026-07-03, aucun prix affiché) est retirée : elle a produit une vente sur vingt intéressés.
 
 ## Brand Personality
 
@@ -27,7 +27,7 @@ Artisan, direct, sûr de son travail. Trois mots : précis, chaleureux, sans bla
 1. **La preuve avant le discours** : les vraies captures d'écran et les maquettes consultables portent le message ; le texte reste court.
 2. **Practice what you preach** : chaque détail (vitesse de chargement, micro-interactions, typographie) est une démonstration de savoir-faire.
 3. **Honnêteté structurelle** : sites en ligne clairement distingués des maquettes-concepts ; jamais de faux avis, jamais de faux chiffres.
-4. **Une seule promesse** : « payé seulement si gardé » est LE différenciant, mis en scène une fois, fortement, sans prix.
+4. **Une seule promesse** : « je vous montre d'abord, vous décidez ensuite, le prix est connu avant tout travail » (depuis le 2026-09-11 ; avant : « payé seulement si gardé », sans prix). Mise en scène une fois, fortement.
 
 ## Accessibility & Inclusion
 
