@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- v1 (2026-09-14) : page d'accueil proposée à Adeline.j Coiffure et Maquillage Mariée (Diémoz, 38),
+     suite à son oui du 10/09 16h14. Une page à 390 €, payée si elle la garde.
+     Contenu : textes, prix, horaires, chiffres et photos repris de son site Wix le 2026-09-14,
+     rien d'inventé, aucun avis (il n'y en a pas sur son site). Formulaire de démonstration.
+     DESIGN : direction « la lumière des préparatifs ». Lin chaud et rosé en fond, encre brun tabac,
+     un seul accent miel pris aux lampes de sa photo de mariée. Instrument Serif (italiques pour SES mots),
+     Karla pour le texte. Signature : le fil du parcours, dont la longueur des segments encode la durée
+     réelle (questionnaire court, essai de 3 h 30 à 4 h, jour J, kit). Grille de 8 px, rayons 14/22. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#2a211d" />
+<title>Adeline.j : coiffure et maquillage de mariée à domicile, Diémoz, Isère</title>
+<meta name="description" content="Coiffeuse et maquilleuse professionnelle depuis plus de quinze ans, Adeline accompagne une trentaine de mariées par an. Essai chez elle à Diémoz, à 30 minutes de Lyon, puis mise en beauté sur le lieu de vos préparatifs le jour J. Invitées et ornements floraux sur mesure." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --lin:#f7f2ed; --lin-2:#efe6de; --lin-3:#e6d9cf;
+  --ink:#2a211d; --ink-soft:#5b4d45; --muted:#7f6e64;
+  --miel:#a8732f; --miel-deep:#7f5620; --miel-pale:#f2e4cf;
+  --line:rgba(42,33,29,.12);
+  --fd:"Instrument Serif",Georgia,serif; --ft:"Karla",system-ui,sans-serif;
+  --wrap:1180px; --pad:28px; --r:14px; --r-lg:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lin);color:var(--ink);font-family:var(--ft);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+h1{font-size:clamp(2.9rem,6.4vw,5.8rem)}
+h2{font-size:clamp(2.2rem,4.4vw,3.8rem)}
+h3{font-size:1.7rem}
+h1 em,h2 em,h3 em,.lead em,blockquote em{font-style:italic;color:var(--miel-deep)}
+h1 em{white-space:nowrap}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-family:var(--ft);font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--miel-deep);margin:0 0 16px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-family:var(--ft);font-weight:600;font-size:1.02rem;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--lin);transition:transform .25s cubic-bezier(.23,1,.32,1),background .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px);background:var(--miel-deep);border-color:var(--miel-deep)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--lin-2);color:var(--ink)}
+:focus-visible{outline:3px solid var(--miel);outline-offset:3px}
+.prix{font-family:var(--fd);font-size:2.4rem;line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.prix small{font-family:var(--ft);font-size:.95rem;color:var(--muted);letter-spacing:0;display:block;margin-top:6px;white-space:normal}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50}
+header::before{content:"";position:absolute;inset:0;z-index:-1;background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled::before{background:rgba(247,242,237,.94);box-shadow:0 1px 0 var(--line)}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad);max-width:var(--wrap);margin:0 auto}
+.brand{font-family:var(--fd);font-size:1.45rem;text-decoration:none;line-height:1.05;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--ft);font-weight:500;font-size:.78rem;color:var(--miel-deep);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+nav.main a.tel{font-weight:600;color:var(--ink);padding:10px 18px;border-radius:999px;background:var(--lin-2)}
+.burger{display:none;position:relative;z-index:60;width:46px;height:46px;border:0;background:transparent;cursor:pointer;padding:0}
+.burger span{position:absolute;left:11px;width:24px;height:2px;background:var(--ink);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:30px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
+body.menu-open{overflow:hidden}
+
+/* hero */
+.hero{position:relative;padding:150px var(--pad) 72px;max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{margin-bottom:24px}
+.hero .lead{font-size:1.2rem;color:var(--ink-soft);max-width:36ch;margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.photo{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--lin-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.hero .photo{aspect-ratio:4/3;box-shadow:0 30px 60px -34px rgba(42,33,29,.55);opacity:0;transform:translateY(12px);animation:arrive 1s cubic-bezier(.23,1,.32,1) .15s forwards}
+.hero .photo img{object-position:40% 45%}
+@keyframes arrive{to{opacity:1;transform:none}}
+.photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(247,242,237,.94);border-radius:10px;padding:9px 13px;font-size:.88rem;font-weight:500;color:var(--ink)}
+
+/* ribbon */
+.ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--lin-2)}
+.ribbon ul{list-style:none;margin:0 auto;padding:18px var(--pad);max-width:var(--wrap);display:flex;flex-wrap:wrap;gap:10px 34px;font-size:.98rem;color:var(--ink-soft)}
+.ribbon li{display:flex;align-items:center;gap:10px}
+.ribbon li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--miel)}
+
+section{padding:96px 0}
+.intro{max-width:56ch;font-size:1.15rem;color:var(--ink-soft);margin-top:20px}
+
+/* parcours : le fil dont la longueur dit la durée */
+.parcours{margin-top:56px}
+.rail{position:relative;height:2px;background:var(--lin-3);margin:0 0 28px}
+.rail::before{content:"";position:absolute;inset:0;background:var(--miel);transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.65,0,.2,1) .2s}
+.parcours.in .rail::before{transform:scaleX(1)}
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1.25fr 2.7fr 1.7fr 1.25fr;gap:32px}
+.etapes li{position:relative;padding-top:20px}
+.etapes li::before{content:"";position:absolute;left:0;top:-36px;width:14px;height:14px;border-radius:50%;background:var(--lin);border:2px solid var(--miel);transform:scale(0);transition:transform .5s cubic-bezier(.23,1,.32,1)}
+.parcours.in .etapes li::before{transform:scale(1)}
+.parcours.in .etapes li:nth-child(1)::before{transition-delay:.25s}.parcours.in .etapes li:nth-child(2)::before{transition-delay:.55s}.parcours.in .etapes li:nth-child(3)::before{transition-delay:1.2s}.parcours.in .etapes li:nth-child(4)::before{transition-delay:1.6s}
+.etapes .duree{font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--miel-deep);margin:0 0 8px}
+.etapes h3{font-size:1.55rem;margin-bottom:10px}
+.etapes p{color:var(--ink-soft);margin:0;font-size:1rem}
+
+/* mariée */
+.mariee{background:var(--lin-2)}
+.mariee .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;margin-top:48px}
+.mariee .grid>.photo{aspect-ratio:3/4;position:sticky;top:110px}
+.mariee .grid>.photo img{object-position:50% 30%}
+.forfait{padding:32px 0;border-top:1px solid var(--line)}
+.forfait:last-child{border-bottom:1px solid var(--line)}
+.forfait .head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:14px}
+.forfait p{color:var(--ink-soft)}
+.forfait ul{margin:0 0 1em;padding-left:1.2em;color:var(--ink-soft)}
+.forfait li{margin-bottom:6px}
+.note{font-size:.92rem;color:var(--muted);margin-top:18px}
+.duo{margin-top:40px}
+.duo .photo{aspect-ratio:1}
+
+/* invitées */
+.invitees .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;margin-top:40px}
+.invitees .photo{aspect-ratio:4/3}
+.tarifs{display:grid;gap:8px;margin:24px 0;padding:0;list-style:none}
+.tarifs li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.tarifs li:first-child{border-top:1px solid var(--line)}
+.tarifs .prix{font-size:1.9rem}
+
+/* ornements */
+.ornements{background:var(--ink);color:var(--lin)}
+.ornements .eyebrow{color:#dcb27a}
+.ornements p{color:#d9cbc0}
+.ornements h2 em{color:#dcb27a}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:48px}
+.trio .photo{aspect-ratio:4/5;background:#3a2f2a}
+.trio figcaption{font-size:.92rem;color:#d9cbc0;margin-top:12px}
+.ornements .txt{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-top:24px}
+.ornements .txt p:last-child a{color:var(--lin);font-weight:600}
+
+/* un peu de moi */
+.moi .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:40px}
+.moi .photo{aspect-ratio:3/4}
+.moi .photo img{object-position:50% 20%}
+blockquote{margin:0 0 24px;padding:0;font-family:var(--fd);font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.2;color:var(--ink)}
+.moi p{color:var(--ink-soft)}
+
+/* contact */
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:40px;align-items:start}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+input,select,textarea{font:inherit;padding:14px 16px;border-radius:10px;border:1.5px solid rgba(42,33,29,.22);background:#fffdfb;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--miel);outline:none;box-shadow:0 0 0 3px rgba(168,115,47,.18)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:#fffdfb;border-radius:var(--r);padding:32px;box-shadow:0 24px 44px -32px rgba(42,33,29,.4)}
+.card dl{margin:0;display:grid;gap:20px}
+.card dt{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.card dd{margin:4px 0 0;font-family:var(--fd);font-size:1.5rem;line-height:1.15}
+.card dd a{text-decoration:none}
+.card dd small{display:block;font-family:var(--ft);font-size:.95rem;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.merci{display:none;padding:18px 20px;border-radius:10px;background:var(--miel-pale);color:var(--miel-deep);font-weight:500}
+form.sent .merci{display:block}
+form.sent .fields{display:none}
+
+footer{background:var(--ink);color:#d9cbc0;padding:44px 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;align-items:center}
+footer strong{color:var(--lin);font-family:var(--fd);font-weight:400;font-size:1.2rem}
+footer a{color:var(--lin);text-decoration:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.23,1,.32,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv,.hero .photo{opacity:1;transform:none;transition:none;animation:none}.btn:hover{transform:none}.rail::before,.etapes li::before{transition:none}}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding:118px var(--pad) 48px;gap:34px}
+  .etapes{grid-template-columns:1fr;gap:0;position:relative;padding-left:32px}
+  .rail{display:none}
+  .etapes::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--lin-3)}
+  .etapes::after{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--miel);transform:scaleY(0);transform-origin:top;transition:transform 1.6s cubic-bezier(.65,0,.2,1) .2s}
+  .parcours.in .etapes::after{transform:scaleY(1)}
+  .etapes li{padding:0 0 32px}
+  .etapes li:last-child{padding-bottom:0}
+  .etapes li::before{left:-32px;top:6px}
+  .mariee .grid,.invitees .grid,.moi .grid,.contact .grid,.ornements .txt{grid-template-columns:1fr;gap:32px}
+  .mariee .grid>.photo{position:relative;top:auto;aspect-ratio:4/3}
+  .trio{grid-template-columns:1fr 1fr 1fr;gap:12px}
+  section{padding:72px 0}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  nav.main{display:none}
+  .burger{display:block}
+  .brand small{display:none}
+  .brand{font-size:1.5rem}
+  .mobile-menu{display:block;position:fixed;inset:0;z-index:55;background:var(--lin);padding:110px var(--pad) 40px;transform:translateX(100%);transition:transform .35s cubic-bezier(.23,1,.32,1);visibility:hidden}
+  .mobile-menu.open{transform:none;visibility:visible}
+  .mobile-menu a{display:block;font-family:var(--fd);font-size:2rem;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line)}
+  .mobile-menu a.tel{margin-top:22px;border:0;font-family:var(--ft);font-weight:600;font-size:1.2rem;color:var(--miel-deep)}
+  .hero .lead{font-size:1.08rem}
+  .two{grid-template-columns:1fr}
+  .card{padding:24px}
+  .ribbon ul{gap:8px 20px;font-size:.92rem}
+  .forfait .head{flex-direction:column;align-items:flex-start;gap:8px}
+  .trio{grid-template-columns:1fr 1fr}
+  .trio figure:last-child{grid-column:1/-1}
+  .trio figure:last-child .photo{aspect-ratio:16/10}
+  .trio figure:last-child .photo img{object-position:50% 25%}
+  .tarifs .prix{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <a class="brand" href="#top">Adeline.j<small>Coiffure et maquillage mariée · Diémoz</small></a>
+    <nav class="main" aria-label="Navigation">
+      <a href="#mariee">La mariée</a>
+      <a href="#invitees">Les invitées</a>
+      <a href="#ornements">Ornements et cadeaux</a>
+      <a href="#moi">Adeline</a>
+      <a class="tel" href="tel:+33776695650">07 76 69 56 50</a>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="menu">
+    <a href="#mariee">La mariée</a>
+    <a href="#invitees">Les invitées</a>
+    <a href="#ornements">Ornements et cadeaux</a>
+    <a href="#moi">Adeline</a>
+    <a href="#contact">Me contacter</a>
+    <a class="tel" href="tel:+33776695650">Appeler le 07 76 69 56 50</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <p class="eyebrow">Coiffeuse et maquilleuse de mariées, à domicile</p>
+    <h1>Belle, apaisée et pleinement <em>vous-même</em>, le jour de votre mariage.</h1>
+    <p class="lead">Depuis plus de quinze ans, j'accompagne une trentaine de mariées par an et leurs proches. L'essai se passe chez moi, à Diémoz, à 30 minutes de Lyon. Le jour J, je viens sur le lieu de vos préparatifs.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Me parler de votre mariage</a>
+      <a class="btn ghost" href="tel:+33776695650">07 76 69 56 50</a>
+    </div>
+  </div>
+  <div class="photo" aria-hidden="true">
+    <img src="assets/adeline-j-coiffure/adeline-au-travail.jpg" alt="" width="1179" height="813" fetchpriority="high" />
+    <div class="tag">Adeline, un matin de préparatifs</div>
+  </div>
+</div>
+
+<div class="ribbon">
+  <ul>
+    <li>Une trentaine de mariées par an</li>
+    <li>Essai complet de 3 h 30 à 4 h</li>
+    <li>Coiffure, maquillage, ornements floraux</li>
+    <li>Diémoz, à 30 minutes de Lyon</li>
+  </ul>
+</div>
+
+<section id="parcours">
+  <div class="wrap">
+    <p class="eyebrow rv">Comment ça se passe</p>
+    <h2 class="rv">Un questionnaire, un long essai, <em>et le jour J.</em></h2>
+    <p class="intro rv">Au-delà d'une simple prestation, je propose une expérience complète centrée sur vous : un accompagnement pensé pour vous sublimer naturellement, tout en vous offrant un moment de douceur, de confiance et de sérénité.</p>
+    <div class="parcours rv" id="fil">
+      <div class="rail" aria-hidden="true"></div>
+      <ol class="etapes">
+        <li>
+          <p class="duree">Avant notre rencontre</p>
+          <h3>Le questionnaire</h3>
+          <p>Votre style, vos envies, vos habitudes beauté, vos inspirations, et comment vous avez envie de vous sentir ce jour-là. C'est ce qui me permet de préparer un essai qui vous ressemble.</p>
+        </li>
+        <li>
+          <p class="duree">3 h 30 à 4 h, chez moi à Diémoz</p>
+          <h3>L'essai complet</h3>
+          <p>Un moment privilégié, cocooning et bienveillant. Nous reprenons le questionnaire, nous essayons votre coiffure et votre maquillage, nous ajustons chaque détail et nous testons des ornements pour trouver la combinaison parfaite. Test drapping et analyse de votre morphologie, de votre carnation et de votre tenue. Je réalise des photos et des vidéos pendant la séance pour que vous puissiez vous projeter sereinement.</p>
+        </li>
+        <li>
+          <p class="duree">Sur le lieu de vos préparatifs</p>
+          <h3>Le jour J</h3>
+          <p>Je me déplace pour créer votre mise en beauté dans une atmosphère calme et apaisante. Mon rôle est aussi de vous offrir un moment doux et rassurant avant de dire « oui ».</p>
+        </li>
+        <li>
+          <p class="duree">Jusqu'au bout de la journée</p>
+          <h3>Le kit retouches</h3>
+          <p>Je vous laisse un petit kit personnalisé pour rester aussi fraîche et lumineuse le soir qu'à la sortie de la mairie.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="mariee" id="mariee">
+  <div class="wrap">
+    <p class="eyebrow rv">La mariée</p>
+    <h2 class="rv">Embellir, <em>sans jamais dénaturer.</em></h2>
+    <p class="intro rv">Une mise en beauté naturelle et lumineuse, des maquillages frais, des coiffures qui reflètent votre personnalité : naturelles, élégantes, romantiques, bohèmes ou raffinées. Je crois profondément que l'élégance se trouve dans la simplicité, dans les petits détails, dans ce qui vous ressemble vraiment.</p>
+    <div class="grid">
+      <div class="photo rv">
+        <img src="assets/adeline-j-coiffure/mariee-lumiere.jpg" alt="Une mariée coiffée par Adeline, chignon bas tressé, sous deux lampes rondes devant un mur de pierre" width="1152" height="1600" loading="lazy" />
+      </div>
+      <div>
+        <article class="forfait rv">
+          <div class="head">
+            <h3>Coiffure et maquillage</h3>
+            <p class="prix">650 €</p>
+          </div>
+          <p>Le forfait complet : questionnaire, essai de 3 h 30 à 4 h chez moi, le jour J sur votre lieu de préparatifs, et le kit retouches.</p>
+          <ul>
+            <li>Une personnalisation complète, adaptée à votre morphologie, votre carnation, votre tenue et vos goûts.</li>
+            <li>Des visuels photo et vidéo de l'essai pour mûrir votre choix tranquillement.</li>
+          </ul>
+        </article>
+        <article class="forfait rv">
+          <div class="head">
+            <h3>Coiffure seule</h3>
+            <p class="prix">350 €</p>
+          </div>
+          <p>Questionnaire préparatoire, essai coiffure d'environ 2 h chez moi, puis votre coiffure le jour J, sur place.</p>
+          <ul>
+            <li>Analyse de la morphologie de votre visage, reprise de vos photos d'inspiration, essai des volumes et des attaches.</li>
+            <li>Une coiffure harmonieuse, confortable, qui tient jusqu'au bout de la journée.</li>
+          </ul>
+        </article>
+        <p class="note rv">Frais de déplacement non inclus.</p>
+        <div class="duo">
+          <div class="photo rv"><img src="assets/adeline-j-coiffure/tresse-avant-arriere.jpg" alt="Une mariée de face avec un maquillage frais, puis de dos avec une longue tresse ornée de fils fins" width="1600" height="1600" loading="lazy" /><div class="tag">Le jour de l'essai : de face, puis de dos</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="invitees" id="invitees">
+  <div class="wrap">
+    <p class="eyebrow rv">Les invitées</p>
+    <h2 class="rv">Votre entourage, <em>dans le même esprit.</em></h2>
+    <div class="grid">
+      <div>
+        <p class="intro rv" style="margin-top:0">Pour plus d'harmonie et de simplicité le jour du mariage, je m'occupe aussi de vos proches : une coiffure, un maquillage ou les deux, dans le même esprit que le vôtre, naturel, élégant et raffiné. Comptez environ 30 minutes par prestation, avec un diagnostic rapide et une adaptation à leurs cheveux, leurs traits et leur tenue.</p>
+        <ul class="tarifs rv">
+          <li><span>Coiffure ou maquillage, invitée de la mariée</span><span class="prix">70 €</span></li>
+          <li><span>Coiffure et maquillage, invitée de la mariée</span><span class="prix">140 €</span></li>
+          <li><span>Invitée seule, coiffure ou maquillage<br /><small style="color:var(--muted)">Déplacement à partir de 4 prestations, si les horaires le permettent</small></span><span class="prix">75 €</span></li>
+        </ul>
+        <p class="note rv">Frais de déplacement non inclus.</p>
+      </div>
+      <div class="photo rv">
+        <img src="assets/adeline-j-coiffure/maquillage-pinceau.jpg" alt="Adeline applique le blush au pinceau sur une invitée en peignoir blanc, qui sourit" width="1477" height="1108" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ornements" id="ornements">
+  <div class="wrap">
+    <p class="eyebrow rv">Ornements et cadeaux</p>
+    <h2 class="rv">Des fleurs qui tiennent <em>toute la journée.</em></h2>
+    <div class="txt">
+      <p class="rv">En parallèle de la mise en beauté, je crée des ornements en fleurs stabilisées ou séchées, entièrement sur mesure, adaptés à vos couleurs, votre thème et votre coiffure : peignes, pinces, bracelets, boutonnières. Chaque pièce est pensée pour s'harmoniser avec votre style et celui de vos invités.</p>
+      <p class="rv">Je réalise aussi des cadeaux personnalisés pour vos invités et vos témoins, comme des stylos ornés de fleurs. De petites attentions pleines de sens, qui laissent un souvenir durable de votre journée. Toutes mes créations sont sur Instagram : <a href="https://www.instagram.com/flowersbya_mariage/" rel="noopener">@flowersbya_mariage</a>.</p>
+    </div>
+    <div class="trio">
+      <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/chignon-fleurs.jpg" alt="Roses pâles et feuillage dans un chignon tressé" width="1170" height="1165" loading="lazy" /></div><figcaption>Roses et feuillage dans un chignon tressé</figcaption></figure>
+      <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/peignoir-bride.jpg" alt="Un chignon flou orné d'un peigne de fleurs blanches, sur une mariée en peignoir brodé Bride" width="988" height="1600" loading="lazy" /></div><figcaption>Peigne de fleurs blanches sur un chignon flou</figcaption></figure>
+      <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/tresse-fleurs.jpg" alt="Une longue tresse bohème piquée de fleurs blanches et bleues, sur une robe bleu nuit" width="1200" height="1600" loading="lazy" /></div><figcaption>Fleurs blanches et bleues sur une tresse bohème</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="moi" id="moi">
+  <div class="wrap">
+    <p class="eyebrow rv">Un peu de moi</p>
+    <div class="grid">
+      <div class="photo rv">
+        <img src="assets/adeline-j-coiffure/maquillage-yeux.jpg" alt="Adeline maquille les yeux d'une mariée en peignoir de satin blanc" width="720" height="1079" loading="lazy" />
+      </div>
+      <div>
+        <blockquote class="rv">À 14 ans, lors de mon premier entretien, on m'a demandé pourquoi je voulais devenir coiffeuse. J'ai répondu : « J'aimerais redonner confiance et sourire aux gens. »</blockquote>
+        <p class="rv">Quand j'étais haute comme trois pommes, je rêvais de devenir coiffeuse ou fleuriste. Après dix ans dans un salon à Lyon, je me suis lancée en indépendante, et depuis plus de six ans je me consacre aux mariages. À domicile, le contact est plus intime, et je prends le temps de personnaliser chaque expérience.</p>
+        <p class="rv">Je suis organisée, ponctuelle, calme et discrète : présente et attentive à vos besoins, y compris quand il faut aller vite. Et avec les fleurs séchées, j'ai fini par réunir mes deux rêves d'enfant.</p>
+        <p class="rv">Chaque année, je réalise plus de 30 mises en beauté de mariées, plus de 150 mises en beauté d'invitées et plus de 400 changements ou entretiens de couleur. Tout cela est possible grâce à vous, qui m'avez soutenue et fait confiance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Me contacter</p>
+    <h2 class="rv">Parlez-moi de <em>votre</em> mariage.</h2>
+    <p class="intro rv">La date, le lieu, ce que vous imaginez. Je vous réponds pour convenir d'un essai.</p>
+    <div class="grid">
+      <form class="rv" id="form" novalidate>
+        <div class="fields">
+          <div class="two">
+            <label>Votre prénom et votre nom<input type="text" name="nom" autocomplete="name" required /></label>
+            <label>Votre e-mail<input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <div class="two">
+            <label>Date du mariage<input type="date" name="date" /></label>
+            <label>Lieu des préparatifs<input type="text" name="lieu" placeholder="Ville ou domaine" /></label>
+          </div>
+          <label>Ce que vous imaginez<textarea name="msg" rows="4" placeholder="Coiffure et maquillage, coiffure seule, des invitées à prévoir, des fleurs dans les cheveux…"></textarea></label>
+          <div><button class="btn" type="submit">Envoyer ma demande</button></div>
+        </div>
+        <p class="merci">Merci, votre demande est envoyée. Adeline vous répond pour convenir d'un essai.</p>
+      </form>
+      <div class="card rv">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33776695650">07 76 69 56 50</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:adeline.j.coiffure@gmail.com" style="font-size:1.25rem">adeline.j.coiffure@gmail.com</a></dd></div>
+          <div><dt>Horaires</dt><dd style="font-size:1.25rem">Mardi, mercredi et jeudi, 10 h à 20 h 30<small>Vendredi 9 h à 18 h · Samedi 6 h à 17 h · Dimanche et lundi fermé</small></dd></div>
+          <div><dt>Les essais</dt><dd style="font-size:1.25rem">Chez moi, à Diémoz<small>Isère, à 30 minutes de Lyon</small></dd></div>
+          <div><dt>Instagram</dt><dd style="font-size:1.25rem"><a href="https://www.instagram.com/adeline.beaute.mariage" rel="noopener">@adeline.beaute.mariage</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Adeline.j</strong><br />Coiffure et maquillage mariée, à domicile. Diémoz, Isère.</div>
+    <div><a href="tel:+33776695650">07 76 69 56 50</a> · <a href="mailto:adeline.j.coiffure@gmail.com">adeline.j.coiffure@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.querySelector('header'),b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function onScroll(){h.classList.toggle('scrolled',window.scrollY>24)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  b.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');document.body.classList.toggle('menu-open',o)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')})});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('sent')});
+})();
+</script>
+</body>
+</html>
