@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<!-- v1 (2026-09-14) : page d'accueil proposée à Adeline.j Coiffure et Maquillage Mariée (Diémoz, 38),
+<!-- v2 (2026-09-15) : retouches demandées par Adeline dans son retour du 15/09 14h15.
+     (1) Recentrage total sur le mariage : elle a arrêté la coiffure à domicile en début d'année.
+     (2) « depuis plus de quinze ans » retiré du haut de page, son parcours reste dans « Un peu de moi ».
+         Accroche remplacée par SON texte, mot pour mot.
+     (3) Maquillage seul à 350 € ajouté. (4) Tarifs invitées reformulés (70 € avec la mariée, 75 € sans).
+     (5) « plus de 400 changements de couleur » supprimé, la section se termine sur son accompagnement.
+     (6) Ornements : passerelle vers flowersbyamariage.fr, fond foncé gardé, photo aux fleurs FRAÎCHES
+         (qui n'était pas d'elle) remplacée par un de ses peignes, pris sur son site Flowers by A le 15/09.
+     v1 (2026-09-14) : page d'accueil proposée à Adeline.j Coiffure et Maquillage Mariée (Diémoz, 38),
      suite à son oui du 10/09 16h14. Une page à 390 €, payée si elle la garde.
      Contenu : textes, prix, horaires, chiffres et photos repris de son site Wix le 2026-09-14,
      rien d'inventé, aucun avis (il n'y en a pas sur son site). Formulaire de démonstration.
@@ -14,8 +22,8 @@
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
 <meta name="theme-color" content="#2a211d" />
-<title>Adeline.j : coiffure et maquillage de mariée à domicile, Diémoz, Isère</title>
-<meta name="description" content="Coiffeuse et maquilleuse professionnelle depuis plus de quinze ans, Adeline accompagne une trentaine de mariées par an. Essai chez elle à Diémoz, à 30 minutes de Lyon, puis mise en beauté sur le lieu de vos préparatifs le jour J. Invitées et ornements floraux sur mesure." />
+<title>Adeline.j : coiffure et maquillage de mariée, Diémoz, Isère</title>
+<meta name="description" content="Spécialisée dans la mise en beauté des mariées, Adeline accompagne une trentaine de futures mariées par an. L'essai se déroule chez elle, à Diémoz, à 30 minutes de Lyon, et le jour J elle vous retrouve sur votre lieu de préparatifs. Invitées et ornements floraux sur mesure." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
@@ -137,7 +145,9 @@ section{padding:96px 0}
 .trio .photo{aspect-ratio:4/5;background:#3a2f2a}
 .trio figcaption{font-size:.92rem;color:#d9cbc0;margin-top:12px}
 .ornements .txt{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-top:24px}
-.ornements .txt p:last-child a{color:var(--lin);font-weight:600}
+.ornements .txt a:not(.btn){color:var(--lin);font-weight:600}
+.ornements .btn{background:var(--lin);color:var(--ink);border-color:var(--lin);margin-top:8px}
+.ornements .btn:hover{background:#dcb27a;border-color:#dcb27a;color:var(--ink)}
 
 /* un peu de moi */
 .moi .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:40px}
@@ -214,11 +224,11 @@ footer a{color:var(--lin);text-decoration:none}
 <body>
 <header id="top">
   <div class="bar">
-    <a class="brand" href="#top">Adeline.j<small>Coiffure et maquillage mariée · Diémoz</small></a>
+    <a class="brand" href="#top">Adeline.j<small>Mise en beauté de mariées · Diémoz</small></a>
     <nav class="main" aria-label="Navigation">
       <a href="#mariee">La mariée</a>
       <a href="#invitees">Les invitées</a>
-      <a href="#ornements">Ornements et cadeaux</a>
+      <a href="#ornements">Les ornements</a>
       <a href="#moi">Adeline</a>
       <a class="tel" href="tel:+33776695650">07 76 69 56 50</a>
     </nav>
@@ -227,7 +237,7 @@ footer a{color:var(--lin);text-decoration:none}
   <div class="mobile-menu" id="menu">
     <a href="#mariee">La mariée</a>
     <a href="#invitees">Les invitées</a>
-    <a href="#ornements">Ornements et cadeaux</a>
+    <a href="#ornements">Les ornements</a>
     <a href="#moi">Adeline</a>
     <a href="#contact">Me contacter</a>
     <a class="tel" href="tel:+33776695650">Appeler le 07 76 69 56 50</a>
@@ -237,9 +247,9 @@ footer a{color:var(--lin);text-decoration:none}
 <main>
 <div class="hero">
   <div>
-    <p class="eyebrow">Coiffeuse et maquilleuse de mariées, à domicile</p>
+    <p class="eyebrow">Coiffure et maquillage de mariée</p>
     <h1>Belle, apaisée et pleinement <em>vous-même</em>, le jour de votre mariage.</h1>
-    <p class="lead">Depuis plus de quinze ans, j'accompagne une trentaine de mariées par an et leurs proches. L'essai se passe chez moi, à Diémoz, à 30 minutes de Lyon. Le jour J, je viens sur le lieu de vos préparatifs.</p>
+    <p class="lead">Spécialisée dans la mise en beauté des mariées, j'accompagne aujourd'hui une trentaine de futures mariées par an. L'essai se déroule chez moi, à Diémoz, et le jour J, je vous retrouve directement sur votre lieu de préparatifs.</p>
     <div class="cta">
       <a class="btn" href="#contact">Me parler de votre mariage</a>
       <a class="btn ghost" href="tel:+33776695650">07 76 69 56 50</a>
@@ -325,6 +335,17 @@ footer a{color:var(--lin);text-decoration:none}
             <li>Une coiffure harmonieuse, confortable, qui tient jusqu'au bout de la journée.</li>
           </ul>
         </article>
+        <article class="forfait rv">
+          <div class="head">
+            <h3>Maquillage seul</h3>
+            <p class="prix">350 €</p>
+          </div>
+          <p>Questionnaire préparatoire, essai maquillage chez moi, puis votre mise en beauté le jour J, sur place.</p>
+          <ul>
+            <li>Test drapping, analyse de votre carnation, de vos traits et de votre tenue, essai des teintes et des textures.</li>
+            <li>Un maquillage frais et lumineux, qui vous ressemble et qui tient jusqu'au bout de la journée.</li>
+          </ul>
+        </article>
         <p class="note rv">Frais de déplacement non inclus.</p>
         <div class="duo">
           <div class="photo rv"><img src="assets/adeline-j-coiffure/tresse-avant-arriere.jpg" alt="Une mariée de face avec un maquillage frais, puis de dos avec une longue tresse ornée de fils fins" width="1600" height="1600" loading="lazy" /><div class="tag">Le jour de l'essai : de face, puis de dos</div></div>
@@ -342,9 +363,9 @@ footer a{color:var(--lin);text-decoration:none}
       <div>
         <p class="intro rv" style="margin-top:0">Pour plus d'harmonie et de simplicité le jour du mariage, je m'occupe aussi de vos proches : une coiffure, un maquillage ou les deux, dans le même esprit que le vôtre, naturel, élégant et raffiné. Comptez environ 30 minutes par prestation, avec un diagnostic rapide et une adaptation à leurs cheveux, leurs traits et leur tenue.</p>
         <ul class="tarifs rv">
-          <li><span>Coiffure ou maquillage, invitée de la mariée</span><span class="prix">70 €</span></li>
-          <li><span>Coiffure et maquillage, invitée de la mariée</span><span class="prix">140 €</span></li>
-          <li><span>Invitée seule, coiffure ou maquillage<br /><small style="color:var(--muted)">Déplacement à partir de 4 prestations, si les horaires le permettent</small></span><span class="prix">75 €</span></li>
+          <li><span>Coiffure ou maquillage, le jour où je m'occupe aussi de la mariée</span><span class="prix">70 €</span></li>
+          <li><span>Coiffure et maquillage, le jour où je m'occupe aussi de la mariée</span><span class="prix">140 €</span></li>
+          <li><span>Coiffure ou maquillage, sans la mariée<br /><small style="color:var(--muted)">Déplacement à partir de 4 prestations, si les horaires le permettent</small></span><span class="prix">75 €</span></li>
         </ul>
         <p class="note rv">Frais de déplacement non inclus.</p>
       </div>
@@ -357,14 +378,14 @@ footer a{color:var(--lin);text-decoration:none}
 
 <section class="ornements" id="ornements">
   <div class="wrap">
-    <p class="eyebrow rv">Ornements et cadeaux</p>
+    <p class="eyebrow rv">Les ornements floraux</p>
     <h2 class="rv">Des fleurs qui tiennent <em>toute la journée.</em></h2>
     <div class="txt">
-      <p class="rv">En parallèle de la mise en beauté, je crée des ornements en fleurs stabilisées ou séchées, entièrement sur mesure, adaptés à vos couleurs, votre thème et votre coiffure : peignes, pinces, bracelets, boutonnières. Chaque pièce est pensée pour s'harmoniser avec votre style et celui de vos invités.</p>
-      <p class="rv">Je réalise aussi des cadeaux personnalisés pour vos invités et vos témoins, comme des stylos ornés de fleurs. De petites attentions pleines de sens, qui laissent un souvenir durable de votre journée. Toutes mes créations sont sur Instagram : <a href="https://www.instagram.com/flowersbya_mariage/" rel="noopener">@flowersbya_mariage</a>.</p>
+      <p class="rv">Je façonne moi-même vos ornements en fleurs stabilisées ou séchées, entièrement sur mesure, adaptés à vos couleurs, votre thème et votre coiffure : peignes, pinces, bracelets, boutonnières. Les fleurs fraîches fanent au fil de la journée, les miennes tiennent de l'essai jusqu'à la dernière danse, et vous les gardez ensuite. Chaque pièce se choisit pendant l'essai, en même temps que votre coiffure, pour que les deux ne fassent qu'un.</p>
+      <p class="rv">Je crée aussi des cadeaux personnalisés pour vos invités et vos témoins, comme des stylos fleuris. Ils vivent sur mon second atelier, Flowers by A.<br /><a class="btn" href="https://flowersbyamariage.fr/" target="_blank" rel="noopener">Découvrir Flowers by A</a></p>
     </div>
     <div class="trio">
-      <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/chignon-fleurs.jpg" alt="Roses pâles et feuillage dans un chignon tressé" width="1170" height="1165" loading="lazy" /></div><figcaption>Roses et feuillage dans un chignon tressé</figcaption></figure>
+      <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/peigne-fleurs-stabilisees.jpg" alt="Un peigne doré garni de fleurs blanches stabilisées et de petites fleurs séchées, tenu dans une main" width="943" height="1357" loading="lazy" /></div><figcaption>Un peigne en fleurs stabilisées, fait main</figcaption></figure>
       <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/peignoir-bride.jpg" alt="Un chignon flou orné d'un peigne de fleurs blanches, sur une mariée en peignoir brodé Bride" width="988" height="1600" loading="lazy" /></div><figcaption>Peigne de fleurs blanches sur un chignon flou</figcaption></figure>
       <figure class="rv" style="margin:0"><div class="photo"><img src="assets/adeline-j-coiffure/tresse-fleurs.jpg" alt="Une longue tresse bohème piquée de fleurs blanches et bleues, sur une robe bleu nuit" width="1200" height="1600" loading="lazy" /></div><figcaption>Fleurs blanches et bleues sur une tresse bohème</figcaption></figure>
     </div>
@@ -380,9 +401,10 @@ footer a{color:var(--lin);text-decoration:none}
       </div>
       <div>
         <blockquote class="rv">À 14 ans, lors de mon premier entretien, on m'a demandé pourquoi je voulais devenir coiffeuse. J'ai répondu : « J'aimerais redonner confiance et sourire aux gens. »</blockquote>
-        <p class="rv">Quand j'étais haute comme trois pommes, je rêvais de devenir coiffeuse ou fleuriste. Après dix ans dans un salon à Lyon, je me suis lancée en indépendante, et depuis plus de six ans je me consacre aux mariages. À domicile, le contact est plus intime, et je prends le temps de personnaliser chaque expérience.</p>
+        <p class="rv">Quand j'étais haute comme trois pommes, je rêvais de devenir coiffeuse ou fleuriste. Après dix ans dans un salon à Lyon, je me suis lancée en indépendante. Depuis le début de cette année, je ne fais plus que du mariage, coiffure et maquillage : c'est ce que je préfère, et c'est là que je peux vraiment prendre le temps.</p>
         <p class="rv">Je suis organisée, ponctuelle, calme et discrète : présente et attentive à vos besoins, y compris quand il faut aller vite. Et avec les fleurs séchées, j'ai fini par réunir mes deux rêves d'enfant.</p>
-        <p class="rv">Chaque année, je réalise plus de 30 mises en beauté de mariées, plus de 150 mises en beauté d'invitées et plus de 400 changements ou entretiens de couleur. Tout cela est possible grâce à vous, qui m'avez soutenue et fait confiance.</p>
+        <p class="rv">Chaque année, j'accompagne plus de 30 mariées et plus de 150 de leurs invitées. Tout cela est possible grâce à vous, qui m'avez soutenue et fait confiance.</p>
+        <p class="rv">Ce que j'aime dans ce métier, au fond, c'est écouter, avancer en douceur, ne jamais bousculer, et vous sublimer sans jamais vous transformer.</p>
       </div>
     </div>
   </div>
@@ -425,7 +447,7 @@ footer a{color:var(--lin);text-decoration:none}
 
 <footer>
   <div class="wrap">
-    <div><strong>Adeline.j</strong><br />Coiffure et maquillage mariée, à domicile. Diémoz, Isère.</div>
+    <div><strong>Adeline.j</strong><br />Coiffure et maquillage de mariée. Essais à Diémoz, Isère.</div>
     <div><a href="tel:+33776695650">07 76 69 56 50</a> · <a href="mailto:adeline.j.coiffure@gmail.com">adeline.j.coiffure@gmail.com</a></div>
   </div>
 </footer>
