@@ -176,6 +176,7 @@ section{scroll-margin-top:72px}
 .panel:nth-child(2){background:#0d0f17}
 .panel:nth-child(3){background:#0a0d14}
 .panel:nth-child(4){background:#0e1019}
+.panel:nth-child(5){background:#0b0d15}
 /* padding-block uniquement : le shorthand écraserait le padding horizontal de .wrap (même élément) */
 .panel-grid{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,14fr);gap:clamp(28px,4vw,72px);align-items:center;width:100%;padding-block:96px}
 .panel-idx{
@@ -217,7 +218,7 @@ section{scroll-margin-top:72px}
   }
 }
 
-/* espace de respiration : laisse au 4e panneau son temps de lecture avant que les maquettes le recouvrent */
+/* espace de respiration : laisse au dernier panneau son temps de lecture avant que les maquettes le recouvrent */
 .stack-tail{height:46vh}
 @media(max-width:640px){.stack-tail{height:0}}
 
