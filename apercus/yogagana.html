@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!-- v1 (2026-09-16) : page d'accueil proposée à YoGa'gana, association de yoga à L'Isle-d'Abeau (38),
+     suite au oui conditionnel de Nolwenn Bourgeois du 15/09 10h09. Une page à 390 €, payée si elle
+     la garde, et qu'elle présentera au bureau de l'association qui vote.
+
+     CONTENU : textes, horaires, tarifs, noms et photos relevés sur https://yogagana.wixsite.com/isere
+     le 2026-09-16. Rien d'inventé. Aucun avis (il n'y en a pas sur son site), aucun chiffre ajouté.
+     Le mapping photo ↔ nom des trois professeures a été vérifié par la position à l'écran sur son
+     site (business/agence-web/clients/yogagana-2026-09-16/CONTENU-SOURCE.md).
+     Formulaire de démonstration : il ouvre un courriel pré-rempli, il n'envoie rien tout seul.
+
+     DESIGN : direction « la feuille de séance », écrite par Nova (DESIGN.md du dossier client).
+     Une page TYPOGRAPHIQUE, sans photo de héros : l'association n'a aucune photo de cours ou de
+     salle qui lui appartienne, et les images de yoga de son Wix sont de la banque Wix, donc hors
+     licence ailleurs. Papier craie, encre prune presque noire, un seul accent prune échantillonné
+     sur SON logo. Newsreader en titrage (italique réservé à SES mots), Atkinson Hyperlegible Next
+     en texte, une police dessinée pour les lecteurs malvoyants : « le yoga pour tous » jusque dans
+     la police. Grille de 8 px, rayons 4 et 8, aucune ombre. Contrastes mesurés en APCA.
+     Les deux défauts cités dans le cold du 09/09 sont corrigés ici : le titre de l'onglet et
+     l'année du pied de page. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#faf8f4" />
+<title>YoGa'gana, cours de yoga à L'Isle-d'Abeau et Bourgoin-Jallieu</title>
+<meta name="description" content="Association de yoga pour tous, en Nord-Isère. Huit cours adultes et un cours enfants par semaine, en salle et sur Zoom, adaptés à chaque corps. Cours à l'unité 12 €, et un tarif discuté si vos moyens sont serrés." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --craie:#faf8f4;
+  --brume:#efe9ec;
+  --prune:#9d1d50;
+  --prune-fonce:#7d1440;
+  --encre:#2b1a24;
+  --sourdine:color-mix(in oklch, var(--encre) 72%, var(--craie));
+  --filet:color-mix(in oklch, var(--encre) 14%, transparent);
+  --fd:"Newsreader","Iowan Old Style",Georgia,serif;
+  --ft:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s6:48px; --s8:64px; --s12:96px;
+  --gout:20px; --max:1120px; --barre:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--craie);color:var(--encre);
+  font-family:var(--ft);font-size:18px;line-height:1.55;font-weight:400;
+  padding-bottom:0;
+}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:pretty;font-optical-sizing:auto}
+h1,h2{font-family:var(--fd);line-height:1.08}
+h3{font-family:var(--ft);font-weight:600;line-height:1.25}
+p{margin:0;max-width:62ch}
+a{color:var(--prune);text-underline-offset:3px}
+img{max-width:100%;display:block}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--prune);outline-offset:2px;border-radius:4px}
+
+.enveloppe{max-width:var(--max);margin:0 auto;padding-inline:var(--gout)}
+section{scroll-margin-top:80px}
+.brume{background:var(--brume)}
+.bloc{padding-block:var(--s8)}
+.titre-section{font-size:30px;margin-bottom:var(--s3)}
+.chapo{font-size:18px;color:var(--sourdine);max-width:58ch;margin-bottom:var(--s6)}
+.petit{font-size:16px;line-height:1.45;color:var(--sourdine)}
+
+/* ---------- barre haute ---------- */
+.barre-haute{
+  position:sticky;top:0;z-index:40;height:var(--barre);background:var(--craie);
+  border-bottom:1px solid var(--filet);display:flex;align-items:center;
+}
+.barre-haute .enveloppe{display:flex;align-items:center;gap:var(--s3);width:100%}
+.barre-haute img{height:34px;width:auto}
+.nav-liens{margin-left:auto;display:flex;align-items:center;gap:var(--s3)}
+.nav-liens a.texte{font-size:16px;font-weight:600;color:var(--encre);text-decoration:none}
+.nav-liens a.texte:hover,.nav-liens a.texte:focus-visible{color:var(--prune);text-decoration:underline}
+@media(max-width:719px){.nav-liens a.texte{display:none}}
+
+/* ---------- boutons ---------- */
+.bouton{
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--s1);
+  min-height:48px;padding:0 24px;border-radius:4px;border:0;
+  font-family:var(--ft);font-size:18px;font-weight:600;line-height:1;
+  text-decoration:none;cursor:pointer;transition:background-color .12s ease,color .12s ease;
+}
+.bouton--plein{background:var(--prune);color:var(--craie)}
+.bouton--plein:hover,.bouton--plein:focus-visible{background:var(--prune-fonce)}
+.bouton--fil{background:var(--craie);color:var(--prune);box-shadow:inset 0 0 0 1.5px var(--prune)}
+.bouton--fil:hover,.bouton--fil:focus-visible{background:var(--brume)}
+.bouton--petit{min-height:40px;padding:0 16px;font-size:16px}
+
+/* ---------- héros ---------- */
+.heros{padding-block:var(--s8) var(--s12)}
+.heros .enveloppe{display:grid;gap:var(--s6)}
+.ancrage{font-size:16px;font-weight:600;color:var(--sourdine);margin-bottom:var(--s2)}
+.heros h1{font-size:40px;margin-bottom:var(--s3)}
+.heros h1 em{font-style:italic}
+.heros p.intro{font-size:19px;margin-bottom:var(--s4)}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s2)}
+.sous-actions{font-size:16px;color:var(--sourdine)}
+.sous-actions a{display:inline-block;padding-block:10px}
+.colonne-droite{display:grid;gap:var(--s4)}
+.citation{
+  font-family:var(--fd);font-style:italic;font-size:26px;line-height:1.2;
+  color:var(--sourdine);border-top:1px solid var(--filet);padding-top:var(--s3);max-width:26ch;
+}
+.citation cite{display:block;font-family:var(--ft);font-style:normal;font-size:16px;margin-top:var(--s2)}
+
+/* ---------- images ---------- */
+.photo{border-radius:8px;overflow:hidden;background:var(--brume)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo figcaption{
+  font-size:15px;line-height:1.4;color:var(--sourdine);padding:var(--s1) 2px 0;
+}
+figure{margin:0}
+.heros .photo{aspect-ratio:3/2}
+.bande{margin-top:var(--s8)}
+.bande .photo{aspect-ratio:16/7}
+.tarif .photo{aspect-ratio:3/2;margin-top:var(--s3)}
+
+/* ---------- horaires ---------- */
+.villes{display:flex;flex-wrap:wrap;gap:var(--s3);margin-bottom:var(--s6);align-items:center}
+.villes button{
+  background:none;border:0;padding:12px 0 10px;font-family:var(--ft);font-size:17px;font-weight:600;
+  color:var(--sourdine);cursor:pointer;border-bottom:2px solid transparent;transition:color .18s ease,border-color .18s ease;
+}
+.villes button[aria-pressed="true"]{color:var(--prune);border-bottom-color:var(--prune)}
+.semaine{display:grid;gap:var(--s6)}
+.jour > h3{
+  font-size:20px;padding-bottom:var(--s1);border-bottom:1px solid var(--filet);
+  position:sticky;top:var(--barre);background:var(--brume);z-index:10;
+}
+.creneaux{display:grid;gap:var(--s3);margin-top:var(--s3)}
+.creneau .etiquette{
+  display:inline-block;font-size:16px;font-weight:600;color:var(--prune);margin-bottom:2px;
+}
+.creneau .heure{font-size:20px;font-weight:600;line-height:1.2}
+.creneau .salle{font-size:18px;margin-top:2px}
+.creneau .adresse{font-size:16px;color:var(--sourdine);line-height:1.4}
+.creneau .avec{font-family:var(--fd);font-style:italic;font-size:17px;color:var(--sourdine)}
+.creneau .essayer{
+  display:inline-block;margin-top:2px;padding-block:10px;font-size:16px;font-weight:600;color:var(--prune);
+  text-decoration:none;box-shadow:inset 0 -1px 0 0 transparent;transition:box-shadow .12s ease;
+}
+.creneau .essayer:hover,.creneau .essayer:focus-visible{box-shadow:inset 0 -1px 0 0 var(--prune)}
+.creneau[hidden]{display:none}
+.zoom-note{margin-top:var(--s6);font-size:16px;color:var(--sourdine);max-width:58ch}
+
+/* ---------- tarifs ---------- */
+.tarifs{display:grid;gap:var(--s6)}
+.tarif{border-top:1px solid var(--filet);padding-top:var(--s2)}
+.tarif h3{font-size:20px;margin-bottom:var(--s2)}
+.tarif li{display:flex;justify-content:space-between;gap:var(--s2);padding:6px 0;font-size:18px;border-bottom:1px solid color-mix(in oklch,var(--encre) 7%,transparent)}
+.tarif li:last-child{border-bottom:0}
+.tarif li b{font-weight:600;white-space:nowrap}
+.tarif p{font-size:17px;color:var(--sourdine);margin-top:var(--s2)}
+.porte-ouverte{
+  margin-top:var(--s8);font-family:var(--fd);font-style:italic;font-size:26px;line-height:1.25;max-width:34ch;
+}
+.porte-ouverte + .actions{margin-top:var(--s3)}
+
+/* ---------- pour tous ---------- */
+.deux-col{display:grid;gap:var(--s6)}
+.deux-col p + p{margin-top:var(--s3)}
+.encart{background:var(--brume);padding:var(--s3);border-radius:8px}
+.encart h3{font-size:20px;margin-bottom:var(--s2)}
+.encart p{font-size:17px}
+.encart p + p{margin-top:var(--s2)}
+
+/* ---------- professeures ---------- */
+.profs{display:grid;gap:var(--s6)}
+.prof .cadre{
+  width:160px;height:160px;border-radius:8px;overflow:hidden;background:var(--brume);
+  display:flex;align-items:center;justify-content:center;margin-bottom:var(--s2);
+}
+.prof .cadre img{width:100%;height:100%;object-fit:cover}
+ /* Ophélie : source 302 px, affichée en 160 px, soit 1,89x. On ne l'agrandit pas au delà. */
+.prof h3{font-size:20px;margin-bottom:var(--s1)}
+.prof p{font-size:17px;max-width:40ch}
+
+/* ---------- ailleurs ---------- */
+.ailleurs li{padding:var(--s2) 0;border-bottom:1px solid var(--filet);font-size:18px;max-width:62ch}
+.ailleurs li:last-child{border-bottom:0}
+
+/* ---------- contact ---------- */
+.contact-grille{display:grid;gap:var(--s8)}
+label{display:block;font-size:16px;font-weight:600;margin-bottom:6px}
+input,select,textarea{
+  width:100%;font-family:var(--ft);font-size:18px;color:var(--encre);background:var(--craie);
+  border:1px solid color-mix(in oklch,var(--encre) 26%,transparent);border-radius:4px;
+  padding:12px 14px;min-height:48px;
+}
+textarea{min-height:110px;resize:vertical}
+.champ + .champ{margin-top:var(--s3)}
+form .actions{margin-top:var(--s4)}
+.coords li{padding:var(--s2) 0;border-bottom:1px solid var(--filet);font-size:18px}
+.coords a{display:inline-block;padding-block:10px}
+.coords li:last-child{border-bottom:0}
+.coords .quoi{display:block;font-size:16px;color:var(--sourdine)}
+
+/* ---------- pied ---------- */
+footer{background:var(--encre);color:var(--craie);text-align:center;padding-block:var(--s8)}
+footer .nom{font-family:var(--fd);font-size:24px;margin-bottom:var(--s2)}
+footer p{max-width:none;font-size:16px;color:color-mix(in oklch,var(--craie) 78%,var(--encre))}
+footer a{color:var(--craie)}
+footer .liens{margin-top:var(--s3);display:flex;gap:var(--s3);justify-content:center;flex-wrap:wrap;font-size:16px;align-items:center}
+footer .liens a{display:inline-block;padding-block:10px}
+
+/* ---------- barre fixe du bas, mobile ---------- */
+.barre-bas{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--craie);
+  border-top:1px solid var(--filet);padding:var(--s1) var(--gout);
+  display:flex;gap:var(--s2);transform:translateY(110%);transition:transform .24s cubic-bezier(.2,.7,.2,1);
+}
+.barre-bas.visible{transform:translateY(0)}
+.barre-bas .bouton{flex:1}
+@media(min-width:720px){.barre-bas{display:none}}
+
+/* ---------- apparition du héros, une seule fois ---------- */
+.monte{opacity:0;transform:translateY(12px);animation:monte .24s cubic-bezier(.2,.7,.2,1) forwards}
+.monte:nth-child(1){animation-delay:0ms}
+.monte:nth-child(2){animation-delay:60ms}
+.monte:nth-child(3){animation-delay:120ms}
+.monte:nth-child(4){animation-delay:180ms}
+.monte:nth-child(5){animation-delay:240ms}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* ---------- grand écran ---------- */
+@media(min-width:720px){
+  :root{--gout:28px}
+  body{font-size:19px}
+  .bloc{padding-block:var(--s12)}
+  .titre-section{font-size:40px}
+  .heros h1{font-size:60px}
+  .heros .enveloppe{grid-template-columns:6fr 5fr;gap:var(--s8);align-items:start}
+  .citation{font-size:30px;padding-top:var(--s4)}
+  .semaine{grid-template-columns:repeat(4,1fr);gap:var(--s4);align-items:start}
+  .jour > h3{position:static;font-size:22px}
+  .tarifs{grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+  .deux-col{grid-template-columns:7fr 5fr;gap:var(--s8)}
+  .profs{grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+  .contact-grille{grid-template-columns:7fr 5fr;gap:var(--s8)}
+  .porte-ouverte{font-size:30px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .monte{opacity:1;transform:none}
+  .barre-bas{transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<header class="barre-haute">
+  <div class="enveloppe">
+    <a href="#haut" aria-label="YoGa'gana, retour en haut"><img src="assets/yogagana/logo.png" alt="YoGa'gana" width="679" height="198" /></a>
+    <nav class="nav-liens">
+      <a class="texte" href="#horaires">Horaires</a>
+      <a class="texte" href="#tarifs">Tarifs</a>
+      <a class="bouton bouton--fil bouton--petit" href="tel:+33608897900">06 08 89 79 00</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+
+  <section class="heros">
+    <div class="enveloppe">
+      <div>
+        <p class="ancrage monte">Association de yoga · L'Isle-d'Abeau et Bourgoin-Jallieu</p>
+        <h1 class="monte">Du yoga <em>pour tous</em>, près de chez vous.</h1>
+        <p class="intro monte">Huit cours pour adultes par semaine, en salle et sur Zoom en même temps, le midi ou le soir. Chaque posture se pratique à trois degrés, pour que chacun trouve le sien quelle que soit sa forme.</p>
+        <div class="actions monte">
+          <a class="bouton bouton--plein" href="#horaires">Venir essayer un cours</a>
+          <a class="bouton bouton--fil" href="tel:+33608897900">Nous appeler</a>
+        </div>
+        <p class="sous-actions monte">Un cours à l'unité, 12 €, sans engagement. Vos moyens sont serrés ? <a href="#tarifs">On en discute.</a></p>
+      </div>
+      <div class="colonne-droite">
+        <figure class="photo">
+          <img src="assets/yogagana/salle.jpg" alt="Une salle de cours, les tapis posés avant l'arrivée du groupe" width="1600" height="1066" />
+        </figure>
+        <blockquote class="citation">
+          « Pas de condition de revenus, si vous avez des petits moyens on en discute ! »
+          <cite>Nolwenn Bourgeois, professeure et fondatrice de l'association</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="horaires" class="bloc brume">
+    <div class="enveloppe">
+      <h2 class="titre-section">Les cours de la semaine</h2>
+      <p class="chapo">Tous les cours collectifs pour adultes sont donnés en salle et sur Zoom en même temps : vous venez, ou vous suivez de chez vous. Du vendredi au dimanche, pas de cours.</p>
+
+      <div class="villes" role="group" aria-label="Filtrer par ville">
+        <span class="petit">Afficher :</span>
+        <button type="button" data-ville="toutes" aria-pressed="true">Les deux villes</button>
+        <button type="button" data-ville="isle" aria-pressed="false">L'Isle-d'Abeau</button>
+        <button type="button" data-ville="bourgoin" aria-pressed="false">Bourgoin-Jallieu</button>
+      </div>
+
+      <div class="semaine">
+
+        <div class="jour">
+          <h3>Lundi</h3>
+          <div class="creneaux">
+            <div class="creneau" data-ville="isle">
+              <p class="heure">12h00 à 13h30</p>
+              <p class="salle">Salle du stade de rugby</p>
+              <p class="adresse">route de Saint-Marcel (espace J. Grisollet), L'Isle-d'Abeau</p>
+              <a class="essayer" href="#contact" data-creneau="Lundi 12h00, stade de rugby, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="jour">
+          <h3>Mardi</h3>
+          <div class="creneaux">
+            <div class="creneau" data-ville="bourgoin">
+              <p class="heure">18h25 à 19h55</p>
+              <p class="salle">École Notre-Dame</p>
+              <p class="adresse">51 rue de la Rivoire, Bourgoin-Jallieu</p>
+              <a class="essayer" href="#contact" data-creneau="Mardi 18h25, école Notre-Dame, Bourgoin-Jallieu">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="bourgoin">
+              <p class="heure">20h05 à 21h30</p>
+              <p class="salle">École Notre-Dame</p>
+              <p class="adresse">51 rue de la Rivoire, Bourgoin-Jallieu</p>
+              <a class="essayer" href="#contact" data-creneau="Mardi 20h05, école Notre-Dame, Bourgoin-Jallieu">Essayer ce cours</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="jour">
+          <h3>Mercredi</h3>
+          <div class="creneaux">
+            <div class="creneau" data-ville="isle">
+              <p class="heure">10h30 à 11h45</p>
+              <p class="salle">Salle David Douillet</p>
+              <p class="adresse">boulevard de Fondbonnière, L'Isle-d'Abeau</p>
+              <p class="avec">avec Isabelle</p>
+              <a class="essayer" href="#contact" data-creneau="Mercredi 10h30, salle David Douillet, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="isle">
+              <p class="heure">12h10 à 13h25</p>
+              <p class="salle">Salle David Douillet</p>
+              <p class="adresse">boulevard de Fondbonnière, L'Isle-d'Abeau</p>
+              <p class="avec">avec Ophélie</p>
+              <a class="essayer" href="#contact" data-creneau="Mercredi 12h10, salle David Douillet, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="isle">
+              <p class="etiquette">Enfants de 6 à 10 ans</p>
+              <p class="heure">16h10 à 17h10</p>
+              <p class="salle">Salle du stade de rugby</p>
+              <p class="adresse">route de Saint-Marcel (espace J. Grisollet), L'Isle-d'Abeau</p>
+              <a class="essayer" href="#contact" data-creneau="Mercredi 16h10, cours enfants, stade de rugby, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="bourgoin">
+              <p class="heure">18h00 à 19h30</p>
+              <p class="salle">École Notre-Dame</p>
+              <p class="adresse">51 rue de la Rivoire, Bourgoin-Jallieu</p>
+              <a class="essayer" href="#contact" data-creneau="Mercredi 18h00, école Notre-Dame, Bourgoin-Jallieu">Essayer ce cours</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="jour">
+          <h3>Jeudi</h3>
+          <div class="creneaux">
+            <div class="creneau" data-ville="isle">
+              <p class="heure">8h35 à 10h05</p>
+              <p class="salle">Salle du stade de rugby</p>
+              <p class="adresse">route de Saint-Marcel (espace J. Grisollet), L'Isle-d'Abeau</p>
+              <a class="essayer" href="#contact" data-creneau="Jeudi 8h35, stade de rugby, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="isle">
+              <p class="heure">18h25 à 19h55</p>
+              <p class="salle">Salle David Douillet</p>
+              <p class="adresse">boulevard de Fondbonnière, L'Isle-d'Abeau</p>
+              <a class="essayer" href="#contact" data-creneau="Jeudi 18h25, salle David Douillet, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+            <div class="creneau" data-ville="isle">
+              <p class="heure">20h05 à 21h30</p>
+              <p class="salle">Salle David Douillet</p>
+              <p class="adresse">boulevard de Fondbonnière, L'Isle-d'Abeau</p>
+              <a class="essayer" href="#contact" data-creneau="Jeudi 20h05, salle David Douillet, L'Isle-d'Abeau">Essayer ce cours</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="zoom-note">Le cours pour enfants se donne en salle uniquement. Pour les adultes, dites simplement à Nolwenn si vous venez ou si vous suivez sur Zoom.</p>
+    </div>
+  </section>
+
+  <section id="tarifs" class="bloc">
+    <div class="enveloppe">
+      <h2 class="titre-section">Ce que ça coûte</h2>
+      <div class="tarifs">
+        <div class="tarif">
+          <h3>Adultes</h3>
+          <ul>
+            <li><span>Un cours à l'unité</span> <b>12 €</b></li>
+            <li><span>L'année, 32 semaines de cours</span> <b>304,50 €</b></li>
+            <li><span>Adhésion à l'association</span> <b>10 €</b></li>
+          </ul>
+        </div>
+        <div class="tarif">
+          <h3>Enfants de 6 à 10 ans</h3>
+          <ul>
+            <li><span>Un cours à l'unité</span> <b>10 €</b></li>
+            <li><span>L'année, 32 cours</span> <b>227 €</b></li>
+            <li><span>Adhésion à l'association</span> <b>10 €</b></li>
+          </ul>
+        </div>
+        <div class="tarif">
+          <h3>Cours particulier, chez Nolwenn</h3>
+          <ul>
+            <li><span>Une heure, pour une personne</span> <b>45 €</b></li>
+          </ul>
+          <p>Vous repartez avec votre séance dessinée sur une feuille, ajustée à vos envies et à vos besoins. Nolwenn a été formée à l'accompagnement personnalisé par Lola Mallein.</p>
+          <figure class="photo">
+            <img src="assets/yogagana/feuille.jpg" alt="Un carnet ouvert, une séance de yoga dessinée à la main" width="1200" height="800" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+
+      <p class="porte-ouverte">« Couples, étudiants, chômeurs, personnes en ALD, petits moyens : nous contacter pour étudier ensemble un tarif qui puisse vous permettre la pratique du yoga. »</p>
+      <div class="actions">
+        <a class="bouton bouton--fil" href="#contact">Nous écrire</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pour-tous" class="bloc">
+    <div class="enveloppe deux-col">
+      <div>
+        <h2 class="titre-section">Pour tous, ça veut dire qui ?</h2>
+        <p>Peu importe vos capacités physiques. Chaque posture est proposée avec des degrés de progression et des ajustements, du plus doux au plus intense. Que vous soyez en pleine forme ou avec des limitations, venez essayer : les options proposées permettent une pratique ajustée à vos besoins et à vos envies de l'instant.</p>
+        <p>Un cours complet, ce sont les postures (asana), la respiration (pranayama), la méditation et la relaxation. Ils changent tout au long de l'année.</p>
+      </div>
+      <aside class="encart">
+        <h3>Le Yoga de l'Énergie</h3>
+        <p>C'est une pédagogie du Hatha Yoga traditionnel, adaptée aux pratiquants occidentaux. On la doit à Roger Clerc, puis à Boris Tatzky.</p>
+        <p>Elle se travaille en trois degrés pour chaque posture, du plus doux au plus intense, et allie la pratique physique, le contrôle de la respiration et la détente profonde. C'est ce qui permet à deux personnes très différentes de suivre le même cours, chacune à sa mesure.</p>
+      </aside>
+    </div>
+    <div class="enveloppe bande">
+      <figure class="photo">
+        <img src="assets/yogagana/detail.jpg" alt="Un coin de salle, tapis roulés et couverture pliée" width="1600" height="700" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section id="professeures" class="bloc brume">
+    <div class="enveloppe">
+      <h2 class="titre-section">Trois professeures</h2>
+      <div class="profs">
+        <div class="prof">
+          <div class="cadre"><img src="assets/yogagana/nolwenn.jpg" alt="Nolwenn Bourgeois" width="720" height="720" loading="lazy" /></div>
+          <h3>Nolwenn Bourgeois</h3>
+          <p>Professeure de yoga diplômée après quatre années de formation, elle enseigne depuis 2016 et continue à se former chaque année. Formée au Hatha Yoga à l'École Française de Yoga de Lyon, en formation continue en Viniyoga auprès de Lola Mallein. Éducatrice spécialisée diplômée d'État. C'est elle qui a créé l'association.</p>
+        </div>
+        <div class="prof">
+          <div class="cadre"><img src="assets/yogagana/isabelle.jpg" alt="Isabelle Di Pippa" width="720" height="720" loading="lazy" /></div>
+          <h3>Isabelle Di Pippa</h3>
+          <p>Elle a rejoint YoGa'gana à la rentrée de septembre 2026 et enseigne le mercredi à 10h30.</p>
+        </div>
+        <div class="prof">
+          <div class="cadre"><img src="assets/yogagana/ophelie.jpg" alt="Ophélie Fila" width="302" height="302" loading="lazy" /></div>
+          <h3>Ophélie Fila</h3>
+          <p>Elle a rejoint YoGa'gana à la rentrée de septembre 2026 et enseigne le mercredi à 12h10.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ailleurs" class="bloc">
+    <div class="enveloppe">
+      <h2 class="titre-section">YoGa'gana se déplace</h2>
+      <p class="chapo">L'association intervient aussi hors de ses créneaux, sur demande.</p>
+      <ul class="ailleurs">
+        <li>Sur votre lieu de travail et en séminaire d'entreprise.</li>
+        <li>En établissement scolaire, de la crèche au lycée, dans les services de soins et les institutions sanitaires et sociales.</li>
+        <li>Pour un événement privé ou en plein air : anniversaire, séance en famille, enterrement de vie de jeune fille.</li>
+        <li>Bons cadeaux sur demande.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="bloc brume">
+    <div class="enveloppe contact-grille">
+      <div>
+        <h2 class="titre-section">Venir essayer</h2>
+        <p class="chapo">Dites-nous le créneau qui vous arrangerait. Si vous avez une limitation physique ou une question sur le tarif, dites-le aussi : c'est prévu pour.</p>
+        <form id="formulaire" novalidate>
+          <div class="champ">
+            <label for="nom">Votre prénom</label>
+            <input type="text" id="nom" name="nom" autocomplete="given-name" />
+          </div>
+          <div class="champ">
+            <label for="contact-retour">Votre téléphone ou votre courriel</label>
+            <input type="text" id="contact-retour" name="contact-retour" autocomplete="tel" />
+          </div>
+          <div class="champ">
+            <label for="creneau">Le cours qui vous intéresse</label>
+            <select id="creneau" name="creneau">
+              <option value="">Je ne sais pas encore</option>
+              <option>Lundi 12h00, stade de rugby, L'Isle-d'Abeau</option>
+              <option>Mardi 18h25, école Notre-Dame, Bourgoin-Jallieu</option>
+              <option>Mardi 20h05, école Notre-Dame, Bourgoin-Jallieu</option>
+              <option>Mercredi 10h30, salle David Douillet, L'Isle-d'Abeau</option>
+              <option>Mercredi 12h10, salle David Douillet, L'Isle-d'Abeau</option>
+              <option>Mercredi 16h10, cours enfants, stade de rugby, L'Isle-d'Abeau</option>
+              <option>Mercredi 18h00, école Notre-Dame, Bourgoin-Jallieu</option>
+              <option>Jeudi 8h35, stade de rugby, L'Isle-d'Abeau</option>
+              <option>Jeudi 18h25, salle David Douillet, L'Isle-d'Abeau</option>
+              <option>Jeudi 20h05, salle David Douillet, L'Isle-d'Abeau</option>
+              <option>Un cours particulier</option>
+            </select>
+          </div>
+          <div class="champ">
+            <label for="message">Une question, une contrainte physique, un budget serré : dites-le nous</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <div class="actions">
+            <button class="bouton bouton--plein" type="submit">Envoyer ma demande</button>
+          </div>
+          <p class="petit" style="margin-top:var(--s2)">Nolwenn vous rappelle pour convenir du premier cours.</p>
+        </form>
+      </div>
+      <div>
+        <ul class="coords">
+          <li><span class="quoi">Téléphone</span> <a href="tel:+33608897900">06 08 89 79 00</a></li>
+          <li><span class="quoi">Courriel</span> <a href="mailto:yogagana38@gmail.com">yogagana38@gmail.com</a></li>
+          <li><span class="quoi">Adresse</span> rue Salvador Dali, 38080 L'Isle-d'Abeau</li>
+          <li><span class="quoi">Les nouvelles à jour</span> <a href="https://www.facebook.com/yogagana38/" rel="noopener">YoGa'gana sur Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="enveloppe">
+    <p class="nom">YoGa'gana</p>
+    <p>Association de yoga, L'Isle-d'Abeau. Cours à L'Isle-d'Abeau et à Bourgoin-Jallieu, en salle et sur Zoom.</p>
+    <div class="liens">
+      <a href="https://www.facebook.com/yogagana38/" rel="noopener">Facebook</a>
+      <span>© 2026 YoGa'gana</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barre-bas" id="barre-bas">
+  <a class="bouton bouton--fil" href="#horaires">Horaires</a>
+  <a class="bouton bouton--plein" href="#contact">Venir essayer</a>
+</div>
+
+<script>
+// Filtre de ville : masque les créneaux de l'autre ville, ne réordonne rien.
+document.querySelectorAll('.villes button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var ville = b.dataset.ville;
+    document.querySelectorAll('.villes button').forEach(function (autre) {
+      autre.setAttribute('aria-pressed', String(autre === b));
+    });
+    document.querySelectorAll('.creneau').forEach(function (c) {
+      c.hidden = (ville !== 'toutes' && c.dataset.ville !== ville);
+    });
+    document.querySelectorAll('.jour').forEach(function (j) {
+      var reste = j.querySelectorAll('.creneau:not([hidden])').length;
+      j.hidden = (reste === 0);
+    });
+  });
+});
+
+// « Essayer ce cours » pré-remplit la liste du formulaire.
+document.querySelectorAll('.essayer').forEach(function (a) {
+  a.addEventListener('click', function () {
+    var liste = document.getElementById('creneau');
+    var voulu = a.dataset.creneau;
+    Array.prototype.forEach.call(liste.options, function (o) {
+      if (o.text === voulu) liste.value = o.value || o.text;
+    });
+  });
+});
+
+// Formulaire de démonstration : il ouvre un courriel pré-rempli, il n'envoie rien tout seul.
+document.getElementById('formulaire').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var nom = document.getElementById('nom').value.trim();
+  var retour = document.getElementById('contact-retour').value.trim();
+  var creneau = document.getElementById('creneau').value;
+  var message = document.getElementById('message').value.trim();
+  var corps = 'Bonjour,\n\n' +
+    (nom ? 'Je m\'appelle ' + nom + '.\n' : '') +
+    (creneau ? 'Le cours qui m\'intéresse : ' + creneau + '.\n' : '') +
+    (retour ? 'Vous pouvez me joindre au ' + retour + '.\n' : '') +
+    (message ? '\n' + message + '\n' : '') +
+    '\nMerci,\n';
+  window.location.href = 'mailto:yogagana38@gmail.com?subject=' +
+    encodeURIComponent('Essayer un cours de yoga') + '&body=' + encodeURIComponent(corps);
+});
+
+// La barre du bas apparaît quand le héros est sorti, disparaît sur le formulaire.
+(function () {
+  var barre = document.getElementById('barre-bas');
+  var heros = document.querySelector('.heros');
+  var contact = document.getElementById('contact');
+  var horsHeros = false, surContact = false;
+  function maj() { barre.classList.toggle('visible', horsHeros && !surContact); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { horsHeros = !e[0].isIntersecting; maj(); },
+      { rootMargin: '-40px 0px 0px 0px' }).observe(heros);
+    new IntersectionObserver(function (e) { surContact = e[0].isIntersecting; maj(); },
+      { threshold: 0.15 }).observe(contact);
+  }
+})();
+</script>
+</body>
+</html>
