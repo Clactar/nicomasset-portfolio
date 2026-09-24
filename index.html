@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nicolas Masset · Création de sites web pour artisans et indépendants</title>
-<meta name="description" content="Nicolas Masset, développeur web indépendant : je crée des sites complets pour les artisans et les indépendants. Cinq pages, vos réalisations en photo, une demande de devis qui arrive dans votre boîte. 1 500 € tout compris, prix connu avant tout travail. Vendée, toute la France.">
-<meta property="og:title" content="Nicolas Masset · Création de sites web">
-<meta property="og:description" content="Des sites qui donnent envie de pousser la porte. Un site complet, cinq pages, 1 500 € tout compris, le prix connu avant tout travail.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolas Masset · Je refais votre page d'accueil</title>
+<meta name="description" content="Je refais la page d'accueil de votre site. Vous la regardez sur votre téléphone, je la retouche jusqu'à ce qu'elle vous plaise, et vous ne payez 390 € que si vous la gardez.">
+<meta property="og:title" content="Nicolas Masset · Je refais votre page d'accueil">
+<meta property="og:description" content="Je refais la page d'accueil de votre site. 390 €, et vous ne payez que si vous la gardez.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nicomasset.com/">
 <meta property="og:image" content="https://nicomasset.com/assets/og.png">
-<meta name="theme-color" content="#08090d">
+<meta name="theme-color" content="#EEF0EB">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://nicomasset.com/">
-<link rel="preload" href="/assets/fonts/ClashDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/styles.css?v=4">
-<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="/accueil/fonts/familjen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/accueil/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/accueil/fonts/caveat-brush.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/accueil/style.css?v=1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Nicolas Masset — Création de sites web",
+  "name": "Nicolas Masset",
   "url": "https://nicomasset.com/",
-  "description": "Développeur web indépendant : création de sites internet pour artisans et indépendants.",
-  "founder": { "@type": "Person", "name": "Nicolas Masset", "jobTitle": "Développeur web indépendant" },
+  "description": "Je refais la page d'accueil des sites d'indépendants. 390 €, payée seulement si elle est gardée.",
+  "founder": { "@type": "Person", "name": "Nicolas Masset" },
   "areaServed": "France",
   "address": { "@type": "PostalAddress", "addressRegion": "Vendée", "addressCountry": "FR" }
 }
@@ -32,275 +32,210 @@
 </head>
 <body>
 
-<div class="io-sentinel" id="topSentinel" aria-hidden="true"></div>
-<div class="halo" id="halo" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
-<a class="skip" href="#top">Aller au contenu</a>
-
-<header class="hdr" id="hdr">
-  <div class="wrap nav">
-    <a href="#top" class="brand" aria-label="Nicolas Masset, accueil">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M10 22V10.4l1.9.0L21 19V10h2v11.6h-1.9L12 12.9V22h-2z" fill="#08090d"/></svg>
-      <span class="brand-name">Nicolas Masset</span>
-    </a>
-    <nav class="menu" id="menu" aria-label="Navigation principale">
+<header class="entete">
+  <div class="enveloppe">
+    <a class="marque" href="#haut">Nicolas Masset</a>
+    <nav aria-label="Navigation principale">
+      <a href="#comment">Comment ça se passe</a>
+      <a href="#prix">Prix</a>
       <a href="#realisations">Réalisations</a>
-      <a href="#methode">La méthode</a>
-      <a href="#apropos">Qui suis-je</a>
-      <a href="#contact" class="nav-cta magnet">Écrivez-moi</a>
+      <a class="bouton bouton--petit ecrire" href="mailto:nicolas@nicomasset.com?subject=Refaire%20ma%20page%20d%27accueil&amp;body=Bonjour%20Nicolas%2C%0A%0AL%27adresse%20de%20mon%20site%20%3A%20">Écrivez-moi</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
 </header>
 
-<main id="top">
+<main id="haut">
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="film" aria-hidden="true">
-    <div class="film-col"><div class="film-col-inner">
-      <img src="/assets/shots/paramaths.webp" alt="" width="1600" height="1000">
-      <img src="/assets/shots/terre-seve.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/vendee.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/paramaths.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/terre-seve.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/vendee.webp" alt="" width="1600" height="1000" loading="lazy">
-    </div></div>
-    <div class="film-col"><div class="film-col-inner">
-      <img src="/assets/shots/arts.webp" alt="" width="1600" height="1000">
-      <img src="/assets/shots/adelinej.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/noemie.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/drone.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/quatresaisons.webp" alt="" width="1600" height="900" loading="lazy">
-      <img src="/assets/shots/arts.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/adelinej.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/noemie.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/drone.webp" alt="" width="1600" height="1000" loading="lazy">
-      <img src="/assets/shots/quatresaisons.webp" alt="" width="1600" height="900" loading="lazy">
-    </div></div>
-  </div>
-
-  <div class="wrap hero-inner">
-    <p class="hero-kicker">Nicolas Masset · Développeur web indépendant</p>
-    <h1>
-      <span class="wd"><i style="animation-delay:.05s">Des</i></span>
-      <span class="wd"><i style="animation-delay:.11s">sites</i></span>
-      <span class="wd"><i style="animation-delay:.17s">qui</i></span>
-      <span class="wd"><i style="animation-delay:.23s">donnent</i></span>
-      <span class="wd"><i style="animation-delay:.29s">envie</i></span>
-      <span class="wd"><i style="animation-delay:.35s">de</i></span>
-      <span class="wd"><i style="animation-delay:.41s"><em>pousser</em></i></span>
-      <span class="wd"><i style="animation-delay:.47s"><em>la</em></i></span>
-      <span class="wd"><i style="animation-delay:.53s"><em>porte.</em></i></span>
-    </h1>
-    <p class="hero-sub">Je crée des sites complets pour artisans et indépendants&nbsp;: cinq pages, vos réalisations en photo, une demande de devis qui arrive dans votre boîte. 1&nbsp;500&nbsp;€ tout compris, et le prix est connu avant tout travail.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-solid magnet" href="#contact"><span class="btn-fill"></span><span>Me décrire votre activité</span></a>
-      <a class="btn btn-line magnet" href="/apercus/paysagiste-temoin/"><span>Voir un site exemple</span></a>
-      <a class="btn btn-line magnet" href="#realisations"><span>Voir les réalisations</span></a>
+<section class="heros" aria-labelledby="titre">
+  <div class="enveloppe">
+    <div class="texte-heros">
+      <h1 id="titre" data-t="S1.titre">Je refais votre page d'accueil. Vous ne payez que si vous la gardez.</h1>
+      <p class="prix-ligne" data-t="S1.texte"><strong class="marque-jaune">390&nbsp;€</strong>, et je la retouche jusqu'à ce qu'elle vous plaise.</p>
+      <div class="actions">
+        <a class="bouton ecrire" href="mailto:nicolas@nicomasset.com?subject=Refaire%20ma%20page%20d%27accueil&amp;body=Bonjour%20Nicolas%2C%0A%0AL%27adresse%20de%20mon%20site%20%3A%20" data-t="S1.bouton">Refaites la mienne</a>
+      </div>
+      <p class="aide" data-t="S1.aide">Un mail s'ouvre vers moi. L'adresse de votre site suffit.</p>
+      <p class="suite-lien"><a class="lien" href="#adeline" data-t="S1.lien" data-montrer="apres">Voir la nouvelle page d'Adeline</a></p>
     </div>
+
+    <figure class="epreuve" id="adeline" data-etat="avant" aria-labelledby="adeline-titre">
+      <div class="epreuve-tete">
+        <h2 id="adeline-titre" data-t="S4.adeline.titre">Adeline.j, coiffure et maquillage de mariée, Diémoz (Isère)</h2>
+        <p data-t="S4.adeline.texte">Son ancienne adresse était impossible à dicter à des témoins. Elle est devenue adelinej.fr, et une future mariée peut l'appeler ou lui écrire dès le premier écran.</p>
+      </div>
+      <div class="bascule" role="group" aria-label="Choisir la version affichée">
+        <button type="button" aria-pressed="true" data-vers="avant">Avant, sur Wix</button>
+        <button type="button" aria-pressed="false" data-vers="apres">Après, adelinej.fr</button>
+      </div>
+      <!-- planche : repère 1440 x 2227 (téléphone = 1000 de large, posé à x 440), notes et flèches y sont placées -->
+      <div class="planche">
+        <div class="telephone">
+          <div class="barre" aria-hidden="true">
+            <svg width="11" height="13" viewBox="0 0 11 13"><rect x="1" y="5.5" width="9" height="7" rx="1.5" fill="currentColor"/><path d="M3 5.5V4a2.5 2.5 0 0 1 5 0v1.5" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+            <span class="url url--avant">adelinejcoiffure.wixsite.com/coiffureprivadelinej</span>
+            <span class="url url--apres" hidden>adelinej.fr</span>
+          </div>
+          <div class="ecran">
+            <div class="couche couche--avant">
+              <img src="/accueil/img/adeline-avant.webp" width="600" height="1300" alt="Le site Wix d'Adeline sur un téléphone : bandeau publicitaire Wix en haut, titre coupé au bord droit de l'écran.">
+            </div>
+            <div class="couche couche--apres">
+              <img src="/accueil/img/adeline-apres.webp" width="600" height="1300" alt="La nouvelle page d'Adeline sur adelinej.fr : titre complet, ce qu'elle fait et où, bouton pour lui écrire et son numéro." loading="lazy">
+            </div>
+            <span class="rideau"></span>
+          </div>
+        </div>
+        <svg class="fleches fleches--avant" viewBox="0 0 1440 2227" aria-hidden="true" focusable="false">
+          <g><path pathLength="1" d="M352 112C420 92 482 84 548 92"/><path pathLength="1" d="M500 59L548 92L504 109"/></g>
+          <g><path pathLength="1" d="M300 352C390 356 460 336 512 288"/><path pathLength="1" d="M456 303L512 288L496 333"/></g>
+          <g><path pathLength="1" d="M352 1566C700 1650 1150 1610 1384 1402"/><path pathLength="1" d="M1328 1416L1384 1402L1367 1447"/></g>
+        </svg>
+        <svg class="fleches fleches--apres" viewBox="0 0 1440 2227" aria-hidden="true" focusable="false">
+          <g><path pathLength="1" d="M352 112C420 92 482 84 548 92"/><path pathLength="1" d="M500 59L548 92L504 109"/></g>
+          <g><path pathLength="1" d="M352 1146C410 1128 470 1150 522 1188"/><path pathLength="1" d="M497 1136L522 1188L475 1181"/></g>
+          <g><path pathLength="1" d="M360 1650C410 1618 470 1606 526 1604"/><path pathLength="1" d="M474 1579L526 1604L485 1628"/></g>
+        </svg>
+        <ol class="notes notes--avant" aria-label="Ce qui coûtait des clientes">
+          <li style="--x:0;--y:20" data-t="S4.adeline.avant1">impossible à dicter à ses témoins</li>
+          <li style="--x:0;--y:372" data-t="S4.adeline.avant2">on lit Wix avant de lire Adeline</li>
+          <li style="--x:0;--y:1470" data-t="S4.adeline.avant3">le titre sort de l'écran</li>
+        </ol>
+        <ol class="notes notes--apres" aria-label="Ce qui a changé" hidden>
+          <li style="--x:0;--y:20" data-t="S4.adeline.apres1">une adresse à son nom</li>
+          <li style="--x:0;--y:1040" data-t="S4.adeline.apres2">ce qu'elle fait, et où</li>
+          <li style="--x:0;--y:1560" data-t="S4.adeline.apres3">l'appeler ou lui écrire</li>
+        </ol>
+      </div>
+      <p class="voir"><span class="etiquette etiquette--ligne">En ligne</span> <a class="lien" href="https://adelinej.fr" target="_blank" rel="noopener">Voir adelinej.fr</a></p>
+    </figure>
   </div>
 </section>
 
-<!-- ===================== MARQUEE ===================== -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Paysagistes</span><span>Photographes</span><span>Traiteurs</span><span>Céramistes</span><span>Fleuristes</span><span>Gîtes &amp; chambres d’hôtes</span><span>Tatoueurs</span><span>Ébénistes</span><span>Cavistes</span><span>Professeurs</span><span>Écoles</span><span>Associations</span>
-    <span>Paysagistes</span><span>Photographes</span><span>Traiteurs</span><span>Céramistes</span><span>Fleuristes</span><span>Gîtes &amp; chambres d’hôtes</span><span>Tatoueurs</span><span>Ébénistes</span><span>Cavistes</span><span>Professeurs</span><span>Écoles</span><span>Associations</span>
-  </div>
-</div>
-
-<!-- ===================== RÉALISATIONS : STACK ===================== -->
-<section id="realisations">
-  <div class="wrap">
-    <header class="sec-head reveal">
-      <h2>Le travail parle mieux que&nbsp;moi.</h2>
-      <p>Cinq sites en ligne, conçus, mis en ligne et maintenus de bout en bout. Faites défiler.</p>
-    </header>
-  </div>
-
-  <div class="stack">
-    <article class="panel">
-      <div class="wrap panel-grid">
-        <div>
-          <div class="panel-idx" aria-hidden="true">01</div>
-          <h3>Adeline.j, coiffure et maquillage de mariée</h3>
-          <p class="panel-desc">La page d’une spécialiste de la mise en beauté des mariées à Diémoz, près de Lyon&nbsp;: son essai, ses tarifs, ses ornements floraux et une demande qui arrive directement dans sa boîte. Nom de domaine à son nom, hébergement et mise en ligne compris.</p>
-          <a class="panel-link" href="https://adelinej.fr" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="tilt">
-          <div class="panel-shot"><img src="/assets/shots/adelinej.webp" alt="Site d’Adeline.j, coiffure et maquillage de mariée à Diémoz" width="1600" height="1000"></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="panel">
-      <div class="wrap panel-grid">
-        <div>
-          <div class="panel-idx" aria-hidden="true">02</div>
-          <h3>Noémie Achet-Piret, naturopathe</h3>
-          <p class="panel-desc">Le site d’un cabinet de naturopathie à Nort-sur-Erdre&nbsp;: prestations, témoignages, et des actualités que la praticienne publie elle-même. Domaine, hébergement et mise en ligne compris.</p>
-          <a class="panel-link" href="https://noemie-achet-piret.fr" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="tilt">
-          <div class="panel-shot"><img src="/assets/shots/noemie.webp" alt="Site de Noémie Achet-Piret, naturopathe à Nort-sur-Erdre" width="1600" height="1000"></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="panel">
-      <div class="wrap panel-grid">
-        <div>
-          <div class="panel-idx" aria-hidden="true">03</div>
-          <h3>paramaths.fr</h3>
-          <p class="panel-desc">Mon site de cours de maths&nbsp;: cours en ligne du collège à la prépa, réservation de séances et paiement en ligne. Conçu, développé et exploité au quotidien.</p>
-          <a class="panel-link" href="https://paramaths.fr" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="tilt">
-          <div class="panel-shot"><img src="/assets/shots/paramaths.webp" alt="Page d’accueil de ParaMaths, cours de mathématiques en ligne" loading="lazy" width="1600" height="1000"></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="panel">
-      <div class="wrap panel-grid">
-        <div>
-          <div class="panel-idx" aria-hidden="true">04</div>
-          <h3>École Les Quatre Saisons</h3>
-          <p class="panel-desc">Le site d’une école Montessori à La Roche-sur-Yon&nbsp;: pédagogie, équipe, pré-inscriptions en ligne et vie de l’école.</p>
-          <a class="panel-link" href="https://lesquatresaisons-montessori.fr" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="tilt">
-          <div class="panel-shot"><img src="/assets/shots/quatresaisons.webp" alt="Site de l’école Montessori Les Quatre Saisons à La Roche-sur-Yon" loading="lazy" width="1600" height="900"></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="panel">
-      <div class="wrap panel-grid">
-        <div>
-          <div class="panel-idx" aria-hidden="true">05</div>
-          <h3>Vendée Apprendre Autrement</h3>
-          <p class="panel-desc">Le site d’une association éducative&nbsp;: présentation du projet, collecte de dons défiscalisés et actualités.</p>
-          <a class="panel-link" href="https://vendeeapprendreautrement.fr" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="tilt">
-          <div class="panel-shot"><img src="/assets/shots/vendee.webp" alt="Site de l’association Vendée Apprendre Autrement" loading="lazy" width="1600" height="1000"></div>
-        </div>
-      </div>
-    </article>
-
-    <div class="stack-tail" aria-hidden="true"></div>
-  </div>
-
-  <!-- Maquettes-concepts -->
-  <div class="mocks">
-    <div class="wrap">
-      <div class="mocks-head reveal">
-        <h3>Et pour voir ce que votre métier mérite&nbsp;: un site témoin complet et deux maquettes-concepts.</h3>
-        <p>Des démonstrations non contractuelles, construites comme de vrais sites. Entreprises fictives, photos d’illustration.</p>
-      </div>
-      <div class="mock-grid">
-        <a class="mock reveal" href="/realisations/arts-et-images.html">
-          <div class="shot"><img src="/assets/shots/arts.webp" alt="Maquette-concept pour un photographe de sport en Guadeloupe" loading="lazy" width="1600" height="1000"></div>
-          <div class="mock-meta">
-            <div><h4>Arts &amp; Images</h4><p>Photographe de sport, Guadeloupe</p></div>
-            <span class="badge">Maquette</span>
-          </div>
-        </a>
-        <a class="mock reveal" href="/apercus/paysagiste-temoin/">
-          <div class="shot"><img src="/assets/shots/terre-seve.webp" alt="Site témoin complet de six pages pour un paysagiste créateur" loading="lazy" width="1600" height="1000"></div>
-          <div class="mock-meta">
-            <div><h4>Terre &amp; Sève</h4><p>Paysagiste créateur, site complet de six pages</p></div>
-            <span class="badge">Site témoin</span>
-          </div>
-        </a>
-        <a class="mock reveal" href="/realisations/vues-aeriennes-landes.html">
-          <div class="shot"><img src="/assets/shots/drone.webp" alt="Maquette-concept pour un pilote de drone dans les Landes" loading="lazy" width="1600" height="1000"></div>
-          <div class="mock-meta">
-            <div><h4>Vues aériennes</h4><p>Pilote de drone, Landes</p></div>
-            <span class="badge">Maquette</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== MANIFESTE / GARANTIE ===================== -->
-<section id="methode" class="pledge">
-  <div class="wrap pledge-inner">
-    <h2 class="pledge-title">
-      <span class="w">Je</span> <span class="w">vous</span> <span class="w">montre</span> <span class="w">d’abord.</span>
-      <span class="w">Vous</span> <span class="w">décidez</span> <span class="w">ensuite.</span>
-      <span class="w">Et</span> <span class="w">le</span> <span class="w">prix</span> <span class="w">est</span> <span class="w">connu</span>
-      <span class="w">avant</span> <span class="w">tout</span> <span class="w">travail.</span>
-    </h2>
-    <p class="pledge-sub">Un site complet, cinq pages, 1&nbsp;500&nbsp;€ tout compris, sans TVA. 750&nbsp;€ à la commande, le reste avant la mise en ligne. Deux tours de corrections, le nom de domaine et la première année d’hébergement sont compris.</p>
-
-    <ol class="steps" role="list">
-      <li class="reveal">
-        <span class="step-n" aria-hidden="true">1</span>
-        <h3>Vous m’écrivez</h3>
-        <p>Deux lignes suffisent&nbsp;: votre métier, votre ville, et l’adresse de votre site s’il existe. Je le regarde depuis un téléphone, comme vos clients.</p>
-      </li>
-      <li class="reveal">
-        <span class="step-n" aria-hidden="true">2</span>
-        <h3>Je vous montre un exemple et le prix</h3>
-        <p>Sous 48&nbsp;h, en un mail&nbsp;: un site complet de votre métier à ouvrir sur votre téléphone, et ce que coûterait le vôtre. Rien à payer pour regarder.</p>
-      </li>
-      <li class="reveal">
-        <span class="step-n" aria-hidden="true">3</span>
-        <h3>Votre accueil d’abord, puis le site entier</h3>
-        <p>Si le prix vous va, je construis votre page d’accueil avec vos photos avant tout acompte. Elle vous plaît&nbsp;? 750&nbsp;€ à la commande, et je construis le reste&nbsp;: les autres pages, le domaine, l’hébergement, la mise en ligne.</p>
-      </li>
+<section class="section" id="comment" aria-labelledby="comment-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="comment-titre" data-t="S2.titre">Comment ça se passe</h2>
+    <ol class="temps">
+      <li><div><h3 data-t="S2.1.titre">Je la refais.</h3><p data-t="S2.1.texte">Je pars de votre site actuel, de vos textes et de vos photos. Vous n'avez rien à préparer.</p></div></li>
+      <li><div><h3 data-t="S2.2.titre">Vous la regardez.</h3><p data-t="S2.2.texte">Je vous envoie un lien. Vous l'ouvrez sur votre téléphone, comme vos clients. Ce qui ne vous va pas, vous me le dites et je la reprends.</p></div></li>
+      <li><div><h3 data-t="S2.3.titre">Vous décidez.</h3><p data-t="S2.3.texte">Si vous la gardez, je la mets en ligne à votre adresse et vous payez 390&nbsp;€. Sinon, vous ne payez rien et on en reste là.</p></div></li>
     </ol>
   </div>
 </section>
 
-<!-- ===================== À PROPOS ===================== -->
-<section id="apropos" class="about">
-  <div class="wrap about-grid">
-    <div class="about-copy reveal">
-      <h2>Pas d’agence. Une personne, un&nbsp;métier.</h2>
-      <p>Je m’appelle Nicolas Masset. Professeur de mathématiques indépendant et développeur web, installé en Vendée.</p>
-      <p>J’ai d’abord construit mes propres outils&nbsp;: mon site de cours avec réservation et paiement, une plateforme complète de gestion pour professeurs, le site d’une école. Aujourd’hui, je mets la même exigence au service des artisans et des indépendants.</p>
-      <p>Quand vous m’écrivez, vous parlez directement à la personne qui conçoit, écrit et met en ligne votre site. Rien n’est sous-traité.</p>
+<section class="prix" id="prix" aria-labelledby="prix-titre">
+  <div class="enveloppe">
+    <h2 class="prix-titre" id="prix-titre" data-t="S3.titre">Le prix, avant de commencer</h2>
+    <div class="prix-grille">
+      <div class="prix-principal">
+        <h3 data-t="S3.b1.nom">Page d'accueil</h3>
+        <p class="montant"><span>390&nbsp;€</span></p>
+        <p class="prix-texte" data-t="S3.b1.texte">Payée seulement si vous la gardez. Je la retouche jusqu'à ce qu'elle vous plaise.</p>
+      </div>
+      <div class="suite">
+        <div class="offre">
+          <h3 data-t="S3.b2.nom">Site complet</h3>
+          <p class="montant">790&nbsp;€</p>
+          <p data-t="S3.b2.texte">Une page par prestation, pour que Google vous trouve sur chacune. Si vous avez déjà pris la page d'accueil, ses 390&nbsp;€ sont déduits.</p>
+        </div>
+        <p class="commun" data-t="S3.commun">Dans les deux cas, l'adresse du site est à votre nom et l'hébergement de la première année est offert.</p>
+        <div class="offre offre--option">
+          <h3 data-t="S3.b3.nom">Sérénité, en option</h3>
+          <p class="montant">29&nbsp;€/mois</p>
+          <p data-t="S3.b3.texte">Sans engagement, vous arrêtez quand vous voulez. Un horaire, un tarif ou une photo à changer&nbsp;? Vous m'écrivez, c'est en ligne sous 48&nbsp;h ouvrées. Je surveille le site et je le sauvegarde. À partir de la deuxième année, l'hébergement et l'adresse sont compris dans ce prix.</p>
+        </div>
+      </div>
     </div>
-    <ul class="about-facts reveal">
-      <li><strong>Vendée, toute la France</strong><span>Tout se fait à distance, simplement</span></li>
-      <li><strong>Réponse sous 48&nbsp;h</strong><span>Par email, sans rendez-vous imposé</span></li>
-      <li><strong>Domaine et hébergement gérés</strong><span>Vous n’avez rien à installer, jamais</span></li>
-      <li><strong>Entreprise individuelle déclarée</strong><span>Facture en bonne et due forme</span></li>
+    <p class="tva" data-t="S3.tva">TVA non applicable, art. 293 B du CGI. Le prix affiché est celui que vous payez.</p>
+  </div>
+</section>
+
+<section class="section" id="realisations" aria-labelledby="realisations-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="realisations-titre" data-t="S4.titre">Ce que j'ai déjà fait</h2>
+    <ul class="realisations">
+      <li class="realisation">
+        <a href="https://noemie-achet-piret.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/noemie-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3 data-t="S4.noemie.nom">Noémie Achet-Piret, naturopathe, Nort-sur-Erdre (Loire-Atlantique)</h3>
+          <p data-t="S4.noemie.texte">Ses tarifs et la prise de rendez-vous sont dans le menu, sur toutes les pages. Elle publie ses actualités elle-même.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">En ligne</span><a class="lien" href="https://noemie-achet-piret.fr" target="_blank" rel="noopener" aria-label="Voir le site de Noémie Achet-Piret">Voir le site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://lesquatresaisons-montessori.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/montessori-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3 data-t="S4.ecole.nom">École Les Quatre Saisons, école Montessori, La Roche-sur-Yon</h3>
+          <p data-t="S4.ecole.texte">Les familles pré-inscrivent leur enfant depuis le site.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">En ligne</span><a class="lien" href="https://lesquatresaisons-montessori.fr" target="_blank" rel="noopener" aria-label="Voir le site de l'école Les Quatre Saisons">Voir le site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://vendeeapprendreautrement.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/vaa-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3 data-t="S4.vaa.nom">Vendée Apprendre Autrement, association, La Roche-sur-Yon</h3>
+          <p data-t="S4.vaa.texte">Les donateurs donnent en ligne et voient tout de suite ce que le don leur coûte après la réduction d'impôt.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">En ligne</span><a class="lien" href="https://vendeeapprendreautrement.fr" target="_blank" rel="noopener" aria-label="Voir le site de Vendée Apprendre Autrement">Voir le site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://paramaths.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/paramaths-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3 data-t="S4.paramaths.nom">paramaths.fr, mon propre site de cours</h3>
+          <p data-t="S4.paramaths.texte">Les élèves réservent une séance et la paient en ligne.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">En ligne</span><a class="lien" href="https://paramaths.fr" target="_blank" rel="noopener" aria-label="Voir paramaths.fr">Voir le site</a></p>
+        </div>
+      </li>
     </ul>
   </div>
 </section>
 
-<!-- ===================== CONTACT ===================== -->
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2 class="reveal">Parlons de votre&nbsp;site.</h2>
-    <p class="contact-sub reveal">Décrivez votre activité en deux lignes. Je vous réponds sous 48&nbsp;h, avec un exemple et le prix. Vous préférez en parler de vive voix&nbsp;? Réservez un créneau&nbsp;: je vous appelle, 15&nbsp;minutes, sans engagement.</p>
-    <a class="mail-giga reveal" href="mailto:nicolas@nicomasset.com?subject=Mon%20site%20web">nicolas@nicomasset.com</a>
-    <div class="contact-row reveal">
-      <button class="mail-copy magnet" id="copyBtn" type="button" aria-label="Copier l’adresse email">Copier l’adresse</button>
-      <a class="mail-copy magnet" href="/rdv" style="display:inline-flex;align-items:center;text-decoration:none">Réserver un appel</a>
+<section class="section" id="moi" aria-labelledby="moi-titre">
+  <div class="enveloppe moi">
+    <h2 class="section-titre" id="moi-titre" data-t="S5.titre">Qui vous écrit</h2>
+    <div class="corps">
+      <p data-t="S5.1">Je m'appelle Nicolas Masset. J'habite en Vendée et je fais des sites pour les indépendants, partout en France, à distance.</p>
+      <p data-t="S5.2">Il n'y a pas d'agence entre nous. Vous m'écrivez, je vous réponds, et c'est moi qui refais votre page.</p>
+      <p data-t="S5.3">Je suis déclaré en entreprise individuelle, et chaque paiement a sa facture.</p>
     </div>
+  </div>
+</section>
+
+<section class="section" id="questions" aria-labelledby="questions-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="questions-titre" data-t="S6.titre">Les questions qu'on me pose</h2>
+    <div class="questions">
+      <details><summary data-t="S6.1.q">Et si je ne la garde pas&nbsp;?</summary><p data-t="S6.1.r">Vous ne payez rien. Vous me dites non, je retire la page et on en reste là. Votre site actuel ne bouge pas pendant ce temps.</p></details>
+      <details><summary data-t="S6.2.q">Et si elle ne me plaît pas du premier coup&nbsp;?</summary><p data-t="S6.2.r">Je la reprends. Une cliente a demandé dix versions de sa page avant d'être contente, et tout était compris dans les 390&nbsp;€. Si on n'avance plus, je vous propose un appel pour en parler de vive voix.</p></details>
+      <details><summary data-t="S6.3.q">Qui possède le site&nbsp;?</summary><p data-t="S6.3.r">Vous. L'adresse est enregistrée à votre nom, pas au mien. Si un jour vous voulez partir, vous gardez l'adresse et je vous remets les fichiers du site.</p></details>
+      <details><summary data-t="S6.4.q">Je dois vous fournir quoi&nbsp;?</summary><p data-t="S6.4.r">Rien pour commencer. Je pars de ce qui est déjà sur votre site. Si vous avez de meilleures photos, vous me les envoyez quand vous voulez.</p></details>
+      <details><summary data-t="S6.6.q">Et après la première année&nbsp;?</summary><p data-t="S6.6.r">Vous choisissez. Avec Sérénité, à 29&nbsp;€/mois, je m'occupe de tout, hébergement et adresse compris. Sans, vous restez libre, l'adresse est à votre nom et je vous remets les fichiers.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="fin" aria-labelledby="fin-titre">
+  <div class="enveloppe">
+    <h2 id="fin-titre" data-t="S7.titre">Je m'y mets&nbsp;?</h2>
+    <p data-t="S7.texte">Envoyez-moi l'adresse de votre site. Je vous renvoie un lien vers votre nouvelle page d'accueil, et vous décidez.</p>
+    <div class="actions">
+      <a class="bouton ecrire" href="mailto:nicolas@nicomasset.com?subject=Refaire%20ma%20page%20d%27accueil&amp;body=Bonjour%20Nicolas%2C%0A%0AL%27adresse%20de%20mon%20site%20%3A%20" data-t="S7.bouton">Écrivez-moi</a>
+    </div>
+    <p class="rdv"><a class="lien" href="https://cal.eu/nicolas-masset/appel-decouverte" target="_blank" rel="noopener" data-t="S7.rdv">Vous préférez qu'on s'appelle&nbsp;? Réservez 15 minutes, je vous rappelle.</a></p>
   </div>
 </section>
 
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-row">
-    <p>© 2026 Nicolas Masset · Vendée</p>
-    <nav aria-label="Liens de bas de page">
-      <a href="/mentions-legales.html">Mentions légales</a>
-    </nav>
+<footer class="pied-page">
+  <div class="enveloppe">
+    <p>Nicolas Masset, Vendée</p>
+    <p><a href="mailto:nicolas@nicomasset.com?subject=Refaire%20ma%20page%20d%27accueil&amp;body=Bonjour%20Nicolas%2C%0A%0AL%27adresse%20de%20mon%20site%20%3A%20">nicolas@nicomasset.com</a></p>
+    <p><a href="/mentions-legales.html">Mentions légales</a></p>
+    <p>© 2026 Nicolas Masset</p>
   </div>
 </footer>
 
-<script src="/app.js?v=3" defer></script>
+<script src="/accueil/app.js?v=1" defer></script>
 <script defer src="https://stats.paramaths.fr/script.js" data-website-id="69a2f2d9-fc25-4684-b2b9-33cf935615a4"></script>
 </body>
 </html>
