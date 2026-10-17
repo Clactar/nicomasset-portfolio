@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolas Masset · I'll redo your homepage</title>
+<meta name="description" content="I redo your website's homepage. You look at it on your phone, I keep refining it until you love it, and you only pay if you keep it.">
+<meta property="og:title" content="Nicolas Masset · I'll redo your homepage">
+<meta property="og:description" content="I redo your website's homepage, and you only pay if you keep it.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://nicomasset.com/en/">
+<meta property="og:image" content="https://nicomasset.com/assets/og.png">
+<meta name="theme-color" content="#EEF0EB">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://nicomasset.com/en/">
+<link rel="alternate" hreflang="fr" href="https://nicomasset.com/">
+<link rel="alternate" hreflang="en" href="https://nicomasset.com/en/">
+<link rel="preload" href="/accueil/fonts/familjen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/accueil/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/accueil/fonts/caveat-brush.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/accueil/style.css?v=1">
+<style>
+  /* version anglaise : pas de montant affiché, le bloc d'offre porte la promesse à la place du prix */
+  .prix-principal .promesse{font-family:var(--titre);font-weight:500;font-size:56px;line-height:1;letter-spacing:-.02em;margin-top:var(--s2);max-width:12ch}
+  .prix-principal .promesse span{background:linear-gradient(var(--surligneur),var(--surligneur)) no-repeat 0 100%/100% 8px;padding-bottom:4px}
+  @media (min-width:900px){.prix-principal .promesse{font-size:88px}}
+  .langue{font-family:var(--titre);font-size:15px;color:var(--encre-douce)}
+  .entete nav a.langue{display:inline;letter-spacing:.02em}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nicolas Masset",
+  "url": "https://nicomasset.com/en/",
+  "inLanguage": "en",
+  "description": "One-person web studio in France. I redo small business homepages, and you only pay if you keep it.",
+  "founder": { "@type": "Person", "name": "Nicolas Masset" },
+  "areaServed": "United States",
+  "address": { "@type": "PostalAddress", "addressRegion": "Vendée", "addressCountry": "FR" }
+}
+</script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe">
+    <a class="marque" href="#haut">Nicolas Masset</a>
+    <nav aria-label="Main navigation">
+      <a href="#comment">How it works</a>
+      <a href="#prix">The deal</a>
+      <a href="#realisations">Work</a>
+      <a class="langue" href="/" hreflang="fr" lang="fr" aria-label="Version française" title="Version française">FR</a>
+      <a class="bouton bouton--petit ecrire" href="mailto:nicolas@nicomasset.com?subject=Redo%20my%20homepage&amp;body=Hi%20Nicolas%2C%0A%0AMy%20website%3A%20">Email me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+
+<section class="heros" aria-labelledby="titre">
+  <div class="enveloppe">
+    <div class="texte-heros">
+      <h1 id="titre">I'll redo your homepage. You only pay if you keep it.</h1>
+      <p class="prix-ligne">I keep refining it until you <strong class="marque-jaune">love it</strong>.</p>
+      <p class="chapeau">I'm a one-person studio in France. You get European rates, and none of the overhead of a US agency.</p>
+      <div class="actions">
+        <a class="bouton ecrire" href="mailto:nicolas@nicomasset.com?subject=Redo%20my%20homepage&amp;body=Hi%20Nicolas%2C%0A%0AMy%20website%3A%20">Redo mine</a>
+      </div>
+      <p class="aide">This opens an email to me. Your website address is all I need.</p>
+      <p class="suite-lien"><a class="lien" href="#adeline" data-montrer="apres">See Adeline's new page</a></p>
+    </div>
+
+    <figure class="epreuve" id="adeline" data-etat="avant" aria-labelledby="adeline-titre">
+      <div class="epreuve-tete">
+        <h2 id="adeline-titre">Adeline.j, bridal hair and makeup, Diémoz, France</h2>
+        <p>Her old web address was impossible to read out to a bridal party. Now it's adelinej.fr, and a bride-to-be can call or message her from the very first screen.</p>
+      </div>
+      <div class="bascule" role="group" aria-label="Choose which version to show">
+        <button type="button" aria-pressed="true" data-vers="avant">Before, on Wix</button>
+        <button type="button" aria-pressed="false" data-vers="apres">After, adelinej.fr</button>
+      </div>
+      <!-- planche : même repère que la version française (1440 x 2227), notes et flèches aux mêmes places -->
+      <div class="planche">
+        <div class="telephone">
+          <div class="barre" aria-hidden="true">
+            <svg width="11" height="13" viewBox="0 0 11 13"><rect x="1" y="5.5" width="9" height="7" rx="1.5" fill="currentColor"/><path d="M3 5.5V4a2.5 2.5 0 0 1 5 0v1.5" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+            <span class="url url--avant">adelinejcoiffure.wixsite.com/coiffureprivadelinej</span>
+            <span class="url url--apres" hidden>adelinej.fr</span>
+          </div>
+          <div class="ecran">
+            <div class="couche couche--avant">
+              <img src="/accueil/img/adeline-avant.webp" width="600" height="1300" alt="Adeline's Wix site on a phone: a Wix ad banner at the top, and the headline cut off at the right edge of the screen.">
+            </div>
+            <div class="couche couche--apres">
+              <img src="/accueil/img/adeline-apres.webp" width="600" height="1300" alt="Adeline's new page at adelinej.fr: the full headline, what she does and where, a button to message her and her phone number." loading="lazy">
+            </div>
+            <span class="rideau"></span>
+          </div>
+        </div>
+        <svg class="fleches fleches--avant" viewBox="0 0 1440 2227" aria-hidden="true" focusable="false">
+          <g><path pathLength="1" d="M352 112C420 92 482 84 548 92"/><path pathLength="1" d="M500 59L548 92L504 109"/></g>
+          <g><path pathLength="1" d="M300 352C390 356 460 336 512 288"/><path pathLength="1" d="M456 303L512 288L496 333"/></g>
+          <g><path pathLength="1" d="M352 1566C700 1650 1150 1610 1384 1402"/><path pathLength="1" d="M1328 1416L1384 1402L1367 1447"/></g>
+        </svg>
+        <svg class="fleches fleches--apres" viewBox="0 0 1440 2227" aria-hidden="true" focusable="false">
+          <g><path pathLength="1" d="M352 112C420 92 482 84 548 92"/><path pathLength="1" d="M500 59L548 92L504 109"/></g>
+          <g><path pathLength="1" d="M352 1146C410 1128 470 1150 522 1188"/><path pathLength="1" d="M497 1136L522 1188L475 1181"/></g>
+          <g><path pathLength="1" d="M360 1650C410 1618 470 1606 526 1604"/><path pathLength="1" d="M474 1579L526 1604L485 1628"/></g>
+        </svg>
+        <ol class="notes notes--avant" aria-label="What was costing her clients">
+          <li style="--x:0;--y:20">impossible to say out loud</li>
+          <li style="--x:0;--y:372">you read Wix before you read Adeline</li>
+          <li style="--x:0;--y:1470">the headline runs off the screen</li>
+        </ol>
+        <ol class="notes notes--apres" aria-label="What changed" hidden>
+          <li style="--x:0;--y:20">an address in her name</li>
+          <li style="--x:0;--y:1040">what she does, and where</li>
+          <li style="--x:0;--y:1560">call or message her</li>
+        </ol>
+      </div>
+      <p class="voir"><span class="etiquette etiquette--ligne">Live</span> <a class="lien" href="https://adelinej.fr" target="_blank" rel="noopener">See adelinej.fr (in French)</a></p>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="comment" aria-labelledby="comment-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="comment-titre">How it works</h2>
+    <ol class="temps">
+      <li><div><h3>I redo it.</h3><p>I start from your current site, your words and your photos. You don't have to prepare a thing.</p></div></li>
+      <li><div><h3>You look at it.</h3><p>I send you a link. You open it on your phone, the way your customers will. Anything you don't like, you tell me and I rework it.</p></div></li>
+      <li><div><h3>You decide.</h3><p>If you keep it, I put it live at your address and you pay. If you don't, you pay nothing and that's the end of it.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="prix" id="prix" aria-labelledby="prix-titre">
+  <div class="enveloppe">
+    <h2 class="prix-titre" id="prix-titre">The deal, before I start</h2>
+    <div class="prix-grille">
+      <div class="prix-principal">
+        <h3>Homepage</h3>
+        <p class="promesse"><span>You only pay if you keep it.</span></p>
+        <p class="prix-texte">And I keep reworking it until you love it.</p>
+      </div>
+      <div class="suite">
+        <div class="offre">
+          <h3>Full website</h3>
+          <p>One page per service, so Google can find you for each one. If you already have the homepage, what you paid for it comes off the price.</p>
+        </div>
+        <p class="commun">Either way, the domain is in your name and your first year of hosting is on me.</p>
+        <div class="offre offre--option">
+          <h3>Care plan, optional</h3>
+          <p>No contract, cancel anytime. Need to change your hours, a price or a photo? Email me and it's live within two business days. I keep an eye on your site and back it up. From the second year, hosting and your domain are included.</p>
+        </div>
+      </div>
+    </div>
+    <p class="tva">Prices are in US dollars, and you get yours in writing before I start. I work alone from France, so you pay European freelance rates, not US agency fees.</p>
+  </div>
+</section>
+
+<section class="section" id="realisations" aria-labelledby="realisations-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="realisations-titre">Sites I've built</h2>
+    <ul class="realisations">
+      <li class="realisation">
+        <a href="https://noemie-achet-piret.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/noemie-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3>Noémie Achet-Piret, naturopath, Nort-sur-Erdre, France</h3>
+          <p>Her rates and online booking sit in the menu, on every page. She posts her own news.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">Live</span><a class="lien" href="https://noemie-achet-piret.fr" target="_blank" rel="noopener" aria-label="See Noémie Achet-Piret's site">See the site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://lesquatresaisons-montessori.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/montessori-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3>Les Quatre Saisons, Montessori school, La Roche-sur-Yon, France</h3>
+          <p>Families pre-register their child right from the site.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">Live</span><a class="lien" href="https://lesquatresaisons-montessori.fr" target="_blank" rel="noopener" aria-label="See the Les Quatre Saisons school site">See the site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://vendeeapprendreautrement.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/vaa-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3>Vendée Apprendre Autrement, nonprofit, La Roche-sur-Yon, France</h3>
+          <p>Donors give online and see right away what their gift really costs them after the tax break.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">Live</span><a class="lien" href="https://vendeeapprendreautrement.fr" target="_blank" rel="noopener" aria-label="See the Vendée Apprendre Autrement site">See the site</a></p>
+        </div>
+      </li>
+      <li class="realisation">
+        <a href="https://paramaths.fr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/accueil/img/paramaths-pc.webp" width="1100" height="688" alt="" loading="lazy"></a>
+        <div>
+          <h3>paramaths.fr, my own math tutoring site</h3>
+          <p>Students book a session and pay for it online.</p>
+          <p class="pied"><span class="etiquette etiquette--ligne">Live</span><a class="lien" href="https://paramaths.fr" target="_blank" rel="noopener" aria-label="See paramaths.fr">See the site</a></p>
+        </div>
+      </li>
+    </ul>
+    <p class="aide">These sites are in French, like their customers.</p>
+  </div>
+</section>
+
+<section class="section" id="moi" aria-labelledby="moi-titre">
+  <div class="enveloppe moi">
+    <h2 class="section-titre" id="moi-titre">Who you'd be working with</h2>
+    <div class="corps">
+      <p>I'm Nicolas Masset. I live in Vendée, on the Atlantic coast of France, and I build websites for small businesses, all of it remotely.</p>
+      <p>There's no agency in between. You email me, I answer, and I'm the one who redoes your page.</p>
+      <p>I'm a registered sole proprietor in France, and every payment comes with an invoice.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="questions" aria-labelledby="questions-titre">
+  <div class="enveloppe">
+    <h2 class="section-titre" id="questions-titre">Questions people ask me</h2>
+    <div class="questions">
+      <details><summary>What if I don't keep it?</summary><p>You pay nothing. You tell me no, I take the page down and that's it. Your current site doesn't change in the meantime.</p></details>
+      <details><summary>What if I don't like it the first time?</summary><p>I rework it. One client asked for ten versions of her page before she was happy, and every one of them was included.</p></details>
+      <details><summary>Who owns the site?</summary><p>You do. The domain is registered in your name, not mine. If you ever want to leave, you keep the domain and I hand you the site files.</p></details>
+      <details><summary>What do I need to send you?</summary><p>Nothing to get started. I work from what's already on your site. If you have better photos, send them over whenever you like.</p></details>
+      <details><summary>You're in France. Does that matter?</summary><p>Not really. Everything happens by email, in English, and through a link you open on your phone. With the time difference, I'm often working on your page while you sleep.</p></details>
+      <details><summary>What happens after the first year?</summary><p>Your call. With the care plan, I take care of everything, hosting and domain included. Without it, you're free: the domain is yours and I hand you the files.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="fin" aria-labelledby="fin-titre">
+  <div class="enveloppe">
+    <h2 id="fin-titre">Want me to get started?</h2>
+    <p>Send me your website address. I'll send you back a link to your new homepage, and you decide.</p>
+    <div class="actions">
+      <a class="bouton ecrire" href="mailto:nicolas@nicomasset.com?subject=Redo%20my%20homepage&amp;body=Hi%20Nicolas%2C%0A%0AMy%20website%3A%20">Email me</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied-page">
+  <div class="enveloppe">
+    <p>Nicolas Masset, Vendée, France</p>
+    <p><a href="mailto:nicolas@nicomasset.com?subject=Redo%20my%20homepage&amp;body=Hi%20Nicolas%2C%0A%0AMy%20website%3A%20">nicolas@nicomasset.com</a></p>
+    <p><a href="/mentions-legales.html" hreflang="fr">Legal notice (in French)</a></p>
+    <p><a href="/" hreflang="fr" lang="fr">Version française</a></p>
+    <p>© 2026 Nicolas Masset</p>
+  </div>
+</footer>
+
+<script src="/accueil/app.js?v=1" defer></script>
+<script defer src="https://stats.paramaths.fr/script.js" data-website-id="69a2f2d9-fc25-4684-b2b9-33cf935615a4"></script>
+</body>
+</html>
