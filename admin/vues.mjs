@@ -23,6 +23,14 @@ export function dateHeure(iso) {
   return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? j : `${j} à ${h}`;
 }
 
+// « 09h16 » si c'est aujourd'hui, sinon « 25/10 09h16 » : l'en-tête doit tenir sur une ligne au téléphone.
+function heureCourte(iso, maintenant = new Date()) {
+  const d = new Date(iso);
+  const jour = (x) => x.toLocaleDateString('fr-FR', { timeZone: FUSEAU, day: '2-digit', month: '2-digit' });
+  const h = d.toLocaleTimeString('fr-FR', { timeZone: FUSEAU, hour: '2-digit', minute: '2-digit' }).replace(':', 'h');
+  return jour(d) === jour(maintenant) ? h : `${jour(d)} ${h}`;
+}
+
 const PAYS = { FR: 'France', US: 'États-Unis' };
 
 const STYLE = `
@@ -39,8 +47,8 @@ h2{font-size:20px;margin:0 0 12px}
 .page{max-width:1200px;margin:0 auto;padding:0 16px 96px}
 .tete{position:sticky;top:0;z-index:2;background:var(--papier);border-bottom:1px solid var(--filet)}
 .tete .page{display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
-.tete .titre{font-family:"Familjen",system-ui,sans-serif;font-weight:600;font-size:18px;text-decoration:none;flex:1}
-.synchro{color:var(--encre-douce);font-size:14px}
+.tete .titre{font-family:"Familjen",system-ui,sans-serif;font-weight:600;font-size:18px;text-decoration:none;flex:1;white-space:nowrap}
+.synchro{color:var(--encre-douce);font-size:14px;white-space:nowrap}
 button,.bouton{font:600 15px/1 "Familjen",system-ui,sans-serif;border-radius:999px;border:0;padding:12px 18px;min-height:44px;background:var(--encre);color:var(--papier-clair);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 button.doux,.bouton.doux{background:transparent;color:var(--encre);box-shadow:inset 0 0 0 1.5px var(--encre)}
 button.petit{padding:8px 14px;min-height:36px;font-size:14px}
@@ -50,11 +58,13 @@ button.danger{background:var(--rouge)}
 .puce b{font-weight:600;margin-left:6px}
 .puce.actif{background:var(--encre);color:var(--papier-clair)}
 .puce.alerte b{background:var(--surligneur);color:var(--encre);padding:2px 6px;border-radius:4px}
-.reglages{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:12px 0 20px;font:500 14px/1.2 "Familjen",system-ui,sans-serif;color:var(--encre-douce)}
+.reglages{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin:0 -16px;padding-left:16px!important;padding-right:16px!important;gap:8px 16px;align-items:center;padding:12px 0 20px;font:500 14px/1.2 "Familjen",system-ui,sans-serif;color:var(--encre-douce)}
 .reglages a{text-decoration:none;padding:6px 0}
 .reglages a.actif{color:var(--encre);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
-.reglages .sep{width:1px;height:16px;background:var(--filet)}
-.grille{display:grid;grid-template-columns:1fr;gap:16px}
+.reglages .sep{flex:none;width:1px;height:16px;background:var(--filet)}
+@media(min-width:720px){.compteurs{flex-wrap:wrap;overflow:visible}}
+.grille{display:grid;grid-template-columns:1fr;gap:12px}
+@media(max-width:719px){.carte{display:grid;grid-template-columns:104px 1fr}.carte>a.corps{display:contents}.carte .vignette{grid-row:1/3;aspect-ratio:auto;height:100%;min-height:150px}.carte .infos{padding:12px 14px 2px;gap:4px}.carte .nom{font-size:17px}.carte .lieu{font-size:14px}.carte .etat{font-size:13px;padding:4px 8px}.carte .pied{grid-column:2;padding:6px 14px 12px;font-size:13px}}
 @media(min-width:720px){.grille{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1100px){.grille{grid-template-columns:repeat(3,1fr);gap:24px}h1{font-size:35px}}
 .carte{background:var(--papier-clair);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
@@ -110,7 +120,7 @@ function gabarit(titre, corps) {
 
 function entete(instantane) {
   let synchro = '';
-  if (instantane) synchro = instantane.genere_le ? `Synchro ${dateHeure(instantane.genere_le)}` : 'Jamais synchronisée';
+  if (instantane) synchro = instantane.genere_le ? `Synchro ${heureCourte(instantane.genere_le)}` : 'Jamais synchronisée';
   return `<header class="tete"><div class="page"><a class="titre" href="/admin">Pages refaites</a>
 ${synchro ? `<span class="synchro">${synchro}</span>` : ''}
 <form method="post" action="/admin/deconnexion"><button class="doux petit" type="submit">Sortir</button></form></div></header>`;
