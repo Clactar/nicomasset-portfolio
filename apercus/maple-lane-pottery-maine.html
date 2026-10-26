@@ -1,292 +1,363 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Maple Lane Pottery (Windsor, Maine), content from http://maplelanepottery.blogspot.com/ (posts, captions, About Me);
-     direction : « Le bestiaire de la ferme » : the black dots of Robbi's slip-decorated bowls as the skin of the first screen,
-     four bowls seen from above as the table of contents (chickens, lobsters, badgers and sheep, mugs). No dated post, email visible on the first screen. -->
+<!-- v2 (2026-10-26) : homepage rebuilt for Maple Lane Pottery (Windsor, Maine), content from http://maplelanepottery.blogspot.com/ (posts, captions, About Me);
+     direction : « Le bestiaire de la ferme » : slip-white page, the hero as a collage of three thick-framed snapshots (lobster bowls, chicken baker, sheep),
+     the farm animals as a table of contents in four cards of different sizes, the About on a black band sown with white dots (her slip decoration reversed) ;
+     no dated post, Robbi's email visible from the first screen ; finition barre-qualite 26/10 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
-<meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#FFFDF8" />
-<title>Maple Lane Pottery: hand-painted pottery from a small farm in Windsor, Maine</title>
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#FBF8F1" />
+<title>Maple Lane Pottery: pottery from a small farm in Windsor, Maine</title>
 <meta name="description" content="Chicken bakers, Rainbow Lobster cereal bowls, sheep and badger figures and mugs, made by Robbi at Maple Lane Pottery, 36 Greeley Road, Windsor, Maine. Write to visit the gallery and studio." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FBF8F1' stroke='%231B1B1B' stroke-width='3'/%3E%3Ccircle cx='16' cy='20' r='2' fill='%231B1B1B'/%3E%3Ccircle cx='48' cy='44' r='2' fill='%231B1B1B'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23C8352B'%3EM%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght,BNCE,INFM@300..800,-100..100,0..100&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --slip:#FFFDF8; --line:#1B1B1B; --hen:#C8352B; --lobster:#F2C230; --sky:#6EC1E4;
-  --soft:#4a4744; --rule:rgba(27,27,27,.14);
+  --slip:#FBF8F1; --card:#FFFDF8; --line:#1B1B1B; --hen:#C8352B; --hen-d:#A82A21; --lob:#F2C230; --sky:#6EC1E4; --soft:#55524C; --rule:rgba(27,27,27,.14);
+  --shadow:0 40px 80px -40px rgba(27,27,27,.5);
   --f:"Shantell Sans",ui-rounded,system-ui,sans-serif;
-  --wrap:1180px; --pad:24px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--slip);color:var(--line);font-family:var(--f);font-size:18px;line-height:1.6;
-  font-variation-settings:"INFM" 0,"BNCE" 0;font-weight:380}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--slip);color:var(--line);font-family:var(--f);font-size:18px;line-height:1.62;font-weight:380;font-variation-settings:"INFM" 0,"BNCE" 0}
+::selection{background:var(--lob);color:var(--line)}
 img{display:block;max-width:100%;height:auto}
-a{color:inherit}
+a{color:var(--line);text-underline-offset:4px;text-decoration-thickness:1.5px;text-decoration-color:var(--hen)}
+a:hover{text-decoration-thickness:2.5px}
+:focus-visible{outline:2.5px solid var(--hen);outline-offset:3px;border-radius:6px}
 p{margin:0 0 1em}
-h1,h2,h3{margin:0;font-weight:640;line-height:1.05;letter-spacing:-.01em;font-variation-settings:"INFM" 55,"BNCE" 25;text-wrap:balance}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-:focus-visible{outline:3px solid var(--hen);outline-offset:4px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+h1,h2,h3{margin:0;font-weight:650;line-height:1.05;letter-spacing:-.01em;font-variation-settings:"INFM" 55,"BNCE" 15;text-wrap:balance}
+h2{font-size:clamp(2.1rem,3.6vw,2.9rem)}
+.soft{color:var(--soft)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* first screen: the dotted slip */
-.slip{
-  background-color:var(--slip);
-  background-image:radial-gradient(circle,var(--line) 1.5px,transparent 2px),radial-gradient(circle,var(--line) 1.5px,transparent 2px);
-  background-size:34px 34px;background-position:0 0,17px 17px;
-  border-bottom:3px solid var(--line);
-}
-.bar{display:flex;justify-content:space-between;align-items:center;gap:6px 16px;flex-wrap:wrap;padding:22px 0 0}
-.mark{font-size:1rem}
-.mark,.bar a.mail{background:var(--slip);padding:2px 8px;border-radius:6px}
-.bar a.mail{font-size:1rem;text-decoration-thickness:1px;text-underline-offset:4px}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:44px 0 80px}
-.hero>div:first-child{background:var(--slip);border:3px solid var(--line);border-radius:30px;padding:44px 46px 46px}
-.hero h1{font-size:clamp(3.2rem,6.2vw,5.4rem);font-weight:720;max-width:7.5ch;font-variation-settings:"INFM" 20,"BNCE" 10}
-.on-slip{background:var(--slip);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .32em 0 .14em;border-radius:.2em}
-.hero .lead{font-size:1.32rem;line-height:1.55;max-width:31ch;margin:26px 0 30px}
-.btn{display:inline-block;background:var(--hen);color:#fff;text-decoration:none;font-weight:620;font-size:1.08rem;
-  padding:15px 24px;border-radius:999px;border:3px solid var(--line);transition:transform .2s ease}
-.btn:hover{transform:rotate(-2deg)}
-.hero .addr{margin:18px 0 0;font-size:1rem}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:17px 28px;border-radius:999px;font-family:var(--f);font-weight:620;font-size:1.02rem;line-height:1.2;text-decoration:none;border:2px solid var(--line);transition:background-color .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease;white-space:nowrap;font-variation-settings:"INFM" 40,"BNCE" 0}
+.btn.solid{background:var(--hen);border-color:var(--hen);color:#fff}
+.btn.solid:hover{background:var(--hen-d);border-color:var(--hen-d);transform:translateY(-2px);box-shadow:0 14px 26px -14px rgba(200,53,43,.85)}
+.btn.line{background:transparent;color:var(--line)}
+.btn.line:hover{background:var(--line);color:var(--slip);transform:translateY(-2px)}
+.btn.light{color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.light:hover{background:#fff;color:var(--line);transform:translateY(-2px)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
 
-/* the four bowls */
-.bowls{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;justify-items:center}
-.bowls li:nth-child(1){transform:translateY(-6px)}
-.bowls li:nth-child(2){transform:translateY(34px)}
-.bowls li:nth-child(3){transform:translate(14px,-10px)}
-.bowls li:nth-child(4){transform:translateY(22px)}
-.bowl{display:flex;flex-direction:column;align-items:center;text-decoration:none;gap:12px}
-.bowl .dish{position:relative;width:var(--d,220px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid var(--line);
-  box-shadow:0 0 0 9px var(--slip),0 0 0 12px var(--line);background:#2b3540;transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
-.bowl:hover .dish{transform:rotate(-8deg)}
-.bowl .dish{background-repeat:no-repeat}
-.bowl b{font-weight:640;font-size:1.32rem;font-variation-settings:"INFM" 100,"BNCE" 50;background:var(--slip);padding:0 10px;border-radius:8px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:transparent;transition:text-decoration-color .2s}
-.bowl:hover b{text-decoration-color:var(--line)}
-.d-hen{--d:236px}.d-lob{--d:212px}.d-bad{--d:196px}.d-mug{--d:222px}
-.d-hen .dish{background-image:url(assets/maple-lane-pottery-maine/chicken-square-bowl.webp);background-size:116% auto;background-position:50% 42%}
-.d-lob .dish{background-image:url(assets/maple-lane-pottery-maine/rainbow-lobster-bowls.webp);background-size:178% auto;background-position:30% 22%}
-.d-bad .dish{background-image:url(assets/maple-lane-pottery-maine/badger.webp);background-size:auto 118%;background-position:72% 40%}
-.d-mug .dish{background-image:url(assets/maple-lane-pottery-maine/bee-hedgehog-chicken-mugs.webp);background-size:auto 128%;background-position:50% 55%}
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(251,248,241,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1.5px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .bar{max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:700;font-size:1.25rem;color:var(--line);text-decoration:none;white-space:nowrap;font-variation-settings:"INFM" 70,"BNCE" 20}
+.top nav{display:flex;gap:26px;align-items:center;font-size:.98rem}
+.top nav a{text-decoration:none;color:var(--soft);transition:color .18s}
+.top nav a:hover{color:var(--line)}
+.top nav a.mail{color:var(--line);border:1.5px solid var(--line);padding:8px 16px;border-radius:999px;white-space:nowrap;transition:background-color .18s,color .18s}
+.top nav a.mail:hover{background:var(--line);color:var(--slip)}
 
-/* chapters */
-.chapter{padding:104px 0 24px}
-.chapter h2{font-size:clamp(2.6rem,5.6vw,4.4rem)}
-.said{font-size:clamp(1.5rem,2.6vw,2.05rem);line-height:1.3;font-weight:540;font-variation-settings:"INFM" 80,"BNCE" 20;max-width:24ch;margin:26px 0 0}
-figure{margin:0}
-figcaption{font-size:.94rem;color:var(--soft);margin-top:10px;font-variation-settings:"INFM" 60,"BNCE" 0}
-.ph{border-radius:14px;width:100%;object-fit:cover;background:#2f3a44}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 600px;gap:56px;align-items:center;padding-top:52px;padding-bottom:84px}
+.hero h1{font-size:clamp(3rem,5.6vw,5rem);font-weight:720;font-variation-settings:"INFM" 30,"BNCE" 10;line-height:1}
+.hero .said{font-size:clamp(1.5rem,2.3vw,1.95rem);line-height:1.25;font-weight:560;color:var(--hen);margin:24px 0 16px;font-variation-settings:"INFM" 90,"BNCE" 25}
+.hero .lead{font-size:1.15rem;max-width:470px;margin-bottom:30px}
+.hero .mailline{margin:20px 0 0;font-size:1rem;color:var(--soft)}
+.hero .mailline a{color:var(--line);font-weight:560}
+.collage{position:relative;height:690px}
+.snap{position:absolute;margin:0;background:#fff;padding:14px 14px 0;border-radius:6px;box-shadow:0 36px 60px -30px rgba(27,27,27,.55),0 3px 8px rgba(27,27,27,.12)}
+.snap img{width:100%;object-fit:cover;border-radius:3px}
+.snap figcaption{padding:12px 4px 15px;font-size:15px;font-weight:540;line-height:1.25;font-variation-settings:"INFM" 100,"BNCE" 20}
+.s-lob{left:112px;top:0;width:400px;transform:rotate(-1.5deg);z-index:1}
+.s-lob img{aspect-ratio:1600/1496;object-position:50% 50%}
+.s-hen{left:0;top:424px;width:320px;transform:rotate(-4deg);z-index:2}
+.s-hen img{aspect-ratio:1100/731}
+.s-sheep{right:0;top:452px;width:280px;transform:rotate(3deg);z-index:3}
+.s-sheep img{aspect-ratio:1100/731;object-position:50% 60%}
 
-.hens{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;margin-top:44px;align-items:end}
-.hens .baker{grid-column:1/8}
-.hens .square{grid-column:8/13}
-.kiln{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:48px;align-items:center;margin-top:72px;padding:38px;border:3px solid var(--line);border-radius:22px}
-.kiln blockquote{margin:0;font-size:1.22rem;line-height:1.6}
-.kiln blockquote p:first-child{font-weight:560;font-size:1.4rem;line-height:1.4;font-variation-settings:"INFM" 90,"BNCE" 10}
+/* facts */
+.facts{border-top:1.5px solid var(--line);border-bottom:1.5px solid var(--line);background:var(--card)}
+.facts ul{list-style:none;margin:0 auto;padding:20px 32px;max-width:1200px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px}
+.facts li{display:flex;align-items:baseline;gap:11px;white-space:nowrap}
+.facts li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--line);transform:translateY(-1px)}
+.facts li:nth-child(2)::before{background:var(--hen)}.facts li:nth-child(3)::before{background:var(--lob)}
 
-.lob{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:64px;align-items:center;margin-top:44px}
-.lob .said{font-size:clamp(2rem,4vw,3.3rem);max-width:12ch;margin:0 0 22px;color:var(--line)}
-.lob .said span{box-shadow:inset 0 -.32em 0 var(--lobster)}
-.lob p.small{max-width:34ch}
+/* animal table of contents */
+.toc{padding:112px 0 100px}
+.toc .head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.toc .head p{max-width:460px;margin:0;color:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow);position:relative}
+.card h3{font-size:2.1rem;font-weight:700;font-variation-settings:"INFM" 80,"BNCE" 20;margin-bottom:10px}
+.card p{margin:0 0 14px}
+.card .said{font-size:1.4rem;line-height:1.3;font-weight:560;font-variation-settings:"INFM" 90,"BNCE" 15}
+.card .ask{font-weight:560}
+.ph{position:relative;margin:0}
+.ph img{width:100%;object-fit:cover;border-radius:16px}
+.tag{position:absolute;left:14px;bottom:14px;background:rgba(255,253,248,.95);color:var(--line);font-size:13.5px;font-weight:560;padding:6px 12px;border-radius:999px;line-height:1.2;border:1.5px solid var(--line);font-variation-settings:"INFM" 60,"BNCE" 0}
+.c-hen{grid-column:span 7}
+.c-hen .row{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:end;margin-top:22px}
+.c-hen .ph.a img{aspect-ratio:1000/975}
+.c-hen .ph.b img{aspect-ratio:640/478}
+.c-lob{grid-column:span 5;background:var(--lob);margin-top:64px}
+.c-lob .ph{margin-top:20px}
+.c-lob .ph img{aspect-ratio:4/3;object-position:50% 30%}
+.c-bad{grid-column:span 5;margin-top:-40px}
+.c-bad .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 18px}
+.c-bad .ph img{aspect-ratio:1/1}
+.c-bad .ph.big img{object-position:40% 30%}
+.c-bad .ph.sm img{object-position:60% 50%}
+.c-mug{grid-column:span 7}
+.c-mug .row{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:center}
+.c-mug .ph img{aspect-ratio:1100/731}
+.c-mug .mini{margin-top:16px;width:64%;margin-left:auto}
+.c-mug .mini img{aspect-ratio:1000/560}
 
-.flock{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;margin-top:44px;align-items:start}
-.flock .sheep{grid-column:1/13}
-.flock .badger{grid-column:1/5;margin-top:8px}
-.flock .big{grid-column:5/9;margin-top:8px}
-.flock .note{grid-column:9/13}
-.flock .note{align-self:center}
-.flock .note .said{font-size:1.5rem;margin:0}
+/* kiln */
+.kiln{padding:30px 0 120px}
+.kiln .grid{display:block}
+.kiln blockquote{margin:0 auto;max-width:900px;text-align:center;border-top:1.5px solid var(--line);padding-top:64px;position:relative}
+.kiln blockquote::before{content:"";position:absolute;left:50%;top:-7px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--hen)}
+.kiln blockquote p{max-width:640px;margin-left:auto;margin-right:auto}
+.kiln blockquote p:first-child{max-width:none;font-weight:580;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.32;font-variation-settings:"INFM" 90,"BNCE" 10;margin-bottom:22px}
+.kiln blockquote p{color:var(--soft)}
+.kiln blockquote p:first-child{color:var(--line)}
 
-.mugs{display:grid;grid-template-columns:5fr 7fr;gap:48px;margin-top:44px;align-items:start}
-.mugs .txt{position:sticky;top:40px;padding-top:24px}
-.mugs .txt p{font-size:1.2rem;max-width:32ch}
-.mugs .pair{display:grid;gap:28px}
+/* about: black band with white dots */
+.farm{background-color:var(--line);color:#F3EFE6;padding:120px 0;
+  background-image:radial-gradient(circle,rgba(251,248,241,.55) 0 1.6px,transparent 2.2px);background-size:30px 30px;background-position:0 0}
+.farm .grid{display:grid;grid-template-columns:440px 1fr;gap:80px;align-items:center}
+.farm .inner{background:var(--line);padding:8px 0;box-shadow:0 0 0 24px var(--line)}
+.farm h2{color:#fff;margin-bottom:24px}
+.farm p{color:#E3DED4}
+.farm .animals{font-weight:560;font-size:1.3rem;line-height:1.4;color:#fff;font-variation-settings:"INFM" 80,"BNCE" 10}
+.farm .ph{background:#fff;padding:14px 14px 0;border-radius:8px;transform:rotate(-2deg);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.farm .ph img{aspect-ratio:799/1000;border-radius:3px}
+.farm .ph figcaption{color:var(--line);padding:12px 4px 15px;font-size:15px;font-weight:540;font-variation-settings:"INFM" 100,"BNCE" 20}
 
-.farm{padding:112px 0 96px}
-.farm .grid{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:64px;align-items:center}
-.farm h2{font-size:clamp(2.4rem,4.8vw,3.6rem);margin-bottom:24px}
-.farm p{font-size:1.16rem;max-width:58ch}
-.farm .animals{font-weight:560;font-variation-settings:"INFM" 80,"BNCE" 10}
+/* visit */
+.visit{padding:116px 0 124px}
+.visit .grid{display:grid;grid-template-columns:1fr 480px;gap:72px;align-items:center}
+.visit h2{margin-bottom:18px}
+.visit .lead{font-size:1.2rem;max-width:540px;margin-bottom:28px}
+.address{background:var(--card);border:1.5px solid var(--line);border-radius:26px;padding:38px 40px;box-shadow:var(--shadow);position:relative}
+.address strong{display:block;font-weight:680;font-size:1.5rem;margin-bottom:8px;font-variation-settings:"INFM" 100,"BNCE" 20}
+.address p{margin:0 0 18px;font-size:1.1rem}
+.address .mail{font-size:1.15rem;font-weight:560}
+.address .stamp{position:absolute;right:-26px;top:-46px;width:170px;margin:0;background:#fff;padding:9px 9px 0;border-radius:5px;transform:rotate(6deg);box-shadow:0 26px 50px -24px rgba(27,27,27,.6)}
+.address .stamp img{aspect-ratio:1000/665;object-fit:cover;border-radius:2px}
+.address .stamp figcaption{font-size:13px;padding:7px 2px 9px;font-variation-settings:"INFM" 100,"BNCE" 20}
 
-.visit{background:var(--hen);color:#fff;padding:88px 0;border-top:3px solid var(--line)}
-.visit .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}
-.visit h2{font-size:clamp(2.4rem,5vw,4rem)}
-.visit .lead{font-size:1.3rem;max-width:30ch;margin:22px 0 30px}
-.visit .btn{background:#fff;color:var(--line)}
-.visit address{font-style:normal;font-size:1.2rem;line-height:1.6}
-.visit address a{color:#fff;text-underline-offset:4px;word-break:break-all}
-.visit address strong{display:block;font-weight:640;font-size:1.36rem;margin-bottom:6px;font-variation-settings:"INFM" 100,"BNCE" 20}
-
-footer{padding:34px 0 26px;font-size:1rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
-footer a{text-underline-offset:4px}
-.proposal{border-top:1px solid var(--rule);padding:12px var(--pad) 16px;text-align:center;font-family:system-ui,sans-serif;font-size:12px;color:#8a8783;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+footer{background:var(--line);color:#D9D4CA;padding:56px 0 44px}
+footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer .name{font-weight:700;font-size:1.35rem;color:#fff;margin:0 0 8px;font-variation-settings:"INFM" 70,"BNCE" 20}
+footer h3{font-size:1rem;color:#fff;margin:0 0 10px;font-variation-settings:"INFM" 30,"BNCE" 0}
+footer p{margin:0;font-size:1rem}
+footer a{color:#F3EFE6;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--lob)}
+.proposal{background:var(--line);border-top:1px solid rgba(255,255,255,.1);padding:14px 20px;text-align:center;font-family:system-ui,sans-serif;font-size:12px;color:#8a8783}
 .proposal a{color:inherit}
 
+.js .rv{opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s ease}
+.js .rv.in{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:none;transition:none}.btn,.btn:hover{transition:none;transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:1120px){
+  .hero{grid-template-columns:1fr 520px;gap:40px}
+  .s-lob{left:90px;width:370px}.s-hen{width:300px;top:330px}.s-sheep{width:260px;top:370px}
+  .kiln .grid{grid-template-columns:1fr 1fr}
+}
 @media (max-width:960px){
-  .hero{grid-template-columns:1fr;padding:40px 0 64px;gap:56px}
-  .hens .baker,.hens .square{grid-column:1/13}
-  .kiln,.lob,.mugs,.farm .grid,.visit .grid{grid-template-columns:1fr}
-  .kiln{padding:22px;gap:28px}
-  .flock .badger{grid-column:1/7}.flock .big{grid-column:7/13}.flock .note{grid-column:1/13}
-  .lob{gap:32px}
-  .farm .grid{gap:36px}
+  .hero{grid-template-columns:1fr}
+  .collage{max-width:600px;width:100%}
+  .cards{grid-template-columns:1fr}
+  .c-hen,.c-lob,.c-bad,.c-mug{grid-column:auto;margin-top:0}
+  .farm .grid,.visit .grid{grid-template-columns:1fr;gap:44px}
+  .farm .ph{max-width:420px}
+  .toc .head{display:block}.toc .head p{margin-top:14px}
+  footer .grid{grid-template-columns:1fr 1fr}
 }
-@media (max-width:560px){
-  :root{--pad:20px}
+@media (max-width:640px){
   body{font-size:17px}
-  .bar a.mail{font-size:.95rem}
-  .bar .mark{font-size:.95rem}
-  .hero h1{font-size:3.1rem}
-  .hero>div:first-child{padding:28px 24px 30px;border-radius:24px}
-  .hero{padding:30px 0 70px;gap:48px}
-  .hero .lead{margin:20px 0 26px}
-  .bar{padding-top:16px}
-  .hero .lead{font-size:1.18rem}
-  .bowls{gap:30px 8px}
-  .d-hen{--d:150px}.d-lob{--d:136px}.d-bad{--d:128px}.d-mug{--d:142px}
-  .bowl .dish{box-shadow:0 0 0 6px var(--slip),0 0 0 9px var(--line)}
-  .bowl b{font-size:1.12rem}
-  .bowls li:nth-child(2){transform:translateY(26px)}
-  .bowls li:nth-child(3){transform:translate(6px,-4px)}
-  .chapter{padding-top:80px}
-  .farm{padding:72px 0 72px}
-  .mugs .txt{position:static;padding-top:0}
-  .flock .badger,.flock .big{grid-column:1/13}
-  .kiln blockquote{font-size:1.08rem}
-  .kiln blockquote p:first-child{font-size:1.2rem}
-  footer .wrap{flex-direction:column}
-  .proposal{white-space:normal}
+  .wrap,.top .bar{padding-left:22px;padding-right:22px}
+  .hide-s{display:none}
+  .brand{font-size:1.1rem}
+  .top nav a.mail{padding:7px 12px;font-size:.88rem}
+  .hero{padding-top:30px;padding-bottom:56px;gap:0}
+  .hero .txt{display:contents}
+  .hero h1{font-size:2.75rem;order:1}
+  .hero .said{order:2;font-size:1.45rem;margin:16px 0 0}
+  .collage{order:3;height:380px;margin:22px 0 26px}
+  .hero .lead{order:4;font-size:1.06rem}
+  .hero .btns{order:5}
+  .hero .mailline{order:6}
+  .btns{flex-direction:column;align-items:stretch}.btns .btn{width:100%}
+  .snap{padding:8px 8px 0}
+  .snap figcaption{font-size:12.5px;padding:7px 2px 9px}
+  .s-lob{left:50%;margin-left:-106px;top:0;width:212px}
+  .s-hen{left:-4px;top:226px;width:180px}
+  .s-sheep{right:-4px;top:240px;width:164px}
+  .s-lob,.s-hen,.s-sheep{z-index:auto}
+  .facts ul{flex-direction:column;padding:22px;gap:10px;font-size:1rem}
+  .facts li{white-space:normal}
+  .toc{padding:72px 0 64px}
+  .card{padding:22px;border-radius:22px}
+  .card h3{font-size:1.8rem}
+  .c-hen .row{grid-template-columns:1fr 1fr;gap:12px}
+  .c-mug .row{grid-template-columns:1fr;gap:16px}
+  .tag{font-size:12.5px;left:10px;bottom:10px;padding:5px 10px}
+  .kiln{padding:20px 0 72px}
+  .kiln blockquote p:first-child{font-size:1.4rem}
+  .farm{padding:72px 0}
+  .farm .inner{box-shadow:0 0 0 14px var(--line)}
+  .farm .ph{max-width:300px}
+  .visit{padding:80px 0}
+  .address{padding:30px 24px}
+  .address{margin-top:50px}
+  .address .stamp{width:118px;right:8px;top:-84px}
+  .c-hen .row{grid-template-columns:1.3fr 1fr}
+  .c-hen .ph.b .tag{display:none}
+  .c-hen .tag{white-space:nowrap;font-size:12px}
+  footer .grid{grid-template-columns:1fr;gap:28px}
 }
+@media (max-width:420px){.proposal{white-space:normal}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 
-<div class="slip">
-  <div class="wrap">
-    <div class="bar">
-      <span class="mark" id="top">36 Greeley Road, Windsor, Maine</span>
-      <a class="mail" href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a>
-    </div>
-    <section class="hero" aria-labelledby="h1">
-      <div>
-        <h1 id="h1"><span>Maple Lane Pottery</span></h1>
-        <p class="lead"><span>Pottery from a small farm in Windsor, Maine. Chickens, lobsters, sheep and badgers all find their way into my clay.</span></p>
-        <a class="btn" href="mailto:robbi.portela@gmail.com?subject=Visiting%20Maple%20Lane%20Pottery">Write to Robbi</a>
-      </div>
-      <nav aria-label="What I make">
-        <ul class="bowls">
-          <li><a class="bowl d-hen" href="#chickens"><span class="dish" aria-hidden="true"></span><b>Chickens</b></a></li>
-          <li><a class="bowl d-lob" href="#lobsters"><span class="dish" aria-hidden="true"></span><b>Lobsters</b></a></li>
-          <li><a class="bowl d-bad" href="#badgers"><span class="dish" aria-hidden="true"></span><b>Badgers and sheep</b></a></li>
-          <li><a class="bowl d-mug" href="#mugs"><span class="dish" aria-hidden="true"></span><b>Mugs</b></a></li>
-        </ul>
-      </nav>
-    </section>
+<header class="top" id="top">
+  <div class="bar">
+    <a class="brand" href="#top">Maple Lane Pottery</a>
+    <nav aria-label="Main">
+      <a class="hide-s" href="#animals">The pottery</a>
+      <a class="hide-s" href="#about">The farm</a>
+      <a class="hide-s" href="#visit">Visit</a>
+      <a class="mail" href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">Email Robbi</a>
+    </nav>
   </div>
-</div>
+</header>
 
 <main>
-  <section class="chapter" id="chickens" aria-labelledby="h-hen">
-    <div class="wrap">
-      <h2 id="h-hen">Chickens</h2>
-      <p class="said">Bakers and bowls in the chicken design.</p>
-      <div class="hens">
-        <figure class="baker">
-          <img class="ph" src="assets/maple-lane-pottery-maine/chicken-baker.webp" width="1100" height="731" loading="lazy" alt="Rectangular clay baker painted with red chickens and black dots" style="aspect-ratio:1100/731" />
-          <figcaption>Rectangular clay baker in the chicken design</figcaption>
-        </figure>
-        <figure class="square">
-          <img class="ph" src="assets/maple-lane-pottery-maine/chicken-square-bowl.webp" width="1000" height="975" loading="lazy" alt="Square bowl with a red chicken, seen from above" style="aspect-ratio:1000/975" />
-          <figcaption>Square chicken bowl</figcaption>
-        </figure>
+  <section class="wrap hero">
+    <div class="txt">
+      <h1>Maple Lane Pottery</h1>
+      <p class="said">Rainbow Lobster cereal bowls!</p>
+      <p class="lead">Pottery from a small farm in Windsor, Maine. Chickens, lobsters, sheep and badgers all find their way into my clay.</p>
+      <div class="btns">
+        <a class="btn solid" href="mailto:robbi.portela@gmail.com?subject=Visiting%20Maple%20Lane%20Pottery">Write to Robbi</a>
+        <a class="btn line" href="#visit">Visit the gallery</a>
       </div>
-      <div class="kiln">
-        <figure>
-          <img class="ph" src="assets/maple-lane-pottery-maine/kiln-opening.webp" width="640" height="478" loading="lazy" alt="Inside the kiln after a firing: a chicken platter, mugs, bowls and a sheep figure" />
-          <figcaption>A kiln opening, one winter</figcaption>
-        </figure>
-        <blockquote>
-          <p>“Kiln loading is a bit like a puzzle,” my ceramics professor said. “You have to optimize your space!”</p>
-          <p>When I make and glaze my pieces, I think about the design and the function, and also about how they will fit in the kiln. Sometimes I wonder if I need a bigger kiln.</p>
-        </blockquote>
-      </div>
+      <p class="mailline">Robbi answers at <a href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a></p>
     </div>
-  </section>
-
-  <section class="chapter" id="lobsters" aria-labelledby="h-lob">
-    <div class="wrap">
-      <h2 id="h-lob">Lobsters</h2>
-      <div class="lob">
-        <figure>
-          <img class="ph" src="assets/maple-lane-pottery-maine/rainbow-lobster-bowls.webp" width="1600" height="1496" loading="lazy" alt="Two stacked cereal bowls painted with blue, yellow, green and orange lobsters" style="aspect-ratio:1600/1496" />
-        </figure>
-        <div>
-          <p class="said"><span>Rainbow Lobster cereal bowls!</span></p>
-          <a href="mailto:robbi.portela@gmail.com?subject=Rainbow%20Lobster%20cereal%20bowls">Ask Robbi about lobster bowls</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="chapter" id="badgers" aria-labelledby="h-bad">
-    <div class="wrap">
-      <h2 id="h-bad">Badgers and sheep</h2>
-      <div class="flock">
-        <figure class="sheep">
-          <img class="ph" src="assets/maple-lane-pottery-maine/sheep-figures.webp" width="1100" height="731" loading="lazy" alt="Three white clay sheep figures with black heads and legs" style="aspect-ratio:1100/560;object-position:50% 70%" />
-          <figcaption>Sheep figures</figcaption>
-        </figure>
-        <figure class="badger">
-          <img class="ph" src="assets/maple-lane-pottery-maine/badger.webp" width="640" height="480" loading="lazy" alt="Small badger figure with a striped back" style="aspect-ratio:720/430;object-position:50% 45%" />
-          <figcaption>Badger figure</figcaption>
-        </figure>
-        <figure class="big">
-          <img class="ph" src="assets/maple-lane-pottery-maine/badger-sculpture.webp" width="720" height="540" loading="lazy" alt="Large badger sculpture on a white plinth" style="aspect-ratio:720/430;object-position:50% 0" />
-          <figcaption>Large badger sculpture</figcaption>
-        </figure>
-        <div class="note">
-          <p class="said">I love badgers and have added this figure to my line of pottery!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="chapter" id="mugs" aria-labelledby="h-mug">
-    <div class="wrap">
-      <h2 id="h-mug">Mugs</h2>
-      <div class="mugs">
-        <div class="txt">
-          <p class="said" style="margin-bottom:22px">We all have a favorite mug.</p>
-          <p>I love a great cup of tea or hot chocolate in the afternoon in one of mine. These are some of my mugs inspired by a hot beverage: bee, hedgehog and chicken.</p>
-          <a href="mailto:robbi.portela@gmail.com?subject=Your%20mugs">Ask Robbi about mugs</a>
-        </div>
-        <div class="pair">
-          <figure>
-            <img class="ph" src="assets/maple-lane-pottery-maine/bee-hedgehog-chicken-mugs.webp" width="1100" height="731" loading="lazy" alt="Three mugs painted with bees, hedgehogs and chickens" style="aspect-ratio:1100/731" />
-            <figcaption>Bee, hedgehog and chicken mugs</figcaption>
-          </figure>
-          <figure>
-            <img class="ph" src="assets/maple-lane-pottery-maine/mini-bowls.webp" width="1000" height="665" loading="lazy" alt="Three mini bowls with a chicken, a hedgehog and a black bird" style="aspect-ratio:1000/520;object-position:50% 50%" />
-            <figcaption>Mini bowls</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="farm" id="about" aria-labelledby="h-farm">
-    <div class="wrap grid">
-      <figure>
-        <img class="ph" src="assets/maple-lane-pottery-maine/pulling-a-mug.webp" width="799" height="1000" loading="lazy" alt="Robbi pulling up a mug on the potter's wheel in her studio" />
-        <figcaption>Pulling a mug in my studio</figcaption>
+    <div class="collage">
+      <figure class="snap s-lob rv">
+        <img src="assets/maple-lane-pottery-maine/rainbow-lobster-bowls.webp" width="1600" height="1496" alt="Two stacked cereal bowls painted with blue, yellow, green and orange lobsters" fetchpriority="high" />
+        <figcaption>Lobster cereal bowls</figcaption>
       </figure>
-      <div>
-        <h2 id="h-farm">The farm in the clay</h2>
+      <figure class="snap s-hen rv">
+        <img src="assets/maple-lane-pottery-maine/chicken-baker.webp" width="1100" height="731" alt="Rectangular clay baker painted with red chickens and black dots" />
+        <figcaption>Baker in the chicken design</figcaption>
+      </figure>
+      <figure class="snap s-sheep rv">
+        <img src="assets/maple-lane-pottery-maine/sheep-figures.webp" width="1100" height="731" alt="Three white clay sheep figures with black heads and legs" />
+        <figcaption>Sheep figures!</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul>
+      <li>A small farm in Windsor, Maine</li>
+      <li>Chickens, cows, horses and sheep</li>
+      <li>Bakers, bowls, mugs and figures</li>
+      <li>Gallery and studio at 36 Greeley Road</li>
+    </ul>
+  </div>
+
+  <section class="toc" id="animals">
+    <div class="wrap">
+      <div class="head">
+        <h2>From the farm to the kiln</h2>
+        <p>All of these creatures find their way into my clay work, in sculpture or in painting.</p>
+      </div>
+      <div class="cards">
+        <article class="card c-hen" id="chickens">
+          <h3>Chickens</h3>
+          <p class="said">Bakers and bowls in the chicken design.</p>
+          <div class="row">
+            <figure class="ph a rv">
+              <img src="assets/maple-lane-pottery-maine/chicken-square-bowl.webp" width="1000" height="975" loading="lazy" alt="Square bowl with a red chicken, seen from above" />
+              <figcaption class="tag">Square chicken bowl</figcaption>
+            </figure>
+            <figure class="ph b rv">
+              <img src="assets/maple-lane-pottery-maine/kiln-opening.webp" width="640" height="478" loading="lazy" alt="Inside the kiln after a firing: a chicken platter, mugs, bowls and a sheep figure" />
+              <figcaption class="tag">A kiln opening, one winter</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="card c-lob" id="lobsters">
+          <h3>Lobsters</h3>
+          <figure class="ph rv">
+            <img src="assets/maple-lane-pottery-maine/rainbow-lobster-bowls.webp" width="1600" height="1496" loading="lazy" alt="Close view of the lobster cereal bowls, blue and yellow lobsters on white slip with black dots" />
+            <figcaption class="tag">Cereal bowls</figcaption>
+          </figure>
+          <p style="margin:18px 0 0"><a class="ask" href="mailto:robbi.portela@gmail.com?subject=Rainbow%20Lobster%20cereal%20bowls">Ask Robbi about lobster bowls</a></p>
+        </article>
+
+        <article class="card c-bad" id="badgers">
+          <h3>Badgers and sheep</h3>
+          <div class="row">
+            <figure class="ph big rv">
+              <img src="assets/maple-lane-pottery-maine/badger-sculpture.webp" width="720" height="540" loading="lazy" alt="Large badger sculpture on a white plinth" />
+              <figcaption class="tag">Large badger</figcaption>
+            </figure>
+            <figure class="ph sm rv">
+              <img src="assets/maple-lane-pottery-maine/badger.webp" width="640" height="480" loading="lazy" alt="Small badger figure with a striped back" />
+              <figcaption class="tag">Badger figure</figcaption>
+            </figure>
+          </div>
+          <p class="said">I love badgers and have added this figure to my line of pottery!</p>
+        </article>
+
+        <article class="card c-mug" id="mugs">
+          <div class="row">
+            <div>
+              <h3>Mugs</h3>
+              <p class="said">We all have a favorite mug.</p>
+              <p class="soft">I love a great cup of tea or hot chocolate in the afternoon in one of mine. These are some of my mugs inspired by a hot beverage: bee, hedgehog and chicken.</p>
+              <a class="ask" href="mailto:robbi.portela@gmail.com?subject=Your%20mugs">Ask Robbi about mugs</a>
+            </div>
+            <div>
+              <figure class="ph rv">
+                <img src="assets/maple-lane-pottery-maine/bee-hedgehog-chicken-mugs.webp" width="1100" height="731" loading="lazy" alt="Three mugs painted with bees, hedgehogs and chickens" />
+                <figcaption class="tag">Bee, hedgehog and chicken mugs</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="kiln">
+    <div class="wrap grid">
+      <blockquote>
+        <p>“Kiln loading is a bit like a puzzle,” my ceramics professor said. “You have to optimize your space!”</p>
+        <p>When I make and glaze my pieces, I think about the design and the function, and also about how they will fit in the kiln. Sometimes I wonder if I need a bigger kiln.</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="farm" id="about">
+    <div class="wrap grid">
+      <figure class="ph rv">
+        <img src="assets/maple-lane-pottery-maine/pulling-a-mug.webp" width="799" height="1000" loading="lazy" alt="Robbi pulling up a mug on the potter's wheel in her studio" />
+        <figcaption>Pulling a mug in my studio!</figcaption>
+      </figure>
+      <div class="inner">
+        <h2>The farm in the clay</h2>
         <p>I grew up on a wonderful small farm in southern New Hampshire. I now live and work on a small farm with my husband and two children in Windsor, Maine, and I am very much inspired by the farm animals and wildlife around us.</p>
         <p class="animals">We raise chickens, cows, horses and sheep. We also have four cats, a rabbit and a dog who keep my life very busy, fun and lively.</p>
         <p>All of these creatures find their way into my clay work, in sculpture or in painting. I love the way they take on so many different shapes, and how their different personalities make wonderful variations of the same animal.</p>
@@ -294,28 +365,56 @@ footer a{text-underline-offset:4px}
     </div>
   </section>
 
-  <section class="visit" id="visit" aria-labelledby="h-visit">
+  <section class="visit" id="visit">
     <div class="wrap grid">
       <div>
-        <h2 id="h-visit">Visit the gallery and studio</h2>
+        <h2>Visit the gallery and studio</h2>
         <p class="lead">The gallery and studio are on our farm in Windsor. Write to me to arrange a visit.</p>
-        <a class="btn" href="mailto:robbi.portela@gmail.com?subject=Visiting%20the%20Maple%20Lane%20gallery">Write to Robbi</a>
+        <div class="btns">
+          <a class="btn solid" href="mailto:robbi.portela@gmail.com?subject=Visiting%20the%20Maple%20Lane%20gallery">Write to Robbi</a>
+        </div>
       </div>
-      <address>
+      <div class="address">
+        <figure class="stamp rv">
+          <img src="assets/maple-lane-pottery-maine/mini-bowls.webp" width="1000" height="665" loading="lazy" alt="Three mini bowls with a chicken, a hedgehog and a black bird" />
+          <figcaption>Mini bowls!</figcaption>
+        </figure>
         <strong>Maple Lane Pottery</strong>
-        36 Greeley Road<br />Windsor, Maine 04363<br />
-        <a href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a>
-      </address>
+        <p>36 Greeley Road<br />Windsor, Maine 04363</p>
+        <a class="mail" href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>Maple Lane Pottery, 36 Greeley Road, Windsor, Maine 04363</span>
-    <a href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a>
+  <div class="wrap grid">
+    <div>
+      <p class="name">Maple Lane Pottery</p>
+      <p>Robbi, on the farm at 36 Greeley Road<br />Windsor, Maine 04363</p>
+    </div>
+    <div>
+      <h3>Write</h3>
+      <p><a href="mailto:robbi.portela@gmail.com?subject=Maple%20Lane%20Pottery">robbi.portela@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>On this page</h3>
+      <p><a href="#animals">The pottery</a><br /><a href="#about">The farm</a><br /><a href="#visit">Visit the gallery</a></p>
+    </div>
   </div>
 </footer>
 <div class="proposal">Proposal by Nicolas Masset for Maple Lane Pottery · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function f(){top.classList.toggle('scrolled',window.scrollY>8)}
+  f();window.addEventListener('scroll',f,{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

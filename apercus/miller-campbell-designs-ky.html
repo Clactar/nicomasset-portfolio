@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Miller Campbell Designs (Eastern Kentucky), content from http://millercampbelldesigns.com/ (home, About My Art, Purchasing Artwork, Shop in Person, Wholesale, View My Studio, the three doll galleries);
-     direction : « Le registre des poupées » : a family wall of hung portraits, then the doll galleries shown as one ledger with the real names and numbers.
-     No 2019 calendar, no expired coupon code: a "How to buy" section built from her own pages. -->
+<!-- v2 (2026-10-26) : homepage rebuilt for Miller Campbell Designs (Eastern Kentucky), content from http://millercampbelldesigns.com/ (home, About My Art, Purchasing Artwork, Shop in Person, Wholesale, View My Studio, the three doll galleries); direction : « Le registre des poupées » : a family wall of framed doll portraits, then the galleries as four numbered registers; no 2019 calendar, no expired coupon code, a "How to buy" built from her own pages ; finition barre-qualite 26/10 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -11,313 +9,445 @@
 <meta name="theme-color" content="#E7E3DC" />
 <title>Miller Campbell Designs: Appalachian folk art dolls by Rebecca F. Miller Campbell, Eastern Kentucky</title>
 <meta name="description" content="Handmade one-of-a-kind folk art dolls, signed, named, numbered and dated, with paintings and ornaments, by Kentuckian Rebecca F. Miller Campbell." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234B3428'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F5F2EC'%3EM%3C/text%3E%3Ccircle cx='50' cy='14' r='5' fill='%23A8322D'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Cabin:wght@400..700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --linen:#E7E3DC; --linen-2:#DDD8CF; --cocoa:#4B3428; --skirt:#A8322D; --sage:#8A9A7B; --white:#FFFFFF;
-  --soft:#6b5649; --rule:rgba(75,52,40,.18);
+  --linen:#E7E3DC; --linen-2:#DCD6CB; --card:#F5F2EC; --mat:#FBF9F5;
+  --cocoa:#4B3428; --cocoa-deep:#37261D; --skirt:#A8322D; --skirt-dk:#8E2824; --sage:#8A9A7B; --sage-bg:#D9DDD0;
+  --soft:#6B5649; --rule:rgba(75,52,40,.16);
+  --sh-long:0 40px 80px -40px rgba(55,38,29,.6);
+  --sh-frame:0 26px 46px -24px rgba(55,38,29,.55),0 2px 5px rgba(55,38,29,.10);
   --fd:"Sorts Mill Goudy",Georgia,serif; --ft:"Cabin",system-ui,sans-serif;
-  --wrap:1200px; --pad:28px;
+  --wrap:1200px; --pad:32px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--linen);color:var(--cocoa);font-family:var(--ft);font-size:18px;line-height:1.62}
+::selection{background:var(--skirt);color:#fff}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
 p{margin:0 0 1em}
-h1,h2,h3{font-family:var(--fd);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.005em;text-wrap:balance}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-:focus-visible{outline:3px solid var(--skirt);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+h1,h2,h3{font-family:var(--fd);font-weight:400;margin:0;line-height:1.06;letter-spacing:-.01em;text-wrap:balance}
+figure{margin:0}
+.wrap{max-width:calc(var(--wrap) + 2*var(--pad));margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:3px solid var(--skirt);outline-offset:3px;border-radius:6px}
 
-header .bar{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-top:24px;padding-bottom:24px}
-.brand{font-family:var(--fd);font-size:1.3rem;text-decoration:none}
-header nav{display:flex;gap:28px;font-size:1rem}
-header nav a{text-decoration:none;color:var(--soft)}
-header nav a:hover{color:var(--cocoa);text-decoration:underline}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:17px 30px;font-weight:600;font-size:1.02rem;line-height:1.2;text-decoration:none;border:1.5px solid transparent;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--skirt);color:#fff;box-shadow:0 14px 26px -16px rgba(168,50,45,.8)}
+.btn-main:hover{background:var(--skirt-dk)}
+.btn-line{border-color:var(--cocoa);color:var(--cocoa)}
+.btn-line:hover{background:var(--cocoa);color:var(--card)}
+.on-dark .btn-line{border-color:rgba(245,242,236,.6);color:var(--card)}
+.on-dark .btn-line:hover{background:var(--card);color:var(--cocoa)}
 
-/* the wall */
-.wall{display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.6vw,40px);padding:34px 0 10px;max-width:1080px;margin:0 auto}
-.frame{margin:0;flex:var(--g) 1 0;min-width:0}
-.frame .mat{background:var(--white);padding:clamp(8px,1vw,14px);border:2px solid var(--cocoa);box-shadow:0 1px 0 rgba(75,52,40,.08),0 14px 24px -18px rgba(75,52,40,.55)}
-.frame img{width:100%}
-.frame figcaption{margin-top:10px;text-align:center;font-family:var(--fd);font-style:italic;font-size:1rem;color:var(--soft)}
-.f-frida{--g:1.5;margin-top:-24px}
-.f-annie{--g:1.22;margin-top:36px}
-.f-alice{--g:1;margin-top:-56px}
-.f-fox{--g:1.02;margin-top:52px}
-.f-sunny{--g:1.18;margin-top:-18px}
-.wall .f-dani,.wall .f-sugar{display:none}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(231,227,220,.92);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px}
+.brand{font-family:var(--fd);font-size:1.4rem;text-decoration:none;white-space:nowrap}
+.top nav{display:flex;align-items:center;gap:30px;font-size:.98rem}
+.top nav a.a{text-decoration:none;color:var(--soft);transition:color .18s}
+.top nav a.a:hover{color:var(--cocoa)}
+.pill{white-space:nowrap;display:inline-flex;align-items:center;border-radius:999px;padding:9px 18px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-weight:600;font-size:.95rem;transition:background-color .18s,color .18s,transform .18s}
+.pill:hover{background:var(--cocoa);color:var(--card);transform:translateY(-1px)}
 
-.intro{text-align:center;padding:46px 0 96px}
-.intro h1{font-size:clamp(2.8rem,6vw,5rem)}
-.intro .by{font-family:var(--fd);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.7rem);margin:12px 0 18px}
-.intro .what{max-width:52ch;margin:0 auto 30px;font-size:1.12rem;color:var(--soft)}
-.btn{display:inline-block;background:var(--skirt);color:var(--white);text-decoration:none;font-weight:600;font-size:1.05rem;padding:15px 28px;border-radius:3px;transition:background .2s}
-.btn:hover{background:#8f2925}
-.intro .more{display:block;margin-top:18px;font-size:1rem}
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:64px;align-items:center;padding-top:64px;padding-bottom:80px}
+.hero h1{font-size:clamp(2.7rem,5.6vw,5rem);line-height:1.0;letter-spacing:-.018em}
+.hero .by{font-family:var(--fd);font-style:italic;font-size:clamp(1.3rem,1.9vw,1.6rem);line-height:1.3;margin:22px 0 22px;color:var(--cocoa)}
+.hero .what{font-size:1.1rem;color:var(--soft);max-width:40ch;margin-bottom:34px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px}
 
-/* the ledger */
-.registers{padding:0 0 110px}
-.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
-.head h2{font-size:clamp(2.4rem,4.6vw,3.8rem)}
-.head p{max-width:52ch;margin:0;font-size:1.08rem}
-.ledger{background:var(--white);border:2px solid var(--cocoa);display:grid;grid-template-columns:repeat(4,1fr);position:relative}
-.reg{padding:26px 26px 28px;border-left:1px solid var(--rule);display:flex;flex-direction:column}
-.reg:first-child{border-left:0}
-.reg h3{font-size:clamp(2.2rem,3.4vw,3rem);line-height:1;font-variant-numeric:lining-nums;margin-bottom:18px}
-.reg .kind{font-family:var(--fd);font-style:italic;color:var(--soft);margin:6px 0 18px;font-size:1.05rem}
-.reg ol{list-style:none;margin:0 0 22px;padding:0;flex:1}
-.reg li{display:grid;grid-template-columns:4.4em 1fr;gap:6px;padding:7px 0;border-bottom:1px solid #D9E2EA;font-size:1rem;line-height:1.35}
-.reg li b{white-space:nowrap;font-weight:600;color:var(--skirt);font-variant-numeric:tabular-nums}
-.reg li.gap{color:#a4968c;border-bottom-style:dashed}
-.reg li small{display:block;color:var(--soft);font-size:.9rem}
-.reg p{font-size:1rem}
-.reg a.open{font-weight:600}
-.reg.clay{background:var(--linen-2)}
-.clay .minis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 20px}
-.clay .minis img{border:6px solid var(--white)}
+/* the wall of portraits */
+.wall{position:relative;width:100%;max-width:690px;justify-self:end;aspect-ratio:690/580;container-type:inline-size}
+.fr{position:absolute;background:var(--mat);padding:1.9cqw;box-shadow:var(--sh-frame);border-radius:3px}
+.fr::after{content:"";position:absolute;inset:1.9cqw;box-shadow:inset 0 0 0 1px rgba(75,52,40,.12);pointer-events:none}
+.fr img{width:100%;height:auto}
+.fr.annie{left:0;top:0;width:29cqw}
+.fr.fox{left:2.5cqw;top:55.4%;width:26.5cqw}
+.fr.frida{left:33cqw;top:19.5%;width:36cqw;box-shadow:var(--sh-long),0 2px 5px rgba(55,38,29,.1)}
+.fr.alice{left:73.5cqw;top:6.2%;width:26.5cqw}
+.fr.sunny{left:74.5cqw;top:53.2%;width:24cqw}
+.tag{position:absolute;left:14px;bottom:14px;background:rgba(251,249,245,.95);color:var(--cocoa);font-size:13.5px;font-weight:600;line-height:1.2;padding:8px 12px;border-radius:10px;box-shadow:0 6px 14px -8px rgba(55,38,29,.5);white-space:nowrap}
+.fr .tag{left:calc(1.9cqw + 10px);bottom:calc(1.9cqw + 10px)}
 
-/* how they are made */
-.made{padding:0 0 110px}
-.made .grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
-.made blockquote{margin:0 0 28px;font-family:var(--fd);font-size:clamp(2rem,3.6vw,3rem);line-height:1.12}
-.made .txt p{font-size:1.1rem;max-width:60ch}
-.made .pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end}
-.made .pair figure{margin:0}
-.made figcaption,.paint figcaption,.studio figcaption{font-size:.92rem;color:var(--soft);margin-top:8px}
+/* facts band */
+.facts{background:var(--linen-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.facts ul{list-style:none;margin:0 auto;padding:20px var(--pad);max-width:calc(var(--wrap) + 2*var(--pad));display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:1rem}
+.facts li{display:flex;align-items:center;gap:12px}
+.facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--skirt);flex:none}
+
+/* registers */
+.registers{padding:120px 0 120px}
+.reg-head{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:48px}
+.reg-head h2{font-size:clamp(2.4rem,4.4vw,3.9rem)}
+.reg-head p{margin:0;max-width:50ch;font-size:1.08rem;color:var(--soft)}
+.ledger{background:var(--card);border-radius:24px;box-shadow:var(--sh-long),0 1px 0 rgba(255,255,255,.6) inset;padding:12px 48px}
+.entry{display:grid;grid-template-columns:290px minmax(0,1fr) 210px;gap:40px;align-items:center;padding:40px 0;border-top:1px solid var(--rule)}
+.entry:first-child{border-top:0}
+.entry .num{white-space:nowrap;font-family:var(--fd);font-size:clamp(3.2rem,5vw,4.5rem);line-height:.95;letter-spacing:-.02em;color:var(--cocoa);font-variant-numeric:lining-nums}
+.entry .num small{display:block;font-size:1.05rem;letter-spacing:0;font-style:italic;color:var(--soft);margin-top:12px}
+.names{list-style:none;margin:0 0 20px;padding:0;columns:2;column-gap:36px}
+.names li{break-inside:avoid;display:grid;grid-template-columns:4.6em 1fr;gap:6px;padding:7px 0;border-bottom:1px solid var(--rule);font-size:1rem;line-height:1.35}
+.names b{font-weight:600;color:var(--skirt);font-variant-numeric:tabular-nums;white-space:nowrap}
+.names small{display:block;color:var(--soft);font-size:.9rem}
+.entry p.clay{margin:0 0 18px;max-width:56ch;font-size:1.02rem}
+.open{font-weight:600;color:var(--skirt);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;transition:color .18s}
+.open:hover{color:var(--cocoa)}
+.vig{justify-self:end;position:relative;width:180px}
+.entry .num.w{font-size:clamp(2.6rem,3.6vw,3.3rem)}
+/* hang tags for the first two registers (no photo of those dolls on file) */
+.hangtag{position:relative;width:150px;margin:18px 14px 0 auto;padding:42px 18px 22px;background:var(--mat);border-radius:14px 14px 10px 10px;box-shadow:var(--sh-frame);text-align:center;transform:rotate(-3deg);transform-origin:50% 0}
+.hangtag::before{content:"";position:absolute;top:14px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--card);box-shadow:inset 0 1px 2px rgba(55,38,29,.35)}
+.hangtag::after{content:"";position:absolute;top:-22px;left:50%;width:2px;height:44px;margin-left:-1px;background:var(--skirt);border-radius:2px;transform:rotate(14deg);transform-origin:50% 100%}
+.hangtag b{display:block;font-family:var(--fd);font-weight:400;font-size:2.1rem;line-height:1;color:var(--cocoa)}
+.hangtag span{display:block;font-family:var(--fd);font-style:italic;font-size:1.15rem;margin-top:8px;color:var(--soft)}
+.hangtag.r2{transform:rotate(2.5deg)}
+.vig .ph{border-radius:16px;overflow:hidden;box-shadow:var(--sh-frame)}
+.vig .ph img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vig .ph.annie img{object-position:50% 30%}
+.vig .tag{left:10px;bottom:10px;font-size:13px}
+.vig.duo{width:200px;height:250px}
+.vig.duo .ph{position:absolute;width:140px}
+.vig.duo .a{right:0;top:0}
+.vig.duo .b{left:0;bottom:0;width:112px;transform:rotate(-4deg);border:6px solid var(--mat);border-radius:14px}
+
+/* made like wood */
+.made{padding:0 0 130px}
+.made .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:80px;align-items:center}
+.made blockquote{margin:0 0 34px;font-family:var(--fd);font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.08;letter-spacing:-.012em}
+.made blockquote span{display:block;text-wrap:balance}
+.made blockquote span + span{color:var(--soft)}
+.made .txt p{max-width:58ch}
+.angels{position:relative;height:600px}
+.angels .big{position:absolute;right:0;top:0;width:380px;border-radius:22px;overflow:hidden;box-shadow:var(--sh-long)}
+.angels .big .tag{left:auto;right:14px}
+.angels .big img{width:100%;aspect-ratio:632/860;object-fit:cover;object-position:50% 60%}
+.angels .small{position:absolute;left:0;bottom:0;width:220px;background:var(--mat);padding:12px 12px 14px;border-radius:6px;box-shadow:var(--sh-frame);transform:rotate(-3.5deg)}
+.angels .small img{width:100%;border-radius:2px}
+.angels .small figcaption{font-family:var(--fd);font-style:italic;font-size:1rem;text-align:center;padding-top:10px;color:var(--soft)}
 
 /* paintings and ornaments */
-.paint{padding:0 0 110px}
-.paint .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:end}
-.paint h2{font-size:clamp(2.2rem,4vw,3.2rem);grid-column:1/13;margin-bottom:6px}
-.paint figure{margin:0}
-.paint .p1{grid-column:1/5}
-.paint .p2{grid-column:5/8}
-.paint .orn{grid-column:8/13}
-.paint .orn p{margin-top:16px;font-size:1.05rem}
+.paint{background:var(--sage-bg);padding:120px 0 110px;position:relative}
+.paint .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 32px;align-items:start}
+.paint .intro{grid-column:1/6;padding-top:10px}
+.paint h2{font-size:clamp(2.4rem,4.2vw,3.6rem);margin-bottom:22px}
+.paint .intro p{max-width:40ch;color:#4f4a3e}
+.paint .orn{grid-column:1/6;grid-row:2;align-self:end;margin-top:56px;margin-bottom:30px;position:relative;border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(47,52,38,.65)}
+.paint .orn img{width:100%}
+.paint .boards{grid-column:6/13;grid-row:1/3;position:relative;height:690px}
+.board{position:absolute;border-radius:14px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(47,52,38,.7),0 2px 4px rgba(47,52,38,.12)}
+.board img{width:100%}
+.board.girl{left:24px;top:0;width:410px}
+.board.teddy{right:0;top:220px;width:310px}
+.board .tag{font-size:13px}
 
 /* studio and Berea */
-.studio{background:var(--white);padding:96px 0}
-.studio .grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:center}
-.studio h2{font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:18px}
-.studio figure{margin:0}
-.studio .berea{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center;margin-top:80px}
-.studio p{font-size:1.08rem;max-width:56ch}
+.studio{padding:130px 0 120px}
+.studio .row1{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+.studio .row2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center;margin-top:90px}
+.studio h2{font-size:clamp(2.2rem,3.8vw,3.3rem);margin-bottom:20px}
+.ph-r{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--sh-long)}
+.ph-r img{width:100%}
+.studio .s1 img{aspect-ratio:1000/560;object-fit:cover;object-position:50% 0}
+.studio .s2{max-width:520px;justify-self:end;width:100%}
+.studio .s2 img{aspect-ratio:1000/780;object-fit:cover;object-position:50% 40%}
+.studio .berea-txt{background:var(--card);border-radius:22px;padding:44px 46px 36px;box-shadow:0 30px 60px -38px rgba(55,38,29,.5)}
+.studio .berea-txt p:last-child{margin-bottom:0}
 
-/* how to buy */
-.buy{background:var(--cocoa);color:#F3EEE6;padding:100px 0}
-.buy .grid{display:grid;grid-template-columns:4fr 7fr;gap:72px;align-items:start}
-.buy h2{font-size:clamp(2.6rem,5vw,4rem);margin-bottom:22px}
-.buy .lead{font-size:1.15rem;max-width:30ch;margin-bottom:30px}
-.buy .btn{background:var(--white);color:var(--cocoa)}
-.buy .btn:hover{background:var(--linen)}
-.buy .mail{display:block;margin-top:16px;color:#F3EEE6;word-break:break-all}
-.ways{margin:0}
-.ways > div{display:grid;grid-template-columns:10em 1fr;gap:24px;padding:24px 0;border-top:1px solid rgba(243,238,230,.25)}
-.ways > div:last-child{border-bottom:1px solid rgba(243,238,230,.25)}
-.ways dt{font-family:var(--fd);font-size:1.5rem;line-height:1.2}
-.ways dd{margin:0;font-size:1.04rem}
-.ways dd p{margin:0 0 .6em}
-.ways a{color:#fff}
-.shops{list-style:none;padding:0;margin:.4em 0 .8em;columns:2;column-gap:28px}
-.shops li{break-inside:avoid;margin-bottom:6px}
-.shops span{display:block;color:#cfc3b6;font-size:.95rem}
+/* how to buy (dark) */
+.buy{background:var(--cocoa);color:var(--card);padding:120px 0 130px}
+.buy .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+.buy h2{font-size:clamp(2.6rem,4.6vw,4rem);margin-bottom:22px;color:#fff}
+.buy .lead{font-size:1.15rem;color:#e3d9cd;max-width:32ch;margin-bottom:32px}
+.buy .ctas{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.buy .mailline{margin-top:22px;font-size:1rem;color:#d8ccbe}
+.buy .mailline a{color:#fff}
+.ways{margin:0;background:var(--card);color:var(--cocoa);border-radius:24px;padding:20px 48px;box-shadow:0 50px 90px -40px rgba(0,0,0,.6)}
+.ways > div{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:30px 0;border-top:1px solid var(--rule)}
+.ways > div:first-child{border-top:0}
+.ways dt{font-family:var(--fd);font-size:1.55rem;line-height:1.2}
+.ways dd{margin:0;font-size:1.02rem}
+.ways dd p{margin:0 0 .7em}
+.ways dd p:last-child{margin-bottom:0}
+.ways a{color:var(--skirt);font-weight:600}
+.ways .links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.shops{list-style:none;padding:0;margin:.3em 0 1em;columns:2;column-gap:28px}
+.shops li{break-inside:avoid;margin-bottom:10px;line-height:1.3}
+.shops span{display:block;color:var(--soft);font-size:.92rem}
 
-footer{padding:34px 0;font-size:1rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
-.proposal{border-top:1px solid var(--rule);padding:12px var(--pad) 16px;text-align:center;font-size:12px;color:#8d8075;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* footer */
+footer{background:var(--cocoa-deep);color:#e9e0d5;padding:64px 0 54px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer .fname{font-family:var(--fd);font-size:1.7rem;color:#fff;margin-bottom:8px}
+footer p{margin:0;color:#cbbfb1;font-size:1rem}
+footer h3{font-family:var(--ft);font-size:.95rem;font-weight:600;color:#fff;margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px}
+footer a{color:#e9e0d5;transition:color .18s}
+footer a:hover{color:#fff}
+.proposal{background:var(--cocoa-deep);border-top:1px solid rgba(245,242,236,.1);padding:12px var(--pad) 16px;text-align:center;font-size:12px;color:#a8998b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .proposal a{color:inherit}
 
-@media (max-width:1000px){
-  .ledger{grid-template-columns:1fr 1fr}
-  .reg:nth-child(3){border-left:0}
-  .reg:nth-child(n+3){border-top:1px solid var(--rule)}
-  .head,.made .grid,.studio .grid,.studio .berea,.buy .grid{grid-template-columns:1fr;gap:32px}
-  .paint .p1{grid-column:1/7}.paint .p2{grid-column:7/13}.paint .orn{grid-column:1/13}
+/* reveal on photos only */
+.js .rv{opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s ease}
+.js .rv.in{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  .btn,.pill{transition:none}.btn:hover,.pill:hover{transform:none}
 }
-@media (max-width:640px){
-  :root{--pad:20px}
+
+@media (max-width:1080px){
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .wall{justify-self:center}
+  .entry{grid-template-columns:200px minmax(0,1fr) 180px;gap:28px}
+  .made .wrap,.studio .row1,.studio .row2,.buy .wrap,.reg-head{grid-template-columns:1fr;gap:44px}
+  .made .angels{max-width:560px}
+  .paint .intro,.paint .orn,.paint .boards{grid-column:1/-1;grid-row:auto}
+  .paint .orn{max-width:560px}
+  .studio .s2{justify-self:start}
+}
+@media (max-width:700px){
+  :root{--pad:22px}
   body{font-size:17px}
-  header nav{display:none}
-  .wall{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;padding-top:6px;align-items:start}
-  .frame{margin-top:0}
-  .frame .mat{padding:6px}
-  .frame figcaption{font-size:.9rem;margin-top:6px}
-  .f-annie,.f-sunny{margin-top:30px}
-  .f-alice,.f-fox{display:none}
-  header .bar{padding-bottom:14px}
-  .wall{max-width:none}
-  .intro{padding:26px 0 72px}
-  .intro h1{font-size:2.5rem}
-  .intro .what{font-size:1.05rem}
-  .ledger{grid-template-columns:1fr}
-  .reg{border-left:0;border-top:1px solid var(--rule);padding:22px 20px}
-  .reg:first-child{border-top:0}
-  .registers,.made,.paint{padding-bottom:80px}
-  .made .pair{gap:16px}
-  .paint .p1,.paint .p2{grid-column:span 6}
-  .studio,.buy{padding:72px 0}
-  .ways > div{grid-template-columns:1fr;gap:8px}
+  .top .wrap{height:58px}
+  .top nav a.a{display:none}
+  .brand{font-size:1.06rem}
+  .pill{padding:8px 15px;font-size:.92rem}
+  .hero .wrap{display:flex;flex-direction:column-reverse;gap:34px;padding-top:28px;padding-bottom:56px}
+  .wall{width:100%}
+  .hero h1{font-size:2.65rem}
+  .hero .by{font-size:1.3rem;margin:14px 0 16px}
+  .hero .what{font-size:1.05rem;margin-bottom:26px}
+  .hero .ctas{flex-direction:column}
+  .hero .ctas .btn,.buy .ctas .btn{width:100%}
+  .buy .ctas{align-items:stretch}
+  .tag{font-size:13px;padding:6px 10px}
+  .fr .tag{left:calc(1.9cqw + 6px);bottom:calc(1.9cqw + 6px)}
+  .facts ul{flex-direction:column;gap:10px;padding:22px var(--pad)}
+  .registers{padding:80px 0}
+  .reg-head{margin-bottom:32px;gap:16px}
+  .ledger{padding:4px 22px;border-radius:20px}
+  .entry{grid-template-columns:minmax(0,1fr) auto;gap:18px 14px;padding:30px 0}
+  .entry .num.w{font-size:2.3rem}
+  .entry .num{grid-column:1;grid-row:1;font-size:2.7rem;align-self:center}
+  .entry .vig{grid-column:2;grid-row:1}
+  .entry .body{grid-column:1/-1;grid-row:2}
+  .names{columns:1}
+  .vig{width:118px}
+  .hangtag{width:112px;padding:34px 10px 16px;margin:16px 6px 0 auto}
+  .hangtag::before{top:11px}
+  .hangtag b{font-size:1.6rem}
+  .hangtag span{font-size:1rem}
+  .vig .tag{display:none}
+  .vig.duo{width:112px;height:150px}
+  .vig.duo .ph{width:80px}
+  .vig.duo .b{width:66px;border-width:4px}
+  .made{padding-bottom:90px}
+  .angels{height:auto;display:flex;flex-direction:column;gap:0}
+  .angels .big{position:relative;width:82%;margin-left:auto}
+  .angels .small{position:relative;width:52%;margin-top:-90px}
+  .angels .big .tag{top:14px;bottom:auto}
+  .paint{padding:84px 0 90px}
+  .paint .boards{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;align-items:start}
+  .board.girl,.board.teddy{position:relative;left:auto;right:auto;top:auto;width:auto}
+  .board.teddy{margin-top:48px}
+  .paint .orn{margin-top:28px}
+  .studio{padding:84px 0}
+  .studio .row2{margin-top:64px}
+  .studio .berea-txt{padding:30px 24px 26px}
+  .buy{padding:84px 0 90px}
+  .ways{padding:6px 22px;border-radius:20px}
+  .ways > div{grid-template-columns:1fr;gap:8px;padding:24px 0}
   .shops{columns:1}
-  footer .wrap{flex-direction:column}
+  footer .wrap{grid-template-columns:1fr;gap:30px}
   .proposal{white-space:normal}
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
-    <a class="brand" href="#top" id="top">Miller Campbell Designs</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Miller Campbell Designs</a>
     <nav aria-label="Main">
-      <a href="#registers">Doll galleries</a>
-      <a href="#paintings">Paintings and ornaments</a>
-      <a href="#buy">How to buy</a>
+      <a class="a" href="#registers">Doll galleries</a>
+      <a class="a" href="#paintings">Paintings and ornaments</a>
+      <a class="a" href="#buy">How to buy</a>
+      <a class="pill" href="mailto:madcackler@gmail.com?subject=A%20question%20about%20your%20dolls">Email Rebecca</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section aria-label="Dolls by Rebecca F. Miller Campbell">
+<main id="top">
+  <section class="hero" aria-labelledby="h-name">
     <div class="wrap">
-      <div class="wall">
-        <figure class="frame f-alice"><div class="mat"><img src="assets/miller-campbell-designs-ky/doll-alice.webp" width="654" height="900" alt="Paperclay doll with long hair and a blue cone dress painted with mushrooms and a rabbit" /></div><figcaption>Paperclay</figcaption></figure>
-        <figure class="frame f-annie"><div class="mat"><img src="assets/miller-campbell-designs-ky/doll-annie.webp" width="550" height="834" alt="Cloth doll Annie with red yarn pigtails, holding a small bear in a pocket marked annie" /></div><figcaption>Annie, no. 250</figcaption></figure>
-        <figure class="frame f-frida"><div class="mat"><img src="assets/miller-campbell-designs-ky/doll-frida.webp" width="550" height="810" alt="Cloth doll Frida with red roses in her hair and a red skirt" /></div><figcaption>Frida, no. 252</figcaption></figure>
-        <figure class="frame f-fox"><div class="mat"><img src="assets/miller-campbell-designs-ky/doll-fox.webp" width="630" height="900" alt="Hand-sculpted paperclay fox" /></div><figcaption>Paperclay</figcaption></figure>
-        <figure class="frame f-sunny"><div class="mat"><img src="assets/miller-campbell-designs-ky/doll-sunny.webp" width="550" height="725" alt="Cloth doll Sunny with a sunflower bonnet" /></div><figcaption>Sunny, no. 251</figcaption></figure>
-      </div>
-      <div class="intro">
-        <h1>Miller Campbell Designs</h1>
-        <p class="by">Appalachian folk art by Kentuckian Rebecca F. Miller Campbell</p>
+      <div class="hero-txt">
+        <h1 id="h-name">Miller Campbell Designs</h1>
+        <div class="by">Appalachian folk art by Kentuckian Rebecca F.&nbsp;Miller Campbell</div>
         <p class="what">One-of-a-kind primitive art dolls, signed and numbered, with paintings and bits of whimsy from the hills of Eastern Kentucky.</p>
-        <a class="btn" href="mailto:madcackler@gmail.com?subject=A%20question%20about%20your%20dolls">Email Rebecca</a>
-        <a class="more" href="#registers">See the doll galleries, from no. 1</a>
+        <div class="ctas">
+          <a class="btn btn-main" href="mailto:madcackler@gmail.com?subject=A%20question%20about%20your%20dolls">Email Rebecca</a>
+          <a class="btn btn-line" href="#registers">See the doll galleries</a>
+        </div>
+      </div>
+      <div class="wall" aria-label="A wall of Rebecca's dolls">
+        <figure class="fr annie"><img src="assets/miller-campbell-designs-ky/doll-annie.webp" width="550" height="834" alt="Cloth doll Annie with red yarn pigtails, holding a small bear in a pocket marked annie" /></figure>
+        <figure class="fr fox"><img src="assets/miller-campbell-designs-ky/doll-fox.webp" width="630" height="900" alt="Hand-sculpted paperclay fox" /></figure>
+        <figure class="fr frida"><img src="assets/miller-campbell-designs-ky/doll-frida.webp" width="550" height="810" alt="Cloth doll Frida with red roses in her hair and a red skirt" /><figcaption class="tag">Frida, no. 252</figcaption></figure>
+        <figure class="fr alice"><img src="assets/miller-campbell-designs-ky/doll-alice.webp" width="654" height="900" alt="Paperclay doll with long hair and a blue cone dress painted with mushrooms and a rabbit" /></figure>
+        <figure class="fr sunny"><img src="assets/miller-campbell-designs-ky/doll-sunny.webp" width="550" height="725" alt="Cloth doll Sunny with a sunflower bonnet" /></figure>
       </div>
     </div>
   </section>
 
+  <div class="facts">
+    <ul>
+      <li>Signed, named, numbered and dated</li>
+      <li>A Certificate of Authenticity with each doll</li>
+      <li>15 to 20 hours of handwork for a 14″ doll</li>
+      <li>Made in Eastern Kentucky</li>
+    </ul>
+  </div>
+
   <section class="registers" id="registers" aria-labelledby="h-reg">
     <div class="wrap">
-      <div class="head">
+      <div class="reg-head">
         <h2 id="h-reg">Named and numbered</h2>
         <p>My cloth dolls come signed, named, numbered and dated, with a Certificate of Authenticity. Because they are one of a kind, they will never be reproduced. Each gallery below is a page of that register.</p>
       </div>
       <div class="ledger">
-        <div class="reg">
-          <h3>1–100</h3>
-          <ol>
-            <li><b>No. 1</b><span>Naoma</span></li>
-            <li><b>No. 2</b><span>Virgil</span></li>
-            <li><b>No. 3</b><span>Lula Belle</span></li>
-            <li><b>No. 4</b><span>Little Miss Penelope</span></li>
-            <li class="gap"><b></b><span>…</span></li>
-            <li><b>No. 98</b><span>Alice in Wonderland</span></li>
-            <li><b>No. 100</b><span>Little Red Riding Hood</span></li>
-          </ol>
-          <a class="open" href="http://millercampbelldesigns.com/?page_id=75">Open Dolls 1–100</a>
-        </div>
-        <div class="reg">
-          <h3>101–200</h3>
-          <ol>
-            <li><b>No. 101</b><span>Aria<small>Thionville, France</small></span></li>
-            <li><b>No. 102</b><span>Gabby</span></li>
-            <li><b>No. 103</b><span>Goldilocks &amp; The Three Bears</span></li>
-            <li class="gap"><b></b><span>…</span></li>
-            <li><b>No. 151</b><span>Red Queen</span></li>
-            <li><b>No. 152</b><span>Mad Hatter</span></li>
-            <li><b>No. 200</b><span>Wicked</span></li>
-          </ol>
-          <a class="open" href="http://millercampbelldesigns.com/?page_id=1705">Open Dolls 101–200</a>
-        </div>
-        <div class="reg">
-          <h3>201–300</h3>
-          <ol>
-            <li><b>No. 201</b><span>Santa</span></li>
-            <li><b>No. 202</b><span>Dempsey</span></li>
-            <li class="gap"><b></b><span>…</span></li>
-            <li><b>No. 250</b><span>Annie</span></li>
-            <li><b>No. 251</b><span>Sunny</span></li>
-            <li><b>No. 252</b><span>Frida</span></li>
-            <li><b>No. 284</b><span>Tricia</span></li>
-          </ol>
-          <a class="open" href="http://millercampbelldesigns.com/?page_id=1890">Open Dolls 201–300</a>
-        </div>
-        <div class="reg clay">
-          <h3>Paperclay</h3>
-          <div class="minis"><img src="assets/miller-campbell-designs-ky/doll-dani-deer.webp" width="600" height="900" loading="lazy" alt="Paperclay figure of a girl with deer antlers and a lace collar" /><img src="assets/miller-campbell-designs-ky/doll-sugar.webp" width="621" height="900" loading="lazy" alt="Paperclay figure in pink with a cupcake on her head" /></div>
-          <p>Many of my smaller dolls are made from paperclay, an air-dry clay that doesn’t have to be fired. All of them are hand-sculpted without molds, then primed, sanded, hand-painted and sealed, much like my cloth dolls.</p>
-          <a class="open" href="http://millercampbelldesigns.com/?page_id=1710">Open Paperclay Dolls</a>
-        </div>
+        <article class="entry">
+          <h3 class="num">1–100<small>Dolls 1 to 100</small></h3>
+          <div class="body">
+            <ol class="names">
+              <li><b>No. 1</b><span>Naoma</span></li>
+              <li><b>No. 2</b><span>Virgil</span></li>
+              <li><b>No. 3</b><span>Lula Belle</span></li>
+              <li><b>No. 4</b><span>Little Miss Penelope</span></li>
+              <li><b>No. 98</b><span>Alice in Wonderland</span></li>
+              <li><b>No. 100</b><span>Little Red Riding Hood</span></li>
+            </ol>
+            <a class="open" href="http://millercampbelldesigns.com/?page_id=75">Open Dolls 1–100</a>
+          </div>
+          <div class="vig"><div class="hangtag" aria-hidden="true"><b>No. 1</b><span>Naoma</span></div></div>
+        </article>
+        <article class="entry">
+          <h3 class="num">101–200<small>Dolls 101 to 200</small></h3>
+          <div class="body">
+            <ol class="names">
+              <li><b>No. 101</b><span>Aria<small>Thionville, France</small></span></li>
+              <li><b>No. 102</b><span>Gabby</span></li>
+              <li><b>No. 103</b><span>Goldilocks &amp; The Three Bears</span></li>
+              <li><b>No. 151</b><span>Red Queen</span></li>
+              <li><b>No. 152</b><span>Mad Hatter</span></li>
+              <li><b>No. 200</b><span>Wicked</span></li>
+            </ol>
+            <a class="open" href="http://millercampbelldesigns.com/?page_id=1705">Open Dolls 101–200</a>
+          </div>
+          <div class="vig"><div class="hangtag r2" aria-hidden="true"><b>No. 101</b><span>Aria</span></div></div>
+        </article>
+        <article class="entry">
+          <h3 class="num">201–300<small>Dolls 201 to 300</small></h3>
+          <div class="body">
+            <ol class="names">
+              <li><b>No. 201</b><span>Santa</span></li>
+              <li><b>No. 202</b><span>Dempsey</span></li>
+              <li><b>No. 250</b><span>Annie</span></li>
+              <li><b>No. 251</b><span>Sunny</span></li>
+              <li><b>No. 252</b><span>Frida</span></li>
+              <li><b>No. 284</b><span>Tricia</span></li>
+            </ol>
+            <a class="open" href="http://millercampbelldesigns.com/?page_id=1890">Open Dolls 201–300</a>
+          </div>
+          <div class="vig"><div class="ph annie rv"><img src="assets/miller-campbell-designs-ky/doll-annie.webp" width="550" height="834" loading="lazy" alt="Annie, doll no. 250" /></div><span class="tag">Annie, no. 250</span></div>
+        </article>
+        <article class="entry">
+          <h3 class="num w">Paperclay<small>Smaller dolls, hand-sculpted</small></h3>
+          <div class="body">
+            <p class="clay">Many of my smaller dolls are made from paperclay, an air-dry clay that doesn’t have to be fired. All of them are hand-sculpted without molds, then primed, sanded, hand-painted and sealed, much like my cloth dolls.</p>
+            <a class="open" href="http://millercampbelldesigns.com/?page_id=1710">Open Paperclay Dolls</a>
+          </div>
+          <div class="vig duo">
+            <div class="ph a rv"><img src="assets/miller-campbell-designs-ky/doll-sugar.webp" width="621" height="900" loading="lazy" alt="Paperclay figure in pink with a cupcake on her head" /></div>
+            <div class="ph b rv"><img src="assets/miller-campbell-designs-ky/doll-dani-deer.webp" width="600" height="900" loading="lazy" alt="Paperclay figure of a girl with deer antlers and a lace collar" /></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="made" aria-labelledby="h-made">
-    <div class="wrap grid">
+    <div class="wrap">
       <div class="txt">
-        <h2 id="h-made" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">How each doll is made</h2>
-        <blockquote>“They look like wood!”<br />“What are these made of?”</blockquote>
+        <h2 id="h-made" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">How each doll is made</h2>
+        <blockquote><span>“They look like wood!”</span><span>“What are these made of?”</span></blockquote>
         <p>I hear these quite often. Many of my cloth dolls do look like wood, but they are made from high-quality muslin. The wooden look comes from my painting process: layers and layers of paint, with light sanding between each one. A light touch reveals a softer, more supple texture, much like worn, broken-in leather.</p>
         <p>I design, sew, stuff, hand-sew, paint, photograph and package every piece myself, clothing and accessories included. An average standing 14″ doll takes 15 to 20 hours of hands-on time, not counting drying time.</p>
         <p>Inspiration comes from nature, the changing seasons, vintage postcards, antiques, stories read as a child, and memories of growing up in Appalachia, with its make-do attitude. I use vintage buttons and often stuff the torsos with rags, the way dolls were made long ago.</p>
       </div>
-      <div class="pair">
-        <figure><img src="assets/miller-campbell-designs-ky/doll-nettie.webp" width="632" height="900" loading="lazy" alt="Paperclay angel with brown and gold wings holding a nest" /><figcaption>Paperclay angel with a nest</figcaption></figure>
-        <figure><img src="assets/miller-campbell-designs-ky/doll-angel.webp" width="600" height="900" loading="lazy" alt="Paperclay angel with glittery wings and a red dress" /><figcaption>Paperclay angel</figcaption></figure>
+      <div class="angels">
+        <figure class="big rv"><img src="assets/miller-campbell-designs-ky/doll-nettie.webp" width="632" height="900" loading="lazy" alt="Paperclay angel with brown and gold wings holding a nest" /><figcaption class="tag">Paperclay angel with a nest</figcaption></figure>
+        <figure class="small rv"><img src="assets/miller-campbell-designs-ky/doll-angel.webp" width="600" height="900" loading="lazy" alt="Paperclay angel with glittery wings and a red dress" /><figcaption>Paperclay angel</figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="paint" id="paintings" aria-labelledby="h-paint">
-    <div class="wrap grid">
-      <h2 id="h-paint">Paintings and ornaments</h2>
-      <figure class="p1"><img src="assets/miller-campbell-designs-ky/painting-girl.webp" width="632" height="800" loading="lazy" alt="Painting of a little clown girl with a red nose on a wooden board" /><figcaption>Painting on board</figcaption></figure>
-      <figure class="p2"><img src="assets/miller-campbell-designs-ky/painting-teddy.webp" width="548" height="800" loading="lazy" alt="Painting of a teddy bear in a party hat on a wooden board" /><figcaption>Painting on board</figcaption></figure>
-      <figure class="orn"><img src="assets/miller-campbell-designs-ky/ornaments.webp" width="600" height="400" loading="lazy" alt="Hand-painted stuffed ornaments: Santas, a snowman, foxes and a reindeer" />
-        <figcaption>Hand-painted stuffed ornaments</figcaption>
-        <p>Ornaments for every season: anytime, Christmas and Halloween.</p>
-      </figure>
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="h-paint">Paintings and ornaments</h2>
+        <p>Paintings on board, and hand-painted stuffed ornaments for every season: anytime, Christmas and Halloween.</p>
+      </div>
+      <figure class="orn rv"><img src="assets/miller-campbell-designs-ky/ornaments.webp" width="600" height="400" loading="lazy" alt="Hand-painted stuffed ornaments: Santas, a snowman, foxes and a reindeer" /></figure>
+      <div class="boards">
+        <figure class="board girl rv"><img src="assets/miller-campbell-designs-ky/painting-girl.webp" width="632" height="800" loading="lazy" alt="Painting of a little clown girl with a red nose on a wooden board" /><figcaption class="tag">Painting on board</figcaption></figure>
+        <figure class="board teddy rv"><img src="assets/miller-campbell-designs-ky/painting-teddy.webp" width="548" height="800" loading="lazy" alt="Painting of a teddy bear in a party hat on a wooden board" /></figure>
+      </div>
     </div>
   </section>
 
   <section class="studio" aria-labelledby="h-studio">
     <div class="wrap">
-      <div class="grid">
-        <figure><img src="assets/miller-campbell-designs-ky/studio.webp" width="1000" height="673" loading="lazy" alt="Rebecca's home studio, white and bright, with shelves of supplies and a long worktable" /></figure>
+      <div class="row1">
+        <figure class="ph-r s1 rv"><img src="assets/miller-campbell-designs-ky/studio.webp" width="1000" height="673" loading="lazy" alt="Rebecca's home studio, white and bright, with shelves of supplies and a long worktable" /><figcaption class="tag">My home studio</figcaption></figure>
         <div>
           <h2 id="h-studio">A lot happens in this little room</h2>
           <p>My home studio is where every creation is dreamed up, sewn, stuffed, painted, finished, photographed and packaged.</p>
         </div>
       </div>
-      <div class="berea">
-        <div>
+      <div class="row2">
+        <div class="berea-txt">
           <h2>Christmas in Berea</h2>
           <p>I was honored to be asked to create a Christmas collection for the Kentucky Artisan Center in Berea. It festooned the three main trees in the lobby of the gallery: 283 pieces in all.</p>
         </div>
-        <figure><img src="assets/miller-campbell-designs-ky/trees-berea.webp" width="1000" height="880" loading="lazy" alt="Three tall Christmas trees covered in Rebecca's ornaments in the lobby of the Kentucky Artisan Center" style="aspect-ratio:1000/720;object-fit:cover;object-position:50% 40%" /><figcaption>The three trees in the lobby of the Kentucky Artisan Center</figcaption></figure>
+        <figure class="ph-r s2 rv"><img src="assets/miller-campbell-designs-ky/trees-berea.webp" width="1000" height="880" loading="lazy" alt="Three tall Christmas trees covered in Rebecca's ornaments in the lobby of the Kentucky Artisan Center" /><figcaption class="tag">Kentucky Artisan Center, Berea</figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="buy" id="buy" aria-labelledby="h-buy">
-    <div class="wrap grid">
+  <section class="buy on-dark" id="buy" aria-labelledby="h-buy">
+    <div class="wrap">
       <div>
         <h2 id="h-buy">How to buy</h2>
         <p class="lead">Ask me about a doll you have seen, or about something you have in mind.</p>
-        <a class="btn" href="mailto:madcackler@gmail.com?subject=Buying%20one%20of%20your%20dolls">Email Rebecca</a>
-        <a class="mail" href="mailto:madcackler@gmail.com?subject=A%20question%20about%20your%20dolls">madcackler@gmail.com</a>
+        <div class="ctas">
+          <a class="btn btn-main" href="mailto:madcackler@gmail.com?subject=Buying%20one%20of%20your%20dolls">Email Rebecca</a>
+          <a class="btn btn-line" href="http://millercampbelldesigns.com/?page_id=88">See available work</a>
+        </div>
+        <p class="mailline"><a href="mailto:madcackler@gmail.com?subject=A%20question%20about%20your%20dolls">madcackler@gmail.com</a></p>
       </div>
       <dl class="ways">
         <div>
           <dt>Online</dt>
           <dd>
             <p>PayPal is preferred for most orders, or Etsy checkout if you order through my Etsy shop. Every doll is packed carefully in a box made for its size, with no handling fee, and ships by USPS Priority Mail or UPS. I am happy to ship internationally: email me for a quote.</p>
-            <p><a href="http://millercampbelldesigns.com/?page_id=88">Available work</a> &nbsp; <a href="http://millercampbelldesigns.com/?page_id=1070">Payment and shipping</a></p>
+            <p class="links"><a href="http://millercampbelldesigns.com/?page_id=88">Available work</a><a href="http://millercampbelldesigns.com/?page_id=1070">Payment and shipping</a></p>
           </dd>
         </div>
         <div>
@@ -352,14 +482,35 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>Miller Campbell Designs, Rebecca F. Miller Campbell, Eastern Kentucky</span>
-    <nav aria-label="Elsewhere">
-      <a href="mailto:madcackler@gmail.com?subject=Hello%20Rebecca">madcackler@gmail.com</a>
-      <a href="http://instagram.com/rmillercampbell/">Instagram</a>
-      <a href="https://www.facebook.com/pages/Miller-Campbell-Designs/114501971897601">Facebook</a>
-    </nav>
+    <div>
+      <div class="fname">Miller Campbell Designs</div>
+      <p>Appalachian folk art by Rebecca F. Miller Campbell, Eastern Kentucky.</p>
+    </div>
+    <div>
+      <h3>Write to Rebecca</h3>
+      <ul>
+        <li><a href="mailto:madcackler@gmail.com?subject=Hello%20Rebecca">madcackler@gmail.com</a></li>
+        <li><a href="http://millercampbelldesigns.com/?page_id=2537">Shops that carry my work</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Follow along</h3>
+      <ul>
+        <li><a href="http://instagram.com/rmillercampbell/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/pages/Miller-Campbell-Designs/114501971897601">Facebook</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 <div class="proposal">Proposal by Nicolas Masset for Miller Campbell Designs · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+<script>
+(function(){
+  var d=document.documentElement;
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  d.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>

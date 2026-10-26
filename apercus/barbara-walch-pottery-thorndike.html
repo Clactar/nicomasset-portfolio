@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Barbara Walch Pottery & Fire Flower Gardens (Thorndike, ME), content from
-     https://barbarawalchpottery.com/ (home, About the Artist, Ordering Pottery, Contact, Plants, Cut Flowers, Shops & Galleries).
-     Photos = theirs. Direction : « Poterie et jardin, deux moitiés » : the hero is split in two equal halves, pottery and
-     garden, the name across the seam; one scalloped edge taken from her pinched rims. The broken cart shortcode and the
-     "Online Sales Halted" notice are replaced by a plain "How to buy pottery" block; no dated "What's New" list. -->
+<!-- v2 (2026-10-26) : homepage rebuilt for Barbara Walch Pottery & Fire Flower Gardens (Thorndike, ME), content from
+     https://barbarawalchpottery.com/ (home, About the Artist, Ordering Pottery, Contact, Plants, Cut Flowers, Shops & Galleries);
+     direction : « Poterie et jardin » : text left, the pinched bowls and the cottage garden overlapping on the right, one
+     scalloped edge into a dark garden chapter. The broken cart shortcode and the "Online Sales Halted" notice become a plain
+     "How to buy pottery" card; no dated "What's New" list ; finition barre-qualite 26/10 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -13,296 +13,404 @@
 <meta name="theme-color" content="#5f7f99" />
 <title>Barbara Walch Pottery &amp; Fire Flower Gardens, Thorndike, Maine</title>
 <meta name="description" content="Handbuilt pinch pottery by Barbara Walch since 1973, and Fire Flower Gardens: cottage gardens, cut flowers and a roadside plant stand in Thorndike, Maine." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%235f7f99'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23eef2f4'%3EB%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --glaze:#5f7f99; --glaze-pale:#e9eff3; --stone:#7a5a43; --leaf:#3f6b3a; --leaf-pale:#edf2ea; --bloom:#a82e63;
-  --paper:#fdfdfb; --ink:#2b2622; --ink-soft:#5b524b; --line:rgba(43,38,34,.16);
+  --page:#eef2f4; --surface:#f8fafb; --blue:#5f7f99; --blue-deep:#4a6780; --night:#1f2d3a; --stone:#7a5a43;
+  --leaf:#3f6b3a; --garden:#2e4a2b; --garden-2:#263f24; --magenta:#a82e63; --ink:#1d2730; --ink-2:#4a5864;
+  --line:rgba(29,39,48,.13);
   --fd:"Alegreya",Georgia,serif; --ft:"Alegreya Sans",system-ui,sans-serif;
-  --wrap:1180px; --pad:24px;
+  --shadow:0 40px 80px -40px rgba(31,45,58,.55);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ft);font-size:19px;line-height:1.6}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--ft);font-size:18px;line-height:1.6}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 p{margin:0 0 1em}
-h1,h2,h3{font-family:var(--fd);font-weight:500;margin:0;line-height:1.1;text-wrap:balance}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-:focus-visible{outline:3px solid var(--bloom);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+h1,h2,h3{font-family:var(--fd);font-weight:500;margin:0;line-height:1.06;text-wrap:balance}
+::selection{background:var(--magenta);color:#fff}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* hero: two halves */
-.hero{position:relative;display:grid;grid-template-columns:1fr 1fr;height:min(88vh,800px);min-height:520px;background:var(--ink)}
-.hero .half{position:relative;overflow:hidden}
-.hero .half img{width:100%;height:100%;object-fit:cover}
-.hero .pot img{object-position:50% 60%}
-.hero .flowers img{object-position:50% 45%}
-.hero .half::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(to top,rgba(20,16,12,.62),rgba(20,16,12,0))}
-.hero .seam{position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:var(--paper);z-index:2}
-.hero .name{position:absolute;left:0;right:0;bottom:92px;display:grid;grid-template-columns:1fr 1fr;z-index:3;color:#fff;pointer-events:none}
-.hero h1{display:contents}
-.hero h1 span{font-family:var(--fd);font-weight:500;font-size:clamp(2.1rem,4.6vw,4.4rem);line-height:1;text-shadow:0 1px 18px rgba(0,0,0,.35)}
-.hero h1 .l{text-align:right;padding-right:58px}
-.hero h1 .r{padding-left:58px}
-.hero .amp{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:76px;height:76px;border-radius:50%;background:var(--paper);color:var(--stone);display:grid;place-items:center;font-family:var(--fd);font-size:2.6rem;line-height:1}
-.hero .tags{position:absolute;left:0;right:0;top:0;padding:16px 0;display:grid;grid-template-columns:1fr 1fr;z-index:3;background:rgba(28,22,18,.5)}
-.hero .tags a{color:#fff;text-decoration:none;font-size:17px;font-weight:500;padding:6px 0;text-shadow:0 1px 10px rgba(0,0,0,.5)}
-.hero .tags a:hover{text-decoration:underline;text-underline-offset:4px}
-.hero .tags .l{justify-self:end;margin-right:34px}
-.hero .tags .r{justify-self:start;margin-left:34px}
-.hero .call{position:absolute;right:28px;top:12px;z-index:4;background:var(--paper);color:var(--ink);text-decoration:none;font-weight:700;font-size:17px;padding:9px 16px;border-radius:999px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 28px;font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid transparent;transition:background-color .18s,color .18s,border-color .18s,transform .18s;line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--blue-deep);color:#fff}
+.btn-fill:hover{background:var(--night)}
+.btn-line{border-color:rgba(29,39,48,.5);color:var(--ink)}
+.btn-line:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--garden)}
+.btn-light:hover{background:#e9f0e6}
 
-/* the single scalloped edge, from her pinched rims */
-.scallop{position:relative;background:var(--paper)}
-.scallop::before{content:"";position:absolute;left:0;right:0;top:-17px;height:18px;
-  background:radial-gradient(circle at 50% 0,transparent 15px,var(--paper) 15.5px) 0 0/34px 18px repeat-x}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;min-height:66px}
+.brand{font-family:var(--fd);font-size:21px;font-weight:500;text-decoration:none;line-height:1.1}
+.top nav{display:flex;gap:30px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:16.5px;color:var(--ink-2)}
+.top nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:10px 18px;background:var(--surface);border:1px solid var(--line);font-weight:700;font-size:15.5px;text-decoration:none;transition:background-color .18s,transform .18s;white-space:nowrap}
+.pill:hover{background:#fff;transform:translateY(-1px)}
 
-/* opening */
-.open{padding:64px 0 90px}
-.open .tag{font-family:var(--fd);font-size:1.2rem;color:var(--stone);text-align:center;margin:0 auto 56px;max-width:none}
-.open .grid{display:grid;grid-template-columns:7fr 4fr;gap:70px;align-items:start}
-.open h2{font-size:clamp(1.85rem,3.3vw,2.9rem);line-height:1.22;font-weight:400;margin-bottom:28px;max-width:28ch}
-.open p{color:var(--ink-soft);max-width:58ch}
-.open figure{margin:6px 0 0}
-.open figure img{width:320px}
-figcaption{font-size:15px;color:var(--ink-soft);margin-top:10px;line-height:1.45;max-width:34ch}
+/* hero */
+.hero{padding:76px 0 90px}
+.hero .grid{display:grid;grid-template-columns:1fr 620px;gap:48px;align-items:center}
+.kicker{font-size:17px;color:var(--stone);margin-bottom:22px;font-weight:500}
+.hero h1{font-size:60px;line-height:1.04;letter-spacing:-.01em}
+.lede{font-size:20px;line-height:1.55;color:var(--ink-2);margin:26px 0 34px;max-width:500px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.stage{position:relative;height:560px}
+.pots{position:absolute;right:0;top:0;width:580px;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(20,34,48,.7)}
+.pots img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(248,250,251,.95);color:var(--ink);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;line-height:1.3}
+.pots .tag{left:auto;right:16px}
+.gard{position:absolute;left:0;bottom:0;width:300px;background:#fff;padding:12px 12px 14px;border-radius:6px;transform:rotate(-3deg);box-shadow:0 34px 60px -30px rgba(20,34,48,.6)}
+.gard img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.gard span{display:block;font-family:var(--fd);font-size:17px;color:var(--leaf);padding:10px 4px 0}
 
-/* pottery chapter */
-.pottery{background:var(--glaze-pale);padding:96px 0}
-.chapter-head{display:grid;grid-template-columns:4fr 7fr;gap:60px;align-items:end;margin-bottom:44px}
-.chapter-head h2{font-size:clamp(2.4rem,4.4vw,3.8rem);color:var(--glaze)}
-.chapter-head p{margin:0;color:var(--ink-soft);max-width:60ch}
-.pots{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.pots figure{margin:0}
-.pots .a{grid-column:span 4}
-.pots .b{grid-column:span 2;align-self:end}
-.pots .c,.pots .d,.pots .e{grid-column:span 2}
-.pots img{width:100%}
-.pottery .note{margin:38px 0 0;max-width:62ch;color:var(--ink-soft)}
+/* facts */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.facts ul{list-style:none;margin:0 auto;max-width:1200px;padding:20px 24px;display:flex;justify-content:space-between;gap:12px 32px}
+.facts li{position:relative;padding-left:18px;color:var(--ink-2);font-size:16px;white-space:nowrap}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--blue)}
+
+/* pottery */
+.pottery{padding:120px 0 110px}
+.pottery .grid{display:grid;grid-template-columns:440px 1fr;gap:70px;align-items:start}
+.pottery h2{font-size:52px;margin-bottom:24px}
+.pottery p{color:var(--ink-2)}
+.hands{display:flex;gap:20px;align-items:center;margin-top:34px;padding:16px;background:var(--surface);border-radius:18px;box-shadow:0 24px 50px -36px rgba(31,45,58,.6)}
+.hands img{width:132px;height:124px;object-fit:cover;border-radius:12px;flex:none}
+.hands p{margin:0;font-size:16.5px;line-height:1.5}
+.shelf{position:relative;height:670px}
+.shelf figure{position:absolute;margin:0}
+.shelf .ph{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.shelf img{width:100%;height:100%;object-fit:cover}
+.f-nest{left:0;top:0;width:560px}
+.f-nest .ph{aspect-ratio:4/3}
+.f-vases{right:0;top:280px;width:270px;z-index:2}
+.f-vases .ph{aspect-ratio:3/4;border:10px solid #fff;border-radius:16px}
+.f-vases img{object-position:50% 60%}
+.f-cups{left:60px;top:400px;width:270px;z-index:3}
+.f-cups .ph{aspect-ratio:1/1}
+.f-cups img{object-position:50% 50%;transform:scale(1.04)}
+.note{display:grid;grid-template-columns:1fr 460px;gap:70px;align-items:center;margin-top:70px}
+.note blockquote{margin:0;font-family:var(--fd);font-style:italic;font-size:32px;line-height:1.3;color:var(--ink);max-width:620px}
+.small2{display:flex;gap:18px;align-items:flex-end}
+.small2 figure{margin:0;flex:1;border-radius:14px;overflow:hidden;box-shadow:0 26px 50px -30px rgba(31,45,58,.6)}
+.small2 img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.small2 figure:last-child{transform:translateY(-28px)}
 
 /* how to buy */
-.buy{padding:96px 0}
-.buy h2{font-size:clamp(2.2rem,4vw,3.4rem);margin-bottom:14px}
-.buy .lede{color:var(--ink-soft);max-width:56ch;margin-bottom:46px}
-.buy .grid{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:start}
-.phone{border-top:6px solid var(--stone);padding-top:26px}
-.phone .num{font-family:var(--fd);font-size:clamp(2.2rem,4vw,3.3rem);text-decoration:none;color:var(--ink);display:inline-block;line-height:1.1}
-.phone .hours{color:var(--stone);font-weight:500;margin:8px 0 18px}
-.phone p{color:var(--ink-soft);max-width:44ch}
-.btn{display:inline-block;background:var(--stone);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:14px 26px;border-radius:999px;transition:background .2s}
-.btn:hover{background:#654733}
-.ways{margin:0;padding:0;list-style:none}
-.ways li{padding:20px 0;border-top:1px solid var(--line)}
-.ways li:last-child{border-bottom:1px solid var(--line)}
-.ways h3{font-size:1.4rem;margin-bottom:4px}
-.ways p{margin:0;color:var(--ink-soft)}
-.buy .kiln{margin-top:34px}
-.buy .kiln img{width:100%;max-width:520px}
+.buy{background:var(--blue-deep);color:#eef3f7;padding:110px 0}
+.buy h2{font-size:50px;color:#fff;margin-bottom:12px}
+.buy .lede2{font-size:20px;color:#dbe5ec;margin-bottom:44px}
+.buy .grid{display:grid;grid-template-columns:480px 1fr;gap:48px;align-items:start}
+.card{background:var(--surface);color:var(--ink);border-radius:24px;padding:38px 38px 40px;box-shadow:0 40px 80px -40px rgba(10,20,30,.7)}
+.card .num{display:block;font-family:var(--fd);font-size:42px;text-decoration:none;line-height:1.1;margin-bottom:4px}
+.card .hours{color:var(--stone);font-weight:500;margin-bottom:18px}
+.card p{color:var(--ink-2)}
+.card .mail{display:block;border-top:1px solid var(--line);padding-top:20px;margin-top:22px}
+.card .mail b{display:block;font-family:var(--fd);font-size:22px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.card .mail a{color:var(--blue-deep);font-weight:700}
+.ways{list-style:none;margin:0;padding:0}
+.ways li{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-top:1px solid rgba(238,243,247,.22)}
+.ways li:last-child{border-bottom:1px solid rgba(238,243,247,.22)}
+.ways h3{font-size:23px;color:#fff}
+.ways p{margin:0;color:#dbe5ec;font-size:17px}
+.ways a{color:#fff}
+.visitpic{position:relative;margin:34px 0 0;border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(10,20,30,.8)}
+.visitpic img{width:100%;aspect-ratio:16/8.5;object-fit:cover;object-position:50% 55%}
+.visitpic .tag{max-width:calc(100% - 32px);white-space:normal}
 
-/* hinge */
-.hinge{background:var(--bloom);color:#fff;padding:80px 0}
-.hinge blockquote{margin:0 auto;max-width:30ch;text-align:center;font-family:var(--fd);font-size:clamp(1.7rem,3.2vw,2.7rem);line-height:1.25}
-.hinge p{text-align:center;margin:20px 0 0;color:#f5d9e5;font-size:18px}
+/* garden */
+.garden{position:relative;background:var(--garden);color:#e6eee3;padding:100px 0 120px;margin-top:28px}
+.garden::before{content:"";position:absolute;left:0;right:0;top:-27px;height:28px;background:radial-gradient(circle at 50% 100%,var(--garden) 27px,transparent 28px) 0 0/56px 28px repeat-x}
+.buy + .garden{margin-top:0}
+.hinge{max-width:820px;margin-bottom:80px}
+.hinge blockquote{margin:0;font-family:var(--fd);font-size:40px;line-height:1.2;color:#fff;text-wrap:balance}
+.hinge p{margin:16px 0 0;color:#b9cbb3;font-size:17px}
+.garden .grid{display:grid;grid-template-columns:600px 1fr;gap:72px;align-items:start}
+.bouq{position:relative}
+.bouq .big{border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.75)}
+.bouq .big img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.bouq .mini{position:absolute;right:-40px;bottom:-50px;width:250px;background:#f4f1e8;padding:10px;border-radius:12px;transform:rotate(2.5deg);box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}
+.bouq .mini img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px}
+.garden h2{font-size:52px;color:#fff;margin-bottom:22px}
+.garden .intro{color:#d3dfcf;margin-bottom:30px}
+.beds{list-style:none;margin:0;padding:0}
+.beds li{padding:20px 0;border-top:1px solid rgba(230,238,227,.2)}
+.beds h3{font-size:24px;color:#fff;margin-bottom:6px}
+.beds p{margin:0;color:#c9d7c4;font-size:17px}
+.stand{display:flex;gap:18px;align-items:center;margin-top:28px}
+.stand img{width:120px;height:160px;object-fit:cover;border-radius:12px;flex:none;box-shadow:0 20px 40px -24px rgba(0,0,0,.8)}
+.stand p{margin:0;color:#c9d7c4;font-size:16.5px}
 
-/* garden chapter */
-.garden{background:var(--leaf-pale);padding:96px 0}
-.garden .chapter-head h2{color:var(--leaf)}
-.beds{display:grid;grid-template-columns:7fr 5fr;gap:22px;align-items:start}
-.beds .side{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.beds .side figure{margin:0}
-.beds .side .wide{grid-column:1 / -1}
-.beds img{width:100%}
-.garden .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;margin-top:50px}
-.garden h3{font-size:1.45rem;color:var(--leaf);margin-bottom:8px}
-.garden .cols p{color:var(--ink-soft);font-size:18px}
+/* come out */
+.visit{padding:110px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.visit h2{font-size:50px;margin-bottom:22px}
+.visit .addr{font-family:var(--fd);font-size:28px;line-height:1.3;margin-bottom:14px}
+.visit p{color:var(--ink-2)}
+.panel{background:var(--surface);border-radius:24px;padding:36px;box-shadow:0 30px 70px -44px rgba(31,45,58,.6)}
+.panel dl{margin:0;display:grid;grid-template-columns:120px 1fr;gap:16px 20px}
+.panel dt{font-weight:700;color:var(--stone)}
+.panel dd{margin:0}
+.panel a{color:var(--blue-deep);font-weight:700}
 
-/* contact */
-.contact{padding:90px 0 80px}
-.contact .grid{display:grid;grid-template-columns:5fr 3fr 3fr;gap:50px;align-items:start}
-.contact h2{font-size:clamp(2rem,3.6vw,3rem)}
-.contact p{margin:0 0 .5em;color:var(--ink-soft)}
-.contact a{text-underline-offset:4px}
-.contact .big{font-family:var(--fd);font-size:1.5rem;color:var(--ink)}
+footer{background:var(--night);color:#c9d3dc;padding:60px 0 50px}
+footer .row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer .name{font-family:var(--fd);font-size:22px;color:#fff;margin-bottom:8px;line-height:1.2}
+footer p{margin:0;font-size:16px}
+footer a{color:#fff}
+footer nav{display:flex;gap:24px;flex-wrap:wrap;font-size:16px}
+footer nav a{text-decoration:none;color:#c9d3dc}
+footer nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
 
-footer{border-top:1px solid var(--line);padding:26px 0;font-size:17px;color:var(--ink-soft)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px}
-footer a{text-underline-offset:4px}
-.proposal{background:#f2f2ef;color:#7a7670;font-size:13px;text-align:center;padding:12px 16px}
-.proposal a{color:#7a7670}
+.proposal{background:#f1efe9;color:#77706a;font-size:13px;text-align:center;padding:12px 16px}
+.proposal a{color:#77706a}
 
-@media (max-width:900px){
-  .open .grid,.chapter-head,.buy .grid,.beds,.contact .grid{grid-template-columns:1fr;gap:34px}
-  .garden .cols{grid-template-columns:1fr;gap:10px}
+.rv{opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s ease}
+.rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;translate:none;transition:none}.btn,.pill{transition:none}.btn:hover,.pill:hover{transform:none}}
+
+@media (max-width:1180px){
+  .hero .grid{grid-template-columns:1fr 520px}
+  .pots{width:500px}.gard{width:250px}.stage{height:480px}
+  .facts ul{flex-wrap:wrap}
+  .pottery .grid,.garden .grid,.buy .grid{grid-template-columns:1fr 1fr}
+  .shelf{height:560px}.f-nest{width:440px}.f-vases{width:240px}.f-cups{width:250px;top:360px}
 }
-@media (max-width:640px){
-  body{font-size:18px}
-  :root{--pad:22px}
-  .hero{height:66vh;min-height:470px}
-  .hero .name{bottom:70px}
-  .hero .pot img{object-position:38% 62%}
-  .hero h1 span{font-size:1.75rem;line-height:1.05}
-  .hero h1 .l{padding-right:36px}
-  .hero h1 .r{padding-left:36px}
-  .hero .amp{width:54px;height:54px;font-size:1.9rem;bottom:-4px}
-  .hero .tags{top:auto;bottom:0;padding:12px 0;background:none}
-  .hero .tags .l{margin-right:20px}
-  .hero .tags .r{margin-left:20px}
-  .hero .tags a{font-size:16px}
-  .hero .call{right:auto;left:50%;transform:translateX(-50%);top:16px;white-space:nowrap}
-  .open{padding:50px 0 64px}
-  .open .tag{margin-bottom:34px}
-  .open figure img{width:100%;max-width:320px}
-  .pottery,.buy,.garden{padding:64px 0}
-  .pots{grid-template-columns:1fr 1fr;gap:12px}
-  .pots .a{grid-column:1 / -1}
-  .pots .b,.pots .c,.pots .d{grid-column:span 1}
-  .pots .e{grid-column:1 / -1}
-  .hinge{padding:60px 0}
-  .contact{padding:64px 0}
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding:0 22px}
+  .top .wrap{min-height:60px;justify-content:space-between}
+  .top nav{display:none}
+  .brand{font-size:17px;max-width:190px}
+  .pill{padding:9px 14px;font-size:14.5px}
+  .hero{padding:36px 0 56px}
+  .hero .grid{grid-template-columns:1fr;gap:34px}
+  .kicker{font-size:16px;margin-bottom:14px}
+  .hero h1{font-size:42px;line-height:1.06}
+  .lede{font-size:18px;margin:18px 0 24px}
+  .actions .btn{width:100%}
+  .stage{height:auto;padding-bottom:110px}
+  .pots{position:relative;width:100%;right:auto}
+  .gard{left:auto;right:6px;bottom:0;width:56%;padding:8px 8px 10px}
+  .gard span{font-size:15px;padding-top:6px}
+  .facts{background:none;border:0}
+  .facts ul{display:grid;padding:6px 22px 0;gap:12px}
+  .facts li{white-space:normal}
+  .pottery{padding:70px 0}
+  .pottery .grid{grid-template-columns:1fr;gap:40px}
+  .pottery h2,.buy h2,.garden h2,.visit h2{font-size:38px}
+  .shelf{height:auto;display:grid;gap:0}
+  .shelf figure{position:relative;left:auto;right:auto;top:auto;width:auto}
+  .shelf .f-vases{width:52%;margin:-60px 0 0 auto}
+  .shelf .f-cups{width:62%;margin:-90px 0 0 0}
+  .note{grid-template-columns:1fr;gap:40px;margin-top:50px}
+  .note blockquote{font-size:25px}
+  .small2 figure:last-child{transform:translateY(-18px)}
+  .buy{padding:70px 0}
+  .buy .lede2{font-size:18px;margin-bottom:30px}
+  .buy .grid{grid-template-columns:1fr;gap:36px}
+  .card{padding:28px 22px}
+  .card .num{font-size:34px}
+  .card .btn{width:100%}
+  .ways li{grid-template-columns:1fr;gap:6px}
+  .garden{padding:70px 0 80px}
+  .hinge{margin-bottom:50px}
+  .hinge blockquote{font-size:29px}
+  .garden .grid{grid-template-columns:1fr;gap:80px}
+  .bouq .mini{right:-4px;bottom:-56px;width:48%}
+  .visit{padding:70px 0}
+  .visit .grid{grid-template-columns:1fr;gap:36px}
+  .visit .addr{font-size:24px}
+  .panel{padding:26px 22px}
+  .panel dl{grid-template-columns:1fr;gap:4px}
+  .panel dd{margin-bottom:12px}
+  .visit .btn{width:100%}
 }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <a class="call" href="tel:+12075683736">Call (207) 568-3736</a>
-  <div class="half pot"><img src="assets/barbara-walch-pottery-thorndike/porcelain-pinch-pots.webp" width="1600" height="1200" alt="Three pale celadon porcelain bowls with pinched, scalloped rims" /></div>
-  <div class="half flowers"><img src="assets/barbara-walch-pottery-thorndike/bouquets-in-jars.webp" width="1200" height="1200" alt="Bouquets of calla lilies, astilbe and bellflowers in mason jars" /></div>
-  <div class="seam" aria-hidden="true"></div>
-  <div class="name">
-    <h1><span class="l">Barbara Walch Pottery</span><span class="r">Fire Flower Gardens</span></h1>
-    <div class="amp" aria-hidden="true">&amp;</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Barbara Walch Pottery &amp; Fire Flower Gardens</a>
+    <nav aria-label="Sections">
+      <a href="#pottery">Pottery</a>
+      <a href="#buy">How to buy</a>
+      <a href="#garden">Gardens</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="pill" href="tel:+12075683736">(207) 568-3736</a>
   </div>
-  <nav class="tags" aria-label="Sections">
-    <a class="l" href="#pottery">The pottery</a>
-    <a class="r" href="#garden">The gardens</a>
-  </nav>
 </header>
 
-<main>
-<section class="open scallop">
-  <div class="wrap">
-    <p class="tag">Handbuilt pottery, perennials and cut flowers in Thorndike, Maine</p>
-    <div class="grid">
-      <div>
-        <h2>Barbara Walch has been making handbuilt pottery since 1973. She is one of only a few American potters who work primarily with the pinch technique.</h2>
-        <p>Her stoneware dinnerware is distinctive and unusual, from vases to bowls to her signature teapots. Barbara and her husband, Charlie Krause, run Fire Flower Garden and Pottery at their home just outside the village of Thorndike, in central Maine, where her studio has been since 1989. Around the working studio are extensive cottage gardens, cutting beds and a roadside plant stand.</p>
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Handbuilt pottery, perennials and cut flowers in Thorndike, Maine</p>
+      <h1>Barbara Walch has been making handbuilt pottery since 1973.</h1>
+      <p class="lede">She is one of only a few American potters who work primarily with the pinch technique. Her stoneware is distinctive and unusual, from vases to bowls to her signature teapots.</p>
+      <div class="actions">
+        <a class="btn btn-fill" href="#buy">How to buy pottery</a>
+        <a class="btn btn-line" href="tel:+12075683736">Call (207) 568-3736</a>
       </div>
-      <figure>
-        <img src="assets/barbara-walch-pottery-thorndike/hands-pinching.webp" width="320" height="300" loading="lazy" alt="Barbara's hands pinching the rim of a bowl" />
-        <figcaption>Every piece starts as a chunk of clay, formed by hand. No potter's wheel is used. Because each piece is hand built, no two are ever exactly alike.</figcaption>
-      </figure>
+    </div>
+    <div class="stage">
+      <div class="pots"><img src="assets/barbara-walch-pottery-thorndike/porcelain-pinch-pots.webp" width="1600" height="1200" alt="Three pale celadon porcelain bowls with pinched, scalloped rims" /><span class="tag">Pinched by hand, no wheel</span></div>
+      <div class="gard"><img src="assets/barbara-walch-pottery-thorndike/cottage-garden.webp" width="900" height="675" alt="The cottage garden in bloom with irises, lupines and daylilies" /><span>Fire Flower Gardens</span></div>
     </div>
   </div>
 </section>
 
+<div class="facts">
+  <ul>
+    <li>Handbuilt pottery since 1973</li>
+    <li>Studio in Thorndike since 1989</li>
+    <li>Stoneware fired at 2300°F in a kiln she built</li>
+    <li>Gardens Certified Organic by MOFGA</li>
+  </ul>
+</div>
+
 <section class="pottery" id="pottery">
   <div class="wrap">
-    <div class="chapter-head">
-      <h2>The pottery</h2>
-      <p>Stoneware fired at 2300°F in a propane kiln I built myself. The outside is often left unglazed, so the texture of the fired clay defines the form. Inside, the glazes recall a clear morning sky, or a drift of snow slowly melting into a plowed furrow.</p>
+    <div class="grid">
+      <div>
+        <h2>The pottery</h2>
+        <p>Stoneware fired at 2300°F in a propane kiln I built myself. The outside is often left unglazed, so the texture of the fired clay defines the form. Inside, the glazes recall a clear morning sky, or a drift of snow slowly melting into a plowed furrow.</p>
+        <p>Barbara and her husband, Charlie Krause, run Fire Flower Garden and Pottery at their home just outside the village of Thorndike, in central Maine, where her studio has been since 1989.</p>
+        <div class="hands">
+          <img src="assets/barbara-walch-pottery-thorndike/hands-pinching.webp" width="320" height="300" loading="lazy" alt="Barbara's hands pinching the rim of a bowl" />
+          <p>Every piece starts as a chunk of clay, formed by hand. No potter's wheel is used. Because each piece is hand built, no two are ever exactly alike.</p>
+        </div>
+      </div>
+      <div class="shelf">
+        <figure class="f-nest"><div class="ph rv"><img src="assets/barbara-walch-pottery-thorndike/nesting-bowls.webp" width="789" height="593" loading="lazy" alt="Nesting bowls with scalloped rims and pale blue glaze inside" /><span class="tag">Nesting bowls</span></div></figure>
+        <figure class="f-vases"><div class="ph rv"><img src="assets/barbara-walch-pottery-thorndike/slab-vases.webp" width="789" height="592" loading="lazy" alt="Three slab vases with a curled lip and blue glaze" /></div></figure>
+        <figure class="f-cups"><div class="ph rv"><img src="assets/barbara-walch-pottery-thorndike/cups-saucers.webp" width="789" height="592" loading="lazy" alt="Two pinched cups on leaf-shaped saucers" /><span class="tag">Cups on leaf saucers</span></div></figure>
+      </div>
     </div>
-    <div class="pots">
-      <figure class="a"><img src="assets/barbara-walch-pottery-thorndike/nesting-bowls.webp" width="789" height="593" loading="lazy" alt="Nesting bowls with scalloped rims and pale blue glaze inside" /></figure>
-      <figure class="b"><img src="assets/barbara-walch-pottery-thorndike/slab-vases.webp" width="789" height="592" loading="lazy" alt="Three slab vases with a curled lip and blue glaze" /></figure>
-      <figure class="c"><img src="assets/barbara-walch-pottery-thorndike/cups-saucers.webp" width="789" height="592" loading="lazy" alt="Two pinched cups on leaf-shaped saucers" /></figure>
-      <figure class="d"><img src="assets/barbara-walch-pottery-thorndike/blue-bowls.webp" width="789" height="592" loading="lazy" alt="Small blue bowls and a spoon with ridged handle" /></figure>
-      <figure class="e"><img src="assets/barbara-walch-pottery-thorndike/spoons.webp" width="533" height="400" loading="lazy" alt="A basket of pinched stoneware spoons" /></figure>
+    <div class="note">
+      <blockquote>“I work to renew a sense of connection to nature: the textures of sand and stone, the colors of earth and sky, the forms of leaves and gourds, shells and seed pods, driftwood and flowers.”</blockquote>
+      <div class="small2">
+        <figure class="rv"><img src="assets/barbara-walch-pottery-thorndike/blue-bowls.webp" width="789" height="592" loading="lazy" alt="Small blue bowls and a spoon with ridged handle" /></figure>
+        <figure class="rv"><img src="assets/barbara-walch-pottery-thorndike/spoons.webp" width="533" height="400" loading="lazy" alt="A basket of pinched stoneware spoons" /></figure>
+      </div>
     </div>
-    <p class="note">I work to renew a sense of connection to nature: the textures of sand and stone, the colors of earth and sky, the forms of leaves and gourds, shells and seed pods, driftwood and flowers.</p>
   </div>
 </section>
 
 <section class="buy" id="buy">
   <div class="wrap">
     <h2>How to buy pottery</h2>
-    <p class="lede">The simplest way is to call or write to me.</p>
+    <p class="lede2">The simplest way is to call or write to me.</p>
     <div class="grid">
       <div>
-        <div class="phone">
+        <div class="card">
           <a class="num" href="tel:+12075683736">(207) 568-3736</a>
           <p class="hours">9am to 7pm, Eastern time</p>
           <p>I'm a one-person business and not always by the phone. If you get the answering machine, leave your name, number and a short message, and I'll call you back as soon as I can.</p>
-          <a class="btn" href="tel:+12075683736">Call Barbara</a>
+          <a class="btn btn-fill" href="tel:+12075683736">Call Barbara</a>
+          <div class="mail">
+            <b>By email</b>
+            <a href="mailto:walchkrause@gmail.com?subject=A%20question%20about%20your%20pottery">walchkrause@gmail.com</a>. Tell me which piece caught your eye.
+          </div>
         </div>
-        <figure class="kiln">
-          <img src="assets/barbara-walch-pottery-thorndike/kiln-load.webp" width="960" height="720" loading="lazy" alt="Freshly fired bowls and cups laid out on a table outdoors" />
-          <figcaption>The best time for a studio visit is a special event, like the unloading of a kiln of newly fired pottery.</figcaption>
-        </figure>
       </div>
-      <ul class="ways">
-        <li><h3>By email</h3><p><a href="mailto:walchkrause@gmail.com?subject=A%20question%20about%20your%20pottery">walchkrause@gmail.com</a>. Tell me which piece caught your eye.</p></li>
-        <li><h3>At the studio</h3><p>Studio visits by appointment, year round. One-of-a-kind pieces are scattered through the gardens. 33 Knox Station Road, Thorndike.</p></li>
-        <li><h3>At the Belfast Farmers' Market</h3><p>Fridays from 9am to 1pm in season, with a small selection of vases and other pottery next to the flowers.</p></li>
-        <li><h3>In shops</h3><p>Maine Potters Market in Portland, open year round, and the Center for Maine Craft in West Gardiner.</p></li>
-      </ul>
+      <div>
+        <ul class="ways">
+          <li><h3>At the studio</h3><p>Studio visits by appointment, year round. One-of-a-kind pieces are scattered through the gardens. 33 Knox Station Road, Thorndike.</p></li>
+          <li><h3>At the Belfast Farmers' Market</h3><p>Fridays from 9am to 1pm in season, with a small selection of vases and other pottery next to the flowers.</p></li>
+          <li><h3>In shops</h3><p>Maine Potters Market in Portland, open year round, and the Center for Maine Craft in West Gardiner.</p></li>
+        </ul>
+        <figure class="visitpic rv"><img src="assets/barbara-walch-pottery-thorndike/kiln-load.webp" width="960" height="720" loading="lazy" alt="Freshly fired bowls and cups laid out on a table outdoors" /><span class="tag">The best time for a studio visit: the unloading of a kiln of newly fired pottery</span></figure>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="hinge">
-  <div class="wrap">
-    <blockquote>Pottery can wait, thanks to plastic, whereas horticulture waits for no one.</blockquote>
-    <p>Barbara, on dividing her days between the studio and the garden</p>
   </div>
 </section>
 
 <section class="garden" id="garden">
   <div class="wrap">
-    <div class="chapter-head">
-      <h2>Fire Flower Garden</h2>
-      <p>A small farm and large garden that grew out of a love of flowers. Hardy perennials, bulbs and tubers suited to the often harsh mid-Maine climate, in USDA Zone 4. Fire Flower Garden is Certified Organic by MOFGA.</p>
+    <div class="hinge">
+      <blockquote>“Pottery can wait, thanks to plastic, whereas horticulture waits for no one.”</blockquote>
+      <p>Barbara, on dividing her days between the studio and the garden</p>
     </div>
-    <div class="beds">
-      <figure style="margin:0"><img src="assets/barbara-walch-pottery-thorndike/cottage-garden.webp" width="900" height="675" loading="lazy" alt="The cottage garden in bloom with irises, lupines and daylilies" /></figure>
-      <div class="side">
-        <figure><img src="assets/barbara-walch-pottery-thorndike/market-flowers.webp" width="900" height="900" loading="lazy" alt="Dahlias and calla lilies at the market stand" /></figure>
-        <figure><img src="assets/barbara-walch-pottery-thorndike/plant-stand.webp" width="600" height="800" loading="lazy" alt="Potted perennials for sale at the Fire Flower stand" /></figure>
-      </div>
-    </div>
-    <div class="cols">
-      <div>
-        <h3>The plant stand</h3>
-        <p>Perennials, cut flowers and herb plants, from May through mid-September. It works on the time-honored self-service system, unless we happen to be out in the garden when you arrive.</p>
+    <div class="grid">
+      <div class="bouq">
+        <div class="big rv"><img src="assets/barbara-walch-pottery-thorndike/bouquets-in-jars.webp" width="1200" height="1200" loading="lazy" alt="Bouquets of calla lilies, astilbe and bellflowers in mason jars" /></div>
+        <div class="mini rv"><img src="assets/barbara-walch-pottery-thorndike/market-flowers.webp" width="900" height="900" loading="lazy" alt="Dahlias and calla lilies at the market stand" /></div>
       </div>
       <div>
-        <h3>Cut flowers</h3>
-        <p>Daffodils in spring, then everything from zinnias to calla lilies until frost. If you need to travel with your bouquet, ask for a mason jar with water to keep it happy on the ride.</p>
-      </div>
-      <div>
-        <h3>Garden visits</h3>
-        <p>By appointment. Cottage gardens surround the 1800s farmhouse and pottery, and Charlie's "Willow Room" changes every year. Call ahead if you want to talk gardening.</p>
+        <h2>Fire Flower Garden</h2>
+        <p class="intro">A small farm and large garden that grew out of a love of flowers. Hardy perennials, bulbs and tubers suited to the often harsh mid-Maine climate, in USDA Zone 4. Fire Flower Garden is Certified Organic by MOFGA.</p>
+        <ul class="beds">
+          <li><h3>The plant stand</h3><p>Perennials, cut flowers and herb plants, from May through mid-September. It works on the time-honored self-service system, unless we happen to be out in the garden when you arrive.</p></li>
+          <li><h3>Cut flowers</h3><p>Daffodils in spring, then everything from zinnias to calla lilies until frost. If you need to travel with your bouquet, ask for a mason jar with water to keep it happy on the ride.</p></li>
+          <li><h3>Garden visits</h3><p>By appointment. Cottage gardens surround the 1800s farmhouse and pottery, and Charlie's "Willow Room" changes every year. Call ahead if you want to talk gardening.</p></li>
+        </ul>
+        <div class="stand">
+          <img class="rv" src="assets/barbara-walch-pottery-thorndike/plant-stand.webp" width="600" height="800" loading="lazy" alt="Potted perennials for sale at the Fire Flower stand" />
+          <p>The Fire Flower stand, self-service from May through mid-September.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="visit" id="visit">
   <div class="wrap grid">
-    <h2>Come out to Thorndike</h2>
     <div>
-      <p class="big">33 Knox Station Road<br />Thorndike, ME 04986</p>
+      <h2>Come out to Thorndike</h2>
+      <p class="addr">33 Knox Station Road<br />Thorndike, ME 04986</p>
       <p>A quarter mile down Knox Station Road, off Route 139. Look for the red signs with white lettering.</p>
-      <p><a href="https://www.google.com/maps/place/33+Knox+Station+Rd,+Thorndike,+ME+04986/@44.561661,-69.233146,17z/data=!3m1!4b1!4m2!3m1!1s0x4cae17ae790b51db:0x43fd0394bbce2a5c">Open in Google Maps</a></p>
+      <div class="actions" style="margin-top:26px">
+        <a class="btn btn-fill" href="https://www.google.com/maps/place/33+Knox+Station+Rd,+Thorndike,+ME+04986/@44.561661,-69.233146,17z/data=!3m1!4b1!4m2!3m1!1s0x4cae17ae790b51db:0x43fd0394bbce2a5c">Open in Google Maps</a>
+        <a class="btn btn-line" href="mailto:walchkrause@gmail.com?subject=Visiting%20the%20studio%20and%20gardens">Write to Barbara</a>
+      </div>
     </div>
-    <div>
-      <p class="big"><a href="tel:+12075683736">(207) 568-3736</a></p>
-      <p><a href="mailto:walchkrause@gmail.com?subject=Visiting%20the%20studio%20and%20gardens">walchkrause@gmail.com</a></p>
-      <p><a href="https://www.facebook.com/BarbaraWalchPottery">Barbara Walch Pottery on Facebook</a></p>
+    <div class="panel">
+      <dl>
+        <dt>Phone</dt><dd><a href="tel:+12075683736">(207) 568-3736</a>, 9am to 7pm, Eastern time</dd>
+        <dt>Email</dt><dd><a href="mailto:walchkrause@gmail.com?subject=Visiting%20the%20studio%20and%20gardens">walchkrause@gmail.com</a></dd>
+        <dt>Studio</dt><dd>Visits by appointment, year round</dd>
+        <dt>Plant stand</dt><dd>Self-service, May through mid-September</dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/BarbaraWalchPottery">Barbara Walch Pottery</a></dd>
+      </dl>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>Barbara Walch Pottery &amp; Fire Flower Gardens, Barbara Walch and Charlie Krause</span>
-    <span><a href="#pottery">Pottery</a>&nbsp;&nbsp; <a href="#buy">How to buy</a>&nbsp;&nbsp; <a href="#garden">Gardens</a></span>
+  <div class="wrap row">
+    <div>
+      <div class="name">Barbara Walch Pottery &amp; Fire Flower Gardens</div>
+      <p>Barbara Walch and Charlie Krause, 33 Knox Station Road, Thorndike, ME 04986<br /><a href="tel:+12075683736">(207) 568-3736</a>, <a href="mailto:walchkrause@gmail.com?subject=A%20question%20about%20your%20pottery">walchkrause@gmail.com</a></p>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#pottery">Pottery</a>
+      <a href="#buy">How to buy</a>
+      <a href="#garden">Gardens</a>
+      <a href="https://www.facebook.com/BarbaraWalchPottery">Facebook</a>
+    </nav>
   </div>
 </footer>
 <div class="proposal">Proposal by Nicolas Masset for Barbara Walch Pottery &amp; Fire Flower Gardens · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

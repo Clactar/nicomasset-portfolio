@@ -1,182 +1,262 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Cedar Mountain Potters (Parsonsfield, ME), content from https://www.cedarmountainpotters.com/
-     (home, about, David, Laurel, shopdavid, shoplaurel, find us, words). Photos = theirs; who made what is taken from their
-     David and Laurel pages and shops. Direction : « Le panneau sous la neige » : the painted roadside sign becomes a hanging
-     typographic panel with a double black rule that carries the Open Studio, spelled right; the name is spelled right
-     everywhere. The October 24-25 Brunswick show is over and is not shown. -->
+<!-- v2 (2026-10-26) : homepage rebuilt for Cedar Mountain Potters (Parsonsfield, ME), content from https://www.cedarmountainpotters.com/
+     (home, about, shopdavid, shoplaurel, findus, words-1); direction : « Le panneau sous la neige » : their painted sign in the
+     snow on the right, and a typographic signboard straddling its edge that carries the Open Studio (spelled right: "Studio"),
+     the name written "Cedar Mountain Potters" everywhere ; no past show dates ; finition barre-qualite 26/10 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#f6f7f7" />
+<meta name="theme-color" content="#2e3a40" />
 <title>Cedar Mountain Potters: David Orser and Laurel MacDuffie, Parsonsfield, Maine</title>
 <meta name="description" content="Stoneware and ceramic sculpture by David Orser and Laurel MacDuffie, made in a renovated cow shed in Parsonsfield, Maine. Open Studio November 7 and 8, 10am to 4pm." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='3' width='58' height='58' rx='8' fill='%23edf1f1' stroke='%232e3a40' stroke-width='4'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%232e3a40'%3EC%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --snow:#f6f7f7; --celadon:#8db5a5; --celadon-deep:#4f7c6b; --iron:#6b4a32; --night:#2e3a40; --ash:#cfc8b6;
-  --ink:#232b2f; --ink-soft:#56636a; --black:#1a1a1a;
+  --page:#edf1f1; --snow:#f6f8f8; --celadon:#8db5a5; --celadon-deep:#5f8b7a; --iron:#6b4a32; --iron-deep:#553a27;
+  --slate:#2e3a40; --slate-2:#263136; --ash:#cfc8b6; --ink:#1f2a2f; --ink-2:#4b5a60; --line:rgba(31,42,47,.14);
   --fd:"IM Fell English",Georgia,serif; --ft:"Albert Sans",system-ui,sans-serif;
-  --wrap:1180px; --pad:24px;
+  --shadow:0 40px 80px -40px rgba(46,58,64,.6);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--ft);font-size:18px;line-height:1.62}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--ft);font-size:17.5px;line-height:1.62}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 p{margin:0 0 1em}
-h1,h2,h3{font-family:var(--fd);font-weight:400;margin:0;line-height:1.05;text-wrap:balance}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-:focus-visible{outline:3px solid var(--celadon-deep);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+h1,h2,h3{font-family:var(--fd);font-weight:400;margin:0;line-height:1.04;text-wrap:balance}
+::selection{background:var(--celadon);color:var(--slate)}
+:focus-visible{outline:3px solid var(--celadon-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* masthead */
-.mast{padding:26px 0 0}
-.mast .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
-.mast .brand{text-decoration:none}
-.mast .brand strong{display:block;font-family:var(--fd);font-weight:400;font-size:2rem;line-height:1}
-.mast .brand span{display:block;color:var(--ink-soft);font-size:16px;margin-top:6px}
-.mast nav{display:flex;gap:26px;font-size:17px}
-.mast nav a{text-decoration:none;color:var(--ink-soft)}
-.mast nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 28px;font-weight:600;font-size:16.5px;text-decoration:none;border:1.5px solid transparent;transition:background-color .18s,color .18s,border-color .18s,transform .18s;line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--iron);color:#fff}
+.btn-fill:hover{background:var(--iron-deep)}
+.btn-line{border-color:rgba(31,42,47,.5);color:var(--ink)}
+.btn-line:hover{background:var(--slate);border-color:var(--slate);color:#fff}
+.btn-snow{border-color:rgba(237,241,241,.55);color:#fff}
+.btn-snow:hover{background:#fff;color:var(--slate);border-color:#fff}
 
-/* hanging sign */
-.yard{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start;padding-top:34px;padding-bottom:90px}
-.post{position:relative;padding:44px 0 0 46px}
-.post::before{content:"";position:absolute;left:0;top:0;bottom:-40px;width:9px;background:var(--black);border-radius:2px}
-.post::after{content:"";position:absolute;left:0;top:10px;width:min(560px,90%);height:6px;background:var(--black);border-radius:0 3px 3px 0}
-.sign{position:relative;max-width:520px;margin-left:28px;background:#fff;border:6px solid var(--black);padding:6px}
-.sign::before,.sign::after{content:"";position:absolute;top:-40px;width:2px;height:34px;background:var(--black)}
-.sign::before{left:26px}.sign::after{right:26px}
-.sign .face{border:1.5px solid var(--black);padding:40px 34px 36px;text-align:center}
-.sign h1{font-size:clamp(3.4rem,6.6vw,5.8rem);line-height:.95}
-.sign .when{font-family:var(--fd);font-size:clamp(1.45rem,2.3vw,1.9rem);line-height:1.25;margin:22px 0 8px}
-.sign .where{font-family:var(--fd);font-size:1.3rem;color:#333;margin:0;text-wrap:balance}
-.sign br.m{display:none}
-.yard .act{margin:34px 0 0 74px}
-.btn{display:inline-block;background:var(--night);color:#fff;text-decoration:none;font-weight:600;font-size:18px;padding:14px 26px;border-radius:3px;transition:background .2s}
-.btn:hover{background:#1e272b}
-.yard .act p{margin:12px 0 0;color:var(--ink-soft);font-size:17px}
-.yard figure{margin:44px 0 0}
-.yard figure img{width:100%;max-width:470px}
-figcaption{font-size:15px;color:var(--ink-soft);margin-top:10px}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;min-height:66px}
+.brand{text-decoration:none;line-height:1.15}
+.brand strong{display:block;font-family:var(--fd);font-weight:400;font-size:23px}
+.top nav{display:flex;gap:30px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:16px;color:var(--ink-2)}
+.top nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.pill{display:inline-flex;border-radius:999px;padding:10px 18px;background:var(--snow);border:1px solid var(--line);font-weight:600;font-size:15px;text-decoration:none;transition:background-color .18s,transform .18s;white-space:nowrap}
+.pill:hover{background:#fff;transform:translateY(-1px)}
+
+/* hero */
+.hero{padding:56px 0 64px}
+.yard{position:relative;min-height:640px}
+.snowpic{position:absolute;right:0;top:0;width:620px;border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -40px rgba(46,58,64,.75)}
+.snowpic img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 50%}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(246,248,248,.95);color:var(--ink);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;line-height:1.3}
+.snowpic .tag{left:auto;right:16px}
+.lefty{position:relative;z-index:2;width:640px}
+.hero h1{font-size:104px;line-height:.94;letter-spacing:-.01em;color:var(--slate)}
+.who{font-size:20px;color:var(--ink-2);margin:20px 0 0}
+.board{position:relative;margin:40px 0 0 250px;width:420px;transform:rotate(-1deg)}
+.board::before,.board::after{content:"";position:absolute;top:-30px;width:2px;height:32px;background:#2a2a2a}
+.board::before{left:22%}.board::after{right:22%}
+.face{background:var(--snow);border:3px solid #141414;outline:2px solid #141414;outline-offset:5px;padding:26px 28px 24px;box-shadow:0 44px 70px -34px rgba(46,58,64,.75);margin:7px}
+.face h2{font-size:52px;line-height:1;color:#141414;margin-bottom:12px}
+.face .when{font-family:var(--fd);font-size:25px;line-height:1.25;margin:0 0 10px;color:#141414}
+.face .where{margin:0;font-size:16.5px;color:var(--ink-2);border-top:1px solid rgba(20,20,20,.25);padding-top:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+
+/* facts */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--snow)}
+.facts ul{list-style:none;margin:0 auto;max-width:1200px;padding:20px 24px;display:flex;justify-content:space-between;gap:12px 26px}
+.facts li{position:relative;padding-left:16px;color:var(--ink-2);font-size:15.5px;white-space:nowrap}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--celadon-deep)}
 
 /* story */
-.story{background:#fff;padding:96px 0;border-top:1px solid #e3e5e3}
-.story .grid{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:center}
-.story p.big{font-family:var(--fd);font-size:clamp(1.6rem,2.8vw,2.35rem);line-height:1.3;margin:0}
-.story .rest{margin-top:26px;color:var(--ink-soft);max-width:54ch}
+.story{padding:120px 0 100px}
+.story .grid{display:grid;grid-template-columns:420px 1fr;gap:90px;align-items:center}
+.portrait{position:relative;background:#fff;padding:12px 12px 14px;border-radius:10px;box-shadow:var(--shadow);transform:rotate(-1.5deg)}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%;border-radius:4px}
+.portrait span{display:block;font-family:var(--fd);font-style:italic;font-size:18px;color:var(--ink-2);padding:10px 4px 0}
+.story .big{font-family:var(--fd);font-size:38px;line-height:1.22;color:var(--slate);margin:0}
+.story .more{margin-top:28px}
+.textlink{color:var(--iron);font-weight:600;text-decoration:underline;text-underline-offset:4px}
 
 /* two potters */
-.pair{padding:100px 0 90px}
-.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.potter{padding:0 44px}
-.potter:first-child{padding-left:0;border-right:1px solid var(--ash)}
-.potter:last-child{padding-right:0}
-.potter h2{font-size:clamp(2.4rem,4vw,3.4rem)}
-.potter .bio{color:var(--ink-soft);margin:14px 0 30px;max-width:46ch}
-.potter figure{margin:0}
-.potter img{width:100%}
-.potter .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.potter .wide{margin-top:16px}
-.potter .shop{display:inline-block;margin-top:26px;font-weight:600;color:var(--celadon-deep);text-underline-offset:5px}
+.pair{padding:20px 0 120px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.potter h2{font-size:50px;color:var(--slate);margin-bottom:16px}
+.potter .bio{color:var(--ink-2);min-height:112px}
+.potter .big{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);margin:26px 0 0}
+.potter .big img{width:100%;aspect-ratio:1/.92;object-fit:cover}
+.potter .big .tag{top:16px;bottom:auto}
+.vig{display:flex;gap:22px;margin-top:-70px;padding:0 26px;position:relative;z-index:2}
+.vig figure{margin:0;flex:1;position:relative;border-radius:16px;overflow:hidden;border:8px solid var(--snow);box-shadow:0 30px 50px -30px rgba(46,58,64,.7)}
+.vig img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.vig figure:nth-child(2){transform:translateY(46px)}
+.vig .tag{left:10px;bottom:10px;font-size:13.5px;padding:6px 11px}
+.potter .shop{margin-top:76px}
+.potter:nth-child(2){margin-top:90px}
 
 /* words */
-.words{background:var(--celadon);color:var(--night);padding:90px 0;text-align:center}
-.words blockquote{margin:0 auto;max-width:24ch;font-family:var(--fd);font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.25}
-.words p{margin:24px 0 0}
-.words a{color:var(--night);text-underline-offset:4px;font-weight:500}
+.words{background:var(--slate);color:#e4eaeb;padding:120px 0}
+.words .grid{display:grid;grid-template-columns:1fr 360px;gap:90px;align-items:center}
+.words blockquote{margin:0;font-family:var(--fd);font-size:50px;line-height:1.16;color:#fff;text-wrap:balance}
+.words .src{margin-top:30px}
+.words .jars{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -36px rgba(0,0,0,.85)}
+.words .jars img{width:100%;aspect-ratio:4/5;object-fit:cover}
 
-/* find us */
-.find{padding:96px 0}
-.find .grid{display:grid;grid-template-columns:4fr 4fr 4fr;gap:50px;align-items:start}
-.find h2{font-size:clamp(2.2rem,3.8vw,3.2rem)}
-.find h3{font-family:var(--ft);font-weight:600;font-size:19px;margin-bottom:6px}
-.find p{color:var(--ink-soft)}
-.find a{text-underline-offset:4px}
+/* find */
+.find{padding:120px 0}
+.find h2{font-size:52px;color:var(--slate);margin-bottom:40px}
+.find .grid{display:grid;grid-template-columns:1fr 1fr 380px;gap:28px;align-items:stretch}
+.box{background:var(--snow);border-radius:22px;padding:32px 30px;box-shadow:0 30px 60px -44px rgba(46,58,64,.6)}
+.box h3{font-size:28px;color:var(--slate);margin-bottom:12px}
+.box p{color:var(--ink-2)}
+.box p:last-child{margin-bottom:0}
+.box a{color:var(--iron);font-weight:600}
+.find figure{margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.find figure img{width:100%;height:100%;object-fit:cover}
 
-footer{background:var(--night);color:#d7dee0;padding:40px 0;font-size:17px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px 30px}
-footer strong{font-family:var(--fd);font-weight:400;font-size:1.5rem;color:#fff;display:block;margin-bottom:4px}
-footer nav{display:flex;flex-wrap:wrap;gap:10px 22px;align-self:end}
-footer a{color:#fff;text-underline-offset:4px}
-.proposal{background:#eceeee;color:#747b7e;font-size:13px;text-align:center;padding:12px 16px}
-.proposal a{color:#747b7e}
+footer{background:var(--slate);color:#c9d3d6;padding:70px 0 54px}
+footer .row{display:grid;grid-template-columns:1.2fr 1fr auto;gap:40px;align-items:start}
+footer .name{font-family:var(--fd);font-size:30px;color:#fff;margin-bottom:6px}
+footer p{margin:0;font-size:16px}
+footer a{color:#fff}
+footer h3{font-family:var(--ft);font-weight:600;font-size:15px;color:#fff;margin-bottom:8px}
+footer nav{display:flex;flex-direction:column;gap:6px;font-size:16px}
+footer nav a{text-decoration:none;color:#c9d3d6}
+footer nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
 
-@media (max-width:980px){
-  .yard{grid-template-columns:1fr;gap:10px}
-  .yard figure{margin:40px 0 0}
-  .story .grid{grid-template-columns:1fr;gap:36px}
-  .find .grid{grid-template-columns:1fr;gap:20px}
+.proposal{background:#f1efe9;color:#77706a;font-size:13px;text-align:center;padding:12px 16px}
+.proposal a{color:#77706a}
+
+.rv{opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s ease}
+.rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;translate:none;transition:none}.btn,.pill{transition:none}.btn:hover,.pill:hover{transform:none}}
+
+@media (max-width:1180px){
+  .snowpic{width:520px}
+  .hero h1{font-size:84px}
+  .board{margin-left:180px;width:400px}
+  .facts ul{flex-wrap:wrap}
+  .story .grid{grid-template-columns:360px 1fr;gap:56px}
+  .find .grid{grid-template-columns:1fr 1fr}
+  .find figure{grid-column:1/-1;height:360px}
 }
 @media (max-width:760px){
-  :root{--pad:22px}
-  .mast .brand strong{font-size:1.7rem}
-  .mast nav{gap:20px}
-  .mast nav a.hide{display:none}
-  .yard{padding-top:24px;padding-bottom:64px}
-  .post{padding:36px 0 0 22px}
-  .post::before{width:7px;bottom:-20px}
-  .post::after{height:5px;top:8px;width:92%}
-  .sign{margin-left:12px;border-width:5px;padding:5px}
-  .sign::before,.sign::after{top:-32px;height:27px}
-  .sign .face{padding:28px 18px 26px}
-  .sign h1{font-size:3.1rem}
-  .sign .when{font-size:1.4rem}
-  .sign .where{font-size:1.1rem}
-  .sign br.m{display:inline}
-  .yard .act{margin:30px 0 0}
-  .story,.pair,.find{padding:64px 0}
-  .pair .cols{grid-template-columns:1fr;gap:60px}
-  .potter,.potter:first-child,.potter:last-child{padding:0;border:0}
-  .words{padding:64px 0}
+  body{font-size:16.5px}
+  .wrap{padding:0 22px}
+  .top .wrap{min-height:60px;justify-content:space-between}
+  .top nav{display:none}
+  .brand strong{font-size:20px}
+  .pill{padding:9px 14px;font-size:14.5px}
+  .hero{padding:30px 0 60px}
+  .yard{min-height:0;display:flex;flex-direction:column}
+  .lefty{width:auto;display:contents}
+  .hero h1{font-size:50px;order:1}
+  .who{order:2;font-size:18px;margin-top:12px}
+  .snowpic{position:relative;width:100%;order:3;margin-top:26px;border-radius:22px}
+  .snowpic img{aspect-ratio:1/1}
+  .snowpic .tag{top:16px;bottom:auto}
+  .board{order:4;margin:-44px auto 0;width:92%;transform:rotate(-1deg)}
+  .board::before,.board::after{display:none}
+  .face{padding:20px 20px 18px}
+  .face h2{font-size:40px}
+  .face .when{font-size:21px}
+  .actions{order:5;margin-top:28px}
+  .actions .btn{width:100%}
+  .facts{background:none;border:0}
+  .facts ul{display:grid;padding:4px 22px 0;gap:12px}
+  .facts li{white-space:normal}
+  .story{padding:64px 0}
+  .story .grid{grid-template-columns:1fr;gap:40px}
+  .portrait{width:86%}
+  .story .big{font-size:27px}
+  .pair{padding:10px 0 70px}
+  .cols{grid-template-columns:1fr;gap:70px}
+  .potter:nth-child(2){margin-top:0}
+  .potter h2{font-size:40px}
+  .potter .bio{min-height:0}
+  .vig{padding:0 12px;gap:14px;margin-top:-50px}
+  .vig figure:nth-child(2){transform:translateY(30px)}
+  .potter .shop{margin-top:56px;width:100%}
+  .words{padding:70px 0}
+  .words .grid{grid-template-columns:1fr;gap:40px}
+  .words blockquote{font-size:33px}
+  .words .jars{width:78%}
+  .words .btn{width:100%}
+  .find{padding:70px 0}
+  .find h2{font-size:40px;margin-bottom:26px}
+  .find .grid{grid-template-columns:1fr;gap:18px}
+  .find figure{height:auto}
+  .find figure img{aspect-ratio:4/3}
+  .box{padding:26px 22px}
+  footer .row{grid-template-columns:1fr;gap:28px}
 }
 </style>
 </head>
 <body>
 
-<header class="mast">
+<header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" id="top"><strong>Cedar Mountain Potters</strong><span>David Orser and Laurel MacDuffie</span></a>
+    <a class="brand" href="#top"><strong>Cedar Mountain Potters</strong></a>
     <nav aria-label="Sections">
-      <a class="hide" href="#potters">David and Laurel</a>
-      <a class="hide" href="#find">Find us</a>
+      <a href="#open-studio">Open Studio</a>
+      <a href="#potters">David and Laurel</a>
+      <a href="#find">Find us</a>
       <a href="https://www.cedarmountainpotters.com/shop">Shop</a>
     </nav>
+    <a class="pill" href="mailto:cedarmountainpotters@gmail.com?subject=Hello%20from%20your%20website">Email us</a>
   </div>
 </header>
 
-<main>
-<section class="wrap yard" aria-label="Open Studio">
-  <div>
-    <div class="post">
-      <div class="sign">
-        <div class="face">
-          <h1>Open Studio</h1>
-          <p class="when">Saturday and Sunday,<br />November 7 and 8,<br class="m" /> 10am to 4pm</p>
-          <p class="where">858 Middle Rd., Parsonsfield, Maine</p>
+<main id="top">
+<section class="hero" id="open-studio">
+  <div class="wrap">
+    <div class="yard">
+      <figure class="snowpic" style="margin:0"><img src="assets/cedar-mountain-potters-parsonsfield/sign-in-snow.webp" width="1200" height="1200" alt="The painted Cedar Mountain Potters sign hanging from its post among snowy branches" /><span class="tag">Our sign, in winter</span></figure>
+      <div class="lefty">
+        <h1>Cedar Mountain Potters</h1>
+        <p class="who">David Orser and Laurel MacDuffie, Parsonsfield, Maine</p>
+        <div class="board" aria-label="Open Studio">
+          <div class="face">
+            <h2>Open Studio</h2>
+            <p class="when">Saturday and Sunday, November 7 and 8, 10am to 4pm</p>
+            <p class="where">858 Middle Rd., Parsonsfield, Maine</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-fill" href="mailto:cedarmountainpotters@gmail.com?subject=Open%20Studio%2C%20November%207%20and%208">Email us about the Open Studio</a>
+          <a class="btn btn-line" href="https://www.cedarmountainpotters.com/shop">Shop online</a>
         </div>
       </div>
     </div>
-    <div class="act">
-      <a class="btn" href="mailto:cedarmountainpotters@gmail.com?subject=Open%20Studio%2C%20November%207%20and%208">Email us about the Open Studio</a>
-    </div>
   </div>
-  <figure>
-    <img src="assets/cedar-mountain-potters-parsonsfield/sign-in-snow.webp" width="1200" height="1200" alt="The painted Cedar Mountain Potters sign hanging from its post among snowy branches" />
-    <figcaption>Our sign, in winter.</figcaption>
-  </figure>
 </section>
+
+<div class="facts">
+  <ul>
+    <li>Studio in a renovated cow shed</li>
+    <li>Met at Mudflat Pottery School</li>
+    <li>David in clay since 1977, Laurel since 1997</li>
+    <li>Shops in Maine and New Hampshire</li>
+  </ul>
+</div>
 
 <section class="story">
   <div class="wrap grid">
-    <img src="assets/cedar-mountain-potters-parsonsfield/laurel-and-david.webp" width="1100" height="1100" loading="lazy" alt="Laurel and David at work in the studio" />
+    <figure class="portrait rv" style="margin:0"><img src="assets/cedar-mountain-potters-parsonsfield/laurel-and-david.webp" width="1100" height="1100" loading="lazy" alt="Laurel and David at work in the studio" /><span>Laurel and David, in the studio</span></figure>
     <div>
       <p class="big">We crossed paths at Mudflat Pottery School in Somerville, Massachusetts, hitched up in 1999, and moved to Maine. We renovated the cow shed into a studio and set up shop as Cedar Mountain Potters. We've been making a living in clay ever since.</p>
+      <p class="more"><a class="textlink" href="https://www.cedarmountainpotters.com/about">More about us</a></p>
     </div>
   </div>
 </section>
@@ -186,62 +266,68 @@ footer a{color:#fff;text-underline-offset:4px}
     <article class="potter">
       <h2>David Orser</h2>
       <p class="bio">David holds an MFA from Cranbrook Academy of Art. He began working in clay in 1977, when he attended the Museum of Fine Arts school in Boston. Vases, tea bowls, bowls and platters, tiles, jars and sculpture.</p>
-      <figure><img src="assets/cedar-mountain-potters-parsonsfield/jade-rose.webp" width="1200" height="1200" loading="lazy" alt="Jade Rose, a sculpture of layered pale green petals" /><figcaption>Jade Rose</figcaption></figure>
-      <div class="two">
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/starburst.webp" width="1200" height="1200" loading="lazy" alt="Starburst, a small sculpture of pointed celadon petals" /><figcaption>Starburst small sculpture</figcaption></figure>
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/oribe-tea-bowl.webp" width="1200" height="1200" loading="lazy" alt="Oribe tea bowl with carved green glaze" /><figcaption>Oribe tea bowl</figcaption></figure>
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/platter.webp" width="1000" height="1000" loading="lazy" alt="A round platter with sweeping white and green glaze" /><figcaption>Platter</figcaption></figure>
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/slab-vase.webp" width="1000" height="1000" loading="lazy" alt="A flat slab vase with leaf shapes in wood-fired browns" /><figcaption>Vase</figcaption></figure>
+      <figure class="big rv" style="margin-bottom:0"><img src="assets/cedar-mountain-potters-parsonsfield/jade-rose.webp" width="1200" height="1200" loading="lazy" alt="Jade Rose, a sculpture of layered pale green petals" /><span class="tag">Jade Rose</span></figure>
+      <div class="vig">
+        <figure class="rv"><img src="assets/cedar-mountain-potters-parsonsfield/oribe-tea-bowl.webp" width="1200" height="1200" loading="lazy" alt="Oribe tea bowl with carved green glaze" /><span class="tag">Oribe tea bowl</span></figure>
+        <figure class="rv"><img src="assets/cedar-mountain-potters-parsonsfield/starburst.webp" width="1200" height="1200" loading="lazy" alt="Starburst, a small sculpture of pointed celadon petals" /><span class="tag">Starburst</span></figure>
       </div>
-      <a class="shop" href="https://www.cedarmountainpotters.com/shopdavid">See what David has available</a>
+      <a class="btn btn-fill shop" href="https://www.cedarmountainpotters.com/shopdavid">See what David has available</a>
     </article>
 
     <article class="potter">
       <h2>Laurel MacDuffie</h2>
       <p class="bio">Laurel holds an MA in Art Therapy from Lesley University in Cambridge, Massachusetts. She's been making art all her life, and working specifically in clay since 1997.</p>
-      <figure><img src="assets/cedar-mountain-potters-parsonsfield/white-pitcher.webp" width="1000" height="1000" loading="lazy" alt="A white pitcher on a round base" /><figcaption>Pitcher</figcaption></figure>
-      <div class="two">
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/laurel-creamer.webp" width="1267" height="1267" loading="lazy" alt="A small creamer with a dark handle on its own tray" /><figcaption>Creamer or syrup with tray</figcaption></figure>
-        <figure><img src="assets/cedar-mountain-potters-parsonsfield/laurel-small-jar.webp" width="1200" height="1200" loading="lazy" alt="A tiny lidded jar with a dark knob" /><figcaption>Smallest of the small jars</figcaption></figure>
+      <figure class="big rv" style="margin-bottom:0"><img src="assets/cedar-mountain-potters-parsonsfield/white-pitcher.webp" width="1000" height="1000" loading="lazy" alt="A white pitcher on a round base" /><span class="tag">Pitcher</span></figure>
+      <div class="vig">
+        <figure class="rv"><img src="assets/cedar-mountain-potters-parsonsfield/laurel-creamer.webp" width="1267" height="1267" loading="lazy" alt="A small creamer with a dark handle on its own tray" /><span class="tag">Creamer with tray</span></figure>
+        <figure class="rv"><img src="assets/cedar-mountain-potters-parsonsfield/laurel-small-jar.webp" width="1200" height="1200" loading="lazy" alt="A tiny lidded jar with a dark knob" /><span class="tag">Small jar</span></figure>
       </div>
-      <figure class="wide"><img src="assets/cedar-mountain-potters-parsonsfield/laurel-box.webp" width="1500" height="1125" loading="lazy" alt="A lidded box with a painted landscape on its side" /><figcaption>Box</figcaption></figure>
-      <a class="shop" href="https://www.cedarmountainpotters.com/shoplaurel">See what Laurel has available</a>
+      <a class="btn btn-fill shop" href="https://www.cedarmountainpotters.com/shoplaurel">See what Laurel has available</a>
     </article>
   </div>
 </section>
 
 <section class="words">
-  <div class="wrap">
-    <blockquote>Clay speaks of body. It reminds us of our own. Body, where our hearts reside. Heart, where things are felt.</blockquote>
-    <p><a href="https://www.cedarmountainpotters.com/words-1">Read our words</a></p>
+  <div class="wrap grid">
+    <div>
+      <blockquote>Clay speaks of body. It reminds us of our own. Body, where our hearts reside. Heart, where things are felt.</blockquote>
+      <p class="src"><a class="btn btn-snow" href="https://www.cedarmountainpotters.com/words-1">Read our words</a></p>
+    </div>
+    <figure class="jars rv" style="margin:0"><img src="assets/cedar-mountain-potters-parsonsfield/laurel-box.webp" width="1500" height="1125" loading="lazy" alt="A lidded box with a painted landscape on its side" /><span class="tag">Laurel's box</span></figure>
   </div>
 </section>
 
 <section class="find" id="find">
-  <div class="wrap grid">
+  <div class="wrap">
     <h2>Find our pots</h2>
-    <div>
-      <h3>In shops, year round</h3>
-      <p>The Maine Potter's Market in Portland, Maine, open 10 to 6 daily.</p>
-      <p>The League of New Hampshire Craftsmen shops in Littleton, North Conway and Meredith.</p>
-      <p><a href="https://www.cedarmountainpotters.com/findus">Shows and shops</a></p>
-    </div>
-    <div>
-      <h3>Online</h3>
-      <p>Shipping is a flat $13, with $3 for each additional item. Oversized packages may cost more; we'll contact you if so.</p>
-      <h3 style="margin-top:22px">Our email list</h3>
-      <p>Occasional announcements about sales and upcoming events. <a href="mailto:cedarmountainpotters@gmail.com?subject=Please%20add%20me%20to%20your%20email%20list">Ask to join</a>.</p>
+    <div class="grid">
+      <div class="box">
+        <h3>In shops, year round</h3>
+        <p>The Maine Potter's Market in Portland, Maine, open 10 to 6 daily.</p>
+        <p>The League of New Hampshire Craftsmen shops in Littleton, North Conway and Meredith.</p>
+        <p><a href="https://www.cedarmountainpotters.com/findus">Shows and shops</a></p>
+      </div>
+      <div class="box">
+        <h3>Online</h3>
+        <p>Shipping is a flat $13, with $3 for each additional item. Oversized packages may cost more; we'll contact you if so.</p>
+        <h3 style="margin-top:22px">Our email list</h3>
+        <p>Occasional announcements about sales and upcoming events. <a href="mailto:cedarmountainpotters@gmail.com?subject=Please%20add%20me%20to%20your%20email%20list">Ask to join</a>.</p>
+      </div>
+      <figure class="rv"><img src="assets/cedar-mountain-potters-parsonsfield/slab-vase.webp" width="1000" height="1000" loading="lazy" alt="A flat slab vase with leaf shapes in wood-fired browns" /><span class="tag">David's slab vase</span></figure>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap row">
     <div>
-      <strong>Cedar Mountain Potters</strong>
-      858 Middle Rd., Parsonsfield, ME 04047<br />
-      <a href="mailto:cedarmountainpotters@gmail.com?subject=Hello%20from%20your%20website">cedarmountainpotters@gmail.com</a>
+      <div class="name">Cedar Mountain Potters</div>
+      <p>David Orser and Laurel MacDuffie</p>
+    </div>
+    <div>
+      <h3>Studio</h3>
+      <p>858 Middle Rd., Parsonsfield, ME 04047<br /><a href="mailto:cedarmountainpotters@gmail.com?subject=Hello%20from%20your%20website">cedarmountainpotters@gmail.com</a></p>
     </div>
     <nav aria-label="Their site">
       <a href="https://www.cedarmountainpotters.com/shop">Shop</a>
@@ -252,5 +338,14 @@ footer a{color:#fff;text-underline-offset:4px}
   </div>
 </footer>
 <div class="proposal">Proposal by Nicolas Masset for Cedar Mountain Potters · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

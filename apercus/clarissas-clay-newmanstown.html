@@ -1,288 +1,332 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Clarissa's Clay (Newmanstown, PA), content from http://www.clarissasclay.com/ (home, gallery, expositions);
-     direction : « Le rouleau peint » : porcelain white, a narrow hanging-scroll column for the text, the pieces hung one by one
-     left and right with wide voids, each captioned with the motif painted on it. "Events in 2024" replaced by a Visit block that does not expire. -->
+<!-- v2 (2026-10-26) : homepage rebuilt for Clarissa's Clay (Newmanstown / Millbach area, Lebanon County, PA), content from
+     http://www.clarissasclay.com/ (home, about, process, gallery, events); direction : « Le rouleau peint » : the bamboo jar in a
+     tall arch opens the page, then the pieces unroll one by one, left and right, with the painted motif named on each photo.
+     "Events in 2024" is replaced by a Visit block that does not expire; "complementing" spelled right ; finition barre-qualite 26/10 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#FAFAF8" />
+<meta name="theme-color" content="#1e2124" />
 <title>Clarissa's Clay: brush-painted stoneware and porcelain, Lebanon County, Pennsylvania</title>
 <meta name="description" content="Wheel-thrown stoneware and porcelain by Clarissa Hollenbach Enck, brush painted sumi-e style with earth oxides. Studio in the Millbach area of Lebanon County, PA, open by appointment." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 60V30a24 24 0 0 1 48 0v30z' fill='%232e4a7d'/%3E%3Ctext x='32' y='50' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f6f6f1'%3EC%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --porcelain:#FAFAF8; --paper:#FFFFFF; --ink:#1E2124; --ink-soft:#4A4F55; --brush:#2E4A7D; --oribe:#5E7D3A;
-  --chamois:#E8DFCB; --wash:#E4EAF3; --silk:#E2E7EF; --line:rgba(30,33,36,.14);
-  --serif:"Shippori Mincho","Hiragino Mincho ProN",Georgia,serif; --sans:"Karla",system-ui,sans-serif;
-  --col:620px;
+  --page:#f6f6f1; --card:#e8dfcb; --card-2:#f0eadc; --sumi:#1e2124; --sumi-2:#2a2e32; --blue:#2e4a7d; --blue-deep:#22385f;
+  --oribe:#5e7d3a; --ink:#1e2124; --ink-2:#51575d; --line:rgba(30,33,36,.13);
+  --fd:"Shippori Mincho",Georgia,serif; --ft:"Karla",system-ui,sans-serif;
+  --shadow:0 40px 80px -40px rgba(30,33,36,.55);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--porcelain);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--ft);font-size:17.5px;line-height:1.65}
 img{display:block;max-width:100%;height:auto}
-a{color:var(--brush);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:2px solid var(--brush);outline-offset:3px}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.2;margin:0;letter-spacing:.01em;text-wrap:balance}
-p{margin:0 0 1.1em}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{font-family:var(--fd);font-weight:500;margin:0;line-height:1.08;text-wrap:balance}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1208px;margin:0 auto;padding:0 24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 28px;font-weight:700;font-size:16.5px;text-decoration:none;border:1.5px solid transparent;transition:background-color .18s,color .18s,border-color .18s,transform .18s;line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--blue);color:#fff}
+.btn-fill:hover{background:var(--blue-deep)}
+.btn-line{border-color:rgba(30,33,36,.5);color:var(--ink)}
+.btn-line:hover{background:var(--sumi);border-color:var(--sumi);color:#fff}
+.btn-paper{background:var(--page);color:var(--sumi)}
+.btn-paper:hover{background:#fff}
 
 /* header */
-.top{position:sticky;top:0;z-index:20;background:rgba(250,250,248,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .2s}
-.top.scrolled{border-bottom-color:var(--line)}
-.top .bar{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.2rem;color:var(--ink);text-decoration:none;letter-spacing:.02em}
-.top nav{display:flex;gap:28px;align-items:center;font-size:1rem}
-.top nav a{color:var(--ink-soft);text-decoration:none}
-.top nav a:hover{color:var(--ink)}
-.top nav a.mail{color:var(--paper);background:var(--brush);padding:9px 18px;border-radius:3px}
-.top nav a.mail:hover{background:#243b65}
+.top{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;min-height:66px}
+.brand{font-family:var(--fd);font-weight:500;font-size:22px;text-decoration:none}
+.top nav{display:flex;gap:30px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:16px;color:var(--ink-2)}
+.top nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.pill{display:inline-flex;border-radius:999px;padding:10px 18px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:15px;text-decoration:none;transition:background-color .18s,transform .18s;white-space:nowrap}
+.pill:hover{background:var(--card-2);transform:translateY(-1px)}
 
-/* the hanging scroll */
-.scroll{position:relative;max-width:1440px;margin:0 auto;padding:0 28px}
-.strip{position:relative;width:var(--col);margin:0 auto;}
-.rod{position:relative;width:calc(var(--col) + 120px);height:12px;margin:0 auto;background:var(--ink);border-radius:6px;z-index:2}
-.rod::before,.rod::after{content:"";position:absolute;top:-4px;width:20px;height:20px;border-radius:50%;background:var(--ink)}
-.rod::before{left:-6px}.rod::after{right:-6px}
-.rod.top-rod{margin-top:0}
-.cord{display:block;width:160px;height:46px;margin:30px auto -6px;border:1.5px solid var(--ink);border-bottom:0;border-radius:60px 60px 0 0;opacity:.75}
-.strip-in{padding:56px 64px 64px}
+/* hero */
+.hero{padding:60px 0 100px}
+.hero .grid{display:grid;grid-template-columns:500px 1fr;gap:90px;align-items:center}
+.arch{position:relative;padding-bottom:40px}
+.arch .jar{position:relative;width:440px;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 50px 90px -40px rgba(30,33,36,.7)}
+.arch .jar img{width:100%;aspect-ratio:440/640;object-fit:cover;object-position:50% 52%}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(246,246,241,.95);color:var(--ink);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;line-height:1.3}
+.tag b{font-weight:700;color:var(--blue)}
+.arch .self{position:absolute;right:0;bottom:0;width:190px;background:#fff;padding:9px;border-radius:8px;box-shadow:0 30px 60px -26px rgba(30,33,36,.65)}
+.arch .self img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 25%;border-radius:3px}
+.hero h1{font-size:84px;line-height:1;letter-spacing:-.01em}
+.hero .who{font-size:18.5px;color:var(--ink-2);margin:22px 0 0;max-width:520px}
+.hero .statement{font-family:var(--fd);font-size:30px;line-height:1.4;color:var(--ink);margin:34px 0 36px;max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
 
-/* hero, inside the strip */
-.hero{text-align:center;display:flex;flex-direction:column;align-items:center;padding-top:64px !important;padding-bottom:40px !important}
-.hero h1{font-size:clamp(2.7rem,6vw,3.9rem);font-weight:700;letter-spacing:.03em}
-.hero .who{font-size:1.06rem;color:var(--ink-soft);max-width:30em;margin:16px auto 30px}
-.statement{font-family:var(--serif);font-size:1.5rem;line-height:1.7;margin:6px auto 30px;max-width:25em}
-.piece.jar{width:calc(100% - 48px);max-width:300px;margin-top:40px}
-.cta{display:inline-block;font-family:var(--sans);font-weight:700;font-size:1.05rem;color:var(--paper);background:var(--brush);text-decoration:none;padding:15px 30px;border-radius:3px}
-.cta:hover{background:#243b65}
-.hero .alt{display:block;margin-top:16px;font-size:1rem}
+/* facts */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fbfbf8}
+.facts ul{list-style:none;margin:0 auto;max-width:1208px;padding:20px 24px;display:flex;justify-content:space-between;gap:12px 28px}
+.facts li{position:relative;padding-left:17px;color:var(--ink-2);font-size:15.5px;white-space:nowrap}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--oribe)}
 
-/* captions: the motif, then the piece */
-figcaption{font-size:.95rem;color:var(--ink-soft);line-height:1.4}
-figcaption b{display:block;font-family:var(--serif);font-weight:500;font-size:1.15rem;color:var(--ink)}
+/* the scroll */
+.scroll{padding:130px 0 40px}
+.row{display:grid;grid-template-columns:580px 1fr;gap:100px;align-items:center;margin-bottom:150px}
+.row.flip{grid-template-columns:1fr 420px}
+.row.flip .pic{order:2}
+.pic{position:relative;margin:0}
+.pic .ph{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.pic img{width:100%;object-fit:cover}
+.r-wide img{aspect-ratio:3/2}
+.r-tall img{aspect-ratio:2/3}
+.row h2{font-size:42px;margin-bottom:22px}
+.row p{color:var(--ink-2);max-width:470px}
+.row .muted{font-size:16px;color:#6c7277}
+.duo{position:relative;padding-bottom:120px}
+.duo .a{width:500px}
+.duo .b{position:absolute;right:0;bottom:0;width:250px;border:9px solid #fff;border-radius:18px}
+.duo .b img{aspect-ratio:2/3}
 
-/* rows : a piece hung outside the strip, text inside */
-.row{display:grid;grid-template-columns:minmax(0,1fr) var(--col) minmax(0,1fr);align-items:start;column-gap:0}
-.row > .txt{grid-column:2;grid-row:1;align-self:stretch;padding:0 64px}
-.row > .txt.pad-b{padding-bottom:40px}
-.piece{margin:0;align-self:start}
-.piece.l{grid-column:1;grid-row:1;justify-self:end;margin-right:48px}
-.piece.r{grid-column:3;grid-row:1;justify-self:start;margin-left:48px}
-.piece.wide{width:calc(100% - 48px);max-width:330px}
-.piece.tall{width:calc(100% - 48px);max-width:232px}
-.piece.l figcaption{text-align:right}
-.piece img{background:#3a4148}
-.piece.drop1{margin-top:60px}.piece.drop2{margin-top:150px}.piece.drop3{margin-top:230px}
-.txt h2{font-size:clamp(1.8rem,3.4vw,2.3rem);margin:0 0 22px;padding-top:56px}
-.txt p{color:var(--ink)}
-.txt .muted{color:var(--ink-soft)}
-
-/* chronology: a real sequence */
-.life{list-style:none;margin:28px 0 0;padding:0;border-left:1px solid var(--line)}
-.life li{position:relative;padding:0 0 22px 24px}
-.life .y{display:block;font-family:var(--serif);font-weight:700;color:var(--oribe);font-size:1.05rem;line-height:1.3}
-.portrait{margin:8px 0 34px}
-.portrait img{width:100%;max-width:466px}
-.portrait figcaption{margin-top:10px}
+/* chronology */
+.life{background:var(--card-2);padding:110px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.life .grid{display:grid;grid-template-columns:1fr 500px;gap:90px;align-items:center}
+.life h2{font-size:46px;margin-bottom:40px}
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:7px;top:12px;bottom:12px;width:1px;background:rgba(30,33,36,.25)}
+.steps li{position:relative;padding:0 0 30px 46px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--card-2);border:2px solid var(--blue)}
+.steps li:last-child::before{background:var(--blue)}
+.steps .y{display:block;font-family:var(--fd);font-size:22px;font-weight:500;color:var(--blue);margin-bottom:2px}
+.steps p{margin:0;color:var(--ink-2);max-width:560px}
+.life .pic img{aspect-ratio:4/3.4;object-position:50% 50%}
 
 /* visit */
-.visit{background:var(--wash);margin:56px -64px 0;padding:52px 64px 48px}
-.visit h2{padding-top:0}
-.visit .cta{background:var(--brush)}
-.visit dl{margin:26px 0 30px}
-.visit dt{font-family:var(--serif);font-weight:700;font-size:1.15rem;margin-top:20px}
-.visit dd{margin:4px 0 0}
-.visit .note{font-size:1rem;color:var(--ink-soft);margin-top:18px}
+.visit{background:var(--sumi);color:#e3e4e2;padding:120px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 400px;gap:100px;align-items:center}
+.visit h2{font-size:52px;color:#fff;margin-bottom:20px}
+.visit .lede{font-size:19px;color:#c9ccca;max-width:560px}
+.visit dl{margin:34px 0 36px;max-width:620px}
+.visit dt{font-family:var(--fd);font-size:23px;color:#fff;padding-top:20px;border-top:1px solid rgba(227,228,226,.18)}
+.visit dd{margin:6px 0 20px;color:#c3c6c4}
+.visit .note{font-size:16px;color:#a9adab;margin-top:24px}
+.visit .pic .ph{border-radius:999px 999px 18px 18px;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
+.visit .pic img{aspect-ratio:400/600}
 
 /* gallery index */
-.index{list-style:none;margin:24px 0 0;padding:0;columns:2;column-gap:40px}
-.index li{break-inside:avoid;border-bottom:1px solid var(--line)}
-.index a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;text-decoration:none;color:var(--ink)}
-.index a span{font-family:var(--serif);font-size:1.15rem}
-.index a small{font-size:.95rem;color:var(--ink-soft)}
-.index a:hover span{color:var(--brush);text-decoration:underline;text-underline-offset:4px}
+.gallery{padding:120px 0}
+.gallery .grid{display:grid;grid-template-columns:1fr 520px;gap:90px;align-items:center}
+.gallery h2{font-size:46px;margin-bottom:12px}
+.gallery .muted{color:var(--ink-2);margin-bottom:30px}
+.index{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+.index li{break-inside:avoid}
+.index a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:color .18s,padding .18s}
+.index a span{font-family:var(--fd);font-size:21px}
+.index a small{font-size:15px;color:#6c7277}
+.index a:hover{color:var(--blue);padding-left:6px}
+.gallery .pic img{aspect-ratio:3/2}
+.plates{padding-bottom:150px}
+.plates .a{width:440px}
+.plates .b{position:absolute;right:0;bottom:0;width:300px;border:9px solid #fff;border-radius:18px}
 
-.rod.bottom-rod{margin-top:64px;margin-bottom:80px}
+footer{background:var(--sumi);color:#c3c6c4;padding:64px 0 54px;border-top:1px solid rgba(227,228,226,.12)}
+footer .row2{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer .name{font-family:var(--fd);font-size:28px;color:#fff;margin-bottom:8px}
+footer p{margin:0;font-size:16px}
+footer a{color:#fff}
+footer nav{display:flex;gap:24px;font-size:16px}
+footer nav a{text-decoration:none;color:#c3c6c4}
+footer nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
 
-footer{max-width:var(--col);margin:0 auto;padding:0 28px 56px;text-align:center;font-size:1rem;color:var(--ink-soft)}
-footer .name{font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:6px}
-.proposal{border-top:1px solid var(--line);padding:14px 20px;text-align:center;font-size:13px;color:#7b8087}
-.proposal a{color:inherit}
+.proposal{background:#f1efe9;color:#77706a;font-size:13px;text-align:center;padding:12px 16px}
+.proposal a{color:#77706a}
 
-/* medium screens: pieces go into the strip flow */
+.rv{opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s ease}
+.rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;translate:none;transition:none}.btn,.pill,.index a{transition:none}.btn:hover,.pill:hover{transform:none}}
+
 @media (max-width:1180px){
-  .row{grid-template-columns:1fr}
-  .row > .txt{grid-column:1;grid-row:auto;width:var(--col);max-width:100%;margin:0 auto}
-  .piece.l,.piece.r{grid-column:1;grid-row:auto;justify-self:center;margin:0 auto;padding:34px 0 10px;width:var(--col);max-width:100%}
-  .piece.l img,.piece.r img{margin:0 auto}
-  .piece.wide img{width:420px}
-  .piece.tall img,.piece.jar img{width:280px}
-  .piece.l{padding-right:180px;padding-left:64px}
-  .piece.r{padding-left:180px;padding-right:64px}
-  .piece.l figcaption{text-align:left}
-  .piece figcaption{margin-top:10px}
-  .piece.drop1,.piece.drop2,.piece.drop3{margin-top:0}
+  .hero .grid{grid-template-columns:420px 1fr;gap:56px}
+  .arch .jar{width:370px}
+  .hero h1{font-size:68px}
+  .facts ul{flex-wrap:wrap}
+  .row{grid-template-columns:1fr 1fr;gap:60px}
+  .row.flip{grid-template-columns:1fr 360px}
+  .duo .a{width:84%}
+  .life .grid,.visit .grid,.gallery .grid{grid-template-columns:1fr 1fr;gap:56px}
 }
-@media (max-width:700px){
-  :root{--col:100%}
-  body{font-size:17px}
-  .top .bar{padding:12px 18px}
-  .top nav{gap:18px}
-  .top nav .hide-s{display:none}
-  .scroll{padding:0 14px}
-  .rod{width:calc(100% + 8px);height:10px}
-  .rod::before,.rod::after{width:16px;height:16px;top:-3px}
-  .rod::before{left:-4px}.rod::after{right:-4px}
-  .cord{margin-top:18px;width:120px;height:36px}
-  .strip,.row > .txt,.piece.l,.piece.r{width:auto}
-  .strip-in{padding:40px 22px 44px}
-  .row > .txt{padding:0 22px}
-  .piece.l{padding:30px 22px 6px 22px}
-  .piece.r{padding:30px 22px 6px 22px}
-  .piece.wide img{width:100%}
-  .piece.tall img{width:62%}
-  .piece.l img{margin:0 auto 0 0}
-  .piece.r img{margin:0 0 0 auto}
-  .piece.r figcaption{text-align:right}
-  .statement{font-size:1.22rem;margin:0 auto 30px}
-  .hero h1{font-size:2.45rem}
-  .hero .who{margin:12px auto 22px}
-  .piece.jar img{width:62%}
-  .visit{margin:44px -22px 0;padding:40px 22px 36px}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .wrap{padding:0 22px}
+  .top .wrap{min-height:60px;justify-content:space-between}
+  .top nav{display:none}
+  .brand{font-size:20px}
+  .pill{padding:9px 14px;font-size:14.5px}
+  .hero{padding:30px 0 60px}
+  .hero .grid{grid-template-columns:1fr;gap:30px}
+  .hero .grid > div:last-child{order:-1}
+  .hero h1{font-size:46px}
+  .hero .who{font-size:17px;margin-top:14px}
+  .hero .statement{font-size:22px;margin:22px 0 24px}
+  .actions .btn{width:100%}
+  .arch{padding-bottom:56px}
+  .arch .jar{width:80%;margin:0 auto 0 0}
+  .arch .jar img{aspect-ratio:3/4}
+  .arch .self{width:44%}
+  .facts{background:none;border:0}
+  .facts ul{display:grid;padding:4px 22px 0;gap:12px}
+  .facts li{white-space:normal}
+  .scroll{padding:70px 0 10px}
+  .row,.row.flip{grid-template-columns:1fr;gap:30px;margin-bottom:80px}
+  .row.flip .pic{order:0}
+  .row h2{font-size:32px}
+  .r-tall{width:78%}
+  .row.flip .r-tall{margin-left:auto}
+  .duo{padding-bottom:90px}
+  .duo .a{width:100%}
+  .duo .b{width:46%}
+  .life{padding:70px 0}
+  .life .grid{grid-template-columns:1fr;gap:40px}
+  .life h2{font-size:36px;margin-bottom:30px}
+  .steps li{padding-left:38px}
+  .visit{padding:70px 0}
+  .visit .grid{grid-template-columns:1fr;gap:44px}
+  .visit h2{font-size:38px}
+  .visit .lede{font-size:17px}
+  .visit .btn{width:100%}
+  .visit .pic{width:70%}
+  .gallery{padding:70px 0}
+  .gallery .grid{grid-template-columns:1fr;gap:40px}
+  .gallery h2{font-size:36px}
   .index{columns:1}
-  .txt h2{padding-top:44px}
+  .plates{padding-bottom:110px}
+  .plates .a{width:88%}
+  .plates .b{width:62%}
+  footer nav{flex-wrap:wrap}
 }
-@media (max-width:480px){.proposal{font-size:11.5px;padding:14px 6px;white-space:nowrap}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.top{transition:none}}
 </style>
 </head>
 <body>
 
-<header class="top" id="top">
-  <div class="bar">
+<header class="top">
+  <div class="wrap">
     <a class="brand" href="#top">Clarissa's Clay</a>
-    <nav aria-label="Main">
-      <a class="hide-s" href="#work">The work</a>
+    <nav aria-label="Sections">
+      <a href="#work">The work</a>
+      <a href="#life">How I came to clay</a>
       <a href="#visit">Visit</a>
-      <a class="hide-s" href="#gallery">Gallery</a>
-      <a class="mail" href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">Email</a>
+      <a href="#gallery">Gallery</a>
     </nav>
+    <a class="pill" href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">Email Clarissa</a>
   </div>
 </header>
 
-<main>
-<div class="scroll">
-  <span class="cord" aria-hidden="true"></span>
-  <div class="rod top-rod" aria-hidden="true"></div>
-  <div class="row hero-row">
-    <div class="txt hero">
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div class="arch">
+      <div class="jar"><img src="assets/clarissas-clay-newmanstown/bamboo-jar.webp" width="930" height="1400" alt="Round white covered jar painted with bamboo leaves in blue and grey" fetchpriority="high" /><span class="tag"><b>Bamboo</b>, covered jar</span></div>
+      <div class="self"><img src="assets/clarissas-clay-newmanstown/clarissa-at-work.webp" width="466" height="600" alt="Clarissa at her potter's wheel, a freshly thrown jar in front of her, shelves of pottery behind" /></div>
+    </div>
+    <div>
       <h1>Clarissa's Clay</h1>
       <p class="who">Functional stoneware and porcelain, thrown on the wheel and brush painted by Clarissa Hollenbach Enck in Lebanon County, Pennsylvania.</p>
       <p class="statement">I use sumi-e style brush painting with bamboo brushes. Its simplicity and relaxed feeling enhance the motifs.</p>
-      <a class="cta" href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">Email Clarissa</a>
-      <a class="alt" href="#visit">Visit the studio by appointment</a>
-    </div>
-    <figure class="piece l jar">
-      <img src="assets/clarissas-clay-newmanstown/bamboo-jar.webp" width="930" height="1400" alt="Round white covered jar painted with bamboo leaves in blue and grey" fetchpriority="high" />
-      <figcaption><b>Bamboo</b>Covered jar</figcaption>
-    </figure>
-    <figure class="piece r wide drop2">
-      <img src="assets/clarissas-clay-newmanstown/swallows-plate.webp" width="1100" height="731" loading="lazy" alt="Plate with four blue swallows in flight and a dotted rim" />
-      <figcaption><b>Swallows</b>Plate</figcaption>
-    </figure>
-  </div>
-
-  <div class="row" id="work">
-    <div class="txt">
-      <h2>Natural subjects, painted before the fire</h2>
-      <p>Much of my work I decorate with natural subjects or calligraphy, brush painted with earth oxides before firing. Clear glazes let my clay bodies show off their natural state, complementing the natural subjects.</p>
-    </div>
-    <figure class="piece l tall drop1">
-      <img src="assets/clarissas-clay-newmanstown/pine-bottle.webp" width="731" height="1100" loading="lazy" alt="Bottle with green glaze at the neck and a painted pine branch" />
-      <figcaption><b>Pine</b>Bottle</figcaption>
-    </figure>
-  </div>
-
-  <div class="row">
-    <div class="txt">
-      <h2>Handcrafted in the truest sense</h2>
-      <p>I mix natural, crushed clays and stone to form my own clay bodies, and I formulate and make my own slips, stains and glazes.</p>
-      <p>The clay is aged six months to a year before it is ready for the potter's wheel. After the wheel, each piece spends thirty hours or more in the kiln, through two separate firings at temperatures as high as 2330&nbsp;°F.</p>
-    </div>
-    <figure class="piece r wide drop2">
-      <img src="assets/clarissas-clay-newmanstown/rooster-plate.webp" width="1100" height="731" loading="lazy" alt="Plate with a rooster painted in sumi-e strokes" />
-      <figcaption><b>Rooster</b>Plate</figcaption>
-    </figure>
-  </div>
-
-  <div class="row">
-    <div class="txt">
-      <h2>Made for every day</h2>
-      <p>The glazes I use are lead-free and durable for everyday use. My work can be used safely in dishwashers, microwaves, and ovens that have not been preheated first.</p>
-      <p class="muted">Extreme temperature changes could cause harm, so let a piece warm up with the oven.</p>
-    </div>
-    <figure class="piece l wide">
-      <img src="assets/clarissas-clay-newmanstown/bamboo-bowl.webp" width="1100" height="731" loading="lazy" alt="Oval dish with green oribe glaze at the rim and bamboo painted inside" />
-      <figcaption><b>Bamboo</b>Oval dish</figcaption>
-    </figure>
-    <figure class="piece r tall drop2">
-      <img src="assets/clarissas-clay-newmanstown/pine-vase.webp" width="731" height="1100" loading="lazy" alt="Vase painted with a pine branch and a line of calligraphy" />
-      <figcaption><b>Pine and calligraphy</b>Vase</figcaption>
-    </figure>
-  </div>
-
-  <div class="row">
-    <div class="txt">
-      <h2>How I came to clay</h2>
-      <figure class="portrait">
-        <img src="assets/clarissas-clay-newmanstown/clarissa-at-work.webp" width="466" height="600" loading="lazy" alt="Clarissa at her potter's wheel, a freshly thrown jar in front of her, shelves of pottery behind" />
-        <figcaption>At the wheel, in the studio.</figcaption>
-      </figure>
-      <ol class="life">
-        <li><span class="y">As a child</span>Mud pies and small pots after rain storms, in Berks County, Pennsylvania.</li>
-        <li><span class="y">1972</span>A pottery class through the Denver Free University rekindled that passion.</li>
-        <li><span class="y">1975</span>Bachelor of Arts, Millersville University.</li>
-        <li><span class="y">1976 and 1977</span>Apprentice potter at the Capricorner, near Carlisle, Pennsylvania.</li>
-        <li><span class="y">2007 to 2011</span>Exhibitions at Radius, The State Museum of Pennsylvania in Harrisburg, the Pennsylvania Guild of Craftsmen Gallery in Lancaster, and the Reading Public Museum.</li>
-        <li><span class="y">Today</span>Juried member of the Pennsylvania Guild of Craftsmen and Lancaster Designer Craftsmen, and a member of the Central Pennsylvania Potters Information Group.</li>
-      </ol>
-    </div>
-    <figure class="piece l wide drop3">
-      <img src="assets/clarissas-clay-newmanstown/teapot.webp" width="1100" height="731" loading="lazy" alt="Teapot with green glaze on spout and handle, painted with a pine branch and cone" />
-      <figcaption><b>Pine</b>Teapot</figcaption>
-    </figure>
-  </div>
-
-  <div class="row" id="visit">
-    <div class="txt">
-      <div class="visit">
-        <h2>Visit the studio</h2>
-        <p>My studio is in an 18th-century summer house in the Millbach area of eastern Lebanon County, Pennsylvania.</p>
-        <dl>
-          <dt>Open House, every year</dt>
-          <dd>The weekend before Thanksgiving.</dd>
-          <dt>Cherry Fair, Schaefferstown</dt>
-          <dd>At Historic Schaefferstown's annual Cherry Fair and Pennsylvania German Folklife Festival, you will find me at my potter's wheel, demonstrating.</dd>
-          <dt>By appointment</dt>
-          <dd>The studio is open for sales by appointment. Write and we'll find a time.</dd>
-        </dl>
-        <a class="cta" href="mailto:clarissa@clarissasclay.com?subject=Visiting%20your%20studio">Email Clarissa to visit</a>
-        <p class="note">My work is also for sale at art and craft shows in south central Pennsylvania.</p>
+      <div class="actions">
+        <a class="btn btn-fill" href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">Email Clarissa</a>
+        <a class="btn btn-line" href="#visit">Visit the studio by appointment</a>
       </div>
     </div>
-    <figure class="piece r tall drop1">
-      <img src="assets/clarissas-clay-newmanstown/bird-bottle.webp" width="731" height="1100" loading="lazy" alt="Bottle with green glaze, painted with a small bird on a bamboo branch" />
-      <figcaption><b>Bird on bamboo</b>Bottle</figcaption>
-    </figure>
   </div>
+</section>
 
-  <div class="row" id="gallery">
-    <div class="txt pad-b">
+<div class="facts">
+  <ul>
+    <li>Wheel-thrown, brush painted by hand</li>
+    <li>Clay aged six months to a year</li>
+    <li>Lead-free, dishwasher safe</li>
+    <li>Juried member, Pennsylvania Guild of Craftsmen</li>
+  </ul>
+</div>
+
+<section class="scroll" id="work">
+  <div class="wrap">
+    <div class="row">
+      <figure class="pic r-wide"><div class="ph rv"><img src="assets/clarissas-clay-newmanstown/swallows-plate.webp" width="1100" height="731" loading="lazy" alt="Plate with four blue swallows in flight and a dotted rim" /><span class="tag"><b>Swallows</b>, plate</span></div></figure>
+      <div>
+        <h2>Natural subjects, painted before the fire</h2>
+        <p>Much of my work I decorate with natural subjects or calligraphy, brush painted with earth oxides before firing. Clear glazes let my clay bodies show off their natural state, complementing the natural subjects.</p>
+      </div>
+    </div>
+
+    <div class="row flip">
+      <figure class="pic r-tall"><div class="ph rv"><img src="assets/clarissas-clay-newmanstown/pine-bottle.webp" width="731" height="1100" loading="lazy" alt="Bottle with green glaze at the neck and a painted pine branch" /><span class="tag"><b>Pine</b>, bottle</span></div></figure>
+      <div>
+        <h2>Handcrafted in the truest sense</h2>
+        <p>I mix natural, crushed clays and stone to form my own clay bodies, and I formulate and make my own slips, stains and glazes.</p>
+        <p>The clay is aged six months to a year before it is ready for the potter's wheel. After the wheel, each piece spends thirty hours or more in the kiln, through two separate firings at temperatures as high as 2330&nbsp;°F.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <figure class="pic duo">
+        <div class="ph a rv"><img src="assets/clarissas-clay-newmanstown/bamboo-bowl.webp" width="1100" height="731" loading="lazy" alt="Oval dish with green oribe glaze at the rim and bamboo painted inside" style="aspect-ratio:3/2" /><span class="tag"><b>Bamboo</b>, oval dish</span></div>
+        <div class="ph b rv"><img src="assets/clarissas-clay-newmanstown/pine-vase.webp" width="731" height="1100" loading="lazy" alt="Vase painted with a pine branch and a line of calligraphy" /></div>
+      </figure>
+      <div>
+        <h2>Made for every day</h2>
+        <p>The glazes I use are lead-free and durable for everyday use. My work can be used safely in dishwashers, microwaves, and ovens that have not been preheated first.</p>
+        <p class="muted">Extreme temperature changes could cause harm, so let a piece warm up with the oven.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="life" id="life">
+  <div class="wrap grid">
+    <div>
+      <h2>How I came to clay</h2>
+      <ol class="steps">
+        <li><span class="y">As a child</span><p>Mud pies and small pots after rain storms, in Berks County, Pennsylvania.</p></li>
+        <li><span class="y">1972</span><p>A pottery class through the Denver Free University rekindled that passion.</p></li>
+        <li><span class="y">1975</span><p>Bachelor of Arts, Millersville University.</p></li>
+        <li><span class="y">1976 and 1977</span><p>Apprentice potter at the Capricorner, near Carlisle, Pennsylvania.</p></li>
+        <li><span class="y">2007 to 2011</span><p>Exhibitions at Radius, The State Museum of Pennsylvania in Harrisburg, the Pennsylvania Guild of Craftsmen Gallery in Lancaster, and the Reading Public Museum.</p></li>
+        <li><span class="y">Today</span><p>Juried member of the Pennsylvania Guild of Craftsmen and Lancaster Designer Craftsmen, and a member of the Central Pennsylvania Potters Information Group.</p></li>
+      </ol>
+    </div>
+    <figure class="pic"><div class="ph rv"><img src="assets/clarissas-clay-newmanstown/teapot.webp" width="1100" height="731" loading="lazy" alt="Teapot with green glaze on spout and handle, painted with a pine branch and cone" /><span class="tag"><b>Pine</b>, teapot</span></div></figure>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Visit the studio</h2>
+      <p class="lede">My studio is in an 18th-century summer house in the Millbach area of eastern Lebanon County, Pennsylvania.</p>
+      <dl>
+        <dt>Open House, every year</dt>
+        <dd>The weekend before Thanksgiving.</dd>
+        <dt>Cherry Fair, Schaefferstown</dt>
+        <dd>At Historic Schaefferstown's annual Cherry Fair and Pennsylvania German Folklife Festival, you will find me at my potter's wheel, demonstrating.</dd>
+        <dt>By appointment</dt>
+        <dd>The studio is open for sales by appointment. Write and we'll find a time.</dd>
+      </dl>
+      <a class="btn btn-paper" href="mailto:clarissa@clarissasclay.com?subject=Visiting%20your%20studio">Email Clarissa to visit</a>
+      <p class="note">My work is also for sale at art and craft shows in south central Pennsylvania.</p>
+    </div>
+    <figure class="pic"><div class="ph rv"><img src="assets/clarissas-clay-newmanstown/bird-bottle.webp" width="731" height="1100" loading="lazy" alt="Bottle with green glaze, painted with a small bird on a bamboo branch" /><span class="tag" style="left:50%;transform:translateX(-50%);white-space:nowrap"><b>Bird on bamboo</b>, bottle</span></div></figure>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap grid">
+    <div>
       <h2>More in the gallery</h2>
       <p class="muted">Photographs of my work, by kind of piece.</p>
       <ul class="index">
@@ -298,29 +342,37 @@ footer .name{font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var
         <li><a href="https://www.clarissasclay.com/gallery/misc/"><span>Other pieces</span><small>25 photos</small></a></li>
       </ul>
     </div>
-    <figure class="piece l wide drop2">
-      <img src="assets/clarissas-clay-newmanstown/bamboo-plate.webp" width="1100" height="731" loading="lazy" alt="Footed plate with a wavy oribe-glazed rim and a painted pine branch" />
-      <figcaption><b>Pine</b>Footed plate</figcaption>
+    <figure class="pic plates">
+      <div class="ph a rv"><img src="assets/clarissas-clay-newmanstown/rooster-plate.webp" width="1100" height="731" loading="lazy" alt="Plate with a rooster painted in sumi-e strokes" /><span class="tag"><b>Rooster</b>, plate</span></div>
+      <div class="ph b rv"><img src="assets/clarissas-clay-newmanstown/bamboo-plate.webp" width="1100" height="731" loading="lazy" alt="Footed plate with a wavy oribe-glazed rim and a painted pine branch" /><span class="tag"><b>Pine</b>, footed plate</span></div>
     </figure>
   </div>
-
-  <div class="rod bottom-rod" aria-hidden="true"></div>
-</div>
+</section>
 </main>
 
 <footer>
-  <p class="name">Clarissa's Clay</p>
-  <p>Clarissa Hollenbach Enck, Millbach area, Lebanon County, Pennsylvania<br />
-  <a href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">clarissa@clarissasclay.com</a></p>
+  <div class="wrap row2">
+    <div>
+      <p class="name">Clarissa's Clay</p>
+      <p>Clarissa Hollenbach Enck, Millbach area, Lebanon County, Pennsylvania<br />
+      <a href="mailto:clarissa@clarissasclay.com?subject=Your%20pottery">clarissa@clarissasclay.com</a></p>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#work">The work</a>
+      <a href="#visit">Visit</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </div>
 </footer>
 
 <div class="proposal">Proposal by Nicolas Masset for Clarissa's Clay · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
 
 <script>
 (function(){
-  var top=document.getElementById('top');
-  function f(){top.classList.toggle('scrolled',window.scrollY>8)}
-  f();window.addEventListener('scroll',f,{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
 })();
 </script>
 </body>
