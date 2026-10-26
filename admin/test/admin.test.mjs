@@ -151,6 +151,8 @@ test('note libre et historique', async () => {
   assert.match(r.texte, /Rappeler &lt;b&gt;lundi&lt;\/b&gt;/);
   assert.match(r.texte, /Note modifiée/);
   assert.match(r.texte, /Mail parti : Votre page/);
+  // Cloudflare brouille les adresses sauf entre ces balises (son script est bloqué par la CSP)
+  assert.match(r.texte, /<!--email_off-->secret-prospect@exemple\.fr<!--\/email_off-->/);
 });
 
 test('retrait : exige la case, puis passe par l’API et s’acquitte', async () => {

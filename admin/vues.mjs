@@ -286,7 +286,7 @@ ${vignette(page, 'image-grande')}
 <div class="ligne"><button form="forcer" type="submit">Enregistrer l’état</button>
 ${etat.force ? `<form method="post" action="/admin/p/${echapper(page.slug)}/etat"><input type="hidden" name="etat" value=""><button class="doux" type="submit">Revenir au calcul</button></form>` : ''}</div>
 </section>
-${page.emails?.length ? `<section class="bloc"><h2>Contact</h2><p class="mails">${page.emails.map(echapper).join('<br>')}</p></section>` : ''}
+${page.emails?.length ? `<section class="bloc"><h2>Contact</h2><p class="mails"><!--email_off-->${page.emails.map(echapper).join('<br>')}<!--/email_off--></p></section>` : ''}
 <section class="bloc"><h2>À corriger</h2>
 <form method="post" action="/admin/p/${echapper(page.slug)}/correction"><label for="texte">Ce qui ne va pas sur cette page</label>
 <textarea id="texte" name="texte" placeholder="Ex. : la photo du haut est floue, le numéro de téléphone est faux"></textarea>
