@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- v1 (2026-10-26) : homepage rebuilt for Bandana Pottery (Bakersville, NC, near Penland), content from https://bandanapottery.com (home, about-us, onggi, kiln, materials, visit, contact); direction : « fumée de four à bois » : ash paper, charcoal smoke, olive ash glaze, onggi brown, Instrument Serif + IBM Plex Sans, their large jar full-bleed in the hero.
+     Fixes : the footer « Visit » link (/map-1, 404) becomes a working Visit section (address, hours and directions from their Visit page, Google Maps search on their exact address) ; the 404 « Apprentices » link is gone.
+     Photos : theirs, downloaded from their Squarespace site and recompressed. Nothing invented : every fact, number and hour comes from their pages. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#24211e" />
+<title>Bandana Pottery · Michael Hunt &amp; Naomi Dalglish · wood-fired pottery near Penland, NC</title>
+<meta name="description" content="Wood-fired utilitarian pottery, large onggi jars and figurative sculpture by Michael Hunt and Naomi Dalglish, made with wild clay from the mountains of western North Carolina. Showroom in Bakersville, NC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ash:#ebe7df; --ash-2:#dcd6ca; --ash-3:#c9c1b2;
+  --smoke:#24211e; --smoke-2:#34302b; --soot:#6b645a;
+  --onggi:#5b3b27; --olive:#6b7140; --olive-deep:#4c5130; --olive-pale:#b9bd8f;
+  --blush:#c48f7a;
+  --fd:"Instrument Serif",Georgia,serif; --ft:"IBM Plex Sans",system-ui,sans-serif;
+  --wrap:1200px; --pad:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ash);color:var(--smoke);font-family:var(--ft);font-size:17px;line-height:1.65}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h1{font-size:clamp(3rem,7.4vw,6.6rem)}
+h2{font-size:clamp(2.4rem,4.8vw,4.1rem)}
+h3{font-size:clamp(1.6rem,2.4vw,2rem)}
+h1 em,h2 em{font-style:italic;color:var(--olive-pale)}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.label{font-family:var(--ft);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--olive);margin:0 0 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:3px;font-family:var(--ft);font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid currentColor;transition:background .2s,color .2s,transform .2s}
+.btn.fill{background:var(--olive);border-color:var(--olive);color:#fff}
+.btn.fill:hover{background:var(--olive-deep);border-color:var(--olive-deep)}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;color:#f3efe7;transition:background .3s}
+header.scrolled{background:rgba(36,33,30,.96)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:var(--wrap);margin:0 auto;padding:16px var(--pad)}
+.brand{text-decoration:none;line-height:1.05}
+.brand b{display:block;font-family:var(--fd);font-weight:400;font-size:1.65rem;letter-spacing:.005em}
+.brand span{display:block;font-size:.78rem;letter-spacing:.06em;opacity:.8}
+nav.main{display:flex;gap:26px;align-items:center}
+nav.main a{text-decoration:none;font-size:.95rem;opacity:.88}
+nav.main a:hover{opacity:1}
+nav.main a.cta{opacity:1;padding:9px 16px;border:1px solid rgba(243,239,231,.55);border-radius:3px}
+.burger{display:none;width:48px;height:48px;border:0;background:transparent;color:inherit;cursor:pointer;position:relative;z-index:60}
+.burger span{position:absolute;left:12px;width:24px;height:2px;background:currentColor;transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:24px}.burger span:nth-child(3){top:31px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#f3efe7;background:var(--smoke);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes settle{from{transform:scale(1.06);opacity:.6}to{transform:none;opacity:1}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,33,30,.55) 0%,rgba(36,33,30,0) 26%,rgba(36,33,30,0) 40%,rgba(36,33,30,.88) 78%,rgba(36,33,30,.97) 100%)}
+.hero .in{position:relative;z-index:2;width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--pad) 64px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.hero h1{margin-bottom:0}
+.hero .side p{font-size:1.08rem;color:#ddd6ca;max-width:40ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.hero .credit{position:absolute;z-index:2;right:var(--pad);top:96px;font-size:.82rem;color:#e6dfd3;opacity:.85;max-width:26ch;text-align:right}
+
+/* opening statement */
+.statement{padding:96px 0 84px;background:var(--ash)}
+.statement blockquote{margin:0;font-family:var(--fd);font-size:clamp(1.75rem,3.1vw,2.7rem);line-height:1.18;max-width:28em;color:var(--smoke)}
+.statement blockquote em{color:var(--olive);font-style:italic}
+.statement .who{margin-top:24px;font-size:.95rem;color:var(--soot)}
+
+/* onggi */
+.onggi{padding:24px 0 104px}
+.onggi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+.onggi-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.onggi-pics figure{margin:0}
+.onggi-pics .big{grid-column:1 / -1}
+.onggi-pics img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.onggi-pics .big img{aspect-ratio:5/4}
+figcaption{font-size:.86rem;color:var(--soot);margin-top:8px}
+.onggi-text{position:sticky;top:110px}
+.onggi-text h2{margin-bottom:22px}
+.onggi-text p{max-width:60ch;color:#3b362f}
+.pull{margin:30px 0 26px;padding:22px 0 0;border-top:1px solid var(--ash-3);font-family:var(--fd);font-size:1.5rem;line-height:1.3;color:var(--onggi)}
+.pull cite{display:block;margin-top:10px;font-family:var(--ft);font-style:normal;font-size:.9rem;color:var(--soot)}
+.textlink{font-weight:600;color:var(--olive-deep);text-underline-offset:4px}
+.kiln .textlink{color:var(--olive-pale)}
+
+/* kiln */
+.kiln{background:var(--smoke);color:#e9e3d8;padding:0 0 100px}
+.kiln-photo{position:relative;height:min(62vh,560px);overflow:hidden}
+.kiln-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(.85)}
+.kiln-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,rgba(36,33,30,0),var(--smoke))}
+.kiln .head{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:-40px;position:relative;z-index:2}
+.kiln h2{color:#f3efe7}
+.kiln .label{color:var(--olive-pale)}
+.kiln p{color:#cfc7b9;max-width:60ch}
+.fire{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(233,227,216,.18)}
+.fire li{padding:26px 22px 4px 0;border-right:1px solid rgba(233,227,216,.12)}
+.fire li+li{padding-left:22px}
+.fire li:last-child{border-right:0}
+.fire b{display:block;font-family:var(--fd);font-weight:400;font-size:clamp(2.2rem,3.6vw,3.2rem);line-height:1;color:var(--olive-pale)}
+.fire span{display:block;margin-top:10px;font-size:.95rem;color:#bdb4a5}
+.kiln-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;margin-top:72px;align-items:center}
+.kiln-row img{border-radius:2px;aspect-ratio:2/3;object-fit:cover;width:100%}
+
+/* materials */
+.materials{padding:104px 0}
+.mat-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:56px}
+.mat-head p{max-width:58ch;color:#3b362f;margin:0}
+.mat-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.mat{grid-column:span 4}
+.mat.wide{grid-column:span 8;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.mat img{width:100%;object-fit:cover;border-radius:2px;background:var(--ash-2)}
+.mat .sq{aspect-ratio:1/1}
+.mat .land{aspect-ratio:4/3}
+.mat h3{margin:18px 0 8px}
+.mat p{font-size:.98rem;color:#3b362f;margin:0}
+
+/* about */
+.about{background:var(--ash-2);padding:100px 0}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.about img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+.about .duo{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:30px}
+.about h3{font-size:1.7rem;margin-bottom:10px;color:var(--onggi)}
+.about p{font-size:.98rem;color:#3b362f;margin:0 0 .8em}
+.about .note{margin-top:26px;font-size:1rem;color:var(--smoke);max-width:62ch}
+
+/* visit */
+.visit{padding:104px 0;background:var(--ash)}
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:stretch}
+.visit-card{background:var(--smoke);color:#ebe5da;border-radius:3px;padding:40px;display:flex;flex-direction:column;gap:26px}
+.visit-card h2{color:#f3efe7}
+.visit-card p{color:#cfc7b9;margin:0;max-width:52ch}
+.visit-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:1rem}
+.visit-card dt{color:var(--olive-pale);font-weight:600;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;padding-top:3px}
+.visit-card dd{margin:0}
+.visit-card dd a{text-decoration-color:rgba(235,229,218,.4);text-underline-offset:4px}
+.visit-card .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.visit-photo{position:relative;margin:0}
+.visit-photo img{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:3px}
+.visit-photo figcaption{position:absolute;left:16px;bottom:16px;background:rgba(235,231,223,.94);color:var(--smoke);padding:8px 12px;border-radius:2px;margin:0}
+.news{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;border-top:1px solid var(--ash-3);padding-top:32px}
+.news h3{margin-bottom:6px}
+.news p{margin:0;color:#3b362f;max-width:60ch}
+.news .btn{color:var(--onggi)}
+
+footer{background:var(--smoke);color:#bdb4a5;padding:56px 0 40px;font-size:.95rem}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+.foot b{display:block;font-family:var(--fd);font-weight:400;font-size:1.8rem;color:#f3efe7;margin-bottom:6px}
+.foot h4{margin:0 0 10px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--olive-pale)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-decoration:none;color:#e9e3d8}
+.foot a:hover{text-decoration:underline}
+.proposal{background:#1b1917;color:#8a8278;font-size:.8rem;text-align:center;padding:12px var(--pad)}
+.proposal a{color:#a39b90}
+
+@media (prefers-reduced-motion:reduce){.hero img{animation:none}html{scroll-behavior:auto}.btn,.burger span{transition:none}}
+
+@media (max-width:980px){
+  .hero .in,.onggi-grid,.kiln .head,.kiln-row,.mat-head,.about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+  .onggi-text{position:static}
+  .fire{grid-template-columns:1fr 1fr}
+  .fire li:nth-child(2){border-right:0}
+  .fire li:nth-child(3){padding-left:0}
+  .mat,.mat.wide{grid-column:1 / -1}
+  .foot{grid-template-columns:1fr 1fr}
+  .foot > div:first-child{grid-column:1 / -1}
+}
+@media (max-width:760px){
+  :root{--pad:20px}
+  body{font-size:16.5px}
+  nav.main{display:none}
+  .burger{display:block}
+  .brand b{font-size:1.45rem}
+  .mobile-menu{display:block;position:fixed;inset:0;z-index:55;background:var(--smoke);padding:100px var(--pad) 40px;transform:translateX(100%);visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility .35s}
+  .mobile-menu.open{transform:none;visibility:visible}
+  .mobile-menu a{display:block;font-family:var(--fd);font-size:2.2rem;text-decoration:none;color:#f3efe7;padding:10px 0;border-bottom:1px solid rgba(243,239,231,.12)}
+  .mobile-menu a.tel{font-family:var(--ft);font-size:1.15rem;color:var(--olive-pale);border:0;margin-top:20px}
+  body.menu-open{overflow:hidden}
+  .hero{min-height:0;display:block;padding-top:0}
+  .hero img{position:relative;height:66svh;min-height:420px}
+  .hero::after{background:linear-gradient(180deg,rgba(36,33,30,.6) 0%,rgba(36,33,30,0) 22%)}
+  .hero .in{padding:30px var(--pad) 48px;margin-top:0;gap:20px}
+  .hero h1{font-size:3.1rem}
+  .hero .credit{display:none}
+  .hero .cta .btn{flex:1 1 100%}
+  .statement{padding:64px 0 56px}
+  .onggi{padding:8px 0 72px}
+  .onggi-pics{gap:10px}
+  .kiln{padding-bottom:72px}
+  .kiln-photo{height:300px}
+  .kiln .head{margin-top:-20px}
+  .fire{grid-template-columns:1fr 1fr}
+  .fire li{padding:20px 12px 4px 0}
+  .fire li+li{padding-left:12px}
+  .fire li:nth-child(3){padding-left:0}
+  .materials,.about,.visit{padding:72px 0}
+  .mat.wide{grid-template-columns:1fr}
+  .about .duo{grid-template-columns:1fr;gap:20px}
+  .visit-card{padding:28px 22px}
+  .visit-card dl{grid-template-columns:1fr;gap:4px}
+  .visit-card dd{margin-bottom:12px}
+  .visit-card .cta .btn,.news .btn{flex:1 1 100%;width:100%}
+  .visit-photo img{min-height:0;aspect-ratio:1/1}
+  .news{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .mat p,.about p,.fire span,.news p,.visit-card p,.statement .who,.onggi-text p{font-size:1rem}
+  figcaption,.pull cite,.brand span{font-size:.92rem}
+  .label{font-size:.85rem}
+  .proposal{font-size:.74rem;padding:12px 10px}
+}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <a class="brand" href="#top"><b>Bandana Pottery</b><span>Michael Hunt · Naomi Dalglish</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#onggi">Onggi</a>
+      <a href="#kiln">Kiln</a>
+      <a href="#materials">Materials</a>
+      <a href="#about">About us</a>
+      <a class="cta" href="#visit">Visit</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="menu">
+    <a href="#onggi">Onggi</a>
+    <a href="#kiln">Kiln</a>
+    <a href="#materials">Materials</a>
+    <a href="#about">About us</a>
+    <a href="#visit">Visit</a>
+    <a class="tel" href="tel:+18286885977">Call (828) 688-5977</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="Introduction">
+  <img src="assets/bandana-pottery-nc/jar-together.webp" alt="Two potters shaping a large jar together in the studio" width="1600" height="1600" fetchpriority="high" />
+  <p class="credit">A large jar taking shape in the studio</p>
+  <div class="in">
+    <h1>Wild clay, our hands, and <em>a wood kiln.</em></h1>
+    <div class="side">
+      <p>We make wood-fired utilitarian pottery, large onggi jars and figurative sculpture in the mountains of western North Carolina, near Penland School.</p>
+      <div class="cta">
+        <a class="btn fill" href="#visit">Visit the showroom</a>
+        <a class="btn line" href="#onggi">See the onggi jars</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="wrap">
+    <p class="label">Bandana Pottery</p>
+    <blockquote>Our pots are the result of a collaboration between us, <em>the coarse wild clay from our mountains,</em> and the wood kiln. Their life begins with the geologic forces that formed the clay, passes through our hands and kiln, and continues through years of daily use in the home.</blockquote>
+    <p class="who">Michael Hunt and Naomi Dalglish</p>
+  </div>
+</section>
+
+<section class="onggi" id="onggi">
+  <div class="wrap onggi-grid">
+    <div class="onggi-pics">
+      <figure class="big"><img src="assets/bandana-pottery-nc/jar-paddle.webp" alt="Paddling the wall of a large round onggi jar" width="1100" height="1100" loading="lazy" /><figcaption>Paddle and anvil: the jar is stretched, not thrown.</figcaption></figure>
+      <figure><img src="assets/bandana-pottery-nc/jar-facets.webp" alt="Large onggi jar in progress, its wall built from paddled slabs" width="1000" height="1000" loading="lazy" /><figcaption>Softly expanding paddled facets.</figcaption></figure>
+      <figure><img src="assets/bandana-pottery-nc/wild-clay.webp" alt="Layers of red, orange and grey wild clay in a mountain bank" width="753" height="760" loading="lazy" /><figcaption>Wild clay, near home.</figcaption></figure>
+    </div>
+    <div class="onggi-text">
+      <p class="label">Onggi</p>
+      <h2>Large jars, made the way they are made in Korea.</h2>
+      <p>Onggi is a Korean tradition of large and small storage jars for everyday use. In the Cholla province, potters developed a fast way to build giant jars: long slabs of clay set on edge, then shaped with a wooden paddle and anvil while the pot turns on a kick wheel set in a pit in the floor. No water is used, so the jar can grow very large without collapsing.</p>
+      <p>Michael learned it in Korea with master onggi potter Oh Hyang Jong. Many of our jars keep the traditional Cholla shapes; others explore new ones, some even flattened into ovoid forms. They could certainly be used for fermenting, though many find their way into homes for other purposes.</p>
+      <p class="pull">“For the first four months I smashed everything I made, until I could make the standard shapes well enough to keep them.”<cite>Michael, on learning onggi in Korea</cite></p>
+      <a class="textlink" href="https://bandanapottery.com/onggi">The full onggi story and slideshow</a>
+    </div>
+  </div>
+</section>
+
+<section class="kiln" id="kiln">
+  <div class="kiln-photo"><img src="assets/bandana-pottery-nc/kiln-smoke.webp" alt="Wood smoke rising from the kiln chimney above the kiln shed roof" width="1400" height="933" loading="lazy" /></div>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">The kiln</p>
+        <h2>Twenty hours of stoking, <em>then two days of waiting.</em></h2>
+      </div>
+      <div>
+        <p>Our pots are fired in a large wood kiln, a modification of traditional kilns from Thailand. We glaze and decorate almost every pot, so we wanted a kiln that fires relatively quickly and doesn't bury the decoration under ash.</p>
+        <p>The wood ash still combines gently with the glazes, and every stoke changes the atmosphere inside, from clear burning to smoky. Each firing is a little different, which is why unloading is always exciting.</p>
+      </div>
+    </div>
+    <ul class="fire">
+      <li><b>~20 h</b><span>of continuous stoking</span></li>
+      <li><b>2350°F</b><span>when the glazes melt, cone 9 to 11</span></li>
+      <li><b>2 days</b><span>of cooling before we unload</span></li>
+      <li><b>4</b><span>firings a year</span></li>
+    </ul>
+    <div class="kiln-row">
+      <img src="assets/bandana-pottery-nc/kiln-stoking.webp" alt="Stoking the wood kiln through a side port" width="733" height="1100" loading="lazy" />
+      <div>
+        <p class="label">Loading and firing</p>
+        <h3>Bricked up, fed by hand.</h3>
+        <p>The pots go in through the front door of the kiln, which is then bricked up for the firing. From there the kiln is stoked with wood, by hand, until the glazes have melted.</p>
+        <a class="textlink" href="https://bandanapottery.com/kiln">More kiln photos on our site</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="materials" id="materials">
+  <div class="wrap">
+    <div class="mat-head">
+      <div>
+        <p class="label">Materials</p>
+        <h2>Clay we dig, glazes made from ash.</h2>
+      </div>
+      <p>We were first drawn to wild clays by our love of the coarse beauty of historical folk pots. These clays are like dance partners with an attitude: we are always finding out what we can do together.</p>
+    </div>
+    <div class="mat-grid">
+      <div class="mat">
+        <img class="sq" src="assets/bandana-pottery-nc/cup.webp" alt="Wood-fired cup with a white slip carved in a chevron pattern" width="900" height="675" loading="lazy" />
+        <h3>The clay</h3>
+        <p>About 75% of our clay body is two clays from our area: a coarse red clay from near our home in the higher mountains, and a more plastic grey clay from a creek bed further down.</p>
+      </div>
+      <div class="mat wide">
+        <div>
+          <img class="land" src="assets/bandana-pottery-nc/bottle.webp" alt="Square wood-fired bottle with brushed grass decoration" width="900" height="675" loading="lazy" />
+        </div>
+        <div>
+          <h3 style="margin-top:0">Slip and glaze</h3>
+          <p>One of our white slips is an impure kaolin we dig across the street. This “bandana kaolin” is prone to blushing pink halos where the iron-rich clay meets slip and glaze in the kiln.</p>
+          <p style="margin-top:.8em">Our glazes are made mostly from wood ash, clay and other local materials. A favorite is based on nuka, a Japanese rice husk ash glaze: white breaking black over the edges, flecked yellow and blue where the fly ash hits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <img src="assets/bandana-pottery-nc/michael-naomi.webp" alt="Naomi Dalglish and Michael Hunt outdoors by a mossy rock" width="1000" height="666" loading="lazy" />
+    <div>
+      <p class="label">About us</p>
+      <h2>Two potters, one studio, one kiln.</h2>
+      <div class="duo">
+        <div>
+          <h3>Michael</h3>
+          <p>Got hooked on clay in high school and became a student at Penland School of Craft, where Will Ruggles and Douglas Rankin became his teachers and mentors. He later went to Korea to learn onggi, then came back to build a studio and a large wood kiln in the Penland area.</p>
+        </div>
+        <div>
+          <h3>Naomi</h3>
+          <p>Began making pottery with her grandmother as a child, studied clay at Earlham College, and discovered pre-Columbian clay figures in Mexico. Her sculptures draw on them and on Japanese haniwa figures. She came to Penland for a kiln-building class and met Michael.</p>
+        </div>
+      </div>
+      <p class="note">We make and glaze the pottery together; Naomi makes the figurative sculptures and Michael the large jars. The name comes from Bandana, the small community where we started the studio. We occasionally teach workshops, and we exhibit our work internationally.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div>
+          <p class="label" style="color:var(--olive-pale)">Visit</p>
+          <h2>Come to the showroom.</h2>
+        </div>
+        <p>Our studio is in the mountains of western North Carolina, about an hour north of Asheville near Penland School. The showroom is generally open every day, and if you call ahead we can be sure to meet you.</p>
+        <dl>
+          <dt>Address</dt><dd>1446 Conley Ridge Road<br />Bakersville, NC 28705</dd>
+          <dt>Hours</dt><dd>Monday to Sunday, 10am to 5pm<br />Call ahead to be sure we're there</dd>
+          <dt>Phone</dt><dd><a href="tel:+18286885977">(828) 688-5977</a></dd>
+          <dt>Email</dt><dd><a href="mailto:huntdalglish@gmail.com?subject=Visiting%20Bandana%20Pottery">huntdalglish@gmail.com</a></dd>
+        </dl>
+        <div class="cta">
+          <a class="btn fill" href="https://www.google.com/maps/search/?api=1&amp;query=1446%20Conley%20Ridge%20Road%2C%20Bakersville%2C%20NC%2028705">Get directions</a>
+          <a class="btn line" href="tel:+18286885977">Call before you come</a>
+        </div>
+      </div>
+      <figure class="visit-photo">
+        <img src="assets/bandana-pottery-nc/showroom.webp" alt="The showroom doorway framed in yellow, shelves of pots and sculptures inside" width="900" height="900" loading="lazy" />
+        <figcaption>The showroom door</figcaption>
+      </figure>
+    </div>
+    <div class="news">
+      <div>
+        <h3>Kiln openings, home sales, workshops</h3>
+        <p>We fire four times a year. Ask to be on our mailing list and we'll let you know about shows, workshops and events.</p>
+      </div>
+      <a class="btn line" href="mailto:huntdalglish@gmail.com?subject=Please%20add%20me%20to%20your%20mailing%20list">Join the mailing list</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Bandana Pottery</b>
+      Michael Hunt and Naomi Dalglish<br />
+      1446 Conley Ridge Road, Bakersville, NC 28705
+    </div>
+    <div>
+      <h4>On this page</h4>
+      <ul>
+        <li><a href="#onggi">Onggi</a></li>
+        <li><a href="#kiln">Kiln</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+18286885977">(828) 688-5977</a></li>
+        <li><a href="mailto:huntdalglish@gmail.com?subject=Hello%20from%20your%20website">huntdalglish@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/bandanapottery/">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Bandana Pottery · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var h=document.querySelector('header'),b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function s(){h.classList.toggle('scrolled',window.scrollY>40)}s();window.addEventListener('scroll',s,{passive:true});
+  function close(){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');document.body.classList.remove('menu-open')}
+  b.addEventListener('click',function(){var o=!m.classList.contains('open');if(!o)return close();m.classList.add('open');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Close menu');document.body.classList.add('menu-open')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+})();
+</script>
+</body>
+</html>

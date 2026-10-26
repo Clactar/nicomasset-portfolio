@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- v1 (2026-10-26) : homepage rebuilt for Cedar Mountain Potters (Parsonsfield, ME), content from https://www.cedarmountainpotters.com/; direction : « two potters as a couple, forest green and clay, humanist type (Fraunces + Karla), full-width studio photo hero with an Open Studio band ». Open Studio dates are the ones on their homepage (November 7-8, 10-4), typo "Sudio" fixed; nothing invented. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#22392d" />
+<title>Cedar Mountain Potters · David Orser and Laurel MacDuffie, Parsonsfield, Maine</title>
+<meta name="description" content="Two potters, one converted cow shed in Parsonsfield, Maine. Stoneware, tea bowls, jars and sculpture by David Orser and Laurel MacDuffie. Open Studio at 858 Middle Rd." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --forest:#22392d; --forest-2:#2f4b3c; --moss:#6f8a6a; --clay:#b4673f; --clay-2:#94512f;
+  --cream:#f4efe5; --cream-2:#e9e1d1; --ink:#1f2a23; --ink-2:#4a5a4f; --line:rgba(31,42,35,.14);
+  --fd:"Fraunces",Georgia,serif; --ft:"Karla",system-ui,sans-serif;
+  --wrap:1220px; --pad:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ft);font-size:18px;line-height:1.6}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:500;line-height:1.08;margin:0;font-variation-settings:"opsz" 96}
+h2{font-size:clamp(2.1rem,4vw,3.3rem);margin-bottom:22px;letter-spacing:-.01em}
+h3{font-size:1.5rem;font-variation-settings:"opsz" 30}
+p{margin:0 0 1em;max-width:60ch}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 26px;border-radius:999px;font:700 1rem/1.2 var(--ft);text-decoration:none;background:var(--clay);color:#fff;border:2px solid var(--clay);transition:background .2s,border-color .2s}
+.btn:hover{background:var(--clay-2);border-color:var(--clay-2)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgba(244,239,229,.6)}
+.btn.ghost:hover{background:rgba(244,239,229,.12)}
+.btn.dark{background:var(--forest);border-color:var(--forest)}
+.btn.dark:hover{background:var(--forest-2)}
+
+header{position:sticky;top:0;z-index:30;background:var(--forest);color:var(--cream)}
+header .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{text-decoration:none;line-height:1.1}
+.brand b{display:block;font-family:var(--fd);font-weight:600;font-size:1.3rem}
+.brand span{font-size:1rem;color:#b9c9b5}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;font-size:1rem;color:#d6dfd2}
+nav a:hover{color:#fff}
+nav .btn{white-space:nowrap;min-height:44px;padding:10px 20px;color:#fff}
+
+/* hero */
+.hero{position:relative;min-height:min(86vh,780px);display:flex;align-items:flex-end;color:var(--cream);overflow:hidden}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,23,.15) 0%,rgba(18,30,23,.25) 40%,rgba(18,30,23,.88) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:56px}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.6rem);max-width:13ch;margin-bottom:20px;letter-spacing:-.02em}
+.hero h1 i{font-style:italic;color:#e9b48f}
+.hero p.lead{font-size:1.25rem;max-width:44ch;color:#e3e9df;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}html{scroll-behavior:auto}}
+
+/* open studio band */
+.band{background:var(--clay);color:#fff}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding-top:22px;padding-bottom:22px}
+.band strong{font-family:var(--fd);font-weight:600;font-size:1.6rem;font-variation-settings:"opsz" 40}
+.band .when{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:1.08rem}
+.band a{color:#fff;font-weight:700;text-underline-offset:4px}
+
+section{padding:100px 0}
+
+/* story */
+.story .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+.story .big{font-family:var(--fd);font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.35;max-width:30ch;color:var(--ink);font-variation-settings:"opsz" 40}
+.story .big em{color:var(--clay-2);font-style:italic}
+.story figure{margin:0;position:relative}
+.story figure img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:180px 180px 8px 8px}
+.story figcaption{margin-top:12px;color:var(--ink-2);font-size:1rem}
+
+/* two potters */
+.potters{background:var(--cream-2)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;border-top:2px solid var(--forest)}
+.duo article{padding:38px 40px 10px 0}
+.duo article + article{padding:38px 0 10px 40px;border-left:1px solid var(--line)}
+.duo h3{font-size:2rem;margin-bottom:6px}
+.duo .role{color:var(--clay-2);font-weight:700;margin-bottom:18px}
+.duo ul{list-style:none;padding:0;margin:18px 0 26px;display:flex;flex-wrap:wrap;gap:8px}
+.duo li{padding:6px 14px;border-radius:999px;background:var(--cream);font-size:1rem;color:var(--ink-2)}
+.duo a.more{font-weight:700;color:var(--forest);text-underline-offset:4px}
+
+/* studio gallery */
+.work .head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.work .head p{margin:0;color:var(--ink-2)}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:14px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:6px;background:#ddd}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .tall{grid-row:span 2}
+.mosaic .wide{grid-column:span 2}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:rgba(244,239,229,.94);padding:5px 12px;border-radius:999px;font-size:1rem;color:var(--ink)}
+
+/* words */
+.words{background:var(--forest);color:var(--cream);text-align:center}
+.words blockquote{margin:0 auto;max-width:30ch;font-family:var(--fd);font-weight:400;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.35;font-variation-settings:"opsz" 72}
+.words blockquote p{max-width:none;margin:0 0 .6em}
+.words cite{display:block;margin-top:24px;font-style:normal;color:#b9c9b5;font-size:1.05rem}
+
+/* find us */
+.find .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:40px}
+.card{background:#fff;border-radius:10px;padding:30px 28px;border:1px solid var(--line)}
+.card h3{margin-bottom:12px}
+.card p{color:var(--ink-2);margin-bottom:.6em}
+.card .btn{margin-top:10px}
+.card ul{margin:0;padding-left:18px;color:var(--ink-2)}
+.card li{margin-bottom:6px}
+.card.os{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.card.os p{color:#d6dfd2}
+.list{margin-top:26px;padding:24px 28px;border-radius:10px;background:var(--cream-2);display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+.list p{margin:0}
+
+footer{background:#18281f;color:#cbd6c7;padding:64px 0 40px}
+footer .grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:end}
+footer h2{color:var(--cream);font-size:2.2rem;margin-bottom:8px}
+footer address{font-style:normal;line-height:1.7}
+footer a{color:var(--cream);text-underline-offset:4px}
+.credit{background:#101a14;color:#7c897f;font-size:13px;text-align:center;padding:10px var(--pad)}
+.credit a{color:#a4b0a6}
+
+@media (max-width:980px){
+  .story .grid{grid-template-columns:1fr;gap:44px}
+  .story figure{max-width:440px}
+  .find .grid{grid-template-columns:1fr}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}
+}
+@media (max-width:720px){
+  :root{--pad:20px}
+  nav a:not(.btn){display:none}
+  .brand span{display:none}
+  .brand b{font-size:1.12rem}
+  nav .btn{padding:10px 16px}
+  .hero{min-height:620px}
+  .cta .btn{width:100%}
+  section{padding:70px 0}
+  .duo{grid-template-columns:1fr}
+  .duo article,.duo article + article{padding:30px 0 16px;border-left:0}
+  .duo article + article{border-top:1px solid var(--line)}
+  .mosaic{grid-auto-rows:170px;gap:10px}
+  .mosaic .wide{grid-column:span 2}
+  .band strong{font-size:1.4rem}
+  .list .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><b>Cedar Mountain Potters</b><span>David Orser · Laurel MacDuffie</span></a>
+    <nav aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#potters">David &amp; Laurel</a>
+      <a href="#work">Work</a>
+      <a href="#find">Find us</a>
+      <a class="btn" href="mailto:cedarmountainpotters@gmail.com?subject=Hello%20from%20your%20website">Email us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="assets/cedar-mountain-potters-parsonsfield/laurel-and-david.webp" width="1100" height="1100" alt="Laurel and David at work side by side in their Parsonsfield studio" />
+    <div class="wrap rise">
+      <h1>Two potters, one <i>old cow shed</i> in Maine.</h1>
+      <p class="lead">David Orser and Laurel MacDuffie make stoneware, tea bowls, jars and sculpture at Cedar Mountain Potters in Parsonsfield.</p>
+      <div class="cta">
+        <a class="btn" href="#find">Come to the Open Studio</a>
+        <a class="btn ghost" href="https://www.cedarmountainpotters.com/shop">Shop the work</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="band" role="note" aria-label="Open Studio">
+    <div class="wrap">
+      <strong>Open Studio</strong>
+      <div class="when"><span>November 7–8, 10am–4pm</span><span>858 Middle Rd., Parsonsfield, ME</span></div>
+      <a href="mailto:cedarmountainpotters@gmail.com?subject=Your%20Open%20Studio">Ask us a question</a>
+    </div>
+  </div>
+
+  <section class="story" id="story">
+    <div class="wrap grid">
+      <div>
+        <h2>How it started</h2>
+        <p class="big">We crossed paths at <em>Mudflat Pottery School</em> in Somerville, Massachusetts, got hitched in 1999, and moved to Maine.</p>
+        <p>We renovated the cow shed into a studio and set up shop as Cedar Mountain Potters. We've been making a living in clay ever since.</p>
+        <a class="btn dark" href="#work">See what comes out of the shed</a>
+      </div>
+      <figure>
+        <img src="assets/cedar-mountain-potters-parsonsfield/sign-in-snow.webp" width="1200" height="1200" loading="lazy" alt="The Cedar Mountain Potters sign hanging in the snow" />
+        <figcaption>Our sign, in a Maine winter.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="potters" id="potters">
+    <div class="wrap">
+      <h2>Two hands, two ways with clay</h2>
+      <p>Same studio, different work. Each of us keeps our own shop page with what is available right now.</p>
+      <div class="duo">
+        <article>
+          <h3>David Orser</h3>
+          <p class="role">Working in clay since 1977</p>
+          <p>David holds an MFA from Cranbrook Academy of Art. He began working in clay in 1977, when he attended the School of the Museum of Fine Arts in Boston.</p>
+          <ul aria-label="David's work"><li>Vases</li><li>Tea bowls</li><li>Bowls &amp; platters</li><li>Tiles</li><li>Jars</li><li>Sculpture</li></ul>
+          <a class="more" href="https://www.cedarmountainpotters.com/shopdavid">Shop David's work</a>
+        </article>
+        <article>
+          <h3>Laurel MacDuffie</h3>
+          <p class="role">Working in clay since 1997</p>
+          <p>Laurel holds an MA in Art Therapy from Lesley University in Cambridge, Massachusetts. She has been making art all her life.</p>
+          <ul aria-label="Laurel's work"><li>Recent work</li><li>Sculpture</li><li>Boxes</li><li>Creamers &amp; small jars</li></ul>
+          <a class="more" href="https://www.cedarmountainpotters.com/shoplaurel">Shop Laurel's work</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="head">
+        <div><h2>From the studio</h2><p>Textured stoneware, petals of clay, quiet glazes.</p></div>
+        <a class="btn dark" href="https://www.cedarmountainpotters.com/shop">Visit the shop</a>
+      </div>
+      <div class="mosaic">
+        <figure class="tall wide"><img src="assets/cedar-mountain-potters-parsonsfield/petal-sculpture.webp" width="1200" height="1200" loading="lazy" alt="Sculpture made of layered clay petals" /><figcaption>Petal sculpture</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/tea-bowl.webp" width="1000" height="1000" loading="lazy" alt="Textured stoneware tea bowl" /><figcaption>Tea bowl</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/celadon-cup.webp" width="1000" height="1000" loading="lazy" alt="Pale green celadon cup" /><figcaption>Celadon cup</figcaption></figure>
+        <figure class="wide"><img src="assets/cedar-mountain-potters-parsonsfield/three-jars.webp" width="1000" height="1000" loading="lazy" alt="Three tall lidded jars on a studio bench" style="object-position:50% 60%" /><figcaption>Lidded jars</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/petal-wreath.webp" width="1000" height="1000" loading="lazy" alt="Ring-shaped sculpture covered in clay petals" /><figcaption>Petal ring</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/slab-vase.webp" width="1000" height="1000" loading="lazy" alt="Flat slab vase in rust and olive tones" /><figcaption>Slab vase</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/platter.webp" width="1000" height="1000" loading="lazy" alt="Round platter with brushed white glaze" /><figcaption>Platter</figcaption></figure>
+        <figure><img src="assets/cedar-mountain-potters-parsonsfield/white-pitcher.webp" width="1000" height="1000" loading="lazy" alt="White pitcher on a stand" /><figcaption>Pitcher</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="words">
+    <div class="wrap">
+      <blockquote>
+        <p>Clay speaks of body. It reminds us of our own.</p>
+        <p>“What would I use this for?” is a question of the mind. “How does this feel?” is a question of the body.</p>
+        <p>Can we feel our way to peace? I ask the clay to show me.</p>
+      </blockquote>
+      <cite>From our “words” page</cite>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap">
+      <h2>Find us</h2>
+      <p>Come to the studio, or find our pots in shops across Maine and New Hampshire.</p>
+      <div class="grid">
+        <div class="card os">
+          <h3>Open Studio</h3>
+          <p>November 7–8, 10am–4pm</p>
+          <p>858 Middle Rd., Parsonsfield, ME 04047</p>
+          <a class="btn" href="mailto:cedarmountainpotters@gmail.com?subject=Your%20Open%20Studio">Email us</a>
+        </div>
+        <div class="card">
+          <h3>The Maine Potters Market</h3>
+          <p>Portland, Maine. Open year round, 10–6 daily.</p>
+        </div>
+        <div class="card">
+          <h3>League of New Hampshire Craftsmen</h3>
+          <p>Year round at the League shops in:</p>
+          <ul><li>Littleton</li><li>North Conway</li><li>Meredith</li></ul>
+        </div>
+      </div>
+      <div class="list">
+        <p>Want to hear about sales and upcoming events? Send us a line and we'll add you to our occasional email list.</p>
+        <a class="btn dark" href="mailto:cedarmountainpotters@gmail.com?subject=Please%20add%20me%20to%20your%20email%20list">Join the list</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <h2>Cedar Mountain Potters</h2>
+      <address>David Orser and Laurel MacDuffie<br />858 Middle Rd., Parsonsfield, ME 04047<br /><a href="mailto:cedarmountainpotters@gmail.com?subject=Hello%20from%20your%20website">cedarmountainpotters@gmail.com</a></address>
+    </div>
+    <p style="margin:0;color:#8fa292">Full show schedule on <a href="https://www.cedarmountainpotters.com/findus">our find us page</a></p>
+  </div>
+</footer>
+<div class="credit">Proposal by Nicolas Masset for Cedar Mountain Potters · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</body>
+</html>
