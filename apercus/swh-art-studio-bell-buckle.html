@@ -1,330 +1,315 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for SWH Art Studio Inc. (Bell Buckle, TN), content from https://www.sherriwarnerhunter.com/ (served at swhartstudioinc.wpcomstaging.com); direction : « tesselles sur béton » (bright mosaic colors on light concrete, Syne + Space Grotesk, hero split like a mosaic panel with grout lines, project grid laid out as tesserae).
-     Fixed: the WORKSHOP link of the homepage leads to "Page not found"; it becomes a real Workshops section (the studio's workshop formats, no invented dates, "Ask about the 2027 schedule" mail button). The page no longer shows the provisional wpcomstaging address.
-     Texts, address and facts come from her homepage, the 2027 schedule page, the September 2026 workshop recap, the commission process and products pages. Photos are her own, recompressed in assets/swh-art-studio-bell-buckle/. -->
+<!-- v1 (2026-10-26) : homepage rebuilt for SWH Art Studio Inc. / Sherri Warner Hunter (Bell Buckle, TN),
+     content from sherriwarnerhunter.com (home, The Commission Process, Products & Tools, Mentoring,
+     Getting to Bell Buckle, workshop post of 2026-09-20); photos from her site.
+     Direction : « concrete and tesserae » : flat concrete grey, the hero laid out as a mosaic of her
+     own work with grout lines, tile colors taken from her mosaic bench. The WORKSHOP link that led to
+     « Page not found » now opens the workshops section of this page. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#e8e5df" />
-<title>SWH Art Studio Inc. | Sherri Warner Hunter, public art, mosaic and concrete, Bell Buckle, TN</title>
-<meta name="description" content="Sherri Warner Hunter, artist, teacher and author: public commissions in mosaic and concrete, workshops in her Bell Buckle, Tennessee studio, colorants and tools. Make your dreams concrete!" />
+<meta name="theme-color" content="#d9d6cf" />
+<title>Sherri Warner Hunter, SWH Art Studio Inc.: concrete and mosaic sculpture in Bell Buckle, Tennessee</title>
+<meta name="description" content="Sherri Warner Hunter creates public commissions in concrete and mosaic and teaches workshops in her studio in Bell Buckle, Tennessee. Make your dreams concrete." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --concrete:#e8e5df; --concrete-2:#d9d5cd; --grout:#c9c4ba; --ink:#1c1c1a; --soft:#4a4944;
-  --cobalt:#1f4fb8; --teal:#0e9488; --sun:#f2b705; --tomato:#e2462b; --leaf:#4f9a35;
-  --fd:"Syne",system-ui,sans-serif; --ft:"Space Grotesk",system-ui,sans-serif;
-  --wrap:1220px; --pad:22px;
+  --concrete:#d9d6cf; --concrete-2:#cbc7bf; --grout:#b3aea5; --white:#ffffff;
+  --ink:#1d2433; --ink-soft:#4a5160;
+  --cobalt:#2c5ba8; --cobalt-deep:#1e3f78; --sun:#f2c230; --leaf:#5f9f3f; --brick:#c2462e;
+  --f:"Familjen Grotesk",system-ui,sans-serif;
+  --wrap:1240px; --pad:24px; --gap:8px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;color:var(--ink);font-family:var(--ft);font-size:17px;line-height:1.6;
-  background:var(--concrete) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.29 0 0 0 0 0.27 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.55}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3{font-family:var(--fd);font-weight:800;line-height:.98;margin:0;letter-spacing:-.02em;text-wrap:balance}
-h1{font-size:clamp(2.7rem,5.6vw,4.9rem)}
-h2{font-size:clamp(2.1rem,4.4vw,3.6rem)}
-h3{font-size:1.35rem;font-weight:700;letter-spacing:-.01em;line-height:1.1}
-p{margin:0 0 1em;max-width:62ch}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.025em;line-height:1}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font:600 1rem/1 var(--ft);text-decoration:none;border:2px solid var(--ink);transition:transform .15s,background .2s,color .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-ink{background:var(--ink);color:#fff}
-.btn-ink:hover{background:var(--cobalt);border-color:var(--cobalt)}
-.btn-line{background:transparent}
-.btn-line:hover{background:var(--ink);color:#fff}
-.btn-sun{background:var(--sun);border-color:var(--sun);color:var(--ink)}
 :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
 
-/* chips: tiny tesserae used as markers */
-.tess{display:inline-flex;gap:4px;vertical-align:middle}
-.tess i{width:11px;height:11px;display:block;border-radius:2px}
-.tess i:nth-child(1){background:var(--cobalt)}.tess i:nth-child(2){background:var(--sun)}.tess i:nth-child(3){background:var(--tomato)}.tess i:nth-child(4){background:var(--teal)}
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.brand{text-decoration:none;font-weight:700;font-size:1.15rem;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-weight:400;font-size:.9rem;color:var(--ink-soft);letter-spacing:0}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:1rem}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav .mail{background:var(--ink);color:var(--white);padding:11px 18px;border-radius:3px}
+.nav .mail:hover{background:var(--cobalt-deep);text-decoration:none}
 
-header.top{position:sticky;top:0;z-index:20;background:rgba(232,229,223,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--grout)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
-.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
-.brand b{font-family:var(--fd);font-weight:800;font-size:1.15rem;letter-spacing:-.01em;line-height:1}
-.brand small{display:block;font-size:.8rem;color:var(--soft);margin-top:3px;font-weight:500}
-nav.main{display:flex;align-items:center;gap:24px}
-nav.main a{text-decoration:none;font-weight:500}
-nav.main a:hover{color:var(--cobalt)}
-nav.main .btn{min-height:44px;padding:0 18px}
-@media (max-width:920px){nav.main a:not(.btn){display:none}}
-@media (max-width:400px){.brand .tess{display:none}}
+/* hero mosaic */
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:64px;gap:var(--gap);background:var(--grout);padding:var(--gap);border-radius:4px}
+.mosaic>*{border-radius:2px;overflow:hidden;margin:0}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.t-say{grid-column:1/7;grid-row:1/8;background:var(--white);padding:44px 44px 40px;display:flex;flex-direction:column;justify-content:space-between}
+.t-say h1{font-size:clamp(3rem,5.5vw,5.1rem);line-height:.93;letter-spacing:-.04em;margin-bottom:32px}
+.t-say .who{font-size:1.2rem;line-height:1.4;max-width:30ch;margin:0 0 22px;color:var(--ink-soft)}
+.t-say .who b{color:var(--ink);font-weight:600}
+.t-turtle{grid-column:7/11;grid-row:1/6}
+.t-sun{grid-column:11/13;grid-row:1/3;background:var(--sun)}
+.t-seals{grid-column:11/13;grid-row:3/8}
+.t-cobalt{grid-column:7/8;grid-row:6/8;background:var(--cobalt)}
+.t-bench{grid-column:8/11;grid-row:6/8}
+.t-turtle img{object-position:50% 60%}
+.t-seals img{object-position:30% 50%}
 
-/* hero */
-.hero{padding:44px 0 72px}
-.hero .grid{display:grid;gap:36px}
-.hero .who{font-weight:600;color:var(--soft);margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.hero h1 span{display:inline-block;background:var(--sun);padding:0 .12em;margin-left:-.06em;border-radius:6px}
-.hero .lede{font-size:1.16rem;margin:24px 0 30px;max-width:44ch;color:var(--soft)}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.cta .btn{flex:1 1 220px}
-.panel{display:grid;grid-template-columns:1.45fr 1fr;grid-template-rows:auto auto;gap:8px;padding:8px;background:var(--grout);border-radius:16px}
-.panel figure{margin:0;overflow:hidden;border-radius:9px;background:var(--concrete-2)}
-.panel img{width:100%;height:100%;object-fit:cover}
-.panel .p1{grid-row:span 2}
-.panel .p1 img{aspect-ratio:4/5;object-position:22% 50%}
-.panel .p2 img{aspect-ratio:1/1}
-.panel .p3 img{aspect-ratio:1/1}
-.panel figcaption{font-size:.9rem}
-.hero-note{margin-top:12px;font-size:1rem;color:var(--soft)}
-@media (min-width:920px){
-  .hero{padding:64px 0 96px}
-  .hero .grid{grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
-  .cta .btn{flex:0 0 auto}
-}
+.btn{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-weight:600;font-size:1.05rem;padding:15px 24px;border-radius:3px;border:0}
+.btn:hover{background:var(--cobalt-deep)}
+.btn.on-blue{background:var(--sun);color:var(--ink)}
+.btn.on-blue:hover{background:#ffd451}
+.link{font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
 
-/* commissions band */
-.band{background:var(--ink);color:#f1efe9;padding:84px 0}
-.band .grid{display:grid;gap:40px}
-.band h2 em{font-style:normal;color:var(--sun)}
-.band p{color:#cfccc4}
-.sites{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-.sites li{display:grid;grid-template-columns:14px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.sites li::before{content:"";width:14px;height:14px;border-radius:3px;margin-top:6px;background:var(--c,var(--sun))}
-.sites b{display:block;font-weight:600;color:#fff}
-.sites span{color:#a9a69e}
-@media (min-width:920px){.band .grid{grid-template-columns:1fr 1fr;gap:90px}}
+/* intro */
+.intro{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start;padding-top:96px;padding-bottom:96px}
+.intro figure{margin:0}
+.intro figure img{border-radius:3px}
+.intro figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:10px}
+.intro h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:24px;max-width:18ch}
+.intro .lede{font-size:1.25rem;line-height:1.5;max-width:34em}
+.places{list-style:none;margin:36px 0 0;padding:0;border-top:2px solid var(--ink)}
+.places li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--grout)}
+.places b{font-weight:600;font-size:1.12rem;line-height:1.3}
+.places span{color:var(--ink-soft);font-size:1rem;text-align:right}
 
-/* mosaic project grid */
-.projects{padding:90px 0}
-.projects-head{display:grid;gap:16px;margin-bottom:34px}
-.projects-head p{color:var(--soft);margin:0}
-@media (min-width:920px){.projects-head{grid-template-columns:1.1fr 1fr;gap:60px;align-items:end}}
-.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:var(--grout);border-radius:16px}
-.tile{position:relative;margin:0;overflow:hidden;border-radius:9px;background:var(--concrete-2)}
-.tile img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
-@media (max-width:919px){.tile:not(.t1) figcaption{font-size:.85rem;padding:4px 8px}}
-.tile figcaption{position:absolute;left:8px;bottom:8px;right:8px;width:max-content;max-width:calc(100% - 16px);background:rgba(255,255,255,.94);padding:6px 10px;border-radius:6px;font-size:.92rem;font-weight:500;line-height:1.3}
-.t1{grid-column:span 2}
-.t1 img{aspect-ratio:4/3 !important}
-.tile.color{display:flex;align-items:flex-end;padding:16px;color:#fff;font-family:var(--fd);font-weight:800;font-size:1.25rem;line-height:1.05}
-@media (min-width:920px){
-  .mosaic{grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px;padding:10px}
-  .tile img{aspect-ratio:auto}
-  .t1{grid-column:1 / span 4;grid-row:1 / span 3}
-  .t2{grid-column:5 / span 2;grid-row:1 / span 2}
-  .t3{grid-column:5 / span 2;grid-row:3 / span 3}
-  .t4{grid-column:1 / span 2;grid-row:4 / span 2}
-  .t5{grid-column:3 / span 2;grid-row:4 / span 2}
-  .t1 img{aspect-ratio:auto !important}
-}
-.process{margin-top:44px;display:grid;gap:0;counter-reset:s;border-top:2px solid var(--ink)}
-.process div{padding:20px 0 20px 52px;border-bottom:1px solid var(--grout);position:relative}
-.process div::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:20px;font-family:var(--fd);font-weight:800;font-size:1.6rem;line-height:1;color:var(--cobalt)}
-.process h3{margin-bottom:6px}
-.process p{margin:0;color:var(--soft)}
-@media (min-width:920px){.process{grid-template-columns:repeat(4,1fr);gap:28px;border-top:0}.process div{padding:20px 0 0;border-top:2px solid var(--ink);border-bottom:0}.process div::before{position:static;display:block;margin-bottom:12px}}
+/* commission */
+.commission{background:var(--white);padding:96px 0}
+.commission .head{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:end;margin-bottom:44px}
+.commission h2{font-size:clamp(2.3rem,4.4vw,3.8rem);max-width:13ch}
+.commission .head p{font-size:1.15rem;max-width:36em;margin:0}
+.wide{border-radius:3px;width:100%;aspect-ratio:2.35/1;object-fit:cover;object-position:50% 62%}
+.steps{list-style:none;padding:0;margin:52px 0 44px;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:18px;border-top:6px solid var(--c)}
+.steps li::before{content:counter(s);display:block;font-weight:700;font-size:2.2rem;line-height:1;margin-bottom:12px}
+.steps h3{font-size:1.15rem;letter-spacing:-.01em;margin-bottom:8px;line-height:1.2}
+.steps p{font-size:1rem;color:var(--ink-soft);margin:0}
+.commission .act{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.commission .act p{margin:0;color:var(--ink-soft);font-size:1rem;max-width:44ch}
 
 /* workshops */
-.workshops{background:#f6f4ef;padding:90px 0;border-top:1px solid var(--grout);border-bottom:1px solid var(--grout)}
-.ws-top{display:grid;gap:30px;margin-bottom:40px}
-.ws-top p{color:var(--soft)}
-.ws-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.ws-photos img{border-radius:10px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
-.ws-photos img:first-child{grid-column:span 2}
-@media (min-width:920px){.ws-top{grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}}
-.ws-list{display:grid;gap:12px}
-.ws{background:#fff;border-radius:14px;padding:22px;border-top:8px solid var(--c)}
-.ws h3{margin-bottom:8px}
-.ws .lvl{display:inline-block;font-size:.9rem;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--concrete);margin-bottom:10px}
-.ws p{margin:0;color:var(--soft)}
-@media (min-width:700px){.ws-list{grid-template-columns:1fr 1fr}}
-@media (min-width:700px){.ws.big{grid-column:span 2}}
-@media (min-width:1080px){.ws-list{grid-template-columns:repeat(4,1fr)}}
-.ws-cta{margin-top:30px;display:grid;gap:20px;background:var(--cobalt);color:#fff;border-radius:16px;padding:28px}
-.ws-cta h3{font-size:1.6rem}
-.ws-cta p{margin:0;color:#dfe6fa}
-.ws-cta .btn{background:var(--sun);border-color:var(--sun);color:var(--ink)}
-@media (min-width:920px){.ws-cta{grid-template-columns:1fr auto;align-items:center;padding:34px 40px;gap:40px}}
+.workshops{background:var(--cobalt-deep);color:#fff;padding:96px 0 104px}
+.workshops .head{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:end;margin-bottom:56px}
+.workshops h2{font-size:clamp(2.4rem,5vw,4.4rem);max-width:12ch;line-height:.98}
+.workshops .head p{font-size:1.15rem;color:#dfe6f3;margin:0;max-width:34em}
+.ws{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.ws dl{margin:0;border-top:2px solid rgba(255,255,255,.85)}
+.ws dt{font-weight:700;font-size:1.45rem;letter-spacing:-.015em;padding-top:16px;line-height:1.15}
+.ws dd{margin:4px 0 0;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.22);color:#dfe6f3;font-size:1rem}
+.ws .pics{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:var(--gap)}
+.ws .pics figure{margin:0;position:relative;overflow:hidden;border-radius:2px}
+.ws .pics img{width:100%;height:100%;object-fit:cover}
+.ws .pics figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-size:.9rem;padding:5px 10px}
+.p-chair{grid-column:1/3;grid-row:span 2}
+.p-wall{grid-row:span 2}
+.p-wall img{object-position:50% 30%}
+.p-fly{grid-row:span 2;background:#e9e9e7}
+.p-fly img{object-fit:contain!important;padding:10px}
+.plan{margin-top:56px;display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;padding-top:40px;border-top:1px solid rgba(255,255,255,.22)}
+.plan p.big{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.25;letter-spacing:-.015em;margin:0;font-weight:500}
+.plan .side p{color:#dfe6f3;font-size:1rem;margin:16px 0 0}
 
 /* products */
-.products{padding:90px 0}
-.products .grid{display:grid;gap:36px}
-.prod-list{margin:20px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
-.prod-list li{background:#fff;border:1px solid var(--grout);border-radius:999px;padding:9px 16px;font-weight:500}
+.products{padding:96px 0}
+.products .grid{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.products h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:20px;max-width:14ch}
+.products ul{margin:0 0 24px;padding:0;list-style:none}
+.products li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--grout)}
+.products li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:14px;background:var(--c);border-radius:2px}
+.products .note{color:var(--ink-soft);font-size:1rem;max-width:40em}
 .products figure{margin:0}
-.products figure img{border-radius:14px;width:100%}
-.products figcaption{margin-top:8px;color:var(--soft);font-size:1rem}
-@media (min-width:920px){.products .grid{grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}}
+.products figure img{border-radius:3px}
+.mentor{margin-top:40px;background:var(--white);padding:28px 30px;border-radius:3px;border-left:8px solid var(--leaf)}
+.mentor h3{font-size:1.35rem;margin-bottom:8px;letter-spacing:-.01em}
+.mentor p{margin:0;font-size:1rem;color:var(--ink-soft)}
 
-/* contact */
-.contact{background:var(--sun);padding:84px 0}
-.contact .grid{display:grid;gap:36px}
-.contact p{color:#3b3420}
-.card{background:var(--concrete);border-radius:16px;padding:8px 24px}
-.card a,.card div{display:block;padding:18px 0;border-bottom:1px solid var(--grout);text-decoration:none}
-.card > :last-child{border-bottom:0}
-.card .k{display:block;font-size:.95rem;color:var(--soft)}
-.card .v{display:block;font-size:1.2rem;font-weight:600;overflow-wrap:anywhere}
-.card a:hover .v{color:var(--cobalt)}
-@media (min-width:920px){.contact .grid{grid-template-columns:1fr 1fr;gap:90px;align-items:center}}
+/* visit */
+.visit{background:var(--ink);color:#fff;padding:96px 0}
+.visit .grid{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:end}
+.visit h2{font-size:clamp(2.4rem,5vw,4.4rem);line-height:.98;margin-bottom:28px;max-width:15ch}
+.visit .yard{font-size:1.25rem;line-height:1.5;color:#e4e6ea;max-width:32em;margin:0}
+.visit address{font-style:normal;font-size:1.2rem;line-height:1.5;margin-bottom:24px}
+.visit address b{display:block;font-size:1rem;color:#b9bec8;font-weight:400;margin-bottom:6px}
+.visit .mailbig{display:inline-block;font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:600;color:var(--sun);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;word-break:break-word;margin-bottom:8px}
+.visit .small{color:#b9bec8;font-size:1rem;margin:14px 0 0}
 
-footer{background:var(--ink);color:#bdbab2;padding:30px 0}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer{background:var(--ink);color:#b9bec8;border-top:1px solid #343c4d;padding:26px 0 30px;font-size:1rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
 footer a{text-decoration:none}
-footer a:hover{color:var(--sun)}
-.proposal{margin:0;padding:12px var(--pad) 16px;text-align:center;font-size:.8rem;color:#77756f;background:var(--ink)}
-.proposal a{color:#99978f}
+footer a:hover{color:#fff;text-decoration:underline}
+.proposal{background:#141a26;color:#8b93a3;font-size:13px;text-align:center;padding:12px var(--pad)}
+.proposal a{color:#b9bec8}
 
-@media (prefers-reduced-motion:no-preference){
-  .panel figure{animation:set .7s ease-out both}
-  .panel .p2{animation-delay:.08s}.panel .p3{animation-delay:.16s}
-  @keyframes set{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@media (max-width:1000px){
+  .intro,.commission .head,.workshops .head,.ws,.plan,.products .grid,.visit .grid{grid-template-columns:1fr;gap:36px}
+  .steps{grid-template-columns:1fr 1fr}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+@media (max-width:760px){
+  :root{--pad:18px;--gap:6px}
+  body{font-size:17px}
+  .nav a:not(.mail){display:none}
+  .mosaic{grid-template-columns:repeat(6,1fr);grid-template-rows:auto repeat(6,46px)}
+  .t-say{grid-column:1/7;grid-row:1/2;padding:28px 22px 26px}
+  .t-say h1{font-size:3.1rem}
+  .t-say .who{font-size:1.1rem}
+  .t-turtle{grid-column:1/5;grid-row:2/6}
+  .t-sun{grid-column:5/7;grid-row:2/3}
+  .t-seals{grid-column:5/7;grid-row:3/6}
+  .t-cobalt{grid-column:1/2;grid-row:6/8}
+  .t-bench{grid-column:2/7;grid-row:6/8}
+  .intro{padding-top:64px;padding-bottom:64px}
+  .places li{grid-template-columns:1fr;gap:2px}
+  .places span{text-align:left}
+  .commission,.workshops,.products,.visit{padding:64px 0}
+  .steps{grid-template-columns:1fr;gap:22px;margin:36px 0 32px}
+  .ws .pics{grid-auto-rows:110px}
+  .wide{aspect-ratio:4/3}
+  .mentor{padding:22px 20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<header class="top" id="top">
-  <div class="wrap">
-    <a class="brand" href="#top"><span class="tess" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><b>SWH Art Studio</b><small>Sherri Warner Hunter</small></span></a>
-    <nav class="main" aria-label="Main">
-      <a href="#commissions">Commissions</a>
-      <a href="#workshops">Workshops</a>
-      <a href="#products">Products</a>
-      <a class="btn btn-ink" href="#contact">Contact</a>
-    </nav>
-  </div>
+<header class="wrap top">
+  <a class="brand" href="#top" id="top">SWH Art Studio Inc.<small>Sherri Warner Hunter</small></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#commission">Commissions</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#products">Products</a>
+    <a href="#visit">Visit</a>
+    <a class="mail" href="mailto:swhartstudio@gmail.com?subject=Hello%20Sherri">Email Sherri</a>
+  </nav>
 </header>
 
 <main>
-<section class="hero" aria-labelledby="h1">
-  <div class="wrap grid">
-    <div>
-      <p class="who"><span class="tess" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Artist · Teacher · Author · Bell Buckle, Tennessee</p>
-      <h1 id="h1">Make your dreams <span>concrete!</span></h1>
-      <p class="lede">I’m Sherri Warner Hunter, the creative force behind SWH Art Studio Inc. My work includes large-scale public commissions in mosaic and concrete, personal pieces for exhibition, and community-based projects.</p>
-      <div class="cta">
-        <a class="btn btn-ink" href="mailto:swhartstudio@gmail.com?subject=Commission%20inquiry">Commission an artwork</a>
-        <a class="btn btn-line" href="#workshops">Take a workshop</a>
+<section class="wrap" aria-label="Introduction">
+  <div class="mosaic">
+    <div class="t-say">
+      <h1>Make your dreams concrete!</h1>
+      <div>
+        <p class="who"><b>Sherri Warner Hunter</b>, artist, teacher and author. Concrete and mosaic sculpture from my studio in Bell Buckle, Tennessee.</p>
+        <a class="btn" href="#workshops">See the workshops</a>
       </div>
     </div>
-    <div>
-      <div class="panel">
-        <figure class="p1"><img src="assets/swh-art-studio-bell-buckle/sherri-mosaic-bird.webp" width="1400" height="1093" alt="Sherri Warner Hunter in front of a large mosaic wall with a mockingbird" fetchpriority="high" /></figure>
-        <figure class="p2"><img src="assets/swh-art-studio-bell-buckle/mosaic-bench-detail.webp" width="1100" height="943" alt="Detail of a mosaic bench in bright blue, yellow, red and green tiles" /></figure>
-        <figure class="p3"><img src="assets/swh-art-studio-bell-buckle/mosaic-turtle.webp" width="1024" height="768" alt="Large mosaic turtle sculpture in a garden" /></figure>
-      </div>
-      <p class="hero-note">Mosaic, concrete and carved foam, made in my studio in Bell Buckle.</p>
-    </div>
+    <figure class="t-turtle"><img src="assets/swh-art-studio-bell-buckle/mosaic-turtle.webp" width="1024" height="768" alt="Large mosaic turtle sculpture in a garden" /></figure>
+    <div class="t-sun" aria-hidden="true"></div>
+    <figure class="t-seals"><img src="assets/swh-art-studio-bell-buckle/lucile-packard-seals.webp" width="1100" height="734" alt="Concrete seal sculptures on a blue play surface" /></figure>
+    <div class="t-cobalt" aria-hidden="true"></div>
+    <figure class="t-bench"><img src="assets/swh-art-studio-bell-buckle/mosaic-bench-detail.webp" width="1100" height="943" alt="Detail of a colorful mosaic bench" /></figure>
   </div>
 </section>
 
-<section class="band" id="commissions" aria-labelledby="cm">
-  <div class="wrap grid">
-    <div>
-      <h2 id="cm">Public art that <em>stays</em></h2>
-      <p style="margin-top:22px">My work is in numerous private collections and can be seen publicly in many places. If you or your organization would like to commission a unique artwork to enhance your space or represent your mission, let’s talk.</p>
-      <p>Commissioning an artwork is all about communication: you tell me what you want and need, I listen carefully and come back with a proposal, visual, verbal and written.</p>
-      <a class="btn btn-sun" href="mailto:swhartstudio@gmail.com?subject=Commission%20inquiry" style="margin-top:8px">Start a commission</a>
-    </div>
-    <ul class="sites" aria-label="Public collections">
-      <li style="--c:var(--sun)"><div><b>Lucile Packard Children’s Hospital</b><span>Stanford University, Palo Alto, CA</span></div></li>
-      <li style="--c:var(--tomato)"><div><b>Executive Residence of Tennessee</b><span>Nashville, TN</span></div></li>
-      <li style="--c:var(--teal)"><div><b>McLaren Health Care Village</b><span>Clarkston, MI</span></div></li>
-      <li style="--c:#7aa2ff"><div><b>1st International Mosaic Intervention</b><span>Puente Alto, Chile</span></div></li>
+<section class="wrap intro" aria-labelledby="who">
+  <figure>
+    <img src="assets/swh-art-studio-bell-buckle/sherri-mosaic-bird.webp" width="1400" height="1093" loading="lazy" alt="Sherri Warner Hunter in front of a mosaic wall with a bird" />
+    <figcaption>Sherri Warner Hunter</figcaption>
+  </figure>
+  <div>
+    <h2 id="who">Public art, exhibition pieces, community projects.</h2>
+    <p class="lede">My artwork includes large scale public commissions, personal pieces for exhibition, and community based projects. It is in numerous private collections, and you can see it in public at many locations, including:</p>
+    <ul class="places">
+      <li><b>Lucile Packard Children’s Hospital at Stanford University</b><span>Palo Alto, CA</span></li>
+      <li><b>Executive Residence of Tennessee</b><span>Nashville, TN</span></li>
+      <li><b>McLaren Health Care Village</b><span>Clarkston, MI</span></li>
+      <li><b>1st International Mosaic Intervention project</b><span>Puente Alto, Chile</span></li>
     </ul>
   </div>
 </section>
 
-<section class="projects" aria-labelledby="pj">
+<section class="commission" id="commission" aria-labelledby="c-title">
   <div class="wrap">
-    <div class="projects-head">
-      <h2 id="pj">Mosaic over concrete, tile by tile</h2>
-      <p>The concrete and mosaic work I create for commissions is time and labor intensive. Advance planning and an ample time frame help me deliver on time.</p>
+    <div class="head">
+      <h2 id="c-title">Commission a piece for your space.</h2>
+      <p>Commissioning an artwork is all about communication. You tell me what you want and need; I listen carefully and come back with a proposal that explains how we can get there, for your space or for your organization’s mission.</p>
     </div>
-    <div class="mosaic">
-      <figure class="tile t1"><img src="assets/swh-art-studio-bell-buckle/lucile-packard-garden.webp" width="1400" height="1050" alt="Rooftop garden with a blue mosaic pond, sea creatures and a starfish" loading="lazy" /><figcaption>Lucile Packard Children’s Hospital, Stanford</figcaption></figure>
-      <figure class="tile t2"><img src="assets/swh-art-studio-bell-buckle/lucile-packard-seals.webp" width="1100" height="734" alt="Mosaic seal sculptures resting on a blue surface" loading="lazy" /><figcaption>Seals, Lucile Packard</figcaption></figure>
-      <figure class="tile t3"><img src="assets/swh-art-studio-bell-buckle/mosaic-deer.webp" width="536" height="739" alt="Mosaic deer sculpture in the studio" loading="lazy" /><figcaption>Mosaic deer, in the studio</figcaption></figure>
-      <figure class="tile t4"><img src="assets/swh-art-studio-bell-buckle/reverse-cast-butterfly.webp" width="900" height="733" alt="Reverse cast mosaic butterfly on a stand" loading="lazy" /><figcaption>Reverse cast butterfly</figcaption></figure>
-      <figure class="tile t5"><img src="assets/swh-art-studio-bell-buckle/dog-armature.webp" width="1400" height="1645" alt="Carved foam and armature for a concrete sculpture, in progress in the studio" loading="lazy" /><figcaption>It starts with foam: an armature in progress</figcaption></figure>
-    </div>
-    <div class="process">
-      <div><h3>Design</h3><p>Concept drawings, scale models, or a written proposal with dimensions, materials, timeline and budget.</p></div>
-      <div><h3>Agreement</h3><p>A basic contract that restates the proposal and any specifications.</p></div>
-      <div><h3>Production</h3><p>Scheduled site visits let you follow the progress of your artwork.</p></div>
-      <div><h3>Installation</h3><p>Each project has its own installation requirements, planned with you.</p></div>
+    <img class="wide" src="assets/swh-art-studio-bell-buckle/lucile-packard-garden.webp" width="1400" height="1050" loading="lazy" alt="Healing garden at Lucile Packard Children’s Hospital with mosaic and concrete sea creatures" />
+    <ol class="steps">
+      <li style="--c:var(--cobalt)"><h3>Design development</h3><p>Concept drawings, scale models (usually 1&Prime; = 1&prime;) and a written proposal with dimensions, materials, timeline and budget.</p></li>
+      <li style="--c:var(--sun)"><h3>Agreement</h3><p>A basic contract that restates the proposal and any additional specifications.</p></li>
+      <li style="--c:var(--leaf)"><h3>Production</h3><p>Scheduled around the projects already in the studio when the agreement is confirmed.</p></li>
+      <li style="--c:var(--brick)"><h3>Site visits</h3><p>You are encouraged to visit and review the progress of the artwork.</p></li>
+      <li style="--c:var(--ink)"><h3>Delivery and installation</h3><p>Large pieces are relatively light: easy to move by truck, with welded steel armatures designed for the site.</p></li>
+    </ol>
+    <div class="act">
+      <a class="btn" href="mailto:swhartstudio@gmail.com?subject=Commission%20inquiry">Start a commission</a>
+      <p>Concrete and mosaic work is time and labor intensive, so advance planning and an ample time frame are appreciated.</p>
     </div>
   </div>
 </section>
 
-<section class="workshops" id="workshops" aria-labelledby="wsh">
+<section class="workshops" id="workshops" aria-labelledby="w-title">
   <div class="wrap">
-    <div class="ws-top">
-      <div>
-        <h2 id="wsh">Workshops in Bell Buckle</h2>
-        <p style="margin-top:22px">Sign up for a workshop to refine a skill or explore your creative side. Classes are small and hands-on, held in my studio, and the pieces often end up living outdoors. Participants have come from Washington State to Maine, Florida to Minnesota. Lunches are included with all workshops.</p>
-        <p>Next year’s schedule is taking shape now. Here are the formats my students know best; some favorites will be back.</p>
-      </div>
-      <div class="ws-photos">
-        <img src="assets/swh-art-studio-bell-buckle/workshop-group.webp" width="1100" height="825" alt="Workshop participants holding their finished mosaics in the studio" loading="lazy" />
-        <img src="assets/swh-art-studio-bell-buckle/off-the-wall.webp" width="1400" height="1866" alt="A participant holding a carved foam bear form in the studio" loading="lazy" />
-        <img src="assets/swh-art-studio-bell-buckle/build-a-chair.webp" width="1100" height="815" alt="A Build a Chair group sitting in their large concrete chairs" loading="lazy" />
+    <div class="head">
+      <h2 id="w-title">Workshops in my Bell Buckle studio.</h2>
+      <p>Sign up for a workshop to refine a skill or explore your creative side. This year’s participants came from Washington State to Maine, and from Florida to Minnesota. Lunches are included with all workshops.</p>
+    </div>
+    <div class="ws">
+      <dl>
+        <dt>Garden Bowls</dt><dd>A great introduction for people new to concrete.</dd>
+        <dt>Stacked Stories</dt><dd>Carved EPS foam and wet concrete, made to tell a story together.</dd>
+        <dt>Off the Wall</dt><dd>Undulating surfaces and bas-relief, with engineered hanging systems.</dd>
+        <dt>Reverse Cast Mosaics</dt><dd>Far beyond stepping-stones, with original waste molds.</dd>
+        <dt>Build a Chair</dt><dd>Eight intense days: what would your chair look like?</dd>
+        <dt>Hybrid Armatures</dt><dd>Carved foam and non-welded metal under concrete. Some experience helps.</dd>
+      </dl>
+      <div class="pics">
+        <figure class="p-chair"><img src="assets/swh-art-studio-bell-buckle/build-a-chair.webp" width="1100" height="815" loading="lazy" alt="Workshop participants sitting in the sculptural chairs they built" /><figcaption>Build a Chair</figcaption></figure>
+        <figure class="p-wall"><img src="assets/swh-art-studio-bell-buckle/off-the-wall.webp" width="1050" height="1400" loading="lazy" alt="A participant holding a carved bear relief" /><figcaption>Off the Wall</figcaption></figure>
+        <figure class="p-fly"><img src="assets/swh-art-studio-bell-buckle/reverse-cast-butterfly.webp" width="900" height="733" loading="lazy" alt="Reverse cast mosaic butterfly on a stand" /><figcaption>Reverse Cast Mosaics</figcaption></figure>
       </div>
     </div>
-    <div class="ws-list">
-      <article class="ws big" style="--c:var(--leaf)"><span class="lvl">New to concrete</span><h3>Garden Bowls</h3><p>An introduction to concrete garden art: cast bowls in simple sand molds, for a birdbath, a butterfly bowl or a pet water bowl, then embed mosaic.</p></article>
-      <article class="ws" style="--c:var(--tomato)"><span class="lvl">Stepping stones and beyond</span><h3>Reverse Cast Mosaics</h3><p>Make a mosaic, place it in a form and cast concrete over it from the back, starting from a “waste” mold that is also your template.</p></article>
-      <article class="ws" style="--c:var(--cobalt)"><span class="lvl">Foam and wet concrete</span><h3>Stacked Stories</h3><p>Two favorite carving materials, carved EPS foam and wet carved concrete, combined into totem elements that tell a story.</p></article>
-      <article class="ws" style="--c:var(--teal)"><span class="lvl">Bas relief</span><h3>Off the Wall</h3><p>Wall-hung pieces with sculptural qualities: layered foam, metal meshes and concrete systems, plus hanging hardware.</p></article>
-      <article class="ws" style="--c:#8b5cf6"><span class="lvl">Some experience needed</span><h3>Hybrid Armatures</h3><p>Carved foam combined with rebar, wire, metal meshes and PVC to push form further than a single material allows.</p></article>
-
-      <article class="ws big" style="--c:var(--sun)"><span class="lvl">Large-scale, 8 days</span><h3>Build a Chair!</h3><p>Everything a successful piece of public sculpture needs, learned by building your own unique chair: ergonomic design, maquettes, drawings as a construction tool, drainage and installation systems. Then there’s the mosaic.</p></article>    </div>
-    <div class="ws-cta">
-      <div>
-        <h3>Want a seat next year?</h3>
-        <p>The 2027 schedule and registration open on November 15. Email me to hear first, or to ask which workshop fits your level.</p>
+    <div class="plan">
+      <p class="big">Your responses are helping shape my 2027 schedule. Tell me which workshop you would like to take, and I’ll let you know the dates.</p>
+      <div class="side">
+        <a class="btn on-blue" href="mailto:swhartstudio@gmail.com?subject=Workshops%20in%202027">Ask about 2027 workshops</a>
+        <p>Bell Buckle is about an hour from Nashville International Airport. Rent a car there: there is no other transportation.</p>
       </div>
-      <a class="btn" href="mailto:swhartstudio@gmail.com?subject=2027%20workshops%20in%20Bell%20Buckle">Ask about the 2027 workshops</a>
     </div>
   </div>
 </section>
 
-<section class="products" id="products" aria-labelledby="pr">
-  <div class="wrap grid">
+<section class="products wrap" id="products" aria-labelledby="p-title">
+  <div class="grid">
     <div>
-      <h2 id="pr">Tools and materials</h2>
-      <p style="margin-top:22px">Find the tools and materials you need for your own projects. I’m still selling some of my favorite things:</p>
-      <ul class="prod-list">
-        <li>Powdered mineral colorants for concrete, grout and thin set</li>
-        <li>Diamond sanding blocks</li>
-        <li>Foam adhesives</li>
-        <li>Proportion wheels</li>
-        <li>Miscellaneous stuff!</li>
+      <h2 id="p-title">Tools and materials for your projects.</h2>
+      <p>I’m still selling some of my favorite things:</p>
+      <ul>
+        <li style="--c:var(--cobalt)">Powdered mineral colorants for concrete, grout and thin set</li>
+        <li style="--c:var(--sun)">Diamond sanding blocks for smooth glass and tile edges</li>
+        <li style="--c:var(--leaf)">Foam adhesives</li>
+        <li style="--c:var(--brick)">Proportion wheels, and miscellaneous stuff</li>
       </ul>
-      <p style="margin-top:22px">Send me an email with the product number and quantity, your shipping address and phone number. I’ll confirm, pack, ship, and email you an invoice with tracking and secure online payment options. Checks are always welcome.</p>
-      <a class="btn btn-ink" href="mailto:swhartstudio@gmail.com?subject=Product%20order%20or%20price%20list">Ask for the price list</a>
+      <p class="note">Email me the product number and quantity, your shipping address and phone number. I’ll confirm, pack, ship, and email you an invoice with your tracking number and secure online payment options. Checks are always welcome.</p>
+      <a class="btn" href="mailto:swhartstudio@gmail.com?subject=Product%20order">Order supplies by email</a>
+      <div class="mentor">
+        <h3>Mentoring and consulting</h3>
+        <p>Professional and technical guidance for artists working on a commission or a work in progress, by phone, FaceTime or Zoom at a prearranged time. $75 an hour, half hour minimum.</p>
+      </div>
     </div>
     <figure>
-      <img src="assets/swh-art-studio-bell-buckle/mosaic-at-work.webp" width="1100" height="845" alt="Hands setting small tiles on a mosaic in progress" loading="lazy" />
-      <figcaption>Need guidance on what to buy? I’m glad to help.</figcaption>
+      <img src="assets/swh-art-studio-bell-buckle/mosaic-at-work.webp" width="1100" height="845" loading="lazy" alt="Setting mosaic tiles on a carved form in the studio" />
     </figure>
   </div>
 </section>
 
-<section class="contact" id="contact" aria-labelledby="ct">
+<section class="visit" id="visit" aria-labelledby="v-title">
   <div class="wrap grid">
     <div>
-      <h2 id="ct">I look forward to hearing from you</h2>
-      <p style="margin-top:22px">A commission, a workshop, an order or a question: write to me and let’s make your dreams concrete. Studio visits by appointment.</p>
-      <a class="btn btn-ink" href="mailto:swhartstudio@gmail.com?subject=Hello%20from%20your%20website">Email Sherri</a>
+      <h2 id="v-title">Visit the studio, by appointment.</h2>
+      <p class="yard">You’ll see a big white studio, two light gray houses with white trim, and a concrete lady in the yard.</p>
     </div>
-    <div class="card">
-      <a href="mailto:swhartstudio@gmail.com"><span class="k">Email</span><span class="v">swhartstudio@gmail.com</span></a>
-      <div><span class="k">Studio</span><span class="v">3375 Fairfield Pike<br />Bell Buckle, TN 37020</span></div>
-      <div><span class="k">Visits</span><span class="v">By appointment</span></div>
+    <div>
+      <address><b>SWH Art Studio Inc.</b>3375 Fairfield Pike<br />Bell Buckle, TN 37020</address>
+      <a class="mailbig" href="mailto:swhartstudio@gmail.com?subject=Visiting%20the%20studio">swhartstudio@gmail.com</a>
+      <p class="small">I look forward to hearing from you.</p>
     </div>
   </div>
 </section>
@@ -332,10 +317,15 @@ footer a:hover{color:var(--sun)}
 
 <footer>
   <div class="wrap">
-    <span>© SWH Art Studio Inc. · Sherri Warner Hunter, Bell Buckle, Tennessee</span>
-    <nav aria-label="Footer"><a href="#commissions">Commissions</a><a href="#workshops">Workshops</a><a href="#products">Products</a><a href="#contact">Contact</a></nav>
+    <span>© SWH Art Studio Inc., Bell Buckle, Tennessee</span>
+    <nav aria-label="Footer">
+      <a href="#commission">Commissions</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#products">Products</a>
+      <a href="#visit">Visit</a>
+    </nav>
   </div>
 </footer>
-<p class="proposal">Proposal by Nicolas Masset for SWH Art Studio Inc. · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></p>
+<div class="proposal">Proposal by Nicolas Masset for SWH Art Studio Inc. · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
 </body>
 </html>

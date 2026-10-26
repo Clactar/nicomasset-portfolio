@@ -1,371 +1,351 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Eco-Art Creative Metal Recycling (Finger, TN), content from https://ecoartbytim.com/; direction : « l'atelier de soudure » (welding shop: black steel, orange rust, bright weld spark, Archivo Black + IBM Plex Sans, dark full-width hero built on his grasshopper photo, stamped material tags, mosaic gallery).
-     Fixed: the site opens behind a "Your connection is not private" certificate warning; this page opens clean. The stale "show schedule for 2025" becomes a dateless "Find the booth" section with an "Ask Tim where the booth is next" mail button.
-     Texts, address, phone and facts come from his homepage, gallery, artist's statement and contact pages only. Photos are his own (gallery pages), recompressed in assets/eco-art-tim-pace-finger/. -->
+<!-- v1 (2026-10-26) : homepage rebuilt for Eco-Art Creative Metal Recycling (Finger, TN), content from https://ecoartbytim.com/ (home, gallery pages, artist's statement, contact);
+     direction : « Le tableau d'atelier » : light steel page, the sculptures hung like tools on a perforated pegboard at their real photo size,
+     each with a hardware tag carrying the name used in Tim's own gallery. No dated show schedule; no link to ecoartbytim.com (invalid certificate). -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
-<meta name="color-scheme" content="dark light" />
-<meta name="theme-color" content="#0d0e10" />
-<title>Eco-Art Creative Metal Recycling | Found-metal sculpture by Tim Pace, Finger, TN</title>
-<meta name="description" content="Welded sculpture and garden art made from farm implements, tools, car parts, cutlery and industrial scrap by Tim Pace in Finger, Tennessee. Each piece signed and numbered. Commissions welcome." />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#E9ECEC" />
+<title>Eco-Art Creative Metal Recycling: found-metal sculpture by Tim Pace, Finger, Tennessee</title>
+<meta name="description" content="Sculpture and garden art welded from farm implements, tools, car parts, cutlery and scrap by Tim Pace. Every piece signed and numbered. Gallery and studio in Finger, Tennessee." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --black:#0d0e10; --steel:#1b1d20; --steel-2:#26292d; --grey:#8d9298; --pale:#c9ccd0;
-  --paper:#e9e6e0; --paper-2:#dcd7ce; --ink:#16171a;
-  --rust:#b8501f; --rust-2:#d9682b; --spark:#ffb547;
-  --line:rgba(255,255,255,.12); --line-d:rgba(22,23,26,.16);
-  --fd:"Archivo Black","Arial Black",sans-serif; --ft:"IBM Plex Sans",system-ui,sans-serif; --fm:"IBM Plex Mono",ui-monospace,monospace;
-  --wrap:1200px; --pad:22px;
+  --steel-l:#E9ECEC; --steel:#8E979B; --rust:#9C4A22; --patina:#4E9A83; --patina-d:#2F6F5D; --graphite:#2A2F33; --soft:#545C61;
+  --board:#D3D8D9; --white:#F8F9F9; --line:rgba(42,47,51,.16);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--black);color:var(--pale);font-family:var(--ft);font-size:17px;line-height:1.6}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--steel-l);color:var(--graphite);font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;font-size:18px;line-height:1.6}
 img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1;margin:0;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
-h1{font-size:clamp(2.6rem,7.4vw,6.4rem);color:#f3f1ec}
-h2{font-size:clamp(2rem,4.4vw,3.5rem)}
-h3{font-size:1.15rem;letter-spacing:.01em}
-p{margin:0 0 1em;max-width:62ch}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-.mono{font-family:var(--fm);font-size:.82rem;letter-spacing:.04em}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 24px;font:600 1rem/1 var(--ft);text-decoration:none;border:2px solid currentColor;transition:background .2s,color .2s,border-color .2s}
-.btn-rust{background:var(--rust);border-color:var(--rust);color:#fff}
-.btn-rust:hover{background:var(--rust-2);border-color:var(--rust-2)}
-.btn-ghost{color:#f3f1ec}
-.btn-ghost:hover{background:#f3f1ec;color:var(--black);border-color:#f3f1ec}
-.btn-dark{background:var(--ink);border-color:var(--ink);color:#fff}
-.btn-dark:hover{background:var(--rust);border-color:var(--rust)}
-:focus-visible{outline:3px solid var(--spark);outline-offset:3px}
+a{color:var(--patina-d);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--patina);outline-offset:3px}
+p{margin:0 0 1em}
+h1,h2,h3{font-stretch:125%;font-weight:800;line-height:1.02;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2rem,4vw,3rem)}
+h3{font-size:1.25rem;font-weight:700;line-height:1.2}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
 /* header */
-header.top{position:sticky;top:0;z-index:20;background:rgba(13,14,16,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
-.brand{font-family:var(--fd);text-transform:uppercase;text-decoration:none;color:#f3f1ec;font-size:1.02rem;line-height:1.05;letter-spacing:.01em}
-.brand span{color:var(--rust-2)}
-.brand small{display:block;font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;color:var(--grey);text-transform:none;margin-top:3px}
-nav.main{display:flex;align-items:center;gap:26px}
-nav.main a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--pale)}
-nav.main a:hover{color:var(--spark)}
-nav.main a.tel{color:#f3f1ec;font-weight:600;border:1px solid var(--line);padding:9px 14px}
-nav.main a.tel:hover{border-color:var(--spark)}
-@media (max-width:900px){nav.main a:not(.tel){display:none}}
-@media (max-width:420px){nav.main a.tel{padding:9px 10px;font-size:.92rem}}
+.top{position:sticky;top:0;z-index:20;background:rgba(233,236,236,.95);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .bar{max-width:1200px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-stretch:125%;font-weight:800;font-size:1.15rem;color:var(--graphite);text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:28px;align-items:center;font-size:1rem}
+.top nav a{color:var(--soft);text-decoration:none}
+.top nav a:hover{color:var(--graphite)}
+.top nav a.tel{color:var(--white);background:var(--graphite);padding:9px 16px;border-radius:4px;white-space:nowrap}
 
 /* hero */
-.hero{position:relative;background:var(--black);overflow:hidden;border-bottom:6px solid var(--rust)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1fr;gap:0}
-.hero-photo{position:relative;margin:0 calc(var(--pad) * -1)}
-.hero-photo img{width:100%;aspect-ratio:450/355;object-fit:cover;
-  -webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 100%)}
-.hero-copy{position:relative;z-index:2;padding:0 0 64px;margin-top:-56px}
-.hero .place{display:inline-block;color:var(--spark);margin-bottom:18px}
-.hero h1 em{font-style:normal;color:var(--rust-2)}
-.hero .lede{font-size:1.14rem;color:var(--pale);margin:22px 0 30px;max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.cta .btn{flex:1 1 220px}
-@media (min-width:900px){
-  .hero{min-height:calc(100vh - 64px);max-height:860px;display:flex;align-items:center}
-  .hero .wrap{width:100%}
-  .hero-photo{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:min(64vw,880px);margin:0}
-  .hero-photo img{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 52% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 52% 50%,#000 62%,transparent 100%)}
-  .hero-copy{margin:0;padding:96px 0;max-width:620px}
-  .cta .btn{flex:0 0 auto}
-}
-.hero-tag{position:absolute;right:var(--pad);bottom:18px;color:var(--grey);z-index:2}
-@media (max-width:899px){.hero-tag{display:none}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:64px;padding-bottom:88px}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.4rem)}
+.hero .by{font-size:1.15rem;color:var(--soft);margin:18px 0 30px}
+.materials{font-stretch:112%;font-weight:600;font-size:clamp(1.35rem,2.3vw,1.75rem);line-height:1.38;margin:0 0 22px;max-width:30em;text-wrap:pretty}
+.hero .signed{color:var(--soft);margin-bottom:32px}
+.btn{display:inline-block;background:var(--rust);color:#fff;font-weight:700;font-stretch:110%;font-size:1.06rem;text-decoration:none;padding:15px 28px;border-radius:4px}
+.btn:hover{background:#7f3b1a}
+.alt{display:inline-block;margin-left:22px;font-size:1.02rem}
 
-/* materials */
-.materials{background:var(--paper);color:var(--ink);padding:84px 0}
-.materials .grid{display:grid;gap:40px}
-.materials h2{color:var(--ink)}
-.materials h2 span{color:var(--rust)}
-.materials p{color:#3a3c40}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
-.tags li{font-family:var(--fm);font-size:.9rem;padding:10px 14px;background:var(--ink);color:#f3f1ec;border-left:4px solid var(--rust)}
-.facts{display:grid;gap:0;border-top:2px solid var(--ink);margin-top:8px}
-.facts div{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line-d)}
-.facts b{font-family:var(--fd);font-weight:400;font-size:1.5rem;color:var(--rust);line-height:1}
-.facts p{margin:0}
-@media (min-width:900px){.materials .grid{grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}}
+/* pegboard */
+.board{position:relative;background-color:var(--board);
+  background-image:radial-gradient(circle at center,rgba(42,47,51,.30) 0 2.4px,transparent 3px);
+  background-size:26px 26px;background-position:13px 13px;border:10px solid #C2C8CA;border-radius:2px}
+.hero .board{padding:44px 30px 44px;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:44px 34px}
+.h-owl{width:150px}.h-bee{width:226px;margin-top:56px}
+.hang{position:relative;margin:0;padding-top:30px;max-width:100%}
+.w-hero{width:400px}
+.hero > *{min-width:0}
+.hang::before{content:"";position:absolute;top:0;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--graphite);box-shadow:0 0 0 3px rgba(248,249,249,.75)}
+.hang::after{content:"";position:absolute;top:8px;left:50%;width:2px;height:24px;margin-left:-1px;background:var(--graphite)}
+.hang img{border:4px solid var(--white);box-shadow:0 1px 0 rgba(42,47,51,.25)}
+.tag{position:absolute;right:-10px;bottom:-16px;background:var(--white);color:var(--graphite);font-size:.95rem;line-height:1.25;padding:7px 12px 7px 24px;border-radius:3px;transform:rotate(-3deg);box-shadow:0 1px 0 rgba(42,47,51,.3)}
+.tag::before{content:"";position:absolute;left:9px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--board);box-shadow:inset 0 0 0 1px var(--steel)}
+.tag b{font-weight:700}
+.tag span{display:block;font-size:14px;color:var(--soft)}
 
-/* gallery */
-.work{padding:88px 0;background:var(--steel)}
-.work-head{display:grid;gap:18px;margin-bottom:36px}
-.work-head h2{color:#f3f1ec}
-.work-head p{color:var(--grey);margin:0}
-@media (min-width:900px){.work-head{grid-template-columns:1fr 1fr;align-items:end;gap:60px}}
-.pieces{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.piece{position:relative;margin:0;background:#000;overflow:hidden}
-.piece img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;transition:transform .5s ease}
-.piece:hover img{transform:scale(1.03)}
-.piece figcaption{position:absolute;left:0;bottom:0;background:var(--black);color:#f3f1ec;padding:6px 10px;font-family:var(--fm);font-size:.78rem;letter-spacing:.04em}
-.piece.big{grid-column:span 2}
-.piece.big img{aspect-ratio:4/3}
-@media (min-width:900px){
-  .pieces{grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:12px}
-  .piece img{aspect-ratio:auto}
-  .piece.big{grid-column:span 2;grid-row:span 2}
-  .piece.tall{grid-row:span 2}
-  .piece.wide{grid-column:span 2}
-}
-.cats{display:flex;flex-wrap:wrap;gap:8px 22px;margin:28px 0 0;padding:0;list-style:none;color:var(--grey)}
-.cats li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--rust-2);margin-right:9px;vertical-align:1px}
-.commission{margin-top:44px;display:grid;gap:20px;padding:28px;border:1px solid var(--line);background:var(--black)}
-.commission h3{color:#f3f1ec;font-size:1.4rem}
-.commission p{margin:0;color:var(--pale)}
-@media (min-width:900px){.commission{grid-template-columns:1fr auto;align-items:center;gap:40px;padding:34px 40px}}
-
-/* mantis + where */
-.see{background:var(--paper);color:var(--ink);padding:88px 0}
-.see .grid{display:grid;gap:44px}
-.plate{margin:0;background:#fff;padding:14px 14px 0;border:1px solid var(--line-d);box-shadow:10px 10px 0 var(--ink);max-width:420px}
-.plate img{width:100%}
-.plate figcaption{padding:12px 2px 14px;font-size:1rem;color:#3a3c40}
-.plate figcaption b{display:block;font-family:var(--fd);font-weight:400;text-transform:uppercase;color:var(--ink);font-size:1.05rem}
-.see h2{color:var(--ink)}
-.places{display:grid;gap:28px;margin-top:30px}
-.places h3{color:var(--rust);margin-bottom:10px}
-.places ul{margin:0;padding:0;list-style:none}
-.places li{padding:10px 0;border-bottom:1px solid var(--line-d)}
-.places li span{display:block;color:#5a5d62;font-size:1rem}
-@media (min-width:900px){.see .grid{grid-template-columns:380px 1fr;gap:80px;align-items:start}.places{grid-template-columns:1fr 1fr;gap:40px}}
+/* gallery board */
+section{padding:96px 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
+.head p{color:var(--soft);margin:0}
+.wall{padding:44px 40px 60px;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:58px 46px}
+.wall .hang{flex:0 1 auto}
+.w450{width:356px}.w440{width:350px}.w400{width:322px}.w330{width:290px}.w210{width:218px}.w179{width:187px}
+.wall .low{margin-top:40px}
+.note{margin-top:26px;color:var(--soft);font-size:1rem;max-width:44em}
 
 /* about */
-.about{padding:88px 0;background:var(--black)}
-.about .grid{display:grid;gap:40px}
-.about h2{color:#f3f1ec}
-.about blockquote{margin:24px 0;padding:0 0 0 20px;border-left:4px solid var(--rust);font-size:1.25rem;line-height:1.45;color:#f3f1ec;max-width:34ch}
-.portrait{margin:0;position:relative;max-width:360px}
-.portrait img{width:100%;filter:grayscale(.2) contrast(1.05)}
-.portrait figcaption{margin-top:10px;color:var(--grey)}
-.timeline{display:grid;gap:0;margin:28px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
-.timeline li{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.timeline b{font-family:var(--fm);color:var(--spark);font-weight:500}
-@media (min-width:900px){.about .grid{grid-template-columns:360px 1fr;gap:80px;align-items:start}}
+.tim{background:var(--white)}
+.tim .grid{display:grid;grid-template-columns:240px 1fr 1fr;gap:48px;align-items:start}
+.tim figure{margin:0}
+.tim figcaption,.small-cap{font-size:.95rem;color:var(--soft);margin-top:10px;line-height:1.4}
+.tim h2{margin-bottom:22px}
+.tim .col p{color:var(--graphite)}
+.tim .col p.soft{color:var(--soft)}
+.orgs{list-style:none;padding:0;margin:8px 0 0}
+.orgs li{padding:9px 0;border-top:1px solid var(--line)}
 
-/* shows */
-.shows{background:var(--rust);color:#fff;padding:72px 0}
-.shows .grid{display:grid;gap:30px}
-.shows h2{color:#fff}
-.shows p{color:#fff4ea}
-.shows ul{margin:0;padding:0;list-style:none;display:grid;gap:0}
-.shows li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.3)}
-.shows li span{display:block;font-size:1rem;color:#ffe2cc}
-.btn-white{background:#fff;border-color:#fff;color:var(--ink)}
-.btn-white:hover{background:var(--ink);border-color:var(--ink);color:#fff}
-@media (min-width:900px){.shows .grid{grid-template-columns:1fr 1fr;gap:80px}}
+/* garden and home */
+.uses{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.uses h2{margin-bottom:22px}
+.uses p{color:var(--graphite)}
+.uses .soft{color:var(--soft)}
+
+/* where to find */
+.find{background:var(--graphite);color:var(--steel-l)}
+.find h2{color:#fff;margin-bottom:16px}
+.find .intro{color:#BFC6C9;max-width:40em;margin-bottom:48px}
+.find .cols{display:grid;grid-template-columns:1fr 1fr 290px;gap:48px;align-items:start}
+.find h3{color:#fff;margin-bottom:14px;font-stretch:115%}
+.find ul{list-style:none;padding:0;margin:0}
+.find li{padding:12px 0;border-top:1px solid rgba(233,236,236,.16);color:#DDE2E3}
+.find li span{display:block;color:#AEB6B9;font-size:.95rem}
+.find figure{margin:0}
+.find figure img{border:4px solid var(--white)}
+.find figcaption{font-size:.95rem;color:#BFC6C9;margin-top:10px;line-height:1.4}
+.find .ask{margin-top:48px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.find .ask p{margin:0;color:#BFC6C9}
+.find .btn{background:var(--rust)}
 
 /* contact */
-.contact{padding:88px 0;background:var(--steel)}
-.contact .grid{display:grid;gap:36px}
-.contact h2{color:#f3f1ec}
-.card{display:grid;gap:0;border-top:2px solid var(--rust-2)}
-.card a,.card div{display:block;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none}
-.card .k{display:block;color:var(--grey);margin-bottom:2px}
-.card .v{font-size:1.2rem;color:#f3f1ec;font-weight:500;overflow-wrap:anywhere}
-.card a:hover .v{color:var(--spark)}
-@media (min-width:900px){.contact .grid{grid-template-columns:1fr 1fr;gap:80px}}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact h2{margin-bottom:18px}
+.contact .soft{color:var(--soft)}
+.contact dl{margin:0}
+.contact dt{font-stretch:115%;font-weight:700;margin-top:18px}
+.contact dt:first-child{margin-top:0}
+.contact dd{margin:2px 0 0;font-size:1.1rem}
 
-footer{background:var(--black);border-top:1px solid var(--line);padding:30px 0;color:var(--grey);font-size:1rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
-footer a{text-decoration:none}
-footer a:hover{color:var(--spark)}
-.proposal{margin:0;padding:12px var(--pad) 16px;text-align:center;font-size:.8rem;color:#6b6f75;background:var(--black)}
-.proposal a{color:#8d9298}
+footer{border-top:1px solid var(--line);padding:30px 0 34px;text-align:center;color:var(--soft);font-size:1rem}
+footer b{font-stretch:125%;color:var(--graphite)}
+.proposal{border-top:1px solid var(--line);padding:14px 20px;text-align:center;font-size:13px;color:#7c858a}
+.proposal a{color:inherit}
 
-@media (prefers-reduced-motion:no-preference){
-  .hero-copy{animation:rise .8s ease-out both}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (max-width:1020px){
+  .hero{grid-template-columns:1fr;gap:44px}
+  .head{grid-template-columns:1fr;gap:16px}
+  .tim .grid{grid-template-columns:200px 1fr;}
+  .tim .grid .col:last-child{grid-column:1 / -1}
+  .uses{grid-template-columns:1fr;gap:40px}
+  .find .cols{grid-template-columns:1fr 1fr}
+  .find figure{grid-column:1 / -1;max-width:290px}
+  .contact .grid{grid-template-columns:1fr;gap:36px}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.piece img{transition:none}}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{padding:0 20px}
+  .top .bar{padding:12px 20px}
+  .brand{font-size:1rem}
+  .top nav .hide-s{display:none}
+  .hero{padding-top:40px;padding-bottom:64px}
+  .hero h1{font-size:2.25rem}
+  .alt{display:block;margin:16px 0 0}
+  .hero .board{padding:40px 14px 40px;border-width:7px;gap:44px 12px}
+  .h-owl{width:38%}.h-bee{width:54%;margin-top:40px}
+  .h-owl .tag,.h-bee .tag{right:-2px;bottom:-26px}
+  section{padding:72px 0}
+  .wall{padding:36px 14px 48px;gap:52px 20px;border-width:7px}
+  .wall .low{margin-top:0}
+  .tag{right:-4px}
+  .tim .grid{grid-template-columns:1fr;gap:28px}
+  .tim figure{max-width:200px}
+  .find .cols{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:420px){.proposal{font-size:12px;padding:14px 10px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.top{transition:none}}
 </style>
 </head>
 <body>
 
 <header class="top" id="top">
-  <div class="wrap">
-    <a class="brand" href="#top">Eco-<span>Art</span><small>Creative Metal Recycling</small></a>
-    <nav class="main" aria-label="Main">
-      <a href="#work">Gallery</a>
-      <a href="#see">Where to see it</a>
-      <a href="#about">About Tim</a>
-      <a href="#contact">Contact</a>
+  <div class="bar">
+    <a class="brand" href="#top">Eco-Art</a>
+    <nav aria-label="Main">
+      <a class="hide-s" href="#work">The work</a>
+      <a class="hide-s" href="#tim">About Tim</a>
+      <a class="hide-s" href="#find">Where to find it</a>
       <a class="tel" href="tel:+17319892366">(731) 989-2366</a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="hero" aria-labelledby="h1">
-  <div class="wrap">
-    <figure class="hero-photo" style="margin-top:0;margin-bottom:0">
-      <img src="assets/eco-art-tim-pace-finger/grasshopper2.webp" width="450" height="355" alt="A welded grasshopper sculpture with a green speckled body and long rod legs, by Tim Pace" fetchpriority="high" />
-    </figure>
-    <div class="hero-copy">
-      <span class="place mono">Found-metal sculpture · Finger, Tennessee</span>
-      <h1 id="h1">Scrap metal, <em>new life.</em></h1>
-      <p class="lede">Cast-off, discarded and scrapped metals, welded by Tim Pace into sculpture for your garden, your mantel or your desk. Every piece is made one at a time, then signed and numbered.</p>
-      <div class="cta">
-        <a class="btn btn-rust" href="mailto:info@ecoartbytim.com?subject=Eco-Art%20piece%20or%20commission">Ask Tim about a piece</a>
-        <a class="btn btn-ghost" href="#work">See the work</a>
+  <div class="wrap hero">
+    <div>
+      <h1>Eco-Art Creative Metal Recycling</h1>
+      <p class="by">Found-metal sculpture by Tim Pace, Finger, Tennessee</p>
+      <p class="materials">I weld together recycled metals: farm implements, tools, car parts, cutlery, industrial scrap, swing sets, trampoline frames and springs, just to mention a few.</p>
+      <p class="signed">Every piece is hand-crafted one at a time, so no two are alike. Each one is signed and numbered.</p>
+      <a class="btn" href="tel:+17319892366">Call Tim, (731) 989-2366</a>
+      <a class="alt" href="mailto:info@ecoartbytim.com?subject=Eco-Art%20sculpture">Or email info@ecoartbytim.com</a>
+    </div>
+    <div class="board">
+      <figure class="hang w-hero">
+        <img src="assets/eco-art-tim-pace-finger/birds.webp" width="450" height="323" alt="Four standing birds welded from shovel blades, garden shears and pliers, on long wire legs" fetchpriority="high" />
+        <figcaption class="tag"><b>Birds</b><span>Birds of a Feather</span></figcaption>
+      </figure>
+        <figure class="hang h-owl">
+          <img src="assets/eco-art-tim-pace-finger/owl.webp" width="210" height="300" alt="Owl cut from a rusted metal sheet with round pipe-cap eyes and rod feet" />
+          <figcaption class="tag"><b>Owl</b><span>Birds of a Feather</span></figcaption>
+        </figure>
+      <figure class="hang h-bee">
+          <img src="assets/eco-art-tim-pace-finger/bee1.webp" width="450" height="330" alt="Bee made of two horseshoes for wings and a coiled spring body with a hex nut head" />
+          <figcaption class="tag"><b>Bee</b><span>In the Garden</span></figcaption>
+        </figure>
+    </div>
+  </div>
+
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <h2>Hung on the board</h2>
+        <p>Many times the materials themselves dictate what the outcome will be. One goal is not to distort the recycled object, so it can still be recognized.</p>
+      </div>
+      <div class="board wall">
+        <figure class="hang w400 low">
+          <img src="assets/eco-art-tim-pace-finger/crab1.webp" width="450" height="303" loading="lazy" alt="Crab made from a pulley and bowl, with open-end wrenches for claws and rake tines for legs" />
+          <figcaption class="tag"><b>Crab</b><span>By the Shore</span></figcaption>
+        </figure>
+        <figure class="hang w400">
+          <img src="assets/eco-art-tim-pace-finger/grasshopper2.webp" width="450" height="355" loading="lazy" alt="Green speckled grasshopper with long rod antennae and pipe legs" />
+          <figcaption class="tag"><b>Hopper</b><span>In the Garden</span></figcaption>
+        </figure>
+        <figure class="hang w440 low">
+          <img src="assets/eco-art-tim-pace-finger/dog6.webp" width="440" height="343" loading="lazy" alt="Long spotted dog made of a cream-painted tank with bent strap legs and ears" />
+          <figcaption class="tag"><b>Dog</b><span>New and Miscellaneous</span></figcaption>
+        </figure>
+        <figure class="hang w330">
+          <img src="assets/eco-art-tim-pace-finger/turtle3.webp" width="450" height="420" loading="lazy" alt="Turtle built from stacked step pulleys with a rusty head and strap feet" />
+          <figcaption class="tag"><b>Turtle</b><span>By the Shore</span></figcaption>
+        </figure>
+        <figure class="hang w179 low">
+          <img src="assets/eco-art-tim-pace-finger/golfer.webp" width="179" height="300" loading="lazy" alt="Tall thin golfer figure welded from flat bar and a real golf club" />
+          <figcaption class="tag"><b>Golfer</b><span>New and Miscellaneous</span></figcaption>
+        </figure>
+        <figure class="hang w330">
+          <img src="assets/eco-art-tim-pace-finger/fish1.webp" width="450" height="420" loading="lazy" alt="Turquoise fish outline filled with washers, on a saw-blade stand" />
+          <figcaption class="tag"><b>Fish</b><span>By the Shore</span></figcaption>
+        </figure>
+        <figure class="hang w400 low">
+          <img src="assets/eco-art-tim-pace-finger/roadrunner.webp" width="450" height="384" loading="lazy" alt="Roadrunner in mid-stride made of blades and rods, perched on a wooden post" />
+          <figcaption class="tag"><b>Road Runner</b><span>Birds of a Feather</span></figcaption>
+        </figure>
+        <figure class="hang w400">
+          <img src="assets/eco-art-tim-pace-finger/candletree.webp" width="450" height="387" loading="lazy" alt="Two candle trees with glass votive cups on branching rods, one on a saw-blade base" />
+          <figcaption class="tag"><b>Candle Tree</b><span>Functional Decor</span></figcaption>
+        </figure>
+      </div>
+      <p class="note">The pieces shown are representative. Each one is a unique creation and will differ from these samples and from every other piece of Eco-Art.</p>
+    </div>
+  </section>
+
+  <section class="tim" id="tim">
+    <div class="wrap grid">
+      <figure>
+        <img src="assets/eco-art-tim-pace-finger/tim-pace.webp" width="200" height="176" loading="lazy" alt="Tim Pace in his studio with his welding helmet up, holding a piece of scrap metal" />
+        <figcaption>Tim at work in the studio.</figcaption>
+      </figure>
+      <div class="col">
+        <h2>It started with a golfer</h2>
+        <p>Eco-Art began in 1995 with the gift of a welder, an excess of scrap metal and the request for a unique gift. The result was a three-foot-tall sculpture of a golfer, to go in a garden. Simple pieces such as dogs and frogs followed.</p>
+        <p class="soft">I have no formal art training. I was an electrician by trade before I decided to pursue my art full time in 1998.</p>
+      </div>
+      <div class="col">
+        <p>Today my pieces range from works that fit on a tabletop to eight-foot-tall sculptures: people, animals, flowers, insects and abstracts, to name just a few. Basically, if it can be welded, I can use it.</p>
+        <p class="soft" style="margin-bottom:8px">I am a member of:</p>
+        <ul class="orgs">
+          <li>Tennessee Association of Craft Artists</li>
+          <li>Craftsmen's Guild of Mississippi</li>
+          <li>Tennessee Valley Art Association</li>
+        </ul>
+        <p class="soft" style="margin-top:18px">My work was featured on episode 2112 of Nashville Public Television's Tennessee Crossroads.</p>
       </div>
     </div>
-  </div>
-  <span class="hero-tag mono">“Hopper”, In the Garden series</span>
-</section>
+  </section>
 
-<section class="materials" aria-labelledby="mat">
-  <div class="wrap grid">
-    <div>
-      <h2 id="mat">If it can be welded, <span>it can be art.</span></h2>
-      <p style="margin-top:24px">Working in the medium of found art metal sculpture, I create unique pieces by welding together recycled metals. With such an array of resources, there is no limit to what can be made, and many times the materials themselves decide what the outcome will be.</p>
-      <ul class="tags" aria-label="Materials used">
-        <li>Farm implements</li><li>Tools</li><li>Car parts</li><li>Cutlery</li><li>Industrial scrap</li><li>Swing sets</li><li>Trampoline frames</li><li>Springs</li>
-      </ul>
-    </div>
-    <div class="facts">
-      <div><b>01</b><p>The found object stays recognizable. One goal of every design is not to distort it.</p></div>
-      <div><b>02</b><p>Hand-crafted one at a time, so no two pieces are alike. Each one is signed and numbered.</p></div>
-      <div><b>03</b><p>From desktop size to very tall garden pieces, plus functional work: business card holders, candle holders and wine racks.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="work" id="work" aria-labelledby="wk">
-  <div class="wrap">
-    <div class="work-head">
-      <h2 id="wk">From the gallery</h2>
-      <p>Eco-Art began as garden art. Many pieces never made it to the garden and found homes on mantels, bookcases, hearths and coffee tables instead. The pieces shown are representative: each one is different from these samples and from every other piece.</p>
-    </div>
-    <div class="pieces">
-      <figure class="piece big"><img src="assets/eco-art-tim-pace-finger/crab1.webp" width="450" height="303" alt="Crab sculpture welded from a round metal dome, wrenches and fork tines" loading="lazy" /><figcaption>Crab · By the Shore</figcaption></figure>
-      <figure class="piece tall"><img src="assets/eco-art-tim-pace-finger/fish1.webp" width="450" height="420" alt="Turquoise fish sculpture filled with metal rings, on a saw-blade base" loading="lazy" /><figcaption>Fish · By the Shore</figcaption></figure>
-      <figure class="piece"><img src="assets/eco-art-tim-pace-finger/bee1.webp" width="450" height="330" alt="Bee sculpture made from horseshoes and a coiled spring" loading="lazy" /><figcaption>Bee · In the Garden</figcaption></figure>
-      <figure class="piece"><img src="assets/eco-art-tim-pace-finger/turtle3.webp" width="450" height="420" alt="Turtle sculpture with a stacked pulley shell" loading="lazy" /><figcaption>Turtle · By the Shore</figcaption></figure>
-      <figure class="piece wide"><img src="assets/eco-art-tim-pace-finger/birds.webp" width="450" height="323" alt="Four standing bird sculptures with shovel-blade bodies and pruning-shear beaks" loading="lazy" /><figcaption>Birds of a Feather</figcaption></figure>
-      <figure class="piece"><img src="assets/eco-art-tim-pace-finger/dog6.webp" width="440" height="343" alt="Spotted dog sculpture lying on asphalt" loading="lazy" /><figcaption>Dog · New and Miscellaneous</figcaption></figure>
-      <figure class="piece"><img src="assets/eco-art-tim-pace-finger/candletree.webp" width="450" height="387" alt="Two candle trees holding glass votives on saw-blade bases" loading="lazy" /><figcaption>Candle tree · Functional Decor</figcaption></figure>
-    </div>
-    <ul class="cats" aria-label="Gallery series">
-      <li>Birds of a Feather</li><li>By the Shore</li><li>Functional Decor</li><li>In the Garden</li><li>New and Miscellaneous</li>
-    </ul>
-    <div class="commission">
+  <section>
+    <div class="wrap uses">
       <div>
-        <h3>Don’t see what you want?</h3>
-        <p>I accept commissions. Tell me what you have in mind; requests are filled based on the materials I have on hand.</p>
+        <h2>From the garden to the mantel</h2>
+        <p>Eco-Art was first designed as garden art. Many pieces never made it into the garden: they found homes on mantels, bookcases, hearths and coffee tables.</p>
+        <p class="soft">Some pieces are functional, too: business card holders, candle holders and wine racks.</p>
       </div>
-      <a class="btn btn-rust" href="mailto:info@ecoartbytim.com?subject=Commission%20request%20for%20Eco-Art">Discuss a commission</a>
+      <div>
+        <h2>Commissions</h2>
+        <p>If you don't find what you want here, I accept commissions. Requests can only be filled based on the materials I have on hand, so tell me what you have in mind.</p>
+        <a class="btn" href="mailto:info@ecoartbytim.com?subject=Commission%20request">Ask Tim about a commission</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="see" id="see" aria-labelledby="se">
-  <div class="wrap grid">
-    <figure class="plate">
-      <img src="assets/eco-art-tim-pace-finger/reading-mantis.webp" width="250" height="215" alt="Tall green praying mantis sculpture reading a book, outside a brick library building" loading="lazy" />
-      <figcaption><b>Reading Mantis</b>Jackson-Madison County Library, Jackson, Tennessee</figcaption>
-    </figure>
-    <div>
-      <h2 id="se">Where to see it, where to buy it</h2>
-      <p style="margin-top:22px">Some Eco-Art lives in public for good, like the Reading Mantis outside the library in Jackson. The rest is at my gallery and studio in Finger, at regional art and craft shows, and in a few galleries across Tennessee and Mississippi.</p>
-      <div class="places">
+  <section class="find" id="find">
+    <div class="wrap">
+      <h2>Where to find Eco-Art</h2>
+      <p class="intro">Eco-Art is at regional art and craft shows, and in these places all year.</p>
+      <div class="cols">
         <div>
-          <h3>On permanent display</h3>
+          <h3>For sale</h3>
           <ul>
-            <li>Jackson-Madison County Library<span>Jackson, Tennessee</span></li>
-            <li>The Children’s Museum of the Shoals<span>Florence, Alabama</span></li>
-            <li>“My Big Backyard” Children’s Learning Center<span>Memphis Botanic Garden, Memphis, Tennessee</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Available at</h3>
-          <ul>
-            <li>Tim’s gallery and studio<span>Finger, Tennessee</span></li>
-            <li>National Ornamental Metal Museum gift shop<span>Memphis, Tennessee</span></li>
+            <li>My gallery and studio<span>Finger, Tennessee</span></li>
+            <li>Gift shop of the National Ornamental Metal Museum<span>Memphis, Tennessee</span></li>
             <li>Mississippi Crafts Center<span>Ridgeland, Mississippi</span></li>
             <li>Corinth Artist Guild Gallery<span>Corinth, Mississippi</span></li>
           </ul>
         </div>
+        <div>
+          <h3>On permanent display</h3>
+          <ul>
+            <li>Jackson-Madison County Library<span>Jackson, Tennessee</span></li>
+            <li>The Children's Museum of the Shoals<span>Florence, Alabama</span></li>
+            <li>“My Big Backyard,” the Children's Learning Center<span>Memphis Botanic Garden, Memphis, Tennessee</span></li>
+          </ul>
+        </div>
+        <figure>
+          <img src="assets/eco-art-tim-pace-finger/reading-mantis.webp" width="250" height="215" loading="lazy" alt="A giant green praying mantis sculpture holding a book, outside the library" />
+          <figcaption>Reading Mantis, at the Jackson-Madison County Library in Jackson, Tennessee.</figcaption>
+        </figure>
+      </div>
+      <div class="ask">
+        <a class="btn" href="mailto:info@ecoartbytim.com?subject=Your%20next%20show">Ask Tim where the next show is</a>
+        <p>Or call <a href="tel:+17319892366" style="color:#fff">(731) 989-2366</a>.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about" aria-labelledby="ab">
-  <div class="wrap grid">
-    <figure class="portrait">
-      <img src="assets/eco-art-tim-pace-finger/tim-pace.webp" width="200" height="176" alt="Tim Pace in his welding shop, holding a piece of rusted metal" loading="lazy" style="width:100%" />
-      <figcaption class="mono">Tim Pace in the shop</figcaption>
-    </figure>
-    <div>
-      <h2 id="ab">An electrician who picked up a welder</h2>
-      <blockquote>“Found art is created by taking an object that already exists and turning it into art.”</blockquote>
-      <p>I have no formal art training. I was an electrician by trade, until a gift, a pile of scrap and a request changed things. Today my pieces range from works that fit on a tabletop to eight-foot-tall sculptures: people, animals, flowers, insects and abstracts, to name a few.</p>
-      <ul class="timeline">
-        <li><b>1995</b><span>The gift of a welder, an excess of scrap metal and a request for a unique gift. The result: a three-foot-tall golfer for a garden. Dogs and frogs followed.</span></li>
-        <li><b>1998</b><span>Eco-Art becomes a full-time pursuit.</span></li>
-        <li><b>2007</b><span>Tim and his work featured on episode 2112 of Nashville Public Television’s <i>Tennessee Crossroads</i>.</span></li>
-      </ul>
-      <p style="margin-top:22px;color:var(--grey)">Member of the Tennessee Association of Craft Artists, the Craftsmen’s Guild of Mississippi and the Tennessee Valley Art Association.</p>
-    </div>
-  </div>
-</section>
-
-<section class="shows" id="shows" aria-labelledby="sh">
-  <div class="wrap grid">
-    <div>
-      <h2 id="sh">Find the booth</h2>
-      <p style="margin-top:20px">I look forward to meeting you at the Eco-Art booth. The show calendar changes every year, so the surest way to know where I’ll be next is to ask.</p>
-      <a class="btn btn-white" href="mailto:info@ecoartbytim.com?subject=Where%20is%20the%20Eco-Art%20booth%20next%3F">Ask Tim where the booth is next</a>
-    </div>
-    <div>
-      <p style="margin-bottom:6px">Shows where you have found Eco-Art:</p>
-      <ul>
-        <li>Troll Fest<span>Memphis Botanic Garden, Memphis</span></li>
-        <li>Art in the Loop<span>Ridgeway Loop Road, Memphis</span></li>
-        <li>Tennessee Craft Spring and Fall Fairs<span>Centennial Park, Nashville</span></li>
-        <li>UT Summer Celebration<span>Tennessee Agricultural Experiment Station, Jackson</span></li>
-        <li>Pink Palace Crafts Fair<span>Audubon Park, Memphis</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact" aria-labelledby="ct">
-  <div class="wrap grid">
-    <div>
-      <h2 id="ct">Say hello</h2>
-      <p style="margin-top:22px">A question about a piece you’ve seen? Interested in commissioning a work? Or just want to say hello? Reach me by phone, email or mail.</p>
-      <div class="cta" style="margin-top:26px">
-        <a class="btn btn-rust" href="mailto:info@ecoartbytim.com?subject=Hello%20from%20your%20website">Email Tim</a>
-        <a class="btn btn-ghost" href="tel:+17319892366">Call (731) 989-2366</a>
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>Questions, a piece you've seen, or just hello</h2>
+        <p class="soft">Reach me by phone, email or mail.</p>
       </div>
+      <dl>
+        <dt>Phone</dt>
+        <dd><a href="tel:+17319892366">(731) 989-2366</a></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:info@ecoartbytim.com?subject=Eco-Art%20sculpture">info@ecoartbytim.com</a></dd>
+        <dt>Mail</dt>
+        <dd>Eco-Art Creative Metal Recycling<br />82 Sherry Lynn Drive<br />Finger, TN 38334</dd>
+      </dl>
     </div>
-    <div class="card">
-      <a href="tel:+17319892366"><span class="k mono">Phone</span><span class="v">(731) 989-2366</span></a>
-      <a href="mailto:info@ecoartbytim.com"><span class="k mono">Email</span><span class="v">info@ecoartbytim.com</span></a>
-      <div><span class="k mono">Mail</span><span class="v">Eco-Art Creative Metal Recycling<br />82 Sherry Lynn Drive<br />Finger, TN 38334</span></div>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© Eco-Art Creative Metal Recycling · Tim Pace, Finger, Tennessee</span>
-    <nav aria-label="Footer">
-      <a href="#work">Gallery</a><a href="#shows">Shows</a><a href="#about">About Tim</a><a href="#contact">Contact</a>
-    </nav>
-  </div>
+  <p><b>Eco-Art Creative Metal Recycling</b><br />Tim Pace, Finger, Tennessee</p>
 </footer>
-<p class="proposal">Proposal by Nicolas Masset for Eco-Art Creative Metal Recycling · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></p>
+<div class="proposal">Proposal by Nicolas Masset for Eco-Art Creative Metal Recycling · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function f(){top.classList.toggle('scrolled',window.scrollY>8)}
+  f();window.addEventListener('scroll',f,{passive:true});
+})();
+</script>
 </body>
 </html>

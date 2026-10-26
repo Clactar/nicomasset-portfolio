@@ -1,373 +1,313 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Homestead Weaving Studio LLC (Columbus, Brown County, IN), content from https://www.homesteadweaver.com/; direction : « la trame » (indigo and ecru with a touch of rust, Bitter + Mulish, a rag rug on the loom as hero photo, woven bands drawn in CSS as decoration).
-     Fixed: the dead "How-to-Kits" link (404) becomes a Kits section on the page, linked to the live Potholder Kits page (200) and an "Ask Chris" mail button for other beginner kits; the page now reads on a phone (viewport, one column).
-     Texts, hours, address, phone and testimonial come from homesteadweaver.com (home, Rugs & Weaving, On the Looms, Potholder Kits, Looms & Supplies). Photos are theirs, recompressed in assets/homestead-weaving-columbus-in/. -->
+<!-- v1 (2026-10-26) : homepage rebuilt for Homestead Weaving Studio LLC (Columbus, Brown County, IN), content from https://www.homesteadweaver.com/ (home, rug gallery, closeout rugs, wearables, on the looms, looms and supplies, potholder kits, used equipment, sectional warping);
+     direction : « La salle des métiers » : a band of irregular warp stripes in the colors of their rag rugs runs across the top and comes back once at the foot,
+     everything else quiet. Directory of their working pages (no How-to-Kits link, it is a 404), readable on a phone. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#1e2b4f" />
-<title>Homestead Weaving Studio : recycled rag rugs, shawls and weaving classes in Brown County, Indiana</title>
-<meta name="description" content="Chris Gustin weaves soft rag rugs from recycled and upcycled material at her studio in Brown County, Indiana. Rugs, Möbius shawls, day-weaving classes, loom kits and supplies since 1968." />
+<meta name="theme-color" content="#2F4A6D" />
+<title>Homestead Weaving Studio: recycled rag rugs, shawls, looms and weaving classes in Brown County, Indiana</title>
+<meta name="description" content="Rag rugs woven from recycled and upcycled material, Möbius shawls, potholder looms and weaving supplies since 1968. Day weaving on the rug looms. Studio near Columbus, Indiana, open by appointment: (812) 988-8622." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400..800;1,400..600&family=Mulish:ital,wght@0,400..800;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&family=Vollkorn:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --ecru:#f4eedf; --ecru-2:#e9e0ca; --ink:#1e2b4f; --ink-2:#34426a; --soft:#56607d;
-  --rust:#b0532a; --rust-d:#8f4120; --sky:#7f93b8; --line:rgba(30,43,79,.14);
-  --fd:"Bitter",Georgia,serif; --ft:"Mulish",system-ui,sans-serif;
-  --wrap:1200px; --pad:24px;
+  --denim:#2F4A6D; --denim-d:#233A57; --red:#B5473A; --moss:#6B7F3E; --wood:#8B5A2B; --linen:#ECF0F4; --white:#FFFFFF;
+  --ink:#24272C; --soft:#555A61; --line:rgba(36,39,44,.15);
+  --serif:"Vollkorn",Georgia,serif; --sans:"Mulish",system-ui,sans-serif;
+  --warp:linear-gradient(90deg,#6B7F3E 0.0% 1.2%,#8B5A2B 1.2% 1.8%,#1F2430 1.8% 2.7%,#B5473A 2.7% 3.3%,#C9A979 3.3% 4.9%,#2F4A6D 4.9% 5.8%,#8B5A2B 5.8% 6.6%,#1F2430 6.6% 8.2%,#6F8093 8.2% 9.0%,#2F4A6D 9.0% 9.9%,#8A8A4A 9.9% 10.5%,#4F6A8A 10.5% 11.3%,#2F4A6D 11.3% 12.9%,#1F2430 12.9% 14.1%,#6B7F3E 14.1% 14.9%,#6F8093 14.9% 15.8%,#4F6A8A 15.8% 18.0%,#D9A39A 18.0% 19.2%,#1F2430 19.2% 20.8%,#B5473A 20.8% 21.7%,#C9A979 21.7% 22.6%,#4F6A8A 22.6% 23.2%,#C9A979 23.2% 24.8%,#8B5A2B 24.8% 25.6%,#6B7F3E 25.6% 27.0%,#4F6A8A 27.0% 28.4%,#6B7F3E 28.4% 30.6%,#D9D6CC 30.6% 31.8%,#3C3F46 31.8% 33.4%,#1F2430 33.4% 35.6%,#C9A979 35.6% 37.0%,#6B7F3E 37.0% 38.4%,#8A8A4A 38.4% 39.3%,#1F2430 39.3% 40.1%,#D9D6CC 40.1% 43.1%,#6F8093 43.1% 44.5%,#8B5A2B 44.5% 45.1%,#E8E4DA 45.1% 46.0%,#D9A39A 46.0% 49.0%,#6B7F3E 49.0% 52.0%,#4F6A8A 52.0% 53.4%,#C9A979 53.4% 54.8%,#1F2430 54.8% 55.7%,#6B7F3E 55.7% 57.1%,#3C3F46 57.1% 58.0%,#2F4A6D 58.0% 60.2%,#E8E4DA 60.2% 61.6%,#8A8A4A 61.6% 62.4%,#E8E4DA 62.4% 65.4%,#2F4A6D 65.4% 66.8%,#B5473A 66.8% 68.0%,#4F6A8A 68.0% 68.9%,#8B5A2B 68.9% 69.5%,#D9D6CC 69.5% 71.7%,#6F8093 71.7% 73.3%,#8B5A2B 73.3% 74.1%,#D9A39A 74.1% 75.0%,#6F8093 75.0% 76.4%,#8B5A2B 76.4% 78.6%,#6F8093 78.6% 79.4%,#C9A979 79.4% 81.6%,#3C3F46 81.6% 82.4%,#6B7F3E 82.4% 83.2%,#D9D6CC 83.2% 84.4%,#1F2430 84.4% 85.6%,#D9D6CC 85.6% 87.2%,#E8E4DA 87.2% 88.8%,#2F4A6D 88.8% 90.2%,#4F6A8A 90.2% 91.4%,#8A8A4A 91.4% 93.6%,#2F4A6D 93.6% 94.8%,#8B5A2B 94.8% 97.8%,#4F6A8A 97.8% 100.0%);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ecru);color:var(--ink);font-family:var(--ft);font-size:17px;line-height:1.65}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65}
 img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--fd);line-height:1.08;margin:0;letter-spacing:-.01em;text-wrap:balance}
-h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:700}
-h2{font-size:clamp(2rem,3.8vw,3.1rem);font-weight:700}
-h3{font-size:1.3rem;font-weight:600}
+a{color:var(--denim);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--denim);outline-offset:3px}
 p{margin:0 0 1em}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-.tag{font-family:var(--fd);font-style:italic;font-weight:500;color:var(--rust);font-size:1.08rem;margin:0 0 12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 24px;border-radius:6px;font-weight:700;font-size:1.02rem;text-decoration:none;background:var(--ink);color:var(--ecru);border:2px solid var(--ink);transition:background .2s,transform .2s}
-.btn:hover{background:var(--ink-2);transform:translateY(-1px)}
-.btn.rust{background:var(--rust);border-color:var(--rust);color:#fff}
-.btn.rust:hover{background:var(--rust-d);border-color:var(--rust-d)}
-.btn.line{background:transparent;color:var(--ink)}
-.btn.line:hover{background:var(--ecru-2)}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;margin:0;letter-spacing:-.005em;text-wrap:balance}
+h2{font-size:clamp(2rem,3.8vw,2.85rem)}
+h3{font-size:1.3rem}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* woven band: weft stripes + warp threads */
-.weft{background:
-  repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 2px,transparent 2px 7px),
-  linear-gradient(180deg,#1e2b4f 0 9%,#e9e0ca 9% 12%,#7f93b8 12% 19%,#1e2b4f 19% 23%,#b0532a 23% 27%,#e9e0ca 27% 34%,#34426a 34% 44%,#d9a07a 44% 47%,#1e2b4f 47% 55%,#f4eedf 55% 58%,#7f93b8 58% 66%,#b0532a 66% 68%,#1e2b4f 68% 79%,#e9e0ca 79% 83%,#34426a 83% 92%,#b0532a 92% 95%,#1e2b4f 95%)}
-.band{height:26px;background:
-  repeating-linear-gradient(180deg,rgba(255,255,255,.12) 0 2px,transparent 2px 6px),
-  linear-gradient(90deg,#1e2b4f 0 14%,#e9e0ca 14% 16%,#7f93b8 16% 27%,#b0532a 27% 30%,#1e2b4f 30% 46%,#d9a07a 46% 48%,#34426a 48% 63%,#e9e0ca 63% 66%,#7f93b8 66% 77%,#b0532a 77% 79%,#1e2b4f 79%)}
+.warp{height:22px;background:var(--warp);background-size:960px 100%;background-repeat:repeat-x;position:relative}
+.warp::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.10) 0 2px,rgba(0,0,0,.10) 2px 4px)}
 
 /* header */
-header{position:sticky;top:0;z-index:40;background:rgba(244,238,223,.95);backdrop-filter:saturate(1.2) blur(6px);-webkit-backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
-header .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--wrap);margin:0 auto;padding:12px var(--pad)}
-.brand{text-decoration:none;font-family:var(--fd);font-weight:700;font-size:1.12rem;line-height:1.15}
-.brand small{display:block;font-family:var(--ft);font-weight:600;font-size:.8rem;color:var(--soft)}
-nav.main{display:flex;align-items:center;gap:26px}
-nav.main a{text-decoration:none;font-weight:600;font-size:.97rem;color:var(--ink-2)}
-nav.main a:hover{color:var(--rust)}
-nav.main a.call{background:var(--ink);color:var(--ecru);padding:10px 16px;border-radius:6px}
-.callm{display:none}
+.top{position:sticky;top:0;z-index:20;background:rgba(236,240,244,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .bar{max-width:1200px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:26px;align-items:center;font-size:1rem}
+.top nav a{color:var(--soft);text-decoration:none}
+.top nav a:hover{color:var(--ink)}
+.top nav a.tel{color:var(--white);background:var(--denim);padding:9px 16px;border-radius:4px;font-weight:700;white-space:nowrap}
+.top nav a.tel:hover{background:var(--denim-d)}
 
 /* hero */
-.hero{max-width:var(--wrap);margin:0 auto;padding:64px var(--pad) 72px;display:grid;grid-template-columns:1fr 1.02fr;gap:56px;align-items:center}
-.hero .lead{font-size:1.2rem;color:var(--ink-2);max-width:36ch;margin:22px 0 30px}
-.hero .since{display:flex;align-items:center;gap:14px;margin-top:34px;color:var(--soft);font-size:.98rem}
-.hero .since b{font-family:var(--fd);font-size:2rem;color:var(--rust);font-weight:700;line-height:1}
-.loom{position:relative;padding-left:46px}
-.loom .weft{position:absolute;left:0;top:28px;bottom:28px;width:30px;border-radius:3px}
-.loom .weft::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:repeating-linear-gradient(90deg,#d9cfb6 0 2px,transparent 2px 6px)}
-.loom .weft::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px;background:repeating-linear-gradient(90deg,#d9cfb6 0 2px,transparent 2px 6px)}
-.loom figure{margin:0;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(30,43,79,.6)}
-.loom img{width:100%;aspect-ratio:5/4;object-fit:cover}
-.loom .cap{font-size:.92rem;color:var(--soft);margin:10px 0 0}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end;padding-top:64px;padding-bottom:44px}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);font-weight:700;line-height:1.02}
+.hero .since{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--soft);margin:14px 0 26px}
+.hero .lead{font-size:1.32rem;line-height:1.55;max-width:30em;margin:0}
+.visitcard{background:var(--denim);color:#E8EDF3;padding:30px 30px 28px;border-radius:4px}
+.visitcard h2{font-size:1.55rem;color:var(--white);margin-bottom:12px}
+.visitcard p{font-size:1.02rem;margin-bottom:12px}
+.btn{display:inline-block;background:var(--denim);color:var(--white);font-weight:700;font-size:1.06rem;text-decoration:none;padding:15px 26px;border-radius:4px}
+.btn:hover{background:var(--denim-d)}
+.visitcard .btn{background:var(--white);color:var(--denim);margin-top:8px}
+.visitcard .btn:hover{background:#E4EAF1}
+.visitcard a.more{color:#E8EDF3;display:inline-block;margin-top:14px;font-size:1rem}
+.loom{margin:0}
+.loom img{width:100%;aspect-ratio:12/5;object-fit:cover;object-position:50% 58%;border-radius:4px}
+.loom figcaption,.cap{font-size:.95rem;color:var(--soft);margin-top:10px;line-height:1.45}
+
+section{padding:100px 0}
 
 /* rugs */
-.rugs{background:var(--ink);color:var(--ecru);padding:88px 0}
-.rugs .tag{color:#e7a37f}
-.rugs .top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
-.rugs .top p{color:#d8d6d0;max-width:58ch;margin:0}
-.rug-grid{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:18px}
-.rug-grid figure{margin:0}
-.rug-grid img{width:100%;height:340px;object-fit:cover;border-radius:4px}
-.rug-grid figcaption{font-size:.92rem;color:#b9bdcb;margin-top:8px}
-.rug-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.rug-links .btn{background:var(--ecru);color:var(--ink);border-color:var(--ecru)}
-.rug-links .btn.line{background:transparent;color:var(--ecru);border-color:rgba(244,238,223,.5)}
-.rug-links .btn.line:hover{background:rgba(244,238,223,.08)}
-.mission{margin-top:56px;padding-top:36px;border-top:1px solid rgba(244,238,223,.18);display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.mission blockquote{margin:0;font-family:var(--fd);font-size:1.45rem;line-height:1.35;font-weight:500}
-.mission p{color:#d8d6d0;margin:0}
+.rugs{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.rugs h2{margin-bottom:22px}
+.rugs .soft{color:var(--soft)}
+.rugs .links{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center}
+.rugstack{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rugstack figure{margin:0}
+.rugstack .a{grid-column:1 / -1}
+.rugstack .b{grid-column:1 / -1;width:88%;justify-self:end}
+.rugstack img{border-radius:3px}
+.detail{display:flex;gap:22px;align-items:flex-end;margin-top:30px}
+.detail img{width:180px;flex:none;border-radius:3px}
 
-/* shawls */
-.shawls{padding:88px 0}
-.shawls .grid{display:grid;grid-template-columns:.9fr .9fr 1.1fr;gap:28px;align-items:center}
-.shawls figure{margin:0}
-.shawls img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
-.shawls figcaption{font-family:var(--fd);font-style:italic;color:var(--ink-2);margin-top:10px}
-.shawls .txt p{color:var(--ink-2);max-width:46ch}
-.shawls .txt h2{margin-bottom:18px}
+/* wearables */
+.wear{background:var(--white)}
+.wear .grid{display:grid;grid-template-columns:420px 1fr;grid-template-rows:auto 1fr;gap:40px 64px;align-items:start}
+.wear .grid > figure:first-child{grid-row:1 / 3}
+.wear .grid > div{max-width:36em;padding-top:12px}
+.wear figure.r{width:320px}
+.wear figure{margin:0}
+.wear h2{margin-bottom:20px}
+.wear .name{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--soft);margin-bottom:16px}
 
 /* classes */
-.classes{background:var(--ecru-2);padding:88px 0;position:relative}
-.classes .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
-.classes .photo img{border-radius:4px;width:100%;aspect-ratio:808/954;object-fit:cover}
-.classes .photo p{font-size:.92rem;color:var(--soft);margin-top:10px}
-.classes h2{margin-bottom:18px}
-.classes .intro{color:var(--ink-2);max-width:58ch}
-ol.steps{list-style:none;padding:0;margin:28px 0;counter-reset:s}
-ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line);color:var(--ink-2)}
-ol.steps li::before{content:counter(s);font-family:var(--fd);font-weight:700;font-size:1.5rem;color:var(--rust);line-height:1.2}
-.quote{background:var(--ecru);border-left:6px solid var(--rust);padding:22px 24px;margin:0 0 28px;border-radius:0 4px 4px 0}
-.quote p{font-family:var(--fd);font-style:italic;font-size:1.08rem;color:var(--ink);margin:0 0 8px}
-.quote cite{font-style:normal;font-size:.94rem;color:var(--soft)}
+.classes .grid{display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:start}
+.classes figure{margin:0}
+.classes img{border-radius:4px}
+.classes h2{margin-bottom:20px}
+.steps{list-style:none;counter-reset:s;padding:0;margin:30px 0 30px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:6px;padding:14px 0;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--serif);font-weight:700;font-size:1.45rem;color:var(--wood);line-height:1.2}
+blockquote{margin:32px 0 0;padding:0 0 0 22px;border-left:3px solid var(--moss);font-family:var(--serif);font-style:italic;font-size:1.18rem;line-height:1.55;color:var(--ink)}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.95rem;color:var(--soft);margin-top:10px}
 
-/* kits */
-.kits{padding:88px 0}
-.kits .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
-.kits img{width:100%;border-radius:4px}
-.kits h2{margin-bottom:18px}
-.kits .txt>p{color:var(--ink-2);max-width:56ch}
-.kit-list{list-style:none;padding:0;margin:24px 0 26px;border:1px solid var(--line);border-radius:6px;background:#fbf8f0}
-.kit-list li{display:flex;justify-content:space-between;gap:16px;padding:13px 18px;border-top:1px solid var(--line)}
-.kit-list li:first-child{border-top:0}
-.kit-list b{font-family:var(--fd);font-weight:600}
-.kit-list span{color:var(--soft);font-size:.96rem;text-align:right}
-.kits .note{font-size:.96rem;color:var(--soft);margin-top:18px}
-.other-kits{margin-top:30px;padding:22px 24px;border-radius:6px;background:var(--ink);color:var(--ecru);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
-.other-kits p{margin:0;max-width:40ch}
-.other-kits .btn{background:var(--rust);border-color:var(--rust);color:#fff}
-
-/* supplies */
-.supplies{padding:0 0 88px}
-.supplies .box{border-top:1px solid var(--line);padding-top:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:56px}
-.supplies ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
-.supplies li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
-.supplies .links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
-.supplies .links a{font-weight:700;color:var(--rust);text-underline-offset:4px}
+/* directory */
+.shop{background:var(--white)}
+.shop .head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
+.shop .head p{color:var(--soft);margin:0}
+.dir{display:grid;grid-template-columns:1fr 1fr 340px;gap:48px;align-items:start}
+.dir h3{font-family:var(--sans);font-weight:700;font-size:1.02rem;color:var(--wood);margin-bottom:6px}
+.dir ul{list-style:none;padding:0;margin:0}
+.dir li{border-top:1px solid var(--line)}
+.dir li a{display:block;padding:13px 0;text-decoration:none;color:var(--ink)}
+.dir li a strong{display:block;font-family:var(--serif);font-weight:600;font-size:1.2rem;color:var(--denim)}
+.dir li a span{display:block;font-size:1rem;color:var(--soft)}
+.dir li a:hover strong{text-decoration:underline;text-underline-offset:4px}
+.dir figure{margin:0}
+.dir figure img{border-radius:4px}
 
 /* visit */
-.visit{background:var(--ink);color:var(--ecru);padding:88px 0}
-.visit .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .visit h2{margin-bottom:20px}
-.visit p{color:#d8d6d0;max-width:52ch}
-.visit .btn.rust{margin-right:4px}
-.visit .btn.line{color:var(--ecru);border-color:rgba(244,238,223,.5)}
-.visit .btn.line:hover{background:rgba(244,238,223,.08)}
-.card{background:var(--ecru);color:var(--ink);border-radius:6px;padding:28px}
-.card dl{margin:0;display:grid;gap:18px}
-.card dt{font-family:var(--fd);font-style:italic;color:var(--rust);font-size:.98rem}
-.card dd{margin:2px 0 0;font-weight:600}
-.card dd a{text-underline-offset:3px}
-.card .people{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--soft);font-size:.96rem}
+.visit .addr{font-family:var(--serif);font-size:1.35rem;line-height:1.45;margin:22px 0}
+.visit .soft{color:var(--soft)}
+.visit figure{margin:0}
+.visit figure img{border-radius:4px}
 
-footer{background:#16203d;color:#c9ccd6;padding:28px 0;font-size:.96rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
-footer a{color:#fff;text-underline-offset:3px}
-.proposal{margin:0;text-align:center;font-size:13px;color:#8b8a84;padding:12px var(--pad) 18px;background:var(--ecru)}
-.proposal a{color:#8b8a84}
+footer{background:var(--denim);color:#D9E1EA;padding:34px 0 38px;text-align:center;font-size:1rem}
+footer b{font-family:var(--serif);font-weight:700;color:var(--white);font-size:1.2rem}
+footer a{color:var(--white)}
+.proposal{padding:14px 20px;text-align:center;font-size:13px;color:#7b7f86}
+.proposal a{color:inherit}
 
-@media (prefers-reduced-motion:no-preference){
-  .loom figure{animation:rise .8s cubic-bezier(.23,1,.32,1) both}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (max-width:1060px){
+  .hero{grid-template-columns:1fr;gap:36px}
+  .rugs{grid-template-columns:1fr;gap:40px}
+  .wear .grid{grid-template-columns:1fr 1fr;gap:36px}
+  .wear .grid > div{grid-column:1 / -1;order:-1}
+  .wear .grid > figure:first-child{grid-row:auto}
+  .wear figure.r{width:auto}
+  .classes .grid{grid-template-columns:1fr;gap:36px}
+  .classes figure{max-width:420px}
+  .shop .head{grid-template-columns:1fr;gap:16px}
+  .dir{grid-template-columns:1fr 1fr}
+  .dir figure{grid-column:1 / -1;max-width:340px}
+  .visit .grid{grid-template-columns:1fr;gap:36px}
+  .visit figure{max-width:560px}
 }
-@media (max-width:1000px){
-  nav.main a:not(.call){display:none}
-  .hero,.rugs .top,.mission,.classes .grid,.kits .grid,.supplies .box,.visit .grid{grid-template-columns:1fr;gap:36px}
-  .shawls .grid{grid-template-columns:1fr 1fr}
-  .shawls .txt{grid-column:1/-1;grid-row:1}
-  .rug-grid{grid-template-columns:1fr 1fr}
-  .rug-grid figure:first-child{grid-column:1/-1}
-  .classes .photo{max-width:520px}
-}
-@media (max-width:600px){
-  :root{--pad:20px}
+@media (max-width:640px){
   body{font-size:17px}
-  .hero{padding:36px var(--pad) 56px}
-  .loom{padding-left:30px}
-  .loom .weft{width:18px}
-  .loom{order:-1}
-  .loom img{aspect-ratio:3/2}
-  .loom .cap{display:none}
-  .rugs,.shawls,.classes,.kits,.visit{padding:64px 0}
-  .supplies{padding-bottom:64px}
-  .rug-grid{grid-template-columns:1fr}
-  .rug-grid img{height:260px}
-  .shawls .grid{grid-template-columns:1fr 1fr;gap:14px}
-  .supplies ul{grid-template-columns:1fr}
-  .cta .btn{flex:1 1 100%}
-  .kit-list li{flex-direction:column;gap:2px}
-  .kit-list span{text-align:left}
-  .brand{font-size:1rem}
-  nav.main a.call{padding:12px 18px;font-size:1rem}
-  .num{display:none}
-  .loom .cap,.rug-grid figcaption,.classes .photo p,.hero .since,.kits .note,.card .people,.quote cite,.kit-list span,footer{font-size:1rem}
+  .wrap{padding:0 20px}
+  .warp{height:16px;background-size:640px 100%}
+  .top .bar{padding:12px 20px}
+  .brand{font-size:1.08rem}
+  .top .hide-s{display:none}
+  .top nav a.tel{padding:8px 12px;font-size:.95rem}
+  .hero{padding-top:36px}
+  .hero h1{font-size:2.4rem}
+  .hero .lead{font-size:1.18rem}
+  .visitcard{padding:24px 20px}
+  .loom img{aspect-ratio:4/3}
+  section{padding:72px 0}
+  .rugstack .b{width:100%}
+  .detail{flex-direction:column;align-items:flex-start}
+  .wear .grid{grid-template-columns:1fr}
+  .wear figure.r{max-width:300px}
+  .dir{grid-template-columns:1fr;gap:32px}
 }
+@media (max-width:420px){.proposal{font-size:12px;padding:14px 10px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.top{transition:none}}
 </style>
 </head>
 <body>
 
-<header>
+<div class="warp" aria-hidden="true"></div>
+<header class="top" id="top">
   <div class="bar">
-    <a class="brand" href="#top">Homestead Weaving Studio<small>Brown County, Indiana</small></a>
-    <nav class="main" aria-label="Main">
-      <a href="#rugs">Rugs</a>
-      <a href="#shawls">Shawls</a>
-      <a href="#classes">Classes</a>
-      <a href="#kits">Kits</a>
-      <a href="#visit">Visit</a>
-      <a class="call" href="tel:+18129888622">Call<span class="num"> (812) 988-8622</span></a>
+    <a class="brand" href="#top">Homestead Weaving<span class="hide-s"> Studio</span></a>
+    <nav aria-label="Main">
+      <a class="hide-s" href="#rugs">Rugs</a>
+      <a class="hide-s" href="#classes">Classes</a>
+      <a class="hide-s" href="#shop">Shop</a>
+      <a class="hide-s" href="#visit">Visit</a>
+      <a class="tel" href="tel:+18129888622">(812) 988-8622</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
+<main>
+  <div class="wrap hero">
     <div>
-      <p class="tag">Chris Gustin, fiber artist</p>
-      <h1>Weaving with an environmental conscience</h1>
-      <p class="lead">Rag rugs that are soft, wonderful and woven from recycled or upcycled material, along with shawls, scarves, classes and weaving supplies, from our studio in Brown County, Indiana.</p>
-      <div class="cta">
-        <a class="btn rust" href="https://www.homesteadweaver.com/rugsforsale.htm">See the new rugs</a>
-        <a class="btn line" href="#visit">Plan a visit</a>
-      </div>
-      <div class="since"><b>1968</b><span>Fine hand-woven items and quality supplies since 1968.<br />Indiana Artisan since 2008.</span></div>
+      <h1>Homestead Weaving Studio</h1>
+      <p class="since">Fine hand-woven items and quality supplies since 1968</p>
+      <p class="lead">Weaving with an environmental conscience, making rag rugs that are soft, wonderful and woven from recycled or upcycled material.</p>
     </div>
-    <div class="loom">
-      <div class="weft" aria-hidden="true"></div>
-      <figure>
-        <img src="assets/homestead-weaving-columbus-in/rag-rug-on-loom.webp" alt="A rag rug in rust, teal and cream on the loom at Homestead Weaving Studio, with balls of fabric strips on the woven part" width="1400" height="1112" />
-      </figure>
-      <p class="cap">On the loom right now: a rag rug from recycled fabric.</p>
-    </div>
-  </section>
+    <aside class="visitcard" aria-label="Visiting the studio">
+      <h2>Open by appointment</h2>
+      <p>Please call first, but we're open most days from 11 a.m. to 5 p.m. Brown County, Indiana.</p>
+      <a class="btn" href="tel:+18129888622">Call (812) 988-8622</a><br />
+      <a class="more" href="#visit">Directions and visiting</a>
+    </aside>
+  </div>
+  <div class="wrap">
+    <figure class="loom">
+      <img src="assets/homestead-weaving-columbus-in/rag-rug-on-loom.webp" width="1400" height="1113" alt="A coral and turquoise rag rug in progress on a Union Loom No. 36, with balls of fabric strips and a wooden shuttle" fetchpriority="high" />
+      <figcaption>A rag rug in progress on the Union loom.</figcaption>
+    </figure>
+  </div>
 
-  <div class="band" aria-hidden="true"></div>
-
-  <section class="rugs" id="rugs">
-    <div class="wrap">
-      <div class="top">
-        <div>
-          <p class="tag">Recycled rag rugs</p>
-          <h2>Industry excess, turned into fiber art for the home</h2>
+  <section id="rugs">
+    <div class="wrap rugs">
+      <div>
+        <h2>Recycled rag rugs</h2>
+        <p>Chris Gustin is a fiber artist who takes recycling seriously. Most of the material in our rugs is reclaimed: new fabric that is the byproduct of another industry, from hosiery mills, bedding factories, curtain manufacturers, and clothing and upholstery mills.</p>
+        <p>To those industries, the material is waste. To us, it is the heart of a recycled rug. We turn over a ton of it into art every year.</p>
+        <p class="soft">Our handwoven rugs are certified as Indiana Artisan quality work. Every rug is one of a kind, and the selection changes often.</p>
+        <div class="links">
+          <a class="btn" href="https://www.homesteadweaver.com/rugsforsale.htm">See the rugs for sale</a>
+          <a href="https://www.homesteadweaver.com/CloseoutRugs.htm">Closeout rugs, up to 50% off</a>
         </div>
-        <p>Chris Gustin takes recycling seriously. The material in our rugs is a byproduct of other industries, where it is considered scrap. Her unique recycled rugs turn it into contemporary fiber art: Shaggy Chic rugs, colorful cotton rugs made from SolMate Socks, and custom pieces woven with clients and interior designers.</p>
+        <div class="detail">
+          <img src="assets/homestead-weaving-columbus-in/rug-detail.webp" width="333" height="380" loading="lazy" alt="Close-up of a twill rag rug in rust, green, gray and cream strips" />
+          <p class="cap">Detail of a rag rug.</p>
+        </div>
       </div>
-      <div class="rug-grid">
-        <figure>
-          <img src="assets/homestead-weaving-columbus-in/rug-blue.webp" alt="Rag rug in navy, denim blue and white stripes with fringed ends" width="1000" height="625" loading="lazy" />
-          <figcaption>Navy and denim stripes, fringed ends.</figcaption>
+      <div class="rugstack">
+        <figure class="a">
+          <img src="assets/homestead-weaving-columbus-in/rug-blue.webp" width="1000" height="625" loading="lazy" alt="Shaggy rag rug in vertical stripes of denim blue, black, gray and pale green" />
+          <figcaption class="cap">“Tangled Up in Blue,” a Shaggy Chic selvedge rug. Sold.</figcaption>
         </figure>
-        <figure>
-          <img src="assets/homestead-weaving-columbus-in/rug-warm.webp" alt="Rag rug in warm browns, olive and cream stripes" width="1200" height="636" loading="lazy" />
-          <figcaption>Warm browns, olive and cream.</figcaption>
+        <figure class="b">
+          <img src="assets/homestead-weaving-columbus-in/rug-warm.webp" width="1200" height="636" loading="lazy" alt="Shaggy rag rug in stripes of olive, gray, rust, brown and pink" />
+          <figcaption class="cap">“Stratification.” Sold, but ask us: we might be able to weave something in the same colorway.</figcaption>
         </figure>
-        <figure>
-          <img src="assets/homestead-weaving-columbus-in/rug-detail.webp" alt="Close-up of a rag rug woven in diagonal twill, rust, green and grey" width="333" height="380" loading="lazy" />
-          <figcaption>Twill, up close.</figcaption>
-        </figure>
-      </div>
-      <div class="rug-links">
-        <a class="btn" href="https://www.homesteadweaver.com/rugsforsale.htm">Rugs for sale</a>
-        <a class="btn line" href="https://www.homesteadweaver.com/CloseoutRugs.htm">Closeout rugs</a>
-        <a class="btn line" href="https://www.homesteadweaver.com/mugrugs.htm">Mug Rugs, easy to mail</a>
-      </div>
-      <div class="mission">
-        <blockquote>Our mission is to keep this usable material from the waste stream and turn it into functional fiber art.</blockquote>
-        <p>Most of our products ship through the shopping carts on the website. If something you love doesn’t have a PayPal button, just email us. We are a proud member of the Green Business Network, honored for our recycling efforts by the Brown County Solid Waste Management District.</p>
       </div>
     </div>
   </section>
 
-  <section class="shawls" id="shawls">
+  <section class="wear" id="wearables">
     <div class="wrap grid">
       <figure>
-        <img src="assets/homestead-weaving-columbus-in/mobius-bamboo.webp" alt="A woman wearing a pale Möbius shawl in bamboo ribbon, outdoors among stone cairns" width="492" height="700" loading="lazy" />
-        <figcaption>Möbius Shawl in Bamboo ribbon</figcaption>
+        <img src="assets/homestead-weaving-columbus-in/mobius-bamboo.webp" width="492" height="700" loading="lazy" alt="A woman in the woods wearing a pale gray Möbius shawl in bamboo ribbon" />
+        <figcaption class="cap">Möbius Shawl in Bamboo ribbon.</figcaption>
       </figure>
-      <figure>
-        <img src="assets/homestead-weaving-columbus-in/mobius-rainbow.webp" alt="A Möbius shawl woven in rainbow stripes, laid flat" width="644" height="900" loading="lazy" />
-        <figcaption>Möbius Shawl in rainbow colors</figcaption>
-      </figure>
-      <div class="txt">
-        <p class="tag">Wearables</p>
-        <h2>Shawls, wraps and scarves off the loom</h2>
-        <p>A rainbow of new Möbius shawls and scarves, traditional rayon chenille scarves, ruanas and other clothing, all hand-woven in the studio. Homestead Weaving Studio produces high-quality hand-woven rugs, clothes, throws and scarves.</p>
-        <a class="btn line" href="https://www.homesteadweaver.com/clothing.htm">See the clothing</a>
+      <div>
+        <h2>Shawls, wraps, ruanas and scarves</h2>
+        <p class="name">Möbius Shawl in Bamboo ribbon</p>
+        <p>There is a rainbow of new Möbius shawls and scarves, traditional rayon chenille scarves, and other clothing, all woven by hand in our studio. One-size garments fit almost everyone thanks to their loose fit.</p>
+        <p><a href="https://www.homesteadweaver.com/clothing.htm">See the wearables</a></p>
       </div>
+      <figure class="r">
+        <img src="assets/homestead-weaving-columbus-in/mobius-rainbow.webp" width="644" height="900" loading="lazy" alt="Möbius shawl woven in rainbow colors, laid flat" />
+        <figcaption class="cap">Möbius shawl in rainbow colors.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="classes" id="classes">
     <div class="wrap grid">
-      <div class="photo">
-        <img src="assets/homestead-weaving-columbus-in/students.webp" alt="Two smiling weavers holding up their finished rugs under the Rug Weaver sign at the studio" width="808" height="954" loading="lazy" />
-        <p>Day-weaving students with the rugs they made.</p>
-      </div>
+      <figure>
+        <img src="assets/homestead-weaving-columbus-in/students.webp" width="808" height="954" loading="lazy" alt="Two smiling day-weaving students holding up their finished rugs beside a loom and a Rug Weaver sign" />
+        <figcaption class="cap">Day-weaving students and their finished rugs.</figcaption>
+      </figure>
       <div>
-        <p class="tag">Come weave with us</p>
-        <h2>Make a rug and take it home</h2>
-        <p class="intro">Classes and day weaving on the rug looms run throughout the year, as weather permits. The studio’s “loom room” has six looms set up for towels, rugs and fabric, and several stay warped for make-and-take visits. It is made for visitors who want a taste of the artisan life of Brown County, and something they made themselves to take home.</p>
+        <h2>Come weave with us</h2>
+        <p>Classes and day instruction are given on the rug looms. They run throughout the year as weather permits, so ask if you're interested. We keep several looms warped for make-and-take: you leave with something you made.</p>
+        <h3>A day-weaving rug class</h3>
         <ol class="steps">
-          <li><span>We pick the colors of fabric for the rug you want to make.</span></li>
-          <li><span>I show you how to plan a rug; we pull the pieces and lay out the design.</span></li>
-          <li><span>The material goes on shuttles, with a short how-to on weaving with it.</span></li>
-          <li><span>You weave on your own; I check on you every ten minutes or so and advance the warp.</span></li>
-          <li><span>I add the header thread, cut the rug off the loom and tie the knots for you.</span></li>
+          <li>We pick the colors of fabric for the rug you want to make.</li>
+          <li>I show you how to plan a rug, and we pull the pieces and lay out the design.</li>
+          <li>We put the material on shuttles, with a short how-to on weaving it.</li>
+          <li>Once you get the hang of it, you weave. I check on you every 10 minutes or so and advance the warp when you need it.</li>
+          <li>I put in the header thread, cut the rug off the loom and tie the knots for you.</li>
         </ol>
-        <blockquote class="quote">
-          <p>“Chris met us with a warm welcome and friendly smile, and immediately put us at ease with her looms. She was a very patient and encouraging teacher, and even patched up my goofs so they don’t show.”</p>
-          <cite>Sharon P., Ohio</cite>
-        </blockquote>
-        <div class="cta">
-          <a class="btn" href="mailto:chris@homesteadweaver.com?subject=Day%20weaving%20class%20at%20the%20studio">Reserve a weaving day</a>
-          <a class="btn line" href="https://www.homesteadweaver.com/onthelooms.htm">What’s on the looms</a>
-        </div>
+        <a class="btn" href="mailto:chris@homesteadweaver.com?subject=Day%20weaving%20at%20the%20studio">Ask Chris about a day of weaving</a>
+        <p style="margin-top:16px"><a href="https://www.homesteadweaver.com/onthelooms.htm">What's on the looms this month, and day-weaving fees</a></p>
+        <blockquote>“She was a very patient and encouraging teacher, and even patched up my goofs so they don't show. I absolutely enjoyed my half day under her guidance.”<cite>Sharon P., Ohio</cite></blockquote>
       </div>
     </div>
   </section>
 
-  <div class="band" aria-hidden="true"></div>
-
-  <section class="kits" id="kits">
-    <div class="wrap grid">
-      <div class="txt">
-        <p class="tag">Kits for beginners</p>
-        <h2>Looper loom kits, handmade in Indiana</h2>
-        <p>A fun and easy way to make coasters, potholders, purses or rugs. No experience necessary, for kids and adults alike. Each kit has everything for at least 8 colorful weavings: a handcrafted solid wood loom with smooth metal pins, an aluminum crochet hook, a generous supply of cotton blend sock loopers, and detailed instructions.</p>
-        <ul class="kit-list">
-          <li><b>Baby Loom Kit</b><span>6.5" x 6.5" loom · $56</span></li>
-          <li><b>Traditional Loom Kit</b><span>8" x 8" loom · $57</span></li>
-          <li><b>Hybrid Loom Kit</b><span>10" x 8" loom · $58</span></li>
-          <li><b>Jumbo Loom Kit</b><span>10" x 10" loom · $59</span></li>
-          <li><b>Potholder, Sunshine and Sock rug kits</b><span>for rugs of any size · from $50</span></li>
-        </ul>
-        <a class="btn rust" href="https://www.homesteadweaver.com/potholders.htm">See all kits and color blends</a>
-        <p class="note">Kits currently ship to U.S. addresses only, because of their weight.</p>
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <div class="head">
+        <h2>Shop the studio</h2>
+        <p>We can ship most of our products with the shopping carts on our pages. If something you want doesn't have a PayPal button, email us.</p>
       </div>
-      <div>
-        <img src="assets/homestead-weaving-columbus-in/loom-kits.webp" alt="Four wooden looper looms labeled Jumbo, Traditional, Baby and Hybrid, each with a colorful woven square" width="900" height="840" loading="lazy" />
-        <div class="other-kits">
-          <p>Looking for a beginner kit for weaving, spinning, tatting or knitting? Ask Chris what is in the studio right now.</p>
-          <a class="btn" href="mailto:chris@homesteadweaver.com?subject=Beginner%20kit%20question">Ask Chris</a>
+      <div class="dir">
+        <div>
+          <h3>Weavings</h3>
+          <ul>
+            <li><a href="https://www.homesteadweaver.com/rugsforsale.htm"><strong>Rugs for sale</strong><span>New handwoven rugs, one of a kind</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/CloseoutRugs.htm"><strong>Closeout rugs</strong><span>Rugs and scarves, up to 50 percent off</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/mugrugs.htm"><strong>Mug rugs</strong><span>A quick, thoughtful gift, easy to mail</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/clothing.htm"><strong>Wearables</strong><span>Shawls, wraps, ruanas, scarves</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/onthelooms.htm"><strong>On the looms</strong><span>Current projects and day weaving</span></a></li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="supplies" id="supplies">
-    <div class="wrap box">
-      <div>
-        <p class="tag">For weavers and spinners</p>
-        <h2>Looms and supplies</h2>
-        <p style="color:var(--ink-2);margin-top:16px;max-width:46ch">Good, affordable weaving and spinning supplies, shipped internationally, plus small dye runs of hand-painted yarns and rovings.</p>
-      </div>
-      <div>
-        <ul>
-          <li>Floor looms and Schacht looms</li>
-          <li>Potholder, Cricket and Flip looms</li>
-          <li>Spinning wheels</li>
-          <li>Wool, mohair and silk for spinning</li>
-          <li>Cone yarn and knitting yarn</li>
-          <li>Rayon chenille and rug warp</li>
-        </ul>
-        <div class="links">
-          <a href="https://www.homesteadweaver.com/supplies.htm">Looms &amp; supplies</a>
-          <a href="https://www.homesteadweaver.com/usedequipment.htm">Used equipment</a>
-          <a href="https://www.homesteadweaver.com/SectionalWarpingSystem.htm">Our sectional warping system</a>
+        <div>
+          <h3>For weavers and spinners</h3>
+          <ul>
+            <li><a href="https://www.homesteadweaver.com/potholders.htm"><strong>Potholder loom kits</strong><span>Great fun for all ages</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/supplies.htm"><strong>Looms and supplies</strong><span>Yarns, spinning fibers, rayon chenille, looms and spinning wheels</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/SectionalWarpingSystem.htm"><strong>Sectional warping system</strong><span>Works on almost every loom, without a tension box</span></a></li>
+            <li><a href="https://www.homesteadweaver.com/usedequipment.htm"><strong>Used equipment</strong><span>Looms and equipment for sale or wanted</span></a></li>
+          </ul>
         </div>
+        <figure>
+          <img src="assets/homestead-weaving-columbus-in/loom-kits.webp" width="900" height="840" loading="lazy" alt="Four wooden potholder looms in jumbo, traditional, baby and hybrid sizes, each holding a woven potholder" />
+          <figcaption class="cap">Potholder looms: jumbo, traditional, baby and hybrid.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -375,33 +315,34 @@ footer a{color:#fff;text-underline-offset:3px}
   <section class="visit" id="visit">
     <div class="wrap grid">
       <div>
-        <p class="tag" style="color:#e7a37f">Visiting the studio</p>
-        <h2>Open by appointment, most days 11 to 5</h2>
-        <p>We are in the middle of “Nowhere,” so please call or email to confirm we will be here before you make the trip. All times of year are by appointment and at the mercy of the weather. Thank you!</p>
-        <div class="cta" style="margin-top:28px">
-          <a class="btn rust" href="tel:+18129888622">Call (812) 988-8622</a>
-          <a class="btn line" href="mailto:chris@homesteadweaver.com?subject=Visiting%20the%20weaving%20studio">Email Chris</a>
-        </div>
+        <h2>Visiting the studio</h2>
+        <p>The studio includes a loom room, with six looms set up for towels, rugs, and fabric. We are open 11 to 5 most days, by appointment.</p>
+        <p class="addr">Homestead Weaving Studio LLC<br />6285 S Hamilton Creek Road<br />Columbus, IN 47201</p>
+        <p>We are in the middle of “Nowhere,” so please call to confirm that we will be here before you make the trip. All times of year are by appointment and at the mercy of the weather.</p>
+        <a class="btn" href="tel:+18129888622">Call (812) 988-8622</a>
+        <p style="margin-top:18px">Or email <a href="mailto:chris@homesteadweaver.com?subject=Visiting%20the%20studio">chris@homesteadweaver.com</a>. Studio news is on <a href="https://www.facebook.com/homesteadweaver">our Facebook page</a>.</p>
       </div>
-      <div class="card">
-        <dl>
-          <div><dt>Studio</dt><dd>6285 S Hamilton Creek Road<br />Columbus, IN 47201</dd></div>
-          <div><dt>Phone</dt><dd><a href="tel:+18129888622">(812) 988-8622</a></dd></div>
-          <div><dt>Email</dt><dd><a href="mailto:chris@homesteadweaver.com">chris@homesteadweaver.com</a></dd></div>
-          <div><dt>News</dt><dd><a href="https://www.facebook.com/homesteadweaver">Homestead Weaving Studio on Facebook</a></dd></div>
-        </dl>
-        <p class="people">Chris Gustin and Bob Gustin.</p>
-      </div>
+      <figure>
+        <img src="assets/homestead-weaving-columbus-in/buffy.webp" width="800" height="539" loading="lazy" alt="Buffy, an orange and white cat, lying on a woven rug next to a receipt book and pen" />
+        <figcaption class="cap">Buffy, official greeter and great studio cat. Yes, we're cat lovers.</figcaption>
+      </figure>
     </div>
   </section>
 </main>
 
+<div class="warp" aria-hidden="true"></div>
 <footer>
-  <div class="wrap">
-    <div><strong>Homestead Weaving Studio LLC</strong> · Recycled rag rugs and weaving, Brown County, Indiana</div>
-    <div><a href="tel:+18129888622">(812) 988-8622</a> · <a href="mailto:chris@homesteadweaver.com">chris@homesteadweaver.com</a></div>
-  </div>
+  <p><b>Homestead Weaving Studio LLC</b><br />Chris Gustin and Bob Gustin, Brown County, Indiana<br />
+  <a href="tel:+18129888622">(812) 988-8622</a> &nbsp; <a href="mailto:chris@homesteadweaver.com?subject=Homestead%20Weaving%20Studio">chris@homesteadweaver.com</a></p>
 </footer>
-<p class="proposal">Proposal by Nicolas Masset for Homestead Weaving Studio LLC · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></p>
+<div class="proposal">Proposal by Nicolas Masset for Homestead Weaving Studio · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function f(){top.classList.toggle('scrolled',window.scrollY>8)}
+  f();window.addEventListener('scroll',f,{passive:true});
+})();
+</script>
 </body>
 </html>

@@ -1,331 +1,320 @@
 <!DOCTYPE html>
-<!-- v1 (2026-10-26) : homepage rebuilt for Poetically Illustrated Studios (Murfreesboro, TN), content from https://poeticallyillustrated.net/; direction : « la galerie » (light, elegant gallery: warm white walls, one deep lapis blue taken from her Aquarius and Two Queens paintings, Playfair Display + Lato, a large painting as hero, works hung with air around them).
-     Fixed: the footer "Shop" link (/shop-west, 404) and "Home" link (/bodylovecollection, 404) are replaced by shop links checked at 200 on 2026-10-26 (/new-products, /shopallprints, /shoporiginalpaintings, /shop-love, /growth-edition-body-collection, product pages, iCanvas).
-     Texts and facts come from her homepage, About page and shop listings. Photos are her own artwork images, recompressed in assets/poetically-illustrated-murfreesboro/. -->
+<!-- v1 (2026-10-26) : homepage rebuilt for Poetically Illustrated Studios, Destiney Powell (Murfreesboro, TN), content from https://poeticallyillustrated.net/ (home, About, Contact, product pages);
+     direction : « La couverture de magazine » : white page, ink type and Destiney's own pink as the only accent; the Among The Queens 2026 Calendar as the cover story.
+     Footer and shop links point only to pages checked live (no /shop-west, no /bodylovecollection). -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="color-scheme" content="light only" />
-<meta name="theme-color" content="#faf6ef" />
-<title>Poetically Illustrated | Art prints and paintings by Destiney Powell, Murfreesboro, TN</title>
-<meta name="description" content="Figurative and portrait-style narrative paintings by Destiney Powell, sharing the stories of African and African American people. Art prints, original paintings, the 2026 Among The Queens calendar and journals." />
+<meta name="theme-color" content="#FFFFFF" />
+<title>Poetically Illustrated: art prints, original paintings and the Among The Queens 2026 Calendar by Destiney Powell</title>
+<meta name="description" content="Figurative and portrait paintings by Destiney Powell sharing the stories of African and African American people. Shop the Among The Queens 2026 Calendar, Signs of the Sun prints, canvas prints and original paintings." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Figtree:wght@400..700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --wall:#faf6ef; --wall-2:#f2ece1; --ink:#1f1c22; --soft:#5b5560; --line:rgba(31,28,34,.14);
-  --lapis:#253378; --lapis-2:#1a2560;
-  --fd:"Playfair Display",Georgia,serif; --ft:"Lato",system-ui,sans-serif;
-  --wrap:1200px; --pad:22px;
+  --paper:#FFFFFF; --ink:#17131C; --rose:#D6186F; --gold:#C8952E; --pearl:#F2F0F3;
+  --soft:#5b5462; --rule:rgba(23,19,28,.14);
+  --fd:"Bodoni Moda",Didot,serif; --ft:"Figtree",system-ui,sans-serif;
+  --wrap:1240px; --pad:28px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--wall);color:var(--ink);font-family:var(--ft);font-size:17px;line-height:1.65}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ft);font-size:18px;line-height:1.6}
 img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--fd);font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em;text-wrap:balance}
-h1{font-size:clamp(2.3rem,3.9vw,3.6rem)}
-h2{font-size:clamp(2rem,3.7vw,3.1rem)}
-h3{font-size:1.45rem}
-h1 em,h2 em{font-style:italic;color:var(--lapis)}
-p{margin:0 0 1em;max-width:60ch}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+p{margin:0 0 1em}
+h1,h2,h3{font-family:var(--fd);font-weight:500;margin:0;line-height:1.02;font-variation-settings:"opsz" 96;text-wrap:balance}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font:700 .98rem/1 var(--ft);letter-spacing:.02em;text-decoration:none;border:1.5px solid var(--lapis);transition:background .2s,color .2s}
-.btn-solid{background:var(--lapis);color:#fff}
-.btn-solid:hover{background:var(--lapis-2)}
-.btn-line{color:var(--lapis)}
-.btn-line:hover{background:var(--lapis);color:#fff}
-.link{color:var(--lapis);font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
-.link:hover{color:var(--ink)}
-:focus-visible{outline:3px solid var(--lapis);outline-offset:3px}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.btn{display:inline-block;background:var(--rose);color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem;padding:16px 28px;transition:background .2s}
+.btn:hover{background:#b3125b}
 
-header.top{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
-.brand{font-family:var(--fd);font-size:1.35rem;text-decoration:none;line-height:1}
-.brand i{color:var(--lapis)}
-nav.main{display:flex;align-items:center;gap:28px}
-nav.main a{text-decoration:none;font-weight:700;font-size:.98rem}
-nav.main a:hover{color:var(--lapis)}
-nav.main .btn{min-height:44px;padding:0 18px}
-@media (max-width:900px){nav.main a:not(.btn){display:none}}
-
-/* hero */
-.hero{padding:40px 0 80px}
-.hero .grid{display:grid;gap:34px}
-.canvas{margin:0;position:relative}
-.canvas img{width:100%;box-shadow:0 30px 60px -30px rgba(31,28,34,.45)}
-.canvas figcaption{margin-top:14px;font-size:1rem;color:var(--soft);font-style:italic;font-family:var(--fd)}
-.kicker{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--lapis);margin-bottom:14px}
-.hero .lede{font-size:1.15rem;color:var(--soft);margin:22px 0 30px;max-width:44ch}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.cta .btn{flex:1 1 200px}
-@media (min-width:900px){
-  .hero{padding:56px 0 110px}
-  .hero .grid{grid-template-columns:1.6fr 1fr;gap:56px;align-items:center}
-  .hero .copy{order:2}
-  .cta .btn{flex:0 0 auto}
-}
-
-/* calendar feature */
-.calendar{background:var(--lapis);color:#eef0fa;padding:90px 0}
-.calendar .grid{display:grid;gap:40px}
-.calendar h2{color:#fff}
-.calendar h2 em{color:#c9d2ff}
-.calendar p{color:#d5daf2}
-.cal-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.cal-imgs img{width:100%}
-.cal-imgs img:last-child{margin-top:48px}
-@media (min-width:900px){.calendar .grid{grid-template-columns:.9fr 1.2fr !important}}
-.btn-white{background:#fff;border-color:#fff;color:var(--lapis)}
-.btn-white:hover{background:transparent;color:#fff}
-.btn-ghost-w{border-color:rgba(255,255,255,.6);color:#fff}
-.btn-ghost-w:hover{background:#fff;color:var(--lapis)}
-@media (min-width:900px){.calendar .grid{grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}}
+/* cover */
+.cover{padding:26px 0 90px}
+.topline{display:flex;justify-content:space-between;gap:16px;font-size:.98rem;color:var(--soft);border-bottom:1px solid var(--ink);padding-bottom:12px}
+.topline nav{display:flex;gap:24px}
+.topline nav a{text-decoration:none}
+.topline nav a:hover{text-decoration:underline}
+.masthead{font-family:var(--fd);font-weight:600;font-size:clamp(3rem,8.5vw,7.7rem);letter-spacing:-.025em;line-height:1;margin:18px 0 0;text-align:center;font-variation-settings:"opsz" 96;white-space:nowrap}
+.byline{text-align:center;font-family:var(--fd);font-style:italic;font-size:1.15rem;margin:30px 0 34px;color:var(--soft)}
+.spread{display:grid;grid-template-columns:200px minmax(0,600px) 1fr;gap:44px;align-items:start}
+.lines{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.lines li{border-bottom:1px solid var(--rule);padding:16px 0}
+.lines a{text-decoration:none;display:block}
+.lines b{display:block;font-family:var(--fd);font-weight:500;font-size:1.45rem;line-height:1.1;font-variation-settings:"opsz" 48}
+.lines span{display:block;font-size:.95rem;color:var(--soft);margin-top:4px}
+.lines a:hover b{color:var(--rose)}
+.calendar img{width:100%}
+.calendar figcaption{font-size:.92rem;color:var(--soft);margin-top:10px}
+.story h1{font-size:clamp(2.6rem,4vw,3.6rem);font-style:italic;font-weight:500}
+.story .year{font-family:var(--fd);font-size:1.5rem;margin:10px 0 22px;color:var(--rose);font-variation-settings:"opsz" 30}
+.story p{font-size:1.06rem;max-width:36ch}
+.story .spec{font-size:.98rem;color:var(--soft);border-top:1px solid var(--rule);padding-top:14px;margin-top:20px}
+.story .btn{margin:6px 0 26px;white-space:nowrap}
+.story .after{font-size:1rem;color:var(--soft)}
 
 /* signs of the sun */
-.signs{padding:100px 0 90px}
-.signs-head{display:grid;gap:16px;margin-bottom:48px}
-.signs-head p{color:var(--soft);margin:0}
-@media (min-width:900px){.signs-head{grid-template-columns:1fr 1fr;gap:70px;align-items:end}}
-.hang{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.work{margin:0}
-.work a{display:block;text-decoration:none}
-.work img{width:100%;transition:transform .4s ease}
-.work a:hover img{transform:translateY(-4px)}
-.work figcaption{margin-top:12px;font-size:1rem}
-.work figcaption b{display:block;font-family:var(--fd);font-weight:500;font-size:1.2rem}
-.work figcaption span{color:var(--soft)}
-.hang .w1{grid-column:span 2}
-@media (min-width:900px){
-  .hang{grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
-  .hang .w1{grid-column:1 / span 5}
-  .hang .w2{grid-column:6 / span 4;margin-top:90px}
-  .hang .w3{grid-column:10 / span 3;margin-top:30px}
-}
+.signs{background:var(--pearl);padding:100px 0}
+.signs .head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:48px}
+.signs h2{font-size:clamp(2.8rem,6vw,5rem)}
+.signs .head p{max-width:46ch;margin:0}
+.trio{display:grid;grid-template-columns:1.35fr 1fr .8fr;gap:32px;align-items:end}
+.trio figure{margin:0}
+.trio figcaption{margin-top:12px;font-size:1rem}
+.trio figcaption a{font-family:var(--fd);font-size:1.35rem;text-decoration:none;font-variation-settings:"opsz" 30}
+.trio figcaption a:hover{color:var(--rose)}
+.trio figcaption span{display:block;color:var(--soft);font-size:.95rem}
+.signs .all{margin-top:40px}
 
-/* collections */
-.collections{background:var(--wall-2);padding:96px 0}
-.col-grid{display:grid;gap:44px}
-.col{display:grid;gap:22px;align-items:center}
-.col img{width:100%}
-.col h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:10px}
-.col p{color:var(--soft)}
-@media (min-width:900px){
-  .col{grid-template-columns:1fr 1fr;gap:64px}
-  .col.rev .pic{order:2}
-  .col .pic{max-width:420px}
-  .col.rev .pic{justify-self:end}
-}
+/* features */
+.features{padding:110px 0}
+.feat{display:grid;grid-template-columns:repeat(12,1fr);gap:32px;align-items:center}
+.feat + .feat{margin-top:100px}
+.feat h3{font-size:clamp(2.2rem,4vw,3.4rem);margin-bottom:18px}
+.feat p{font-size:1.06rem;max-width:44ch}
+.feat .q{font-family:var(--fd);font-style:italic;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.25;max-width:22ch;margin-bottom:22px;font-variation-settings:"opsz" 40}
+.f-rose .img{grid-column:1/7}.f-rose .txt{grid-column:8/13}
+.f-sea .txt{grid-column:1/6;grid-row:1}.f-sea .img{grid-column:7/11;grid-row:1}
+.f-love .img{grid-column:2/6}.f-love .txt{grid-column:7/12}
+.feat a.more{font-weight:600}
+
+/* queens band */
+.queens{position:relative;background:var(--ink);color:#fff}
+.queens img{width:100%;max-width:1500px;margin:0 auto;aspect-ratio:1500/760;object-fit:cover;object-position:50% 30%}
+.queens .cap{max-width:var(--wrap);margin:0 auto;padding:22px var(--pad) 26px;display:flex;justify-content:space-between;gap:24px;align-items:baseline;flex-wrap:wrap}
+.queens .cap b{font-family:var(--fd);font-weight:500;font-size:1.6rem;font-style:italic}
+.queens .cap a{color:#fff}
 
 /* about */
-.about{padding:100px 0}
-.about .grid{display:grid;gap:40px}
-.about figure{margin:0;max-width:440px}
-.about figure img{width:100%}
-.about blockquote{margin:0 0 26px;font-family:var(--fd);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.3;font-style:italic;color:var(--lapis);max-width:30ch}
-.about p{color:var(--soft)}
-@media (min-width:900px){.about .grid{grid-template-columns:420px 1fr;gap:90px;align-items:center}}
+.about{padding:110px 0}
+.about .grid{display:grid;grid-template-columns:minmax(0,520px) 1fr;gap:72px;align-items:center}
+.about h2{font-size:clamp(2.6rem,5vw,4.2rem);margin-bottom:26px}
+.about p{font-size:1.1rem;max-width:56ch}
+.about .mission{font-family:var(--fd);font-size:1.5rem;line-height:1.35;border-left:3px solid var(--rose);padding-left:22px;margin:28px 0;font-variation-settings:"opsz" 40}
 
-/* shop */
-.shop{border-top:1px solid var(--line);padding:90px 0}
-.shop .grid{display:grid;gap:40px}
-.shop-list{margin:0;padding:0;list-style:none;border-top:1.5px solid var(--ink)}
-.shop-list a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--fd);font-size:1.3rem}
-.shop-list a span{font-family:var(--ft);font-size:1rem;color:var(--soft)}
-.shop-list a::after{content:"→";color:var(--lapis);font-family:var(--ft);font-size:1.2rem}
-.shop-list a:hover{color:var(--lapis)}
-.shop-list a > div{display:flex;flex-direction:column}
-@media (min-width:900px){.shop .grid{grid-template-columns:1fr 1.2fr;gap:90px}}
+/* shop index */
+.shop{border-top:1px solid var(--ink);padding:90px 0 100px}
+.shop .grid{display:grid;grid-template-columns:4fr 7fr;gap:72px}
+.shop h2{font-size:clamp(2.6rem,5vw,4.2rem);margin-bottom:20px}
+.shop .lead{max-width:34ch}
+.index{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.index li{border-bottom:1px solid var(--rule)}
+.index a{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:20px 0;text-decoration:none}
+.index b{font-family:var(--fd);font-weight:500;font-size:1.7rem;font-variation-settings:"opsz" 40}
+.index span{color:var(--soft);font-size:.98rem;text-align:right}
+.index a:hover b{color:var(--rose)}
+.ask{margin-top:34px;font-size:1.06rem;max-width:56ch}
+.ask a{color:var(--rose);font-weight:600}
 
-/* contact */
-.contact{background:var(--ink);color:#e9e5ee;padding:90px 0}
-.contact .grid{display:grid;gap:36px}
-.contact h2{color:#fff}
-.contact h2 em{color:#b9c3ff}
-.contact p{color:#c4bfcc}
-.contact .btn-solid{background:#fff;border-color:#fff;color:var(--lapis)}
-.contact .btn-solid:hover{background:#c9d2ff}
-.info{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.25)}
-.info a,.info div{display:block;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14);text-decoration:none}
-.info .k{display:block;font-size:.95rem;color:#a7a1b0}
-.info .v{display:block;font-size:1.2rem;font-weight:700;color:#fff;overflow-wrap:anywhere}
-.info a:hover .v{color:#c9d2ff}
-@media (min-width:900px){.contact .grid{grid-template-columns:1fr 1fr;gap:90px;align-items:center}}
+footer{background:var(--ink);color:#fff;padding:44px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;align-items:baseline}
+footer .name{font-family:var(--fd);font-size:1.6rem;font-variation-settings:"opsz" 40}
+footer nav{display:flex;gap:26px;flex-wrap:wrap}
+footer a{color:#fff}
+footer small{display:block;color:#b9b2c0;font-size:.95rem;margin-top:4px}
+.proposal{padding:12px var(--pad) 16px;text-align:center;font-size:12px;color:#8b8592;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.proposal a{color:inherit}
 
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.12);padding:28px 0;color:#a7a1b0}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
-footer a{text-decoration:none;color:#e9e5ee}
-footer a:hover{color:#c9d2ff}
-.proposal{margin:0;padding:12px var(--pad) 16px;text-align:center;font-size:.8rem;color:#7d7785;background:var(--ink)}
-.proposal a{color:#a7a1b0}
-
-@media (prefers-reduced-motion:no-preference){
-  .canvas{animation:hang .9s ease-out both}
-  @keyframes hang{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (max-width:1080px){
+  .spread{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .calendar{grid-column:1/3}
+  .lines{grid-row:3;grid-column:1/3}
+  .story{grid-column:1/3}
+  .story p{max-width:56ch}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work img{transition:none}.work a:hover img{transform:none}}
+@media (max-width:900px){
+  .signs .head,.about .grid,.shop .grid{grid-template-columns:1fr;gap:28px}
+  .f-rose .img,.f-rose .txt,.f-sea .txt,.f-sea .img,.f-love .img,.f-love .txt{grid-column:1/13;grid-row:auto}
+  .f-sea .img,.f-love .img{max-width:440px}
+}
+@media (max-width:640px){
+  :root{--pad:20px}
+  body{font-size:17px}
+  .topline nav{display:none}
+  .masthead{font-size:3.25rem;white-space:normal;line-height:.98}
+  .byline{font-size:1.05rem;margin:16px 0 26px}
+  .spread{grid-template-columns:minmax(0,1fr);gap:0}
+  .story{display:contents}
+  .spread > *,.story > *{grid-column:1/-1;grid-row:auto}
+  .story h1{order:1;font-size:2.7rem}
+  .story .year{order:2;margin:6px 0 18px}
+  .story .btn{order:3;justify-self:start;margin:0 0 26px}
+  .calendar{order:4;margin-bottom:26px!important}
+  .calendar figcaption{display:none}
+  .story > p:not(.year){order:5;max-width:none}
+  .lines{order:9;margin-top:30px}
+  .cover{padding-bottom:70px}
+  .signs,.features,.about{padding:76px 0}
+  .trio{grid-template-columns:1fr 1fr;gap:18px}
+  .trio .leo{grid-column:1/3}
+  .feat + .feat{margin-top:72px}
+  .queens .cap b{font-size:1.35rem}
+  .index b{font-size:1.4rem}
+  .index a{grid-template-columns:1fr}
+  .index span{text-align:left}
+  .proposal{white-space:normal}
+}
 </style>
 </head>
 <body>
 
-<header class="top" id="top">
+<header class="cover" id="top">
   <div class="wrap">
-    <a class="brand" href="#top">Poetically <i>Illustrated</i></a>
-    <nav class="main" aria-label="Main">
-      <a href="#calendar">2026 Calendar</a>
-      <a href="#collections">Collections</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-solid" href="https://poeticallyillustrated.net/new-products">Shop</a>
-    </nav>
+    <div class="topline">
+      <span>Murfreesboro, Tennessee</span>
+      <nav aria-label="Main">
+        <a href="#signs">Signs of the Sun</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+      </nav>
+    </div>
+    <p class="masthead">Poetically Illustrated</p>
+    <p class="byline">Paintings and prints by Destiney Powell</p>
+    <div class="spread">
+      <ul class="lines" aria-label="In this issue">
+        <li><a href="#signs"><b>Signs of the Sun</b><span>Aquarius, Leo, Scorpio</span></a></li>
+        <li><a href="#concrete-rose"><b>Concrete Rose</b><span>After a Tupac Shakur poem</span></a></li>
+        <li><a href="#emerald-sea"><b>Emerald Sea</b><span>An African mermaid, limited edition</span></a></li>
+        <li><a href="#romance"><b>Romance</b><span>From the Sunday Love Collection</span></a></li>
+        <li><a href="#about"><b>Meet Destiney</b><span>Artist, illustrator, CEO</span></a></li>
+      </ul>
+      <figure class="calendar" style="margin:0">
+        <img src="assets/poetically-illustrated-murfreesboro/among-the-queens-calendar.webp" width="1080" height="1080" alt="Among The Queens 2026 Calendar: a queen crowned with a golden sun between two leopards, above the January page" />
+        <figcaption>Among The Queens, the January page</figcaption>
+      </figure>
+      <div class="story">
+        <h1>Among The Queens</h1>
+        <p class="year">2026 Calendar</p>
+        <p>A collectible fine art calendar honoring the celestial wisdom, beauty and power of great queens and goddesses of the past, as guiding stars for our future.</p>
+        <a class="btn" href="https://poeticallyillustrated.net/new-products/among-the-queens-2026-calendar">Shop the 2026 calendar</a>
+        <p class="after">Each month features an original illustration inspired by mythology, history, astrology, Afrofuturism and glamour.</p>
+        <p class="spec">January 2026 through January 2027. Spiral-bound, portrait format, 11 × 17 in, printed on 300gsm fine white paper with archival-quality inks.</p>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
-<section class="hero" aria-labelledby="h1">
-  <div class="wrap grid">
-    <figure class="canvas">
-      <img src="assets/poetically-illustrated-murfreesboro/two-queens.webp" width="1500" height="1125" alt="Painting by Destiney Powell: two women in jeweled headdresses and shimmering blue garments, rising from the water" fetchpriority="high" />
-      <figcaption>Painting by Destiney Powell</figcaption>
-    </figure>
-    <div class="copy">
-      <p class="kicker">Destiney Powell · Murfreesboro, Tennessee</p>
-      <h1>Stories of African and African American people, <em>past, present and future.</em></h1>
-      <p class="lede">Figurative and portrait-style narrative paintings, as art prints, originals, canvas prints, calendars and journals.</p>
-      <div class="cta">
-        <a class="btn btn-solid" href="https://poeticallyillustrated.net/new-products">Shop the prints</a>
-        <a class="btn btn-line" href="#calendar">The 2026 calendar</a>
+  <section class="signs" id="signs" aria-labelledby="h-signs">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="h-signs">Signs of the Sun</h2>
+        <p>My interpretation of the zodiac, each sign as the essence of a star and an extension of the sun source, Sundai. Printed on heavyweight matte museum-quality art paper, as art prints and canvas pieces.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="calendar" id="calendar" aria-labelledby="cal">
-  <div class="wrap grid">
-    <div>
-      <h2 id="cal">2026 Calendar, <em>Among The Queens</em></h2>
-      <p style="margin-top:22px">The 2026 astrological wall calendar from the Queen Collection, also available as a poster, with a matching Among The Queens bookmark set.</p>
-      <div class="cta" style="margin-top:28px">
-        <a class="btn btn-white" href="https://poeticallyillustrated.net/new-products/among-the-queens-2026-calendar">Shop the 2026 calendar</a>
-        <a class="btn btn-ghost-w" href="https://poeticallyillustrated.net/new-products/among-the-queens-2026-calendar-poster">See the poster</a>
+      <div class="trio">
+        <figure class="leo">
+          <img src="assets/poetically-illustrated-murfreesboro/leo-signs-of-the-sun.webp" width="750" height="1000" loading="lazy" alt="Leo: a woman with long locs crowned by a golden zodiac wheel, wrapped in flames on orange" />
+          <figcaption><a href="https://poeticallyillustrated.net/new-products/leo-prints-signs-of-the-sun-collection">Leo</a></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/poetically-illustrated-murfreesboro/aquarius-signs-of-the-sun.webp" width="750" height="1000" loading="lazy" alt="Aquarius: a woman with royal blue hair under a golden zodiac wheel" />
+          <figcaption><a href="https://poeticallyillustrated.net/new-products/aquarius-signs-of-the-sun-collection">Aquarius</a><span>Royal blue and aquamarine, with copper and gold</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/poetically-illustrated-murfreesboro/scorpio-signs-of-the-sun.webp" width="750" height="1000" loading="lazy" alt="Scorpio: a woman in gold profile before a red and blue zodiac wheel" />
+          <figcaption><a href="https://poeticallyillustrated.net/new-products/scorpio-prints-signs-of-the-sun-collection">Scorpio</a></figcaption>
+        </figure>
       </div>
+      <p class="all"><a href="https://poeticallyillustrated.net/new-products?category=Signs%20of%20the%20Sun%20Collection">See every sign in the collection</a></p>
     </div>
-    <div class="cal-imgs">
-      <img src="assets/poetically-illustrated-murfreesboro/among-the-queens-calendar.webp" width="1080" height="1080" alt="The Among The Queens 2026 calendar open on January, framed by a gold sun and two lionesses" loading="lazy" />
-      <img src="assets/poetically-illustrated-murfreesboro/among-the-queens-collectors.webp" width="1080" height="1080" alt="Among The Queens calendar and prints laid out together" loading="lazy" />
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="signs" aria-labelledby="sun">
-  <div class="wrap">
-    <div class="signs-head">
-      <h2 id="sun">Signs Of <em>The Sun</em></h2>
-      <p>Twelve zodiac portraits, each sign painted as a woman crowned by the wheel of the stars. Pick yours.</p>
-    </div>
-    <div class="hang">
-      <figure class="work w1"><a href="https://poeticallyillustrated.net/new-products/leo-prints-signs-of-the-sun-collection"><img src="assets/poetically-illustrated-murfreesboro/leo-signs-of-the-sun.webp" width="750" height="1000" alt="Leo: a woman with long locs in a ring of fire before a zodiac wheel" loading="lazy" /><figcaption><b>“Leo”</b><span>Signs Of The Sun print</span></figcaption></a></figure>
-      <figure class="work w2"><a href="https://poeticallyillustrated.net/new-products/aquarius-signs-of-the-sun-collection"><img src="assets/poetically-illustrated-murfreesboro/aquarius-signs-of-the-sun.webp" width="750" height="1000" alt="Aquarius: a woman with blue hair under a gold zodiac wheel on deep blue" loading="lazy" /><figcaption><b>“Aquarius”</b><span>Signs Of The Sun print</span></figcaption></a></figure>
-      <figure class="work w3"><a href="https://poeticallyillustrated.net/new-products/scorpio-prints-signs-of-the-sun-collection"><img src="assets/poetically-illustrated-murfreesboro/scorpio-signs-of-the-sun.webp" width="750" height="1000" alt="Scorpio: a woman in profile with a scorpion headdress before a red and gold wheel" loading="lazy" /><figcaption><b>“Scorpio”</b><span>Signs Of The Sun print</span></figcaption></a></figure>
-    </div>
-    <p style="margin-top:44px"><a class="link" href="https://poeticallyillustrated.net/new-products?category=Signs%20of%20the%20Sun%20Collection">See all twelve signs</a></p>
-  </div>
-</section>
-
-<section class="collections" id="collections" aria-labelledby="colh">
-  <div class="wrap">
-    <h2 id="colh" style="margin-bottom:56px">More from <em>the studio</em></h2>
-    <div class="col-grid">
-      <div class="col">
-        <div class="pic"><img src="assets/poetically-illustrated-murfreesboro/concrete-rose.webp" width="1000" height="1000" alt="Concrete Rose: a woman with red roses woven through green locs, golden cracks on her skin" loading="lazy" /></div>
-        <div>
-          <h3>“Concrete Rose” Collection</h3>
-          <p>Gold veins and red roses: the Concrete Rose prints, with their companion pieces “Concrete Rose Connection” and “Concrete Rose (HIS)”.</p>
-          <a class="link" href="https://poeticallyillustrated.net/new-products/concrete-rose-prints">Shop “Concrete Rose”</a>
+  <section class="features" aria-label="Featured paintings">
+    <div class="wrap">
+      <article class="feat f-rose" id="concrete-rose">
+        <div class="img"><img src="assets/poetically-illustrated-murfreesboro/concrete-rose.webp" width="1000" height="1000" loading="lazy" alt="Concrete Rose: a dark-skinned woman with green locs and red roses, gold cracks on her skin" /></div>
+        <div class="txt">
+          <h3>Concrete Rose</h3>
+          <p class="q">The growth is beautiful!</p>
+          <p>A digital painting inspired by Tupac Shakur’s poem “The Rose That Grew From Concrete.” Olive green and red, it honors black women: the beauty of locs, dark skin, and getting through our everyday struggles.</p>
+          <a class="more" href="https://poeticallyillustrated.net/new-products/concrete-rose-prints">Prints and canvas prints</a>
         </div>
-      </div>
-      <div class="col rev">
-        <div class="pic"><img src="assets/poetically-illustrated-murfreesboro/romance-sunday-love.webp" width="750" height="1000" alt="Romance: two women embracing in a swirl of patterned gold, blue and orange" loading="lazy" /></div>
-        <div>
-          <h3>Sunday Love Series</h3>
-          <p>“Romance”, “The Kiss”, “In Love” and “Soul Mates”: love painted in pattern and color.</p>
-          <a class="link" href="https://poeticallyillustrated.net/new-products/romance-sunday-love-series">Shop “Romance”</a>
+      </article>
+      <article class="feat f-sea" id="emerald-sea">
+        <div class="txt">
+          <h3>Emerald Sea</h3>
+          <p class="q">She is a reminder that mindset is art.</p>
+          <p>Inspired by an African mermaid: a black mermaid with a glowing leopard-print tail, still and present in the moment. A limited edition: only 25 of each canvas print and poster print, signed and embossed with gold foil detailing.</p>
+          <a class="more" href="https://poeticallyillustrated.net/new-products/emerald-sea">Shop Emerald Sea</a>
         </div>
-      </div>
-      <div class="col">
-        <div class="pic"><img src="assets/poetically-illustrated-murfreesboro/emerald-sea.webp" width="684" height="1000" alt="Emerald Sea: a mermaid with a gold tail resting on green rocks under a crescent moon" loading="lazy" /></div>
-        <div>
-          <h3>“Emerald Sea”</h3>
-          <p>A mermaid at rest under a crescent moon, in greens and gold.</p>
-          <a class="link" href="https://poeticallyillustrated.net/new-products/emerald-sea">Shop “Emerald Sea”</a>
+        <div class="img"><img src="assets/poetically-illustrated-murfreesboro/emerald-sea.webp" width="684" height="1000" loading="lazy" alt="Emerald Sea: a black mermaid with a leopard-print tail resting on green rocks under a crescent moon" /></div>
+      </article>
+      <article class="feat f-love" id="romance">
+        <div class="img"><img src="assets/poetically-illustrated-murfreesboro/romance-sunday-love.webp" width="750" height="1000" loading="lazy" alt="Romance: two women embracing for a kiss in a golden swirl, after Klimt’s The Kiss" /></div>
+        <div class="txt">
+          <h3>Romance</h3>
+          <p class="q">Inspired by Gustav Klimt’s The Kiss.</p>
+          <p>From the Sunday Love Collection: the dating, getting-to-know-each-other, love-languages phase of love. Only 100 of each piece are made, each hand-embellished by me for the look and feel of the original.</p>
+          <a class="more" href="https://poeticallyillustrated.net/new-products/romance-sunday-love-series">Shop the Sunday Love series</a>
         </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="queens" aria-label="The 2026 Queen Collection">
+    <img src="assets/poetically-illustrated-murfreesboro/two-queens.webp" width="1500" height="1125" loading="lazy" alt="Two queens in jeweled headwraps rising from shimmering water" />
+    <div class="cap">
+      <b>The 2026 Queen Collection</b>
+      <a href="https://poeticallyillustrated.net/new-products/among-the-queens-2026-calendar-poster">The calendar is also a poster</a>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="h-about">
+    <div class="wrap grid">
+      <img src="assets/poetically-illustrated-murfreesboro/destiney-powell.webp" width="900" height="900" loading="lazy" alt="Destiney Powell in a bright pink suit in her studio, beside one of her paintings" />
+      <div>
+        <h2 id="h-about">Destiney Powell</h2>
+        <p>I am a best-selling published visual artist, an illustrator, and CEO of Poetically Illustrated Studios. My figurative and portrait-style narrative paintings share the stories of African and African American people from the past, present and future.</p>
+        <p class="mission">My mission is to share a vibrant, fun, dynamic narrative that lets African and African American people see a visual representation of the beauty I see in them.</p>
+        <p>I discovered my artistic ability at the age of two and earned my Bachelor of Fine Arts from Mississippi State University. I paint and draw people and stories that inspire me.</p>
+        <a href="https://poeticallyillustrated.net/about">Read my story</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about" aria-labelledby="ab">
-  <div class="wrap grid">
-    <figure><img src="assets/poetically-illustrated-murfreesboro/destiney-powell.webp" width="900" height="900" alt="Destiney Powell in a bright pink suit next to one of her paintings" loading="lazy" /></figure>
-    <div>
-      <h2 id="ab" style="margin-bottom:26px">Hi, I’m <em>Destiney</em></h2>
-      <blockquote>My mission is to share a vibrant, fun, dynamic narrative that lets African and African American people see the beauty I see in them.</blockquote>
-      <p>I’m a best-selling published visual artist, illustrator, and CEO of Poetically Illustrated Studios. I paint and draw people and stories that inspire me.</p>
-      <p>I discovered my artistic ability at the age of two and have called myself an artist ever since. I earned my Bachelor of Fine Arts from Mississippi State University in 2013, and with the support of my husband and my family I left my 9-to-5 to become a full-time artist and small business owner.</p>
-      <p>See a piece on my social media that isn’t in the shop? <a class="link" href="mailto:poeticallyillustrated@gmail.com?subject=A%20piece%20I%20saw%20on%20your%20social%20media">Send me an email.</a></p>
+  <section class="shop" id="shop" aria-labelledby="h-shop">
+    <div class="wrap grid">
+      <div>
+        <h2 id="h-shop">Shop</h2>
+        <p class="lead">Art prints, canvas prints, calendars and original paintings, from my studio to your home.</p>
+      </div>
+      <div>
+        <ul class="index">
+          <li><a href="https://poeticallyillustrated.net/new-products"><b>New arrivals</b><span>The calendar and the latest prints</span></a></li>
+          <li><a href="https://poeticallyillustrated.net/shopallprints"><b>All prints</b><span>Every art print in the shop</span></a></li>
+          <li><a href="https://poeticallyillustrated.net/shoporiginalpaintings"><b>Original paintings</b><span>One of a kind</span></a></li>
+          <li><a href="https://www.icanvas.com/canvas-art-prints/artist/poetically-illustrated?product=canvas&amp;sort=popular"><b>Canvas prints</b><span>Through iCanvas</span></a></li>
+          <li><a href="https://poeticallyillustrated.net/shop-love"><b>Love Body Collection</b><span>Prints</span></a></li>
+          <li><a href="https://poeticallyillustrated.net/growth-edition-body-collection"><b>Growth Body Collection</b><span>Prints</span></a></li>
+        </ul>
+        <p class="ask">Seen a piece on my social media that isn’t in the shop? Want to hire me for an event or a commission? <a href="mailto:poeticallyillustrated@gmail.com?subject=A%20question%20about%20your%20art">Send me an email</a>.</p>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="shop" id="shop" aria-labelledby="sh">
-  <div class="wrap grid">
-    <div>
-      <h2 id="sh">Visit <em>the shop</em></h2>
-      <p style="margin-top:22px;color:var(--soft)">Art prints, original paintings, the Body Collections, calendars, journals and canvas prints.</p>
-      <a class="btn btn-solid" href="https://poeticallyillustrated.net/new-products" style="margin-top:10px">Shop new arrivals</a>
-    </div>
-    <ul class="shop-list">
-      <li><a href="https://poeticallyillustrated.net/shopallprints"><div>All prints<span>Every print in the shop</span></div></a></li>
-      <li><a href="https://poeticallyillustrated.net/shoporiginalpaintings"><div>Original paintings<span>One of a kind</span></div></a></li>
-      <li><a href="https://poeticallyillustrated.net/shop-love"><div>Love Body Collection<span>Prints</span></div></a></li>
-      <li><a href="https://poeticallyillustrated.net/growth-edition-body-collection"><div>Growth Body Collection<span>Prints</span></div></a></li>
-      <li><a href="https://www.icanvas.com/canvas-art-prints/artist/poetically-illustrated?product=canvas&amp;sort=popular"><div>Canvas prints<span>On iCanvas</span></div></a></li>
-    </ul>
-  </div>
-</section>
-
-<section class="contact" id="contact" aria-labelledby="ct">
-  <div class="wrap grid">
-    <div>
-      <h2 id="ct">Let’s <em>talk</em></h2>
-      <p style="margin-top:22px">A question about a print, an original painting or a piece you’ve seen elsewhere? Write to me.</p>
-      <a class="btn btn-solid" href="mailto:poeticallyillustrated@gmail.com?subject=Hello%20from%20your%20website">Email Destiney</a>
-    </div>
-    <div class="info">
-      <a href="mailto:poeticallyillustrated@gmail.com"><span class="k">Email</span><span class="v">poeticallyillustrated@gmail.com</span></a>
-      <div><span class="k">Studio</span><span class="v">Murfreesboro, Tennessee</span></div>
-      <a href="http://instagram.com/poeticallyillustrated"><span class="k">Instagram</span><span class="v">@poeticallyillustrated</span></a>
-      <a href="https://www.youtube.com/channel/UCACQCux0pvdkxCGFhHbfCIA"><span class="k">YouTube</span><span class="v">Poetically Illustrated</span></a>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© Poetically Illustrated Studios · Murfreesboro, TN</span>
+    <div>
+      <span class="name">Poetically Illustrated</span>
+      <small>Destiney Powell, Murfreesboro, Tennessee</small>
+    </div>
     <nav aria-label="Footer">
-      <a href="#top">Home</a>
-      <a href="https://poeticallyillustrated.net/new-products">Shop</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="https://poeticallyillustrated.net/">Home</a>
+      <a href="https://poeticallyillustrated.net/shopallprints">Shop</a>
+      <a href="https://poeticallyillustrated.net/about">About</a>
+      <a href="https://poeticallyillustrated.net/contact">Contact</a>
+      <a href="http://instagram.com/poeticallyillustrated">Instagram</a>
+      <a href="https://www.youtube.com/channel/UCACQCux0pvdkxCGFhHbfCIA">YouTube</a>
+      <a href="mailto:poeticallyillustrated@gmail.com?subject=Hello%20Destiney">poeticallyillustrated@gmail.com</a>
     </nav>
   </div>
 </footer>
-<p class="proposal">Proposal by Nicolas Masset for Poetically Illustrated Studios · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></p>
+<div class="proposal">Proposal by Nicolas Masset for Poetically Illustrated Studios · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
 </body>
 </html>
