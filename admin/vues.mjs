@@ -64,7 +64,6 @@ button.danger{background:var(--rouge)}
 .reglages .sep{flex:none;width:1px;height:16px;background:var(--filet)}
 @media(min-width:720px){.compteurs{flex-wrap:wrap;overflow:visible}}
 .grille{display:grid;grid-template-columns:1fr;gap:12px}
-@media(max-width:719px){.carte{display:grid;grid-template-columns:104px 1fr}.carte>a.corps{display:contents}.carte .vignette{grid-row:1/3;aspect-ratio:auto;height:100%;min-height:150px}.carte .infos{padding:12px 14px 2px;gap:4px}.carte .nom{font-size:17px}.carte .lieu{font-size:14px}.carte .etat{font-size:13px;padding:4px 8px}.carte .pied{grid-column:2;padding:6px 14px 12px;font-size:13px}}
 @media(min-width:720px){.grille{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1100px){.grille{grid-template-columns:repeat(3,1fr);gap:24px}h1{font-size:35px}}
 .carte{background:var(--papier-clair);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
@@ -109,6 +108,7 @@ ul.histo time{font:500 13px "Familjen",system-ui,sans-serif;color:var(--encre-do
 .erreur{color:var(--rouge);font:500 15px "Familjen",system-ui,sans-serif}
 .image-grande{width:100%;border-radius:6px;display:block;background:var(--filet);aspect-ratio:390/600;object-fit:cover;object-position:top}
 .mails{font-family:"Familjen",system-ui,sans-serif;font-size:15px;word-break:break-all}
+@media(max-width:719px){.carte{display:grid;grid-template-columns:104px 1fr}.carte>a.corps{display:contents}.carte .vignette{grid-row:1/3;aspect-ratio:auto;height:100%;min-height:150px}.carte .infos{padding:12px 14px 2px;gap:4px}.carte .nom{font-size:17px}.carte .lieu{font-size:14px}.carte .etat{font-size:13px;padding:4px 8px}.carte .pied{grid-column:2;padding:6px 14px 12px;font-size:13px}}
 `;
 
 function gabarit(titre, corps) {
