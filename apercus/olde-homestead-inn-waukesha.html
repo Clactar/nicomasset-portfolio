@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Inn on the Olde Homestead · Historic Bed &amp; Breakfast in Waukesha, Wisconsin</title>
+<meta name="description" content="A historic stone farmhouse B&amp;B in Waukesha, Wisconsin: three bed chambers and a cottage furnished with 18th and 19th century New England antiques.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E3A32'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EEEBE4'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --chaux:#EEEBE4; --chaux-2:#E5E0D6; --paper:#F7F5F0;
+  --ink:#1D1B18; --ink-2:#4F4A42; --brick:#8E2F25; --brick-d:#74251D;
+  --green:#2E3A32; --green-2:#3A483F; --mat:#F3EFE6;
+  --shadow:0 30px 60px -34px rgba(29,27,24,.55);
+  --display:'IM Fell English', Georgia, serif;
+  --text:'Source Sans 3', 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{background:var(--chaux);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--brick);color:var(--paper)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--brick);outline-offset:3px}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.005em;text-wrap:balance}
+h2{font-size:clamp(36px,4.2vw,52px);line-height:1.05}
+h3{font-size:26px;line-height:1.15}
+p{text-wrap:pretty}
+.lead{font-size:20px;color:var(--ink-2);max-width:34em}
+
+/* header */
+.top{padding:22px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;line-height:1.1}
+.brand b{display:block;font-family:var(--display);font-weight:400;font-size:24px}
+.brand span{font-size:14px;color:var(--ink-2);letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--ink-2);transition:color .2s}
+.nav a:hover{color:var(--brick)}
+.nav .tel{background:var(--chaux-2);color:var(--ink);padding:10px 20px;border-radius:999px;font-weight:600;transition:background .25s}
+.nav .tel:hover{background:#DDD6C9;color:var(--ink)}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-fill{background:var(--brick);color:var(--paper);box-shadow:0 14px 28px -16px rgba(142,47,37,.8)}
+.btn-fill:hover{background:var(--brick-d);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.dark .btn-line{border-color:rgba(238,235,228,.6);color:var(--chaux)}
+.dark .btn-line:hover{background:var(--chaux);color:var(--green)}
+
+/* hero */
+.hero{padding:40px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;grid-template-areas:"top frame" "body frame";column-gap:72px;align-items:end}
+.h-top{grid-area:top;align-self:end}
+.h-body{grid-area:body;align-self:start}
+.h-frame{grid-area:frame}
+.kicker{font-size:16px;color:var(--brick);font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,5.6vw,76px);line-height:1;margin-bottom:28px}
+.hero h1 em{font-style:italic;color:var(--brick)}
+.h-body .lead{margin-bottom:34px}
+.h-body small{display:block;margin-top:22px;font-size:16px;color:var(--ink-2)}
+
+.frame{position:relative;padding:16px;background:linear-gradient(145deg,#3B342C,#211D19 60%,#2E2822);border-radius:6px;box-shadow:var(--shadow),inset 0 0 0 1px rgba(255,255,255,.08)}
+.frame .matte{background:var(--mat);padding:30px;box-shadow:inset 0 2px 6px rgba(29,27,24,.25)}
+.frame .fillet{border:1px solid rgba(142,47,37,.55);padding:6px}
+.frame img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 45%}
+.tavern{position:absolute;left:-56px;bottom:-48px;width:300px;background:var(--paper);border-radius:16px;padding:14px 16px 16px;box-shadow:0 26px 50px -28px rgba(29,27,24,.6);display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center}
+.tavern img{width:86px;height:98px;object-fit:cover;border-radius:10px}
+.tavern b{font-family:var(--display);font-weight:400;font-size:21px;display:block;line-height:1.1;margin-bottom:4px}
+.tavern p{font-size:15px;line-height:1.4;color:var(--ink-2)}
+
+/* facts */
+.facts{background:var(--chaux-2);border-block:1px solid rgba(29,27,24,.08)}
+.facts ul{list-style:none;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 0}
+.facts li{display:flex;align-items:center;gap:10px;font-size:16px;color:var(--ink-2)}
+.facts li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brick);flex:none}
+
+/* chambers */
+.chambers{padding:120px 0 110px}
+.chambers .wrap{display:grid;grid-template-columns:420px 1fr;gap:80px}
+.ch-side h2{margin-bottom:22px}
+.ch-side p{color:var(--ink-2);margin-bottom:40px}
+.stack{position:relative;height:420px}
+.stack img{position:absolute;object-fit:cover}
+.stack .s1{width:300px;height:300px;left:0;top:0;border-radius:18px;box-shadow:var(--shadow)}
+.stack .s2{width:200px;height:200px;right:0;bottom:0;border:8px solid var(--paper);border-radius:4px;transform:rotate(3deg);box-shadow:0 22px 40px -24px rgba(29,27,24,.6)}
+.rooms{list-style:none;border-top:1px solid rgba(29,27,24,.18)}
+.rooms li{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid rgba(29,27,24,.18)}
+.rooms h3{margin-bottom:6px}
+.rooms .bed{font-size:15px;color:var(--brick);font-weight:600}
+.rooms p{color:var(--ink-2);font-size:17px}
+.rooms .price{display:inline-block;margin-top:10px;font-family:var(--display);font-size:22px;color:var(--ink)}
+.rooms .cottage{grid-template-columns:200px 1fr 150px;align-items:start}
+.rooms .cottage img{width:150px;height:200px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+.ch-more{margin-top:34px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.ch-more p{font-size:16px;color:var(--ink-2)}
+
+/* common areas (dark) */
+.dark{background:var(--green);color:var(--chaux)}
+.common{padding:120px 0}
+.common .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.c-photo{position:relative}
+.c-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%;border-radius:22px;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.tag{position:absolute;left:18px;bottom:18px;background:rgba(247,245,240,.94);color:var(--ink);font-size:15px;font-weight:600;padding:8px 16px;border-radius:999px}
+.common h2{margin-bottom:26px}
+.quote{font-family:var(--display);font-style:italic;font-size:30px;line-height:1.25;color:#F1DCC8;margin:0 0 26px}
+.common p{color:rgba(238,235,228,.82)}
+.areas{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.area{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+.area img{width:96px;height:120px;object-fit:cover;border-radius:10px}
+.area b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--chaux);margin-bottom:4px}
+.area span{font-size:16px;line-height:1.45;color:rgba(238,235,228,.75)}
+
+/* house notes */
+.notes{padding:120px 0 110px}
+.notes .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:72px;align-items:center}
+.notes h2{margin-bottom:20px;max-width:12em}
+.notes .lead{margin-bottom:40px}
+.card{background:var(--paper);border-radius:20px;padding:40px 44px;box-shadow:0 30px 60px -44px rgba(29,27,24,.45)}
+.list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
+.list li b{display:block;font-weight:600;font-size:17px}
+.list li span{font-size:16px;color:var(--ink-2);line-height:1.45}
+.n-photo{position:relative;padding:0 0 40px 30px}
+.n-photo img{width:100%;max-width:420px;aspect-ratio:5/6;object-fit:cover;border-radius:14px;transform:rotate(-2deg);box-shadow:var(--shadow)}
+.n-photo .tag{left:0;bottom:12px}
+
+/* events */
+.events{padding:0 0 120px}
+.ev{background:var(--chaux-2);border-radius:28px;padding:72px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.ev h2{margin-bottom:18px}
+.ev .side p{color:var(--ink-2)}
+.ev-now{background:var(--paper);border-radius:18px;padding:32px 34px;box-shadow:0 24px 50px -36px rgba(29,27,24,.5);margin-bottom:22px}
+.ev-now h3{margin-bottom:10px}
+.ev-now p{color:var(--ink-2);margin-bottom:22px}
+.ev-alt{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ev-alt div{padding:6px 4px}
+.ev-alt b{font-family:var(--display);font-weight:400;font-size:22px;display:block;margin-bottom:6px}
+.ev-alt p{font-size:16px;color:var(--ink-2);margin-bottom:10px}
+.ev-alt a{font-weight:600;color:var(--brick);font-size:16px;text-underline-offset:4px}
+
+/* on the homestead */
+.grounds{padding:0 0 130px}
+.grounds .head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px}
+.grounds .head p{max-width:30em;color:var(--ink-2)}
+.g-grid{display:grid;grid-template-columns:330px 1fr 1fr;gap:48px;align-items:start}
+.g-sign{position:relative}
+.g-sign img{width:100%;max-width:330px;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+.g-item{padding-top:24px;border-top:2px solid var(--ink)}
+.g-item h3{margin-bottom:12px}
+.g-item p{color:var(--ink-2);margin-bottom:16px}
+.g-item .hours{font-size:16px;color:var(--ink);margin-bottom:18px}
+.g-item a.more{font-weight:600;color:var(--brick);text-underline-offset:4px}
+.g-item.second{margin-top:90px}
+
+/* footer */
+footer{background:#1F2621;color:rgba(238,235,228,.8);padding:96px 0 56px}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:48px}
+footer h2{color:var(--chaux);font-size:40px;margin-bottom:18px}
+footer h4{font-family:var(--display);font-weight:400;font-size:21px;color:var(--chaux);margin-bottom:14px}
+footer p,footer li{font-size:16px;line-height:1.7}
+footer ul{list-style:none}
+footer a{text-decoration:none;color:rgba(238,235,228,.85);transition:color .2s}
+footer a:hover{color:#F1DCC8}
+.f-facade{margin-top:28px;width:260px;height:196px;object-fit:cover;border-radius:14px;box-shadow:0 30px 60px -34px rgba(0,0,0,.9)}
+.f-base{margin-top:64px;padding-top:26px;border-top:1px solid rgba(238,235,228,.14);font-size:15px;color:rgba(238,235,228,.55)}
+.proposal{background:#161B17;color:rgba(238,235,228,.55);text-align:center;font-size:14px;padding:14px 20px}
+.proposal a{color:rgba(238,235,228,.8)}
+
+/* reveal (photos only) */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .rv.on{opacity:1;transform:none}
+.js .n-photo img.rv.on{transform:rotate(-2deg)}
+.js .stack .s2.rv.on{transform:rotate(3deg)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* tablet */
+@media (max-width:1100px){
+  .hero .wrap{column-gap:48px}
+  .tavern{left:-24px}
+  .chambers .wrap{grid-template-columns:1fr;gap:48px}
+  .stack{height:340px;max-width:520px}
+  .g-grid{grid-template-columns:1fr 1fr}
+  .g-sign{grid-column:1/-1}
+  .g-item.second{margin-top:0}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+/* phone */
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 40px)}
+  .top{padding:16px 0 8px}
+  .top .wrap{flex-wrap:wrap;gap:12px}
+  .nav{width:100%;gap:18px;font-size:16px;flex-wrap:wrap}
+  .nav .tel{position:absolute;right:20px;top:16px;padding:8px 14px;font-size:15px}
+  .top{position:relative}
+  .brand{max-width:calc(100% - 150px)}
+  .brand b{font-size:21px}
+  .brand span{font-size:13px}
+  .tag{font-size:14px;right:auto;max-width:calc(100% - 36px)}
+  .nav .hide-s{display:none}
+  .hero{padding:22px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"top" "frame" "body";row-gap:0}
+  .kicker{margin-bottom:14px;font-size:16px}
+  .hero h1{font-size:44px;margin-bottom:24px}
+  .frame{padding:10px;margin-bottom:84px}
+  .frame .matte{padding:14px}
+  .frame .fillet{padding:4px}
+  .tavern{left:12px;right:12px;width:auto;bottom:-70px;grid-template-columns:70px 1fr}
+  .tavern img{width:70px;height:84px}
+  .lead{font-size:18px}
+  .btns{flex-direction:column}
+  .btn{width:100%}
+  .facts ul{flex-direction:column;gap:10px;padding:22px 0}
+  .chambers,.common,.notes{padding:80px 0}
+  .stack{height:300px}
+  .stack .s1{width:230px;height:230px}
+  .stack .s2{width:160px;height:160px}
+  .rooms li,.rooms .cottage{grid-template-columns:1fr;gap:10px}
+  .rooms .cottage img{width:150px;height:190px}
+  .common .wrap,.notes .wrap{grid-template-columns:1fr;gap:48px}
+  .quote{font-size:25px}
+  .areas{grid-template-columns:1fr}
+  .card{padding:30px 24px}
+  .list{grid-template-columns:1fr}
+  .n-photo{padding:0 0 30px 10px}
+  .events{padding-bottom:80px}
+  .ev{padding:36px 22px;grid-template-columns:1fr;gap:32px;border-radius:22px}
+  .ev-now{padding:26px 22px}
+  .ev-alt{grid-template-columns:1fr}
+  .grounds{padding-bottom:90px}
+  .grounds .head{flex-direction:column;align-items:start;gap:16px;margin-bottom:36px}
+  .g-grid{grid-template-columns:1fr;gap:40px}
+  .g-sign img{max-width:300px}
+  footer{padding:72px 0 44px}
+  .f-grid{grid-template-columns:1fr;gap:36px}
+  .f-facade{width:100%;max-width:320px;height:auto;aspect-ratio:4/3}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Inn on the Olde Homestead, home">
+      <b>The Inn on the Olde Homestead</b>
+      <span>Historic B&amp;B · Waukesha, Wisconsin</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#chambers">Bed chambers</a>
+      <a href="#common">Common areas</a>
+      <a href="#events">Events</a>
+      <a href="#visit" class="hide-s">Visit</a>
+      <a class="tel" href="tel:4149157565">414-915-7565</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="h-top">
+        <p class="kicker">A 170-year-old stone farmhouse in Waukesha</p>
+        <h1>Stay with us in comfort at our <em>historic</em> B&amp;B</h1>
+      </div>
+      <div class="h-frame">
+        <div class="frame">
+          <div class="matte"><div class="fillet">
+            <img class="rv" src="assets/olde-homestead-inn-waukesha/chambre-poutres-lit-fenetre.webp" alt="Bed chamber with wood beams, a stone wall, a poster bed and a pewter pitcher" width="1200" height="1200">
+          </div></div>
+          <aside class="tavern">
+            <img src="assets/olde-homestead-inn-waukesha/salle-taverne-table-bois-chaises-windsor.webp" alt="Tavern room with a sawbuck table, pewter plate and Windsor chairs" width="567" height="640">
+            <div>
+              <b>Tavern room</b>
+              <p>The full kitchen hides behind the authentic cage bar. If you can find it, you can use it!</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="h-body">
+        <p class="lead">Enjoy the simplicity of the 1800s throughout “The Inn,” with the comfort of today. Three bed chambers and a cottage, all furnished with 18th and 19th century New England antiques.</p>
+        <div class="btns">
+          <a class="btn btn-fill" href="https://secure.thinkreservations.com/oldehomesteadinn/reservations">Book your stay</a>
+          <a class="btn btn-line" href="tel:4149157565">Call or text 414-915-7565</a>
+        </div>
+        <small>Self check-in from 3 to 9 pm, check-out at 11 am.</small>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li>BBB Accredited Business</li>
+        <li>3 bed chambers and a cottage</li>
+        <li>No TVs, free Wi-Fi</li>
+        <li>Complimentary coffee, 24 hours a day</li>
+        <li>Jack’s Cafe right on the property</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="chambers" id="chambers">
+    <div class="wrap">
+      <div class="ch-side">
+        <h2>Our bed chambers</h2>
+        <p>Hardwood floors, Persian rugs, poster beds and soft matelassé bedding. Each bed chamber is decorated with beautiful 18th and 19th century New England antiques and furnishings.</p>
+        <div class="stack">
+          <img class="s1 rv" src="assets/olde-homestead-inn-waukesha/chambre-lit-baldaquin-dentelle-lustre.webp" alt="Bed chamber with a crocheted canopy, candle chandelier, chest of drawers and Persian rug" width="1080" height="1080" loading="lazy">
+          <img class="s2 rv" src="assets/olde-homestead-inn-waukesha/chambre-lit-baldaquin-portrait.webp" alt="Poster bed beside a black fireplace and an antique portrait on paneled walls" width="1080" height="1080" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <ul class="rooms">
+          <li>
+            <div><h3>Bed Chamber One</h3><span class="bed">Queen poster bed</span></div>
+            <p>A large bed chamber with a separate sitting room and a fireplace beside the bed. Keurig coffee maker, tea, a wine chiller and glasses in the sitting room desk. New bathroom with Kohler fixtures and a 4′ step-in shower.</p>
+          </li>
+          <li>
+            <div><h3>Bed Chamber Two</h3><span class="bed">Queen poster bed</span></div>
+            <p>A large bed chamber with a large separate sitting room, an electric fireplace, comfy furniture and a “cricket” table. Hand-stenciled floors, and a newly remodeled bathroom with Kohler fixtures and a 4′ step-in shower.</p>
+          </li>
+          <li>
+            <div><h3>Bed Chamber Three</h3><span class="bed">Double poster bed</span></div>
+            <p>A cozy chamber under a crocheted bed canopy, with linen covers, a Persian rug, comfy furniture by a faux fireplace and a full bath with a 3′ step-in shower.</p>
+          </li>
+          <li class="cottage">
+            <div><h3>Olde Homestead Cottage</h3><span class="bed">Pet friendly</span></div>
+            <p>Originally the “summer kitchen” of the stone farmhouse, this free-standing 400 sq ft cottage sits 10 ft from the Inn, with its own full bathroom and a fenced patio.<br><span class="price">$175 / night</span></p>
+            <img class="rv" src="assets/olde-homestead-inn-waukesha/cottage-pierre-portillon-bienvenue.webp" alt="Stone cottage with a wreath on the door and a Welcome Guests of The Inn sign on the gate" width="237" height="320" loading="lazy">
+          </li>
+        </ul>
+        <div class="ch-more">
+          <a class="btn btn-fill" href="https://secure.thinkreservations.com/oldehomesteadinn/reservations">Check availability</a>
+          <p>Rates are for 1 to 2 guests. A simple continental self-serve breakfast is included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="common dark" id="common">
+    <div class="wrap">
+      <div class="c-photo">
+        <img class="rv" src="assets/olde-homestead-inn-waukesha/cheminee-fauteuil-windsor-chaudrons.webp" alt="Brick hearth with cast iron kettles and a Windsor chair in front of an antique desk" width="1600" height="1600" loading="lazy">
+        <span class="tag">From Just A Little Bit Country, next door</span>
+      </div>
+      <div>
+        <h2>Three common areas, all yours</h2>
+        <p class="quote">“Of course everything is hidden to keep the colonial feeling alive. Remember, you’ve just been transported to the 1800s.”</p>
+        <p>The full kitchen is snuggled behind the cage bar in the tavern room. The induction stove top sits on an old cupboard, and a Breville oven, a microwave and a coffee pot are hiding in the cabinet next to it. All common areas are included in your bed chamber price.</p>
+        <div class="areas">
+          <div class="area">
+            <img src="assets/olde-homestead-inn-waukesha/salon-table-jeu-chaises-windsor.webp" alt="Gathering room with a game table, candle and black Windsor chairs on a brick floor" width="480" height="640" loading="lazy">
+            <div><b>Gathering room</b><span>Historic books, and games in the New England corner cabinet behind the game table.</span></div>
+          </div>
+          <div class="area">
+            <img src="assets/olde-homestead-inn-waukesha/salle-a-manger-table-ovale-cheminee.webp" alt="Dining room with an oval table, fireplace, chandelier and portrait" width="480" height="640" loading="lazy">
+            <div><b>Dining room</b><span>A large sunny garden room with a 6′ bench table, ladderback chairs and an electric fireplace.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <div class="wrap">
+      <div>
+        <h2>Take a reprieve from the daily grind</h2>
+        <p class="lead">Whether this is your first visit or you have been a guest many times, we want your stay to be comfortable and peaceful in an early colonial setting. We are always available to help.</p>
+        <div class="card">
+          <ul class="list">
+            <li><b>No TVs</b><span>We do have free Wi-Fi.</span></li>
+            <li><b>Coffee, 24 hours a day</b><span>Complimentary, for every guest.</span></li>
+            <li><b>Checkers and chess</b><span>In the library, with books lying about.</span></li>
+            <li><b>Breakfast your way</b><span>Continental is included; add more when you book.</span></li>
+            <li><b>Wine or champagne</b><span>Order a bottle as an extra.</span></li>
+            <li><b>Longer stays</b><span>A laundry facility is available.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-photo">
+        <img class="rv" src="assets/olde-homestead-inn-waukesha/fauteuil-windsor-chandelle-lambris.webp" alt="High-back Windsor chair and candle stand with books against gray-green paneling" width="1332" height="1600" loading="lazy">
+        <span class="tag">100% satisfaction guaranteed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="events" id="events">
+    <div class="wrap">
+      <div class="ev">
+        <div class="side">
+          <h2>Events at The Inn</h2>
+          <p>Events on the Olde Homestead are posted here as soon as a date is set.</p>
+        </div>
+        <div>
+          <div class="ev-now">
+            <h3>No dates on the calendar right now</h3>
+            <p>Want to hear about the next one, or planning something of your own? Call or text, or send us an email.</p>
+            <div class="btns">
+              <a class="btn btn-fill" href="mailto:TheInn1850@gmail.com?subject=Events%20at%20The%20Inn">Email us</a>
+              <a class="btn btn-line" href="tel:4149157565">414-915-7565</a>
+            </div>
+          </div>
+          <div class="ev-alt">
+            <div>
+              <b>Reserve the entire Inn</b>
+              <p>Book a room or the whole house. The dining room is great for entertaining more guests.</p>
+              <a href="https://secure.thinkreservations.com/oldehomesteadinn/reservations">See dates</a>
+            </div>
+            <div>
+              <b>Give a gift certificate</b>
+              <p>Great memories of a stay at “The Inn.”</p>
+              <a href="https://secure.thinkreservations.com/oldehomesteadinn/gift-certificates">Buy a gift certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grounds" id="visit">
+    <div class="wrap">
+      <div class="head">
+        <h2>Eat and shop on the Olde Homestead</h2>
+        <p>Lunch is right on the property, and the antiques in every room come from the shop just steps away.</p>
+      </div>
+      <div class="g-grid">
+        <div class="g-sign">
+          <img class="rv" src="assets/olde-homestead-inn-waukesha/enseigne-jacks-cafe-1850.webp" alt="Antique hanging sign of Jack's Cafe, c. 1850" width="480" height="640" loading="lazy">
+          <span class="tag">Jack’s Cafe, c. 1850</span>
+        </div>
+        <div class="g-item">
+          <h3>Jack’s Cafe</h3>
+          <p>Enjoy our historic on-site cafe for a nice, relaxing lunch. Jack only serves great boutique wines.</p>
+          <a class="more" href="http://www.jackscafewi.com">jackscafewi.com</a>
+        </div>
+        <div class="g-item second">
+          <h3>Just A Little Bit Country</h3>
+          <p>18th and 19th century New England antiques and home furnishings. They furnished all of “The Inn.”</p>
+          <p class="hours">Tuesday to Saturday, 11 am to 4 pm<br>262-542-8050</p>
+          <a class="more" href="http://www.justalittlebitcountry.com">justalittlebitcountry.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h2>The Inn on the Olde Homestead</h2>
+        <p>N4 W22496 Bluemound<br>Waukesha, Wisconsin 53186</p>
+        <img class="f-facade rv" src="assets/olde-homestead-inn-waukesha/facade-ferme-pierre.webp" alt="The two-story limestone farmhouse with its balcony and lawn" width="640" height="482" loading="lazy">
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:4149157565">Call or text 414-915-7565</a></li>
+          <li><a href="mailto:TheInn1850@gmail.com">TheInn1850@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/place/The+Inn/@43.0366312,-88.1957879,17z/data=!4m8!3m7!1s0x8805a95d20cddc63:0x7c580e1fff88fca5!8m2!3d43.0366312!4d-88.1957879!9m1!1b1!16s%2Fg%2F11szbjws3q">Get directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Your stay</h4>
+        <ul>
+          <li>Self check-in, 3 to 9 pm</li>
+          <li>Check-out, 11 am</li>
+          <li>Children 12 and older</li>
+          <li>Smoke free, no candles</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Book and follow</h4>
+        <ul>
+          <li><a href="https://secure.thinkreservations.com/oldehomesteadinn/reservations">Reservations</a></li>
+          <li><a href="https://secure.thinkreservations.com/oldehomesteadinn/gift-certificates">Gift certificates</a></li>
+          <li><a href="https://www.google.com/maps/place/The+Inn/@43.0366312,-88.1957879,17z/data=!4m8!3m7!1s0x8805a95d20cddc63:0x7c580e1fff88fca5!8m2!3d43.0366312!4d-88.1957879!9m1!1b1!16s%2Fg%2F11szbjws3q">Reviews on Google</a></li>
+          <li><a href="https://www.facebook.com/111300791620952">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="f-base">© 2026 The Inn on the Olde Homestead. BBB Accredited Business.</p>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for The Inn on the Olde Homestead · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

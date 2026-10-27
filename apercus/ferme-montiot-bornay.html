@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Ferme Montiot, éleveur d'agneau bio à Bornay (39), nuit du 2026-10-27.
+     CONTENU : textes, produits, dates de retrait et photos relevés sur https://ferme-montiot.com/ le
+     27/10/2026 (dossier de Marco). Rien d'inventé : pas d'adresse, pas de téléphone, pas d'horaire,
+     pas de prix (le site n'en affiche aucun). Seul contact : l'e-mail de réservation.
+     Défaut réglé : l'entrée « Events » menait à une page 404, et sur téléphone trois écrans blancs
+     précédaient le moyen de réserver. Ici, aucun lien vers /events/, et le bouton de réservation
+     par e-mail est dans le premier écran du téléphone.
+     DESIGN (Nova) : givre gris bleuté, encre ardoise, accent orange fil de clôture.
+     Archivo étroit + Source Serif 4. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#E8ECEE" />
+<title>Ferme Montiot, viande d'agneau bio nourri à l'herbe</title>
+<meta name="description" content="Agneau bio nourri à 100 % à l'herbe, en pâturage tournant et sans fil barbelé. Réservez votre agneau par e-mail : merguez en novembre 2026, colis en mars 2027." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E2428'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='38' fill='%23E5672A'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --givre:#E8ECEE;
+  --givre-2:#DCE2E5;
+  --neige:#F5F7F8;
+  --ardoise:#1E2428;
+  --ardoise-2:#2A3238;
+  --gris:#4C5860;
+  --fil:#E5672A;
+  --fil-fonce:#B8481A;
+  --sur-sombre:#E8ECEE;
+  --sur-sombre-doux:#AEB9C0;
+  --filet:rgba(30,36,40,.14);
+  --ombre:0 30px 60px -34px rgba(30,36,40,.55);
+  --ombre-courte:0 18px 36px -24px rgba(30,36,40,.5);
+  --fd:"Archivo","Arial Narrow",sans-serif;
+  --ft:"Source Serif 4",Georgia,serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--givre);color:var(--ardoise);font-family:var(--ft);font-size:19px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--fil);color:var(--ardoise)}
+h1,h2,h3{margin:0;font-family:var(--fd);font-stretch:75%;font-weight:600;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+:focus-visible{outline:2px solid var(--fil);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--fd);font-stretch:90%;font-weight:600;font-size:18px;text-decoration:none;border:1.5px solid var(--ardoise);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s;text-align:center}
+.btn-plein{background:var(--fil);border-color:var(--fil);color:var(--ardoise)}
+.btn-plein:hover{background:var(--ardoise);border-color:var(--ardoise);color:var(--givre);transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(30,36,40,.9)}
+.btn-contour{background:transparent;color:var(--ardoise)}
+.btn-contour:hover{background:var(--ardoise);color:var(--givre);transform:translateY(-2px)}
+.sur-photo .btn-contour,.sombre .btn-contour{border-color:rgba(232,236,238,.8);color:var(--givre)}
+.sur-photo .btn-contour:hover,.sombre .btn-contour:hover{background:var(--givre);color:var(--ardoise)}
+.sombre .btn-plein:hover{background:var(--givre);border-color:var(--givre);color:var(--ardoise)}
+
+.pastille{position:absolute;left:16px;bottom:16px;background:rgba(245,247,248,.94);color:var(--ardoise);font-family:var(--fd);font-stretch:90%;font-size:15px;font-weight:600;line-height:1.3;padding:8px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(30,36,40,.6)}
+
+/* apparitions : photos seulement */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding:22px 0 18px}
+.tete .env{display:flex;align-items:center;gap:32px;max-width:1360px}
+.marque{text-decoration:none;line-height:1}
+.marque b{display:block;font-family:var(--fd);font-stretch:75%;font-weight:700;font-size:28px;letter-spacing:.01em}
+.marque small{display:block;font-family:var(--fd);font-stretch:90%;font-size:14px;color:var(--gris);margin-top:5px;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center;font-family:var(--fd);font-stretch:90%;font-weight:600;font-size:16px}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--fil-fonce)}
+.langues{display:flex;gap:6px;font-family:var(--fd);font-weight:600;font-size:14px}
+.langues a{text-decoration:none;border:1.5px solid var(--filet);border-radius:999px;padding:5px 11px}
+.langues a:hover{border-color:var(--ardoise)}
+.langues span{background:var(--ardoise);color:var(--givre);border-radius:999px;padding:5px 11px;border:1.5px solid var(--ardoise)}
+
+/* ---------- héros ---------- */
+.heros{padding:0 24px}
+.heros-cadre{position:relative;max-width:1392px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:var(--ombre);height:min(80vh,720px);min-height:560px}
+.heros-cadre > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.voile{position:absolute;left:0;bottom:0;width:72%;height:78%;background:radial-gradient(ellipse at 0% 100%,rgba(20,26,30,.82) 0%,rgba(20,26,30,.62) 38%,rgba(20,26,30,0) 72%)}
+.sur-photo{position:absolute;left:64px;bottom:60px;max-width:640px;color:var(--givre)}
+.sur-photo .lieu{font-family:var(--ft);font-style:italic;font-size:19px;color:#F6C6A8;margin-bottom:14px}
+.sur-photo h1{font-size:clamp(52px,6.4vw,92px);line-height:.95;color:#F5F7F8;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.sur-photo h1 em{font-style:normal;color:var(--fil)}
+.sur-photo .chapo{font-size:19px;line-height:1.5;margin-top:20px;max-width:46ch;color:#E2E8EB}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.pastille.droite{left:auto;right:20px;bottom:20px}
+
+/* ---------- faits ---------- */
+.faits ul{display:flex;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-block:30px 6px}
+.faits li{font-family:var(--fd);font-stretch:85%;font-weight:600;font-size:17px;display:flex;align-items:center;gap:12px}
+.faits li::before{content:"";width:18px;height:2px;background:var(--fil);flex:none}
+
+/* ---------- disponible ---------- */
+.dispo{padding:112px 0 120px}
+.dispo .env{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.dispo h2{font-size:clamp(40px,4.6vw,64px);line-height:1}
+.dispo .intro p{color:var(--gris);margin-top:20px;max-width:34ch}
+.adresse-mail{display:inline-block;margin-top:28px;font-family:var(--fd);font-stretch:80%;font-weight:600;font-size:28px;text-decoration:none;border-bottom:2px solid var(--fil);padding-bottom:2px}
+.adresse-mail:hover{color:var(--fil-fonce)}
+.agneau{position:relative;width:250px;margin-top:44px;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte);transform:rotate(-2deg)}
+.agneau img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:30% 60%}
+.bon{background:var(--neige);border-radius:22px;box-shadow:var(--ombre);padding:16px 44px 36px}
+.retrait{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-bottom:1px dashed rgba(30,36,40,.28)}
+.retrait .mois{font-family:var(--fd);font-stretch:75%;font-weight:600;font-size:40px;line-height:1}
+.retrait .mois small{display:block;font-size:15px;font-stretch:90%;color:var(--gris);font-weight:500;margin-top:8px}
+.retrait h3{font-size:24px;line-height:1.2;font-stretch:85%}
+.retrait p{color:var(--gris);font-size:17px;margin-top:6px}
+.retrait ul li{font-family:var(--fd);font-stretch:85%;font-weight:600;font-size:24px;line-height:1.25}
+.retrait ul li + li{margin-top:6px}
+.bon .actions{margin-top:30px}
+.auberge{margin-top:22px;font-size:16px;color:var(--gris);font-style:italic}
+
+/* ---------- méthode ---------- */
+.methode{background:var(--neige);padding:120px 0}
+.methode .chapeau{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:end;margin-bottom:72px}
+.methode h2{font-size:clamp(40px,4.6vw,64px);line-height:1}
+.methode .chapeau p{color:var(--gris)}
+.methode .corps{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
+.cloture{position:sticky;top:32px;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.cloture img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+.etapes{counter-reset:e}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:64px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--filet)}
+.etapes li:last-child{border-bottom:1px solid var(--filet)}
+.etapes li::before{content:counter(e);font-family:var(--fd);font-stretch:75%;font-weight:600;font-size:22px;width:48px;height:48px;border-radius:50%;border:2px solid var(--fil);display:grid;place-items:center;color:var(--fil-fonce)}
+.etapes h3{font-size:28px;line-height:1.1;margin-bottom:10px}
+.etapes p{color:var(--gris)}
+.etapes p + p{margin-top:8px}
+.etapes strong{color:var(--ardoise);font-weight:600}
+
+/* ---------- sombre : juste de l'herbe ---------- */
+.sombre{background:var(--ardoise);color:var(--sur-sombre)}
+.herbe{padding:120px 0 128px}
+.herbe h2{font-size:clamp(56px,6.6vw,96px);line-height:.95;max-width:16ch}
+.herbe h2 em{font-style:normal;color:var(--fil)}
+.herbe .trois{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:64px}
+.herbe .trois h3{font-size:26px;line-height:1.15;color:var(--givre);margin-bottom:12px;padding-top:20px;border-top:2px solid var(--fil)}
+.herbe .trois p{color:var(--sur-sombre-doux);font-size:17px}
+.givre-photo{position:relative;margin-top:80px;border-radius:22px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.givre-photo img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 55%}
+.givre-photo .pastille{background:rgba(245,247,248,.92)}
+
+/* ---------- arbres ---------- */
+.arbres{padding:128px 0}
+.arbres .env{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+.duo{position:relative;padding:0 0 110px 0}
+.duo .sous-bois{border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.duo .sous-bois img{width:86%;aspect-ratio:4/3;object-fit:cover}
+.duo .sous-bois{width:86%}
+.duo .sous-bois img{width:100%}
+.duo .fleurs{position:absolute;right:0;bottom:0;width:48%;border:10px solid var(--neige);border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.duo .fleurs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.arbres h2{font-size:clamp(38px,4.2vw,58px);line-height:1}
+.arbres p{color:var(--gris);margin-top:20px;max-width:48ch}
+
+/* ---------- troupeau ---------- */
+.troupeau{background:var(--givre-2);padding:120px 0}
+.troupeau .haut{display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:end;margin-bottom:56px}
+.troupeau h2{font-size:clamp(40px,4.6vw,64px);line-height:1}
+.troupeau .haut p{color:var(--gris)}
+.roles{display:grid;grid-template-columns:5fr 4fr 3fr;gap:28px;align-items:start}
+.role{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.role img{width:100%;object-fit:cover}
+.role.r1 img{aspect-ratio:4/5}
+.role.r2{margin-top:80px}
+.role.r2 img{aspect-ratio:1/1}
+.role.r3{margin-top:24px}
+.role.r3 img{aspect-ratio:3/4;object-position:45% 50%}
+.role .pastille b{color:var(--fil-fonce)}
+
+/* ---------- réserver ---------- */
+.reserver{padding:128px 0 120px}
+.reserver .env{position:relative}
+.reserver .large{border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.reserver .large img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 60%}
+.carte-resa{position:relative;margin:-160px 0 0 auto;width:min(560px,90%);margin-right:56px;background:var(--neige);border-radius:22px;box-shadow:var(--ombre);padding:44px 44px 40px}
+.carte-resa h2{font-size:44px;line-height:1}
+.carte-resa p{color:var(--gris);margin-top:16px}
+.carte-resa .adresse-mail{font-size:26px;margin-top:20px}
+.carte-resa .actions{margin-top:28px}
+
+/* ---------- pied ---------- */
+.pied{padding:96px 0 0}
+.pied .grille{display:grid;grid-template-columns:6fr 3fr 3fr;gap:56px}
+.pied .marque b{font-size:44px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.devise{font-family:var(--ft);font-style:italic;font-size:22px;line-height:1.45;color:var(--givre);margin-top:28px;max-width:40ch}
+.pied h3{font-size:17px;font-stretch:90%;color:var(--fil);margin-bottom:14px}
+.pied li{font-size:17px;color:var(--sur-sombre-doux);margin-bottom:10px;line-height:1.45}
+.pied li a{color:var(--givre);text-decoration:none;border-bottom:1px solid rgba(232,236,238,.3)}
+.pied li a:hover{color:var(--fil);border-color:var(--fil)}
+.propo{margin-top:80px;border-top:1px solid rgba(232,236,238,.14);padding:22px 0 26px;font-size:15px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--givre)}
+
+/* barre collante, téléphone seulement */
+.barre-resa{display:none}
+
+/* ---------- téléphone ---------- */
+@media (max-width: 900px){
+  body{font-size:17px}
+  .pied{padding-bottom:84px}
+  .env{padding-inline:20px}
+  .tete{padding:16px 0 14px}
+  .tete .env{gap:12px}
+  .marque b{font-size:24px}
+  .marque small{font-size:13px}
+  .nav{display:none}
+  .langues{margin-left:auto}
+  .heros{padding:0 12px}
+  .heros-cadre{height:auto;min-height:0;aspect-ratio:auto}
+  .heros-cadre > img{position:relative;height:460px}
+  .voile{width:100%;height:80%;background:linear-gradient(to top,rgba(20,26,30,.85) 0%,rgba(20,26,30,.55) 45%,rgba(20,26,30,0) 100%)}
+  .sur-photo{left:20px;right:20px;bottom:22px;max-width:none}
+  .sur-photo .lieu{font-size:15px;margin-bottom:10px}
+  .sur-photo h1{font-size:50px}
+  .sur-photo .chapo,.sur-photo .actions{display:none}
+  .pastille.droite{display:none}
+  .heros-sous{display:block !important;padding:22px 8px 0}
+  .heros-sous .chapo{font-size:17px;color:var(--gris)}
+  .heros-sous .actions{margin-top:18px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:10px;padding-block:28px 0}
+  .dispo,.methode,.arbres,.troupeau{padding:80px 0}
+  .herbe{padding:80px 0}
+  .dispo .env,.methode .chapeau,.methode .corps,.arbres .env,.troupeau .haut{grid-template-columns:1fr;gap:36px}
+  .methode .chapeau{margin-bottom:40px}
+  .adresse-mail{font-size:22px;overflow-wrap:anywhere}
+  .agneau{width:200px;margin-top:32px}
+  .bon{padding:8px 22px 26px}
+  .retrait{grid-template-columns:1fr;gap:10px;padding:24px 0}
+  .retrait .mois{font-size:34px}
+  .retrait ul li{font-size:21px}
+  .cloture{position:relative;top:0}
+  .cloture img{aspect-ratio:4/3}
+  .etapes li{grid-template-columns:48px 1fr;gap:14px}
+  .etapes li::before{width:40px;height:40px;font-size:19px}
+  .etapes h3{font-size:24px}
+  .herbe h2{font-size:56px}
+  .herbe .trois{grid-template-columns:1fr;gap:32px;margin-top:44px}
+  .givre-photo{margin-top:48px}
+  .givre-photo img{aspect-ratio:4/3}
+  .duo{padding-bottom:70px}
+  .duo .fleurs{width:56%;border-width:6px}
+  .roles{grid-template-columns:1fr 1fr;gap:14px}
+  .role.r1{grid-column:1 / -1}
+  .role.r1 img{aspect-ratio:4/3}
+  .role.r2,.role.r3{margin-top:0}
+  .role.r2 img,.role.r3 img{aspect-ratio:3/4}
+  .role .pastille{font-size:13px;left:10px;bottom:10px;padding:6px 11px}
+  .reserver{padding:80px 0}
+  .reserver .large img{aspect-ratio:4/3}
+  .carte-resa{margin:-60px 0 0;width:auto;padding:28px 22px}
+  .carte-resa .adresse-mail{font-size:20px}
+  .carte-resa h2{font-size:34px}
+  .pied{padding-top:72px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+  .barre-resa{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(232,236,238,.96);border-top:1px solid var(--filet);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .js .barre-resa{transform:translateY(110%)}
+  .js .barre-resa.montre{transform:none}
+  .btn{padding:0 18px;font-size:17px}
+  .barre-resa .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Ferme Montiot, retour en haut">
+      <b>Ferme Montiot</b>
+      <small>Viande d'agneau bio</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#disponible">Disponible</a>
+      <a href="#methode">Notre méthode</a>
+      <a href="#troupeau">Le troupeau</a>
+      <a href="#reserver">Réserver</a>
+    </nav>
+    <div class="langues" aria-label="Langue">
+      <span>FR</span>
+      <a href="https://ferme-montiot.com/organiclamb/" hreflang="en" lang="en">EN</a>
+      <a href="https://ferme-montiot.com/bio-lambfleisch-2/" hreflang="de" lang="de">DE</a>
+    </div>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="heros-cadre">
+      <img class="apparait" src="assets/ferme-montiot-bornay/brebis-paturage-herbe-haute.webp" alt="Brebis au pâturage dans l'herbe haute, en lumière dorée, fil de clôture au premier plan" width="1600" height="1200" fetchpriority="high" />
+      <div class="voile" aria-hidden="true"></div>
+      <span class="pastille droite">Au pré, derrière le fil de clôture</span>
+      <div class="sur-photo">
+        <p class="lieu">Bornay, dans le Jura</p>
+        <h1>Viande d'agneau bio, nourri à 100 % à l'<em>herbe</em>.</h1>
+        <p class="chapo">Une production ovine durable, tout en préservant l'environnement : pâturage tournant, clôtures mobiles, pas de fil barbelé.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:moutons@ferme-montiot.com?subject=R%C3%A9servation%20d%27agneau">Réserver son agneau par e-mail</a>
+          <a class="btn btn-contour" href="#disponible">Ce qui est disponible</a>
+        </div>
+      </div>
+    </div>
+    <div class="heros-sous" style="display:none">
+      <p class="chapo">Une production ovine durable, tout en préservant l'environnement : pâturage tournant, clôtures mobiles, pas de fil barbelé.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:moutons@ferme-montiot.com?subject=R%C3%A9servation%20d%27agneau">Réserver son agneau par e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="La ferme en bref">
+      <li>Nourri à 100 % à l'herbe, bio</li>
+      <li>Thones et Marthod, race de Savoie</li>
+      <li>Pâturage au repos 3 à 4 mois</li>
+      <li>Pas de sevrage</li>
+      <li>Pas de fil barbelé</li>
+    </ul>
+  </div>
+
+  <section class="dispo" id="disponible">
+    <div class="env">
+      <div class="intro">
+        <h2>Réservez votre agneau</h2>
+        <p>La réservation se fait par e-mail, à l'adresse suivante :</p>
+        <a class="adresse-mail" href="mailto:moutons@ferme-montiot.com">moutons@ferme-montiot.com</a>
+        <figure class="agneau apparait">
+          <img src="assets/ferme-montiot-bornay/agneau-tete-noire-troupeau.webp" alt="Agneau blanc au museau noir devant le troupeau" width="899" height="1600" loading="lazy" />
+          <span class="pastille">Avec sa mère, sans sevrage</span>
+        </figure>
+      </div>
+      <div class="bon">
+        <div class="retrait">
+          <p class="mois">Novembre<small>2026, à retirer</small></p>
+          <div>
+            <ul><li>Merguez</li></ul>
+          </div>
+        </div>
+        <div class="retrait">
+          <p class="mois">Mars<small>2027, à retirer</small></p>
+          <div>
+            <ul>
+              <li>Colis 1/2 agneau découpé</li>
+              <li>Colis agneau entier découpé</li>
+            </ul>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:moutons@ferme-montiot.com?subject=R%C3%A9servation%20d%27agneau">Réserver son agneau par e-mail</a>
+          <a class="btn btn-contour" href="mailto:moutons@ferme-montiot.com?subject=Merguez%20de%20novembre">Réserver des merguez</a>
+        </div>
+        <p class="auberge">L'auberge est toujours fermée pour rénovation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="methode" id="methode">
+    <div class="env">
+      <div class="chapeau">
+        <h2>Pâturage tournant dynamique</h2>
+        <p>Nous tirons parti de la relation symbiotique entre les herbivores et les prairies et forêts pour produire une viande de qualité.</p>
+      </div>
+      <div class="corps">
+        <figure class="cloture apparait">
+          <img src="assets/ferme-montiot-bornay/cloture-electrique-fil-mobile.webp" alt="Dérouleurs de fil de clôture électrique orange et piquets blancs sur un talus" width="1600" height="1200" loading="lazy" />
+          <span class="pastille">Dérouleurs de fil : la clôture mobile</span>
+        </figure>
+        <ol class="etapes">
+          <li><div>
+            <h3>Des clôtures qui bougent</h3>
+            <p>Nous utilisons des clôtures électriques pour reproduire les mouvements naturels des troupeaux d'herbivores suivis de près par des prédateurs.</p>
+            <p><strong>Pas de fil barbelé. Pas de clôture fixée. On l'a arrachée.</strong></p>
+          </div></li>
+          <li><div>
+            <h3>Une courte période sur chaque parcelle</h3>
+            <p>De courtes périodes de pâturage dans une zone délimitée avant de se tourner vers de nouveaux pâturages. Cette méthode permet d'accroître la productivité des pâturages, la biodiversité et leur résilience.</p>
+          </div></li>
+          <li><div>
+            <h3>3 à 4 mois de repos</h3>
+            <p>Nous laissons le pâturage se régénérer pendant 3 à 4 mois avant d'y faire paître à nouveau le bétail.</p>
+          </div></li>
+          <li><div>
+            <h3>Pas de vermifugation systématique</h3>
+            <p>La plupart des œufs de parasites meurent avant d'être ingérés. La vermifugation n'est effectuée que lorsque cela est absolument nécessaire.</p>
+          </div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="herbe sombre">
+    <div class="env">
+      <h2>Pas de céréales. Juste de l'<em>herbe</em>.</h2>
+      <div class="trois">
+        <div>
+          <h3>100 % à l'herbe, en bio</h3>
+          <p>Notre viande est issue d'animaux nourris à 100 % à l'herbe et issus de l'agriculture biologique. Pas de compléments alimentaires, pas de céréales, pas d'aliments pour animaux.</p>
+        </div>
+        <div>
+          <h3>Pas de sevrage</h3>
+          <p>Nos agneaux restent auprès de leur mère aussi longtemps qu'ils le souhaitent.</p>
+        </div>
+        <div>
+          <h3>De l'herbe pour toutes les saisons</h3>
+          <p>Nous préférons planifier un an à l'avance afin de réserver suffisamment d'herbe pour toutes les saisons, et nous ne donnons que de très petites quantités de foin en cas de conditions extrêmes. Nous ne produisons pas de foin : peu de combustibles fossiles.</p>
+        </div>
+      </div>
+      <figure class="givre-photo apparait">
+        <img src="assets/ferme-montiot-bornay/ferme-prairie-givre.webp" alt="Prairie couverte de givre, arbres givrés et toit de la ferme au loin" width="1600" height="1200" loading="lazy" />
+        <span class="pastille">L'hiver sur les prairies de la ferme</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="arbres">
+    <div class="env">
+      <div class="duo">
+        <figure class="sous-bois apparait">
+          <img src="assets/ferme-montiot-bornay/brebis-sous-bois-sylvopastoralisme.webp" alt="Brebis broutant dans un sous-bois clair" width="1600" height="1200" loading="lazy" />
+        </figure>
+        <figure class="fleurs apparait">
+          <img src="assets/ferme-montiot-bornay/prairie-fleurie-collines.webp" alt="Prairie en fleurs devant des collines boisées" width="1600" height="1200" loading="lazy" />
+        </figure>
+      </div>
+      <div>
+        <h2>De l'ombre dans les bois, des arbres dans les prés</h2>
+        <p>Pratique du sylvopastoralisme : notre troupeau a toujours accès à l'ombre et à un abri contre le vent dans les bois.</p>
+        <p>Nous favorisons le retour d'un écosystème de savane diversifié en plantant des arbres et en laissant pousser les arbres spontanés. Les herbes hautes et les arbres épars aident à atténuer les effets des phénomènes météorologiques extrêmes, de plus en plus fréquents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="troupeau" id="troupeau">
+    <div class="env">
+      <div class="haut">
+        <h2>Chaque espèce joue son rôle</h2>
+        <p>Thones et Marthod : une race rustique originaire de Savoie. Il est toutefois nécessaire de poursuivre la sélection génétique année après année.</p>
+      </div>
+      <div class="roles">
+        <figure class="role r1 apparait">
+          <img src="assets/ferme-montiot-bornay/chiens-de-protection-troupeau.webp" alt="Deux chiens blancs de protection devant le troupeau au crépuscule" width="1600" height="1200" loading="lazy" />
+          <span class="pastille"><b>Protection</b> : les chiens</span>
+        </figure>
+        <figure class="role r2 apparait">
+          <img src="assets/ferme-montiot-bornay/troupeau-pre-lisiere-bois.webp" alt="Troupeau de brebis au pré en lisière de bois" width="1600" height="1200" loading="lazy" />
+          <span class="pastille"><b>Pâturage</b> : les brebis</span>
+        </figure>
+        <figure class="role r3 apparait">
+          <img src="assets/ferme-montiot-bornay/troupeau-agneaux-chevre.webp" alt="Brebis, agneaux et une chèvre dans un pré boisé" width="1600" height="1200" loading="lazy" />
+          <span class="pastille"><b>Broutage</b> : la chèvre</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserver" id="reserver">
+    <div class="env">
+      <figure class="large apparait">
+        <img src="assets/ferme-montiot-bornay/troupeau-vallee-barriere-bois.webp" alt="Brebis dispersées dans une vallée herbeuse, barrière en bois au premier plan" width="1600" height="1200" loading="lazy" />
+      </figure>
+      <div class="carte-resa">
+        <h2>Un agneau à réserver ?</h2>
+        <p>Merguez à retirer en novembre 2026. Colis 1/2 agneau découpé et colis agneau entier découpé à retirer en mars 2027.</p>
+        <a class="adresse-mail" href="mailto:moutons@ferme-montiot.com">moutons@ferme-montiot.com</a>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:moutons@ferme-montiot.com?subject=R%C3%A9servation%20d%27agneau">Réserver son agneau par e-mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><b>Ferme Montiot</b><small>Viande d'agneau bio</small></a>
+        <p class="devise">Agriculture régénérative, pâturage tournant dynamique, pâturage holistique planifié. Appelez ça comme vous voulez. C'est bon pour la planète.</p>
+      </div>
+      <div>
+        <h3>Réserver</h3>
+        <ul>
+          <li><a href="mailto:moutons@ferme-montiot.com">moutons@ferme-montiot.com</a></li>
+          <li>Merguez : novembre 2026</li>
+          <li>Colis : mars 2027</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre la ferme</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/p/Ferme-Montiot-61593468029527/">Ferme Montiot sur Facebook</a></li>
+          <li><a href="https://ferme-montiot.com/organiclamb/" hreflang="en">Organic lamb, in English</a></li>
+          <li><a href="https://ferme-montiot.com/bio-lambfleisch-2/" hreflang="de">Bio Lambfleisch, auf Deutsch</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour la Ferme Montiot</p>
+  </div>
+</footer>
+
+<div class="barre-resa">
+  <a class="btn btn-plein" href="mailto:moutons@ferme-montiot.com?subject=R%C3%A9servation%20d%27agneau">Réserver son agneau par e-mail</a>
+</div>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('vu') }); return;
+  }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vu'); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(e){ io.observe(e) });
+})();
+(function(){
+  var barre = document.querySelector('.barre-resa'), cible = document.querySelector('.heros-sous .btn');
+  if (!barre) return;
+  if (!('IntersectionObserver' in window) || !cible) { barre.classList.add('montre'); return; }
+  new IntersectionObserver(function(e){
+    var r = e[0].boundingClientRect;
+    barre.classList.toggle('montre', !e[0].isIntersecting && r.top < 0);
+  }).observe(cible);
+})();
+</script>
+</body>
+</html>

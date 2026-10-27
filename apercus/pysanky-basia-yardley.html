@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PysankyByBasia · Ukrainian pysanky and eggshell jewelry, Yardley, PA</title>
+<meta name="description" content="Pysanky written with beeswax and dyes, eggshell pendants and earrings, and pysanka workshops by Basia Andrusko in Yardley, Pennsylvania.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='33' rx='24' ry='30' fill='%23B3261E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23F3ECD8'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --straw:#F3ECD8; --straw-2:#EBE1C6; --paper:#FBF7EC;
+  --ink:#16120E; --ink-2:#4A4136; --madder:#B3261E; --madder-d:#8E1D17; --yolk:#E3A82B;
+  --shadow:0 30px 60px -34px rgba(22,18,14,.55);
+  --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--straw);color:var(--ink);font:400 17px/1.65 'Figtree',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--madder);color:var(--straw)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--madder);outline-offset:3px;border-radius:6px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 28px;border-radius:999px;font:600 16px/1 'Figtree',sans-serif;text-decoration:none;border:1.5px solid var(--ink);transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--ink);color:var(--straw)}
+.btn-full:hover{background:var(--madder);border-color:var(--madder);box-shadow:0 16px 30px -18px rgba(179,38,30,.8)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--straw)}
+.btn-light{border-color:rgba(243,236,216,.6);color:var(--straw)}
+.btn-light:hover{background:var(--straw);color:var(--ink)}
+
+/* en-tête */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column}
+.brand b{font:400 27px/1 'DM Serif Display',serif;letter-spacing:-.01em}
+.brand b i{color:var(--madder)}
+.brand span{font-size:13.5px;color:var(--ink-2);margin-top:5px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:15.5px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:var(--madder);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--paper);padding:11px 20px;border-radius:999px;font-weight:600!important;box-shadow:0 10px 24px -18px rgba(22,18,14,.6);transition:background-color .25s,color .25s}
+.pill:hover{background:var(--ink);color:var(--straw)}
+
+/* héros */
+.hero{position:relative;padding:34px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.02fr;column-gap:56px;grid-template-areas:". vis" "kick vis" "h1 vis" "lead vis" "cta vis" ". vis";grid-template-rows:1fr auto auto auto auto 1.4fr}
+.kick{grid-area:kick;color:var(--madder);font-weight:600;font-size:15.5px;margin-bottom:20px}
+.hero h1{grid-area:h1;font-size:clamp(46px,6.6vw,92px);line-height:.98;letter-spacing:-.018em}
+.hero h1 em{color:var(--madder);font-style:italic}
+.lead{grid-area:lead;max-width:470px;margin-top:28px;color:var(--ink-2);font-size:18px}
+.cta{grid-area:cta;display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.vis{grid-area:vis;position:relative;height:640px;margin-bottom:-90px;z-index:2}
+.disc{position:absolute;top:18px;right:0;width:560px;height:560px;border-radius:50%;background:var(--madder);box-shadow:0 50px 90px -40px rgba(142,29,23,.75)}
+.disc::after{content:"";position:absolute;inset:-26px;border-radius:50%;border:1.5px solid rgba(179,38,30,.35)}
+.egg{position:absolute;top:0;right:44px;width:510px;height:510px;border-radius:50%;overflow:hidden;box-shadow:var(--shadow);background:#e9e7e3}
+.egg img{width:100%;height:100%;object-fit:cover;object-position:50% 46%;transform:scale(1.06)}
+.tag{position:absolute;left:18px;bottom:18px;background:rgba(251,247,236,.94);color:var(--ink);font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(22,18,14,.5);line-height:1.2}
+.egg .tag{left:auto;right:84px;bottom:64px;white-space:nowrap}
+.square{position:absolute;left:4px;bottom:20px;width:230px;background:var(--paper);padding:10px 10px 12px;border-radius:6px;transform:rotate(-6deg);box-shadow:0 34px 60px -30px rgba(22,18,14,.6)}
+.square img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px}
+.square figcaption{font-size:13.5px;color:var(--ink-2);text-align:center;margin-top:9px}
+
+/* bandeau de faits */
+.facts{background:var(--straw-2);border-top:1px solid rgba(22,18,14,.08);border-bottom:1px solid rgba(22,18,14,.08);position:relative;z-index:1}
+.facts ul{list-style:none;display:flex;flex-wrap:wrap;gap:12px 40px;padding:22px 0;max-width:640px}
+.facts li{font-size:15px;font-weight:500;display:flex;align-items:center;gap:10px}
+.facts li::before{content:"";width:7px;height:9px;border-radius:50%;background:var(--madder);flex:none}
+
+/* cours */
+.classes{padding:130px 0 120px}
+.classes .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.cl-photo{position:relative}
+.cl-photo .main{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
+.cl-photo .main img{width:100%;height:100%;object-fit:cover}
+.cl-photo .small{position:absolute;right:-46px;bottom:-40px;width:210px;border-radius:16px;overflow:hidden;border:7px solid var(--straw);box-shadow:0 26px 50px -28px rgba(22,18,14,.6);aspect-ratio:4/5}
+.cl-photo .small img{width:100%;height:100%;object-fit:cover}
+.h2{font-size:clamp(38px,4.4vw,58px)}
+.classes .intro{margin-top:22px;max-width:520px;color:var(--ink-2)}
+.next{margin-top:36px;background:var(--paper);border-radius:20px;padding:30px 32px;box-shadow:0 24px 50px -36px rgba(22,18,14,.5)}
+.next h3{font-size:27px}
+.next p{margin-top:10px;color:var(--ink-2)}
+.venues{list-style:none;margin-top:18px;display:grid;gap:0}
+.venues li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid rgba(22,18,14,.1);font-weight:500}
+.venues li span{color:var(--ink-2);font-weight:400;font-size:15px;text-align:right}
+.next .cta{margin-top:22px}
+.private{margin-top:22px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;padding:26px 30px;border-radius:20px;background:var(--yolk);color:var(--ink)}
+.private b{font:400 25px/1.1 'DM Serif Display',serif;display:block}
+.private p{font-size:16px}
+.private .num{font:400 52px/0.9 'DM Serif Display',serif}
+
+/* le travail */
+.work{background:var(--paper);padding:120px 0 130px}
+.work-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:56px}
+.work-head p{color:var(--ink-2);max-width:500px}
+.mosaic{display:grid;grid-template-columns:1.55fr 1fr;gap:34px;align-items:start}
+.m-big{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.m-big img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.m-side{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:-30px}
+.m-side figure{position:relative}
+.m-side .a{border-radius:50% 50% 18px 18px/42% 42% 18px 18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/4}
+.m-side .b{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/4;margin-top:64px}
+.m-side img{width:100%;height:100%;object-fit:cover}
+.m-side figcaption{font-size:14px;color:var(--ink-2);margin-top:10px}
+.shop-links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.chip{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;background:var(--straw);text-decoration:none;font-weight:500;font-size:15.5px;transition:background-color .25s,color .25s,transform .25s}
+.chip:hover{background:var(--ink);color:var(--straw);transform:translateY(-2px)}
+.custom{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;margin-top:90px;padding-top:60px;border-top:1px solid rgba(22,18,14,.12)}
+.custom .ph{border-radius:50%;overflow:hidden;aspect-ratio:1;box-shadow:var(--shadow)}
+.custom .ph img{width:100%;height:100%;object-fit:cover}
+.custom h3{font-size:36px}
+.custom p{margin-top:12px;color:var(--ink-2);max-width:560px}
+.custom .cta{margin-top:22px}
+
+/* comment s'écrit une pysanka */
+.how{padding:120px 0 110px}
+.how .h2{max-width:640px}
+.how .sub{margin-top:18px;color:var(--ink-2);max-width:620px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;counter-reset:s;border-top:1.5px solid var(--ink)}
+.steps li{padding:28px 28px 0 0;counter-increment:s;position:relative}
+.steps li::before{content:counter(s);display:block;font:400 46px/1 'DM Serif Display',serif;color:var(--madder);margin-bottom:14px}
+.steps b{display:block;font-weight:600;margin-bottom:6px}
+.steps p{font-size:16px;color:var(--ink-2)}
+.legend{margin-top:100px;display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start}
+.legend .lbl{font-weight:600;color:var(--madder)}
+.legend .lbl small{display:block;color:var(--ink-2);font-weight:400;font-size:15.5px;margin-top:8px;max-width:300px}
+.legend blockquote{font:400 clamp(30px,3.3vw,44px)/1.18 'DM Serif Display',serif;letter-spacing:-.01em}
+.legend blockquote em{font-style:italic;color:var(--madder)}
+
+/* salons et galerie (section sombre) */
+.find{background:var(--ink);color:var(--straw);padding:120px 0}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.find .h2{color:var(--straw)}
+.find .sub{color:rgba(243,236,216,.75);margin-top:18px;max-width:460px}
+.shows{list-style:none;margin-top:40px}
+.shows li{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:22px 0;border-top:1px solid rgba(243,236,216,.16);align-items:baseline}
+.shows li:last-child{border-bottom:1px solid rgba(243,236,216,.16)}
+.shows .d{font:400 30px/1 'DM Serif Display',serif;color:var(--yolk)}
+.shows .d small{display:block;font:500 14px/1.4 'Figtree',sans-serif;color:rgba(243,236,216,.6);margin-top:6px}
+.shows b{font-weight:600;font-size:18px}
+.shows span{display:block;color:rgba(243,236,216,.65);font-size:15.5px}
+.gallery{position:relative}
+.gallery .ph{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.9);aspect-ratio:4/3.1}
+.gallery .ph img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.gallery .card{position:relative;margin:-70px 0 0 40px;background:var(--straw);color:var(--ink);border-radius:20px;padding:30px 32px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.gallery .card h3{font-size:30px}
+.gallery .card p{margin-top:8px;color:var(--ink-2);font-size:16px}
+.gallery .card .hrs{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.gallery .card .hrs dt{font-weight:600}
+.gallery .card .cta{margin-top:22px}
+.gallery .vit{position:absolute;right:-20px;top:-46px;width:150px;border-radius:14px;overflow:hidden;border:6px solid var(--ink);transform:rotate(4deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+.gallery .vit img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* à propos */
+.about{padding:130px 0}
+.about .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:90px;align-items:center}
+.about p{margin-top:18px;color:var(--ink-2);max-width:580px}
+.about .pledge{margin-top:30px;display:flex;gap:18px;align-items:flex-start;background:var(--paper);border-radius:18px;padding:22px 26px;max-width:580px}
+.about .pledge i{flex:none;width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#2F5DA8 50%,#F2C230 50%);margin-top:3px}
+.about .pledge p{margin:0;font-size:16px}
+.about .pledge a{font-weight:600}
+.portrait{position:relative;padding:0 30px 40px 0}
+.portrait .pol{background:var(--paper);padding:14px 14px 18px;border-radius:6px;transform:rotate(2.5deg);box-shadow:0 40px 70px -36px rgba(22,18,14,.6)}
+.portrait .pol img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:3px}
+.portrait .pol figcaption{font-size:14px;color:var(--ink-2);margin-top:12px;text-align:center}
+.portrait .pend{position:absolute;left:-60px;bottom:0;width:170px;border-radius:50%;overflow:hidden;aspect-ratio:1;border:7px solid var(--straw);box-shadow:0 24px 50px -24px rgba(22,18,14,.6)}
+.portrait .pend img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+
+/* pied */
+.foot{background:#211A14;color:var(--straw);padding:90px 0 50px}
+.foot .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}
+.foot .big{font:400 44px/1.02 'DM Serif Display',serif}
+.foot .big i{color:var(--yolk)}
+.foot p,.foot li{color:rgba(243,236,216,.75);font-size:16px}
+.foot h4{font:600 15px/1 'Figtree',sans-serif;color:var(--yolk);margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:8px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(243,236,216,.25);transition:border-color .2s,color .2s}
+.foot a:hover{color:#fff;border-color:var(--yolk)}
+.foot .cta{margin-top:26px}
+.foot .legal{margin-top:70px;padding-top:24px;border-top:1px solid rgba(243,236,216,.14);display:flex;justify-content:space-between;gap:20px;font-size:14px;color:rgba(243,236,216,.55)}
+.proposal{background:#211A14;color:rgba(243,236,216,.5);text-align:center;font-size:13px;padding:0 20px 26px}
+.proposal a{color:rgba(243,236,216,.75)}
+
+/* apparitions (photos seulement) */
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+html.js .rv.on{opacity:1;transform:none}
+html.js .square.rv{transform:rotate(-6deg) translateY(26px)}
+html.js .square.rv.on{transform:rotate(-6deg)}
+html.js .pol.rv{transform:rotate(2.5deg) translateY(26px)}
+html.js .pol.rv.on{transform:rotate(2.5deg)}
+@media (prefers-reduced-motion:reduce){html.js .rv,html.js .square.rv,html.js .pol.rv{opacity:1;transition:none}html.js .square.rv{transform:rotate(-6deg)}html.js .pol.rv{transform:rotate(2.5deg)}.btn,.chip{transition:none}}
+
+/* tablette */
+@media (max-width:1100px){
+  .vis{height:560px}
+  .disc{width:470px;height:470px}
+  .egg{width:430px;height:430px;right:30px}
+  .square{width:190px}
+}
+/* téléphone */
+@media (max-width:860px){
+  body{font-size:16.5px}
+  .wrap{padding:0 22px}
+  .top{padding:18px 0 6px}
+  .top .wrap{flex-wrap:wrap;row-gap:14px}
+  .brand b{font-size:24px}
+  .nav{width:100%;gap:22px;order:3}
+  .nav a{font-size:16px}
+  .nav .pill{position:absolute;top:18px;right:22px;padding:10px 16px;font-size:15px}
+  .top{position:relative}
+  .hero{padding-top:26px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"kick" "h1" "vis" "lead" "cta";grid-template-rows:auto}
+  .kick{margin-bottom:14px;font-size:15px}
+  .hero h1{font-size:46px}
+  .vis{height:auto;aspect-ratio:1/1.02;margin:26px 0 0;width:100%}
+  .disc{width:92%;height:auto;aspect-ratio:1;top:6%;right:0}
+  .disc::after{inset:-12px}
+  .egg{width:84%;height:auto;aspect-ratio:1;right:9%;top:0}
+  .egg .tag{bottom:auto;top:12%;right:10%;font-size:13.5px}
+  .square{width:38%;left:0;bottom:2%;padding:6px 6px 8px}
+  .square figcaption{font-size:12.5px;margin-top:5px}
+  .lead{margin-top:20px;font-size:17px}
+  .cta{flex-direction:column;margin-top:26px}
+  .cta .btn{width:100%}
+  .facts{margin-top:44px}
+  .facts ul{flex-direction:column;gap:10px;padding:22px 0}
+  .classes{padding:80px 0}
+  .classes .wrap,.work-head,.mosaic,.find .wrap,.about .wrap,.legend,.foot .grid{grid-template-columns:1fr;gap:44px}
+  .cl-photo{margin-right:30px}
+  .cl-photo .small{right:-30px;width:140px;bottom:-30px}
+  .next{padding:24px 22px}
+  .venues li{flex-direction:column;gap:2px}
+  .venues li span{text-align:left}
+  .private{grid-template-columns:1fr;padding:22px}
+  .work{padding:80px 0}
+  .work-head{margin-bottom:36px;gap:16px}
+  .m-side{margin-top:0}
+  .custom{grid-template-columns:1fr;margin-top:60px;padding-top:44px;gap:26px}
+  .custom .ph{width:220px}
+  .how{padding:80px 0}
+  .steps{grid-template-columns:1fr;margin-top:36px}
+  .steps li{padding:22px 0;border-bottom:1px solid rgba(22,18,14,.12);display:grid;grid-template-columns:48px 1fr;column-gap:8px}
+  .steps li::before{grid-row:span 2;margin:0;font-size:38px}
+  .legend{margin-top:60px;gap:18px}
+  .find{padding:80px 0}
+  .shows li{grid-template-columns:1fr;gap:6px}
+  .gallery{margin-top:10px}
+  .gallery .card{margin:-40px 10px 0;padding:24px 22px}
+  .gallery .vit{right:-6px;top:-30px;width:104px;border-width:4px}
+  .about{padding:80px 0}
+  .portrait{padding:0 14px 30px 40px;order:-1}
+  .portrait .pend{left:0;width:120px}
+  .portrait .pol figcaption{text-align:right}
+  .m-side .b{margin-top:40px}
+  .m-side{margin-top:0}
+  .foot{padding:70px 0 40px}
+  .foot .big{font-size:36px}
+  .foot .legal{flex-direction:column}
+  .btn{min-height:54px}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="PysankyByBasia, home">
+      <b>Pysanky<i>by</i>Basia</b>
+      <span>Ukrainian egg art, Yardley, PA</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#classes">Classes</a>
+      <a href="#work">Pysanky &amp; jewelry</a>
+      <a href="#find">Shows</a>
+      <a href="#about">About</a>
+      <a class="pill" href="tel:+12679189172">267-918-9172</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <p class="kick">Ukrainian pysanky, written by Basia Andrusko</p>
+    <h1>Real art on real <em>eggshells</em>.</h1>
+    <div class="vis">
+      <div class="disc" aria-hidden="true"></div>
+      <figure class="egg rv">
+        <img src="assets/pysanky-basia-yardley/pysanka-rouge-noir-motifs-etoiles.webp" alt="Red and black pysanka with eight-pointed stars and spirals, on a clear stand" width="1600" height="1600">
+        <figcaption class="tag">Beeswax and dyes</figcaption>
+      </figure>
+      <figure class="square rv">
+        <img src="assets/pysanky-basia-yardley/pysanka-tournesol-support-dore.webp" alt="Blue pysanka with a sunflower design on a gold flower stand" width="1600" height="1600">
+        <figcaption>Sunflower pysanka</figcaption>
+      </figure>
+    </div>
+    <p class="lead">Pysanky written with beeswax and dyes, pysanka ornaments, and eggshell pendants and earrings. I learned this Ukrainian tradition as a child, and I love teaching it in workshops.</p>
+    <div class="cta">
+      <a class="btn btn-full" href="https://www.pysankybybasia.com/shop">Visit the online shop</a>
+      <a class="btn btn-line" href="#classes">Pysanka classes</a>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li>Writing pysanky since childhood</li>
+      <li>First PysankyUSA Retreat in 2014</li>
+      <li>Member of Red Tulip Gallery, New Hope</li>
+      <li>Proceeds go to aid for Ukraine</li>
+    </ul>
+  </div>
+</div>
+
+<section class="classes" id="classes">
+  <div class="wrap">
+    <div class="cl-photo">
+      <figure class="main rv"><img src="assets/pysanky-basia-yardley/atelier-oeufs-dans-les-mains-violet.webp" alt="A circle of hands, each holding a finished pysanka from a workshop" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="small rv"><img src="assets/pysanky-basia-yardley/atelier-oeufs-dans-les-mains-fond-sombre.webp" alt="Open hands holding colorful pysanky over a wooden table" loading="lazy" width="1273" height="1600"></figure>
+    </div>
+    <div>
+      <h2 class="h2">Learn to write your own pysanka.</h2>
+      <p class="intro">Learn the ages-old Ukrainian tradition of writing Easter eggs. Classes are for beginners and intermediate students: no experience necessary, all levels welcome.</p>
+
+      <div class="next">
+        <h3>Next public classes</h3>
+        <p>New dates for the spring are being scheduled with the venues below and will be posted here. Send me a note and I'll tell you as soon as they're set.</p>
+        <ul class="venues">
+          <li>Cherry Grove Farm <span>Lawrenceville, NJ</span></li>
+          <li>Tyler Park Center for the Arts <span>Pysanka Basics, all levels</span></li>
+          <li>Artists of Yardley Art Center <span>Pysanky for all levels</span></li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-full" href="mailto:basia@pysankybybasia.com?subject=Pysanka%20classes">Email me about classes</a>
+          <a class="btn btn-line" href="tel:+12679189172">Call 267-918-9172</a>
+        </div>
+      </div>
+
+      <div class="private">
+        <span class="num">8+</span>
+        <div>
+          <b>Private workshops, on request</b>
+          <p>I come to your home with all materials and supplies, for a group of at least 8 adults or children 12 and up. A private workshop can also be arranged at TPCA or Artists of Yardley, from 6 people.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="work-head">
+      <h2 class="h2">Pysanky, ornaments and eggshell jewelry.</h2>
+      <p>The designs range from very simple to extremely intricate: one egg can take anywhere from three hours to over 100 hours. The same wax-and-dye method goes into my pendants and earrings, which are then cut, shaped and coated by hand.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m-big rv">
+        <img src="assets/pysanky-basia-yardley/pysanky-assortiment-fond-rouge.webp" alt="An assortment of pysanky with geometric and floral designs on red cloth" loading="lazy" width="1600" height="864">
+        <figcaption class="tag">Pysanky, each one written by hand</figcaption>
+      </figure>
+      <div class="m-side">
+        <figure>
+          <div class="a rv"><img src="assets/pysanky-basia-yardley/ornement-pysanka-bleu-marine-fleurs.webp" alt="Navy blue pysanka ornament with white and pink designs, hanging from a silver cord" loading="lazy" width="1600" height="1600"></div>
+          <figcaption>Pysanka ornament</figcaption>
+        </figure>
+        <figure>
+          <div class="b rv"><img src="assets/pysanky-basia-yardley/pendentif-rond-vert-cordon.webp" alt="Round green-gray eggshell pendant with a geometric flower, on a black cord" loading="lazy" width="1200" height="1600"></div>
+          <figcaption>Eggshell pendant</figcaption>
+        </figure>
+      </div>
+      <div class="shop-links">
+        <a class="chip" href="https://www.pysankybybasia.com/shop">Pysanky</a>
+        <a class="chip" href="https://www.pysankybybasia.com/collection1-1">Ornaments</a>
+        <a class="chip" href="https://www.pysankybybasia.com/eggshell-pendants">Eggshell pendants</a>
+        <a class="chip" href="https://www.pysankybybasia.com/stands">Stands for pysanky</a>
+        <a class="chip" href="https://www.pysankybybasia.com/supplies-tools-and-accessories">Supplies and tools</a>
+        <a class="chip" href="https://www.pysankybybasia.com/wine-charms">Wine charms</a>
+      </div>
+    </div>
+
+    <div class="custom">
+      <figure class="ph rv"><img src="assets/pysanky-basia-yardley/pysanka-croix-bleue-socle.webp" alt="Blue pysanka with a pale blue diamond cross, on a clear stand" loading="lazy" width="1600" height="1600"></figure>
+      <div>
+        <h3>A pysanka made for someone.</h3>
+        <p>Commissioned and personalized pysanky: contact me to create a pysanka especially for your special someone, or to remember an extra special event.</p>
+        <div class="cta">
+          <a class="btn btn-line" href="https://www.pysankybybasia.com/custom-work">See custom work</a>
+          <a class="btn btn-line" href="mailto:basia@pysankybybasia.com?subject=Custom%20pysanka">Ask for a custom egg</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2 class="h2">Written, not painted.</h2>
+    <p class="sub">A pysanka is a Ukrainian Easter egg, decorated with a wax-resist method that dates back to ancient times. The design is "written" with a stylus filled with hot beeswax.</p>
+    <ol class="steps">
+      <li><b>Start with a white egg</b><p>Wax goes on with the stylus. Everything covered now will stay white.</p></li>
+      <li><b>Dip in the first color</b><p>Yellow, for example. New wax lines added now will be yellow in the end.</p></li>
+      <li><b>Layer the colors</b><p>A pysanka can carry anywhere from one to 5 or 6 colors, dipped one after the other.</p></li>
+      <li><b>Melt off the wax</b><p>The egg is warmed over a flame and the wax wiped away, revealing the pattern.</p></li>
+    </ol>
+    <div class="legend">
+      <p class="lbl">Legend of the pysanka<small>A creature is chained to a hillside. The more pysanky written each year, the tighter its bonds.</small></p>
+      <blockquote>If many eggs are decorated, its evil is kept in check for yet another year. Helping to save the world, <em>one pysanka at a time.</em></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Find me this fall and winter.</h2>
+      <p class="sub">The 2026 craft show season is here. This is where you can find me through the end of the year.</p>
+      <ul class="shows">
+        <li><span class="d">Nov 14 &amp; 15<small>Saturday and Sunday</small></span><div><b>Holy Ghost Prep Craft Show</b></div></li>
+        <li><span class="d">Nov 21 &amp; 22<small>Saturday and Sunday</small></span><div><b>AOY Fine Craft Show</b><span>Artists of Yardley</span></div></li>
+        <li><span class="d">Dec 12<small>Saturday</small></span><div><b>UECC Christmas Bazaar</b><span>Details to be announced</span></div></li>
+      </ul>
+    </div>
+    <div class="gallery">
+      <figure class="ph rv"><img src="assets/pysanky-basia-yardley/red-tulip-gallery-facade-nuit.webp" alt="Red Tulip Gallery storefront lit up at dusk, with string lights and a wreath" loading="lazy" width="1600" height="987"></figure>
+      <figure class="vit rv"><img src="assets/pysanky-basia-yardley/vitrine-bijoux-oeuf-red-tulip.webp" alt="Display of eggshell pendant necklaces at Red Tulip Gallery" loading="lazy" width="1200" height="1600"></figure>
+      <div class="card">
+        <h3>Red Tulip Gallery</h3>
+        <p>19 W. Bridge Street, New Hope, PA. An artists' co-op with 17 local members: everything in the shop is made by one of us.</p>
+        <dl class="hrs">
+          <dt>Wed to Mon</dt><dd>12 to 5 pm</dd>
+          <dt>Saturday</dt><dd>11 am to 5 pm</dd>
+        </dl>
+        <div class="cta"><a class="btn btn-line" href="http://www.redtulipcrafts.com">Shop the gallery online</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Hi, I'm Basia.</h2>
+      <p>I live in Yardley, in southeastern Pennsylvania. Growing up in a Ukrainian family, I learned to write pysanky at an early age and fell in love with it, writing eggs every Lenten season through my school years. Raising a family put the art on a back burner. With my boys grown, I finally brought out my eggs and dyes, and now they stay out all year.</p>
+      <p>In 2014 I attended my first PysankyUSA Retreat, hosted by Jim Hollock. A class in embellished pendants, taught by Marianne Lurie, started me on eggshell jewelry. One of my great joys is hosting classes and workshops.</p>
+      <div class="pledge"><i aria-hidden="true"></i><p>Since March 1, 2022, proceeds from purchases on my website go to humanitarian aid in Ukraine, currently through <a href="https://www.razomforukraine.org">Razom for Ukraine</a>. Slava Ukraini!</p></div>
+    </div>
+    <div class="portrait">
+      <figure class="pol rv">
+        <img src="assets/pysanky-basia-yardley/basia-devant-musee-pysanka-ukraine.webp" alt="Basia standing in front of the giant decorated egg of the Pysanka Museum" loading="lazy" width="1200" height="1600">
+        <figcaption>At the Pysanka Museum</figcaption>
+      </figure>
+      <figure class="pend rv"><img src="assets/pysanky-basia-yardley/pendentif-tournesol-coquille.webp" alt="Oval eggshell pendant with a sunflower design" loading="lazy" width="1200" height="1600"></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="big">Pysanky<i>by</i>Basia</p>
+        <p style="margin-top:14px;max-width:360px">Ukrainian pysanky, ornaments and eggshell jewelry by Basia Andrusko, Yardley, PA 19067.</p>
+        <div class="cta"><a class="btn btn-light" href="mailto:basia@pysankybybasia.com">basia@pysankybybasia.com</a></div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+12679189172">267-918-9172</a></li>
+          <li><a href="mailto:basia@pysankybybasia.com">Email Basia</a></li>
+          <li><a href="https://www.pysankybybasia.com/contact-me">Contact page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="http://www.facebook.com/pysankybybasia">Facebook</a></li>
+          <li><a href="http://instagram.com/pysankybybasia">Instagram</a></li>
+          <li><a href="http://www.pinterest.com/pysankybybasia">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Basia Andrusko, PysankyByBasia</span><span>Yardley, Pennsylvania</span></div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for PysankyByBasia · <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

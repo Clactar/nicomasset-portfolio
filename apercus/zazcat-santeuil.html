@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à l'atelier Zazcat, céramiste à Santeuil (95), nuit du 2026-10-27.
+     CONTENU : textes, prix, horaires, coordonnées et photos relevés sur https://zazcat.fr/ le 27/10/2026
+     (dossier de Marco). Rien d'inventé. Expos : seulement celles après le 27/10/2026. Stages du
+     dimanche : seulement la date du 15 novembre. Défaut réglé : la « prochaine expo » annoncée était
+     un salon passé (Automnales d'Harcourt, 17 et 18 octobre).
+     DESIGN (Nova) : engobe rosé, encre aubergine, accent grès orangé. Gloock + Karla. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F2E8E1" />
+<title>Atelier Zazcat, céramiques et cours de poterie à Santeuil, dans le Vexin</title>
+<meta name="description" content="Céramiques et sculptures poétiques pour la maison et le jardin, cours de poterie pour adultes en petit groupe et stages du dimanche à Santeuil, dans le Vexin." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232B1E2A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F2E8E1'%3EZ%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --engobe:#F2E8E1;
+  --engobe-2:#EADBD1;
+  --biscuit:#FBF6F2;
+  --encre:#2B1E2A;
+  --encre-douce:#5A4858;
+  --gres:#C8602B;
+  --gres-fonce:#A44B1E;
+  --aubergine:#2B1E2A;
+  --sur-sombre:#F2E8E1;
+  --sur-sombre-doux:#CDBCC6;
+  --filet:rgba(43,30,42,.14);
+  --ombre:0 30px 60px -34px rgba(43,30,42,.55);
+  --ombre-courte:0 18px 36px -24px rgba(43,30,42,.5);
+  --fd:"Gloock",Georgia,serif;
+  --ft:"Karla",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--engobe);color:var(--encre);font-family:var(--ft);font-size:18px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--gres);color:var(--biscuit)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:pretty}
+h1,h2{font-family:var(--fd);letter-spacing:-.01em}
+p{margin:0}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--gres);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--encre);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--encre);color:var(--engobe)}
+.btn-plein:hover{background:var(--gres);border-color:var(--gres);transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(200,96,43,.9)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--engobe);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--gres);border-color:var(--gres);color:#FFF8F2}
+.sombre .btn-plein:hover{background:var(--engobe);border-color:var(--engobe);color:var(--encre)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--encre)}
+
+/* étiquette posée sur photo */
+.pastille{position:absolute;left:16px;bottom:16px;background:rgba(251,246,242,.94);color:var(--encre);font-size:15px;font-weight:600;line-height:1.3;padding:9px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(43,30,42,.6)}
+.pastille b{color:var(--gres-fonce);font-weight:700}
+.pastille.haut-gauche{top:16px;bottom:auto}
+
+/* apparitions des photos seulement */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding-top:26px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:30px}
+.marque small{font-size:13px;color:var(--encre-douce);margin-top:6px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--gres-fonce)}
+.tel-pill{margin-left:8px;background:var(--engobe-2);padding:10px 18px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .25s}
+.tel-pill:hover{background:var(--encre);color:var(--engobe)}
+
+/* ---------- héros ---------- */
+.heros{padding:72px 0 96px}
+.heros .env{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:center}
+.lieu{font-size:15px;font-weight:700;color:var(--gres-fonce);margin-bottom:22px;letter-spacing:.02em}
+.heros h1{font-size:clamp(44px,5.6vw,80px);line-height:1.02;max-width:12ch}
+.heros h1 em{font-style:normal;color:var(--gres)}
+.heros .chapo{font-size:19px;color:var(--encre-douce);max-width:50ch;margin-top:28px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros-visuel{position:relative;padding-bottom:40px}
+.heros-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.heros-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 50%}
+.polaroid{position:absolute;right:-44px;bottom:-30px;width:256px;background:var(--biscuit);padding:10px 10px 14px;border-radius:4px;transform:rotate(4.5deg);box-shadow:0 26px 40px -22px rgba(43,30,42,.65)}
+.polaroid img{width:100%;aspect-ratio:7/5;object-fit:cover;object-position:50% 40%;border-radius:2px}
+.polaroid p{font-size:14px;font-weight:600;text-align:center;margin-top:8px;color:var(--encre-douce)}
+
+/* ---------- bandeau de faits ---------- */
+.faits{background:var(--engobe-2);border-block:1px solid var(--filet)}
+.faits ul{display:flex;justify-content:space-between;gap:16px 24px;padding-block:22px;flex-wrap:wrap}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600}
+.faits li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gres);flex:none}
+
+/* ---------- expos ---------- */
+.expos{padding:120px 0 112px}
+.expos .env{display:grid;grid-template-columns:4fr 7fr;gap:72px;align-items:start}
+.expos h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.expos .intro p{color:var(--encre-douce);margin-top:22px;max-width:36ch}
+.carnet{background:var(--biscuit);border-radius:20px;box-shadow:var(--ombre-courte);padding:12px 40px}
+.expo{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid var(--filet)}
+.expo:last-child{border-bottom:0}
+.expo .date{font-family:var(--fd);font-size:34px;line-height:1}
+.expo .date small{display:block;font-family:var(--ft);font-size:15px;font-weight:600;color:var(--encre-douce);margin-top:8px}
+.expo h3{font-family:var(--ft);font-weight:700;font-size:20px;line-height:1.3}
+.expo .ou{color:var(--encre-douce);font-size:16px;margin-top:4px}
+.expo .badge{font-size:14px;font-weight:700;background:var(--gres);color:#FFF8F2;padding:7px 14px;border-radius:999px;white-space:nowrap}
+.expo.premiere .date{color:var(--gres-fonce)}
+
+/* ---------- cours ---------- */
+.cours{background:var(--biscuit);padding:120px 0}
+.cours .env{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center}
+.cours-visuel{position:relative;padding:0 0 120px 0}
+.cours-visuel .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.cours-visuel .grande img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:60% 50%}
+.passe{position:absolute;right:-24px;bottom:0;width:230px;background:var(--engobe);padding:14px;border-radius:14px;box-shadow:var(--ombre-courte)}
+.passe img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.passe p{font-size:14px;font-weight:600;margin-top:10px;color:var(--encre-douce);line-height:1.35}
+.cours h2{font-size:clamp(34px,3.8vw,50px);line-height:1.06}
+.cours .txt{margin-top:24px;color:var(--encre-douce);max-width:56ch}
+.cours .txt + .txt{margin-top:14px}
+.horaires{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.horaires span{background:var(--engobe);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:600}
+.tarifs{margin-top:32px;border-top:1px solid var(--filet)}
+.tarifs li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--filet)}
+.tarifs li span{font-size:17px}
+.tarifs li span small{display:block;color:var(--encre-douce);font-size:15px;margin-top:2px}
+.tarifs li b{font-family:var(--fd);font-weight:400;font-size:28px;white-space:nowrap}
+.cours .actions{margin-top:32px}
+.note{font-size:15px;color:var(--encre-douce);margin-top:16px;max-width:56ch}
+
+/* ---------- stages (section sombre) ---------- */
+.sombre{background:var(--aubergine);color:var(--sur-sombre)}
+.stages{padding:120px 0}
+.stages .env{display:grid;grid-template-columns:6fr 5fr;gap:80px}
+.stages h2{font-size:clamp(34px,3.8vw,50px);line-height:1.06}
+.stages .chapo{color:var(--sur-sombre-doux);margin-top:22px;max-width:50ch}
+.prochain{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:end;margin-top:48px}
+.prochain .quand{border-top:1px solid rgba(242,232,225,.25);padding-top:24px}
+.prochain .quand small{font-size:15px;font-weight:700;color:#E9925F}
+.prochain .quand strong{display:block;font-family:var(--fd);font-weight:400;font-size:clamp(34px,3.2vw,46px);line-height:1.05;margin:10px 0 14px}
+.prochain .quand p{color:var(--sur-sombre-doux);font-size:17px}
+.prochain .quand p + p{margin-top:6px}
+.prochain .prix{display:flex;gap:28px;margin-top:22px}
+.prochain .prix div{font-size:16px;color:var(--sur-sombre-doux)}
+.prochain .prix b{display:block;font-family:var(--fd);font-weight:400;font-size:36px;color:var(--sur-sombre);line-height:1.1}
+.coupelle{position:relative;border-radius:16px;overflow:hidden;transform:rotate(-2.5deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.coupelle img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.stages .actions{margin-top:44px}
+.formules h3{font-family:var(--ft);font-weight:700;font-size:18px;color:#E9925F;margin-bottom:8px}
+.formules li{padding:20px 0;border-bottom:1px solid rgba(242,232,225,.18)}
+.formules li:first-of-type{border-top:1px solid rgba(242,232,225,.18)}
+.formules .ligne{display:flex;justify-content:space-between;gap:18px;align-items:baseline}
+.formules .ligne span{font-weight:700;font-size:18px}
+.formules .ligne b{font-family:var(--fd);font-weight:400;font-size:24px;white-space:nowrap}
+.formules p{color:var(--sur-sombre-doux);font-size:16px;margin-top:4px}
+.formules .fin{color:var(--sur-sombre-doux);font-size:16px;margin-top:22px;max-width:48ch}
+
+/* ---------- créations ---------- */
+.creations{padding:128px 0 120px}
+.creations .haut{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:end;margin-bottom:56px}
+.creations h2{font-size:clamp(36px,4.2vw,58px);line-height:1.04}
+.creations .haut p{color:var(--encre-douce)}
+.mosaique{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:start}
+.cerf{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.cerf img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:55% 40%}
+.colonne-pieces{display:flex;flex-direction:column;gap:28px;padding-top:56px}
+.mangeoire{position:relative;width:340px;max-width:100%;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.mangeoire img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:40% 50%}
+.nichoir{align-self:flex-end;margin-right:12px;margin-top:-64px;width:220px;background:var(--biscuit);padding:10px 10px 12px;border-radius:4px;transform:rotate(-3deg);box-shadow:0 24px 36px -22px rgba(43,30,42,.6);position:relative;z-index:2}
+.nichoir img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.nichoir p{font-size:14px;font-weight:600;text-align:center;margin-top:8px;color:var(--encre-douce)}
+.univers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:1.5px solid var(--encre)}
+.univers a{display:block;text-decoration:none;padding:28px 32px 8px 0;transition:color .25s}
+.univers a + a{padding-left:32px;border-left:1px solid var(--filet)}
+.univers h3{font-family:var(--fd);font-size:30px;line-height:1.1}
+.univers p{color:var(--encre-douce);font-size:16px;margin-top:12px}
+.univers .lien{display:inline-block;margin-top:14px;font-weight:700;font-size:16px;color:var(--gres-fonce);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.univers a:hover h3{color:var(--gres-fonce)}
+.creations .actions{margin-top:48px}
+
+/* ---------- l'atelier ---------- */
+.atelier{background:var(--engobe-2);padding:128px 0}
+.citation{font-family:var(--fd);font-size:clamp(30px,3.4vw,46px);line-height:1.18;max-width:28ch;text-wrap:balance}
+.citation::before{content:"« ";color:var(--gres)}
+.citation::after{content:" »";color:var(--gres)}
+.atelier .bas{display:grid;grid-template-columns:3fr 5fr 4fr;gap:56px;margin-top:72px;align-items:start}
+.galou{position:relative;border-radius:180px 180px 18px 18px;overflow:hidden;box-shadow:var(--ombre);max-width:300px}
+.galou img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:50% 40%}
+.atelier .bas p{color:var(--encre-douce)}
+.atelier .bas p + p{margin-top:16px}
+.atelier .encadre{background:var(--biscuit);border-radius:18px;padding:32px;box-shadow:var(--ombre-courte)}
+.atelier .encadre h3{font-family:var(--fd);font-size:26px;line-height:1.15;margin-bottom:12px}
+
+/* ---------- venir ---------- */
+.venir{padding:120px 0}
+.venir .env{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center}
+.venir h2{font-size:clamp(34px,3.8vw,50px);line-height:1.06}
+.venir p{color:var(--encre-douce);margin-top:20px;max-width:52ch}
+.carte-adresse{background:var(--biscuit);border-radius:22px;box-shadow:var(--ombre);padding:40px}
+.carte-adresse .adr{font-family:var(--fd);font-size:30px;line-height:1.2}
+.carte-adresse dl{margin:24px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px;font-size:17px}
+.carte-adresse dt{font-weight:700}
+.carte-adresse dd{margin:0;color:var(--encre-douce)}
+.carte-adresse dd a{color:var(--encre);font-weight:600;text-underline-offset:3px}
+.carte-adresse .actions{margin-top:28px}
+
+/* ---------- pied ---------- */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:40px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:34ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:#E9925F;margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(242,232,225,.3)}
+.pied li a:hover{color:#E9925F;border-color:#E9925F}
+.propo{margin-top:72px;border-top:1px solid rgba(242,232,225,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+/* ---------- téléphone ---------- */
+@media (max-width: 1100px){
+  .polaroid{right:-12px}
+  .passe{right:0}
+}
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{flex-wrap:wrap;gap:12px 16px}
+  .marque span{font-size:26px}
+  .nav{order:3;width:100%;margin-left:0;gap:18px;justify-content:flex-start}
+  .nav .loin{display:none}
+  .tel-pill{margin-left:auto;font-size:15px;padding:9px 14px}
+  .heros{padding:30px 0 56px}
+  .heros .env{grid-template-columns:1fr;gap:0}
+  .heros-texte{display:contents}
+  .lieu{order:1}.heros h1{order:2}.heros-visuel{order:3;margin-top:24px}.heros .chapo{order:4}.heros .actions{order:5}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:44px;max-width:none}
+  .heros .chapo{font-size:17px;margin-top:22px}
+  .heros-visuel{padding-bottom:34px;margin-right:6px}
+  .heros-photo img{aspect-ratio:4/3}
+  .polaroid{width:150px;right:-4px;bottom:0;padding:6px 6px 8px}
+  .polaroid p{font-size:12px;margin-top:4px}
+  .pastille{font-size:14px;left:12px;bottom:12px;padding:7px 12px}
+  .pastille.haut-gauche{top:12px}
+  .actions{flex-direction:column;margin-top:24px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:10px;padding-block:20px}
+  .expos,.cours,.stages,.creations,.atelier,.venir{padding:80px 0}
+  .expos .env,.cours .env,.stages .env,.venir .env{grid-template-columns:1fr;gap:40px}
+  .carnet{padding:4px 22px}
+  .expo{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .expo .badge{justify-self:start;order:-1}
+  .expo .date{font-size:30px}
+  .expo .date small{display:inline;margin-left:8px}
+  .cours-visuel{padding-bottom:90px;order:2}
+  .passe{width:160px;padding:10px}
+  .tarifs li b{font-size:24px}
+  .prochain{grid-template-columns:1fr;gap:32px}
+  .coupelle{width:220px}
+  .creations .haut{grid-template-columns:1fr;gap:20px;margin-bottom:36px}
+  .mosaique{grid-template-columns:1fr;gap:24px}
+  .colonne-pieces{padding-top:0}
+  .nichoir{width:170px;margin-top:-48px}
+  .univers{grid-template-columns:1fr;margin-top:48px}
+  .univers a,.univers a + a{padding:24px 0;border-left:0;border-bottom:1px solid var(--filet)}
+  .atelier .bas{grid-template-columns:1fr;gap:36px;margin-top:48px}
+  .galou{max-width:220px}
+  .carte-adresse{padding:28px 22px}
+  .carte-adresse .adr{font-size:26px}
+  .carte-adresse dl{grid-template-columns:1fr;gap:2px}
+  .carte-adresse dd{margin-bottom:12px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Atelier Zazcat, retour en haut">
+      <span>Zazcat</span>
+      <small>Atelier céramique, Santeuil</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#expos">Les expos</a>
+      <a href="#cours">Les cours</a>
+      <a href="#stages" class="loin">Les stages</a>
+      <a href="#creations">Les créations</a>
+      <a href="#atelier" class="loin">L'atelier</a>
+    </nav>
+    <a class="tel-pill" href="tel:+33617826276">06 17 82 62 76</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <p class="lieu">Céramiste à Santeuil, dans le Vexin</p>
+        <h1>Céramiques et sculptures <em>poétiques</em>, façonnées main.</h1>
+        <p class="chapo">Bienvenue dans l'univers de l'atelier Zazcat, à Santeuil dans le Val-d'Oise, à 50 km de Paris. Des pièces uniques pour la maison et le jardin, et des cours de poterie pour les adultes comme pour les enfants.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#cours">S'inscrire à un cours</a>
+          <a class="btn btn-contour" href="https://zazcat.fr/boutique/">Voir la boutique</a>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="heros-photo apparait">
+          <img src="assets/zazcat-santeuil/main-decorant-un-bol-orange.webp" alt="Mains incisant un décor de bulles sur un grand bol en grès orangé" width="1600" height="900" fetchpriority="high" />
+          <a class="pastille haut-gauche" href="#expos" style="text-decoration:none">Prochaine expo : <b>21 et 22 novembre</b>, Natur'Nesles</a>
+        </figure>
+        <figure class="polaroid apparait">
+          <img src="assets/zazcat-santeuil/potiere-et-plat-feuillage.webp" alt="La céramiste de l'atelier Zazcat tenant un plat noir au décor de feuilles" width="976" height="683" loading="lazy" />
+          <p>À l'atelier, à Santeuil</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="L'atelier en bref">
+      <li>Atelier créé en 2017</li>
+      <li>Parc naturel régional du Vexin</li>
+      <li>Cours en petit groupe, 6 personnes maximum</li>
+      <li>Chaque pièce est unique</li>
+    </ul>
+  </div>
+
+  <section class="expos" id="expos">
+    <div class="env">
+      <div class="intro">
+        <h2>Nous retrouver en salon</h2>
+        <p>Les pièces de l'atelier voyagent dans les salons et les marchés de potiers. Les prochains rendez-vous :</p>
+      </div>
+      <ol class="carnet" style="list-style:none;margin:0">
+        <li class="expo premiere">
+          <p class="date">21 et 22<small>novembre</small></p>
+          <div><h3>Salon Natur'Nesles</h3><p class="ou">Nesles la Vallée (95)</p></div>
+          <span class="badge">Prochaine expo</span>
+        </li>
+        <li class="expo">
+          <p class="date">5 et 6<small>décembre</small></p>
+          <div><h3>Marché des potiers</h3><p class="ou">Villers Bocage (14)</p></div>
+          <span></span>
+        </li>
+        <li class="expo">
+          <p class="date">12 et 13<small>décembre</small></p>
+          <div><h3>Marché de Noël</h3><p class="ou">Pontoise (95)</p></div>
+          <span></span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="env">
+      <div class="cours-visuel">
+        <figure class="grande apparait">
+          <img src="assets/zazcat-santeuil/montage-d-un-pot-sur-le-tour.webp" alt="Une main monte un pot en argile sur le tour" width="1600" height="900" loading="lazy" />
+        </figure>
+        <figure class="passe apparait">
+          <img src="assets/zazcat-santeuil/plat-feuille-emaille-cours.webp" alt="Plat en forme de feuille émaillé blanc et turquoise, réalisé par un élève" width="1200" height="1600" loading="lazy" />
+          <p>Une réalisation d'élève, en cours hebdo</p>
+        </figure>
+      </div>
+      <div>
+        <h2>Cours de poterie pour adultes, chaque mardi</h2>
+        <p class="txt">Que vous soyez déjà amateur ou non-initié, nos cours sont ouverts à toutes et tous. En petit groupe de 6 personnes maximum, nous vous apprenons les bonnes pratiques de l'argile : façonnage, tournage, émaillage.</p>
+        <p class="txt">Plaque, colombin, pot pincé, tournage, modelage en ronde bosse ou en bas relief, sur du grès blanc ou noir.</p>
+        <div class="horaires" aria-label="Horaires">
+          <span>Mardi 14h à 16h30</span>
+          <span>Mardi 18h30 à 21h</span>
+          <span>Hors vacances scolaires</span>
+        </div>
+        <ul class="tarifs">
+          <li><span>Carte de 5 cours de 2h30<small>Valable uniquement pour les cours hebdomadaires</small></span><b>180 €</b></li>
+          <li><span>Carte de 10 cours de 2h30<small>Possibilité de payer en 2 fois</small></span><b>350 €</b></li>
+          <li><span>À la séance<small>Sous réserve des places disponibles</small></span><b>50 €</b></li>
+        </ul>
+        <p class="note">Le cours est ouvert à partir de 2 personnes inscrites. Forfaits payables à l'avance, de préférence par virement.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://zazcat.fr/cours-adulte/">Les cours en détail</a>
+          <a class="btn btn-contour" href="mailto:zazcat.atelier@gmail.com?subject=Cours%20de%20poterie">Demander une place</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stages sombre" id="stages">
+    <div class="env">
+      <div>
+        <h2>Les stages du dimanche</h2>
+        <p class="chapo">Certains dimanches, l'atelier est ouvert aux apprentis céramistes occasionnels. Vous façonnez un objet simple ou une petite sculpture, en 3 ou 6 heures selon la formule choisie.</p>
+        <div class="prochain">
+          <div class="quand">
+            <small>Prochaine date</small>
+            <strong>Dimanche 15 novembre</strong>
+            <p>De 10h à 13h ou de 14h30 à 17h30.</p>
+            <p>Il n'y a pas de tournage le dimanche.</p>
+            <div class="prix">
+              <div><b>75 €</b>3 heures</div>
+              <div><b>140 €</b>6 heures</div>
+            </div>
+          </div>
+          <figure class="coupelle apparait">
+            <img src="assets/zazcat-santeuil/coupelle-fleur-stage-dimanche.webp" alt="Coupelle festonnée aux rayons orange et verts, réalisée en stage" width="1260" height="1600" loading="lazy" />
+            <span class="pastille">Faite en stage</span>
+          </figure>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:zazcat.atelier@gmail.com?subject=Stage%20du%2015%20novembre">Réserver le 15 novembre</a>
+          <a class="btn btn-contour" href="https://zazcat.fr/ateliers-ponctuels/">Tous les ateliers</a>
+        </div>
+      </div>
+      <div class="formules">
+        <h3>Et sur rendez-vous</h3>
+        <ul>
+          <li><div class="ligne"><span>Forfait famille</span><b>170 €</b></div><p>Les 2h30, pour 2 adultes et 2 enfants de plus de 7 ans.</p></li>
+          <li><div class="ligne"><span>Initiation au tournage</span><b>90 €</b></div><p>2 h en individuel, sur réservation.</p></li>
+          <li><div class="ligne"><span>Baby poterie</span><b>30 €</b></div><p>1 h avec votre enfant de 15 à 36 mois, pour découvrir l'argile solide et liquide.</p></li>
+          <li><div class="ligne"><span>Atelier privatisé, adultes</span><b>45 €</b></div><p>Par heure et par personne, minimum 2 heures et 2 personnes.</p></li>
+          <li><div class="ligne"><span>Atelier privatisé, enfants</span><b>140 €</b></div><p>Les 2 heures pour 4 enfants, 40 € par enfant supplémentaire (7 enfants maximum).</p></li>
+        </ul>
+        <p class="fin">L'atelier intervient aussi dans les écoles et dans des établissements accueillant des personnes en situation de handicap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creations" id="creations">
+    <div class="env">
+      <div class="haut">
+        <h2>Pour une maison zen et un jardin punk</h2>
+        <p>Nos créations embellissent le quotidien et aident à protéger la faune de nos jardins. Et dans la galerie, une surprise : la poésie des Mitouflis et des Galous, créatures messagères.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="cerf apparait">
+          <img src="assets/zazcat-santeuil/mitoufli-cerf-dans-le-lierre.webp" alt="Sculpture de cerf en grès clair aux bois sombres, dans le lierre" width="1600" height="900" loading="lazy" />
+          <span class="pastille">Un Mitoufli, gardien du jardin</span>
+        </figure>
+        <div class="colonne-pieces">
+          <figure class="mangeoire apparait">
+            <img src="assets/zazcat-santeuil/mangeoire-bilbo-mesange.webp" alt="Mangeoire suspendue en céramique orange, une mésange s'y pose" width="1600" height="1067" loading="lazy" />
+            <span class="pastille">Bilbo, mangeoire <b>42 €</b></span>
+          </figure>
+          <figure class="nichoir apparait">
+            <img src="assets/zazcat-santeuil/nichoir-toit-rouge.webp" alt="Nichoir en grès noir à toit rouge" width="1600" height="1600" loading="lazy" />
+            <p>Un nichoir, grès noir</p>
+          </figure>
+        </div>
+      </div>
+      <div class="univers">
+        <a href="https://zazcat.fr/categorie-produit/pour-une-maison-zen/">
+          <h3>Maison zen</h3>
+          <p>Porte-encens, cloches, carillons, coupelles : des céramiques qui apportent un supplément d'âme à votre intérieur.</p>
+          <span class="lien">Voir les pièces</span>
+        </a>
+        <a href="https://zazcat.fr/categorie-produit/pour-les-oiseaux/">
+          <h3>Jardin vivant</h3>
+          <p>Nichoirs, mangeoires, abreuvoirs ou hôtels à insectes. Ensauvagez votre jardin tout en aidant la faune de votre région.</p>
+          <span class="lien">Voir les pièces</span>
+        </a>
+        <a href="https://zazcat.fr/categorie-produit/les-creatures-messageres/">
+          <h3>Créatures messagères</h3>
+          <p>Un monde onirique et joyeux, peuplé de créatures gardiennes porteuses de sens pour qui sait lire entre les lignes.</p>
+          <span class="lien">Voir les pièces</span>
+        </a>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="https://zazcat.fr/boutique/">Parcourir la boutique</a>
+        <a class="btn btn-contour" href="https://zazcat.fr/portfolio/">La galerie</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="atelier" id="atelier">
+    <div class="env">
+      <p class="citation">Attirer l'attention sur la beauté de la faune et de la flore, changer son regard et l'inciter à les préserver : tel est le fil rouge de mon travail.</p>
+      <div class="bas">
+        <figure class="galou apparait">
+          <img src="assets/zazcat-santeuil/galou-sculpture-de-jardin.webp" alt="Galou, sculpture de jardin en grès violine à bois de cerf, avec un cristal" width="1067" height="1600" loading="lazy" />
+        </figure>
+        <div>
+          <p>J'y ajoute une pincée de poésie, de fantaisie et de légèreté pour susciter rêves et émotions. Mes sculptures, Mitouflis, Galougalous et Telgarwiins, sont porteuses de sens pour qui sait lire entre les lignes.</p>
+          <p>Chaque pièce est unique et son aspect parfois imparfait raconte une histoire authentique, née de la main qui l'a façonnée.</p>
+          <p>Après une carrière de graphiste dans l'édition, je me suis professionnalisée dans le travail de l'argile et j'ai créé mon atelier à Santeuil, au cœur du Vexin, en 2017.</p>
+        </div>
+        <div class="encadre">
+          <h3>Un atelier attentif à ses ressources</h3>
+          <p>Matières premières, gestion de l'eau, outils : mon processus de travail se veut le plus vertueux possible, et privilégie au maximum le réemploi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="contact">
+    <div class="env">
+      <div>
+        <h2>Venir à l'atelier</h2>
+        <p>Santeuil est une petite commune du Val-d'Oise, à 50 km de Paris : comptez 1h en voiture depuis la capitale. Nous vous accueillons avec plaisir pour un cours de poterie, ou pour vous remettre en main propre un achat fait sur la boutique en ligne.</p>
+        <p>Une question, une commande spécifique ? Écrivez-nous, nous vous répondrons toujours avec plaisir.</p>
+      </div>
+      <div class="carte-adresse">
+        <p class="adr">9 rue René Simon<br />95640 Santeuil</p>
+        <dl>
+          <dt>Téléphone</dt><dd><a href="tel:+33617826276">06 17 82 62 76</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:zazcat.atelier@gmail.com">zazcat.atelier@gmail.com</a></dd>
+          <dt>Cours</dt><dd>Le mardi, sur inscription. Les autres séances sur rendez-vous.</dd>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33617826276">Appeler l'atelier</a>
+          <a class="btn btn-contour" href="mailto:zazcat.atelier@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Zazcat</span><small>Atelier céramique, Santeuil</small></a>
+        <p class="dit">Création et cours de poterie dans le Vexin, proche Paris.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>9 rue René Simon<br />95640 Santeuil</li>
+          <li><a href="tel:+33617826276">06 17 82 62 76</a></li>
+          <li><a href="mailto:zazcat.atelier@gmail.com">zazcat.atelier@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires des cours</h3>
+        <ul>
+          <li>Mardi 14h à 16h30</li>
+          <li>Mardi 18h30 à 21h</li>
+          <li>Stages : certains dimanches, 10h à 13h ou 14h30 à 17h30</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre l'atelier</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/zazcat.ceramiques/">Instagram, les céramiques</a></li>
+          <li><a href="https://www.instagram.com/zazcat.coursetstages/">Instagram, cours et stages</a></li>
+          <li><a href="https://www.facebook.com/zazcat.atelier">Facebook</a></li>
+          <li><a href="https://a347db15.sibforms.com/serve/MUIFAKtpdbz3qpqcczLOBFXnB1sXrm-mAHrp1w7azRjR8rHFDP4veGCa4EN07a3nWCLLhPmMA-Kn3wsZEUC62SiCW6YoBJcgkb2YFSxqhUUOJNGtYOZGI6tiZ9IPcEZMORTgW8CYhi_yz4UMkxSAnke7r74GsD_7U5dtB3T677qkMY1z6bo_moBaBAswTEHP3xetkNl7CAtH90To">La newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour l'atelier Zazcat</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('vu') }); return;
+  }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vu'); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée au GAEC Les 3 Mulets, Gourgeon (70). 2026-10-27.
+     CONTENU : textes, tarifs, coordonnées et photos relevés sur 3mulets.fr (dossier de Marco du 27/10).
+     Rien d'inventé. Liens externes : seulement ceux vérifiés 200 le 27/10.
+     DÉFAUTS RÉGLÉS : le bloc laine mène à la vraie boutique (/boutique/, plus de /shop/ en 404) ;
+     le camping a son propre bloc et son bouton mène à /le-camping/ (plus de /our-history/ en 404).
+     DESIGN : Nova, direction « laine et pré ». Écru laine, brun terre, vert pré, section sombre brune.
+     Young Serif + Instrument Sans. Héros en mosaïque : troupeau en grand, laine qui chevauche en bas. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F2EDE2" />
+<title>GAEC Les 3 Mulets, ferme bio, camping à la ferme et laine à Gourgeon (70)</title>
+<meta name="description" content="Ferme biologique à Gourgeon, en Haute-Saône : 350 brebis, agneau en vente directe, camping paysan dans un pré et produits en laine de nos brebis." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%234E7A3A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F2EDE2'%3E3%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ecru:#F2EDE2;
+  --ecru-2:#E8E0D1;
+  --carte:#FAF6EE;
+  --terre:#2E2620;
+  --terre-2:#3A3029;
+  --pre:#4E7A3A;
+  --pre-fonce:#3E6430;
+  --pre-clair:#9DC283;
+  --sourdine:#6B5F55;
+  --ombre:0 30px 60px -34px rgba(46,38,32,.55);
+  --display:"Young Serif", Georgia, serif;
+  --texte:"Instrument Sans", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ecru)}
+body{background:var(--ecru);color:var(--terre);font-family:var(--texte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--pre);color:var(--ecru)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pre);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px, calc(100% - 48px));margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap .mot{font-size:15px;font-weight:600;color:var(--pre);margin-bottom:16px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .25s cubic-bezier(.2,.7,.2,1), background-color .25s, color .25s, border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--pre);color:var(--carte)}
+.btn-plein:hover{background:var(--pre-fonce)}
+.btn-contour{border:1.5px solid rgba(46,38,32,.35);color:var(--terre)}
+.btn-contour:hover{border-color:var(--terre);background:rgba(46,38,32,.04)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* En-tête */
+.entete{padding:24px 0}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:14px}
+.marque i{width:44px;height:44px;border-radius:50%;background:var(--pre);color:var(--ecru);display:grid;place-items:center;font-family:var(--display);font-style:normal;font-size:24px;line-height:1}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:23px;line-height:1.1}
+.marque span{display:block;font-size:13px;color:var(--sourdine)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:15.5px;transition:color .2s}
+.nav a:hover{color:var(--pre)}
+.nav .tel{background:var(--terre);color:var(--ecru);padding:10px 20px;border-radius:999px;font-weight:600}
+.nav .tel:hover{background:var(--pre);color:var(--carte)}
+.entete-tel{display:none}
+
+/* Héros en mosaïque */
+.heros{padding:40px 0 96px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"tete mosaique" "corps mosaique";column-gap:64px;align-items:start}
+.heros-tete{grid-area:tete;padding-top:56px}
+.heros-corps{grid-area:corps}
+.heros h1{font-size:clamp(44px, 5.2vw, 72px);line-height:1.04;margin-bottom:28px}
+.heros h1 span{color:var(--pre)}
+.heros-corps p{font-size:18.5px;color:#4A3F36;max-width:30em;margin-bottom:34px}
+.mosaique{grid-area:mosaique;position:relative;padding:0 0 96px 0}
+.troupeau{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -42px rgba(46,38,32,.6)}
+.troupeau img{width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:50% 78%}
+.pastille{position:absolute;left:16px;bottom:16px;background:rgba(250,246,238,.95);color:var(--terre);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.2}
+.troupeau .pastille{left:auto;right:16px;top:16px;bottom:auto}
+.laine{position:absolute;left:-56px;bottom:0;width:40%;border-radius:18px;overflow:hidden;border:8px solid var(--ecru);box-shadow:var(--ombre)}
+.laine img{width:100%;aspect-ratio:1/1;object-fit:cover}
+
+/* Bandeau de faits */
+.faits{background:var(--ecru-2)}
+.faits ul{list-style:none;display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:40px;padding:34px 0}
+.faits li{display:flex;flex-direction:column;gap:2px;font-size:15.5px;color:#4A3F36;line-height:1.45}
+.faits b{font-family:var(--display);font-weight:400;font-size:30px;color:var(--pre-fonce);line-height:1.15}
+
+/* Qui sommes-nous */
+.qui{padding:128px 0}
+.qui .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.qui figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.qui figure img{width:100%;aspect-ratio:3/2.4;object-fit:cover;object-position:50% 50%}
+.qui h2{font-size:clamp(32px, 3.4vw, 46px);line-height:1.12;margin-bottom:24px}
+.qui p{color:#4A3F36;margin-bottom:16px;max-width:34em}
+.pour{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:10px}
+.pour li{font-family:var(--display);font-size:21px;display:flex;gap:14px;align-items:baseline}
+.pour li::before{content:"";width:22px;height:2px;background:var(--pre);flex:none;transform:translateY(-6px)}
+
+/* La ferme : section sombre */
+.ferme{background:var(--terre);color:var(--ecru);padding:128px 0}
+.ferme ::selection{background:var(--pre-clair);color:var(--terre)}
+.ferme .wrap .mot{color:var(--pre-clair)}
+.ferme-haut{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:88px;align-items:end;margin-bottom:80px}
+.ferme h2{font-size:clamp(36px, 4.2vw, 58px);line-height:1.06;margin-bottom:24px}
+.ferme-haut p{color:#D9CFC0;max-width:36em;margin-bottom:14px}
+.bergerie{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);transform:rotate(1.5deg)}
+.bergerie img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.saisons{display:grid;grid-template-columns:minmax(0,4fr) repeat(3, minmax(0,3fr));gap:32px;padding:40px 0;border-block:1px solid rgba(242,237,226,.16);margin-bottom:80px}
+.saisons > p{color:#D9CFC0;font-size:16px}
+.saisons div h3{font-size:28px;margin-bottom:4px}
+.saisons div p{color:var(--pre-clair);font-size:16px}
+.ferme-bas{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px}
+.ferme-bas h3{font-size:30px;line-height:1.15;margin-bottom:18px}
+.ferme-bas p{color:#D9CFC0;margin-bottom:14px}
+.ardoise{background:var(--terre-2);border-radius:20px;padding:36px 40px;box-shadow:0 30px 60px -36px rgba(0,0,0,.8)}
+.ardoise h3{margin-bottom:6px}
+.ardoise > p{font-size:15.5px;color:var(--pre-clair);margin-bottom:20px}
+.ardoise ul{list-style:none}
+.ardoise li{display:flex;align-items:baseline;gap:12px;padding:9px 0;font-size:16.5px}
+.ardoise li::after{content:"";order:2;flex:1;border-bottom:1px dotted rgba(242,237,226,.3);transform:translateY(-4px)}
+.ardoise li span{order:3;font-variant-numeric:tabular-nums;white-space:nowrap}
+.visite{margin-top:28px;padding-top:24px;border-top:1px solid rgba(242,237,226,.16)}
+
+/* Camping */
+.camping{padding:136px 0 128px;scroll-margin-top:16px}
+.camping .wrap{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,5.6fr);gap:72px;align-items:start}
+.camping-photos{position:relative;padding-bottom:180px}
+.chemin{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.chemin img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 55%}
+.pre-ciel{position:absolute;right:-32px;bottom:0;width:56%;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);transform:rotate(-2deg)}
+.pre-ciel img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.camping h2{font-size:clamp(36px, 4.2vw, 58px);line-height:1.06;margin-bottom:22px}
+.camping .intro{font-size:18.5px;color:#4A3F36;margin-bottom:28px}
+.equip{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-bottom:28px}
+.equip li{font-size:16px;padding-left:20px;position:relative;color:#4A3F36}
+.equip li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;border:2px solid var(--pre)}
+.tarifs{background:var(--carte);border-radius:20px;padding:28px 30px;box-shadow:0 24px 50px -32px rgba(46,38,32,.45);margin-bottom:28px}
+.tarifs h3{font-size:22px;margin-bottom:12px}
+.tarifs dl{display:grid;grid-template-columns:1fr auto;gap:6px 20px;font-size:16px}
+.tarifs dd{font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+.tarifs p{font-size:15px;color:var(--sourdine);margin-top:14px}
+.camping .note{font-size:16px;color:#4A3F36;margin-bottom:28px}
+.camping .btn{padding:0 22px}
+
+/* Laine */
+.laine-section{background:var(--ecru-2);padding:128px 0}
+.laine-haut{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:end;margin-bottom:64px}
+.laine-section h2{font-size:clamp(36px, 4.4vw, 62px);line-height:1.04}
+.laine-haut p{color:#4A3F36;font-size:18px}
+.galerie{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:24px;margin-bottom:72px}
+.galerie figure{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.galerie img{width:100%;height:100%;object-fit:cover}
+.g-gamme{grid-row:1 / 3}
+.g-gamme img{aspect-ratio:3/2.35}
+.g-oreillers img{aspect-ratio:16/10}
+.g-duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.g-duo figure:last-child{margin-top:40px}
+.g-duo img{aspect-ratio:1/1}
+.laine-bas{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:start}
+.chaine{list-style:none;counter-reset:etape}
+.chaine li{counter-increment:etape;display:grid;grid-template-columns:48px 1fr;gap:18px;padding:16px 0;border-top:1px solid rgba(46,38,32,.14)}
+.chaine li::before{content:counter(etape);width:36px;height:36px;border-radius:50%;background:var(--carte);color:var(--pre-fonce);display:grid;place-items:center;font-family:var(--display);font-size:18px}
+.chaine p{color:#4A3F36}
+.chaine strong{color:var(--terre)}
+.prix-laine{background:var(--carte);border-radius:20px;padding:32px 34px;box-shadow:0 24px 50px -32px rgba(46,38,32,.45)}
+.prix-laine blockquote{font-family:var(--display);font-size:22px;line-height:1.3;margin-bottom:22px}
+.prix-laine dl{display:grid;grid-template-columns:1fr auto;gap:6px 20px;font-size:16px;margin-bottom:20px}
+.prix-laine dd{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.prix-laine > p{font-size:15px;color:var(--sourdine);margin-bottom:24px}
+
+/* Venir */
+.venir{padding:128px 0 120px}
+.panorama{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--ombre);margin-bottom:72px}
+.panorama img{width:100%;aspect-ratio:2.6/1;object-fit:cover;object-position:50% 45%}
+.venir-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:56px}
+.venir h2{font-size:clamp(34px, 3.8vw, 52px);line-height:1.08;margin-bottom:18px}
+.venir-grille > div > p{color:#4A3F36}
+.venir h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--pre);margin-bottom:10px}
+.venir address{font-style:normal;font-size:18px;line-height:1.5;margin-bottom:24px}
+.venir .lien{display:block;font-size:18px;text-decoration:none;border-bottom:1px solid rgba(78,122,58,.45);width:max-content;max-width:100%;margin-bottom:8px}
+.venir .lien:hover{color:var(--pre)}
+.venir .actions{margin-top:28px}
+
+/* Pied */
+.pied{background:var(--terre);color:#D9CFC0;padding:88px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:56px;padding-bottom:64px}
+.pied .marque b{color:var(--ecru)}
+.pied .marque span{color:#B5A998}
+.pied blockquote{font-family:var(--display);font-size:22px;line-height:1.35;color:var(--ecru);margin-top:28px;max-width:22em}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--pre-clair);margin-bottom:14px}
+.pied ul{list-style:none}
+.pied li{margin-bottom:8px;font-size:16px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--pre-clair)}
+.proposition{border-top:1px solid rgba(242,237,226,.1);text-align:center;font-size:13px;color:#9C8F80;padding:16px 24px}
+.proposition a{color:#9C8F80}
+
+/* Apparitions des photos (masquées seulement si le JS tourne) */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .pre-ciel.apparait.vu{transform:rotate(-2deg)}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .js .pre-ciel.apparait{transform:rotate(-2deg)}
+  .btn{transition:none}.btn:hover{transform:none}
+}
+
+@media (max-width: 1100px){
+  .laine{left:-24px}
+  .pre-ciel{right:-12px}
+}
+@media (max-width: 900px){
+  .wrap{width:calc(100% - 40px)}
+  .entete{padding:18px 0 8px}
+  .entete .wrap{flex-wrap:wrap;gap:14px}
+  .entete-tel{display:inline-flex}
+  .entete .marque span span{display:none}
+  .nav{order:3;width:100%;gap:8px 22px;flex-wrap:wrap}
+  .nav a{font-size:16px}
+  .nav .tel{display:none}
+  .heros{padding:16px 0 72px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"tete" "mosaique" "corps"}
+  .heros-tete{padding-top:8px}
+  .heros h1{font-size:42px;margin-bottom:24px}
+  .mosaique{padding:0 0 72px 0;margin-bottom:24px}
+  .laine{left:-8px;width:44%;border-width:6px}
+  .heros-corps p{font-size:17px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr;gap:24px 20px;padding:28px 0}
+  .faits b{font-size:26px}
+  .qui,.ferme,.camping,.laine-section,.venir{padding:88px 0}
+  .qui .wrap,.ferme-haut,.ferme-bas,.camping .wrap,.laine-haut,.laine-bas,.venir-grille{grid-template-columns:minmax(0,1fr);gap:48px}
+  .ferme-haut{margin-bottom:56px}
+  .bergerie{max-width:340px}
+  .saisons{grid-template-columns:minmax(0,1fr);gap:20px;margin-bottom:56px}
+  .ardoise,.tarifs,.prix-laine{padding:26px 22px}
+  .camping-photos{padding-bottom:110px;margin-right:12px}
+  .pre-ciel{width:58%;right:-12px}
+  .equip{grid-template-columns:1fr}
+  .chemin .pastille{top:14px;bottom:auto}
+  .galerie{grid-template-columns:minmax(0,1fr);gap:16px;margin-bottom:48px}
+  .g-gamme{grid-row:auto}
+  .g-duo{gap:16px}
+  .g-duo figure:last-child{margin-top:28px}
+  .panorama{margin-bottom:48px}
+  .panorama img{aspect-ratio:4/3}
+  .pour li{font-size:19px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr);gap:40px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Les 3 Mulets, retour en haut">
+      <i aria-hidden="true">3</i>
+      <span><b>Les 3 Mulets</b><span>Ferme bio et camping, Gourgeon</span></span>
+    </a>
+    <a class="btn btn-plein entete-tel" href="tel:+33649622902" style="min-height:44px;padding:0 20px;font-size:15px">Appeler</a>
+    <nav class="nav" aria-label="Sections de la page">
+      <a href="#ferme">La ferme</a>
+      <a href="#camping">Le camping</a>
+      <a href="#laine">La laine</a>
+      <a href="#venir">Venir</a>
+      <a class="tel" href="tel:+33649622902">06 49 62 29 02</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-tete">
+        <p class="mot">Ferme bio et camping à la ferme, en Haute-Saône</p>
+        <h1>Dormez dans <span>l'herbe</span>, mangez local, vivez simple.</h1>
+      </div>
+      <div class="mosaique">
+        <figure class="troupeau">
+          <img src="assets/trois-mulets-gourgeon/troupeau-brebis-agneaux-pre.webp" alt="Brebis et agneaux au pré, sous-bois en arrière-plan" width="1600" height="1200" fetchpriority="high" />
+          <figcaption class="pastille">Le troupeau au pré, à Gourgeon</figcaption>
+        </figure>
+        <figure class="laine">
+          <img src="assets/trois-mulets-gourgeon/couette-laine-roulee.webp" alt="Couette en laine blanche roulée" width="1600" height="1200" />
+        </figure>
+      </div>
+      <div class="heros-corps">
+        <p>Les 3 Mulets, c'est une ferme biologique où les moutons sont élevés pour leur viande et leur laine, un petit camping paysan et deux associés, Gilles et Nathalie. Nous sommes heureux de vous accueillir pour camper dans un pré, découvrir l'élevage et acheter nos produits.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://3mulets.fr/boutique/">Voir la boutique laine</a>
+          <a class="btn btn-contour" href="#camping">Le camping du Moulin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>350 brebis</b>en agriculture biologique, surtout de race Blanche du Massif Central</li>
+      <li><b>Toute l'année</b>de l'agneau, grâce à trois périodes d'agnelage</li>
+      <li><b>Depuis 2024</b>la laine de nos brebis devient couettes, oreillers et chaussons</li>
+      <li><b>Dans un pré</b>un camping paysan, sans emplacement figé, bordé par un bois</li>
+    </ul>
+  </div>
+
+  <section class="qui" aria-labelledby="titre-qui">
+    <div class="wrap">
+      <figure class="apparait">
+        <img src="assets/trois-mulets-gourgeon/vallee-maison-ferme.webp" alt="La maison de la ferme dans la vallée, vue à travers le feuillage" width="1600" height="1066" loading="lazy" />
+        <figcaption class="pastille">Le Moulin du Haut, Gourgeon</figcaption>
+      </figure>
+      <div>
+        <p class="mot">Qui sommes-nous&nbsp;?</p>
+        <h2 id="titre-qui">Une ferme accueillante, vivante, respectueuse de la nature.</h2>
+        <p>Une ferme biologique, un petit camping paysan, deux associés plutôt sympathiques, un Moulin avec plein de gens dedans, de 7 à 87 ans, 3 gros chiens qui peuvent faire peur mais qui sont gentils, une armée de chats… Bref, une ferme bien implantée localement et viable économiquement.</p>
+        <p>Nous sommes heureux de vous accueillir pour&nbsp;:</p>
+        <ul class="pour">
+          <li>camper en toute liberté dans un pré,</li>
+          <li>découvrir notre élevage de brebis,</li>
+          <li>acheter des produits faits avec leur laine ou leur viande.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ferme" id="ferme">
+    <div class="wrap">
+      <div class="ferme-haut">
+        <div>
+          <p class="mot">La ferme</p>
+          <h2>Une ferme bio et locale, où l'herbe fait l'essentiel.</h2>
+          <p>Toute l'année, nos brebis pâturent nos prés. Nous les rentrons en bergerie à l'approche des agnelages&nbsp;: elles mangent alors du foin de prairie et du foin de légumineuses (trèfle et luzerne) produits sur la ferme.</p>
+          <p>Nos animaux sont abattus localement, à Luxeuil-les-Bains. Nous découpons nous-mêmes la viande dans notre laboratoire aux normes, à la ferme, et nous en transformons une partie en fricadelles (boulettes à la menthe) et en merguez.</p>
+        </div>
+        <figure class="bergerie apparait">
+          <img src="assets/trois-mulets-gourgeon/ferme-vue-aerienne-bergerie.webp" alt="Vue aérienne des bâtiments de la ferme, du chemin et de la bergerie à toit vert" width="1600" height="1600" loading="lazy" />
+        </figure>
+      </div>
+
+      <div class="saisons">
+        <p>Le troupeau est divisé en trois lots, pour des agnelages étalés dans l'année. De l'agneau toute l'année, même pour Noël et Pâques.</p>
+        <div><h3>Automne</h3><p>septembre, octobre</p></div>
+        <div><h3>Hiver</h3><p>décembre, janvier</p></div>
+        <div><h3>Printemps</h3><p>mars, avril</p></div>
+      </div>
+
+      <div class="ferme-bas">
+        <div>
+          <h3>Vente à la ferme et au magasin de producteurs</h3>
+          <p>La viande se commande, puis se retire sur place, sur rendez-vous. La grande majorité de nos produits est vendue aux «&nbsp;Saveurs de la Ferme&nbsp;» à Châtillon-le-Duc, près de Besançon&nbsp;: nous faisons partie des huit fermes associées de ce magasin de producteurs, et nous en sommes très fiers.</p>
+          <div class="visite">
+            <h3>Campeurs, la ferme se visite</h3>
+            <p>En autonomie&nbsp;: ne pas nourrir les animaux, ne pas entrer dans les enclos, laisser les compagnons à quatre pattes à l'extérieur de la ferme. Et si nous sommes dans les bâtiments, venez discuter&nbsp;!</p>
+          </div>
+        </div>
+        <div class="ardoise">
+          <h3>La viande d'agneau et de mouton</h3>
+          <p>Sur commande uniquement, tarifs au kilo</p>
+          <ul>
+            <li>Gigot entier<span>25,00 €</span></li>
+            <li>Gigot désossé<span>27,00 €</span></li>
+            <li>Épaule entière<span>22,50 €</span></li>
+            <li>Côtelettes simples<span>22,00 €</span></li>
+            <li>Merguez de mouton<span>16,50 €</span></li>
+            <li>Fricadelles à la menthe<span>16,50 €</span></li>
+            <li>Saucisson de mouton<span>30,00 €</span></li>
+            <li>Agneau complet ou demi, découpé<span>17,50 €</span></li>
+            <li>Agneau entier pour méchoui<span>16,25 €</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="camping" id="camping">
+    <div class="wrap">
+      <div class="camping-photos">
+        <figure class="chemin apparait">
+          <img src="assets/trois-mulets-gourgeon/chemin-panneau-camping-paysan.webp" alt="Chemin de terre menant au pré, panneau « Le Moulin Camping paysan »" width="1600" height="1200" loading="lazy" />
+          <figcaption class="pastille">L'entrée du Camping du Moulin</figcaption>
+        </figure>
+        <figure class="pre-ciel apparait">
+          <img src="assets/trois-mulets-gourgeon/camping-pre-vue-aerienne.webp" alt="Vue aérienne du pré du camping et de la route qui le longe" width="1600" height="1200" loading="lazy" />
+        </figure>
+      </div>
+      <div>
+        <p class="mot">Le camping du Moulin</p>
+        <h2>Dormir dans un pré, au calme.</h2>
+        <p class="intro">Ici, pas de parcelles numérotées&nbsp;: vous choisissez votre place dans le pré, à l'ombre d'un arbre ou au soleil. Un petit terrain en pleine campagne, bordé par un bois, loin du tourisme de masse. À vélo, en camping-car ou avec les enfants.</p>
+        <ul class="equip">
+          <li>WC, douches, éviers et lavabos</li>
+          <li>Accès à l'électricité</li>
+          <li>Réfrigérateur en libre accès</li>
+          <li>Barbecue</li>
+          <li>Étang de Gourgeon à deux pas</li>
+          <li>Animaux bienvenus</li>
+        </ul>
+        <div class="tarifs">
+          <h3>Tarifs par nuit</h3>
+          <dl>
+            <dt>Adulte et enfant de plus de 12 ans</dt><dd>3,30 €</dd>
+            <dt>Enfant de 6 à 12 ans</dt><dd>2,50 €</dd>
+            <dt>Enfant de moins de 6 ans</dt><dd>Gratuit</dd>
+            <dt>Vélo et tente</dt><dd>2,50 €</dd>
+            <dt>Voiture et tente</dt><dd>3,50 €</dd>
+            <dt>Caravane, camping-car</dt><dd>5,00 €</dd>
+            <dt>Électricité (option)</dt><dd>3,00 €</dd>
+          </dl>
+          <p>Taxe de séjour&nbsp;: 0,20 € par adulte.</p>
+        </div>
+        <p class="note">Accueil tous les jours entre 8h et 18h&nbsp;; en dehors, prévenez-nous à l'avance. Réserver n'est pas obligatoire, mais c'est conseillé l'été, par e-mail ou par téléphone.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://3mulets.fr/le-camping/">Tout savoir sur le camping</a>
+          <a class="btn btn-contour" href="tel:+33649622902">Réserver par téléphone</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="laine-section" id="laine">
+    <div class="wrap">
+      <div class="laine-haut">
+        <div>
+          <p class="mot">Les créations en laine</p>
+          <h2>Dormez avec la laine du pré.</h2>
+        </div>
+        <p>Depuis 2024, nous valorisons la laine de nos moutons. Avec l'aide d'artisans français, elle devient des objets utiles, beaux et durables&nbsp;: couettes et oreillers, sacs et cabas isothermes, accessoires de cuisine et de pique-nique.</p>
+      </div>
+
+      <div class="galerie">
+        <figure class="g-gamme apparait">
+          <img src="assets/trois-mulets-gourgeon/gamme-produits-laine-mur-pierre.webp" alt="Maniques, cabas, chaussons et laine cardée devant un mur de pierres sèches" width="1600" height="1066" loading="lazy" />
+          <figcaption class="pastille">La gamme, devant un mur de pierres sèches</figcaption>
+        </figure>
+        <figure class="g-oreillers apparait">
+          <img src="assets/trois-mulets-gourgeon/oreillers-laine-lit.webp" alt="Oreillers et couette en laine sur un lit" width="1600" height="1067" loading="lazy" />
+        </figure>
+        <div class="g-duo">
+          <figure class="apparait">
+            <img src="assets/trois-mulets-gourgeon/chaussons-laine-pierre.webp" alt="Chaussons en laine feutrée sur un mur de pierres" width="1600" height="1066" loading="lazy" />
+          </figure>
+          <figure class="apparait">
+            <img src="assets/trois-mulets-gourgeon/cabas-maniques-nouveaux-tissus.webp" alt="Cabas isothermes et maniques aux tissus de l'été 2026, dans l'herbe" width="1600" height="1200" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="laine-bas">
+        <ol class="chaine" aria-label="De la tonte à vos nuits">
+          <li><p><strong>La tonte.</strong> Chaque année, nos brebis sont tondues et un premier tri de la laine est fait à la ferme.</p></li>
+          <li><p><strong>Le lavage.</strong> La laine part à Saugues (43), où elle est lavée.</p></li>
+          <li><p><strong>La literie.</strong> L'entreprise Laurent Laine la transforme en couettes, matelas et oreillers.</p></li>
+          <li><p><strong>Le feutre.</strong> Les Ateliers de la Bruyère en feutrent une autre partie pour fabriquer des chaussons et des semelles.</p></li>
+        </ol>
+        <div class="prix-laine">
+          <blockquote>La laine emprisonne près de 80 % d'air dans son propre poids&nbsp;: elle protège du chaud comme du froid.</blockquote>
+          <dl>
+            <dt>Oreiller 40 × 60</dt><dd>60 €</dd>
+            <dt>Couette 140 × 200</dt><dd>235 €</dd>
+            <dt>Cabas isotherme, petit format</dt><dd>70 €</dd>
+            <dt>Manique carrée</dt><dd>18 €</dd>
+          </dl>
+          <p>Expédition possible en France métropolitaine, frais de port précisés à la commande.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://3mulets.fr/boutique/">Découvrir la boutique</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <figure class="panorama apparait">
+        <img src="assets/trois-mulets-gourgeon/ferme-vue-aerienne-campagne.webp" alt="Vue aérienne de la ferme et de la campagne haute-saônoise" width="1600" height="1200" loading="lazy" />
+        <figcaption class="pastille">La ferme et la campagne de Haute-Saône</figcaption>
+      </figure>
+      <div class="venir-grille">
+        <div>
+          <p class="mot">Venir aux 3 Mulets</p>
+          <h2>Au cœur de la Haute-Saône, à Gourgeon.</h2>
+          <p>Depuis la N19 (Langres, Vesoul), entrez dans le village de Gourgeon vers l'église, sortez du village et, à la patte d'oie, prenez à gauche direction Cornot, camping.</p>
+        </div>
+        <div>
+          <h3>Adresse</h3>
+          <address>Le Moulin du Haut<br />70120 Gourgeon</address>
+          <a class="lien" href="https://maps.app.goo.gl/XdFXcbGfwxKgB2nXA">Ouvrir l'itinéraire</a>
+        </div>
+        <div>
+          <h3>Nous joindre</h3>
+          <a class="lien" href="tel:+33649622902">06 49 62 29 02</a>
+          <a class="lien" href="mailto:3mulets@gmail.com">3mulets@gmail.com</a>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33649622902">Appeler la ferme</a>
+            <a class="btn btn-contour" href="mailto:3mulets@gmail.com">Nous écrire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><i aria-hidden="true">3</i><span><b>GAEC Les 3 Mulets</b><span>Ferme bio, camping et laine, Gourgeon (70)</span></span></a>
+      <blockquote>Bienvenue aux 3 Mulets, où la terre nourrit le cœur et la laine réchauffe les nuits.</blockquote>
+    </div>
+    <div>
+      <h3>Nous trouver</h3>
+      <ul>
+        <li>Le Moulin du Haut, 70120 Gourgeon</li>
+        <li><a href="tel:+33649622902">06 49 62 29 02</a></li>
+        <li><a href="mailto:3mulets@gmail.com">3mulets@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100029115386356&amp;locale=fr_FR">Facebook</a></li>
+        <li><a href="https://www.instagram.com/3mulets/">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sur notre site</h3>
+      <ul>
+        <li><a href="https://3mulets.fr/boutique/">La boutique en ligne</a></li>
+        <li><a href="https://3mulets.fr/le-camping/">Le camping du Moulin</a></li>
+        <li><a href="https://3mulets.fr/actualites-des-3-mulets/">Actualités des 3 Mulets</a></li>
+        <li><a href="https://3mulets.fr/faq/">Questions fréquentes</a></li>
+        <li><a href="https://3mulets.fr/conditions-generales-de-vente-cgv/">Conditions générales de vente</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposition">Proposition de Nicolas Masset pour le GAEC Les 3 Mulets, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+</footer>
+
+<script>
+(function(){
+  var photos = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
+  photos.forEach(function(p){ io.observe(p); });
+})();
+</script>
+</body>
+</html>

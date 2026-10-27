@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!-- 2026-10-27 : page d'accueil refaite pour Les Fées des Herbes (Les Pineaux, Vendée), contenu repris de https://lesfeesdesherbes85.fr/
+     (accueil, ateliers, production de fleurs sauvages, vente directe, nos marchés, cosmétiques, contact).
+     Direction : « La planche d'herbier » : lin vert pâle, encre olive, accent monarde ; photo du jardin montée en passe-partout
+     avec bandes gommées et étiquette d'herbier, texte à droite. « Nos produits » existe enfin (section ancrée, leur lien mène à une 404),
+     barre d'actions du bas reprise sur téléphone et fonctionnelle. Commune seulement, horaires mot pour mot de la page Contact,
+     aucun calendrier d'ateliers inventé. Barre qualité du 26/10. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#2C3320" />
+<title>Les Fées des Herbes : herboristerie paysanne aux Pineaux, en Vendée</title>
+<meta name="description" content="Anne-Marie, paysanne herboriste aux Pineaux (Vendée) : plantes séchées et produits à base de plantes aromatiques et médicinales cultivées à la main, certifiées bio. Cosmétiques, alcoolature, gemmothérapie, synergies, ateliers et balades botaniques." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232C3320'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EEF0E4'%3EF%3C/text%3E%3Ccircle cx='48' cy='16' r='5' fill='%23B8342A'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --lin:#EEF0E4; --lin-2:#E2E6D2; --papier:#F8F8F1; --olive:#2C3320; --olive-2:#46512F; --olive-3:#20261A;
+  --monarde:#B8342A; --monarde-2:#9E2A21; --mousse:#5A6248; --sauge:#C9D0B4;
+  --ombre:0 30px 60px -34px rgba(32,38,26,.5); --ombre-longue:0 44px 80px -40px rgba(32,38,26,.62);
+  --display:"Libre Caslon Display",Georgia,serif; --texte:"Albert Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:90px;background:var(--lin)}
+body{margin:0;background:var(--lin);color:var(--olive);font-family:var(--texte);font-size:17px;line-height:1.65}
+::selection{background:var(--monarde);color:var(--papier)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--monarde);outline-offset:3px;border-radius:6px}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;text-wrap:balance}
+h2{font-size:clamp(2.3rem,4.3vw,3.7rem);line-height:1.04;letter-spacing:-.01em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.lieu{font-size:15px;font-weight:500;color:var(--mousse);margin:0 0 20px;letter-spacing:.01em}
+.lieu b{color:var(--monarde);font-weight:600}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font-family:var(--texte);font-size:16px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .25s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--monarde);color:var(--papier);box-shadow:0 14px 26px -16px rgba(184,52,42,.85)}
+.btn-plein:hover{background:var(--monarde-2);box-shadow:0 20px 30px -16px rgba(184,52,42,.9)}
+.btn-contour{border-color:var(--olive);color:var(--olive)}
+.btn-contour:hover{background:var(--olive);color:var(--lin)}
+.contraste .btn-contour,.pied-page .btn-contour{border-color:rgba(238,240,228,.6);color:var(--lin)}
+.contraste .btn-contour:hover,.pied-page .btn-contour:hover{background:var(--lin);color:var(--olive);border-color:var(--lin)}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(238,240,228,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.marque{text-decoration:none;font-family:var(--display);font-size:25px;line-height:1}
+.marque small{display:block;font-family:var(--texte);font-size:13px;color:var(--mousse);margin-top:4px;letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:28px;font-size:15.5px;font-weight:500}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--monarde)}
+.nav .tel{border:1.5px solid var(--olive);padding:9px 18px;border-radius:999px;transition:background-color .25s,color .25s}
+.nav .tel:hover{background:var(--olive);color:var(--lin)}
+
+/* héros */
+.heros{padding:56px 0 0}
+.heros .wrap{display:grid;grid-template-columns:490px 1fr;grid-template-areas:"planche titre" "planche texte";column-gap:88px;align-items:start}
+.heros .titre{grid-area:titre;align-self:end;padding-top:40px}
+.heros .texte{grid-area:texte}
+.heros h1{font-size:clamp(3.4rem,6.6vw,6rem);line-height:.98;letter-spacing:-.015em;margin-bottom:28px}
+.heros h1 em{font-style:normal;color:var(--monarde)}
+.heros .texte p{font-size:18.5px;line-height:1.62;max-width:54ch;color:#3A4230}
+.heros .actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 18px}
+.heros .note{font-size:15px;color:var(--mousse)}
+
+.planche{grid-area:planche;position:relative;background:var(--papier);padding:26px 26px 92px;border-radius:6px;box-shadow:var(--ombre-longue),0 1px 0 rgba(32,38,26,.06)}
+.planche .photo{border-radius:3px;overflow:hidden}
+.planche .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:18% 62%}
+.bande{position:absolute;width:96px;height:28px;background:rgba(214,201,160,.78);box-shadow:0 2px 6px -3px rgba(32,38,26,.35);z-index:2}
+.bande.g{top:12px;left:-14px;transform:rotate(-31deg)}
+.bande.d{top:12px;right:-14px;transform:rotate(31deg)}
+.etiquette-herbier{position:absolute;right:26px;bottom:20px;width:236px;background:var(--papier);border:1px solid rgba(44,51,32,.55);outline:1px solid rgba(44,51,32,.55);outline-offset:3px;padding:9px 12px 8px;font-size:13px;line-height:1.45;color:var(--olive)}
+.etiquette-herbier b{display:block;font-family:var(--display);font-weight:400;font-size:17px;line-height:1.15;margin-bottom:3px}
+.etiquette-herbier span{color:var(--mousse)}
+.planche .signe{position:absolute;left:28px;bottom:30px;font-family:var(--display);font-size:20px;color:var(--mousse)}
+
+/* bandeau de faits */
+.faits{margin-top:96px;background:var(--lin-2)}
+.faits ul{list-style:none;margin:0 auto;max-width:1280px;padding:24px 40px;display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:20px}
+.faits li{font-size:15.5px;font-weight:500;line-height:1.35;padding-left:18px;position:relative;max-width:25ch}
+.nw{white-space:nowrap}
+.faits li::before{content:"";position:absolute;left:0;top:.42em;width:8px;height:8px;border-radius:50% 0 50% 0;background:var(--olive-2)}
+.faits li:first-child::before{background:var(--monarde)}
+
+/* nos produits */
+.produits{padding:130px 0 120px}
+.produits .wrap{display:grid;grid-template-columns:400px 1fr;gap:96px;align-items:start}
+.produits .col-g{position:sticky;top:120px}
+.produits h2{margin-bottom:22px}
+.produits .col-g p{color:#3A4230}
+.vignette{position:relative;margin-top:34px;max-width:300px;border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.vignette img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.pastille{position:absolute;left:14px;bottom:14px;background:rgba(248,248,241,.94);color:var(--olive);font-size:13.5px;font-weight:600;padding:7px 14px;border-radius:999px;box-shadow:0 10px 22px -14px rgba(32,38,26,.7)}
+.tiroirs{list-style:none;margin:0;padding:0;border-top:1px solid rgba(44,51,32,.2)}
+.tiroir{display:grid;grid-template-columns:1fr auto;column-gap:32px;align-items:baseline;padding:30px 0 28px;border-bottom:1px solid rgba(44,51,32,.2)}
+.tiroir h3{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.05}
+.tiroir p{grid-column:1/2;margin:10px 0 0;color:#454D39;max-width:56ch}
+.tiroir .lien{grid-column:2;grid-row:1/3;align-self:center;font-size:15px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;border:1.5px solid rgba(44,51,32,.45);white-space:nowrap;transition:background-color .25s,color .25s,border-color .25s}
+.tiroir .lien:hover{background:var(--olive);color:var(--lin);border-color:var(--olive)}
+.tiroir.mis-en-avant{background:var(--papier);border-radius:20px;padding:30px 32px;margin:18px -32px;border-bottom:0;box-shadow:var(--ombre)}
+.prix{grid-column:1/-1;list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.prix li{background:var(--lin);border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.4}
+.prix li b{display:block;font-weight:600;margin-bottom:4px}
+.prix li span{color:var(--monarde);font-weight:600;white-space:nowrap}
+
+/* la ferme */
+.ferme{padding:110px 0 130px;background:var(--lin-2)}
+.ferme .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:84px;align-items:center}
+.ferme h2{margin-bottom:26px}
+.ferme p{color:#3A4230;max-width:56ch}
+.ferme h3{font-size:26px;margin:30px 0 10px}
+.composition{position:relative;padding:0 0 120px 0}
+.composition .grande{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-longue);position:relative}
+.composition .grande img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.composition .polaroid{position:absolute;right:-28px;bottom:0;width:250px;background:var(--papier);padding:10px 10px 14px;border-radius:4px;box-shadow:var(--ombre-longue);transform:rotate(3deg)}
+.composition .polaroid img{aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+
+/* ateliers */
+.contraste{background:var(--olive-2);color:var(--lin)}
+.ateliers{padding:130px 0}
+.ateliers .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:88px;align-items:start}
+.ateliers .lieu{color:var(--sauge)}
+.ateliers h2{margin-bottom:24px}
+.ateliers .intro{color:#DCE1CC;max-width:52ch}
+.liste-ateliers{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.liste-ateliers li{border:1px solid rgba(238,240,228,.35);border-radius:24px;padding:9px 18px;font-size:15.5px}
+.dates{margin-top:40px;padding:26px 28px;border-radius:18px;background:var(--olive-3)}
+.dates h3{font-size:26px;margin-bottom:8px}
+.dates p{color:#DCE1CC;margin-bottom:20px}
+.dates .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cote{position:relative;padding-top:40px}
+.cote .photo{width:62%;margin-left:auto;border-radius:20px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(10,14,8,.8)}
+.cote .photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.tarifs{position:relative;margin-top:-170px;width:82%;background:var(--papier);color:var(--olive);border-radius:20px;padding:30px 32px 26px;box-shadow:0 40px 70px -36px rgba(10,14,8,.85)}
+.tarifs h3{font-size:28px;margin-bottom:10px}
+.tarifs dl{margin:0}
+.tarifs div{display:grid;grid-template-columns:1fr auto;gap:16px;padding:14px 0;border-top:1px solid rgba(44,51,32,.15)}
+.tarifs dt{font-weight:600;line-height:1.35}
+.tarifs dt small{display:block;font-weight:400;color:var(--mousse);font-size:14.5px;margin-top:3px}
+.tarifs dd{margin:0;font-family:var(--display);font-size:22px;color:var(--monarde);white-space:nowrap}
+.tarifs .pied{font-size:14.5px;color:var(--mousse);margin:12px 0 0}
+
+/* fleurs sauvages */
+.sauvages{padding:130px 0 110px}
+.sauvages .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:center}
+.especes{font-family:var(--display);font-size:clamp(2rem,3.6vw,3.1rem);line-height:1.12;letter-spacing:-.01em;margin:6px 0 34px;text-wrap:pretty}
+.especes span{color:var(--monarde)}
+.sauvages .cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;color:#3A4230;font-size:16.5px}
+.sauvages .actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+.duo{position:relative;padding-bottom:70px}
+.duo .grande{border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.duo .grande img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.duo .petite{position:absolute;left:-60px;bottom:0;width:170px;border-radius:50%;overflow:hidden;border:7px solid var(--lin);box-shadow:var(--ombre)}
+.duo .petite img{aspect-ratio:1/1;object-fit:cover}
+
+/* avis */
+.avis{padding:40px 0 130px}
+.avis .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:72px;align-items:start}
+.avis .note-g{display:flex;align-items:center;gap:14px;font-size:15px;font-weight:600;color:var(--mousse);margin-bottom:22px}
+.avis .note-g b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--olive)}
+.avis blockquote{margin:0}
+.avis .grande p{font-family:var(--display);font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.12;margin-bottom:20px;text-wrap:pretty}
+.avis cite{font-style:normal;font-size:15px;font-weight:600;color:var(--mousse)}
+.avis .petites{display:grid;gap:18px;padding-top:44px}
+.avis .petites blockquote{background:var(--papier);border-radius:18px;padding:24px 26px;box-shadow:var(--ombre)}
+.avis .petites p{font-size:16.5px;margin-bottom:10px}
+
+/* pied */
+.pied-page{background:var(--olive);color:var(--lin);padding:110px 0 50px}
+.pied-haut{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;padding-bottom:60px;border-bottom:1px solid rgba(238,240,228,.16)}
+.pied-haut h2{font-size:clamp(2.4rem,4.6vw,4rem);margin-bottom:22px}
+.pied-haut p{color:#D5DBC4;max-width:52ch}
+.pied-haut .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.horaires{background:rgba(238,240,228,.06);border-radius:18px;padding:28px 30px;align-self:end}
+.horaires h3{font-size:24px;margin-bottom:10px}
+.horaires p{margin:0 0 14px}
+.horaires p:last-child{margin:0}
+.pied-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding-top:46px}
+.pied-cols h3{font-family:var(--texte);font-size:14px;font-weight:600;color:#E07A6F;margin-bottom:12px;letter-spacing:.01em}
+.pied-cols p,.pied-cols li{font-size:16px;color:#D5DBC4;margin:0 0 6px}
+.pied-cols ul{list-style:none;margin:0;padding:0}
+.pied-cols a{color:var(--lin)}
+.proposition{background:var(--olive-3);color:#98A086;text-align:center;font-size:13px;padding:14px 20px}
+
+/* barre d'actions du bas (téléphone) */
+.barre{display:none}
+
+/* apparitions des photos */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .composition .polaroid.rv{transform:rotate(3deg) translateY(16px)}
+.js .composition .polaroid.rv.in{transform:rotate(3deg)}
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .rv.in{opacity:1;transform:none;transition:none}
+  .js .composition .polaroid.rv,.js .composition .polaroid.rv.in{transform:rotate(3deg)}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width:1100px){
+  .nav a:not(.tel){display:none}
+  .heros .wrap{grid-template-columns:400px 1fr;column-gap:56px}
+  .produits .wrap{grid-template-columns:320px 1fr;gap:56px}
+  .ferme .wrap,.ateliers .wrap,.sauvages .wrap,.avis .wrap,.pied-haut{grid-template-columns:1fr;gap:56px}
+  .duo{max-width:440px;margin-left:60px}
+  .faits ul{grid-template-columns:repeat(3,auto)}
+}
+@media (max-width:760px){
+  .wrap{padding:0 22px}
+  .tete .wrap{height:64px}
+  .marque{font-size:22px}
+  .marque small{font-size:12px}
+  .nav{display:none}
+  .heros{padding:26px 0 0}
+  .heros .wrap{grid-template-columns:1fr;grid-template-areas:"titre" "planche" "texte";row-gap:0}
+  .heros .titre{padding-top:0}
+  .heros h1{font-size:clamp(2.9rem,13vw,3.5rem);margin-bottom:22px}
+  .planche{padding:16px 16px 74px;margin:0 4px}
+  .planche .photo img{aspect-ratio:5/4;object-position:20% 60%}
+  .bande{width:70px;height:22px}
+  .etiquette-herbier{right:14px;bottom:12px;width:200px;font-size:12.5px}
+  .etiquette-herbier b{font-size:16px}
+  .planche .signe{display:none}
+  .heros .texte{padding-top:30px}
+  .heros .texte p{font-size:17px}
+  .heros .actions{flex-direction:column}
+  .btn{width:100%}
+  .faits{margin-top:56px}
+  .faits ul{grid-template-columns:1fr;padding:22px;gap:12px}
+  .faits li{max-width:none}
+  .produits{padding:84px 0}
+  .produits .wrap{grid-template-columns:1fr;gap:40px}
+  .produits .col-g{position:static}
+  .vignette{max-width:240px}
+  .tiroir{grid-template-columns:1fr}
+  .tiroir .lien{grid-column:1;grid-row:auto;justify-self:start;margin-top:16px}
+  .tiroir.mis-en-avant{margin:14px -10px;padding:24px 20px}
+  .prix{grid-template-columns:1fr}
+  .ferme{padding:84px 0}
+  .composition{padding-bottom:110px}
+  .composition .polaroid{right:-6px;width:170px}
+  .ateliers{padding:84px 0}
+  .cote .photo{width:78%}
+  .tarifs{width:auto;margin:-90px 0 0;padding:24px 22px}
+  .sauvages{padding:84px 0}
+  .sauvages .cols{grid-template-columns:1fr;gap:0}
+  .duo{margin-left:40px;max-width:none}
+  .duo .petite{left:-40px;width:130px}
+  .avis{padding:20px 0 84px}
+  .avis .petites{padding-top:0}
+  .pied-page{padding:80px 0 40px}
+  .pied-haut .actions{flex-direction:column}
+  .horaires{padding:24px 22px}
+  .pied-cols{grid-template-columns:1fr;gap:26px}
+  .proposition{font-size:12px;padding:14px 10px calc(84px + env(safe-area-inset-bottom))}
+  .barre{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--olive);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -14px 30px -18px rgba(20,24,14,.7)}
+  .barre a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;color:var(--lin);text-decoration:none;font-size:16px;font-weight:600;border:1.5px solid rgba(238,240,228,.35)}
+  .barre a svg{width:18px;height:18px;flex:none}
+  .barre a.produits-lien{background:var(--monarde);border-color:var(--monarde)}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Les Fées des Herbes<small>Herboristerie paysanne en Vendée</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#produits">Nos produits</a>
+      <a href="#ferme">La ferme</a>
+      <a href="#ateliers">Ateliers et balades</a>
+      <a href="#fleurs-sauvages">Fleurs sauvages</a>
+      <a href="#venir">Venir</a>
+      <a class="tel" href="tel:+33785854172">07 85 85 41 72</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <figure class="planche" style="margin:0">
+        <span class="bande g" aria-hidden="true"></span><span class="bande d" aria-hidden="true"></span>
+        <div class="photo rv">
+          <img src="assets/fees-des-herbes-les-pineaux/jardin-monardes-rouges-et-soucis.webp" alt="Les plates-bandes du jardin : monardes rouges au premier plan, soucis orange et bleuets le long d'un chemin d'herbe" width="1600" height="1200" fetchpriority="high" />
+        </div>
+        <figcaption class="etiquette-herbier"><b>Monardes, soucis, bleuets</b>Jardin des Fées des Herbes<br /><span>Les Pineaux, Vendée</span></figcaption>
+        <span class="signe" aria-hidden="true">Les Fées des Herbes</span>
+      </figure>
+      <div class="titre">
+        <p class="lieu"><b>Herboristerie paysanne</b>, aux Pineaux, en Vendée</p>
+        <h1>D'une graine au <em>bien-être</em>.</h1>
+      </div>
+      <div class="texte">
+        <p>Ancrée au cœur de la nature vendéenne, Anne-Marie, paysanne herboriste spécialisée en botanique et formatrice, propose des plantes séchées et des produits à base de plantes aromatiques et médicinales cultivées à la main, certifiées bio, selon les savoirs ancestraux.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#produits">Nos produits</a>
+          <a class="btn btn-contour" href="tel:+33785854172">07 85 85 41 72</a>
+        </div>
+        <p class="note">Vente directe à la ferme, uniquement sur rendez-vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul>
+      <li>Certifiées bio, Ecocert <span class="nw">FR-BIO-01</span></li>
+      <li>Cultivées à la main, désherbage manuel</li>
+      <li>Toutes les transformations à la ferme</li>
+      <li>Membre de Vendée Flore Sauvage</li>
+      <li>« Excellent » sur 10 avis Google</li>
+    </ul>
+  </div>
+
+  <section class="produits" id="produits">
+    <div class="wrap">
+      <div class="col-g">
+        <p class="lieu"><b>Boutique en ligne</b> et vente directe</p>
+        <h2>Nos produits</h2>
+        <p>Des plantes ! Il y en a pour tous les goûts : tisanes, baumes, macérâts huileux, plantes sèches, extraits de bourgeons et de plantes, et bien d'autres encore.</p>
+        <p>Chaque produit est le fruit d'un travail minutieux, et toutes les transformations se font à la ferme.</p>
+        <div class="vignette rv">
+          <img src="assets/fees-des-herbes-les-pineaux/tiges-fleuries-violettes.webp" alt="Tiges à fleurs violettes posées à plat sur un tissu rose" width="1200" height="1600" loading="lazy" />
+          <span class="pastille">Du jardin à l'atelier</span>
+        </div>
+      </div>
+      <ul class="tiroirs">
+        <li class="tiroir">
+          <h3>Plantes séchées et tisanes</h3>
+          <p>Cultivées au jardin des fées ou cueillies à la main dans les champs, prairies et forêts alentour : aubépine, pissenlit, sureau, ronce, et bien d'autres trésors.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/vente-directe/">À la ferme</a>
+        </li>
+        <li class="tiroir mis-en-avant">
+          <h3>Cosmétiques</h3>
+          <p>Baumes nourrissants et apaisants, huiles précieuses, déodorant naturel, sérums visage revitalisants. Certifiés par Ecocert <span class="nw">FR-BIO-01</span>.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/cosmetiques/">Voir la gamme</a>
+          <ul class="prix">
+            <li><b>Baume douceur au calendula</b>Format familial, <span>20,00 €</span></li>
+            <li><b>Huile Belles gambettes</b>Confort circulatoire, <span>8,50 €</span></li>
+            <li><b>Baume Souffle des herbes</b>Confort respiratoire, <span>12,50 €</span></li>
+          </ul>
+        </li>
+        <li class="tiroir">
+          <h3>Compléments alimentaires</h3>
+          <p>La gamme est en ligne, avec ses prix.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/complements-alimentaires/">Voir la gamme</a>
+        </li>
+        <li class="tiroir">
+          <h3>Alcoolature</h3>
+          <p>Extraits de plantes, préparés à la ferme.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/alcoolature/">Voir la gamme</a>
+        </li>
+        <li class="tiroir">
+          <h3>Gemmothérapie</h3>
+          <p>Extraits de bourgeons, préparés à la ferme.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/gemmotherapie/">Voir la gamme</a>
+        </li>
+        <li class="tiroir">
+          <h3>Synergies</h3>
+          <p>À découvrir en ligne, ou à la ferme sur rendez-vous.</p>
+          <a class="lien" href="https://lesfeesdesherbes85.fr/synergies/">Voir la gamme</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ferme" id="ferme">
+    <div class="wrap">
+      <div>
+        <p class="lieu"><b>Aux Pineaux</b>, en pleine nature vendéenne</p>
+        <h2>Anne-Marie cultive bien plus que des plantes : une philosophie.</h2>
+        <p>Celle d'un retour à l'essentiel, à l'écoute du vivant, dans une ferme à taille humaine baptisée avec poésie « Les Fées des Herbes ».</p>
+        <p>Issue d'une reconversion inspirée, sa passion pour les plantes médicinales et aromatiques s'incarne aujourd'hui dans une production artisanale, bio, respectueuse des cycles naturels et de la biodiversité. Semis bio ou graines des récoltes précédentes, boutures maison, désherbage manuel : les plantes sont exemptes d'intrants chimiques.</p>
+        <h3>Pourquoi « Les Fées des Herbes » ?</h3>
+        <p>Parce qu'au cœur de ce monde cartésien, Anne-Marie croit en la magie discrète de la nature. Elle imagine un monde féerique où des fées veillent sur chaque plante, chaque arbre, chaque insecte.</p>
+      </div>
+      <div class="composition">
+        <div class="grande rv">
+          <img src="assets/fees-des-herbes-les-pineaux/jardin-vue-d-ensemble-ciel-bleu.webp" alt="Vue large du jardin de plantes aromatiques et médicinales, bordures en bois, arbres et ciel bleu nuageux" width="1600" height="1200" loading="lazy" />
+          <span class="pastille">Le jardin des fées</span>
+        </div>
+        <div class="polaroid rv">
+          <img src="assets/fees-des-herbes-les-pineaux/papillon-sur-fleurs-lilas.webp" alt="Un papillon rayé jaune et noir posé sur des fleurs rose lilas" width="1600" height="1200" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ateliers contraste" id="ateliers">
+    <div class="wrap">
+      <div>
+        <p class="lieu">Près de La Roche-sur-Yon, sur rendez-vous</p>
+        <h2>Ateliers, visites et balades botaniques</h2>
+        <p class="intro">Partez à la rencontre du petit peuple avec des histoires contées pour les familles, faites connaissance avec les plantes sauvages qui vous entourent. Pour quelques heures, venez découvrir le métier de paysan herboriste au cœur du jardin.</p>
+        <ul class="liste-ateliers">
+          <li>Cueillir et cuisiner des plantes sauvages</li>
+          <li>Fabriquer un baume ou un macérât huileux</li>
+          <li>Semis, boutures, récoltes</li>
+          <li>Concevoir une tisane de plantes cultivées et sauvages</li>
+          <li>Découvrir la gemmothérapie</li>
+        </ul>
+        <div class="dates">
+          <h3>Les prochains ateliers</h3>
+          <p>Pour connaître les prochaines dates, appelez Anne-Marie ou écrivez-lui : renseignements et réservations par téléphone ou par mail.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33785854172">Appeler le 07 85 85 41 72</a>
+            <a class="btn btn-contour" href="mailto:lesfeesdesherbes85@orange.fr">Écrire un mail</a>
+          </div>
+        </div>
+      </div>
+      <div class="cote">
+        <div class="photo rv">
+          <img src="assets/fees-des-herbes-les-pineaux/insecte-sur-fleurs-blanc-rose.webp" alt="Un insecte sur une grappe de petites fleurs blanc rosé, haie et serre derrière" width="1200" height="1600" loading="lazy" />
+        </div>
+        <div class="tarifs">
+          <h3>Les tarifs</h3>
+          <dl>
+            <div><dt>Balade découverte des plantes sauvages<small>Par personne, gratuit pour les moins de 10 ans</small></dt><dd>20 € / 2 h</dd></div>
+            <div><dt>Groupe, à partir de 5 personnes<small>Par personne</small></dt><dd>17 € / 2 h</dd></div>
+            <div><dt>Balade contée<small>Enfants et accompagnants, par personne, 15 personnes au plus</small></dt><dd>5 € / 1 h</dd></div>
+            <div><dt>Visite sensorielle commentée<small>Sur réservation, par personne</small></dt><dd>8 €</dd></div>
+          </dl>
+          <p class="pied">Associations et amicales : déplacement possible, sur devis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sauvages" id="fleurs-sauvages">
+    <div class="wrap">
+      <div>
+        <p class="lieu"><b>Production de fleurs sauvages</b>, membre de Vendée Flore Sauvage</p>
+        <p class="especes">Marguerites, mauves, guimauves, ancolies, achillées, salicaires, pulicaires, fenouils, valérianes, consoudes, <span>coquelicots</span>…</p>
+        <div class="cols">
+          <p>Botaniste de terrain, Anne-Marie récolte des graines de fleurs sauvages locales pour reverdir les villages, les jardins et les espaces publics. Massifs, pieds de murs, bandes fleuries : sans arrosage intensif, sans traitement chimique, dans un esprit zéro phyto.</p>
+          <p>Formatrice, elle intervient auprès d'écoles et de centres de formation pour adultes. Elle propose aussi des inventaires de flore sur votre terrain, et vous accompagne dans son aménagement en tenant compte des plantes bio-indicatrices.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://lesfeesdesherbes85.fr/production-de-fleurs-sauvages/">Godets, graines, projet sur mesure</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="grande rv">
+          <img src="assets/fees-des-herbes-les-pineaux/champ-de-marguerites.webp" alt="Prairie de marguerites blanches" width="1200" height="1600" loading="lazy" />
+        </div>
+        <div class="petite rv">
+          <img src="assets/fees-des-herbes-les-pineaux/primeveres-jaune-pale.webp" alt="Gros plan sur des fleurs jaune pâle" width="640" height="640" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" aria-label="Ils nous font confiance">
+    <div class="wrap">
+      <div>
+        <p class="note-g"><b>Excellent</b> sur 10 avis publiés sur Google</p>
+        <blockquote class="grande">
+          <p>« En plus d'une visite aussi merveilleuse que passionnante, Anne-Marie propose des produits d'une qualité unique. La magie opère ! »</p>
+          <cite>Marion Blanchet</cite>
+        </blockquote>
+      </div>
+      <div class="petites">
+        <blockquote>
+          <p>« De très bons conseils. Connaît parfaitement son métier et choix varié de produits en fonction des besoins de la clientèle. Produits 100 % naturels et locaux. »</p>
+          <cite>Sarita49</cite>
+        </blockquote>
+        <blockquote>
+          <p>« Une très belle rencontre, avec une passionnée de ses plantes aromatiques. Nous avons profité durant ces deux heures d'un moment de détente et d'un plaisir olfactif au milieu de toutes ces plantes. »</p>
+          <cite>Xavier Tessaro</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied-page" id="venir">
+  <div class="wrap">
+    <div class="pied-haut">
+      <div>
+        <h2>Venir à la ferme</h2>
+        <p>Anne-Marie vous accueille dans son atelier pour découvrir, sentir et goûter ses produits, à deux pas de La Roche-sur-Yon, Chantonnay, Luçon et Mareuil-sur-Lay. Téléphonez avant de venir pour vous assurer de sa présence.</p>
+        <p>Le premier dimanche du mois, retrouvez-la au marché producteur de Sainte-Hermine.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33785854172">Appeler le 07 85 85 41 72</a>
+          <a class="btn btn-contour" href="mailto:lesfeesdesherbes85@orange.fr">Écrire un mail</a>
+        </div>
+      </div>
+      <div class="horaires">
+        <h3>Vente directe</h3>
+        <p>Vente directe du lundi au samedi de 9h à 18h<br />Uniquement sur RDV par téléphone</p>
+      </div>
+    </div>
+    <div class="pied-cols">
+      <div>
+        <h3>Les Fées des Herbes</h3>
+        <p>Herboristerie paysanne<br />Les Pineaux, Vendée</p>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <p><a href="tel:+33785854172">07 85 85 41 72</a></p>
+        <p><a href="mailto:lesfeesdesherbes85@orange.fr">lesfeesdesherbes85@orange.fr</a></p>
+      </div>
+      <div>
+        <h3>Sur le site</h3>
+        <ul>
+          <li><a href="https://lesfeesdesherbes85.fr/nos-ateliers/">Ateliers et balades</a></li>
+          <li><a href="https://lesfeesdesherbes85.fr/production-de-fleurs-sauvages/">Fleurs sauvages</a></li>
+          <li><a href="https://lesfeesdesherbes85.fr/conditions-generales-de-vente-cgv/">Conditions de vente</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/people/Les-f%C3%A9es-des-Herbes/100062940595394/?ref=page_internal">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Les Fées des Herbes</div>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="tel:+33785854172"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appel</a>
+  <a href="mailto:lesfeesdesherbes85@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Mail</a>
+  <a class="produits-lien" href="#produits">Nos produits</a>
+</nav>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

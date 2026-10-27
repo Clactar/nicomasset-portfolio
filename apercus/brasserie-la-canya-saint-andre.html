@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Brasserie-Distillerie La Canya, Saint André (66). 2026-10-27.
+     CONTENU : textes, coordonnées et photos relevés sur brasserielacanya.fr (dossier de Marco du 27/10).
+     Rien d'inventé. Aucun horaire affiché (ils se contredisent sur leur site) : renvoi au téléphone.
+     Aucun réseau social (ceux du site sont ceux du thème). Le blog de démonstration n'est pas repris.
+     DÉFAUT RÉGLÉ : l'entrée « Houblonnière » du menu mène à une vraie section de la page, et le lien
+     des conditions de vente pointe vers leur page qui existe (/conditions-genrerales-de-ventes/).
+     DESIGN : Nova, direction « la cave cuivrée ». Page sombre brun noir, crème, accent cuivre de
+     l'alambic, une seule section claire (la boutique). Bodoni Moda + Hanken Grotesk. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#1C1613" />
+<title>Brasserie-Distillerie La Canya, bières et spiritueux bio à Saint André (66)</title>
+<meta name="description" content="Bières et spiritueux 100 % biologiques brassés et distillés sur place à Saint André, au pied des Albères. Bar, boutique et planche tapas." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231C1613'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='42' fill='%23C27A3E'%3EC%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --nuit:#1C1613;
+  --nuit-2:#251D19;
+  --nuit-3:#2E2420;
+  --creme:#F1E6D6;
+  --creme-2:#E8D9C4;
+  --cuivre:#C27A3E;
+  --cuivre-clair:#D99A63;
+  --sourdine:#BFAF9C;
+  --encre:#231A15;
+  --ombre:0 30px 60px -34px rgba(0,0,0,.85);
+  --display:"Bodoni Moda", "Didot", Georgia, serif;
+  --texte:"Hanken Grotesk", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--nuit)}
+body{background:var(--nuit);color:var(--creme);font-family:var(--texte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--cuivre);color:var(--nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cuivre-clair);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px, calc(100% - 48px));margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap .label,.label{font-size:15px;font-weight:600;color:var(--cuivre-clair);letter-spacing:.01em;margin-bottom:18px}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .25s cubic-bezier(.2,.7,.2,1), background-color .25s, color .25s, border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--cuivre);color:var(--nuit)}
+.btn-plein:hover{background:var(--cuivre-clair)}
+.btn-contour{border:1.5px solid rgba(241,230,214,.45);color:var(--creme)}
+.btn-contour:hover{border-color:var(--creme);background:rgba(241,230,214,.06)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* En-tête */
+.entete{padding:26px 0}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:600;font-size:28px;letter-spacing:-.01em}
+.marque span{font-size:13px;color:var(--sourdine);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:15.5px;color:var(--creme-2);transition:color .2s}
+.nav a:hover{color:var(--cuivre-clair)}
+.nav .tel{border:1.5px solid rgba(194,122,62,.6);padding:10px 20px;border-radius:999px;color:var(--creme);font-weight:600}
+.nav .tel:hover{background:var(--cuivre);color:var(--nuit);border-color:var(--cuivre)}
+
+/* Héros */
+.heros{padding:48px 0 112px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,6.2fr) minmax(0,5.8fr);grid-template-areas:"tete visuel" "corps visuel";column-gap:56px;align-items:start}
+.heros-tete{grid-area:tete;padding-top:48px}
+.heros-corps{grid-area:corps}
+.heros h1{font-size:clamp(46px, 6.1vw, 84px);line-height:1.02;font-weight:500;margin-bottom:30px}
+.heros h1 em{font-style:italic;color:var(--cuivre-clair);font-weight:500}
+.heros-corps p{font-size:19px;color:var(--creme-2);max-width:31em;margin-bottom:36px}
+.heros-visuel{grid-area:visuel;position:relative;padding:12px 64px 72px 24px}
+.tireuse{position:relative;border-radius:20px;overflow:hidden;transform:rotate(2deg);box-shadow:0 40px 80px -40px rgba(0,0,0,.95), 0 0 0 1px rgba(241,230,214,.06)}
+.tireuse img{width:100%;aspect-ratio:4/5.1;object-fit:cover;object-position:50% 40%}
+.pastille{position:absolute;left:16px;bottom:16px;background:rgba(241,230,214,.94);color:var(--encre);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.2}
+.alambic{position:absolute;right:0;bottom:0;width:42%;border-radius:14px;overflow:hidden;transform:rotate(-4deg);border:6px solid var(--nuit-3);box-shadow:var(--ombre)}
+.alambic img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%}
+
+/* Bandeau de faits */
+.faits{background:var(--nuit-2);border-block:1px solid rgba(241,230,214,.08)}
+.faits ul{list-style:none;display:flex;justify-content:space-between;gap:24px;padding:24px 0}
+.faits li{font-size:15px;white-space:nowrap;color:var(--creme-2);display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cuivre);flex:none}
+
+/* Brassage */
+.brassage{padding:136px 0 120px}
+.brassage .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.arche{border-radius:400px 400px 22px 22px;overflow:hidden;box-shadow:var(--ombre)}
+.arche img{width:100%;aspect-ratio:3/4.1;object-fit:cover;object-position:40% 60%}
+.brassage h2{font-size:clamp(36px, 4vw, 56px);line-height:1.06;margin-bottom:28px}
+.brassage .intro{font-size:19px;color:var(--creme);margin-bottom:22px;max-width:34em}
+.brassage p{color:var(--creme-2);max-width:36em;margin-bottom:16px}
+.types{margin-top:34px;padding-top:28px;border-top:1px solid rgba(241,230,214,.12)}
+.types p{font-size:15.5px;color:var(--sourdine);margin-bottom:14px}
+.types ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.types li{font-family:var(--display);font-style:italic;font-size:20px;padding:8px 20px;border-radius:999px;background:var(--nuit-3);color:var(--creme)}
+
+/* Houblonnière */
+.houblon{background:var(--nuit-2);padding:112px 0;scroll-margin-top:24px}
+.houblon .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:end}
+.houblon blockquote{font-family:var(--display);font-size:clamp(28px, 3vw, 40px);line-height:1.22;font-weight:400}
+.houblon aside{border-left:1px solid rgba(194,122,62,.5);padding-left:28px}
+.houblon aside p{color:var(--creme-2);margin-bottom:14px}
+.houblon aside p:last-child{margin-bottom:0}
+
+/* Distillation */
+.distil{padding:136px 0}
+.distil .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:96px;align-items:start}
+.distil-photo{order:2;margin-top:24px}
+.distil-photo{position:relative;padding-bottom:40px}
+.distil-photo figure .pastille{left:auto;right:16px}
+.distil-photo figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.distil-photo figure img{width:100%;aspect-ratio:4/5.3;object-fit:cover;object-position:50% 30%}
+.hublot{position:absolute;left:-56px;bottom:0;width:190px;height:190px;border-radius:50%;overflow:hidden;border:7px solid var(--nuit);box-shadow:var(--ombre)}
+.hublot img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.distil h2{font-size:clamp(36px, 4vw, 56px);line-height:1.06;margin-bottom:24px}
+.distil .intro{color:var(--creme-2);max-width:34em;margin-bottom:44px}
+.frise{list-style:none;position:relative}
+.frise::before{content:"";position:absolute;left:84px;top:12px;bottom:12px;width:1px;background:rgba(194,122,62,.4)}
+.frise li{display:grid;grid-template-columns:84px 1fr;gap:32px;padding:0 0 30px}
+.frise li:last-child{padding-bottom:0}
+.frise b{font-family:var(--display);font-size:30px;font-weight:500;color:var(--cuivre-clair);line-height:1}
+.frise p{color:var(--creme-2);padding-top:4px}
+.frise p strong{color:var(--creme);font-weight:600}
+
+/* Boutique : la section claire */
+.boutique{background:var(--creme);color:var(--encre);padding:128px 0}
+.boutique ::selection{background:var(--cuivre);color:var(--creme)}
+.boutique .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.boutique .wrap .label{color:#97582A}
+.boutique h2{font-size:clamp(36px, 4vw, 56px);line-height:1.06;margin-bottom:20px}
+.boutique .intro{color:#4D3E33;max-width:32em;margin-bottom:40px}
+.carte-prix{list-style:none;margin-bottom:40px}
+.carte-prix li{padding:22px 0;border-top:1px solid rgba(35,26,21,.14)}
+.carte-prix li:last-child{border-bottom:1px solid rgba(35,26,21,.14)}
+.carte-prix a{display:grid;grid-template-columns:1fr auto;gap:6px 24px;text-decoration:none}
+.carte-prix h3{font-size:28px;font-weight:500;transition:color .2s}
+.carte-prix a:hover h3{color:#97582A}
+.carte-prix .prix{font-family:var(--display);font-size:24px;align-self:baseline}
+.carte-prix small{grid-column:1 / -1;font-size:15.5px;color:#5E4E42;max-width:34em}
+.boutique .btn-plein{background:var(--nuit);color:var(--creme)}
+.boutique .btn-plein:hover{background:#3A2C24}
+.boutique .btn-contour{border-color:rgba(35,26,21,.4);color:var(--encre)}
+.boutique .btn-contour:hover{border-color:var(--encre);background:rgba(35,26,21,.05)}
+.bouteilles{position:relative}
+.bouteilles figure{border-radius:24px;overflow:hidden;box-shadow:0 34px 70px -36px rgba(35,26,21,.75)}
+.bouteilles img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 55%}
+.bouteilles blockquote{position:absolute;left:-48px;bottom:44px;max-width:300px;background:var(--creme);color:var(--encre);padding:22px 26px;border-radius:16px;font-family:var(--display);font-style:italic;font-size:22px;line-height:1.3;box-shadow:0 24px 50px -30px rgba(35,26,21,.6)}
+
+/* Services */
+.services{padding:136px 0 120px}
+.equipe{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre);margin-bottom:88px}
+.equipe img{width:100%;aspect-ratio:2.4/1;object-fit:cover;object-position:50% 30%}
+.services-tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:end;margin-bottom:56px}
+.services h2{font-size:clamp(36px, 4.4vw, 60px);line-height:1.04}
+.services-tete p{color:var(--creme-2)}
+.offres{list-style:none}
+.offres li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,4fr);gap:48px;padding:36px 0;border-top:1px solid rgba(241,230,214,.12)}
+.offres li:last-child{border-bottom:1px solid rgba(241,230,214,.12)}
+.offres h3{font-size:30px;line-height:1.1}
+.offres p{color:var(--creme-2)}
+.offres ul{list-style:none}
+.offres ul li{display:block;border:0;padding:0 0 6px 18px;position:relative;color:var(--sourdine);font-size:16px}
+.offres ul li:last-child{border:0}
+.offres ul li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--cuivre)}
+.services .suite{margin-top:40px}
+
+/* Venir */
+.venir{background:var(--nuit-2);padding:128px 0}
+.venir .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.facade{border-radius:18px;overflow:hidden;transform:rotate(-1.5deg);box-shadow:var(--ombre);border:8px solid var(--nuit-3)}
+.facade img{width:100%;aspect-ratio:3/3.7;object-fit:cover;object-position:50% 40%}
+.venir h2{font-size:clamp(36px, 4vw, 56px);line-height:1.06;margin-bottom:18px}
+.venir .intro{color:var(--creme-2);font-size:19px;margin-bottom:40px}
+.coord{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-bottom:40px}
+.coord dt{font-size:14.5px;color:var(--sourdine);margin-bottom:4px}
+.coord dd{font-size:18px;line-height:1.45}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(194,122,62,.5)}
+.coord dd a:hover{color:var(--cuivre-clair)}
+
+/* Pied */
+.pied{background:#15100D;padding:88px 0 0;color:var(--creme-2)}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:56px;padding-bottom:64px}
+.pied .marque b{font-size:34px;color:var(--creme)}
+.pied .devise{font-family:var(--display);font-style:italic;font-size:21px;color:var(--creme);margin-top:22px;max-width:20em}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--cuivre-clair);margin-bottom:16px}
+.pied ul{list-style:none}
+.pied li{margin-bottom:8px;font-size:16px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--cuivre-clair)}
+.proposition{border-top:1px solid rgba(241,230,214,.08);text-align:center;font-size:13px;color:#8C7D6E;padding:16px 24px}
+.proposition a{color:#8C7D6E}
+
+/* Apparitions des photos (masquées seulement si le JS tourne) */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}.btn:hover{transform:none}
+}
+
+/* Tablette et téléphone */
+@media (max-width: 1100px){
+  .faits ul{flex-wrap:wrap;justify-content:flex-start;gap:12px 32px}
+  .hublot{left:-24px}
+}
+@media (max-width: 900px){
+  .wrap{width:calc(100% - 40px)}
+  .entete{padding:18px 0 8px}
+  .entete .wrap{flex-wrap:wrap;gap:14px}
+  .nav{order:3;width:100%;gap:8px 20px;flex-wrap:wrap}
+  .nav a{font-size:16px}
+  .nav .tel{display:none}
+  .entete-tel{display:inline-flex!important}
+  .heros{padding:20px 0 72px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"tete" "visuel" "corps"}
+  .heros-tete{padding-top:8px}
+  .heros h1{font-size:44px;margin-bottom:24px}
+  .heros-visuel{padding:4px 28px 48px 6px;margin-bottom:28px}
+  .tireuse{transform:rotate(1.5deg)}
+  .tireuse img{aspect-ratio:4/3.6}
+  .alambic{width:38%;border-width:5px}
+  .heros-corps p{font-size:17px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:12px;padding:24px 0}
+  .faits li{white-space:normal}
+  .brassage,.distil,.services{padding:88px 0}
+  .houblon,.boutique,.venir{padding:88px 0}
+  .brassage .wrap,.distil .wrap,.boutique .wrap,.venir .wrap,.houblon .wrap,.services-tete{grid-template-columns:1fr;gap:48px}
+  .arche{max-width:340px}
+  .brassage .intro,.venir .intro{font-size:17px}
+  .types li{font-size:18px}
+  .distil-photo{margin-right:24px}
+  .distil-photo{order:0;margin-top:0}
+  .hublot{width:120px;height:120px;left:auto;right:-20px;top:-28px;bottom:auto}
+  .frise::before{left:64px}
+  .frise li{grid-template-columns:64px 1fr;gap:22px}
+  .frise b{font-size:24px}
+  .boutique .wrap{display:flex;flex-direction:column-reverse}
+  .bouteilles{width:100%}
+  .bouteilles blockquote{position:relative;left:auto;bottom:auto;margin:-48px 16px 0;font-size:19px}
+  .carte-prix h3{font-size:24px}
+  .equipe{margin-bottom:56px}
+  .equipe img{aspect-ratio:4/3}
+  .offres li{grid-template-columns:1fr;gap:14px}
+  .coord{grid-template-columns:1fr}
+  .facade{max-width:360px}
+  .pied .wrap{grid-template-columns:1fr;gap:40px}
+}
+.entete-tel{display:none}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="La Canya, retour en haut">
+      <b>La Canya</b>
+      <span>Brasserie-Distillerie, Saint André</span>
+    </a>
+    <a class="btn btn-plein entete-tel" href="tel:+33670077361" style="min-height:44px;padding:0 20px;font-size:15px">Appeler</a>
+    <nav class="nav" aria-label="Sections de la page">
+      <a href="#brassage">Brassage</a>
+      <a href="#houblonniere">Houblonnière</a>
+      <a href="#distillation">Distillation</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#services">Services</a>
+      <a class="tel" href="tel:+33670077361">06 70 07 73 61</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-tete">
+        <p class="label">Au pied des Albères, en Pays Catalan</p>
+        <h1>Bières et spiritueux bio, brassés et <em>distillés</em> sur place.</h1>
+      </div>
+      <div class="heros-visuel">
+        <figure class="tireuse">
+          <img src="assets/brasserie-la-canya-saint-andre/tirage-d-une-biere-a-la-tireuse.webp" alt="Une bière tirée à la tireuse dans un verre à pied frappé du logo La Canya" width="1237" height="1600" fetchpriority="high" />
+          <figcaption class="pastille">Au bar de la brasserie</figcaption>
+        </figure>
+        <figure class="alambic">
+          <img src="assets/brasserie-la-canya-saint-andre/thermometre-alambic-cuivre.webp" alt="Thermomètre à cadran sur l'alambic en cuivre" width="1200" height="1600" />
+        </figure>
+      </div>
+      <div class="heros-corps">
+        <p>À Saint André, nous élaborons des bières et des spiritueux 100 % biologiques, dans le respect de l'environnement et du terroir. La brasserie est aussi un lieu où vous pouvez déguster ce qui est brassé sur place, avec de la charcuterie ou une planche mixte.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://brasserielacanya.fr/boutique/">Voir la boutique</a>
+          <a class="btn btn-contour" href="#venir">Venir nous voir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li>100 % biologique</li>
+      <li>Bières non filtrées, non pasteurisées</li>
+      <li>1er whisky du Pays Catalan</li>
+      <li>Coup de Cœur du trophée RSE 2019</li>
+      <li>Brasserie certifiée éco-défi</li>
+    </ul>
+  </div>
+
+  <section class="brassage" id="brassage">
+    <div class="wrap">
+      <figure class="arche apparait">
+        <img src="assets/brasserie-la-canya-saint-andre/cuve-de-brassage-inox.webp" alt="Cuve de brassage en inox, cuve de fermentation en bois clair derrière" width="1200" height="1600" loading="lazy" />
+      </figure>
+      <div>
+        <p class="label">Le brassage</p>
+        <h2>Des bières vivantes, dans des tanks à lait reformés.</h2>
+        <p class="intro">Nous élaborons des bières pur malt de haute fermentation, dans le respect des traditions brassicoles. Refermentées en bouteille, non filtrées, non pasteurisées&nbsp;: le dépôt au fond de la bouteille est gage de qualité.</p>
+        <p>La brasserie a été entièrement réalisée de nos propres mains, à partir de tanks à lait reformés, toujours dans un but d'upcycling. Elle est en démarche zéro déchet&nbsp;: tous les résidus de céréales du brassage vont aux agriculteurs locaux.</p>
+        <p>Depuis 2020, en plus de la gamme traditionnelle, nous proposons des bières éphémères, qui naissent et disparaissent au gré des saisons et des envies des brasseurs.</p>
+        <div class="types">
+          <p>Nos bières, par caractère</p>
+          <ul>
+            <li>Légère et rafraîchissante</li>
+            <li>Gourmande</li>
+            <li>Ronde et douce</li>
+            <li>Fruitée</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="houblon" id="houblonniere" aria-labelledby="titre-houblon">
+    <div class="wrap">
+      <div>
+        <p class="label" id="titre-houblon">La houblonnière</p>
+        <blockquote>Nous avions installé notre propre houblonnière pour aller vers l'autonomie. Les sécheresses nous ont amenés à arrêter la production&nbsp;: le houblon vient désormais d'ailleurs, mais toujours au plus près.</blockquote>
+      </div>
+      <aside>
+        <p>Nos céréales sont bio et paysannes, produites en majorité en Occitanie Pyrénées Méditerranée.</p>
+        <p>Emballages, marketing, fournisseurs&nbsp;: la brasserie travaille en circuit court.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="distil" id="distillation">
+    <div class="wrap">
+      <div class="distil-photo">
+        <figure class="apparait">
+          <img src="assets/brasserie-la-canya-saint-andre/brasseurs-devant-l-alambic.webp" alt="Les deux brasseurs debout devant l'alambic en cuivre et les cuves inox" width="1066" height="1600" loading="lazy" />
+          <figcaption class="pastille">Devant l'alambic, à Saint André</figcaption>
+        </figure>
+        <div class="hublot apparait">
+          <img src="assets/brasserie-la-canya-saint-andre/hublot-alambic-cuivre.webp" alt="Hublot en inox sur la cuve de l'alambic en cuivre" width="1200" height="1600" loading="lazy" />
+        </div>
+      </div>
+      <div>
+        <p class="label">La distillation</p>
+        <h2>Whiskies, gins, anisés&nbsp;: la même démarche que la brasserie.</h2>
+        <p class="intro">La majorité des fournisseurs de la distillerie vient, elle aussi, d'un circuit court&nbsp;: céréales, emballages, marketing.</p>
+        <ol class="frise">
+          <li><b>2017</b><p>Première distillation, chez notre confrère de la distillerie Castan à Villeneuve-sur-Vère, qui partage la même philosophie.</p></li>
+          <li><b>2020</b><p>Sortie de notre premier whisky. Avec la marque <strong>Seixanta 6</strong>, la brasserie embouteille le 1er whisky du Pays Catalan.</p></li>
+          <li><b>2022</b><p>Livraison de notre propre alambic, acquis en 2021. Depuis, la distillerie élabore des gins, un anisé, des liqueurs, et travaille sur un deuxième anisé.</p></li>
+          <li><b>2023</b><p>La distillerie prend son identité, avec un logotype bien à elle.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutique" id="boutique">
+    <div class="wrap">
+      <div>
+        <p class="label">Bar et boutique</p>
+        <h2>Les produits du moment.</h2>
+        <p class="intro">Quelques bières et spiritueux du moment. Sur place&nbsp;: la boutique, le bar et la planche tapas. N'hésitez pas à venir visiter la boutique, ou à commander en ligne.</p>
+        <ul class="carte-prix">
+          <li><a href="https://brasserielacanya.fr/produit/blonde/"><h3>Blonde</h3><span class="prix">3,00 €</span><small>Style American Pale Ale, robe jaune dorée, mousse blanche. Notes fruitées et houblonnées, aussi agréable que désaltérante.</small></a></li>
+          <li><a href="https://brasserielacanya.fr/produit/ipa/"><h3>IPA</h3><span class="prix">4,00 €</span></a></li>
+          <li><a href="https://brasserielacanya.fr/produit/seixanta-6-vermell/"><h3>Whisky Vermell</h3><span class="prix">56,00 €</span><small>Seixanta 6, le whisky de la distillerie La Canya.</small></a></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://brasserielacanya.fr/boutique/">Ouvrir la boutique</a>
+          <a class="btn btn-contour" href="https://brasserielacanya.fr/commander/">Commander</a>
+        </div>
+      </div>
+      <div class="bouteilles">
+        <figure class="apparait">
+          <img src="assets/brasserie-la-canya-saint-andre/bouteilles-la-canya-fond-noir.webp" alt="Deux bouteilles de bière La Canya à l'étiquette bio, sur fond noir" width="1068" height="1600" loading="lazy" />
+        </figure>
+        <blockquote>Brasser provoque la passion, distiller de l'émotion.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <figure class="equipe apparait">
+        <img src="assets/brasserie-la-canya-saint-andre/brasseurs-au-bar.webp" alt="Les deux brasseurs en polo noir au logo, bras croisés, devant le bar de la brasserie" width="1600" height="1066" loading="lazy" />
+        <figcaption class="pastille">Les brasseurs, au bar</figcaption>
+      </figure>
+      <div class="services-tete">
+        <div>
+          <p class="label">Particuliers, associations, professionnels</p>
+          <h2>«&nbsp;La bière artisanale n'est pas plus chère&nbsp;!&nbsp;»</h2>
+        </div>
+        <p>Pour une soirée, un festival ou votre carte, proposez une bière artisanale, bio et locale. Trouvez l'offre qui vous correspond.</p>
+      </div>
+      <ul class="offres">
+        <li>
+          <h3>Particulier</h3>
+          <p>Une soirée ou un événement à organiser ? Louez une tireuse à bière et réservez nos bières bio en fûts de 30 litres, parmi la gamme disponible. Nous vous présentons le fonctionnement de la machine.</p>
+          <ul><li>Location de tireuse</li><li>Fûts de 30 litres</li></ul>
+        </li>
+        <li>
+          <h3>Événement, festival</h3>
+          <p>Le bar est un élément central&nbsp;: nous mettons à votre disposition le matériel nécessaire à sa bonne tenue, et nous gérons la logistique avec vous.</p>
+          <ul><li>Tireuse mobile ou fixe, à froid humide</li><li>Verre réutilisable consigné</li><li>Comptoir</li></ul>
+        </li>
+        <li>
+          <h3>CHR, professionnel</h3>
+          <p>Caviste, restaurateur, commerçant, hôtel ou camping&nbsp;: devenez partenaire d'une entreprise locale et proposez à vos clients une bière biologique locale. Contactez-nous pour une offre personnalisée.</p>
+          <ul><li>Fûts de 30 l à poche recyclable, tête plate</li><li>Verrerie, PLV</li><li>Animation commerciale sur demande</li><li>Livraison</li></ul>
+        </li>
+      </ul>
+      <div class="actions suite">
+        <a class="btn btn-contour" href="https://brasserielacanya.fr/service/">Toutes nos propositions</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <figure class="facade apparait">
+        <img src="assets/brasserie-la-canya-saint-andre/facade-brasserie-la-canya.webp" alt="Façade de la brasserie La Canya, vitrines «&nbsp;Bières et spiritueux&nbsp;» et «&nbsp;Brew pub&nbsp;», terrasse en bois" width="1200" height="1600" loading="lazy" />
+      </figure>
+      <div>
+        <p class="label">Nous sommes à Saint André</p>
+        <h2>Arrêtez-vous et venez nous voir.</h2>
+        <p class="intro">Pour connaître nos heures d'ouverture, un coup de téléphone suffit. Visite gratuite de la brasserie entre mai et septembre, sur rendez-vous.</p>
+        <dl class="coord">
+          <div><dt>Adresse</dt><dd>7 parc d'activités Albères Méditerranée<br />66690 Saint André</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33670077361">06 70 07 73 61</a><br /><a href="tel:+33670392686">06 70 39 26 86</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:contact@brasserielacanya.fr">contact@brasserielacanya.fr</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33670077361">Appeler la brasserie</a>
+          <a class="btn btn-contour" href="mailto:contact@brasserielacanya.fr">Nous écrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><b>La Canya</b><span>Brasserie-Distillerie bio, Saint André (66)</span></a>
+      <p class="devise">Brasser, distiller, c'est notre métier, notre passion.</p>
+    </div>
+    <div>
+      <h3>Nous trouver</h3>
+      <ul>
+        <li>7 parc d'activités Albères Méditerranée</li>
+        <li>66690 Saint André</li>
+        <li><a href="tel:+33670077361">06 70 07 73 61</a></li>
+        <li><a href="tel:+33670392686">06 70 39 26 86</a></li>
+        <li><a href="mailto:contact@brasserielacanya.fr">contact@brasserielacanya.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>En ligne</h3>
+      <ul>
+        <li><a href="https://brasserielacanya.fr/boutique/">Boutique</a></li>
+        <li><a href="https://brasserielacanya.fr/boutique/mon-compte/">Mon compte</a></li>
+        <li><a href="https://brasserielacanya.fr/conditions-genrerales-de-ventes/">Conditions générales de vente</a></li>
+        <li><a href="https://brasserielacanya.fr/politique-de-confidentialite-2/">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposition">Proposition de Nicolas Masset pour la Brasserie-Distillerie La Canya, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+</footer>
+
+<script>
+(function(){
+  var photos = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
+  photos.forEach(function(p){ io.observe(p); });
+})();
+</script>
+</body>
+</html>
