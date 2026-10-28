@@ -225,7 +225,14 @@ footer a:hover{color:#fff;text-decoration:underline}
   .card div{grid-template-columns:1fr;gap:2px}
   footer .grid{grid-template-columns:1fr;gap:28px}
 }
-@media (max-width:420px){.proposal{font-size:12px;padding:14px 10px}}
+@media (max-width:420px){.proposal{font-size:12px;padding:14px 10px}
+  .btn{white-space:normal;text-align:center;text-wrap:balance;padding-left:22px;padding-right:22px}
+  .uses .grid{grid-template-columns:minmax(0,1fr)}
+  .hero .peg{height:min(530px,calc(480px + .91 * (100vw - 320px)))}
+  .h-birds{width:min(300px,calc(100% - 32px))}
+  .h-owl{width:min(132px,41%);top:min(316px,calc(.714 * (100vw - 96px) + 116px))}
+  .h-bee{width:min(180px,55%);top:min(344px,calc(.714 * (100vw - 96px) + 144px))}
+}
 </style>
 </head>
 <body>

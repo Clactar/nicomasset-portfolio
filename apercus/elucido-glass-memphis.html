@@ -224,6 +224,14 @@ p{text-wrap:pretty}
   *{transition:none!important;animation:none!important}
   .rv.pre{opacity:1;translate:none}
 }
+@media (max-width:420px){
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts li{padding:16px 14px}
+  .facts strong{font-size:18px}
+  .color .wrap{grid-template-columns:minmax(0,1fr)}
+  .duo{gap:14px}
+  .duo .gem{width:auto;flex:1 1 0;min-width:0}
+}
 </style>
 </head>
 <body>

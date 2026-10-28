@@ -259,6 +259,11 @@ section{scroll-margin-top:24px}
   .carte-contact dd{margin-bottom:12px}
   .pied .grille{grid-template-columns:1fr;gap:36px}
 }
+@media (max-width:420px){
+  .ronde{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ronde figure,.ronde .medaillon{width:min(104px,calc((100vw - 60px) / 3))}
+  .ronde .medaillon{height:min(104px,calc((100vw - 60px) / 3))}
+}
 </style>
 </head>
 <body>

@@ -139,10 +139,10 @@ p{text-wrap:pretty}
 .carte-prix{list-style:none;margin-bottom:40px}
 .carte-prix li{padding:22px 0;border-top:1px solid rgba(35,26,21,.14)}
 .carte-prix li:last-child{border-bottom:1px solid rgba(35,26,21,.14)}
-.carte-prix a{display:grid;grid-template-columns:1fr auto;gap:6px 24px;text-decoration:none}
+.carte-prix a{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:6px 24px;text-decoration:none}
 .carte-prix h3{font-size:28px;font-weight:500;transition:color .2s}
 .carte-prix a:hover h3{color:#97582A}
-.carte-prix .prix{font-family:var(--display);font-size:24px;align-self:baseline}
+.carte-prix .prix{font-family:var(--display);font-size:24px;align-self:baseline;white-space:nowrap;text-align:right;min-width:3.6em}
 .carte-prix small{grid-column:1 / -1;font-size:15.5px;color:#5E4E42;max-width:34em}
 .boutique .btn-plein{background:var(--nuit);color:var(--creme)}
 .boutique .btn-plein:hover{background:#3A2C24}
@@ -292,7 +292,7 @@ p{text-wrap:pretty}
         </figure>
       </div>
       <div class="heros-corps">
-        <p>À Saint André, nous élaborons des bières et des spiritueux 100 % biologiques, dans le respect de l'environnement et du terroir. La brasserie est aussi un lieu où vous pouvez déguster ce qui est brassé sur place, avec de la charcuterie ou une planche mixte.</p>
+        <p>À Saint André, nous élaborons des bières et des spiritueux 100&nbsp;% biologiques, dans le respect de l'environnement et du terroir. La brasserie est aussi un lieu où vous pouvez déguster ce qui est brassé sur place, avec de la charcuterie ou une planche mixte.</p>
         <div class="actions">
           <a class="btn btn-plein" href="https://brasserielacanya.fr/boutique/">Voir la boutique</a>
           <a class="btn btn-contour" href="#venir">Venir nous voir</a>
@@ -303,7 +303,7 @@ p{text-wrap:pretty}
 
   <div class="faits" aria-label="En bref">
     <ul class="wrap">
-      <li>100 % biologique</li>
+      <li>100&nbsp;% biologique</li>
       <li>Bières non filtrées, non pasteurisées</li>
       <li>1er whisky du Pays Catalan</li>
       <li>Coup de Cœur du trophée RSE 2019</li>
@@ -380,9 +380,9 @@ p{text-wrap:pretty}
         <h2>Les produits du moment.</h2>
         <p class="intro">Quelques bières et spiritueux du moment. Sur place&nbsp;: la boutique, le bar et la planche tapas. N'hésitez pas à venir visiter la boutique, ou à commander en ligne.</p>
         <ul class="carte-prix">
-          <li><a href="https://brasserielacanya.fr/produit/blonde/"><h3>Blonde</h3><span class="prix">3,00 €</span><small>Style American Pale Ale, robe jaune dorée, mousse blanche. Notes fruitées et houblonnées, aussi agréable que désaltérante.</small></a></li>
-          <li><a href="https://brasserielacanya.fr/produit/ipa/"><h3>IPA</h3><span class="prix">4,00 €</span></a></li>
-          <li><a href="https://brasserielacanya.fr/produit/seixanta-6-vermell/"><h3>Whisky Vermell</h3><span class="prix">56,00 €</span><small>Seixanta 6, le whisky de la distillerie La Canya.</small></a></li>
+          <li><a href="https://brasserielacanya.fr/produit/blonde/"><h3>Blonde</h3><span class="prix">3,00&nbsp;€</span><small>Style American Pale Ale, robe jaune dorée, mousse blanche. Notes fruitées et houblonnées, aussi agréable que désaltérante.</small></a></li>
+          <li><a href="https://brasserielacanya.fr/produit/ipa/"><h3>IPA</h3><span class="prix">4,00&nbsp;€</span></a></li>
+          <li><a href="https://brasserielacanya.fr/produit/seixanta-6-vermell/"><h3>Whisky Vermell</h3><span class="prix">56,00&nbsp;€</span><small>Seixanta 6, le whisky de la distillerie La Canya.</small></a></li>
         </ul>
         <div class="actions">
           <a class="btn btn-plein" href="https://brasserielacanya.fr/boutique/">Ouvrir la boutique</a>
