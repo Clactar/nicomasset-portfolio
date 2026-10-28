@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sarah House Pottery · Functional pottery from Yancey County, Western North Carolina</title>
+<meta name="description" content="Functional stoneware by Sarah House: mugs, bowls, pitchers and yarn bowls, made in the mountains of Western North Carolina between Micaville and Celo. Call 828-284-3026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232C4166'/%3E%3Cpath d='M0 46 L16 34 L28 42 L44 28 L64 42 L64 64 L0 64Z' fill='%23A4522B'/%3E%3Ctext x='32' y='38' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F3F5F8'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#E3E8EE; --mist-2:#D3DAE3; --surface:#F3F5F8;
+  --dusk:#2C4166; --dusk-d:#1C2A44; --ridge:#7D93B3;
+  --rust:#A4522B; --rust-d:#86401F;
+  --ink:#1F2533; --ink-2:#4F5868;
+  --shadow:0 36px 66px -36px rgba(28,42,68,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--mist);color:var(--ink);font:400 17px/1.66 'Manrope',sans-serif;overflow-x:hidden}
+::selection{background:var(--rust);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;font-weight:500;line-height:1.02;letter-spacing:-.012em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:600 16px/1 'Manrope',sans-serif;text-decoration:none;border:1.5px solid var(--dusk);transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--rust);border-color:var(--rust);color:var(--surface)}
+.btn-full:hover{background:var(--rust-d);border-color:var(--rust-d);box-shadow:0 18px 30px -18px rgba(134,64,31,.9)}
+.btn-line{color:var(--dusk)}
+.btn-line:hover{background:var(--dusk);color:var(--surface)}
+.btn-light{border-color:rgba(243,245,248,.55);color:var(--surface)}
+.btn-light:hover{background:var(--surface);color:var(--dusk-d)}
+
+/* en-tête */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none}
+.brand b{display:block;font:500 29px/1 'Crimson Pro',serif}
+.brand span{display:block;font-size:14.5px;color:var(--ink-2);margin-top:6px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16px;font-weight:600;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--dusk);color:var(--surface);padding:13px 22px;border-radius:999px;transition:background-color .25s}
+.pill:hover{background:var(--rust)}
+
+/* héros */
+.hero{padding:36px 0 110px}
+.hero .wrap{display:grid;grid-template-columns:.95fr 1.05fr;column-gap:60px;align-items:center}
+.kick{font:italic 500 22px/1.3 'Crimson Pro',serif;color:var(--rust)}
+.hero h1{font-size:clamp(48px,5.4vw,76px);margin-top:16px}
+.hero h1 em{font-style:italic;color:var(--dusk)}
+.lead{margin-top:28px;max-width:470px;color:var(--ink-2);font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.reach{margin-top:22px;font-size:16px;color:var(--ink-2)}
+.reach a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:1.5px solid rgba(164,82,43,.45)}
+.reach a:hover{border-color:var(--rust)}
+.pair{position:relative;height:600px}
+.pair figure{position:absolute;overflow:hidden}
+.pair .a{right:0;top:0;width:86%;border-radius:24px;box-shadow:var(--shadow)}
+.pair .a img{width:100%;aspect-ratio:1.4/1;object-fit:cover;object-position:50% 50%}
+.pair .b{left:0;bottom:0;width:56%;border-radius:20px;border:10px solid var(--mist);box-shadow:0 40px 70px -34px rgba(28,42,68,.75)}
+.pair .b img{width:100%;aspect-ratio:1.336/1;object-fit:cover}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(243,245,248,.95);color:var(--ink);font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;line-height:1.2;box-shadow:0 10px 24px -14px rgba(28,42,68,.6)}
+.pair .a .tag{left:auto;bottom:auto;right:18px;top:18px}
+.ridge{position:absolute;right:-30px;bottom:30px;width:220px;height:auto;color:var(--ridge);opacity:.7}
+
+/* faits */
+.facts{background:var(--dusk);color:var(--surface)}
+.facts ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px;padding:24px 0}
+.facts li{font-size:16.5px;font-weight:600;display:flex;align-items:center;gap:12px}
+.facts li::before{content:"";width:14px;height:8px;background:var(--rust);clip-path:polygon(0 100%,35% 20%,55% 60%,75% 0,100% 100%);flex:none}
+
+/* mugs */
+.mugs{padding:130px 0 120px}
+.mugs .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:center}
+.jug{position:relative;padding:0 0 70px 0}
+.jug .main{border-radius:26px;overflow:hidden;box-shadow:var(--shadow);width:84%;position:relative}
+.jug .main img{width:100%;aspect-ratio:1000/1251;object-fit:cover}
+.jug .thumb{position:absolute;right:0;bottom:0;width:220px;background:var(--surface);padding:12px 12px 14px;border-radius:18px;box-shadow:0 30px 56px -28px rgba(28,42,68,.7)}
+.jug .thumb img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.jug .thumb figcaption{font:italic 500 18px/1.2 'Crimson Pro',serif;color:var(--ink-2);padding:10px 4px 0}
+blockquote{font:italic 400 clamp(32px,3.4vw,46px)/1.16 'Crimson Pro',serif;color:var(--ink);text-wrap:balance}
+.mugs .txt>p{margin-top:26px;color:var(--ink-2);max-width:500px}
+.h2{font-size:clamp(40px,4.4vw,60px)}
+.h2 em{font-style:italic;color:var(--rust)}
+
+/* bols à laine */
+.yarn{padding:0 0 130px}
+.yarn .box{background:var(--surface);border-radius:30px;padding:72px 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;box-shadow:0 44px 80px -54px rgba(28,42,68,.55)}
+.yarn .txt>p{margin-top:20px;color:var(--ink-2);max-width:520px}
+.yarn .txt>p.first{font-size:19px;color:var(--ink)}
+.bowls{display:flex;justify-content:center;gap:26px;padding:20px 0}
+.bowls figure{width:220px;flex:none;background:var(--mist);padding:12px 12px 14px;border-radius:18px;box-shadow:0 30px 50px -30px rgba(28,42,68,.7)}
+.bowls figure:first-child{rotate:-4deg;margin-top:40px}
+.bowls figure:last-child{rotate:3deg}
+.bowls img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.bowls figcaption{font:italic 500 18px/1.2 'Crimson Pro',serif;color:var(--ink-2);padding:10px 4px 0}
+
+/* fonctions, sombre */
+.multi{background:var(--dusk-d);color:var(--surface);padding:130px 0}
+.multi-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.multi .h2{color:var(--surface)}
+.multi .h2 em{color:#E7A57F}
+.multi-head p{color:rgba(243,245,248,.8);max-width:500px}
+.multi-grid{margin-top:60px;display:grid;grid-template-columns:1.45fr 1fr;gap:26px;align-items:start}
+.multi-grid figure{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 44px 80px -40px rgba(0,0,0,.85)}
+.multi-grid .w img{width:100%;aspect-ratio:1.787/1;object-fit:cover}
+.multi-grid .side{display:grid;gap:26px}
+.multi-grid .side figure:first-child img{width:100%;aspect-ratio:1.5/1;object-fit:cover}
+.multi-grid .side figure:last-child{width:80%;justify-self:end}
+.multi-grid .side figure:last-child img{width:100%;aspect-ratio:1.44/1;object-fit:cover}
+.multi .btn{margin-top:30px}
+
+/* prix + où acheter */
+.buy{padding:130px 0 120px}
+.buy .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.buy .txt>p{margin-top:20px;color:var(--ink-2);max-width:480px}
+.prices{list-style:none;margin-top:34px;columns:2;column-gap:40px}
+.prices li{display:flex;align-items:baseline;gap:10px;padding:9px 0;break-inside:avoid;font-size:16.5px}
+.prices li::after{content:"";order:1;flex:1;border-bottom:1.5px dotted rgba(31,37,51,.3);transform:translateY(-4px)}
+.prices b{order:2;font:600 19px/1 'Crimson Pro',serif;color:var(--rust)}
+.prices .full{margin-top:22px;font-size:16px;color:var(--ink-2)}
+.prices-link{display:inline-block;margin-top:18px;font-weight:700;color:var(--dusk);text-decoration:none;border-bottom:1.5px solid rgba(44,65,102,.4)}
+.prices-link:hover{border-color:var(--dusk)}
+.ways{display:grid;gap:22px}
+.way{background:var(--surface);border-radius:22px;padding:32px 34px;box-shadow:0 36px 64px -44px rgba(28,42,68,.6)}
+.way h3{font-size:29px}
+.way p{margin-top:8px;color:var(--ink-2);font-size:16px}
+.way ul{list-style:none;margin-top:12px}
+.way li{padding:11px 0;border-top:1px solid rgba(31,37,51,.1);font-size:16px;display:flex;justify-content:space-between;gap:16px}
+.way li span{color:var(--ink-2);text-align:right}
+.way li a{font-weight:700;text-decoration:none;border-bottom:1.5px solid rgba(164,82,43,.4)}
+.way li a:hover{border-color:var(--rust)}
+.way.dusk{background:var(--mist-2);box-shadow:none}
+
+/* atelier */
+.studio{padding:0 0 130px}
+.studio .box{position:relative;display:grid;grid-template-columns:auto 1fr 1fr;gap:56px;align-items:center;background:var(--surface);border-radius:30px;padding:56px 60px;box-shadow:0 44px 80px -54px rgba(28,42,68,.55)}
+.portrait{width:220px;background:var(--ink);padding:10px;border-radius:16px;rotate:-2deg;box-shadow:0 30px 56px -28px rgba(28,42,68,.75)}
+.portrait img{width:100%;aspect-ratio:300/420;object-fit:cover;border-radius:8px}
+.studio .h2{font-size:clamp(36px,3.8vw,52px)}
+.studio p{margin-top:14px;color:var(--ink-2)}
+.rows a,.rows div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(31,37,51,.12);text-decoration:none;font-weight:700;transition:color .2s}
+.rows span{font-weight:400;color:var(--ink-2);text-align:right;overflow-wrap:anywhere}
+.rows a:hover{color:var(--rust)}
+.studio .btn{margin-top:18px;width:100%}
+
+/* pied */
+.foot{background:var(--dusk-d);color:var(--surface);padding:84px 0 50px}
+.foot .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}
+.foot .big{font:500 44px/1.04 'Crimson Pro',serif}
+.foot .big em{color:#E7A57F}
+.foot p,.foot li{color:rgba(243,245,248,.74);font-size:16px}
+.foot .grid>div:first-child p:not(.big){margin-top:16px;max-width:380px}
+.foot h4{font:700 15px/1 'Manrope',sans-serif;color:#E7A57F;margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(243,245,248,.25);transition:border-color .2s}
+.foot a:hover{border-color:#E7A57F}
+.foot .legal{margin-top:64px;padding-top:24px;border-top:1px solid rgba(243,245,248,.14);display:flex;justify-content:space-between;gap:20px;font-size:14.5px;color:rgba(243,245,248,.5)}
+.proposal{background:var(--dusk-d);color:rgba(243,245,248,.5);text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:rgba(243,245,248,.8)}
+
+/* apparitions (photos) */
+html.js .rv{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.3,1)}
+html.js .rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;translate:none;transition:none}.btn,.nav a::after{transition:none}}
+
+@media (max-width:1100px){.studio .box{grid-template-columns:auto 1fr}.studio .rowsbox{grid-column:1/-1}}
+@media (max-width:860px){
+  body{font-size:16.5px}
+  .wrap{padding:0 22px}
+  .top{padding:18px 0 4px}
+  .brand b{font-size:25px}
+  .brand span{font-size:15px}
+  .nav a:not(.pill){display:none}
+  .pill{padding:11px 18px;font-size:16px;flex:none}
+  .hero{padding:22px 0 64px}
+  .hero .wrap{grid-template-columns:1fr}
+  .intro{display:contents}
+  .kick{order:1;font-size:19px}
+  .hero h1{order:2;font-size:44px;margin-top:10px}
+  .pair{order:3;height:auto;aspect-ratio:1/.86;margin-top:26px}
+  .pair .a{width:90%}
+  .pair .b{width:60%;border-width:6px}
+  .pair .a .tag{right:10px;top:10px;font-size:15px;padding:7px 12px}
+  .lead{order:4;font-size:17px;margin-top:26px}
+  .cta{order:5;flex-direction:column;margin-top:26px}
+  .cta .btn{width:100%}
+  .reach{order:6}
+  .facts ul{flex-direction:column;gap:12px}
+  .mugs{padding:84px 0 70px}
+  .mugs .wrap,.multi-head,.multi-grid,.buy .wrap,.foot .grid{grid-template-columns:1fr;gap:44px}
+  .jug{padding-bottom:60px}
+  .jug .thumb{width:160px;padding:8px 8px 10px}
+  .jug .thumb figcaption{font-size:16px}
+  .yarn{padding:0 0 84px}
+  .yarn .box{grid-template-columns:1fr;padding:36px 22px;gap:30px;border-radius:24px}
+  .yarn .txt>p.first{font-size:18px}
+  .bowls{gap:12px;padding:10px 0}
+  .bowls figure{width:46%;padding:8px 8px 10px}
+  .bowls figcaption{font-size:16px}
+  .multi{padding:84px 0}
+  .multi-head{gap:18px}
+  .multi-grid{margin-top:36px;gap:16px}
+  .multi-grid .side{gap:16px}
+  .multi .btn{width:100%}
+  .buy{padding:84px 0 70px}
+  .prices{columns:1}
+  .way{padding:28px 22px}
+  .studio{padding:0 0 84px}
+  .studio .box{grid-template-columns:1fr;padding:36px 22px;gap:28px;border-radius:24px}
+  .portrait{width:180px}
+  .foot{padding:64px 0 40px}
+  .foot .big{font-size:36px}
+  .foot .legal{flex-direction:column;gap:6px}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sarah House Pottery, home">
+      <b>Sarah House</b><span>Functional Pottery</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pottery">Pottery</a>
+      <a href="#buy">Buy</a>
+      <a href="#studio">The studio</a>
+      <a class="pill" href="tel:+18282843026">Call Sarah</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="intro">
+        <div class="kick">Sarah House Pottery, Burnsville, NC</div>
+        <h1>Functional pottery from the mountains of <em>Western North Carolina.</em></h1>
+        <p class="lead">Made in Yancey County, between Micaville and Celo. Pottery has a place in every room of the house: some pieces have a specific function, some are just meant to enrich your surroundings.</p>
+        <div class="cta">
+          <a class="btn btn-full" href="tel:+18282843026">Call 828-284-3026</a>
+          <a class="btn btn-line" href="#studio">Meet Sarah</a>
+        </div>
+        <p class="reach">Or email <a href="mailto:sarah@skhpottery.com">sarah@skhpottery.com</a></p>
+      </div>
+      <div class="pair">
+        <figure class="a rv">
+          <img src="assets/sarah-house-pottery-burnsville/grand-saladier-gres-email-bleu-vert.webp" alt="Large stoneware bowl in a speckled blue green glaze with sand colored waves running through it" width="1556" height="1000">
+          <span class="tag">Large bowl</span>
+        </figure>
+        <figure class="b rv">
+          <img src="assets/sarah-house-pottery-burnsville/bol-a-fouetter-anse-email-ambre.webp" alt="Whisk bowl with a pouring spout and handle, amber rust and brown glaze over sand, a metal whisk behind it" width="1336" height="1000">
+          <span class="tag">Whisk bowl</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li>Yancey County, Western North Carolina</li>
+        <li>Studio open year round</li>
+        <li>Ships anywhere</li>
+        <li>Special orders considered</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mugs" id="pottery">
+    <div class="wrap">
+      <div class="jug">
+        <figure class="main rv">
+          <img src="assets/sarah-house-pottery-burnsville/pichet-gres-brun-et-vert.webp" alt="Stoneware pitcher with a speckled celadon green top, a glossy brown black base and a large handle" loading="lazy" width="1000" height="1251">
+          <span class="tag">Pitcher</span>
+        </figure>
+        <figure class="thumb rv">
+          <img src="assets/sarah-house-pottery-burnsville/mug-gres-prune-et-vert.webp" alt="Round bellied stoneware mug, green sand top and speckled plum base, with a wide handle" loading="lazy" width="1000" height="1000">
+          <figcaption>The mug</figcaption>
+        </figure>
+      </div>
+      <div class="txt">
+        <blockquote>Your favorite mug is a very personal choice; everyone in the family will have certain ones that they pick day after day.</blockquote>
+        <p>These are sure to be in constant demand. Bowls are the center piece of many kitchens too: from eating, serving, storage and display, all sizes and shapes have many uses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="yarn" aria-label="Yarn bowls">
+    <div class="wrap">
+      <div class="box">
+        <div class="txt">
+          <h2 class="h2">Keep your yarn <em>in check</em> as you knit.</h2>
+          <p class="first">No more retrieving your yarn from under the table or fighting the cat for possession.</p>
+          <p>Bowls are approximately 6 inches wide and tall and very sturdy. I love placing mine in the floorboard of the car on trips, and I often take it along to knitting group. And if you have as many projects going at once as I do, skip the hole and you can switch yarns as often as you like.</p>
+        </div>
+        <div class="bowls">
+          <figure class="rv">
+            <img src="assets/sarah-house-pottery-burnsville/bol-a-laine-email-bleu-vert.webp" alt="Yarn bowl in a blue green glaze with sand drips, the hole for the yarn on its side" loading="lazy" width="1000" height="1000">
+            <figcaption>Blue green</figcaption>
+          </figure>
+          <figure class="rv">
+            <img src="assets/sarah-house-pottery-burnsville/bol-a-laine-email-caramel.webp" alt="Yarn bowl with a glossy caramel top, a dark drip around the yarn hole and a matte sand base" loading="lazy" width="1000" height="1000">
+            <figcaption>Caramel</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="multi">
+    <div class="wrap">
+      <div class="multi-head">
+        <h2 class="h2">Multiple <em>functions.</em></h2>
+        <div>
+          <p>Pottery has a place in every room of the house. In addition to the work shown here, I do many other pieces. Special orders are considered.</p>
+          <a class="btn btn-light" href="mailto:sarah@skhpottery.com?subject=Special%20order">Ask about a special order</a>
+        </div>
+      </div>
+      <div class="multi-grid">
+        <figure class="w rv">
+          <img src="assets/sarah-house-pottery-burnsville/quatre-distributeurs-savon-gres.webp" alt="Four stoneware soap pump bottles, each with a thumb print, in blue green, black, green and amber rust glazes" loading="lazy" width="1600" height="895">
+          <span class="tag">Pump bottles in four glazes</span>
+        </figure>
+        <div class="side">
+          <figure class="rv">
+            <img src="assets/sarah-house-pottery-burnsville/plat-a-four-anses-email-bleu-sable.webp" alt="Deep stoneware dish with two small side handles, blue gray outside and a sand colored inside" loading="lazy" width="1591" height="1000">
+            <span class="tag">Platter with handles</span>
+          </figure>
+          <figure class="rv">
+            <img src="assets/sarah-house-pottery-burnsville/bol-de-service-email-vert-bleu.webp" alt="Stoneware serving bowl with speckled bands of green and blue violet glaze and a bare foot" loading="lazy" width="1441" height="1000">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="buy" id="buy">
+    <div class="wrap">
+      <div class="txt">
+        <h2 class="h2">There are several ways to <em>buy my work.</em></h2>
+        <p>To place an order, please call or email. I can ship anywhere and, if the item is available, have it to you in a few days. Some special orders may require a 50% down payment.</p>
+        <ul class="prices" aria-label="A few prices">
+          <li>Mug <b>$45</b></li>
+          <li>Large Mug <b>$50</b></li>
+          <li>Cereal Bowl <b>$40</b></li>
+          <li>Serving Bowl <b>$45</b></li>
+          <li>Large Bowl <b>$82</b></li>
+          <li>Berry Bowl <b>$52</b></li>
+          <li>Whisk Bowl <b>$48</b></li>
+          <li>Spoon Jar <b>$48</b></li>
+          <li>Pitcher <b>$52</b></li>
+          <li>Pump Bottle <b>$45</b></li>
+          <li>Dinner Plate <b>$50</b></li>
+          <li>Platter <b>$82</b></li>
+        </ul>
+        <a class="prices-link" href="https://skhpottery.com/prices">See every price and ordering information</a>
+      </div>
+      <div class="ways">
+        <div class="way">
+          <h3>Directly from me</h3>
+          <p>My studio is open year round. It never hurts to call to see if I'm around and if it's tidy enough for visitors! During special events and kiln openings I stock my online shop.</p>
+          <ul>
+            <li>Call <a href="tel:+18282843026">828-284-3026</a></li>
+            <li>Online shop <a href="https://skhpottery.square.site/">skhpottery.square.site</a></li>
+          </ul>
+        </div>
+        <div class="way">
+          <h3>At events</h3>
+          <ul>
+            <li><a href="http://www.toeriverarts.org/about-the-tour/">Toe River Studio Tours</a><span>First weekend of June and second weekend of November</span></li>
+            <li>Highway 80 Art Hop<span>Second weekend of October</span></li>
+          </ul>
+        </div>
+        <div class="way dusk">
+          <h3>In galleries</h3>
+          <ul>
+            <li><a href="http://www.toerivercrafts.com/">Toe River Crafts</a><span>Celo, NC</span></li>
+            <li><a href="http://newmorninggallerync.com/">New Morning Gallery</a><span>Asheville, NC</span></li>
+            <li>TRA Center<span>Spruce Pine, NC</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="studio" id="studio">
+    <div class="wrap">
+      <div class="box">
+        <figure class="portrait rv">
+          <img src="assets/sarah-house-pottery-burnsville/sarah-house-au-tour-noir-et-blanc.webp" alt="Black and white photo of Sarah House at the wheel, her hands on a bowl, studio shelves behind her" loading="lazy" width="300" height="420">
+        </figure>
+        <div>
+          <h2 class="h2">Sarah House, <em>at the wheel.</em></h2>
+          <p>Functional pottery, located in the mountains of Western North Carolina, Yancey County, between Micaville and Celo. Join the mailing list: it's the best way to know what's happening.</p>
+        </div>
+        <div class="rowsbox">
+          <div class="rows">
+            <a href="tel:+18282843026">Phone <span>828-284-3026</span></a>
+            <a href="mailto:sarah@skhpottery.com">Email <span>sarah@skhpottery.com</span></a>
+            <div>Studio <span>315 Coventry Ln, Burnsville, NC 28714</span></div>
+          </div>
+          <a class="btn btn-full" href="mailto:sarah@skhpottery.com?subject=Mailing%20list">Join the mailing list</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="big">Sarah House <em>Pottery</em></p>
+        <p>Functional pottery from Yancey County, in the mountains of Western North Carolina.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>315 Coventry Ln<br>Burnsville, NC 28714</li>
+          <li><a href="tel:+18282843026">828-284-3026</a></li>
+          <li><a href="mailto:sarah@skhpottery.com">sarah@skhpottery.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/SarahHousePottery">Facebook: SarahHousePottery</a></li>
+          <li><a href="https://www.instagram.com/potterknitter">Instagram: PotterKnitter</a></li>
+          <li><a href="https://skhpottery.square.site/">Online shop</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Sarah House Pottery</span><span>Made in Yancey County, NC</span></div>
+  </div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Sarah House Pottery</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

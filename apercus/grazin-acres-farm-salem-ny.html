@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Grazin' Acres Farm | Family farm in Washington County, NY</title>
+<meta name="description" content="Since 2010, Grazin' Acres Farm has raised all-natural beef, pork, lamb, chicken and fresh vegetables in Washington County, NY. Shop online or find us at weekly farmers' markets.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B2824'/%3E%3Crect x='6' y='6' width='52' height='52' rx='9' fill='none' stroke='%23D3A23C' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23FAF5EA'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --straw:#EEE6D4; --straw-2:#E3D8BF; --cream:#FAF5EA;
+  --coal:#2B2824; --coal-2:#5A544B; --coal-d:#211F1B;
+  --rust:#9E3C1F; --rust-d:#7E2E16; --hay:#D3A23C; --hay-p:#E9CF8E;
+  --shadow:0 30px 60px -34px rgba(60,40,20,.6);
+  --shadow-deep:0 48px 80px -44px rgba(43,40,36,.75);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--straw);color:var(--coal);font:300 17px/1.7 'Lexend',Georgia,sans-serif;overflow-x:hidden}
+::selection{background:var(--rust);color:var(--cream)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+strong,b{font-weight:500}
+h1,h2,h3{font-family:'Domine',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:500 16px/1 'Lexend',sans-serif;text-decoration:none;border:1.5px solid var(--coal);transition:transform .3s cubic-bezier(.2,.7,.3,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--rust);border-color:var(--rust);color:var(--cream)}
+.btn-full:hover{background:var(--rust-d);border-color:var(--rust-d);box-shadow:0 18px 32px -18px rgba(126,46,22,.9)}
+.btn-line{color:var(--coal)}
+.btn-line:hover{background:var(--coal);color:var(--cream)}
+.btn-hay{background:var(--hay);border-color:var(--hay);color:var(--coal)}
+.btn-hay:hover{background:var(--hay-p);border-color:var(--hay-p)}
+.btn-light{border-color:rgba(250,245,234,.45);color:var(--cream)}
+.btn-light:hover{background:var(--cream);color:var(--coal);border-color:var(--cream)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.ln{font-weight:500;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat;padding-bottom:2px;transition:background-size .3s,color .3s}
+.ln:hover{color:var(--rust);background-size:40% 1.5px}
+
+/* en-tete */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:26px;padding-bottom:26px}
+.brand{text-decoration:none;line-height:1.1}
+.brand b{display:block;font:600 25px/1 'Domine',Georgia,serif}
+.brand span{display:block;font-size:14px;color:var(--coal-2);margin-top:7px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:400}
+.nav a:not(.btn){text-decoration:none}
+.nav a:not(.btn):hover{color:var(--rust)}
+.nav .btn{white-space:nowrap;min-height:46px;padding:0 22px;background:var(--coal);border-color:var(--coal);color:var(--cream)}
+.nav .btn:hover{background:var(--rust);border-color:var(--rust)}
+
+/* heros */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:1fr auto auto auto auto 1fr;grid-template-areas:". pic" "k pic" "h pic" "l pic" "b pic" ". pic";column-gap:72px;padding-top:28px;padding-bottom:88px}
+.kicker{grid-area:k;font-size:17px;font-weight:400;color:var(--rust);margin-bottom:20px}
+.hero h1{grid-area:h;font-size:clamp(44px,5.4vw,70px);margin-bottom:28px}
+.lead{grid-area:l;font-size:19px;color:var(--coal-2);max-width:42ch;margin-bottom:34px}
+.hero .cta{grid-area:b}
+.small{margin-top:22px;font-size:16px;color:var(--coal-2);max-width:44ch}
+.frame{grid-area:pic;position:relative;background:var(--cream);padding:20px;border-radius:14px;box-shadow:var(--shadow-deep);align-self:center}
+.frame img{width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:46% 50%;border-radius:6px}
+.tag{position:absolute;left:36px;bottom:36px;background:rgba(250,245,234,.95);color:var(--coal);font-size:14px;font-weight:500;line-height:1.3;padding:9px 15px;border-radius:999px;max-width:calc(100% - 72px)}
+.frame .stamp{position:absolute;right:-26px;top:44px;width:132px;height:132px;border-radius:50%;background:var(--hay);color:var(--coal);display:flex;align-items:center;justify-content:center;text-align:center;font:600 17px/1.2 'Domine',serif;rotate:8deg;box-shadow:var(--shadow)}
+@keyframes lever{from{opacity:0;translate:0 30px}to{opacity:1;translate:0 0}}
+.frame{animation:lever 1s cubic-bezier(.2,.7,.3,1) both}
+
+/* bandeau de faits */
+.band{background:var(--hay)}
+.band-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-top:38px;padding-bottom:38px}
+.fact{padding:0 28px;border-left:1.5px solid rgba(43,40,36,.2)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font:600 27px/1.15 'Domine',serif;margin-bottom:6px}
+.fact span{display:block;font-size:16px;line-height:1.45;color:#3E3830}
+
+/* histoire */
+.story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:96px;align-items:center;padding-top:128px;padding-bottom:128px}
+.story-pics{position:relative}
+.polar{background:var(--cream);padding:14px 14px 0;border-radius:12px;box-shadow:var(--shadow-deep);rotate:-2.5deg;position:relative}
+.polar img{width:100%;aspect-ratio:3/3.7;object-fit:cover;object-position:50% 40%;border-radius:5px}
+.polar figcaption{font-size:16px;color:var(--coal-2);padding:14px 6px 18px;line-height:1.4}
+.calf{position:absolute;right:-40px;top:-34px;width:200px;z-index:2;background:var(--cream);padding:8px;border-radius:12px;box-shadow:var(--shadow);rotate:4deg}
+.calf img{border-radius:6px;aspect-ratio:1/1;object-fit:cover;object-position:30% 50%}
+.story h2{font-size:clamp(34px,3.8vw,48px);margin-bottom:24px}
+.story p{margin-bottom:18px;color:var(--coal-2)}
+.regen{margin-top:30px;background:var(--cream);border-radius:20px;padding:26px 30px;box-shadow:0 24px 44px -34px rgba(60,40,20,.55)}
+.regen h3{font-size:21px;margin-bottom:8px}
+.regen p{font-size:16px;margin:0}
+
+/* produits, sombre */
+.dark{background:var(--coal);color:var(--cream)}
+.raise{padding-top:120px;padding-bottom:120px}
+.raise-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:64px}
+.raise h2{font-size:clamp(36px,4.2vw,54px)}
+.raise-head p{color:#CFC7B8}
+.raise-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.prods{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;list-style:none}
+.prods li{padding:24px 0;border-top:1px solid rgba(250,245,234,.14)}
+.prods h3{font-size:22px;color:var(--hay);margin-bottom:6px}
+.prods p{font-size:16px;color:#CFC7B8;line-height:1.6}
+.raise .btns{margin-top:40px}
+.stack{position:relative;height:560px}
+.s1{position:absolute;left:0;top:0;width:86%;border-radius:22px;overflow:hidden;box-shadow:0 50px 80px -40px rgba(0,0,0,.7)}
+.s1 img{width:100%;aspect-ratio:4/3.2;object-fit:cover}
+.s2{position:absolute;right:0;bottom:0;width:58%;border-radius:18px;overflow:hidden;border:8px solid var(--coal);box-shadow:0 40px 60px -30px rgba(0,0,0,.7)}
+.s2 img{width:100%;aspect-ratio:3/3.4;object-fit:cover;object-position:50% 60%}
+.s1 .tag{left:16px;bottom:16px}
+
+/* boeuf */
+.beef{padding-top:128px;padding-bottom:40px}
+.beef-in{position:relative}
+.wide{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-deep);position:relative}
+.wide img{width:100%;height:560px;object-fit:cover;object-position:50% 60%}
+.wide .tag{left:24px;bottom:24px}
+.beef-card{position:absolute;right:40px;bottom:-56px;width:440px;background:var(--cream);border-radius:22px;padding:36px 38px;box-shadow:var(--shadow-deep)}
+.beef-card h2{font-size:34px;margin-bottom:14px}
+.beef-card p{font-size:16px;color:var(--coal-2);margin-bottom:14px}
+
+/* legumes */
+.veg{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:96px;align-items:center;padding-top:168px;padding-bottom:120px}
+.veg h2{font-size:clamp(34px,3.8vw,48px);margin-bottom:22px}
+.veg p{color:var(--coal-2);margin-bottom:24px;max-width:54ch}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px;list-style:none}
+.chips li{background:var(--cream);border-radius:999px;padding:7px 15px;font-size:16px;font-weight:400}
+.veg-pics{position:relative;padding-bottom:60px;padding-left:40px}
+.cream-frame{background:var(--cream);padding:16px;border-radius:14px;box-shadow:var(--shadow-deep)}
+.cream-frame img{width:100%;aspect-ratio:3/3.8;object-fit:cover;border-radius:6px}
+.onion{position:absolute;left:-20px;bottom:0;width:210px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--straw);rotate:-3deg}
+.onion img{aspect-ratio:1/1;object-fit:cover}
+
+/* citation */
+.quote{background:var(--straw-2)}
+.quote-in{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:80px;align-items:center;padding-top:104px;padding-bottom:104px}
+.quote blockquote{font:500 clamp(30px,3.5vw,46px)/1.25 'Domine',Georgia,serif;letter-spacing:-.015em;text-wrap:balance;position:relative;padding-top:40px}
+.quote blockquote::before{content:"\201C";position:absolute;left:-6px;top:-40px;font:600 120px/1 'Domine',serif;color:var(--hay)}
+.quote cite{display:block;margin-top:22px;font:400 17px/1.4 'Lexend',sans-serif;font-style:normal;color:var(--coal-2)}
+.chop{border-radius:22px;overflow:hidden;box-shadow:var(--shadow-deep);rotate:2deg}
+.chop img{width:100%;aspect-ratio:1/1;object-fit:cover}
+
+/* marches et contact */
+.find{padding-top:128px;padding-bottom:128px}
+.find h2{font-size:clamp(36px,4.2vw,54px);margin-bottom:16px}
+.find .intro{color:var(--coal-2);max-width:52ch;margin-bottom:56px}
+.find-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:start}
+.markets{list-style:none}
+.markets li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr);gap:24px;padding:26px 0;border-top:1.5px solid var(--straw-2)}
+.markets li:last-child{border-bottom:1.5px solid var(--straw-2)}
+.markets h3{font-size:22px;margin-bottom:4px}
+.markets .where{font-size:16px;color:var(--coal-2)}
+.markets dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:16px}
+.markets dt{font-weight:500;color:var(--rust)}
+.market-pics{position:relative;margin-top:56px;padding-bottom:30px}
+.stand{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);width:78%}
+.stand img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.stand-tag{position:relative}
+.fam{position:absolute;right:0;bottom:0;width:220px;background:var(--cream);padding:8px;border-radius:12px;box-shadow:var(--shadow-deep);rotate:3deg}
+.fam img{border-radius:6px;aspect-ratio:4/3.3;object-fit:cover}
+.farm{background:var(--coal);color:var(--cream);border-radius:26px;padding:44px 40px;box-shadow:var(--shadow-deep);position:sticky;top:24px}
+.farm h3{font-size:32px;margin-bottom:24px}
+.farm dl{display:grid;grid-template-columns:1fr;gap:4px;margin-bottom:30px}
+.farm dt{font-size:15px;color:var(--hay);font-weight:500;margin-top:14px}
+.farm dd{font-size:17px;color:#E8E0D0}
+.farm dd a{text-decoration:none}
+.farm dd a:hover{text-decoration:underline}
+.farm .btns{flex-direction:column}
+.farm .btn{width:100%}
+
+/* pied */
+.foot{background:var(--coal-d);color:#CFC7B8}
+.foot-in{display:grid;grid-template-columns:minmax(0,4fr) repeat(3,minmax(0,2.4fr));gap:48px;padding-top:88px;padding-bottom:64px}
+.foot .fb{font:600 30px/1.1 'Domine',serif;color:var(--cream);margin-bottom:14px}
+.foot p{font-size:16px}
+.foot h3{font:500 16px/1.3 'Lexend',sans-serif;color:var(--hay);margin-bottom:14px;letter-spacing:0}
+.foot ul{list-style:none}
+.foot li{font-size:16px;margin-bottom:9px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--cream);text-decoration:underline}
+.foot-base{border-top:1px solid rgba(207,199,184,.14);padding-top:22px;padding-bottom:28px;display:flex;justify-content:space-between;gap:16px;font-size:15px;color:#9C9486}
+.proposal{background:var(--coal-d);color:#8D8679;text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:#CFC7B8}
+
+.js .rv{opacity:0;translate:0 30px;transition:opacity .9s cubic-bezier(.2,.7,.3,1),translate .9s cubic-bezier(.2,.7,.3,1)}
+.js .rv.on{opacity:1;translate:0 0}
+
+@media (max-width:1080px){
+  .nav a:not(.btn){display:none}
+  .hero{column-gap:44px}
+  .frame .stamp{right:-8px}
+}
+@media (max-width:860px){
+  .wrap{padding:0 22px}
+  .top{padding-top:18px;padding-bottom:18px}
+  .brand b{font-size:22px}
+  .brand span{max-width:22ch}
+  .nav .btn{min-height:42px;padding:0 18px;font-size:15px}
+  .hero{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"k" "h" "pic" "l" "b";padding-top:8px;padding-bottom:64px}
+  .kicker{font-size:16px;margin-bottom:12px}
+  .hero h1{font-size:40px;margin-bottom:22px}
+  .frame{padding:12px;margin-bottom:30px}
+  .frame img{aspect-ratio:4/3.3}
+  .tag{left:24px;bottom:24px;max-width:calc(100% - 48px)}
+  .frame .stamp{width:96px;height:96px;font-size:14px;right:-4px;top:-22px}
+  .lead{font-size:17px;margin-bottom:26px}
+  .btns .btn{width:100%}
+  .band-in{grid-template-columns:1fr 1fr;row-gap:26px;padding-top:30px;padding-bottom:30px}
+  .fact{padding:0 0 0 16px}
+  .fact:nth-child(3){border-left:0;padding-left:0}
+  .fact b{font-size:22px}
+  .story,.veg{grid-template-columns:1fr;gap:56px;padding-top:88px;padding-bottom:88px}
+  .calf{width:140px;right:-6px;top:-26px}
+  .raise{padding-top:88px;padding-bottom:88px}
+  .raise-head,.raise-grid{grid-template-columns:1fr;gap:28px}
+  .raise-head{margin-bottom:24px}
+  .prods{grid-template-columns:1fr}
+  .stack{height:400px;margin-top:20px}
+  .beef{padding-top:88px}
+  .wide img{height:360px}
+  .beef-card{position:relative;right:auto;bottom:auto;width:auto;margin:-80px 12px 0;padding:28px 24px}
+  .veg{padding-top:88px}
+  .veg-pics{padding-left:0;padding-bottom:70px}
+  .onion{width:150px;left:-6px}
+  .quote-in{grid-template-columns:1fr;gap:44px;padding-top:80px;padding-bottom:80px}
+  .chop{max-width:260px}
+  .find{padding-top:88px;padding-bottom:88px}
+  .find-grid{grid-template-columns:1fr;gap:48px}
+  .markets li{grid-template-columns:1fr;gap:10px}
+  .stand{width:86%}
+  .fam{width:160px}
+  .farm{position:static;padding:32px 24px}
+  .foot-in{grid-template-columns:1fr;gap:34px;padding-top:64px}
+  .foot-base{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top wrap">
+  <a class="brand" href="#top" aria-label="Grazin' Acres Farm, home"><b>Grazin&rsquo; Acres Farm</b><span>Family farm in Washington County, NY</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#story">About us</a>
+    <a href="#raise">Our products</a>
+    <a href="#beef">Our practices</a>
+    <a href="#contact">Contact</a>
+    <a class="btn" href="https://grazin-acres-farm.localline.ca/">Shop online</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero wrap">
+  <p class="kicker">Salem, NY, family owned and operated since 2010</p>
+  <h1>Bringing the best of our farm to your table.</h1>
+  <figure class="frame">
+    <img src="assets/grazin-acres-farm-salem-ny/troupeau-vaches-rousses-paturage.webp" alt="The Grazin' Acres herd grazing a green hillside, mountains in the distance" width="1600" height="1200">
+    <figcaption class="tag">The rolling hillsides of Washington County</figcaption>
+    <span class="stamp" aria-hidden="true">Since<br>2010</span>
+  </figure>
+  <p class="lead">We produce all-natural beef, pork, lamb, chicken, and fresh vegetables for tables across Upstate New York, with responsible farming techniques and products made for our family, and yours.</p>
+  <div class="cta">
+    <div class="btns">
+      <a class="btn btn-full" href="https://grazin-acres-farm.localline.ca/">Shop online</a>
+      <a class="btn btn-line" href="#contact">Contact the farm</a>
+    </div>
+    <p class="small">Products and CSA shares can be purchased online, or find us at one of the farmers&rsquo; markets we attend weekly.</p>
+  </div>
+</section>
+
+<section class="band" aria-label="The farm at a glance">
+  <div class="band-in wrap">
+    <div class="fact"><b>Since 2010</b><span>family owned and operated</span></div>
+    <div class="fact"><b>4 locations</b><span>of fully sustainable livestock farming</span></div>
+    <div class="fact"><b>3 markets</b><span>Chestertown, Glens Falls and Saratoga</span></div>
+    <div class="fact"><b>Grass-fed</b><span>and grass-finished, USDA approved Angus beef</span></div>
+  </div>
+</section>
+
+<section class="story wrap" id="story">
+  <div class="story-pics">
+    <figure class="polar rv"><img src="assets/grazin-acres-farm-salem-ny/famille-foire-agricole.webp" alt="Nathan and Meghan Mattison with their five children in red shirts at a county fair" width="1200" height="1600" loading="lazy"><figcaption>Nathan, Meghan and their five favorite farmhands, McKenna, Landon, Kylee, Nolan and Jameson</figcaption></figure>
+    <figure class="calf"><img src="assets/grazin-acres-farm-salem-ny/veau-roux-barriere.webp" alt="A newborn red calf by a green gate" width="1600" height="1200" loading="lazy"></figure>
+  </div>
+  <div>
+    <h2>A small piece of land, a few beef cattle and &lsquo;Pinky&rsquo; the boar.</h2>
+    <p>That is how we started in 2010. Since then we have expanded every year to what is now 4 different farm locations, with fully sustainable livestock including beef cattle, pigs, chickens and lamb, and most recently a huge variety of fresh vegetables.</p>
+    <p>As kids, we grew up on our own family farms using regenerative agriculture, so when it came time to start our own farm, this practice was just second nature. We proudly follow strict animal welfare protocol and provide all natural, non-GMO meats and veggies.</p>
+    <div class="regen">
+      <h3>What is regenerative agriculture?</h3>
+      <p>Farming and grazing practices that rebuild the soil&rsquo;s organic matter and restore degraded soil biodiversity. The result is carbon draw-down, improvements on the water cycle and healthier soil.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="raise">
+  <div class="raise wrap">
+    <div class="raise-head">
+      <h2>Flavorful, nutritious foods, grown sustainably.</h2>
+      <p>Our animals are raised with care and love in the rolling hillsides of Washington County, because raising animals humanely is an important part of our farm.</p>
+    </div>
+    <div class="raise-grid">
+      <div>
+        <ul class="prods">
+          <li><h3>Grass-fed beef</h3><p>100% grass-fed and grass-finished, on pasture all summer and our own harvested hay for the winter.</p></li>
+          <li><h3>Heritage breed pork</h3><p>Raised on pasture with non-GMO, local grains. All our smoked products have no nitrites.</p></li>
+          <li><h3>Pasture-raised chicken</h3><p>Heritage breeds like Freedom Rangers and Kosher Kings, vigorous foragers on free-range pastures.</p></li>
+          <li><h3>Grass-fed lamb</h3><p>Free-range, grass-fed and grass-finished. A lean, flavorful meat, from chops to shanks.</p></li>
+          <li><h3>Fresh produce</h3><p>Organic seeds, limited soil amendments, and we rarely spray for pests.</p></li>
+          <li><h3>Organic seasoning mixes</h3><p>Homemade, with carefully selected herbs and spices, free from artificial additives.</p></li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn-hay" href="https://grazin-acres-farm.localline.ca/">Shop online</a>
+          <a class="btn btn-light" href="https://grazinacresfarm.com/our-products">See all our products</a>
+        </div>
+      </div>
+      <div class="stack">
+        <figure class="s1 rv"><img src="assets/grazin-acres-farm-salem-ny/cochons-dans-l-herbe.webp" alt="Three heritage pigs in tall green grass" width="1600" height="1200" loading="lazy"><figcaption class="tag">Heritage pigs on pasture</figcaption></figure>
+        <figure class="s2"><img src="assets/grazin-acres-farm-salem-ny/poules-au-pre.webp" alt="Free-range hens in a fenced pasture, a red barn behind" width="1200" height="1600" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beef wrap" id="beef">
+  <div class="beef-in">
+    <figure class="wide rv"><img src="assets/grazin-acres-farm-salem-ny/vaches-herbe-haute-ciel-bleu.webp" alt="Red Angus cattle in tall grass under a blue sky" width="1600" height="1200" loading="lazy"><figcaption class="tag">Angus beef, raised on grass</figcaption></figure>
+    <div class="beef-card">
+      <h2>Raised with special care from day one.</h2>
+      <p>Each animal is grass-fed and grass-finished. Grass-finished beef is about 20% lower in calories than grain-finished beef and has higher levels of Omega-3 fatty acids, and Vitamins A and E.</p>
+      <p>All of our beef is USDA-approved, all-natural, and non-GMO with no regular use of antibiotics.</p>
+      <a class="ln" href="https://grazinacresfarm.com/our-practices">Read about our practices</a>
+    </div>
+  </div>
+</section>
+
+<section class="veg wrap">
+  <div>
+    <h2>The freshest, cleanest and, of course, yummiest produce.</h2>
+    <p>Although we are not certified organic, we consider ourselves better than organic. Our seasonal, regenerative produce brings fresh, nutrient-dense vegetables straight to your table. Some of what we offer:</p>
+    <ul class="chips">
+      <li>Carrots</li><li>Cucumbers</li><li>Dried beans</li><li>Garlic</li><li>Green beans</li><li>Kale</li><li>Leeks</li><li>Lettuce</li><li>Onions</li><li>Peppers</li><li>Potatoes</li><li>Pumpkins</li><li>Radishes</li><li>Salad</li><li>Summer squash</li><li>Swiss chard</li><li>Tomatoes</li><li>Winter squash</li><li>Zucchini</li>
+    </ul>
+    <a class="btn btn-line" href="#markets">Find us at the market</a>
+  </div>
+  <div class="veg-pics">
+    <figure class="cream-frame rv"><img src="assets/grazin-acres-farm-salem-ny/rangs-legumes-tunnels.webp" alt="Rows of Swiss chard and greens with two high tunnels and wooded hills behind" width="1200" height="1600" loading="lazy"></figure>
+    <figure class="onion"><img src="assets/grazin-acres-farm-salem-ny/oignons-nouveaux.webp" alt="Red and white spring onions in a wooden basket" width="1600" height="1465" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="quote-in wrap">
+    <blockquote>So grateful to have found Grazin&rsquo; Acres and your family as our trusted, healthy meat source!<cite>Lynette</cite></blockquote>
+    <figure class="chop"><img src="assets/grazin-acres-farm-salem-ny/cotes-de-porc-assiette.webp" alt="Two thick pork chops on a white plate with fresh herbs" width="1600" height="1200" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="find wrap" id="markets">
+  <h2>Find us at the market</h2>
+  <p class="intro">Visit us at one of the several markets we attend in the region. We also offer local deliveries as well as pick-up locations, listed in our online store.</p>
+  <div class="find-grid">
+    <div>
+      <ul class="markets">
+        <li><div><h3>Glens Falls Farmer&rsquo;s Market</h3><p class="where">57 South St, Downtown Glens Falls, NY</p></div>
+          <dl><dt>May to Oct</dt><dd>Saturdays, 8 am to 12 pm</dd><dt>Nov to April</dt><dd>Saturdays, 9 am to 12 pm</dd></dl></li>
+        <li><div><h3>Saratoga Farmer&rsquo;s Market</h3><p class="where">High Rock Park in season, Wilton Mall on NY-50 in winter, Saratoga Springs</p></div>
+          <dl><dt>May to Oct</dt><dd>Saturdays, 9 am to 1 pm</dd><dt>Nov to April</dt><dd>Saturdays, 9:30 am to 1:30 pm</dd></dl></li>
+        <li><div><h3>Chestertown Farmer&rsquo;s Market</h3><p class="where">6307 U.S. 9, Chestertown, NY 12817</p></div>
+          <dl><dt>Mid June to mid Sept</dt><dd>Wednesdays, 10 am to 2 pm</dd></dl></li>
+      </ul>
+      <div class="market-pics">
+        <figure class="stand rv stand-tag"><img src="assets/grazin-acres-farm-salem-ny/stand-marche-legumes-interieur.webp" alt="The Grazin' Acres Farm market stand with sweet potatoes, carrots, cabbage and squash" width="1600" height="1201" loading="lazy"><figcaption class="tag">Our market stand</figcaption></figure>
+        <figure class="fam"><img src="assets/grazin-acres-farm-salem-ny/famille-stand-marche-plein-air.webp" alt="The family behind their outdoor market stand" width="1600" height="1323" loading="lazy"></figure>
+      </div>
+    </div>
+    <aside class="farm" id="contact">
+      <h3>Say hello</h3>
+      <dl>
+        <dt>Our farm</dt><dd>49 Wolfe Ln, Salem, NY 12865<br>Visits by appointment only.</dd>
+        <dt>Email</dt><dd><a href="mailto:grazinacresfarm@gmail.com">grazinacresfarm@gmail.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+15183373656">(518) 337 3656</a></dd>
+        <dt>Order fulfillment</dt><dd>Local deliveries and pick-up locations, see our online store.</dd>
+      </dl>
+      <div class="btns">
+        <a class="btn btn-hay" href="mailto:grazinacresfarm@gmail.com">Email the farm</a>
+        <a class="btn btn-light" href="tel:+15183373656">Call (518) 337 3656</a>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in wrap">
+    <div>
+      <p class="fb">Grazin&rsquo; Acres Farm</p>
+      <p>A family owned and operated farm in Washington County, NY, raising all-natural beef, pork, lamb, chicken and fresh vegetables since 2010.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>49 Wolfe Ln, Salem, NY 12865</li>
+        <li><a href="mailto:grazinacresfarm@gmail.com">grazinacresfarm@gmail.com</a></li>
+        <li><a href="tel:+15183373656">(518) 337 3656</a></li>
+        <li><a href="https://grazinacresfarm.com/contact">Contact page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>The farm</h3>
+      <ul>
+        <li><a href="https://grazinacresfarm.com/about-us">About us</a></li>
+        <li><a href="https://grazinacresfarm.com/our-practices">Our practices</a></li>
+        <li><a href="https://grazinacresfarm.com/our-products">Our products</a></li>
+        <li><a href="https://grazinacresfarm.com/recipes">Recipes</a></li>
+        <li><a href="https://grazinacresfarm.com/blog">Farm news</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Order and follow</h3>
+      <ul>
+        <li><a href="https://grazin-acres-farm.localline.ca/">Shop online</a></li>
+        <li><a href="https://www.facebook.com/GrazinAcresFarm/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-base"><span>Grazin&rsquo; Acres Farm, Salem, New York</span><span>For our family, and yours</span></div></div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Grazin&rsquo; Acres Farm</div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à l'Atelier Les Trois Alènes, Séverine Combes, sellière à Fraissinet-de-Lozère (48), nuit du 2026-10-28.
+     CONTENU : textes, prestations, tarifs (légendes des photos de leur site), délais, coordonnées et photos relevés sur https://www.lestroisalenes.fr/
+     (dossier de Marco du 28/10/2026). Rien d'inventé.
+     DÉFAUT RÉGLÉ : le lien « harnachement du cheval » du texte de présentation (404 sur /bourrellerie/) mène ici à la section #harnachement de la
+     page, et de là à /sellerie-harnachement/ qui répond. Le 06 65 02 37 11 est cliquable partout (tel:).
+     DESIGN (Nova) : lin gris granit, encre noir cuir, accent cognac. Spectral + Public Sans. Héros sombre pleine largeur, poignée cousue en grand. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#1A1714" />
+<title>Atelier Les Trois Alènes, sellerie, maroquinerie et harnachement en Lozère</title>
+<meta name="description" content="Séverine Combes, sellière sur le Mont Lozère : rénovation de sièges auto et de selles de moto, maroquinerie en cuir pleine fleur, harnachement du cheval sur mesure. Atelier ouvert sur rendez-vous." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%239C5A2A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23ECEAE4'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --lin:#ECEAE4;
+  --lin-2:#E0DBD1;
+  --surface:#F6F4EF;
+  --cuir:#1A1714;
+  --cuir-2:#262119;
+  --cuir-doux:#5C554C;
+  --cognac:#9C5A2A;
+  --cognac-clair:#D49461;
+  --sur-sombre:#ECEAE4;
+  --sur-sombre-doux:#B5ADA2;
+  --filet:rgba(26,23,20,.14);
+  --ombre-cognac:0 50px 90px -40px rgba(156,90,42,.7),0 24px 40px -28px rgba(0,0,0,.8);
+  --ombre:0 30px 60px -34px rgba(26,23,20,.55);
+  --ombre-courte:0 16px 32px -22px rgba(26,23,20,.5);
+  --fd:"Spectral",Georgia,serif;
+  --ft:"Public Sans",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lin);color:var(--cuir);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--cognac);color:var(--lin)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance;font-family:var(--fd)}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--cognac-clair);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--cuir);transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn-plein{background:var(--cuir);color:var(--lin)}
+.btn-plein:hover{background:var(--cognac);border-color:var(--cognac);transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(156,90,42,.95)}
+.btn-contour{background:transparent;color:var(--cuir)}
+.btn-contour:hover{background:var(--cuir);color:var(--lin);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--cognac);border-color:var(--cognac);color:#FBF5EE}
+.sombre .btn-plein:hover{background:var(--lin);border-color:var(--lin);color:var(--cuir)}
+.sombre .btn-contour{border-color:rgba(236,234,228,.7);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--cuir)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(246,244,239,.95);color:var(--cuir);font-size:15px;font-weight:600;line-height:1.3;padding:9px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(26,23,20,.7)}
+.etiquette b{color:var(--cognac);font-weight:700}
+.etiquette.haut{top:16px;bottom:auto}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* héros sombre, en-tête compris */
+.sombre{background:var(--cuir);color:var(--sur-sombre)}
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:29px;font-weight:400}
+.marque small{font-size:14px;color:var(--sur-sombre-doux);margin-top:7px;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:500;color:var(--sur-sombre)}
+.nav a:hover{color:var(--cognac-clair)}
+.pill-tete{border:1.5px solid rgba(236,234,228,.5);padding:10px 20px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+.pill-tete:hover{background:var(--cognac);border-color:var(--cognac)}
+.heros{padding:0 0 112px}
+.heros .grille{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center;padding-top:72px}
+.lieu{font-size:16px;font-weight:600;color:var(--cognac-clair);margin-bottom:22px}
+.heros h1{font-size:clamp(46px,5.4vw,78px);line-height:1.02;font-weight:300;letter-spacing:-.015em}
+.heros h1 em{font-style:italic;color:var(--cognac-clair)}
+.heros .chapo{font-size:19px;color:var(--sur-sombre-doux);max-width:50ch;margin-top:28px}
+.heros .chapo a{color:var(--sur-sombre);text-decoration-color:var(--cognac-clair);text-underline-offset:4px;text-decoration-thickness:1.5px}
+.heros .chapo a:hover{color:var(--cognac-clair)}
+.heros .actions{margin-top:36px}
+.heros .rdv{margin-top:20px;font-size:16px;color:var(--sur-sombre-doux);display:flex;gap:10px;align-items:center}
+.heros .rdv::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cognac-clair);flex:none}
+.heros-visuel{position:relative;padding-left:24px}
+.poignee{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-cognac)}
+.poignee img{width:100%;aspect-ratio:4/5.2;object-fit:cover;object-position:50% 40%}
+.cartel-cuir{position:absolute;left:-36px;bottom:44px;width:250px;background:var(--surface);color:var(--cuir);border-radius:14px;padding:18px 20px;box-shadow:0 26px 44px -24px rgba(0,0,0,.8)}
+.cartel-cuir b{display:block;font-family:var(--fd);font-weight:400;font-size:22px;line-height:1.15}
+.cartel-cuir span{display:block;font-size:15px;color:var(--cuir-doux);margin-top:6px;line-height:1.4}
+
+/* faits */
+.faits{background:var(--lin-2)}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr)}
+.faits li{padding:26px 24px 26px 0;font-size:16px;line-height:1.4;color:var(--cuir-doux)}
+.faits li + li{padding-left:24px;border-left:1px solid var(--filet)}
+.faits li b{display:block;font-family:var(--fd);font-weight:400;font-size:27px;line-height:1.1;color:var(--cuir);margin-bottom:4px}
+
+/* index des métiers */
+.metiers{padding:128px 0 112px}
+.metiers .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end;margin-bottom:48px}
+.metiers h2{font-size:clamp(38px,4.4vw,60px);line-height:1.05;font-weight:300}
+.metiers .haut p{color:var(--cuir-doux);font-size:17px}
+.index li a{display:grid;grid-template-columns:4fr 6fr 2fr;gap:40px;align-items:baseline;padding:30px 0;border-top:1px solid var(--filet);text-decoration:none;transition:background-color .3s,padding .3s}
+.index li:last-child a{border-bottom:1px solid var(--filet)}
+.index h3{font-size:38px;line-height:1.05;font-weight:400}
+.index p{color:var(--cuir-doux);font-size:17px}
+.index .voir{justify-self:end;font-weight:600;font-size:16px;color:var(--cognac);text-decoration:underline;text-underline-offset:4px}
+.index li a:hover h3{color:var(--cognac)}
+
+/* sellerie */
+.sellerie{padding:0 0 128px}
+.sellerie .env{display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:center}
+.atelier-photos{display:grid;grid-template-columns:7fr 4fr;gap:24px;align-items:start}
+.porte{grid-column:1 / 3;position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.porte img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 55%}
+.moto{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.moto img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%}
+.chaise{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte);margin-top:-72px;border:8px solid var(--lin)}
+.chaise img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%}
+.sellerie h2{font-size:clamp(36px,4vw,54px);line-height:1.05;font-weight:300}
+.sellerie .chapo{color:var(--cuir-doux);margin-top:18px}
+.liste{margin-top:24px}
+.liste li{padding:12px 0 12px 28px;border-bottom:1px solid var(--filet);position:relative;font-size:17px}
+.liste li::before{content:"";position:absolute;left:4px;top:23px;width:10px;height:1.5px;background:var(--cognac)}
+.sellerie h3{font-family:var(--ft);font-weight:700;font-size:16px;color:var(--cognac);margin-top:36px}
+.sellerie .actions{margin-top:32px}
+
+/* harnachement : section contrastée en cuir clair */
+.harnachement{background:var(--lin-2);padding:128px 0}
+.harnachement .env{display:grid;grid-template-columns:5.4fr 6.6fr;gap:72px;align-items:start}
+.harnachement h2{font-size:clamp(36px,3.8vw,52px);line-height:1.05;font-weight:300}
+.harnachement .chapo{color:var(--cuir-doux);margin-top:20px}
+.harnachement .chapo + .chapo{margin-top:14px}
+.tarifs{margin-top:32px;background:var(--surface);border-radius:20px;padding:10px 28px;box-shadow:var(--ombre-courte)}
+.tarifs li{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--filet);font-size:16px}
+.tarifs li:last-child{border-bottom:0}
+.tarifs b{font-family:var(--fd);font-weight:500;font-size:22px;white-space:nowrap}
+.harnachement .note{font-size:16px;color:var(--cuir-doux);margin-top:16px}
+.harnachement .actions{margin-top:30px}
+.ecurie{display:grid;grid-template-columns:5fr 4fr;gap:28px;align-items:start}
+.licol{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.licol img{width:100%;aspect-ratio:3/4.6;object-fit:cover;object-position:50% 50%}
+.colonne{display:flex;flex-direction:column;gap:28px;padding-top:96px}
+.tresse{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.tresse img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.bridon{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte);margin-left:-120px;border:8px solid var(--lin-2)}
+.bridon img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:45% 50%}
+
+/* maroquinerie */
+.maroquinerie{padding:128px 0}
+.maroquinerie .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end;margin-bottom:56px}
+.maroquinerie h2{font-size:clamp(38px,4.4vw,60px);line-height:1.04;font-weight:300}
+.maroquinerie .haut p{color:var(--cuir-doux);font-size:17px}
+.etal{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center}
+.fermoir{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.fermoir img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:50% 45%}
+.catalogue{padding:36px 40px !important}
+.fermoir.bas{margin-top:80px}
+.catalogue{background:var(--surface);border-radius:22px;padding:28px;box-shadow:var(--ombre-courte)}
+.catalogue h3{font-size:26px;line-height:1.15}
+.catalogue ul{margin-top:16px;display:flex;flex-direction:column;gap:14px}
+.catalogue li{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
+.catalogue li img{width:120px;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.catalogue li span{font-size:15px;color:var(--cuir-doux);line-height:1.4}
+.catalogue li b{display:block;color:var(--cuir);font-size:16px}
+.catalogue .note{font-size:15px;color:var(--cuir-doux);margin-top:18px;padding-top:14px;border-top:1px solid var(--filet)}
+.maroquinerie .actions{margin-top:44px}
+
+/* savoir-faire et parcours */
+.savoir{padding:0 0 128px}
+.bloc-savoir{display:grid;grid-template-columns:7fr 5fr;gap:0;background:var(--surface);border-radius:28px;box-shadow:var(--ombre);overflow:hidden}
+.bloc-savoir .texte{padding:64px 56px}
+.bloc-savoir blockquote{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1.18}
+.bloc-savoir blockquote em{font-style:italic;color:var(--cognac)}
+.bloc-savoir .chapo{color:var(--cuir-doux);margin-top:22px;max-width:52ch}
+.outils{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.outils li{padding:12px 0;border-top:1px solid var(--filet);font-size:16px;color:var(--cuir-doux)}
+.outils b{display:block;color:var(--cuir);font-weight:600}
+.bloc-savoir .photo{position:relative}
+.bloc-savoir .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.parcours{margin-top:96px;display:grid;grid-template-columns:4fr 8fr;gap:72px}
+.parcours h2{font-size:clamp(36px,4vw,54px);line-height:1.05;font-weight:300}
+.parcours .intro{color:var(--cuir-doux);margin-top:18px;font-size:17px}
+.frise{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.frise li{padding:20px 0 22px;border-top:1.5px solid var(--cuir)}
+.frise b{display:block;font-family:var(--fd);font-weight:400;font-size:34px;line-height:1;color:var(--cognac)}
+.frise span{display:block;margin-top:10px;font-size:16px;color:var(--cuir-doux)}
+
+/* contact */
+.contact{padding:0 0 128px}
+.contact .carte.sombre{display:grid;grid-template-columns:6fr 6fr;gap:64px;background:var(--cuir-2);color:var(--sur-sombre);border-radius:28px;padding:64px;box-shadow:var(--ombre)}
+.contact h2{font-size:clamp(38px,4.2vw,56px);line-height:1.04;font-weight:300}
+.contact .chapo{color:var(--sur-sombre-doux);margin-top:18px;max-width:46ch}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:16px 28px;font-size:17px;align-content:start}
+.contact dt{font-weight:600;color:var(--cognac-clair)}
+.contact dd{margin:0;color:var(--sur-sombre-doux)}
+.contact dd a{color:var(--sur-sombre);font-weight:600;text-underline-offset:3px}
+.contact .tel{font-family:var(--fd);font-size:40px;line-height:1.1;font-weight:400;text-decoration:none;color:var(--sur-sombre)}
+.contact .tel:hover{color:var(--cognac-clair)}
+.contact .actions{margin-top:32px}
+
+/* pied */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:38px}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:36ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:var(--cognac-clair);margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(236,234,228,.3)}
+.pied li a:hover{color:var(--cognac-clair);border-color:var(--cognac-clair)}
+.propo{margin-top:72px;border-top:1px solid rgba(236,234,228,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+@media (max-width: 1100px){
+  .cartel-cuir{left:-8px}
+  .bridon{margin-left:-60px}
+}
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{gap:12px}
+  .marque span{font-size:24px}
+  .marque small{font-size:13px}
+  .nav{display:none}
+  .pill-tete{margin-left:auto;font-size:15px;padding:9px 14px}
+  .heros{padding-bottom:64px}
+  .heros .grille{grid-template-columns:1fr;gap:0;padding-top:30px}
+  .heros-texte{display:contents}
+  .lieu{order:1;margin-bottom:12px;font-size:15px}
+  .heros h1{order:2;font-size:44px}
+  .heros-visuel{order:3;margin-top:26px;padding-left:0}
+  .poignee{border-radius:16px}
+  .poignee img{aspect-ratio:4/3.4;object-position:50% 45%}
+  .cartel-cuir{position:relative;left:auto;bottom:auto;width:auto;margin:-36px 14px 0;padding:14px 16px}
+  .cartel-cuir b{font-size:20px}
+  .heros .chapo{order:4;font-size:17px}
+  .heros .actions{order:5}
+  .heros .rdv{order:6}
+  .etiquette{font-size:14px;left:12px;bottom:12px;padding:7px 12px}
+  .etiquette.haut{top:12px}
+  .actions{flex-direction:column;margin-top:24px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr}
+  .faits li,.faits li + li{padding:18px 12px 18px 0;border-left:0;border-bottom:1px solid var(--filet)}
+  .faits li:nth-child(even){padding-left:16px;border-left:1px solid var(--filet)}
+  .faits li b{font-size:22px}
+  .metiers,.harnachement,.maroquinerie{padding:80px 0}
+  .metiers .haut,.maroquinerie .haut{grid-template-columns:1fr;gap:18px;margin-bottom:32px}
+  .index li a{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .index h3{font-size:30px}
+  .index .voir{justify-self:start}
+  .sellerie{padding-bottom:80px}
+  .sellerie .env,.harnachement .env{grid-template-columns:1fr;gap:40px}
+  .atelier-photos{gap:14px}
+  .chaise{margin-top:-40px;border-width:6px}
+  .chaise .etiquette{display:none}
+  .ecurie{gap:14px}
+  .colonne{padding-top:48px;gap:14px}
+  .bridon{margin-left:-50px;border-width:6px}
+  .tarifs{padding:6px 20px}
+  .etal{grid-template-columns:1fr;gap:20px}
+  .catalogue{padding:22px !important}
+  .catalogue li{grid-template-columns:96px 1fr}
+  .catalogue li img{width:96px}
+  .savoir,.contact{padding-bottom:80px}
+  .bloc-savoir{grid-template-columns:1fr}
+  .bloc-savoir .texte{padding:32px 22px}
+  .bloc-savoir .photo{order:-1}
+  .bloc-savoir .photo img{aspect-ratio:16/10;height:auto}
+  .outils{grid-template-columns:1fr}
+  .parcours{grid-template-columns:1fr;gap:28px;margin-top:64px}
+  .frise{grid-template-columns:1fr 1fr;gap:0 16px}
+  .frise b{font-size:28px}
+  .contact .carte.sombre{grid-template-columns:1fr;gap:32px;padding:32px 22px}
+  .contact dl{grid-template-columns:1fr;gap:2px}
+  .contact dd{margin-bottom:12px}
+  .contact .tel{font-size:32px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<div class="sombre">
+  <header class="tete">
+    <div class="env">
+      <a class="marque" href="#haut" aria-label="Atelier Les Trois Alènes, retour en haut">
+        <span>Les Trois Alènes</span>
+        <small>Séverine Combes, sellière en Lozère</small>
+      </a>
+      <nav class="nav" aria-label="Sur cette page">
+        <a href="#sellerie">Sellerie garnissage</a>
+        <a href="#harnachement">Harnachement</a>
+        <a href="#maroquinerie">Maroquinerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="pill-tete" href="tel:+33665023711">06 65 02 37 11</a>
+    </div>
+  </header>
+
+  <section class="heros" id="haut">
+    <div class="env grille">
+      <div class="heros-texte">
+        <p class="lieu">Atelier sur le Mont Lozère, à Fraissinet-de-Lozère</p>
+        <h1>Sellerie automobile, maroquinerie et <em>harnachement</em></h1>
+        <p class="chapo">À l'atelier des Trois Alènes, je rénove vos intérieurs de voiture, vos selles de moto et vos sièges de tous types de véhicules. Je crée aussi en cuir de vachette pleine fleur des objets de maroquinerie et le <a href="#harnachement">harnachement du cheval</a>, et je répare vos cuirs.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33665023711">Appeler le 06 65 02 37 11</a>
+          <a class="btn btn-contour" href="mailto:severine@lestroisalenes.fr">M'écrire</a>
+        </div>
+        <p class="rdv">L'atelier est ouvert sur rendez-vous</p>
+      </div>
+      <div class="heros-visuel">
+        <figure class="poignee apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/poignee-cuir-serviette-coutures-sellier.webp" alt="Poignée en cuir brun d'une serviette, couture sellier claire cousue main, anneaux en métal" width="1067" height="1600" fetchpriority="high" />
+        </figure>
+        <p class="cartel-cuir"><b>La couture sellier</b><span>Deux aiguilles, et le croisement des 2 fils dans le trou de l'alêne.</span></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<main>
+  <div class="faits">
+    <ul class="env" aria-label="L'atelier en bref">
+      <li><b>Depuis 1995</b>Le travail du cuir, en maroquinerie</li>
+      <li><b>École nationale</b>De sellerie-harnachement, chez le sellier Sarras-Bournet</li>
+      <li><b>Sellier garnisseur</b>Formée à l'AFPA de Rodez en 2024</li>
+      <li><b>Made in France</b>Un travail entièrement artisanal</li>
+    </ul>
+  </div>
+
+  <section class="metiers">
+    <div class="env">
+      <div class="haut">
+        <h2>Les Trois Alènes vous propose</h2>
+        <p>Pour toute commande, une création particulière ou un devis de réparation, je suis à votre écoute par téléphone ou par mail.</p>
+      </div>
+      <ul class="index">
+        <li><a href="#sellerie"><h3>Sellerie garnissage</h3><p>Sièges auto et moto, banquettes, coussins et assises, tables de massage et fauteuils médicaux, accessoires de salle de sport, bâches de protection en PVC. En simili cuir, tissu ou cuir.</p><span class="voir">La sellerie</span></a></li>
+        <li><a href="#harnachement"><h3>Harnachement</h3><p>Sur mesure : enrênements en cuir, licols, bridons, side pull, hackamores, guêtres, fontes. Réparations de vos selles et harnachements.</p><span class="voir">Le harnachement</span></a></li>
+        <li><a href="#maroquinerie"><h3>Maroquinerie</h3><p>Sacs, sacoches ceintures, porte-monnaie, étuis à lunettes en cuir de vachette pleine fleur tannage végétal. Sur mesure : cartables, étuis à couteaux, sacoches à outils.</p><span class="voir">La maroquinerie</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sellerie" id="sellerie">
+    <div class="env">
+      <div class="atelier-photos">
+        <figure class="porte apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/panneau-porte-sellerie-cuir-noir-rouge.webp" alt="Panneau de porte regarni en simili cuir noir à surpiqûres diagonales, médaillon central plissé rouge et noir" width="1600" height="1200" loading="lazy" />
+          <span class="etiquette">Médaillon de porte</span>
+        </figure>
+        <figure class="moto apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/selle-moto-refaite-noire.webp" alt="Selle de moto biplace refaite en simili cuir noir à surpiqûres grises, sur un établi" width="1600" height="1200" loading="lazy" />
+          <span class="etiquette">Selle de moto</span>
+        </figure>
+        <figure class="chaise apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/chaise-patchwork-cuir-rouge-ocre.webp" alt="Chaise d'atelier regarnie en patchwork géométrique noir, rouge et ocre" width="1200" height="1600" loading="lazy" />
+          <span class="etiquette">Siège de couture</span>
+        </figure>
+      </div>
+      <div>
+        <h2>Rénovation des intérieurs de voiture et des selles de moto</h2>
+        <p class="chapo">À l'identique ou selon vos envies : côtes sellières, côtes plates ou coutures de décoration. Il est possible de ne remplacer que la partie abîmée de la coiffe, et il est préférable de réparer dès l'apparition d'une déchirure.</p>
+        <ul class="liste">
+          <li>Réparation des mousses et garnitures des sièges</li>
+          <li>Modification du confort des selles de moto</li>
+          <li>Gainage des éléments de portières</li>
+          <li>Rénovation des moquettes et des ciels de toit</li>
+        </ul>
+        <h3>Sellerie générale</h3>
+        <ul class="liste">
+          <li>Bars et restaurants : assises, banquettes, tabourets</li>
+          <li>Milieu médical : tables de massage, fauteuils de dentiste</li>
+          <li>Espaces extérieurs : transats, bâche PVC, toile anti pluie ou anti UV</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:severine@lestroisalenes.fr?subject=Devis%20de%20sellerie">Demander un devis</a>
+          <a class="btn btn-contour" href="https://www.lestroisalenes.fr/sellerie-automobile/">Les réalisations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="harnachement" id="harnachement">
+    <div class="env">
+      <div>
+        <h2>Le harnachement du cheval, sur mesure</h2>
+        <p class="chapo">Licols, bridons, hackamores, brides de dressage, enrênements type collier de chasse ou martingale, étrivières ou fontes de randonnée. Le cuir de tannage végétal est coupé dans le dosset, dense, et teinté dans la masse pour éviter toute décoloration avec la transpiration du cheval.</p>
+        <p class="chapo">Les coutures sont entièrement faites à la main, au point sellier. La bouclerie est en laiton ou en inox, selon la couleur désirée. Je répare aussi vos selles : quartiers, panneaux, porte-étrivières, contre-sanglons.</p>
+        <ul class="tarifs" aria-label="Quelques réalisations">
+          <li><span>Licol, vachette naturelle, tannage végétal</span><b>150 €</b></li>
+          <li><span>Sidepull et licol, vachette tannage végétal</span><b>200 €</b></li>
+          <li><span>Guêtres de saut d'obstacle, la paire</span><b>130 €</b></li>
+          <li><span>Fontes de randonnée, la paire</span><b>270 €</b></li>
+        </ul>
+        <p class="note">Produits uniquement sur mesure : le devis est établi après accord sur la couleur, la taille et les détails de décoration.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:severine@lestroisalenes.fr?subject=Harnachement%20sur%20mesure">Demander un devis</a>
+          <a class="btn btn-contour" href="https://www.lestroisalenes.fr/sellerie-harnachement/">Toute la bourrellerie</a>
+        </div>
+      </div>
+      <div class="ecurie">
+        <figure class="licol apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/licol-cuir-naturel.webp" alt="Licol en cuir naturel couleur miel, boucles en laiton, sur fond bleu nuit" width="885" height="1600" loading="lazy" />
+          <span class="etiquette">Licol en vachette naturelle, <b>150 €</b></span>
+        </figure>
+        <div class="colonne">
+          <figure class="tresse apparait">
+            <img src="assets/les-trois-alenes-mont-lozere/licol-cuir-tresse-boucles-laiton.webp" alt="Licol en cuir brun aux montants tressés, grosses boucles et anneaux en laiton" width="1024" height="1365" loading="lazy" />
+            <span class="etiquette">Licol, détail alliance</span>
+          </figure>
+          <figure class="bridon apparait">
+            <img src="assets/les-trois-alenes-mont-lozere/bridon-cuir-detail-passant.webp" alt="Détail d'un bridon en cuir brun foncé, passant et montant cousus main" width="1600" height="1066" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="maroquinerie" id="maroquinerie">
+    <div class="env">
+      <div class="haut">
+        <h2>Des objets qui confondent beauté et solidité</h2>
+        <p>Un cuir de qualité correctement tanné, une coupe nette et une belle couture rendront tout objet naturellement beau et élégant. Je dessine toutes mes formes : taille, couleur et fermoir se choisissent sur mesure.</p>
+      </div>
+      <div class="etal">
+        <figure class="fermoir apparait">
+          <img src="assets/les-trois-alenes-mont-lozere/fermoir-serviette-cuir-patine.webp" alt="Rabat et fermoir en laiton d'une serviette en cuir brun rouge patiné" width="1024" height="1536" loading="lazy" />
+          <span class="etiquette">Serviette, cuir pleine fleur</span>
+        </figure>
+        <div class="catalogue">
+          <h3>À commander par mail</h3>
+          <ul>
+            <li><img src="assets/les-trois-alenes-mont-lozere/serviette-cuir-vachette-fermoir-laiton.webp" alt="Serviette en cuir brun à rabat et fermoir laiton" width="1024" height="683" loading="lazy" /><span><b>Serviette, 200 €</b>Cuir végétal pleine fleur, poche zippée à l'arrière, 35 x 27 x 5 cm</span></li>
+            <li><img src="assets/les-trois-alenes-mont-lozere/sac-bandouliere-cuir-orange-bleu.webp" alt="Sac à bandoulière en cuir orange à rabat en pointe bleu marine" width="1024" height="683" loading="lazy" /><span><b>Sac Brigitte, 100 €</b>Cuir végétal, simple poche, fermeture bouton</span></li>
+            <li><img src="assets/les-trois-alenes-mont-lozere/sac-besace-cuir-bicolore.webp" alt="Petit sac besace bicolore, rabat orange et corps brun foncé" width="1024" height="683" loading="lazy" /><span><b>Sac perle bicouleur, 100 €</b>Cuir pleine fleur tannage végétal, 22 x 15 x 3 cm</span></li>
+          </ul>
+          <p class="note">Sacs livrés en 10 à 15 jours. Les frais de port sont en sus.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:severine@lestroisalenes.fr?subject=Commande%20de%20maroquinerie">Commander par mail</a>
+        <a class="btn btn-contour" href="https://www.lestroisalenes.fr/maroquinerie/">Toute la maroquinerie</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="savoir" id="savoir-faire">
+    <div class="env">
+      <div class="bloc-savoir">
+        <div class="texte">
+          <blockquote>Deux aiguilles sont nécessaires : c'est le croisement des 2 fils dans le trou de l'alêne qui assure <em>la solidité</em> de l'assemblage.</blockquote>
+          <p class="chapo">La couture sellier est utilisée depuis très longtemps pour les coutures soumises à fortes tractions. Je dessine mes gabarits sur du papier cartonné avant de les reporter sur le cuir.</p>
+          <ul class="outils" aria-label="Les outils">
+            <li><b>Le couteau demi-lune</b>pour couper le cuir</li>
+            <li><b>La roulette à griffe</b>pour marquer les points de couture</li>
+            <li><b>L'alêne</b>pour percer les trous avant couture</li>
+            <li><b>La pince à sellier</b>pour tenir le cuir à assembler</li>
+            <li><b>L'abat carre</b>pour chanfreiner les bords</li>
+          </ul>
+        </div>
+        <figure class="photo">
+          <img src="assets/les-trois-alenes-mont-lozere/fermoir-sac-cuir-rouge-brun.webp" alt="Rabat d'un sac en cuir rouge brun avec fermoir tourniquet en laiton, couture main sur la tranche" width="1024" height="1536" loading="lazy" />
+          <span class="etiquette haut">Le cuir se patinera avec le temps</span>
+        </figure>
+      </div>
+
+      <div class="parcours">
+        <div>
+          <h2>Séverine Combes, sellière</h2>
+          <p class="intro">J'ai travaillé 30 ans dans le spectacle vivant, comme régisseuse plateau et régisseuse générale. Je me concentre aujourd'hui uniquement sur la sellerie garnissage, le harnachement et la maroquinerie.</p>
+        </div>
+        <ol class="frise">
+          <li><b>1995</b><span>Je commence la maroquinerie, par plaisir du travail du cuir.</span></li>
+          <li><b>2011</b><span>Cavalière de randonnée, je me perfectionne à l'École Nationale de Sellerie-Harnachement, à Vinzier.</span></li>
+          <li><b>2011</b><span>Atelier-boutique à Sète, en coopérative d'emploi.</span></li>
+          <li><b>2015</b><span>Je déménage en Lozère et crée mon atelier.</span></li>
+          <li><b>2019</b><span>Je prends le statut d'auto-entrepreneur en sellerie, maroquinerie et harnachement d'équitation.</span></li>
+          <li><b>2024</b><span>J'apprends le métier de sellier garnisseur à l'AFPA de Rodez.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div class="carte sombre">
+        <div>
+          <h2>Venir à l'atelier, sur rendez-vous</h2>
+          <p class="chapo">L'atelier est situé dans un village des hautes Cévennes : il est préférable de me prévenir de votre venue, pour éviter de trouver porte close en cas de déplacement.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33665023711">Appeler Séverine</a>
+            <a class="btn btn-contour" href="mailto:severine@lestroisalenes.fr">Écrire un mail</a>
+          </div>
+        </div>
+        <dl>
+          <dt>Téléphone</dt><dd><a class="tel" href="tel:+33665023711">06 65 02 37 11</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:severine@lestroisalenes.fr">severine@lestroisalenes.fr</a></dd>
+          <dt>Atelier</dt><dd>Fraissinet-de-Lozère<br />48220 Pont-de-Montvert</dd>
+          <dt>Commandes</dt><dd>Par mail, frais de port en sus</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Les Trois Alènes</span><small>Séverine Combes, sellière en Lozère</small></a>
+        <p class="dit">Sellerie garnissage, sellerie générale, maroquinerie et harnachement. Un travail entièrement artisanal et made in France.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>Fraissinet-de-Lozère<br />48220 Pont-de-Montvert</li>
+          <li>Ouvert sur rendez-vous</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Me joindre</h3>
+        <ul>
+          <li><a href="tel:+33665023711">06 65 02 37 11</a></li>
+          <li><a href="mailto:severine@lestroisalenes.fr">severine@lestroisalenes.fr</a></li>
+          <li><a href="https://www.facebook.com/Les-trois-al%C3%A8nes-123117754483225">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sur le site</h3>
+        <ul>
+          <li><a href="https://www.lestroisalenes.fr/portrait/">Portrait</a></li>
+          <li><a href="https://www.lestroisalenes.fr/savoir-faire/">Savoir-faire</a></li>
+          <li><a href="https://www.lestroisalenes.fr/reparations/">Réparations</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour l'Atelier Les Trois Alènes</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var t = 0;
+  function voir(){
+    var h = innerHeight * 0.94;
+    els = els.filter(function(e){ if (e.getBoundingClientRect().top < h){ e.classList.add('vu'); return false } return true });
+    if (!els.length){ removeEventListener('scroll', planifier); clearInterval(veille) }
+  }
+  var veille = setInterval(voir, 200);
+  function planifier(){ if (!t) t = requestAnimationFrame(function(){ t = 0; voir() }) }
+  addEventListener('scroll', planifier, { passive: true });
+  addEventListener('resize', planifier);
+  voir();
+})();
+</script>
+</body>
+</html>

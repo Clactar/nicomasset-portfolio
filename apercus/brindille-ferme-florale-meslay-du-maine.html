@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à Brindille, ferme florale à Meslay-du-Maine (53), nuit du 2026-10-28.
+     CONTENU : textes, points de vente, tarif, coordonnées et photos relevés sur https://brindille-fermeflorale.com/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé.
+     Défaut réglé : le lien « BLOG » du menu menait à une page 404 ; le menu ne pointe plus que vers des ancres de la page
+     et vers leur boutique en ligne (lien vérifié le 28/10).
+     Défaut 2 réglé : téléphone et mail visibles dès le premier écran.
+     DESIGN (Nova) : lilas très pâle, encre aubergine, accent coquelicot doux. Gilda Display et Karla. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#EFEAF2" />
+<title>Brindille, ferme florale locale et écologique à Meslay-du-Maine</title>
+<meta name="description" content="Une trentaine d'espèces de fleurs bio de mars à octobre, cultivées à Meslay-du-Maine, en Mayenne, pour les particuliers et les fleuristes." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232B1E33'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EFEAF2'%3EB%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Karla:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --lilas:#EFEAF2;
+  --lilas-2:#E4DCEA;
+  --petale:#FBF9FC;
+  --aubergine:#2B1E33;
+  --aubergine-douce:#5F5068;
+  --coquelicot:#D9573F;
+  --coquelicot-fonce:#B8432D;
+  --sur-sombre:#F1ECF4;
+  --sur-sombre-doux:#C7B9CF;
+  --filet:rgba(43,30,51,.13);
+  --ombre:0 34px 70px -38px rgba(55,30,68,.6);
+  --ombre-courte:0 18px 38px -24px rgba(55,30,68,.5);
+  --fd:"Gilda Display",Georgia,serif;
+  --ft:"Karla",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lilas);color:var(--aubergine);font-family:var(--ft);font-size:18px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--coquelicot);color:var(--petale)}
+h1,h2,h3{margin:0;font-family:var(--fd);font-weight:400;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--coquelicot);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--aubergine);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--coquelicot);border-color:var(--coquelicot);color:#FFF8F5}
+.btn-plein:hover{background:var(--aubergine);border-color:var(--aubergine);transform:translateY(-2px);box-shadow:0 14px 26px -14px rgba(43,30,51,.8)}
+.btn-contour{background:transparent;color:var(--aubergine)}
+.btn-contour:hover{background:var(--aubergine);color:var(--petale);transform:translateY(-2px)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--aubergine)}
+.sombre .btn-plein:hover{background:var(--sur-sombre);border-color:var(--sur-sombre);color:var(--aubergine)}
+
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(251,249,252,.95);color:var(--aubergine);font-size:15px;font-weight:700;line-height:1.3;padding:10px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(43,30,51,.7)}
+.pastille span{font-weight:500;color:var(--aubergine-douce)}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn,.tel-pill{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:24px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px;line-height:1}
+.marque span{font-family:var(--fd);font-size:34px}
+.marque small{font-size:15px;color:var(--aubergine-douce);font-weight:600}
+.nav{margin-left:auto;display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--coquelicot-fonce)}
+.tel-pill{background:var(--aubergine);color:var(--petale);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .25s}
+.nav a.tel-pill:hover{background:var(--coquelicot);color:#FFF8F5}
+
+/* héros : grande photo sur deux tiers, carte qui chevauche */
+.heros{padding:40px 0 56px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:center}
+.heros-photo{grid-column:5 / 13;grid-row:1;position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--ombre)}
+.heros-photo img{width:100%;height:700px;object-fit:cover;object-position:50% 70%}
+.heros-photo .pastille{left:auto;right:22px;bottom:22px}
+.heros-carte{grid-column:1 / 7;grid-row:1;position:relative;z-index:2;background:var(--petale);border-radius:26px;padding:44px 44px 36px;box-shadow:var(--ombre)}
+.lieu{font-size:16px;font-weight:700;color:var(--coquelicot-fonce);margin-bottom:18px}
+.heros h1{font-size:clamp(44px,4.4vw,62px);line-height:1.04;letter-spacing:-.005em}
+.chapo{font-size:18px;color:var(--aubergine-douce);margin-top:22px;max-width:46ch}
+.heros .actions{gap:12px;margin-top:28px}
+.heros .actions .btn{padding:0 22px;font-size:16px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.joindre{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:26px;padding-top:22px;border-top:1px solid var(--filet);font-size:17px}
+.joindre a{font-weight:700;text-decoration:none}
+.joindre a:hover{color:var(--coquelicot-fonce)}
+.joindre span{color:var(--aubergine-douce)}
+
+/* faits */
+.faits{padding:8px 0 0}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr);background:var(--lilas-2);border-radius:24px;padding:28px 36px;gap:28px}
+.faits li{display:flex;gap:14px;align-items:flex-start}
+.faits li::before{content:"";flex:none;width:12px;height:12px;margin-top:9px;border-radius:50% 50% 50% 0;background:var(--coquelicot);transform:rotate(-45deg)}
+.faits b{display:block;font-family:var(--fd);font-weight:400;font-size:24px;line-height:1.2}
+.faits span{font-size:16px;color:var(--aubergine-douce)}
+
+/* fleurs */
+.fleurs{padding:128px 0 112px}
+.fleurs .env{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+.compo{position:relative;padding:0 64px 72px 0}
+.compo .grande{border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.compo .grande img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.compo .petite{position:absolute;right:0;bottom:0;width:250px;background:var(--petale);padding:10px;border-radius:14px;box-shadow:var(--ombre);transform:rotate(3deg)}
+.compo .petite img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px}
+.compo .petite figcaption{font-size:15px;font-weight:600;padding:8px 4px 2px;color:var(--aubergine-douce)}
+.fleurs h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.fleurs p{color:var(--aubergine-douce);margin-top:18px}
+.fleurs h3{font-size:30px;margin-top:40px}
+
+/* saison : mosaïque */
+.saison{padding:0 0 128px}
+.saison .phrase{font-family:var(--fd);font-size:clamp(30px,3.6vw,48px);line-height:1.2;max-width:24ch;margin-bottom:48px}
+.saison .phrase span{color:var(--aubergine-douce)}
+.mosaique{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:300px 300px;gap:24px}
+.mosaique figure{position:relative;overflow:hidden;box-shadow:var(--ombre-courte)}
+.mosaique img{width:100%;height:100%;object-fit:cover}
+.m-arche{grid-column:1 / 5;grid-row:1 / 3;border-radius:999px 999px 24px 24px}
+.m-large{grid-column:5 / 13;grid-row:1;border-radius:24px}
+.m-a{grid-column:5 / 9;grid-row:2;border-radius:24px}
+.m-b{grid-column:9 / 13;grid-row:2;border-radius:24px 24px 120px 24px}
+
+/* points de vente */
+.points{padding:112px 0;background:var(--petale)}
+.points-tete{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:end;margin-bottom:56px}
+.points h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.points-tete p{color:var(--aubergine-douce)}
+.points-corps{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.kraft{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.kraft img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+.liste-points li{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:22px 0;border-top:1px solid var(--filet)}
+.liste-points li:last-child{border-bottom:1px solid var(--filet)}
+.liste-points h3{font-size:25px;line-height:1.2}
+.liste-points .ou{font-size:16px;font-weight:700;color:var(--coquelicot-fonce)}
+.liste-points .quand{grid-column:1;color:var(--aubergine-douce);font-size:17px}
+.liste-points .lien{grid-column:2;grid-row:1 / 3;align-self:center;font-size:16px;font-weight:700;text-decoration:none;border:1.5px solid var(--filet);border-radius:999px;padding:9px 16px;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.liste-points .lien:hover{background:var(--aubergine);color:var(--petale);border-color:var(--aubergine)}
+.ferme{margin-top:36px;display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:var(--lilas);border-radius:22px;padding:20px 28px 20px 20px}
+.ferme img{width:200px;height:200px;object-fit:cover;border-radius:14px;box-shadow:var(--ombre-courte)}
+.ferme h3{font-size:26px}
+.ferme p{color:var(--aubergine-douce);font-size:17px;margin-top:8px}
+.ferme a{font-weight:700;color:var(--aubergine)}
+
+/* sombre : événements et fleuristes */
+.sombre{background:var(--aubergine);color:var(--sur-sombre)}
+.pros{padding:120px 0}
+.pros-tete{max-width:640px;margin-bottom:56px}
+.pros h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.pros-tete p{color:var(--sur-sombre-doux);margin-top:18px}
+.pros-grille{display:grid;grid-template-columns:7fr 5fr;gap:32px;align-items:start}
+.bloc{background:rgba(241,236,244,.06);border-radius:26px;overflow:hidden}
+.bloc figure{position:relative}
+.bloc img{width:100%;object-fit:cover}
+.bloc-a img{aspect-ratio:16/10;object-position:50% 70%}
+.bloc-b{margin-top:96px}
+.bloc-b img{aspect-ratio:1/1;object-position:60% 40%}
+.bloc .txt{padding:30px 32px 34px}
+.bloc h3{font-size:32px;line-height:1.1}
+.bloc p{color:var(--sur-sombre-doux);margin-top:12px}
+.bloc .prix{display:inline-block;margin-top:18px;background:var(--sur-sombre);color:var(--aubergine);border-radius:999px;padding:8px 18px;font-weight:700;font-size:16px}
+.bloc .actions{margin-top:24px}
+
+/* approche */
+.approche{padding:128px 0 112px}
+.approche-grille{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.approche h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.approche .txt p{color:var(--aubergine-douce);margin-top:18px}
+.duo{position:relative;border-radius:24px 120px 24px 24px;overflow:hidden;box-shadow:var(--ombre)}
+.duo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.chiffre{margin-top:40px;padding:32px 36px;background:var(--petale);border-radius:22px;box-shadow:var(--ombre-courte)}
+.chiffre p:first-child{font-family:var(--fd);font-size:32px;line-height:1.2;color:var(--aubergine)}
+.chiffre p + p{color:var(--aubergine-douce);font-size:17px;margin-top:14px}
+.bichonne{margin-top:96px;text-align:left;font-family:var(--fd);font-size:clamp(30px,3.6vw,48px);line-height:1.2;max-width:34ch}
+.bichonne::before{content:"«\00a0";color:var(--coquelicot)}
+.bichonne::after{content:"\00a0»";color:var(--coquelicot)}
+
+/* collectif */
+.collectif{padding:0 0 112px}
+.collectif .env > div{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);padding:36px 0}
+.collectif .sceau{width:96px;height:96px;border-radius:50%;background:var(--lilas-2);display:grid;place-items:center;font-family:var(--fd);font-size:22px;line-height:1.05;text-align:center;color:var(--aubergine)}
+.collectif h2{font-size:28px;line-height:1.2}
+.collectif p{color:var(--aubergine-douce);font-size:17px;margin-top:8px;max-width:70ch}
+
+/* contact */
+.contact{padding:0 0 128px}
+.contact .env > .carte{display:grid;grid-template-columns:6fr 5fr;gap:56px;background:var(--petale);border-radius:28px;padding:56px;box-shadow:var(--ombre)}
+.contact h2{font-size:clamp(34px,3.8vw,50px);line-height:1.05}
+.contact .txt p{color:var(--aubergine-douce);margin-top:16px}
+.grand-tel{display:inline-block;font-family:var(--fd);font-size:clamp(36px,4vw,54px);line-height:1.1;margin-top:26px;text-decoration:none;color:var(--aubergine)}
+.grand-tel:hover{color:var(--coquelicot-fonce)}
+.contact dl{margin:0;display:grid;gap:18px;align-content:center}
+.contact dt{font-size:15px;font-weight:700;color:var(--coquelicot-fonce)}
+.contact dd{margin:2px 0 0;font-size:19px}
+.contact dd a{font-weight:700;text-underline-offset:3px;text-decoration-color:rgba(217,87,63,.5)}
+
+/* pied */
+.pied{background:#211727;color:var(--sur-sombre);padding:72px 0 28px}
+.pied .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.pied .nom{font-family:var(--fd);font-size:34px;line-height:1}
+.pied p,.pied li{font-size:16px;color:var(--sur-sombre-doux);line-height:1.7}
+.pied h3{font-family:var(--ft);font-size:16px;font-weight:700;margin-bottom:10px;color:var(--sur-sombre)}
+.pied a{color:var(--sur-sombre);text-underline-offset:3px}
+.pied .bas{margin-top:48px;padding-top:22px;border-top:1px solid rgba(241,236,244,.14);font-size:15px;color:var(--sur-sombre-doux)}
+.proposition{background:#1A1220;color:var(--sur-sombre-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-sombre)}
+
+@media (max-width:1080px){
+  .nav a.cache-t{display:none}
+  .heros-photo{grid-column:1 / 13}
+  .heros-photo img{height:520px}
+  .heros-carte{grid-column:1 / 12;grid-row:2;margin-top:-140px;margin-left:24px}
+  .fleurs .env,.points-tete,.points-corps,.approche-grille,.contact .env > .carte{grid-template-columns:1fr;gap:48px}
+  .pros-grille{grid-template-columns:1fr}
+  .bloc-b{margin-top:0}
+  .faits ul{grid-template-columns:1fr 1fr}
+  .pied .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .nav a:not(.tel-pill){display:none}
+  .marque{flex-direction:column;align-items:flex-start;gap:4px}
+  .marque span{font-size:28px}
+  .marque small{font-size:14px}
+  .tel-pill{font-size:16px;padding:10px 16px}
+  .heros{padding:20px 0 40px}
+  .heros-photo{border-radius:22px}
+  .heros-photo img{height:300px;object-position:50% 72%}
+  .heros-photo .pastille{right:auto;left:12px;top:12px;bottom:auto;font-size:14px;padding:8px 13px}
+  .heros-carte{grid-column:1 / 13;margin:-56px 10px 0;padding:28px 22px 26px;border-radius:22px}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:40px;line-height:1.06}
+  .chapo{font-size:18px;margin-top:18px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .joindre{flex-direction:column}
+  .faits ul{grid-template-columns:1fr;padding:24px 22px;gap:18px}
+  .fleurs{padding:80px 0 72px}
+  .compo{padding:0 28px 56px 0}
+  .compo .petite{width:150px;padding:7px}
+  .compo .petite figcaption{font-size:14px}
+  .fleurs h3{font-size:27px;margin-top:30px}
+  .saison{padding-bottom:80px}
+  .saison .phrase{margin-bottom:32px}
+  .mosaique{grid-template-rows:240px 200px 200px;gap:14px}
+  .m-arche{grid-column:1 / 7;grid-row:1 / 3}
+  .m-large{grid-column:7 / 13;grid-row:1 / 3;border-radius:20px}
+  .m-a{grid-column:1 / 7;grid-row:3;border-radius:20px}
+  .m-b{grid-column:7 / 13;grid-row:3;border-radius:20px 20px 64px 20px}
+  .m-b .pastille{display:none}
+  .m-large .pastille{left:10px;bottom:10px;font-size:14px;padding:7px 12px}
+  .points{padding:80px 0}
+  .points-tete{margin-bottom:36px;gap:20px}
+  .liste-points li{grid-template-columns:1fr}
+  .liste-points .lien{grid-column:1;grid-row:auto;justify-self:start;margin-top:8px}
+  .ferme{grid-template-columns:1fr;padding:18px}
+  .ferme img{width:200px;height:200px}
+  .pros{padding:80px 0}
+  .bloc .txt{padding:24px 22px 28px}
+  .bloc h3{font-size:28px}
+  .approche{padding:80px 0 72px}
+  .duo{border-radius:20px 72px 20px 20px}
+  .chiffre{padding:24px 22px}
+  .chiffre p:first-child{font-size:27px}
+  .bichonne{margin-top:64px}
+  .collectif{padding-bottom:80px}
+  .collectif .env > div{grid-template-columns:1fr;gap:18px}
+  .contact{padding-bottom:80px}
+  .contact .env > .carte{padding:30px 22px;gap:32px}
+  .pied .cols{grid-template-columns:1fr}
+  .pied .bas,.proposition{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Brindille, accueil">
+      <span>Brindille</span>
+      <small>ferme florale, Mayenne</small>
+    </a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#fleurs">Nos fleurs</a>
+      <a href="#points">Où nous trouver</a>
+      <a href="#approche" class="cache-t">Notre approche</a>
+      <a href="https://commande.kuupanda.com/producteur/8025/particulier">Boutique</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-pill" href="tel:+33677633289">06 77 63 32 89</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env heros-grille">
+      <figure class="heros-photo apparait">
+        <img src="assets/brindille-ferme-florale-meslay-du-maine/champ-rangs-fleurs-brume-matin.webp" alt="Les longues planches de fleurs de la ferme, asters mauves et blancs, véroniques et scabieuses, dans la brume du matin" width="1600" height="1570" fetchpriority="high" />
+        <figcaption class="pastille">Les rangs au petit matin <span>à Meslay-du-Maine</span></figcaption>
+      </figure>
+      <div class="heros-carte">
+        <p class="lieu">Brindille, ferme florale locale et écologique</p>
+        <h1>Fleurs locales, biologiques et de saison en Mayenne</h1>
+        <p class="chapo">Une trentaine d'espèces de fleurs bio de mars à octobre, sélectionnées une à une pour leur tenue en vase. Pour les particuliers comme pour les fleuristes.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33677633289">Commander un bouquet</a>
+          <a class="btn btn-contour" href="#points">Où trouver nos fleurs</a>
+        </div>
+        <p class="joindre"><span><a href="tel:+33677633289">06 77 63 32 89</a>, appel ou sms</span><a href="mailto:contact@brindille-fermeflorale.fr">contact@brindille-fermeflorale.fr</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="env">
+      <ul>
+        <li><div><b>Une trentaine d'espèces</b><span>de fleurs bio, choisies une à une</span></div></li>
+        <li><div><b>De mars à octobre</b><span>en plein champ ou sous abris non chauffés</span></div></li>
+        <li><div><b>Moins d'un hectare</b><span>en bio-intensif, sur sol vivant</span></div></li>
+        <li><div><b>Collectif de la Fleur Française</b><span>Brindille en est membre</span></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="fleurs" id="fleurs">
+    <div class="env">
+      <div class="compo">
+        <figure class="grande apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/bouquet-dahlias-bleuets-aneth.webp" alt="Bouquet vu de dessus : dahlias pompon blancs, roses et rouges, bleuets, ombelles d'aneth et célosies" width="1597" height="1600" loading="lazy" />
+        </figure>
+        <figure class="petite apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/eucalyptus-ciel-bleu-champ.webp" alt="Tige d'eucalyptus aux feuilles rondes argentées sur un ciel bleu, rang d'eucalyptus derrière" width="1597" height="1600" loading="lazy" />
+          <figcaption>L'eucalyptus de la ferme</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Nos fleurs</h2>
+        <p>Nous proposons une trentaine d'espèces de fleurs bio de haute qualité de mars à octobre. Chaque année, nous les sélectionnons une à une pour vous assurer une bonne tenue en vase, et des couleurs et des formes qui régaleront vos yeux.</p>
+        <p>Toujours quelques grands classiques, et des fleurs que vous ne connaissez pas forcément. Elles ont toutes en commun d'être ultra-fraîches, cueillies au meilleur moment pour durer en vase.</p>
+        <h3>Nos feuillages</h3>
+        <p>Un bouquet sans feuillage, c'est comme un jardin sans herbe. Dès notre arrivée sur la ferme, nous avons planté de nombreux arbres et arbustes afin de produire des feuillages bio atypiques.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="saison" aria-label="Les fleurs de la saison">
+    <div class="env">
+      <p class="phrase">Des toutes petites, des pulpeuses, des toutes simples, <span>des multicolores.</span></p>
+      <div class="mosaique">
+        <figure class="m-arche apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/bouquet-champetre-carotte-sauvage.webp" alt="Bouquet champêtre : ombelles blanches de carotte sauvage, mufliers orange, fleurs roses et graminées" width="950" height="1424" loading="lazy" style="object-position:50% 40%" />
+        </figure>
+        <figure class="m-large apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/dahlia-cafe-au-lait-gros-plan.webp" alt="Gros plan d'un grand dahlia crème rosé dans son feuillage" width="1600" height="739" loading="lazy" style="object-position:40% 50%" />
+          <figcaption class="pastille">Dahlia crème rosé</figcaption>
+        </figure>
+        <figure class="m-a apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/zinnias-orange-saumon.webp" alt="Planche de zinnias orange, saumon et jaunes en pleine floraison" width="1600" height="900" loading="lazy" />
+        </figure>
+        <figure class="m-b apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/dahlia-orange-en-culture.webp" alt="Dahlia orange épanoui au milieu d'un rang de dahlias en culture" width="1600" height="1067" loading="lazy" style="object-position:55% 50%" />
+          <figcaption class="pastille">Dans le rang des dahlias</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="points" id="points">
+    <div class="env">
+      <div class="points-tete">
+        <h2>Où trouver notre production</h2>
+        <p>Nos fleurs et feuillages sont à destination des particuliers comme des professionnels.</p>
+      </div>
+      <div class="points-corps">
+        <figure class="kraft apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/bouquet-tulipes-papier-kraft.webp" alt="Une main tend un bouquet de tulipes et de feuillages panachés emballé dans un papier kraft au logo Brindille" width="1600" height="1200" loading="lazy" />
+          <figcaption class="pastille">Le bouquet <span>dans son kraft</span></figcaption>
+        </figure>
+        <div>
+          <ul class="liste-points">
+            <li><h3>Marché de Château-Gontier</h3><p class="quand"><span class="ou">Sur les promenades</span>, tous les jeudis matin</p><a class="lien" href="https://maps.app.goo.gl/eKJZbhiVuLQqGSmZ8">S'y rendre</a></li>
+            <li><h3>Magasin à la ferme Arc-en-Ciel</h3><p class="quand"><span class="ou">Bazougers</span>, mardi soir, vendredi soir et samedi matin</p><a class="lien" href="https://www.fermearcenciel.com/magasin-a-la-ferme/">Plus d'infos</a></li>
+            <li><h3>Magasin Au Local</h3><p class="quand"><span class="ou">Château-Gontier</span>, mercredi matin, vendredi soir et samedi matin</p><a class="lien" href="https://www.aulocal.fr/">Plus d'infos</a></li>
+            <li><h3>Magasins Biocoop</h3><p class="quand"><span class="ou">Le Mans</span>, bouquets frais ou secs livrés en fin de semaine</p><a class="lien" href="https://lefenouil-biocoop.fr/local/brindille-ferme-florale-bio/">Plus d'infos</a></li>
+            <li><h3>Chez nos fleuristes partenaires</h3><p class="quand">Contactez-nous pour savoir dans quelles boutiques retrouver nos fleurs.</p><a class="lien" href="#contact">Nous demander</a></li>
+          </ul>
+          <div class="ferme">
+            <img src="assets/brindille-ferme-florale-meslay-du-maine/bouquets-point-de-vente-seaux.webp" alt="Bouquets emballés dans du kraft, dans des seaux sur un présentoir en bois" width="200" height="200" loading="lazy" />
+            <div>
+              <h3>Vente à la ferme</h3>
+              <p>Un anniversaire, une soirée, ou simplement pour vous faire plaisir : bouquets sur commande par téléphone, appel ou sms, au minimum 48 h à l'avance. <a href="tel:+33677633289">06 77 63 32 89</a></p>
+              <p>Quelques week-ends dans l'année, une cueillette à la ferme : suivez-nous sur <a href="https://www.instagram.com/brindille.fermeflorale/">Instagram</a> pour en connaître les dates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pros sombre" id="evenements">
+    <div class="env">
+      <div class="pros-tete">
+        <h2>Pour vos événements et pour les fleuristes</h2>
+        <p>Nous organisons pour vous une récolte sur mesure, avec des fleurs locales et de saison.</p>
+      </div>
+      <div class="pros-grille">
+        <article class="bloc bloc-a">
+          <figure class="apparait">
+            <img src="assets/brindille-ferme-florale-meslay-du-maine/bouquet-mariage-pose-au-sol.webp" alt="Bouquet champêtre de marguerites, immortelles, mufliers roses et chardons bleus posé au sol pendant une cérémonie" width="1600" height="1200" loading="lazy" />
+          </figure>
+          <div class="txt">
+            <h3>Événements</h3>
+            <p>De mai à octobre, nous fleurissons vos événements : les fleurs et feuillages vous sont préparés sous forme de brassées, dans des seaux.</p>
+            <span class="prix">Pour un mariage, prévoir entre 300 et 600 €</span>
+            <div class="actions">
+              <a class="btn btn-plein" href="mailto:contact@brindille-fermeflorale.fr?subject=Demande%20de%20devis">Demander un devis</a>
+            </div>
+          </div>
+        </article>
+        <article class="bloc bloc-b">
+          <figure class="apparait">
+            <img src="assets/brindille-ferme-florale-meslay-du-maine/brassee-tulipes-pivoine-dans-les-bras.webp" alt="Un homme en casquette verte porte une énorme brassée de tulipes doubles blanc crème et rose pâle devant un champ" width="1600" height="1200" loading="lazy" />
+            <figcaption class="pastille">Une brassée de tulipes</figcaption>
+          </figure>
+          <div class="txt">
+            <h3>Pour les fleuristes</h3>
+            <p>Des fleurs et feuillages cultivés localement, sélectionnés pour leur fraîcheur et leur tenue en vase. Livraison entre Le Mans, Laval et Château-Gontier.</p>
+            <div class="actions">
+              <a class="btn btn-contour" href="tel:+33677633289">Nous appeler</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="approche" id="approche">
+    <div class="env">
+      <div class="approche-grille">
+        <div class="txt">
+          <h2>Notre approche</h2>
+          <p>Notre approche s'inscrit dans le mouvement Slow Flower : des fleurs locales, qui n'ont pas fait le tour du monde ni passé une semaine dans un frigo, et des fleurs saines, non traitées, produites suivant le cahier des charges du bio.</p>
+          <p>Tous les deux ingénieurs paysagistes de formation, nous avons exercé plus de 10 ans comme concepteurs paysagistes dans le Grand Ouest, en multipliant les séjours de travail volontaire dans des fermes. En 2020, rejoindre la Slow Flower devient une évidence ; en 2024, nous trouvons enfin une ferme pour nous accueillir, à Meslay-du-Maine.</p>
+          <p>Une micro-ferme écologique, à échelle humaine : moins d'un hectare, intrants biologiques uniquement, travail minimal du sol et eau raisonnée.</p>
+
+        </div>
+        <div>
+        <figure class="duo apparait">
+          <img src="assets/brindille-ferme-florale-meslay-du-maine/florian-juliane-eucalyptus-champ.webp" alt="Florian et Juliane taillent ensemble un jeune eucalyptus dans la prairie de la ferme" width="1200" height="900" loading="lazy" />
+          <figcaption class="pastille">Florian et Juliane <span>dans la prairie</span></figcaption>
+        </figure>
+            <div class="chiffre">
+            <p>En France, aujourd'hui, 8 fleurs sur 10 viennent de l'étranger.</p>
+            <p>La plupart des fleurs hollandaises sont cultivées hors sol, dans des serres chauffées, sous lumières artificielles. L'horticulture en Pays de la Loire est un savoir-faire historique.</p>
+          </div>
+        </div>
+      </div>
+      <p class="bichonne">On sème, on plante, on désherbe, on paille, on laisse la terre se reposer et on prépare vos commandes. Bref, on bichonne notre terre et nos plantes de A à Z.</p>
+    </div>
+  </section>
+
+  <section class="collectif" aria-label="Collectif de la Fleur Française">
+    <div class="env">
+      <div>
+        <span class="sceau" aria-hidden="true">Fleur<br />française</span>
+        <div>
+          <h2>Brindille est membre du Collectif de la Fleur Française</h2>
+          <p>Une association au service de la fleur locale et de saison : un réseau qui soutient une agriculture plus responsable et fait évoluer les pratiques de consommation.</p>
+        </div>
+        <a class="btn btn-contour" href="https://www.collectifdelafleurfrancaise.com/">Le Collectif</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div class="carte">
+        <div class="txt">
+          <h2>Contactez la ferme florale Brindille</h2>
+          <p>Une question ? Une demande de devis ? N'hésitez pas à nous contacter, nous nous ferons un plaisir de revenir vers vous.</p>
+          <a class="grand-tel" href="tel:+33677633289">06 77 63 32 89</a>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33677633289">Appeler la ferme</a>
+            <a class="btn btn-contour" href="mailto:contact@brindille-fermeflorale.fr">Écrire un mail</a>
+          </div>
+        </div>
+        <dl>
+          <div><dt>Par mail</dt><dd><a href="mailto:contact@brindille-fermeflorale.fr">contact@brindille-fermeflorale.fr</a></dd></div>
+          <div><dt>Bouquet à la ferme</dt><dd>Sur commande, appel ou sms, 48 h à l'avance</dd></div>
+          <div><dt>La ferme</dt><dd>Meslay-du-Maine, en Mayenne</dd></div>
+          <div><dt>Commander en ligne</dt><dd><a href="https://commande.kuupanda.com/producteur/8025/particulier">Notre boutique</a></dd></div>
+          <div><dt>Nous suivre</dt><dd><a href="https://www.instagram.com/brindille.fermeflorale/">Instagram</a> et <a href="https://www.facebook.com/brindille.fermeflorale/">Facebook</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="cols">
+      <div>
+        <p class="nom">Brindille</p>
+        <p style="margin-top:14px">Ferme florale locale et écologique. Fleurs et feuillages de saison, à Meslay-du-Maine.</p>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="tel:+33677633289">06 77 63 32 89</a></li>
+          <li><a href="mailto:contact@brindille-fermeflorale.fr">contact@brindille-fermeflorale.fr</a></li>
+          <li>Meslay-du-Maine (53)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>La page</h3>
+        <ul>
+          <li><a href="#fleurs">Nos fleurs</a></li>
+          <li><a href="#points">Où nous trouver</a></li>
+          <li><a href="#approche">Notre approche</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ailleurs</h3>
+        <ul>
+          <li><a href="https://commande.kuupanda.com/producteur/8025/particulier">Boutique en ligne</a></li>
+          <li><a href="https://www.instagram.com/brindille.fermeflorale/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/brindille.fermeflorale/">Facebook</a></li>
+          <li><a href="https://brindille-fermeflorale.com/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">GAEC Brindille, Meslay-du-Maine. Photographes : Pierig Le Pottier, Pierre-Etienne Vilbert, Maëva Gaigner.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Brindille, ferme florale</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

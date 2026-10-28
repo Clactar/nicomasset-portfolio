@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Blue Barn Farm · Pick-Your-Own berries and vegetables in Williamsburg, PA</title>
+<meta name="description" content="Pick-Your-Own berries, the best local sweet corn and a self-serve farm market in the barn, open 9am to 7pm daily. 615 Flowing Spring Road, Williamsburg PA.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232F3C7E'/%3E%3Ccircle cx='48' cy='16' r='6' fill='%23C7313D'/%3E%3Ctext x='31' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23F5F4EF'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --milk:#F5F4EF; --milk-2:#E9E9E1; --card:#FCFCF9;
+  --berry:#2F3C7E; --berry-d:#1E2554; --ink:#1B2140; --ink-2:#4A5070; --bloom:#9AA3D1;
+  --straw:#C7313D; --straw-d:#A3242F;
+  --shadow:0 34px 64px -30px rgba(30,37,84,.55);
+  --shadow-s:0 22px 40px -24px rgba(30,37,84,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--milk);color:var(--ink);font:400 17px/1.65 'Rubik',sans-serif;overflow-x:hidden}
+::selection{background:var(--straw);color:var(--card)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Yeseva One',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.005em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--straw);outline-offset:3px;border-radius:8px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font:500 16px/1.2 'Rubik',sans-serif;text-decoration:none;text-align:center;border:1.5px solid var(--berry);transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--straw);border-color:var(--straw);color:var(--card)}
+.btn-full:hover{background:var(--berry-d);border-color:var(--berry-d);box-shadow:0 18px 30px -18px rgba(30,37,84,.9)}
+.btn-line{color:var(--berry)}
+.btn-line:hover{background:var(--berry);color:var(--card)}
+.btn-light{border-color:rgba(245,244,239,.5);color:var(--milk)}
+.btn-light:hover{background:var(--milk);color:var(--berry-d);border-color:var(--milk)}
+
+/* top */
+.top{padding:24px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:14px}
+.brand svg{flex:none}
+.brand b{display:block;font:400 25px/1 'Yeseva One',serif;color:var(--berry)}
+.brand span{display:block;font-size:14px;color:var(--ink-2);margin-top:5px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15.5px}
+.nav a{text-decoration:none;color:var(--ink-2);transition:color .2s}
+.nav a:hover{color:var(--straw)}
+.nav .pill{flex:none;white-space:nowrap;color:var(--berry);background:var(--card);padding:12px 20px;border-radius:999px;font-weight:500;box-shadow:var(--shadow-s)}
+.nav .pill:hover{color:var(--card);background:var(--berry)}
+
+/* hero */
+.hero{padding:40px 0 104px}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;grid-template-areas:"head vis" "body vis";column-gap:72px;align-items:start}
+.h-head{grid-area:head;padding-top:40px}
+.h-body{grid-area:body}
+.h-vis{grid-area:vis;position:relative;padding:22px 0 0 8px}
+.kicker{display:inline-block;color:var(--straw);font-weight:500;font-size:16px;margin-bottom:20px}
+.hero h1{font-size:72px;color:var(--berry-d)}
+.hero h1 em{font-style:normal;color:var(--straw)}
+.lead{font-size:19px;color:var(--ink-2);max-width:31em;margin:28px 0 36px}
+.lead strong{color:var(--ink);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:14px}
+.h-note{margin-top:22px;font-size:16px;color:var(--ink-2)}
+.h-note a{color:var(--berry);font-weight:500;text-underline-offset:3px}
+
+.tilt{position:relative;rotate:2.5deg;border-radius:24px;box-shadow:var(--shadow);background:var(--card);padding:12px;animation:settle 1s cubic-bezier(.2,.8,.25,1) both}
+.tilt img{border-radius:16px;aspect-ratio:4/4.3;object-fit:cover;object-position:50% 40%;width:100%}
+@keyframes settle{from{rotate:0deg;translate:0 18px;opacity:.4}to{rotate:2.5deg;translate:0 0;opacity:1}}
+
+.seasons{position:absolute;left:-56px;bottom:-46px;background:var(--card);border-radius:20px;padding:20px 22px 18px;box-shadow:var(--shadow);width:356px}
+.seasons h2{font-size:21px;color:var(--berry-d);margin-bottom:12px}
+.seasons ul{list-style:none;display:grid;gap:8px}
+.seasons li{display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.3;background:var(--milk);border-radius:999px;padding:7px 14px 7px 8px;animation:pop .5s cubic-bezier(.2,.8,.25,1) both}
+.seasons li:nth-child(2){animation-delay:.08s}.seasons li:nth-child(3){animation-delay:.16s}.seasons li:nth-child(4){animation-delay:.24s}.seasons li:nth-child(5){animation-delay:.32s}
+.seasons li i{flex:none;width:20px;height:20px;border-radius:50%;background:var(--straw)}
+.seasons li i.b{background:var(--berry)}
+.seasons li i.k{background:var(--berry-d);box-shadow:inset 0 0 0 4px #4a2a3e}
+.seasons li i.r{background:#D8505B}
+.seasons li i.c{background:#E3B940}
+.seasons li b{font-weight:500}
+.seasons li span{color:var(--ink-2);margin-left:auto;text-align:right}
+@keyframes pop{from{opacity:0;translate:-10px 0}to{opacity:1;translate:0 0}}
+
+/* facts */
+.facts{background:var(--milk-2)}
+.facts ul{list-style:none;display:flex;justify-content:space-between;gap:24px;padding:26px 0}
+.facts li{flex:none;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--ink)}
+.facts li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--berry);box-shadow:0 0 0 4px rgba(47,60,126,.15)}
+.facts li:nth-child(2n)::before{background:var(--straw);box-shadow:0 0 0 4px rgba(199,49,61,.15)}
+
+/* pick your own */
+.pick{padding:128px 0 120px}
+.pick .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:88px;align-items:start}
+.stack{position:relative;padding-bottom:120px}
+.stack .big{border-radius:22px;box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;width:86%}
+.stack .small{position:absolute;right:0;bottom:0;width:230px;background:var(--card);padding:10px 10px 0;border-radius:6px;box-shadow:var(--shadow);rotate:-4deg}
+.stack .small img{border-radius:3px;aspect-ratio:1/1.1;object-fit:cover}
+.stack .small span{display:block;font-size:15px;color:var(--ink-2);padding:10px 4px 12px;text-align:center}
+.tag{position:absolute;left:18px;bottom:138px;background:rgba(252,252,249,.94);color:var(--ink);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(30,37,84,.7)}
+.sec-h{font-size:52px;color:var(--berry-d);margin-bottom:22px}
+.pick .intro{font-size:18.5px;color:var(--ink-2);max-width:32em}
+.times{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:34px 0 18px}
+.times div{background:var(--card);border-radius:18px;padding:20px 22px;box-shadow:var(--shadow-s)}
+.times b{display:block;font:400 30px/1.1 'Yeseva One',serif;color:var(--berry)}
+.times span{font-size:16px;color:var(--ink-2)}
+.small-print{font-size:16px;color:var(--ink-2);max-width:34em}
+.small-print a{color:var(--berry);font-weight:500;text-underline-offset:3px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:4px}
+.steps-h{font-size:24px;color:var(--berry-d);margin:40px 0 12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-top:1px solid #D9D9CF;font-size:16.5px}
+.steps li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--berry);color:var(--card);display:grid;place-items:center;font:500 15px/1 'Rubik',sans-serif}
+.steps li strong{font-weight:500;color:var(--ink)}
+.pay{margin-top:18px;font-size:16px;color:var(--ink-2)}
+
+/* market, dark */
+.market{background:var(--berry-d);color:var(--milk);padding:124px 0 132px;position:relative;overflow:hidden}
+.market .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.mosaic{position:relative;height:640px}
+.mosaic .m1{position:absolute;left:0;top:0;width:78%;border-radius:22px;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);aspect-ratio:4/3;object-fit:cover}
+.mosaic .m2{position:absolute;right:0;bottom:0;width:54%;border-radius:18px;box-shadow:0 40px 70px -30px rgba(0,0,0,.7);aspect-ratio:4/3;object-fit:cover;outline:10px solid var(--berry-d)}
+.mosaic .m3{position:absolute;left:6%;bottom:6px;width:210px;background:var(--milk);padding:9px 9px 0;border-radius:6px;rotate:-5deg;box-shadow:0 30px 50px -24px rgba(0,0,0,.7)}
+.mosaic .m3 img{border-radius:3px;aspect-ratio:1/1;object-fit:cover}
+.mosaic .m3 span{display:block;color:var(--ink);font-size:15px;text-align:center;padding:9px 2px 11px}
+.mosaic .lbl{position:absolute;left:18px;top:18px;background:rgba(252,252,249,.95);color:var(--ink);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(0,0,0,.7)}
+.market .sec-h{color:var(--milk)}
+.market p{color:#C9CDE6;font-size:18px;max-width:30em}
+.market p + p{margin-top:16px}
+.hours{display:flex;align-items:baseline;gap:16px;margin:30px 0;padding:22px 26px;background:rgba(245,244,239,.07);border-radius:18px}
+.hours b{font:400 40px/1 'Yeseva One',serif;color:var(--milk)}
+.hours span{font-size:16px;color:#C9CDE6}
+.season-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 30px}
+.season-cols div{border-top:1px solid rgba(154,163,209,.35);padding-top:14px}
+.season-cols h3{font-size:20px;color:var(--milk);margin-bottom:6px}
+.season-cols p{font-size:16px;margin:0}
+.corn{font-size:17px;color:var(--milk);margin-bottom:30px}
+.corn strong{color:#F0C9CC;font-weight:500}
+
+/* mission */
+.mission{padding:128px 0 40px}
+.pano{position:relative}
+.pano img{width:100%;aspect-ratio:1600/520;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+.quote{position:relative;margin:-120px 0 0 auto;width:min(640px,92%);background:var(--card);border-radius:24px;padding:40px 44px;box-shadow:var(--shadow);margin-right:48px}
+.quote p.q{font:400 30px/1.28 'Yeseva One',serif;color:var(--berry-d)}
+.quote p.by{margin-top:16px;font-size:16px;color:var(--ink-2)}
+.practice{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;padding:104px 0 120px}
+.practice .sec-h{font-size:46px}
+.practice .side{font-size:18px;color:var(--ink-2)}
+.plist{list-style:none}
+.plist li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:24px 0;border-top:1px solid #D9D9CF}
+.plist li:last-child{border-bottom:1px solid #D9D9CF}
+.plist h3{font-size:22px;color:var(--berry)}
+.plist p{font-size:16.5px;color:var(--ink-2)}
+
+/* find us */
+.find{background:var(--milk-2);padding:120px 0 132px}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.find .lead2{font-size:18px;color:var(--ink-2);max-width:32em;margin-bottom:34px}
+.mk{display:grid;gap:14px}
+.mk div{background:var(--card);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-s);display:grid;grid-template-columns:1fr auto;gap:4px 18px}
+.mk h3{font-size:21px;color:var(--berry-d)}
+.mk b{font-weight:500;color:var(--straw);text-align:right}
+.mk span{grid-column:1/-1;font-size:16px;color:var(--ink-2)}
+.mk .home{background:var(--berry);color:var(--milk)}
+.mk .home h3{color:var(--milk)}
+.mk .home b{color:#F0C9CC}
+.mk .home span{color:#C9CDE6}
+.barn{position:relative;padding-bottom:180px}
+.barn img{border-radius:24px;box-shadow:var(--shadow);aspect-ratio:4/3.3;object-fit:cover;width:100%}
+.barn .tag{bottom:auto;top:18px;left:18px}
+.contact{position:absolute;right:-24px;bottom:0;width:380px;background:var(--card);border-radius:22px;padding:30px 30px 28px;box-shadow:var(--shadow)}
+.contact h3{font-size:26px;color:var(--berry-d);margin-bottom:6px}
+.contact > p{font-size:16px;color:var(--ink-2);margin-bottom:16px}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:16px;margin-bottom:22px}
+.contact dt{color:var(--ink-2)}
+.contact dd{text-align:right;font-weight:500}
+.contact dd a{text-decoration:none;color:var(--berry)}
+.contact dd a:hover{color:var(--straw)}
+.contact .btn{width:100%}
+.how{margin-top:34px;font-size:16px;color:var(--ink-2);max-width:34em}
+.how b{color:var(--ink);font-weight:500}
+
+/* footer */
+footer{background:#161B3D;color:#C9CDE6;padding:88px 0 0}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:64px}
+footer .fb{font:400 32px/1 'Yeseva One',serif;color:var(--milk)}
+footer .cols > div > p{margin-top:16px;font-size:16px;max-width:24em}
+footer h4{font:500 16px/1 'Rubik',sans-serif;color:#F0C9CC;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:9px;font-size:16px}
+footer a{text-decoration:none;color:var(--milk)}
+footer a:hover{color:#F0C9CC}
+.legal{border-top:1px solid rgba(201,205,230,.18);padding:22px 0;display:flex;justify-content:space-between;gap:20px;font-size:15px}
+.proposal{background:#10142E;color:#9AA0C2;text-align:center;font-size:15px;padding:16px 24px}
+.proposal a{color:var(--milk);text-underline-offset:3px}
+
+@media (max-width:1080px){
+  .hero h1{font-size:60px}
+  .seasons{left:-20px}
+  .nav{gap:20px}
+}
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  .nav a:not(.pill){display:none}
+  .brand b{font-size:21px}
+  .brand svg{width:34px;height:34px}
+  .top .wrap{gap:12px}
+  .nav .pill{padding:11px 15px;font-size:15px}
+  .seasons h2{font-size:19px}
+  .seasons ul{gap:6px}
+  .hero{padding:12px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"head" "vis" "body"}
+  .h-head{padding-top:12px}
+  .hero h1{font-size:44px}
+  .kicker{margin-bottom:14px}
+  .h-vis{padding:18px 8px 0}
+  .tilt{rotate:1.5deg;padding:8px;border-radius:20px}
+  @keyframes settle{from{rotate:0deg;opacity:.4}to{rotate:1.5deg;opacity:1}}
+  .tilt img{aspect-ratio:4/3;border-radius:14px}
+  .seasons{position:relative;left:auto;bottom:auto;width:auto;margin:-28px 10px 0;}
+  .seasons li{font-size:15px}
+  .lead{font-size:17px;margin:30px 0 26px}
+  .ctas{flex-direction:column}
+  .btn{width:100%}
+  .facts li{flex:auto}
+  .facts ul{flex-direction:column;gap:12px;padding:26px 0}
+  .pick{padding:80px 0}
+  .pick .wrap,.market .wrap,.practice,.find .wrap{grid-template-columns:1fr;gap:48px}
+  .stack{padding-bottom:90px}
+  .stack .big{width:88%}
+  .stack .small{width:170px}
+  .tag{bottom:104px}
+  .sec-h{font-size:38px}
+  .times b{font-size:24px}
+  .steps li{grid-template-columns:40px 1fr;font-size:16px}
+  .market{padding:80px 0}
+  .mosaic{height:auto;display:grid;gap:16px;padding-bottom:20px}
+  .mosaic .m1,.mosaic .m2,.mosaic .m3{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%}
+  .mosaic .m2{width:78%;margin:-60px 0 0 auto;outline-width:6px}
+  .mosaic .m3{width:170px;margin:-90px 0 0 10px}
+  .season-cols{grid-template-columns:1fr}
+  .hours b{font-size:30px}
+  .mission{padding:80px 0 20px}
+  .pano img{aspect-ratio:16/10;border-radius:20px}
+  .quote{margin:-56px auto 0;width:calc(100% - 24px);padding:28px 24px}
+  .quote p.q{font-size:23px}
+  .practice{padding:72px 0 80px}
+  .practice .sec-h{font-size:36px}
+  .plist li{grid-template-columns:1fr;gap:6px}
+  .find{padding:80px 0}
+  .barn{padding-bottom:0}
+  .contact{position:relative;right:auto;width:auto;margin:-48px 12px 0;padding:24px 22px}
+  .contact dl{grid-template-columns:1fr}
+  .contact dd{text-align:left;margin-top:-6px}
+  footer .cols{grid-template-columns:1fr;gap:36px}
+  .legal{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Blue Barn Farm, home">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 18 20 6l16 12v18H4z" fill="#2F3C7E"/><path d="M14 36V24h12v12" fill="#F5F4EF"/><path d="M14 24l12 12M26 24 14 36" stroke="#2F3C7E" stroke-width="1.6"/><circle cx="32" cy="9" r="4" fill="#C7313D"/></svg>
+      <span><b>Blue Barn Farm</b><span>Williamsburg, PA</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pick">Pick-Your-Own</a>
+      <a href="#market">Farm market</a>
+      <a href="#practices">Our farm</a>
+      <a href="#find">Markets</a>
+      <a class="pill" href="tel:+12403574087">240-357-4087</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="h-head">
+        <span class="kicker">Fresh local produce in Williamsburg, PA</span>
+        <h1>Come and pick your own fresh <em>berries.</em></h1>
+      </div>
+      <div class="h-vis">
+        <div class="tilt">
+          <img src="assets/blue-barn-farm-williamsburg/barquettes-de-fraises-et-myrtilles.webp" width="1600" height="1200" alt="Quarts of strawberries and blueberries on a blue table at Blue Barn Farm">
+        </div>
+        <div class="seasons">
+          <h2>When the berries come in</h2>
+          <ul>
+            <li><i></i><b>Strawberries</b><span>early June</span></li>
+            <li><i class="r"></i><b>Red raspberries</b><span>mid to late June</span></li>
+            <li><i class="b"></i><b>Blueberries</b><span>end of June</span></li>
+            <li><i class="k"></i><b>Black raspberries</b><span>first week of July</span></li>
+            <li><i class="c"></i><b>Sweet corn</b><span>from mid-July</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="h-body">
+        <p class="lead">High quality berries and vegetables. Pick-Your-Own fresh, nutritious berries, and <strong>On-Farm Sales of the best local sweet corn</strong> and fresh vegetables, on our 290-acre farm about 2 miles from Canoe Creek State Park.</p>
+        <div class="ctas">
+          <a class="btn btn-full" href="tel:+12403574087">Call ahead to pick</a>
+          <a class="btn btn-line" href="#pick">See picking times</a>
+        </div>
+        <p class="h-note">Or shop our produce online on <a href="https://blue-barn-farm-1.localline.ca/">Local Line</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li>290 acres by the Juniata River</li>
+        <li>2 miles from Canoe Creek State Park</li>
+        <li>Self-serve market in the barn</li>
+        <li>Open 9am to 7pm daily</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pick" id="pick">
+    <div class="wrap">
+      <div class="stack">
+        <img class="big" src="assets/blue-barn-farm-williamsburg/cueillette-de-myrtilles-en-famille.webp" width="1200" height="1600" alt="A mother and her little girl picking blueberries between the rows" loading="lazy">
+        <span class="tag">Blueberry rows, picking together</span>
+        <figure class="small">
+          <img src="assets/blue-barn-farm-williamsburg/poignee-de-myrtilles.webp" width="1200" height="1600" alt="A handful of blueberries" loading="lazy">
+          <span>Pay by the pound</span>
+        </figure>
+      </div>
+      <div>
+        <h2 class="sec-h">Pick-Your-Own</h2>
+        <p class="intro">We have a variety of small fruits and vegetables for you to pick, including strawberries, blueberries, red and black raspberries, beans and squash. Availability depends on weather and season.</p>
+        <div class="times">
+          <div><b>8 to 11am</b><span>Early in the day</span></div>
+          <div><b>5 to 8pm</b><span>Late in the day</span></div>
+        </div>
+        <p class="small-print">Picking days depend on the berries, and the berries depend on the weather. Please call ahead at <a href="tel:+12403574087">240-357-4087</a> or check our <a href="https://www.facebook.com/bluebarnfarmer/">Facebook page</a>.</p>
+        <h3 class="steps-h">When you get here</h3>
+        <ol class="steps" aria-label="Berry picking procedures">
+          <li><span><strong>Drive through the cul-de-sac</strong> at the end of Flowing Spring Road onto our private drive, to the front of the barn.</span></li>
+          <li><span><strong>Park in the designated areas</strong> and walk to the field entrance.</span></li>
+          <li><span><strong>Bring your own containers.</strong> They are weighed as you enter the field, and you pay for your berries by the pound.</span></li>
+          <li><span><strong>Wash your hands</strong> at the wash station by the field entrance.</span></li>
+          <li><span><strong>Pick in the row</strong> and color coded area you are assigned. Family groups pick together.</span></li>
+        </ol>
+        <p class="pay">For Pick-Your-Own we accept cash, check or card, PayPal and Venmo, and FMNP vouchers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="market" id="market">
+    <div class="wrap">
+      <div class="mosaic">
+        <img class="m1" src="assets/blue-barn-farm-williamsburg/farm-market-dans-la-grange.webp" width="1600" height="1200" alt="The open blue doors of the farm market in the barn, pumpkins lined up in front" loading="lazy">
+        <span class="lbl">The farm market, lower part of the barn</span>
+        <img class="m2" src="assets/blue-barn-farm-williamsburg/etals-du-farm-market-tomates-et-courges.webp" width="1600" height="1200" alt="Blue tables of tomatoes, zucchini, peppers and squash inside the farm market" loading="lazy">
+        <figure class="m3">
+          <img src="assets/blue-barn-farm-williamsburg/equipe-et-recolte-de-mais-doux.webp" width="1600" height="1200" alt="Three young farmhands behind a wagon full of sweet corn" loading="lazy">
+          <span>Sweet corn harvest</span>
+        </figure>
+      </div>
+      <div>
+        <h2 class="sec-h">Stop in, there's always something fresh.</h2>
+        <p>Our farm market is in the lower part of our barn. It is a self serve market and runs on the honor system. Find what's ripe and ready!</p>
+        <div class="hours"><b>9am to 7pm</b><span>open daily</span></div>
+        <div class="season-cols">
+          <div><h3>Early in the season</h3><p>Lettuces, greens, radishes, broccoli and green onions.</p></div>
+          <div><h3>Later in the season</h3><p>Tomatoes, squashes, peppers and eggplant.</p></div>
+        </div>
+        <p class="corn"><strong>And don't forget the sweet corn!</strong> We grow the best sweet corn. It's available beginning mid-July at the farm market and the Farmers Markets we attend. Call ahead for availability and freezing or canning corn orders.</p>
+        <p>Cash, check, PayPal and Venmo are accepted. No change is provided for cash sales.</p>
+        <div class="ctas" style="margin-top:30px">
+          <a class="btn btn-full" href="tel:+12403574087">Call about corn orders</a>
+          <a class="btn btn-light" href="https://blue-barn-farm-1.localline.ca/">Shop produce online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission" id="practices">
+    <div class="wrap">
+      <div class="pano">
+        <img src="assets/blue-barn-farm-williamsburg/champ-de-mais-et-arrosage-sous-la-colline.webp" width="1600" height="576" alt="Rows of corn under irrigation, with the wooded hill behind the farm" loading="lazy">
+      </div>
+      <div class="quote">
+        <p class="q">Our mission is to produce high quality berries and produce at reasonable prices for our local community.</p>
+        <p class="by">Tim &amp; Karen Wilson, owners of Blue Barn Farm</p>
+      </div>
+      <div class="practice">
+        <div>
+          <h2 class="sec-h">Farming for the future</h2>
+          <p class="side">Our goal is to support biodiversity and foster the development and maintenance of healthy ecosystems. Blue Barn Farm has long been a vegetable farm known especially for its sweet corn; Karen has gone back to her farming heritage and created a Pick-Your-Own farm.</p>
+        </div>
+        <ul class="plist">
+          <li><h3>Grown with care</h3><p>We use Integrated Pest Management to control pests with minimal disruption. We are not certified organic, but all vegetables in our tunnels and fenced fields are cultivated organically. Our sweet corn and berries are managed with minimal sprays.</p></li>
+          <li><h3>Healthy soil</h3><p>We rotate crops, compost crop waste, grow cover crops when possible and use no-till planting. We preserve natural vegetation along the Juniata River and other waterways.</p></li>
+          <li><h3>Food safety</h3><p>Karen has taken the FSMA Training. A written farm food safety plan is in place, and workers are trained to watch for contamination.</p></li>
+          <li><h3>Giving back</h3><p>We have historically provided food banks with many pounds of produce throughout the growing season, and plan to continue.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap">
+      <div>
+        <h2 class="sec-h">Where to find us</h2>
+        <p class="lead2">Between Hollidaysburg and Williamsburg, easy to reach from Altoona, Huntingdon and Martinsburg. You'll also find our berries and produce at two farmers markets.</p>
+        <div class="mk">
+          <div class="home"><h3>Our farm market</h3><b>Daily, 9am to 7pm</b><span>615 Flowing Spring Road, Williamsburg. Self serve, in our barn.</span></div>
+          <div><h3>Hollidaysburg Farmers Market</h3><b>Tuesdays, 11 to 2</b><span>Montgomery &amp; Allegheny Streets, through the middle of October.</span></div>
+          <div><h3>Altoona Farmers Market</h3><b>Thursdays, 11 to 2</b><span>11th Avenue &amp; 14th Street, from May through the middle of October.</span></div>
+        </div>
+        <p class="how"><b>How to get here.</b> From Route 22, turn onto Flowing Spring Road and cross the river bridge, then the smaller bridge over Flowing Spring stream. Immediately after the second bridge, turn right onto Flowing Spring Road, follow it Flowing Spring Road to the end, and go through the cul de sac onto our private drive. The barn is in front of you. Happy travels!</p>
+      </div>
+      <div class="barn">
+        <img src="assets/blue-barn-farm-williamsburg/la-grange-bleue.webp" width="1600" height="1200" alt="The wooden barn with its blue tin roof at the end of the drive" loading="lazy">
+        <span class="tag">The blue barn, end of the drive</span>
+        <div class="contact">
+          <h3>Questions? Call us.</h3>
+          <p>Please contact us with any questions.</p>
+          <dl>
+            <dt>Phone</dt><dd><a href="tel:+12403574087">240-357-4087</a></dd>
+            <dt>Email</dt><dd><a href="mailto:bluebarnfarmpa@gmail.com">bluebarnfarmpa@gmail.com</a></dd>
+            <dt>Facebook</dt><dd><a href="https://www.facebook.com/bluebarnfarmer/">Blue Barn Farm</a></dd>
+          </dl>
+          <a class="btn btn-full" href="mailto:bluebarnfarmpa@gmail.com">Email Blue Barn Farm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <span class="fb">Blue Barn Farm</span>
+        <p>Pick-Your-Own berries and vegetables, sweet corn and a self-serve farm market. Tim &amp; Karen Wilson, owners.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>615 Flowing Spring Road</li>
+          <li>Williamsburg PA 16693</li>
+          <li>Farm market daily, 9am to 7pm</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+12403574087">240-357-4087</a></li>
+          <li><a href="tel:+18142016134">814-201-6134</a></li>
+          <li><a href="mailto:bluebarnfarmpa@gmail.com">bluebarnfarmpa@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/bluebarnfarmer/">Facebook</a></li>
+          <li><a href="https://blue-barn-farm-1.localline.ca/">Shop produce online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; Blue Barn Farm, Williamsburg, Pennsylvania</span><span>Fresh local produce</span></div>
+  </div>
+  <div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Blue Barn Farm</div>
+</footer>
+
+</body>
+</html>

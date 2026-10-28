@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Ferme des Venelles, Bardouville (76), nuit du 2026-10-28.
+     CONTENU : textes, colis, prix, dates, coordonnées et photos relevés sur http://www.lafermedesvenelles.com/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé. Dates de vente : toutes postérieures au 28/10/2026.
+     Défaut réglé : le lien « Nous recrutons » menait à une page 404 ; aucun poste n'est lisible sur leur site, le lien disparaît.
+     Défaut 2 réglé : le nom de la ferme passe à la ligne sur téléphone au lieu de sortir de l'écran.
+     DESIGN (Nova) : vert de pré pâle, encre brun terre, accent froment roux. Vollkorn et Mulish. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#E8EBE1" />
+<title>La Ferme des Venelles, colis de viande bovine et ovine bio à Bardouville</title>
+<meta name="description" content="Frédéric Durand, éleveur d'aubracs à Bardouville, vend des colis de viande bovine et ovine bio sur réservation, à retirer le vendredi à la ferme." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232A231C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23E8EBE1'%3EV%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..600;1,400..500&family=Mulish:ital,wght@0,400..800;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --pre:#E8EBE1;
+  --pre-2:#DDE2D3;
+  --surface:#F6F7F1;
+  --terre:#2A231C;
+  --terre-douce:#5C5349;
+  --froment:#A8502E;
+  --froment-fonce:#8C3F22;
+  --sur-sombre:#ECE7DD;
+  --sur-sombre-doux:#C2B8A9;
+  --filet:rgba(42,35,28,.14);
+  --ombre-longue:24px 40px 70px -30px rgba(74,48,26,.55);
+  --ombre:0 30px 60px -34px rgba(58,40,24,.55);
+  --ombre-courte:0 16px 34px -22px rgba(58,40,24,.5);
+  --fd:"Vollkorn",Georgia,serif;
+  --ft:"Mulish",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pre);color:var(--terre);font-family:var(--ft);font-size:18px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--froment);color:var(--surface)}
+h1,h2,h3{margin:0;font-family:var(--fd);font-weight:500;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--froment);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--terre);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--terre);color:var(--surface)}
+.btn-plein:hover{background:var(--froment);border-color:var(--froment);transform:translateY(-2px);box-shadow:0 14px 26px -14px rgba(168,80,46,.85)}
+.btn-contour{background:transparent;color:var(--terre)}
+.btn-contour:hover{background:var(--terre);color:var(--surface);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--froment);border-color:var(--froment);color:#FFF7EF}
+.sombre .btn-plein:hover{background:var(--sur-sombre);border-color:var(--sur-sombre);color:var(--terre)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--terre)}
+
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(246,247,241,.95);color:var(--terre);font-size:15px;font-weight:700;line-height:1.3;padding:10px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(42,35,28,.7)}
+.pastille span{font-weight:500;color:var(--terre-douce)}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn,.tel-pill{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:26px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:28px;font-weight:500}
+.marque small{font-size:14px;color:var(--terre-douce);margin-top:6px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--froment-fonce)}
+.tel-pill{background:var(--pre-2);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--terre);color:var(--surface)}
+
+/* héros */
+.heros{padding:64px 0 88px}
+.heros .env{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+.lieu{font-size:16px;font-weight:700;color:var(--froment-fonce);margin-bottom:20px}
+.heros h1{font-size:clamp(46px,6vw,84px);line-height:1;font-weight:500}
+.heros h1 em{font-style:italic;font-weight:400;color:var(--froment)}
+.chapo{font-size:20px;color:var(--terre-douce);max-width:44ch;margin-top:28px;line-height:1.55}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.prochaine{display:flex;align-items:center;gap:16px;margin-top:34px;padding:14px 22px 14px 14px;background:var(--surface);border-radius:18px;box-shadow:var(--ombre-courte);width:max-content;max-width:100%}
+.prochaine .jour{font-family:var(--fd);font-size:34px;line-height:1;background:var(--pre-2);border-radius:12px;padding:10px 12px;text-align:center;min-width:72px}
+.prochaine .jour small{display:block;font-family:var(--ft);font-size:13px;font-weight:700;margin-top:4px}
+.prochaine p{font-size:16px;line-height:1.4}
+.prochaine strong{display:block;font-size:17px}
+.heros-visuel{position:relative;padding-bottom:56px;padding-left:28px}
+.heros-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.heros-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:44% 50%}
+.polaroid{position:absolute;left:-8px;bottom:0;width:200px;background:var(--surface);padding:10px 10px 12px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-4deg)}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:30% 50%;border-radius:3px}
+.polaroid figcaption{font-size:14px;font-weight:600;margin-top:8px;color:var(--terre-douce)}
+.heros-visuel .pastille{left:auto;right:18px}
+
+/* bandeau de faits */
+.faits{background:var(--pre-2)}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-block:30px}
+.faits li{display:flex;flex-direction:column;gap:2px;padding-left:20px;border-left:1px solid var(--filet)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{font-family:var(--fd);font-size:26px;font-weight:500;line-height:1.15}
+.faits span{font-size:16px;color:var(--terre-douce)}
+
+/* colis */
+.colis{padding:112px 0 104px}
+.colis-tete{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:end;margin-bottom:48px}
+.colis h2{font-size:clamp(36px,4vw,56px);line-height:1.05}
+.colis-tete p{color:var(--terre-douce);font-size:18px}
+.colis-tete a{font-weight:700;color:var(--froment-fonce)}
+.grille-colis{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:24px}
+.carte{background:var(--surface);border-radius:20px;padding:32px;box-shadow:var(--ombre-courte)}
+.carte-tete{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--filet)}
+.carte h3{font-size:26px;line-height:1.1}
+.carte h3 small{display:block;font-family:var(--ft);font-size:15px;font-weight:600;color:var(--terre-douce);margin-top:6px;letter-spacing:0}
+.prix{font-family:var(--fd);font-size:40px;line-height:1;white-space:nowrap}
+.contenu li{position:relative;padding-left:20px;font-size:16px;line-height:1.45;margin-bottom:9px}
+.contenu li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--pre-2);box-shadow:inset 0 0 0 2px var(--froment)}
+.carte-grande{grid-row:span 2;position:relative}
+.carte-grande .badge{display:inline-block;font-size:14px;font-weight:700;background:var(--terre);color:var(--surface);border-radius:999px;padding:6px 14px;margin-bottom:18px}
+.hache .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-top:1px solid var(--filet)}
+.hache .ligne:first-of-type{border-top:0;padding-top:0}
+.hache .ligne b{font-size:17px}
+.hache .ligne span{display:block;font-size:15px;color:var(--terre-douce)}
+.hache .ligne .prix{font-size:28px}
+.variantes{grid-column:2 / span 2;background:transparent;box-shadow:none;border:1.5px dashed rgba(42,35,28,.25);padding:26px 30px}
+.variantes h3{font-size:22px;margin-bottom:14px}
+.variantes ul{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.variantes li{font-size:15px;line-height:1.45;color:var(--terre-douce)}
+.variantes li b{display:block;font-size:16px;color:var(--terre);margin-bottom:4px}
+.note{font-size:15px;color:var(--terre-douce);margin-top:22px;max-width:80ch}
+
+/* agneau */
+.agneau{padding:0 0 120px}
+.agneau .env{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center}
+.agneau-photo{position:relative;border-radius:22px 22px 22px 120px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.agneau-photo img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:58% 60%}
+.agneau h2{font-size:clamp(34px,3.6vw,50px);line-height:1.05;margin-bottom:18px}
+.agneau .intro{color:var(--terre-douce);margin-bottom:28px}
+.tarifs li{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px solid var(--filet)}
+.tarifs li:first-child{border-top:1px solid var(--filet)}
+.tarifs span{font-size:18px;font-weight:600}
+.tarifs b{font-family:var(--fd);font-size:30px;font-weight:500;white-space:nowrap}
+.tarifs b small{font-family:var(--ft);font-size:15px;font-weight:600;color:var(--terre-douce)}
+
+/* dates, section sombre */
+.sombre{background:var(--terre);color:var(--sur-sombre)}
+.dates{padding:108px 0}
+.dates .env{display:grid;grid-template-columns:4fr 7fr;gap:72px}
+.dates h2{font-size:clamp(36px,4vw,56px);line-height:1.05}
+.dates .txt p{color:var(--sur-sombre-doux);margin-top:22px;max-width:38ch}
+.dates .txt .actions{margin-top:34px}
+.retrait{margin-top:36px;padding-top:24px;border-top:1px solid rgba(236,231,221,.18)}
+.retrait b{display:block;font-family:var(--fd);font-size:24px;font-weight:500;color:var(--sur-sombre)}
+.retrait span{color:var(--sur-sombre-doux);font-size:17px}
+.calendrier{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-content:start}
+.calendrier li{background:rgba(236,231,221,.06);border-radius:16px;padding:20px 18px 18px}
+.calendrier .j{font-family:var(--fd);font-size:46px;line-height:1}
+.calendrier .m{display:block;font-size:16px;font-weight:700;margin-top:6px}
+.calendrier .q{display:block;font-size:15px;color:var(--sur-sombre-doux);margin-top:10px;line-height:1.35}
+.calendrier li.premiere{background:var(--sur-sombre);color:var(--terre);grid-column:span 2;display:grid;grid-template-columns:auto 1fr;gap:4px 20px;align-items:center}
+.calendrier li.premiere .j{font-size:72px;grid-row:span 3}
+.calendrier li.premiere .q{color:var(--terre-douce);margin-top:2px}
+.calendrier li.premiere .etiq{font-size:14px;font-weight:800;color:var(--froment-fonce)}
+
+/* élevage */
+.elevage{padding:120px 0 112px}
+.bande{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.bande img{width:100%;aspect-ratio:3/1;object-fit:cover}
+.elevage-corps{display:grid;grid-template-columns:5fr 6fr;gap:72px;margin-top:72px}
+.elevage h2{font-size:clamp(36px,4vw,56px);line-height:1.05}
+.elevage .cite{font-family:var(--fd);font-style:italic;font-size:24px;line-height:1.4;margin-top:26px;color:var(--terre)}
+.elevage .phil{color:var(--terre-douce);margin-top:22px}
+.elevage .phil + .phil{margin-top:14px}
+.accroupi{position:relative;margin-top:40px;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-longue);max-width:480px}
+.accroupi img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:30% 50%}
+.frise h3{font-size:26px;margin-bottom:26px}
+.frise ol{position:relative}
+.frise ol::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:var(--pre-2)}
+.frise li{position:relative;padding-left:40px;padding-bottom:26px}
+.frise li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--pre);box-shadow:inset 0 0 0 3px var(--froment)}
+.frise li b{display:block;font-family:var(--fd);font-size:22px;font-weight:500;line-height:1.2}
+.frise li p{color:var(--terre-douce);font-size:17px;margin-top:4px}
+.frise .lien{display:inline-block;margin-top:6px;font-weight:700;color:var(--froment-fonce)}
+
+/* venir */
+.venir{padding:0 0 120px}
+.venir .env{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:center}
+.passe{background:var(--surface);padding:14px;border-radius:24px;box-shadow:var(--ombre)}
+.passe-in{position:relative;border-radius:14px;overflow:hidden}
+.passe img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%}
+.venir h2{font-size:clamp(34px,3.6vw,50px);line-height:1.05}
+.venir .intro{color:var(--terre-douce);margin-top:18px}
+.coord{margin-top:30px;background:var(--surface);border-radius:20px;padding:28px 30px;box-shadow:var(--ombre-courte)}
+.coord address{font-style:normal;font-family:var(--fd);font-size:24px;line-height:1.3}
+.coord dl{margin:20px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:17px}
+.coord dt{font-weight:700}
+.coord dd{margin:0;color:var(--terre-douce)}
+.coord dd a{color:var(--terre);font-weight:700;text-decoration-color:rgba(168,80,46,.5);text-underline-offset:3px}
+.coord .actions{margin-top:24px}
+
+/* pied */
+.pied{background:#1F1A15;color:var(--sur-sombre);padding:72px 0 28px}
+.pied .env > .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.pied .nom{font-family:var(--fd);font-size:30px;line-height:1.1}
+.pied p,.pied li{font-size:16px;color:var(--sur-sombre-doux);line-height:1.6}
+.pied h3{font-family:var(--ft);font-size:16px;font-weight:800;margin-bottom:12px;color:var(--sur-sombre)}
+.pied a{color:var(--sur-sombre);text-underline-offset:3px}
+.pied .credit{margin-top:48px;padding-top:22px;border-top:1px solid rgba(236,231,221,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:15px}
+.proposition{background:#17130F;color:var(--sur-sombre-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-sombre)}
+
+/* tablette */
+@media (max-width:1080px){
+  .heros .env,.colis-tete,.agneau .env,.dates .env,.elevage-corps,.venir .env{grid-template-columns:1fr;gap:44px}
+  .grille-colis{grid-template-columns:1fr 1fr}
+  .carte-grande{grid-row:auto;grid-column:span 2}
+  .variantes{grid-column:span 2}
+  .calendrier{grid-template-columns:repeat(3,1fr)}
+  .pied .env > .cols{grid-template-columns:1fr 1fr}
+}
+/* téléphone */
+@media (max-width:640px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .nav a:not(.tel-pill){display:none}
+  .tete .env{gap:12px}
+  .marque span{font-size:22px;white-space:nowrap}
+  .marque small{font-size:14px}
+  .tel-pill{font-size:16px;padding:10px 16px;white-space:nowrap}
+  .tel-pill .long{display:none}
+  .note,.variantes li,.faits span,.calendrier .q,.hache .ligne span,.carte h3 small,.tarifs b small,.contenu li,.pied p,.pied li,.retrait span{font-size:16px}
+  .heros{padding:28px 0 56px}
+  .heros .env{gap:28px}
+  .lieu{font-size:16px;margin-bottom:14px}
+  .heros h1{font-size:50px;line-height:1.02}
+  .chapo{font-size:18px;margin-top:20px}
+  .heros-visuel{padding-left:0;padding-bottom:40px}
+  .heros-texte{display:contents}
+  .heros .env{display:flex;flex-direction:column;align-items:stretch}
+  .heros-titre{order:-2}
+  .heros-visuel{order:-1}
+  .heros-suite{order:0}
+  .polaroid{width:120px;left:auto;right:6px;bottom:-4px;padding:6px 6px 8px;transform:rotate(4deg)}
+  .polaroid figcaption{font-size:13px;margin-top:5px}
+  .heros-visuel .pastille{right:auto;left:12px;bottom:12px;font-size:14px;padding:8px 13px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .prochaine{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr;gap:20px 16px;padding-block:26px}
+  .faits li{border-left:0;padding-left:0}
+  .faits b{font-size:22px}
+  .colis{padding:72px 0 64px}
+  .grille-colis{grid-template-columns:1fr}
+  .carte-grande,.variantes{grid-column:auto}
+  .variantes ul{grid-template-columns:1fr}
+  .carte{padding:24px}
+  .prix{font-size:34px}
+  .agneau{padding-bottom:80px}
+  .agneau-photo{border-radius:18px 18px 18px 72px}
+  .dates{padding:72px 0}
+  .calendrier{grid-template-columns:1fr 1fr}
+  .calendrier li:last-child{grid-column:span 2}
+  .calendrier li.premiere .j{font-size:56px}
+  .elevage{padding:80px 0 72px}
+  .bande img{aspect-ratio:16/10;object-position:60% 50%}
+  .elevage-corps{margin-top:44px}
+  .elevage .cite{font-size:21px}
+  .venir{padding-bottom:80px}
+  .passe{padding:10px}
+  .coord{padding:22px 20px}
+  .coord address{font-size:21px}
+  .coord dl{grid-template-columns:1fr;gap:2px}
+  .coord dd{margin-bottom:10px}
+  .pied .env > .cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="La Ferme des Venelles, accueil">
+      <span>La Ferme des Venelles</span>
+      <small>Frédéric et Fanny, Bardouville</small>
+    </a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#colis">Les colis</a>
+      <a href="#agneau">L'agneau</a>
+      <a href="#dates">Les dates</a>
+      <a href="#elevage">L'élevage</a>
+      <a href="#venir">Venir</a>
+      <a class="tel-pill" href="mailto:contact@lafermedesvenelles.fr?subject=R%C3%A9servation%20d%27un%20colis">Réserver<span class="long"> un colis</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <div class="heros-titre">
+          <p class="lieu">Frédéric Durand, éleveur à Bardouville</p>
+          <h1>La Ferme des <em>Venelles</em></h1>
+        </div>
+        <div class="heros-suite">
+          <p class="chapo">Des colis de viande bovine et ovine bio, nés et élevés sur la ferme, à réserver par mail et à retirer le vendredi à la ferme.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#colis">Voir les colis et les prix</a>
+            <a class="btn btn-contour" href="mailto:contact@lafermedesvenelles.fr?subject=R%C3%A9servation%20d%27un%20colis">Réserver par mail</a>
+          </div>
+          <a class="prochaine" href="#dates" style="text-decoration:none">
+            <span class="jour">27<small>nov.</small></span>
+            <p><strong>Prochaine vente, bœuf et agneau</strong>vendredi 27 novembre 2026, à la ferme</p>
+          </a>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="heros-photo apparait">
+          <img src="assets/ferme-des-venelles-bardouville/eleveur-caresse-vache-aubrac.webp" alt="Frédéric Durand, souriant, la main posée sur le dos d'une vache aubrac aux cornes en lyre, au milieu du troupeau" width="1280" height="427" fetchpriority="high" />
+          <figcaption class="pastille">Frédéric <span>et ses aubracs</span></figcaption>
+        </figure>
+        <figure class="polaroid apparait">
+          <img src="assets/ferme-des-venelles-bardouville/trois-brebis-tete-noire.webp" alt="Trois brebis à tête noire dans l'herbe haute" width="1280" height="426" loading="lazy" />
+          <figcaption>Et les brebis</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env">
+      <li><b>90 vaches aubrac</b><span>allaitantes, environ 230 bêtes</span></li>
+      <li><b>En bio</b><span>les vaches depuis mai 2018, les brebis aussi</span></li>
+      <li><b>Vente directe</b><span>depuis 2008, sur commande</span></li>
+      <li><b>Le vendredi</b><span>retrait à la ferme, 17h30 à 19h</span></li>
+    </ul>
+  </div>
+
+  <section class="colis" id="colis">
+    <div class="env">
+      <div class="colis-tete">
+        <h2>Les colis de bœuf</h2>
+        <p>Des colis entre 3 et 10 kg de viande bovine biologique, proposés environ toutes les 6 semaines en vente directe, sur commande. Les morceaux sont conditionnés sous vide. <a href="http://www.lafermedesvenelles.com/index.php/les-produits-en-vente/viande-bovine?view=article&amp;id=8:infos-congelation&amp;catid=2:non-categorise">Infos pratiques congélation</a></p>
+      </div>
+
+      <div class="grille-colis">
+        <article class="carte carte-grande">
+          <span class="badge">Le colis le plus complet</span>
+          <div class="carte-tete">
+            <h3>Colis n°1<small>10 kg</small></h3>
+            <span class="prix">170 €</span>
+          </div>
+          <ul class="contenu">
+            <li>1 côte ou 1 rôti filet ou 1 rôti faux-filet ou 1 filet de rumsteak</li>
+            <li>1 à 2 rôtis, ou 1 rôti et des morceaux à brochette ou à fondue</li>
+            <li>1,4 à 2 kg de steaks de 1<sup>re</sup> et 2<sup>e</sup> catégorie, par paquet de 1 ou 2</li>
+            <li>2 barquettes de cheveux d'ange, soit 1 kg</li>
+            <li>1 kg de pot-au-feu</li>
+            <li>1 kg de bourguignon</li>
+            <li>3 barquettes de 2 steaks hachés</li>
+            <li>2 paquets de 5 chipos de bœuf*</li>
+            <li>2 paquets de 5 merguez de bœuf*</li>
+          </ul>
+        </article>
+
+        <article class="carte">
+          <div class="carte-tete">
+            <h3>Colis n°5<small>5 kg</small></h3>
+            <span class="prix">90 €</span>
+          </div>
+          <ul class="contenu">
+            <li>1 rôti</li>
+            <li>Environ 1,5 kg de steaks</li>
+            <li>1 bourguignon</li>
+            <li>1 barquette de steak haché</li>
+            <li>1 barquette de cheveux d'ange</li>
+            <li>1 paquet de 5 chipos et 1 paquet de 5 merguez de bœuf*</li>
+          </ul>
+        </article>
+
+        <article class="carte hache">
+          <div class="carte-tete">
+            <h3>100 % haché<small>barquettes de 2 steaks</small></h3>
+          </div>
+          <div class="ligne"><div><b>Colis n°6, 3 kg</b><span>10 barquettes, 16 €/kg</span></div><span class="prix">48 €</span></div>
+          <div class="ligne"><div><b>Colis n°7, 5 kg</b><span>17 barquettes, 15,69 €/kg</span></div><span class="prix">80 €</span></div>
+          <div class="ligne"><div><b>Colis n°8, 10 kg</b><span>34 barquettes, 15,20 €/kg</span></div><span class="prix">155 €</span></div>
+        </article>
+
+        <article class="carte variantes">
+          <h3>Les colis n°2, 3 et 4, 10 kg à 170 €</h3>
+          <ul>
+            <li><b>Colis n°2</b>dont 8 barquettes de 2 steaks hachés</li>
+            <li><b>Colis n°3</b>dont 2 kg de bourguignon et 4 barquettes de 2 steaks hachés</li>
+            <li><b>Colis n°4</b>dont 9 barquettes de 2 steaks hachés, 2 paquets de 5 chipos et 2 paquets de 5 merguez de bœuf*</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">* Les chipos et merguez sont fabriquées à partir des restes de découpe de l'atelier : la viande peut donc provenir de plusieurs élevages issus de l'agriculture biologique. <a href="http://www.lafermedesvenelles.com/index.php/les-produits-en-vente/viande-bovine">Le détail complet de chaque colis</a></p>
+    </div>
+  </section>
+
+  <section class="agneau" id="agneau">
+    <div class="env">
+      <figure class="agneau-photo apparait">
+        <img src="assets/ferme-des-venelles-bardouville/brebis-agneau-pature.webp" alt="Une brebis et son agneau au premier plan d'une grande pâture, le troupeau dispersé sous les arbres" width="1280" height="426" loading="lazy" />
+        <figcaption class="pastille">La pâture des brebis</figcaption>
+      </figure>
+      <div>
+        <h2>L'agneau</h2>
+        <p class="intro">Les deux élevages, bovins et ovins, sont conduits en agriculture biologique. L'agneau est proposé aux ventes marquées bœuf et agneau, la prochaine le 27 novembre 2026.</p>
+        <ul class="tarifs">
+          <li><span>Agneau sous vide</span><b>20 € <small>le kg</small></b></li>
+          <li><span>Avec épaule et gigot en tranches</span><b>21 € <small>le kg</small></b></li>
+          <li><span>Chipos et merguez de mouton</span><b>15 € <small>le kg</small></b></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@lafermedesvenelles.fr?subject=R%C3%A9servation%20d%27agneau">Réserver de l'agneau</a>
+          <a class="btn btn-contour" href="http://www.lafermedesvenelles.com/index.php/les-produits-en-vente/viande-ovine">Le détail sur notre site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dates sombre" id="dates">
+    <div class="env">
+      <div class="txt">
+        <h2>Prochains rendez-vous</h2>
+        <p>N'hésitez pas à réserver votre colis dès maintenant par mail. Vous pouvez nous contacter à tout moment pour vous inscrire sur notre prochain carnet de commande.</p>
+        <div class="retrait">
+          <b>Retrait le vendredi à la ferme</b>
+          <span>de 17h30 à 19h, 1354 chemin du Roy, Bardouville</span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@lafermedesvenelles.fr?subject=R%C3%A9servation%20d%27un%20colis">Réserver par mail</a>
+          <a class="btn btn-contour" href="tel:+33679932878">06 79 93 28 78</a>
+        </div>
+      </div>
+      <ul class="calendrier">
+        <li class="premiere"><span class="j">27</span><span class="etiq">Prochaine vente</span><span class="m">novembre 2026</span><span class="q">Bœuf et agneau</span></li>
+        <li><span class="j">29</span><span class="m">janvier 2027</span><span class="q">Bœuf</span></li>
+        <li><span class="j">12</span><span class="m">mars 2027</span><span class="q">Bœuf</span></li>
+        <li><span class="j">30</span><span class="m">avril 2027</span><span class="q">Bœuf</span></li>
+        <li><span class="j">11</span><span class="m">juin 2027</span><span class="q">Bœuf</span></li>
+        <li><span class="j">3</span><span class="m">septembre 2027</span><span class="q">Bœuf</span></li>
+        <li><span class="j">15</span><span class="m">octobre 2027</span><span class="q">Bœuf, agneau à confirmer</span></li>
+        <li><span class="j">3</span><span class="m">décembre 2027</span><span class="q">Bœuf, agneau à confirmer</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="elevage" id="elevage">
+    <div class="env">
+      <figure class="bande apparait">
+        <img src="assets/ferme-des-venelles-bardouville/marais-vaches-aigrettes-boucles-seine.webp" alt="Prairie humide de marais avec une mare, vaches aubrac au pâturage et aigrettes blanches au premier plan" width="1280" height="427" loading="lazy" />
+        <figcaption class="pastille">Le marais, en fin d'hiver</figcaption>
+      </figure>
+      <div class="elevage-corps">
+        <div>
+          <h2>Produire en harmonie</h2>
+          <p class="cite">« Installé dans une zone de marais très sauvage, j'ai eu à cœur de préserver ce patrimoine naturel ancestral. »</p>
+          <p class="phil">Tous les animaux naissent et sont élevés sur l'exploitation. Leur alimentation repose sur le pâturage en prairie, chaque bête bénéficie d'une grande surface en herbe. Aucun antibiotique, une alimentation sans OGM, ni engrais ni produits phytosanitaires sur les prairies.</p>
+          <p class="phil">Mes pratiques d'agriculture durable ont même contribué au développement de la biodiversité.</p>
+          <figure class="accroupi apparait">
+            <img src="assets/ferme-des-venelles-bardouville/eleveur-accroupi-vaches-aubrac-veau.webp" alt="Frédéric accroupi dans l'herbe fleurie caresse la tête d'une vache aubrac, un veau à côté" width="1280" height="427" loading="lazy" />
+          </figure>
+        </div>
+        <div class="frise">
+          <h3>L'histoire de la ferme</h3>
+          <ol>
+            <li><b>À 20 ans</b><p>Je reprends l'exploitation de la famille Loriot-Vaucquelin : 60 vaches normandes et croisées et leur suite, et 120 brebis issues de mon élevage d'adolescent. Un système très simple : le pâturage.</p></li>
+            <li><b>2003</b><p>Je débute la conversion du cheptel en race pure aubrac : une race rustique, autonome et docile, qui valorise le foin en hiver et l'herbe pâturée le reste de l'année.</p></li>
+            <li><b>2008</b><p>Je lance la vente directe.</p></li>
+            <li><b>Mai 2018</b><p>Mon élevage de vaches passe en bio.</p></li>
+            <li><b>Aujourd'hui</b><p>Un troupeau de 90 vaches allaitantes, exclusivement aubrac, soit environ 230 bêtes. Une partie de la reproduction se fait avec des taureaux charolais, dont les génisses sont reconnues pour leurs qualités gustatives.</p>
+              <a class="lien" href="http://www.lafermedesvenelles.com/index.php/notre-histoire">Lire l'histoire en entier</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="env">
+      <figure class="passe apparait">
+        <div class="passe-in">
+          <img src="assets/ferme-des-venelles-bardouville/vache-aubrac-cornes-en-lyre.webp" alt="Vache aubrac face à l'objectif, cornes en lyre, dans une prairie fleurie de boutons d'or" width="1280" height="426" loading="lazy" style="object-position:72% 50%" />
+          <figcaption class="pastille">Arrêt de bus « Venelles »</figcaption>
+        </div>
+      </figure>
+      <div>
+        <h2>Venir à la ferme</h2>
+        <p class="intro">Les permanences de retrait des colis ont lieu le vendredi à la ferme, de 17h30 à 19h. Pour réserver, un mail suffit.</p>
+        <div class="coord">
+          <address>1354 chemin du Roy<br />76480 Bardouville</address>
+          <dl>
+            <dt>Frédéric</dt><dd><a href="tel:+33679932878">06 79 93 28 78</a></dd>
+            <dt>Fanny</dt><dd><a href="tel:+33672183270">06 72 18 32 70</a></dd>
+            <dt>Mail</dt><dd><a href="mailto:contact@lafermedesvenelles.fr">contact@lafermedesvenelles.fr</a></dd>
+            <dt>GPS</dt><dd>49.425209 / 0.931102</dd>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-plein" href="http://www.lafermedesvenelles.com/index.php?view=article&amp;id=11:plan-dacces&amp;catid=2:non-categorise">Voir le plan d'accès</a>
+            <a class="btn btn-contour" href="mailto:contact@lafermedesvenelles.fr?subject=R%C3%A9servation%20d%27un%20colis">Écrire un mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="cols">
+      <div>
+        <p class="nom">La Ferme des Venelles</p>
+        <p style="margin-top:12px">Frédéric Durand, éleveur à Bardouville. Viande bovine et ovine bio, en vente directe.</p>
+      </div>
+      <div>
+        <h3>La ferme</h3>
+        <p>Frédéric et Fanny<br />1354 chemin du Roy<br />76480 Bardouville<br />Arrêt de bus « Venelles »</p>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="tel:+33679932878">06 79 93 28 78</a> (Frédéric)</li>
+          <li><a href="tel:+33672183270">06 72 18 32 70</a> (Fanny)</li>
+          <li><a href="mailto:contact@lafermedesvenelles.fr">contact@lafermedesvenelles.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Retrait des colis</h3>
+        <p>Le vendredi à la ferme<br />de 17h30 à 19h</p>
+        <p style="margin-top:10px"><a href="http://www.lafermedesvenelles.com/index.php/ils-nous-soutiennent">Ils nous soutiennent</a></p>
+      </div>
+    </div>
+    <div class="credit">
+      <p>Photos : JM Leligny, parc naturel régional des Boucles de la Seine normande.</p>
+      <p>Bovins et ovins conduits en agriculture biologique.</p>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour La Ferme des Venelles</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

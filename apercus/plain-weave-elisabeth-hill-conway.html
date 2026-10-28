@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Plain Weave and beyond · Hand weaving by Elisabeth Hill</title>
+<meta name="description" content="Hand weaving by Elisabeth Hill in Western Massachusetts: towels, scarves, blankets and table linens, weaving patterns, and workshops for guilds, conferences and schools.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23243A72'/%3E%3Cpath d='M0 54h64M0 58h64' stroke='%23EDE7DA' stroke-width='1.5' opacity='.5'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23EDE7DA'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wool:#EDE7DA; --wool-2:#E2DACA; --card:#F8F4EC;
+  --indigo:#243A72; --indigo-d:#1A2A55; --indigo-2:#3B5096; --wash:#C8D0E6;
+  --ink:#1E2440; --ink-soft:#545A70;
+  --shadow:0 34px 64px -36px rgba(26,42,85,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--wool);color:var(--ink);font:400 17.5px/1.66 'Hanken Grotesk',Georgia,sans-serif;overflow-x:hidden}
+::selection{background:var(--indigo);color:var(--wool)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'EB Garamond',Georgia,serif;font-weight:500;line-height:1.02;letter-spacing:-.012em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:600 16.5px/1 'Hanken Grotesk',sans-serif;text-decoration:none;border:1.5px solid var(--indigo);color:var(--indigo);transition:transform .28s cubic-bezier(.2,.7,.3,1),background-color .28s,color .28s,box-shadow .28s,border-color .28s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--indigo);color:var(--wool)}
+.btn-full:hover{background:var(--indigo-d);border-color:var(--indigo-d);box-shadow:0 18px 32px -16px rgba(26,42,85,.8)}
+.btn-line:hover{background:var(--indigo);color:var(--wool)}
+.btn-wool{background:var(--wool);border-color:var(--wool);color:var(--indigo)}
+.btn-wool:hover{background:var(--card);box-shadow:0 18px 32px -16px rgba(0,0,0,.6)}
+.btn-ghost{border-color:rgba(237,231,218,.5);color:var(--wool)}
+.btn-ghost:hover{background:var(--wool);color:var(--indigo);border-color:var(--wool)}
+
+/* weave motif */
+.weave{background-color:var(--indigo);background-image:
+  repeating-linear-gradient(0deg,rgba(237,231,218,.10) 0 2px,transparent 2px 10px),
+  repeating-linear-gradient(90deg,rgba(10,18,45,.30) 0 5px,transparent 5px 10px),
+  conic-gradient(from 90deg,rgba(255,255,255,.06) 25%,transparent 0 50%,rgba(255,255,255,.06) 0 75%,transparent 0);
+  background-size:auto,auto,20px 20px}
+
+/* header */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none}
+.brand b{display:block;font:500 30px/1 'EB Garamond',serif}
+.brand b i{font-weight:400}
+.brand span{display:block;font-size:15px;color:var(--ink-soft);margin-top:6px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--indigo);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{white-space:nowrap;background:var(--indigo);color:var(--wool);padding:12px 20px;border-radius:999px;font-weight:600!important;transition:background-color .25s}
+.pill:hover{background:var(--indigo-d)}
+
+/* hero */
+.hero{padding:30px 0 110px}
+.hero .wrap{display:grid;grid-template-columns:1.06fr 1fr;gap:64px;align-items:center}
+.kick{font:italic 400 21px/1.3 'EB Garamond',serif;color:var(--indigo-2)}
+.hero h1{font-size:clamp(56px,6.4vw,90px);line-height:.98;margin-top:16px}
+.hero h1 span{display:block}
+.hero h1 span:nth-child(2n){font-style:italic;font-weight:400;padding-left:.55em}
+.lead{margin-top:28px;max-width:470px;color:var(--ink-soft);font-size:18.5px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.reach{margin-top:20px;font-size:16px;color:var(--ink-soft)}
+.reach a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(36,58,114,.4)}
+.loomside{position:relative;border-radius:28px;padding:56px 56px 150px 56px;box-shadow:0 50px 90px -50px rgba(26,42,85,.9)}
+.loomside .ph{position:relative;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -34px rgba(5,10,30,.85)}
+.loomside .ph img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:50% 45%}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(248,244,236,.95);color:var(--ink);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;line-height:1.25;box-shadow:0 12px 26px -14px rgba(26,42,85,.6)}
+.loomside .ph .tag{left:auto;right:16px;bottom:auto;top:16px}
+.pattern{position:absolute;left:-36px;bottom:36px;width:330px;background:var(--card);border-radius:18px;padding:24px 26px;box-shadow:0 34px 60px -30px rgba(10,18,45,.75)}
+.pattern small{display:block;font-size:15px;font-weight:600;color:var(--indigo-2)}
+.pattern b{display:block;font:500 28px/1.1 'EB Garamond',serif;margin-top:4px}
+.pattern p{font-size:16px;color:var(--ink-soft);margin-top:8px;line-height:1.5}
+
+/* facts */
+.facts{border-top:1px solid rgba(36,58,114,.18);border-bottom:1px solid rgba(36,58,114,.18)}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.facts li{padding:28px 26px;font-size:16px;line-height:1.45;color:var(--ink-soft)}
+.facts li:first-child{padding-left:0}
+.facts li+li{box-shadow:inset 1px 0 0 rgba(36,58,114,.18)}
+.facts b{display:block;font:500 25px/1.15 'EB Garamond',serif;color:var(--indigo);margin-bottom:4px}
+
+/* latest products */
+.latest{padding:130px 0 110px}
+.latest .head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:60px}
+.h2{font-size:clamp(42px,5vw,68px)}
+.latest .head p{color:var(--ink-soft);max-width:470px}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.tile{position:relative;margin:0}
+.tile .im{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.tile img{width:100%;object-fit:cover}
+.m1{grid-column:1/6;grid-row:1/3}
+.m1 img{aspect-ratio:4/5.2}
+.m2{grid-column:6/10;grid-row:1;margin-top:80px}
+.m2 img{aspect-ratio:1/1}
+.m3{grid-column:10/13;grid-row:1}
+.m3 img{aspect-ratio:3/4.2}
+.feature{grid-column:6/13;grid-row:2;background:var(--card);border-radius:24px;padding:36px 40px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.feature small{display:block;font-size:15px;font-weight:600;color:var(--indigo-2)}
+.feature h3{font-size:40px;margin-top:6px}
+.feature p{margin-top:12px;color:var(--ink-soft);max-width:440px}
+.feature em{font-family:'EB Garamond',serif;font-size:21px;color:var(--indigo)}
+.m4{grid-column:1/5;grid-row:3;margin-top:10px}
+.m4 img{aspect-ratio:4/3}
+.m5{grid-column:5/9;grid-row:3;margin-top:70px}
+.m5 .im{border:10px solid var(--card);border-radius:22px}
+.m5 img{aspect-ratio:4/3}
+.m6{grid-column:9/13;grid-row:3;margin-top:-30px}
+.m6 img{aspect-ratio:3/3.6}
+.tile figcaption{margin-top:14px;font-size:16px;color:var(--ink-soft)}
+.tile figcaption b{display:block;font:500 21px/1.2 'EB Garamond',serif;color:var(--ink)}
+.latest .more{margin-top:56px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.latest .more p{color:var(--ink-soft);font-size:16.5px;max-width:520px}
+
+/* big idea */
+.idea{background:var(--wool-2);padding:130px 0}
+.idea .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:96px;align-items:center}
+.duo{position:relative;padding:0 70px 90px 0}
+.duo .a{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);margin:0}
+.duo .a img{width:100%;aspect-ratio:3/3.9;object-fit:cover;object-position:30% 40%}
+.duo .b{position:absolute;right:0;bottom:0;width:52%;margin:0;background:var(--card);padding:10px 10px 14px;border-radius:12px;rotate:3deg;box-shadow:0 30px 56px -26px rgba(26,42,85,.7)}
+.duo .b img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+.duo .b figcaption{font-size:15px;color:var(--ink-soft);padding:8px 4px 0}
+.idea .kick{font-size:21px}
+.idea h2{margin-top:8px}
+.idea p{margin-top:20px;color:var(--ink-soft);max-width:580px}
+.idea blockquote{margin-top:34px;padding:30px 34px;background:var(--card);border-radius:20px;box-shadow:0 26px 50px -38px rgba(26,42,85,.7);font:italic 400 25px/1.4 'EB Garamond',serif;color:var(--ink)}
+.idea .btn{margin-top:30px}
+
+/* workshops, dark */
+.work{color:var(--wool);padding:130px 0}
+.work .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:start}
+.work .h2{color:var(--wool)}
+.work .intro{margin-top:22px;color:rgba(237,231,218,.82);max-width:470px}
+.work .ph{margin:44px 0 0;border-radius:20px;overflow:hidden;box-shadow:0 44px 80px -40px rgba(0,0,0,.85)}
+.work .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.work .cta{margin-top:34px}
+.shops{list-style:none;background:var(--indigo-d);border-radius:26px;padding:12px 40px;box-shadow:0 44px 80px -40px rgba(0,0,0,.8)}
+.shops li{padding:32px 0}
+.shops li+li{border-top:1px solid rgba(237,231,218,.14)}
+.shops h3{font-size:34px}
+.shops p{margin-top:10px;color:rgba(237,231,218,.8);font-size:16.5px}
+.shops dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin-top:16px;font-size:16px}
+.shops dt{color:var(--wash);font-weight:600}
+.shops dd{color:rgba(237,231,218,.86)}
+
+/* news */
+.news{padding:130px 0 70px}
+.news .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.news .side p{margin-top:18px;color:var(--ink-soft);font-size:16.5px}
+.news .side a{color:var(--indigo);font-weight:600}
+.posts{list-style:none}
+.posts li{border-top:1px solid rgba(36,58,114,.2)}
+.posts li:last-child{border-bottom:1px solid rgba(36,58,114,.2)}
+.posts a{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:28px 0;text-decoration:none}
+.posts h3{font-size:34px;transition:color .25s}
+.posts p{margin-top:8px;color:var(--ink-soft);font-size:16.5px;max-width:560px}
+.posts span.go{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--indigo);display:grid;place-items:center;transition:background-color .25s,color .25s}
+.posts span.go svg{width:18px;height:18px}
+.posts a:hover h3{color:var(--indigo-2)}
+.posts a:hover span.go{background:var(--indigo);color:var(--wool)}
+
+/* contact */
+.contact{padding:60px 0 130px}
+.cbox{display:grid;grid-template-columns:1.1fr .9fr;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--card)}
+.cbox .txt{padding:56px}
+.cbox .txt p{margin-top:16px;color:var(--ink-soft);max-width:480px}
+.cbox dl{margin-top:26px;display:grid;grid-template-columns:100px 1fr}
+.cbox dt,.cbox dd{padding:14px 0;border-top:1px solid rgba(36,58,114,.12)}
+.cbox dt{font-weight:600}
+.cbox dd{color:var(--ink-soft);overflow-wrap:anywhere}
+.cbox dd a{color:var(--ink);font-weight:600;text-decoration-color:var(--indigo-2);text-underline-offset:3px}
+.cbox .cta{margin-top:28px}
+.cbox .pic{position:relative;margin:0}
+.cbox .pic img{width:100%;height:100%;object-fit:cover;min-height:420px}
+
+/* footer */
+footer{background:var(--indigo-d);color:var(--wool);padding:90px 0 0}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
+.foot .name{font:500 38px/1.05 'EB Garamond',serif}
+.foot .name i{font-weight:400}
+.foot p{margin-top:14px;color:rgba(237,231,218,.72);font-size:16.5px;max-width:360px}
+.foot h4{font:600 16px/1.3 'Hanken Grotesk',sans-serif;color:var(--wash);margin-bottom:14px}
+.foot ul{list-style:none}
+.foot li{padding:5px 0;font-size:16.5px;color:rgba(237,231,218,.86);overflow-wrap:anywhere}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(237,231,218,.25)}
+.foot a:hover{border-color:var(--wool)}
+.base{margin-top:70px;border-top:1px solid rgba(237,231,218,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px;color:rgba(237,231,218,.55)}
+.proposal{background:#131E3F;color:rgba(237,231,218,.62);text-align:center;font-size:15px;padding:14px 20px}
+.proposal a{color:var(--wool)}
+
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero h1 span{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.1s}
+.hero h1 span:nth-child(3){animation-delay:.2s}
+.hero h1 span:nth-child(4){animation-delay:.3s}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* tablet & phone */
+@media (max-width:1060px){
+  .hero .wrap,.latest .head,.idea .wrap,.work .wrap,.news .wrap{grid-template-columns:1fr;gap:56px}
+  .facts ul{grid-template-columns:1fr 1fr}
+  .facts li:nth-child(3){padding-left:0;box-shadow:inset 0 1px 0 rgba(36,58,114,.18)}
+  .facts li:nth-child(4){box-shadow:inset 1px 1px 0 rgba(36,58,114,.18)}
+  .pattern{left:24px}
+  .mosaic{grid-template-columns:1fr 1fr;gap:24px}
+  .m1,.m2,.m3,.m4,.m5,.m6,.feature{grid-column:auto;grid-row:auto;margin-top:0}
+  .feature{grid-column:1/-1}
+  .cbox{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding:0 20px}
+  .nav a:not(.pill){display:none}
+  .top{padding:18px 0}
+  .brand b{font-size:25px}
+  .brand span{font-size:15px}
+  .pill{padding:11px 16px;font-size:16px}
+  .hero{padding:12px 0 70px}
+  .hero .wrap{display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .hero .txt{display:contents}
+  .kick{order:1;font-size:19px}
+  .hero h1{order:2;font-size:54px;margin-top:8px}
+  .loomside{order:3;margin-top:26px;padding:16px 16px 118px;border-radius:22px}
+  .lead{order:4;font-size:17px}
+  .hero .cta{order:5}
+  .reach{order:6}
+  .pattern{left:12px;right:12px;width:auto;bottom:14px;padding:16px 18px}
+  .pattern b{font-size:23px}
+  .pattern p{display:none}
+  .loomside .ph .tag{top:12px;right:12px;font-size:14px;padding:7px 12px}
+  .cta{flex-direction:column}
+  .cta .btn{width:100%}
+  .facts li{padding:20px 14px}
+  .facts b{font-size:21px}
+  .latest,.idea,.work,.news{padding:90px 0}
+  .latest .head{gap:20px;margin-bottom:40px}
+  .mosaic{grid-template-columns:1fr}
+  .m1,.m2,.m3,.m4,.m5,.m6,.feature{grid-column:1}
+  .feature{grid-template-columns:1fr;padding:28px 22px}
+  .feature .btn{width:100%}
+  .latest .more .btn{width:100%}
+  .duo{padding:0 30px 80px 0}
+  .idea blockquote{padding:24px 22px;font-size:22px}
+  .idea .btn{width:100%}
+  .shops{padding:6px 22px}
+  .news{padding-bottom:40px}
+  .posts h3{font-size:28px}
+  .posts a{grid-template-columns:1fr}
+  .posts span.go{display:none}
+  .cbox .txt{padding:30px 22px}
+  .cbox dl{grid-template-columns:1fr}
+  .cbox dd{border-top:0;padding-top:0}
+  .cbox .pic img{min-height:0;aspect-ratio:4/3}
+  .foot{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" id="top"><b>Plain Weave <i>and beyond</i></b><span>Elisabeth Hill, handweaver</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#idea">The Big Idea</a>
+      <a href="#latest">Portfolio</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#news">News</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="txt">
+      <div class="kick">Plain Weave and beyond</div>
+      <h1><span>Hand weaving,</span><span>color,</span><span>form,</span><span>function.</span></h1>
+      <p class="lead">I am a handweaver living in Western Massachusetts. I want to make beautiful cloth that I can turn into useful items, and I teach workshops for guilds, conferences and schools.</p>
+      <div class="cta">
+        <a class="btn btn-full" href="#workshops">Book a workshop</a>
+        <a class="btn btn-line" href="#latest">See the latest pieces</a>
+      </div>
+      <p class="reach">Or write to <a href="mailto:HillWeaver@gmail.com">HillWeaver@gmail.com</a></p>
+    </div>
+    <div class="loomside weave">
+      <figure class="ph">
+        <img src="assets/plain-weave-elisabeth-hill-conway/atelier-torchons-lin-indigo-metier.webp" alt="Five indigo linen towels with fine checks hanging from a loom bar in the studio, shelves of yarn cones behind" width="1600" height="1200">
+        <span class="tag">Indigo linen towels in the studio</span>
+      </figure>
+      <div class="pattern">
+        <small>Pattern available soon</small>
+        <b>Indigo Linen Towels</b>
+        <p>Woven using fine singles linen in a classic plain weave design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>25 years</b>immersed in warping, weaving, teaching, designing and writing</li>
+      <li><b>Patterns</b>for some pieces, through my Etsy shop</li>
+      <li><b>Workshops</b>for your guild, conference or school</li>
+      <li><b>Western Massachusetts</b>where I live and weave</li>
+    </ul>
+  </div>
+</section>
+
+<section class="latest" id="latest">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2">Latest products</h2>
+      <p>Towels, scarves, blankets, napkins and placemats, in linen, cottolin, cotton and wool. Patterns are available for some items.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="tile m1 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/echarpe-gris-franges-multicolores.webp" alt="Charcoal wool scarf with fine color stripes and long multicolored twisted fringe, on a dress form" width="1280" height="1600" loading="lazy"></div>
+        <span class="tag">Hidden Spectrum Scarf</span>
+      </figure>
+      <figure class="tile m2 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/torchon-cotolin-motif-meta-recto-verso.webp" alt="A cottolin towel with a plum geometric meta pattern on lavender, front and back" width="1600" height="1600" loading="lazy"></div>
+        <figcaption><b>Metaweave Towels</b>A plain weave graphic in summer and winter weave</figcaption>
+      </figure>
+      <figure class="tile m3 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/couverture-indigo-quadrillage-plein-air.webp" alt="Navy blanket with a fine cream grid and knotted fringe, hung outdoors" width="1200" height="1600" loading="lazy"></div>
+      </figure>
+      <div class="feature">
+        <div>
+          <small>Pattern available</small>
+          <h3>Heavy Meta Towels</h3>
+          <p>Crank it up with these mega meta towels in 2 (or 3) weights of Euroflax linen. The scale of the Meta design is expanded, with a twill tie-down for even more fun Bergman style.</p>
+          <p><em>Treadle to the metal!</em></p>
+        </div>
+        <a class="btn btn-full" href="https://plainweave.net/portfolio-item/heavy-meta-towels/">See the towels</a>
+      </div>
+      <figure class="tile m4 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/torchons-suspendus-quatre-couleurs.webp" alt="Four woven towels in red, turquoise, yellow and pale green hanging from a branch" width="1280" height="961" loading="lazy"></div>
+      </figure>
+      <figure class="tile m5 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/tissage-carreaux-rose-ocre-suspendu.webp" alt="A woven cloth in powder pink, brown and ochre checks with small diamond motifs" width="1600" height="1200" loading="lazy"></div>
+      </figure>
+      <figure class="tile m6 reveal">
+        <div class="im"><img src="assets/plain-weave-elisabeth-hill-conway/torchons-verts-suspendus-branche.webp" alt="Eight olive green towels with turquoise motifs hanging under a driftwood branch" width="1600" height="1200" loading="lazy"></div>
+        <span class="tag">Towels, from the portfolio</span>
+      </figure>
+    </div>
+    <div class="more">
+      <a class="btn btn-line" href="https://plainweave.net/portfolio/">Browse the portfolio</a>
+      <p>If you’d like to request a pattern for a particular item, leave a comment or contact me.</p>
+    </div>
+  </div>
+</section>
+
+<section class="idea" id="idea">
+  <div class="wrap">
+    <div class="duo reveal">
+      <figure class="a"><img src="assets/plain-weave-elisabeth-hill-conway/lisa-hill-au-metier.webp" alt="Elisabeth Hill adjusting the top of a large wooden loom in her studio" width="1200" height="1600" loading="lazy"></figure>
+      <figure class="b"><img src="assets/plain-weave-elisabeth-hill-conway/torchons-jaunes-roses-suspendus.webp" alt="Yellow, salmon and ochre checked towels hanging in a row from a branch" width="1200" height="1600" loading="lazy"><figcaption>Towels drying in a row</figcaption></figure>
+    </div>
+    <div>
+      <p class="kick">Hey, what’s the big idea?</p>
+      <h2 class="h2">The Big Idea</h2>
+      <p>I live in Western Massachusetts with my wonderful husband and my very bad dog, in an intermittently empty nest: the degree of emptiness depends on where my three adult children are in their life adventures, and on my current loom count.</p>
+      <p>I am inspired by my materials, tools and the natural world. I love the well-worn, always-engaging processes of designing, winding, beaming, threading, sleying, weaving and finishing cloth. Serendipity and surprise abound.</p>
+      <blockquote>I fail a lot, I succeed occasionally, I make cloth, and I know that making cloth connects me to weavers across the world and across time.</blockquote>
+      <a class="btn btn-line" href="https://plainweave.net/the-big-idea/">Read more about me</a>
+    </div>
+  </div>
+</section>
+
+<section class="work weave" id="workshops">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Book a workshop</h2>
+      <p class="intro">I am available to teach workshops at your guild, conference or school. These samples give you an idea of the scope and size of my typical workshops; contact me to discuss a custom workshop for your own guild.</p>
+      <figure class="ph reveal"><img src="assets/plain-weave-elisabeth-hill-conway/metier-a-tisser-chaine-montee.webp" alt="Front view of a large shaft loom with a black and white warp, harness and heddles visible" width="1600" height="1200" loading="lazy"></figure>
+      <div class="cta">
+        <a class="btn btn-wool" href="mailto:HillWeaver@gmail.com?subject=Workshop%20for%20our%20guild">Ask about a workshop</a>
+        <a class="btn btn-ghost" href="https://plainweave.net/workshops/">Workshop details</a>
+      </div>
+    </div>
+    <ul class="shops">
+      <li>
+        <h3>Off the Grid</h3>
+        <p>Feeling hemmed in by the ho hum of parallels and perpendiculars? In an on-loom, round-robin format we weave samples in structures that let warp and weft shift and move, creating curves, undulations and textures.</p>
+        <dl><dt>Length</dt><dd>2 to 3 days</dd><dt>Level</dt><dd>Able to warp a loom and read a weaving draft</dd><dt>Class size</dt><dd>Up to 15</dd></dl>
+      </li>
+      <li>
+        <h3>Masters of Deflection</h3>
+        <p>Mystery Weave, Deflected Double Weave, Cell Weave: it has as many names as it does possibilities. Participants weave a sampler as a design tool, then use it to design their own scarf.</p>
+        <dl><dt>Length</dt><dd>2, 3, 4 or 5 days</dd><dt>Level</dt><dd>Able to warp a loom, change tie-up and follow a draft</dd><dt>Class size</dt><dd>12 to 15</dd></dl>
+      </li>
+      <li>
+        <h3>Big Blankets Little Looms</h3>
+        <p>Ever wanted to wrap yourself in an adult-size, handwoven throw, but your loom width seems more doll-size? We stretch your loom’s capacity using double wide double weave. I work with each participant on design and colors 6 weeks before.</p>
+        <dl><dt>Length</dt><dd>3 days</dd><dt>Class size</dt><dd>Up to 12</dd></dl>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <div class="side">
+      <h2 class="h2">Latest news</h2>
+      <p>Notes from the loom for fellow weavers. My pattern-writing partner and I have also created a new website, <a href="https://groundweave.com/">Groundweave.com</a>.</p>
+    </div>
+    <ul class="posts">
+      <li><a href="https://plainweave.net/news/"><div><h3>Taking an Idea for a Walk</h3><p>Title stolen from the MOMA show “Taking a Thread for a Walk,” which was stolen from Paul Klee, who described a line as “a dot that went for a walk.”</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></a></li>
+      <li><a href="https://plainweave.net/news/"><div><h3>The Grid</h3><p>Hello Weavers, I am returning to my blog after a long hiatus.</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></a></li>
+      <li><a href="https://plainweave.net/2022/12/02/lovely-lucious-linen/"><div><h3>Lovely, Luscious, Linen</h3><p>A group of weavers admired a set of linen napkins, but agreed that linen is too scary to work with. I want to firmly respond “au contraire!”</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cbox reveal">
+      <div class="txt">
+        <h2 class="h2">Contact</h2>
+        <p>For a workshop, a pattern request, or an event you would like me to attend, please get in touch.</p>
+        <dl>
+          <dt>Name</dt><dd>Elisabeth Hill</dd>
+          <dt>Phone</dt><dd><a href="tel:+14132501275">413.250.1275</a></dd>
+          <dt>Email</dt><dd><a href="mailto:HillWeaver@gmail.com">HillWeaver@gmail.com</a></dd>
+          <dt>Studio</dt><dd>Western Massachusetts</dd>
+        </dl>
+        <div class="cta">
+          <a class="btn btn-full" href="mailto:HillWeaver@gmail.com">Email Elisabeth</a>
+          <a class="btn btn-line" href="tel:+14132501275">Call 413.250.1275</a>
+        </div>
+      </div>
+      <figure class="pic"><img src="assets/plain-weave-elisabeth-hill-conway/sets-de-table-soie-noil-table-dressee.webp" alt="A long wooden table set with handwoven silk noil placemats in pastel stripes" width="1200" height="1600" loading="lazy"><span class="tag">Silk Noil Placemats Set</span></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="name">Plain Weave <i>and beyond</i></div>
+        <p>Hand Weaving, Color, Form, Function. Woven by Elisabeth Hill in Western Massachusetts.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Elisabeth Hill</li>
+          <li><a href="tel:+14132501275">413.250.1275</a></li>
+          <li><a href="mailto:HillWeaver@gmail.com">HillWeaver@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Around the studio</h4>
+        <ul>
+          <li><a href="https://www.etsy.com/shop/plainweave">Visit PlainWeave on Etsy</a></li>
+          <li><a href="https://plainweave.net/portfolio/">Portfolio</a></li>
+          <li><a href="https://plainweave.net/workshops/">Workshops</a></li>
+          <li><a href="https://groundweave.com/">Groundweave.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base"><span>© Plain Weave and beyond</span><span>Western Massachusetts</span></div>
+  </div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Plain Weave and beyond</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

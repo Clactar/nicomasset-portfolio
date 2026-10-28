@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Clay by Stacia · Handmade pottery in Kyle, Texas</title>
+<meta name="description" content="Unique stoneware for the kitchen, ring holders with melted glass, handmade glazes and slip trailed floral designs. Hand building classes in Kyle, Texas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%233F4D3B'/%3E%3Ccircle cx='50' cy='14' r='5' fill='%23D2A23A'/%3E%3Ctext x='31' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23F2F0E6'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,500&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1EFE4; --paper-2:#E5E7D8; --card:#FAF8F0;
+  --sage:#8C9C7C; --sage-l:#C9D2BB; --sage-d:#3F4D3B; --sage-dd:#2F3A2C;
+  --ink:#262E23; --ink-2:#56604F;
+  --mustard:#D2A23A; --mustard-d:#94690F;
+  --shadow:0 34px 64px -36px rgba(47,58,44,.62);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.7 'Sora',sans-serif;overflow-x:hidden}
+::selection{background:var(--mustard);color:var(--sage-dd)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.06;letter-spacing:-.018em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--mustard-d);outline-offset:3px;border-radius:6px}
+
+/* motif de points de barbotine */
+.dots{background-image:radial-gradient(circle,var(--sage) 2.6px,transparent 3.2px);background-size:20px 20px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:600 16px/1.2 'Sora',sans-serif;text-decoration:none;border:1.5px solid var(--sage-d);text-align:center;transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--sage-d);color:var(--paper)}
+.btn-full:hover{background:var(--mustard);border-color:var(--mustard);color:var(--sage-dd);box-shadow:0 18px 32px -18px rgba(148,105,15,.8)}
+.btn-line{color:var(--sage-d)}
+.btn-line:hover{background:var(--sage-d);color:var(--paper)}
+.btn-gold{background:var(--mustard);border-color:var(--mustard);color:var(--sage-dd)}
+.btn-gold:hover{background:var(--paper);border-color:var(--paper)}
+.btn-pale{border-color:rgba(241,239,228,.5);color:var(--paper)}
+.btn-pale:hover{background:var(--paper);color:var(--sage-d)}
+
+/* en-tête */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:14px}
+.brand i{width:44px;height:44px;border-radius:50%;background:var(--sage-d);color:var(--paper);display:grid;place-items:center;font:italic 500 25px/1 'Lora',serif;position:relative;flex:none}
+.brand i::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--mustard);top:-1px;right:-1px;border:2px solid var(--paper)}
+.brand b{display:block;font:500 25px/1 'Lora',serif;letter-spacing:-.01em}
+.brand span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:6px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:15.5px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:50%;bottom:-9px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--mustard);transform:scale(0);transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scale(1)}
+.pill{background:var(--sage-d);color:var(--paper);padding:12px 22px;border-radius:999px;font-weight:600!important;transition:background-color .25s,color .25s}
+.pill:hover{background:var(--mustard);color:var(--sage-dd)}
+
+/* héros */
+.hero{padding:34px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;column-gap:56px;grid-template-areas:". vis" "kick vis" "h1 vis" "lead vis" "cta vis" "reach vis" ". vis";grid-template-rows:1fr auto auto auto auto auto 1fr}
+.kick{grid-area:kick;font-weight:600;font-size:15.5px;color:var(--mustard-d);margin-bottom:22px}
+.hero h1{grid-area:h1;font-size:clamp(46px,6.2vw,84px);line-height:1;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:var(--sage-d)}
+.lead{grid-area:lead;margin-top:28px;max-width:500px;color:var(--ink-2);font-size:18px}
+.cta{grid-area:cta;display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.reach{grid-area:reach;margin-top:22px;font-size:15.5px;color:var(--ink-2)}
+.reach a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(210,162,58,.7);overflow-wrap:anywhere}
+.reach a:hover{border-color:var(--sage-d)}
+.vis{grid-area:vis;position:relative;height:640px}
+.disc{position:absolute;top:10px;right:0;width:560px;height:560px;border-radius:50%;background:var(--mustard)}
+.disc-dots{position:absolute;left:-10px;bottom:20px;width:200px;height:200px;border-radius:50%;opacity:.55}
+.hero-ph{position:absolute;left:0;top:100px;width:84%;border-radius:26px;overflow:hidden;box-shadow:0 44px 80px -40px rgba(47,58,44,.75);background:#fff}
+.hero-ph img{width:100%;aspect-ratio:1440/1125;object-fit:cover}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(250,248,240,.96);color:var(--ink);font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;line-height:1.3;box-shadow:0 10px 24px -14px rgba(47,58,44,.7)}
+.tag small{font-weight:400;color:var(--ink-2);font-size:13.5px}
+.hero-ring{position:absolute;right:18px;top:20px;width:200px;height:200px;border-radius:50%;overflow:hidden;border:8px solid var(--paper);box-shadow:0 30px 50px -28px rgba(47,58,44,.8)}
+.hero-ring img{width:100%;height:100%;object-fit:cover;transform:scale(1.18)}
+
+/* bandeau de faits */
+.facts{background:var(--sage-d);color:var(--paper)}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:14px 36px;padding:26px 0}
+.facts li{display:flex;align-items:baseline;gap:12px;font-size:15.5px;color:rgba(241,239,228,.82)}
+.facts b{font:500 26px/1 'Lora',serif;color:var(--mustard)}
+
+/* pièces */
+.work{padding:130px 0 120px}
+.work-head{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:end;margin-bottom:60px}
+.h2{font-size:clamp(36px,4.4vw,58px)}
+.work-head p{color:var(--ink-2);max-width:520px}
+.mosaic{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:28px;align-items:start}
+.piece{position:relative;margin:0}
+.piece .ph{border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.piece .ph img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.piece figcaption{margin-top:16px;max-width:360px}
+.piece figcaption b{display:block;font:500 21px/1.25 'Lora',serif}
+.piece figcaption span{display:block;margin-top:4px;font-size:15.5px;color:var(--ink-2);line-height:1.6}
+.p-big{grid-row:1/3}
+.p-big .ph img{aspect-ratio:1440/1512}
+.p-2{margin-top:90px}
+.p-3 .ph{border-radius:50%;box-shadow:0 0 0 12px var(--paper-2),var(--shadow)}
+.p-4{grid-column:2/4;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--card);border-radius:26px;padding:22px;box-shadow:0 28px 56px -40px rgba(47,58,44,.6)}
+.p-4 .ph{box-shadow:none;border-radius:16px}
+.p-4 figcaption{margin:0;padding-right:12px}
+.p-4 figcaption + figcaption{margin-top:18px}
+
+/* cours (sombre) */
+.lessons{background:var(--sage-d);color:var(--paper);padding:130px 0;position:relative;overflow:hidden}
+.lessons::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background-image:radial-gradient(circle,rgba(210,162,58,.45) 2.6px,transparent 3.2px);background-size:20px 20px}
+.lessons .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:90px;position:relative}
+.lessons .h2{color:var(--paper)}
+.lessons .intro{margin-top:22px;color:rgba(241,239,228,.8);max-width:520px}
+.snaps{position:relative;height:330px;margin-top:56px}
+.snap{position:absolute;width:230px;background:var(--card);padding:10px 10px 14px;border-radius:8px;box-shadow:0 30px 50px -26px rgba(0,0,0,.6)}
+.snap img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.snap span{display:block;margin-top:10px;font-size:13.5px;color:var(--ink-2);line-height:1.4;padding:0 4px}
+.snap-1{left:0;top:0;rotate:-4deg}
+.snap-2{left:200px;top:60px;rotate:5deg}
+.lessons .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.terms{background:var(--card);color:var(--ink);border-radius:24px;padding:14px 36px 28px;box-shadow:0 44px 80px -44px rgba(0,0,0,.75)}
+.terms h3{font-size:27px;padding:22px 0 6px}
+.terms dl{display:grid;grid-template-columns:150px 1fr}
+.terms dt,.terms dd{padding:15px 0;border-top:1px solid rgba(63,77,59,.13)}
+.terms dt{font-weight:600;font-size:15.5px}
+.terms dd{color:var(--ink-2);font-size:16px}
+.terms dd b{color:var(--ink);font-weight:600}
+.next{margin-top:18px;background:var(--paper-2);border-radius:18px;padding:20px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.next p{font-size:15.5px;color:var(--ink-2)}
+.next p b{display:block;color:var(--ink);font:500 19px/1.3 'Lora',serif;margin-bottom:4px}
+.next .full{grid-column:1/-1;font-size:15px}
+
+/* Stacia */
+.about{padding:140px 0 120px}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.pair{position:relative;padding:0 70px 90px 0}
+.pair .a{border-radius:24px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.pair .a img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.pair .b{position:absolute;right:0;bottom:0;width:50%;border-radius:50%;overflow:hidden;border:10px solid var(--paper);box-shadow:0 30px 60px -30px rgba(47,58,44,.75)}
+.pair .b img{width:100%;aspect-ratio:1/1;object-fit:cover;transform:scale(1.12)}
+.pair .tag{left:18px;top:18px;bottom:auto}
+.about .say{margin-top:24px;color:var(--ink-2);max-width:540px}
+.about .say + .say{margin-top:16px}
+.about blockquote{margin-top:34px;padding:26px 30px;background:var(--card);border-radius:22px;font:italic 500 23px/1.4 'Lora',serif;color:var(--sage-d);box-shadow:0 24px 50px -40px rgba(47,58,44,.6);max-width:540px}
+
+/* trouver les pièces */
+.find{padding:0 0 140px}
+.find-box{position:relative;background:var(--paper-2);border-radius:32px;padding:80px 72px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;overflow:hidden}
+.find-box .dots{position:absolute;left:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;opacity:.4}
+.find-box > div{position:relative}
+.find-box p{margin-top:20px;color:var(--ink-2);max-width:480px}
+.find-box .note{font-size:15.5px;margin-top:16px}
+.reach-card{background:var(--card);border-radius:24px;padding:34px 34px 30px;box-shadow:0 36px 70px -38px rgba(47,58,44,.65)}
+.reach-card h3{font-size:29px}
+.rows{margin-top:18px;display:grid}
+.rows a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:15px 0;border-top:1px solid rgba(63,77,59,.13);text-decoration:none;font-weight:600;transition:color .2s}
+.rows a span{font-weight:400;color:var(--ink-2);text-align:right;overflow-wrap:anywhere}
+.rows a:hover{color:var(--mustard-d)}
+.reach-card .btn{margin-top:20px;width:100%}
+
+/* pied */
+.foot{background:var(--sage-dd);color:var(--paper);padding:86px 0 48px}
+.foot .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}
+.foot .big{font:500 44px/1.05 'Lora',serif;letter-spacing:-.015em}
+.foot .big em{color:var(--mustard)}
+.foot p,.foot li{color:rgba(241,239,228,.74);font-size:16px}
+.foot .grid > div > p{margin-top:16px;max-width:380px}
+.foot h4{font:600 15px/1 'Sora',sans-serif;color:var(--mustard);margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(241,239,228,.25);transition:border-color .2s;overflow-wrap:anywhere}
+.foot a:hover{border-color:var(--mustard)}
+.foot .legal{margin-top:64px;padding-top:24px;border-top:1px solid rgba(241,239,228,.14);display:flex;justify-content:space-between;gap:20px;font-size:14px;color:rgba(241,239,228,.52)}
+.proposal{background:var(--sage-dd);color:rgba(241,239,228,.52);text-align:center;font-size:13px;padding:0 20px 26px}
+.proposal a{color:rgba(241,239,228,.78)}
+
+/* apparitions (photos seulement) */
+html.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+html.js .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}.btn,.pill,.nav a::after{transition:none}}
+
+@media (max-width:1150px){
+  .disc{width:480px;height:480px}
+  .vis{height:580px}
+  .facts ul{grid-template-columns:repeat(2,auto)}
+}
+@media (max-width:860px){
+  body{font-size:16.5px}
+  .wrap{padding:0 22px}
+  .top{padding:18px 0 4px}
+  .top .wrap{flex-wrap:wrap;row-gap:16px}
+  .brand i{width:38px;height:38px;font-size:22px}
+  .brand b{font-size:22px}
+  .brand span{font-size:13px}
+  .nav{width:100%;gap:22px;flex-wrap:wrap}
+  .nav a{font-size:16px}
+  .nav .pill{display:none}
+  .hero{padding:24px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"kick" "h1" "vis" "lead" "cta" "reach";grid-template-rows:auto}
+  .kick{margin-bottom:14px;font-size:15px}
+  .hero h1{font-size:44px}
+  .vis{height:auto;aspect-ratio:1/0.92;margin-top:26px}
+  .disc{width:86%;height:auto;aspect-ratio:1;top:0}
+  .disc-dots{width:120px;height:120px;left:-6px;bottom:0}
+  .hero-ph{top:18%;width:90%;border-radius:20px}
+  .hero-ring{width:110px;height:110px;border-width:6px;right:0;top:0}
+  .tag{font-size:13px;left:12px;bottom:12px;padding:7px 13px}
+  .tag small{font-size:12.5px}
+  .lead{font-size:17px;margin-top:22px}
+  .cta{flex-direction:column;margin-top:26px}
+  .cta .btn{width:100%}
+  .facts ul{grid-template-columns:1fr;gap:12px;padding:24px 0}
+  .work{padding:84px 0 70px}
+  .work-head,.lessons .wrap,.about .wrap,.find-box,.foot .grid{grid-template-columns:1fr;gap:40px}
+  .work-head{margin-bottom:40px}
+  .mosaic{grid-template-columns:1fr 1fr;gap:20px}
+  .p-big{grid-row:auto;grid-column:1/-1}
+  .p-2{margin-top:0}
+  .p-3{margin-top:40px}
+  .p-4{grid-column:1/-1;grid-template-columns:1fr;padding:16px}
+  .p-4 figcaption{padding:0 6px}
+  .piece figcaption b{font-size:19px}
+  .lessons{padding:84px 0}
+  .lessons::before{width:240px;height:240px;right:-90px;top:-90px}
+  .snaps{height:auto;display:flex;gap:14px;margin-top:40px}
+  .snap{position:relative;left:auto;top:auto;width:50%;max-width:200px;padding:8px 8px 12px}
+  .snap-2{margin-top:30px}
+  .lessons .btns{flex-direction:column}
+  .lessons .btn{width:100%}
+  .terms{padding:8px 22px 22px}
+  .terms dl{grid-template-columns:1fr}
+  .terms dt{padding-bottom:0}
+  .terms dd{border-top:0;padding-top:4px}
+  .next{grid-template-columns:1fr}
+  .about{padding:90px 0 70px}
+  .pair{padding:0 40px 70px 0}
+  .about blockquote{font-size:20px;padding:22px}
+  .find{padding:0 0 90px}
+  .find-box{padding:44px 22px 22px;border-radius:26px}
+  .reach-card{padding:26px 20px 22px}
+  .rows a{flex-direction:column;gap:2px}
+  .rows a span{text-align:left}
+  .foot{padding:64px 0 40px}
+  .foot .big{font-size:36px}
+  .foot .legal{flex-direction:column}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Clay by Stacia, home">
+      <i aria-hidden="true">S</i>
+      <span class="brand-t"><b>Clay by Stacia</b><span>Handmade pottery, Kyle, Texas</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pottery">Pottery</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#about">About</a>
+      <a href="#purchase">Purchase</a>
+      <a class="pill" href="mailto:miller.stacia@gmail.com">Email Stacia</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="kick">Welcome to Clay by Stacia</p>
+    <h1>Unique stoneware for the <em>kitchen</em>.</h1>
+    <div class="vis">
+      <div class="disc" aria-hidden="true"></div>
+      <div class="disc-dots dots" aria-hidden="true"></div>
+      <figure class="hero-ph rv">
+        <img src="assets/clay-by-stacia-kyle/saladier-chips-deux-coupelles-trellis-lake.webp" width="1440" height="1125" alt="Large wheel thrown chip bowl with two attached dip bowls, deep blue green glaze over a textured band of raised vines">
+        <figcaption class="tag">Chip and 2 Dips <small>in my trellis lake design</small></figcaption>
+      </figure>
+      <div class="hero-ring rv">
+        <img src="assets/clay-by-stacia-kyle/porte-bagues-fleur-verre-fondu.webp" width="1440" height="1440" alt="Flower shaped ring holder with melted turquoise glass in the center">
+      </div>
+    </div>
+    <p class="lead">I specialize in unique stoneware for the kitchen; ring holders with melted glass accents; beautiful, handmade glaze colors; and slip trailed floral designs.</p>
+    <div class="cta">
+      <a class="btn btn-full" href="mailto:miller.stacia@gmail.com?subject=Clay%20by%20Stacia">Email Stacia</a>
+      <a class="btn btn-line" href="#lessons">Hand building classes</a>
+    </div>
+    <p class="reach">Write to <a href="mailto:miller.stacia@gmail.com">miller.stacia@gmail.com</a></p>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>2012</b> studio opened</li>
+      <li><b>Kyle</b> home studio in Texas</li>
+      <li><b>16+</b> adult classes, no experience needed</li>
+      <li><b>5</b> students per class at most</li>
+    </ul>
+  </div>
+</section>
+
+<section class="work" id="pottery">
+  <div class="wrap">
+    <div class="work-head">
+      <h2 class="h2">Thrown, altered, textured and slip trailed.</h2>
+      <p>Functional kitchen stoneware, ring holders and decorative pieces: wheel thrown or slab built, with colored slip, texture, slip trailing and handmade glaze colors.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="piece p-big">
+        <div class="ph rv"><img src="assets/clay-by-stacia-kyle/coupe-sur-pied-anses-torsadees.webp" width="1440" height="1512" alt="Pedestal bowl with twisted handles, blue green glaze running over a textured band of vines" loading="lazy"></div>
+        <figcaption><b>Trellis Lake Compote</b><span>My trellis lake glaze combination on a thrown and altered pedestal bowl with twisted handles.</span></figcaption>
+      </figure>
+      <figure class="piece p-2">
+        <div class="ph rv"><img src="assets/clay-by-stacia-kyle/beurrier-blanc-decor-feuilles.webp" width="1440" height="1440" alt="White covered butter dish with a twisted handle and a textured brown panel with a flower" loading="lazy"></div>
+        <figcaption><b>Butter Dish</b><span>Covered, in white, with colored slip, texture, slip trailing and painted glaze leaves and berries.</span></figcaption>
+      </figure>
+      <figure class="piece p-3">
+        <div class="ph rv"><img src="assets/clay-by-stacia-kyle/dessous-de-verre-vitrail.webp" width="1440" height="1428" alt="Four round stoneware coasters with black slip swirls filled with blue, green and amber melted glass" loading="lazy"></div>
+        <figcaption><b>&ldquo;Stained Glass&rdquo; coasters</b><span>Stoneware with black slip trailing and melted colored glass.</span></figcaption>
+      </figure>
+      <div class="piece p-4">
+        <div class="ph rv"><img src="assets/clay-by-stacia-kyle/mugs-turquoise-barbotine.webp" width="1440" height="1440" alt="Three speckled turquoise mugs with slip trailed fern and swirl designs" loading="lazy"></div>
+        <div>
+          <figcaption><b>Slip Trailed Mugs</b><span>Wheel thrown, with colored slip, slip trailing and iron wash.</span></figcaption>
+          <figcaption><b>Pedestal Earring Bowl</b><span>Slip trailing, chattered glaze, melted glass, and room to hang 48 pairs of earrings.</span></figcaption>
+          <figcaption><b>Oval Utensil Holder</b><span>Wheel and slab built, with twisted handles and two pockets for smaller utensils.</span></figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lessons" id="lessons">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Learn to build your own pottery.</h2>
+      <p class="intro">I offer adult classes for beginning to intermediate hand building, held at my home studio in Kyle. No clay experience is necessary. We concentrate on slab and extruding skills, and may also try pinch pots and coil building. I only have two wheels, so wheel skills come as a rotation, one project per cycle.</p>
+      <div class="snaps">
+        <figure class="snap snap-1 rv"><img src="assets/clay-by-stacia-kyle/demonstration-tour-atelier-collectif.webp" width="957" height="954" alt="A wheel throwing demonstration watched by a small group in a pottery studio" loading="lazy"><span>A wheel demonstration</span></figure>
+        <figure class="snap snap-2 rv"><img src="assets/clay-by-stacia-kyle/decor-grave-sur-pot-au-tour.webp" width="1600" height="1200" alt="Hands carving a floral design into an unfired pot on the wheel" loading="lazy"><span>Carving a design on the wheel</span></figure>
+      </div>
+      <div class="btns">
+        <a class="btn btn-gold" href="mailto:miller.stacia@gmail.com?subject=Hand%20building%20classes">Ask about a spot</a>
+        <a class="btn btn-pale" href="https://www.claybystacia.com/lessons">Full class details</a>
+      </div>
+    </div>
+    <div class="terms">
+      <h3>Hand building classes</h3>
+      <dl>
+        <dt>Price</dt><dd><b>$120 per student</b> for a 3 week cycle. Half secures your spot, half on the first day.</dd>
+        <dt>Each class</dt><dd>2 hours, once a week. We build first, and glaze your creations in the last class.</dd>
+        <dt>Included</dt><dd>Instruction, glazes, firing and 25 pounds of clay. More clay is $15 per 25 pound bag.</dd>
+        <dt>Class size</dt><dd>Five slots at most. Returning students get priority, then I open to my waitlist.</dd>
+        <dt>Pickup</dt><dd>Usually one to two weeks after the last class, once I fire your pieces.</dd>
+        <dt>Payment</dt><dd>Cash, check, Facebook payments, Venmo, Apple Pay, PayPal, Zelle, or credit and debit.</dd>
+      </dl>
+      <div class="next">
+        <p><b>Sunday evenings</b>6 to 8 pm, November 1, 8 and 15</p>
+        <p><b>Monday mornings and evenings</b>10 to noon or 6 to 8 pm, November 2, 9 and 16</p>
+        <p class="full">I will then take a break from teaching until the new year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="pair">
+      <div class="a rv"><img src="assets/clay-by-stacia-kyle/mug-bleu-frise-sculptee.webp" width="1440" height="1440" alt="Wheel thrown mug in blue and brown glaze with a textured band of raised vines and leaves" loading="lazy"></div>
+      <div class="b rv"><img src="assets/clay-by-stacia-kyle/plat-de-service-pod.webp" width="1440" height="1440" alt="White pod shaped serving dish with a brown flowered band and blue green glaze touches" loading="lazy"></div>
+      <span class="tag">Made in Kyle, Texas</span>
+    </div>
+    <div>
+      <h2 class="h2">Hello! I&rsquo;m Stacia.</h2>
+      <p class="say">My name is pronounced Stay-shuh, like station without the n, but I&rsquo;ll answer to most anything! I found my love of clay in college, as an art major, when pottery was a required course. Now I can&rsquo;t imagine doing anything else.</p>
+      <p class="say">I worked at a paint-your-own-pottery shop after graduation, then in 2012 opened my own studio. I love to make functional kitchen stoneware, slip trail, and experiment with glazes. I work out of my home in Kyle, where I live with my husband and young son.</p>
+      <blockquote>God has blessed me richly with the ability to have pottery part of my daily life, and I hope my pottery blesses you too!</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="purchase">
+  <div class="wrap">
+    <div class="find-box">
+      <div class="dots" aria-hidden="true"></div>
+      <div>
+        <h2 class="h2">Find a piece for your kitchen.</h2>
+        <p>A selection of my unique kitchen pottery, ring holders and decorative stoneware is in my Etsy shop.</p>
+        <p class="note">Wondering where to find my pottery in person? Send me a note.</p>
+      </div>
+      <div class="reach-card">
+        <h3>Reach Stacia</h3>
+        <div class="rows">
+          <a href="mailto:miller.stacia@gmail.com">Email <span>miller.stacia@gmail.com</span></a>
+          <a href="https://www.etsy.com/shop/claybystacia">Etsy <span>claybystacia</span></a>
+          <a href="http://www.instagram.com/claybystacia/">Instagram <span>@claybystacia</span></a>
+          <a href="http://www.facebook.com/claybystacia">Facebook <span>Clay by Stacia</span></a>
+        </div>
+        <a class="btn btn-full" href="mailto:miller.stacia@gmail.com?subject=A%20question%20about%20your%20pottery">Email Stacia</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="big">Clay by <em>Stacia</em></div>
+        <p>A small home-based pottery studio in Kyle, Texas. Kitchen stoneware, ring holders with melted glass, and hand building classes for adults.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:miller.stacia@gmail.com">miller.stacia@gmail.com</a></li>
+          <li>Home studio in Kyle, Texas</li>
+          <li><a href="https://www.etsy.com/shop/claybystacia">Shop on Etsy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow along</h4>
+        <ul>
+          <li><a href="http://www.instagram.com/claybystacia/">Instagram</a></li>
+          <li><a href="http://www.facebook.com/claybystacia">Facebook</a></li>
+          <li><a href="http://www.pinterest.com/millerstacia/">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; Clay by Stacia</span><span>Handmade stoneware, Kyle, Texas</span></div>
+  </div>
+</footer>
+<p class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Clay by Stacia</p>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

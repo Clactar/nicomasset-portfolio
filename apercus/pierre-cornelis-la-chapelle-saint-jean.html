@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à Pierre Cornélis, tourneur et sculpteur sur bois à La Chapelle-Saint-Jean (24), nuit du 2026-10-28.
+     CONTENU : textes, distinctions, galeries et photos relevés sur https://www.pierrecornelis.com/ (dossier de Marco du 28/10/2026). Rien d'inventé.
+     DÉFAUT RÉGLÉ : l'exposition « 1er trimestre 2026 » de Niort n'est plus présentée comme actuelle ou à venir. « À venir » ne garde que
+     ce que son site annonce après le 28/10/2026 (journée AFTAB du 8 novembre 2026 à l'atelier, Révélations Paris 2027) ; Niort passe dans
+     « Expositions passées », datée. Fautes « Bienvenu » et « Réalisations antérieurs » corrigées.
+     DESIGN (Nova) : gris pierre froid, encre graphite, accent ocre jaune. Instrument Serif + Manrope. Héros de galerie, titre qui chevauche la photo. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#E9E7E1" />
+<title>Pierre Cornélis, tourneur et sculpteur sur bois en Périgord Noir</title>
+<meta name="description" content="Pièces uniques tournées et sculptées dans le bois, travail de la surface, formations à la journée dans l'atelier de La Chapelle-Saint-Jean, en Dordogne." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231E1F1C'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23B98A2E'%3EP%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --pierre:#E9E7E1;
+  --pierre-2:#DDDAD2;
+  --carte:#F5F4F0;
+  --graphite:#1E1F1C;
+  --graphite-doux:#55574F;
+  --ocre:#B98A2E;
+  --ocre-fonce:#80601D;
+  --sur-sombre:#E9E7E1;
+  --sur-sombre-doux:#B4B2AA;
+  --filet:rgba(30,31,28,.14);
+  --ombre:0 34px 64px -36px rgba(30,31,28,.6);
+  --ombre-courte:0 18px 36px -24px rgba(30,31,28,.55);
+  --fd:"Instrument Serif",Georgia,serif;
+  --ft:"Manrope",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pierre);color:var(--graphite);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--ocre);color:var(--graphite)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--fd);letter-spacing:-.012em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--ocre);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--graphite);transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn-plein{background:var(--graphite);color:var(--pierre)}
+.btn-plein:hover{background:var(--ocre);border-color:var(--ocre);color:var(--graphite);transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(185,138,46,.95)}
+.btn-contour{background:transparent;color:var(--graphite)}
+.btn-contour:hover{background:var(--graphite);color:var(--pierre);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--ocre);border-color:var(--ocre);color:var(--graphite)}
+.sombre .btn-plein:hover{background:var(--pierre);border-color:var(--pierre)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--graphite)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* cartel de musée posé sur la photo */
+.cartel{position:absolute;left:18px;bottom:18px;background:rgba(245,244,240,.95);color:var(--graphite);font-size:15px;font-weight:600;line-height:1.35;padding:10px 16px;border-radius:10px;box-shadow:0 12px 26px -16px rgba(30,31,28,.6);max-width:calc(100% - 36px)}
+.cartel i{font-family:var(--fd);font-style:italic;font-weight:400;font-size:19px;display:block;line-height:1.1}
+.cartel.droite{left:auto;right:18px}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:31px}
+.marque small{font-size:14px;color:var(--graphite-doux);margin-top:6px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--ocre-fonce)}
+.pill-tete{background:var(--graphite);color:var(--pierre);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .3s,color .3s}
+.pill-tete:hover{background:var(--ocre);color:var(--graphite)}
+
+/* héros de galerie */
+.heros{padding:64px 0 104px}
+.heros .env{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.lieu{grid-column:1 / 9;grid-row:1;font-size:16px;font-weight:700;color:var(--ocre-fonce);margin-bottom:14px}
+.heros h1{grid-column:1 / 13;grid-row:2;position:relative;z-index:2;font-size:clamp(64px,10.4vw,150px);line-height:.9;letter-spacing:-.025em;pointer-events:none}
+.heros h1 span{display:block}
+.heros h1 .l2{padding-left:.04em}
+.heros-photo{grid-column:5 / 13;grid-row:2 / 4;align-self:start;margin-top:166px;position:relative;z-index:1;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);transform:translateX(16px)}
+.heros-photo img{width:100%;aspect-ratio:16/9.4;object-fit:cover;object-position:38% 50%}
+.heros-texte{grid-column:1 / 5;grid-row:3;padding-top:56px;padding-right:8px}
+.heros-texte p{font-size:19px;color:var(--graphite-doux)}
+.heros-texte p b{color:var(--graphite);font-weight:700}
+.heros-texte .actions{margin-top:32px;flex-direction:column;align-items:flex-start}
+
+/* bandeau de faits */
+.faits{background:var(--pierre-2)}
+.faits ul{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:0}
+.faits li{padding:28px 28px 28px 0;font-size:16px;line-height:1.4;color:var(--graphite-doux)}
+.faits li + li{padding-left:28px;border-left:1px solid var(--filet)}
+.faits li b{display:block;font-family:var(--fd);font-weight:400;font-size:30px;line-height:1.05;color:var(--graphite);margin-bottom:6px}
+
+/* démarche */
+.demarche{padding:136px 0 120px}
+.demarche .env{display:grid;grid-template-columns:5fr 7fr;gap:88px;align-items:start}
+.portrait{position:relative;max-width:380px}
+.portrait figure{border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 40%;filter:contrast(1.04)}
+.portrait .note{margin-top:18px;font-size:15px;color:var(--graphite-doux);max-width:32ch}
+.demarche blockquote{margin:0;font-family:var(--fd);font-size:clamp(36px,4vw,54px);line-height:1.08;letter-spacing:-.01em}
+.demarche blockquote em{color:var(--ocre-fonce)}
+.demarche .txt{margin-top:40px;columns:2;column-gap:40px;color:var(--graphite-doux);font-size:17px}
+.demarche .txt p{break-inside:avoid;margin-bottom:16px}
+.demarche .signe{margin-top:16px;font-size:16px;font-weight:700}
+
+/* pièces */
+.pieces{padding:0 0 136px}
+.pieces .haut{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:end;margin-bottom:56px}
+.pieces h2{font-size:clamp(40px,4.6vw,64px);line-height:1.02}
+.pieces .haut p{color:var(--graphite-doux);font-size:17px}
+.vitrine{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.p-grand{grid-column:1 / 6;grid-row:1 / 3;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.p-grand img{width:100%;aspect-ratio:4/5.2;object-fit:cover;object-position:50% 55%}
+.p-large{grid-column:6 / 13;position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.p-large img{width:100%;aspect-ratio:16/8.6;object-fit:cover;object-position:50% 52%}
+.p-duo{grid-column:6 / 13;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}
+.p-carre{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.p-carre img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.p-decal{margin-top:44px}
+.reserve{margin-top:72px;display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center;background:var(--carte);border-radius:24px;padding:40px 48px;box-shadow:var(--ombre-courte)}
+.reserve h3{font-family:var(--fd);font-size:36px;line-height:1.08}
+.reserve p{color:var(--graphite-doux);font-size:17px;margin-top:14px}
+.reserve .mini{display:flex;gap:20px;justify-content:flex-end;align-items:flex-end}
+.reserve .mini figure{position:relative;width:200px;border-radius:12px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.reserve .mini figure:nth-child(2){width:230px;transform:translateY(-14px)}
+.reserve .mini img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.reserve .mini figcaption{position:absolute;left:10px;bottom:10px;background:rgba(245,244,240,.95);font-size:14px;font-weight:600;padding:5px 11px;border-radius:8px}
+.pieces .actions{margin-top:28px}
+
+/* où voir les pièces : section sombre */
+.sombre{background:var(--graphite);color:var(--sur-sombre)}
+.voir{padding:128px 0}
+.voir .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end}
+.voir h2{font-size:clamp(40px,4.6vw,64px);line-height:1.02}
+.voir .haut p{color:var(--sur-sombre-doux);font-size:17px}
+.voir .grille{display:grid;grid-template-columns:6fr 5fr;gap:72px;margin-top:64px;align-items:start}
+.voir h3{font-family:var(--ft);font-weight:700;font-size:16px;color:var(--ocre);margin-bottom:6px}
+.avenir li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:30px 0;border-top:1px solid rgba(233,231,225,.18)}
+.avenir li:last-child{border-bottom:1px solid rgba(233,231,225,.18)}
+.avenir .quand{font-family:var(--fd);font-size:34px;line-height:1.02}
+.avenir .quand small{display:block;font-family:var(--ft);font-size:15px;font-weight:600;color:var(--sur-sombre-doux);margin-top:8px}
+.avenir h4{margin:0;font-size:20px;font-weight:700;line-height:1.3}
+.avenir p{color:var(--sur-sombre-doux);font-size:16px;margin-top:6px}
+.galeries{background:#2A2B27;border-radius:22px;padding:34px 36px 26px}
+.galeries li{padding:16px 0;border-bottom:1px solid rgba(233,231,225,.12)}
+.galeries li:last-child{border-bottom:0}
+.galeries b{display:block;font-size:18px;font-weight:700}
+.galeries span{display:block;color:var(--sur-sombre-doux);font-size:16px;margin-top:2px}
+.galeries a{color:var(--sur-sombre);text-underline-offset:3px;text-decoration-color:rgba(185,138,46,.7)}
+.galeries a:hover{color:var(--ocre)}
+.passees{margin-top:80px;border-top:1.5px solid var(--sur-sombre);padding-top:28px}
+.passees .tete-p{display:flex;justify-content:space-between;gap:24px;align-items:baseline;flex-wrap:wrap}
+.passees h3{font-family:var(--fd);font-weight:400;font-size:34px;color:var(--sur-sombre);margin:0}
+.passees .tete-p p{color:var(--sur-sombre-doux);font-size:16px}
+.passees ol{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px;margin-top:20px}
+.passees li{padding:16px 0;border-bottom:1px solid rgba(233,231,225,.12);font-size:16px;color:var(--sur-sombre-doux);line-height:1.45}
+.passees li b{display:block;color:var(--sur-sombre);font-weight:700;font-size:15px;margin-bottom:3px}
+.voir .actions{margin-top:48px}
+
+/* atelier partagé */
+.atelier{padding:136px 0}
+.atelier .env{display:grid;grid-template-columns:6fr 6fr;gap:88px;align-items:center}
+.collage{position:relative;padding:0 64px 120px 0}
+.collage .fond{border-radius:22px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.collage .fond img{width:100%;aspect-ratio:5/5.2;object-fit:cover;object-position:40% 50%}
+.polaroid{position:absolute;right:0;bottom:0;width:250px;background:var(--carte);padding:11px 11px 14px;border-radius:4px;rotate:3.5deg;box-shadow:0 28px 44px -24px rgba(30,31,28,.7)}
+.polaroid img{width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:50% 40%;border-radius:2px}
+.polaroid p{font-family:var(--fd);font-style:italic;font-size:20px;text-align:center;margin-top:8px;color:var(--graphite)}
+.atelier h2{font-size:clamp(38px,4.2vw,58px);line-height:1.04}
+.atelier .chapo{color:var(--graphite-doux);margin-top:22px;max-width:52ch}
+.formules{margin-top:32px;border-top:1.5px solid var(--graphite)}
+.formules li{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--filet)}
+.formules b{font-family:var(--fd);font-weight:400;font-size:24px;line-height:1.15}
+.formules span{color:var(--graphite-doux);font-size:16px}
+.atelier .note{font-size:16px;color:var(--graphite-doux);margin-top:20px}
+.atelier .actions{margin-top:30px}
+
+/* venir */
+.venir{padding:0 0 128px}
+.venir .carte{display:grid;grid-template-columns:7fr 5fr;gap:0;background:var(--carte);border-radius:26px;box-shadow:var(--ombre);overflow:hidden}
+.venir .gauche{padding:56px}
+.venir h2{font-size:clamp(38px,4.2vw,56px);line-height:1.04}
+.venir .gauche > p{color:var(--graphite-doux);margin-top:18px;max-width:46ch}
+.venir dl{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:17px}
+.venir dt{font-weight:700}
+.venir dd{margin:0;color:var(--graphite-doux)}
+.venir dd a{color:var(--graphite);font-weight:600;text-underline-offset:3px}
+.venir .actions{margin-top:32px}
+.venir .droite{position:relative;min-height:100%}
+.venir .droite img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+
+/* pied */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 4fr;gap:56px}
+.pied .marque span{font-size:42px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:36ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:var(--ocre);margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(233,231,225,.3)}
+.pied li a:hover{color:var(--ocre);border-color:var(--ocre)}
+.propo{margin-top:72px;border-top:1px solid rgba(233,231,225,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+@media (max-width: 1100px){
+  .heros-photo{transform:none}
+  .demarche .txt{columns:1}
+}
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{gap:12px}
+  .marque span{font-size:27px}
+  .marque small{font-size:13px}
+  .nav{display:none}
+  .pill-tete{margin-left:auto;font-size:15px;padding:10px 16px}
+  .heros{padding:30px 0 64px}
+  .heros .env{display:flex;flex-direction:column}
+  .lieu{margin-bottom:10px;font-size:15px}
+  .heros h1{font-size:64px;line-height:.92}
+  .heros-photo{margin-top:20px;border-radius:16px}
+  .heros-photo img{aspect-ratio:4/3;object-position:30% 50%}
+  .heros-texte{padding-top:26px;padding-right:0}
+  .heros-texte p{font-size:17px}
+  .heros-texte .actions{align-items:stretch}
+  .actions{flex-direction:column;margin-top:24px}
+  .actions .btn{width:100%}
+  .cartel{left:12px;bottom:12px;font-size:14px;padding:8px 12px}
+  .cartel.droite{right:12px}
+  .cartel i{font-size:17px}
+  .faits ul{grid-template-columns:1fr 1fr}
+  .faits li,.faits li + li{padding:20px 12px 20px 0;border-left:0;border-bottom:1px solid var(--filet)}
+  .faits li:nth-child(even){padding-left:16px;border-left:1px solid var(--filet)}
+  .faits li b{font-size:25px}
+  .demarche,.atelier,.voir{padding:80px 0}
+  .demarche .env,.atelier .env{grid-template-columns:1fr;gap:40px}
+  .portrait{max-width:250px}
+  .demarche .txt{margin-top:28px}
+  .pieces{padding-bottom:80px}
+  .pieces .haut,.voir .haut,.voir .grille{grid-template-columns:1fr;gap:20px}
+  .vitrine{grid-template-columns:1fr;gap:20px}
+  .p-grand,.p-large,.p-duo{grid-column:auto;grid-row:auto}
+  .p-duo{gap:16px}
+  .reserve{grid-template-columns:1fr;padding:28px 22px;gap:28px;margin-top:48px}
+  .reserve .mini{justify-content:flex-start;gap:14px}
+  .reserve .mini{gap:10px}
+  .reserve .mini figure,.reserve .mini figure:nth-child(2){width:calc((100% - 20px) / 3);transform:none}
+  .reserve .mini figcaption{display:none}
+  .p-decal{margin-top:0}
+  .voir .grille{margin-top:40px;gap:48px}
+  .avenir li{grid-template-columns:1fr;gap:10px}
+  .galeries{padding:24px 22px 16px}
+  .passees{margin-top:56px}
+  .passees ol{grid-template-columns:1fr}
+  .collage{padding:0 30px 100px 0}
+  .polaroid{width:170px;padding:8px 8px 10px}
+  .polaroid p{font-size:17px}
+  .formules li{grid-template-columns:1fr;gap:4px}
+  .venir{padding-bottom:80px}
+  .venir .carte{grid-template-columns:1fr}
+  .venir .gauche{padding:32px 22px}
+  .venir .droite{order:-1}
+  .venir .droite img{aspect-ratio:16/10;height:auto}
+  .venir dl{grid-template-columns:1fr;gap:2px}
+  .venir dd{margin-bottom:12px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Pierre Cornélis, retour en haut">
+      <span>Pierre Cornélis</span>
+      <small>Tourneur et sculpteur sur bois</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#demarche">Démarche</a>
+      <a href="#pieces">Les pièces</a>
+      <a href="#voir">Où les voir</a>
+      <a href="#atelier">L'atelier partagé</a>
+    </nav>
+    <a class="pill-tete" href="mailto:lapoulepicor@gmail.com">Écrire à Pierre</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <p class="lieu">Atelier bois à La Chapelle-Saint-Jean, en Périgord Noir</p>
+      <h1><span>Bois, métal,</span><span class="l2">céramique ?</span></h1>
+      <figure class="heros-photo apparait">
+        <img src="assets/pierre-cornelis-la-chapelle-saint-jean/main-gouge-bol-sur-le-tour.webp" alt="La main de Pierre Cornélis, couverte de sciure, guide une gouge contre un bol en rotation sur le tour" width="1600" height="740" fetchpriority="high" />
+        <figcaption class="cartel droite"><i>Le geste</i>Un bol à la gouge, sur le tour de l'atelier</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p>Tourneur sur bois depuis plus de 26 ans, je travaille la surface de la matière pour lui donner un aspect contemporain et provoquer la surprise. <b>Le doute devient une invitation à redécouvrir la matière.</b></p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#pieces">Voir les pièces</a>
+          <a class="btn btn-contour" href="#voir">Où les voir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="Pierre Cornélis en bref">
+      <li><b>Depuis 1999</b>Tourneur sur bois, formé auprès de maîtres français et internationaux</li>
+      <li><b>Artisan d'Art</b>Titre attribué par la CMA Nouvelle-Aquitaine Dordogne en 2025</li>
+      <li><b>Top 3</b>Métiers d'Art, Trajectoires d'exception 2025 en Dordogne</li>
+      <li><b>Prix du public</b>Salon des métiers d'art NAMMA, Terrasson-Lavilledieu</li>
+    </ul>
+  </div>
+
+  <section class="demarche" id="demarche">
+    <div class="env">
+      <div class="portrait">
+        <figure class="apparait">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/portrait-pierre-cornelis-noir-et-blanc.webp" alt="Portrait en noir et blanc de Pierre Cornélis, souriant, lunettes et chemise sombre" width="1600" height="1584" loading="lazy" />
+        </figure>
+        <p class="note">Membre du Pôle Expérimental des Métiers d'Art de Nontron et du Carnet de route des métiers d'art de Dordogne.</p>
+      </div>
+      <div>
+        <blockquote>Je recherche des lignes épurées, une élégance organique <em>inspirée du vivant.</em></blockquote>
+        <div class="txt">
+          <p>Mon travail s'inspire des formes, couleurs, textures et matières offertes par la nature. Glanés au fil du temps, ces éléments nourrissent mon imaginaire et réapparaissent parfois de manière inattendue, au détour d'un croquis griffonné au cœur de la nuit.</p>
+          <p>Le travail de la surface du bois occupe une place essentielle. Mon objectif : troubler les repères, éveiller la curiosité.</p>
+          <p>Le tournage, la sculpture, mais aussi le métal, la feuille d'or, les pigments, la peinture, l'ardoise : autant de matières qui enrichissent mes créations au gré des envies, des rencontres et des rêves.</p>
+          <p>J'apprécie particulièrement les projets collaboratifs, avec des émailleurs, des céramistes, des créateurs de luminaires ou des peintres.</p>
+        </div>
+        <p class="signe">Pierre Cornélis</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pieces" id="pieces">
+    <div class="env">
+      <div class="haut">
+        <h2>De l'idée à la pièce unique</h2>
+        <p>Formes tournées sur un ou plusieurs axes, surfaces texturées, gravées, patinées ou rehaussées d'or : chaque pièce suit son propre cheminement.</p>
+      </div>
+      <div class="vitrine">
+        <figure class="p-grand apparait">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/vase-bois-rouge-orange-craquele.webp" alt="Vase tourné en bois, surface peinte rouge et orange aux craquelures claires, deux tiges métalliques incrustées" width="1301" height="1600" loading="lazy" />
+          <figcaption class="cartel"><i>Vase</i>Bois tourné, surface craquelée, métal</figcaption>
+        </figure>
+        <figure class="p-large apparait">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/memoire-des-signes-forme-basse-gravee.webp" alt="Forme basse fermée au bandeau bleu gris gravé de spirales, de personnages et d'animaux" width="1600" height="1174" loading="lazy" />
+          <figcaption class="cartel"><i>Mémoire des signes</i>Forme basse, surface gravée</figcaption>
+        </figure>
+        <div class="p-duo">
+          <figure class="p-carre apparait">
+            <img src="assets/pierre-cornelis-la-chapelle-saint-jean/bol-bois-noir-stries-dorees.webp" alt="Bol ovoïde en bois à la surface noire patinée, rayé de stries dorées" width="1600" height="1573" loading="lazy" />
+          </figure>
+          <figure class="p-carre p-decal apparait">
+            <img src="assets/pierre-cornelis-la-chapelle-saint-jean/murale-disque-bois-patine-cuivree.webp" alt="Grande murale en disque de bois évidé, reflets cuivrés, verts et violets" width="1600" height="1559" loading="lazy" />
+            <figcaption class="cartel"><i>Murale</i>72 cm de diamètre</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="reserve">
+        <div>
+          <h3>Un jeu de regards et d’illusions</h3>
+          <p>Certaines pièces ressemblent à des céramiques, jusqu'à ce que les veines du bois se révèlent. D'autres sont tournées sur plusieurs axes, puis sculptées et ajourées.</p>
+        </div>
+        <div class="mini">
+          <figure class="apparait">
+            <img src="assets/pierre-cornelis-la-chapelle-saint-jean/vase-bois-bleu-irise-motifs-dores.webp" alt="Vase en bois à la surface bleu violet irisée, rectangles dorés et noirs" width="1541" height="1600" loading="lazy" />
+          </figure>
+          <figure class="apparait">
+            <img src="assets/pierre-cornelis-la-chapelle-saint-jean/multiples-axes-forme-ajouree-irisee.webp" alt="Forme en fuseau tournée sur plusieurs axes, ajourée de trous ovales, reflets violets et verts" width="1257" height="788" loading="lazy" />
+            <figcaption>Multiples axes</figcaption>
+          </figure>
+          <figure class="apparait">
+            <img src="assets/pierre-cornelis-la-chapelle-saint-jean/cosse-sculptee-texturee-ocre-or.webp" alt="Cosse sculptée allongée, surface ocre texturée, ajours et motifs dorés" width="1600" height="1048" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="https://www.pierrecornelis.com/des-r%C3%A9alisations">Toutes les réalisations récentes</a>
+        <a class="btn btn-contour" href="https://www.pierrecornelis.com/quelques-r%C3%A9alisations">Les collaborations</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="voir sombre" id="voir">
+    <div class="env">
+      <div class="haut">
+        <h2>Où voir les pièces</h2>
+        <p>En 2026, les pièces sont en galerie à Nontron, Brantôme et Niort. À l'atelier, dans l'attente de vous présenter un nouvel événement.</p>
+      </div>
+      <div class="grille">
+        <div>
+          <h3>À venir</h3>
+          <ol class="avenir">
+            <li>
+              <p class="quand">8 novembre<small>Dimanche, à partir de 9h30</small></p>
+              <div>
+                <h4>Journée de tournage sur bois de l'AFTAB</h4>
+                <p>Antenne Périgord-Limousin, à l'atelier de La Chapelle-Saint-Jean. Venir avec ses dernières réalisations et de quoi manger à midi, pour un repas partagé sur place.</p>
+              </div>
+            </li>
+            <li>
+              <p class="quand">2027<small>Paris</small></p>
+              <div>
+                <h4>Révélations, Grand Palais</h4>
+                <p>Biennale internationale des métiers d'art et de la création.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3>En galerie</h3>
+          <ul class="galeries">
+            <li><b>Boutique Métiers d'Art de Nontron</b><span>5 rue Carnot, 24300 Nontron. Du mardi au samedi, 10h à 13h et 14h à 18h. <a href="tel:+33553605077">05 53 60 50 77</a></span></li>
+            <li><b><a href="https://www.tekhnelecomptoirdesarts.com/">Tekhnè, le Comptoir des Arts</a></b><span>26 boulevard Coligny, 24310 Brantôme-en-Périgord</span></li>
+            <li><b>36 Quai des Arts</b><span>79000 Niort</span></li>
+            <li><b><a href="https://cigaregallery.com/">Galerie de Rouffignac</a></b><span>275 route de Reilhac, 24580 Rouffignac-Saint-Cernin-de-Reilhac</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="passees">
+        <div class="tete-p">
+          <h3>Expositions passées</h3>
+          <p>Une sélection, de la plus récente à la plus ancienne.</p>
+        </div>
+        <ol>
+          <li><b>Septembre 2026</b>Démonstrateur au Congrès international de tournage sur bois, Espagne</li>
+          <li><b>1er trimestre 2026</b>36 Quai des Arts, Niort : trois artistes, trois matières, un jeu de regards et d'illusions</li>
+          <li><b>Octobre 2025</b>Démonstrateur au Congrès international de tournage sur bois, Irlande</li>
+          <li><b>Septembre 2025</b>Salon Déco de La Rochelle, du 26 au 29 septembre</li>
+          <li><b>Août 2025</b>Sarlat-la-Canéda, exposition à l'Hôtel Maleville, du 1er au 15 août</li>
+          <li><b>2025</b>Périgueux, Biennale de la société des beaux-arts du Périgord</li>
+          <li><b>Octobre 2022</b>NAMMA, salon des métiers d'art de Terrasson-Lavilledieu : Prix du public</li>
+          <li><b>Exposition itinérante</b>« Du cœur à l'écorce », de l'AFTAB, sélectionné à deux reprises</li>
+          <li><b>Grand Atelier d'Aiguines</b>L'Art et la Matière, en 2015, 2017 et 2021</li>
+        </ol>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:lapoulepicor@gmail.com?subject=Journ%C3%A9e%20AFTAB%20du%208%20novembre">Venir le 8 novembre</a>
+        <a class="btn btn-contour" href="https://www.pierrecornelis.com/parcours">Le parcours complet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="atelier" id="atelier">
+    <div class="env">
+      <div class="collage">
+        <figure class="fond apparait">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/atelier-tour-a-bois-la-chapelle.webp" alt="L'atelier : un tour à bois vert au premier plan, meules, établis et copeaux au sol" width="1381" height="1509" loading="lazy" />
+          <figcaption class="cartel"><i>L'atelier</i>Un des tours à bois</figcaption>
+        </figure>
+        <figure class="polaroid apparait">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/tournage-grande-murale-peuplier.webp" alt="Pierre Cornélis, casque anti-bruit, tourne un très grand disque de peuplier" width="1200" height="1600" loading="lazy" />
+          <p>Le peuplier est délicat</p>
+        </figure>
+      </div>
+      <div>
+        <h2>J'accueille à la journée, du débutant au professionnel</h2>
+        <p class="chapo">Formation individuelle, journées d'atelier partagé, réunions de tourneurs : chaque journée est adaptée à la personne, dans mon atelier de La Chapelle-Saint-Jean.</p>
+        <ul class="formules">
+          <li><b>Découverte plaisir</b><span>Une journée pour voir se dérouler le bois et apparaître un objet que l'on rapporte chez soi.</span></li>
+          <li><b>Initiation</b><span>En vue d'une pratique régulière : les bases pour travailler correctement et en sécurité, avant d'acheter un tour.</span></li>
+          <li><b>Tournage spécifique</b><span>Vous tournez déjà et souhaitez explorer une technique ou le maniement d'un outil.</span></li>
+          <li><b>Techniques additionnelles</b><span>La texture petite ou grosse, la mise en couleur, l'ajout de matière.</span></li>
+        </ul>
+        <p class="note">Il n'y a pas d'agenda de formation défini : écrivez-moi pour toute information.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:lapoulepicor@gmail.com?subject=Journ%C3%A9e%20de%20formation%20au%20tournage">Demander une journée</a>
+          <a class="btn btn-contour" href="https://www.pierrecornelis.com/parcours-1">L'atelier partagé en images</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="contact">
+    <div class="env">
+      <div class="carte">
+        <div class="gauche">
+          <h2>Venir à l'atelier</h2>
+          <p>« C'est à creuser ? Atelier bois », en Dordogne, dans le Périgord Noir. J'y accueille régulièrement des journées de formation, des journées d'atelier partagé et des réunions de tourneurs.</p>
+          <dl>
+            <dt>Atelier</dt><dd>24390 La Chapelle-Saint-Jean, France</dd>
+            <dt>E-mail</dt><dd><a href="mailto:lapoulepicor@gmail.com">lapoulepicor@gmail.com</a></dd>
+            <dt>Formulaire</dt><dd><a href="https://www.pierrecornelis.com/contact">pierrecornelis.com/contact</a></dd>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-plein" href="mailto:lapoulepicor@gmail.com">Écrire à Pierre</a>
+            <a class="btn btn-contour" href="https://www.google.fr/maps/place/C'est+a+Creuser+%3F+Atelier+Bois.+Tournage+sur+bois./@45.1968601,1.1591293,15z">Voir le plan</a>
+          </div>
+        </div>
+        <figure class="droite">
+          <img src="assets/pierre-cornelis-la-chapelle-saint-jean/pierre-cornelis-au-tour-copeaux.webp" alt="Pierre Cornélis au tour, longue gouge en main, veste bleue constellée de copeaux" width="1341" height="1600" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Pierre Cornélis</span><small>Tourneur et sculpteur sur bois</small></a>
+        <p class="dit">Tournage et sculpture sur bois, pièces uniques. L'atelier est situé en Dordogne, dans le Périgord Noir.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>C'est à creuser ? Atelier bois</li>
+          <li>24390 La Chapelle-Saint-Jean</li>
+          <li><a href="mailto:lapoulepicor@gmail.com">lapoulepicor@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sur le site</h3>
+        <ul>
+          <li><a href="https://www.pierrecornelis.com/parcours">Parcours</a></li>
+          <li><a href="https://www.pierrecornelis.com/des-r%C3%A9alisations">Réalisations récentes</a></li>
+          <li><a href="https://www.pierrecornelis.com/copie-de-r%C3%A9alisations">Réalisations antérieures</a></li>
+          <li><a href="https://www.pierrecornelis.com/les-expositions-anterieur">Expositions antérieures</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Pierre Cornélis</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var t = 0;
+  function voir(){
+    var h = innerHeight * 0.94;
+    els = els.filter(function(e){ if (e.getBoundingClientRect().top < h){ e.classList.add('vu'); return false } return true });
+    if (!els.length){ removeEventListener('scroll', planifier); clearInterval(veille) }
+  }
+  var veille = setInterval(voir, 200);
+  function planifier(){ if (!t) t = requestAnimationFrame(function(){ t = 0; voir() }) }
+  addEventListener('scroll', planifier, { passive: true });
+  addEventListener('resize', planifier);
+  voir();
+})();
+</script>
+</body>
+</html>

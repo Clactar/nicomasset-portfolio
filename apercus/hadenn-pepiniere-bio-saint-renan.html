@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Pépinière Hadenn, Saint-Renan (29), nuit du 2026-10-28.
+     CONTENU : textes, catégories, documents, horaires, coordonnées et photos relevés sur https://www.hadenn.fr/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé.
+     Défaut réglé : la vignette « Plants de légumes » menait à une page introuvable ; elle mène à la section #legumes de la page,
+     avec leurs textes (catalogue, codes couleurs, calendriers) et leurs documents vérifiés le 28/10.
+     Défaut 2 réglé : plus de « Réouverture le mercredi 4 mars 2026 » ; aucune date passée, aucune date de réouverture inventée.
+     DESIGN (Nova) : vert d'eau froid, encre vert sapin, accent jaune colza. Epilogue et Literata. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#E6EEEA" />
+<title>Pépinière Hadenn, plants bio de légumes et aromatiques à Saint-Renan</title>
+<meta name="description" content="Près de 500 variétés de plants bio, semés et élevés à Saint-Renan à partir de la graine, surtout en variétés population. Pour les jardiniers et les maraîchers." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312302A'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23E2B93B'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --eau:#E6EEEA;
+  --eau-2:#D6E3DD;
+  --etiquette:#FAF9F3;
+  --sapin:#12302A;
+  --sapin-doux:#46605A;
+  --colza:#E2B93B;
+  --colza-pale:#F3E3A8;
+  --sur-sombre:#E9F0EC;
+  --sur-sombre-doux:#AFC4BC;
+  --filet:rgba(18,48,42,.14);
+  --ombre:0 30px 60px -34px rgba(12,42,36,.6);
+  --ombre-courte:0 16px 32px -20px rgba(12,42,36,.5);
+  --fd:"Epilogue",system-ui,sans-serif;
+  --ft:"Literata",Georgia,serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--eau);color:var(--sapin);font-family:var(--ft);font-size:18px;line-height:1.65;overflow-x:hidden}
+::selection{background:var(--colza);color:var(--sapin)}
+h1,h2,h3{margin:0;font-family:var(--fd);font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--sapin);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--fd);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--sapin);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--colza);border-color:var(--colza);color:var(--sapin)}
+.btn-plein:hover{background:var(--sapin);border-color:var(--sapin);color:var(--etiquette);transform:translateY(-2px);box-shadow:0 14px 26px -14px rgba(18,48,42,.8)}
+.btn-contour{background:transparent;color:var(--sapin)}
+.btn-contour:hover{background:var(--sapin);color:var(--etiquette);transform:translateY(-2px)}
+.sombre .btn-plein:hover{background:var(--sur-sombre);border-color:var(--sur-sombre);color:var(--sapin)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--sapin)}
+
+.pastille{position:absolute;left:16px;top:16px;background:rgba(250,249,243,.95);color:var(--sapin);font-family:var(--fd);font-size:15px;font-weight:600;line-height:1.3;padding:9px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(18,48,42,.7)}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .etiq.apparait.vu.g{transform:rotate(-4deg)}
+.js .etiq.apparait.vu.d{transform:rotate(3deg)}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transition:none}
+  .js .apparait:not(.etiq){transform:none}
+  .btn,.tel-pill,.cat{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:24px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px;line-height:1}
+.marque .logo{width:42px;height:42px;border-radius:12px;background:var(--sapin);color:var(--colza);display:grid;place-items:center;font-family:var(--fd);font-weight:600;font-size:22px}
+.marque b{display:block;font-family:var(--fd);font-weight:600;font-size:24px;letter-spacing:-.02em}
+.marque small{display:block;font-size:14px;color:var(--sapin-doux);margin-top:4px;white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:26px;align-items:center;font-family:var(--fd);white-space:nowrap}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--colza);text-decoration-thickness:3px;text-underline-offset:6px}
+.tel-pill{background:var(--etiquette);padding:11px 20px;border-radius:999px;font-weight:600 !important;box-shadow:var(--ombre-courte);transition:background .25s,color .25s}
+.nav a.tel-pill:hover{background:var(--sapin);color:var(--etiquette);text-decoration:none}
+
+/* héros */
+.heros{padding:64px 0 128px}
+.heros .env{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.lieu{font-family:var(--fd);font-size:16px;font-weight:600;color:var(--sapin-doux);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.lieu::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--colza)}
+.heros h1{font-size:clamp(44px,5.4vw,72px);line-height:1.02;font-weight:600}
+.chapo{font-size:19px;color:var(--sapin-doux);margin-top:26px;max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.heros-visuel{position:relative;padding-bottom:40px}
+.heros-photo{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.heros-photo img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 50%}
+.etiq{position:absolute;width:190px;background:var(--etiquette);padding:30px 10px 12px;border-radius:12px 12px 10px 10px;box-shadow:var(--ombre)}
+.etiq::before{content:"";position:absolute;top:10px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--eau);box-shadow:inset 0 0 0 2px var(--colza)}
+.etiq img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
+.etiq figcaption{font-family:var(--fd);font-size:15px;font-weight:600;line-height:1.25;margin-top:10px;padding-inline:4px}
+.etiq figcaption span{display:block;font-family:var(--ft);font-weight:400;font-size:14px;color:var(--sapin-doux);margin-top:2px}
+.etiq.g{left:-44px;bottom:-56px;transform:rotate(-4deg)}
+.etiq.d{left:180px;bottom:-84px;transform:rotate(3deg)}
+
+/* faits */
+.faits{background:var(--etiquette)}
+.faits ul{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;padding-block:34px;gap:28px}
+.faits li{border-left:3px solid var(--eau-2);padding-left:20px}
+.faits li:first-child{border-left-color:var(--colza)}
+.faits b{display:block;font-family:var(--fd);font-weight:600;font-size:26px;letter-spacing:-.02em;line-height:1.15}
+.faits span{font-size:16px;color:var(--sapin-doux)}
+
+/* catégories, comme des étiquettes */
+.categories{padding:112px 0 32px}
+.categories h2{font-size:clamp(32px,3.4vw,44px);line-height:1.1}
+.categories .intro{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:end;margin-bottom:48px}
+.categories .intro p{color:var(--sapin-doux)}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start}
+.cat{position:relative;display:block;text-decoration:none;background:var(--etiquette);border-radius:16px 16px 12px 12px;padding:34px 16px 20px;box-shadow:var(--ombre-courte);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.cat::before{content:"";position:absolute;top:13px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--eau);box-shadow:inset 0 0 0 2px var(--sapin-doux)}
+.cat:nth-child(2){margin-top:28px}
+.cat:nth-child(4){margin-top:28px}
+.cat:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:var(--ombre)}
+.cat img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.cat h3{font-size:21px;line-height:1.2;margin-top:16px}
+.cat p{font-size:16px;color:var(--sapin-doux);margin-top:6px;line-height:1.5}
+.cat .vers{display:inline-block;margin-top:12px;font-family:var(--fd);font-weight:600;font-size:15px;border-bottom:3px solid var(--colza)}
+.cat.premiere::before{box-shadow:inset 0 0 0 2px var(--colza)}
+
+/* légumes */
+.legumes{padding:112px 0 120px}
+.legumes .env{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.legumes-visuel{position:sticky;top:32px;padding:0 0 120px 0}
+.legumes-visuel .tunnel{border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.legumes-visuel .tunnel img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.legumes-visuel .recolte{position:absolute;right:-36px;bottom:0;width:62%;border-radius:14px;overflow:hidden;box-shadow:var(--ombre);border:8px solid var(--etiquette)}
+.legumes-visuel .recolte img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.legumes h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.legumes .txt > p{color:var(--sapin-doux);margin-top:18px}
+.legumes .txt > p.fort{color:var(--sapin);font-size:20px}
+.docs{margin-top:32px;background:var(--etiquette);border-radius:18px;padding:8px 26px;box-shadow:var(--ombre-courte)}
+.docs li{border-top:1px solid var(--filet)}
+.docs li:first-child{border-top:0}
+.docs a{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 0;text-decoration:none}
+.docs a b{font-family:var(--fd);font-weight:600;font-size:18px;display:block}
+.docs a span{font-size:15px;color:var(--sapin-doux)}
+.docs a i{font-style:normal;font-family:var(--fd);font-weight:600;font-size:14px;background:var(--eau);border-radius:999px;padding:6px 12px;transition:background .25s}
+.docs a:hover i{background:var(--colza)}
+.code{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;margin-top:36px}
+.code img{width:200px;height:240px;object-fit:cover;border-radius:12px;box-shadow:var(--ombre-courte);transform:rotate(-2deg)}
+.code h3{font-size:22px}
+.code p{color:var(--sapin-doux);font-size:17px;margin-top:8px}
+.calendrier-note{margin-top:32px;padding-left:20px;border-left:3px solid var(--colza);font-style:italic;font-size:19px}
+
+/* aromatiques */
+.aromatiques{padding:112px 0;background:var(--eau-2)}
+.aro-tete{display:grid;grid-template-columns:7fr 4fr;gap:64px;align-items:center;margin-bottom:56px}
+.aromatiques h2{font-size:clamp(34px,3.8vw,50px);line-height:1.08}
+.aro-tete p{color:var(--sapin-doux);margin-top:18px;max-width:56ch}
+.aro-photo{position:relative;background:var(--etiquette);padding:10px 10px 14px;border-radius:10px;box-shadow:var(--ombre);transform:rotate(2.5deg);max-width:340px;justify-self:end}
+.aro-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
+.aro-photo figcaption{font-family:var(--fd);font-weight:600;font-size:15px;margin-top:10px;padding-left:4px}
+.cycles{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.cycles div{border-top:2px solid var(--sapin);padding-top:20px}
+.cycles h3{font-size:24px}
+.cycles .duree{font-size:16px;color:var(--sapin-doux);margin-top:4px}
+.cycles p.noms{margin-top:14px;font-size:18px;line-height:1.7}
+.aromatiques .suite{margin-top:40px}
+
+/* pros, section sombre */
+.sombre{background:var(--sapin);color:var(--sur-sombre)}
+.pros{padding:120px 0}
+.pros .env{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center}
+.pros-photo{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.pros-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pros h2{font-size:clamp(34px,3.8vw,50px);line-height:1.08}
+.pros .bloc{margin-top:30px;padding-top:24px;border-top:1px solid rgba(233,240,236,.18)}
+.pros h3{font-size:22px;color:var(--colza)}
+.pros .bloc p{color:var(--sur-sombre-doux);margin-top:10px}
+.pros .actions{margin-top:34px}
+
+/* semences, fournitures */
+.boutique{padding:120px 0 96px}
+.boutique .env{display:grid;grid-template-columns:5fr 7fr;gap:28px;align-items:stretch}
+.carte{background:var(--etiquette);border-radius:20px;padding:36px;box-shadow:var(--ombre-courte)}
+.carte h2{font-size:32px;line-height:1.1}
+.carte p{color:var(--sapin-doux);margin-top:14px;font-size:17px}
+.carte .lien{display:inline-block;margin-top:20px;font-family:var(--fd);font-weight:600;font-size:16px;border-bottom:3px solid var(--colza);text-decoration:none}
+.fournitures ul{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.fournitures li{font-size:17px;line-height:1.5}
+.fournitures li b{display:block;font-family:var(--fd);font-weight:600}
+.fournitures li span{color:var(--sapin-doux)}
+
+/* à propos */
+.apropos{padding:24px 0 120px}
+.apropos .env{display:grid;grid-template-columns:4fr 7fr;gap:80px;align-items:center}
+.apropos-photo{position:relative;border-radius:16px 16px 140px 16px;overflow:hidden;box-shadow:var(--ombre)}
+.apropos-photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.lettre .graine{font-family:var(--fd);font-weight:500;font-size:clamp(30px,3.4vw,46px);line-height:1.15;letter-spacing:-.02em}
+.lettre .graine mark{background:linear-gradient(transparent 62%,var(--colza-pale) 62%);color:inherit;padding:0 .08em}
+.lettre p{color:var(--sapin-doux);margin-top:20px}
+.lettre .signe{font-style:italic;color:var(--sapin);font-size:22px;margin-top:26px}
+
+/* venir */
+.venir{padding:0 0 128px}
+.venir .env > .boite{display:grid;grid-template-columns:6fr 5fr;gap:56px;background:var(--etiquette);border-radius:24px;padding:56px;box-shadow:var(--ombre)}
+.venir h2{font-size:clamp(34px,3.8vw,50px);line-height:1.08}
+.venir .acces{color:var(--sapin-doux);margin-top:18px}
+.venir address{font-style:normal;font-family:var(--fd);font-weight:600;font-size:24px;margin-top:26px;line-height:1.3}
+.horaires h3{font-size:20px}
+.horaires .periode{color:var(--sapin-doux);font-size:16px}
+.horaires dl{margin:18px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px}
+.horaires dt{font-family:var(--fd);font-weight:600;font-size:17px}
+.horaires dd{margin:0;font-size:17px}
+.horaires .coord{margin-top:26px;padding-top:20px;border-top:1px solid var(--filet);display:grid;gap:6px;font-size:18px}
+.horaires .coord a{font-weight:600;text-underline-offset:3px;text-decoration-color:var(--colza)}
+
+/* pied */
+.pied{background:#0D241F;color:var(--sur-sombre);padding:72px 0 28px}
+.pied .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.pied .nom{font-family:var(--fd);font-weight:600;font-size:28px;letter-spacing:-.02em}
+.pied p,.pied li{font-size:16px;color:var(--sur-sombre-doux);line-height:1.7}
+.pied h3{font-size:16px;margin-bottom:10px;color:var(--sur-sombre);letter-spacing:0}
+.pied a{color:var(--sur-sombre);text-underline-offset:3px}
+.pied .bas{margin-top:48px;padding-top:22px;border-top:1px solid rgba(233,240,236,.14);font-size:15px;color:var(--sur-sombre-doux)}
+.proposition{background:#091B17;color:var(--sur-sombre-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-sombre)}
+
+@media (max-width:1080px){
+  .nav a.cache-t{display:none}
+  .heros .env,.categories .intro,.legumes .env,.aro-tete,.pros .env,.boutique .env,.apropos .env,.venir .env > .boite{grid-template-columns:1fr;gap:48px}
+  .heros-visuel{margin-left:44px}
+  .cats{grid-template-columns:1fr 1fr}
+  .legumes-visuel .recolte{right:0}
+  .legumes-visuel{position:relative;top:auto}
+  .aro-photo{justify-self:start}
+  .apropos-photo{max-width:420px}
+  .pied .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .nav a:not(.tel-pill){display:none}
+  .marque .logo{width:38px;height:38px;font-size:20px}
+  .marque b{font-size:21px}
+  .marque small{font-size:14px;white-space:normal}
+  .tete .env{gap:12px}
+  .nav{gap:0}
+  .tel-pill{font-size:16px !important;padding:10px 15px}
+  .heros{padding:24px 0 72px}
+  .heros .env{display:flex;flex-direction:column;align-items:stretch;gap:24px}
+  .heros-texte{display:contents}
+  .heros-titre{order:-2}
+  .heros-visuel{order:-1;margin-left:0;padding-bottom:64px}
+  .heros-suite{order:0}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:42px}
+  .chapo{font-size:18px;margin-top:0}
+  .heros-photo img{aspect-ratio:4/3}
+  .etiq{width:118px;padding:22px 7px 8px}
+  .etiq::before{top:7px;width:9px;height:9px;margin-left:-4.5px}
+  .etiq figcaption{font-size:14px;margin-top:6px}
+  .etiq figcaption span{display:none}
+  .etiq.g{left:8px;bottom:0}
+  .etiq.d{left:auto;right:10px;bottom:-14px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr;gap:22px 16px;padding-block:26px}
+  .faits li{padding-left:12px}
+  .faits b{font-size:21px}
+  .categories{padding:72px 0 16px}
+  .categories .intro{margin-bottom:32px;gap:16px}
+  .cats{gap:14px}
+  .cat{padding:28px 10px 14px}
+  .cat:nth-child(2),.cat:nth-child(4){margin-top:18px}
+  .cat h3{font-size:18px}
+  .cat p{display:none}
+  .legumes{padding:72px 0 80px}
+  .legumes-visuel{padding-bottom:90px}
+  .legumes-visuel .recolte{width:64%;border-width:6px}
+  .docs{padding:4px 18px}
+  .code{grid-template-columns:1fr}
+  .code img{width:200px;height:220px}
+  .aromatiques{padding:80px 0}
+  .aro-photo{max-width:240px}
+  .cycles{grid-template-columns:1fr;gap:28px}
+  .pros{padding:80px 0}
+  .boutique{padding:80px 0 64px}
+  .carte{padding:26px 22px}
+  .fournitures ul{grid-template-columns:1fr}
+  .apropos{padding-bottom:80px}
+  .apropos-photo{border-radius:16px 16px 80px 16px}
+  .venir{padding-bottom:80px}
+  .venir .env > .boite{padding:30px 22px;gap:32px}
+  .horaires dl{grid-template-columns:1fr;gap:2px}
+  .horaires dd{margin-bottom:10px}
+  .pied .cols{grid-template-columns:1fr}
+  .pied .bas,.proposition,.docs a span{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Pépinière Hadenn, accueil">
+      <span class="logo" aria-hidden="true">H</span>
+      <span><b>Hadenn</b><small>Pépinière bio, Saint-Renan</small></span>
+    </a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#legumes">Plants de légumes</a>
+      <a href="#aromatiques" class="cache-t">Aromatiques</a>
+      <a href="#pros">Professionnels</a>
+      <a href="#venir">Lieux et horaires</a>
+      <a class="tel-pill" href="tel:+33659151854">06 59 15 18 54</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <div class="heros-titre">
+          <div class="lieu">Pépinière Hadenn, à Saint-Renan</div>
+          <h1>Plants bio de légumes et aromatiques</h1>
+        </div>
+        <div class="heros-suite">
+          <p class="chapo">Près de 500 variétés, toutes semées et élevées ici à partir de la graine, surtout des variétés population, c'est à dire reproductibles. Pour les jardiniers et les maraîchers.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#legumes">Voir les plants de légumes</a>
+            <a class="btn btn-contour" href="#venir">Lieux et horaires</a>
+          </div>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="heros-photo apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/serre-pepiniere-plants-en-pots.webp" alt="Intérieur de la serre de la pépinière : pots de basilics verts et pourpres, aromatiques et fleurs, une personne debout dans l'allée centrale" width="1600" height="772" fetchpriority="high" />
+          <figcaption class="pastille">La serre de la pépinière</figcaption>
+        </figure>
+        <figure class="etiq g apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/jeunes-salades-vertes-et-rouges.webp" alt="Plaque de jeunes laitues vertes et rouges" width="1600" height="1200" loading="lazy" />
+          <figcaption>Jeunes laitues<span>vertes et rouges</span></figcaption>
+        </figure>
+        <figure class="etiq d apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/allee-godets-code-couleur.webp" alt="Rangées de godets violets, orange, jaunes et noirs, chacun avec un jeune plant" width="1200" height="1600" loading="lazy" />
+          <figcaption>Godets en couleurs<span>un code par variété</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env">
+      <li><b>Près de 500 variétés</b><span>sélectionnées pour notre territoire</span></li>
+      <li><b>Depuis la graine</b><span>tous les plants semés et élevés ici</span></li>
+      <li><b>Labellisée Ecocert</b><span>certifié FR-BIO-01</span></li>
+      <li><b>Variétés population</b><span>anciennes et reproductibles</span></li>
+    </ul>
+  </div>
+
+  <section class="categories" id="categories">
+    <div class="env">
+      <div class="intro">
+        <h2>Nos catégories</h2>
+        <p>Plants de légumes, plantes aromatiques, plantes accompagnatrices et fleurs comestibles, tous en bio, uniquement en variétés anciennes et variétés population.</p>
+      </div>
+      <div class="cats">
+        <a class="cat premiere" href="#legumes">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/recolte-tomates-poivrons-aubergines.webp" alt="Tomates anciennes, poivrons, piments et aubergines posés sur une table" width="1600" height="1200" loading="lazy" />
+          <h3>Plants de légumes</h3>
+          <p>Le catalogue 2026, les prix, les codes couleurs et les calendriers.</p>
+          <span class="vers">Voir les plants</span>
+        </a>
+        <a class="cat" href="#aromatiques">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/fleurs-nigelle-pavot-californie.webp" alt="Fleurs de nigelle bleues et pavots de Californie orange" width="1200" height="1600" loading="lazy" />
+          <h3>Plantes compagnes et aromatiques</h3>
+          <p>Annuelles, bisannuelles et vivaces, utiles en cuisine et au jardin.</p>
+          <span class="vers">Voir les plantes</span>
+        </a>
+        <a class="cat" href="#semences">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/semis-jeunes-pousses-caisse.webp" alt="Caisse de terreau où lèvent des dizaines de jeunes pousses aux tiges rouges" width="1200" height="1600" loading="lazy" />
+          <h3>Semences</h3>
+          <p>Quelques sachets de graines bio, pour vous dépanner.</p>
+          <span class="vers">Voir les semences</span>
+        </a>
+        <a class="cat" href="#fournitures">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/poignee-de-graines.webp" alt="Main ouverte tenant une poignée de cosses grises et noires" width="1200" height="1600" loading="lazy" />
+          <h3>Fournitures</h3>
+          <p>Voiles de protection, paillage, céramiques.</p>
+          <span class="vers">Voir les fournitures</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="legumes" id="legumes">
+    <div class="env">
+      <div class="legumes-visuel">
+        <figure class="tunnel apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/tunnel-potager-tomates-oeillets-inde.webp" alt="Tunnel de culture : pieds de tomates palissés, poivrons et œillets d'Inde orange en bordure" width="1600" height="1200" loading="lazy" />
+        </figure>
+        <figure class="recolte apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/recolte-courges-poireaux-tomates.webp" alt="Récolte de courges butternut, potimarrons, poireaux, carottes et tomates" width="1200" height="1600" loading="lazy" />
+          <figcaption class="pastille">De la graine à la récolte</figcaption>
+        </figure>
+      </div>
+      <div class="txt">
+        <h2>Plants de légumes</h2>
+        <p class="fort">Des plants de légumes bio, uniquement en variétés anciennes et variétés population : des semences reproductibles.</p>
+        <p>Attention, tout n'est pas disponible tout le temps : les plants s'accordent aux saisons de plantation et à la capacité de notre petite structure.</p>
+        <ul class="docs">
+          <li><a href="https://www.hadenn.fr/wp-content/uploads/2026/02/catalogue-2026-Document-A45.pdf"><span><b>Catalogue 2026</b><span>liste et description des variétés, les petits fruits ont été ajoutés</span></span><i>PDF</i></a></li>
+          <li><a href="https://www.hadenn.fr/wp-content/uploads/2026/02/prix-2026.pdf"><span><b>Prix public 2026</b><span>tarifs des plants programmés</span></span><i>PDF</i></a></li>
+          <li><a href="https://www.hadenn.fr/wp-content/uploads/2026/03/code-couleur-2026.pdf"><span><b>Codes couleurs 2026</b><span>pour reconnaître les variétés</span></span><i>PDF</i></a></li>
+          <li><a href="https://www.hadenn.fr/wp-content/uploads/2020/12/Calendrier-des-Plantations-DehorsDedans-1.pdf"><span><b>Calendrier des plantations</b><span>les grandes périodes des principaux légumes</span></span><i>PDF</i></a></li>
+          <li><a href="https://www.hadenn.fr/wp-content/uploads/2020/12/Calendrier-Semis-DehorsDedans.pdf"><span><b>Calendrier des semis</b><span>dehors et dedans</span></span><i>PDF</i></a></li>
+        </ul>
+        <div class="code">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/plaques-godets-couleurs-terreau.webp" alt="Plaques de godets remplies de terreau, alignées par couleur : vert, jaune, orange, rose, violet" width="1200" height="1600" loading="lazy" />
+          <div>
+            <h3>Pourquoi des godets de couleur</h3>
+            <p>Je ne mets pas d'étiquette dans les pots. C'est le binôme couleur et numéro, lettre et couleur, astérisque et couleur pour les courges, ou seulement une couleur, qui permet d'identifier les variétés grâce aux équivalences du code couleurs.</p>
+          </div>
+        </div>
+        <p class="calendrier-note">Chaque plante a sa période de semis, de plantation, de récolte. Il ne sert à rien de semer ou planter trop tôt : la plante va stagner, voire se fragiliser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="aromatiques" id="aromatiques">
+    <div class="env">
+      <div class="aro-tete">
+        <div>
+          <h2>Plantes compagnes et aromatiques</h2>
+          <p>Les plantes aromatiques et autres plantes compagnes sont très utiles en cuisine et au jardin. On distingue trois familles, selon la durée de leur vie.</p>
+        </div>
+        <figure class="aro-photo apparait">
+          <img src="assets/hadenn-pepiniere-bio-saint-renan/serre-pepiniere-plants-en-pots.webp" alt="Pots de basilics verts et pourpres et d'aromatiques sur les tables de la serre" width="1600" height="772" loading="lazy" style="object-position:12% 100%" />
+          <figcaption>Basilics et aromatiques, à la serre</figcaption>
+        </figure>
+      </div>
+      <div class="cycles">
+        <div>
+          <h3>Les annuelles</h3>
+          <p class="duree">ne vivent qu'un an</p>
+          <p class="noms">Aneth, coriandre, basilic, cerfeuil, œillet d'Inde…</p>
+        </div>
+        <div>
+          <h3>Les bisannuelles</h3>
+          <p class="duree">vivent deux ans et fleurissent la deuxième année</p>
+          <p class="noms">Persil, carotte, anis, bardane, betteraves, choux, bourrache, capucine, céleri…</p>
+        </div>
+        <div>
+          <h3>Les vivaces</h3>
+          <p class="duree">vivent plusieurs années</p>
+          <p class="noms">Ciboule, ciboulette, fenouil, thym, sauge, romarin, estragon, consoude, lavande, absinthe, tanaisie…</p>
+        </div>
+      </div>
+      <div class="actions suite">
+        <a class="btn btn-contour" href="https://www.hadenn.fr/plantes-compagnes-et-aromatiques/">Lire l'article sur les plantes compagnes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pros sombre" id="pros">
+    <div class="env">
+      <figure class="pros-photo apparait">
+        <img src="assets/hadenn-pepiniere-bio-saint-renan/serre-tables-de-plants-en-godets.webp" alt="Serre vitrée avec deux longues tables couvertes de plants en godets de couleurs" width="1600" height="1200" loading="lazy" />
+        <figcaption class="pastille">Les tables de plants, sous la serre</figcaption>
+      </figure>
+      <div>
+        <h2>Plants bio pour les professionnels</h2>
+        <div class="bloc">
+          <h3>Maraîchers bio</h3>
+          <p>Des prestations adaptées à vos besoins en variétés population. Plants de légumes ou d'aromatiques annuelles (persil, coriandre, basilic…) en mottes de 4/4, par caisses de 98 mottes. Tomates, poivrons, piments, aubergines, cucurbitacées et aromatiques vivaces en godets de 8x8x7 cm.</p>
+        </div>
+        <div class="bloc">
+          <h3>Magasins bio</h3>
+          <p>Des plants de légumes et d'aromatiques bio vendus par barquette de 6 mottes, par godet ou par pot, selon les variétés.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@hadenn.fr?subject=Demande%20de%20tarifs%20professionnels">Demander les tarifs</a>
+          <a class="btn btn-contour" href="tel:+33659151854">06 59 15 18 54</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutique" aria-label="Semences et fournitures">
+    <div class="env">
+      <article class="carte" id="semences">
+        <h2>Semences bio</h2>
+        <p>Hadenn n'a pas pour objet de vendre des semences, mais j'ai quelques sachets de graines bio pour vous dépanner, uniquement à la serre sur les horaires d'ouverture. Seulement les graines dont je ne fais pas de plants : radis, carottes, fève, petits pois, panais, rutabaga…</p>
+        <p>Également de la phacélie bio et des mélanges de graines mellifères bio, pour couvrir vos espaces non cultivés de fleurs qui attirent abeilles et insectes. Pour aller plus loin, l'association Kaol Kozh et son réseau de jardiniers échangent leurs semences.</p>
+        <a class="lien" href="https://www.hadenn.fr/semences/">La page semences</a>
+      </article>
+      <article class="carte fournitures" id="fournitures">
+        <h2>Fournitures</h2>
+        <p>Hadenn n'est pas une jardinerie, mais vous propose de quoi protéger et pailler vos cultures.</p>
+        <ul>
+          <li><b>Voile de forçage</b><span>contre les gelées et les températures trop froides aux mi-saisons</span></li>
+          <li><b>Voile anti-insecte</b><span>contre la mouche de la carotte, la mouche des navets et radis, les chenilles sur les choux</span></li>
+          <li><b>Cosse de sarrasin</b><span>de la boulangerie Canevet : un paillage qui garde l'humidité et que les limaces apprécient peu</span></li>
+          <li><b>Céramiques de l'atelier Marumi</b><span>des caches-pots et des oyas, petits formats pour jardinières et plantes d'intérieur</span></li>
+        </ul>
+        <a class="lien" href="https://www.hadenn.fr/fournitures/">La page fournitures</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="apropos" id="apropos">
+    <div class="env">
+      <figure class="apropos-photo apparait">
+        <img src="assets/hadenn-pepiniere-bio-saint-renan/plants-cardons-en-pots.webp" alt="Vue de dessus de nombreux petits pots noirs, chacun avec un jeune plant aux feuilles longues et dentelées" width="1200" height="1600" loading="lazy" />
+      </figure>
+      <div class="lettre">
+        <p class="graine">« Hadenn » signifie <mark>graine</mark> en breton.</p>
+        <p>La Pépinière Hadenn, à Saint-Renan, a déjà une belle histoire, et j'ai eu la joie d'en reprendre le flambeau en 2024. Un mot qui dit l'esprit de la pépinière : respecter le vivant, laisser le temps faire son œuvre, et accompagner chaque plant depuis sa toute première étape.</p>
+        <p>Je suis labellisée Ecocert, un engagement qui reflète mes pratiques : une agriculture biologique respectueuse, cohérente et attentive à la biodiversité. Je travaille surtout avec des variétés population, pour leur richesse, leur diversité et leur capacité à s'adapter naturellement à notre territoire. Pour quelques espèces, notamment les petits fruits, je m'appuie sur des producteurs partenaires de confiance.</p>
+        <p>Je serai ravie de vous accueillir à la pépinière et de partager avec vous ma passion des plantes, du jardin et de la biodiversité cultivée.</p>
+        <p class="signe">À bientôt, à la pépinière,<br />Claire</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="env">
+      <div class="boite">
+        <div>
+          <h2>Venir à la pépinière</h2>
+          <address>Kerhastel<br />29290 Saint-Renan</address>
+          <p class="acces">À la sortie de Saint-Renan quand on vient de Brest et que l'on va vers Le Conquet. Sur la gauche, après une carrière en exploitation qui se trouve sur la droite, et juste avant une grande descente, l'ancienne voie romaine. Un grand panneau indique l'endroit en bord de route.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33659151854">Appeler la pépinière</a>
+            <a class="btn btn-contour" href="https://www.hadenn.fr/contact/">Voir le plan</a>
+          </div>
+        </div>
+        <div class="horaires">
+          <h3>Horaires</h3>
+          <p class="periode">de mars à octobre</p>
+          <dl>
+            <dt>À la serre</dt><dd>mercredi et jeudi, 9h à 12h et 14h à 18h<br />samedi, 15h à 18h</dd>
+            <dt>Au marché</dt><dd>Saint-Renan, rue de l'Aber, le samedi matin</dd>
+          </dl>
+          <div class="coord">
+            <a href="tel:+33659151854">06 59 15 18 54</a>
+            <a href="mailto:contact@hadenn.fr">contact@hadenn.fr</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="cols">
+      <div>
+        <p class="nom">Hadenn</p>
+        <p style="margin-top:12px">Plants bio de légumes et aromatiques pour les jardiniers et les maraîchers. Certifié FR-BIO-01.</p>
+      </div>
+      <div>
+        <h3>La pépinière</h3>
+        <p>Kerhastel<br />29290 Saint-Renan<br /><a href="tel:+33659151854">06 59 15 18 54</a><br /><a href="mailto:contact@hadenn.fr">contact@hadenn.fr</a></p>
+      </div>
+      <div>
+        <h3>Horaires, de mars à octobre</h3>
+        <p>Serre : mercredi et jeudi, 9h à 12h et 14h à 18h ; samedi, 15h à 18h<br />Marché de Saint-Renan : samedi matin</p>
+      </div>
+      <div>
+        <h3>Suivre la pépinière</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100065154084424">Facebook</a></li>
+          <li><a href="https://www.instagram.com/hadenn_bio/">Instagram</a></li>
+          <li><a href="https://www.hadenn.fr/categorie/actualites/">Actualités</a></li>
+          <li><a href="https://www.hadenn.fr/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">Pépinière Hadenn, Saint-Renan. Tous les plants sont semés et élevés ici, à partir de la graine.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour la Pépinière Hadenn</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à Bouliwood Créations Bois, Rocbaron (83), nuit du 2026-10-28.
+     CONTENU : textes, ateliers, tarifs, horaires, dates de marchés, coordonnées et photos relevés sur
+     https://www.bouliwoodcreationsbois.com/ le 28/10/2026 (dossier de Marco). Rien d'inventé.
+     Défaut réglé : le bouton « Nos jeux en bois » menait à une page non trouvée ; il mène ici à la
+     section #jeux de la page, qui renvoie elle-même vers la catégorie jeux en bois qui répond.
+     La phrase « Et très prochainement, nous allons vous proposer nos ateliers » n'est pas reprise :
+     les ateliers sont présentés comme ouverts. Seules les dates de marchés après le 28/10/2026 sont affichées.
+     DESIGN (Nova) : lin sciure, encre noyer, accent orange copeau. Bricolage Grotesque + Figtree.
+     Héros : photo du tournage pleine largeur arrondie, titre en surimpression sur voile du bas. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#EFE6D6" />
+<title>Bouliwood Créations Bois, atelier familial de créations bois à Rocbaron</title>
+<meta name="description" content="Jeux en bois, arts de la table et ateliers au tour à bois : Bouliwood, atelier familial de créations bois à Rocbaron, dans le Var." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23C8641E'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='36' fill='%232A2118'%3EB%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --lin:#EFE6D6;
+  --lin-2:#E5D8C2;
+  --copeau-clair:#F8F2E8;
+  --noyer:#2A2118;
+  --noyer-doux:#5C4D3E;
+  --orange:#C8641E;
+  --orange-fonce:#9E4A10;
+  --orange-clair:#F0A36B;
+  --sur-sombre:#EFE6D6;
+  --sur-sombre-doux:#CDBFA9;
+  --filet:rgba(42,33,24,.15);
+  --ombre:0 34px 64px -34px rgba(42,33,24,.62);
+  --ombre-courte:0 20px 36px -24px rgba(42,33,24,.55);
+  --fd:"Bricolage Grotesque",Georgia,sans-serif;
+  --ft:"Figtree",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lin);color:var(--noyer);font-family:var(--ft);font-size:18px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--orange);color:var(--noyer)}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+h1,h2{font-family:var(--fd);font-variation-settings:"opsz" 96;letter-spacing:-.025em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--noyer);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--noyer);color:var(--lin)}
+.btn-plein:hover{background:var(--orange);border-color:var(--orange);color:var(--noyer);transform:translateY(-2px);box-shadow:0 16px 28px -16px rgba(200,100,30,.9)}
+.btn-contour{background:transparent;color:var(--noyer)}
+.btn-contour:hover{background:var(--noyer);color:var(--lin);transform:translateY(-2px)}
+.sombre .btn-plein,.voile-sombre .btn-plein{background:var(--orange);border-color:var(--orange);color:var(--noyer)}
+.sombre .btn-plein:hover,.voile-sombre .btn-plein:hover{background:var(--lin);border-color:var(--lin);color:var(--noyer)}
+.sombre .btn-contour,.voile-sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover,.voile-sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--noyer)}
+
+/* étiquette posée sur photo */
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(248,242,232,.95);color:var(--noyer);font-size:15px;font-weight:600;line-height:1.3;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(42,33,24,.7)}
+.pastille b{color:var(--orange-fonce);font-weight:700}
+
+/* apparitions : photos seulement */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .archive.apparait{transform:translateY(24px) rotate(3deg)}
+.js .archive.apparait.vu{transform:rotate(3deg)}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait,.js .apparait.vu{opacity:1;transition:none;transform:none}
+  .js .archive.apparait,.js .archive.apparait.vu{transform:rotate(3deg)}
+  .btn{transition:none}
+  .heros img{animation:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding-top:26px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-weight:700;font-size:30px;letter-spacing:-.03em;font-variation-settings:"opsz" 48}
+.marque small{font-size:14px;color:var(--noyer-doux);margin-top:6px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--orange-fonce)}
+.tel-pill{margin-left:8px;background:var(--lin-2);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--noyer);color:var(--lin)}
+
+/* ---------- héros : photo pleine largeur ---------- */
+.heros{padding:28px 0 0}
+.scene{position:relative}
+.cadre{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre);background:var(--noyer)}
+.cadre img{width:100%;height:clamp(560px,47vw,680px);object-fit:cover;object-position:50% 80%;animation:approche 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes approche{from{transform:scale(1.06)}to{transform:scale(1)}}
+.cadre::after{content:"";position:absolute;inset:auto 0 0 0;height:72%;background:linear-gradient(to top,rgba(24,18,12,.92) 0%,rgba(24,18,12,.72) 38%,rgba(24,18,12,0) 100%);pointer-events:none}
+.cadre .pastille{left:auto;right:24px;bottom:auto;top:24px;z-index:2}
+.titre{position:absolute;left:56px;bottom:52px;z-index:2;color:var(--copeau-clair);max-width:620px}
+.lieu{font-size:17px;font-weight:700;color:var(--orange-clair);margin-bottom:16px}
+.heros h1{font-size:clamp(46px,5.6vw,84px);line-height:.98;font-weight:600}
+.voile-sombre{position:absolute;right:56px;bottom:56px;z-index:2;width:380px;color:var(--sur-sombre)}
+.voile-sombre .chapo{font-size:18px;color:#E6DAC6}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* ---------- bandeau de faits ---------- */
+.faits{padding:40px 0 0}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:var(--copeau-clair);border-radius:20px;padding:26px 32px;box-shadow:var(--ombre-courte)}
+.faits li{display:flex;gap:16px;align-items:center;font-size:16px;line-height:1.35;color:var(--noyer-doux)}
+.faits li + li{border-left:1px solid var(--filet);padding-left:24px}
+.faits b{display:block;font-family:var(--fd);font-weight:600;font-size:24px;color:var(--noyer);letter-spacing:-.02em;font-variation-settings:"opsz" 48}
+.rondelle{flex:none;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle,var(--orange) 0 3px,transparent 3.5px),repeating-radial-gradient(circle,#E9C9A4 0 3px,#D9AC7C 3px 5px);box-shadow:inset 0 0 0 2px #B98250}
+
+/* ---------- jeux en bois (cible du bouton réparé) ---------- */
+.jeux{padding:128px 0 120px}
+.jeux .env{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:center}
+.jeux-visuel{position:relative;padding:0 0 110px 0}
+.topologie{border-radius:24px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.topologie img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%}
+.picvert{position:absolute;right:-28px;bottom:0;width:250px;background:var(--copeau-clair);padding:12px 12px 14px;border-radius:18px;box-shadow:var(--ombre-courte)}
+.picvert img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:42% 50%;border-radius:10px}
+.picvert p{font-size:14px;font-weight:600;margin-top:10px;color:var(--noyer-doux);line-height:1.35}
+.jeux h2{font-size:clamp(36px,4vw,56px);line-height:1.02}
+.jeux .txt{margin-top:22px;color:var(--noyer-doux);max-width:46ch}
+.familles{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.familles li{background:var(--copeau-clair);border-radius:999px;padding:7px 15px;font-size:16px;font-weight:600}
+.ages{margin-top:20px;font-size:16px;color:var(--noyer-doux)}
+.ages b{color:var(--noyer)}
+.normes{margin-top:28px;background:var(--lin-2);border-radius:16px;padding:20px 22px;font-size:16px;color:var(--noyer-doux)}
+.normes strong{display:block;color:var(--noyer);font-size:17px;margin-bottom:4px}
+.jeux .actions{margin-top:30px}
+
+/* ---------- ateliers (section sombre) ---------- */
+.sombre{background:var(--noyer);color:var(--sur-sombre)}
+.ateliers{padding:120px 0}
+.ateliers .haut{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:end}
+.ateliers h2{font-size:clamp(36px,4.2vw,60px);line-height:1.02}
+.ateliers .haut p{color:var(--sur-sombre-doux)}
+.ateliers .haut p + p{margin-top:12px}
+.ateliers .corps{display:grid;grid-template-columns:4fr 7fr;gap:64px;margin-top:64px;align-items:start}
+.coquetiers{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 34px 60px -30px rgba(0,0,0,.75)}
+.coquetiers img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+.liste li{border-top:1px solid rgba(239,230,214,.18)}
+.liste li:last-child{border-bottom:1px solid rgba(239,230,214,.18)}
+.liste a{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:22px 0;text-decoration:none;transition:padding .3s cubic-bezier(.2,.7,.2,1)}
+.liste a:hover{padding-left:12px}
+.liste a:hover h3{color:var(--orange-clair)}
+.liste h3{font-family:var(--ft);font-weight:700;font-size:20px;line-height:1.3;transition:color .25s}
+.liste .meta{grid-column:1;font-size:16px;color:var(--sur-sombre-doux)}
+.liste .prix{grid-column:2;grid-row:1 / span 2;align-self:center;font-family:var(--fd);font-weight:600;font-size:28px;white-space:nowrap;text-align:right;font-variation-settings:"opsz" 48}
+.liste .prix small{display:block;font-family:var(--ft);font-size:14px;font-weight:600;color:var(--sur-sombre-doux)}
+.ouvert{display:inline-block;margin-left:10px;font-family:var(--ft);font-size:13px;font-weight:700;background:var(--orange);color:var(--noyer);padding:3px 10px;border-radius:999px;vertical-align:3px;white-space:nowrap}
+.reserver{margin-top:36px;color:var(--sur-sombre-doux);font-size:17px;max-width:62ch}
+.ateliers .actions{margin-top:24px}
+
+/* ---------- notre histoire ---------- */
+.histoire{padding:128px 0 120px}
+.histoire .env{display:grid;grid-template-columns:6fr 5fr;gap:88px;align-items:start}
+.histoire h2{font-size:clamp(36px,4vw,56px);line-height:1.02;max-width:14ch}
+.histoire .txt{margin-top:22px;color:var(--noyer-doux);max-width:58ch}
+.histoire .txt + .txt{margin-top:14px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.duo figure{display:flex;gap:14px;align-items:center;background:var(--copeau-clair);border-radius:999px;padding:8px 22px 8px 8px;box-shadow:var(--ombre-courte)}
+.duo img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.duo b{display:block;font-family:var(--fd);font-weight:600;font-size:21px;line-height:1.1;font-variation-settings:"opsz" 48}
+.duo span{font-size:15px;color:var(--noyer-doux);line-height:1.3}
+.histoire-visuel{position:relative;padding-top:16px}
+.archive{background:#F6F1E8;padding:16px 16px 18px;border-radius:6px;box-shadow:0 30px 50px -26px rgba(42,33,24,.7);transform:rotate(3deg)}
+.archive img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:sepia(.18) contrast(1.02);border-radius:2px}
+.archive p{font-size:15px;font-weight:600;margin-top:12px;color:var(--noyer-doux);text-align:center;font-style:italic}
+.citation{margin-top:56px;font-family:var(--fd);font-weight:500;font-size:clamp(26px,2.6vw,34px);line-height:1.2;letter-spacing:-.02em;color:var(--noyer);font-variation-settings:"opsz" 72}
+.citation::before{content:"« ";color:var(--orange)}
+.citation::after{content:" »";color:var(--orange)}
+
+/* ---------- bois récupéré : bandeau photo ---------- */
+.bois{padding:0 0 128px}
+.bois .bloc{position:relative}
+.bandeau-photo{border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.bandeau-photo img{width:100%;height:480px;object-fit:cover;object-position:50% 50%}
+.carte-bois{position:absolute;right:88px;top:50%;transform:translateY(-50%);width:440px;background:var(--copeau-clair);border-radius:22px;padding:36px;box-shadow:var(--ombre)}
+.carte-bois h2{font-size:32px;line-height:1.08}
+.carte-bois p{margin-top:14px;color:var(--noyer-doux);font-size:17px}
+.table{display:grid;grid-template-columns:5fr 7fr;gap:64px;margin-top:72px;align-items:center}
+.table h3{font-family:var(--fd);font-weight:600;font-size:30px;line-height:1.1;letter-spacing:-.02em;font-variation-settings:"opsz" 48}
+.table p{margin-top:14px;color:var(--noyer-doux);max-width:46ch}
+.table .lien{display:inline-block;margin-top:18px;font-weight:700;color:var(--orange-fonce);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.duo-photos{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:end}
+.planche{border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte);position:relative}
+.planche img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.couverts{border-radius:14px;overflow:hidden;box-shadow:var(--ombre-courte);margin-bottom:-40px}
+.couverts img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 50%}
+
+/* ---------- boutique et marchés ---------- */
+.venir{background:var(--lin-2);padding:120px 0}
+.venir .env{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:start}
+.venir h2{font-size:clamp(34px,3.8vw,52px);line-height:1.04}
+.chalet{margin-top:32px;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.chalet img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.horaires{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:17px}
+.horaires dt{font-weight:700}
+.horaires dd{margin:0;color:var(--noyer-doux)}
+.sms{margin-top:20px;font-size:17px;color:var(--noyer-doux);max-width:54ch}
+.venir .actions{margin-top:26px}
+.carte-adresse{background:var(--copeau-clair);border-radius:22px;padding:36px;box-shadow:var(--ombre-courte)}
+.carte-adresse .adr{font-family:var(--fd);font-weight:600;font-size:28px;line-height:1.15;letter-spacing:-.02em;font-variation-settings:"opsz" 48}
+.carte-adresse .acces{margin-top:12px;font-size:16px;color:var(--noyer-doux)}
+.marches{margin-top:44px}
+.marches h3{font-family:var(--fd);font-weight:600;font-size:26px;letter-spacing:-.02em;font-variation-settings:"opsz" 48}
+.marches ol{margin-top:14px}
+.marches li{display:grid;grid-template-columns:118px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--filet);font-size:16px;line-height:1.4}
+.marches .quand{font-weight:700;color:var(--orange-fonce)}
+.marches .ou{color:var(--noyer-doux)}
+.marches .ou b{color:var(--noyer);display:block;font-size:17px}
+
+/* ---------- pied ---------- */
+.pied{background:var(--noyer);color:var(--sur-sombre);padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:40px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:34ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:var(--orange-clair);margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(239,230,214,.3)}
+.pied li a:hover{color:var(--orange-clair);border-color:var(--orange-clair)}
+.propo{margin-top:72px;border-top:1px solid rgba(239,230,214,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+/* ---------- tablette ---------- */
+@media (max-width: 1100px){
+  .picvert{right:0}
+  .carte-bois{right:40px}
+  .voile-sombre{width:330px;right:40px}
+  .titre{left:40px}
+}
+/* ---------- téléphone ---------- */
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{flex-wrap:wrap;gap:12px 16px}
+  .marque span{font-size:26px}
+  .marque small{font-size:13px}
+  .nav{order:3;width:100%;margin-left:0;gap:20px;justify-content:flex-start}
+  .nav .loin{display:none}
+  .tel-pill{margin-left:auto;font-size:15px;padding:9px 14px}
+  .heros{padding-top:18px}
+  .cadre{border-radius:22px}
+  .cadre img{height:500px;object-position:52% 60%}
+  .cadre .pastille{top:14px;right:14px;font-size:14px;padding:7px 12px}
+  .titre{left:22px;right:22px;bottom:26px}
+  .lieu{font-size:16px;margin-bottom:10px}
+  .heros h1{font-size:40px;line-height:1.02}
+  .voile-sombre{position:static;width:auto;color:var(--noyer);margin-top:24px}
+  .voile-sombre .chapo{color:var(--noyer-doux);font-size:17px}
+  .voile-sombre .btn-plein{background:var(--noyer);border-color:var(--noyer);color:var(--lin)}
+  .voile-sombre .btn-contour{border-color:var(--noyer);color:var(--noyer)}
+  .actions{flex-direction:column;margin-top:22px}
+  .actions .btn{width:100%}
+  .faits{padding-top:40px}
+  .faits ul{grid-template-columns:1fr 1fr;gap:18px 14px;padding:22px 18px}
+  .faits li + li{border-left:0;padding-left:0}
+  .faits li{flex-direction:column;align-items:flex-start;gap:8px}
+  .faits b{font-size:21px}
+  .jeux,.ateliers,.histoire,.venir{padding:80px 0}
+  .jeux .env,.histoire .env,.venir .env{grid-template-columns:1fr;gap:44px}
+  .jeux-visuel{padding-bottom:90px;margin-right:6px}
+  .picvert{width:160px;padding:8px 8px 10px}
+  .picvert p{font-size:13px}
+  .topologie .pastille{top:12px;bottom:auto;left:12px}
+  .ateliers .haut,.ateliers .corps{grid-template-columns:1fr;gap:24px}
+  .ateliers .corps{margin-top:40px}
+  .coquetiers img{aspect-ratio:3/2}
+  .liste a{grid-template-columns:1fr;gap:4px}
+  .liste .prix{grid-column:1;grid-row:auto;text-align:left;font-size:24px}
+  .liste .prix small{display:inline;margin-left:8px}
+  .duo{grid-template-columns:1fr;gap:12px}
+  .archive{max-width:300px;margin:0 auto}
+  .citation{margin-top:40px}
+  .bois{padding-bottom:80px}
+  .bandeau-photo img{height:260px}
+  .carte-bois{position:relative;right:auto;top:auto;transform:none;width:auto;margin:-56px 14px 0;padding:26px 22px}
+  .carte-bois h2{font-size:28px}
+  .table{grid-template-columns:1fr;gap:32px;margin-top:56px}
+  .duo-photos{grid-template-columns:3fr 2fr;gap:14px}
+  .couverts{margin-bottom:-24px}
+  .horaires{grid-template-columns:1fr;gap:2px}
+  .horaires dd{margin-bottom:10px}
+  .carte-adresse{padding:28px 22px}
+  .carte-adresse .adr{font-size:24px}
+  .marches li{grid-template-columns:1fr;gap:4px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Bouliwood Créations Bois, retour en haut">
+      <span>Bouliwood</span>
+      <small>Créations bois, Rocbaron</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#jeux">Nos jeux en bois</a>
+      <a href="#ateliers">Les ateliers</a>
+      <a href="#histoire" class="loin">Notre histoire</a>
+      <a href="#boutique" class="loin">La boutique</a>
+    </nav>
+    <a class="tel-pill" href="sms:+33610608725">SMS 06 10 60 87 25</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="scene">
+        <div class="cadre">
+          <img src="assets/bouliwood-rocbaron/tournage-bol-au-tour-a-bois-copeaux.webp" alt="Greg, visière et masque, creuse un bol en bois clair au tour à bois, les copeaux volent" width="1066" height="1600" fetchpriority="high" />
+          <span class="pastille">Greg, élagueur et <b>tourneur sur bois</b></span>
+          <div class="titre">
+            <p class="lieu">Rocbaron, dans le Var</p>
+            <h1>Un atelier familial de créations bois</h1>
+          </div>
+        </div>
+        <div class="voile-sombre">
+          <p class="chapo">Jeux éducatifs, objets des arts de la table, pièces sur mesure et ateliers pour devenir artisan du bois d'un jour.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#jeux">Nos jeux en bois</a>
+            <a class="btn btn-contour" href="#ateliers">Les ateliers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="env"><ul aria-label="Bouliwood en bref">
+      <li><span class="rondelle" aria-hidden="true"></span><span><b>Mai 2019</b>Naissance de Bouliwood</span></li>
+      <li><span class="rondelle" aria-hidden="true"></span><span><b>Escoulen</b>Formation au tour à bois, Aiguines</span></li>
+      <li><span class="rondelle" aria-hidden="true"></span><span><b>Bois récupéré</b>Élagages et chutes de bois brutes</span></li>
+      <li><span class="rondelle" aria-hidden="true"></span><span><b>5 ★</b>13 avis de BouliLovers</span></li>
+    </ul></div>
+  </div>
+
+  <section class="jeux" id="jeux">
+    <div class="env">
+      <div class="jeux-visuel">
+        <figure class="topologie apparait">
+          <img src="assets/bouliwood-rocbaron/jouets-bois-animaux-arbre-puzzle.webp" alt="Jeu en bois&nbsp;: arbre vert, girafe et petits animaux colorés posés avec des cartes illustrées" width="1600" height="1066" loading="lazy" />
+          <span class="pastille">Jeu <b>Topologie Nature</b></span>
+        </figure>
+        <figure class="picvert apparait">
+          <img src="assets/bouliwood-rocbaron/jouet-pic-vert-sur-ressort.webp" alt="Pic-vert en bois peint rouge, noir et bleu sur sa tige et son socle" width="1600" height="1066" loading="lazy" />
+          <p>Le pic-vert sur ressort, un modèle imaginé par mon papa</p>
+        </figure>
+      </div>
+      <div>
+        <h2>Nos jeux en bois</h2>
+        <p class="txt">Le jeu éducatif prend une place importante dans mes créations, et je m'essaie aussi aux jeux de société. Certains modèles viennent tout droit de l'imagination de mon papa.</p>
+        <ul class="familles" aria-label="Familles de jeux">
+          <li>Jeux d'éveil</li>
+          <li>Hochets</li>
+          <li>Jeux à tirer</li>
+          <li>Animaux en bois</li>
+          <li>Puzzles</li>
+          <li>Jeux de mémoire</li>
+          <li>Jeux d'équilibre</li>
+          <li>Casse-tête</li>
+          <li>Dés à Histoires</li>
+          <li>Toupies</li>
+          <li>Jeux de société</li>
+        </ul>
+        <p class="ages"><b>Par âge&nbsp;:</b> à partir de 3 mois, 6 mois, 1 an, et jusqu'à 8 ans.</p>
+        <div class="normes">
+          <strong>Des jouets normés</strong>
+          Peintures normées EN71-3 et ASTM D-4236, non toxiques pour les tout petits qui mettent les objets à la bouche. Vernis normé EN71-3, fait par une société française de l'Allier. Bois non traité.
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.bouliwoodcreationsbois.com/categorie-produit/jeux-en-bois/">Voir tous les jeux en bois</a>
+          <a class="btn btn-contour" href="https://www.bouliwoodcreationsbois.com/boutique/">La boutique en ligne</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ateliers sombre" id="ateliers">
+    <div class="env">
+      <div class="haut">
+        <h2>Devenez artisan du bois d'un jour</h2>
+        <div>
+          <p>Des ateliers créatifs autour du bois, ouverts aux enfants comme aux adultes. Chacun manipule la matière, découvre différentes essences de bois et s'initie aux gestes de l'artisanat.</p>
+          <p>Un moment convivial pour apprendre, créer et repartir avec sa propre réalisation. Ateliers adultes et enfants à partir de 5 ans.</p>
+        </div>
+      </div>
+      <div class="corps">
+        <figure class="coquetiers apparait">
+          <img src="assets/bouliwood-rocbaron/coquetiers-et-ronds-tournes-oeufs.webp" alt="Coquetiers tournés en bois clair, deux avec un œuf, sur une table sombre" width="1600" height="1066" loading="lazy" />
+          <span class="pastille">Atelier coquetier, <b>avec Grégory</b></span>
+        </figure>
+        <div>
+          <ul class="liste">
+            <li><a href="https://www.bouliwoodcreationsbois.com/ateliers/atelier-initiation-decoupe-a-la-scie-a-chantourner-enfant-ou-adulte/">
+              <h3>Initiation découpe à la scie à chantourner <span class="ouvert">Inscriptions ouvertes</span></h3>
+              <p class="meta">Enfant ou adulte, 1h, avec Stéphanie</p>
+              <p class="prix">40 €<small>par personne</small></p>
+            </a></li>
+            <li><a href="https://www.bouliwoodcreationsbois.com/ateliers/creation-dun-chateau-fort-en-bois-2/">
+              <h3>Création d'un château fort en bois <span class="ouvert">Inscriptions ouvertes</span></h3>
+              <p class="meta">2h30, avec Stéphanie</p>
+              <p class="prix">65 €<small>par enfant</small></p>
+            </a></li>
+            <li><a href="https://www.bouliwoodcreationsbois.com/ateliers/atelier-creation-dun-jeu-de-memory-en-bois-atelier-adultes-et-ou-enfants/">
+              <h3>Création d'un jeu de memory en bois <span class="ouvert">Inscriptions ouvertes</span></h3>
+              <p class="meta">Adultes et enfants, 2h30, avec Stéphanie</p>
+              <p class="prix">75 €<small>par personne</small></p>
+            </a></li>
+            <li><a href="https://www.bouliwoodcreationsbois.com/ateliers/atelier-de-fabrication-dun-coquetier-au-tour-a-bois/">
+              <h3>Fabrication d'un coquetier au tour à bois</h3>
+              <p class="meta">2h, dès 10 ans, avec Grégory</p>
+              <p class="prix">70 €<small>par adulte</small></p>
+            </a></li>
+            <li><a href="https://www.bouliwoodcreationsbois.com/ateliers/atelier-de-fabrication-de-toupies-au-tour-a-bois-2/">
+              <h3>Fabrication de toupies au tour à bois</h3>
+              <p class="meta">1h30, avec Grégory</p>
+              <p class="prix">55 €<small>par adulte</small></p>
+            </a></li>
+            <li><a href="https://www.bouliwoodcreationsbois.com/les-ateliers/">
+              <h3>Atelier parent et enfant&nbsp;: un objet en bois</h3>
+              <p class="meta">Puzzle simple, 4 animaux ou thème au choix, 2h30, avec Stéphanie</p>
+              <p class="prix">65 €<small>par enfant</small></p>
+            </a></li>
+          </ul>
+          <p class="reserver">Contactez-moi par SMS ou par mail avec un maximum de détails sur votre souhait et vos disponibilités, je vous répondrai au plus vite. Et désormais, vous pouvez aussi créer votre propre atelier, en famille, entre amis ou pour un événement.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="sms:+33610608725">Réserver par SMS</a>
+            <a class="btn btn-contour" href="https://www.bouliwoodcreationsbois.com/les-ateliers/demander-un-atelier-prive/">Demander un atelier privé</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="env">
+      <div>
+        <h2>Bouliwood est né en mai 2019</h2>
+        <p class="txt">Je crois que c'est en moi depuis que je suis petite&nbsp;: j'ai eu la chance d'avoir un papa menuisier issu de l'école Boulle à Paris. Il confectionnait des meubles, des horloges, des dessous de plat et même des jouets. Certains de mes modèles sont d'ailleurs issus de son imagination.</p>
+        <p class="txt">C'est l'arrivée de ma fille qui a fait germer l'idée&nbsp;: j'ai commencé à confectionner des jouets pour elle, puis à les présenter sur les marchés. J'y ai embarqué mon compagnon&nbsp;: nous avons fait ensemble la formation d'initiation au tour à bois de la grande école de tournage Escoulen, à Aiguines dans le Var.</p>
+        <p class="txt">Aujourd'hui, nous voilà avec un garage rempli de copeaux, une maison devenue un atelier permanent, des enfants bons testeurs de produits et des pièces de bois en cours de partout&nbsp;!</p>
+        <div class="duo">
+          <figure>
+            <img src="assets/bouliwood-rocbaron/artisane-montage-pendentif-arbre-de-vie.webp" alt="Stéphanie monte l'anneau d'un pendentif en bois découpé en arbre de vie" width="1066" height="1600" loading="lazy" />
+            <figcaption><b>Steph</b><span>Artisane du bois</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/bouliwood-rocbaron/tourneur-visiere-creusage-bol.webp" alt="Greg derrière sa visière couverte de copeaux, au tour à bois" width="1600" height="1200" loading="lazy" />
+            <figcaption><b>Greg</b><span>Élagueur et tourneur sur bois</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="histoire-visuel">
+        <figure class="archive apparait">
+          <img src="assets/bouliwood-rocbaron/pere-menuisier-atelier-archive-noir-et-blanc.webp" alt="Photo d'archive en noir et blanc&nbsp;: Frédéric Bluche travaille à la scie à chantourner dans son atelier" width="1600" height="1200" loading="lazy" />
+          <p>Frédéric Bluche, mon papa, il y a plus de 30 ans</p>
+        </figure>
+        <p class="citation">Le bois plaît, le bois traverse les années. Une véritable passion est née.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bois">
+    <div class="env">
+      <div class="bloc">
+      <figure class="bandeau-photo apparait">
+        <img src="assets/bouliwood-rocbaron/chutes-de-bois-recuperees.webp" alt="Tas de chutes de bois brut récupérées, chêne et bois clair, posées sur de la sciure" width="1600" height="1066" loading="lazy" />
+      </figure>
+      <div class="carte-bois">
+        <h2>Du bois issu d'élagages</h2>
+        <p>Je «&nbsp;traque&nbsp;» les menuisiers, les scieries, les ébénistes pour récupérer les chutes de bois brutes destinées à être jetées ou brûlées. Mon compagnon est élagueur&nbsp;: il récupère le bois qui lui permettra de fabriquer des assiettes, des bols ou encore des toupies.</p>
+        <p>Peut-être mangerez-vous dans une assiette faite à partir d'un arbre que vous avez déjà croisé&nbsp;!</p>
+      </div>
+      </div>
+      <div class="table">
+        <div>
+          <h3>Pour la table, et sur mesure</h3>
+          <p>Planches de présentation, plats apéro, couverts, coquetiers, saladiers. Les objets de cuisine sont huilés à la cire d'abeille d'un apiculteur de Saint André les Alpes, mélangée à de l'huile de tournesol&nbsp;: on appelle cela «&nbsp;la popote&nbsp;».</p>
+          <p>L'idée de Bouliwood est de faire ce qui vous plaît&nbsp;: pièces uniques, personnalisation, petites séries, pour les particuliers comme pour les professionnels.</p>
+          <a class="lien" href="https://www.bouliwoodcreationsbois.com/categorie-produit/arts-de-la-table/">Voir les arts de la table</a>
+        </div>
+        <div class="duo-photos">
+          <figure class="planche apparait">
+            <img src="assets/bouliwood-rocbaron/planche-aperitif-bois-a-poignee.webp" alt="Planche apéritif en bois clair à longue poignée, garnie de saucisson et de deux coupelles turquoise" width="1600" height="1066" loading="lazy" />
+            <span class="pastille">Plat apéro</span>
+          </figure>
+          <figure class="couverts apparait">
+            <img src="assets/bouliwood-rocbaron/couverts-a-salade-bois-saladier.webp" alt="Couverts à salade en bois sculpté posés dans un saladier de salade verte" width="1600" height="1066" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="boutique">
+    <div class="env">
+      <div>
+        <h2>Il y a la boutique en ligne, mais aussi une vraie boutique</h2>
+        <figure class="chalet apparait">
+          <img src="assets/bouliwood-rocbaron/boutique-physique-chalet-bois-rocbaron.webp" alt="Intérieur de la boutique Bouliwood, chalet en bois aux étagères de jouets et d'objets en bois" width="1600" height="1205" loading="lazy" />
+          <span class="pastille">La boutique, <b>à Rocbaron</b></span>
+        </figure>
+        <dl class="horaires">
+          <dt>Lundi, mardi, jeudi, vendredi</dt><dd>16h30 à 19h</dd>
+          <dt>Mercredi</dt><dd>13h à 16h</dd>
+          <dt>Autres moments</dt><dd>Sur rendez-vous, par SMS</dd>
+        </dl>
+        <p class="sms">Même pendant les horaires d'ouverture, un petit SMS avant votre venue est toujours apprécié, idéalement la veille&nbsp;: il m'arrive de ne pas avoir mon téléphone sur moi lorsque je travaille.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="sms:+33610608725">Prévenir par SMS</a>
+          <a class="btn btn-contour" href="mailto:contact@bouliwoodcreationsbois.com">Écrire un mail</a>
+        </div>
+      </div>
+      <div>
+        <div class="carte-adresse">
+          <p class="adr">6 lotissement les écureuils<br />83136 Rocbaron</p>
+          <p class="acces">Lorsque vous arrivez dans le lotissement, allez toujours tout droit, le portail est au fond à droite&nbsp;!</p>
+        </div>
+        <div class="marches">
+          <h3>Sur les marchés et salons</h3>
+          <ol>
+            <li><span class="quand">14 et 15 nov.</span><span class="ou"><b>Salon Scrap and Co 83</b>Place Trotobas, Ollioules, 10h à 18h</span></li>
+            <li><span class="quand">21 et 22 nov.</span><span class="ou"><b>Salon Galathéa</b>Forum du Casino, Hyères, 9h à 19h</span></li>
+            <li><span class="quand">27 au 29 nov.</span><span class="ou"><b>Salon Fémin'art</b>Palais Neptune, Toulon, 10h à 19h</span></li>
+            <li><span class="quand">12 déc.</span><span class="ou"><b>Marché de Noël</b>Salle Valérie Garnier, La Valette, 9h à 17h</span></li>
+            <li><span class="quand">13 déc.</span><span class="ou"><b>Marché de Noël</b>Centre ville de Rocbaron, 9h à 18h</span></li>
+            <li><span class="quand">20 déc.</span><span class="ou"><b>Marché de Noël</b>Saint Maximin, 9h30 à 18h</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Bouliwood</span><small>Créations bois, Rocbaron</small></a>
+        <p class="dit">Fabrique artisanale d'objets en bois sur mesure et personnalisés, pour particuliers ou professionnels.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>6 lotissement les écureuils<br />83136 Rocbaron</li>
+          <li><a href="sms:+33610608725">SMS 06 10 60 87 25</a></li>
+          <li><a href="mailto:contact@bouliwoodcreationsbois.com">contact@bouliwoodcreationsbois.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>La boutique</h3>
+        <ul>
+          <li>Lundi, mardi, jeudi, vendredi&nbsp;: 16h30 à 19h</li>
+          <li>Mercredi&nbsp;: 13h à 16h</li>
+          <li>Ou sur rendez-vous par SMS</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre Bouliwood</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/bouliwoodcreation/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/bouliwoodcreationsbois">Facebook</a></li>
+          <li><a href="https://wa.me/33610608725">WhatsApp</a></li>
+          <li><a href="https://www.bouliwoodcreationsbois.com/blog/">Le blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Bouliwood Créations Bois</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('vu') }); return;
+  }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vu'); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

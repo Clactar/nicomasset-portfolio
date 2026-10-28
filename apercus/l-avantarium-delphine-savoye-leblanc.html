@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à L'Avantarium, créations de Delphine Savoye Leblanc (Dordogne), nuit du 2026-10-28.
+     CONTENU : textes, noms et prix des créations, mail et photos relevés sur https://lavantarium-creation.com/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé. Défaut réglé : les liens « FAQ » et « Commandes personnalisées » du pied de page
+     menaient à des pages 404 ; ils mènent ici aux sections #faq et #commandes de la page, avec leurs textes, et le mail
+     est un vrai lien mailto. Le pied de page ne garde plus les crochets de modèle.
+     DESIGN (Nova) : parchemin doré, encre prune noire, accent laiton. Cormorant Garamond + Jost. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F1EADB" />
+<title>L'Avantarium, bijoux en laiton, parures florales et décoration faits main</title>
+<meta name="description" content="Bijoux en laiton martelé, broches et chapeaux en soie, parures florales pour mariages et objets de décoration, créés à la main par Delphine Savoye Leblanc en Dordogne." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 60V30a24 24 0 0 1 48 0v30z' fill='%232A1A22'/%3E%3Cpath d='M13 56V30a19 19 0 0 1 38 0v26' fill='none' stroke='%23B08A3E' stroke-width='1.5'/%3E%3Ctext x='32' y='48' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23F1EADB'%3EA%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:ital,wght@0,400..600;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --parchemin:#F1EADB;
+  --parchemin-2:#E7DCC6;
+  --velin:#F9F5EC;
+  --prune:#2A1A22;
+  --prune-doux:#5E4A53;
+  --prune-nuit:#21141B;
+  --laiton:#B08A3E;
+  --laiton-fonce:#7F6024;
+  --laiton-clair:#D6B676;
+  --sur-sombre:#F1EADB;
+  --sur-sombre-doux:#CDBFC4;
+  --filet:rgba(42,26,34,.14);
+  --ombre:0 34px 64px -36px rgba(42,26,34,.6);
+  --ombre-courte:0 18px 36px -24px rgba(42,26,34,.55);
+  --fd:"Cormorant Garamond",Georgia,serif;
+  --ft:"Jost",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--parchemin);color:var(--prune);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--laiton);color:var(--velin)}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:balance}
+h1,h2{font-family:var(--fd);letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--laiton);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:500;font-size:17px;letter-spacing:.01em;text-decoration:none;border:1.5px solid var(--prune);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,border-color .25s,box-shadow .25s;text-align:center}
+.btn-plein{background:var(--prune);color:var(--parchemin)}
+.btn-plein:hover{background:var(--laiton);border-color:var(--laiton);color:var(--velin);transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(176,138,62,.95)}
+.btn-contour{background:transparent;color:var(--prune)}
+.btn-contour:hover{background:var(--prune);color:var(--parchemin);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--laiton);border-color:var(--laiton);color:var(--prune-nuit)}
+.sombre .btn-plein:hover{background:var(--parchemin);border-color:var(--parchemin);color:var(--prune)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--prune)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+
+/* étiquette posée sur photo */
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(249,245,236,.95);color:var(--prune);font-size:15px;font-weight:500;line-height:1.3;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(42,26,34,.7);max-width:calc(100% - 32px)}
+.etiquette em{font-family:var(--fd);font-style:italic;font-weight:600;font-size:18px}
+.etiquette b{font-weight:500;color:var(--laiton-fonce);margin-left:6px}
+
+/* apparitions des photos seulement */
+.js .apparait{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .btn{transition:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding-top:26px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:32px;font-weight:600;font-style:italic}
+.marque small{font-size:14px;color:var(--prune-doux);margin-top:6px}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:hover{color:var(--laiton-fonce)}
+.mail-pill{background:var(--prune);color:var(--parchemin);padding:10px 20px;border-radius:999px;font-weight:500;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.nav .mail-pill:hover{background:var(--laiton);color:var(--velin)}
+
+/* ---------- héros ---------- */
+.heros{padding:72px 0 120px}
+.heros .env{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+.lieu{font-size:16px;font-weight:500;color:var(--laiton-fonce);margin-bottom:22px}
+.heros h1{font-size:clamp(52px,6.4vw,92px);line-height:.98;font-weight:500;max-width:12ch}
+.heros h1 em{font-style:italic;color:var(--laiton-fonce)}
+.heros .chapo{font-size:20px;color:var(--prune-doux);max-width:44ch;margin-top:28px}
+.heros-visuel{position:relative;isolation:isolate;margin:0 28px 28px 0}
+.arche{position:relative;border-radius:50% 50% 18px 18px / 40% 40% 18px 18px;overflow:hidden;box-shadow:0 44px 70px -38px rgba(42,26,34,.7)}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.heros-visuel::before{content:"";position:absolute;inset:0;translate:22px 22px;border:1.5px solid var(--laiton);border-radius:50% 50% 22px 22px / 40% 40% 22px 22px;z-index:-1}
+.arche .etiquette{left:50%;translate:-50% 0;white-space:normal;text-align:center}
+
+/* ---------- bandeau de faits ---------- */
+.faits{background:var(--prune);color:var(--sur-sombre)}
+.faits ul{display:flex;justify-content:space-between;gap:14px 24px;padding-block:24px;flex-wrap:wrap}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px}
+.faits li::before{content:"";width:8px;height:8px;rotate:45deg;background:var(--laiton-clair);flex:none}
+
+/* ---------- créations (cabinet de curiosités) ---------- */
+.creations{padding:128px 0 120px}
+.creations .haut{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:end;margin-bottom:64px}
+.creations h2{font-size:clamp(42px,4.8vw,66px);line-height:1}
+.creations h2 em{font-style:italic}
+.creations .haut p{color:var(--prune-doux);max-width:52ch}
+.cabinet{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.piece{position:relative}
+.piece .ph{position:relative;overflow:hidden;box-shadow:var(--ombre)}
+.piece img{width:100%;object-fit:cover}
+.piece figcaption{margin-top:14px}
+.piece figcaption strong{display:block;font-family:var(--fd);font-weight:600;font-size:24px;line-height:1.15}
+.piece figcaption span{display:block;font-size:15px;color:var(--prune-doux);margin-top:2px}
+.p1{grid-column:1 / span 5}
+.p1 .ph{border-radius:20px}
+.p1 img{aspect-ratio:4/5;object-position:50% 45%}
+.p2{grid-column:6 / span 4;margin-top:96px}
+.p2 .ph{background:var(--velin);padding:16px;border-radius:14px;box-shadow:var(--ombre-courte)}
+.p2 img{aspect-ratio:3/4;border-radius:6px;object-position:50% 40%}
+.p3{grid-column:10 / span 3;margin-top:24px}
+.p3 .ph{border-radius:999px 999px 14px 14px}
+.p3 img{aspect-ratio:3/5;object-position:50% 40%}
+.p4{grid-column:1 / span 3;margin-top:40px;margin-left:24px}
+.p4 .ph{background:var(--velin);padding:10px 10px 12px;border-radius:4px;rotate:-3deg;box-shadow:0 26px 40px -22px rgba(42,26,34,.6)}
+.p4 img{aspect-ratio:1/1;border-radius:2px}
+.p5{grid-column:5 / span 4;margin-top:24px}
+.p5 .ph{border-radius:20px}
+.p5 img{aspect-ratio:1/1;object-position:50% 55%}
+.p6{grid-column:9 / span 4;margin-top:-8px}
+.p6 .ph{border-radius:20px}
+.p6 img{aspect-ratio:4/5;object-position:50% 60%}
+.creations .bas{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:64px;padding-top:32px;border-top:1px solid var(--filet)}
+.creations .bas p{color:var(--prune-doux);max-width:60ch}
+.creations .bas .actions{margin-top:0}
+
+/* ---------- parurerie florale (section sombre) ---------- */
+.sombre{background:var(--prune);color:var(--sur-sombre)}
+.parurerie{padding:128px 0}
+.parurerie .env{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center}
+.ronsard{position:relative;isolation:isolate}
+.ronsard .ph{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 44px 70px -34px rgba(0,0,0,.75)}
+.ronsard img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 35%}
+.ronsard::before{content:"";position:absolute;inset:0;translate:-20px -20px;border:1.5px solid rgba(214,182,118,.7);border-radius:26px;z-index:-1}
+.parurerie .citation{font-family:var(--fd);font-style:italic;font-weight:500;font-size:clamp(32px,3.4vw,46px);line-height:1.16;text-wrap:balance}
+.parurerie .citation::before{content:"« ";color:var(--laiton-clair)}
+.parurerie .citation::after{content:" »";color:var(--laiton-clair)}
+.parurerie .source{margin-top:18px;color:var(--sur-sombre-doux);font-size:16px}
+.heures{margin-top:44px;border-top:1px solid rgba(241,234,219,.2)}
+.heures li{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(241,234,219,.2)}
+.heures span{font-size:17px}
+.heures span small{display:block;color:var(--sur-sombre-doux);font-size:15px;margin-top:2px}
+.heures b{font-family:var(--fd);font-weight:500;font-size:30px;color:var(--laiton-clair);line-height:1}
+
+/* ---------- à propos ---------- */
+.apropos{padding:128px 0}
+.apropos .env{display:grid;grid-template-columns:6fr 4fr;gap:88px;align-items:center}
+.apropos h2{font-size:clamp(40px,4.4vw,60px);line-height:1.02}
+.apropos p{color:var(--prune-doux);margin-top:20px;max-width:56ch}
+.apropos p.nom-origine{margin-top:28px;font-family:var(--fd);font-size:25px;line-height:1.35;color:var(--prune);max-width:34ch}
+.portrait{justify-self:center;width:100%;max-width:400px;position:relative;isolation:isolate}
+.portrait .ph{background:var(--velin);padding:14px;border-radius:999px;box-shadow:var(--ombre)}
+.portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:999px}
+.portrait figcaption{text-align:center;margin-top:18px;font-family:var(--fd);font-style:italic;font-size:22px}
+
+/* ---------- pourquoi ---------- */
+.pourquoi{background:var(--parchemin-2);padding:96px 0}
+.pourquoi h2{font-size:clamp(34px,3.6vw,48px);line-height:1.05}
+.pourquoi ul{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:1.5px solid var(--prune)}
+.pourquoi li{padding:28px 28px 8px 0}
+.pourquoi li + li{padding-left:28px;border-left:1px solid var(--filet)}
+.pourquoi h3{font-family:var(--fd);font-weight:600;font-size:26px;line-height:1.15}
+.pourquoi p{color:var(--prune-doux);font-size:17px;margin-top:10px}
+
+/* ---------- commandes personnalisées ---------- */
+.commandes{padding:128px 0 120px}
+.commandes .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end}
+.commandes h2{font-size:clamp(42px,4.8vw,66px);line-height:1}
+.commandes .haut p{color:var(--prune-doux);max-width:50ch}
+.commandes .corps{display:grid;grid-template-columns:4fr 7fr;gap:72px;margin-top:72px;align-items:start}
+.bouquet{position:relative}
+.bouquet .ph{position:relative;border-radius:999px 999px 20px 20px;overflow:hidden;box-shadow:var(--ombre)}
+.bouquet img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%}
+.envies{display:grid;grid-template-columns:1fr 1fr;gap:36px 48px}
+.envies h3{font-family:var(--fd);font-weight:600;font-size:28px;line-height:1.1}
+.envies p{color:var(--prune-doux);font-size:17px;margin-top:10px}
+.mariages{margin-top:48px;background:var(--velin);border-radius:22px;padding:36px 40px;box-shadow:var(--ombre-courte)}
+.mariages h3{font-family:var(--fd);font-weight:600;font-size:30px;line-height:1.1}
+.mariages p{color:var(--prune-doux);margin-top:12px}
+.histoire{margin-top:72px;display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;background:var(--prune);color:var(--sur-sombre);border-radius:26px;padding:56px 60px;position:relative;overflow:hidden}
+.histoire::after{content:"";position:absolute;inset:12px;border:1px solid rgba(214,182,118,.45);border-radius:18px;pointer-events:none}
+.histoire h3{font-family:var(--fd);font-weight:500;font-size:clamp(32px,3.2vw,44px);line-height:1.05}
+.histoire p{color:var(--sur-sombre-doux);margin-top:16px}
+.histoire .contact{position:relative;z-index:1}
+.histoire .contact p{color:var(--sur-sombre);font-size:18px;margin-top:0}
+.histoire .contact a.mail{display:inline-block;margin-top:8px;font-family:var(--fd);font-size:30px;font-style:italic;color:var(--laiton-clair);text-decoration:none;overflow-wrap:anywhere}
+.histoire .contact a.mail:hover{text-decoration:underline;text-underline-offset:5px}
+.histoire .actions{flex-direction:column;margin-top:24px}
+.histoire .btn-plein{background:var(--laiton);border-color:var(--laiton);color:var(--prune-nuit)}
+.histoire .btn-plein:hover{background:var(--parchemin);border-color:var(--parchemin);color:var(--prune)}
+.histoire .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.histoire .btn-contour:hover{background:var(--sur-sombre);color:var(--prune)}
+.histoire .actions .btn{width:100%}
+
+/* ---------- FAQ ---------- */
+.faq{padding:0 0 128px}
+.faq .env{display:grid;grid-template-columns:4fr 7fr;gap:72px;align-items:start}
+.faq h2{font-size:clamp(40px,4.4vw,60px);line-height:1}
+.faq .env > div > p{color:var(--prune-doux);margin-top:18px;max-width:34ch}
+.faq details{border-bottom:1px solid var(--filet)}
+.faq details:first-child{border-top:1px solid var(--filet)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-family:var(--fd);font-weight:600;font-size:26px;line-height:1.2}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:12px;height:12px;border-right:1.5px solid var(--laiton-fonce);border-bottom:1.5px solid var(--laiton-fonce);rotate:45deg;translate:0 -4px;transition:rotate .3s ease,translate .3s ease;flex:none}
+.faq details[open] summary::after{rotate:225deg;translate:0 3px}
+.faq details p{color:var(--prune-doux);padding:0 0 24px;max-width:60ch}
+
+/* ---------- pied ---------- */
+.pied{background:var(--prune-nuit);color:var(--sur-sombre);padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:4fr 3fr 3fr 3fr;gap:48px}
+.pied .nom{font-family:var(--fd);font-style:italic;font-size:36px;font-weight:600;line-height:1}
+.pied .grille > div > p{color:var(--sur-sombre-doux);font-size:16px;margin-top:12px;max-width:30ch}
+.pied h3{font-size:15px;font-weight:500;color:var(--laiton-clair);margin-bottom:12px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);padding:3px 0}
+.pied li a{color:var(--sur-sombre);text-decoration:none;overflow-wrap:anywhere}
+.pied li a:hover{color:var(--laiton-clair)}
+.copy{margin-top:64px;border-top:1px solid rgba(241,234,219,.14);padding-top:22px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo{padding:8px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+/* ---------- tablette ---------- */
+@media (max-width: 1080px){
+  .heros .env,.creations .haut,.parurerie .env,.apropos .env,.commandes .haut,.commandes .corps,.histoire,.faq .env{grid-template-columns:1fr;gap:48px}
+  .pourquoi ul{grid-template-columns:1fr 1fr}
+  .pourquoi li:nth-child(3){padding-left:0;border-left:0}
+  .pied .grille{grid-template-columns:1fr 1fr}
+}
+
+/* ---------- téléphone ---------- */
+@media (max-width: 640px){
+  body{font-size:17px}
+  .env{padding-inline:22px}
+  .tete{padding-top:18px}
+  .tete .env{gap:12px}
+  .nav a:not(.mail-pill){display:none}
+  .marque span{font-size:28px}
+  .marque small{font-size:13px}
+  .mail-pill{font-size:15px;padding:9px 16px}
+  .heros{padding:32px 0 80px}
+  .heros .env{gap:0}
+  .heros-texte{display:contents}
+  .heros-texte .debut{order:-1}
+  .heros-visuel{order:0;margin:28px 18px 18px 0}
+  .heros-texte .suite{order:1;margin-top:20px}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:48px;line-height:1}
+  .heros .chapo{font-size:18px;margin-top:8px}
+  .heros-visuel::before{translate:14px 14px}
+  .arche img{aspect-ratio:1/1;object-position:50% 25%}
+  .arche{border-radius:50% 50% 16px 16px / 50% 50% 16px 16px}
+  .heros-visuel::before{border-radius:50% 50% 18px 18px / 50% 50% 18px 18px}
+  .actions{flex-direction:column;gap:12px;margin-top:28px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:12px}
+  .creations,.parurerie,.apropos,.commandes{padding:88px 0}
+  .pourquoi{padding:80px 0}
+  .cabinet{grid-template-columns:1fr 1fr;gap:28px 16px}
+  .piece{grid-column:auto;margin-top:0}
+  .p1,.p5{grid-column:1 / -1}
+  .p5{order:1}
+  .p4{margin-left:0}
+  .p3 img{aspect-ratio:3/4}
+  .p4 .ph{rotate:-2deg}
+  .piece figcaption strong{font-size:21px}
+  .creations .bas{flex-direction:column;align-items:stretch}
+  .ronsard::before{translate:-12px -12px}
+  .heures b{font-size:26px}
+  .portrait{max-width:300px}
+  .pourquoi ul{grid-template-columns:1fr}
+  .pourquoi li,.pourquoi li + li{padding:22px 0 6px;border-left:0}
+  .pourquoi li + li{border-top:1px solid var(--filet)}
+  .envies{grid-template-columns:1fr;gap:28px}
+  .bouquet{max-width:320px}
+  .mariages{padding:28px 24px}
+  .histoire{padding:40px 26px}
+  .histoire .contact a.mail{font-size:26px}
+  .faq{padding-bottom:88px}
+  .faq summary{font-size:23px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#">
+      <span>L'Avantarium</span>
+      <small>Créations de Delphine Savoye Leblanc</small>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#creations">Créations</a>
+      <a href="#apropos">À propos de moi</a>
+      <a href="#commandes">Commandes personnalisées</a>
+      <a href="#faq">FAQ</a>
+      <a class="mail-pill" href="mailto:lavantarium@gmail.com">M'écrire</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <div class="debut">
+          <p class="lieu">Bienvenue dans l'univers de L'Avantarium</p>
+          <h1>Où l'artisanat s'exprime avec <em>passion</em></h1>
+        </div>
+        <div class="suite">
+          <p class="chapo">Bijoux, fleurs et objets de décoration, façonnés avec amour pour sublimer vos instants de vie, du quotidien aux évènements magiques.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#creations">Découvrir mes créations</a>
+            <a class="btn btn-contour" href="#commandes">Une commande personnalisée</a>
+          </div>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="arche apparait">
+          <img src="assets/l-avantarium-delphine-savoye-leblanc/coiffe-florale-automne-sur-tete-mannequin.webp" width="1200" height="1600" alt="Coiffe en couronne de branchages aux petites feuilles rouges, orange et jaunes, fleurs pêche et baies, sur une tête de mannequin en toile" />
+          <figcaption class="etiquette"><em>Parurerie florale</em></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="env">
+      <li>Créations faites main, uniques et garanties</li>
+      <li>Fleurs en soie et étoffes précieuses</li>
+      <li>Bijoux en laiton martelé</li>
+      <li>Création sur mesure</li>
+      <li>En Dordogne</li>
+    </ul>
+  </section>
+
+  <section class="creations" id="creations">
+    <div class="env">
+      <div class="haut">
+        <h2>Des créations <em>uniques</em></h2>
+        <p>L'Avantarium est né d'une passion : offrir des créations artisanales uniques, à la fois élégantes et pleines d'âme. Chaque bijou, chaque composition florale, chaque décor est conçu à la main, avec une sensibilité artistique, qu'il s'agisse d'un mariage, d'un cadeau personnel ou d'une touche déco au quotidien.</p>
+      </div>
+      <div class="cabinet">
+        <figure class="piece p1 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/chapeau-clothilde-roses-pastel.webp" width="1200" height="1600" loading="lazy" alt="Capeline en paille fine ornée d'une branche de roses pastel, de feuilles vert olive et d'une plume" />
+            <span class="etiquette">Chapeau « Clothilde » <b>140 €</b></span>
+          </div>
+          <figcaption><strong>Voile, taffetas et fil de soie</strong><span>Une délicate branche de roses pastel orne cet élégant chapeau.</span></figcaption>
+        </figure>
+        <figure class="piece p2 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/collier-prague-libellule-art-nouveau.webp" width="1200" height="1600" loading="lazy" alt="Pendentif libellule aux ailes dorées façon vitrail, petit oiseau sculpté et clochettes violettes" />
+          </div>
+          <figcaption><strong>Collier Prague</strong><span>Féérie et style Art nouveau, chaîne en laiton. 95 €</span></figcaption>
+        </figure>
+        <figure class="piece p3 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/broche-ilda-fleur-soie-bleue.webp" width="1200" height="1600" loading="lazy" alt="Grande fleur en soie bleu-gris au cœur d'étamines jaunes, épinglée sur un haut en crochet" />
+          </div>
+          <figcaption><strong>Broche « Ilda »</strong><span>Bleu comme une pivoine. Taffetas de soie. 85 €</span></figcaption>
+        </figure>
+        <figure class="piece p4 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/bracelet-venus-laiton-perles.webp" width="1599" height="1600" loading="lazy" alt="Bracelet jonc en laiton martelé terminé par deux perles d'eau douce, enroulé sur du bois flotté" />
+          </div>
+          <figcaption><strong>Bracelet « Vénus »</strong><span>Laiton martelé, perles d'eau douce. 36 €</span></figcaption>
+        </figure>
+        <figure class="piece p5 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/torque-laiton-martele-labradorite.webp" width="1599" height="1600" loading="lazy" alt="Collier rigide en laiton martelé portant un cabochon ovale de labradorite bleue" />
+            <span class="etiquette">Torque et labradorite <b>60 €</b></span>
+          </div>
+          <figcaption><strong>Laiton martelé</strong><span>On raconte que la labradorite protège. Ses reflets sont tout simplement hypnotisants.</span></figcaption>
+        </figure>
+        <figure class="piece p6 apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/collier-joli-coquelicot-laiton.webp" width="1200" height="1600" loading="lazy" alt="Collier rigide en laiton parmi le lierre, terminé par un coquelicot rouge sculpté" />
+          </div>
+          <figcaption><strong>Collier « Joli Coquelicot »</strong><span>Porcelaine froide sculptée, laiton martelé. 60 €</span></figcaption>
+        </figure>
+      </div>
+      <div class="bas">
+        <p>Bijoux laiton, boucles d'oreilles, broches, colliers, parures de cheveux, mariage et décoration : toutes les créations sont dans la boutique.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://lavantarium-creation.com/?page_id=2299">Visiter la boutique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="parurerie sombre">
+    <div class="env">
+      <figure class="ronsard apparait">
+        <div class="ph">
+          <img src="assets/l-avantarium-delphine-savoye-leblanc/broche-ronsard-roses-mannequin.webp" width="1200" height="1600" loading="lazy" alt="Grande rose rose en voile et velours de soie épinglée à l'épaule d'un chemisier ancien à col en crochet" />
+          <span class="etiquette">Broche « Ronsard » <b>95 €</b></span>
+        </div>
+      </figure>
+      <div>
+        <p class="citation">La parurerie florale, cet art délicat qui consiste à créer des fleurs avec de la soie et des étoffes précieuses.</p>
+        <p class="source">Un art découvert dans un atelier de costumes parisien</p>
+        <ul class="heures">
+          <li><span>Fleur de magnolia<small>Porcelaine froide sculptée</small></span><b>8 h</b></li>
+          <li><span>Chapeau « Clothilde »<small>Voile, taffetas et fil de soie</small></span><b>6 h 40</b></li>
+          <li><span>Broche « Ronsard »<small>Voile, velours et fil de soie</small></span><b>5 h 40</b></li>
+          <li><span>Collier Prague<small>Ailes façon vitrail, oiseau sculpté</small></span><b>5 h 20</b></li>
+        </ul>
+        <p class="source">Le temps de travail d'une seule pièce, tel qu'il est noté sur chaque création.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apropos" id="apropos">
+    <div class="env">
+      <div>
+        <h2>À propos de moi</h2>
+        <p>Après un CAP puis un BP de fleuriste, j'ai intégré une école de maquillage artistique et de coiffure, où je me suis spécialisée dans la mise en beauté d'époque. Cela m'a conduite à travailler dans un atelier de costumes parisien, où j'ai découvert la parurerie florale.</p>
+        <p>Quelques années plus tard, j'ai ouvert ma propre boutique dans les Cévennes, un véritable cabinet de curiosités empli de trésors et de pièces uniques. L'aventure a duré deux belles années, avant que le vent de la vie ne m'emporte jusqu'en Dordogne.</p>
+        <p class="nom-origine">L'Avantarium : le temps qui passe, « Avant », et les mondes imaginaires que j'affectionne, « arium », en clin d'œil à L'Imaginarium du Docteur Parnassus.</p>
+      </div>
+      <figure class="portrait apparait">
+        <div class="ph">
+          <img src="assets/l-avantarium-delphine-savoye-leblanc/portrait-creatrice.webp" width="1202" height="1600" loading="lazy" alt="Portrait de Delphine, longs cheveux châtains bouclés avec tresses, devant une bibliothèque" />
+        </div>
+        <figcaption>Delphine Savoye Leblanc</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="pourquoi">
+    <div class="env">
+      <h2>Pourquoi choisir L'Avantarium ?</h2>
+      <ul>
+        <li><h3>Création artisanale</h3><p>Créations faites main, uniques et garanties.</p></li>
+        <li><h3>Création sur mesure</h3><p>Adaptée à votre style ou votre événement.</p></li>
+        <li><h3>Savoir-faire engagé</h3><p>Matériaux de qualité, démarche responsable, attention portée à chaque détail.</p></li>
+        <li><h3>Artisanat d'art</h3><p>Un savoir-faire unique pour des pièces d'exception.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="commandes" id="commandes">
+    <div class="env">
+      <div class="haut">
+        <h2>Commandes personnalisées</h2>
+        <p>Chaque création de L'Avantarium est pensée comme une œuvre unique, façonnée avec soin et poésie. Si un modèle vous plaît, sachez qu'il peut devenir le vôtre : adapté, transformé, réinventé selon vos envies.</p>
+      </div>
+      <div class="corps">
+        <figure class="bouquet apparait">
+          <div class="ph">
+            <img src="assets/l-avantarium-delphine-savoye-leblanc/bouquet-fleurs-sechees-perles-et-bulles.webp" width="1200" height="1600" loading="lazy" alt="Bouquet de fleurs séchées ivoire et sable avec bulles de verre irisées et perles nacrées" />
+            <span class="etiquette">Fleurs séchées, perles et bulles de verre</span>
+          </div>
+        </figure>
+        <div>
+          <div class="envies">
+            <div><h3>Changer une pierre</h3><p>Une pierre porte-bonheur, une pierre qui porte une histoire ou des souvenirs, à monter sur un torque en laiton martelé simple ou en plusieurs parties.</p></div>
+            <div><h3>Modifier une couleur</h3><p>Un modèle vous plaît beaucoup mais vous l'apprécieriez encore plus dans d'autres coloris ? Camaïeu, couleurs plus vives, voyons ensemble les possibilités.</p></div>
+            <div><h3>Ajouter un détail</h3><p>Un petit pendentif fétiche, un objet qui vous tient à cœur, une breloque ou une perle à porter sur l'une des créations.</p></div>
+            <div><h3>Son propre style</h3><p>Vous avez un collier, un sac, une tenue et vous souhaiteriez un bijou ou une création pour pouvoir tout coordonner.</p></div>
+          </div>
+          <div class="mariages">
+            <h3>Mariages, évènements et ateliers</h3>
+            <p>À journée extraordinaire, créations extraordinaires. Un bijou de mariée, des boutonnières, un bouquet éternel original et unique, une création pour une communion ou un baptême : imaginons cela ensemble.</p>
+            <p>Un enterrement de vie de jeune fille, un anniversaire, ou simplement un après-midi entre amis à créer vos propres objets dans un cadre agréable et calme ? C'est possible.</p>
+          </div>
+        </div>
+      </div>
+      <div class="histoire">
+        <div>
+          <h3>Une création qui raconte votre histoire</h3>
+          <p>Un compagnon à quatre pattes auquel vous souhaiteriez rendre hommage, une mèche de cheveux à transformer en un bijou unique, quelques fleurs séchées de votre bouquet de mariée à préserver. Chaque commande personnalisée est une rencontre, une collaboration où vos idées prennent forme entre mes mains.</p>
+        </div>
+        <div class="contact">
+          <p>Un projet en tête ? Écrivez-moi :</p>
+          <a class="mail" href="mailto:lavantarium@gmail.com?subject=Commande%20personnalis%C3%A9e">lavantarium@gmail.com</a>
+          <div class="actions">
+            <a class="btn btn-plein" href="mailto:lavantarium@gmail.com?subject=Commande%20personnalis%C3%A9e">Parler de mon projet</a>
+            <a class="btn btn-contour" href="https://www.instagram.com/lavantarium/">Me suivre sur Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="env">
+      <div>
+        <h2>Questions et réponses</h2>
+        <p>Une question sur une création en ligne ? N'hésitez pas à me contacter.</p>
+      </div>
+      <div>
+        <details open>
+          <summary>Quel prix ?</summary>
+          <p>Vous vous interrogez sur le prix d'une création en ligne ou avez un projet en tête : contactez-moi et j'établirai un devis.</p>
+        </details>
+        <details>
+          <summary>Combien de temps ?</summary>
+          <p>Vous avez un projet, un évènement et vous souhaiteriez commander une création ? Voyons ensemble les possibilités adaptées à vos délais et contraintes.</p>
+        </details>
+        <details>
+          <summary>Personnalisable ?</summary>
+          <p>Impératifs de temps, budget, envies, projet complètement fou : tout est possible à condition de bien poser les choses et de communiquer. Ensemble, trouvons des idées et des solutions pour donner vie à vos souhaits.</p>
+        </details>
+        <details>
+          <summary>Remboursement ?</summary>
+          <p>Un article ne vous convient pas ? Vous avez 10 jours pour changer d'avis.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <span class="nom">L'Avantarium</span>
+        <p>Bijoux, fleurs et objets de décoration créés à la main par Delphine Savoye Leblanc, en Dordogne.</p>
+      </div>
+      <div>
+        <h3>M'écrire</h3>
+        <ul>
+          <li><a href="mailto:lavantarium@gmail.com">lavantarium@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/lavantarium/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/lavantarium">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li><a href="#apropos">À propos de moi</a></li>
+          <li><a href="#commandes">Commandes personnalisées</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>La boutique</h3>
+        <ul>
+          <li><a href="https://lavantarium-creation.com/?product_cat=bijoux-laiton">Bijoux laiton</a></li>
+          <li><a href="https://lavantarium-creation.com/?product_cat=parurerie-florale">Parurerie florale</a></li>
+          <li><a href="https://lavantarium-creation.com/?product_cat=mariages">Mariage</a></li>
+          <li><a href="https://lavantarium-creation.com/?page_id=2299">Toute la boutique</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 L'Avantarium, Delphine Savoye Leblanc</p>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour L'Avantarium</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  function montrer(e){ e.classList.add('vu') }
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(montrer); return }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ montrer(en.target); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+  els.forEach(function(e){ io.observe(e) });
+  var filet = function(){ els.forEach(montrer) };
+  window.addEventListener('load', function(){ setTimeout(filet, 1400) });
+  setTimeout(filet, 2600);
+})();
+</script>
+</body>
+</html>

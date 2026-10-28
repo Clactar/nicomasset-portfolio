@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rebecca Lowery Ceramics, handmade pottery and sculpture in Bloomington, Indiana</title>
+<meta name="description" content="Whimsical handmade pottery and sculpture by Rebecca Lowery, from her studio in Bloomington, Indiana. Teapots, mugs, bowls, bottles and sculpture series.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C7D6CA'/%3E%3Ccircle cx='50' cy='14' r='5' fill='%239E3B26'/%3E%3Ctext x='31' y='46' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23223129'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clay:#EADFD3; --clay-2:#DED0C0; --card:#F6F1EA;
+  --celadon:#C7D6CA; --celadon-2:#A9C0AF; --celadon-d:#5E7A68;
+  --iron:#9E3B26; --iron-d:#7E2C1B;
+  --ink:#223129; --ink-2:#4F5B53; --night:#1E2A24;
+  --shadow:0 34px 64px -34px rgba(34,49,41,.6);
+  --shadow-red:0 30px 60px -34px rgba(126,44,27,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--clay);color:var(--ink);font:400 18px/1.62 'Figtree',sans-serif;overflow-x:hidden}
+::selection{background:var(--iron);color:var(--card)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Gloock',Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--iron);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:600 16px/1 'Figtree',sans-serif;text-decoration:none;border:1.5px solid currentColor;transition:transform .28s cubic-bezier(.2,.7,.3,1),background-color .28s,color .28s,box-shadow .28s,border-color .28s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--iron);border-color:var(--iron);color:var(--card)}
+.btn-full:hover{background:var(--ink);border-color:var(--ink);box-shadow:var(--shadow)}
+.btn-line{color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--card)}
+.btn-light{color:var(--card);border-color:rgba(246,241,234,.5)}
+.btn-light:hover{background:var(--card);border-color:var(--card);color:var(--night)}
+.btn-cel{background:var(--celadon);border-color:var(--celadon);color:var(--night)}
+.btn-cel:hover{background:var(--card);border-color:var(--card)}
+
+/* en-tête */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none}
+.brand b{display:block;font:400 25px/1.05 'Gloock',serif}
+.brand span{display:block;margin-top:5px;font-size:14px;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--iron);transform:scaleX(0);transform-origin:left;transition:transform .28s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--ink);color:var(--card);padding:13px 22px;border-radius:999px;font-weight:600!important;transition:background-color .28s}
+.pill:hover{background:var(--iron)}
+
+/* héros : titre à gauche, arche à droite */
+.hero{padding:30px 0 110px}
+.hero-text{display:grid;grid-template-columns:1fr 500px;column-gap:72px;grid-template-areas:". arch" "kick arch" "h1 arch" "lead arch" "cta arch" "reach arch" ". arch";grid-template-rows:1fr auto auto auto auto auto 1fr}
+.kick{grid-area:kick}.hero h1{grid-area:h1}.lead{grid-area:lead}.cta{grid-area:cta}.reach{grid-area:reach}
+.kick{font-size:17px;color:var(--celadon-d);font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,5.8vw,80px);line-height:1.01;letter-spacing:-.02em}
+.hero h1 span{color:var(--iron)}
+.lead{margin-top:28px;max-width:500px;font-size:19px;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.reach{margin-top:22px;font-size:16px;color:var(--ink-2)}
+.reach a{color:var(--ink);font-weight:600;text-underline-offset:4px}
+.arch{grid-area:arch;position:relative;padding:0 0 40px 40px}
+.arch::before{content:"";position:absolute;right:-28px;top:-28px;width:440px;height:560px;border-radius:220px 220px 26px 26px;background:var(--celadon)}
+.arch .ph{position:relative;border-radius:240px 240px 26px 26px;overflow:hidden;box-shadow:var(--shadow)}
+.arch .ph img{width:100%;height:600px;object-fit:cover;object-position:58% 50%}
+.tag{position:absolute;left:20px;bottom:20px;background:rgba(246,241,234,.95);color:var(--ink);font-size:14px;font-weight:600;line-height:1.25;padding:8px 14px;border-radius:999px;box-shadow:0 8px 18px -10px rgba(0,0,0,.45)}
+.arch .tag{left:auto;right:22px;bottom:24px}
+.arch .me{position:absolute;left:0;bottom:0;width:150px;height:150px;border-radius:50%;overflow:hidden;border:6px solid var(--card);box-shadow:var(--shadow-red);z-index:2}
+.arch .me img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+
+/* bandeau de faits : bande céladon */
+.facts .band{background:var(--celadon);border-radius:28px;display:grid;grid-template-columns:repeat(4,1fr);padding:34px 14px}
+.facts .band div{padding:2px 30px;font-size:16px;line-height:1.45;color:#33453A}
+.facts .band div+div{border-left:1.5px solid rgba(34,49,41,.14)}
+.facts strong{display:block;font:400 24px/1.12 'Gloock',serif;color:var(--ink);margin-bottom:8px}
+
+/* déclaration d'artiste */
+.statement{padding:130px 0}
+.statement .wrap{display:grid;grid-template-columns:5fr 7fr;gap:90px;align-items:center}
+.mugcard{background:var(--card);padding:18px;border-radius:26px;box-shadow:var(--shadow);rotate:-2deg;position:relative}
+.mugcard img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.mugcard .tag{left:34px;bottom:34px}
+.statement blockquote{font:400 clamp(34px,3.7vw,52px)/1.1 'Gloock',serif;letter-spacing:-.01em}
+.statement .body{margin-top:34px;max-width:600px;display:grid;gap:18px;color:var(--ink-2)}
+.statement .body p:last-child{color:var(--ink)}
+
+/* poterie : mosaïque et liste */
+.pottery{padding:0 0 130px}
+.pot-head{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:56px}
+.pot-head h2{font-size:clamp(38px,4.2vw,58px)}
+.pot-head p{color:var(--ink-2);max-width:480px}
+.pot-grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+.mosaic{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:22px}
+.mosaic figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#111}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .big{grid-row:1/3}
+.mosaic .big img{aspect-ratio:auto;height:100%;min-height:560px;object-position:60% 50%}
+.mosaic .sm img{aspect-ratio:1/1}
+.mosaic .sm:nth-child(3){margin-left:-60px;border:8px solid var(--clay)}
+.wide{margin-top:22px;display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:end}
+.wide figure{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.wide .butter img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.wide .stack{width:220px;justify-self:start;rotate:2.5deg;border-radius:14px;background:var(--card);padding:10px;overflow:visible}
+.wide .stack img{border-radius:8px;aspect-ratio:800/1029;object-fit:cover;width:200px}
+.kinds{background:var(--card);border-radius:26px;padding:16px 36px 30px;box-shadow:var(--shadow)}
+.kinds a{display:grid;grid-template-columns:1fr auto;align-items:center;padding:17px 0;border-bottom:1px solid var(--clay-2);text-decoration:none;font:400 22px/1.2 'Gloock',serif;transition:color .25s,padding .25s}
+.kinds a span{font:500 15px/1 'Figtree',sans-serif;color:var(--celadon-d)}
+.kinds a:hover{color:var(--iron);padding-left:6px}
+.kinds p{margin-top:24px;font-size:16px;color:var(--ink-2)}
+.kinds p b{color:var(--ink);font-weight:600}
+
+/* sculpture : section sombre */
+.sculpture{background:var(--night);color:var(--card);border-radius:36px;margin:0 24px;padding:120px 0}
+.sculpture .wrap{display:grid;grid-template-columns:6fr 5fr;gap:84px;align-items:center}
+.faces{position:relative;height:640px}
+.faces figure{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 40px 70px -34px rgba(0,0,0,.9)}
+.faces img{width:100%;height:100%;object-fit:cover}
+.faces .f1{left:0;top:0;width:340px;height:510px}
+.faces .f2{right:0;bottom:0;width:300px;height:330px;border:8px solid var(--celadon)}
+.faces .f2 img{object-position:50% 40%}
+.sculpture h2{font-size:clamp(38px,4.2vw,58px)}
+.sculpture .t{margin-top:24px;color:rgba(246,241,234,.78)}
+.series{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+.series a{padding:10px 18px;border-radius:999px;background:rgba(199,214,202,.12);color:var(--celadon);text-decoration:none;font-size:16px;font-weight:500;transition:background-color .25s,color .25s}
+.series a:hover{background:var(--celadon);color:var(--night)}
+.recent{margin-top:38px;border-top:1px solid rgba(246,241,234,.16)}
+.recent div{display:grid;grid-template-columns:1fr auto;gap:20px;padding:14px 0;border-bottom:1px solid rgba(246,241,234,.16)}
+.recent b{font:400 21px/1.2 'Gloock',serif}
+.recent span{font-size:15px;color:rgba(246,241,234,.62)}
+.sculpture .cta{margin-top:36px}
+
+/* ateliers */
+.workshops{padding:130px 0 0}
+.ws-grid{display:grid;grid-template-columns:5fr 7fr;gap:28px;align-items:stretch}
+.ws-intro h2{font-size:clamp(38px,4.2vw,58px)}
+.ws-intro p{margin-top:22px;color:var(--ink-2);max-width:440px}
+.polaroid{margin-top:40px;width:236px;background:var(--card);padding:12px 12px 46px;border-radius:6px;box-shadow:var(--shadow);rotate:-3deg;position:relative}
+.polaroid img{width:212px;aspect-ratio:1/1;object-fit:cover;border-radius:3px}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-size:15px;font-weight:500;color:var(--ink-2)}
+.ws-cards{display:grid;gap:24px}
+.ws{border-radius:28px;padding:42px 44px}
+.ws.online{background:var(--iron);color:var(--card);box-shadow:var(--shadow-red)}
+.ws.online .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.ws.online .meta span{background:rgba(246,241,234,.16);border-radius:999px;padding:7px 14px;font-size:15px;font-weight:600}
+.ws h3{font-size:34px}
+.ws p{margin-top:14px;max-width:600px}
+.ws.online p{color:rgba(246,241,234,.88)}
+.ws .btn{margin-top:28px}
+.ws.online .btn{background:var(--card);border-color:var(--card);color:var(--iron-d)}
+.ws.online .btn:hover{background:var(--night);border-color:var(--night);color:var(--card)}
+.ws.onsite{background:var(--card);box-shadow:var(--shadow)}
+.ws.onsite p{color:var(--ink-2)}
+
+/* galeries et contact */
+.find{padding:130px 0}
+.find .wrap{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:start}
+.galleries h2{font-size:clamp(36px,4vw,54px)}
+.galleries > p{margin-top:18px;color:var(--ink-2);max-width:560px}
+.glist{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.glist a{display:block;padding:18px 0;border-top:1px solid var(--clay-2);text-decoration:none}
+.glist b{display:block;font:400 21px/1.2 'Gloock',serif;transition:color .25s}
+.glist span{display:block;margin-top:4px;font-size:15.5px;color:var(--ink-2)}
+.glist a:hover b{color:var(--iron)}
+.galleries .more{display:inline-block;margin-top:26px;font-weight:600;text-underline-offset:5px;text-decoration-color:var(--iron);text-decoration-thickness:1.5px}
+.contact{background:var(--celadon);border-radius:30px;padding:46px 44px;box-shadow:var(--shadow);scroll-margin-top:30px}
+.contact h2{font-size:42px}
+.contact p{margin-top:14px;color:#33453A}
+.contact .mail{display:block;margin-top:22px;font:400 25px/1.2 'Gloock',serif;color:var(--ink);text-decoration:none;word-break:break-word}
+.contact .mail:hover{color:var(--iron)}
+.contact .btn{margin-top:26px;width:100%}
+.contact .news{margin-top:32px;padding-top:24px;border-top:1.5px solid rgba(34,49,41,.14);font-size:16.5px}
+.contact .news a{font-weight:600;text-underline-offset:4px}
+
+/* pied */
+.foot{background:var(--night);color:var(--card);padding:90px 0 0;border-radius:36px 36px 0 0}
+.foot .grid{display:grid;grid-template-columns:5fr 3fr 3fr;gap:56px;padding-bottom:70px}
+.foot h2{font-size:40px}
+.foot .grid > div:first-child p{margin-top:16px;color:rgba(246,241,234,.72);max-width:420px;font-size:17px}
+.foot h3{font:600 15px/1 'Figtree',sans-serif;color:var(--celadon);margin-bottom:18px}
+.foot ul{list-style:none;display:grid;gap:10px;font-size:16.5px}
+.foot a{text-underline-offset:4px;text-decoration-color:rgba(246,241,234,.35)}
+.foot a:hover{text-decoration-color:var(--celadon)}
+.foot .cta{margin-top:28px}
+.legal{border-top:1px solid rgba(246,241,234,.14);padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-size:15px;color:rgba(246,241,234,.6)}
+.proposal{background:var(--night);color:rgba(246,241,234,.55);text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:rgba(246,241,234,.82)}
+
+.rv{transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.3,1)}
+.rv.pre{opacity:0;translate:0 26px}
+
+@media (max-width:1100px){
+  .hero-text{grid-template-columns:1fr 420px;column-gap:48px}
+  .arch::before{width:360px;height:480px}
+  .arch .ph img{height:520px}
+}
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .nav a:not(.pill){display:none}
+  .top{padding:18px 0}
+  .brand b{font-size:22px}
+  .pill{padding:11px 16px;font-size:15px;white-space:nowrap}
+  .hero{padding:10px 0 80px}
+  .hero-text{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"kick" "h1" "arch" "lead" "cta" "reach"}
+  .kick{grid-area:kick;font-size:16px;margin-bottom:12px}
+  .hero h1{grid-area:h1;font-size:44px}
+  .arch{grid-area:arch;margin-top:26px;padding:0 0 26px 26px}
+  .arch::before{right:-8px;top:-12px;width:78%;height:300px}
+  .arch .ph{border-radius:160px 160px 20px 20px}
+  .arch .ph img{height:330px}
+  .arch .me{width:96px;height:96px;border-width:4px}
+  .arch .tag{right:14px;bottom:14px;font-size:13px}
+  .lead{grid-area:lead;font-size:18px;margin-top:24px}
+  .cta{grid-area:cta;flex-direction:column;margin-top:26px}
+  .cta .btn{width:100%}
+  .reach{grid-area:reach}
+  .facts .band{grid-template-columns:1fr 1fr;padding:10px 0;border-radius:24px}
+  .facts .band div{padding:18px 20px}
+  .facts .band div+div{border-left:0}
+  .facts .band div:nth-child(even){border-left:1.5px solid rgba(34,49,41,.14)}
+  .facts .band div:nth-child(n+3){border-top:1.5px solid rgba(34,49,41,.14)}
+  .facts strong{font-size:20px}
+  .statement{padding:90px 0}
+  .statement .wrap{grid-template-columns:1fr;gap:50px}
+  .mugcard{max-width:320px;margin:0 auto;padding:12px}
+  .mugcard .tag{left:24px;bottom:24px}
+  .statement blockquote{font-size:32px}
+  .pottery{padding-bottom:90px}
+  .pot-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}
+  .pot-grid{grid-template-columns:1fr;gap:34px}
+  .mosaic{gap:12px}
+  .mosaic figure{border-radius:16px}
+  .mosaic .big img{min-height:340px}
+  .mosaic .sm:nth-child(3){margin-left:-30px;border-width:5px}
+  .wide{grid-template-columns:1fr;gap:16px}
+  .wide .stack{width:180px;justify-self:end}
+  .wide .stack img{width:160px}
+  .kinds{padding:8px 22px 24px}
+  .kinds a{font-size:20px}
+  .sculpture{margin:0 10px;padding:80px 0;border-radius:28px}
+  .sculpture .wrap{grid-template-columns:1fr;gap:50px}
+  .faces{height:420px}
+  .faces .f1{width:62%;height:340px}
+  .faces .f2{width:52%;height:220px;border-width:5px}
+  .recent div{grid-template-columns:1fr;gap:2px}
+  .sculpture .cta .btn{width:100%}
+  .workshops{padding-top:90px}
+  .ws-grid{grid-template-columns:1fr;gap:36px}
+  .polaroid{margin:30px auto 0}
+  .ws{padding:30px 24px}
+  .ws h3{font-size:28px}
+  .ws .btn{width:100%}
+  .find{padding:90px 0}
+  .find .wrap{grid-template-columns:1fr;gap:50px}
+  .glist{grid-template-columns:1fr}
+  .contact{padding:32px 24px}
+  .contact .mail{font-size:22px}
+  .foot{padding-top:70px;border-radius:28px 28px 0 0}
+  .foot .grid{grid-template-columns:1fr;gap:38px;padding-bottom:50px}
+  .foot .cta .btn{width:100%}
+  .legal{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .rv.pre{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" id="top"><b>Rebecca Lowery Ceramics</b><span>Bloomington, Indiana</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pottery">Pottery</a>
+      <a href="#sculpture">Sculpture</a>
+      <a href="#workshops">Workshops</a>
+      <a class="pill" href="#contact">Contact me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="kick">Pottery and sculpture by Rebecca Lowery</p>
+        <h1><span>Whimsical</span> handmade pottery and sculpture.</h1>
+        <div class="arch">
+          <figure class="ph"><img src="assets/rebecca-lowery-ceramics-bloomington/rebecca-au-tour-base-de-theiere.webp" alt="Rebecca Lowery's hands throwing a bottle form on the wheel, the base of a teapot"><span class="tag">Throwing a teapot</span></figure>
+          <div class="me"><img src="assets/rebecca-lowery-ceramics-bloomington/portrait-rebecca-lowery.webp" alt="Rebecca Lowery"></div>
+        </div>
+        <p class="lead">A mug, for instance, is a very intimate object. You take sustenance from it. You caress it with the most sensitive receptors in your hands and fingertips.</p>
+        <div class="cta">
+          <a class="btn btn-full" href="mailto:info@rebeccalowery.com">Contact me</a>
+          <a class="btn btn-line" href="#pottery">See the pottery</a>
+        </div>
+        <p class="reach">Or write to <a href="mailto:info@rebeccalowery.com">info@rebeccalowery.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="About Rebecca">
+    <div class="wrap">
+      <div class="band">
+        <div><strong>Rural Georgia</strong>where she was born and raised</div>
+        <div><strong>Four years</strong>an apprentice in the Berea College pottery</div>
+        <div><strong>BA in studio art</strong>with an emphasis in sculpture</div>
+        <div><strong>Bloomington, Indiana</strong>her current studio</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" id="about">
+    <div class="wrap">
+      <figure class="mugcard rv"><img src="assets/rebecca-lowery-ceramics-bloomington/mug-creme-fleurs-jaunes.webp" alt="Cream mug with raised yellow flowers, blue lines and a red rim" loading="lazy"><span class="tag">Flower Mug</span></figure>
+      <div>
+        <blockquote>“Handmade functional items are the most sensual objects of art you can own.”</blockquote>
+        <div class="body">
+          <p>You place your lips softly on its rim. It's a very personal item. So, if you choose to use handmade functional items, art is an intimate part of your life and it enhances your experience with the simple joy of a cup of coffee, tea or cocoa.</p>
+          <p>Rebecca began her love of clay in college. After graduation, she taught, developed and created ceramics in Kentucky, Maryland and Indiana. In her current studio in Bloomington, she creates whimsical handmade pottery and sculpture displayed at art exhibitions, galleries and festivals throughout the year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pottery" id="pottery">
+    <div class="wrap">
+      <div class="pot-head">
+        <h2>Fine art pottery.</h2>
+        <p>See some of Rebecca's creations: teapots, drinking and pouring vessels, bowls, bottles and vases, lidded vessels, plates and platters.</p>
+      </div>
+      <div class="pot-grid">
+        <div>
+          <div class="mosaic">
+            <figure class="big rv"><img src="assets/rebecca-lowery-ceramics-bloomington/theiere-bleu-marine-ecailles-jaunes.webp" alt="Navy blue teapot with a yellow panel of small red-ringed scales" loading="lazy"><span class="tag">Prink Teapot</span></figure>
+            <figure class="sm rv"><img src="assets/rebecca-lowery-ceramics-bloomington/trio-de-bouteilles-jaune-vert-bleu.webp" alt="Three narrow-necked bottles in yellow, sea green and blue" loading="lazy"></figure>
+            <figure class="sm rv"><img src="assets/rebecca-lowery-ceramics-bloomington/grand-plat-spirale-bleue.webp" alt="15 inch white wavy platter with a blue swirl and red dots" loading="lazy"></figure>
+          </div>
+          <div class="wide">
+            <figure class="butter rv"><img src="assets/rebecca-lowery-ceramics-bloomington/beurrier-marguerites-bord-rouge.webp" alt="Daisy butter dish with a red heart knob and a wavy red rim" loading="lazy"><span class="tag">Daisy Butter Dish</span></figure>
+            <figure class="stack rv"><img src="assets/rebecca-lowery-ceramics-bloomington/pile-de-bols-a-damier.webp" alt="Tall stack of checker salad bowls in red, blue, yellow and green" loading="lazy"></figure>
+          </div>
+        </div>
+        <div class="kinds">
+          <a href="https://www.rebeccalowery.com/teapots">Teapots <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/drinkingvessels">Drinking and pouring vessels <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/bowls">Bowls <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/bottlesandvases">Bottles and vases <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/liddedvessels">Lidded vessels <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/platesandplatters">Plates and platters <span>View</span></a>
+          <a href="https://www.rebeccalowery.com/saltandpepper">Salt and pepper sets <span>View</span></a>
+          <p><b>Undercover</b> is a show exclusively for covered butter dishes. One of my butter dishes from it was featured in the Exposure section of Ceramics Monthly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sculpture" id="sculpture">
+    <div class="wrap">
+      <div class="faces">
+        <figure class="f1 rv"><img src="assets/rebecca-lowery-ceramics-bloomington/sculpture-visage-capuche-volutes-bleues.webp" alt="Ceramic sculpture of a white face with closed eyes inside a hood of blue, grey and pink scrolls" loading="lazy"></figure>
+        <figure class="f2 rv"><img src="assets/rebecca-lowery-ceramics-bloomington/sculpture-visage-gris-levres-rouges.webp" alt="Ceramic sculpture of a grey face with closed eyes and red lips, a blue eye on its narrow neck" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2>Sculpture, in series.</h2>
+        <p class="t">Recent works in cone 6 clay, thrown and altered or coil built, with underglaze.</p>
+        <div class="series">
+          <a href="https://www.rebeccalowery.com/yesunicornsarerealseries">Yes, Unicorns Are Real</a>
+          <a href="https://www.rebeccalowery.com/andsheknewseries">And She Knew...</a>
+          <a href="https://www.rebeccalowery.com/noaliceseries">No Alice</a>
+          <a href="https://www.rebeccalowery.com/nonserialworks">Non-series work</a>
+        </div>
+        <div class="recent">
+          <div><b>Dream</b><span>17.5"x6"x5", coiled paper clay wall sculpture</span></div>
+          <div><b>Devious Thoughts</b><span>8"x8"x13", thrown and altered</span></div>
+          <div><b>“…And Giggles”</b><span>8"x8"x12.5", thrown and altered</span></div>
+          <div><b>Oh Really!?</b><span>8"x8"x12.5", thrown and altered</span></div>
+        </div>
+        <div class="cta">
+          <a class="btn btn-cel" href="mailto:info@rebeccalowery.com?subject=Sculpture%20purchase%20inquiry">Purchase inquiries</a>
+          <a class="btn btn-light" href="https://www.rebeccalowery.com/recentsculpture">Recent work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshops" id="workshops">
+    <div class="wrap">
+      <div class="ws-grid">
+        <div class="ws-intro">
+          <h2>I offer workshops.</h2>
+          <p>I'm comfortable with beginners and more advanced students and enjoy teaching both!</p>
+          <figure class="polaroid rv"><img src="assets/rebecca-lowery-ceramics-bloomington/rebecca-decore-une-theiere-crue.webp" alt="Rebecca carving the surface of a raw clay teapot" loading="lazy"><figcaption>Building a teapot</figcaption></figure>
+        </div>
+        <div class="ws-cards">
+          <div class="ws online">
+            <div class="meta"><span>Online, ongoing</span><span>$39 for 2.5 hours</span></div>
+            <h3>Hitting The Bottle, altered bottle teapots</h3>
+            <p>Sign up to take my recorded Teapot Workshop on The Ceramic School. We dive deep into the basics of throwing a bottle form, a shape that is incredibly versatile, whether you're making bottles, salt and pepper shakers, covered jars, or teapots.</p>
+            <a class="btn" href="https://links.ceramic.school/rebeccalowery">Sign up for the workshop</a>
+          </div>
+          <div class="ws onsite">
+            <h3>Want a workshop?</h3>
+            <p>A two day workshop for throwing and altering techniques, handbuilding sculpture techniques or a combination. If you are interested in having me teach a workshop at your art center, guild or studio, contact me for scheduling and fees.</p>
+            <a class="btn btn-line" href="mailto:info@rebeccalowery.com?subject=Workshop">Ask about a workshop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find">
+    <div class="wrap">
+      <div class="galleries">
+        <h2>See the work in person.</h2>
+        <p>Visit one of these fine galleries to view my work in person. In Indiana:</p>
+        <div class="glist">
+          <a href="https://juniperartgallery.com/"><b>Juniper Art Gallery</b><span>615 W Kirkwood Ave, Bloomington, IN</span></a>
+          <a href="https://artifactsindy.com/"><b>Artifacts Gallery</b><span>6327 Guilford Ave, Indianapolis, IN</span></a>
+          <a href="https://www.indianaartisan.org/"><b>Indiana Artisan Carmel</b><span>22 N. Rangeline Rd, Carmel, IN</span></a>
+          <a href="https://www.facebook.com/Spears-Gallery-285344798735"><b>Spears Gallery</b><span>5110 St. Rd 135 S &amp; 15 S Van Buren, Nashville, IN</span></a>
+        </div>
+        <a class="more" href="https://www.rebeccalowery.com/shop-1">All the galleries that carry my work</a>
+      </div>
+      <div class="contact" id="contact">
+        <h2>Contact me</h2>
+        <p>For a piece, a purchase inquiry or a workshop at your art center, guild or studio.</p>
+        <a class="mail" href="mailto:info@rebeccalowery.com">info@rebeccalowery.com</a>
+        <a class="btn btn-full" href="mailto:info@rebeccalowery.com">Write to Rebecca</a>
+        <p class="news">Want a monthly reminder of where my next art fair, exhibition or workshop will be? <a href="http://eepurl.com/srwaX">Subscribe to my newsletter.</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Rebecca Lowery Ceramics</h2>
+        <p>Whimsical handmade pottery and sculpture from a studio in Bloomington, Indiana.</p>
+        <div class="cta"><a class="btn btn-full" href="mailto:info@rebeccalowery.com">Contact me</a></div>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:info@rebeccalowery.com">info@rebeccalowery.com</a></li>
+          <li>Studio in Bloomington, Indiana</li>
+          <li><a href="http://eepurl.com/srwaX">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://instagram.com/rebeccaloweryceramics">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RebeccaLoweryCeramics">Facebook</a></li>
+          <li><a href="https://www.rebeccalowery.com/pottery">Pottery gallery</a></li>
+          <li><a href="https://www.rebeccalowery.com/sculpture">Sculpture gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>Rebecca Lowery Ceramics</span><span>Bloomington, Indiana</span></div>
+  </div>
+  <div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Rebecca Lowery Ceramics</div>
+</footer>
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){
+    if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); }
+  });
+})();
+</script>
+</body>
+</html>

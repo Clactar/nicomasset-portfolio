@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rain Shadow Ranch | Specialty flower farm in Port Orchard, WA</title>
+<meta name="description" content="A six-acre specialty flower farm in south Port Orchard, Washington. Weekend Bloom Stand, Bulk Blooms by the bucket in six color palettes, and wholesale for florists.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231D3A2B'/%3E%3Ccircle cx='50' cy='14' r='6' fill='%23B3245F'/%3E%3Ctext x='31' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' text-anchor='middle' fill='%23F2ECEE'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#F2ECEE; --mist-2:#E9DFE3; --card:#FBF8F9;
+  --forest:#1D3A2B; --forest-2:#4A6455; --forest-d:#132A1F;
+  --dahlia:#B3245F; --dahlia-d:#8E1A4A; --blush:#F0D9E2;
+  --shadow:0 30px 60px -34px rgba(29,58,43,.55);
+  --shadow-rose:0 44px 70px -40px rgba(120,22,64,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--mist);color:var(--forest);font:400 17px/1.65 'Albert Sans',Georgia,sans-serif;overflow-x:hidden}
+::selection{background:var(--dahlia);color:var(--card)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--dahlia);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:600 16px/1 'Albert Sans',sans-serif;text-decoration:none;border:1.5px solid var(--forest);transition:transform .3s cubic-bezier(.2,.7,.3,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--dahlia);border-color:var(--dahlia);color:var(--card)}
+.btn-full:hover{background:var(--dahlia-d);border-color:var(--dahlia-d);box-shadow:0 18px 32px -18px rgba(142,26,74,.9)}
+.btn-line{color:var(--forest)}
+.btn-line:hover{background:var(--forest);color:var(--card)}
+.btn-light{border-color:rgba(251,248,249,.5);color:var(--card)}
+.btn-light:hover{background:var(--card);color:var(--forest);border-color:var(--card)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+
+.ln{font-weight:600;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat;padding-bottom:2px;transition:background-size .3s,color .3s}
+.ln:hover{color:var(--dahlia);background-size:40% 1.5px}
+
+/* en-tete */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:26px;padding-bottom:26px}
+.brand{text-decoration:none;line-height:1.1}
+.brand b{display:block;font:italic 500 27px/1 'Playfair Display',Georgia,serif}
+.brand span{display:block;font-size:14px;color:var(--forest-2);margin-top:6px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:500}
+.nav a:not(.btn){text-decoration:none}
+.nav a:not(.btn):hover{color:var(--dahlia)}
+.nav .btn{white-space:nowrap;min-height:46px;padding:0 22px;background:var(--card);border-color:var(--card);box-shadow:var(--shadow)}
+.nav .btn:hover{background:var(--forest);border-color:var(--forest);color:var(--card)}
+
+/* heros */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:1fr auto auto auto auto 1fr;grid-template-areas:". pics" "k pics" "h pics" "l pics" "b pics" ". pics";column-gap:64px;padding-top:24px;padding-bottom:72px}
+.kicker{grid-area:k;font-size:17px;font-weight:500;color:var(--dahlia);margin-bottom:22px;max-width:40ch}
+.hero h1{grid-area:h;font-size:clamp(46px,6.4vw,84px);line-height:1;margin-bottom:28px}
+.lead{grid-area:l;font-size:19px;color:var(--forest-2);max-width:44ch;margin-bottom:34px}
+.hero .cta{grid-area:b}
+.hours{margin-top:22px;font-size:16px;color:var(--forest-2)}
+.hours strong{color:var(--forest);font-weight:600}
+
+.mosaic{grid-area:pics;position:relative;height:700px}
+.tile{position:absolute;overflow:hidden;border-radius:20px;box-shadow:var(--shadow);background:var(--mist-2)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.t1{left:0;top:0;width:53%;height:500px;border-radius:26px;box-shadow:var(--shadow-rose);z-index:2}
+.t1 img{object-position:50% 45%}
+.t1 .tag{top:14px;bottom:auto}
+.t2{right:0;top:44px;width:43%;height:280px}
+.t2 img{object-position:50% 30%}
+.t3{right:0;top:344px;width:43%;height:196px}
+.t3 img{object-position:50% 25%}
+.t4{right:5%;top:566px;width:150px;height:128px;border-radius:16px;z-index:3;border:6px solid var(--card)}
+.t4 img{object-position:50% 30%}
+.tag{position:absolute;left:14px;bottom:14px;background:rgba(251,248,249,.94);color:var(--forest);font-size:14px;font-weight:600;line-height:1.3;padding:9px 14px;border-radius:12px;max-width:calc(100% - 28px)}
+.winter{position:absolute;left:16%;top:452px;width:330px;background:var(--forest);color:var(--card);border-radius:22px;padding:26px 26px 24px;box-shadow:0 40px 60px -36px rgba(19,42,31,.85);z-index:4}
+.winter h3{font-size:26px;margin-bottom:10px}
+.winter p{font-size:16px;line-height:1.55;color:#D8E0DA}
+
+@keyframes pose{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
+.mosaic .tile,.mosaic .winter{animation:pose .9s cubic-bezier(.2,.7,.3,1) both}
+.t2{animation-delay:.08s!important}.t3{animation-delay:.16s!important}.t4{animation-delay:.24s!important}.winter{animation-delay:.32s!important}
+
+/* faits */
+.facts{background:var(--card);border-radius:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);padding:34px 12px}
+.fact{padding:0 28px;position:relative}
+.fact+.fact::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--mist-2)}
+.fact b{display:block;font:italic 500 32px/1.1 'Playfair Display',Georgia,serif;color:var(--dahlia);margin-bottom:8px}
+.fact span{display:block;font-size:16px;line-height:1.45;color:var(--forest-2)}
+
+/* comment acheter */
+.buy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center;padding-top:128px;padding-bottom:128px}
+.buy-pics{position:relative;padding-bottom:70px}
+.stand{border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.stand img{width:100%;aspect-ratio:4/3.4;object-fit:cover;object-position:60% 50%}
+.snap{position:absolute;right:-28px;bottom:0;width:230px;background:var(--card);padding:10px;border-radius:16px;box-shadow:var(--shadow-rose);rotate:3deg}
+.snap img{border-radius:10px;aspect-ratio:1/1;object-fit:cover}
+.buy h2{font-size:clamp(38px,4.4vw,56px);margin-bottom:18px}
+.buy .intro{color:var(--forest-2);margin-bottom:36px;max-width:46ch}
+.ways{list-style:none}
+.ways li{padding:24px 0;border-top:1px solid var(--mist-2)}
+.ways li:last-child{border-bottom:1px solid var(--mist-2)}
+.ways h3{font-size:28px;margin-bottom:6px}
+.ways p{color:var(--forest-2);margin-bottom:10px}
+
+/* bulk blooms, sombre */
+.dark{background:var(--forest);color:var(--card)}
+.bulk{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center;padding-top:120px;padding-bottom:120px}
+.pre{font-size:18px;color:var(--blush);margin-bottom:14px}
+.bulk h2{font-size:clamp(40px,4.8vw,62px);margin-bottom:22px}
+.bulk .body{color:#D3DCD6;max-width:52ch;margin-bottom:34px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin-bottom:30px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline;font-size:17px;color:var(--card)}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--dahlia);color:var(--card);font:italic 500 18px/32px 'Playfair Display',serif;text-align:center;translate:0 -2px}
+.note{font-size:16px;color:#AFC0B6;margin-bottom:32px}
+.palettes{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px}
+.palettes span{border:1.5px solid rgba(240,217,226,.4);color:var(--blush);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:500}
+.buckets{position:relative}
+.buckets figure{border-radius:24px;overflow:hidden;background:var(--card);padding:12px;box-shadow:0 50px 80px -40px rgba(0,0,0,.6);rotate:-2deg;position:relative}
+.buckets img{border-radius:14px;aspect-ratio:4/4.4;object-fit:cover;object-position:50% 50%;width:100%}
+.buckets .tag{left:26px;bottom:26px}
+
+/* champ */
+.field{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center;padding-top:128px;padding-bottom:96px}
+.field-pics{position:relative;height:620px}
+.fp1{position:absolute;left:0;top:0;width:68%;height:520px;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:var(--shadow)}
+.fp1 img,.fp2 img{width:100%;height:100%;object-fit:cover}
+.fp2{position:absolute;right:0;bottom:0;width:46%;height:300px;border-radius:20px;overflow:hidden;border:8px solid var(--mist);box-shadow:var(--shadow-rose)}
+.fp2 img{object-position:50% 60%}
+.field h2{font-size:clamp(38px,4.4vw,56px);margin-bottom:18px}
+.field .intro{color:var(--forest-2);margin-bottom:36px;max-width:52ch}
+.seasons{display:grid;grid-template-columns:1fr 1fr;gap:30px 40px;margin-bottom:36px}
+.seasons h3{font-size:24px;color:var(--dahlia);margin-bottom:6px}
+.seasons p{font-size:16px;line-height:1.55}
+.organic{background:var(--card);border-radius:18px;padding:22px 26px;font-size:16px;color:var(--forest-2);box-shadow:0 24px 40px -32px rgba(29,58,43,.45)}
+
+/* grossistes */
+.trade{background:var(--blush)}
+.trade-in{padding-top:112px;padding-bottom:112px}
+.trade blockquote{font:italic 400 clamp(32px,3.8vw,50px)/1.18 'Playfair Display',Georgia,serif;max-width:22ch;margin-bottom:64px;text-wrap:balance}
+.trade-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:48px;align-items:start}
+.mat{background:var(--card);padding:14px;border-radius:22px;box-shadow:var(--shadow-rose);margin-top:-40px}
+.mat img{border-radius:12px;aspect-ratio:3/3.6;object-fit:cover;object-position:60% 40%;width:100%}
+.trade h2{font-size:34px;margin-bottom:14px}
+.trade p{margin-bottom:16px}
+.spec{list-style:none}
+.spec li{padding:16px 0;border-bottom:1px solid rgba(29,58,43,.16)}
+.spec li:first-child{padding-top:0}
+.spec b{display:block;font:italic 500 22px/1.2 'Playfair Display',serif;margin-bottom:4px}
+.spec span{font-size:16px;color:var(--forest-2)}
+
+/* visite */
+.visit{padding-top:128px;padding-bottom:128px}
+.visit-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center}
+.vcard{background:var(--card);border-radius:26px;padding:48px 52px;box-shadow:var(--shadow);position:relative;z-index:2;margin-right:-90px}
+.vcard h2{font-size:clamp(38px,4.2vw,54px);margin-bottom:26px}
+.vcard dl{display:grid;grid-template-columns:120px 1fr;gap:16px 24px;margin-bottom:32px}
+.vcard dt{font-weight:600}
+.vcard dd{color:var(--forest-2)}
+.vphoto{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-rose);position:relative}
+.vphoto img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 60%}
+.faq{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:88px}
+.faq h3{font-size:25px;margin-bottom:10px}
+.faq p{font-size:16px;color:var(--forest-2)}
+.ship{display:flex;gap:18px;align-items:flex-start}
+.ship img{width:96px;height:120px;object-fit:cover;border-radius:12px;flex:none;box-shadow:var(--shadow)}
+
+/* pied */
+.foot{background:var(--forest-d);color:#D3DCD6}
+.foot-in{display:grid;grid-template-columns:minmax(0,4fr) repeat(3,minmax(0,2.4fr));gap:48px;padding-top:88px;padding-bottom:64px}
+.foot .fb{font:italic 500 34px/1.05 'Playfair Display',serif;color:var(--card);margin-bottom:14px}
+.foot p{font-size:16px}
+.foot h3{font:600 16px/1.3 'Albert Sans',sans-serif;font-style:normal;color:var(--blush);margin-bottom:14px}
+.foot ul{list-style:none}
+.foot li{font-size:16px;margin-bottom:9px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--card);text-decoration:underline}
+.foot-base{border-top:1px solid rgba(211,220,214,.14);padding-top:22px;padding-bottom:28px;display:flex;justify-content:space-between;gap:16px;font-size:15px;color:#9FB2A7}
+.proposal{background:var(--forest-d);color:#8FA397;text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:#C9D4CD}
+
+/* apparitions */
+.js .rv{opacity:0;translate:0 30px;transition:opacity .9s cubic-bezier(.2,.7,.3,1),translate .9s cubic-bezier(.2,.7,.3,1)}
+.js .rv.on{opacity:1;translate:0 0}
+
+@media (max-width:1080px){
+  .nav a:not(.btn){display:none}
+  .hero{column-gap:40px}
+  .winter{left:8%}
+}
+@media (max-width:860px){
+  .wrap{padding:0 22px}
+  .top{padding-top:18px;padding-bottom:18px}
+  .brand b{font-size:23px}
+  .brand span{font-size:14px;max-width:20ch}
+  .nav .btn{min-height:42px;padding:0 16px;font-size:15px}
+  .hero{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"k" "h" "pics" "l" "b";padding-top:8px;padding-bottom:56px}
+  .kicker{font-size:16px;margin-bottom:14px}
+  .hero h1{font-size:44px;margin-bottom:22px}
+  .mosaic{height:auto;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:190px 160px;gap:12px;margin-bottom:28px}
+  .tile{position:relative;inset:auto;width:auto;height:auto}
+  .t1{grid-row:1/3;top:0;height:auto}
+  .t1 .tag{top:auto;bottom:14px}
+  .t2,.t3{top:0;right:auto;width:auto;height:auto}
+  .t4{display:none}
+  .winter{position:relative;left:auto;top:auto;width:auto;grid-column:1/3;margin-top:4px}
+  .lead{font-size:17px;margin-bottom:26px}
+  .btns .btn{width:100%}
+  .facts{grid-template-columns:1fr 1fr;padding:26px 6px;row-gap:26px}
+  .fact{padding:0 18px}
+  .fact:nth-child(3)::before{display:none}
+  .fact b{font-size:26px}
+  .buy,.bulk,.field{grid-template-columns:1fr;gap:48px;padding-top:88px;padding-bottom:88px}
+  .snap{width:170px;right:-6px}
+  .steps{grid-template-columns:1fr}
+  .buckets figure{rotate:-1.5deg}
+  .field-pics{height:440px;order:2}
+  .fp1{height:380px;width:72%}
+  .fp2{height:210px;width:48%}
+  .trade-in{padding-top:80px;padding-bottom:80px}
+  .trade blockquote{margin-bottom:56px}
+  .trade-grid{grid-template-columns:1fr;gap:36px}
+  .mat{margin-top:0}
+  .visit{padding-top:88px;padding-bottom:88px}
+  .visit-top{grid-template-columns:1fr}
+  .vcard{margin-right:0;padding:32px 24px;order:2;margin-top:-60px;margin-left:10px;margin-right:10px}
+  .vcard dl{grid-template-columns:1fr;gap:4px}
+  .vcard dd{margin-bottom:12px}
+  .vphoto img{aspect-ratio:4/4.2}
+  .faq{grid-template-columns:1fr;gap:36px;margin-top:64px}
+  .foot-in{grid-template-columns:1fr;gap:34px;padding-top:64px}
+  .foot-base{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top wrap">
+  <a class="brand" href="#top" aria-label="Rain Shadow Ranch, home"><b>Rain Shadow Ranch</b><span>Specialty flower farm, Port Orchard, WA</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#field">Flowers</a>
+    <a href="#bulk">Bulk Blooms</a>
+    <a href="#wholesale">Wholesale</a>
+    <a href="#visit">Visit</a>
+    <a class="btn" href="mailto:hello@rainshadowranch.com">Email us</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero wrap">
+  <p class="kicker">A six-acre specialty flower farm tucked into the hollows of south Port Orchard, Washington</p>
+  <h1>Farm-grown flowers for every celebration.</h1>
+  <div class="mosaic">
+    <figure class="tile t1"><img src="assets/rain-shadow-ranch-port-orchard/seau-zinnias-dahlias-amarante.webp" alt="A Rain Shadow Ranch bucket overflowing with zinnias, dahlias and cosmos" width="1200" height="1600"><figcaption class="tag">Grown at the ranch</figcaption></figure>
+    <figure class="tile t2"><img src="assets/rain-shadow-ranch-port-orchard/seau-dahlias-multicolores.webp" alt="A bucket of red, coral, pink and purple dahlias" width="1200" height="1600"></figure>
+    <figure class="tile t3"><img src="assets/rain-shadow-ranch-port-orchard/dahlia-creme-peche-champ.webp" alt="A cream and peach dahlia in the field" width="1200" height="1600"></figure>
+    <figure class="tile t4"><img src="assets/rain-shadow-ranch-port-orchard/bouquet-cosmos-roses.webp" alt="A hand holding a bunch of pink cosmos" width="1200" height="1600"></figure>
+    <aside class="winter">
+      <h3>Winter at Rain Shadow Ranch</h3>
+      <p>Seasonal gifting, holiday pre-orders, pantry favorites and monthly farm pick-up days. Check back soon for upcoming dates.</p>
+    </aside>
+  </div>
+  <p class="lead">Visit the weekend Bloom Stand for grab-n-go bouquets and seasonal bunches, or reserve Bulk Blooms by the bucket in six curated color palettes, the perfect solution for DIY, cost savings, and artists.</p>
+  <div class="cta">
+    <div class="btns">
+      <a class="btn btn-full" href="https://www.rainshadowranch.com/bulk-blooms">Reserve Bulk Blooms</a>
+      <a class="btn btn-line" href="#visit">Plan your visit</a>
+    </div>
+    <p class="hours"><strong>Bloom Stand:</strong> Saturdays and Sundays, 10am to 2pm, April to October.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact"><b>Six acres</b><span>of specialty cut flowers in Kitsap County</span></div>
+    <div class="fact"><b>Over 50</b><span>types of spring to fall annuals in the field</span></div>
+    <div class="fact"><b>Six palettes</b><span>for Bulk Blooms, from Whites &amp; Greens to Autumnal &amp; Rustic</span></div>
+    <div class="fact"><b>15 minutes</b><span>from Gig Harbor or Bremerton, 30 from Tacoma</span></div>
+  </div>
+</div>
+
+<section class="buy wrap" id="buy">
+  <div class="buy-pics">
+    <figure class="stand rv"><img src="assets/rain-shadow-ranch-port-orchard/stand-fruits-bouquets-pots-mason.webp" alt="The wooden Bloom Stand with Mason jar bouquets, apples and pantry jars" width="1600" height="1200" loading="lazy"></figure>
+    <figure class="snap"><img src="assets/rain-shadow-ranch-port-orchard/seau-dahlias-cueillette.webp" alt="A bucket of freshly cut coral dahlias and cosmos" width="1600" height="1064" loading="lazy"></figure>
+  </div>
+  <div>
+    <h2>How to buy flowers</h2>
+    <p class="intro">Not sure where to start? Whether you&rsquo;re stopping by the weekend Bloom Stand, buying direct from the farm, or sourcing wholesale, we keep it simple.</p>
+    <ul class="ways">
+      <li><h3>Weekend Bloom Stand</h3><p>Visit for grab-n-go bouquets and seasonal bunches.</p><a class="ln" href="#visit">Hours and directions</a></li>
+      <li><h3>Direct from the farm</h3><p>Reserve bulk buckets of flowers with a click.</p><a class="ln" href="https://www.rainshadowranch.com/bulk-blooms">Shop pre-orders</a></li>
+      <li><h3>Wholesale</h3><p>Florists and distributors have three easy buying options.</p><a class="ln" href="#wholesale">Learn more</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dark" id="bulk">
+  <div class="bulk wrap">
+    <div>
+      <p class="pre">Planning a wedding or event for 2027?</p>
+      <h2>Reserve Bulk Blooms by the bucket.</h2>
+      <p class="body">Our Bulk Blooms are designed for DIY weddings, events, and anyone who wants the beauty of farm-grown flowers with the freedom to create their own designs. Stems are conditioned, hydrated, and stripped of excess foliage, ready for you to arrange.</p>
+      <ol class="steps">
+        <li>Select your package, bucket or bulk</li>
+        <li>Choose your color palette</li>
+        <li>Pick your farm pickup date and time</li>
+        <li>Complete payment to secure your order</li>
+      </ol>
+      <div class="palettes" aria-label="Color palettes">
+        <span>Whites &amp; Greens</span><span>Blush Romance</span><span>Soft &amp; Neutral</span><span>Wild &amp; Free</span><span>Bold &amp; Bright</span><span>Autumnal &amp; Rustic</span>
+      </div>
+      <p class="note">Pickup is at the farm only. Your order is not reserved until payment is received.</p>
+      <div class="btns">
+        <a class="btn btn-full" href="https://www.rainshadowranch.com/bulk-blooms">Reserve Bulk Blooms</a>
+        <a class="btn btn-light" href="https://www.rainshadowranch.com/event-florals">See event florals</a>
+      </div>
+    </div>
+    <div class="buckets rv">
+      <figure><img src="assets/rain-shadow-ranch-port-orchard/seaux-fleurs-en-vrac-gamme.webp" alt="A dozen Rain Shadow Ranch buckets, each filled with one color of flowers" width="1600" height="1194" loading="lazy"><figcaption class="tag">Bulk Flower Buckets</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="field wrap" id="field">
+  <div class="field-pics">
+    <figure class="fp1 rv"><img src="assets/rain-shadow-ranch-port-orchard/mufliers-blancs.webp" alt="White and pale green snapdragons in the field" width="1200" height="1600" loading="lazy"></figure>
+    <figure class="fp2"><img src="assets/rain-shadow-ranch-port-orchard/seau-statice-violet.webp" alt="A black bucket of purple and white statice" width="1200" height="1600" loading="lazy"></figure>
+  </div>
+  <div>
+    <h2>What&rsquo;s growing in the field</h2>
+    <p class="intro">Over 50 types of spring to fall annuals are grown at Rain Shadow Ranch. We focus on varieties suited to the temperate PNW climate, but also dabble in a few Mediterranean and hot climate flowers.</p>
+    <div class="seasons">
+      <div><h3>Spring</h3><p>Ranunculus, anemone, snapdragons, stock, narcissus and tulips</p></div>
+      <div><h3>Summer</h3><p>Dahlias, sunflowers, zinnias, hydrangea, statice, strawflower, ageratum, cosmos and yarrow</p></div>
+      <div><h3>Fall</h3><p>Wheat, autumn foliage, corn, tomatoes, peppers, marigold and most of the summer varieties</p></div>
+      <div><h3>Herbs</h3><p>Sage, rosemary, Pacific bay, basil, parsley, dill and cilantro</p></div>
+    </div>
+    <p class="organic">We are not organic certified, but do practice environmentally friendly, sustainable farming, including Integrated Pest Management, organic liquid seaweed and kelp fertilizer, and compost teas.</p>
+  </div>
+</section>
+
+<section class="trade" id="wholesale">
+  <div class="trade-in wrap">
+    <blockquote>Our blossoms are harvested at their peak, ensuring vibrant colors and long-lasting beauty.</blockquote>
+    <div class="trade-grid">
+      <figure class="mat rv"><img src="assets/rain-shadow-ranch-port-orchard/fleuriste-serre-composition.webp" alt="Arranging a bouquet of dahlias, sunflowers and delphiniums in the greenhouse" width="1064" height="1600" loading="lazy"></figure>
+      <div>
+        <h2>For florists and designers</h2>
+        <p>We grow specialty cut flowers for local florists, designers and wholesale customers throughout the South Sound and Kitsap Peninsula.</p>
+        <p>We hand-harvest during the cooler morning hours, then place every bloom in clean, cool water and temperature-controlled storage before distribution.</p>
+        <p>Event and wholesale pick-up and delivery are by appointment only.</p>
+        <a class="btn btn-line" href="https://www.rainshadowranch.com/florists-and-designers">Fill out the interest form</a>
+      </div>
+      <div>
+        <ul class="spec">
+          <li><b>Dahlias</b><span>Stunning variety and rich colors. They thrive in our climate and are always a favorite for events.</span></li>
+          <li><b>Zinnias</b><span>Bright, cheerful blooms that add a touch of joy to any arrangement.</span></li>
+          <li><b>Cosmos</b><span>Delicate and whimsical, ideal for soft, romantic looks.</span></li>
+        </ul>
+        <p style="margin-top:18px;font-size:16px;color:var(--forest-2)">Varieties that do not ship well and are best purchased locally, from a full range of over 40 focal, filler, green and woody plants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit wrap" id="visit">
+  <div class="visit-top">
+    <div class="vcard">
+      <h2>Visit the Bloom Stand</h2>
+      <dl>
+        <dt>Hours</dt><dd>Saturdays and Sundays, 10am to 2pm, April to October</dd>
+        <dt>Address</dt><dd>5695 Sidney Road SW<br>Port Orchard, WA 98367</dd>
+        <dt>Getting here</dt><dd>At the top of our property, at the crossroads of Sidney and Sedgewick, easily accessed from Hwy 16.</dd>
+      </dl>
+      <div class="btns">
+        <a class="btn btn-full" href="https://www.google.com/maps/search/?api=1&amp;query=5695+Sidney+Rd+SW+Port+Orchard+WA+98367">Get directions</a>
+        <a class="btn btn-line" href="tel:+12532606910">253-260-6910</a>
+      </div>
+    </div>
+    <figure class="vphoto rv"><img src="assets/rain-shadow-ranch-port-orchard/panneau-retrait-commandes-fleurs.webp" alt="A chalkboard sign reading Today's Bouquet, Flower Order Pick up, in front of the barn" width="1065" height="1600" loading="lazy"><figcaption class="tag">Flower order pickup, by the barn</figcaption></figure>
+  </div>
+  <div class="faq">
+    <div><h3>Is the flower field open to the public?</h3><p>Our field is not open to the public, except for scheduled Pick-Your-Own hours or reservation-only events and workshops.</p></div>
+    <div><h3>Can I rent the field for a wedding?</h3><p>Our field may be rented for outdoor elopements or intimate weddings of 25 people or less, with affordable floral packages for pick-up at the Ranch. <a class="ln" href="https://www.rainshadowranch.com/event-florals">Event Florals</a></p></div>
+    <div class="ship"><img src="assets/rain-shadow-ranch-port-orchard/couronnes-fleurs-sechees.webp" alt="Grapevine wreaths with dried flowers" width="1200" height="1600" loading="lazy"><div><h3>Do you ship flowers?</h3><p>Deliveries within 15 miles of Port Orchard, WA. Nationwide shipping for wreaths and all non-perishable goods.</p></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in wrap">
+    <div>
+      <p class="fb">Rain Shadow Ranch</p>
+      <p>A six-acre specialty flower farm in south Port Orchard, Washington. Fields are closed to the public outside scheduled experiences. Thank you for your understanding!</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:hello@rainshadowranch.com">hello@rainshadowranch.com</a></li>
+        <li><a href="tel:+12532606910">253-260-6910</a>, business line</li>
+        <li>Text <a href="sms:+12533818067">253-381-8067</a> when you arrive for a pickup</li>
+        <li>5695 Sidney Road SW, Port Orchard, WA 98367</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Order</h3>
+      <ul>
+        <li><a href="https://www.rainshadowranch.com/bulk-blooms">Bulk Blooms</a></li>
+        <li><a href="https://www.rainshadowranch.com/event-florals">Event Florals</a></li>
+        <li><a href="https://www.rainshadowranch.com/florists-and-designers">Wholesale</a></li>
+        <li><a href="https://www.rainshadowranch.com/cut-flower-care">Pickup instructions</a></li>
+        <li><a href="https://www.rainshadowranch.com/faq-master">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Follow the farm</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/rainshadowranch_flowers/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/rainshadowranchflowers">Facebook</a></li>
+        <li><a href="https://www.pinterest.com/rainshadowranch_flowers/">Pinterest</a></li>
+        <li><a href="https://www.rainshadowranch.com/at-the-farm">At the farm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-base"><span>Rain Shadow Ranch, Port Orchard, Washington</span><span>Farm-grown flowers for every celebration</span></div></div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Rain Shadow Ranch</div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

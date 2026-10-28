@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Ferme-brasserie Northmæn, La Chapelle-Saint-Ouen (76), nuit du 2026-10-28.
+     CONTENU : textes, bières, whiskies, chiffres, tarifs du catalogue, horaires, coordonnées et photos relevés sur https://www.northmaen.com/
+     (dossier de Marco du 28/10/2026). Rien d'inventé.
+     DÉFAUT RÉGLÉ : « Bières & cervoises » (404 sur ?page_id=274) existe enfin : la section #bieres liste leurs bières et cervoises avec les noms
+     et descriptions de leur site. Le bloc d'actualités aux trois dates passées et le texte « post-confinement » ne sont plus sur l'accueil.
+     DESIGN (Nova) : crème houblon, encre vert bouteille, accent cuivre ambré. DM Serif Display + Figtree. Héros : carte arrondie et vignette inclinée. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F2EEDF" />
+<title>Ferme-brasserie Northmæn, bières, cervoises et whiskies fermiers de Normandie</title>
+<meta name="description" content="Brasserie artisanale normande à La Chapelle-Saint-Ouen : orge de notre propre production, près de 20 bières et 5 whiskies fermiers, visite commentée et dégustation gratuite le samedi à 15h30." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2317302A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23C07A2C'%3EN%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --creme:#F2EEDF;
+  --creme-2:#E8E2CD;
+  --surface:#FAF7EC;
+  --vert:#17302A;
+  --vert-2:#21403A;
+  --vert-doux:#4D5E57;
+  --cuivre:#C07A2C;
+  --cuivre-fonce:#8F5515;
+  --sur-sombre:#F2EEDF;
+  --sur-sombre-doux:#B8C2B9;
+  --filet:rgba(23,48,42,.14);
+  --ombre:0 34px 64px -36px rgba(23,48,42,.6);
+  --ombre-courte:0 18px 34px -22px rgba(23,48,42,.55);
+  --fd:"DM Serif Display",Georgia,serif;
+  --ft:"Figtree",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--vert);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--cuivre);color:var(--surface)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--fd);letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--cuivre);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--vert);transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn-plein{background:var(--vert);color:var(--creme)}
+.btn-plein:hover{background:var(--cuivre);border-color:var(--cuivre);color:var(--surface);transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(192,122,44,.95)}
+.btn-contour{background:transparent;color:var(--vert)}
+.btn-contour:hover{background:var(--vert);color:var(--creme);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--cuivre);border-color:var(--cuivre);color:var(--surface)}
+.sombre .btn-plein:hover{background:var(--creme);border-color:var(--creme);color:var(--vert)}
+.sombre .btn-contour{border-color:rgba(242,238,223,.7);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--vert)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(250,247,236,.96);color:var(--vert);font-size:15px;font-weight:600;line-height:1.3;padding:10px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(23,48,42,.6)}
+.etiquette b{color:var(--cuivre-fonce);font-weight:700}
+.etiquette.haut{top:18px;bottom:auto}
+.etiquette.droite{left:auto;right:18px}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:30px}
+.marque small{font-size:14px;color:var(--vert-doux);margin-top:6px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--cuivre-fonce)}
+.pill-tete{background:var(--vert);color:var(--creme);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;transition:background .3s}
+.pill-tete:hover{background:var(--cuivre)}
+
+/* héros */
+.heros{padding:64px 0 120px}
+.heros .env{display:grid;grid-template-columns:5.6fr 6.4fr;gap:56px;align-items:center}
+.lieu{font-size:16px;font-weight:700;color:var(--cuivre-fonce);margin-bottom:22px}
+.heros h1{font-size:clamp(46px,4.9vw,70px);line-height:1.03}
+.heros h1 em{font-style:italic;color:var(--cuivre-fonce)}
+.heros .chapo{font-size:19px;color:var(--vert-doux);max-width:44ch;margin-top:26px}
+.heros .actions{margin-top:36px}
+.heros-visuel{position:relative;padding:0 0 64px 40px}
+.ferme{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.ferme img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:52% 50%}
+.vignette{position:absolute;left:-8px;bottom:0;width:270px;background:var(--surface);padding:10px 10px 14px;border-radius:14px;rotate:-4deg;box-shadow:0 30px 48px -26px rgba(23,48,42,.75);z-index:2}
+.vignette img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.vignette p{font-size:15px;font-weight:600;margin-top:9px;padding-left:4px}
+
+/* faits */
+.faits{background:var(--vert);color:var(--sur-sombre)}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr)}
+.faits li{padding:28px 24px 28px 0;font-size:16px;line-height:1.4;color:var(--sur-sombre-doux)}
+.faits li + li{padding-left:24px;border-left:1px solid rgba(242,238,223,.14)}
+.faits li b{display:block;font-family:var(--fd);font-weight:400;font-size:32px;line-height:1.05;color:var(--sur-sombre);margin-bottom:4px}
+
+/* histoire */
+.histoire{padding:128px 0}
+.histoire .env{display:grid;grid-template-columns:6fr 6fr;gap:88px;align-items:center}
+.orge{position:relative;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:var(--ombre);max-width:500px}
+.orge img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:40% 50%}
+.histoire h2{font-size:clamp(38px,4.4vw,60px);line-height:1.04}
+.histoire .txt{margin-top:24px;color:var(--vert-doux)}
+.histoire .txt p + p{margin-top:14px}
+.histoire .txt b{color:var(--vert);font-weight:700}
+
+/* bières et cervoises */
+.bieres{background:var(--surface);padding:128px 0}
+.bieres .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end;margin-bottom:56px}
+.bieres h2{font-size:clamp(42px,5vw,68px);line-height:1}
+.bieres .haut p{color:var(--vert-doux);font-size:17px}
+.carte-bieres{display:grid;grid-template-columns:4.6fr 7.4fr;gap:64px;align-items:start}
+.gauche-bieres{display:flex;flex-direction:column;gap:40px}
+.bouteilles{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bouteilles figure{position:relative;background:#F4F3F1;border-radius:20px;overflow:hidden;box-shadow:var(--ombre-courte)}
+.bouteilles figure:nth-child(2){margin-top:56px}
+.bouteilles img{width:100%;aspect-ratio:1/1.75;object-fit:cover;object-position:50% 30%}
+.bouteilles figcaption{position:absolute;left:10px;right:10px;bottom:10px;text-align:center;background:rgba(250,247,236,.96);border-radius:999px;font-size:14px;font-weight:700;padding:6px 8px}
+.degustation h3{font-family:var(--ft);font-weight:700;font-size:16px;color:var(--cuivre-fonce);margin:0 0 8px}
+.degustation h3 ~ h3{margin-top:44px}
+.biere{display:grid;grid-template-columns:1fr auto;gap:6px 32px;padding:22px 0;border-top:1px solid var(--filet)}
+.biere:last-of-type{border-bottom:1px solid var(--filet)}
+.biere h4{margin:0;font-family:var(--fd);font-weight:400;font-size:30px;line-height:1.1}
+.biere .chiffres{grid-column:2;grid-row:1;align-self:center;display:flex;gap:8px}
+.biere .chiffres span{background:var(--creme);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:700;white-space:nowrap}
+.biere p{grid-column:1 / 3;color:var(--vert-doux);font-size:17px;max-width:64ch}
+.biere .saison{display:block;font-family:var(--ft);font-size:14px;font-weight:700;color:var(--cuivre-fonce);margin-top:6px}
+.gamme{background:var(--creme);border-radius:22px;padding:28px 28px}
+.gamme h3{margin:0 0 14px;font-family:var(--ft);font-weight:700;font-size:16px;color:var(--cuivre-fonce)}
+.gamme ul{display:flex;flex-wrap:wrap;gap:10px}
+.gamme li{background:var(--surface);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:600}
+.gamme li small{color:var(--vert-doux);font-weight:500;font-size:15px}
+.gamme .prix{margin-top:16px;font-size:16px;color:var(--vert-doux)}
+.bieres .actions{margin-top:32px}
+
+/* whiskies : section sombre */
+.sombre{background:var(--vert);color:var(--sur-sombre)}
+.whiskies{padding:128px 0}
+.whiskies .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end}
+.whiskies h2{font-size:clamp(40px,4.6vw,64px);line-height:1.02}
+.whiskies .haut p{color:var(--sur-sombre-doux);font-size:17px}
+.chai{position:relative;margin-top:56px;border-radius:24px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.chai img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 55%}
+.whiskies .corps{display:grid;grid-template-columns:8fr 4fr;gap:64px;margin-top:64px;align-items:start}
+.flacons li{display:grid;grid-template-columns:180px 1fr auto;gap:28px;padding:24px 0;border-top:1px solid rgba(242,238,223,.16);align-items:baseline}
+.flacons li:last-child{border-bottom:1px solid rgba(242,238,223,.16)}
+.flacons h3{font-family:var(--fd);font-size:30px;line-height:1.05}
+.flacons .fiche{font-size:15px;font-weight:600;color:#E3A866}
+.flacons p{color:var(--sur-sombre-doux);font-size:16px;margin-top:4px}
+.flacons .prix{font-family:var(--fd);font-size:30px;white-space:nowrap}
+.duo-flacons{position:relative;min-height:560px}
+.duo-flacons figure{position:absolute;width:230px;border-radius:18px;overflow:hidden;box-shadow:0 30px 50px -26px rgba(0,0,0,.8)}
+.duo-flacons img{width:100%;aspect-ratio:3/4.4;object-fit:cover;object-position:50% 50%}
+.duo-flacons .f1{top:0;left:0;rotate:-3deg}
+.duo-flacons .f2{top:200px;right:0;rotate:3deg}
+.whiskies .actions{margin-top:44px}
+
+/* fabrication */
+.fabrication{padding:128px 0}
+.fabrication .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end;margin-bottom:56px}
+.fabrication h2{font-size:clamp(38px,4.4vw,60px);line-height:1.04}
+.fabrication .haut p{color:var(--vert-doux);font-size:17px}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px;counter-reset:etape}
+.etapes li{border-top:1.5px solid var(--vert);padding-top:22px}
+.etapes li::before{counter-increment:etape;content:counter(etape);display:block;font-family:var(--fd);font-size:44px;line-height:1;color:var(--cuivre-fonce);margin-bottom:12px}
+.etapes h3{font-family:var(--ft);font-weight:700;font-size:20px}
+.etapes p{color:var(--vert-doux);font-size:16px;margin-top:8px}
+.etapes small{display:inline-block;margin-top:12px;background:var(--creme-2);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:700}
+.bande{display:grid;grid-template-columns:7fr 5fr;gap:28px;margin-top:64px;align-items:end}
+.cuves{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.cuves img{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:50% 50%}
+.malt{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte);margin-bottom:-40px}
+.malt img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* visites */
+.visites{padding:72px 0 128px}
+.visites .carte{display:grid;grid-template-columns:6fr 6fr;background:var(--surface);border-radius:28px;box-shadow:var(--ombre);overflow:hidden}
+.visites .gauche{padding:56px}
+.visites h2{font-size:clamp(38px,4.2vw,56px);line-height:1.04}
+.visites .chapo{color:var(--vert-doux);margin-top:18px;max-width:46ch}
+.horaire-visite{display:flex;align-items:baseline;gap:18px;margin-top:28px;padding:20px 0;border-block:1px solid var(--filet)}
+.horaire-visite b{font-family:var(--fd);font-weight:400;font-size:46px;line-height:1;color:var(--cuivre-fonce)}
+.horaire-visite span{font-size:17px;font-weight:600;line-height:1.4}
+.visites .note{margin-top:18px;font-size:16px;color:var(--vert-doux)}
+.visites .actions{margin-top:30px}
+.visites .droite{position:relative}
+.visites .droite > img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.polaroid{position:absolute;right:24px;bottom:24px;width:220px;background:var(--surface);padding:9px 9px 12px;border-radius:4px;rotate:3deg;box-shadow:0 26px 40px -22px rgba(0,0,0,.6)}
+.polaroid img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+.polaroid p{font-size:14px;font-weight:600;text-align:center;margin-top:7px}
+
+/* venir */
+.venir{padding:0 0 128px}
+.venir .env{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.venir h2{font-size:clamp(38px,4.2vw,56px);line-height:1.04}
+.venir .intro{color:var(--vert-doux);margin-top:18px;max-width:40ch}
+.coord{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.coord div{background:var(--surface);border-radius:20px;padding:30px;box-shadow:var(--ombre-courte)}
+.coord h3{font-family:var(--fd);font-size:26px;line-height:1.15;margin-bottom:10px}
+.coord p{color:var(--vert-doux);font-size:17px}
+.coord a{color:var(--vert);font-weight:600;text-underline-offset:3px}
+.coord .large{grid-column:1 / 3;background:var(--creme-2);box-shadow:none}
+.venir .actions{margin-top:28px}
+
+/* pied */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:4fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:40px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:32ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:#E3A866;margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(242,238,223,.3)}
+.pied li a:hover{color:#E3A866;border-color:#E3A866}
+.propo{margin-top:72px;border-top:1px solid rgba(242,238,223,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{gap:12px}
+  .marque span{font-size:26px}
+  .marque small{font-size:13px}
+  .nav{display:none}
+  .pill-tete{margin-left:auto;font-size:15px;padding:10px 14px}
+  .heros{padding:28px 0 64px}
+  .heros .env{grid-template-columns:1fr;gap:0}
+  .heros-texte{display:contents}
+  .lieu{order:1;margin-bottom:12px;font-size:15px}
+  .heros h1{order:2;font-size:44px}
+  .heros-visuel{order:3;margin-top:24px;padding:0 0 48px 0}
+  .ferme{border-radius:18px}
+  .ferme img{aspect-ratio:4/3}
+  .vignette{width:150px;left:8px;padding:6px 6px 8px;border-radius:10px}
+  .vignette p{font-size:13px;margin-top:5px}
+  .heros .chapo{order:4;font-size:17px}
+  .heros .actions{order:5}
+  .etiquette{font-size:14px;left:12px;bottom:12px;padding:7px 12px}
+  .etiquette.haut{top:12px}
+  .etiquette.droite{right:12px;left:auto}
+  .actions{flex-direction:column;margin-top:24px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr}
+  .faits li,.faits li + li{padding:18px 12px 18px 0;border-left:0;border-bottom:1px solid rgba(242,238,223,.14)}
+  .faits li:nth-child(even){padding-left:16px;border-left:1px solid rgba(242,238,223,.14)}
+  .faits li b{font-size:25px}
+  .histoire,.bieres,.whiskies,.fabrication{padding:80px 0}
+  .histoire .env{grid-template-columns:1fr;gap:36px}
+  .orge{max-width:300px}
+  .bieres .haut,.whiskies .haut,.fabrication .haut{grid-template-columns:1fr;gap:18px;margin-bottom:32px}
+  .carte-bieres{grid-template-columns:1fr;gap:36px}
+  .bouteilles{max-width:320px}
+  .bouteilles figure:nth-child(2){margin-top:32px}
+  .biere{grid-template-columns:1fr}
+  .biere .chiffres{grid-column:1;grid-row:auto;flex-wrap:wrap}
+  .biere p{grid-column:1}
+  .biere h4{font-size:26px}
+  .gamme{padding:22px}
+  .chai{margin-top:36px;border-radius:18px}
+  .chai img{aspect-ratio:16/10}
+  .whiskies .corps{grid-template-columns:1fr;gap:32px;margin-top:40px}
+  .flacons li{grid-template-columns:1fr auto;gap:4px 16px}
+  .flacons .fiche{grid-column:1 / 3}
+  .flacons li > div{grid-column:1}
+  .flacons .prix{grid-column:2;grid-row:1;font-size:26px}
+  .flacons h3{font-size:26px}
+  .duo-flacons{min-height:0;display:flex;gap:14px}
+  .duo-flacons figure{position:static;width:50%;rotate:none}
+  .etapes{grid-template-columns:1fr;gap:28px}
+  .bande{grid-template-columns:1fr;gap:16px;margin-top:40px}
+  .malt{margin-bottom:0;width:70%;margin-left:auto;margin-top:-56px;border:6px solid var(--creme)}
+  .visites{padding:24px 0 80px}
+  .visites .carte{grid-template-columns:1fr}
+  .visites .gauche{padding:32px 22px}
+  .visites .droite{order:-1}
+  .visites .droite > img{aspect-ratio:16/10;height:auto}
+  .polaroid{width:140px;right:12px;bottom:-20px;padding:6px 6px 8px}
+  .polaroid p{font-size:12px}
+  .horaire-visite b{font-size:38px}
+  .venir{padding-bottom:80px}
+  .venir .env{grid-template-columns:1fr;gap:32px}
+  .coord{grid-template-columns:1fr;gap:14px}
+  .coord .large{grid-column:auto}
+  .coord div{padding:24px 22px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Ferme-brasserie Northmæn, retour en haut">
+      <span>Northmæn</span>
+      <small>Ferme-brasserie, La Chapelle-Saint-Ouen</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#bieres">Bières &amp; cervoises</a>
+      <a href="#whiskies">Whiskies fermiers</a>
+      <a href="#fabrication">Fabrication</a>
+      <a href="#visites">Visites</a>
+    </nav>
+    <a class="pill-tete" href="https://www.northmaen.com/catalogue/">Commander en ligne</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <p class="lieu">Ferme-brasserie en Normandie, depuis 1997</p>
+        <h1>Une brasserie artisanale typiquement <em>normande</em></h1>
+        <p class="chapo">De l'orge de notre propre production, près de 20 bières artisanales et 5 whiskies fermiers. Et tous les samedis à 15h30, une visite commentée avec dégustation gratuite.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#bieres">Nos bières et cervoises</a>
+          <a class="btn btn-contour" href="#visites">Venir à la visite</a>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="ferme apparait">
+          <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/ferme-brasserie-bati-normand-colombages.webp" alt="La ferme-brasserie Northmæn sous un ciel bleu : hangars en bardage bois, tour à colombages en brique, cour et prairie" width="1600" height="900" fetchpriority="high" />
+          <span class="etiquette haut droite">La Chapelle-Saint-Ouen, Normandie</span>
+        </figure>
+        <figure class="vignette apparait">
+          <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/futs-biere-inox-northmaen.webp" alt="Fûts de bière en inox cerclés de bandes marquées Northmæn" width="1600" height="900" loading="lazy" />
+          <p>Une bière à la pression, en Normandie et au-delà</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="La brasserie en bref">
+      <li><b>4500 hl</b>de bière par an, brassés à la ferme</li>
+      <li><b>20 bières</b>artisanales : 17 bières et 3 cervoises</li>
+      <li><b>5 whiskies</b>fermiers, l'unique gamme normande</li>
+      <li><b>30 hectares</b>pour cultiver notre propre orge</li>
+    </ul>
+  </div>
+
+  <section class="histoire" id="histoire">
+    <div class="env">
+      <figure class="orge apparait">
+        <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/champ-orge-avant-moisson.webp" alt="Champ d'orge mûr, épis dorés sous un ciel bleu" width="1600" height="900" loading="lazy" />
+        <span class="etiquette">Notre orge, avant la moisson</span>
+      </figure>
+      <div>
+        <h2>Une recette viking, née dans une vieille étable</h2>
+        <div class="txt">
+          <p>C'est au printemps 1997 que Dominique Camus, technicien chimiste plus connu sous le surnom de Léo, s'installe en famille à La Chapelle-Saint-Ouen. Le 1er juillet sortent les bières blonde, ambrée, rousse et brune, brassées selon une tradition « viking » chère au patron : elles deviennent vite les stars des marchés fermiers normands.</p>
+          <p>Les premières années, la production se fait à deux, dans une vieille étable, avec des tanks à lait. En décembre 1999, Léo prépare discrètement dans sa cave <b>le premier whisky normand, Thor Boyo</b>, qui sortira à Noël 2002.</p>
+          <p>Le jeune brasseur achète jusqu'à 30 hectares de terres pour cultiver son propre orge : la brasserie devient ferme-brasserie. Elle reste en évolution permanente, sur près de 2000 m², d'où sortent chaque jour 4000 litres de bière, grâce à une équipe impliquée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bieres" id="bieres">
+    <div class="env">
+      <div class="haut">
+        <h2>Bières &amp; cervoises</h2>
+        <p>Brassées à la ferme avec notre orge, puis une double fermentation. Pour les cervoises, pas de houblon : on procède à une infusion de plantes.</p>
+      </div>
+      <div class="carte-bieres">
+        <div class="gauche-bieres">
+        <div class="bouteilles">
+          <figure class="apparait">
+            <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/biere-blanche-northmaen-deux-formats.webp" alt="Bière Blanche Northmæn en 75 cl et 33 cl, étiquettes dorées au personnage viking" width="916" height="1600" loading="lazy" />
+            <figcaption>Blanche</figcaption>
+          </figure>
+          <figure class="apparait">
+            <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/biere-brune-northmaen-deux-formats.webp" alt="Bière brune Knarr en 75 cl et 33 cl, étiquettes bleues au drakkar" width="785" height="1600" loading="lazy" />
+            <figcaption>Knarr, la brune</figcaption>
+          </figure>
+        </div>
+          <div class="gamme">
+            <h3>Toute la gamme au catalogue</h3>
+            <ul>
+              <li>Lagertha <small>la blonde</small></li>
+              <li>Ambrée</li>
+              <li>La Dame du Lac <small>la rousse</small></li>
+              <li>Knarr <small>la brune</small></li>
+              <li>Blanche</li>
+              <li>La Route de Thor <small>IPA</small></li>
+              <li>11 siècles de Normandie</li>
+              <li>OIB Frigg <small>bio</small></li>
+              <li>OIB Hörfrae <small>bio</small></li>
+            </ul>
+            <p class="prix">De 2,50 € à 5 € selon le format, au catalogue en ligne. À la pression dans de nombreux établissements de Normandie et au-delà.</p>
+          </div>
+        </div>
+        <div class="degustation">
+          <h3>Parmi nos bières</h3>
+          <div class="biere">
+            <h4>Bière du Débarquement</h4>
+            <div class="chiffres"><span>5 % vol</span><span>IBU 90</span><span>EBC 44</span></div>
+            <p>Une American Pale Ale qui rend hommage aux héros qui ont débarqué en Normandie le 6 juin 1944. Brassée avec de l'orge normand et les houblons warrior et cascade importés par les Américains.</p>
+          </div>
+          <div class="biere">
+            <h4>Bière à l'ortie</h4>
+            <div class="chiffres"><span>5 % vol</span><span>IBU 45</span><span>EBC 6</span></div>
+            <p>Brassée avec du malt et de l'orge de Normandie, infusée au houblon et à l'ortie.</p>
+          </div>
+          <div class="biere">
+            <h4>Northmæn à la Châtaigne</h4>
+            <div class="chiffres"><span>5 % vol</span><span>IBU 29</span><span>EBC 18</span></div>
+            <p>Une bière fermière de Normandie avec 8 % de châtaigne.</p>
+          </div>
+          <div class="biere">
+            <h4>Northmæn de Printemps <span class="saison">De saison</span></h4>
+            <div class="chiffres"><span>6,5 % vol</span><span>IBU 28</span><span>EBC 6</span></div>
+            <p>Infusée aux réglisses, pour profiter du retour des beaux jours.</p>
+          </div>
+          <div class="biere">
+            <h4>Northmæn de Noël <span class="saison">De saison</span></h4>
+            <p>Infusée à l'écorce d'orange douce et d'orange amère.</p>
+          </div>
+
+          <h3>Parmi nos cervoises</h3>
+          <div class="biere">
+            <h4>Northmæn Yggdrasill</h4>
+            <div class="chiffres"><span>5 % vol</span><span>IBU 15</span><span>EBC 5</span></div>
+            <p>Une cervoise infusée au frêne.</p>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn-plein" href="https://www.northmaen.com/catalogue/">Commander nos bières</a>
+            <a class="btn btn-contour" href="https://www.northmaen.com/points-de-vente/">Trouver un point de vente</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="whiskies sombre" id="whiskies">
+    <div class="env">
+      <div class="haut">
+        <h2>L'unique gamme de whiskies normands</h2>
+        <p>Des whiskies fermiers issus d'une orge semée, cultivée et récoltée par nos soins. Broyage, brassage, fermentation, distillation, vieillissement en fût et mise en bouteille : tout est réalisé sur place.</p>
+      </div>
+      <figure class="chai apparait">
+        <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/tonneaux-chene-vieillissement-whisky.webp" alt="Le chai : tonneaux de chêne couchés sur des racks en bois, lumière chaude" width="1600" height="900" loading="lazy" />
+        <span class="etiquette">Le chai, vieillissement en fût de chêne</span>
+      </figure>
+      <div class="corps">
+        <ul class="flacons">
+          <li><span class="fiche">Single malt, 3 ans, 42 %</span><div><h3>Thor Boyo</h3><p>Équilibré, floral et épicé, aux belles notes pâtissières. Médaille d'or au Concours Général Agricole 2017.</p></div><span class="prix">35 €</span></li>
+          <li><span class="fiche">Single malt, 8 ans, 44 %</span><div><h3>Sleipnir</h3><p>Une belle complexité, floral et épicé. Médaille de bronze au Concours Général Agricole 2014.</p></div><span class="prix">46 €</span></li>
+          <li><span class="fiche">Single malt, 5 ans, 43 %</span><div><h3>Fafnír</h3><p>Fumé au bois de hêtre, aux notes suaves et épicées. Médaille d'argent au Concours Général Agricole 2017.</p></div><span class="prix">57 €</span></li>
+          <li><span class="fiche">Single malt, 6 ans, 42,4 %</span><div><h3>Kenning</h3><p>L'influence d'un vieux fût de Sauternes : tout en rondeur, aux notes végétales et boisées.</p></div><span class="prix">62 €</span></li>
+          <li><span class="fiche">Single cask, 10 ans, 53 %</span><div><h3>Brut de Fût</h3><p>La version « cask strength » du Thor Boyo, aux arômes boisés et herbacés.</p></div><span class="prix">78 €</span></li>
+        </ul>
+        <div class="duo-flacons">
+          <figure class="f1 apparait">
+            <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/whisky-thor-boyo-bouteille.webp" alt="Bouteille de whisky Thor Boyo, étiquette crème à la pierre runique" width="1600" height="1600" loading="lazy" />
+          </figure>
+          <figure class="f2 apparait">
+            <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/whisky-sleipnir-bouteille.webp" alt="Bouteille de whisky Sleipnir 8 ans, étiquette au cheval blanc sur fond de flammes" width="1600" height="1600" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="https://www.northmaen.com/whiskies/">Les whiskies en détail</a>
+        <a class="btn btn-contour" href="https://www.northmaen.com/catalogue/">Commander en ligne</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fabrication" id="fabrication">
+    <div class="env">
+      <div class="haut">
+        <h2>De notre orge à la bouteille</h2>
+        <p>Un brassage par infusion, puis une double fermentation. L'écorce des grains, séparée par filtration, est recyclée en agriculture.</p>
+      </div>
+      <ol class="etapes">
+        <li><h3>Maltage et brassage</h3><p>Notre orge est malté, germé puis torréfié, broyé, et finit sa course dans une grande cuve d'eau où l'amidon est extrait pour obtenir un moût sucré.</p></li>
+        <li><h3>Ébullition et mise en fermentation</h3><p>Le moût part en ébullition avec le houblon, ou en infusion de plantes pour les cervoises. On refroidit, puis on ajoute la levure.</p><small>Une journée</small></li>
+        <li><h3>Fermentation et conditionnement</h3><p>Après la fermentation, la bière est filtrée, mise sous pression, puis conditionnée en fûts ou en bouteilles.</p><small>2 à 3 semaines</small></li>
+      </ol>
+      <div class="bande">
+        <figure class="cuves apparait">
+          <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/cuves-inox-brassage-noir-et-blanc.webp" alt="Cuves de brassage et de fermentation en inox numérotées, en noir et blanc" width="1600" height="900" loading="lazy" />
+          <span class="etiquette">Les cuves de la brasserie</span>
+        </figure>
+        <figure class="malt apparait">
+          <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/sacs-de-malt-entrepot.webp" alt="Entrepôt rempli de grands sacs de toile blanche remplis de malt" width="1600" height="900" loading="lazy" />
+          <span class="etiquette">Le malt, en sacs</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visites" id="visites">
+    <div class="env">
+      <div class="carte">
+        <div class="gauche">
+          <h2>Visite de la brasserie et dégustation</h2>
+          <p class="chapo">L'équipe de la brasserie vous accueille pour une visite détaillée du site, couronnée par une dégustation gratuite.</p>
+          <p class="horaire-visite"><b>15h30</b><span>Tous les samedis,<br />sauf jours fériés</span></p>
+          <p class="note">Sur réservation au 02 35 09 21 54. Pour les groupes de plus de 10 personnes, prenez rendez-vous par téléphone au préalable.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33235092154">Réserver au 02 35 09 21 54</a>
+            <a class="btn btn-contour" href="mailto:ferme.northmaen@gmail.com?subject=Visite%20de%20la%20brasserie">Écrire à la brasserie</a>
+          </div>
+        </div>
+        <figure class="droite">
+          <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/boutique-ferme-etageres-bieres-whiskies.webp" alt="La boutique de la ferme : étagères en bois garnies de bières et de whiskies, coffrets, comptoir carrelé" width="1600" height="900" loading="lazy" />
+          <span class="etiquette haut">La boutique de la ferme</span>
+          <div class="polaroid">
+            <img src="assets/ferme-brasserie-northmaen-la-chapelle-saint-ouen/comptoir-bar-brasserie-tabourets.webp" alt="Le comptoir en bois de la brasserie et ses tabourets de bar" width="747" height="492" loading="lazy" />
+            <p>Le comptoir de la brasserie</p>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="contact">
+    <div class="env">
+      <div>
+        <h2>Pour nous rendre visite</h2>
+        <p class="intro">Une question ? Écrivez-nous, ou appelez directement la brasserie aux horaires d'ouverture.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33235092154">Appeler la brasserie</a>
+          <a class="btn btn-contour" href="mailto:ferme.northmaen@gmail.com">ferme.northmaen@gmail.com</a>
+        </div>
+      </div>
+      <div class="coord">
+        <div>
+          <h3>Ferme-brasserie Northmæn</h3>
+          <p>Cervoiserie Northmæn<br />Le Centre<br />76780 La Chapelle-Saint-Ouen<br />Normandie, France</p>
+        </div>
+        <div>
+          <h3>Horaires</h3>
+          <p>Du lundi au vendredi :<br />9h à 12h et 14h à 18h<br />Le samedi : 10h à 12h</p>
+        </div>
+        <div class="large">
+          <h3>Joindre la brasserie</h3>
+          <p>Téléphone : <a href="tel:+33235092154">02 35 09 21 54</a><br />Mail : <a href="mailto:ferme.northmaen@gmail.com">ferme.northmaen@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Northmæn</span><small>Ferme-brasserie, La Chapelle-Saint-Ouen</small></a>
+        <p class="dit">Une brasserie artisanale typiquement normande, en permanente évolution.</p>
+      </div>
+      <div>
+        <h3>La brasserie</h3>
+        <ul>
+          <li>Le Centre<br />76780 La Chapelle-Saint-Ouen</li>
+          <li><a href="tel:+33235092154">02 35 09 21 54</a></li>
+          <li><a href="mailto:ferme.northmaen@gmail.com">ferme.northmaen@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Commander</h3>
+        <ul>
+          <li><a href="https://www.northmaen.com/catalogue/">Le catalogue en ligne</a></li>
+          <li><a href="https://www.northmaen.com/points-de-vente/">Les points de vente</a></li>
+          <li><a href="https://www.northmaen.com/whiskies/">Les whiskies fermiers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="http://latavernedethor.com/">La Taverne de Thor</a></li>
+          <li><a href="https://www.facebook.com/groups/1536859456344443/">Thor park, le village viking</a></li>
+          <li><a href="https://www.facebook.com/northmaen/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour la Ferme-brasserie Northmæn</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var t = 0;
+  function voir(){
+    var h = innerHeight * 0.94;
+    els = els.filter(function(e){ if (e.getBoundingClientRect().top < h){ e.classList.add('vu'); return false } return true });
+    if (!els.length){ removeEventListener('scroll', planifier); clearInterval(veille) }
+  }
+  var veille = setInterval(voir, 200);
+  function planifier(){ if (!t) t = requestAnimationFrame(function(){ t = 0; voir() }) }
+  addEventListener('scroll', planifier, { passive: true });
+  addEventListener('resize', planifier);
+  voir();
+})();
+</script>
+</body>
+</html>

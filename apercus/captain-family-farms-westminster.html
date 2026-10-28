@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Captain Family Farms · Vegetables, meat and eggs in Westminster, Maryland</title>
+<meta name="description" content="A family farm on nearly 20 acres in Westminster, MD. CSA memberships, an on-farm store open May through November, pastured eggs, pork, beef and chicken.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239E2B25'/%3E%3Cpath d='M10 30 32 14l22 16' fill='none' stroke='%23F5EEDC' stroke-width='4' stroke-linejoin='round'/%3E%3Ctext x='32' y='52' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23F5EEDC'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4EDDC; --cream-2:#EAE0C8; --card:#FBF7EC;
+  --red:#9E2B25; --red-d:#7E211C; --red-dd:#3B1613;
+  --green:#4F6B32; --green-d:#26331E; --green-l:#B9C79A;
+  --ink:#2B2420; --ink-2:#5E5248;
+  --shadow:0 34px 64px -36px rgba(59,22,19,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:400 18px/1.65 'Lato',sans-serif;overflow-x:hidden}
+::selection{background:var(--red);color:var(--card)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Arvo',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:700 16.5px/1.2 'Lato',sans-serif;text-decoration:none;border:2px solid var(--red);text-align:center;transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--red);color:var(--card)}
+.btn-full:hover{background:var(--green-d);border-color:var(--green-d);box-shadow:0 18px 32px -18px rgba(38,51,30,.9)}
+.btn-line{color:var(--red-d);border-color:rgba(126,33,28,.55)}
+.btn-line:hover{background:var(--red);border-color:var(--red);color:var(--card)}
+.btn-green{background:var(--green);border-color:var(--green);color:var(--card)}
+.btn-green:hover{background:var(--red);border-color:var(--red)}
+.btn-pale{border-color:rgba(244,237,220,.55);color:var(--cream)}
+.btn-pale:hover{background:var(--cream);color:var(--green-d)}
+
+/* en-tête */
+.top{padding:24px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:14px}
+.brand svg{flex:none}
+.brand b{display:block;font:700 23px/1 'Arvo',serif;letter-spacing:-.01em}
+.brand span{display:block;font:italic 400 15px/1 'Arvo',serif;color:var(--red);margin-top:7px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16px;font-weight:700;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:3px;border-radius:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--red);color:var(--card);padding:12px 22px;border-radius:999px;transition:background-color .25s}
+.pill:hover{background:var(--green-d)}
+
+/* héros */
+.hero{padding:30px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;column-gap:64px;grid-template-areas:"kick kick" "h1 lead" "h1 cta" "ph ph";align-items:end}
+.kick{grid-area:kick;font-weight:700;font-size:16px;color:var(--green);margin-bottom:18px}
+.hero h1{grid-area:h1;font-size:clamp(44px,6vw,82px);line-height:1.02}
+.hero h1 em{font-style:italic;color:var(--red)}
+.lead{grid-area:lead;color:var(--ink-2);max-width:480px}
+.cta{grid-area:cta;display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.stage{grid-area:ph;position:relative;margin-top:54px}
+.wide{border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -48px rgba(59,22,19,.75)}
+.wide img{width:100%;height:540px;object-fit:cover;object-position:50% 46%}
+.tag{position:absolute;left:18px;top:18px;background:rgba(251,247,236,.95);color:var(--ink);font-size:15px;font-weight:700;padding:9px 16px;border-radius:999px;line-height:1.3;box-shadow:0 10px 24px -14px rgba(59,22,19,.7)}
+.csa{position:absolute;right:40px;bottom:-40px;width:410px;background:var(--card);border-radius:24px;padding:30px 32px 30px;box-shadow:0 44px 80px -40px rgba(59,22,19,.7)}
+.csa .stamp{display:inline-grid;place-items:center;width:74px;height:74px;border-radius:50%;background:var(--red);color:var(--card);font:700 21px/1 'Arvo',serif;letter-spacing:.02em;rotate:-8deg;box-shadow:0 10px 20px -10px rgba(126,33,28,.8);position:absolute;top:-30px;right:26px}
+.csa h2{font-size:30px;padding-right:70px}
+.csa p{margin-top:12px;color:var(--ink-2);font-size:17px}
+.csa .btn{margin-top:20px;width:100%}
+
+/* bandeau de faits */
+.facts{padding:72px 0 0}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:14px 40px;padding:26px 0;border-top:2px solid var(--red);border-bottom:2px solid var(--red)}
+.facts li{font-size:16.5px;color:var(--ink-2)}
+.facts b{display:block;font:700 22px/1.2 'Arvo',serif;color:var(--red-d)}
+
+/* la famille */
+.family{padding:130px 0 120px}
+.family .wrap{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.duo{position:relative;padding:0 0 110px 0}
+.duo .a{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);width:88%}
+.duo .a img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:50% 40%}
+.duo .b{position:absolute;right:0;bottom:0;width:48%;background:var(--card);padding:10px 10px 16px;border-radius:10px;rotate:4deg;box-shadow:0 30px 56px -28px rgba(59,22,19,.7)}
+.duo .b img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px}
+.duo .b span{display:block;font:italic 400 15px/1.3 'Arvo',serif;color:var(--ink-2);padding:10px 4px 0}
+.h2{font-size:clamp(36px,4.3vw,56px)}
+.family p.say{margin-top:22px;color:var(--ink-2);max-width:540px}
+.family p.say + p.say{margin-top:16px}
+.family .cide{margin-top:30px;padding:22px 26px;background:var(--cream-2);border-radius:18px;font:italic 400 20px/1.45 'Arvo',serif;color:var(--green-d);max-width:540px}
+
+/* magasin et saisons */
+.store{padding:20px 0 130px}
+.store .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:84px;align-items:start}
+.store .intro{margin-top:22px;color:var(--ink-2);max-width:500px}
+.seasons{margin-top:40px;display:grid}
+.seasons div{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:18px 0;border-top:1.5px solid rgba(158,43,37,.22)}
+.seasons div:last-child{border-bottom:1.5px solid rgba(158,43,37,.22)}
+.seasons b{font:700 19px/1.4 'Arvo',serif;color:var(--red)}
+.seasons span{color:var(--ink-2);font-size:17px}
+.store .more{margin-top:22px;color:var(--ink-2);font-size:17px;max-width:500px}
+.crops{position:relative;height:650px}
+.crops figure{position:absolute;margin:0}
+.c-tom{left:0;top:0;width:62%;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.c-tom img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.c-tom .tag{top:auto;bottom:16px;left:16px}
+.c-pump{right:0;top:150px;width:46%;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:var(--shadow);border:8px solid var(--cream)}
+.c-pump img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.c-garlic{left:6%;bottom:0;width:36%;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);border:8px solid var(--cream)}
+.c-garlic img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:50% 40%}
+
+/* au pâturage (sombre) */
+.pasture{background:var(--green-d);color:var(--cream);padding:130px 0;position:relative;overflow:hidden}
+.pasture .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:start}
+.pasture .h2{color:var(--cream)}
+.pasture .lede{margin-top:20px;color:rgba(244,237,220,.78);max-width:470px}
+.cattle{margin-top:46px;position:relative;border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -40px rgba(0,0,0,.85)}
+.cattle img{width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:50% 50%}
+.cattle .tag{top:auto;bottom:16px}
+.animals{display:grid;gap:22px}
+.animal{display:grid;grid-template-columns:170px 1fr;gap:28px;align-items:center;background:rgba(244,237,220,.06);border-radius:22px;padding:18px}
+.animal .ph{border-radius:16px;overflow:hidden}
+.animal .ph img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.animal h3{font-size:25px;color:var(--cream)}
+.animal p{margin-top:8px;font-size:16.5px;color:rgba(244,237,220,.76)}
+.pasture .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+
+/* promesse */
+.pledge{padding:140px 0 120px}
+.pledge .quote{font:400 clamp(30px,3.5vw,46px)/1.25 'Arvo',serif;letter-spacing:-.015em;max-width:980px;text-wrap:balance}
+.pledge .quote em{color:var(--green)}
+.pledge .src{margin-top:22px;color:var(--ink-2);font-size:17px}
+.aims{list-style:none;margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.aims li{background:var(--card);border-radius:20px;padding:26px 24px 28px;box-shadow:0 26px 50px -38px rgba(59,22,19,.6);font-size:17px;color:var(--ink-2)}
+.aims li:nth-child(even){margin-top:40px}
+.aims li::before{content:"";display:block;width:34px;height:34px;border-radius:50%;margin-bottom:16px;background:var(--green-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2326331E' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+
+/* visite */
+.visit{padding:0 0 140px}
+.visit .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:0;align-items:center}
+.visit-card{position:relative;z-index:2;background:var(--card);border-radius:26px;padding:44px 42px 38px;box-shadow:0 44px 84px -42px rgba(59,22,19,.7);margin-right:-90px}
+.visit-card p.say{margin-top:16px;color:var(--ink-2);font-size:17px}
+.rows{margin-top:22px;display:grid}
+.rows a,.rows div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-top:1.5px solid rgba(158,43,37,.15);text-decoration:none;font-weight:700;font-size:16.5px}
+.rows span{font-weight:400;color:var(--ink-2);text-align:right;overflow-wrap:anywhere}
+.rows a{transition:color .2s}
+.rows a:hover{color:var(--red)}
+.visit-card .btn{margin-top:22px;width:100%}
+.barn{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.barn img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:40% 50%}
+.barn .tag{left:auto;right:18px}
+
+/* pied */
+.foot{background:var(--red-dd);color:var(--cream);padding:88px 0 48px}
+.foot .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}
+.foot .big{font:700 42px/1.05 'Arvo',serif;letter-spacing:-.02em}
+.foot .motto{font:italic 400 20px/1.3 'Arvo',serif;color:#E4A79E;margin-top:12px}
+.foot p,.foot li{color:rgba(244,237,220,.74);font-size:16.5px}
+.foot h4{font:700 15px/1 'Lato',sans-serif;color:#E4A79E;margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(244,237,220,.25);transition:border-color .2s;overflow-wrap:anywhere}
+.foot a:hover{border-color:#E4A79E}
+.foot .legal{margin-top:64px;padding-top:24px;border-top:1px solid rgba(244,237,220,.14);display:flex;justify-content:space-between;gap:20px;font-size:14px;color:rgba(244,237,220,.52)}
+.proposal{background:var(--red-dd);color:rgba(244,237,220,.52);text-align:center;font-size:13px;padding:0 20px 26px}
+.proposal a{color:rgba(244,237,220,.8)}
+
+/* apparitions (photos seulement) */
+html.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+html.js .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}.btn,.pill,.nav a::after{transition:none}}
+
+@media (max-width:1100px){
+  .facts ul{grid-template-columns:repeat(2,auto)}
+  .aims{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  body{font-size:17px}
+  .wrap{padding:0 22px}
+  .top{padding:18px 0 4px}
+  .top .wrap{flex-wrap:wrap;row-gap:16px}
+  .brand b{font-size:21px}
+  .nav{width:100%;gap:22px;flex-wrap:wrap}
+  .nav .pill{display:none}
+  .hero{padding:22px 0 10px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"kick" "h1" "ph" "lead" "cta"}
+  .kick{margin-bottom:12px}
+  .hero h1{font-size:42px}
+  .stage{margin-top:24px}
+  .wide{border-radius:20px}
+  .wide img{height:300px}
+  .tag{font-size:13.5px;left:12px;top:12px;padding:7px 13px}
+  .csa{position:relative;right:auto;bottom:auto;width:auto;margin:-50px 14px 0;padding:24px 22px}
+  .csa .stamp{width:62px;height:62px;font-size:18px;top:-24px;right:18px}
+  .csa h2{font-size:25px}
+  .lead{margin-top:30px}
+  .cta{flex-direction:column;margin-top:22px}
+  .cta .btn{width:100%}
+  .facts{padding:40px 0 0}
+  .facts ul{grid-template-columns:1fr;gap:14px}
+  .family{padding:80px 0 70px}
+  .family .wrap,.store .wrap,.pasture .wrap,.visit .wrap,.foot .grid{grid-template-columns:1fr;gap:44px}
+  .duo{padding-bottom:80px}
+  .duo .a{width:92%}
+  .duo .b{width:50%}
+  .family .cide{font-size:18px}
+  .store{padding:10px 0 80px}
+  .seasons div{grid-template-columns:1fr;gap:2px}
+  .crops{height:auto;aspect-ratio:1/1.1}
+  .pasture{padding:84px 0}
+  .animal{grid-template-columns:96px 1fr;gap:18px;padding:14px}
+  .animal h3{font-size:21px}
+  .animal p{font-size:16px}
+  .pasture .btns{flex-direction:column}
+  .pasture .btn{width:100%}
+  .pledge{padding:90px 0 80px}
+  .pledge .quote{font-size:28px}
+  .aims{grid-template-columns:1fr;gap:16px;margin-top:40px}
+  .aims li:nth-child(even){margin-top:0}
+  .visit{padding:0 0 90px}
+  .visit .wrap{display:flex;flex-direction:column-reverse}
+  .visit-card{margin:-60px 12px 0;padding:28px 20px 24px}
+  .rows a,.rows div{flex-direction:column;gap:2px}
+  .rows span{text-align:left}
+  .foot{padding:64px 0 40px}
+  .foot .big{font-size:34px}
+  .foot .legal{flex-direction:column}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Captain Family Farms, home">
+      <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#9E2B25"/><path d="M12 30 32 15l20 15" fill="none" stroke="#F4EDDC" stroke-width="4" stroke-linejoin="round"/><text x="32" y="52" font-family="Arvo,Georgia,serif" font-size="24" font-weight="700" text-anchor="middle" fill="#F4EDDC">C</text></svg>
+      <span class="brand-t"><b>Captain Family Farms</b><span>growing with love</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#farm">Our farm</a>
+      <a href="#store">Farm store</a>
+      <a href="#pasture">Meat &amp; eggs</a>
+      <a href="#visit">Visit</a>
+      <a class="pill" href="https://captain-family-farms.square.site/">Shop online</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="kick">Family farm in Westminster, Maryland</p>
+    <h1>We believe fresh tastes <em>better</em>.</h1>
+    <p class="lead">That&rsquo;s why we&rsquo;re growing everything we like to eat here on our farm. We grow vegetables and raise meat and eggs in our regenerative system on nearly 20 acres in Westminster.</p>
+    <div class="cta">
+      <a class="btn btn-full" href="https://captain-family-farms.square.site/">Shop eggs, meat and produce</a>
+      <a class="btn btn-line" href="mailto:tim@captainfamilyfarms.com?subject=Free%20farm%20tour">Schedule a farm tour</a>
+    </div>
+    <div class="stage">
+      <figure class="wide rv">
+        <img src="assets/captain-family-farms-westminster/panier-csa-navets-blettes-basilic.webp" width="3024" height="2274" alt="A share of the harvest laid out on wood: purple turnips, frisee, chard, red beets, red kale, basil and garlic scapes">
+        <figcaption class="tag">Turnips, chard, beets, kale and basil</figcaption>
+      </figure>
+      <aside class="csa" id="csa" aria-labelledby="csa-t">
+        <span class="stamp" aria-hidden="true">CSA</span>
+        <h2 id="csa-t">CSA memberships</h2>
+        <p>Weekly produce subscriptions for our 16 week season. You purchase your share before the season starts, we know how much to grow, and we eat well together all season long.</p>
+        <a class="btn btn-full" href="https://captain-family-farms.square.site/">Buy a CSA share</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>Nearly 20 acres</b>in Westminster, MD</li>
+      <li><b>Regenerative</b>vegetables, meat and eggs</li>
+      <li><b>May through November</b>on-farm store</li>
+      <li><b>Free farm tours</b>for families</li>
+    </ul>
+  </div>
+</section>
+
+<section class="family" id="farm">
+  <div class="wrap">
+    <div class="duo">
+      <div class="a rv"><img src="assets/captain-family-farms-westminster/couple-de-fermiers-dans-la-brume.webp" width="2048" height="1539" alt="The two farmers smiling in front of a misty field and growing beds" loading="lazy"></div>
+      <figure class="b rv"><img src="assets/captain-family-farms-westminster/brebis-et-agneaux-au-pre.webp" width="3024" height="3024" alt="A ewe and three spotted lambs in tall grass behind the fence" loading="lazy"><span>Out on pasture</span></figure>
+    </div>
+    <div>
+      <h2 class="h2">Thanks for stopping by Captain Family Farms!</h2>
+      <p class="say">We live on the farm full-time with our family, and we think it&rsquo;s just about the best place on earth for our kids to grow up.</p>
+      <p class="say">We offer CSA memberships and also sell our food in our on-farm store. We hope to grow food you love on a farm you love to visit. We look forward to seeing you soon and sharing our food with you!</p>
+      <p class="cide">The food we grow reflects the values we share with our kids: we honor the essence of everything we grow, plants and animals, and we never spray herbicides or any other &ldquo;-cide.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<section class="store" id="store">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">A seasonal farm store, May through November.</h2>
+      <p class="intro">On our farm you can expect lots of seasonal variety. Buy &ldquo;a la carte&rdquo; produce, eggs, cuts of meat, flowers, and more. When you visit, you can look forward to:</p>
+      <div class="seasons">
+        <div><b>Spring</b><span>beets, spinach, kale, radishes, arugula, carrots, lettuce</span></div>
+        <div><b>Summer</b><span>tomatoes, cucumbers, peppers, squash, herbs, strawberries, melons, sweet corn</span></div>
+        <div><b>Fall</b><span>lettuce, beets, radish, swiss chard, carrots, onions, turnips, pumpkins</span></div>
+      </div>
+      <p class="more">And much more! We update our social media often with the availability of pasture raised beef, lamb, pork, and chicken.</p>
+    </div>
+    <div class="crops">
+      <figure class="c-tom rv"><img src="assets/captain-family-farms-westminster/barquettes-de-tomates.webp" width="3024" height="3024" alt="Nine blue cardboard pints filled with red and dark tomatoes" loading="lazy"><figcaption class="tag">Summer tomatoes</figcaption></figure>
+      <figure class="c-pump rv"><img src="assets/captain-family-farms-westminster/citrouilles-blanches-et-orange.webp" width="3024" height="2274" alt="White and orange pumpkins packed close together" loading="lazy"></figure>
+      <figure class="c-garlic rv"><img src="assets/captain-family-farms-westminster/ail-rose-en-bouquet.webp" width="2389" height="3024" alt="A bunch of striped pink garlic heads with green stems" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pasture" id="pasture">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Raised on pasture, here in Westminster.</h2>
+      <p class="lede">Our beef cattle are raised on grass on our farm. They spend their days grazing and socializing; in summer you can often catch a look at them driving along Lemmon Rd.</p>
+      <figure class="cattle rv">
+        <img src="assets/captain-family-farms-westminster/bovins-au-paturage.webp" width="2674" height="3024" alt="Four red haired cattle grazing in tall pasture at the edge of the woods" loading="lazy">
+        <figcaption class="tag">Pasture Raised Beef</figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="animals">
+        <article class="animal">
+          <div class="ph rv"><img src="assets/captain-family-farms-westminster/douzaine-d-oeufs-fermiers.webp" width="2048" height="2048" alt="A dozen brown eggs in an open carton" loading="lazy"></div>
+          <div><h3>Pastured Eggs</h3><p>Beautiful brown (and sometimes green and blue!) eggs from hardy American breeds, raised on pasture and supplemented with locally grown, non-GMO feed. Available seasonally in our farm store.</p></div>
+        </article>
+        <article class="animal">
+          <div class="ph rv"><img src="assets/captain-family-farms-westminster/porcelets-tachetes-en-enclos.webp" width="1440" height="1083" alt="Three spotted piglets on straw in their pen" loading="lazy"></div>
+          <div><h3>Pastured Pork</h3><p>A cross between Idaho Pasture Pigs and Kunekune. Most of their diet is fresh pasture forage and farm leftovers, with a little non-GMO, locally grown feed.</p></div>
+        </article>
+        <article class="animal">
+          <div class="ph rv"><img src="assets/captain-family-farms-westminster/poule-dans-les-bras.webp" width="2243" height="4032" alt="A red hen held in gloved hands in front of the poultry shelter" loading="lazy"></div>
+          <div><h3>Pasture Raised Chicken</h3><p>Grown on pasture and non-GMO feed, kept healthy through daily moves to fresh grass. In spring, summer and fall, we strive to have fresh, never frozen chicken in the farm store.</p></div>
+        </article>
+      </div>
+      <div class="btns">
+        <a class="btn btn-green" href="https://captain-family-farms.square.site/">Order eggs and meat online</a>
+        <a class="btn btn-pale" href="http://www.instagram.com/captainfamilyfarms">See what&rsquo;s available</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pledge" aria-labelledby="pledge-t">
+  <div class="wrap">
+    <h2 id="pledge-t" class="quote">We believe a regenerative farm <em>grows the ecosystem</em> rather than depleting it.</h2>
+    <p class="src">Our Regenerative Pledge. In our farming practices we aim to:</p>
+    <ul class="aims">
+      <li>build topsoil through our growing practices</li>
+      <li>develop resilient pastures that are resistant to erosion</li>
+      <li>grow nutrient dense fruits and vegetables without using herbicides</li>
+      <li>establish flourishing habitats for native species, including our farm&rsquo;s waterways and woodland</li>
+    </ul>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-card">
+      <h2 class="h2">Come visit us!</h2>
+      <p class="say">We would love to show you where your food is raised. E-mail us to schedule a free farm tour: seasonal ecological exploration, our production areas, our animals, and a little of the history of our farm. Families and children welcome, perfect for a homeschool outing!</p>
+      <div class="rows">
+        <div>Farm &amp; Store <span>339 Lemmon Road, Westminster, MD 21157</span></div>
+        <a href="mailto:tim@captainfamilyfarms.com">Email <span>tim@captainfamilyfarms.com</span></a>
+        <div>Farm store <span>Open May through November</span></div>
+        <a href="https://www.captainfamilyfarms.com/monthly-newsletter">Newsletter <span>Monthly farm happenings</span></a>
+      </div>
+      <a class="btn btn-full" href="mailto:tim@captainfamilyfarms.com?subject=Free%20farm%20tour">Schedule a free farm tour</a>
+    </div>
+    <figure class="barn rv">
+      <img src="assets/captain-family-farms-westminster/boutique-de-la-ferme.webp" width="3024" height="2274" alt="The white farm store building with its big door open, American and Maryland flags out front" loading="lazy">
+      <figcaption class="tag">The farm store on Lemmon Road</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="big">Captain Family Farms</div>
+        <p class="motto">growing with love</p>
+      </div>
+      <div>
+        <h4>Farm &amp; Store</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=339+Lemmon+Road,+Westminster,+MD+21157">339 Lemmon Road<br>Westminster, MD 21157</a></li>
+          <li><a href="mailto:tim@captainfamilyfarms.com">tim@captainfamilyfarms.com</a></li>
+          <li>Store open May through November</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow the farm</h4>
+        <ul>
+          <li><a href="http://www.facebook.com/captainfamilyfarms">Facebook</a></li>
+          <li><a href="http://www.instagram.com/captainfamilyfarms">Instagram</a></li>
+          <li><a href="https://captain-family-farms.square.site/">Online store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; Captain Family Farms</span><span>Westminster, Maryland</span></div>
+  </div>
+</footer>
+<p class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Captain Family Farms</p>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

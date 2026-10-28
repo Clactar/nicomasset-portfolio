@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à l'Atelier Gabrielle S., couture et révision de machines à Prigonrieux (24), nuit du 2026-10-28.
+     CONTENU : textes, tarifs, horaires, coordonnées et photos relevés sur https://gabriellesaubois.fr/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé. Coordonnées : celles de la page Contact.
+     Défaut réglé : le bouton « Je confie ma machine » menait à une page 404 ; il mène ici à la section #revision,
+     avec les textes de la page Entretien et réparation, l'appel et le mail.
+     DESIGN (Nova) : toile écrue, encre bleu marine, accent corail broderie. Petrona + Nunito Sans. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F5F1E8" />
+<title>Atelier Gabrielle S., cours de couture et révision de machines à coudre à Prigonrieux</title>
+<meta name="description" content="Cours de couture et initiation broderie main en petit groupe, révision et réparation de machines à coudre toutes marques à Prigonrieux, en Dordogne." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231C2541'/%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%23D4664F' stroke-width='2' stroke-dasharray='4 4'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23F5F1E8'%3EG%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..600;1,400..500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --toile:#F5F1E8;
+  --toile-2:#ECE5D6;
+  --coton:#FBF9F3;
+  --marine:#1C2541;
+  --marine-doux:#4B536A;
+  --marine-nuit:#151C33;
+  --corail:#D4664F;
+  --corail-fonce:#AC4A35;
+  --sur-sombre:#F5F1E8;
+  --sur-sombre-doux:#C3C7D4;
+  --filet:rgba(28,37,65,.14);
+  --ombre-longue:0 44px 70px -38px rgba(28,37,65,.62);
+  --ombre:0 30px 60px -34px rgba(28,37,65,.55);
+  --ombre-courte:0 18px 36px -24px rgba(28,37,65,.5);
+  --fd:"Petrona",Georgia,serif;
+  --ft:"Nunito Sans",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--toile);color:var(--marine);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--corail);color:var(--coton)}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:balance}
+h1,h2{font-family:var(--fd);letter-spacing:-.012em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--corail);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* piqûre : la signature du fil */
+.piqure{display:block;height:0;border-top:2px dashed var(--corail);opacity:.9}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--ft);font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid var(--marine);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,border-color .25s,box-shadow .25s;text-align:center}
+.btn-plein{background:var(--marine);color:var(--toile)}
+.btn-plein:hover{background:var(--corail);border-color:var(--corail);color:#fffaf4;transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(212,102,79,.95)}
+.btn-contour{background:transparent;color:var(--marine)}
+.btn-contour:hover{background:var(--marine);color:var(--toile);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--corail);border-color:var(--corail);color:#fffaf4}
+.sombre .btn-plein:hover{background:var(--toile);border-color:var(--toile);color:var(--marine)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--marine)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+
+/* étiquette posée sur photo */
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(251,249,243,.95);color:var(--marine);font-size:15px;font-weight:700;line-height:1.35;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(28,37,65,.7);max-width:calc(100% - 36px)}
+
+/* apparitions des photos seulement (translate, jamais transform : la rotation reste) */
+.js .apparait{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .btn{transition:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding-top:26px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:29px;font-weight:500}
+.marque small{font-size:14px;color:var(--marine-doux);margin-top:7px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:700}
+.nav a:hover{color:var(--corail-fonce)}
+.tel-pill{background:var(--toile-2);padding:10px 18px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--marine);color:var(--toile)}
+
+/* ---------- héros ---------- */
+.heros{padding:76px 0 112px}
+.heros .env{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center}
+.lieu{font-size:16px;font-weight:700;color:var(--corail-fonce);margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.lieu .piqure{width:44px}
+.heros h1{font-size:clamp(46px,5.3vw,76px);line-height:1.03;max-width:13ch;font-weight:500}
+.heros h1 em{font-style:italic;font-weight:400;color:var(--corail-fonce)}
+.heros .chapo{font-size:20px;color:var(--marine-doux);max-width:46ch;margin-top:28px}
+.joindre{margin-top:28px;display:flex;flex-wrap:wrap;gap:6px 28px;font-size:17px}
+.joindre a{font-weight:700;text-decoration:underline;text-decoration-color:rgba(212,102,79,.6);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.joindre a:hover{color:var(--corail-fonce)}
+.joindre span{color:var(--marine-doux)}
+.heros-visuel{position:relative;padding:0 0 56px 0;margin-right:8px}
+.heros-photo{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.heros-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 58%}
+.heros-photo::after{content:"";position:absolute;inset:12px;border:2px dashed rgba(245,241,232,.75);border-radius:10px;pointer-events:none}
+.polaroid{position:absolute;left:-64px;bottom:0;width:236px;background:var(--coton);padding:10px 10px 14px;border-radius:4px;rotate:-5deg;box-shadow:0 28px 42px -22px rgba(28,37,65,.7);z-index:2}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:52% 50%;border-radius:2px}
+.polaroid p{font-size:15px;font-weight:700;text-align:center;margin-top:9px;color:var(--marine-doux);line-height:1.3}
+.heros .pastille{left:auto;right:18px;bottom:auto;top:18px}
+
+/* ---------- bandeau de faits ---------- */
+.faits{background:var(--marine);color:var(--sur-sombre)}
+.faits ul{display:flex;justify-content:space-between;gap:16px 20px;padding-block:24px;flex-wrap:wrap}
+.faits li{display:flex;align-items:center;gap:10px;font-size:15.5px;font-weight:700}
+.faits li::before{content:"";width:18px;border-top:2px dashed var(--corail);flex:none}
+
+/* ---------- cours ---------- */
+.cours{padding:128px 0 120px}
+.cours .env{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.cours h2{font-size:clamp(36px,4vw,54px);line-height:1.06}
+.cours .txt{margin-top:24px;color:var(--marine-doux);max-width:46ch}
+.cours-photo{position:relative;margin-top:44px;border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.cours-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%}
+.carnet{background:var(--coton);border-radius:22px;box-shadow:var(--ombre-courte);padding:16px 44px 40px}
+.cours-liste li{padding:28px 0;border-bottom:1px dashed rgba(28,37,65,.22)}
+.cours-liste .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.cours-liste h3{font-family:var(--fd);font-size:28px;line-height:1.15;font-weight:500}
+.cours-liste b{font-family:var(--fd);font-weight:500;font-size:26px;color:var(--corail-fonce);text-align:right;flex:none}
+.cours-liste .duree{font-size:16px;font-weight:700;color:var(--marine);margin-top:6px}
+.cours-liste p{color:var(--marine-doux);font-size:17px;margin-top:8px;max-width:52ch}
+.carnet .note{font-size:16px;color:var(--marine-doux);margin-top:22px}
+.carnet .actions{margin-top:28px}
+
+/* ---------- révision (section sombre) ---------- */
+.sombre{background:var(--marine);color:var(--sur-sombre)}
+.revision{padding:128px 0 120px;position:relative}
+.revision .env{display:grid;grid-template-columns:5fr 6fr;gap:88px;align-items:start}
+.revision .marque-fil{font-size:16px;font-weight:700;color:#EE937F;display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.revision .marque-fil .piqure{width:44px}
+.revision h2{font-size:clamp(38px,4.2vw,58px);line-height:1.04}
+.revision .chapo{color:var(--sur-sombre-doux);margin-top:24px;max-width:48ch}
+.revision .chapo + .chapo{margin-top:14px}
+.atelier-meca{position:relative;margin-top:52px;padding-bottom:70px}
+.meca{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.75);position:relative}
+.meca img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:45% 55%}
+.engrenage{position:absolute;right:-28px;bottom:0;width:210px;background:var(--toile);padding:12px;border-radius:14px;rotate:3deg;box-shadow:0 26px 44px -22px rgba(0,0,0,.8)}
+.engrenage img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px}
+.engrenage p{color:var(--marine-doux);font-size:14px;font-weight:700;margin-top:9px;line-height:1.3;text-align:center}
+.revision h3{font-family:var(--fd);font-weight:500;font-size:28px;line-height:1.15}
+.etapes{color:var(--sur-sombre-doux);margin-top:14px;max-width:56ch}
+.tarifs{margin-top:44px;background:var(--marine-nuit);border-radius:20px;padding:28px 36px 30px}
+.tarifs li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:15px 0;border-bottom:1px dashed rgba(245,241,232,.2)}
+.tarifs li:last-child{border-bottom:0}
+.tarifs li span{font-size:17px}
+.tarifs li span small{display:block;color:var(--sur-sombre-doux);font-size:15px;margin-top:2px}
+.tarifs li b{font-family:var(--fd);font-weight:500;font-size:28px;color:var(--sur-sombre);flex:none}
+.tva{font-size:15px;color:var(--sur-sombre-doux);margin-top:12px}
+.pratique{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:20px 36px}
+.pratique p{font-size:17px;color:var(--sur-sombre-doux);padding-left:30px;position:relative}
+.pratique p::before{content:"";position:absolute;left:0;top:14px;width:18px;border-top:2px dashed var(--corail)}
+.pratique strong{color:var(--sur-sombre);font-weight:700}
+.revision .actions{margin-top:40px}
+.revision .contact-direct{margin-top:16px;color:var(--sur-sombre-doux);font-size:16px}
+
+/* ---------- toutes marques (mosaïque) ---------- */
+.marques{padding:128px 0 112px;overflow:hidden}
+.marques .haut{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:end;margin-bottom:64px}
+.marques h2{font-size:clamp(36px,4.2vw,58px);line-height:1.04}
+.marques .haut p{color:var(--marine-doux);max-width:44ch}
+.mosaique{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:start}
+.singer{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.singer img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%}
+.colonne{display:flex;flex-direction:column;gap:0;padding-top:48px}
+.pfaff{background:var(--coton);padding:16px;border-radius:16px;box-shadow:var(--ombre-courte);position:relative;rotate:1.5deg;margin-left:-64px;z-index:2}
+.pfaff img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px}
+.pfaff p{font-size:15px;font-weight:700;color:var(--marine-doux);margin-top:12px}
+.neva{align-self:flex-start;margin-left:-72px;margin-top:-36px;width:280px;background:var(--coton);padding:10px 10px 14px;border-radius:4px;rotate:-3.5deg;box-shadow:0 26px 40px -22px rgba(28,37,65,.65);position:relative;z-index:2}
+.neva img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.neva p{font-size:15px;font-weight:700;text-align:center;margin-top:9px;color:var(--marine-doux)}
+
+/* ---------- parcours ---------- */
+.parcours{background:var(--toile-2);padding:128px 0}
+.citation{font-family:var(--fd);font-style:italic;font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.22;max-width:30ch;text-wrap:balance}
+.citation::before{content:"« ";color:var(--corail-fonce);font-style:normal}
+.citation::after{content:" »";color:var(--corail-fonce);font-style:normal}
+.parcours .signe{margin-top:22px;font-weight:700;font-size:16px;color:var(--marine-doux);display:flex;align-items:center;gap:14px}
+.parcours .signe .piqure{width:44px}
+.parcours .bas{display:grid;grid-template-columns:6fr 5fr;gap:72px;margin-top:72px;align-items:center}
+.portrait{position:relative;border-radius:200px 18px 18px 18px;overflow:hidden;box-shadow:var(--ombre)}
+.portrait img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:62% 40%}
+.parcours h2{font-size:clamp(32px,3.4vw,44px);line-height:1.08}
+.parcours .bas p{color:var(--marine-doux);margin-top:18px;max-width:50ch}
+.propose{margin-top:28px;border-top:1px dashed rgba(28,37,65,.25)}
+.propose li{padding:14px 0;border-bottom:1px dashed rgba(28,37,65,.25);font-size:17px}
+.propose strong{font-weight:800}
+
+/* ---------- mercerie + privatisation ---------- */
+.duo{padding:128px 0}
+.duo .env{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.mercerie{background:var(--coton);border-radius:22px;box-shadow:var(--ombre-courte);padding:48px;display:grid;grid-template-columns:1fr 170px;gap:28px;align-items:start}
+.mercerie h2,.privat h2{font-size:clamp(30px,3vw,40px);line-height:1.08}
+.mercerie p{color:var(--marine-doux);margin-top:16px;font-size:17px}
+.aiguilles{width:170px;margin-top:8px;border-radius:12px;overflow:hidden;rotate:3deg;box-shadow:var(--ombre-courte)}
+.aiguilles img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.privat{background:var(--corail);color:#fffaf4;border-radius:22px;padding:48px 52px;position:relative;overflow:hidden}
+.privat::after{content:"";position:absolute;inset:14px;border:2px dashed rgba(255,250,244,.55);border-radius:14px;pointer-events:none}
+.privat p{margin-top:18px;font-size:18px;max-width:56ch;color:#fff5ee}
+.privat .btn{position:relative;z-index:1;background:var(--marine);border-color:var(--marine);color:var(--toile)}
+.privat .btn:hover{background:var(--coton);border-color:var(--coton);color:var(--marine)}
+
+/* ---------- venir ---------- */
+.venir{padding:0 0 128px}
+.venir .env{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center}
+.entree{position:relative;max-width:420px;border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.entree img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.venir h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.venir .txt{color:var(--marine-doux);margin-top:20px;max-width:46ch}
+.fiche{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+.fiche h3{font-size:15px;font-weight:800;color:var(--corail-fonce);margin-bottom:6px}
+.fiche p,.fiche a{font-size:18px}
+.fiche a{font-weight:700;text-decoration:underline;text-decoration-color:rgba(212,102,79,.6);text-underline-offset:5px;text-decoration-thickness:1.5px;overflow-wrap:anywhere}
+
+/* ---------- pied ---------- */
+.pied{background:var(--marine-nuit);color:var(--sur-sombre);padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:4fr 3fr 3fr 3fr;gap:48px}
+.pied .nom{font-family:var(--fd);font-size:32px;font-weight:500;line-height:1.1}
+.pied .grille > div > p{color:var(--sur-sombre-doux);font-size:16px;margin-top:12px;max-width:30ch}
+.pied h3{font-size:15px;font-weight:800;color:#EE937F;margin-bottom:12px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);padding:3px 0}
+.pied li a{color:var(--sur-sombre);text-decoration:none;overflow-wrap:anywhere}
+.pied li a:hover{color:#EE937F}
+.pied .piqure{margin-top:72px;opacity:.45}
+.propo{padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+/* ---------- tablette ---------- */
+@media (max-width: 1080px){
+  .heros .env,.cours .env,.revision .env,.marques .haut,.mosaique,.parcours .bas,.duo .env,.venir .env{grid-template-columns:1fr;gap:56px}
+  .polaroid{left:-12px}
+  .neva{margin-left:0}
+  .pfaff{margin-left:0}
+  .pied .grille{grid-template-columns:1fr 1fr}
+}
+
+/* ---------- téléphone ---------- */
+@media (max-width: 640px){
+  body{font-size:17px}
+  .env{padding-inline:22px}
+  .tete{padding-top:18px}
+  .nav a:not(.tel-pill){display:none}
+  .tete .env{gap:10px}
+  .marque span{font-size:21px}
+  .marque small{font-size:13px}
+  .tel-pill{font-size:14px;padding:8px 12px;white-space:nowrap}
+  .heros{padding:36px 0 72px}
+  .heros .env{gap:30px}
+  .lieu{margin-bottom:14px}
+  .heros h1{font-size:40px;line-height:1.06}
+  .heros .chapo{font-size:18px;margin-top:18px}
+  .heros-visuel{order:0;margin-right:0;padding-bottom:44px}
+  .heros-texte{display:contents}
+  .heros-texte .debut{order:-1}
+  .heros-texte .suite{order:1}
+  .heros-photo img{aspect-ratio:5/4}
+  .polaroid{width:150px;left:auto;right:8px;bottom:0;padding:7px 7px 10px}
+  .polaroid p{font-size:13px}
+  .heros .pastille{top:14px;bottom:auto;left:14px;right:auto;font-size:14px;max-width:70%}
+  .actions{flex-direction:column;gap:12px;margin-top:28px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:12px;padding-block:24px}
+  .faits li{font-size:16px}
+  .cours,.marques,.parcours,.duo{padding:88px 0}
+  .revision{padding:88px 0}
+  .carnet{padding:8px 22px 28px}
+  .cours-liste .ligne{flex-direction:column;gap:4px}
+  .cours-liste b{text-align:left;font-size:24px}
+  .cours-liste h3{font-size:25px}
+  .engrenage{width:150px;right:-6px;padding:8px}
+  .tarifs{padding:18px 20px 22px}
+  .tarifs li b{font-size:24px}
+  .pratique{grid-template-columns:1fr}
+  .mercerie{grid-template-columns:1fr;padding:28px}
+  .aiguilles{width:140px}
+  .privat{padding:40px 28px}
+  .privat .btn{width:100%}
+  .neva{width:220px;margin-top:-28px;margin-left:8px}
+  .colonne{padding-top:0}
+  .mosaique{gap:28px}
+  .portrait{border-radius:140px 16px 16px 16px}
+  .fiche{grid-template-columns:1fr}
+  .venir{padding-bottom:88px}
+  .entree{max-width:none}
+  .entree img{aspect-ratio:4/3}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#">
+      <span>Atelier Gabrielle S.</span>
+      <small>Couture et machines à coudre, Prigonrieux</small>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#cours">Cours</a>
+      <a href="#revision">Entretien et réparation</a>
+      <a href="#parcours">À propos</a>
+      <a href="#venir">Contact</a>
+      <a class="tel-pill" href="tel:+33685095468">06 85 09 54 68</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <div class="debut">
+          <p class="lieu"><span class="piqure" aria-hidden="true"></span>Atelier Gabrielle S. à Prigonrieux</p>
+          <h1>Cours de couture, broderie main et <em>révision</em> de machines</h1>
+        </div>
+        <div class="suite">
+          <p class="chapo">Un lieu chaleureux pour apprendre, créer et faire entretenir votre machine avec expertise. Réservez votre cours ou confiez-moi votre machine dès aujourd'hui.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#revision">Je confie ma machine</a>
+            <a class="btn btn-contour" href="#cours">Voir les cours</a>
+          </div>
+          <div class="joindre">
+            <p><span>Appelez-moi au </span><a href="tel:+33685095468">06 85 09 54 68</a></p>
+            <p><span>ou écrivez à </span><a href="mailto:bonjour@gabriellesaubois.fr">bonjour@gabriellesaubois.fr</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="heros-visuel">
+        <figure class="heros-photo apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/atelier-salle-de-cours-machines-a-coudre.webp" width="1200" height="1600" alt="La salle de l'atelier : longues tables en bois clair portant plusieurs machines à coudre et une surjeteuse, mur bleu et baie vitrée" />
+          <figcaption class="pastille">L'atelier, en petit groupe</figcaption>
+        </figure>
+        <figure class="polaroid apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/machine-a-coudre-vintage-neva.webp" width="1600" height="1200" alt="Machine à coudre portative vintage crème marquée Neva" />
+          <p>Toutes marques, tous modèles</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="env">
+      <li>Réparatrice certifiée Répar'Acteur</li>
+      <li>Cours de 3 personnes maximum</li>
+      <li>Déplacement pour les machines industrielles</li>
+      <li>Du mardi au samedi</li>
+    </ul>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="env">
+      <div>
+        <h2>Un atelier pensé pour créer, apprendre et partager</h2>
+        <p class="txt">Vous y trouverez plusieurs machines à coudre, des surjeteuses, de grandes tables hautes idéales pour la découpe et l'assemblage, ainsi que le petit matériel de couture à disposition.</p>
+        <p class="txt">Dans cette atmosphère conviviale et lumineuse, chacun peut avancer à son rythme, découvrir de nouvelles techniques et réaliser ses projets dans les meilleures conditions.</p>
+        <figure class="cours-photo apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/surjeteuse-ouverte-enfilage.webp" width="1600" height="1200" loading="lazy" alt="Surjeteuse blanche capot ouvert, fils de couleur passés dans le circuit d'enfilage" />
+          <figcaption class="pastille">L'enfilage d'une surjeteuse</figcaption>
+        </figure>
+      </div>
+      <div class="carnet">
+        <ul class="cours-liste">
+          <li>
+            <div class="ligne"><h3>Initiation machine à coudre</h3><b>40 €</b></div>
+            <p class="duree">Cours d'1h30</p>
+            <p>Apprenez à dompter votre machine : l'enfiler, la régler, comprendre sa mécanique pour éviter les blocages, et réaliser vos premières coutures sans stress.</p>
+          </li>
+          <li>
+            <div class="ligne"><h3>Couture libre accompagnée</h3><b>15 €/h</b></div>
+            <p class="duree">Cours collectif, 3 personnes maximum</p>
+            <p>Venez avec vos tissus et votre mercerie, je vous accompagne dans votre projet et vous donne toutes mes petites astuces. Tarif dégressif au forfait.</p>
+          </li>
+          <li>
+            <div class="ligne"><h3>Initiation surjeteuse</h3><b>45 €</b></div>
+            <p class="duree">Cours de 2h</p>
+            <p>Comprendre et enfiler parfaitement votre machine, régler les tensions, le différentiel et les différents points, puis réaliser un premier projet.</p>
+          </li>
+          <li>
+            <div class="ligne"><h3>Club couture junior</h3><b>à partir de 20 €</b></div>
+            <p class="duree">2 heures le mercredi matin, 3 enfants maximum</p>
+            <p>Chaque enfant découvre la machine à coudre et réalise ses propres projets textiles, à son rythme, dans un cadre sécurisé et bienveillant.</p>
+          </li>
+        </ul>
+        <p class="note">Vous pouvez venir avec votre propre machine ou utiliser celles mises à disposition à l'atelier.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://gabriellesaubois.fr/calendrier-de-reservation/">Réserver un cours</a>
+          <a class="btn btn-contour" href="tel:+33685095468">M'appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="revision sombre" id="revision">
+    <div class="env">
+      <div>
+        <p class="marque-fil"><span class="piqure" aria-hidden="true"></span>Je confie ma machine</p>
+        <h2>Révision et réparation de machines à coudre</h2>
+        <p class="chapo">Réparatrice certifiée Répar'Acteur, j'entretiens et répare vos machines à coudre, toutes marques et tous modèles, directement à l'atelier, pour qu'elles retrouvent performance et fiabilité.</p>
+        <p class="chapo">Je me déplace aussi dans les ateliers pour les réparations sur machines industrielles.</p>
+        <div class="atelier-meca">
+          <figure class="meca apparait">
+            <img src="assets/atelier-gabrielle-s-prigonrieux/mecanisme-crochet-machine-encrasse.webp" width="1600" height="1200" loading="lazy" alt="Mécanisme d'une machine démontée, crochet et griffes couverts de bourre et de poussière" />
+            <figcaption class="pastille">Avant le nettoyage intérieur</figcaption>
+          </figure>
+          <figure class="engrenage apparait">
+            <img src="assets/atelier-gabrielle-s-prigonrieux/engrenages-machine-a-coudre-gros-plan.webp" width="1470" height="1600" loading="lazy" alt="Gros plan sur un arbre et un pignon à l'intérieur d'une machine à coudre" />
+            <p>Vérification des mécanismes</p>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <h3>Ce que comprend une révision</h3>
+        <p class="etapes">Démontage des éléments, nettoyage intérieur en profondeur, vérification des mécanismes, réglages et équilibrage, huilage, graissage, remontage, pose d'une aiguille neuve et tests sur tissu.</p>
+        <ul class="tarifs">
+          <li><span>Forfait révision<small>Machine à coudre familiale</small></span><b>75 €</b></li>
+          <li><span>Forfait révision<small>Surjeteuse ou recouvreuse</small></span><b>90 €</b></li>
+          <li><span>Forfait révision<small>Brodeuse ou machine combinée</small></span><b>110 €</b></li>
+          <li><span>Réparation<small>Démontage, remplacement des pièces, montage ; pièces détachées en plus</small></span><b>60 €/h</b></li>
+        </ul>
+        <p class="tva">TVA non applicable, art. 293B du CGI</p>
+        <div class="pratique">
+          <p><strong>Délai moyen de 2 à 3 semaines</strong> pour une révision ; pour une réparation, il dépend de la réception des pièces.</p>
+          <p><strong>Prenez rendez-vous</strong> pour le dépôt : 20 € d'arrhes, déduits de la facture finale.</p>
+          <p><strong>Apportez</strong> le câble d'alimentation, la pédale et une canette vide.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33685095468">Prendre rendez-vous au 06 85 09 54 68</a>
+          <a class="btn btn-contour" href="mailto:bonjour@gabriellesaubois.fr?subject=D%C3%A9p%C3%B4t%20de%20ma%20machine%20%C3%A0%20coudre">Écrire pour un dépôt</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marques">
+    <div class="env">
+      <div class="haut">
+        <h2>Une seconde vie pour les machines</h2>
+        <p>Qu'il s'agisse d'un simple réglage, d'un nettoyage approfondi ou d'une panne plus complexe, je vous accompagne avec transparence et des délais rapides pour que vous puissiez coudre sereinement.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="singer apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/machine-singer-ancienne-dorures.webp" width="1600" height="1200" loading="lazy" alt="Machine à coudre Singer ancienne, noire à décors dorés, sur son socle en bois" />
+          <figcaption class="pastille">Singer ancienne, sur son socle</figcaption>
+        </figure>
+        <div class="colonne">
+          <figure class="pfaff apparait">
+            <img src="assets/atelier-gabrielle-s-prigonrieux/machine-industrielle-pfaff.webp" width="1600" height="1200" loading="lazy" alt="Machine à coudre industrielle Pfaff, peinture grise usée" />
+            <p>Machine industrielle Pfaff</p>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="parcours" id="parcours">
+    <div class="env">
+      <p class="citation">La couture et la broderie doivent être des moments de détente, notre esprit se pose. C'est une parenthèse pour s'évader et se recentrer sur soi-même.</p>
+      <p class="signe"><span class="piqure" aria-hidden="true"></span>Gabrielle, Atelier Gabrielle S.</p>
+      <div class="bas">
+        <figure class="portrait apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/couturiere-machine-industrielle-singer.webp" width="1600" height="1200" loading="lazy" alt="Gabrielle à sa machine Singer" />
+        </figure>
+        <div>
+          <h2>Mon parcours</h2>
+          <p>J'ai découvert la couture lorsque j'ai eu ma première machine à coudre vers 10 ans. Après avoir exercé en tant qu'infirmière puéricultrice, je me suis reconvertie en obtenant un CAP Couture flou et un CAP Tailleur, puis formée en patronnage sur mesure.</p>
+          <p>Je me suis ensuite spécialisée dans la réparation de machines à coudre, pour accompagner particuliers comme professionnels.</p>
+          <ul class="propose">
+            <li><strong>Réparation et entretien</strong> de machines à coudre</li>
+            <li><strong>Cours de couture</strong> pour les débutants comme les passionnés</li>
+            <li><strong>Mercerie de première nécessité</strong> : aiguilles, canettes, petit outillage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="duo">
+    <div class="env">
+      <div class="mercerie">
+        <div>
+          <h2>Mercerie de première nécessité</h2>
+          <p>Retrouvez à l'atelier aiguilles machine de qualité et canettes adaptées à votre machine, petit matériel de couture et de broderie.</p>
+          <p>Vous avez un besoin particulier en mercerie ? N'hésitez pas à m'en parler.</p>
+        </div>
+        <figure class="aiguilles apparait">
+          <img src="assets/atelier-gabrielle-s-prigonrieux/aiguilles-schmetz-mercerie.webp" width="1369" height="1600" loading="lazy" alt="Sachets d'aiguilles Schmetz suspendus sur un panneau perforé" />
+        </figure>
+      </div>
+      <div class="privat">
+        <h2>Envie d'organiser un atelier à votre image ?</h2>
+        <p>L'Atelier Gabrielle S. peut être privatisé pour un anniversaire, une soirée entre amis, un EVJF ou simplement un instant de couture en petit groupe. Je peux vous proposer des solutions clé en main : machines et matériel, fournitures sélectionnées, modèle adapté au niveau de chacun.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:bonjour@gabriellesaubois.fr?subject=Privatiser%20l%27atelier">Contactez-moi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="env">
+      <figure class="entree apparait">
+        <img src="assets/atelier-gabrielle-s-prigonrieux/entree-hotel-d-entreprises.webp" width="1200" height="1600" loading="lazy" alt="Entrée vitrée de l'Hôtel d'entreprises, rue Jules Ferry à Prigonrieux" />
+        <figcaption class="pastille">20, rue Jules Ferry</figcaption>
+      </figure>
+      <div>
+        <h2>Et si on se rencontrait ?</h2>
+        <p class="txt">Que vous ayez besoin de réparer votre machine, d'apprendre une technique ou de trouver de la mercerie, je serai ravie de vous accueillir à l'atelier.</p>
+        <div class="fiche">
+          <div>
+            <h3>Adresse</h3>
+            <p>20, rue Jules Ferry<br />Hôtel d'entreprises<br />24130 Prigonrieux</p>
+          </div>
+          <div>
+            <h3>Horaires de l'atelier</h3>
+            <p>Mardi au vendredi : 9h à 12h et 14h à 17h<br />Samedi : 10h à 12h</p>
+          </div>
+          <div>
+            <h3>Appelez-moi</h3>
+            <a href="tel:+33685095468">06 85 09 54 68</a>
+          </div>
+          <div>
+            <h3>Écrivez-moi</h3>
+            <a href="mailto:bonjour@gabriellesaubois.fr">bonjour@gabriellesaubois.fr</a>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33685095468">Appeler l'atelier</a>
+          <a class="btn btn-contour" href="mailto:bonjour@gabriellesaubois.fr">Écrire un mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <span class="nom">Atelier Gabrielle S.</span>
+        <p>Cours de couture, initiation broderie main et révision de machines à coudre à Prigonrieux.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>20, rue Jules Ferry</li>
+          <li>Hôtel d'entreprises</li>
+          <li>24130 Prigonrieux</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Mardi au vendredi</li>
+          <li>9h à 12h, 14h à 17h</li>
+          <li>Samedi, 10h à 12h</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33685095468">06 85 09 54 68</a></li>
+          <li><a href="mailto:bonjour@gabriellesaubois.fr">bonjour@gabriellesaubois.fr</a></li>
+          <li><a href="https://gabriellesaubois.fr/conditions-generales-de-vente/">CGV</a></li>
+          <li><a href="https://gabriellesaubois.fr/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <span class="piqure" aria-hidden="true"></span>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour l'Atelier Gabrielle S.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  function montrer(e){ e.classList.add('vu') }
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(montrer); return }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ montrer(en.target); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+  els.forEach(function(e){ io.observe(e) });
+  // filet de sécurité : rien ne reste invisible si le défilement est trop rapide
+  var filet = function(){ els.forEach(montrer) };
+  window.addEventListener('load', function(){ setTimeout(filet, 1400) });
+  setTimeout(filet, 2600);
+})();
+</script>
+</body>
+</html>

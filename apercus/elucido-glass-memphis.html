@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Elucido Glass by Lisa Butts, fused glass artworks to wear</title>
+<meta name="description" content="Fused glass jewelry by Lisa Butts: pendants, earrings and cuffs layered from opaque, transparent, powder and frit glass.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F3B3F'/%3E%3Ccircle cx='48' cy='16' r='6' fill='%23E2A23B'/%3E%3Ctext x='31' y='46' font-family='Didot,Georgia,serif' font-size='40' font-style='italic' text-anchor='middle' fill='%23EEF2F3'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petrol:#0F3B3F; --petrol-d:#0A2B2E; --petrol-2:#46676A;
+  --saffron:#E2A23B; --saffron-d:#B97A16;
+  --porcelain:#E6ECEE; --porcelain-2:#DAE3E6; --card:#F4F7F8;
+  --shadow:0 34px 60px -32px rgba(5,30,33,.75);
+  --shadow-soft:0 30px 60px -36px rgba(15,59,63,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--porcelain);color:var(--petrol);font:400 18px/1.62 'Karla',sans-serif;overflow-x:hidden}
+::selection{background:var(--saffron);color:var(--petrol-d)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:500;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:8px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:700 16px/1 'Karla',sans-serif;letter-spacing:.01em;text-decoration:none;border:1.5px solid currentColor;transition:transform .28s cubic-bezier(.2,.7,.3,1),background-color .28s,color .28s,box-shadow .28s,border-color .28s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--saffron);border-color:var(--saffron);color:var(--petrol-d)}
+.btn-full:hover{background:var(--card);border-color:var(--card);box-shadow:0 18px 34px -18px rgba(0,0,0,.6)}
+.btn-line{color:var(--card);border-color:rgba(244,247,248,.5)}
+.btn-line:hover{background:var(--card);border-color:var(--card);color:var(--petrol)}
+.btn-ink{background:var(--petrol);border-color:var(--petrol);color:var(--card)}
+.btn-ink:hover{background:var(--saffron-d);border-color:var(--saffron-d);box-shadow:var(--shadow-soft)}
+.btn-ink-line{color:var(--petrol)}
+.btn-ink-line:hover{background:var(--petrol);color:var(--card)}
+
+/* héros sombre */
+.hero{background:var(--petrol);color:var(--card);border-radius:0 0 36px 36px;position:relative;overflow:hidden}
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0}
+.brand{text-decoration:none;display:block}
+.brand b{display:block;font:500 28px/1 'Bodoni Moda',serif;letter-spacing:.01em}
+.brand span{display:block;margin-top:6px;font-size:14px;color:rgba(244,247,248,.68)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:var(--saffron);transform:scaleX(0);transform-origin:left;transition:transform .28s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{border:1.5px solid rgba(244,247,248,.45);padding:12px 22px;border-radius:999px;font-weight:700!important;transition:background-color .28s,color .28s}
+.pill:hover{background:var(--saffron);border-color:var(--saffron);color:var(--petrol-d)}
+
+.hero-grid{display:grid;grid-template-columns:1fr 600px;column-gap:56px;align-items:center;padding:40px 0 110px;grid-template-areas:"text tray"}
+.hero-text{grid-area:text}
+.hello{font-size:17px;color:var(--saffron);font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,6.2vw,86px);font-weight:500;line-height:.98;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--saffron);font-weight:400}
+.lead{margin-top:28px;max-width:470px;font-size:19px;color:rgba(244,247,248,.82)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.reach{margin-top:22px;font-size:16px;color:rgba(244,247,248,.66)}
+.reach a{color:var(--card);text-underline-offset:4px}
+
+/* mosaïque de vignettes en cartes */
+.tray{grid-area:tray;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.tray .col{display:grid;gap:20px}
+.tray .col:nth-child(1){margin-top:70px}
+.tray .col:nth-child(3){margin-top:130px}
+.gem{background:var(--card);padding:9px;border-radius:16px;box-shadow:var(--shadow);position:relative}
+.gem img{width:100%;border-radius:9px;object-fit:cover}
+.gem.l img{aspect-ratio:3/2}
+.gem.p img{aspect-ratio:3/4}
+.gem.s img{aspect-ratio:1/1}
+.gem.tilt-a{rotate:-3deg}
+.gem.tilt-b{rotate:2.5deg}
+.tag{position:absolute;left:18px;bottom:18px;background:rgba(244,247,248,.94);color:var(--petrol);font-size:13.5px;font-weight:600;line-height:1.25;padding:7px 12px;border-radius:999px;box-shadow:0 8px 18px -10px rgba(0,0,0,.5)}
+
+/* bandeau de faits */
+.facts{margin-top:-46px;position:relative;z-index:2}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border-radius:22px;box-shadow:var(--shadow-soft);padding:26px 10px}
+.facts li{padding:4px 28px;font-size:16px;line-height:1.45;color:var(--petrol-2)}
+.facts li+li{border-left:1px solid var(--porcelain-2)}
+.facts strong{display:block;font:500 21px/1.15 'Bodoni Moda',serif;color:var(--petrol);margin-bottom:6px}
+
+/* histoire */
+.story{padding:130px 0 120px}
+.story .wrap{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.portrait{position:relative;width:300px;margin-left:30px}
+.portrait figure{background:var(--card);padding:12px 12px 52px;border-radius:6px;box-shadow:var(--shadow-soft);rotate:-2.5deg;width:244px}
+.portrait img{width:220px;aspect-ratio:436/572;object-fit:cover;border-radius:3px}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:16px;text-align:center;font:italic 500 18px/1 'Bodoni Moda',serif}
+.portrait figure{position:relative}
+.gardener{margin-top:48px;max-width:380px;font:italic 400 30px/1.22 'Bodoni Moda',serif;color:var(--petrol)}
+.gardener span{display:block;margin-top:14px;font:500 15px/1.4 'Karla',sans-serif;font-style:normal;color:var(--petrol-2)}
+.story h2{font-size:clamp(36px,4vw,54px)}
+.story .body{margin-top:30px;max-width:610px;display:grid;gap:20px;color:#25494C}
+
+/* travail du verre : bande claire avec vignettes décalées */
+.glass{padding:0 0 130px}
+.glass .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.layers{position:relative;height:520px}
+.layers .gem{position:absolute;box-shadow:var(--shadow-soft)}
+.layers .g1{left:0;top:30px;width:240px}
+.layers .g2{left:200px;top:0;width:200px;z-index:2}
+.layers .g3{left:40px;top:250px;width:210px;z-index:3}
+.layers .g4{left:290px;top:250px;width:230px}
+.glass h2{font-size:clamp(34px,3.6vw,50px)}
+.glass p{margin-top:24px;max-width:520px;color:#25494C}
+.steps{list-style:none;margin-top:34px;display:grid;gap:0;max-width:520px}
+.steps li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--porcelain-2);font-size:17px}
+.steps li:last-child{border-bottom:1px solid var(--porcelain-2)}
+.steps b{font:500 19px/1.3 'Bodoni Moda',serif}
+.steps span{color:var(--petrol-2)}
+
+/* section sombre : la couleur */
+.color{background:var(--petrol-d);color:var(--card);padding:120px 0;border-radius:36px;margin:0 24px}
+.color .wrap{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:center}
+.color blockquote{font:italic 400 clamp(36px,4.2vw,60px)/1.08 'Bodoni Moda',serif;letter-spacing:-.01em}
+.color blockquote b{font-weight:400;color:var(--saffron)}
+.color .side p{color:rgba(244,247,248,.8);font-size:18px}
+.color .side p+p{margin-top:18px}
+.duo{display:flex;gap:18px;margin-top:36px}
+.duo .gem{width:170px;background:#E9EEEF;box-shadow:0 26px 50px -26px rgba(0,0,0,.8)}
+.duo .gem:nth-child(2){margin-top:34px}
+
+/* salons et point de vente */
+.find{padding:130px 0 120px}
+.find-head{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:56px}
+.find-head h2{font-size:clamp(36px,4vw,56px)}
+.find-head p{color:#25494C;max-width:500px}
+.find-cards{display:grid;grid-template-columns:7fr 5fr;gap:28px}
+.card{background:var(--card);border-radius:24px;padding:44px;box-shadow:var(--shadow-soft)}
+.card h3{font-size:30px}
+.card p{margin-top:16px;color:#25494C}
+.card .btn{margin-top:30px}
+.card.shows{display:grid;grid-template-columns:1fr 190px;gap:36px;align-items:center}
+.card.shows .gem{box-shadow:var(--shadow-soft);rotate:3deg;background:var(--porcelain)}
+.card.retail{background:var(--saffron);color:var(--petrol-d)}
+.card.retail p{color:var(--petrol-d)}
+.addr{margin-top:20px;font:500 22px/1.35 'Bodoni Moda',serif}
+.textlink{display:inline-block;margin-top:24px;font-weight:700;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.textlink:hover{text-decoration-color:var(--card)}
+
+/* pied */
+.foot{background:var(--petrol-d);color:var(--card);padding:90px 0 0;border-radius:36px 36px 0 0}
+.foot .grid{display:grid;grid-template-columns:5fr 4fr 3fr;gap:56px;padding-bottom:70px}
+.foot h2{font-size:42px}
+.foot .grid > div:first-child p{margin-top:18px;max-width:400px;color:rgba(244,247,248,.72);font-size:17px}
+.foot h3{font:700 15px/1 'Karla',sans-serif;color:var(--saffron);margin-bottom:18px;letter-spacing:.02em}
+.foot ul{list-style:none;display:grid;gap:10px;font-size:17px}
+.foot a{text-underline-offset:4px;text-decoration-color:rgba(244,247,248,.35)}
+.foot a:hover{text-decoration-color:var(--saffron)}
+.foot .cta{margin-top:30px}
+.legal{border-top:1px solid rgba(244,247,248,.14);padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-size:15px;color:rgba(244,247,248,.6)}
+.proposal{background:var(--petrol-d);color:rgba(244,247,248,.55);text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:rgba(244,247,248,.8)}
+
+/* apparition des photos */
+.rv{transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.3,1)}
+.rv.pre{opacity:0;translate:0 26px}
+
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr 480px;column-gap:36px}
+  .layers{transform:scale(.85);transform-origin:left top}
+}
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  .nav a:not(.pill){display:none}
+  .hero{border-radius:0 0 28px 28px}
+  .top{padding:20px 0}
+  .brand b{font-size:24px}
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"text";padding:8px 0 90px}
+  .hero-text{display:grid;grid-template-areas:"hello" "h1" "tray" "lead" "cta" "reach"}
+  .hello{grid-area:hello;margin-bottom:14px;font-size:16px}
+  .hero h1{grid-area:h1;font-size:44px;line-height:1}
+  .tray{grid-area:tray;margin-top:26px;gap:12px}
+  .tray.desk{display:none}
+  .tray .col{gap:12px}
+  .tray .col:nth-child(1){margin-top:30px}
+  .tray .col:nth-child(3){margin-top:56px}
+  .gem{padding:6px;border-radius:12px}
+  .gem img{border-radius:7px}
+  .tag{left:10px;bottom:10px;font-size:12.5px;padding:6px 10px}
+  .lead{grid-area:lead;font-size:18px;margin-top:26px}
+  .cta{grid-area:cta;flex-direction:column;margin-top:28px}
+  .cta .btn{width:100%}
+  .reach{grid-area:reach}
+  .facts ul{grid-template-columns:1fr 1fr;padding:12px 0}
+  .facts li{padding:16px 20px}
+  .facts li+li{border-left:0}
+  .facts li:nth-child(even){border-left:1px solid var(--porcelain-2)}
+  .facts li:nth-child(n+3){border-top:1px solid var(--porcelain-2)}
+  .facts strong{font-size:19px}
+  .story{padding:90px 0}
+  .story .wrap{grid-template-columns:1fr;gap:56px}
+  .portrait{margin:0 auto;width:auto;display:flex;flex-direction:column;align-items:center}
+  .gardener{text-align:center;font-size:26px}
+  .glass{padding-bottom:90px}
+  .glass .wrap{grid-template-columns:1fr;gap:48px}
+  .layers{height:auto;transform:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .layers .gem{position:relative;left:auto;top:auto;width:auto}
+  .layers .g2{margin-top:30px}
+  .steps li{grid-template-columns:1fr;gap:4px}
+  .color{margin:0 12px;padding:80px 0;border-radius:28px}
+  .color .wrap{grid-template-columns:1fr;gap:40px}
+  .color blockquote{font-size:36px}
+  .duo .gem{width:150px}
+  .find{padding:90px 0}
+  .find-head{grid-template-columns:1fr;gap:20px;margin-bottom:36px}
+  .find-cards{grid-template-columns:1fr}
+  .card{padding:30px 24px}
+  .card.shows{grid-template-columns:1fr}
+  .card.shows .gem{width:170px}
+  .card .btn{width:100%}
+  .foot{padding-top:70px;border-radius:28px 28px 0 0}
+  .foot .grid{grid-template-columns:1fr;gap:40px;padding-bottom:50px}
+  .foot .cta .btn{width:100%}
+  .legal{flex-direction:column}
+}
+@media (min-width:901px){ .tray.mob{display:none} }
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .rv.pre{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="#top" id="top"><b>Elucido Glass</b><span>by Lisa Butts</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#glass">The work</a>
+        <a href="#shows">Shows &amp; retail</a>
+        <a class="pill" href="mailto:lisa@elucidoglass.com">Email Lisa</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hello">Thank you for dropping in.</p>
+        <h1>Artworks to wear, in <em>rich color.</em></h1>
+
+        <div class="tray mob" aria-hidden="true">
+          <div class="col">
+            <div class="gem p"><img src="assets/elucido-glass-memphis/boucles-oreilles-verre-vert-anis.webp" alt=""></div>
+          </div>
+          <div class="col">
+            <div class="gem p tilt-b"><img src="assets/elucido-glass-memphis/pendentif-verre-rayures-collier-turquoise.webp" alt=""></div>
+          </div>
+          <div class="col">
+            <div class="gem s"><img src="assets/elucido-glass-memphis/collier-pendentif-ovale-perles-rouges.webp" alt=""></div>
+          </div>
+        </div>
+
+        <p class="lead">Here you'll find artworks to wear inspired by my passionate interest of textures, color and natural elements.</p>
+        <div class="cta">
+          <a class="btn btn-full" href="mailto:lisa@elucidoglass.com">Email Lisa</a>
+          <a class="btn btn-line" href="#glass">See the work</a>
+        </div>
+        <p class="reach">Write to <a href="mailto:lisa@elucidoglass.com">lisa@elucidoglass.com</a>, I'd love to hear from you.</p>
+      </div>
+
+      <div class="tray desk">
+        <div class="col">
+          <div class="gem l tilt-a"><img src="assets/elucido-glass-memphis/pendentif-boucles-manchette-cuir-verre-fusionne.webp" alt="Fused glass pendant on a gold chain, turquoise glass earrings and a leather cuff with a glass plate"></div>
+          <div class="gem p"><img src="assets/elucido-glass-memphis/boucles-oreilles-verre-vert-anis.webp" alt="Two-tone green glass earrings on long silver hooks"></div>
+        </div>
+        <div class="col">
+          <div class="gem s"><img src="assets/elucido-glass-memphis/collier-pendentif-ovale-perles-rouges.webp" alt="Oval red, yellow and turquoise glass pendant between brick red beads"></div>
+          <div class="gem p tilt-b"><img src="assets/elucido-glass-memphis/pendentif-verre-rayures-collier-turquoise.webp" alt="Striped glass pendant on a turquoise bead necklace"><span class="tag">Layered &amp; fired glass</span></div>
+        </div>
+        <div class="col">
+          <div class="gem l"><img src="assets/elucido-glass-memphis/trois-manchettes-cuivre-plaques-de-verre.webp" alt="Three copper cuffs, each set with a multicolored glass plate"></div>
+          <div class="gem p tilt-a"><img src="assets/elucido-glass-memphis/boucles-oreilles-cartes-elucido-glass.webp" alt="Six pairs of striped glass earrings on Elucido Glass cards"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="facts" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li><strong>Opaque, transparent, powder &amp; frit</strong>the glasses layered in every piece</li>
+        <li><strong>Fired, then cold‑worked</strong>in a sequence, for texture and depth</li>
+        <li><strong>Pendants, earrings &amp; cuffs</strong>glass set in leather, copper and wire</li>
+        <li><strong>Fox Gallery</strong>10 N. Main Street, Germantown, OH</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="story" id="about">
+    <div class="wrap">
+      <div>
+        <div class="portrait">
+          <figure class="rv">
+            <img src="assets/elucido-glass-memphis/portrait-lisa-butts.webp" alt="Lisa Butts wearing one of her necklaces">
+            <figcaption>Lisa Butts</figcaption>
+          </figure>
+        </div>
+        <p class="gardener">“He told me I must learn to appreciate shades of green and texture.”<span>The master gardener, at a shade garden seminar</span></p>
+      </div>
+      <div>
+        <h2>Color is an essential in my life. Rich color!</h2>
+        <div class="body">
+          <p>Many years ago, I attended a shade garden seminar to gain insight into colorful plants I could nurture and grow in my wooded yard. It was there that my perception of all I see around me was forever changed by a few simple words said by the master gardener.</p>
+          <p>Because of those simple words, the sight through my lens now appears with more depth and definition of texture. I use these visual images to design depth into an otherwise flat piece of glass.</p>
+          <p>Color is empowering for me and enriches my life. I want women to recognize and celebrate their inner and outer beauty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="glass" id="glass">
+    <div class="wrap">
+      <div class="layers">
+        <div class="gem l g1 rv"><img src="assets/elucido-glass-memphis/manchettes-cuir-plaques-verre-multicolores.webp" alt="Three leather cuffs, each with a checkered glass plate wrapped in wire" loading="lazy"></div>
+        <div class="gem p g2 rv"><img src="assets/elucido-glass-memphis/plaque-verre-dichroique-manchette-cuir.webp" alt="Close up of a glass plate with iridescent bands on a tan leather cuff" loading="lazy"></div>
+        <div class="gem l g3 rv"><img src="assets/elucido-glass-memphis/pendentif-triangle-rouge-cordon-cuir.webp" alt="Red, green and yellow triangular glass pendant on a black double cord" loading="lazy"><span class="tag">Glass, cord &amp; copper</span></div>
+        <div class="gem l g4 rv"><img src="assets/elucido-glass-memphis/bracelet-perles-boucles-pendentif-verre-turquoise.webp" alt="Turquoise bead bracelet, glass earrings and a striped oval pendant around a porcelain vase" loading="lazy"></div>
+      </div>
+      <div>
+        <h2>Depth, out of an otherwise flat piece of glass.</h2>
+        <p>By layering opaque, transparent, powder and frit glasses, in a sequence of firings and cold-working, I am able to obtain texture and depth in my work.</p>
+        <ol class="steps">
+          <li><b>Layering</b><span>Opaque, transparent, powder and frit glasses.</span></li>
+          <li><b>Firings</b><span>Not one, but a sequence of firings.</span></li>
+          <li><b>Cold-working</b><span>For texture and depth in the finished piece.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="color" aria-label="Why color">
+    <div class="wrap">
+      <blockquote>A bold wearable art, with an <b>empowering pop of color</b> that never oversteps your comfort level.</blockquote>
+      <div class="side">
+        <p>I know many women like color but are intimidated by it. My goal in creating Elucido Glass jewelry is to offer women a bold wearable art that gives them their empowering pop of color without overstepping their comfort level.</p>
+        <div class="duo">
+          <div class="gem s rv"><img src="assets/elucido-glass-memphis/collier-pendentif-ovale-perles-rouges.webp" alt="Oval glass pendant with red beads on a black ground" loading="lazy"></div>
+          <div class="gem l rv"><img src="assets/elucido-glass-memphis/pendentif-triangulaire-chaine-bronze-porcelaine.webp" alt="Large violet, orange and blue glass pendant in a white porcelain dish" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="shows">
+    <div class="wrap">
+      <div class="find-head">
+        <h2>Find the work at shows, and in Ohio.</h2>
+        <p>If you find my art work appealing or are already a collector, share your email address with me. I will periodically send you news of upcoming shows in your area, new products and subscriber specials.</p>
+      </div>
+      <div class="find-cards">
+        <div class="card shows">
+          <div>
+            <h3>Upcoming shows, by email</h3>
+            <p>More shows will be included as I'm notified. Send me your email address, and your mailing address if you'd like a note when I do shows in your area.</p>
+            <a class="btn btn-ink" href="mailto:lisa@elucidoglass.com?subject=Please%20add%20me%20to%20your%20email%20list">Join the email list</a>
+          </div>
+          <div class="gem p rv"><img src="assets/elucido-glass-memphis/boucles-oreilles-cartes-elucido-glass.webp" alt="Elucido Glass earrings on their cards, as at a show booth" loading="lazy"></div>
+        </div>
+        <div class="card retail">
+          <h3>Retail location</h3>
+          <p>Find my work in person at</p>
+          <p class="addr">Fox Gallery<br>10 N. Main Street<br>Germantown, OH</p>
+          <a class="textlink" href="https://www.facebook.com/foxgallerygermantownohio/">Fox Gallery on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Elucido Glass</h2>
+        <p>Please feel free to contact me with any questions or requests. I'd love to hear from you!</p>
+        <div class="cta">
+          <a class="btn btn-full" href="mailto:lisa@elucidoglass.com">Email Lisa</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:lisa@elucidoglass.com">lisa@elucidoglass.com</a></li>
+          <li>Fox Gallery, 10 N. Main Street, Germantown, OH</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://facebook.com/LisaButts.ElucidoGlass">Facebook</a></li>
+          <li><a href="https://pinterest.com/elucidoglass">Pinterest</a></li>
+          <li><a href="https://linkedin.com/in/AlisaButts">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>Elucido Glass by Lisa Butts</span><span>Fused glass artworks to wear</span></div>
+  </div>
+  <div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Elucido Glass</div>
+</footer>
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var els = [].slice.call(document.querySelectorAll('.rv'));
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){
+    if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Scami Stoneware · Fanciful stoneware miniatures, whistles and jointed critters by Sue Scamihorn</title>
+<meta name="description" content="Stoneware with porcelain and terra cotta accents by Sue Scamihorn: miniatures, whistles, nativities, inspirational pottery and pouch pots. Call 260-330-9416.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231F3C8C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-style='italic' text-anchor='middle' fill='%23F6ECCD'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6ECCD; --cream-2:#EFE1B8; --paper:#FFFAEB;
+  --cobalt:#1F3C8C; --cobalt-2:#2E4FA8; --cobalt-d:#152A64;
+  --ink:#1C2236; --ink-2:#4A4F62;
+  --shadow:0 34px 60px -34px rgba(21,42,100,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:400 18px/1.62 'Alegreya Sans',sans-serif;overflow-x:hidden}
+::selection{background:var(--cobalt);color:var(--cream)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Alegreya',Georgia,serif;font-weight:500;line-height:1.04;letter-spacing:-.012em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:500 17px/1 'Alegreya Sans',sans-serif;text-decoration:none;border:1.5px solid var(--cobalt);transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s,color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--cobalt);color:var(--paper)}
+.btn-full:hover{background:var(--cobalt-d);border-color:var(--cobalt-d);box-shadow:0 18px 30px -18px rgba(21,42,100,.9)}
+.btn-line{color:var(--cobalt)}
+.btn-line:hover{background:var(--cobalt);color:var(--paper)}
+.btn-light{border-color:rgba(255,250,235,.6);color:var(--paper)}
+.btn-light:hover{background:var(--paper);color:var(--cobalt-d)}
+
+/* en-tête */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:14px}
+.brand i{width:46px;height:46px;border-radius:50%;background:var(--cobalt);color:var(--cream);display:grid;place-items:center;font:italic 500 28px/1 'Alegreya',serif;flex:none}
+.brand b{display:block;font:500 27px/1 'Alegreya',serif}
+.brand span{display:block;font-size:15px;color:var(--ink-2);margin-top:5px}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{font-size:17px;font-weight:500;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--cobalt);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--cobalt);color:var(--paper);padding:13px 22px;border-radius:999px;transition:background-color .25s}
+.pill:hover{background:var(--cobalt-d)}
+
+/* héros */
+.hero{padding:34px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;column-gap:56px;align-items:center}
+.kick{font:italic 500 22px/1.3 'Alegreya',serif;color:var(--cobalt)}
+.hero h1{font-size:clamp(46px,5.6vw,80px);margin-top:16px}
+.hero h1 em{font-style:italic;color:var(--cobalt)}
+.lead{margin-top:28px;max-width:470px;color:var(--ink-2);font-size:19px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.reach{margin-top:22px;font-size:16px;color:var(--ink-2)}
+.reach a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1.5px solid rgba(31,60,140,.4)}
+.reach a:hover{border-color:var(--cobalt)}
+
+.pile{position:relative;height:640px}
+.pol{position:absolute;background:var(--paper);padding:14px 14px 0;border-radius:6px;box-shadow:0 30px 50px -28px rgba(21,42,100,.6),0 2px 6px rgba(21,42,100,.08)}
+.pol img{width:100%;object-fit:cover;border-radius:3px}
+.pol figcaption{font:italic 400 19px/1.25 'Alegreya',serif;color:var(--ink-2);padding:12px 4px 16px;text-align:center}
+.pol.p1{width:62%;left:6%;top:40px;rotate:-4deg;z-index:4}
+.pol.p1 img{aspect-ratio:1.21/1;object-position:40% 50%}
+.pol.p2{width:37%;right:0;top:0;rotate:6deg;z-index:1}
+.pol.p2 img{aspect-ratio:3/4}
+.pol.p3{width:40%;right:4%;bottom:0;rotate:-3deg;z-index:3}
+.pol.p3 img{aspect-ratio:1/1}
+.pol.p4{width:31%;left:0;bottom:-6px;rotate:5deg;z-index:3}
+.pol.p4 img{aspect-ratio:3/4;object-position:50% 50%}
+.ph-wrap{position:relative}
+.tag{position:absolute;left:12px;bottom:12px;background:rgba(255,250,235,.95);color:var(--cobalt-d);font:500 15px/1.2 'Alegreya Sans',sans-serif;padding:8px 15px;border-radius:999px;box-shadow:0 10px 22px -12px rgba(21,42,100,.6)}
+
+/* faits */
+.facts{background:var(--cobalt);color:var(--paper)}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:14px 36px;padding:26px 0}
+.facts li{font-size:17px;font-weight:500;display:flex;align-items:center;gap:12px}
+.facts li::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid var(--cream);flex:none}
+
+/* sifflets */
+.whistle{padding:130px 0 110px}
+.whistle .wrap{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.duo{position:relative;padding:0 70px 90px 0}
+.duo .big{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.duo .big img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 55%}
+.duo .small{position:absolute;right:0;bottom:0;width:42%;border-radius:18px;overflow:hidden;border:9px solid var(--cream);box-shadow:0 30px 56px -28px rgba(21,42,100,.7)}
+.duo .small img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.h2{font-size:clamp(38px,4.4vw,60px)}
+.h2 em{font-style:italic;color:var(--cobalt)}
+.whistle .txt>p{margin-top:22px;color:var(--ink-2);max-width:500px}
+.makes{margin-top:34px;display:flex;flex-wrap:wrap;gap:6px 0;font:italic 400 26px/1.35 'Alegreya',serif;color:var(--ink)}
+.makes span{display:inline-flex;align-items:center}
+.makes span:not(:last-child)::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--cobalt);margin:0 16px}
+.sign{margin-top:44px;display:flex;align-items:center;gap:26px}
+.sign .pol{position:relative;width:210px;rotate:-3deg;flex:none}
+.sign .pol img{aspect-ratio:1/1}
+.sign .pol figcaption{font-size:17px;padding:8px 2px 12px}
+.sign p{color:var(--ink-2);font-size:17px;max-width:250px}
+
+/* oiseaux, bandeau */
+.birds{padding:0 0 130px}
+.birds .wrap{position:relative}
+.band{border-radius:26px;overflow:hidden;box-shadow:var(--shadow);position:relative;margin-right:18%}
+.band img{width:100%;aspect-ratio:2.4/1;object-fit:cover}
+.band .tag{left:18px;bottom:18px}
+.note{position:absolute;right:40px;top:50%;translate:0 -42%;width:380px;background:var(--paper);border-radius:22px;padding:38px 36px;box-shadow:0 40px 70px -36px rgba(21,42,100,.6)}
+.note h3{font-size:34px}
+.note p{margin-top:12px;color:var(--ink-2);font-size:17px}
+.note .btn{margin-top:24px}
+
+/* crèches, sombre */
+.nativ{background:var(--cobalt-d);color:var(--paper);padding:130px 0}
+.nativ .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
+.nativ .h2{color:var(--paper)}
+.nativ .h2 em{color:var(--cream-2)}
+.nativ p{margin-top:20px;color:rgba(255,250,235,.8);max-width:470px}
+.nativ .btn{margin-top:34px}
+.trio{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:start}
+.trio figure{border-radius:20px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.85);position:relative}
+.trio .n1{grid-column:1/3}
+.trio .n1 img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 60%}
+.trio .n2 img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.trio .n3{margin-top:60px}
+.trio .n3 img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.trio .tag{background:rgba(255,250,235,.94)}
+
+/* où trouver */
+.find{padding:130px 0 120px}
+.find-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:56px}
+.find-head p{color:var(--ink-2);max-width:480px}
+.find-body{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+.stores{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:44px}
+.stores li{padding:18px 0;border-top:1px solid rgba(28,34,54,.14)}
+.stores b{display:block;font:500 21px/1.25 'Alegreya',serif}
+.stores span{display:block;color:var(--ink-2);font-size:16px;margin-top:3px}
+.side{position:relative}
+.shows{background:var(--paper);border-radius:24px;padding:40px 38px 34px;box-shadow:0 40px 70px -40px rgba(21,42,100,.55)}
+.shows h3{font-size:34px}
+.shows p{margin-top:12px;color:var(--ink-2);font-size:17px}
+.rows{margin-top:22px}
+.rows a{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-top:1px solid rgba(28,34,54,.12);text-decoration:none;font-weight:500;transition:color .2s}
+.rows a span{color:var(--ink-2);font-weight:400;text-align:right;overflow-wrap:anywhere}
+.rows a:hover{color:var(--cobalt)}
+.shows .btn{margin-top:20px;width:100%}
+.side .pol{position:relative;width:200px;margin:0 -10px -34px auto;rotate:6deg;z-index:2}
+.side .pol img{aspect-ratio:3/4}
+.side .pol figcaption{font-size:16px;padding:8px 2px 12px}
+
+/* pied */
+.foot{background:var(--ink);color:var(--paper);padding:84px 0 50px}
+.foot .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}
+.foot .big{font:500 44px/1.05 'Alegreya',serif}
+.foot .big em{color:var(--cream-2)}
+.foot p,.foot li{color:rgba(255,250,235,.74);font-size:17px}
+.foot .grid>div:first-child p{margin-top:16px;max-width:380px}
+.foot h4{font:700 15px/1 'Alegreya Sans',sans-serif;letter-spacing:.02em;color:var(--cream-2);margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(255,250,235,.28);transition:border-color .2s}
+.foot a:hover{border-color:var(--cream)}
+.foot .legal{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,250,235,.14);display:flex;justify-content:space-between;gap:20px;font-size:15px;color:rgba(255,250,235,.52)}
+.proposal{background:var(--ink);color:rgba(255,250,235,.52);text-align:center;font-size:14px;padding:0 20px 26px}
+.proposal a{color:rgba(255,250,235,.8)}
+
+/* apparitions (photos) */
+html.js .rv{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.3,1)}
+html.js .rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;translate:none;transition:none}.btn,.nav a::after{transition:none}}
+
+@media (max-width:1100px){.pile{height:580px}.note{width:340px;right:24px}}
+@media (max-width:860px){
+  body{font-size:17px}
+  .wrap{padding:0 22px}
+  .top{padding:18px 0 4px}
+  .brand i{width:40px;height:40px;font-size:24px}
+  .brand b{font-size:24px}
+  .brand span{font-size:15px}
+  .nav a:not(.pill){display:none}
+  .pill{padding:11px 18px;font-size:16px}
+  .hero{padding:22px 0 64px}
+  .hero .wrap{grid-template-columns:1fr}
+  .kick{font-size:19px}
+  .hero h1{font-size:44px;margin-top:10px}
+  .intro{display:contents}
+  .kick{order:1}.hero h1{order:2}.pile{order:3}.lead{order:4}.cta{order:5}.reach{order:6}
+  .pile{height:auto;aspect-ratio:1/1.02;margin-top:26px}
+  .pol{padding:8px 8px 0}
+  .pol figcaption{font-size:16px;padding:7px 2px 10px}
+  .pol.p1{width:66%;left:4%;top:34px}
+  .pol.p2{width:38%}
+  .pol.p3{width:42%;right:2%}
+  .pol.p4{width:34%;bottom:14px}
+  .pol.p2 figcaption,.pol.p4 figcaption{display:none}
+  .tag{font-size:15px;padding:7px 12px;left:8px;bottom:8px}
+  .lead{font-size:17.5px;margin-top:26px}
+  .cta{flex-direction:column;margin-top:26px}
+  .cta .btn{width:100%}
+  .facts ul{grid-template-columns:1fr;gap:12px;padding:24px 0}
+  .whistle{padding:84px 0 70px}
+  .whistle .wrap,.nativ .wrap,.find-head,.find-body,.foot .grid{grid-template-columns:1fr;gap:44px}
+  .duo{padding:0 34px 70px 0}
+  .duo .small{width:46%;border-width:6px}
+  .makes{font-size:22px}
+  .makes span:not(:last-child)::after{margin:0 11px}
+  .sign{gap:18px}
+  .sign .pol{width:150px}
+  .sign p{font-size:16px}
+  .birds{padding:0 0 84px}
+  .band{margin-right:0}
+  .band img{aspect-ratio:1.5/1}
+  .band .tag{left:10px;bottom:10px}
+  .note{position:relative;right:auto;top:auto;translate:none;width:auto;margin:-40px 14px 0;padding:30px 24px}
+  .note h3{font-size:29px}
+  .note .btn{width:100%}
+  .nativ{padding:84px 0}
+  .trio{gap:14px}
+  .trio .n3{margin-top:36px}
+  .nativ .btn{width:100%}
+  .find{padding:84px 0 80px}
+  .find-head{margin-bottom:30px;gap:18px}
+  .stores{grid-template-columns:1fr}
+  .side .pol{width:150px;margin:0 0 -28px auto}
+  .shows{padding:32px 24px 26px}
+  .shows h3{font-size:29px}
+  .foot{padding:64px 0 40px}
+  .foot .big{font-size:36px}
+  .foot .legal{flex-direction:column;gap:6px}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Scami Stoneware, home">
+      <i aria-hidden="true">S</i>
+      <div><b>Scami Stoneware</b><span>by Sue Scamihorn</span></div>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#whistles">Whistles</a>
+      <a href="#nativities">Nativities</a>
+      <a href="#find">Where to find it</a>
+      <a class="pill" href="tel:+12603309416">Call Sue</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="intro">
+        <div class="kick">Stoneware by Sue Scamihorn</div>
+        <h1>Fanciful stoneware miniatures, whistles and jointed <em>critters.</em></h1>
+        <p class="lead">Stoneware with porcelain and terra cotta accents: miniatures, whistles, nativities, inspirational pottery, pouch pots, and more.</p>
+        <div class="cta">
+          <a class="btn btn-full" href="tel:+12603309416">Call 260-330-9416</a>
+          <a class="btn btn-line" href="mailto:sue.scami@gmail.com">Email Sue</a>
+        </div>
+        <p class="reach">Or meet Sue on her <a href="https://indianaartisan.org/team/sue-scamihorn/">Indiana Artisan page</a></p>
+      </div>
+      <div class="pile" aria-label="A few of Sue's pieces">
+        <figure class="pol p2 rv">
+          <img src="assets/scami-stoneware-wabash/vache-sifflet-poule-et-chat.webp" alt="Black and white stoneware cow holding a flower, with a hen and an orange cat sitting on its head" width="1066" height="1600">
+          <figcaption>Cow, hen and cat</figcaption>
+        </figure>
+        <figure class="pol p1 rv">
+          <div class="ph-wrap">
+            <img src="assets/scami-stoneware-wabash/creatures-articulees-cheval-mouton-chien.webp" alt="Jointed stoneware critters on a wooden table: a brown horse with tube legs, a curly white sheep, a dog and a small orange cat" width="1600" height="1322">
+            <span class="tag">Jointed critters</span>
+          </div>
+          <figcaption>Horse, sheep, dog and cat</figcaption>
+        </figure>
+        <figure class="pol p4 rv">
+          <img src="assets/scami-stoneware-wabash/elephant-stylise-decor-damier.webp" alt="Speckled stoneware elephant with a looped trunk and a glazed checkerboard saddle, next to a quarter" width="1114" height="1600">
+          <figcaption>Next to a quarter</figcaption>
+        </figure>
+        <figure class="pol p3 rv">
+          <img src="assets/scami-stoneware-wabash/creche-plate-arche-etoile.webp" alt="Relief nativity: Joseph, Mary in blue holding the baby, a sheep and a donkey, in front of an arch cut with a star" width="1600" height="1600">
+          <figcaption>Nativity with a star</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li>Porcelain and terra cotta accents</li>
+        <li>Whistles, miniatures, nativities</li>
+        <li>Stores and galleries across Indiana</li>
+        <li>At Indiana Artisan</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="whistle" id="whistles">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="big rv">
+          <img src="assets/scami-stoneware-wabash/creature-tachetee-sifflet.webp" alt="Four legged stoneware whistle covered in red, black and green dots, with a hole in its red lips" loading="lazy" width="1600" height="1600">
+          <span class="tag">A penny, for scale</span>
+        </figure>
+        <figure class="small rv">
+          <img src="assets/scami-stoneware-wabash/girafes-maman-et-petit.webp" alt="Two stoneware giraffes lying down, a mother and her baby looking at each other" loading="lazy" width="1541" height="1600">
+        </figure>
+      </div>
+      <div class="txt">
+        <h2 class="h2">Yes, we are <em>whistles.</em></h2>
+        <p>Fun and fancy stoneware whistles, ornaments, and more. Spotted, striped, curly or checkered, every critter has its own face.</p>
+        <div class="makes" aria-label="What Sue makes">
+          <span>Miniatures</span><span>Whistles</span><span>Nativities</span><span>Inspirational pottery</span><span>Pouch pots</span>
+        </div>
+        <div class="sign">
+          <figure class="pol rv">
+            <img src="assets/scami-stoneware-wabash/presentoir-sifflets-yes-we-are-whistles.webp" alt="Round wooden tray covered with small stoneware animals and a handwritten sign that reads Yes we are Whistles" loading="lazy" width="1600" height="1433">
+            <figcaption>Yes we are Whistles</figcaption>
+          </figure>
+          <p>A whole table of them: dogs, a monkey, birds, a pig, an elephant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="birds" aria-label="Birds and ornaments">
+    <div class="wrap">
+      <figure class="band rv">
+        <img src="assets/scami-stoneware-wabash/oiseaux-ceramique-sur-tiges.webp" alt="Seven glazed stoneware birds in red, green, yellow, orange and white, painted with leaves, flowers and clouds, on thin metal stems" loading="lazy" width="1600" height="666">
+        <span class="tag">Birds on wire stems</span>
+      </figure>
+      <div class="note">
+        <h3>Ornaments and little birds.</h3>
+        <p>Leaves, flowers and clouds painted in glaze, each bird set on its own stem. Ask Sue what she has right now.</p>
+        <a class="btn btn-full" href="mailto:sue.scami@gmail.com?subject=Your%20stoneware">Ask Sue about a piece</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="nativ" id="nativities">
+    <div class="wrap">
+      <div class="txt">
+        <h2 class="h2">Nativities and <em>inspirational</em> pottery.</h2>
+        <p>A stoneware stable with a pitched roof, a miniature with a gold star, a relief scene set against an arch, and ornaments made to hang.</p>
+        <a class="btn btn-light" href="mailto:sue.scami@gmail.com?subject=Nativities">Ask about a nativity</a>
+      </div>
+      <div class="trio">
+        <figure class="n1 rv">
+          <img src="assets/scami-stoneware-wabash/creche-etable-gres.webp" alt="Stoneware stable with a pitched roof, holding Mary, Joseph, the baby and a sheep" loading="lazy" width="1600" height="1402">
+          <span class="tag">The stoneware stable</span>
+        </figure>
+        <figure class="n2 rv">
+          <img src="assets/scami-stoneware-wabash/creche-miniature-etoile-doree.webp" alt="Miniature nativity with Mary, Joseph, the manger and a sheep under a gold star on a stem" loading="lazy" width="1578" height="1600">
+        </figure>
+        <figure class="n3 rv">
+          <img src="assets/scami-stoneware-wabash/ornement-arche-couple-enlace.webp" alt="Pointed arch ornament topped with a cross, an embracing couple glazed in color inside, with a gold spiral hook" loading="lazy" width="1346" height="1600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap">
+      <div class="find-head">
+        <h2 class="h2">Where to find <em>Sue's</em> work.</h2>
+        <p>Sue's stoneware is carried by stores and galleries around Indiana. To ask about a piece, call or email her directly.</p>
+      </div>
+      <div class="find-body">
+        <ul class="stores">
+          <li><b>Twisted Sisters Creative Gifts</b><span>Indianapolis, IN</span></li>
+          <li><b>Indiana Artisan</b><span>French Lick Resort and Carmel Art District</span></li>
+          <li><b>Orchard Gallery</b><span>Fort Wayne, IN, Christmas season</span></li>
+          <li><b>Welcome Center</b><span>Wabash, IN</span></li>
+          <li><b>Traditional Arts Today</b><span>Ferdinand, IN</span></li>
+          <li><b>50 East. White's Residential Garden Store</b><span>Wabash, IN</span></li>
+          <li><b>Rachel's Taste of Indiana</b><span>Converse, IN</span></li>
+          <li><b>Design Studio 407</b><span>Marion, IN</span></li>
+        </ul>
+        <div class="side">
+          <figure class="pol rv">
+            <img src="assets/scami-stoneware-wabash/sculpture-tortues-et-coquillages.webp" alt="Tall openwork stoneware sculpture covered with small glazed turtles and round shells" loading="lazy" width="1067" height="1600">
+            <figcaption>Turtles and shells</figcaption>
+          </figure>
+          <div class="shows">
+            <h3>Coming to a show?</h3>
+            <p>Show dates are tentative. Call or email Sue to ask where she'll be next.</p>
+            <div class="rows">
+              <a href="tel:+12603309416">Phone <span>260-330-9416</span></a>
+              <a href="mailto:sue.scami@gmail.com">Email <span>sue.scami@gmail.com</span></a>
+            </div>
+            <a class="btn btn-full" href="mailto:sue.scami@gmail.com?subject=Your%20next%20show">Ask about the next show</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="big">Scami <em>Stoneware</em></p>
+        <p>Fanciful stoneware miniatures, whistles and jointed critters, by Sue Scamihorn.</p>
+      </div>
+      <div>
+        <h4>Contact Sue</h4>
+        <ul>
+          <li>Sue Scamihorn</li>
+          <li><a href="tel:+12603309416">260-330-9416</a></li>
+          <li><a href="mailto:sue.scami@gmail.com">sue.scami@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Around the studio</h4>
+        <ul>
+          <li><a href="#whistles">Whistles</a></li>
+          <li><a href="#nativities">Nativities</a></li>
+          <li><a href="#find">Stores and galleries</a></li>
+          <li><a href="https://indianaartisan.org/team/sue-scamihorn/">Indiana Artisan</a></li>
+          <li><a href="https://www.etsy.com/shop/suescami">Etsy shop</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Scami Stoneware</span><span>Stoneware from Indiana</span></div>
+  </div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for Scami Stoneware</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

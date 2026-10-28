@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à Sylvie Duroch, fileuse de verre au Bugue (24), nuit du 2026-10-28.
+     CONTENU : textes, coordonnées et photos relevés sur http://www.fileusedeverre.com/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé : aucun prix, aucun horaire, aucune date d'exposition (le site n'en publie pas).
+     Défaut réglé : le lien « Accueil » du menu menait à une page 404 ; l'accueil existe ici, et chaque
+     lien du menu pointe sur une ancre réelle de la page (#atelier, #creations, #commande, #contact).
+     Le bloc « Expo à venir : aucun évènement à afficher » n'est pas repris.
+     La date incrustée sur la photo d'atelier est recadrée hors champ (CSS).
+     DESIGN (Nova) : héros bleu nuit et flamme, page sur crème froid. Fraunces + Outfit.
+     Seulement 4 photos en grand ; les 8 petites images d'animaux restent en médaillons de moins de 240 px. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#141B2E" />
+<title>Fileuse de verre au Bugue, verre filé à la flamme en Périgord Noir</title>
+<meta name="description" content="L'atelier de Sylvie Duroch, fileuse de verre au Bugue, en Périgord Noir : animaux, bijoux et pièces pour jeux en verre filé à la flamme, conçus à main levée sans moule. Travail sur commande." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23141B2E'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23E0892B'%3ES%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..500;1,9..144,400&family=Outfit:wght@400..600&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --nuit:#141B2E;
+  --nuit-2:#1E2740;
+  --creme:#F2F0EA;
+  --creme-2:#E7E4DA;
+  --cristal:#FBFAF6;
+  --encre:#1A2033;
+  --encre-douce:#4C5468;
+  --flamme:#E0892B;
+  --flamme-fonce:#A65A12;
+  --flamme-clair:#F4B46A;
+  --sur-nuit-doux:#B9BFCF;
+  --filet:rgba(26,32,51,.14);
+  --ombre:0 34px 64px -34px rgba(20,27,46,.55);
+  --ombre-courte:0 20px 36px -24px rgba(20,27,46,.5);
+  --fd:"Fraunces",Georgia,serif;
+  --ft:"Outfit",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--flamme);color:var(--nuit)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--fd);font-variation-settings:"opsz" 144;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--flamme);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--encre);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--encre);color:var(--creme)}
+.btn-plein:hover{background:var(--flamme);border-color:var(--flamme);color:var(--nuit);transform:translateY(-2px);box-shadow:0 16px 28px -16px rgba(224,137,43,.9)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--creme);transform:translateY(-2px)}
+.nuit .btn-plein{background:var(--flamme);border-color:var(--flamme);color:var(--nuit)}
+.nuit .btn-plein:hover{background:var(--creme);border-color:var(--creme);color:var(--nuit);box-shadow:0 16px 28px -16px rgba(224,137,43,.7)}
+.nuit .btn-contour{border-color:var(--creme);color:var(--creme)}
+.nuit .btn-contour:hover{background:var(--creme);color:var(--nuit)}
+
+/* étiquette posée sur photo */
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(251,250,246,.95);color:var(--encre);font-size:15px;font-weight:500;line-height:1.3;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(20,27,46,.7);z-index:2}
+.pastille b{color:var(--flamme-fonce);font-weight:600}
+
+/* apparitions : photos seulement */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait,.js .apparait.vu{opacity:1;transition:none;transform:none}
+  .btn{transition:none}
+}
+
+/* ---------- héros sombre ---------- */
+.nuit{background:var(--nuit);color:var(--creme)}
+.haut-nuit{padding-bottom:112px;position:relative}
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:28px;font-variation-settings:"opsz" 72}
+.marque small{font-size:14px;color:var(--sur-nuit-doux);margin-top:7px}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:hover,.nav a[aria-current]{color:var(--flamme-clair)}
+.tel-pill{margin-left:8px;background:var(--nuit-2);padding:11px 20px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--flamme);color:var(--nuit)}
+.heros{padding-top:72px}
+.heros .env{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:center}
+.lieu{font-size:16px;font-weight:500;color:var(--flamme-clair);margin-bottom:24px}
+.heros h1{font-size:clamp(46px,5.2vw,76px);line-height:1.04;font-weight:400}
+.heros h1 em{font-style:italic;color:var(--flamme-clair)}
+.heros .chapo{font-size:19px;color:var(--sur-nuit-doux);max-width:44ch;margin-top:28px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.flamme-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 46px 90px -40px rgba(224,137,43,.62),0 24px 40px -30px rgba(0,0,0,.6)}
+.flamme-photo .recadre{aspect-ratio:5/4;overflow:hidden}
+.flamme-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;transform:scale(1.12);transform-origin:50% 0%}
+.signature{position:absolute;right:-18px;top:-26px;width:132px;height:132px;border-radius:50%;background:var(--creme);padding:7px;box-shadow:0 22px 36px -20px rgba(0,0,0,.7);z-index:3}
+.signature img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 40%}
+.visuel{position:relative}
+
+/* ---------- bandeau de faits ---------- */
+.faits{position:relative;z-index:2;margin-top:-56px}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr);background:var(--cristal);border-radius:20px;box-shadow:var(--ombre);padding:28px 8px}
+.faits li{padding:0 28px;font-size:16px;color:var(--encre-douce);line-height:1.4}
+.faits li + li{border-left:1px solid var(--filet)}
+.faits b{display:block;font-family:var(--fd);font-weight:400;font-size:25px;color:var(--encre);line-height:1.15;margin-bottom:4px;font-variation-settings:"opsz" 72}
+
+/* ---------- l'atelier ---------- */
+.atelier{padding:136px 0 120px}
+.atelier .env{display:grid;grid-template-columns:5fr 7fr;gap:96px;align-items:start}
+.atelier h2{font-size:clamp(38px,4.2vw,60px);line-height:1.04}
+.atelier .lead{margin-top:24px;font-family:var(--fd);font-size:23px;line-height:1.45;color:var(--encre);font-variation-settings:"opsz" 24}
+.atelier .txt{color:var(--encre-douce);max-width:60ch}
+.atelier .txt + .txt{margin-top:16px}
+.gestes{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.gestes li{background:var(--cristal);border-radius:999px;padding:8px 18px;font-size:16px;font-weight:500;box-shadow:0 8px 18px -14px rgba(20,27,46,.6)}
+.plein{margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:var(--creme-2);border-radius:20px;padding:22px 28px 22px 22px}
+.plein .medaillon{width:132px;height:132px}
+.plein p{font-size:17px;color:var(--encre-douce)}
+.plein p b{display:block;font-family:var(--fd);font-weight:400;font-size:24px;color:var(--encre);margin-bottom:4px;line-height:1.2}
+
+/* médaillons : les petites images, jamais en grand */
+.medaillon{flex:none;width:176px;height:176px;border-radius:50%;background:var(--cristal);padding:7px;box-shadow:var(--ombre-courte)}
+.medaillon img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+
+/* ---------- créations ---------- */
+.creations{background:var(--cristal);padding:120px 0 128px}
+.creations .haut{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:end;margin-bottom:56px}
+.creations h2{font-size:clamp(38px,4.2vw,60px);line-height:1.04}
+.creations .haut p{color:var(--encre-douce);max-width:44ch}
+.vitrine{display:grid;grid-template-columns:7fr 5fr;gap:32px;align-items:start}
+.dalmatien{border-radius:22px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.dalmatien img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 55%}
+.pile{display:flex;flex-direction:column;gap:0;padding-top:48px}
+.chien{border-radius:18px;overflow:hidden;box-shadow:var(--ombre-courte);position:relative}
+.chien img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.coq{width:78%;align-self:flex-end;margin-top:-36px;margin-right:-24px;background:var(--creme);padding:10px 10px 12px;border-radius:14px;box-shadow:var(--ombre);position:relative;z-index:2}
+.coq img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:60% 50%;border-radius:8px}
+.coq p{font-size:14px;font-weight:500;color:var(--encre-douce);margin-top:8px;text-align:center}
+.menagerie{margin-top:80px;display:grid;grid-template-columns:4fr 8fr;gap:56px;align-items:center}
+.menagerie h3{font-family:var(--fd);font-size:32px;line-height:1.1;font-variation-settings:"opsz" 72}
+.menagerie p{margin-top:12px;color:var(--encre-douce);font-size:17px}
+.menagerie .lien{display:inline-block;margin-top:18px;font-weight:600;color:var(--flamme-fonce);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.ronde{display:grid;grid-template-columns:repeat(5,1fr);gap:22px 12px;justify-items:center}
+.ronde figure{text-align:center;width:128px}
+.ronde .medaillon{width:128px;height:128px}
+.ronde figure:nth-child(even){margin-top:34px}
+.ronde figcaption{font-size:15px;font-weight:500;margin-top:10px;color:var(--encre-douce);line-height:1.3}
+
+/* ---------- aussi à l'atelier ---------- */
+.aussi{padding:120px 0 0}
+.aussi .env{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.aussi article{background:var(--cristal);border-radius:22px;padding:40px;box-shadow:var(--ombre-courte)}
+.aussi article:nth-child(2){margin-top:56px}
+.aussi h3{font-family:var(--fd);font-size:30px;line-height:1.12;font-variation-settings:"opsz" 72}
+.aussi .sous{font-size:15px;font-weight:600;color:var(--flamme-fonce);margin-bottom:10px}
+.aussi p{color:var(--encre-douce);margin-top:14px}
+
+/* ---------- commande et contact ---------- */
+.commande{padding:128px 0}
+.commande .env{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:center}
+.parole{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start}
+.prince{width:200px;background:var(--cristal);padding:12px 12px 14px;border-radius:16px;box-shadow:var(--ombre);transform:rotate(-3deg)}
+.prince img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px}
+.prince p{font-size:14px;font-weight:500;color:var(--encre-douce);text-align:center;margin-top:8px;line-height:1.3}
+.parole blockquote{margin:0;font-family:var(--fd);font-size:clamp(28px,3vw,40px);line-height:1.22;font-variation-settings:"opsz" 96}
+.parole blockquote::before{content:"« ";color:var(--flamme)}
+.parole blockquote::after{content:" »";color:var(--flamme)}
+.parole .qui{margin-top:20px;font-size:17px;color:var(--encre-douce)}
+.parole .actions{margin-top:30px}
+.carte-contact{background:var(--nuit);color:var(--creme);border-radius:24px;padding:40px;box-shadow:0 40px 70px -36px rgba(20,27,46,.8)}
+.carte-contact .nom{font-size:15px;font-weight:600;color:var(--flamme-clair)}
+.carte-contact .adr{font-family:var(--fd);font-size:28px;line-height:1.2;margin-top:10px;font-variation-settings:"opsz" 72}
+.carte-contact dl{margin:26px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px;font-size:17px;align-items:baseline}
+.carte-contact dt{color:var(--sur-nuit-doux)}
+.carte-contact dd{margin:0;overflow-wrap:anywhere}
+.carte-contact dd a{font-weight:600;text-underline-offset:4px;text-decoration-color:rgba(244,180,106,.6)}
+.carte-contact .actions{flex-direction:column;margin-top:30px}
+.carte-contact .actions .btn{width:100%}
+
+/* ---------- pied ---------- */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:36px}
+.pied .dit{color:var(--sur-nuit-doux);font-size:16px;margin-top:20px;max-width:34ch}
+.pied h3{font-family:var(--ft);font-weight:600;font-size:15px;color:var(--flamme-clair);margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-nuit-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--creme);text-decoration:none;border-bottom:1px solid rgba(242,240,234,.3)}
+.pied li a:hover{color:var(--flamme-clair);border-color:var(--flamme-clair)}
+.propo{margin-top:72px;border-top:1px solid rgba(242,240,234,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-nuit-doux)}
+.propo a{color:var(--creme)}
+
+/* ---------- tablette ---------- */
+@media (max-width: 1100px){
+  .signature{right:8px}
+  .coq{margin-right:0}
+}
+/* ---------- téléphone ---------- */
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{flex-wrap:wrap;gap:12px 16px}
+  .marque span{font-size:25px}
+  .marque small{font-size:13px}
+  .nav{order:3;width:100%;margin-left:0;gap:20px;justify-content:flex-start}
+  .nav .loin{display:none}
+  .tel-pill{margin-left:auto;font-size:15px;padding:9px 14px}
+  .haut-nuit{padding-bottom:96px}
+  .heros{padding-top:28px}
+  .heros .env{grid-template-columns:1fr;gap:0}
+  .heros-texte{display:contents}
+  .lieu{order:1}.heros h1{order:2}.visuel{order:3;margin-top:24px}.heros .chapo{order:4}.heros .actions{order:5}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:40px}
+  .heros .chapo{font-size:17px;margin-top:24px}
+  .flamme-photo .recadre{aspect-ratio:4/3}
+  .signature{width:84px;height:84px;padding:5px;right:10px;top:-18px}
+  .pastille{font-size:14px;left:12px;bottom:12px;padding:7px 12px}
+  .actions{flex-direction:column;margin-top:26px}
+  .actions .btn{width:100%}
+  .faits{margin-top:-48px}
+  .faits ul{grid-template-columns:1fr 1fr;gap:20px 0;padding:22px 4px}
+  .faits li{padding:0 16px}
+  .faits li:nth-child(3){border-left:0}
+  .faits b{font-size:21px}
+  .atelier,.creations,.commande{padding:80px 0}
+  .atelier .env,.commande .env{grid-template-columns:1fr;gap:40px}
+  .atelier .lead{font-size:20px}
+  .plein{grid-template-columns:1fr;gap:16px;padding:22px}
+  .plein .medaillon{width:110px;height:110px}
+  .creations .haut{grid-template-columns:1fr;gap:18px;margin-bottom:36px}
+  .vitrine{grid-template-columns:1fr;gap:24px}
+  .pile{padding-top:0}
+  .coq{width:72%;margin-top:-28px}
+  .menagerie{grid-template-columns:1fr;gap:28px;margin-top:56px}
+  .ronde{grid-template-columns:repeat(3,1fr);gap:18px 10px}
+  .ronde figure,.ronde .medaillon{width:104px}
+  .ronde .medaillon{height:104px;padding:5px}
+  .ronde figure:nth-child(even){margin-top:0}
+  .ronde figcaption{font-size:14px}
+  .aussi{padding-top:80px}
+  .aussi .env{grid-template-columns:1fr;gap:20px}
+  .aussi article{padding:30px 24px}
+  .aussi article:nth-child(2){margin-top:0}
+  .parole{grid-template-columns:1fr;gap:28px}
+  .prince{width:170px}
+  .carte-contact{padding:30px 22px}
+  .carte-contact .adr{font-size:24px}
+  .carte-contact dl{grid-template-columns:1fr;gap:2px}
+  .carte-contact dd{margin-bottom:12px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<div class="nuit haut-nuit" id="haut">
+  <header class="tete">
+    <div class="env">
+      <a class="marque" href="#haut" aria-label="Fileuse de verre, accueil">
+        <span>Fileuse de verre</span>
+        <small>L'atelier de Sylvie Duroch, Le Bugue</small>
+      </a>
+      <nav class="nav" aria-label="Sur cette page">
+        <a href="#haut" aria-current="page">Accueil</a>
+        <a href="#atelier" class="loin">L'atelier</a>
+        <a href="#creations">Les créations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="tel-pill" href="tel:+33625882504">06 25 88 25 04</a>
+    </div>
+  </header>
+
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <p class="lieu">Au Bugue, en plein cœur du Périgord Noir</p>
+        <h1>Le verre filé à la flamme, façonné à main levée</h1>
+        <p class="chapo">Je fonds au chalumeau des baguettes de verre transparent ou en couleur, puis je façonne par étirements, pincements et coupes des animaux, des perles, des fleurs. Chaque pièce est conçue à main levée, sans moule.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#commande">Me confier une idée</a>
+          <a class="btn btn-contour" href="#creations">Voir les créations</a>
+        </div>
+      </div>
+      <div class="visuel">
+        <figure class="flamme-photo apparait">
+          <div class="recadre">
+            <img src="assets/fileuse-de-verre-le-bugue/fileuse-au-chalumeau-atelier.webp" alt="Sylvie, lunettes de protection et tablier bleu, file une baguette de verre dans la flamme du chalumeau, devant ses figurines" width="1600" height="1200" fetchpriority="high" />
+          </div>
+          <span class="pastille">Sylvie, <b>à la flamme</b>, dans l'atelier</span>
+        </figure>
+        <figure class="signature apparait">
+          <img src="assets/fileuse-de-verre-le-bugue/elephant-verre-ambre.webp" alt="Éléphant en verre ambré, trompe levée" width="366" height="550" />
+        </figure>
+      </div>
+    </div>
+  </section>
+</div>
+
+<main>
+  <div class="faits">
+    <div class="env">
+      <ul aria-label="L'atelier en bref">
+        <li><b>Dès le XVI<sup>e</sup> siècle</b>La technique du verre filé, à la lampe</li>
+        <li><b>Sans moule</b>Chaque pièce conçue à main levée</li>
+        <li><b>Le Bugue</b>Périgord Noir, en Dordogne</li>
+        <li><b>Sur commande</b>Vos cadeaux personnalisés</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="atelier" id="atelier">
+    <div class="env">
+      <div>
+        <h2>Bienvenue à l'atelier&nbsp;!</h2>
+        <p class="lead">Mon atelier est installé au Bugue, non loin des terres de Cro-Magnon et des célèbres villages des Eyzies, de Montignac et de Sarlat.</p>
+      </div>
+      <div>
+        <p class="txt">Je travaille la technique du verre filé, dite «&nbsp;technique à la flamme ou à la lampe&nbsp;», apparue dès le XVI<sup>e</sup> siècle.</p>
+        <p class="txt">Le filage consiste à fondre des baguettes de verre transparent ou en couleur à l'aide d'un chalumeau, et à façonner des personnages, des animaux, des perles, des fleurs. Chaque pièce est conçue à main levée, sans moule.</p>
+        <ul class="gestes" aria-label="Les gestes du filage">
+          <li>Étirements</li>
+          <li>Pincements</li>
+          <li>Coupes</li>
+          <li>À main levée</li>
+        </ul>
+        <div class="plein">
+          <figure class="medaillon apparait">
+            <img src="assets/fileuse-de-verre-le-bugue/cheval-cabre-verre-transparent.webp" alt="Cheval cabré en verre transparent, crinière et queue étirées" width="366" height="550" loading="lazy" />
+          </figure>
+          <p><b>Des pièces pleines</b>Des objets qui, bien souvent, sont dits «&nbsp;pleins&nbsp;» et non soufflés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="creations" id="creations">
+    <div class="env">
+      <div class="haut">
+        <h2>Les créations de la fileuse de verre</h2>
+        <p>Mes orientations de travail s'articulent autour des thèmes des animaux, des bijoux et des pièces pour jeux.</p>
+      </div>
+      <div class="vitrine">
+        <figure class="dalmatien apparait">
+          <img src="assets/fileuse-de-verre-le-bugue/dalmatien-verre-file.webp" alt="Dalmatien en verre blanc opaque à taches noires, debout sur un petit socle en bois" width="1280" height="851" loading="lazy" />
+          <span class="pastille">Dalmatien, <b>verre filé</b></span>
+        </figure>
+        <div class="pile">
+          <figure class="chien apparait">
+            <img src="assets/fileuse-de-verre-le-bugue/chien-verre-file-noir-blanc-fauve.webp" alt="Chien de chasse en verre filé noir, blanc et fauve, oreilles tombantes" width="1280" height="851" loading="lazy" />
+          </figure>
+          <figure class="coq apparait">
+            <img src="assets/fileuse-de-verre-le-bugue/coq-poule-poussin-verre-file.webp" alt="Coq à crête rouge, poule et poussin en verre filé blanc laiteux et transparent" width="1280" height="851" loading="lazy" />
+            <p>De la ferme&nbsp;: le coq, la poule et le poussin</p>
+          </figure>
+        </div>
+      </div>
+      <div class="menagerie">
+        <div>
+          <h3>Toute une ménagerie</h3>
+          <p>Quelques animaux de l'album, en verre transparent ou en couleur.</p>
+          <a class="lien" href="http://www.fileusedeverre.com/album/fileuse-de-verre-1/">Voir l'album photo</a>
+        </div>
+        <div class="ronde">
+                    <figure><div class="medaillon apparait"><img src="assets/fileuse-de-verre-le-bugue/hibou-verre-transparent.webp" alt="Hibou en verre transparent aux yeux blancs" width="366" height="550" loading="lazy" /></div><figcaption>Hibou</figcaption></figure>
+          <figure><div class="medaillon apparait"><img src="assets/fileuse-de-verre-le-bugue/rhinoceros-verre-transparent.webp" alt="Rhinocéros en verre transparent" width="550" height="366" loading="lazy" /></div><figcaption>Rhinocéros</figcaption></figure>
+          <figure><div class="medaillon apparait"><img src="assets/fileuse-de-verre-le-bugue/cochons-verre-rose.webp" alt="Trois cochons en verre rose translucide" width="550" height="366" loading="lazy" /></div><figcaption>Cochons roses</figcaption></figure>
+          <figure><div class="medaillon apparait"><img src="assets/fileuse-de-verre-le-bugue/ane-verre-transparent-dehors.webp" alt="Âne en verre transparent aux longues oreilles" width="550" height="365" loading="lazy" /></div><figcaption>Âne</figcaption></figure>
+          <figure><div class="medaillon apparait"><img src="assets/fileuse-de-verre-le-bugue/chien-verre-ambre-sur-souche.webp" alt="Chien en verre ambré posé sur une souche" width="550" height="365" loading="lazy" /></div><figcaption>Chien ambré</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aussi" aria-label="Aussi à l'atelier">
+    <div class="env">
+      <article>
+        <p class="sous">Jeux de société</p>
+        <h3>Des pièces pour les jeux d'échecs et de dames</h3>
+        <p>Les jeux de société réunissent petits et grands&nbsp;: c'est toujours de bons moments et d'échanges&nbsp;!</p>
+      </article>
+      <article>
+        <p class="sous">Panneaux de verre</p>
+        <h3>Des séparations qui laissent passer la lumière</h3>
+        <p>Je réalise des panneaux de verre à encastrer dans les murs, les portes, les impostes, pour créer des séparations transparentes qui gardent le côté intime des pièces.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="commande" id="commande">
+    <div class="env">
+      <div class="parole">
+        <figure class="prince apparait">
+          <img src="assets/fileuse-de-verre-le-bugue/petit-prince-et-renard-sur-globe-bleu.webp" alt="Le Petit Prince et le renard en verre filé debout sur une sphère de verre bleu" width="680" height="1024" loading="lazy" />
+          <p>Le Petit Prince et le renard</p>
+        </figure>
+        <div>
+          <blockquote>J'ai beaucoup de plaisir à travailler aussi sur commande&nbsp;: n'hésitez pas à me confier vos idées pour vos cadeaux personnalisés&nbsp;!</blockquote>
+          <p class="qui">Sylvie Duroch, fileuse de verre</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="mailto:durochsylvie@hotmail.fr?subject=Une%20id%C3%A9e%20de%20pi%C3%A8ce%20en%20verre%20fil%C3%A9">Écrire à Sylvie</a>
+            <a class="btn btn-contour" href="tel:+33625882504">Appeler l'atelier</a>
+          </div>
+        </div>
+      </div>
+      <div class="carte-contact" id="contact">
+        <p class="nom">L'atelier Fileuse et Souffleurs de verre</p>
+        <p class="adr">5 avenue de la République<br />24260 Le Bugue</p>
+        <dl>
+          <dt>Sylvie Duroch</dt><dd><a href="tel:+33625882504">06 25 88 25 04</a></dd>
+          <dt>Loup Guittet</dt><dd><a href="tel:+33786493502">07 86 49 35 02</a></dd>
+          <dt>Mail</dt><dd><a href="mailto:durochsylvie@hotmail.fr">durochsylvie@hotmail.fr</a></dd>
+        </dl>
+        <div class="actions nuit" style="background:none">
+          <a class="btn btn-plein" href="mailto:durochsylvie@hotmail.fr">Écrire un mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied nuit">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Fileuse de verre</span><small>L'atelier de Sylvie Duroch, Le Bugue</small></a>
+        <p class="dit">L'atelier Fileuse et Souffleurs de verre&nbsp;: Sylvie Duroch, Loup et Ludovic Guittet.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>5 avenue de la République<br />24260 Le Bugue</li>
+          <li><a href="mailto:durochsylvie@hotmail.fr">durochsylvie@hotmail.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Téléphone</h3>
+        <ul>
+          <li>Sylvie&nbsp;: <a href="tel:+33625882504">06 25 88 25 04</a></li>
+          <li>Loup&nbsp;: <a href="tel:+33786493502">07 86 49 35 02</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sur la page</h3>
+        <ul>
+          <li><a href="#atelier">L'atelier</a></li>
+          <li><a href="#creations">Les créations</a></li>
+          <li><a href="#commande">Sur commande</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour SD Créations, Fileuse de verre</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('vu') }); return;
+  }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vu'); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

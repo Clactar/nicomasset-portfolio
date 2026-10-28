@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à Salsa Maroquinerie, Mauzens et Miremont (24), nuit du 2026-10-28.
+     CONTENU : textes, coordonnées, horaires, conditions et photos relevés sur https://salsacreation.fr/ le 28/10/2026
+     (dossier de Marco). Rien d'inventé. Défaut 1 : le lien « Guide des tailles » du pied de page menait à une
+     page non trouvée ; le site ne donne aucun guide (seulement les largeurs de ceintures), donc le lien
+     disparaît au profit de l'ancre #taille « Une question de taille ? » avec le téléphone de l'atelier.
+     Défaut 2 : « Où nous trouver » (page non trouvée) mène ici à la section #venir (adresse, horaires).
+     Aucun mail n'est affiché sur leur site : seul le téléphone et le formulaire de contact sont repris.
+     DESIGN (Nova) : crème rosé, encre sang-de-bœuf, accent rouge cuir. Libre Caslon Display + Albert Sans.
+     Héros inversé : photo de Didier et Yohann à gauche, texte à droite, étiquette de cuir posée sur la photo. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F4ECE6" />
+<title>Salsa Maroquinerie, maroquinerie artisanale française en Dordogne</title>
+<meta name="description" content="Sacs, ceintures et petite maroquinerie en cuir, dessinés et réalisés par Didier et son fils Yohann dans leur atelier familial de Mauzens et Miremont, en Dordogne." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23A3262A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F4ECE6'%3ES%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400..700;1,400&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --creme:#F4ECE6;
+  --creme-2:#EADDD4;
+  --velin:#FBF7F3;
+  --encre:#3A1518;
+  --encre-douce:#6A4A4C;
+  --rouge:#A3262A;
+  --rouge-fonce:#86191E;
+  --rouge-clair:#E8938C;
+  --sur-sombre:#F4ECE6;
+  --sur-sombre-doux:#D7BFBF;
+  --filet:rgba(58,21,24,.15);
+  --ombre:0 36px 70px -36px rgba(58,21,24,.62);
+  --ombre-courte:0 20px 36px -24px rgba(58,21,24,.55);
+  --fd:"Libre Caslon Display",Georgia,serif;
+  --ft:"Albert Sans",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--ft);font-size:18px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--rouge);color:var(--velin)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--fd);letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure,blockquote{margin:0}
+:focus-visible{outline:2px solid var(--rouge);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--encre);transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--rouge);border-color:var(--rouge);color:var(--velin)}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre);transform:translateY(-2px);box-shadow:0 16px 28px -16px rgba(58,21,24,.8)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--creme);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--creme);border-color:var(--creme);color:var(--encre)}
+.sombre .btn-plein:hover{background:var(--rouge);border-color:var(--rouge);color:var(--velin)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--encre)}
+
+/* étiquette posée sur photo */
+.pastille{position:absolute;left:18px;bottom:18px;background:rgba(251,247,243,.95);color:var(--encre);font-size:15px;font-weight:600;line-height:1.3;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(58,21,24,.7)}
+.pastille b{color:var(--rouge);font-weight:700}
+
+/* apparitions : photos seulement */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait,.js .apparait.vu{opacity:1;transition:none;transform:none}
+  .btn{transition:none}
+}
+
+/* ---------- en-tête ---------- */
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:32px}
+.marque small{font-size:14px;color:var(--encre-douce);margin-top:6px;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:hover{color:var(--rouge)}
+.tel-pill{margin-left:8px;background:var(--creme-2);padding:11px 20px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--rouge);color:var(--velin)}
+
+/* ---------- héros inversé ---------- */
+.heros{padding:64px 0 104px}
+.heros .env{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+.heros-visuel{position:relative;padding-bottom:28px}
+.decoupe{border-radius:16px;overflow:hidden;box-shadow:0 44px 80px -40px rgba(58,21,24,.7)}
+.decoupe img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 50%}
+.etiquette{position:absolute;right:-30px;bottom:-4px;transform:rotate(-5deg);background:var(--rouge);color:var(--velin);border-radius:10px 22px 22px 10px;padding:18px 26px 18px 46px;box-shadow:0 22px 36px -18px rgba(58,21,24,.75);z-index:2}
+.etiquette::before{content:"";position:absolute;left:16px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--creme);box-shadow:inset 0 2px 3px rgba(58,21,24,.45)}
+.etiquette::after{content:"";position:absolute;inset:6px 8px 6px 36px;border:1.5px dashed rgba(251,247,243,.5);border-radius:6px 16px 16px 6px;pointer-events:none}
+.etiquette b{display:block;font-family:var(--fd);font-weight:400;font-size:30px;line-height:1.05}
+.etiquette span{font-size:15px;font-weight:500;opacity:.92}
+.lieu{font-size:16px;font-weight:600;color:var(--rouge);margin-bottom:22px}
+.heros h1{font-size:clamp(48px,5.6vw,82px);line-height:1;max-width:11ch}
+.heros .chapo{font-size:19px;color:var(--encre-douce);max-width:42ch;margin-top:30px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+
+/* ---------- bandeau de faits ---------- */
+.faits{background:var(--encre);color:var(--sur-sombre)}
+.faits ul{display:grid;grid-template-columns:repeat(4,1fr);padding-block:30px}
+.faits li{padding:0 28px;font-size:16px;color:var(--sur-sombre-doux);line-height:1.4}
+.faits li:first-child{padding-left:0}
+.faits li + li{border-left:1px solid rgba(244,236,230,.18)}
+.faits b{display:block;font-family:var(--fd);font-weight:400;font-size:28px;color:var(--sur-sombre);line-height:1.1;margin-bottom:4px}
+
+/* ---------- collection ---------- */
+.collection{padding:128px 0 120px}
+.collection .env{display:grid;grid-template-columns:5fr 6fr;gap:88px;align-items:start}
+.collection h2{font-size:clamp(40px,4.4vw,62px);line-height:1.02}
+.collection .intro{margin-top:22px;color:var(--encre-douce);max-width:40ch}
+.rayons{margin-top:44px;border-top:1.5px solid var(--encre)}
+.rayons li{border-bottom:1px solid var(--filet)}
+.rayons a{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:center;padding:20px 0;text-decoration:none;transition:padding .3s cubic-bezier(.2,.7,.2,1),color .25s}
+.rayons a:hover{padding-left:12px;color:var(--rouge)}
+.rayons h3{font-family:var(--fd);font-size:30px;line-height:1.1}
+.rayons p{grid-column:1;font-size:16px;color:var(--encre-douce)}
+.rayons .voir{grid-column:2;grid-row:1 / span 2;font-size:15px;font-weight:600;color:var(--rouge);border:1.5px solid currentColor;border-radius:999px;padding:7px 14px;white-space:nowrap}
+.vitrine{position:relative;padding:0 0 170px 0}
+.nautile{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.nautile img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%}
+.nautile .pastille{top:18px;bottom:auto}
+.elsa{position:absolute;left:-40px;bottom:0;width:220px;background:var(--velin);padding:12px 12px 14px;border-radius:16px;box-shadow:var(--ombre-courte);transform:rotate(-3deg)}
+.elsa img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#fff}
+.elsa p{font-size:14px;font-weight:600;margin-top:8px;color:var(--encre-douce);text-align:center}
+.bouton-bois{position:absolute;right:0;bottom:0;max-width:300px;background:var(--creme-2);border-radius:18px;padding:20px 22px;font-size:16px;color:var(--encre-douce);box-shadow:var(--ombre-courte)}
+.bouton-bois b{display:block;font-family:var(--fd);font-weight:400;font-size:22px;color:var(--encre);line-height:1.15;margin-bottom:4px}
+
+/* ---------- fabrication (section sombre) ---------- */
+.sombre{background:var(--encre);color:var(--sur-sombre)}
+.fabrication{padding:120px 0 128px;background:#2E1013}
+.fabrication .haut{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:end}
+.fabrication h2{font-size:clamp(38px,4.2vw,60px);line-height:1.04}
+.fabrication .haut p{color:var(--sur-sombre-doux)}
+.mosaique{display:grid;grid-template-columns:7fr 5fr;gap:28px;margin-top:64px;align-items:start}
+.bouton{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 36px 70px -34px rgba(0,0,0,.8)}
+.bouton img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 45%}
+.colonne{display:grid;gap:28px;padding-top:72px}
+.jaune{border-radius:16px;overflow:hidden;position:relative;box-shadow:0 30px 56px -30px rgba(0,0,0,.8)}
+.jaune img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.parage{width:72%;justify-self:end;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 30px 56px -30px rgba(0,0,0,.8);margin-top:-64px;margin-right:-20px;border:8px solid #2E1013}
+.parage img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:72px;counter-reset:e}
+.etapes li{border-top:1px solid rgba(244,236,230,.22);padding-top:22px}
+.etapes li::before{counter-increment:e;content:counter(e);display:block;font-family:var(--fd);font-size:40px;line-height:1;color:var(--rouge-clair);margin-bottom:14px}
+.etapes h3{font-family:var(--ft);font-weight:700;font-size:19px}
+.etapes p{color:var(--sur-sombre-doux);font-size:16px;margin-top:8px}
+.mains{margin-top:72px;font-family:var(--fd);font-size:clamp(28px,3vw,40px);line-height:1.22;max-width:32ch}
+.mains::before{content:"« ";color:var(--rouge-clair)}
+.mains::after{content:" »";color:var(--rouge-clair)}
+
+/* ---------- le cuir et la taille ---------- */
+.cuir{padding:128px 0 120px}
+.cuir .env{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:start}
+.cuir h2{font-size:clamp(38px,4vw,56px);line-height:1.04}
+.cuir .txt{margin-top:22px;color:var(--encre-douce);max-width:58ch}
+.cuir .txt + .txt{margin-top:14px}
+.ceintures{margin-top:40px;display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center}
+.passe{background:var(--velin);padding:10px;border-radius:14px;box-shadow:var(--ombre-courte)}
+.passe img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px}
+.ceintures p{color:var(--encre-douce);font-size:17px}
+.ceintures p b{color:var(--encre)}
+.taille{background:var(--velin);border-radius:24px;padding:40px;box-shadow:var(--ombre);position:relative;scroll-margin-top:24px}
+.taille h3{font-family:var(--fd);font-size:34px;line-height:1.08}
+.taille p{margin-top:14px;color:var(--encre-douce);font-size:17px}
+.largeurs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}
+.largeurs a{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;background:var(--creme);border-radius:14px;padding:14px 6px 12px;font-weight:600;font-size:16px;transition:background .25s,color .25s}
+.largeurs a:hover{background:var(--rouge);color:var(--velin)}
+.largeurs a:hover i{background:var(--velin)}
+.largeurs i{display:block;width:48px;border-radius:3px;background:var(--rouge);transition:background .25s}
+.taille .actions{flex-direction:column;margin-top:28px}
+.taille .actions .btn{width:100%}
+
+/* ---------- famille ---------- */
+.famille{background:var(--creme-2);padding:120px 0}
+.famille .env{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center}
+.batiment{border-radius:20px 120px 20px 20px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.batiment img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+.famille h2{font-size:clamp(36px,4vw,54px);line-height:1.05}
+.famille .didier{margin-top:24px;font-size:19px;color:var(--encre);max-width:56ch}
+.famille .didier + .txt{margin-top:14px;color:var(--encre-douce);max-width:58ch}
+.trio{margin-top:36px;display:grid;gap:12px}
+.trio li{background:var(--velin);border-radius:16px;padding:18px 24px;box-shadow:var(--ombre-courte);display:grid;grid-template-columns:220px 1fr;gap:4px 24px;align-items:center}
+.trio b{display:block;font-family:var(--fd);font-weight:400;font-size:24px;line-height:1.1}
+.trio span{display:block;font-size:15px;color:var(--rouge);font-weight:600;margin-top:4px}
+.trio p{font-size:16px;color:var(--encre-douce);line-height:1.45;grid-column:2;grid-row:1 / span 2}
+
+/* ---------- avis ---------- */
+.avis{padding:120px 0}
+.avis .env{display:grid;grid-template-columns:4fr 8fr;gap:72px;align-items:start}
+.avis h2{font-size:clamp(34px,3.6vw,48px);line-height:1.06}
+.avis .note{margin-top:16px;color:var(--encre-douce)}
+.avis .note b{color:var(--encre)}
+.cartes-avis{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cartes-avis figure{background:var(--velin);border-radius:20px;padding:32px;box-shadow:var(--ombre-courte)}
+.cartes-avis figure:nth-child(2){margin-top:48px}
+.cartes-avis blockquote{font-family:var(--fd);font-size:23px;line-height:1.35}
+.cartes-avis figcaption{margin-top:18px;font-size:15px;font-weight:600;color:var(--encre-douce)}
+
+/* ---------- venir ---------- */
+.venir{padding:0 0 128px}
+.venir .carte{display:grid;grid-template-columns:6fr 5fr;background:var(--velin);border-radius:28px;box-shadow:var(--ombre);overflow:hidden}
+.venir .infos{padding:56px}
+.venir h2{font-size:clamp(34px,3.6vw,50px);line-height:1.05}
+.venir .adr{margin-top:22px;font-size:20px;line-height:1.45}
+.venir dl{margin:26px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:17px}
+.venir dt{font-weight:700}
+.venir dd{margin:0;color:var(--encre-douce)}
+.venir .absent{margin-top:20px;font-size:16px;color:var(--encre-douce);max-width:50ch}
+.venir .actions{margin-top:28px}
+.venir .cote{background:var(--creme-2);padding:48px 48px 48px 40px;display:flex;flex-direction:column;gap:28px}
+.salon{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
+.salon figure{border-radius:12px;overflow:hidden;box-shadow:var(--ombre-courte);transform:rotate(2deg)}
+.salon img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.salon p{font-size:16px;color:var(--encre-douce)}
+.salon p b{display:block;color:var(--encre);font-size:17px}
+.services li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--filet);font-size:16px}
+.services li b{color:var(--encre)}
+.services li span{color:var(--encre-douce)}
+
+/* ---------- pied ---------- */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:40px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:34ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:var(--rouge-clair);margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(244,236,230,.3)}
+.pied li a:hover{color:var(--rouge-clair);border-color:var(--rouge-clair)}
+.propo{margin-top:72px;border-top:1px solid rgba(244,236,230,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+/* ---------- tablette ---------- */
+@media (max-width: 1100px){
+  .etiquette{right:-8px}
+  .elsa{left:-8px}
+  .parage{margin-right:0}
+}
+/* ---------- téléphone ---------- */
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{flex-wrap:wrap;gap:12px 16px}
+  .marque span{font-size:24px}
+  .marque small{font-size:13px}
+  .nav{order:3;width:100%;margin-left:0;gap:20px;justify-content:flex-start}
+  .nav .loin{display:none}
+  .tel-pill{margin-left:auto;font-size:15px;padding:9px 14px}
+  .heros{padding:26px 0 64px}
+  .heros .env{grid-template-columns:1fr;gap:0}
+  .heros-texte{display:contents}
+  .lieu{order:1}.heros h1{order:2}.heros-visuel{order:3;margin-top:24px}.heros .chapo{order:4}.heros .actions{order:5}
+  .lieu{margin-bottom:12px}
+  .heros h1{font-size:44px;max-width:none}
+  .heros .chapo{font-size:17px;margin-top:26px}
+  .decoupe img{aspect-ratio:4/3.4}
+  .etiquette{right:-4px;bottom:-6px;padding:12px 18px 12px 38px}
+  .etiquette::before{left:13px;width:12px;height:12px;margin-top:-6px}
+  .etiquette::after{inset:5px 6px 5px 30px}
+  .etiquette b{font-size:23px}
+  .etiquette span{font-size:14px}
+  .actions{flex-direction:column;margin-top:26px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:1fr 1fr;gap:22px 0;padding-block:28px}
+  .faits li{padding:0 14px}
+  .faits li:nth-child(3){border-left:0;padding-left:0}
+  .faits b{font-size:23px}
+  .collection,.fabrication,.cuir,.famille,.avis{padding:80px 0}
+  .collection .env,.cuir .env,.famille .env,.avis .env{grid-template-columns:1fr;gap:44px}
+  .vitrine{padding-bottom:170px}
+  .elsa{width:150px;left:0;padding:8px 8px 10px}
+  .elsa p{font-size:13px}
+  .bouton-bois{right:0;bottom:0;max-width:190px;padding:14px 16px;font-size:15px}
+  .bouton-bois b{font-size:19px}
+  .rayons h3{font-size:26px}
+  .fabrication .haut{grid-template-columns:1fr;gap:20px}
+  .mosaique{grid-template-columns:1fr;gap:20px;margin-top:40px}
+  .colonne{padding-top:0;gap:20px}
+  .parage{margin-top:-48px;width:66%;border-width:6px}
+  .etapes{grid-template-columns:1fr;gap:28px;margin-top:48px}
+  .mains{margin-top:48px}
+  .ceintures{grid-template-columns:130px 1fr;gap:18px}
+  .taille{padding:30px 22px}
+  .taille h3{font-size:30px}
+  .largeurs{grid-template-columns:repeat(2,1fr)}
+  .batiment{border-radius:20px 80px 20px 20px;max-width:360px}
+  .batiment img{aspect-ratio:4/3}
+  .trio li{grid-template-columns:1fr;padding:18px 20px}
+  .trio p{grid-column:1;grid-row:auto;margin-top:6px}
+  .cartes-avis{grid-template-columns:1fr;gap:16px}
+  .cartes-avis figure{padding:26px 22px}
+  .cartes-avis figure:nth-child(2){margin-top:0}
+  .cartes-avis blockquote{font-size:21px}
+  .venir{padding-bottom:80px}
+  .venir .carte{grid-template-columns:1fr}
+  .venir .infos{padding:32px 22px}
+  .venir dl{grid-template-columns:1fr;gap:2px}
+  .venir dd{margin-bottom:10px}
+  .venir .cote{padding:30px 22px}
+  .salon{grid-template-columns:110px 1fr;gap:16px}
+  .services li{grid-template-columns:1fr;gap:2px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Salsa Maroquinerie, retour en haut">
+      <span>Salsa Maroquinerie</span>
+      <small>Maroquinerie artisanale française</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#collection">La collection</a>
+      <a href="#fabrication" class="loin">L'atelier</a>
+      <a href="#famille" class="loin">Notre histoire</a>
+      <a href="#venir">Où nous trouver</a>
+    </nav>
+    <a class="tel-pill" href="tel:+33675250705">06 75 25 07 05</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-visuel">
+        <figure class="decoupe apparait">
+          <img src="assets/salsa-maroquinerie-mauzens/didier-et-yohann-decoupe-cuir-rouge.webp" alt="Yohann découpe une peau de cuir rouge autour d'un patron, sous le regard de son père Didier" width="1592" height="1600" fetchpriority="high" />
+        </figure>
+        <p class="etiquette"><b>Didier et Yohann</b><span>Le père et le fils, à la découpe</span></p>
+      </div>
+      <div class="heros-texte">
+        <p class="lieu">Mauzens et Miremont, en Dordogne</p>
+        <h1>Pour un style décalé, assumé et moderne.</h1>
+        <p class="chapo">Nous concevons dans notre atelier des sacs, ceintures et accessoires de maroquinerie. Salsa Maroquinerie est un atelier familial&nbsp;: Didier dessine et réalise avec son fils Yohann chaque objet.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://salsacreation.fr/bienvenue-dans-notre-boutique/">Découvrir la boutique</a>
+          <a class="btn btn-contour" href="#venir">Venir à l'atelier</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="Salsa Maroquinerie en bref">
+      <li><b>Depuis 1995</b>Salsa Maroquinerie</li>
+      <li><b>Maître artisan</b>Didier Soumah, maroquinier</li>
+      <li><b>Cuirs européens</b>Tanneries de France, d'Italie, d'Espagne</li>
+      <li><b>Livraison offerte</b>dès 120 € d'achat</li>
+    </ul>
+  </div>
+
+  <section class="collection" id="collection">
+    <div class="env">
+      <div>
+        <h2>Explorez notre collection</h2>
+        <p class="intro">Notre volonté est d'allier originalité et fonctionnalité dans des formes contemporaines. Soyez unique avec un sac Salsa Maroquinerie.</p>
+        <ul class="rayons">
+          <li><a href="https://salsacreation.fr/categorie-produit/sacs-en-cuir/"><h3>Sacs</h3><p>Sacs à dos, sacs à bandoulière et poignée, sacs à anses</p><span class="voir">Voir</span></a></li>
+          <li><a href="https://salsacreation.fr/categorie-produit/ceintures-en-cuir/"><h3>Ceintures</h3><p>De 2,5 à 4 cm de largeur, finition sellier</p><span class="voir">Voir</span></a></li>
+          <li><a href="https://salsacreation.fr/categorie-produit/sacs-en-cuir/pochettes-en-cuir/"><h3>Pochettes</h3><p>Pochettes en cuir</p><span class="voir">Voir</span></a></li>
+          <li><a href="https://salsacreation.fr/categorie-produit/petites-maroquinerie/"><h3>Petite maroquinerie</h3><p>Accessoires en cuir</p><span class="voir">Voir</span></a></li>
+        </ul>
+      </div>
+      <div class="vitrine">
+        <figure class="nautile apparait">
+          <img src="assets/salsa-maroquinerie-mauzens/sac-nautile-cuir-noir.webp" alt="Sac à dos Nautile en cuir noir grainé en forme de coquille enroulée" width="1600" height="1200" loading="lazy" />
+          <span class="pastille">Sac à dos <b>Nautile</b></span>
+        </figure>
+        <figure class="elsa apparait">
+          <img src="assets/salsa-maroquinerie-mauzens/sac-elsa-cuir-orange-noir.webp" alt="Sac Elsa asymétrique en cuir orange et noir, bouton en bois gainé" width="850" height="850" loading="lazy" />
+          <p>Le sac Elsa</p>
+        </figure>
+        <p class="bouton-bois"><b>Le bouton de bois gainé</b>L'originalité de votre sac est soulignée par son bouton et ses associations de cuir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fabrication sombre" id="fabrication">
+    <div class="env">
+      <div class="haut">
+        <h2>Coupée, assemblée, cousue dans notre atelier</h2>
+        <p>L'atelier se situe à Mauzens et Miremont, dans le Périgord noir. Pareuse, machines à coudre, emporte-pièces&nbsp;: pour chaque étape de la fabrication, nous avons des gestes précis pour l'utilisation des outils, et pour la façon de tenir le cuir.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="bouton apparait">
+          <img src="assets/salsa-maroquinerie-mauzens/couture-bouton-bois-marquete-machine.webp" alt="Deux mains guident sous la machine à coudre la patte de cuir noir d'un bouton de bois marqueté" width="1600" height="1263" loading="lazy" />
+          <span class="pastille">La couture <b>du bouton de bois</b></span>
+        </figure>
+        <div class="colonne">
+          <figure class="jaune apparait">
+            <img src="assets/salsa-maroquinerie-mauzens/decoupe-cuir-jaune-couteau.webp" alt="Mains qui découpent une bande de cuir jaune vif à la règle sur l'établi" width="1600" height="1284" loading="lazy" />
+          </figure>
+          <figure class="parage apparait">
+            <img src="assets/salsa-maroquinerie-mauzens/parage-soufflet-cuir-gris.webp" alt="Un doigt maintient un soufflet en cuir gris pendant le parage" width="1500" height="1188" loading="lazy" />
+            <span class="pastille">Le parage</span>
+          </figure>
+        </div>
+      </div>
+      <ol class="etapes">
+        <li><h3>La découpe</h3><p>Nous choisissons le cuir qui conviendra le mieux au modèle, puis nous le découpons en positionnant le patron créé auparavant, en indiquant où poser fermetures, poche et bouton en bois.</p></li>
+        <li><h3>Le parage</h3><p>Les cuirs sont parés et rempliés, pour travailler des cuirs souples avec la technique de la maroquinerie.</p></li>
+        <li><h3>L'assemblage</h3><p>Sacs et petite maroquinerie sont assemblés par piqûre machine. Les ceintures reçoivent une finition sellier&nbsp;: bords abat-carrés, teint-tranchés, couture décorative.</p></li>
+      </ol>
+      <p class="mains">Nos mains sont nos outils premiers&nbsp;: elles nous permettent de toucher le cuir, de percevoir ses qualités futures, de le maintenir lors du parage, de la couture.</p>
+    </div>
+  </section>
+
+  <section class="cuir" id="cuir">
+    <div class="env">
+      <div>
+        <h2>Notre cuir</h2>
+        <p class="txt">Votre futur sac sera conçu à partir de cuirs crispés naturels, grainés, imprimés et lisses, provenant de tanneries françaises, italiennes ou espagnoles qui respectent les normes européennes de l'environnement et des personnes.</p>
+        <p class="txt">Nous utilisons des colles et des teints-tranches sans solvant. Les boucles de ceintures, en laiton ou en zamak, sont françaises ou italiennes.</p>
+        <div class="ceintures">
+          <figure class="passe apparait">
+            <img src="assets/salsa-maroquinerie-mauzens/ceintures-cuir-couleurs-boucles.webp" alt="Six ceintures en cuir de couleurs enroulées avec leurs boucles" width="1080" height="1080" loading="lazy" />
+          </figure>
+          <p><b>Pour nos ceintures</b>, du collet ou du croupon en tannage végétal. Pour les sacs, les pochettes et la petite maroquinerie, de la bande ou de la peau entière.</p>
+        </div>
+      </div>
+      <aside class="taille" id="taille" aria-labelledby="titre-taille">
+        <h3 id="titre-taille">Une question de taille&nbsp;?</h3>
+        <p>Nos ceintures existent en quatre largeurs, de 2,5 à 4 cm. Pour une question de longueur ou de taille, appelez l'atelier.</p>
+        <div class="largeurs">
+          <a href="https://salsacreation.fr/categorie-produit/ceintures-en-cuir/ceintures-2-5-cm-de-largeur/"><i style="height:10px"></i>2,5 cm</a>
+          <a href="https://salsacreation.fr/categorie-produit/ceintures-en-cuir/ceintures-en-cuir-3-cm-de-largeur/"><i style="height:12px"></i>3 cm</a>
+          <a href="https://salsacreation.fr/categorie-produit/ceintures-en-cuir/ceintures-en-cuir-3-5-cm-de-largeur/"><i style="height:14px"></i>3,5 cm</a>
+          <a href="https://salsacreation.fr/categorie-produit/ceintures-en-cuir/ceintures-en-cuir-de-4-cm-de-largeur/"><i style="height:16px"></i>4 cm</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33675250705">Appeler le 06 75 25 07 05</a>
+          <a class="btn btn-contour" href="https://salsacreation.fr/contact/">Écrire par le formulaire</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="famille" id="famille">
+    <div class="env">
+      <figure class="batiment apparait">
+        <img src="assets/salsa-maroquinerie-mauzens/batiment-atelier-mauzens.webp" alt="Le bâtiment de l'atelier en bardage bois, grandes fenêtres et toit de panneaux solaires" width="1500" height="1049" loading="lazy" />
+        <span class="pastille">L'atelier, <b>à Mauzens</b></span>
+      </figure>
+      <div>
+        <h2>Un atelier familial, depuis 1995</h2>
+        <p class="didier">«&nbsp;Je suis autodidacte. En 1975, je travaillais déjà le cuir selon les techniques de la sellerie-maroquinerie à l'ancienne. Je suis revenu professionnellement à l'artisanat d'art en 1995 avec Salsa Maroquinerie.&nbsp;»</p>
+        <p class="txt">Didier dessine et réalise ses modèles, trouvant son inspiration dans les formes offertes par la nature et la géométrie. L'esthétique de ses collections constitue sa signature distinctive.</p>
+        <ul class="trio">
+          <li><b>Didier Soumah</b><span>Maître artisan maroquinier</span><p>Créateur de Salsa Maroquinerie.</p></li>
+          <li><b>Laurence Valdman</b><span>Conjointe collaboratrice</span><p>Céramiste de formation, elle travaille avec Didier depuis 2004 et participe à la fabrication des ceintures.</p></li>
+          <li><b>Yohann Soumah</b><span>Formé à l'atelier</span><p>Formé en alternance chez Salsa et à Eysines Le Vigean, il participe à la création des modèles.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" aria-labelledby="titre-avis">
+    <div class="env">
+      <div>
+        <h2 id="titre-avis">Ce qu'en disent nos clients</h2>
+        <p class="note"><b>Excellent</b>, sur la base de 7 avis publiés sur Google.</p>
+      </div>
+      <div class="cartes-avis">
+        <figure>
+          <blockquote>Une réalisation parfaite de mon sac à main sur mesure. Tous mes souhaits ont été respectés.</blockquote>
+          <figcaption>Marie-Laure Mariot, avis Google</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Les sacs sont magnifiques, originaux, beaux… quant aux ceintures, elles sont indestructibles&nbsp;!</blockquote>
+          <figcaption>Karen Perroud, avis Google</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="env">
+      <div class="carte">
+        <div class="infos">
+          <h2>Où nous trouver</h2>
+          <p class="adr">Salsa Maroquinerie<br />70 Passage des Vignes, «&nbsp;Les Granges&nbsp;»<br />24260 Mauzens et Miremont</p>
+          <dl>
+            <dt>Horaires</dt><dd>Du lundi au samedi, de 10h à 13h et de 15h à 19h</dd>
+            <dt>Téléphone</dt><dd><a href="tel:+33675250705">06 75 25 07 05</a></dd>
+          </dl>
+          <p class="absent">Nous pouvons être absents pendant les périodes de salons&nbsp;: n'hésitez pas à nous appeler avant de venir.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33675250705">Appeler l'atelier</a>
+            <a class="btn btn-contour" href="https://salsacreation.fr/contact/">Nous écrire</a>
+          </div>
+        </div>
+        <div class="cote">
+          <div class="salon">
+            <figure class="apparait">
+              <img src="assets/salsa-maroquinerie-mauzens/stand-salon-sacs-et-ceintures.webp" alt="Le stand de salon Salsa Maroquinerie, étagères de sacs de couleurs et présentoir de ceintures" width="866" height="839" loading="lazy" />
+            </figure>
+            <p><b>Sur les salons</b>Vous nous avez peut-être rencontrés à ARTISA à Grenoble, au salon Créateurs et Artisans d'Art de Toulouse ou aux Ateliers de l'Aiguillerie.</p>
+          </div>
+          <ul class="services">
+            <li><b>Paiement</b><span>CB sécurisée par Stripe, virement, chèque</span></li>
+            <li><b>Livraison</b><span>Colissimo, Mondial Relay, gratuite dès 120 €</span></li>
+            <li><b>Délais</b><span>4 à 5 jours ouvrés en stock, une semaine de réalisation sinon</span></li>
+            <li><b>Retour</b><span>Vous avez 14 jours de réflexion</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Salsa Maroquinerie</span><small>Maroquinerie artisanale française</small></a>
+        <p class="dit">Sacs, ceintures et petite maroquinerie, coupés, assemblés et cousus dans notre atelier en Dordogne.</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>70 Passage des Vignes<br />24260 Mauzens et Miremont</li>
+          <li><a href="tel:+33675250705">06 75 25 07 05</a></li>
+          <li>Du lundi au samedi, 10h à 13h et 15h à 19h</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="#venir">Où nous trouver</a></li>
+          <li><a href="#taille">Une question de taille&nbsp;?</a></li>
+          <li><a href="https://salsacreation.fr/expeditions-des-commandes/">Expéditions</a></li>
+          <li><a href="https://salsacreation.fr/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="https://salsacreation.fr/bienvenue-dans-notre-boutique/">La boutique</a></li>
+          <li><a href="https://salsacreation.fr/conditions-generales-de-vente/">Conditions générales de vente</a></li>
+          <li><a href="https://salsacreation.fr/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Salsa Maroquinerie</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('vu') }); return;
+  }
+  var io = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vu'); io.unobserve(en.target) } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

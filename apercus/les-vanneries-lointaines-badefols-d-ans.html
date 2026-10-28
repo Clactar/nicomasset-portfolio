@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée aux Vanneries Lointaines, atelier de Céline Torck à Badefols d'Ans (24), nuit du 2026-10-28.
+     CONTENU : textes, stages, tarifs, durées, coordonnées et photos relevés sur https://www.lesvannerieslointaines.com/ (dossier de Marco du 28/10/2026,
+     association stage / tarif vérifiée sur la page affichée). Rien d'inventé.
+     DÉFAUT RÉGLÉ : les dates de stage (janvier à avril 2026, toutes passées) ne sont plus affichées. Les stages restent avec leur contenu, leur durée
+     et leur tarif, et « Prochaines dates sur demande » mène au téléphone et au mail réels. Fautes « PANIER OVAL » et « bandouliere » corrigées.
+     DESIGN (Nova) : paille, encre vert olive sombre, accent rose ancien. Sorts Mill Goudy + Cabin. Héros : photo dans un passe-partout de galerie. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F3EBD8" />
+<title>Les Vanneries Lointaines, l'osier traditionnel et contemporain à Badefols d'Ans</title>
+<meta name="description" content="Atelier de Céline Torck, vannière en Périgord Noir : pièces uniques en osier, réalisations sur mesure et stages d'initiation à la vannerie à Badefols d'Ans." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232C3320'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F3EBD8'%3EV%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Cabin:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --paille:#F3EBD8;
+  --paille-2:#EADFC5;
+  --papier:#FCF8EE;
+  --olive:#2C3320;
+  --olive-doux:#5A6049;
+  --rose:#B5546B;
+  --rose-fonce:#93394F;
+  --sur-sombre:#F3EBD8;
+  --sur-sombre-doux:#C9C6B0;
+  --filet:rgba(44,51,32,.15);
+  --ombre-longue:0 60px 90px -48px rgba(44,51,32,.6),0 22px 34px -24px rgba(44,51,32,.35);
+  --ombre:0 30px 60px -34px rgba(44,51,32,.55);
+  --ombre-courte:0 16px 32px -22px rgba(44,51,32,.5);
+  --fd:"Sorts Mill Goudy",Georgia,serif;
+  --ft:"Cabin",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paille);color:var(--olive);font-family:var(--ft);font-size:18px;line-height:1.62;overflow-x:hidden}
+::selection{background:var(--rose);color:var(--papier)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2,h3{font-family:var(--fd)}
+p{margin:0;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+.env{max-width:var(--max);margin:0 auto;padding-inline:40px}
+section{scroll-margin-top:24px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--ft);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--olive);transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn-plein{background:var(--olive);color:var(--paille)}
+.btn-plein:hover{background:var(--rose);border-color:var(--rose);color:var(--papier);transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(181,84,107,.95)}
+.btn-contour{background:transparent;color:var(--olive)}
+.btn-contour:hover{background:var(--olive);color:var(--paille);transform:translateY(-2px)}
+.sombre .btn-plein{background:var(--rose);border-color:var(--rose);color:var(--papier)}
+.sombre .btn-plein:hover{background:var(--paille);border-color:var(--paille);color:var(--olive)}
+.sombre .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.sombre .btn-contour:hover{background:var(--sur-sombre);color:var(--olive)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(252,248,238,.95);color:var(--olive);font-size:15px;font-weight:600;line-height:1.3;padding:9px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(44,51,32,.6)}
+.etiquette.rose{background:var(--rose);color:var(--papier)}
+.etiquette.haut{top:16px;bottom:auto}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+/* en-tête */
+.tete{padding-top:28px}
+.tete .env{display:flex;align-items:center;gap:32px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque span{font-family:var(--fd);font-size:29px}
+.marque small{font-size:14px;color:var(--olive-doux);margin-top:7px;font-weight:600}
+.nav{margin-left:auto;display:flex;gap:28px;align-items:center}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a:hover{color:var(--rose-fonce)}
+.pill-tete{background:var(--paille-2);padding:11px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;transition:background .3s,color .3s}
+.pill-tete:hover{background:var(--olive);color:var(--paille)}
+
+/* héros */
+.heros{padding:72px 0 112px}
+.heros .env{display:grid;grid-template-columns:6fr 6fr;gap:64px;align-items:center}
+.lieu{font-size:16px;font-weight:700;color:var(--rose-fonce);margin-bottom:22px}
+.heros h1{font-size:clamp(46px,5.3vw,76px);line-height:1.02;letter-spacing:-.01em}
+.heros h1 span{display:block}
+.heros h1 em{font-style:italic;display:block}
+.heros .vers{font-family:var(--fd);font-style:italic;font-size:23px;line-height:1.4;margin-top:28px;max-width:30ch;color:var(--olive)}
+.heros .chapo{font-size:18px;color:var(--olive-doux);max-width:46ch;margin-top:18px}
+.heros .actions{margin-top:36px}
+.cadre{background:var(--papier);padding:30px 30px 22px;border-radius:6px;box-shadow:var(--ombre-longue);rotate:1.2deg}
+.cadre .photo{position:relative;border-radius:3px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(44,51,32,.08)}
+.cadre img{width:100%;aspect-ratio:1600/1140;object-fit:cover;object-position:50% 55%}
+.cadre figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:16px;font-size:15px;color:var(--olive-doux)}
+.cadre figcaption i{font-family:var(--fd);font-size:19px;color:var(--olive)}
+
+/* faits */
+.faits{border-block:1px solid var(--filet);background:var(--paille-2)}
+.faits ul{display:flex;justify-content:space-between;gap:16px 32px;padding-block:24px;flex-wrap:wrap}
+.faits li{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600}
+.faits li::before{content:"";width:9px;height:9px;border-radius:50%;border:2px solid var(--rose);flex:none}
+
+/* créations */
+.creations{padding:128px 0 120px}
+.creations .haut{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:end;margin-bottom:56px}
+.creations h2{font-size:clamp(40px,4.6vw,62px);line-height:1.04}
+.creations .haut p{color:var(--olive-doux);font-size:17px}
+.mosaique{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:start}
+.odero{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.odero img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:62% 50%}
+.fiches li{padding:18px 0;border-bottom:1px solid var(--filet)}
+.fiches li:first-child{border-top:1.5px solid var(--olive)}
+.fiches h3{font-size:24px;line-height:1.2}
+.fiches p{font-size:16px;color:var(--olive-doux);margin-top:3px}
+.rangee{display:grid;grid-template-columns:4fr 4fr 3.4fr;gap:40px;margin-top:64px;align-items:start}
+.twist{position:relative;border-radius:200px 200px 16px 16px;overflow:hidden;box-shadow:var(--ombre)}
+.twist img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 60%}
+.cabas{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre-courte);margin-top:96px}
+.cabas img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.besace{background:var(--papier);padding:12px 12px 16px;border-radius:4px;rotate:-2.5deg;box-shadow:0 26px 40px -22px rgba(44,51,32,.6);margin-top:24px}
+.besace img{width:100%;aspect-ratio:3/4.4;object-fit:cover;object-position:50% 50%}
+.besace p{font-family:var(--fd);font-style:italic;font-size:19px;text-align:center;margin-top:10px}
+
+/* sur mesure */
+.mesure{background:var(--papier);padding:120px 0}
+.mesure .env{display:grid;grid-template-columns:5fr 7fr;gap:88px;align-items:center}
+.duo{position:relative;padding:0 0 96px 72px}
+.duo .lum{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.duo .lum img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+.duo .malle{position:absolute;left:0;bottom:0;width:220px;border-radius:14px;overflow:hidden;box-shadow:var(--ombre-courte);border:8px solid var(--papier)}
+.duo .malle img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.mesure h2{font-size:clamp(38px,4.2vw,56px);line-height:1.05}
+.mesure .chapo{color:var(--olive-doux);margin-top:20px;max-width:52ch}
+.liste-mesure{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.liste-mesure li{background:var(--paille);border-radius:999px;padding:9px 18px;font-size:16px;font-weight:600}
+.mesure .actions{margin-top:36px}
+
+/* stages : section sombre */
+.sombre{background:var(--olive);color:var(--sur-sombre)}
+.stages{padding:128px 0}
+.stages .haut{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:end}
+.stages h2{font-size:clamp(40px,4.6vw,64px);line-height:1.02}
+.stages .haut p{color:var(--sur-sombre-doux);font-size:17px}
+.demande{display:inline-flex;align-items:center;gap:14px;margin-top:24px;background:rgba(243,235,216,.1);border-radius:999px;padding:10px 20px 10px 12px;font-weight:600;font-size:17px}
+.demande span{background:var(--rose);color:var(--papier);border-radius:999px;padding:4px 12px;font-size:15px}
+.stages .corps{display:grid;grid-template-columns:7fr 4fr;gap:72px;margin-top:64px;align-items:start}
+.programme li{display:grid;grid-template-columns:1fr auto;gap:8px 32px;padding:24px 0;border-top:1px solid rgba(243,235,216,.2)}
+.programme li:last-child{border-bottom:1px solid rgba(243,235,216,.2)}
+.programme h3{font-size:30px;line-height:1.1}
+.programme h3 small{display:block;font-family:var(--ft);font-size:15px;font-weight:600;color:#E79AAB;margin-top:6px}
+.programme p{grid-column:1;color:var(--sur-sombre-doux);font-size:16px}
+.programme .prix{grid-row:1 / 3;grid-column:2;text-align:right;font-family:var(--fd);font-size:36px;line-height:1}
+.programme .prix small{display:block;font-family:var(--ft);font-size:15px;color:var(--sur-sombre-doux);margin-top:8px}
+.vitrine-stages{position:relative;min-height:700px}
+.vitrine-stages figure{position:absolute;background:var(--papier);padding:10px 10px 14px;border-radius:4px;box-shadow:0 30px 50px -26px rgba(0,0,0,.7)}
+.vitrine-stages img{width:100%;aspect-ratio:3/4.4;object-fit:cover;border-radius:2px}
+.vitrine-stages p{font-family:var(--fd);font-style:italic;font-size:18px;color:var(--olive);text-align:center;margin-top:8px}
+.vs1{top:0;left:0;width:180px;rotate:-3deg}
+.vs2{top:64px;right:0;width:180px;rotate:2.5deg}
+.vs3{top:384px;left:96px;width:200px;rotate:-1.5deg}
+.alacarte{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.alacarte div{background:rgba(243,235,216,.07);border-radius:18px;padding:28px}
+.alacarte h3{font-size:25px;line-height:1.15}
+.alacarte p{color:var(--sur-sombre-doux);font-size:16px;margin-top:8px}
+.stages .actions{margin-top:44px}
+
+/* céline */
+.celine{padding:136px 0 120px}
+.celine .env{display:grid;grid-template-columns:3fr 9fr;gap:72px;align-items:start}
+.portrait{width:220px;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:var(--ombre)}
+.portrait img{width:100%;aspect-ratio:3/4.4;object-fit:cover;object-position:50% 30%}
+.celine .nom{margin-top:18px;font-weight:700;font-size:17px}
+.celine .nom small{display:block;font-weight:400;color:var(--olive-doux);font-size:16px}
+.celine blockquote{margin:0;font-family:var(--fd);font-size:clamp(34px,3.8vw,52px);line-height:1.12;max-width:24ch}
+.celine blockquote::before{content:"« ";color:var(--rose)}
+.celine blockquote::after{content:" »";color:var(--rose)}
+.celine .txt{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px;color:var(--olive-doux);font-size:17px}
+.celine .txt p + p{margin-top:14px}
+.celine .maitres{margin-top:36px;padding:24px 28px;background:var(--papier);border-radius:16px;box-shadow:var(--ombre-courte);font-size:16px;color:var(--olive-doux)}
+.celine .maitres b{color:var(--olive)}
+
+/* venir */
+.venir{padding:0 0 128px}
+.venir .haut{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px}
+.venir h2{font-size:clamp(38px,4.2vw,56px);line-height:1.05}
+.venir .haut p{color:var(--olive-doux);max-width:44ch}
+.lieux{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+.lieu-carte{background:var(--papier);border-radius:22px;padding:34px;box-shadow:var(--ombre-courte)}
+.lieu-carte h3{font-size:28px;line-height:1.1}
+.lieu-carte p{color:var(--olive-doux);margin-top:12px;font-size:17px}
+.lieu-carte.joindre{background:var(--paille-2);box-shadow:none}
+.lieu-carte a:not(.btn){color:var(--olive);font-weight:600;text-underline-offset:3px}
+.venir .actions{margin-top:20px}
+
+/* pied */
+.pied{padding:88px 0 0}
+.pied .grille{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:48px}
+.pied .marque span{font-size:38px}
+.pied .marque small{color:var(--sur-sombre-doux)}
+.pied .dit{color:var(--sur-sombre-doux);font-size:16px;margin-top:20px;max-width:34ch}
+.pied h3{font-family:var(--ft);font-weight:700;font-size:15px;color:#E79AAB;margin-bottom:14px}
+.pied li{font-size:16px;color:var(--sur-sombre-doux);margin-bottom:9px;line-height:1.45}
+.pied li a{color:var(--sur-sombre);text-decoration:none;border-bottom:1px solid rgba(243,235,216,.3)}
+.pied li a:hover{color:#E79AAB;border-color:#E79AAB}
+.propo{margin-top:72px;border-top:1px solid rgba(243,235,216,.14);padding:22px 0 26px;font-size:14px;color:var(--sur-sombre-doux)}
+.propo a{color:var(--sur-sombre)}
+
+@media (max-width: 900px){
+  body{font-size:17px}
+  .env{padding-inline:20px}
+  .tete{padding-top:18px}
+  .tete .env{gap:12px}
+  .marque span{font-size:25px}
+  .marque small{font-size:13px}
+  .nav{display:none}
+  .pill-tete{margin-left:auto;font-size:15px;padding:10px 14px}
+  .heros{padding:28px 0 64px}
+  .heros .env{grid-template-columns:1fr;gap:0}
+  .heros-texte{display:contents}
+  .lieu{order:1;margin-bottom:12px;font-size:15px}
+  .heros h1{order:2;font-size:44px}
+  .cadre{order:3;margin-top:26px;padding:14px 14px 12px;rotate:none}
+  .cadre figcaption{font-size:14px;margin-top:10px}
+  .cadre figcaption i{font-size:17px}
+  .heros .vers{order:4;font-size:20px;margin-top:28px}
+  .heros .chapo{order:5;font-size:17px}
+  .heros .actions{order:6}
+  .etiquette{font-size:14px;left:10px;bottom:10px;padding:7px 12px}
+  .etiquette.haut{top:10px}
+  .actions{flex-direction:column;margin-top:24px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:10px;padding-block:20px}
+  .creations,.mesure,.stages,.celine{padding:80px 0}
+  .creations .haut,.stages .haut{grid-template-columns:1fr;gap:18px;margin-bottom:36px}
+  .mosaique{grid-template-columns:1fr;gap:32px}
+  .rangee{grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+  .twist{grid-column:1 / 3;max-width:280px}
+  .cabas{margin-top:0}
+  .besace{margin-top:0}
+  .besace p{font-size:16px}
+  .mesure .env{grid-template-columns:1fr;gap:40px}
+  .duo{padding:0 0 70px 40px}
+  .duo .malle{width:150px;border-width:6px}
+  .stages .corps{grid-template-columns:1fr;gap:40px;margin-top:40px}
+  .programme h3{font-size:26px}
+  .programme .prix{font-size:30px}
+  .vitrine-stages{min-height:0;display:flex;gap:12px}
+  .vitrine-stages figure{position:static;width:33%;padding:6px 6px 8px;rotate:none}
+  .vitrine-stages p{font-size:14px}
+  .alacarte{grid-template-columns:1fr;gap:14px;margin-top:40px}
+  .alacarte div{padding:22px}
+  .celine .env{grid-template-columns:1fr;gap:32px}
+  .portrait{width:170px}
+  .celine .txt{grid-template-columns:1fr;gap:14px;margin-top:28px}
+  .celine .maitres{padding:20px}
+  .venir{padding-bottom:80px}
+  .venir .haut{flex-direction:column;align-items:flex-start;gap:14px}
+  .lieux{grid-template-columns:1fr;gap:16px}
+  .lieu-carte{padding:26px 22px}
+  .pied .grille{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut" aria-label="Les Vanneries Lointaines, retour en haut">
+      <span>Les Vanneries Lointaines</span>
+      <small>Atelier Céline Torck</small>
+    </a>
+    <nav class="nav" aria-label="Sur cette page">
+      <a href="#creations">Mes créations</a>
+      <a href="#sur-mesure">Sur mesure</a>
+      <a href="#stages">Stages</a>
+      <a href="#celine">Céline Torck</a>
+    </nav>
+    <a class="pill-tete" href="tel:+33609156039">06 09 15 60 39</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="heros-texte">
+        <p class="lieu">Vannière à Badefols d'Ans, en Périgord Noir</p>
+        <h1><span>L'osier</span><span>traditionnel et</span><em>contemporain</em></h1>
+        <p class="vers">Quand mes mains entrelacent les brins d'osier, mon âme vagabonde aux pays des anciens.</p>
+        <p class="chapo">Pièces uniques, réalisations sur mesure et stages d'initiation à la vannerie d'osier, dans mon atelier de Dordogne.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#stages">Voir les stages</a>
+          <a class="btn btn-contour" href="#creations">Mes créations</a>
+        </div>
+      </div>
+      <figure class="cadre apparait">
+        <div class="photo">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/panier-ovale-osier-brut-anse-roses.webp" alt="Panier ovale en osier blanc à anse centrale, rangs d'osier brun, garni de roses rouges, sur une terrasse en bois" width="1600" height="1140" fetchpriority="high" />
+          <span class="etiquette rose">Pièce unique</span>
+        </div>
+        <figcaption><i>Panier ovale en osier</i><span>Atelier Céline Torck</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env" aria-label="L'atelier en bref">
+      <li>Des pièces uniques</li>
+      <li>Osier de Touraine ou de Corrèze</li>
+      <li>Plus de 4 ans d'expérience</li>
+      <li>Stages d'initiation dès 50 €</li>
+    </ul>
+  </div>
+
+  <section class="creations" id="creations">
+    <div class="env">
+      <div class="haut">
+        <h2>Mes créations, des techniques venues du monde entier</h2>
+        <p>Au cours de mes voyages, la vannerie a toujours été présente au détour d'un chemin. J'aime explorer les techniques de vannerie du monde entier, avec l'osier et le rotin.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="odero apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/decoration-murale-odero-osier-papier-japonais.webp" alt="Décoration murale ronde en rayons de brins sombres, cercle rouge et carré central tissé en papier japonais recyclé" width="1600" height="1066" loading="lazy" />
+          <span class="etiquette">Odero, technique ougandaise</span>
+        </figure>
+        <ul class="fiches">
+          <li><h3>Décoration murale</h3><p>Osier et papier japonais recyclé, technique ougandaise appelée Odero. Sur commande, dimensions et couleurs au choix.</p></li>
+          <li><h3>Besace rectangulaire</h3><p>Sac à bandoulière en cuir, osier brut Helix et Rouge Belge, technique des Asturies.</p></li>
+          <li><h3>Cabas ajouré, anses en cuir</h3><p>Osier brut Helix, deux anses en cuir et bordure tissée, technique de la tresse néolithique.</p></li>
+          <li><h3>Cabas irlandais</h3><p>Point irlandais avec anse alsacienne, osier brut Rouge Belge et Purpurea Daphnoïde.</p></li>
+          <li><h3>Panier ovale à fond plat</h3><p>Panier à champignons en osier brut Bourdiala.</p></li>
+        </ul>
+      </div>
+      <div class="rangee">
+        <figure class="twist apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/panier-twist-osier-blanc-vert.webp" alt="Panier haut en forme de goutte, osier vert tressé en spirale, bordure et anse en osier blanc" width="1104" height="1600" loading="lazy" />
+          <span class="etiquette">Panier twist blanc et vert</span>
+        </figure>
+        <figure class="cabas apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/cabas-ajoure-osier-anses-cuir-rouge.webp" alt="Vue plongeante dans un cabas en osier brut ajouré, fond en spirale, anses en cuir rouge" width="1440" height="1440" loading="lazy" />
+          <span class="etiquette">Cabas ajouré</span>
+        </figure>
+        <figure class="besace apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/besace-rectangulaire-osier-bandouliere-cuir.webp" alt="Besace rectangulaire en osier clair à rangs bruns, longue bandoulière en cuir fauve, posée sur un parquet" width="848" height="1506" loading="lazy" />
+          <p>Besace rectangulaire</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="mesure" id="sur-mesure">
+    <div class="env">
+      <div class="duo">
+        <figure class="lum apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/luminaire-osier-allume.webp" alt="Suspension en osier tressé en rayons, vue de dessous, ampoule allumée au centre" width="900" height="1488" loading="lazy" />
+          <span class="etiquette haut">Luminaire</span>
+        </figure>
+        <figure class="malle apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/malle-osier-blanc-couvercle.webp" alt="Grande malle à couvercle en osier blanc, bande d'osier vert foncé" width="1469" height="1600" loading="lazy" />
+        </figure>
+      </div>
+      <div>
+        <h2>Une réalisation sur mesure</h2>
+        <p class="chapo">Mon travail se distingue par la création d'objets à la fois traditionnels et contemporains. N'hésitez pas à me contacter pour tout autre projet.</p>
+        <ul class="liste-mesure" aria-label="Réalisations possibles">
+          <li>Luminaires</li>
+          <li>Panières décoratives ou utilitaires</li>
+          <li>Paniers ovales, ronds ou rectangulaires</li>
+          <li>Paniers pique-nique</li>
+          <li>Tiroirs pour aménagements sur mesure</li>
+          <li>Paniers pour animaux</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:lesvannerieslointaines@gmail.com?subject=Projet%20sur%20mesure">Me parler de votre projet</a>
+          <a class="btn btn-contour" href="tel:+33609156039">06 09 15 60 39</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stages sombre" id="stages">
+    <div class="env">
+      <div class="haut">
+        <div>
+          <h2>Stages d'initiation à la vannerie</h2>
+          <p class="demande"><span>Prochaines dates</span>sur demande, par téléphone ou par mail</p>
+        </div>
+        <p>J'ai à cœur de transmettre mon savoir, ma passion, et de faire découvrir cet art merveilleux. Les stages ont lieu à l'atelier, à Badefols d'Ans.</p>
+      </div>
+      <div class="corps">
+        <ul class="programme">
+          <li><h3>Nichoir en osier<small>Le matin, de 9h à 13h</small></h3><p>Nichoir en osier brut.</p><span class="prix">65 €</span></li>
+          <li><h3>La corbeille asymétrique<small>La journée, de 9h à 17h30</small></h3><p>Corbeille asymétrique en osier brut.</p><span class="prix">100 €</span></li>
+          <li><h3>Panier à ail<small>Le matin, de 9h à 13h</small></h3><span class="prix">65 €</span></li>
+          <li><h3>Mangeoire<small>L'après-midi</small></h3><p>Fabriquez 2 mangeoires, similaires ou différentes.</p><span class="prix">50 €</span></li>
+          <li><h3>La besace ovale en osier<small>Niveau intermédiaire, de 9h à 17h30</small></h3><span class="prix">110 €</span></li>
+        </ul>
+        <div class="vitrine-stages" aria-label="Pièces réalisées en stage">
+          <figure class="vs1 apparait">
+            <img src="assets/les-vanneries-lointaines-badefols-d-ans/nichoir-osier-brut-suspendu-stage.webp" alt="Nichoir en osier brut en forme de goutte, suspendu à une branche fleurie" width="900" height="1600" loading="lazy" />
+            <p>Le nichoir</p>
+          </figure>
+          <figure class="vs2 apparait">
+            <img src="assets/les-vanneries-lointaines-badefols-d-ans/corbeille-asymetrique-osier-stage.webp" alt="Corbeille haute en osier bleu noir et brun, bord découpé en biais, suspendue à un bâton" width="900" height="1600" loading="lazy" />
+            <p>La corbeille</p>
+          </figure>
+          <figure class="vs3 apparait">
+            <img src="assets/les-vanneries-lointaines-badefols-d-ans/besace-ovale-osier-stage.webp" alt="Besace en osier fauve et brun à bandoulière de cuir, accrochée contre un volet blanc" width="900" height="1600" loading="lazy" />
+            <p>La besace ovale</p>
+          </figure>
+        </div>
+      </div>
+      <div class="alacarte">
+        <div><h3>Stage à la carte</h3><p>Pour 2 personnes minimum, à l'atelier de Badefols d'Ans.</p></div>
+        <div><h3>Possibilité de déplacement</h3><p>Contactez-moi pour en parler.</p></div>
+        <div><h3>Une carte cadeau</h3><p>Pensez à offrir un stage de vannerie.</p></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:lesvannerieslointaines@gmail.com?subject=Prochaines%20dates%20de%20stage">Demander les prochaines dates</a>
+        <a class="btn btn-contour" href="tel:+33609156039">Appeler le 06 09 15 60 39</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="celine" id="celine">
+    <div class="env">
+      <div>
+        <figure class="portrait apparait">
+          <img src="assets/les-vanneries-lointaines-badefols-d-ans/portrait-celine-torck.webp" alt="Céline Torck, souriante, chemise blanche brodée" width="529" height="891" loading="lazy" />
+        </figure>
+        <p class="nom">Céline Torck<small>Artisan vannière à Badefols d'Ans</small></p>
+      </div>
+      <div>
+        <blockquote>C'est une histoire, qui se raconte au fil des saisons.</blockquote>
+        <div class="txt">
+          <div>
+            <p>Ma passion pour la vannerie a été forgée par des rencontres, et par l'apprentissage auprès de vanniers professionnels qui m'ont transmis avec bienveillance les techniques et savoir-faire de cet art ancestral.</p>
+            <p>J'aime plus particulièrement le tressage du point néolithique et la technique de la triple crocane.</p>
+          </div>
+          <div>
+            <p>La vannerie est bien plus qu'un simple métier pour moi : un moyen de se reconnecter avec la nature, de trouver la paix et l'harmonie dans la création artisanale.</p>
+            <p>Rejoignez-moi dans la découverte de la vannerie : ensemble, nous pourrons « tresser » des brins et tisser des liens.</p>
+          </div>
+        </div>
+        <p class="maitres"><b>Formée auprès de</b> Tiane Cattet, Alexandra Marks, Valérie Lavaure, Emilie Leal et Philippe Guerinel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="contact">
+    <div class="env">
+      <div class="haut">
+        <h2>Venir à l'atelier</h2>
+        <p>Pour toute information complémentaire, un stage ou une commande, contactez-moi par téléphone ou par mail.</p>
+      </div>
+      <div class="lieux">
+        <div class="lieu-carte">
+          <h3>L'atelier showroom</h3>
+          <p>Lieu-dit Raffard<br />232 chemin de Raffard<br />24390 Badefols d'Ans</p>
+        </div>
+        <div class="lieu-carte">
+          <h3>L'échoppe</h3>
+          <p>1 place de Guingois<br />24120 Terrasson-Lavilledieu</p>
+        </div>
+        <div class="lieu-carte joindre">
+          <h3>Me joindre</h3>
+          <p><a href="tel:+33609156039">06 09 15 60 39</a><br /><a href="mailto:lesvannerieslointaines@gmail.com">lesvannerieslointaines@gmail.com</a></p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33609156039">Appeler Céline</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="env">
+    <div class="grille">
+      <div>
+        <a class="marque" href="#haut"><span>Les Vanneries Lointaines</span><small>Atelier Céline Torck</small></a>
+        <p class="dit">L'osier traditionnel et contemporain, en Périgord Noir, Dordogne.</p>
+      </div>
+      <div>
+        <h3>L'atelier showroom</h3>
+        <ul>
+          <li>232 chemin de Raffard<br />24390 Badefols d'Ans</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Me joindre</h3>
+        <ul>
+          <li><a href="tel:+33609156039">06 09 15 60 39</a></li>
+          <li><a href="mailto:lesvannerieslointaines@gmail.com">lesvannerieslointaines@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre l'atelier</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/lesvannerieslointaines/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61553254281732">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Les Vanneries Lointaines</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var t = 0;
+  function voir(){
+    var h = innerHeight * 0.94;
+    els = els.filter(function(e){ if (e.getBoundingClientRect().top < h){ e.classList.add('vu'); return false } return true });
+    if (!els.length){ removeEventListener('scroll', planifier); clearInterval(veille) }
+  }
+  var veille = setInterval(voir, 200);
+  function planifier(){ if (!t) t = requestAnimationFrame(function(){ t = 0; voir() }) }
+  addEventListener('scroll', planifier, { passive: true });
+  addEventListener('resize', planifier);
+  voir();
+})();
+</script>
+</body>
+</html>

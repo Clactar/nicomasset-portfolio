@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>hodgson studio · Handmade pottery by Gaye Lynn and Michael Hodgson, Wimberley TX</title>
+<meta name="description" content="Handmade, high fired stoneware and porcelain by Gaye Lynn and Michael Hodgson in Wimberley, Texas. Studio visits welcome: pottery@hodgsonstudio.com.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F4A3C'/%3E%3Cellipse cx='32' cy='22' rx='19' ry='5' fill='none' stroke='%23C4643A' stroke-width='3'/%3E%3Ctext x='32' y='52' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23ECE8E0'%3Eh%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#E6E2DA; --lime-2:#D9D3C7; --card:#F4F1EB;
+  --cedar:#2F4A3C; --cedar-d:#1F3229; --cedar-2:#5B6E62;
+  --terra:#C4643A; --terra-d:#A24E2A;
+  --ink:#232B26; --ink-soft:#56605A;
+  --shadow:0 34px 64px -36px rgba(31,50,41,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--lime);color:var(--ink);font:400 18px/1.62 'Outfit',Georgia,sans-serif;overflow-x:hidden}
+::selection{background:var(--terra);color:var(--card)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Literata',Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.022em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;font:500 17px/1 'Outfit',sans-serif;text-decoration:none;border:1.5px solid var(--cedar);color:var(--cedar);transition:transform .28s cubic-bezier(.2,.7,.3,1),background-color .28s,color .28s,box-shadow .28s,border-color .28s}
+.btn:hover{transform:translateY(-2px)}
+.btn-terra{background:var(--terra);border-color:var(--terra);color:var(--card)}
+.btn-terra:hover{background:var(--terra-d);border-color:var(--terra-d);box-shadow:0 18px 32px -16px rgba(162,78,42,.75)}
+.btn-line:hover{background:var(--cedar);color:var(--card)}
+.btn-light{border-color:rgba(244,241,235,.5);color:var(--card)}
+.btn-light:hover{background:var(--card);color:var(--cedar);border-color:var(--card)}
+
+/* header */
+.top{padding:26px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:14px}
+.brand svg{width:46px;height:30px;flex:none}
+.brand b{display:block;font:400 28px/1 'Literata',serif;letter-spacing:-.02em;color:var(--ink)}
+.brand span{display:block;font-size:15px;color:var(--ink-soft);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:16.5px;text-decoration:none;position:relative}
+.nav a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{white-space:nowrap;background:var(--cedar);color:var(--card);padding:12px 22px;border-radius:999px;font-weight:500;transition:background-color .25s}
+.pill:hover{background:var(--terra)}
+
+/* hero */
+.hero{padding:34px 0 120px}
+.hero .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:72px;align-items:center}
+.kick{font-size:17px;font-weight:500;color:var(--terra-d)}
+.hero h1{font-size:clamp(56px,6.6vw,96px);margin-top:18px}
+.hero h1 i{font-style:italic;color:var(--cedar)}
+.lead{margin-top:26px;max-width:470px;color:var(--ink-soft);font-size:19px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.reach{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:16.5px;color:var(--ink-soft)}
+.reach a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1.5px solid rgba(196,100,58,.45)}
+.reach a:hover{border-color:var(--terra)}
+.stage{position:relative;padding:0 0 120px 110px}
+.stage .big{position:relative;margin:0;border-radius:26px;overflow:hidden;box-shadow:0 50px 90px -46px rgba(31,50,41,.75)}
+.stage .big img{width:100%;aspect-ratio:1/1.02;object-fit:cover;object-position:50% 55%}
+.stage .small{position:absolute;left:0;bottom:0;width:44%;margin:0;border-radius:20px;overflow:hidden;border:10px solid var(--lime);box-shadow:0 34px 60px -28px rgba(31,50,41,.7)}
+.stage .small img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.tag{position:absolute;left:18px;bottom:18px;background:rgba(244,241,235,.95);color:var(--ink);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;line-height:1.25;box-shadow:0 12px 26px -14px rgba(31,50,41,.6)}
+.stage .big .tag{left:auto;right:18px;bottom:auto;top:18px}
+.stage .small .tag{left:10px;bottom:10px;font-size:14.5px;padding:7px 13px}
+
+/* facts */
+.facts{position:relative;margin-top:-40px}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);background:var(--cedar);color:var(--card);border-radius:24px;box-shadow:var(--shadow)}
+.facts li{padding:30px 30px 28px;font-size:16px;line-height:1.45;color:rgba(244,241,235,.78)}
+.facts li+li{box-shadow:inset 1px 0 0 rgba(244,241,235,.14)}
+.facts b{display:block;font:400 34px/1.05 'Literata',serif;color:var(--card);margin-bottom:6px}
+
+/* bio */
+.bio{padding:140px 0 120px}
+.bio .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:96px;align-items:center}
+.bio blockquote{font:400 clamp(30px,3.2vw,44px)/1.25 'Literata',serif;letter-spacing:-.015em}
+.bio blockquote em{color:var(--terra-d)}
+.bio p{margin-top:28px;color:var(--ink-soft);max-width:640px}
+.bio .sign{margin-top:22px;font-weight:500;color:var(--cedar)}
+.pins{position:relative;height:440px}
+.pol{position:absolute;margin:0;background:var(--card);padding:10px 10px 14px;border-radius:10px;box-shadow:0 30px 54px -26px rgba(31,50,41,.7)}
+.pol img{width:100%;object-fit:cover;border-radius:5px}
+.pol figcaption{font-size:15px;color:var(--ink-soft);padding:9px 4px 0;line-height:1.3}
+.p1{width:236px;top:0;right:30px;rotate:3deg}
+.p1 img{aspect-ratio:480/455}
+.p2{width:220px;bottom:0;left:0;rotate:-4deg}
+.p2 img{aspect-ratio:3/2}
+
+/* makers, dark */
+.makers{background:var(--cedar-d);color:var(--card);padding:130px 0}
+.makers .intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:76px}
+.h2{font-size:clamp(42px,4.8vw,66px)}
+.makers .h2{color:var(--card)}
+.makers .intro p{color:rgba(244,241,235,.76);max-width:500px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.maker h3{font-size:40px}
+.maker .q{margin-top:10px;font:italic 400 21px/1.45 'Literata',serif;color:#E9A27F}
+.shots{position:relative;margin-top:34px}
+.shots .a{margin:0;border-radius:22px;overflow:hidden;box-shadow:0 44px 80px -40px rgba(0,0,0,.85)}
+.shots .a img{width:100%;aspect-ratio:4/3.3;object-fit:cover}
+.shots .b{position:absolute;margin:0;right:-20px;bottom:-60px;width:42%;border-radius:200px 200px 18px 18px;overflow:hidden;border:8px solid var(--cedar-d);box-shadow:0 30px 56px -26px rgba(0,0,0,.85)}
+.shots .b img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.m2 .shots .b{right:auto;left:-20px;border-radius:18px}
+.m2 .shots .b img{aspect-ratio:1/1}
+.maker .lk{margin-top:96px}
+.maker .lk a{color:var(--card);font-weight:500;text-decoration-color:var(--terra);text-underline-offset:4px}
+.m2 .shots .a img{object-position:50% 60%}
+
+/* how they are made */
+.made{padding:130px 0 120px}
+.made .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start}
+.made .ph{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.made .ph img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.made .txt>p{margin-top:20px;color:var(--ink-soft);max-width:520px}
+.spec{margin-top:36px;background:var(--card);border-radius:22px;padding:10px 32px;box-shadow:0 26px 50px -40px rgba(31,50,41,.7)}
+.spec dl{display:grid;grid-template-columns:120px 1fr}
+.spec dt,.spec dd{padding:16px 0}
+.spec dt+dd~dt,.spec dt+dd~dt+dd{border-top:1px solid rgba(31,50,41,.1)}
+.spec dt{font-weight:600;color:var(--cedar)}
+.spec dd{color:var(--ink-soft);font-size:16.5px}
+.strip{display:flex;gap:20px;margin-top:30px}
+.strip figure{margin:0;width:170px;border-radius:14px;overflow:hidden;box-shadow:0 20px 34px -22px rgba(31,50,41,.7)}
+.strip img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.strip figure:nth-child(2){margin-top:26px}
+
+/* where to find */
+.find{background:var(--lime-2);padding:130px 0}
+.find .head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:56px}
+.find .head p{color:var(--ink-soft);max-width:480px}
+.places{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;align-items:start}
+.place{background:var(--card);border-radius:22px;padding:32px;box-shadow:0 26px 50px -38px rgba(31,50,41,.7)}
+.place.studio{grid-row:span 2;background:var(--cedar);color:var(--card);padding:36px}
+.place h3{font-size:30px}
+.place small{display:block;font-size:15px;font-weight:500;color:var(--terra-d);margin-bottom:8px}
+.place.studio small{color:#E9A27F}
+.place p{margin-top:12px;color:var(--ink-soft);font-size:16.5px}
+.place.studio p{color:rgba(244,241,235,.8)}
+.place a.more{display:inline-block;margin-top:16px;font-weight:500;color:var(--cedar);text-decoration-color:var(--terra);text-underline-offset:4px}
+.place.studio .btn{margin-top:24px}
+.place.studio .cta{margin-top:24px;gap:12px}
+.booth{margin:26px 0 0;width:236px;border-radius:14px;overflow:hidden;rotate:-2deg;box-shadow:0 26px 44px -22px rgba(0,0,0,.6);border:6px solid var(--card)}
+.booth img{width:100%;aspect-ratio:1139/1023;object-fit:cover}
+.mail{grid-column:2/4;display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--card);border-radius:22px;padding:28px 32px;box-shadow:0 26px 50px -38px rgba(31,50,41,.7)}
+.mail p{font-size:17px;color:var(--ink-soft);max-width:440px}
+.mail b{display:block;font:400 26px/1.2 'Literata',serif;color:var(--ink);margin-bottom:4px}
+
+/* clay fest band */
+.fest{background:var(--terra);color:var(--card);padding:56px 0}
+.fest .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center}
+.fest .n{font:400 92px/1 'Literata',serif;letter-spacing:-.04em}
+.fest p{font-size:18px;max-width:620px}
+.fest p b{display:block;font:400 26px/1.2 'Literata',serif;margin-bottom:4px}
+
+/* contact */
+.contact{padding:120px 0 130px}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.contact .lead2{margin-top:20px;color:var(--ink-soft);max-width:480px;font-size:19px}
+.card{background:var(--card);border-radius:26px;padding:42px;box-shadow:var(--shadow)}
+.card h3{font-size:32px}
+.card dl{margin-top:22px;display:grid;grid-template-columns:110px 1fr}
+.card dt,.card dd{padding:15px 0;border-top:1px solid rgba(31,50,41,.1)}
+.card dt{font-weight:600}
+.card dd{color:var(--ink-soft);overflow-wrap:anywhere}
+.card dd a{color:var(--ink);font-weight:500;text-decoration-color:var(--terra);text-underline-offset:3px}
+.card .cta{margin-top:26px}
+
+/* footer */
+footer{background:var(--cedar-d);color:var(--card);padding:90px 0 0}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
+.foot .name{font:400 40px/1 'Literata',serif;letter-spacing:-.02em}
+.foot p{margin-top:14px;color:rgba(244,241,235,.72);font-size:16.5px;max-width:360px}
+.foot h4{font:500 16px/1.3 'Outfit',sans-serif;color:#E9A27F;margin-bottom:14px}
+.foot ul{list-style:none}
+.foot li{padding:5px 0;font-size:16.5px;color:rgba(244,241,235,.86);overflow-wrap:anywhere}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(244,241,235,.25)}
+.foot a:hover{border-color:var(--terra)}
+.base{margin-top:70px;border-top:1px solid rgba(244,241,235,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px;color:rgba(244,241,235,.55)}
+.proposal{background:#16241D;color:rgba(244,241,235,.6);text-align:center;font-size:15px;padding:14px 20px}
+.proposal a{color:var(--card)}
+
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.stage .big{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.stage .small{animation:rise 1s cubic-bezier(.2,.7,.2,1) .22s both}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* tablet & phone */
+@media (max-width:1060px){
+  .hero .wrap,.bio .wrap,.makers .intro,.made .wrap,.find .head,.contact .wrap{grid-template-columns:1fr;gap:56px}
+  .facts ul{grid-template-columns:1fr 1fr}
+  .facts li:nth-child(3){box-shadow:inset 0 1px 0 rgba(244,241,235,.14)}
+  .facts li:nth-child(4){box-shadow:inset 1px 1px 0 rgba(244,241,235,.14)}
+  .pair{grid-template-columns:1fr;gap:110px}
+  .places{grid-template-columns:1fr 1fr}
+  .place.studio{grid-row:auto;grid-column:1/-1}
+  .mail{grid-column:1/-1}
+  .fest .wrap{grid-template-columns:auto 1fr;gap:28px}
+  .fest .btn{grid-column:1/-1;justify-self:start}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .wrap{padding:0 20px}
+  .nav a:not(.pill){display:none}
+  .top{padding:18px 0}
+  .brand svg{display:none}
+  .brand b{font-size:24px}
+  .brand span{font-size:15px}
+  .pill{padding:11px 18px;font-size:16px}
+  .hero{padding:10px 0 90px}
+  .hero .wrap{display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .hero .txt{display:contents}
+  .kick{order:1;font-size:16px}
+  .hero h1{order:2;font-size:50px;margin-top:10px}
+  .reach{order:3;margin-top:18px;gap:8px 22px}
+  .stage{order:4;margin-top:22px;padding:0 0 70px 56px}
+  .lead{order:5;font-size:17px}
+  .hero .cta{order:6}
+  .stage .big img{aspect-ratio:1/.92}
+  .stage .small{width:46%;border-width:7px;border-radius:16px}
+  .stage .small .tag{display:none}
+  .stage .big .tag{top:12px;right:12px;font-size:14px;padding:7px 12px}
+  .cta{flex-direction:column}
+  .cta .btn{width:100%}
+  .facts{margin-top:-30px}
+  .facts li{padding:20px 16px}
+  .facts b{font-size:26px}
+  .bio,.makers,.made,.find,.contact{padding:90px 0}
+  .pins{height:400px;max-width:350px}
+  .p1{width:200px;right:0}
+  .p2{width:190px}
+  .makers .intro{margin-bottom:48px;gap:20px}
+  .shots .b{right:-6px;bottom:-50px}
+  .m2 .shots .b{left:-6px}
+  .maker .lk{margin-top:76px}
+  .spec{padding:6px 20px}
+  .spec dl{grid-template-columns:1fr}
+  .spec dt{padding-bottom:0}
+  .spec dd{padding-top:4px}
+  .spec dt+dd~dt+dd{border-top:0}
+  .strip figure{width:46%}
+  .places{grid-template-columns:1fr}
+  .place,.place.studio{padding:28px 22px}
+  .booth{width:220px}
+  .mail{flex-direction:column;align-items:stretch;padding:26px 22px}
+  .mail .btn{width:100%}
+  .find .head{gap:20px;margin-bottom:40px}
+  .fest .wrap{grid-template-columns:1fr;gap:12px}
+  .fest .n{font-size:72px}
+  .fest .btn{width:100%}
+  .card{padding:28px 22px}
+  .card dl{grid-template-columns:1fr}
+  .card dd{border-top:0;padding-top:0}
+  .foot{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" id="top">
+      <svg viewBox="0 0 46 30" aria-hidden="true"><ellipse cx="23" cy="13" rx="20" ry="7" fill="none" stroke="#C4643A" stroke-width="2.6"/><path d="M5 16c3 8 33 8 36 0" fill="none" stroke="#2F4A3C" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <div class="bt"><b>hodgson studio</b><span>handmade pottery, wimberley tx</span></div>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#bio">bio</a>
+      <a href="#gallery">gallery</a>
+      <a href="#find">find</a>
+      <a href="#contact">contact</a>
+      <a class="pill" href="https://hodgsonstudio.square.site/">shop now</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="txt">
+      <p class="kick">gaye lynn + michael hodgson</p>
+      <h1>All of our pots are <i>made to be used.</i></h1>
+      <p class="lead">Handmade stoneware and porcelain, glazed with lead-free, food safe glazes and high fired, from our studio in Wimberley, Texas.</p>
+      <div class="cta">
+        <a class="btn btn-terra" href="https://hodgsonstudio.square.site/">Shop now</a>
+        <a class="btn btn-line" href="#find">Where to find our pottery</a>
+      </div>
+      <p class="reach"><a href="mailto:pottery@hodgsonstudio.com">pottery@hodgsonstudio.com</a><a href="tel:+15126180646">(512) 618.0646</a></p>
+    </div>
+    <div class="stage">
+      <figure class="big"><img src="assets/hodgson-studio-wimberley/theiere-cuisson-bois-ocre.webp" alt="Stoneware teapot in ochre and sand with gray blue brushstrokes" width="1600" height="1600"><span class="tag">Teapot, from Michael’s gallery</span></figure>
+      <figure class="small"><img src="assets/hodgson-studio-wimberley/plat-tourne-trait-noir-ocre.webp" alt="Thrown platter shading from cream to rust with two black brushed arcs" width="1600" height="1599"><span class="tag">From Gaye Lynn’s gallery</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>Since 1981</b>when we established a studio east of Austin, Texas</li>
+      <li><b>1985</b>our first wood fired kiln</li>
+      <li><b>2400°F</b>stoneware and porcelain, high fired to around 2400 degrees</li>
+      <li><b>Everyday safe</b>dishwasher, microwave and oven safe</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bio" id="bio">
+  <div class="wrap">
+    <div>
+      <blockquote>In 1985 we built our first wood fired kiln. <em>The effects that we achieved in wood firing continue to influence our glaze choices and surface treatments.</em></blockquote>
+      <p>We graduated from Texas A&amp;M University in 1978, and in 1981 we established a studio east of Austin. Since then we have learned through workshops, the daily practice of work in clay, and the wisdom of the generous clay community.</p>
+      <p>After 40 years in clay, what fuels our enthusiasm is what drew us to pottery in the first place: our love of function and form, our passion for the process of making pots, and the joy we find in using hand made pottery.</p>
+      <p class="sign">gaye lynn &amp; michael hodgson</p>
+    </div>
+    <div class="pins">
+      <figure class="pol p1 reveal"><img src="assets/hodgson-studio-wimberley/gaye-lynn-et-michael-hodgson.webp" alt="Gaye Lynn and Michael Hodgson smiling, both in black berets" loading="lazy"><figcaption>Gaye Lynn and Michael</figcaption></figure>
+      <figure class="pol p2 reveal"><img src="assets/hodgson-studio-wimberley/gobelets-triangulaires-cuisson-bois.webp" alt="Five wood fired triangular tumblers in ash, rust and brown tones" loading="lazy"><figcaption>Triangular tumblers</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="makers" id="gallery">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="h2">Two potters, one studio</h2>
+      <p>We use both the potter’s wheel and the slab roller in the construction of our pots. As we work together in the studio, we are able to collaborate on ideas and construction methods.</p>
+    </div>
+    <div class="pair">
+      <article class="maker m1">
+        <h3>gaye lynn hodgson</h3>
+        <p class="q">“Most of my pots are handbuilt. I incorporate surface decoration as I build the form.”</p>
+        <div class="shots reveal">
+          <figure class="a"><img src="assets/hodgson-studio-wimberley/plat-gres-cuisson-bois-traits-gris.webp" alt="Large round platter with a swirling cream ground, rust speckles and hand drawn gray lines" width="1600" height="1600" loading="lazy"></figure>
+          <figure class="b"><img src="assets/hodgson-studio-wimberley/bol-carre-stries-obliques.webp" alt="Handbuilt square bowl with oblique grooves in blond stoneware" width="1600" height="1600" loading="lazy"></figure>
+        </div>
+        <p class="lk"><a href="https://www.hodgsonstudio.com/gaye-lynn">See Gaye Lynn’s work</a></p>
+      </article>
+      <article class="maker m2">
+        <h3>michael hodgson</h3>
+        <p class="q">“Most of my work is wheel thrown; sometimes I alter the forms.”</p>
+        <div class="shots reveal">
+          <figure class="a"><img src="assets/hodgson-studio-wimberley/quatre-mugs-gres-brun.webp" alt="Four rust brown stoneware mugs with throwing ridges and varied handles" width="1600" height="1200" loading="lazy"></figure>
+          <figure class="b"><img src="assets/hodgson-studio-wimberley/pichet-feuilles-dessinees.webp" alt="Orange stoneware pitcher decorated with large leaves outlined in dark brown" width="1600" height="1600" loading="lazy"></figure>
+        </div>
+        <p class="lk"><a href="https://www.hodgsonstudio.com/michael">See Michael’s work</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="made">
+  <div class="wrap">
+    <figure class="ph reveal"><img src="assets/hodgson-studio-wimberley/theiere-gres-mouchetee.webp" alt="Round stoneware teapot with a glossy beige glaze speckled brown and wine red" width="1600" height="1200" loading="lazy"><span class="tag">Speckled stoneware teapot</span></figure>
+    <div class="txt">
+      <h2 class="h2">Durable enough for every day</h2>
+      <p>At around 2400 degrees F, the finished pots are very durable and suitable for use as dinnerware and serving pieces.</p>
+      <div class="spec">
+        <dl>
+          <dt>Clay</dt><dd>A stoneware clay body and a porcelain body</dd>
+          <dt>Glazes</dt><dd>Lead-free and food safe</dd>
+          <dt>Firing</dt><dd>High fired, to around 2400 degrees F</dd>
+          <dt>Care</dt><dd>Dishwasher, microwave and oven safe</dd>
+          <dt>In the shop</dt><dd>Plates and platters, tea ware, bowls, cups and mugs, vases, salt and pepper, incense blocks</dd>
+        </dl>
+      </div>
+      <div class="strip">
+        <figure class="reveal"><img src="assets/hodgson-studio-wimberley/plat-gres-coulures-ocre-brun.webp" alt="Round platter in sand and ochre clouded with brown, two black lines and a green drip" loading="lazy"></figure>
+        <figure class="reveal"><img src="assets/hodgson-studio-wimberley/vase-noir-texture-volcanique.webp" alt="Squat matte black vase with a lava like crackled surface" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2">Where to find our pottery</h2>
+      <p>In our studio, online, and in two Texas shops. Subscribe to our email list to hear about our annual studio show and other events where our work is available.</p>
+    </div>
+    <div class="places">
+      <div class="place studio reveal" id="visit">
+        <small>our studio</small>
+        <h3>We welcome studio visits</h3>
+        <p>Call or email for directions to 1100 dry cypress ranch rd, Wimberley.</p>
+        <div class="cta">
+          <a class="btn btn-terra" href="mailto:pottery@hodgsonstudio.com?subject=Studio%20visit">Email for directions</a>
+          <a class="btn btn-light" href="tel:+15126180646">Call (512) 618.0646</a>
+        </div>
+        <figure class="booth"><img src="assets/hodgson-studio-wimberley/stand-salon-hodgson-studio.webp" alt="The hodgson studio booth with its banner, wooden shelves and tables of pots" loading="lazy"></figure>
+      </div>
+      <div class="place">
+        <small>online</small>
+        <h3>Our secure Square storefront</h3>
+        <p>Shop for handmade pottery by Michael and Gaye Lynn Hodgson.</p>
+        <a class="more" href="https://hodgsonstudio.square.site/">Shop now</a>
+      </div>
+      <div class="place">
+        <small>Blanco, Texas</small>
+        <h3>Brieger Pottery</h3>
+        <p>This local shop on the square has a great selection of our work year round.</p>
+        <a class="more" href="http://briegerpottery.com">briegerpottery.com</a>
+      </div>
+      <div class="mail">
+        <div>
+          <b>Gruene, Texas: The Barn Pottery</b>
+          <p>Our work, along with the work of other Texas clay artists, at this pottery shop and working pottery studio.</p>
+        </div>
+        <a class="btn btn-line" href="http://www.thebarningruene.com/">Visit The Barn</a>
+      </div>
+      <div class="mail">
+        <div>
+          <b>Stay in touch!</b>
+          <p>We’ll send you email notifications announcing our annual studio show and other events where our work is available.</p>
+        </div>
+        <a class="btn btn-terra" href="https://www.hodgsonstudio.com/email">Join the mailing list</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fest" aria-label="Texas Clay Festival artwork">
+  <div class="wrap">
+    <div class="n">30+</div>
+    <p><b>Texas Clay Festival artwork</b>For thirty plus years we have designed the yearly poster and tee shirt of the festival, celebrating different artists and graphic design periods in a light hearted way.</p>
+    <a class="btn btn-light" href="https://www.hodgsonstudio.com/texas-clay-festival-artwork">See them in review</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Say hello</h2>
+      <p class="lead2">For a studio visit, a question about a piece, or directions to the studio, write or call us.</p>
+      <div class="cta">
+        <a class="btn btn-terra" href="mailto:pottery@hodgsonstudio.com">Email us</a>
+        <a class="btn btn-line" href="tel:+15126180646">Call (512) 618.0646</a>
+      </div>
+    </div>
+    <div class="card reveal">
+      <h3>michael hodgson, gaye lynn hodgson</h3>
+      <dl>
+        <dt>Email</dt><dd><a href="mailto:pottery@hodgsonstudio.com">pottery@hodgsonstudio.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+15126180646">(512) 618.0646</a></dd>
+        <dt>Studio</dt><dd>1100 dry cypress ranch rd<br>wimberley, tx 78676</dd>
+        <dt>Follow</dt><dd><a href="http://instagram.com/hodgsonstudio">Instagram</a>, <a href="https://www.facebook.com/hodgsonstudio">Facebook</a>, <a href="http://www.pinterest.com/HodgsonStudio/">Pinterest</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="name">hodgson studio</div>
+        <p>Handmade pottery by gaye lynn + michael hodgson. Stoneware and porcelain, made to be used.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:pottery@hodgsonstudio.com">pottery@hodgsonstudio.com</a></li>
+          <li><a href="tel:+15126180646">(512) 618.0646</a></li>
+          <li>1100 dry cypress ranch rd, wimberley, tx 78676</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Around the studio</h4>
+        <ul>
+          <li><a href="https://hodgsonstudio.square.site/">shop now</a></li>
+          <li><a href="https://www.hodgsonstudio.com/email">mailing list</a></li>
+          <li><a href="http://instagram.com/hodgsonstudio">Instagram</a></li>
+          <li><a href="https://www.facebook.com/hodgsonstudio">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base"><span>© hodgson studio</span><span>wimberley, tx 78676</span></div>
+  </div>
+</footer>
+<div class="proposal">Proposal by <a href="https://nicomasset.com/en">Nicolas Masset</a> for hodgson studio</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
