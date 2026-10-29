@@ -1,0 +1,456 @@
+<!doctype html>
+<!--
+PLAN (Array of Elegance, Jo Dean Sarins, White Salmon WA)
+Couleurs : gris lavande #ECE9EF (fond), minuit #1B1F2E (texte, vitrine, pied), turquoise #2A9D8F (accent : liens, filet de l'arche), rouge émail #B23A48 (touche : losanges du bandeau, prix de la pièce vedette), surface #F7F5F9, argent #CFCAD6 (filets).
+Typo : Bodoni Moda 400/500 + italique 400 pour les noms de pièces + Jost 400/500 (texte). Pas de capitales espacées.
+Héros : [nav ............................................ 309-657-2180]
+        [ligne de l'artiste            (  arche  )  portrait à l'établi, filet turquoise décalé]
+        [TITRE Bodoni                  (         )                                         ]
+        [chapeau + boutons             [ovale chat] vignette émaillée qui mord le bas de l'arche]
+Sections : bandeau de faits en ligne avec losanges rouges / VITRINE fond minuit : pièces en formats variés posées comme sur velours, nom en italique, prix, achat / Cat-As : deux broches ovales qui se chevauchent + revers en médaillon / l'artiste : grande citation + texte en colonne + photo d'atelier sous passe-partout / marque et turquoise : deux panneaux côte à côte / galeries : étiquettes de musée / contact / pied minuit.
+Revue : la vitrine n'est pas une grille d'album (zones nommées, ratios différents, pas de légende grise dessous) ; pas de mot en couleur dans les titres ; aucune numérotation ; l'audace est l'arche, le reste reste calme.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Array of Elegance · Jo Dean Sarins, handmade jewelry in White Salmon, WA</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 62V30a26 26 0 0 1 52 0v32z' fill='%231B1F2E'/%3E%3Ctext x='32' y='50' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='34' fill='%232A9D8F'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lav:#ECE9EF; --lav-2:#E1DCE6; --surface:#F7F5F9; --night:#1B1F2E; --night-2:#252A3C;
+  --teal:#2A9D8F; --teal-d:#1F7A6F; --red:#B23A48; --silver:#CFCAD6; --ink-soft:#545868;
+  --shadow:0 30px 60px -34px rgba(27,31,46,.55);
+  --shadow-s:0 16px 30px -20px rgba(27,31,46,.5);
+  --wrap:min(1200px, 100% - 40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--lav);color:var(--night);font-family:Jost,ui-sans-serif,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--teal);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:4px}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,Georgia,serif;font-weight:400;line-height:1.06;margin:0;text-wrap:balance;font-optical-sizing:auto}
+p{margin:0 0 1em}
+.wrap{width:var(--wrap);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.8em 1.6em;border-radius:999px;font-weight:500;font-size:17px;letter-spacing:.01em;text-decoration:none;line-height:1.2;text-align:center;transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,color .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--night);color:var(--surface)}
+.btn-full:hover{background:var(--teal-d)}
+.btn-line{border:1.5px solid var(--night);color:var(--night)}
+.btn-line:hover{background:var(--night);color:var(--surface)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.nowrap{white-space:nowrap}
+
+/* en-tête */
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;padding:24px 0}
+.logo{text-decoration:none;font-family:"Bodoni Moda",Didot,serif;font-size:26px;line-height:1.1}
+.logo small{display:block;font-family:Jost,sans-serif;font-size:14px;color:var(--ink-soft);margin-top:3px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:16px}
+.nav a{text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.nav a:hover{border-color:var(--teal)}
+.nav .tel{border:1.5px solid var(--night);border-radius:999px;padding:9px 18px;white-space:nowrap;font-weight:500}
+.nav .tel:hover{background:var(--night);color:var(--surface)}
+
+/* héros */
+.hero{padding:40px 0 110px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:". arch" "who arch" "title arch" "text arch" ". arch";grid-template-rows:1fr auto auto auto 1.3fr;gap:0 80px;align-items:start}
+.who{grid-area:who;font-size:17px;color:var(--ink-soft);margin:0 0 20px}
+.hero h1{grid-area:title;font-size:clamp(46px, 6.6vw, 98px);line-height:.98;letter-spacing:-.015em;font-weight:400}
+.hero-text{grid-area:text;margin-top:32px;max-width:520px}
+.lede{font-size:20px;color:#2F3344}
+.arch-wrap{grid-area:arch;position:relative;margin:0;padding:16px 16px 0 0}
+.arch-wrap::before{content:"";position:absolute;inset:0 0 40px 16px;border:1.5px solid var(--teal);border-radius:50% 50% 24px 24px / 36% 36% 24px 24px;pointer-events:none}
+.arch{position:relative;border-radius:50% 50% 24px 24px / 36% 36% 24px 24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:13/18;background:var(--lav-2)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:45% 28%}
+.gem{position:absolute;left:-54px;bottom:-34px;width:clamp(150px,15vw,214px);aspect-ratio:3/2;border-radius:50%;overflow:hidden;border:6px solid var(--lav);box-shadow:var(--shadow);transform:rotate(-7deg);background:var(--night)}
+.gem img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1.08)}
+.tag{position:absolute;right:16px;bottom:18px;background:var(--surface);color:var(--night);font-size:14px;font-weight:500;line-height:1.3;padding:9px 14px;border-radius:12px;box-shadow:0 10px 24px -14px rgba(27,31,46,.7);max-width:calc(100% - 32px)}
+
+/* bandeau de faits */
+.facts{border-top:1px solid var(--silver);border-bottom:1px solid var(--silver);padding:26px 0}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 32px}
+.facts li{display:flex;align-items:baseline;gap:12px;font-size:17px;line-height:1.4}
+.facts li::before{content:"";flex:none;width:8px;height:8px;background:var(--red);transform:rotate(45deg) translateY(-2px)}
+.facts b{font-family:"Bodoni Moda",Didot,serif;font-weight:500;font-size:19px}
+
+/* vitrine */
+.vitrine{background:var(--night);color:#E7E4EC;padding:120px 0 110px;margin-top:110px;border-radius:44px 44px 0 0}
+.v-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:64px}
+.v-head h2{font-size:clamp(40px,5vw,72px);color:#F5F2F8}
+.v-head p{color:#B9B6C4;margin:0;font-size:18px}
+.cabinet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-areas:
+  "trout trout trout trout trout trout lynx lynx lynx mag mag mag"
+  "trout trout trout trout trout trout brace brace brace mag mag mag"
+  "az az az . cat cat cat cat cat cat cat cat";gap:34px 28px;align-items:start}
+.piece{margin:0;position:relative}
+.piece .ph{border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px rgba(207,202,214,.12),0 40px 70px -40px rgba(0,0,0,.9),0 0 60px -30px rgba(42,157,143,.35);background:#000}
+.piece img{width:100%;object-fit:cover}
+.piece figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px;flex-wrap:wrap}
+.piece .nm{font-family:"Bodoni Moda",Didot,serif;font-style:italic;font-size:22px;color:#F5F2F8;line-height:1.2}
+.piece .md{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:15px;color:#A9A6B6;margin-top:2px}
+.piece .pr{font-size:17px;color:#E7E4EC;white-space:nowrap}
+.piece a.nm{text-decoration:none;border-bottom:1px solid rgba(42,157,143,.6)}
+.piece a.nm:hover{border-color:#5CC4B7}
+.p-trout{grid-area:trout}
+.p-trout img{aspect-ratio:4/3}
+.p-trout .pr{color:#F2A3AC}
+.p-lynx{grid-area:lynx}
+.p-lynx img{aspect-ratio:1/1;object-position:50% 50%}
+.p-brace{grid-area:brace}
+.p-brace img{aspect-ratio:1/1}
+.p-mag{grid-area:mag;margin-top:70px}
+.p-mag img{aspect-ratio:4/5.4;object-position:50% 40%}
+.p-az{grid-area:az}
+.p-az img{aspect-ratio:3/4;object-position:50% 45%}
+.buy{grid-area:cat;align-self:center;background:var(--night-2);border-radius:24px;padding:36px 38px;box-shadow:0 0 0 1px rgba(207,202,214,.1)}
+.buy h3{font-size:clamp(28px,2.6vw,36px);color:#F5F2F8;margin-bottom:12px}
+.buy p{color:#B9B6C4;font-size:17px}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+.cats a{font-size:15px;text-decoration:none;padding:8px 15px;border-radius:999px;border:1px solid rgba(207,202,214,.3);color:#E7E4EC;transition:border-color .3s,background-color .3s}
+.cats a:hover{border-color:#5CC4B7;background:rgba(42,157,143,.15)}
+.vitrine .btn-full{background:var(--teal);color:#0F1320}
+.vitrine .btn-full:hover{background:#5CC4B7}
+.vitrine .btn-line{border-color:#CFCAD6;color:#E7E4EC}
+.vitrine .btn-line:hover{background:#E7E4EC;color:var(--night)}
+
+/* Cat-As */
+.catas{padding:130px 0 120px}
+.cat-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center}
+.ovals{position:relative;min-height:0;padding:20px 0 120px}
+.oval{border-radius:50%;overflow:hidden;box-shadow:var(--shadow);background:#000;border:5px solid var(--surface)}
+.oval img{width:100%;aspect-ratio:3/2;object-fit:cover;transform:scale(1.06)}
+.oval.o1{width:78%;transform:rotate(-5deg)}
+.oval.o2{width:64%;position:absolute;right:0;bottom:20px;transform:rotate(6deg)}
+.flip{position:absolute;left:4%;bottom:0;width:clamp(110px,11vw,150px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid var(--lav);box-shadow:var(--shadow-s);z-index:2}
+.flip img{width:100%;height:100%;object-fit:cover}
+.sec-title{font-size:clamp(38px,4.6vw,64px)}
+.sec-sub{font-size:19px;color:var(--ink-soft);margin:20px 0 0}
+.cat-quote{font-family:"Bodoni Moda",Didot,serif;font-style:italic;font-size:clamp(24px,2.4vw,31px);line-height:1.3;margin:28px 0;padding:22px 26px;background:var(--surface);border-radius:20px;box-shadow:var(--shadow-s)}
+.cat-meta{font-size:16px;color:var(--ink-soft)}
+
+/* artiste */
+.artist{background:var(--lav-2);padding:120px 0}
+.pull{font-family:"Bodoni Moda",Didot,serif;font-size:clamp(40px,6vw,88px);line-height:1;margin:0 0 56px;max-width:980px;letter-spacing:-.01em;text-wrap:balance}
+.art-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.passe{background:var(--surface);padding:16px 16px 0;border-radius:16px;box-shadow:var(--shadow);transform:rotate(-1.5deg)}
+.passe img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.passe figcaption{font-size:15px;color:var(--ink-soft);padding:12px 4px 14px;line-height:1.4}
+.cols{columns:2 300px;column-gap:48px}
+.cols p{break-inside:avoid}
+.cols p:first-child::first-letter{font-family:"Bodoni Moda",Didot,serif;float:left;font-size:72px;line-height:.8;padding:8px 10px 0 0;color:var(--teal-d)}
+
+/* marque et turquoise */
+.mark{padding:120px 0}
+.mark-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:stretch}
+.panel{border-radius:28px;padding:44px 46px}
+.panel h2{font-size:clamp(30px,3.2vw,44px);margin-bottom:20px}
+.panel.story{background:var(--surface);box-shadow:var(--shadow-s)}
+.panel.story p{color:#3A3E4E}
+.panel.turq{background:#D7ECE8;display:flex;flex-direction:column}
+.turq-pic{width:min(280px,100%);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(2deg);margin:4px 0 26px;align-self:flex-start}
+.turq-pic img{aspect-ratio:1119/935;object-fit:cover;width:100%}
+.panel.turq p{color:#33424A}
+.panel.turq a{color:var(--teal-d);font-weight:500;text-underline-offset:4px}
+
+/* galeries */
+.galleries{padding:0 0 120px}
+.g-head{display:flex;justify-content:space-between;align-items:end;gap:20px 40px;flex-wrap:wrap;margin-bottom:36px}
+.g-head p{margin:0;color:var(--ink-soft);max-width:420px}
+.labels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.label{background:var(--surface);border-radius:6px 6px 22px 6px;padding:26px 28px;box-shadow:0 18px 34px -26px rgba(27,31,46,.6)}
+.label h3{font-size:25px;margin-bottom:10px;line-height:1.15}
+.label p{margin:0;color:var(--ink-soft);font-size:16.5px}
+
+/* contact */
+.contact{background:var(--surface);border-radius:36px;padding:clamp(34px,6vw,80px);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center;box-shadow:var(--shadow);margin-bottom:110px}
+.contact h2{font-size:clamp(38px,4.6vw,62px)}
+.c-lines{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.c-lines li{display:grid;gap:2px}
+.c-lines span{font-size:15px;color:var(--ink-soft)}
+.c-lines a,.c-lines b{font-family:"Bodoni Moda",Didot,serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.2;text-decoration:none;word-break:break-word}
+.c-lines a:hover{color:var(--teal-d);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+
+/* pied */
+.foot{background:var(--night);color:#D9D6E0;padding:76px 0 0}
+.foot-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px;padding-bottom:60px}
+.foot .logo{color:#F5F2F8}
+.foot .logo small{color:#A9A6B6}
+.foot h3{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#5CC4B7;margin-bottom:12px}
+.foot p,.foot li{font-size:17px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-underline-offset:4px;text-decoration-color:rgba(217,214,224,.4)}
+.foot a:hover{color:#FFF}
+.foot .blurb{color:#A9A6B6;max-width:400px;margin-top:16px}
+.proposal{border-top:1px solid rgba(217,214,224,.14);padding:18px 20px;text-align:center;font-size:14px;color:#8E8B9B}
+.proposal a{color:#C4C1CE}
+
+.js .reveal{opacity:0;translate:0 26px;transition:opacity 1s ease,translate 1s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;translate:0 0}
+
+@media (max-width:1020px){
+  .cat-grid,.art-grid,.mark-grid,.contact,.v-head{grid-template-columns:minmax(0,1fr)}
+  .v-head{gap:20px}
+  .cabinet{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"trout trout" "lynx mag" "brace mag" "az az" "cat cat"}
+  .p-mag{margin-top:0}
+  .p-az{max-width:420px}
+  .labels{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ovals{max-width:620px}
+  .passe{max-width:520px}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .hero{padding:16px 0 80px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"who" "title" "arch" "text";grid-template-rows:none;gap:0}
+  .who{margin:14px 0 14px}
+  .arch-wrap{margin:30px 0 0 auto;width:84%}
+  .gem{left:-14%;bottom:-26px;width:124px;border-width:5px}
+  .tag{font-size:13.5px;right:12px;bottom:14px;padding:8px 12px;max-width:calc(100% - 96px)}
+  .hero-text{margin-top:58px}
+  .lede{font-size:19px}
+  .vitrine{margin-top:72px;padding:84px 0;border-radius:30px 30px 0 0}
+  .catas,.artist,.mark{padding:84px 0}
+  .galleries{padding-bottom:84px}
+  .panel{padding:32px 26px}
+  .labels{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .buy{padding:28px 24px}
+  .contact{margin-bottom:84px}
+}
+@media (max-width:520px){
+  .cabinet{grid-template-areas:"trout trout" "lynx brace" "mag mag" "az az" "cat cat";gap:28px 16px}
+  .p-mag{max-width:340px}
+  .piece .nm{font-size:20px}
+  .facts ul{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .btns .btn{width:100%}
+  .nav{gap:4px 20px}
+  .top{padding:16px 0}
+  .ovals{padding-bottom:100px}
+  .p-az{max-width:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="#top">Array of Elegance<small>Jo Dean Sarins, jewelry artist</small></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#pieces">The pieces</a>
+    <a href="#about">About</a>
+    <a href="#galleries">Find me here</a>
+    <a href="#contact">Contact</a>
+    <a class="tel" href="tel:+13096572180">309-657-2180</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="h">
+    <div class="hero-grid">
+      <p class="who">Jo Dean Sarins, metal artist, enamelist and lapidarist in White Salmon, Washington</p>
+      <h1 id="h">Unique hand made jewelry</h1>
+      <figure class="arch-wrap">
+        <div class="arch">
+          <img src="assets/array-of-elegance-white-salmon/artiste-sciant-argent-etabli.webp" alt="Jo Dean Sarins at her jeweler’s bench, saw in hand, cutting a small piece of silver" width="1067" height="1600" fetchpriority="high">
+          <figcaption class="tag">At the bench, jeweler’s saw in hand</figcaption>
+        </div>
+        <div class="gem"><img src="assets/array-of-elegance-white-salmon/broche-chat-cloisonne-yeux-verts.webp" alt="Cloisonné enamel cat brooch with green eyes, set in sterling silver" width="1600" height="1066"></div>
+      </figure>
+      <div class="hero-text">
+        <p class="lede">My enameled works are small pieces of abstract art or larger cloisonné pieces. Each is fabricated by hand, one-of-a-kind, and set in gold or sterling silver as wearable art.</p>
+        <div class="btns">
+          <a class="btn btn-full" href="#pieces">See the pieces</a>
+          <a class="btn btn-line" href="tel:+13096572180">Call 309-657-2180</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts wrap">
+    <ul>
+      <li><span><b>Cloisonné</b> on fine silver, set in sterling</span></li>
+      <li><span><b>Vintage turquoise</b>, stones over 20 years up to 100 years</span></li>
+      <li><span><b>Signed</b> with my maker’s mark, an Afghan dog</span></li>
+      <li><span><b>Three galleries</b> in Washington carry my work</span></li>
+    </ul>
+  </div>
+
+  <section class="vitrine" id="pieces" aria-labelledby="pieces-h">
+    <div class="wrap">
+      <div class="v-head">
+        <h2 id="pieces-h">Enamel, silver and stone</h2>
+        <p>Cloisonné animals, enamels, turquoise and lapidary work, each one-of-a-kind. The pieces are for sale in the shop on my site.</p>
+      </div>
+      <div class="cabinet">
+        <figure class="piece p-trout">
+          <div class="ph reveal"><img src="assets/array-of-elegance-white-salmon/broche-cloisonne-truite-arc-en-ciel-citrine.webp" alt="Cloisonné rainbow trout leaping under a silver branch set with a faceted citrine" width="1600" height="1200" loading="lazy"></div>
+          <figcaption><span><a class="nm" href="https://www.arrayofelegance.com/gallery-TIVnx/p/rainbow-trout">Rainbow Trout</a><span class="md">Cloisonné with a bright citrine, brooch and pendant, 2" x 2"</span></span><span class="pr">$595</span></figcaption>
+        </figure>
+        <figure class="piece p-lynx">
+          <div class="ph reveal"><img src="assets/array-of-elegance-white-salmon/broche-cloisonne-lynx-canadien.webp" alt="Cloisonné Canadian lynx face on an iridescent green ground, in a rounded silver bezel" width="1600" height="1200" loading="lazy"></div>
+          <figcaption><span><span class="nm">Canadian Lynx</span><span class="md">Cloisonné, sterling silver</span></span><span class="pr">$570</span></figcaption>
+        </figure>
+        <figure class="piece p-brace">
+          <div class="ph reveal"><img src="assets/array-of-elegance-white-salmon/bracelet-cloisonne-medaillons-email.webp" alt="Bracelet of seven round cloisonné enamel links in silver" width="1600" height="1349" loading="lazy"></div>
+          <figcaption><span><span class="nm">Cloisonné bracelet</span><span class="md">Seven enameled links</span></span></figcaption>
+        </figure>
+        <figure class="piece p-mag">
+          <div class="ph reveal"><img src="assets/array-of-elegance-white-salmon/pendentif-cloisonne-magnolia-perle.webp" alt="Cloisonné magnolia pendant in a fan-shaped silver setting, a pearl hanging below" width="1228" height="1536" loading="lazy"></div>
+          <figcaption><span><span class="nm">Magnolia</span><span class="md">Cloisonné pendant, pearl drop</span></span><span class="pr">$450</span></figcaption>
+        </figure>
+        <figure class="piece p-az">
+          <div class="ph reveal"><img src="assets/array-of-elegance-white-salmon/collier-aztec-summer-email-sur-cuivre.webp" alt="Aztec Summer necklace: enamel on copper in a stepped silver setting" width="1199" height="1600" loading="lazy"></div>
+          <figcaption><span><span class="nm">Aztec Summer</span><span class="md">Necklace</span></span></figcaption>
+        </figure>
+        <div class="buy">
+          <h3>How to buy a piece</h3>
+          <p>Open the shop, pick a category, then add the piece to your cart. A question, or a special order? Write or call me.</p>
+          <div class="cats" aria-label="Shop categories">
+            <a href="https://www.arrayofelegance.com/gallery-TIVnx/cloisonn-and-enamels">Cloisonné and enamels</a>
+            <a href="https://www.arrayofelegance.com/gallery-TIVnx/turquoise-jewelry">Turquoise jewelry</a>
+            <a href="https://www.arrayofelegance.com/gallery-TIVnx/cat-as-jewelry">Cat-As Jewelry</a>
+          </div>
+          <div class="btns">
+            <a class="btn btn-full" href="https://www.arrayofelegance.com/gallery-TIVnx">Open the shop</a>
+            <a class="btn btn-line" href="mailto:arrayofelegance@att.net?subject=A%20question%20about%20a%20piece">Email me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catas wrap" id="cats" aria-labelledby="cats-h">
+    <div class="cat-grid">
+      <div class="ovals">
+        <div class="oval o1 reveal"><img src="assets/array-of-elegance-white-salmon/broche-chat-cloisonne-yeux-bleus.webp" alt="Sebastian: cloisonné enamel cat face with big blue eyes, oval brooch" width="1600" height="1066" loading="lazy"></div>
+        <div class="oval o2 reveal"><img src="assets/array-of-elegance-white-salmon/broche-chat-cloisonne-yeux-verts.webp" alt="Francis: cloisonné enamel tabby cat face with green eyes, oval brooch" width="1600" height="1066" loading="lazy"></div>
+        <div class="flip"><img src="assets/array-of-elegance-white-salmon/broche-cat-as-revers-recadre.webp" alt="The back of a cat brooch: a blue enameled cat seen from behind, a small stone under the tail, stamped Sterling" width="720" height="720" loading="lazy"></div>
+      </div>
+      <div>
+        <h2 class="sec-title" id="cats-h">Cat-As Jewelry</h2>
+        <p class="sec-sub">Fine silver cloisonné enamel of just a sweet kitty’s beautiful eyes and nose, set in sterling silver as a brooch. Flip her over and her Cat-As has a CZ under her enameled tail.</p>
+        <p class="cat-quote">“If you want a personalized kitty, I can do that too!!”</p>
+        <p class="cat-meta">Francis, Sebastian and Odessa, 1 ¾ x 1 ¼", $265 each.</p>
+        <div class="btns" style="margin-top:24px">
+          <a class="btn btn-full" href="mailto:arrayofelegance@att.net?subject=A%20personalized%20kitty">Ask for your own kitty</a>
+          <a class="btn btn-line" href="https://www.arrayofelegance.com/gallery-TIVnx/cat-as-jewelry">See the Cat-As pieces</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="artist" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 class="pull" id="about-h">“Then I took a jewelry class. I was Hooked!!”</h2>
+      <div class="art-grid">
+        <figure class="passe reveal" style="margin:0">
+          <img src="assets/array-of-elegance-white-salmon/atelier-bijouterie-etablis-outils.webp" alt="The jewelry studio: benches with stakes, mallets and mandrels, a drill press and a small kiln" width="1600" height="1200" loading="lazy">
+          <figcaption>The studio: stakes, mallets, mandrels, a drill press and a small kiln.</figcaption>
+        </figure>
+        <div class="cols">
+          <p>I have always been interested in creating art. Since college I have worked with china paints, ceramics, watercolors, acrylics and oils, painted in a folk art style from the early 1970’s through the 1980’s, taught acrylic painting at a junior college and showed at juried art shows.</p>
+          <p>My love of jewelry started with collecting Swarovski pins, then vintage jewelry. I enjoyed restoring those pieces so much, and the collection grew so large, that I started my own business, Array Of Elegance, selling in antique stores.</p>
+          <p>I took all the jewelry classes offered at the Peoria Art Guild, one of which was enameling: the fusing of vitreous glass to a metal surface, either gold, silver or copper. It combines science and art, which works well for me, with a masters degree in science and a love of working with my hands.</p>
+          <p>Today my style is changing. I still love the glitz, I still add sparkly gems to my jewelry, however I am going smaller. My next challenge is honing my cloisonné skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mark wrap" aria-label="Maker’s mark and vintage turquoise">
+    <div class="mark-grid">
+      <div class="panel story">
+        <h2>Signed with an Afghan dog</h2>
+        <p>All pieces are signed and authenticated with my maker’s mark, guaranteeing that you have purchased an original piece of my art jewelry.</p>
+        <p>Years ago, a psychic reader foretold of a woman wearing a feather boa and leading an Afghan dog. As we left, I whispered to Mom that the man I had just started dating owned two Erte serigraphs of exactly that woman. I married the man, Juris. The psychic was right!</p>
+        <p style="margin:0">Later, I had an Afghan dog tattooed on my ankle, and it became the mark on my jewelry.</p>
+      </div>
+      <div class="panel turq">
+        <div class="turq-pic reveal"><img src="assets/array-of-elegance-white-salmon/pendentif-turquoise-ancienne-argent-texture.webp" alt="Vintage turquoise pendant: an oval natural turquoise cabochon in a beaded silver bezel on a textured silver plate" width="1119" height="935" loading="lazy"></div>
+        <h2>Vintage turquoise</h2>
+        <p>Like this pendant: hand cut from a turquoise nodule, a natural cabochon set in textured sterling silver. Vintage refers to stones over 20 years, up to 100 years.</p>
+        <p style="margin:0"><a href="https://www.arrayofelegance.com/gallery-TIVnx/turquoise-jewelry">See the turquoise jewelry</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="galleries wrap" id="galleries" aria-labelledby="gal-h">
+    <div class="g-head">
+      <h2 class="sec-title" id="gal-h">Galleries I can be found at</h2>
+      <p>Where to see the work in person.</p>
+    </div>
+    <div class="labels">
+      <div class="label"><h3>Maryhill Museum</h3><p>35 Maryhill Dr.<br>Goldendale, WA 98620</p></div>
+      <div class="label"><h3>Carson Art Garage</h3><p>962 Wind River Road<br>Carson, Washington</p></div>
+      <div class="label"><h3>Columbia Gorge Museum</h3><p>990 SW Rock Creek Drive<br>Stevenson, WA</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact" aria-labelledby="contact-h">
+    <div class="contact">
+      <div>
+        <h2 id="contact-h">Have a question? Get in touch.</h2>
+        <p class="sec-sub">Thanks for taking the time to contact me! I do my best to respond quickly, but it could take 1 to 2 business days to get back to you.</p>
+      </div>
+      <ul class="c-lines">
+        <li><span>Call</span><a href="tel:+13096572180">309-657-2180</a></li>
+        <li><span>Email</span><a href="mailto:arrayofelegance@att.net">arrayofelegance@att.net</a></li>
+        <li><span>Address</span><b>15 Osborne Road, White Salmon, WA 98672</b></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top">Array of Elegance<small>Jo Dean Sarins, jewelry artist</small></a>
+      <p class="blurb">Metal artist, enamelist and lapidarist. Unique hand made jewelry, signed with an Afghan dog.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>15 Osborne Road<br>White Salmon, WA 98672</p>
+      <ul>
+        <li><a href="tel:+13096572180">309-657-2180</a></li>
+        <li><a href="mailto:arrayofelegance@att.net">arrayofelegance@att.net</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="https://www.arrayofelegance.com/gallery-TIVnx">All pieces</a></li>
+        <li><a href="https://www.arrayofelegance.com/gallery-TIVnx/cloisonn-and-enamels">Cloisonné and enamels</a></li>
+        <li><a href="https://www.arrayofelegance.com/gallery-TIVnx/turquoise-jewelry">Turquoise jewelry</a></li>
+        <li><a href="https://www.arrayofelegance.com/gallery-TIVnx/cat-as-jewelry">Cat-As Jewelry</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposal">Proposal by Nicolas Masset for Array of Elegance, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

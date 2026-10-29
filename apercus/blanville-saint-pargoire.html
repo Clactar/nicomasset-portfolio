@@ -1,0 +1,537 @@
+<!doctype html>
+<!--
+PLAN · Domaine de Blanville, « craie et barrique », registre grand domaine, sobre
+Couleurs : craie froide #ECEDEA (fond), craie claire #F6F6F3 (cartes posées), graphite boisé #24201C (encre, section sombre), graphite doux #4A443E (texte courant), grenat #7B2136 (boutons, filets, liens ; rare).
+Typo : Cormorant 500 (titres, grands corps, italique réservé aux noms de gammes), Manrope 400/500/600 (texte, boutons, légendes). Pas de majuscules espacées, pas de sur-titres.
+Héros :  ┌──────────── photo du prélèvement à la pipette, pleine largeur utile, r 24 ─────────────┐
+         │                                                       [étiquette sur la photo]    │
+         ├──────────────────────┐                                                            │
+         │ carte claire : titre │ ───────────────────────────────────────────────────────────┘  (au téléphone : carte sous la photo)
+         └──────────────────────┘
+Sections : faits (rangée à filets fins) · famille (texte 5 col. | photo d'équipe 7 col. + légende des noms) · deux métiers (deux colonnes séparées d'un filet) · nos domaines (index en lignes, puis Château Haut-Blanville photo barrique | texte, puis bloc Les Créations à part) · savoir-faire en graphite (liste des pratiques | mosaïque brebis + réfractomètre) · oenotourisme (texte + carte des conditions | deux vigneronnes) · location (photo du Mas en bandeau, texte posé) · contact (panneau en trois colonnes).
+Revue contre les défauts génériques : ni crème ni terre cuite (craie froide + grenat), pas de cartes identiques en rangée (index en lignes), pas de numérotation (la visite en trois temps est écrite en phrase), pas de « → », italique limité aux noms de gammes.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine de Blanville, grands vins du Languedoc à Saint-Pargoire</title>
+<meta name="description" content="Domaine familial du Languedoc en agriculture biologique depuis 1997 : Château Haut-Blanville, Domaine des Celtis, Domaine des 8 Lunes, Les Créations by Blanville, oenotourisme.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237B2136'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23ECEDEA'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --craie:#ECEDEA;
+  --craie-claire:#F6F6F3;
+  --craie-sombre:#DEDFDA;
+  --graphite:#24201C;
+  --graphite-doux:#4A443E;
+  --grenat:#7B2136;
+  --grenat-fonce:#5E1828;
+  --sur-graphite:#ECEDEA;
+  --sur-graphite-doux:#BDB8B0;
+  --filet:rgba(36,32,28,.16);
+  --ombre:0 34px 64px -36px rgba(36,32,28,.55);
+  --ombre-courte:0 20px 40px -28px rgba(36,32,28,.5);
+  --titre:'Cormorant',Georgia,serif;
+  --texte:'Manrope',ui-sans-serif,sans-serif;
+  --page:min(1200px, 100% - 2*clamp(20px,4vw,40px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--craie);color:var(--graphite);font-family:var(--texte);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+::selection{background:var(--grenat);color:var(--craie-claire)}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--grenat);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--titre);font-weight:500;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0}
+.page{width:var(--page);margin-inline:auto}
+.prix{white-space:nowrap}
+
+/* en-tête */
+.entete{width:var(--page);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px 32px;padding:22px 0;flex-wrap:wrap}
+.marque{text-decoration:none;font-family:var(--titre);font-size:30px;font-weight:600;line-height:1;letter-spacing:.01em}
+.marque small{display:block;font-family:var(--texte);font-size:14px;font-weight:500;letter-spacing:0;color:var(--graphite-doux);margin-top:6px}
+.entete nav{display:flex;align-items:center;gap:8px 28px;flex-wrap:wrap}
+.entete nav a{text-decoration:none;font-weight:500;font-size:16px}
+.entete nav a:hover{color:var(--grenat)}
+.entete .boutique{border-radius:999px;padding:10px 20px;box-shadow:inset 0 0 0 1.5px var(--graphite);font-weight:600;transition:background .25s,color .25s}
+.entete .boutique:hover{background:var(--graphite);color:var(--craie-claire)}
+
+/* boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--grenat);color:var(--craie-claire)}
+.btn-plein:hover{background:var(--grenat-fonce)}
+.btn-contour{box-shadow:inset 0 0 0 1.5px var(--graphite);color:var(--graphite)}
+.btn-contour:hover{background:var(--graphite);color:var(--craie-claire)}
+.sombre .btn-contour{box-shadow:inset 0 0 0 1.5px var(--sur-graphite);color:var(--sur-graphite)}
+.sombre .btn-contour:hover{background:var(--sur-graphite);color:var(--graphite)}
+.lien{font-weight:600;color:var(--grenat);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
+.lien:hover{color:var(--grenat-fonce)}
+
+/* photos */
+.ph{position:relative;margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);background:var(--craie-sombre)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(246,246,243,.94);color:var(--graphite);font-size:14.5px;font-weight:600;line-height:1.3;padding:8px 14px;border-radius:10px;max-width:calc(100% - 32px)}
+.etiquette.haut{bottom:auto;top:16px;left:auto;right:16px}
+.js .apparait{opacity:0;transform:scale(.985);transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+/* héros */
+.heros{position:relative;padding-top:clamp(4px,1.5vw,16px)}
+.heros-photo{border-radius:24px;aspect-ratio:1200 / 640;box-shadow:0 50px 90px -46px rgba(36,32,28,.7)}
+.heros-photo img{object-position:62% 40%}
+.heros-carte{position:relative;z-index:2;width:min(620px,100%);margin:-250px 0 0 clamp(0px,3vw,40px);background:var(--craie-claire);border-radius:22px;padding:40px 44px 40px;box-shadow:var(--ombre)}
+.heros h1{font-size:clamp(46px,6vw,84px);line-height:.98;letter-spacing:-.01em}
+.heros .chapo{font-size:18.5px;color:var(--graphite-doux);margin:20px 0 28px;max-width:30em}
+
+/* faits */
+.faits{margin:clamp(48px,6vw,72px) auto 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.faits div{padding:24px 22px 26px 0}
+.faits div+div{padding-left:22px;border-left:1px solid var(--filet)}
+.faits dt{font-family:var(--titre);font-size:36px;font-weight:600;line-height:1;color:var(--grenat)}
+.faits dd{margin:10px 0 0;font-size:15.5px;line-height:1.45;color:var(--graphite-doux);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+
+/* sections */
+section{scroll-margin-top:20px}
+.bloc{padding-top:clamp(80px,10vw,136px)}
+.h2{font-size:clamp(38px,4.6vw,62px)}
+.texte{color:var(--graphite-doux)}
+.texte p+p{margin-top:16px}
+
+/* famille */
+.famille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,80px);align-items:start}
+.famille .texte{margin-top:26px}
+.equipe{margin-top:70px}
+.equipe .ph{aspect-ratio:16 / 9;border-radius:18px}
+.equipe .ph img{object-position:50% 45%}
+.noms{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15.5px;color:var(--graphite-doux)}
+.noms strong{color:var(--graphite);font-weight:600}
+.noms .intro{width:100%;font-weight:500}
+
+/* deux métiers */
+.metiers{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:clamp(64px,8vw,104px);background:var(--craie-claire);border-radius:24px;box-shadow:var(--ombre-courte)}
+.metiers div{padding:clamp(28px,4vw,52px)}
+.metiers div+div{border-left:1px solid var(--filet)}
+.metiers h3{font-size:clamp(32px,3.4vw,44px);font-style:italic;color:var(--grenat)}
+.metiers p{margin-top:14px;color:var(--graphite-doux)}
+
+/* domaines */
+.index{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--graphite)}
+.index li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,2fr);gap:10px 32px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--filet)}
+.index h3{font-size:clamp(28px,2.8vw,36px)}
+.index p{color:var(--graphite-doux)}
+.index .action{justify-self:end;text-align:right}
+.index .action span{color:var(--graphite-doux);font-size:15.5px}
+
+.chateau{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,80px);align-items:center;margin-top:clamp(64px,8vw,104px)}
+.chateau .ph{aspect-ratio:4 / 5;border-radius:20px;max-height:640px}
+.chateau .ph img{object-position:58% 50%}
+.chateau h3,.creations h3{font-size:clamp(36px,4vw,54px)}
+.chateau .texte{margin-top:18px}
+.sous-gammes{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 28px}
+.sous-gammes span{font-family:var(--titre);font-style:italic;font-size:22px;padding:6px 18px;border-radius:999px;background:var(--craie-claire);box-shadow:var(--ombre-courte)}
+
+.creations{margin-top:clamp(64px,8vw,104px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:0;align-items:center}
+.creations-carte{background:var(--craie-claire);border-radius:24px;padding:clamp(30px,4.5vw,60px);padding-right:clamp(30px,8vw,120px);box-shadow:var(--ombre);grid-column:1;grid-row:1}
+.creations-carte .accroche{font-family:var(--titre);font-style:italic;font-size:clamp(26px,2.6vw,34px);line-height:1.15;color:var(--grenat);margin:12px 0 20px}
+.creations .ph{grid-column:2;grid-row:1;margin-left:-70px;aspect-ratio:3 / 4;border-radius:20px;border:8px solid var(--craie);z-index:2}
+
+/* savoir-faire, section sombre */
+.sombre{background:var(--graphite);color:var(--sur-graphite);margin-top:clamp(80px,10vw,136px);padding:clamp(72px,9vw,120px) 0}
+.sombre .texte{color:var(--sur-graphite-doux)}
+.savoir{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,80px);align-items:start}
+.savoir .texte{margin-top:22px}
+.pratiques{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 28px}
+.pratiques li{padding:14px 0;border-top:1px solid rgba(236,237,234,.14);color:var(--sur-graphite-doux);font-size:16px;line-height:1.5}
+.pratiques strong{display:block;color:var(--sur-graphite);font-weight:600}
+.mosaique{position:relative;padding-bottom:150px}
+.mosaique .brebis{aspect-ratio:4 / 3;border-radius:20px;box-shadow:0 40px 70px -36px rgba(0,0,0,.75)}
+.mosaique .refracto{position:absolute;left:-28px;bottom:0;width:min(230px,46%);aspect-ratio:1;border-radius:16px;border:6px solid var(--graphite);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.mosaique .refracto img{object-position:38% 40%}
+.chai{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:center}
+.chai .ph{aspect-ratio:3 / 4;border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.chai .ph img{object-position:62% 50%}
+.chai blockquote{margin:0;font-family:var(--titre);font-size:clamp(24px,2.4vw,30px);line-height:1.25;color:var(--sur-graphite)}
+
+/* oenotourisme */
+.oeno{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px,6vw,80px);align-items:start}
+.oeno .texte{margin-top:22px}
+.conditions{margin-top:30px;background:var(--craie-claire);border-radius:20px;padding:26px 28px;box-shadow:var(--ombre-courte)}
+.conditions h3{font-size:30px}
+.conditions p{color:var(--graphite-doux);margin-top:10px}
+.conditions .gros{font-family:var(--titre);font-size:40px;line-height:1;color:var(--grenat);font-weight:600;margin-top:14px}
+.conditions .btns{margin-top:22px}
+.oeno-photos{position:relative}
+.oeno-photos .vigneronnes{aspect-ratio:4 / 5;border-radius:22px}
+.oeno-photos .vigneronnes img{object-position:35% 50%}
+.oeno-photos .gratuite{position:absolute;left:-36px;bottom:40px;max-width:min(300px,80%);background:var(--grenat);color:var(--craie-claire);border-radius:18px;padding:20px 22px;box-shadow:var(--ombre);font-size:16px;line-height:1.45}
+.oeno-photos .gratuite strong{display:block;font-family:var(--titre);font-size:28px;font-weight:600;line-height:1.05;margin-bottom:6px}
+
+/* location */
+.location{margin-top:clamp(80px,10vw,136px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end}
+.location .ph{grid-column:1 / span 9;grid-row:1;aspect-ratio:16 / 9;border-radius:24px}
+.location .ph img{object-position:50% 60%}
+.location-carte{grid-column:8 / -1;grid-row:1;margin-bottom:-56px;position:relative;z-index:2;background:var(--craie-claire);border-radius:22px;padding:32px 34px;box-shadow:var(--ombre)}
+.location-carte h2{font-size:clamp(32px,3.4vw,44px)}
+.location-carte p{color:var(--graphite-doux);margin-top:14px}
+.location-carte .lien{display:inline-block;margin-top:16px}
+
+/* contact */
+.contact{margin-top:40px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:0;background:var(--craie-claire);border-radius:26px;box-shadow:var(--ombre)}
+.contact > div{padding:clamp(26px,3.5vw,44px)}
+.contact > div+div{border-left:1px solid var(--filet)}
+.contact h3{font-size:28px;margin-bottom:12px}
+.contact p{color:var(--graphite-doux)}
+.contact .tel{display:inline-block;font-family:var(--titre);font-size:clamp(32px,3.2vw,42px);font-weight:600;line-height:1.05;text-decoration:none;color:var(--grenat)}
+.contact .tel:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
+.contact .mail{display:inline-block;margin-top:8px;font-weight:600;overflow-wrap:anywhere;text-decoration-color:var(--grenat);text-underline-offset:5px}
+.contact .btns{margin-top:24px}
+
+/* pied */
+.pied{background:var(--graphite);color:var(--sur-graphite);margin-top:clamp(80px,10vw,136px);padding:64px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:36px}
+.pied .nom{font-family:var(--titre);font-size:34px;font-weight:600;line-height:1}
+.pied p,.pied li{color:var(--sur-graphite-doux);font-size:16px}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:600;color:var(--sur-graphite);margin-bottom:10px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{color:var(--sur-graphite);text-decoration-color:rgba(236,237,234,.4);text-underline-offset:4px}
+.legal{margin-top:44px;padding-top:22px;border-top:1px solid rgba(236,237,234,.14);font-size:14.5px;color:var(--sur-graphite-doux)}
+.proposition{background:#181512;color:var(--sur-graphite-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-graphite)}
+
+/* tablette */
+@media (max-width:1060px){
+  .faits{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits div:nth-child(4){padding-left:0;border-left:0}
+  .faits div:nth-child(n+4){border-top:1px solid var(--filet)}
+  .location .ph{grid-column:1 / -1}
+  .location-carte{grid-column:2 / -1;grid-row:2;margin:-80px 0 0}
+}
+@media (max-width:900px){
+  .famille,.savoir,.oeno,.chateau{grid-template-columns:minmax(0,1fr)}
+  .equipe{margin-top:0}
+  .chateau .ph{aspect-ratio:4 / 3}
+  .creations{grid-template-columns:minmax(0,1fr)}
+  .creations-carte{padding-right:clamp(30px,4.5vw,60px)}
+  .creations .ph{grid-column:1;grid-row:2;margin:-30px 24px 0 auto;width:min(320px,70%);aspect-ratio:4 / 5}
+  .index li{grid-template-columns:minmax(0,1fr)}
+  .index .action{justify-self:start;text-align:left}
+  .oeno-photos .gratuite{left:16px}
+  .contact{grid-template-columns:minmax(0,1fr)}
+  .contact > div+div{border-left:0;border-top:1px solid var(--filet)}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* téléphone */
+@media (max-width:640px){
+  .entete{padding:16px 0 12px;gap:10px 20px}
+  .entete nav .lien-section{display:none}
+  .heros-photo{aspect-ratio:1;border-radius:20px}
+  .heros-photo img{object-position:74% 40%}
+  .heros-carte{margin:-36px 12px 0;width:auto;padding:28px 24px 28px}
+  .heros .chapo{font-size:17.5px}
+  .faits{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faits div,.faits div+div{padding:20px 14px 20px 0;border-left:0}
+  .faits div:nth-child(even){padding-left:16px;border-left:1px solid var(--filet)}
+  .faits div:nth-child(n+3){border-top:1px solid var(--filet)}
+  .faits div:last-child{grid-column:1 / -1;padding-left:0;border-left:0}
+  .faits dt{font-size:32px}
+  .faits dd{font-size:16px}
+  .metiers{grid-template-columns:minmax(0,1fr)}
+  .metiers div+div{border-left:0;border-top:1px solid var(--filet)}
+  .pratiques{grid-template-columns:minmax(0,1fr)}
+  .mosaique{padding-bottom:110px}
+  .mosaique .refracto{left:10px}
+  .chai{grid-template-columns:minmax(0,1fr)}
+  .chai .ph{aspect-ratio:4 / 3}
+  .oeno-photos .vigneronnes{aspect-ratio:4 / 5}
+  .oeno-photos .gratuite{position:relative;left:auto;bottom:auto;margin:-60px 16px 0;max-width:none}
+  .location .ph{aspect-ratio:4 / 3}
+  .location-carte{grid-column:1 / -1;margin:-40px 12px 0;padding:26px 24px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .noms,.pratiques li,.pied p,.pied li{font-size:16px}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+  .etiquette{font-size:14px;left:12px;bottom:12px}
+  .etiquette.haut{left:auto;right:12px;top:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <a class="marque" href="#haut">Blanville<small>Grands vins du Languedoc</small></a>
+  <nav aria-label="Navigation principale">
+    <a class="lien-section" href="#domaine">Le domaine</a>
+    <a class="lien-section" href="#domaines">Nos domaines</a>
+    <a class="lien-section" href="#oenotourisme">Oenotourisme</a>
+    <a class="lien-section" href="#location">Location</a>
+    <a href="#contact">Contact</a>
+    <a class="boutique" href="https://www.blanville.boutique/">Boutique</a>
+  </nav>
+</header>
+
+<main id="haut">
+  <section class="heros page" aria-labelledby="titre">
+    <figure class="ph heros-photo apparait">
+      <img src="assets/blanville-saint-pargoire/vigneronne-preleve-le-vin-a-la-pipette-au-chai.webp" width="1600" height="1067" alt="Dans le chai à barriques au mur de pierre, une vigneronne verse dans un verre le vin prélevé à la pipette">
+      <figcaption class="etiquette haut">Prélèvement à la pipette, au chai</figcaption>
+    </figure>
+    <div class="heros-carte">
+      <h1 id="titre">Grands vins du Languedoc</h1>
+      <p class="chapo">Domaine familial en agriculture biologique, fondé en 1997 à Saint-Pargoire, dans l'Hérault.</p>
+      <div class="btns">
+        <a class="btn btn-plein" href="#contact">Prendre rendez-vous</a>
+        <a class="btn btn-contour" href="#domaines">Découvrir nos domaines</a>
+      </div>
+    </div>
+
+    <dl class="faits">
+      <div><dt>1997</dt><dd>fondé par Béatrice et Bernard Nivollet</dd></div>
+      <div><dt>Bio</dt><dd>tous nos terroirs, dès le millésime 2024</dd></div>
+      <div><dt>HVE</dt><dd>Haute Valeur Environnementale depuis 2019</dd></div>
+      <div><dt>33 pays</dt><dd>Château Haut-Blanville présent dans plus de 33 pays</dd></div>
+      <div><dt>Vegan</dt><dd>tous nos Clos et Blends</dd></div>
+    </dl>
+  </section>
+
+  <section id="domaine" class="bloc page" aria-labelledby="t-famille">
+    <div class="famille">
+      <div>
+        <h2 id="t-famille" class="h2">D'un projet de couple à une aventure en trio féminin</h2>
+        <div class="texte">
+          <p>Fondé en 1997 par Béatrice et Bernard Nivollet, le domaine de Blanville, à Saint-Pargoire, est au cœur des appellations AOP Languedoc Grès de Montpellier et AOP Languedoc Pézenas.</p>
+          <p>En 2015, l'aventure s'intensifie avec l'arrivée d'une jeune équipe, dont Charlotte et Margaux, les filles des fondateurs. En 2022, face aux défis climatiques et pour préserver la biodiversité, Blanville crée le Domaine des 8 Lunes à Roujan, cultivé selon les principes de la biodynamie.</p>
+        </div>
+      </div>
+      <div class="equipe">
+        <figure class="ph apparait">
+          <img src="assets/blanville-saint-pargoire/equipe-familiale-dans-le-chai.webp" width="1600" height="900" alt="Béatrice, Bernard, Charlotte et Margaux Nivollet et Marion Mathelin, souriants devant les barriques du chai" loading="lazy">
+        </figure>
+        <ul class="noms">
+          <li class="intro">De gauche à droite&nbsp;:</li>
+          <li><strong>Béatrice Nivollet</strong>, fondatrice</li>
+          <li><strong>Bernard Nivollet</strong>, fondateur et président</li>
+          <li><strong>Charlotte Nivollet</strong>, responsable production</li>
+          <li><strong>Margaux Nivollet</strong>, responsable logistique</li>
+          <li><strong>Marion Mathelin</strong>, responsable commerciale</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="metiers">
+      <div>
+        <h3>Artisans du vin</h3>
+        <p>Plongez dans l'univers de nos vins parcellaires et découvrez l'incroyable diversité des terroirs du Languedoc. Chaque bouteille raconte une histoire, celle d'un sol, d'un climat et d'un savoir-faire ancestral.</p>
+      </div>
+      <div>
+        <h3>Révélateurs de pépites</h3>
+        <p>En tant que négociant vinificateur, nous collaborons avec des vignerons qui partagent nos valeurs pour vous offrir le meilleur du Languedoc.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="domaines" class="bloc page" aria-labelledby="t-domaines">
+    <h2 id="t-domaines" class="h2">Nos domaines</h2>
+    <p class="texte" style="margin-top:14px;max-width:36em">La Maison Blanville se répartit aujourd'hui en quatre gammes distinctes.</p>
+    <ul class="index">
+      <li><h3>Château Haut-Blanville</h3><p>Domaine historique, vins de garde et mono-parcellaires sur le terroir des Grès de Montpellier.</p><div class="action"><a class="lien" href="#chateau">En savoir plus</a></div></li>
+      <li><h3>Domaine des Celtis</h3><p>Vins jeunes sur le fruit, sur l'aire d'appellation AOP Languedoc Pézenas.</p><div class="action"><span>Depuis 2021</span></div></li>
+      <li><h3>Domaine des 8 Lunes</h3><p>Cépages oubliés du Languedoc en biodynamie, à Roujan.</p><div class="action"><span>Depuis 2022</span></div></li>
+      <li><h3>Les Créations by Blanville</h3><p>Pépites sauvages de la jeune génération.</p><div class="action"><a class="lien" href="#creations">En savoir plus</a></div></li>
+    </ul>
+
+    <div id="chateau" class="chateau">
+      <figure class="ph apparait">
+        <img src="assets/blanville-saint-pargoire/barrique-murmures-chateau-haut-blanville-2020.webp" width="1600" height="1164" alt="Fond de barrique marqué « Château Haut-Blanville 2020, Murmures »" loading="lazy">
+        <figcaption class="etiquette">Murmures 2020, en barrique</figcaption>
+      </figure>
+      <div>
+        <h3>Château Haut-Blanville</h3>
+        <div class="texte">
+          <p>Créé en 1997 avec 10 ha de vignes minutieusement sélectionnées à l'extrême sud-ouest de l'aire d'appellation AOP Languedoc Grès de Montpellier, le vignoble a été construit parcelle par parcelle pendant 22 ans.</p>
+          <p>Pionnier en Languedoc des vins mono-parcellaires, «&nbsp;de la vigne à la bouteille&nbsp;», souvent mono-cépage et à longs élevages, il est largement reconnu à l'international.</p>
+        </div>
+        <div class="sous-gammes" aria-label="Les gammes du Château"><span>Les Parcellaires</span><span>Les Grands Classiques</span><span>Les Collections</span></div>
+        <a class="btn btn-contour" href="https://www.blanville.com/chateau-haut-blanville/">Le Château Haut-Blanville</a>
+      </div>
+    </div>
+
+    <div id="creations" class="creations">
+      <div class="creations-carte">
+        <h3>Les Créations by Blanville</h3>
+        <p class="accroche">Pépites sauvages de la jeune génération.</p>
+        <div class="texte">
+          <p>En 2021, les cuvées de la deuxième génération de Blanville voient le jour&nbsp;: des vins plus jeunes, fruités et sans élevage en barriques. Avec le Domaine des Celtis, Les Créations enrichissent la collection Blanville et permettent d'apprécier des vins dès leur jeunesse.</p>
+        </div>
+        <div class="btns" style="margin-top:28px">
+          <a class="btn btn-plein" href="https://www.blanville.boutique/">Les trouver en boutique</a>
+          <a class="btn btn-contour" href="#contact">Venir les goûter</a>
+        </div>
+      </div>
+      <figure class="ph apparait">
+        <img src="assets/blanville-saint-pargoire/raisin-blanc-vendange-devant-le-tracteur.webp" width="1200" height="1600" alt="Grappes de raisin blanc fraîchement vendangées, devant une benne et un tracteur rouge" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="sombre" aria-labelledby="t-savoir">
+    <div class="page savoir">
+      <div>
+        <h2 id="t-savoir" class="h2">Un savoir-faire artisanal</h2>
+        <div class="texte">
+          <p>Le but des vins parcellaires&nbsp;: révéler un micro-climat et mettre en valeur au maximum un terroir donné. La sélection commence à la vigne, où l'équipe choisit année après année les vignes de chaque cuvée. À la cave, Charlotte et François procèdent à une seconde sélection et ne gardent que les meilleures barriques de chaque parcelle.</p>
+        </div>
+        <ul class="pratiques">
+          <li><strong>Pas d'irrigation</strong>Garrigues préservées&nbsp;: au terroir des Peyrals, 20 ha de vignes sur 40 de garrigues.</li>
+          <li><strong>Agriculture biologique</strong>Pas de produits de synthèse.</li>
+          <li><strong>Embruns marins</strong>Un terroir haut en altitude, proche de la Méditerranée&nbsp;: équilibre, salinité et minéralité.</li>
+          <li><strong>Petits rendements</strong>Belle concentration et respect de la vigne.</li>
+          <li><strong>Jachères de 3 ans</strong>Avec des légumineuses pour nourrir la terre, et des couverts végétaux.</li>
+          <li><strong>Pâturage de brebis</strong>Au sein même du vignoble.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="mosaique">
+          <figure class="ph brebis apparait">
+            <img src="assets/blanville-saint-pargoire/moutons-dans-le-sanctuaire-de-biodiversite.webp" width="1600" height="1060" alt="Brebis blanches qui pâturent dans une parcelle au soleil du soir, bâtiments du domaine au fond" loading="lazy">
+            <figcaption class="etiquette haut">Sanctuaire de biodiversité méditerranéen</figcaption>
+          </figure>
+          <figure class="ph refracto apparait">
+            <img src="assets/blanville-saint-pargoire/vigneron-refractometre-maturite-du-raisin.webp" width="1600" height="1067" alt="Dans les vignes, un vigneron contrôle la maturité du raisin au réfractomètre" loading="lazy">
+          </figure>
+        </div>
+        <div class="chai">
+          <figure class="ph apparait">
+            <img src="assets/blanville-saint-pargoire/degustation-au-verre-dans-la-cave-a-barriques.webp" width="1600" height="1067" alt="Une vigneronne sent le vin dans un verre, penchée au-dessus des barriques" loading="lazy">
+          </figure>
+          <blockquote>«&nbsp;Cette minutieuse sélection, de la vigne à la bouteille, permet de créer des vins rares, complexes et uniques, révélant à leur maximum le terroir dont ils sont issus.&nbsp;»</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oenotourisme" class="bloc page" aria-labelledby="t-oeno">
+    <div class="oeno">
+      <div>
+        <h2 id="t-oeno" class="h2">Oenotourisme, visite et dégustation</h2>
+        <div class="texte">
+          <p>Venez découvrir nos terroirs, nos chais à barriques et notre travail. Une visite hors du temps au milieu de nos vignobles, en trois temps sur 3&nbsp;h&nbsp;: la découverte de nos terroirs, puis la visite de nos chais, puis la dégustation.</p>
+        </div>
+        <div class="conditions">
+          <h3>Une demi-journée consacrée au vin et à la vigne</h3>
+          <p>Uniquement sur rendez-vous, de mai à septembre. 10 personnes au plus par groupe.</p>
+          <p class="gros"><span class="prix">150&nbsp;€</span></p>
+          <p>la visite jusqu'à 6 personnes, puis <span class="prix">15&nbsp;€</span> par personne supplémentaire. Dès <span class="prix">300&nbsp;€</span> d'achat, nous vous remboursons la visite.</p>
+          <div class="btns">
+            <a class="btn btn-plein" href="mailto:margaux@blanville.com">Réserver par email</a>
+            <a class="btn btn-contour" href="https://www.blanville.com/domaine/oenotourisme/">Plus d'informations</a>
+          </div>
+        </div>
+      </div>
+      <div class="oeno-photos">
+        <figure class="ph vigneronnes apparait">
+          <img src="assets/blanville-saint-pargoire/deux-vigneronnes-examinent-la-vigne.webp" width="1600" height="1067" alt="Deux vigneronnes examinent de près le feuillage d'un pied de vigne, au soleil" loading="lazy">
+        </figure>
+        <p class="gratuite"><strong>Dégustation gratuite au caveau</strong>Les 3 cuvées du moment, sur rendez-vous en semaine.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="page" aria-labelledby="t-location">
+    <div class="location">
+      <figure class="ph apparait">
+        <img src="assets/blanville-saint-pargoire/mas-de-boudet-dans-les-collines.webp" width="1600" height="1200" alt="Le Mas, salle de réception en bois et pierre au milieu des vignes et de la garrigue" loading="lazy">
+        <figcaption class="etiquette">Le Mas, au cœur des vignes</figcaption>
+      </figure>
+      <div class="location-carte">
+        <h2 id="t-location">Location pour vos plus beaux événements</h2>
+        <p>Une salle de réception de 120&nbsp;m² avec vue sur la garrigue héraultaise, une cuisine entièrement aménagée, des WC aux normes PMR et le mobilier pour une quarantaine de convives assis (au plus environ 60 personnes assises et 80 debout). À louer le temps d'un week-end.</p>
+        <a class="lien" href="https://www.blanville.com/location/">Voir la location</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bloc page" aria-labelledby="t-contact" style="padding-top:clamp(120px,12vw,170px)">
+    <h2 id="t-contact" class="h2">Nous rendre visite</h2>
+    <p class="texte" style="margin-top:14px;max-width:40em">Nous n'avons pas de permanence au caveau&nbsp;: un simple coup de téléphone pour prévenir, et nous vous accueillons avec plaisir en semaine pour préparer au mieux votre dégustation.</p>
+    <div class="contact">
+      <div>
+        <h3>Nous joindre</h3>
+        <a class="tel" href="tel:+33467252253">04 67 25 22 53</a><br>
+        <a class="mail" href="mailto:info@blanville.com">info@blanville.com</a>
+        <p style="margin-top:14px">Rendez-vous de dégustation&nbsp;: <a class="mail" style="margin-top:0" href="mailto:margaux@blanville.com">margaux@blanville.com</a></p>
+        <div class="btns">
+          <a class="btn btn-plein" href="tel:+33467252253">Appeler le domaine</a>
+        </div>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <p>Du lundi au vendredi,<br>de 9h à 12h et de 13h30 à 17h30.</p>
+        <p style="margin-top:12px">Dégustation sur rendez-vous.</p>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p>Château Haut-Blanville<br>Rieutort, route de Gignac (D32)<br>34230 Saint-Pargoire</p>
+        <p style="margin-top:12px">Sur la RD32 entre Gignac et Montagnac, à 10&nbsp;km au nord de Pézenas et à 35&nbsp;km de Montpellier.</p>
+        <p style="margin-top:12px"><a class="lien" href="https://www.blanville.com/contact/">Plan et coordonnées GPS</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="page">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Blanville</p>
+        <p style="margin-top:12px">Domaine familial du Languedoc en agriculture biologique, à Saint-Pargoire.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33467252253">04 67 25 22 53</a></li>
+          <li><a href="mailto:info@blanville.com">info@blanville.com</a></li>
+          <li>34230 Saint-Pargoire</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul><li>Du lundi au vendredi</li><li>9h à 12h, 13h30 à 17h30</li><li>Sur rendez-vous</li></ul>
+      </div>
+      <div>
+        <h3>Suivez-nous</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/vinsblanville/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/vinsblanville/">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/blanville">LinkedIn</a></li>
+          <li><a href="https://www.blanville.boutique/">Boutique en ligne</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">Tous nos Clos et Blends sont vegan. L'abus d'alcool est dangereux pour la santé, à consommer avec modération. La vente d'alcool est interdite aux mineurs.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine de Blanville, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

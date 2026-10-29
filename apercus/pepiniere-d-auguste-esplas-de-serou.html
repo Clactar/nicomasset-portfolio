@@ -1,0 +1,489 @@
+<!doctype html>
+<!--
+PLAN (Nova, direction « étiquette de pépinière »)
+Couleurs : lin kraft #E4DCCB (fond 60), forêt #1F3324 (encre et section contrastée 30), soufre #D8B935 (10, en surface ou sur forêt, jamais en texte sur clair), lin clair #EEE8DB pour les surfaces posées.
+Typo : Instrument Serif 400 (titres, noms de variétés comme sur une étiquette manuscrite) + Schibsted Grotesk 400/500/600 (texte, prix, petites mentions en casse normale, aucun sur-titre en capitales).
+Héros : [titre géant en escalier : Arbres / fruitiers / biologiques   qui mord sur  [ portrait arrondi 20 px, ombre longue, étiquette soufre à œillet ]]  puis chapeau + deux pilules ; bandeau de faits posé en surface sous le héros.
+Sections : catalogue (grande photo collante à gauche, liste éditoriale à points de conduite à droite) / la saison en forêt (ruban de douze mois, photo d'hiver) / la pépinière (deux photos qui se chevauchent + texte au « je ») / conseils (titre-phrase des quatre gestes, deux vignettes décalées) / rendez-vous (surface claire) / pied forêt.
+Revu contre les défauts : pas de crème + terre cuite (kraft + forêt + soufre), pas de cartes égales (liste de catalogue), pas de numérotation (les mois sont une vraie séquence), pas de flèches ni de méta à points, aucun mot accentué en couleur dans les titres.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Pépinière d'Auguste, arbres fruitiers biologiques à Esplas-de-Sérou</title>
+<meta name="description" content="Plus de 155 variétés d'arbres fruitiers biologiques, anciennes, rares et résistantes. Vente sur rendez-vous au Hameau de Pombole, Esplas de Sérou.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3324'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23D8B935'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lin:#E4DCCB; --lin-clair:#EEE8DB; --lin-fonce:#D3C7AE;
+  --foret:#1F3324; --foret-2:#2A4330; --foret-doux:#4A5C4D;
+  --soufre:#D8B935;
+  --ombre:0 30px 60px -34px rgba(31,51,36,.55), 0 60px 110px -70px rgba(31,51,36,.45);
+  --ombre-courte:0 18px 36px -22px rgba(31,51,36,.5);
+  --page:min(1200px, calc(100% - 2*var(--marge)));
+  --marge:clamp(18px, 4vw, 48px);
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Schibsted Grotesk", "Helvetica Neue", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--lin);color:var(--foret);font-family:var(--sans);font-size:17px;line-height:1.6}
+::selection{background:var(--soufre);color:var(--foret)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--foret);outline-offset:3px;border-radius:6px}
+.sombre a:focus-visible,.pied a:focus-visible,.annonce a:focus-visible{outline-color:var(--soufre)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0 0 1em;text-wrap:pretty}
+.cadre{width:var(--page);margin-inline:auto}
+
+/* Annonce : l'état des ventes, sans date périmée */
+.annonce{background:var(--foret);color:var(--lin-clair);font-size:15px;line-height:1.45}
+.annonce .cadre{display:flex;flex-wrap:wrap;gap:.35em 1.4em;align-items:center;justify-content:center;padding:10px 0;text-align:center}
+.annonce strong{font-weight:600;color:var(--soufre)}
+
+/* En-tête */
+.entete{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.05}
+.marque b{font-family:var(--serif);font-weight:400;font-size:30px;letter-spacing:-.01em}
+.marque span{font-size:14px;color:var(--foret-doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:6px 26px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:16px;font-weight:500;padding:4px 0;background:linear-gradient(currentColor,currentColor) left bottom/0 1.5px no-repeat;transition:background-size .3s ease}
+.nav a:hover{background-size:100% 1.5px}
+.nav .tel{background:var(--foret);color:var(--lin-clair);padding:10px 20px;border-radius:999px;white-space:nowrap;transition:transform .25s ease, background-color .25s ease}
+.nav .tel:hover{background:var(--foret-2);transform:translateY(-2px)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--foret);transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn-plein{background:var(--foret);color:var(--lin-clair)}
+.btn-plein:hover{background:var(--foret-2);transform:translateY(-2px);box-shadow:var(--ombre-courte)}
+.btn-contour{color:var(--foret);background:transparent}
+.btn-contour:hover{background:var(--foret);color:var(--lin-clair);transform:translateY(-2px)}
+.btn-soufre{background:var(--soufre);border-color:var(--soufre);color:var(--foret)}
+.btn-soufre:hover{transform:translateY(-2px);box-shadow:0 18px 36px -20px rgba(0,0,0,.6)}
+.btn-clair{border-color:var(--lin-clair);color:var(--lin-clair)}
+.btn-clair:hover{background:var(--lin-clair);color:var(--foret);transform:translateY(-2px)}
+
+/* Héros */
+.heros{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:40px 0 0;align-items:start}
+.heros h1{grid-column:1/11;grid-row:1;position:relative;z-index:2;font-size:clamp(3.3rem, 1.2rem + 8.2vw, 8.9rem);line-height:.9;letter-spacing:-.025em;padding-top:8px}
+.heros h1 span{display:block}
+.heros h1 .l2{padding-left:1.15em}
+.heros h1 .l3{padding-left:2.3em}
+.heros-photo{grid-column:8/13;grid-row:1/3;margin:118px 0 0;position:relative;z-index:1}
+.heros-photo .ph{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5.4;background:var(--lin-fonce)}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:38% 30%;transform:scaleX(-1)}
+.heros-texte{grid-column:1/7;grid-row:2;padding-top:18px;max-width:34em}
+.chapeau{font-size:clamp(18px, 1rem + .4vw, 21px);line-height:1.55;margin-bottom:28px}
+.chapeau em{font-family:var(--serif);font-style:italic;font-size:1.25em;line-height:1}
+
+/* Étiquette de pépinière */
+.etiquette{position:absolute;left:-34px;bottom:52px;width:max-content;max-width:92%;transform:rotate(-7deg);transform-origin:12% 50%;filter:drop-shadow(0 18px 22px rgba(31,51,36,.38))}
+.etiquette-corps{background:var(--soufre);color:var(--foret);padding:16px 18px 16px 50px;clip-path:polygon(0 24%,13% 0,100% 0,100% 100%,13% 100%,0 76%);-webkit-mask:radial-gradient(circle at 24px 50%, transparent 6px, #000 6.5px);mask:radial-gradient(circle at 24px 50%, transparent 6px, #000 6.5px)}
+.etiquette-corps b{display:block;font-family:var(--serif);font-weight:400;font-size:29px;line-height:1;white-space:nowrap}
+.etiquette-corps span{display:block;font-size:14px;font-weight:500;margin-top:4px}
+.etiquette-oeillet{position:absolute;left:15px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;border:2.5px solid #8C7A2E;pointer-events:none}
+.etiquette svg{position:absolute;left:-58px;top:50%;width:84px;height:60px;margin-top:-52px;overflow:visible;pointer-events:none}
+.etiquette svg path{stroke:var(--foret);opacity:.7}
+
+/* Bandeau de faits */
+.faits{margin-top:64px;background:var(--lin-clair);border-radius:18px;box-shadow:var(--ombre-courte);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.fait{padding:26px 28px 24px;position:relative}
+.fait + .fait::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:1px;background:var(--lin-fonce)}
+.fait b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(40px, 2rem + 1.4vw, 54px);line-height:1;white-space:nowrap}
+.fait span{display:block;font-size:15.5px;line-height:1.4;margin-top:8px;color:var(--foret-doux)}
+
+section{scroll-margin-top:20px}
+.titre-section{font-size:clamp(2.4rem, 1.4rem + 3.2vw, 4.4rem);line-height:.98}
+.intro{font-size:18px;max-width:36em}
+
+/* Catalogue */
+.catalogue{padding:128px 0 120px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px 72px;align-items:start}
+.catalogue-photo{position:sticky;top:32px}
+.catalogue-photo .ph{border-radius:16px;overflow:hidden;box-shadow:var(--ombre);position:relative;aspect-ratio:4/5}
+.catalogue-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.pastille{position:absolute;left:14px;bottom:14px;background:var(--lin-clair);color:var(--foret);font-size:14px;font-weight:500;line-height:1.3;padding:8px 14px;border-radius:10px;max-width:calc(100% - 28px)}
+.catalogue h2{margin-bottom:18px}
+.formes{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 42px;padding:0;list-style:none}
+.formes li{font-size:15px;font-weight:500;padding:6px 14px 6px 22px;border:1.5px solid var(--foret);border-radius:4px 999px 999px 4px;position:relative}
+.formes li::before{content:"";position:absolute;left:8px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--foret)}
+.liste{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--foret)}
+.variete{display:grid;grid-template-columns:96px minmax(0,1fr);gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid var(--lin-fonce)}
+.variete img{width:96px;height:96px;object-fit:cover;border-radius:12px;box-shadow:var(--ombre-courte)}
+.variete-ligne{display:flex;align-items:baseline;gap:12px}
+.variete h3{font-size:clamp(26px, 1.2rem + 1vw, 34px);line-height:1.05}
+.points{flex:1;min-width:24px;border-bottom:2px dotted var(--foret-doux);transform:translateY(-6px);opacity:.55}
+.prix{white-space:nowrap;font-size:16px;font-weight:500}
+.variete-bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-top:6px;font-size:15.5px;color:var(--foret-doux)}
+.variete-bas a{color:var(--foret);font-weight:600;text-underline-offset:3px}
+.catalogue .boutons{margin-top:36px}
+
+/* Saison, section forêt */
+.sombre{background:var(--foret);color:var(--lin-clair)}
+.saison{padding:120px 0}
+.saison-haut{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px 72px;align-items:end}
+.saison h2{color:var(--lin-clair)}
+.saison .intro{color:#D8D3C4;margin:0}
+.ruban{margin-top:72px}
+.mois{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));font-size:14px;color:#BDB8A8;padding-left:var(--etiq);}
+.mois span{padding:0 0 10px 6px;border-left:1px solid rgba(238,232,219,.18)}
+.piste{display:grid;grid-template-columns:var(--etiq) repeat(24,minmax(0,1fr));align-items:center;margin-top:14px;min-height:46px}
+.piste > span:first-child{font-size:16px;font-weight:500;padding-right:16px;line-height:1.3}
+.barre{height:34px;border-radius:999px;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden}
+.date-tel{display:none}
+.barre-commandes{background:var(--soufre);color:var(--foret)}
+.barre-plantation{background:var(--lin-clair);color:var(--foret)}
+.barre-precommande{border:1.5px dashed var(--soufre);color:var(--soufre)}
+.ruban{--etiq:190px}
+.saison-bas{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px 72px;margin-top:96px;align-items:center}
+.saison-bas .ph{border-radius:22px;overflow:hidden;box-shadow:0 34px 70px -36px rgba(0,0,0,.7);position:relative;aspect-ratio:4/3}
+.saison-bas img{width:100%;height:100%;object-fit:cover}
+.saison-bas blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px, 1.1rem + 1.4vw, 36px);line-height:1.2}
+.saison-bas p{color:#D8D3C4;margin-top:22px}
+
+/* La pépinière */
+.pepiniere{padding:128px 0 112px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px 80px;align-items:center}
+.duo{position:relative;padding-bottom:22%}
+.duo .grand{border-radius:14px;padding:10px;background:var(--lin-clair);box-shadow:var(--ombre)}
+.duo .grand img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.duo .petit{position:absolute;right:-6%;bottom:0;width:42%;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);border:6px solid var(--lin)}
+.duo .petit img{aspect-ratio:5/6;object-fit:cover;width:100%}
+.duo .pastille{left:24px;bottom:auto;top:24px}
+.pepiniere h2{margin-bottom:26px}
+.pepiniere .phrase{font-family:var(--serif);font-size:clamp(24px, 1rem + 1vw, 30px);line-height:1.2;margin:28px 0 0;padding-top:24px;border-top:1.5px solid var(--foret)}
+
+/* Conseils */
+.conseils{background:var(--lin-clair);padding:112px 0}
+.conseils .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px 72px;align-items:center}
+.gestes{font-size:clamp(2.6rem, 1.2rem + 4.4vw, 5.6rem);line-height:.95;margin-bottom:34px}
+.gestes span{display:block}
+.vignettes{position:relative;padding:0 0 30% 0}
+.vignettes .v1{width:78%;border-radius:14px;overflow:hidden;box-shadow:var(--ombre)}
+.vignettes .v2{position:absolute;right:0;bottom:0;width:58%;border-radius:14px;overflow:hidden;box-shadow:var(--ombre);border:6px solid var(--lin-clair)}
+.vignettes img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.vignettes .pastille{font-size:13.5px;padding:6px 12px}
+
+/* Rendez-vous */
+.rdv{padding:120px 0}
+.rdv-carte{background:var(--lin-clair);border-radius:24px;box-shadow:var(--ombre);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);overflow:hidden}
+.rdv-texte{padding:clamp(28px, 5vw, 64px)}
+.rdv-texte h2{margin-bottom:22px}
+.rdv-infos{background:var(--soufre);padding:clamp(28px, 4vw, 52px);display:flex;flex-direction:column;gap:22px;justify-content:center}
+.rdv-infos dl{margin:0;display:grid;gap:18px}
+.rdv-infos dt{font-size:14px;font-weight:600}
+.rdv-infos dd{margin:2px 0 0;font-size:18px;line-height:1.4}
+.rdv-infos a{font-weight:600;text-underline-offset:3px;overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:#172619;color:#D8D3C4;padding:80px 0 0;font-size:16px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,5fr) repeat(2,minmax(0,3fr));gap:40px 56px;padding-bottom:56px}
+.pied .marque b{color:var(--lin-clair);font-size:36px}
+.pied h3{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--soufre);margin-bottom:12px;letter-spacing:0}
+.pied p{margin:0 0 6px}
+.pied a{color:var(--lin-clair);text-underline-offset:3px}
+.pied ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.proposition{border-top:1px solid rgba(238,232,219,.14);padding:18px var(--marge);text-align:center;font-size:14px;color:#A9A796;background:#172619}
+.proposition a{color:#D8D3C4}
+
+/* Apparition douce des photos (seulement si le script a posé la classe) */
+.js .revele{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .revele.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .revele{opacity:1;transform:none;transition:none}.btn,.nav .tel{transition:none}}
+
+/* Tablette */
+@media (max-width:980px){
+  .heros h1{grid-column:1/13}
+  .heros-photo{grid-column:7/13;margin-top:150px}
+  .heros-texte{grid-column:1/7}
+  .faits{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fait:nth-child(3)::before{display:none}
+  .catalogue,.saison-haut,.saison-bas,.pepiniere,.conseils .cadre,.rdv-carte,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .catalogue-photo{position:relative;top:0;max-width:520px}
+  .duo{max-width:620px}
+  .vignettes{max-width:520px}
+}
+/* Téléphone */
+@media (max-width:680px){
+  body{font-size:17px}
+  .nav{gap:4px 18px}
+  .heros{display:block;padding-top:20px}
+  .heros h1{font-size:clamp(3rem, 2.2rem + 5vw, 4.4rem)}
+  .heros h1 .l2{padding-left:.7em}
+  .heros h1 .l3{padding-left:1.4em}
+  .heros-photo{margin:-18px 0 0 14%;}
+  .heros-photo .ph{aspect-ratio:4/4.6}
+  .etiquette{left:-14%;bottom:30px}
+  .etiquette svg{display:none}
+  .etiquette-corps b{font-size:22px}
+  .etiquette-corps{padding:12px 14px 12px 44px}
+  .heros-texte{padding-top:40px}
+  .faits{margin-top:44px;grid-template-columns:minmax(0,1fr)}
+  .fait{padding:18px 22px}
+  .fait + .fait::before{left:22px;right:22px;top:0;bottom:auto;width:auto;height:1px;display:block}
+  .catalogue{padding:88px 0 80px}
+  .variete{grid-template-columns:72px minmax(0,1fr);gap:16px}
+  .variete img{width:72px;height:72px}
+  .variete-ligne{flex-wrap:wrap;gap:2px 10px}
+  .points{display:none}
+  .prix{width:100%}
+  .saison,.rdv{padding:88px 0}
+  .ruban{--etiq:0px;margin-top:48px}
+  .mois span{padding-left:4px;font-size:0}
+  .mois span::before{content:attr(data-l);font-size:14px}
+  .piste{margin-top:22px}
+  .piste > span:first-child{grid-column:1/-1;padding:0 0 8px}
+  .date-tel{display:block;font-size:15px;font-weight:400;color:#D8D3C4}
+  .barre{height:22px;padding:0;font-size:0}
+  .pepiniere{padding:88px 0 80px}
+  .duo .petit{right:0}
+  .conseils{padding:88px 0}
+}
+@media (max-width:420px){
+  .boutons .btn{width:100%}
+  .nav .tel{width:100%;text-align:center}
+  .nav{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="annonce" role="note">
+  <div class="cadre">
+    <span><strong>Ouverts uniquement sur rendez-vous</strong>, au Hameau de Pombole.</span>
+    <span>Commandes du 1er septembre au 15 mars, précommande possible le reste de l'année.</span>
+  </div>
+</div>
+
+<div class="cadre">
+  <header class="entete">
+    <a class="marque" href="#haut" id="haut-lien"><b>La Pépinière d'Auguste</b><span>Producteur pour particuliers et professionnels</span></a>
+    <nav class="nav" aria-label="Sections de la page">
+      <a href="#varietes">Variétés</a>
+      <a href="#saison">La saison</a>
+      <a href="#pepiniere">La pépinière</a>
+      <a href="#conseils">Conseils</a>
+      <a class="tel" href="tel:+33768952575">07 68 95 25 75</a>
+    </nav>
+  </header>
+
+  <main id="haut">
+  <div class="heros">
+    <h1><span class="l1">Arbres</span><span class="l2">fruitiers</span><span class="l3">biologiques</span></h1>
+    <figure class="heros-photo">
+      <div class="ph revele"><img src="assets/pepiniere-d-auguste-esplas-de-serou/pepinieriste-avec-jeune-arbre-fruitier.webp" width="1001" height="1600" alt="Le pépiniériste bine au pied d'un jeune arbre fruitier planté dans la prairie, en fin de journée." fetchpriority="high"></div>
+      <div class="etiquette" aria-hidden="true">
+        <svg viewBox="0 0 84 60"><path d="M80 52 C 60 40, 40 6, 2 2" fill="none" stroke="#EEE8DB" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div class="etiquette-corps"><b>Variétés anciennes</b><span>rares et résistantes</span></div>
+        <span class="etiquette-oeillet"></span>
+      </div>
+    </figure>
+    <div class="heros-texte">
+      <p class="chapeau">Plus de 155 variétés d'arbres fruitiers rares, d'exception et résistants, greffés à la main au Hameau de Pombole et vendus en <em>racines nues</em>, pour les particuliers comme pour les professionnels.</p>
+      <div class="boutons">
+        <a class="btn btn-plein" href="#varietes">Découvrir nos arbres</a>
+        <a class="btn btn-contour" href="#rendez-vous">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="faits" aria-label="La pépinière en chiffres">
+    <div class="fait"><b>155</b><span>variétés différentes, anciennes, modernes, rares et résistantes</span></div>
+    <div class="fait"><b>+ 3000</b><span>arbres plantés par an, à la main, de novembre à février</span></div>
+    <div class="fait"><b>100&nbsp;%</b><span>de greffes manuelles, au service du patrimoine fruitier</span></div>
+    <div class="fait"><b>4 formes</b><span>scion, scion fort, scion préformé et demi-tige</span></div>
+  </div>
+
+  <section class="catalogue" id="varietes" aria-labelledby="t-varietes">
+    <figure class="catalogue-photo" style="margin:0">
+      <div class="ph revele">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/prunes-rumyanaya-zorka-coupees-dans-la-main.webp" width="1562" height="1600" loading="lazy" alt="Une main tient une prune entière et une prune ouverte, chair jaune et noyau, à côté d'un couteau pliant.">
+        <figcaption class="pastille">Prunier hybride Rumyanaya Zorka</figcaption>
+      </div>
+    </figure>
+    <div>
+      <h2 class="titre-section" id="t-varietes">Nos variétés d'arbres fruitiers</h2>
+      <p class="intro">Plus de 155 variétés, de formes différentes. Chaque année, le catalogue s'élargit de variétés rares, anciennes et résistantes, choisies avec leurs porte-greffes pour s'adapter à votre sol et à votre climat.</p>
+      <ul class="formes" aria-label="Les quatre formes proposées">
+        <li>Scion</li><li>Scion fort</li><li>Scion préformé</li><li>Demi-tige</li>
+      </ul>
+      <ul class="liste">
+        <li class="variete">
+          <img src="assets/pepiniere-d-auguste-esplas-de-serou/citrons-meyer-sous-la-neige.webp" width="670" height="670" loading="lazy" alt="Deux citrons Meyer jaunes et un vert sur une branche couverte de neige.">
+          <div>
+            <div class="variete-ligne"><h3>Citron Meyer</h3><span class="points" aria-hidden="true"></span><span class="prix">à partir de 38,00&nbsp;€</span></div>
+            <div class="variete-bas"><span>Agrume</span><a href="https://www.pepiniereauguste.com/produit/citron-meyer/">Voir la fiche</a></div>
+          </div>
+        </li>
+        <li class="variete">
+          <img src="assets/pepiniere-d-auguste-esplas-de-serou/citrons-sudachi-sur-l-arbre.webp" width="670" height="670" loading="lazy" alt="Grappe de petits citrons Sudachi verts parmi les feuilles.">
+          <div>
+            <div class="variete-ligne"><h3>Citron Sudachi</h3><span class="points" aria-hidden="true"></span><span class="prix">à partir de 38,00&nbsp;€</span></div>
+            <div class="variete-bas"><span>Agrume</span><a href="https://www.pepiniereauguste.com/boutique/">Voir en boutique</a></div>
+          </div>
+        </li>
+        <li class="variete">
+          <img src="assets/pepiniere-d-auguste-esplas-de-serou/cerises-blanchard-sur-la-branche.webp" width="670" height="670" loading="lazy" alt="Bouquet de cerises rouges sur la branche.">
+          <div>
+            <div class="variete-ligne"><h3>Cerisier Blanchard</h3><span class="points" aria-hidden="true"></span><span class="prix">à partir de 25,00&nbsp;€</span></div>
+            <div class="variete-bas"><span>Cerisier</span><a href="https://www.pepiniereauguste.com/produit/cerisier-blanchard/">Voir la fiche</a></div>
+          </div>
+        </li>
+        <li class="variete">
+          <img src="assets/pepiniere-d-auguste-esplas-de-serou/pomme-belle-fille-de-salins-sur-l-arbre.webp" width="670" height="670" loading="lazy" alt="Grosse pomme rouge striée sous la pluie, sur une branche couverte de lichen.">
+          <div>
+            <div class="variete-ligne"><h3>Pommier Belle Fille de Salins</h3><span class="points" aria-hidden="true"></span><span class="prix">à partir de 23,00&nbsp;€</span></div>
+            <div class="variete-bas"><span>Pommier</span><a href="https://www.pepiniereauguste.com/boutique/">Voir en boutique</a></div>
+          </div>
+        </li>
+      </ul>
+      <div class="boutons">
+        <a class="btn btn-plein" href="https://www.pepiniereauguste.com/boutique/">Voir toutes nos variétés</a>
+      </div>
+    </div>
+  </section>
+  </main>
+</div>
+
+<section class="sombre saison" id="saison" aria-labelledby="t-saison">
+  <div class="cadre">
+    <div class="saison-haut">
+      <h2 class="titre-section" id="t-saison">Une saison réglée sur le sommeil des arbres</h2>
+      <p class="intro">Les arbres se déterrent pendant leur dormance, quand la sève est redescendue et que les feuilles sont tombées. C'est ce qui préserve leur potentiel vital et assure une bonne reprise à la plantation.</p>
+    </div>
+
+    <div class="ruban" role="img" aria-label="Commandes en ligne du 1er septembre au 15 mars. Plantation à la main de novembre à février. Précommande pour la saison suivante du 15 mars à fin août.">
+      <div class="mois" aria-hidden="true"><span data-l="S">sept.</span><span data-l="O">oct.</span><span data-l="N">nov.</span><span data-l="D">déc.</span><span data-l="J">janv.</span><span data-l="F">févr.</span><span data-l="M">mars</span><span data-l="A">avr.</span><span data-l="M">mai</span><span data-l="J">juin</span><span data-l="J">juil.</span><span data-l="A">août</span></div>
+      <div class="piste" aria-hidden="true"><span>Commandes en ligne<small class="date-tel">du 1er septembre au 15 mars</small></span><span class="barre barre-commandes" style="grid-column:2 / span 13">1er septembre au 15 mars</span></div>
+      <div class="piste" aria-hidden="true"><span>Plantation à la main<small class="date-tel">de novembre à février</small></span><span class="barre barre-plantation" style="grid-column:6 / span 8">novembre à février</span></div>
+      <div class="piste" aria-hidden="true"><span>Précommande<small class="date-tel">pour la saison suivante</small></span><span class="barre barre-precommande" style="grid-column:15 / span 11">pour la saison suivante</span></div>
+    </div>
+
+    <div class="saison-bas">
+      <figure class="ph revele" style="margin:0">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/taille-d-un-arbre-fruitier-en-hiver.webp" width="1600" height="1200" loading="lazy" alt="En hiver, sur un coteau, le pépiniériste grimpé dans un fruitier sans feuilles le taille.">
+        <figcaption class="pastille">La taille, en hiver</figcaption>
+      </figure>
+      <div>
+        <blockquote>Tous nos arbres sont vendus en racines nues, sans terre autour des racines.</blockquote>
+        <p>Cela facilite leur transport et leur reprise une fois plantés, et évite les conteneurs plastique et le terreau. Hors période de vente, vous pouvez précommander vos arbres : ils sont réservés à l'avance et expédiés dès que les conditions sont réunies pour les déterrer.</p>
+        <div class="boutons" style="margin-top:30px">
+          <a class="btn btn-soufre" href="https://www.pepiniereauguste.com/boutique/">Commander ou précommander</a>
+          <a class="btn btn-clair" href="https://www.pepiniereauguste.com/transport-et-conditionnement/">Transport et conditionnement</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cadre">
+  <section class="pepiniere" id="pepiniere" aria-labelledby="t-pepiniere">
+    <div class="duo">
+      <figure class="grand revele" style="margin:0;position:relative">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/portrait-du-pepinieriste-au-soleil-couchant.webp" width="1600" height="1200" loading="lazy" alt="Portrait souriant du pépiniériste au soleil couchant, feuillage d'un arbre à côté de lui.">
+        <figcaption class="pastille">Au Hameau de Pombole</figcaption>
+      </figure>
+      <figure class="petit revele" style="margin:0">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/mains-greffage-au-couteau.webp" width="1091" height="1278" loading="lazy" alt="Deux mains taillent un rameau au petit couteau pour une greffe.">
+      </figure>
+    </div>
+    <div>
+      <h2 class="titre-section" id="t-pepiniere">Plus qu'un travail, un partage</h2>
+      <p>Depuis maintenant 10 ans, je me consacre à la culture et au développement d'arbres fruitiers rares, anciens et résistants. Mon objectif est simple : offrir des arbres de qualité, adaptés à votre sol et à votre climat grâce à une sélection rigoureuse de variétés et de porte-greffes.</p>
+      <p>Je veille personnellement à ce que chaque arbre soit en parfaite santé avant de vous être expédié. Jardinier amateur ou professionnel, je suis là pour vous accompagner dans le choix des arbres qui conviendront le mieux à votre projet.</p>
+      <p class="phrase">« Ensemble, faisons de votre terrain un véritable verger, riche en saveurs et en diversité. »</p>
+      <div class="boutons" style="margin-top:28px">
+        <a class="btn btn-contour" href="https://www.pepiniereauguste.com/la-pepiniere/">Découvrir la pépinière</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="conseils" id="conseils" aria-labelledby="t-conseils">
+  <div class="cadre">
+    <div>
+      <h2 class="gestes" id="t-conseils"><span>Planter,</span><span>entretenir,</span><span>récolter,</span><span>tailler.</span></h2>
+      <p class="intro">Des conseils pour chaque étape de votre projet de verger, de la plantation à la récolte, en passant par l'entretien et la taille. Que vous soyez novice ou expérimenté, des guides vous aident à choisir la forme adaptée à vos besoins et à récolter vos fruits au bon moment.</p>
+      <div class="boutons" style="margin-top:28px">
+        <a class="btn btn-plein" href="https://www.pepiniereauguste.com/conseils/">Accéder à tous nos conseils</a>
+      </div>
+    </div>
+    <div class="vignettes">
+      <figure class="v1 revele" style="margin:0;position:relative">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/jeunes-plants-tuteures-en-rangs.webp" width="1000" height="750" loading="lazy" alt="Rang de jeunes plants fraîchement mis en terre, chacun tenu par un tuteur rouge.">
+        <figcaption class="pastille">Planter</figcaption>
+      </figure>
+      <figure class="v2 revele" style="margin:0">
+        <img src="assets/pepiniere-d-auguste-esplas-de-serou/panier-de-pommes-recoltees.webp" width="1000" height="750" loading="lazy" alt="Panier en osier rempli de pommes vertes, jaunes et rouges posé dans l'herbe.">
+        <figcaption class="pastille">Récolter</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="cadre">
+  <section class="rdv" id="rendez-vous" aria-labelledby="t-rdv">
+    <div class="rdv-carte">
+      <div class="rdv-texte">
+        <h2 class="titre-section" id="t-rdv">Ouverts uniquement sur rendez-vous</h2>
+        <p class="intro">La pépinière se situe au Hameau de Pombole, à Esplas de Sérou. Si vous retirez vos arbres sur place, convenons d'un rendez-vous : le numéro à appeler figure dans l'email que vous recevez quand votre commande est prête.</p>
+        <p class="intro">Pour une question ou une demande d'informations, nous vous répondons du lundi au vendredi, de 9h à 18h.</p>
+        <div class="boutons" style="margin-top:28px">
+          <a class="btn btn-plein" href="tel:+33768952575">Appeler la pépinière</a>
+          <a class="btn btn-contour" href="mailto:pepiniereauguste@gmail.com">Écrire un email</a>
+        </div>
+      </div>
+      <div class="rdv-infos">
+        <dl>
+          <div><dt>Adresse</dt><dd>Hameau de Pombole<br>09420 Esplas de Sérou</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33768952575">07 68 95 25 75</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:pepiniereauguste@gmail.com">pepiniereauguste@gmail.com</a></dd></div>
+          <div><dt>Réponse aux demandes</dt><dd>Du lundi au vendredi, de 9h à 18h</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="pied">
+  <div class="cadre pied-grille">
+    <div>
+      <div class="marque"><b>La Pépinière d'Auguste</b></div>
+      <p style="margin-top:14px">Arbres fruitiers biologiques, variétés anciennes, rares et résistantes. Producteur pour particuliers et professionnels.</p>
+    </div>
+    <div>
+      <h3>Horaires et contact</h3>
+      <p>Ouverts uniquement sur rendez-vous</p>
+      <p><a href="tel:+33768952575">07 68 95 25 75</a></p>
+      <p><a href="mailto:pepiniereauguste@gmail.com">pepiniereauguste@gmail.com</a></p>
+      <p>Hameau de Pombole, 09420 Esplas de Sérou</p>
+    </div>
+    <div>
+      <h3>Informations</h3>
+      <ul>
+        <li><a href="https://www.pepiniereauguste.com/boutique/">La boutique</a></li>
+        <li><a href="https://www.pepiniereauguste.com/transport-et-conditionnement/">Transport et conditionnement</a></li>
+        <li><a href="https://www.pepiniereauguste.com/conditions-generales-de-vente/">Conditions générales de vente</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposition">Proposition de Nicolas Masset pour La Pépinière d'Auguste, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.revele').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

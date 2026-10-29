@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+  Plan (D'Sewist Quilt Shop & More, Appleton): the color of the fabric carries the page.
+  Color: pale mint gray #EEF2EE (ground), card #F8FAF6, charcoal #22272B (ink + clubs section), marigold #E2A03F (fills), coral #D9523B (second touch, fills and big type only), fabric hues sampled from the ombre wall for the selvage dots and the category chips.
+  Type: Archivo with the width axis (125 expanded for the hero title and section titles, 100 for small heads), Crimson Pro for reading text. Left aligned.
+  Hero: [rounded 20px landscape banner of the ombre wall under the nav] / [huge expanded title below, left] + [raised light "Clubs" card on the right, climbing over the banner's bottom edge, long shadow]
+  Sections: selvage-dot facts strip > charcoal clubs section as strip-quilt rows (the fix for the dead /clubs.htm) > kits mosaic with overlapping quilts > marigold longarm section with a measured backing diagram > fabric-color category chips > visit with a small tilted storefront > charcoal footer.
+  Review vs generic defaults: no caps eyebrows, no dotted meta, no arrows; numbering only on the longarm steps, which are a real sequence; no accent word in titles.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>D'Sewist Quilt Shop &amp; More, Appleton</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23E2A03F'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='32' font-weight='900' text-anchor='middle' fill='%2322272B'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mint:#EEF2EE; --mint-2:#E2E9E3; --card:#F8FAF6; --char:#22272B; --char-2:#1A1E21; --char-3:#2D3338;
+  --gold:#E2A03F; --gold-pale:#F5E3C2; --coral:#D9523B; --soft:#4A5358;
+  --shadow:0 30px 60px -34px rgba(34,39,43,.55);
+  --shadow-long:0 50px 80px -40px rgba(34,39,43,.6),0 12px 24px -16px rgba(34,39,43,.25);
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--mint);color:var(--char);font-family:"Crimson Pro",Georgia,serif;font-size:20px;line-height:1.6}
+::selection{background:var(--gold);color:var(--char)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+h1,h2,h3,.sans{font-family:"Archivo",sans-serif;font-weight:600}
+h2{font-size:clamp(30px,4.4vw,52px);line-height:1.02;font-stretch:118%;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}
+h3{font-size:22px;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em}
+p{margin:0 0 14px;text-wrap:pretty}
+.wrap{width:min(var(--wrap),100%);margin-inline:auto;padding-inline:clamp(20px,4.5vw,40px)}
+section{padding-block:clamp(64px,9vw,120px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:600;font-size:16px;padding:15px 26px;border-radius:999px;text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease;max-width:100%;text-align:center}
+.btn-fill{background:var(--char);color:var(--card);box-shadow:0 16px 30px -18px rgba(34,39,43,.9)}
+.btn-fill:hover{background:var(--coral);transform:translateY(-2px)}
+.btn-line{border:1.5px solid currentColor}
+.btn-line:hover{background:var(--char);color:var(--card);border-color:var(--char);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--char)}
+.btn-gold:hover{background:var(--card);transform:translateY(-2px)}
+
+/* nav */
+.top{padding-block:20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:700;font-size:24px;letter-spacing:-.02em}
+.brand span{font-style:italic;font-size:17px;color:var(--soft);margin-top:3px}
+.nav{display:flex;align-items:center;gap:24px;font-family:"Archivo",sans-serif;font-weight:500;font-size:16px}
+.nav a{text-decoration:none;padding-block:4px;background:linear-gradient(var(--coral),var(--coral)) left bottom/0 2px no-repeat;transition:background-size .3s ease}
+.nav a:hover{background-size:100% 2px}
+.nav .tel{background:var(--char);color:var(--card);padding:11px 20px;border-radius:999px}
+.nav .tel:hover{background:var(--coral)}
+
+/* hero */
+.hero{padding-block:4px clamp(56px,7vw,96px)}
+.banner{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.banner img{width:100%;height:clamp(240px,34vw,460px);object-fit:cover;object-position:50% 30%}
+.banner .tag{position:absolute;left:20px;bottom:20px}
+.tag{display:inline-block;background:rgba(248,250,246,.95);color:var(--char);font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;box-shadow:0 10px 22px -12px rgba(34,39,43,.6)}
+.selvage{display:flex;gap:9px;margin:22px 0 0;padding:0;list-style:none}
+.selvage li{width:14px;height:14px;border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.hero h1{font-stretch:125%;font-weight:600;font-size:clamp(34px,6.2vw,80px);line-height:.96;letter-spacing:-.035em;margin:30px 0 26px}
+.hero .lede{font-size:22px;color:var(--soft);max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.club-card{position:relative;z-index:2;margin-top:-150px;background:var(--card);border-radius:22px;padding:30px 30px 26px;box-shadow:var(--shadow-long)}
+.club-card h2{font-size:30px;font-stretch:125%;margin-bottom:6px}
+.club-card .sub{font-style:italic;color:var(--soft);font-size:18px;margin-bottom:14px}
+.club-card ul{list-style:none;margin:0 0 18px;padding:0}
+.club-card li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid #DCE3DD}
+.club-card li::before{content:"";width:14px;height:14px;border-radius:50%;margin-top:6px;background:var(--dot)}
+.club-card b{font-family:"Archivo",sans-serif;font-weight:600;font-size:18px;display:block;line-height:1.25}
+.club-card li span{display:block;font-size:17px;color:var(--soft);line-height:1.4;margin-top:2px}
+
+/* facts */
+.facts{padding-block:0 8px}
+.facts ul{list-style:none;margin:0 auto;padding-block:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;border-top:1.5px solid #CDD6CF}
+.facts li{display:flex;flex-direction:column}
+.facts strong{font-family:"Archivo",sans-serif;font-weight:600;font-size:19px;line-height:1.25}
+.facts span{font-size:18px;color:var(--soft);line-height:1.35}
+.facts i{display:block;width:30px;height:6px;border-radius:3px;margin-bottom:12px}
+
+/* clubs */
+.clubs{background:var(--char);color:var(--card)}
+.clubs-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,80px);align-items:center;margin-bottom:56px}
+.clubs-head p{color:rgba(248,250,246,.78);font-size:21px;max-width:560px}
+.clubs .btn-line{color:var(--card)}
+.clubs .btn-line:hover{background:var(--card);color:var(--char);border-color:var(--card)}
+.fan{position:relative;justify-self:end;width:min(380px,100%)}
+.fan img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;box-shadow:0 40px 70px -36px rgba(0,0,0,.8);transform:rotate(2.5deg)}
+.fan .tag{position:absolute;left:18px;bottom:22px}
+.strips{display:grid;gap:12px}
+.strip{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr) minmax(0,1.3fr);gap:28px;align-items:start;padding:30px 34px;border-radius:18px;color:var(--char)}
+.strip h3{font-stretch:125%;font-size:clamp(24px,2.6vw,32px);line-height:1.05;margin:0}
+.strip .when{font-family:"Archivo",sans-serif;font-weight:600;font-size:17px;line-height:1.35}
+.strip .when small{display:block;font-family:"Crimson Pro",serif;font-weight:400;font-style:italic;font-size:17px;opacity:.8}
+.strip p{margin:0;font-size:19px}
+.s-gold{background:var(--gold)}
+.s-coral{background:var(--coral);color:#FFF8F1}
+.s-mint{background:#CFE0D4}
+.dates{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:start}
+.dates h3{color:var(--card);font-size:20px;margin-top:10px}
+.dates ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.dates li{display:flex;align-items:center;gap:14px;background:var(--char-3);border-radius:999px;padding:8px 20px 8px 8px;font-size:18px;color:rgba(248,250,246,.9)}
+.dates time{font-family:"Archivo",sans-serif;font-weight:700;font-stretch:112%;font-size:14px;background:var(--card);color:var(--char);border-radius:999px;padding:8px 12px;white-space:nowrap}
+.dates .links{grid-column:2;display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+
+/* kits */
+.kits .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,88px);align-items:center}
+.kits p{color:var(--soft)}
+.mosaic{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(12,minmax(0,40px))}
+.mosaic figure{margin:0;position:relative}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.m1{grid-column:1/8;grid-row:1/10}
+.m1 img{border-radius:20px;box-shadow:var(--shadow)}
+.m2{grid-column:7/13;grid-row:3/12;z-index:2}
+.m2 img{border-radius:16px;border:8px solid var(--card);box-shadow:var(--shadow-long);transform:rotate(3deg)}
+.m3{grid-column:2/7;grid-row:9/13;z-index:3}
+.m3 img{border-radius:14px;box-shadow:var(--shadow-long);transform:rotate(-2deg)}
+.m3 .tag{position:absolute;left:12px;bottom:12px}
+
+/* longarm */
+.longarm{background:var(--gold-pale)}
+.la-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,88px);align-items:start}
+.steps{list-style:none;margin:28px 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;padding:16px 0;border-top:1.5px dashed rgba(34,39,43,.25)}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--char);color:var(--gold-pale);display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:700;font-size:17px}
+.steps b{font-family:"Archivo",sans-serif;font-weight:600;font-size:19px;display:block}
+.steps span{display:block;color:var(--soft);font-size:19px;line-height:1.45;margin-top:2px}
+.measure{background:var(--card);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+.measure svg{width:100%;height:auto;display:block}
+.measure p{font-size:18px;color:var(--soft);margin:14px 0 0}
+.grace{margin-top:22px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:center}
+.grace img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
+.grace h3{font-stretch:118%}
+.grace p{font-size:18px;color:var(--soft)}
+.grace .links{display:flex;flex-direction:column;gap:6px;font-family:"Archivo",sans-serif;font-weight:600;font-size:16px}
+.grace .links a{text-underline-offset:4px;text-decoration-color:var(--coral);text-decoration-thickness:2px}
+
+/* shop */
+.shop .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips a{display:inline-block;text-decoration:none;font-family:"Archivo",sans-serif;font-weight:500;font-size:16px;padding:10px 18px;border-radius:999px;background:var(--c);color:var(--char);transition:transform .2s ease}
+.chips a:hover{transform:translateY(-2px) rotate(-1deg)}
+.gift{margin-top:28px;background:var(--card);border-radius:20px;padding:24px 26px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.gift b{font-family:"Archivo",sans-serif;font-weight:600;font-size:19px}
+.gift .amts{display:flex;flex-wrap:wrap;gap:8px}
+.gift .amts span{font-family:"Archivo",sans-serif;font-weight:600;font-stretch:112%;font-size:16px;border:1.5px solid var(--char);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.gift small{font-style:italic;color:var(--soft);font-size:17px}
+
+/* visit */
+.visit{padding-top:0}
+.visit-card{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center;background:var(--card);border-radius:26px;padding:clamp(28px,4vw,52px);box-shadow:var(--shadow)}
+.front{position:relative;width:min(250px,100%);justify-self:center}
+.front img{width:100%;aspect-ratio:512/579;object-fit:cover;border-radius:12px;border:8px solid #fffdf8;box-shadow:var(--shadow-long);transform:rotate(-3deg)}
+.front .tag{position:absolute;right:-12px;bottom:-10px;background:var(--gold)}
+.hours{width:100%;border-collapse:collapse;font-size:19px}
+.hours th{text-align:left;font-family:"Archivo",sans-serif;font-weight:600;font-size:17px;padding:8px 0;padding-right:12px}
+.hours td{padding:8px 0;color:var(--soft)}
+.hours tr+tr{border-top:1px solid #DCE3DD}
+.contact-lines{display:grid;gap:4px;font-size:19px}
+.contact-lines a{text-underline-offset:4px;text-decoration-color:var(--coral)}
+
+/* footer */
+footer{background:var(--char-2);color:rgba(248,250,246,.8);padding-block:64px 0;font-size:18px}
+footer .cols{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px;padding-bottom:48px}
+footer .name{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:700;font-size:26px;color:var(--card);line-height:1.05;margin-bottom:12px}
+footer h3{color:var(--card);font-size:17px;margin-bottom:10px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+footer a{color:var(--card);text-underline-offset:4px;text-decoration-color:rgba(226,160,63,.6)}
+footer .selvage{margin:0 0 22px}
+.proposal{border-top:1px solid rgba(248,250,246,.12);padding:18px clamp(20px,4.5vw,40px);text-align:center;font-size:15px;color:rgba(248,250,246,.6)}
+.proposal a{color:rgba(248,250,246,.88)}
+
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-reveal .reveal:not(.in){opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){.reveal,.btn,.chips a{transition:none}}
+
+@media (max-width:1040px){
+  .nav a:not(.tel){display:none}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .strip p{grid-column:1/-1}
+  .visit-card{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}
+  .visit-card .contact{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .hero-grid,.clubs-head,.kits .wrap,.la-grid,.shop .wrap,footer .cols{grid-template-columns:minmax(0,1fr)}
+  .club-card{margin-top:4px}
+  .fan{justify-self:start;width:min(320px,88%)}
+  .dates{grid-template-columns:minmax(0,1fr)}
+  .dates .links{grid-column:auto}
+  .mosaic{grid-template-rows:repeat(12,minmax(0,34px))}
+}
+@media (max-width:560px){
+  body{font-size:19px}
+  .strip{grid-template-columns:minmax(0,1fr);gap:10px;padding:24px 22px}
+  .facts ul{grid-template-columns:minmax(0,1fr);gap:20px}
+  .visit-card{grid-template-columns:minmax(0,1fr)}
+  .front{justify-self:start;width:min(200px,70%)}
+  .grace{grid-template-columns:minmax(0,1fr)}
+  .grace img{aspect-ratio:16/10}
+  .mosaic{grid-template-rows:repeat(12,minmax(0,26px))}
+  .m3{grid-column:1/9}
+  .fan img{transform:rotate(1.5deg)}
+  .measure{padding:18px}
+  .club-card{padding:24px 22px 20px}
+  .banner .tag{left:12px;bottom:12px}
+}
+@media (max-width:420px){
+  .actions .btn,.dates .links .btn{width:100%}
+  .brand b{font-size:21px}
+  .nav .tel{padding:10px 16px}
+  .dates li{border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="D'Sewist Quilt Shop and More, home"><b>D'Sewist</b><span>Quilt Shop &amp; More</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#clubs">Clubs</a>
+      <a href="#kits">Kits</a>
+      <a href="#longarm">Longarm</a>
+      <a href="#shop">Shop</a>
+      <a href="#visit">Visit</a>
+      <a class="tel" href="tel:+19209393989">920-939-3989</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="banner">
+      <img src="assets/dsewist-quilt-shop-appleton/rayon-tissus-degrades-arc-en-ciel.webp" alt="A long shelf of mottled fabric bolts sorted like a rainbow, from orange and red through pink, yellow and green to blue and lavender" width="1600" height="846">
+      <span class="tag">In the shop, 1400 West College Ave</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <ul class="selvage" aria-hidden="true">
+          <li style="background:#D9632F"></li><li style="background:#C8323A"></li><li style="background:#8E2240"></li><li style="background:#E996A6"></li><li style="background:#EFD86A"></li><li style="background:#9CC75A"></li><li style="background:#3FA7A0"></li><li style="background:#2E6E9E"></li><li style="background:#9C8BD0"></li>
+        </ul>
+        <h1>Wisconsin's friendliest quilt shop.</h1>
+        <p class="lede">Quilt fabric, notions and supplies, patterns, classes and yarn, in Appleton and online. Come and stitch with us at a club or a circle.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="#clubs">Join a club</a>
+          <a class="btn btn-line" href="https://www.dsewistquilts.com/shop.htm">Shop online</a>
+        </div>
+      </div>
+      <aside class="club-card" aria-labelledby="cc-title">
+        <h2 id="cc-title">Clubs</h2>
+        <p class="sub">We have the Club for you.</p>
+        <ul>
+          <li style="--dot:#E2A03F"><div><b>Featherweight Friends</b><span>New project since September 2026: the Americana Revival quilt</span></div></li>
+          <li style="--dot:#D9523B"><div><b>Sashiko Circle</b><span>Second Tuesday, 5:30 to 8:00</span></div></li>
+          <li style="--dot:#3FA7A0"><div><b>Strip Quilters' Circle</b><span>Grab your jelly rolls</span></div></li>
+        </ul>
+        <a class="btn btn-gold" href="#clubs">Meet the clubs</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <ul class="wrap">
+    <li><i style="background:#E2A03F"></i><strong>Monday to Saturday</strong><span>Open until 7&nbsp;pm on Tuesdays</span></li>
+    <li><i style="background:#D9523B"></i><strong>Clubs and circles</strong><span>Featherweight, Sashiko, strip quilting</span></li>
+    <li><i style="background:#3FA7A0"></i><strong>Longarm quilting</strong><span>Shipped back to you for free</span></li>
+    <li><i style="background:#9C8BD0"></i><strong>A Grace dealer</strong><span>Test drive a machine and frame</span></li>
+  </ul>
+</div>
+
+<section class="clubs" id="clubs">
+  <div class="wrap">
+    <div class="clubs-head">
+      <div>
+        <h2>Clubs and circles</h2>
+        <p>Do you have a Featherweight? Have you always wanted to show it off and stitch with other Featherweight Friends? We have the Club for you. And if hand stitching or jelly rolls are more your thing, there's a circle for that too.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://www.dsewistquilts.com/classes.htm">See the calendar</a>
+          <a class="btn btn-line" href="https://www.dsewistquilts.com/iishop?dynamicFilters=%7B%22class_category%22%3A%7B%22-1%22%3Atrue%7D%7D">All classes</a>
+        </div>
+      </div>
+      <figure class="fan">
+        <img class="reveal" src="assets/dsewist-quilt-shop-appleton/quilt-eventails-arc-en-ciel.webp" alt="A quilt of rainbow fan blocks on a charcoal ground, framed by turquoise sashing" width="1189" height="1600" loading="lazy">
+        <span class="tag">From our Kits page</span>
+      </figure>
+    </div>
+
+    <div class="strips">
+      <article class="strip s-gold">
+        <h3>Featherweight Friends</h3>
+        <div class="when">Americana Revival quilt<small>new project since September 2026</small></div>
+        <p>Join us for the Americana Revival quilt from the KIS ME! Bloc Loc book by Janna Thomas... or bring your own project!</p>
+      </article>
+      <article class="strip s-coral">
+        <h3>Sashiko Circle</h3>
+        <div class="when">Second Tuesday<small>5:30 to 8:00</small></div>
+        <p>Come and stitch. Sashiko classes and supplies are in the shop too.</p>
+      </article>
+      <article class="strip s-mint">
+        <h3>Strip Quilters' Circle</h3>
+        <div class="when">Next on Nov 3<small>see the calendar for more</small></div>
+        <p>Grab your jelly rolls and come join us for this great and fun circle.</p>
+      </article>
+    </div>
+
+    <div class="dates">
+      <h3>Coming up</h3>
+      <ol>
+        <li><time datetime="2026-11-03">Nov 3</time>Strip Quilters' Circle</li>
+        <li><time datetime="2026-11-10">Nov 10</time>Sashiko Circle</li>
+        <li><time datetime="2026-11-13">Nov 13 and 14</time>Fall Fun In-Store Retreat</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="kits" id="kits">
+  <div class="wrap">
+    <div>
+      <h2>Kits, ready to sew.</h2>
+      <p>The fabric and the pattern together, tied up in the shop. These quilts are a few of the ones on our Kits page: flying geese, fans, offset bricks.</p>
+      <div class="actions">
+        <a class="btn btn-fill" href="https://www.dsewistquilts.com/shop/Kits.htm">Browse the kits</a>
+        <a class="btn btn-line" href="https://www.dsewistquilts.com/shop/Fabric.htm">Fabric</a>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="m1"><img class="reveal" src="assets/dsewist-quilt-shop-appleton/quilt-oies-sauvages-violet.webp" alt="A finished quilt of purple, blue and pink blocks surrounded by multicolored flying geese" width="1592" height="1600" loading="lazy"></figure>
+      <figure class="m2"><img class="reveal" src="assets/dsewist-quilt-shop-appleton/quilt-rectangles-decales-sombres.webp" alt="A quilt of offset bricks in pink, green, turquoise, yellow and orange, separated by black and white bands" width="1200" height="1600" loading="lazy"></figure>
+      <figure class="m3"><img class="reveal" src="assets/dsewist-quilt-shop-appleton/kit-tissus-ruban-violet.webp" alt="A quilt kit: folded yellow and green gingham fabrics with batting, tied with a purple ribbon and the pattern" width="1600" height="888" loading="lazy"><span class="tag">A kit, tied with its pattern</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="longarm" id="longarm">
+  <div class="wrap la-grid">
+    <div>
+      <h2>Longarm quilting</h2>
+      <p>Complete our reservation form to have your quilt professionally quilted. From baby to king size, you choose the thread color and the design, or let D'Sewist choose them and supply the batting.</p>
+      <ol class="steps">
+        <li><div><b>Fill in the reservation form</b><span>Name, size, thread color and type of design.</span></div></li>
+        <li><div><b>We call you</b><span>When we are ready to have your quilt sent to us.</span></div></li>
+        <li><div><b>Send us your quilt</b><span>If you mail it, we'll call so you know your baby has arrived safely.</span></div></li>
+        <li><div><b>We ship it back for free</b><span>Once quilted, it comes home to you at no charge.</span></div></li>
+      </ol>
+      <div class="actions"><a class="btn btn-fill" href="https://www.dsewistquilts.com/longarm-quilting.htm">Reservation form</a></div>
+    </div>
+    <div>
+      <figure class="measure" style="margin:0">
+        <svg viewBox="0 0 420 300" role="img" aria-label="A 60 by 80 inch quilt needs backing and batting of at least 68 by 88 inches">
+          <rect x="70" y="18" width="280" height="264" rx="10" fill="#F5E3C2" stroke="#22272B" stroke-width="2" stroke-dasharray="7 6"/>
+          <rect x="102" y="48" width="216" height="204" rx="6" fill="#E2A03F"/>
+          <g fill="#D9523B" opacity=".9"><rect x="102" y="48" width="54" height="51"/><rect x="210" y="99" width="54" height="51"/><rect x="156" y="150" width="54" height="51"/><rect x="264" y="201" width="54" height="51"/></g>
+          <g fill="#3FA7A0" opacity=".85"><rect x="264" y="48" width="54" height="51"/><rect x="102" y="201" width="54" height="51"/></g>
+          <text x="210" y="138" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="24" fill="#22272B">60" x 80"</text>
+          <text x="210" y="160" text-anchor="middle" font-family="Crimson Pro, serif" font-style="italic" font-size="16" fill="#22272B">your quilt</text>
+          <text x="210" y="12" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="14" fill="#22272B">backing and batting: at least 68" x 88"</text>
+          <g stroke="#22272B" stroke-width="1.5"><line x1="355" y1="48" x2="375" y2="48"/><line x1="355" y1="18" x2="375" y2="18"/><line x1="368" y1="20" x2="368" y2="46"/></g>
+          <text x="382" y="38" font-family="Archivo, sans-serif" font-weight="600" font-size="14" fill="#22272B">4"</text>
+        </svg>
+        <figcaption><p>Make sure your backing and batting are 4" larger on each side of the quilt. A 60" x 80" quilt needs at least 68" x 88".</p></figcaption>
+      </figure>
+      <div class="grace">
+        <img class="reveal" src="assets/dsewist-quilt-shop-appleton/pied-de-biche-quilting-machine.webp" alt="Close-up of a metal quilting foot and needle over floral fabric" width="1600" height="1422" loading="lazy">
+        <div>
+          <h3>We are a Grace dealer</h3>
+          <p>Come by to see our machines and frames and "test drive" one today.</p>
+          <div class="links">
+            <a href="https://www.dsewistquilts.com/shop/QNique-Long-Arm-Machines-by-Grace-Company.htm">Q'Nique long arm machines</a>
+            <a href="https://www.dsewistquilts.com/shop/c/p/Singer-Sewing-Machines-x101852839.htm">Singer sewing machines</a>
+            <a href="https://www.dsewistquilts.com/shop/Machines-and-Supplies.htm">Machines and supplies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div>
+      <h2>The whole shop, online.</h2>
+      <p style="color:var(--soft)">Shop by department online, from Grunge Basics to wool felt.</p>
+      <div class="actions"><a class="btn btn-fill" href="https://www.dsewistquilts.com/shop.htm">Open the shop</a></div>
+    </div>
+    <div>
+      <ul class="chips">
+        <li><a style="--c:#F2B48F" href="https://www.dsewistquilts.com/shop/Fabric.htm">Fabric</a></li>
+        <li><a style="--c:#F0A2A0" href="https://www.dsewistquilts.com/shop/c/p/Grunge-Basics-x63328516.htm">Grunge Basics</a></li>
+        <li><a style="--c:#F3C6CF" href="https://www.dsewistquilts.com/shop.htm">Ombre</a></li>
+        <li><a style="--c:#F2DC8C" href="https://www.dsewistquilts.com/shop.htm">Precuts</a></li>
+        <li><a style="--c:#E4E59A" href="https://www.dsewistquilts.com/shop/Kits.htm">Kits</a></li>
+        <li><a style="--c:#C3DE9C" href="https://www.dsewistquilts.com/shop.htm">Patterns</a></li>
+        <li><a style="--c:#A9D8BF" href="https://www.dsewistquilts.com/shop.htm">Books</a></li>
+        <li><a style="--c:#9ED3D0" href="https://www.dsewistquilts.com/shop.htm">Applique</a></li>
+        <li><a style="--c:#A8CBE6" href="https://www.dsewistquilts.com/shop.htm">Batting</a></li>
+        <li><a style="--c:#B9C3EC" href="https://www.dsewistquilts.com/shop.htm">Interfacing and Stabilizer</a></li>
+        <li><a style="--c:#CDBDEA" href="https://www.dsewistquilts.com/shop.htm">Notions</a></li>
+        <li><a style="--c:#E0BDE3" href="https://www.dsewistquilts.com/shop.htm">Knits</a></li>
+        <li><a style="--c:#F2B48F" href="https://www.dsewistquilts.com/shop.htm">Clothing Fabric</a></li>
+        <li><a style="--c:#F0A2A0" href="https://www.dsewistquilts.com/shop.htm">Rayon Fabrics</a></li>
+        <li><a style="--c:#F2DC8C" href="https://www.dsewistquilts.com/shop.htm">Wool and Wool Felt</a></li>
+        <li><a style="--c:#C3DE9C" href="https://www.dsewistquilts.com/shop.htm">Yarn Department</a></li>
+        <li><a style="--c:#9ED3D0" href="https://www.dsewistquilts.com/shop/Machines-and-Supplies.htm">Machines and Supplies</a></li>
+        <li><a style="--c:#A8CBE6" href="https://www.dsewistquilts.com/shop.htm">Subscriptions</a></li>
+        <li><a style="--c:#CDBDEA" href="https://www.dsewistquilts.com/shop.htm">Gifts and Other Fun Stuff</a></li>
+      </ul>
+      <div class="gift">
+        <b>Online gift card</b>
+        <div class="amts"><span>$25</span><span>$30</span><span>$40</span><span>$50</span><span>$100</span></div>
+        <small>Expires in 12 months.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-card">
+      <figure class="front" style="margin:0">
+        <img class="reveal" src="assets/dsewist-quilt-shop-appleton/vitrine-1400-college-ave.webp" alt="The storefront: D'Sewist Quilt Shop and More banner over glass doors with an Open sign, door number 1400 D" width="512" height="579" loading="lazy">
+        <span class="tag">1400 D</span>
+      </figure>
+      <div>
+        <h2 style="font-size:clamp(28px,3.2vw,40px)">Visit us in person or online!</h2>
+        <table class="hours">
+          <tr><th scope="row">Mon, Wed, Thu, Fri</th><td>10&nbsp;am to 5&nbsp;pm</td></tr>
+          <tr><th scope="row">Tuesday</th><td>11&nbsp;am to 7&nbsp;pm</td></tr>
+          <tr><th scope="row">Saturday</th><td>9&nbsp;am to 3&nbsp;pm</td></tr>
+        </table>
+      </div>
+      <div class="contact">
+        <div class="contact-lines">
+          <span>1400 West College Ave<br>Appleton, WI 54914</span>
+          <a href="tel:+19209393989">920-939-3989</a>
+          <a href="mailto:info@dsewist.com">info@dsewist.com</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://share.google/yKfV0klftRGDzgyyj">Find us on Google</a>
+          <a class="btn btn-line" href="https://www.facebook.com/p/DSewist-Quilt-Shop-More-61579690473920/">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <ul class="selvage" aria-hidden="true">
+        <li style="background:#D9632F"></li><li style="background:#C8323A"></li><li style="background:#E996A6"></li><li style="background:#EFD86A"></li><li style="background:#9CC75A"></li><li style="background:#3FA7A0"></li><li style="background:#2E6E9E"></li><li style="background:#9C8BD0"></li>
+      </ul>
+      <div class="name">D'Sewist Quilt Shop &amp; More</div>
+      <p>1400 West College Ave<br>Appleton, WI 54914</p>
+      <p><a href="tel:+19209393989">920-939-3989</a><br><a href="mailto:info@dsewist.com">info@dsewist.com</a></p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <ul>
+        <li>Mon, Wed, Thu, Fri: 10&nbsp;am to 5&nbsp;pm</li>
+        <li>Tuesday: 11&nbsp;am to 7&nbsp;pm</li>
+        <li>Saturday: 9&nbsp;am to 3&nbsp;pm</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#clubs">Clubs</a></li>
+        <li><a href="https://www.dsewistquilts.com/classes.htm">Classes</a></li>
+        <li><a href="https://www.dsewistquilts.com/module/events.htm?pageComponentId=2554028&amp;month=current&amp;year=current">Calendar of events</a></li>
+        <li><a href="https://www.dsewistquilts.com/longarm-quilting.htm">Longarm reservation form</a></li>
+        <li><a href="https://www.dsewistquilts.com/shop.htm">Shop online</a></li>
+        <li><a href="https://www.facebook.com/p/DSewist-Quilt-Shop-More-61579690473920/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposal">Proposal by Nicolas Masset for D'Sewist Quilt Shop &amp; More, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var els=document.querySelectorAll('.reveal');
+  document.documentElement.classList.add('js-reveal');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

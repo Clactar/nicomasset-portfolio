@@ -1,0 +1,434 @@
+<!doctype html>
+<!--
+PLAN (Blue Mountain Woodworks, Timbo AR)
+Couleurs : noyer #231A14 (héros, ébénisterie, pied), crème #F0EBE3 (fond), cerisier #A4472B (accent : téléphone, étiquettes), surface #F8F4EE, fil du bois #D8C7B2 (traits, règle).
+Typo : Zilla Slab 600 (titres) / 500 (chiffres) + Karla 400/500/700 (texte). Pas de capitales espacées, pas de sur-titres.
+Héros : [logo ............ nav ....... (870) 746-4764]   fond noyer
+        [phrase de lieu     |  photo table cerisier qui file jusqu'au bord droit ]
+        [TITRE slab crème   |  arrondi 24 px à gauche seulement, étiquette posée   ]
+        [chapeau + appel    |                                                      ]
+Sections : règle de menuisier (bandeau de faits à graduations) / rayon de planches (8 essences) + coffre en cèdre sous passe-partout / meubles en quinconce avec étiquettes / ébénisterie fond noyer : cuisine large + carte qui chevauche / planches à découper : chiffre d'épaisseur + photo inclinée / père et fils : grande citation + photo du bar / commander : numéro en très grand / pied noyer.
+Revue : pas de crème + serif + terre cuite générique (le cerisier est la couleur du bois montré, la slab vient de l'atelier) ; pas de grille de cartes ; aucune numérotation ; un seul objet audacieux : la photo qui sort de l'écran.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Blue Mountain Woodworks · Custom furniture in Timbo, Arkansas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%23A4472B'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='36' fill='%23F0EBE3'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --walnut:#231A14; --walnut-2:#33261D; --cream:#F0EBE3; --surface:#F8F4EE; --cherry:#A4472B; --cherry-d:#8A3A22;
+  --grain:#D8C7B2; --ink:#2A211B; --ink-soft:#5E5148; --on-dark:#E9DFD3; --on-dark-soft:#BFB1A2;
+  --shadow:0 30px 60px -34px rgba(35,26,20,.6);
+  --shadow-s:0 16px 30px -20px rgba(35,26,20,.55);
+  --wrap:min(1200px, 100% - 40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Karla,ui-sans-serif,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--cherry);color:var(--cream)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:3px solid #E59A6F;outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+.wrap{width:var(--wrap);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:.8em 1.55em;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;line-height:1.2;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--cherry);color:#FBF5EE;box-shadow:0 16px 28px -18px rgba(164,71,43,.9)}
+.btn-full:hover{background:var(--cherry-d)}
+.btn-line{border:2px solid currentColor}
+.btn-line:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.nowrap{white-space:nowrap}
+
+/* héros sombre */
+.hero{background:var(--walnut);color:var(--on-dark);padding-bottom:96px;position:relative}
+.top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 28px;padding:22px 0 44px}
+.logo{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:25px;line-height:1.1;text-decoration:none;color:#F6EFE6}
+.logo small{display:block;font-family:Karla,sans-serif;font-weight:500;font-size:14px;color:var(--on-dark-soft);margin-top:4px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-size:16px;font-weight:500}
+.nav a{text-decoration:none;color:var(--on-dark)}
+.nav a:not(.tel):hover{color:#FFF;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--cherry);text-decoration-thickness:2px}
+.nav .tel{background:var(--cherry);color:#FBF5EE;font-weight:700;padding:11px 20px;border-radius:999px;white-space:nowrap;transition:background-color .25s}
+.nav .tel:hover{background:var(--cherry-d)}
+.hero-grid{display:grid;grid-template-columns:minmax(20px,1fr) minmax(0,560px) 56px minmax(0,584px) minmax(0,1fr);grid-template-areas:". kick . pic pic" ". title . pic pic" ". text . pic pic";align-items:start}
+.kick{grid-area:kick;font-size:17px;color:var(--on-dark-soft);margin:22px 0 18px}
+.hero h1{grid-area:title;font-size:clamp(40px, 4.8vw, 68px);color:#F6EFE6;letter-spacing:-.01em}
+.hero-text{grid-area:text;margin-top:28px}
+.lede{font-size:20px;color:var(--on-dark);max-width:500px}
+.hero .btn-line{color:#F6EFE6}
+.hero .btn-line:hover{background:#F6EFE6;color:var(--walnut);border-color:#F6EFE6}
+.pay{font-size:15px;color:var(--on-dark-soft);margin-top:18px}
+.hero-pic{grid-area:pic;position:relative;margin:0;align-self:center}
+.hero-pic .ph{border-radius:24px 0 0 24px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.85)}
+.hero-pic img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 58%;min-height:340px}
+.tag{position:absolute;left:20px;bottom:20px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:700;line-height:1.3;padding:10px 15px;border-radius:12px;box-shadow:0 12px 26px -14px rgba(35,26,20,.7);max-width:calc(100% - 40px)}
+.tag i{font-style:normal;color:var(--cherry);font-weight:700}
+
+/* règle de menuisier : faits */
+.rule{position:relative;margin-top:-44px;z-index:2}
+.rule-in{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:30px 34px 26px;position:relative;overflow:hidden}
+.rule-in::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:repeating-linear-gradient(90deg,var(--grain) 0 2px,transparent 2px 16px),repeating-linear-gradient(90deg,var(--cherry) 0 2px,transparent 2px 80px);background-size:auto 9px,auto 14px;background-repeat:repeat-x;opacity:.75}
+.rule ul{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.rule b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:500;font-size:30px;line-height:1.1;color:var(--ink)}
+.rule span{display:block;font-size:15.5px;color:var(--ink-soft);line-height:1.4;margin-top:4px}
+
+/* essences */
+.woods{padding:120px 0 110px}
+.woods-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.sec-title{font-size:clamp(34px,4.4vw,58px);letter-spacing:-.005em}
+.sec-sub{font-size:19px;color:var(--ink-soft);margin:18px 0 0;max-width:560px}
+.rack{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.rack li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 20px;border-radius:8px;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(20px,2vw,26px);line-height:1.1;box-shadow:0 10px 18px -14px rgba(35,26,20,.6)}
+.rack li span{font-family:Karla,sans-serif;font-weight:500;font-size:15px;opacity:.85}
+.rack .w1{width:100%;background:#4A3426;color:#F3E9DE}
+.rack .w2{width:94%;background:#9A5434;color:#FBF1E7}
+.rack .w3{width:88%;background:#B98463;color:#2A1D15}
+.rack .w4{width:97%;background:#CDB28E;color:#2A1D15}
+.rack .w5{width:84%;background:#B48D62;color:#2A1D15}
+.rack .w6{width:91%;background:#DCCBAE;color:#2A1D15}
+.rack .w7{width:80%;background:#E4D5BC;color:#2A1D15}
+.rack .w8{width:95%;background:#A9563F;color:#FBF1E7}
+.matted{background:var(--surface);padding:18px;border-radius:20px;box-shadow:var(--shadow);transform:rotate(1.5deg)}
+.matted img{border-radius:10px;aspect-ratio:5/4;object-fit:cover;width:100%}
+.matted figcaption{font-size:15px;color:var(--ink-soft);padding:14px 4px 2px;line-height:1.4}
+
+/* meubles en quinconce */
+.furniture{padding:40px 0 120px}
+.f-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:end;margin-bottom:54px}
+.f-head p{margin:0;color:var(--ink-soft);font-size:19px}
+.stagger{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px}
+.stagger figure{margin:0;position:relative}
+.stagger .ph{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.stagger img{width:100%;object-fit:cover}
+.s1{grid-column:1 / span 7}
+.s1 img{aspect-ratio:4/3;object-position:50% 60%}
+.s2{grid-column:8 / span 5;margin-top:120px !important}
+.s2 img{aspect-ratio:4/3}
+.s3{grid-column:3 / span 4;margin-top:-40px !important}
+.s3 img{aspect-ratio:4/5;object-position:50% 50%}
+.s4{grid-column:8 / span 5;align-self:center;padding:0 10px 0 6px}
+.s4-q{font-family:"Zilla Slab",Georgia,serif;font-weight:500;font-size:clamp(24px,2.4vw,32px);line-height:1.22;color:var(--ink);margin-bottom:16px}
+.s4-p{color:var(--ink-soft);font-size:17px;margin:0}
+
+/* ébénisterie, fond noyer */
+.cabinets{background:var(--walnut);color:var(--on-dark);padding:120px 0;border-radius:36px}
+.cab-wide{position:relative}
+.cab-wide .ph{border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.cab-wide img{width:100%;aspect-ratio:2.1/1;object-fit:cover;object-position:50% 52%}
+.cab-card{position:relative;margin:-120px 0 0 48px;max-width:560px;background:var(--surface);color:var(--ink);border-radius:22px;padding:38px 40px;box-shadow:0 40px 70px -36px rgba(0,0,0,.8);z-index:2}
+.cab-card h2{font-size:clamp(32px,3.6vw,48px)}
+.cab-card p{color:var(--ink-soft)}
+.cab-row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.cab-side{margin-top:56px}
+.cab-side .ph{border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(0,0,0,.9)}
+.cab-side img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.cab-side p{color:var(--on-dark-soft);margin-top:22px;font-size:17px}
+.cab-side strong{color:#F6EFE6}
+
+/* planches à découper */
+.boards{padding:130px 0 110px}
+.boards-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+.thick{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:30px 0 26px}
+.thick b{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(54px,6vw,84px);line-height:1;color:var(--cherry);white-space:nowrap}
+.thick span{font-size:17px;color:var(--ink-soft);max-width:220px;line-height:1.4}
+.board-stage{position:relative;padding:40px 0 40px 40px}
+.board-stage::before{content:"";position:absolute;inset:0 0 0 0;background:#E6DCCD;border-radius:28px}
+.board-pic{position:relative;width:min(380px,82%);margin-left:auto;margin-right:12%;transform:rotate(-4deg);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.board-pic img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.board-stage .tag{left:52px;bottom:58px;z-index:2}
+
+/* père et fils */
+.family{background:#E6DCCD;padding:120px 0}
+.fam-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.fam-quote{font-family:"Zilla Slab",Georgia,serif;font-weight:500;font-size:clamp(30px,3.4vw,46px);line-height:1.18;margin:0 0 30px;color:var(--ink);text-wrap:balance}
+.fam-who{display:flex;align-items:center;gap:18px;margin-top:30px}
+.portrait{flex:none;width:96px;height:96px;border-radius:50%;overflow:hidden;border:4px solid var(--surface);box-shadow:var(--shadow-s)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.fam-who p{margin:0;font-size:16px;color:var(--ink-soft);line-height:1.45}
+.fam-who b{color:var(--ink);font-size:17px}
+.fam-pic{position:relative;margin:0}
+.fam-pic .ph{border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.fam-pic img{aspect-ratio:5/6;object-fit:cover;object-position:62% 50%;width:100%}
+
+/* commander */
+.order{padding:120px 0}
+.order-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end}
+.big-tel{display:inline-block;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(40px,7vw,96px);line-height:1;color:var(--cherry);text-decoration:none;margin:24px 0 18px;white-space:nowrap;transition:color .25s}
+.big-tel:hover{color:var(--cherry-d);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:10px}
+.order-card{background:var(--surface);border-radius:22px;padding:30px 32px;box-shadow:var(--shadow-s)}
+.order-card h3{font-size:24px;margin-bottom:10px}
+.order-card p{font-size:17px;color:var(--ink-soft)}
+.order-card a{color:var(--ink);font-weight:700;text-underline-offset:4px;text-decoration-color:var(--cherry);word-break:break-word}
+
+/* pied */
+.foot{background:var(--walnut);color:var(--on-dark);padding:76px 0 0}
+.foot-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px;padding-bottom:60px}
+.foot h3{font-family:Karla,sans-serif;font-weight:700;font-size:16px;color:#E59A6F;margin-bottom:12px}
+.foot p,.foot li{font-size:17px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-underline-offset:4px;text-decoration-color:rgba(233,223,211,.4)}
+.foot a:hover{color:#FFF}
+.foot .blurb{color:var(--on-dark-soft);max-width:420px;margin-top:16px}
+.proposal{border-top:1px solid rgba(233,223,211,.14);padding:18px 20px;text-align:center;font-size:14px;color:#9E9083}
+.proposal a{color:#CDBFB0}
+
+.js .reveal{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;translate:0 0}
+
+@media (max-width:1020px){
+  .woods-grid,.boards-grid,.fam-grid,.order-grid,.cab-row,.f-head{grid-template-columns:minmax(0,1fr)}
+  .rule ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .matted{max-width:460px}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .f-head{gap:18px}
+}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:20px minmax(0,1fr) 0;grid-template-areas:". kick ." ". title ." "pic pic pic" ". text .";}
+  .hero-pic{grid-column:2 / 4;margin-top:30px}
+  .hero-pic img{min-height:0}
+  .top{padding-bottom:20px}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .hero{padding-bottom:84px}
+  .lede{font-size:19px}
+  .rule-in{padding:26px 22px 20px}
+  .rule ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rule b{font-size:26px}
+  .stagger{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .s1{grid-column:1 / -1}
+  .s2{grid-column:1 / -1;margin-top:0 !important;width:86%;margin-left:auto !important}
+  .s3{grid-column:1 / -1;margin-top:0 !important;width:72%}
+  .s4{grid-column:1 / -1;align-self:center;padding:6px 0 0}
+  .s4-q{font-size:22px}
+  .s4-p{font-size:16px}
+  .cab-card{margin:-40px 12px 0;padding:28px 24px}
+  .cab-wide img{aspect-ratio:4/3}
+  .woods,.boards,.family,.order,.cabinets{padding:84px 0}
+  .furniture{padding-bottom:84px}
+  .board-stage{padding:30px 0 30px 20px}
+  .board-pic{margin-right:8%}
+  .board-stage .tag{left:28px;bottom:40px}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .cabinets{border-radius:28px}
+}
+@media (max-width:420px){
+  .btns .btn{width:100%}
+  .nav{gap:4px 18px;font-size:15.5px}
+  .nav .tel{order:-1;width:100%;text-align:center;font-size:17px}
+  .rule ul{grid-template-columns:minmax(0,1fr)}
+  .rack li{padding:12px 14px}
+  .rack li span{font-size:14px}
+  .big-tel{font-size:clamp(34px,11vw,44px)}
+}
+@media (prefers-reduced-motion: reduce){
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap top">
+    <a class="logo" href="#top">Blue Mountain Woodworks<small>Timbo, Arkansas</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#furniture">Furniture</a>
+      <a href="#cabinets">Cabinets</a>
+      <a href="#boards">Cutting boards</a>
+      <a href="#about">About</a>
+      <a class="tel" href="tel:+18707464764">(870) 746-4764</a>
+    </nav>
+  </div>
+  <div class="hero-grid">
+    <p class="kick">A father-son partnership, established in 1987</p>
+    <h1>Custom furniture and cabinets from native Ozark hardwoods</h1>
+    <figure class="hero-pic">
+      <div class="ph"><img src="assets/blue-mountain-woodworks-timbo/cherry-dining-table-chairs-benches.webp" alt="Solid cherry dining table on a pedestal base, with matching chairs and a bench" width="1600" height="1200" fetchpriority="high"></div>
+      <figcaption class="tag">Solid cherry dining table, chairs &amp; benches</figcaption>
+    </figure>
+    <div class="hero-text">
+      <p class="lede">We build with solid wood, no veneers or plywood. If you want a long-lasting, American-made heirloom, give us a call.</p>
+      <div class="btns">
+        <a class="btn btn-full" href="tel:+18707464764"><span>Call <span class="nowrap">(870) 746-4764</span></span></a>
+        <a class="btn btn-line" href="mailto:bluemtnwoodworks@mvtel.net">Email the shop</a>
+      </div>
+      <p class="pay">Orders over the phone or by e-mail. We accept Visa &amp; Mastercard.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap rule">
+    <div class="rule-in">
+      <ul>
+        <li><b>Since 1987</b><span>building for valued customers</span></li>
+        <li><b>Father &amp; son</b><span>Paul Sr. and little Paul, full time</span></li>
+        <li><b>Solid wood</b><span>no veneers or plywood</span></li>
+        <li><b>8 hardwoods</b><span>native to the Arkansas Ozarks</span></li>
+        <li><b>Non-toxic</b><span>finishes at your request</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="woods wrap" aria-labelledby="woods-h">
+    <div class="woods-grid">
+      <div>
+        <h2 class="sec-title" id="woods-h">Native Arkansan hardwoods, from the Ozarks</h2>
+        <p class="sec-sub">We build our custom-made furniture, cabinets and other products from native Arkansan hardwoods. Here is what we have available.</p>
+        <ul class="rack">
+          <li class="w1">Walnut</li>
+          <li class="w2">Cherry</li>
+          <li class="w3">Red Oak</li>
+          <li class="w4">White Oak</li>
+          <li class="w5">Hickory</li>
+          <li class="w6">Ash</li>
+          <li class="w7">Maple</li>
+          <li class="w8">Aromatic Red Cedar</li>
+        </ul>
+      </div>
+      <figure class="matted reveal" style="margin:0">
+        <img src="assets/blue-mountain-woodworks-timbo/cedar-chest-lid-grain.webp" alt="Solid cedar chest seen from above, red and cream grain with knots, dovetails on the sides" width="1600" height="1200" loading="lazy">
+        <figcaption>Solid cedar chest: red heartwood, cream sapwood, dovetailed corners.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="furniture wrap" id="furniture" aria-labelledby="furn-h">
+    <div class="f-head">
+      <h2 class="sec-title" id="furn-h">Furniture built to last a lifetime and more</h2>
+      <p>We use solid wood in our furniture, no veneers or plywood, and we also offer non-toxic finishes at your request.</p>
+    </div>
+    <div class="stagger">
+      <figure class="s1 reveal">
+        <div class="ph"><img src="assets/blue-mountain-woodworks-timbo/cherry-crib-changing-table.webp" alt="Solid cherry crib and changing table in the corner of a nursery" width="1600" height="1200" loading="lazy"></div>
+        <figcaption class="tag">Solid cherry crib and changing table, all natural finish</figcaption>
+      </figure>
+      <figure class="s2 reveal">
+        <div class="ph"><img src="assets/blue-mountain-woodworks-timbo/cedar-chest-dovetail-corners.webp" alt="Cedar chest on four legs with visible dovetail joints at the corners" width="1600" height="1200" loading="lazy"></div>
+        <figcaption class="tag">Cedar chest</figcaption>
+      </figure>
+      <figure class="s3 reveal">
+        <div class="ph"><img src="assets/blue-mountain-woodworks-timbo/butcher-block-kitchen-table.webp" alt="Small butcher block kitchen table with striped top and pegged legs" width="1200" height="1600" loading="lazy"></div>
+        <figcaption class="tag">Butcher block table</figcaption>
+      </figure>
+      <div class="s4">
+        <p class="s4-q">Products made with love and hard work, built to be long-lasting, American-made heirlooms.</p>
+        <p class="s4-p">Located in Timbo, Arkansas, we work hard to give our customers the best quality work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cabinets" id="cabinets" aria-labelledby="cab-h">
+    <div class="wrap">
+      <div class="cab-wide">
+        <div class="ph reveal"><img src="assets/blue-mountain-woodworks-timbo/oak-kitchen-cabinets.webp" alt="A full kitchen of wood cabinets with paneled doors, drawer stacks and an arched valance over the window" width="1600" height="1200" loading="lazy"></div>
+      </div>
+      <div class="cab-row">
+        <div class="cab-card">
+          <h2 id="cab-h">Cabinets are how we started</h2>
+          <p style="margin-top:16px">All types of cabinets, built with real wood, attention to detail and many styles of doors and trim. We build heavy-duty, long-lasting cabinets and take pride in doing what we say we will do.</p>
+          <a class="btn btn-full" href="tel:+18707464764"><span>Talk cabinets: <span class="nowrap">(870) 746-4764</span></span></a>
+        </div>
+        <div class="cab-side">
+          <div class="ph reveal"><img src="assets/blue-mountain-woodworks-timbo/live-edge-bar-counter.webp" alt="Paneled bar with a thick live edge top and a solid wood post" width="1600" height="1200" loading="lazy"></div>
+          <p><strong>Piecework too.</strong> We also do piecework to fit your manufacturing needs. If you need quality furniture, cabinets or anything out of wood, contact us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boards wrap" id="boards" aria-labelledby="boards-h">
+    <div class="boards-grid">
+      <div>
+        <h2 class="sec-title" id="boards-h">Cutting boards, bowls, cups and trays</h2>
+        <div class="thick"><b>1" to 1 1/2"</b><span>thick butcher block cutting boards, in a wide variety of shapes and sizes</span></div>
+        <p>All finished with an all natural finish that is completely safe for food use. We also make custom butcher block tables and more.</p>
+        <div class="btns" style="margin-top:26px">
+          <a class="btn btn-line" href="mailto:bluemtnwoodworks@mvtel.net?subject=Cutting%20board">Ask about a board</a>
+        </div>
+      </div>
+      <div class="board-stage">
+        <div class="board-pic reveal"><img src="assets/blue-mountain-woodworks-timbo/cutting-board-wavy-inlay.webp" alt="Butcher block cutting board with a juice groove and three wavy inlaid stripes, standing on a small wooden stand" width="1333" height="1600" loading="lazy"></div>
+        <span class="tag">Juice groove, wavy inlay</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="family" id="about" aria-labelledby="fam-h">
+    <div class="wrap fam-grid">
+      <div>
+        <h2 id="fam-h" style="font-size:20px;font-family:Karla,sans-serif;font-weight:700;color:var(--cherry);margin-bottom:22px">Father and son, in Timbo</h2>
+        <p class="fam-quote">“It gives us joy to make people happy and stand by our work.”</p>
+        <p>Since 1987, Paul Sr. has been accommodating the special needs and orders of valued customers. Over the past decade, Paul Sr. and little Paul have been working together full time to create products that bring light to excellent, American-built furniture.</p>
+        <div class="fam-who">
+          <div class="portrait"><img src="assets/blue-mountain-woodworks-timbo/father-and-son-portrait.webp" alt="Little Paul and Paul Sr. in front of a wooden door" width="255" height="174" loading="lazy"></div>
+          <p><b>Paul Sr. and little Paul</b><br>Blue Mountain Woodworks, Timbo, Arkansas</p>
+        </div>
+      </div>
+      <figure class="fam-pic">
+        <div class="ph reveal"><img src="assets/blue-mountain-woodworks-timbo/live-edge-bar-cabinets-craftsman.webp" alt="A live edge bar with matching post, beam and cabinets, the woodworker leaning on the counter" width="1600" height="1200" loading="lazy"></div>
+        <figcaption class="tag">Live edge bar, post, beam and cabinets</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="order wrap" id="contact" aria-labelledby="order-h">
+    <div class="order-grid">
+      <div>
+        <h2 class="sec-title" id="order-h">Tell us what you need built</h2>
+        <a class="big-tel" href="tel:+18707464764">(870) 746-4764</a>
+        <p style="color:var(--ink-soft);max-width:520px">Orders can be placed over the phone or through e-mail. We accept Visa &amp; Mastercard.</p>
+      </div>
+      <div class="order-card">
+        <h3>Paul Gillam</h3>
+        <p>2547 Blue Mountain Rd.<br>Timbo, Arkansas 72680</p>
+        <p style="margin:0"><a href="mailto:bluemtnwoodworks@mvtel.net">bluemtnwoodworks@mvtel.net</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top">Blue Mountain Woodworks<small>Timbo, Arkansas</small></a>
+      <p class="blurb">A father-son partnership established in 1987, building custom furniture, cabinets and cutting boards from native Ozark hardwoods.</p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <p>Paul Gillam<br>2547 Blue Mountain Rd.<br>Timbo, Arkansas 72680</p>
+    </div>
+    <div>
+      <h3>Call or write</h3>
+      <ul>
+        <li><a href="tel:+18707464764">(870) 746-4764</a></li>
+        <li><a href="mailto:bluemtnwoodworks@mvtel.net">bluemtnwoodworks@mvtel.net</a></li>
+        <li>Visa &amp; Mastercard</li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposal">Proposal by Nicolas Masset for Blue Mountain Woodworks, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

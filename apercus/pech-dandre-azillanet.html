@@ -1,0 +1,524 @@
+<!doctype html>
+<!--
+PLAN · Domaine du Pech d'André, « la maison jaune de 1701 »
+Couleurs : pierre calcaire rosée #E9E2D7 (fond), pierre claire #F4EFE7 (surfaces posées), lie-de-vin #3A1622 (encre et section sombre), lie profonde #2A0F18 (pied), ocre de façade #C7922B (filets, pastilles, survols ; jamais en texte courant sur pierre).
+Typo : Gloock 400 pour les titres (serif de caractère, gravé), Figtree 400/500/600 pour le texte ; pas de sur-titre en majuscules, pas de mot coloré dans les titres.
+Héros :  [ titre 7 col. + texte + 2 pilules ]............
+         [ bloc pierre ]╗ ┌──────── bandeau Philippe 1200 x 405, r 22, ombre longue ───────┐ (le bloc mord sur le coin haut gauche)
+                        ╚═╧══════════════════════════════════════ étiquette « Philippe » ═╛
+Sections : faits (panneau clair posé, 5 cellules) · histoire (intro + polaroïd incliné | chronologie 1701/1858/1966/aujourd'hui) · vignes (texte | bandeau hiver + grappe ronde qui chevauche) · vins (liste éditoriale des gammes + cuvées | carte ferme avec oliviers en portrait) · cave en lie-de-vin (citation géante + caveau N&B + Lorenz) · gîtes (photo des bâtiments, deux cartes qui la chevauchent à droite) · contact (grande carte : façade jaune | téléphone géant, email, accès, horaires).
+Revue contre les défauts génériques : pas de crème + terre cuite (pierre rosée + lie + ocre de leur façade), pas de cartes SaaS identiques (une seule paire de cartes, les gîtes), pas de numérotation (les dates sont une vraie chronologie), pas de « → », pas de méta à points médians, bandeaux 1200 x 405 jamais agrandis au-delà de leur taille.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine du Pech d'André, vigneron familial depuis 1701 à Azillanet</title>
+<meta name="description" content="Domaine viticole familial depuis 1701 dans le Minervois : vins bio et naturels, caveau ouvert 7 j/7, deux gîtes ruraux, huile d'olive.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%233A1622'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23C7922B'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gloock&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pierre:#E9E2D7;
+  --pierre-claire:#F4EFE7;
+  --pierre-sombre:#DCD2C3;
+  --lie:#3A1622;
+  --lie-douce:#5E3D46;
+  --lie-profonde:#2A0F18;
+  --ocre:#C7922B;
+  --ocre-texte:#8C6114;
+  --sur-lie:#EFE7DB;
+  --sur-lie-doux:#CDBBB8;
+  --ombre:0 34px 64px -36px rgba(58,22,34,.55);
+  --ombre-courte:0 18px 40px -26px rgba(58,22,34,.45);
+  --titre:'Gloock',Georgia,serif;
+  --texte:'Figtree',ui-sans-serif,sans-serif;
+  --page:min(1200px, 100% - 2*clamp(20px,4vw,40px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--pierre);color:var(--lie);font-family:var(--texte);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+::selection{background:var(--ocre);color:var(--lie)}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ocre);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.page{width:var(--page);margin-inline:auto}
+
+/* ---------- en-tête ---------- */
+.entete{width:var(--page);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px 28px;padding:22px 0;flex-wrap:wrap}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--titre);font-weight:400;font-size:28px;letter-spacing:-.01em}
+.marque span{font-size:14px;color:var(--lie-douce);margin-top:4px}
+.entete nav{display:flex;align-items:center;gap:6px 26px;flex-wrap:wrap}
+.entete nav a{text-decoration:none;font-weight:500;font-size:16px}
+.entete nav a:hover{text-decoration:underline;text-decoration-color:var(--ocre);text-underline-offset:5px;text-decoration-thickness:2px}
+.joindre{display:flex;align-items:center;gap:8px 10px;flex-wrap:wrap}
+.joindre a{text-decoration:none;font-weight:600;font-size:15.5px;border-radius:999px;padding:10px 18px;transition:background .25s,color .25s,transform .25s}
+.joindre .tel{background:var(--lie);color:var(--sur-lie)}
+.joindre .tel:hover{background:var(--ocre);color:var(--lie)}
+.joindre .mail{background:var(--pierre-claire);box-shadow:inset 0 0 0 1.5px rgba(58,22,34,.18)}
+.joindre .mail:hover{box-shadow:inset 0 0 0 1.5px var(--ocre)}
+
+/* ---------- boutons ---------- */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16.5px;text-decoration:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--lie);color:var(--sur-lie);box-shadow:var(--ombre-courte)}
+.btn-plein:hover{background:#4E1F2E}
+.btn-contour{box-shadow:inset 0 0 0 2px var(--lie);color:var(--lie)}
+.btn-contour:hover{background:var(--lie);color:var(--sur-lie)}
+.sombre .btn-plein{background:var(--ocre);color:var(--lie)}
+.sombre .btn-plein:hover{background:#D7A443}
+.sombre .btn-contour{box-shadow:inset 0 0 0 2px var(--sur-lie);color:var(--sur-lie)}
+.sombre .btn-contour:hover{background:var(--sur-lie);color:var(--lie)}
+
+/* ---------- photos ---------- */
+.ph{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre);background:var(--pierre-sombre)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(244,239,231,.94);color:var(--lie);font-size:14.5px;font-weight:600;line-height:1.3;padding:8px 14px;border-radius:12px;max-width:calc(100% - 32px)}
+.etiquette.droite{left:auto;right:16px}
+.etiquette.haut{left:auto;right:16px;bottom:auto;top:16px}
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+/* ---------- héros ---------- */
+.heros{padding-top:clamp(12px,3vw,40px)}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.heros-bloc{grid-column:1 / span 7;grid-row:1;position:relative;z-index:2;background:var(--pierre);padding:0 48px 34px 0;border-bottom-right-radius:30px;align-self:start}
+.heros h1{font-size:clamp(40px,5.6vw,76px);line-height:1}
+.heros .chapo{font-size:19px;line-height:1.55;color:var(--lie-douce);max-width:34em;margin:26px 0 30px}
+.heros-photo{grid-column:1 / -1;grid-row:2;margin-top:-226px;border-radius:22px;aspect-ratio:1200 / 405;max-width:1200px;box-shadow:0 44px 80px -42px rgba(58,22,34,.62)}
+.heros-photo img{object-position:70% 50%}
+
+/* ---------- faits ---------- */
+.faits{margin-top:clamp(32px,5vw,56px);background:var(--pierre-claire);border-radius:22px;box-shadow:var(--ombre-courte);display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.faits div{padding:24px 24px 26px;position:relative}
+.faits div+div::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:1px;background:rgba(199,146,43,.55)}
+.faits dt{font-family:var(--titre);font-size:30px;line-height:1.05}
+.faits dd{margin:8px 0 0;font-size:15.5px;line-height:1.45;color:var(--lie-douce)}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:24px}
+.bloc{padding:clamp(72px,10vw,128px) 0 0}
+.h2{font-size:clamp(34px,4.2vw,54px)}
+.texte p+p{margin-top:16px}
+.texte{color:var(--lie-douce)}
+
+/* histoire */
+.histoire{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.histoire .intro{font-size:19px;margin-top:22px;color:var(--lie-douce)}
+.polaroid{margin-top:44px;background:var(--pierre-claire);padding:12px 12px 16px;border-radius:14px;box-shadow:var(--ombre);transform:rotate(-1.6deg);max-width:min(470px,100%)}
+.polaroid .cadre{border-radius:8px;overflow:hidden;aspect-ratio:4 / 3}
+.polaroid img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.polaroid figcaption{font-size:15px;color:var(--lie-douce);padding:12px 4px 0}
+.chrono{list-style:none;margin:0;padding:0}
+.chrono li{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid rgba(58,22,34,.16)}
+.chrono li:last-child{border-bottom:1px solid rgba(58,22,34,.16)}
+.chrono .an{font-family:var(--titre);font-size:42px;line-height:1;color:var(--lie)}
+.chrono .an.mot{font-size:30px;padding-top:6px}
+.chrono h3{font-size:24px;margin-bottom:8px}
+.chrono p{color:var(--lie-douce)}
+.chrono blockquote{margin:0;font-family:var(--titre);font-size:24px;line-height:1.3;color:var(--lie)}
+
+/* vignes */
+.vignes{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,80px);align-items:center}
+.vignes .texte{margin-top:20px}
+.vignes .fort{margin-top:26px;padding:20px 24px;background:var(--pierre-claire);border-radius:16px;font-size:18px;color:var(--lie);box-shadow:var(--ombre-courte)}
+.vignes-photos{position:relative;padding-bottom:110px}
+.vignes-photos .hiver{aspect-ratio:1200 / 405;border-radius:20px}
+.vignes-photos .grappe{position:absolute;right:6%;bottom:0;width:min(250px,42%);aspect-ratio:1;border-radius:50%;border:8px solid var(--pierre);box-shadow:var(--ombre)}
+.vignes-photos .grappe img{object-position:66% 50%}
+
+/* vins */
+.vins-tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px}
+.vins-tete p{max-width:30em;color:var(--lie-douce)}
+.vins{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,64px);margin-top:44px;align-items:start}
+.cuvees{list-style:none;margin:0;padding:0}
+.cuvees li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:8px 32px;padding:22px 0;border-top:1px solid rgba(58,22,34,.16)}
+.cuvees li:last-child{border-bottom:1px solid rgba(58,22,34,.16)}
+.cuvees h3{font-size:27px}
+.cuvees p{color:var(--lie-douce);align-self:center}
+.gammes{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
+.gammes span{background:var(--pierre-claire);border-radius:999px;padding:8px 16px;font-size:15.5px;font-weight:500}
+.ferme{background:var(--pierre-claire);border-radius:22px;box-shadow:var(--ombre);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)}
+.ferme .ph{border-radius:0;box-shadow:none;aspect-ratio:16 / 10;max-height:330px}
+.ferme .ph img{object-position:18% 50%}
+.ferme-texte{padding:26px 30px 30px}
+.ferme-texte h3{font-size:28px;margin-bottom:12px}
+.ferme-texte p{color:var(--lie-douce);font-size:16.5px}
+.ferme-texte .livraison{margin-top:16px;color:var(--lie);font-weight:600}
+.ferme-texte .btn{margin-top:22px}
+
+/* cave, section sombre */
+.sombre{background:var(--lie);color:var(--sur-lie);margin-top:clamp(80px,10vw,128px);padding:clamp(72px,9vw,120px) 0}
+.sombre .texte{color:var(--sur-lie-doux)}
+.cave{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,80px);align-items:start}
+.cave .citation{font-family:var(--titre);font-size:clamp(38px,5.4vw,72px);line-height:1.02;color:var(--sur-lie);margin:26px 0 22px}
+.cave .citation span{color:var(--ocre)}
+.cave .contexte{color:var(--sur-lie-doux);font-size:18px;max-width:30em}
+.cave-photos{position:relative;padding-bottom:90px}
+.cave-photos .caveau{aspect-ratio:16 / 8;border-radius:20px;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.cave-photos .caveau img{object-position:40% 50%}
+.cave-photos .lorenz{position:absolute;left:-28px;bottom:0;width:min(230px,46%);aspect-ratio:1;border-radius:16px;border:6px solid var(--lie);box-shadow:0 30px 60px -30px rgba(0,0,0,.75)}
+.cave-photos .lorenz img{object-position:58% 40%}
+.horaires{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.horaires div{background:rgba(239,231,219,.07);border-radius:18px;padding:22px 24px}
+.horaires h3{font-size:24px;color:var(--sur-lie);margin-bottom:8px}
+.horaires p{color:var(--sur-lie-doux)}
+.horaires strong{color:var(--ocre);font-weight:600}
+.aussi{margin-top:36px;color:var(--sur-lie-doux)}
+.aussi ul{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.aussi li{border-radius:999px;padding:8px 16px;box-shadow:inset 0 0 0 1.5px rgba(199,146,43,.6);color:var(--sur-lie);font-size:15.5px}
+
+/* gîtes */
+.gites{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;margin-top:40px;align-items:center}
+.gites .domaine{grid-column:1 / span 8;grid-row:1;aspect-ratio:1200 / 560;border-radius:24px;max-height:405px}
+.gites .domaine img{object-position:45% 60%}
+.gites-cartes{grid-column:8 / -1;grid-row:1;position:relative;z-index:2;display:grid;gap:18px}
+.gite{background:var(--pierre-claire);border-radius:20px;padding:24px 26px;box-shadow:var(--ombre)}
+.gite h3{font-size:27px}
+.gite .capacite{font-weight:600;margin:6px 0 10px;color:var(--lie)}
+.gite p{color:var(--lie-douce);font-size:16.5px}
+.gite a{display:inline-block;margin-top:12px;font-weight:600;text-decoration-color:var(--ocre);text-underline-offset:5px;text-decoration-thickness:2px}
+.reservation{margin-top:34px;max-width:48em;color:var(--lie-douce)}
+.reservation strong{color:var(--lie);font-weight:600}
+
+/* contact */
+.contact{margin-top:44px;background:var(--pierre-claire);border-radius:26px;box-shadow:var(--ombre);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);overflow:hidden}
+.contact .facade{margin:18px !important;border-radius:18px;box-shadow:var(--ombre-courte);aspect-ratio:5 / 4;align-self:center;max-height:405px}
+.contact .facade img{object-position:22% 60%}
+.contact-infos{padding:clamp(28px,4vw,52px)}
+.gros-tel{display:inline-block;font-family:var(--titre);font-size:clamp(34px,4.4vw,56px);line-height:1.05;text-decoration:none;color:var(--lie);border-bottom:3px solid var(--ocre);padding-bottom:4px}
+.gros-tel:hover{color:#6A2A3D}
+.mail-lien{display:inline-block;margin-top:14px;font-size:clamp(19px,2vw,24px);font-weight:600;overflow-wrap:anywhere;text-decoration-color:var(--ocre);text-underline-offset:6px;text-decoration-thickness:2px}
+.contact-cols{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 32px}
+.contact-cols h3{font-size:22px;margin-bottom:6px}
+.contact-cols p{color:var(--lie-douce);font-size:16.5px}
+.contact-cols a{font-weight:600;color:var(--lie);text-decoration-color:var(--ocre);text-underline-offset:4px}
+.contact .btns{margin-top:30px}
+
+/* pied */
+.pied{background:var(--lie-profonde);color:var(--sur-lie);margin-top:clamp(80px,10vw,128px);padding:64px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:36px}
+.pied .nom{font-family:var(--titre);font-size:32px;line-height:1.05}
+.pied p,.pied li{color:var(--sur-lie-doux);font-size:16px}
+.pied h3{font-family:var(--texte);font-weight:600;font-size:16px;color:var(--ocre);margin-bottom:10px;letter-spacing:0}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{color:var(--sur-lie);text-decoration-color:rgba(199,146,43,.7);text-underline-offset:4px}
+.legal{margin-top:44px;padding-top:22px;border-top:1px solid rgba(239,231,219,.14);font-size:14.5px;color:var(--sur-lie-doux)}
+.proposition{background:#1E0A11;color:var(--sur-lie-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-lie)}
+
+/* ---------- tablette ---------- */
+@media (max-width:1060px){
+  .faits{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits div:nth-child(4)::before{display:none}
+  .gites .domaine{grid-column:1 / -1}
+  .gites-cartes{grid-column:1 / -1;grid-row:2;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin:-70px 24px 0}
+}
+@media (max-width:900px){
+  .heros-bloc{grid-column:1 / -1;padding-right:0;margin-bottom:0}
+  .heros-photo{margin-top:0;aspect-ratio:16 / 10}
+  .histoire,.vignes,.vins,.cave,.contact{grid-template-columns:minmax(0,1fr)}
+  .cave-photos .lorenz{left:16px}
+  .contact .facade{aspect-ratio:16 / 9;margin:12px 12px 0 !important}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* ---------- téléphone ---------- */
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete{padding:16px 0 8px;gap:12px}
+  .entete nav .lien-section{display:none}
+  .joindre{gap:10px 16px}
+  .joindre .mail{background:none;box-shadow:none;padding:6px 0;text-decoration:underline;text-decoration-color:var(--ocre);text-underline-offset:5px;text-decoration-thickness:2px}
+  .marque b{font-size:25px}
+  .heros .chapo{font-size:18px;margin:18px 0 22px}
+  .heros-photo{aspect-ratio:4 / 3;border-radius:18px}
+  .heros-photo img{object-position:76% 50%}
+  .faits{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faits div{padding:18px 18px 20px}
+  .faits div::before{display:none}
+  .faits div:last-child{grid-column:1 / -1}
+  .faits dt{font-size:25px}
+  .faits dd{font-size:16px}
+  .chrono li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .chrono .an{font-size:34px}
+  .vignes-photos{padding-bottom:80px}
+  .vignes-photos .hiver{aspect-ratio:3 / 2}
+  .vignes-photos .grappe{width:44%}
+  .cuvees li{grid-template-columns:minmax(0,1fr)}
+  .ferme{grid-template-columns:minmax(0,1fr)}
+  .cave-photos .caveau{aspect-ratio:4 / 3}
+  .horaires{grid-template-columns:minmax(0,1fr)}
+  .gites .domaine{aspect-ratio:4 / 3}
+  .gites-cartes{grid-template-columns:minmax(0,1fr);margin:-48px 12px 0}
+  .contact-cols{grid-template-columns:minmax(0,1fr)}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .faits dd,.gite p,.ferme-texte p,.contact-cols p,.pied p,.pied li{font-size:16px}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+  .etiquette{font-size:14px;left:12px;bottom:12px}
+  .etiquette.droite,.etiquette.haut{right:12px}
+  .etiquette.haut{top:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <a class="marque" href="#haut"><b>Le Pech d'André</b><span>Domaine familial depuis 1701, Azillanet</span></a>
+  <nav aria-label="Navigation principale">
+    <a class="lien-section" href="#domaine">Le domaine</a>
+    <a class="lien-section" href="#vins">Les vins</a>
+    <a class="lien-section" href="#caveau">Le caveau</a>
+    <a class="lien-section" href="#gites">Les gîtes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="joindre">
+    <a class="tel" href="tel:+33607494937">06 07 49 49 37</a>
+    <a class="mail" href="mailto:contact@lepechdandre.fr">contact@lepechdandre.fr</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros page" aria-labelledby="titre">
+    <div class="heros-grille">
+      <div class="heros-bloc">
+        <h1 id="titre">Domaine viticole familial depuis 1701 dans le Minervois</h1>
+        <p class="chapo">Des vins bio et naturels, un caveau ouvert tous les jours de 10h à 20h sans rendez-vous, deux gîtes ruraux et l'huile d'olive de la ferme, à Azillanet.</p>
+        <div class="btns">
+          <a class="btn btn-plein" href="#contact">Nous contacter</a>
+          <a class="btn btn-contour" href="#vins">Découvrir les vins</a>
+        </div>
+      </div>
+      <figure class="ph heros-photo apparait" style="margin-inline:0;margin-bottom:0">
+        <img src="assets/pech-dandre-azillanet/philippe-vigneron-vieille-souche.webp" width="1200" height="405" alt="Philippe accroupi en souriant à côté d'une vieille souche de vigne taillée, rangs de vignes nues en hiver derrière lui">
+        <figcaption class="etiquette droite">Philippe, dans les vieilles vignes taillées</figcaption>
+      </figure>
+    </div>
+
+    <dl class="faits">
+      <div><dt>1701</dt><dd>notre histoire familiale au Pech commence</dd></div>
+      <div><dt>7 j/7</dt><dd>caveau ouvert de 10h à 20h, sans rendez-vous</dd></div>
+      <div><dt>Bio et naturels</dt><dd>des vins de pays aux AOP Minervois et Languedoc</dd></div>
+      <div><dt>2&nbsp;gîtes</dt><dd>pour 4 et 8 personnes, au domaine</dd></div>
+      <div><dt>À la main</dt><dd>toutes nos vignes vendangées à la main en 2026</dd></div>
+    </dl>
+  </section>
+
+  <section id="domaine" class="bloc page" aria-labelledby="t-histoire">
+    <div class="histoire">
+      <div>
+        <h2 id="t-histoire" class="h2">Au commencement, il y a plus de 300 ans</h2>
+        <p class="intro">On ne sait pas au juste dater la naissance du Pech. On sait seulement que notre histoire familiale en ce lieu débute en 1701, quand notre premier aïeul Jean-Baptiste d'André, issu d'une famille toulousaine, s'établit sur quelques terres «&nbsp;Al Pech&nbsp;», sur la colline en occitan.</p>
+        <figure class="polaroid apparait">
+          <div class="cadre"><img src="assets/pech-dandre-azillanet/mireille-et-philippe-devant-la-maison.webp" width="1200" height="405" alt="Mireille et Philippe debout côte à côte devant la maison, entre bambous et lauriers" loading="lazy"></div>
+          <figcaption>Mireille et Philippe, devant la maison</figcaption>
+        </figure>
+      </div>
+      <ol class="chrono">
+        <li>
+          <span class="an">1701</span>
+          <div><h3>Les d'André «&nbsp;Al Pech&nbsp;»</h3><p>Quatre générations d'hommes se succèdent jusqu'aux «&nbsp;Demoiselles d'André&nbsp;», Marie, Jeanne et Louise, dernières du nom au Pech au début du XXᵉ siècle.</p></div>
+        </li>
+        <li>
+          <span class="an">1858</span>
+          <div><h3>Quatre générations de femmes</h3><p>Louise d'André se marie. Sa fille Joséphine Bel prend la suite, puis Jeanne-Zoe Léontine Gervies, qui dirigea le domaine pendant plus de 30 ans, et sa fille Marie Simon, épouse de Louis Remaury.</p></div>
+        </li>
+        <li>
+          <span class="an">1966</span>
+          <div><h3>Marc et Germaine Remaury</h3><p>Ils s'orientent vers la vente directe au domaine et vers une culture respectueuse de l'environnement, en précurseurs, et conduisent le ré-encépagement progressif du vignoble.</p></div>
+        </li>
+        <li>
+          <span class="an mot">Aujourd'hui</span>
+          <div><blockquote>«&nbsp;Cette terre m'a été confiée. Je souhaite poursuivre la tradition d'authenticité et d'accueil du Domaine.&nbsp;»</blockquote><p style="margin-top:12px">Avec Mickaël, fils de Claude Brunel qui a travaillé au Pech plus de trente ans, avec Philippe et son fils Lorenz, et avec Claire, qui prend soin des vignes tout au long de l'année.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bloc page" aria-labelledby="t-vignes">
+    <div class="vignes">
+      <div>
+        <h2 id="t-vignes" class="h2">Une voie de douceur</h2>
+        <div class="texte">
+          <p>Depuis 1966, le vignoble est conduit dans le respect de l'environnement, et ré-encépagé peu à peu pour une meilleure expression du terroir et des vins plus aromatiques.</p>
+          <p>Des compétences d'écologue (docteur en pédologie) au service du maintien de ce patrimoine, de ces paysages et de leur biodiversité.</p>
+        </div>
+        <p class="fort">En 2026, pour la première fois depuis plus de 40 ans, toutes nos vignes ont été vendangées à la main.</p>
+      </div>
+      <div class="vignes-photos">
+        <figure class="ph hiver apparait" style="margin:0">
+          <img src="assets/pech-dandre-azillanet/vignes-en-hiver-rangs-soleil-couchant.webp" width="1200" height="405" alt="Rangs de vignes taillées en hiver sur l'herbe verte, soleil bas qui perce les nuages" loading="lazy">
+          <figcaption class="etiquette">Les vignes en hiver</figcaption>
+        </figure>
+        <figure class="ph grappe apparait" style="margin:0">
+          <img src="assets/pech-dandre-azillanet/grappe-raisin-noir-dans-la-main.webp" width="1200" height="405" alt="Une main tient une grappe de raisin noir sous les feuilles de vigne" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="vins" class="bloc page" aria-labelledby="t-vins">
+    <div class="vins-tete">
+      <h2 id="t-vins" class="h2">Des vins bio et naturels</h2>
+      <p>Des vins de pays aux AOC Minervois et Languedoc, des cuvées nature aux cépages rares, en bouteille ou en cubi.</p>
+    </div>
+    <div class="vins">
+      <div>
+        <ul class="cuvees">
+          <li><h3>Les Lunes Pourpres</h3><p>Parfait équilibre entre Syrah et Mourvèdre.</p></li>
+          <li><h3>La Rivière Blanche</h3><p>Blanc sec de Bourboulenc.</p></li>
+          <li><h3>Zora</h3><p>Blanc sec aux arômes d'abricot.</p></li>
+          <li><h3>Léon, en cubi</h3><p>Rondeur et souplesse de la Syrah.</p></li>
+        </ul>
+        <div class="gammes" aria-label="Les gammes">
+          <span>Vins de Pays</span><span>Vins Natures &amp; Cépages rares</span><span>AOC/AOP Minervois</span><span>AOC/AOP Languedoc</span><span>Moelleux &amp; Apéritifs</span><span>Les Vins Coquins</span><span>Vins en cubi</span><span>Assortiments</span>
+        </div>
+      </div>
+      <aside class="ferme">
+        <figure class="ph apparait" style="margin:0">
+          <img src="assets/pech-dandre-azillanet/vignes-automne-oliviers-minervois.webp" width="1200" height="405" alt="Rangée d'oliviers devant les vignes d'automne jaunes et rouges" loading="lazy">
+        </figure>
+        <div class="ferme-texte">
+          <h3>La ferme</h3>
+          <p>Huile d'olive, jus de raisin et produits de la ferme, au caveau et en ligne.</p>
+          <p class="livraison">Livraison gratuite à domicile pour toute commande à partir de 80&nbsp;€.</p>
+          <a class="btn btn-plein" href="https://www.lepechdandre.fr/fr/4-vin-bio">Commander en ligne</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="caveau" class="sombre" aria-labelledby="t-cave">
+    <div class="page cave">
+      <div>
+        <h2 id="t-cave" class="h2">La magie de la cave</h2>
+        <p class="citation">«&nbsp;Ça vibre, ça bouillonne, ça <span>chauffe</span>…&nbsp;»</p>
+        <p class="contexte">Dans les semaines qui suivent les vendanges, la cave prend vie. Dans la pure tradition languedocienne, elle est faite de cuves en béton, la plupart équipées de trappes en chêne&nbsp;: une installation de plus de 150 ans.</p>
+        <div class="horaires">
+          <div><h3>Le caveau</h3><p>Ouvert tous les jours, 7 jours sur 7, <strong>de 10h à 20h</strong>, sans rendez-vous.</p></div>
+          <div><h3>Visite de la cave</h3><p>Uniquement sur rendez-vous, commentée en français ou en anglais.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="cave-photos">
+          <figure class="ph caveau apparait" style="margin:0">
+            <img src="assets/pech-dandre-azillanet/caveau-degustation-tonneaux-noir-et-blanc.webp" width="1200" height="405" alt="Le caveau de dégustation en noir et blanc : tonneaux alignés, bouteilles sur les étagères, mur de pierre" loading="lazy">
+            <figcaption class="etiquette haut">Le caveau de dégustation</figcaption>
+          </figure>
+          <figure class="ph lorenz apparait" style="margin:0">
+            <img src="assets/pech-dandre-azillanet/lorenz-au-chai-sourire.webp" width="1200" height="405" alt="Lorenz souriant au bord d'une cuve" loading="lazy">
+          </figure>
+        </div>
+        <div class="aussi">
+          <p>Aussi au domaine&nbsp;:</p>
+          <ul><li>Accueil de groupe</li><li>Balade vigneronne et botanique</li><li>Expositions et manifestations</li><li>L'association Pech-Ô-Live</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gites" class="bloc page" aria-labelledby="t-gites">
+    <h2 id="t-gites" class="h2">Deux gîtes ruraux, au domaine</h2>
+    <div class="gites">
+      <figure class="ph domaine apparait" style="margin:0">
+        <img src="assets/pech-dandre-azillanet/domaine-batiments-derriere-les-vignes.webp" width="1200" height="405" alt="Les bâtiments du domaine entre les pins, vus depuis les vignes d'automne" loading="lazy">
+        <figcaption class="etiquette">Le Pech, depuis les vignes</figcaption>
+      </figure>
+      <div class="gites-cartes">
+        <article class="gite">
+          <h3>Le Gîte de la Pinède</h3>
+          <p class="capacite">4 personnes, 58&nbsp;m²</p>
+          <p>Il ouvre directement sur le parc et la pinède, qui abrite la piscine familiale (sans surveillance, avec alarme).</p>
+          <a href="https://www.lepechdandre.fr/fr/content/17-le-gite-de-la-pinede">Voir le gîte</a>
+        </article>
+        <article class="gite">
+          <h3>Le Gîte de Léontine</h3>
+          <p class="capacite">8 personnes, 4 chambres, 117&nbsp;m²</p>
+          <p>L'ancien logis du régisseur, il ouvre directement sur la cour du Domaine.</p>
+          <a href="https://www.lepechdandre.fr/fr/content/18-le-gite-de-leontine">Voir le gîte</a>
+        </article>
+      </div>
+    </div>
+    <p class="reservation">Les deux gîtes sont attenants à la maison principale, chacun avec son entrée indépendante. <strong>Pour réserver, <a href="#contact">écrivez-nous ou appelez-nous</a></strong>&nbsp;: après vérification de la disponibilité, nous vous adressons une proposition de contrat. Nous acceptons les Chèques Vacances.</p>
+  </section>
+
+  <section id="contact" class="bloc page" aria-labelledby="t-contact">
+    <h2 id="t-contact" class="h2">Nous contacter, venir au Pech</h2>
+    <div class="contact">
+      <figure class="ph facade apparait" style="margin:0">
+        <img src="assets/pech-dandre-azillanet/facade-jaune-maison-le-pech-d-andre.webp" width="1200" height="405" alt="La façade jaune de la maison, volets clairs, plaque « Le Pech d'André » au mur" loading="lazy">
+        <figcaption class="etiquette">Le Pech jaune</figcaption>
+      </figure>
+      <div class="contact-infos">
+        <a class="gros-tel" href="tel:+33607494937">06 07 49 49 37</a><br>
+        <a class="mail-lien" href="mailto:contact@lepechdandre.fr">contact@lepechdandre.fr</a>
+        <div class="contact-cols">
+          <div><h3>Adresse</h3><p>Domaine du Pech d'André<br>34210 Azillanet<br>Sur la route départementale entre Olonzac et Azillanet.</p></div>
+          <div><h3>Le caveau</h3><p>Ouvert tous les jours de l'année, 7 jours sur 7, de 10h à 20h, sans rendez-vous.</p></div>
+          <div><h3>WhatsApp</h3><p><a href="tel:+33468912266">+33 4 68 91 22 66</a></p></div>
+          <div><h3>GPS</h3><p>43.314339, 2.744069</p></div>
+        </div>
+        <div class="btns">
+          <a class="btn btn-plein" href="tel:+33607494937">Appeler le domaine</a>
+          <a class="btn btn-contour" href="https://www.lepechdandre.fr/fr/content/20-plan-acces-gps">Plan d'accès</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="page">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Le Pech d'André</p>
+        <p style="margin-top:10px">Domaine viticole familial depuis 1701 dans le Minervois.</p>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="tel:+33607494937">06 07 49 49 37</a></li>
+          <li><a href="mailto:contact@lepechdandre.fr">contact@lepechdandre.fr</a></li>
+          <li>34210 Azillanet</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Caveau</h3>
+        <ul><li>Tous les jours, 7 j/7</li><li>De 10h à 20h, sans rendez-vous</li></ul>
+      </div>
+      <div>
+        <h3>Suivez-nous</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/lepechdandre">Facebook</a></li>
+          <li><a href="https://www.youtube.com/c/LepechdandreFr">YouTube</a></li>
+          <li><a href="https://www.lepechdandre.fr/fr/blog">Le blog du domaine</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">Vente interdite aux mineurs. L'abus d'alcool est dangereux pour la santé.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine du Pech d'André, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

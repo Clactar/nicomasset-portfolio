@@ -1,0 +1,564 @@
+<!doctype html>
+<!--
+PLAN (Flingin Pots, Fort Collins CO)
+Couleurs : barbotine rosée #F2E6DC (fond), bleu nuit #1D2A3A (texte, section raku, pied), émail turquoise #2E8C87 (accent, bande Date Night), éclat feu #E0662B (raku seulement : étiquette, pastille), surface #FBF4EE (cartes posées).
+Typo : Young Serif 400 (titres, chiffres du bandeau) + Hanken Grotesk 400/500/600 (texte). Aucun sur-titre en capitales : phrases en casse normale.
+Héros : [nav ............................ tel]
+        [STAY MESSY ................. géant, pleine largeur]
+        [MY FRIENDS!  ....... [photo tour 28px] ]  la photo remonte sur le bas du titre
+        [chapeau + boutons + 3 liens   [o] vignette ronde inclinée sur le coin]
+Sections : bandeau de faits (4 colonnes) / Sampler : collage incliné + séquence réelle Class 1 à 4 / bande turquoise Dirty Date Night (texte + polaroïd) / liste éditoriale des autres cours / RAKU fond bleu nuit (grande photo + vignette carrée + photo secondaire) / tarifs privés en liste + photo étiquetée / atelier et locations (photo large + colonnes de prix) / citation pleine largeur / « Stay in the loop » (remplace le formulaire cassé, aucun champ) / pied bleu nuit.
+Revue : pas de crème + terre cuite (fond rosé, accents froids), pas de cartes SaaS identiques, numérotation réservée aux 4 cours du Sampler (vraie séquence), pas de flèche dans les boutons, pas de mot italique coloré.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Flingin Pots · Pottery classes in Fort Collins, Colorado</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232E8C87'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23F2E6DC'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slip:#F2E6DC; --slip-2:#EADACB; --card:#FBF4EE; --night:#1D2A3A; --night-2:#27374A;
+  --teal:#2E8C87; --teal-d:#226B67; --fire:#E0662B; --ink-soft:#4A5564;
+  --shadow:0 30px 60px -34px rgba(29,42,58,.55);
+  --shadow-s:0 18px 34px -22px rgba(29,42,58,.5);
+  --wrap:min(1200px, 100% - 40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--slip);color:var(--night);font-family:"Hanken Grotesk",ui-sans-serif,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--teal);color:var(--slip)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--fire);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+.wrap{width:var(--wrap);margin-inline:auto}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:.8em 1.5em;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;line-height:1.2;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-full{background:var(--night);color:var(--slip);box-shadow:0 14px 26px -16px rgba(29,42,58,.8)}
+.btn-full:hover{background:var(--teal)}
+.btn-line{border:2px solid var(--night);color:var(--night)}
+.btn-line:hover{background:var(--night);color:var(--slip)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* en-tête */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0}
+.logo{font-family:"Young Serif",Georgia,serif;font-size:26px;text-decoration:none;line-height:1}
+.logo small{display:block;font-family:"Hanken Grotesk",sans-serif;font-size:14px;color:var(--teal-d);margin-top:6px;font-weight:500}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-weight:500;font-size:16px}
+.nav a{text-decoration:none;padding:6px 0;background:linear-gradient(var(--teal),var(--teal)) 0 100%/0 2px no-repeat;transition:background-size .3s}
+.nav a:hover{background-size:100% 2px}
+.nav .tel{padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:var(--shadow-s);white-space:nowrap}
+
+/* héros */
+.hero{padding:18px 0 72px}
+.hero-kicker{font-size:17px;font-weight:500;color:var(--ink-soft);margin:0 0 14px}
+.hero h1{font-size:clamp(50px, 12.2vw, 182px);line-height:.9;letter-spacing:-.02em;position:relative;z-index:1}
+.hero h1 span{display:block}
+.hero h1 .l2{padding-left:.04em}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,450px);gap:0 64px;align-items:start}
+.hero-fig{grid-column:2;grid-row:1 / span 2;position:relative;z-index:2;margin:calc(clamp(50px, 12.2vw, 182px) * -.17) 0 0}
+.hero-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:20/21;background:var(--slip-2)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 62%}
+.tag{position:absolute;left:18px;bottom:18px;background:var(--card);color:var(--night);font-size:14px;font-weight:600;padding:9px 14px;border-radius:12px;line-height:1.3;box-shadow:0 10px 24px -14px rgba(29,42,58,.6);max-width:calc(100% - 36px)}
+.hero .tag{left:auto;right:18px}
+.coin{position:absolute;left:-46px;bottom:-40px;width:clamp(112px, 12vw, 158px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--slip);box-shadow:var(--shadow-s);transform:rotate(-9deg)}
+.coin img{width:100%;height:100%;object-fit:cover}
+.hero-text{grid-column:1;padding-top:34px;max-width:600px}
+.lede{font-size:21px;line-height:1.55;color:var(--night)}
+.lede strong{font-weight:600}
+.hero-links{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.hero-links a{font-size:15px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:999px;background:var(--slip-2);transition:background-color .2s,color .2s}
+.hero-links a:hover{background:var(--teal);color:var(--slip)}
+.hero-links a.fire{background:#F6D7C5}
+.hero-links a.fire:hover{background:var(--fire);color:var(--night)}
+
+/* bandeau de faits */
+.facts{background:var(--card);border-radius:24px;box-shadow:var(--shadow-s);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:-6px}
+.fact{padding:26px 28px}
+.fact + .fact{box-shadow:inset 1px 0 0 rgba(29,42,58,.1)}
+.fact b{display:block;font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1;margin-bottom:6px}
+.fact span{font-size:16px;color:var(--ink-soft);line-height:1.45;display:block}
+
+/* sampler */
+.sampler{padding:120px 0 110px}
+.sampler-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
+.collage{position:relative;padding-bottom:70px}
+.collage .a{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/4;width:78%}
+.collage .a img{width:100%;height:100%;object-fit:cover}
+.collage .b{position:absolute;right:0;bottom:0;width:58%;background:var(--card);padding:10px 10px 0;border-radius:14px;box-shadow:var(--shadow);transform:rotate(4deg)}
+.collage .b img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.collage .b figcaption{font-size:14px;font-weight:500;padding:9px 4px 11px;color:var(--ink-soft);line-height:1.35}
+.sec-title{font-size:clamp(38px, 5.2vw, 68px);letter-spacing:-.01em}
+.sec-sub{font-size:20px;color:var(--ink-soft);margin:16px 0 26px;max-width:560px}
+.steps{list-style:none;margin:30px 0 26px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.steps li{background:var(--card);border-radius:16px;padding:16px 18px 18px;display:flex;gap:14px;align-items:baseline;box-shadow:0 12px 24px -20px rgba(29,42,58,.6)}
+.steps .n{font-family:"Young Serif",Georgia,serif;font-size:15px;color:var(--teal-d);white-space:nowrap}
+.steps b{font-weight:600;font-size:18px;line-height:1.3}
+.note{font-size:16px;color:var(--ink-soft);border-radius:14px;background:var(--slip-2);padding:14px 18px;margin:0 0 26px}
+
+/* date night */
+.date{background:var(--teal);color:#F7EEE6;border-radius:32px;padding:clamp(36px,6vw,80px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:center}
+.date h2{font-size:clamp(30px, 4.8vw, 64px);color:#FFF8F2}
+.date p{font-size:18px;max-width:560px}
+.date .btn-full{background:var(--night);color:var(--slip)}
+.date .btn-full:hover{background:var(--slip);color:var(--night)}
+.date .btn-line{border-color:#F7EEE6;color:#F7EEE6}
+.date .btn-line:hover{background:#F7EEE6;color:var(--teal-d)}
+.polaroid{background:#FBF4EE;padding:12px 12px 0;border-radius:12px;transform:rotate(-3.5deg);box-shadow:0 34px 60px -30px rgba(15,25,35,.75)}
+.polaroid img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;object-position:50% 40%}
+.polaroid figcaption{color:var(--night);font-size:15px;font-weight:500;padding:11px 4px 14px;line-height:1.35}
+
+/* liste de cours */
+.more{padding:110px 0 120px}
+.more-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:40px}
+.more-head p{font-size:19px;color:var(--ink-soft);margin:0}
+.rows{border-top:2px solid var(--night)}
+.row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:32px;padding:30px 0;border-bottom:1px solid rgba(29,42,58,.18)}
+.row h3{font-size:clamp(26px,2.6vw,34px)}
+.row p{margin:0;color:var(--ink-soft)}
+.row .who{display:block;font-family:"Hanken Grotesk",sans-serif;font-size:15px;font-weight:600;color:var(--teal-d);margin-top:8px;line-height:1.3}
+
+/* raku */
+.raku{background:var(--night);color:#EFE3D8;padding:120px 0;border-radius:40px 40px 0 0}
+.raku-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.raku-pics{position:relative;padding:0 0 90px}
+.raku-main{border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.raku-main img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.raku .tag{background:var(--fire);color:var(--night);left:18px;right:auto;top:18px;bottom:auto}
+.glow{position:absolute;right:-18px;top:-36px;width:clamp(120px,13vw,180px);border-radius:18px;overflow:hidden;border:5px solid var(--night);box-shadow:0 0 0 2px rgba(224,102,43,.55),0 24px 50px -20px rgba(224,102,43,.55);transform:rotate(5deg)}
+.glow img{aspect-ratio:1;object-fit:cover;width:100%}
+.raku-second{position:absolute;left:8%;bottom:0;width:46%;border-radius:16px;overflow:hidden;border:5px solid var(--night-2);box-shadow:0 30px 60px -30px rgba(0,0,0,.85);transform:rotate(-3deg)}
+.raku-second img{aspect-ratio:4/3;object-fit:cover;width:100%;object-position:50% 70%}
+.raku h2{font-size:clamp(40px,5vw,70px);color:#FBF0E6}
+.raku .kick{color:var(--fire);font-weight:600;font-size:18px;margin:14px 0 22px}
+.raku p{color:#D9CEC5}
+.raku-facts{list-style:none;padding:0;margin:26px 0;display:grid;gap:10px}
+.raku-facts li{display:flex;gap:12px;align-items:baseline;font-size:17px;line-height:1.45}
+.raku-facts li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--fire);transform:translateY(-2px)}
+.raku .btn-full{background:var(--fire);color:var(--night)}
+.raku .btn-full:hover{background:#FBF0E6}
+.raku .btn-line{border-color:#EFE3D8;color:#EFE3D8}
+.raku .btn-line:hover{background:#EFE3D8;color:var(--night)}
+.small{font-size:15px;color:#B9B0A9;margin-top:22px}
+
+/* fêtes privées */
+.parties{background:var(--slip-2);padding:120px 0}
+.parties-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.party-fig{position:sticky;top:30px}
+.party-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.party-photo img{aspect-ratio:4/5;object-fit:cover;width:100%;object-position:62% 50%}
+.party-fig p{margin-top:28px;font-size:18px}
+.prices{display:grid;gap:14px;margin:30px 0}
+.price{background:var(--card);border-radius:20px;padding:24px 26px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;box-shadow:0 14px 30px -24px rgba(29,42,58,.6)}
+.price h3{font-size:24px;line-height:1.2}
+.price .amt{font-family:"Young Serif",Georgia,serif;font-size:22px;color:var(--teal-d);white-space:nowrap;text-align:right}
+.price p{grid-column:1 / -1;margin:0;font-size:16px;color:var(--ink-soft)}
+.price .tiers{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.price .tiers span{background:var(--slip);border-radius:999px;padding:6px 12px;font-size:15px;font-weight:500;white-space:nowrap}
+
+/* atelier */
+.studio{padding:120px 0 40px}
+.studio-wide{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.studio-wide img{width:100%;aspect-ratio:2.25/1;object-fit:cover;object-position:50% 40%}
+.studio-wide .tag{left:20px;bottom:20px}
+.studio-cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4fr);gap:48px;margin-top:56px}
+.studio-cols h2{font-size:clamp(34px,4vw,52px)}
+.studio-cols h3{font-size:24px;margin-bottom:14px}
+.ledger{list-style:none;margin:0;padding:0}
+.ledger li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed rgba(29,42,58,.25);font-size:17px}
+.ledger li span:last-child{white-space:nowrap;font-weight:600}
+.studio-cols .sm{font-size:15px;color:var(--ink-soft);margin-top:12px}
+.leaves{margin-top:30px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-s);transform:rotate(-2deg)}
+.leaves img{aspect-ratio:3/2;object-fit:cover;width:100%}
+
+/* citation */
+.quote{padding:100px 0}
+.quote blockquote{margin:0 auto;max-width:980px;text-align:left}
+.quote p{font-family:"Young Serif",Georgia,serif;font-size:clamp(28px,3.4vw,44px);line-height:1.22;margin:0 0 20px;text-wrap:pretty}
+.quote cite{font-style:normal;font-weight:600;color:var(--teal-d)}
+
+/* newsletter */
+.loop{padding:0 0 120px}
+.loop-card{background:var(--card);border-radius:32px;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:48px;padding:clamp(32px,5.5vw,72px);align-items:center;position:relative}
+.loop-card h2{font-size:clamp(40px,5.4vw,72px)}
+.loop-card .sec-sub{margin-bottom:28px}
+.socials{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:26px;font-weight:600;font-size:16px}
+.socials a{text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--teal)}
+.hearts{border-radius:50% 50% 22px 22px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(3deg);max-width:340px;justify-self:end;width:100%}
+.hearts img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+/* pied */
+.foot{background:var(--night);color:#E4D8CD;padding:80px 0 0}
+.foot-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px;padding-bottom:64px}
+.foot .logo{font-size:34px;color:#FBF0E6}
+.foot .logo small{color:#8FC9C4;font-size:16px}
+.foot h3{font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:16px;color:#8FC9C4;margin-bottom:12px;line-height:1.3}
+.foot p,.foot li{font-size:17px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-decoration-color:rgba(228,216,205,.4);text-underline-offset:4px}
+.foot a:hover{color:#FFF}
+.foot .blurb{color:#B9B0A9;max-width:420px;margin-top:18px}
+.proposal{border-top:1px solid rgba(228,216,205,.14);padding:18px 20px;text-align:center;font-size:14px;color:#9C958F}
+.proposal a{color:#C9C0B8}
+
+/* apparition des photos (seulement si le script tourne) */
+.js .reveal{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;translate:0 0}
+
+/* tablette */
+@media (max-width:1020px){
+  .sampler-grid,.raku-grid,.parties-grid,.date,.loop-card{grid-template-columns:minmax(0,1fr)}
+  .studio-cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .studio-cols > :first-child{grid-column:1 / -1}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact:nth-child(3){box-shadow:inset 0 1px 0 rgba(29,42,58,.1)}
+  .fact:nth-child(4){box-shadow:inset 1px 1px 0 rgba(29,42,58,.1)}
+  .party-fig{position:static}
+  .polaroid{max-width:360px}
+  .hearts{justify-self:start}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .more-head{grid-template-columns:minmax(0,1fr)}
+}
+/* téléphone */
+@media (max-width:760px){
+  body{font-size:17px}
+  .hero{padding-bottom:56px}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-fig{grid-column:1;grid-row:auto;margin:-4px 0 0 18%;}
+  .hero-photo{aspect-ratio:4/5}
+  .coin{left:-15%;bottom:-26px}
+  .hero-text{padding-top:52px}
+  .lede{font-size:19px}
+  .row{grid-template-columns:minmax(0,1fr);gap:10px}
+  .studio-cols{grid-template-columns:minmax(0,1fr)}
+  .studio-wide img{aspect-ratio:4/3}
+  .raku-pics{padding-bottom:70px}
+  .glow{right:-6px;top:-30px}
+  .raku-second{width:56%;left:4%}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .sampler,.more,.parties,.raku{padding:84px 0}
+  .studio{padding-top:84px}
+  .quote{padding:72px 0}
+  .loop{padding-bottom:84px}
+}
+@media (max-width:520px){
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .fact + .fact,.fact:nth-child(3),.fact:nth-child(4){box-shadow:inset 0 1px 0 rgba(29,42,58,.1)}
+  .fact{padding:20px 22px}
+  .fact b{font-size:26px}
+}
+@media (max-width:420px){
+  .btns .btn{width:100%}
+  .top{padding:16px 0}
+  .nav{gap:4px 18px}
+  .hero-fig{margin-left:12%}
+  .price{grid-template-columns:minmax(0,1fr)}
+  .price .amt{text-align:left}
+  .collage .a{width:84%}
+  .collage .b{width:64%}
+  .date{padding:30px 22px;border-radius:26px}
+  .date h2{font-size:29px}
+}
+@media (prefers-reduced-motion: reduce){
+  .btn,.nav a{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="#top">Flingin Pots<small>Pottery to the People</small></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#classes">Classes</a>
+    <a href="#raku">Raku</a>
+    <a href="#parties">Private parties</a>
+    <a href="#studio">Rentals</a>
+    <a href="#contact">Contact</a>
+    <a class="tel" href="tel:+17193294725">(719) 329-4725</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="h">
+    <p class="hero-kicker">Bringin’ Pottery to the People, in Fort Collins, Colorado</p>
+    <h1 id="h"><span>Stay Messy</span><span class="l2">My Friends!</span></h1>
+    <div class="hero-grid">
+      <figure class="hero-fig" style="margin-bottom:0">
+        <div class="hero-photo">
+          <img src="assets/flingin-pots-fort-collins/tournage-bol-cours-en-plein-air.webp" alt="Hands centering clay on a potter’s wheel during an outdoor Flingin Pots class, a row of students at their wheels behind" width="1200" height="1600" fetchpriority="high">
+        </div>
+        <span class="tag">Wheel class, hands on hands</span>
+        <div class="coin"><img src="assets/flingin-pots-fort-collins/bol-raku-crin-vignette.webp" alt="Horse hair burning black lines onto a hot white raku bowl" width="800" height="800"></div>
+      </figure>
+      <div class="hero-text">
+        <p class="lede"><strong>Wheel throwing classes for all ages and abilities.</strong> Hands on hands instruction allows the novice to experience the wheel and be successful on the 1st try!</p>
+        <div class="btns">
+          <a class="btn btn-full" href="https://www.eventbrite.com/o/flingin-pots-17762469979">Register on Eventbrite</a>
+          <a class="btn btn-line" href="#parties">Book a private class</a>
+        </div>
+        <div class="hero-links" aria-label="This month at the studio">
+          <a class="fire" href="#raku">Monthly Raku Workshops</a>
+          <a href="#date-night">Dirty Date Night</a>
+          <a href="#classes">4-class dinnerware sampler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><b>10 wheels</b><span>so bigger groups can run in sessions</span></div>
+      <div class="fact"><b>Ages 1 and up</b><span>from Tots Clay Play to Dirty Date Night (18 &amp; up)</span></div>
+      <div class="fact"><b>Two kilns</b><span>Skutt 1027 electric kilns, open for community firings</span></div>
+      <div class="fact"><b>Basement &amp; backyard</b><span>cozy downstairs 3 seasons, outside with the chickens and cats in summer</span></div>
+    </div>
+  </div>
+
+  <section class="sampler wrap" id="classes" aria-labelledby="classes-h">
+    <div class="sampler-grid">
+      <div class="collage">
+        <div class="a reveal"><img src="assets/flingin-pots-fort-collins/bols-tournes-crus-sur-planches.webp" alt="A table covered with freshly thrown bowls drying on their boards" width="1200" height="1600" loading="lazy"></div>
+        <figure class="b reveal" style="margin:0">
+          <img src="assets/flingin-pots-fort-collins/eleves-plateau-de-bols-atelier.webp" alt="Two smiling students holding a board of their freshly thrown cups and bowls under the Flingin Pots sign" width="1600" height="1200" loading="lazy">
+          <figcaption>Fresh off the wheel, waiting for trimming</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2 class="sec-title" id="classes-h">Let’s Get Messy!</h2>
+        <p class="sec-sub">The Sampler is a dinnerware set in four classes: an intro to wheel throwing for the novice, or for the potter who would benefit from a refresher on basic concepts and techniques.</p>
+        <ol class="steps">
+          <li><span class="n">Class 1</span><b>Cups and bowls</b></li>
+          <li><span class="n">Class 2</span><b>Plates &amp; whatevs</b></li>
+          <li><span class="n">Class 3</span><b>Trimming and handles</b></li>
+          <li><span class="n">Class 4</span><b>Glazing</b></li>
+        </ol>
+        <p class="note">Already centering on your own? <strong>Sampler 2</strong> moves on to lidded containers: honey pots, garlic keepers, sugar bowls and little keep safe boxes.</p>
+        <div class="btns">
+          <a class="btn btn-full" href="https://www.eventbrite.com/o/flingin-pots-17762469979">See classes on Eventbrite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="date-night" aria-labelledby="date-h">
+    <div class="date">
+      <div>
+        <h2 id="date-h">Add a little spice to your relationship with a Dirty Date Night!</h2>
+        <p style="margin-top:24px">Calling all Demi Moores and Patrick Swayzes. An adult wheel-throwing class for the novice or for the potter who needs a refresher. Each of you will attempt to make 2 pieces, glazes and firings included.</p>
+        <p>Ages 18 &amp; up, price is per couple. All “couple” types welcomed!!!</p>
+        <div class="btns" style="margin-top:28px">
+          <a class="btn btn-full" href="https://www.eventbrite.com/o/flingin-pots-17762469979">Find a date night</a>
+          <a class="btn btn-line" href="mailto:flinginpots@gmail.com?subject=Dirty%20Date%20Night">Ask us a question</a>
+        </div>
+      </div>
+      <figure class="polaroid reveal" style="margin:0">
+        <img src="assets/flingin-pots-fort-collins/cours-tour-atelier-huit-tours.webp" alt="Students throwing bowls at two rows of wheels in the basement studio" width="1200" height="1600" loading="lazy">
+        <figcaption>Wheel night in the basement studio</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="more wrap" aria-labelledby="more-h">
+    <div class="more-head">
+      <h2 class="sec-title" id="more-h">More ways to play with mud</h2>
+      <p>You’ll find us out on the town regularly, partnering with local breweries, coffee shops and paint n’ sips.</p>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <h3>All Ages Wheel-Throwing<span class="who">Under 10 attends with a parent</span></h3>
+        <p>Centering, pulling walls, shaping and trimming on the wheel are all covered. Students attempt to make 2 pieces per class, with glazes and firings, a studio tour and an info session on the firing process included.</p>
+      </div>
+      <div class="row">
+        <h3>Tots Clay Play<span class="who">Ages 1 to 6, parent and child</span></h3>
+        <p>A sensory studio where littles experience the world of clay through touch, with multiple stations and various stages of clay. Not a project class, but littles can keep 1 item: brain coil bowls or a wheel experience.</p>
+      </div>
+      <div class="row">
+        <h3>Pottery Camps<span class="who">Weeklong, outside</span></h3>
+        <p>Held outside with the cats and chickens: 3 days on the basics of wheel throwing, 1 day of handbuilding (coil, pinch and slab) and Friday painting all their creations. Messy hands and happy hearts, guaranteed.</p>
+      </div>
+      <div class="row">
+        <h3>Handbuilding<span class="who">Great for crafty family time</span></h3>
+        <p>A 2 hour workshop to create a project of your choice: cows, chickens, mugs and more. All supplies, instruction and materials included, projects high-fired and ready for pick up 1 month later.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="raku" id="raku" aria-labelledby="raku-h">
+    <div class="wrap raku-grid">
+      <div class="raku-pics">
+        <div class="raku-main reveal" style="position:relative">
+          <img src="assets/flingin-pots-fort-collins/bol-raku-crin-de-cheval.webp" alt="Two hands laying horse hair on a white raku bowl fresh from the kiln, the hair burning into black lines" width="1600" height="1200" loading="lazy">
+          <span class="tag">Horse hair on a red-hot bowl</span>
+        </div>
+        <div class="glow"><img src="assets/flingin-pots-fort-collins/four-raku-incandescent.webp" alt="The raku kiln opened at night, shelf and pots glowing orange" width="1080" height="1080" loading="lazy"></div>
+        <div class="raku-second reveal"><img src="assets/flingin-pots-fort-collins/femme-et-fillette-pieces-raku.webp" alt="A woman and a girl showing their finished raku pieces, copper lustre pots and smoke-marked white bowls" width="1600" height="1200" loading="lazy"></div>
+      </div>
+      <div>
+        <h2 id="raku-h">Like playing with fire?</h2>
+        <p class="kick">Check out our Monthly Raku Workshops!!</p>
+        <p>Inspired by traditional Japanese raku firing, our Western-style raku pulls pottery from the kiln at bright red heat and places it into containers with combustible materials. Once they ignite, the containers are closed, and the reduction brings out brilliant metallic blues, purples, coppers, reds and yellows.</p>
+        <ul class="raku-facts">
+          <li>Each person paints and fires two pieces in a 2 hour workshop</li>
+          <li>Your pieces go home with you after the event: the only ceramic process where you paint, fire and take home!</li>
+          <li>Private raku workshop for your group: $55 / person, min 6, max 14</li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn-full" href="https://www.eventbrite.com/o/flingin-pots-17762469979">See raku dates</a>
+          <a class="btn btn-line" href="#parties">Book one for your group</a>
+        </div>
+        <p class="small">Note: raku ware is not food-safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="parties" id="parties" aria-labelledby="parties-h">
+    <div class="wrap parties-grid">
+      <figure class="party-fig" style="margin:0">
+        <div class="party-photo reveal">
+          <img src="assets/flingin-pots-fort-collins/anniversaire-enfants-tour-potier.webp" alt="A kids’ birthday party on the wheels, out on a sunny patio, one child in a party hat" width="1600" height="1200" loading="lazy">
+          <span class="tag">Birthday party on the wheels</span>
+        </div>
+        <p>At the Flingin Pots home studio, your group travels to us. <strong>Great for team building and family gatherings!</strong></p>
+      </figure>
+      <div>
+        <h2 class="sec-title" id="parties-h">Groups of 4 or more? Schedule your private class!</h2>
+        <div class="prices">
+          <div class="price">
+            <h3>Private class</h3><span class="amt">from $45</span>
+            <p>1.5 hour class, scheduled at your convenience. Max 10. Each student attempts 2 pieces on the potter’s wheels, with formal instruction on centering, pulling walls and shaping.</p>
+            <div class="tiers"><span>$60 / person, 2 to 3 people</span><span>$50 / person, 4 to 5</span><span>$45 / person, 6 to 10</span></div>
+          </div>
+          <div class="price">
+            <h3>Adult party wheel experience</h3><span class="amt">$30 / adult</span>
+            <p>1 piece each: every adult makes 1 pot with 2&nbsp;lbs of clay, glazes and firings included. Groups of 6 to 10+, add $5 per person for groups of 3 to 5.</p>
+          </div>
+          <div class="price">
+            <h3>Child birthday party or scout badge</h3><span class="amt">$25 / child</span>
+            <p>1 piece each: every child makes 1 pot with 1&nbsp;lb of clay. Groups of 6 to 10+, add $5 per person for groups of 3 to 5.</p>
+          </div>
+          <div class="price">
+            <h3>Raku or handbuilding workshop</h3><span class="amt">$55 / person</span>
+            <p>2 hour workshop, min 6, max 14.</p>
+          </div>
+        </div>
+        <p style="color:var(--ink-soft)">We have 10 wheels and can run groups in sessions of 35 to 45 mins. A $100 deposit reserves the date.</p>
+        <div class="btns" style="margin-top:22px">
+          <a class="btn btn-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfwz8eRT_hqLVL52t08aXxXjdcHgjacO2dUH35Cuy2W-OoeVQ/viewform?c=0&amp;flr=0&amp;vc=0&amp;w=1">Open the reservation form</a>
+          <a class="btn btn-line" href="tel:+17193294725">Call (719) 329-4725</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="studio wrap" id="studio" aria-labelledby="studio-h">
+    <figure class="studio-wide reveal" style="margin:0">
+      <img src="assets/flingin-pots-fort-collins/cours-modelage-atelier-tables.webp" alt="A handbuilding class at work around boarded wheels in the basement studio, under the wooden Flingin Pots letters" width="1600" height="1274" loading="lazy">
+      <span class="tag">The basement studio, warm and cozy 3 seasons</span>
+    </figure>
+    <div class="studio-cols">
+      <div>
+        <h2 id="studio-h">Community rentals</h2>
+        <p class="sec-sub" style="margin-bottom:0">We have two Skutt 1027 electric kilns. Bisque fire to ^05 and glaze fire to ^5.5, same fees for both.</p>
+        <div class="leaves reveal"><img src="assets/flingin-pots-fort-collins/coupes-feuilles-emaillees.webp" alt="A basket of leaf-shaped dishes glazed amber and green with pools of turquoise glass" width="1600" height="1200" loading="lazy"></div>
+      </div>
+      <div>
+        <h3>Firing fees</h3>
+        <ul class="ledger">
+          <li><span>Per piece</span><span>$5</span></li>
+          <li><span>Half shelf (19x11x5)</span><span>$15</span></li>
+          <li><span>Full shelf (19x19x5)</span><span>$25</span></li>
+          <li><span>Half kiln</span><span>$35</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Clay, 25&nbsp;lbs</h3>
+        <ul class="ledger">
+          <li><span>Dover Sand</span><span>$30</span></li>
+          <li><span>Speckled Buff</span><span>$30</span></li>
+          <li><span>Brown Trout</span><span>$30</span></li>
+          <li><span>Flagstone</span><span>$30</span></li>
+          <li><span>Chocolate, specialty</span><span>$35</span></li>
+        </ul>
+        <p class="sm">Make at home kits and gift cards are in our <a href="https://www.flinginpots.com/potterygiftcard">online shop</a>, gift cards from $25.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote wrap" aria-label="What families say">
+    <blockquote>
+      <p>“Just got done with a class for my kids and they can’t stop talking about how much they loved it. They said Suzanne and Scott were so kind and patient and want me to schedule another class ASAP!!”</p>
+      <cite>Brooke S.</cite>
+    </blockquote>
+  </section>
+
+  <section class="loop wrap" id="newsletter" aria-labelledby="loop-h">
+    <div class="loop-card">
+      <div>
+        <h2 id="loop-h">Stay in the loop</h2>
+        <p class="sec-sub">Join our community newsletter and be the first to hear about events, special offers and more. Every monthly issue comes with the registration links.</p>
+        <div class="btns">
+          <a class="btn btn-full" href="mailto:flinginpots@gmail.com?subject=Add%20me%20to%20the%20Flingin%20Pots%20newsletter">Email us to join the list</a>
+          <a class="btn btn-line" href="https://us19.campaign-archive.com/?id=56143aeb4f&amp;u=ea47be2c9e31b74a4b995597a">Read the monthly newsletter</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/flinginpots/">Instagram</a>
+          <a href="https://www.facebook.com/FlinginPots/">Facebook</a>
+          <a href="https://www.youtube.com/channel/UCUEy8Y19cQfVakKDJamqBTw/featured">YouTube</a>
+        </div>
+      </div>
+      <div class="hearts reveal"><img src="assets/flingin-pots-fort-collins/coupelles-coeurs-verre-fondu.webp" alt="A kiln shelf of small heart-shaped dishes filled with colored glass, ready to fire" width="1200" height="1600" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top">Flingin Pots<small>Pottery to the People</small></a>
+      <p class="blurb">Two goofy creatives blending family, art and business. Suzanne &amp; Scott, founders of Flingin Pots in Fort Collins, Colorado.</p>
+    </div>
+    <div>
+      <h3>Come get messy</h3>
+      <p>2614 Pleasant Valley Rd<br>Fort Collins, CO 80521</p>
+      <ul>
+        <li><a href="mailto:flinginpots@gmail.com">flinginpots@gmail.com</a></li>
+        <li><a href="tel:+17193294725">(719) 329-4725</a></li>
+        <li><a href="tel:+19704925825">(970) 492.5825</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Classes &amp; more</h3>
+      <ul>
+        <li><a href="https://www.eventbrite.com/o/flingin-pots-17762469979">Register on Eventbrite</a></li>
+        <li><a href="https://www.flinginpots.com/potterygiftcard">Kits &amp; gift cards</a></li>
+        <li><a href="https://www.instagram.com/flinginpots/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/FlinginPots/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="proposal">Proposal by Nicolas Masset for Flingin Pots, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

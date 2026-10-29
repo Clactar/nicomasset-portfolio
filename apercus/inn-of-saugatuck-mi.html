@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--
+PLAN (Nova, 29/10) The Inn of Saugatuck
+1. Couleurs : lilas crépuscule #EDE7EE (fond), aubergine #2B2140 (texte, bande sombre, pied), corail couchant #E07A5F (pleins, puces, jamais en texte sur fond clair), surface #F7F3F7 pour les cartes, lilas soutenu #E3DAE6 pour une section.
+2. Typo : DM Serif Display 400 (titres, noms de chambres, citations) + Mulish 400/600 (texte). Pas de sur-titres en capitales, aucune numérotation décorative.
+3. Héros : [ nav ........................ tel ]  /  [ PHOTO façade au couchant, pleine largeur utile, arrondi 24 | titre en bas à gauche sur voile local ] / carte de faits qui chevauche le bas de la photo. Téléphone : titre puis photo.
+4. Sections : 1904 (photos qui se chevauchent | texte) ; chambres (photos | liste éditoriale avec prix) ; Things to do sur fond aubergine (intro + vue aérienne, puis 4 colonnes) ; Eat & drink (carte menu à deux colonnes + photo) ; avis (photo du porche inclinée + grande citation) ; offres en bande coupon corail ; Good to know ; pied sombre.
+5. Revu contre les défauts : pas de crème + terre cuite (lilas froid + aubergine), pas de 3 cartes identiques (offres = un coupon unique), pas de mot en italique coloré, pas de « → », pas de méta à points médians.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Inn of Saugatuck, Bed and Breakfast in Downtown Saugatuck, Michigan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B2140'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23E07A5F'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDE7EE; --ink:#2B2140; --coral:#E07A5F; --card:#F7F3F7; --deep:#E3DAE6;
+  --muted:#574B6B; --line:rgba(43,33,64,.14);
+  --w:min(1200px, 100% - 48px);
+  --shadow:0 30px 60px -34px rgba(43,33,64,.55);
+  --serif:"DM Serif Display", Georgia, serif; --sans:"Mulish", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--coral);color:var(--ink)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+.wrap{width:var(--w);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem, 3.6vw, 3.1rem)}
+p{margin:0 0 1em}
+.lede{font-size:1.125rem;color:var(--muted);max-width:60ch}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:.9em 1.6em;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--coral);color:var(--ink);box-shadow:0 14px 30px -16px rgba(224,122,95,.9)}
+.btn-fill:hover{background:#E88B72}
+.btn-line{border:1.5px solid currentColor;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+
+/* en-tête */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.brand b{font-family:var(--serif);font-weight:400;font-size:1.6rem}
+.brand span{font-size:.9rem;color:var(--muted)}
+.top nav{display:flex;align-items:center;gap:26px;font-weight:600;font-size:.98rem}
+.top nav a{text-decoration:none}
+.top nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--coral)}
+.top .btn{padding:.65em 1.2em}
+
+/* héros */
+.hero{display:grid;position:relative}
+.hero > *{grid-area:1/1}
+.hero-figure{margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);height:clamp(560px, 74vh, 690px)}
+.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.hero-veil{align-self:stretch;justify-self:start;width:68%;border-radius:24px 0 0 24px;background:linear-gradient(90deg, rgba(28,20,42,.84) 0%, rgba(28,20,42,.7) 50%, rgba(28,20,42,0) 100%);pointer-events:none}
+.hero-text{align-self:end;justify-self:start;padding:0 0 112px 56px;max-width:600px;color:#F7F1F4;position:relative}
+.hero-text .where{font-weight:600;font-size:1rem;margin-bottom:14px;color:#F3DCD4}
+.hero h1{font-size:clamp(2.5rem, 4.4vw, 4.1rem);line-height:1.02;margin-bottom:20px;text-shadow:0 2px 24px rgba(28,20,42,.4)}
+.hero-text p.sub{font-size:1.08rem;max-width:46ch;color:#EFE6EC}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .btn-line{color:#F7F1F4}
+.hero .btn-line:hover{background:#F7F1F4;color:var(--ink)}
+
+/* bandeau de faits */
+.facts{position:relative;z-index:2;margin:-62px auto 0;width:min(1080px, 100% - 96px);background:var(--card);border-radius:20px;box-shadow:0 26px 50px -30px rgba(43,33,64,.5);display:grid;grid-template-columns:repeat(4, minmax(0,1fr))}
+.facts div{padding:24px 26px}
+.facts div + div{border-left:1px solid var(--line)}
+.facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.9rem;line-height:1.1;white-space:nowrap}
+.facts span{font-size:.95rem;color:var(--muted)}
+
+/* 1904 */
+.story{padding:120px 0 110px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:72px;align-items:center}
+.stack{position:relative;padding-bottom:90px}
+.stack .big{border-radius:20px;box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:88%}
+.stack .small{position:absolute;right:0;bottom:0;width:50%;border:10px solid var(--bg);border-radius:18px;box-shadow:0 24px 40px -26px rgba(43,33,64,.6);aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+.tag{position:absolute;left:16px;bottom:16px;background:rgba(247,243,247,.94);color:var(--ink);font-weight:600;font-size:.88rem;padding:7px 13px;border-radius:999px}
+.stack .tag{bottom:106px}
+.story h2{margin-bottom:24px}
+.story .note{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:var(--serif);font-size:1.35rem;line-height:1.35}
+
+/* chambres */
+.rooms{background:var(--deep);padding:110px 0}
+.rooms-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+.rooms-photos{position:sticky;top:32px;display:grid;gap:18px}
+.rooms-photos img{border-radius:22px;box-shadow:var(--shadow);aspect-ratio:3/2;object-fit:cover;width:100%}
+.rooms-photos .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.rooms-photos .pair img{border-radius:14px;aspect-ratio:1/1}
+.rooms h2{margin-bottom:16px}
+.room-list{list-style:none;padding:0;margin:34px 0 26px;border-top:1px solid var(--line)}
+.room-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.room-list h3{font-size:1.55rem}
+.room-list .price{white-space:nowrap;font-weight:700}
+.room-list .price small{font-weight:400;color:var(--muted);font-size:.9rem}
+.room-list p{grid-column:1/-1;margin:0;color:var(--muted);font-size:.98rem}
+.amen{font-size:.98rem;color:var(--muted);margin-bottom:26px}
+
+/* things to do (défaut 1) */
+.todo{background:var(--ink);color:#EEE6EE;padding:112px 0 120px}
+.todo-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:64px;align-items:center;margin-bottom:76px}
+.todo h2{color:#FBF4F2;margin-bottom:20px}
+.todo .lede{color:#CFC4D6}
+.todo-photo{position:relative;margin:0}
+.todo-photo img{border-radius:24px;aspect-ratio:16/10;object-fit:cover;width:100%;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.groups{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:40px}
+.group h3{font-size:1.65rem;color:#FBF4F2;margin-bottom:12px;padding-top:18px;border-top:2px solid var(--coral)}
+.group p{color:#CFC4D6;font-size:.98rem}
+.group ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.group li{display:flex;gap:10px;align-items:baseline;font-weight:600;color:#F5EDF1}
+.group li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--coral);transform:translateY(-1px)}
+.group li a{text-decoration-color:var(--coral);text-underline-offset:4px}
+
+/* eat & drink */
+.eat{padding:120px 0 100px}
+.eat-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:48px;align-items:start}
+.menu{background:var(--card);border-radius:24px;padding:48px 52px;box-shadow:0 26px 50px -36px rgba(43,33,64,.45)}
+.menu h2{margin-bottom:14px}
+.menu .lede{margin-bottom:34px}
+.menu dl{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:22px 44px;margin:0}
+.menu dt{font-family:var(--serif);font-size:1.3rem;line-height:1.2}
+.menu dd{margin:4px 0 0;color:var(--muted);font-size:.96rem}
+.menu .drinks{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.menu .drinks h3{font-size:1.45rem;margin-bottom:8px}
+.eat-side{position:relative;margin:56px 0 0;transform:rotate(1.6deg)}
+.eat-side img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;object-position:35% 50%;width:100%;box-shadow:var(--shadow)}
+.eat-side .tag{left:22px;bottom:26px}
+
+/* avis */
+.guests{padding:40px 0 120px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:center}
+.porch{position:relative;margin:0;transform:rotate(-1.8deg)}
+.porch img{border-radius:20px;aspect-ratio:4/5;object-fit:cover;object-position:30% 50%;width:100%;box-shadow:var(--shadow)}
+.porch .tag{left:24px;bottom:28px}
+.guests blockquote{margin:0}
+.big-quote{font-family:var(--serif);font-size:clamp(1.7rem, 2.7vw, 2.45rem);line-height:1.2;margin:0 0 14px}
+.who{color:var(--muted);font-size:.95rem;margin-bottom:36px}
+.small-quotes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;border-top:1px solid var(--line);padding-top:28px}
+.small-quotes p{font-size:1rem;margin-bottom:8px}
+
+/* offres */
+.specials{background:var(--coral);color:var(--ink);border-radius:28px;padding:52px 56px;display:grid;grid-template-columns:minmax(0,.9fr) repeat(3, minmax(0,1fr));gap:0;box-shadow:0 30px 60px -36px rgba(160,70,50,.75)}
+.specials > div{padding:0 30px}
+.specials > div + div{border-left:2px dashed rgba(43,33,64,.35)}
+.specials > div:first-child{padding-left:0}
+.specials h2{font-size:clamp(1.9rem, 2.6vw, 2.4rem);margin-bottom:14px}
+.specials h3{font-size:1.45rem;margin-bottom:10px}
+.specials p{font-size:.98rem}
+.code{display:inline-block;background:var(--ink);color:#FBEDE7;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.92rem;white-space:nowrap}
+.specials .btn-line{margin-top:6px}
+
+/* good to know */
+.know{padding:110px 0 120px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px}
+.know h2{margin-bottom:18px}
+.know-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px}
+.know h3{font-size:1.4rem;margin-bottom:12px}
+.know ul{margin:0;padding-left:1.1em;color:var(--muted)}
+.know li{margin-bottom:8px}
+.know li::marker{color:var(--coral)}
+
+/* pied */
+footer{background:var(--ink);color:#DCD2E0;padding:80px 0 0}
+.foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-bottom:64px}
+.foot .name{font-family:var(--serif);font-size:2.2rem;color:#FBF4F2;line-height:1.1;margin-bottom:14px}
+.foot h3{font-family:var(--sans);font-weight:700;font-size:1rem;color:#FBF4F2;margin-bottom:12px}
+.foot p{margin-bottom:6px}
+.foot a{text-decoration-color:var(--coral);text-underline-offset:4px}
+.foot .btn-fill{margin-top:18px}
+.proposal{border-top:1px solid rgba(255,255,255,.12);padding:20px 24px;text-align:center;font-size:.88rem;color:#B9AEC2}
+
+/* apparition des photos */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+/* tablette */
+@media (max-width:1060px){
+  .groups{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .specials{grid-template-columns:repeat(2, minmax(0,1fr));gap:32px 0}
+  .specials > div:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:900px){
+  :root{--w:min(1200px, 100% - 40px)}
+  .top nav a:not(.btn){display:none}
+  .hero{display:flex;flex-direction:column}
+  .hero-veil{display:none}
+  .hero-text{display:contents;color:var(--ink)}
+  .hero-text .where{order:1;margin:14px 0 8px}
+  .hero h1{order:2;color:var(--ink)}
+  .hero-figure{order:3}
+  .hero-text p.sub{order:4;margin-top:22px}
+  .hero-actions{order:5;margin-top:4px}
+  .hero-text .where{color:var(--muted)}
+  .hero h1{text-shadow:none}
+  .hero-text p.sub{color:var(--muted)}
+  .hero .btn-line{color:var(--ink)}
+  .hero .btn-line:hover{background:var(--ink);color:var(--bg)}
+  .hero-figure{height:auto;aspect-ratio:4/3;border-radius:20px}
+  .facts{margin-top:30px;width:100%;grid-template-columns:repeat(2, minmax(0,1fr))}
+  .facts div:nth-child(3){border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .story,.rooms-grid,.todo-head,.eat-grid,.guests,.know{grid-template-columns:minmax(0,1fr);gap:44px}
+  .story{padding:84px 0 80px}
+  .rooms-photos{position:static}
+  .eat-side{margin:0;max-width:440px}
+  .foot{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .facts div + div{border-left:0;border-top:1px solid var(--line)}
+  .facts div{padding:16px 20px}
+  .facts strong{font-size:1.6rem}
+  .groups,.know-cols,.small-quotes,.menu dl{grid-template-columns:minmax(0,1fr)}
+  .menu{padding:32px 22px}
+  .specials{grid-template-columns:minmax(0,1fr);padding:36px 24px}
+  .specials > div{padding:0 0 26px;border-left:0 !important}
+  .specials > div + div{border-top:2px dashed rgba(43,33,64,.35);padding-top:26px}
+  .rooms,.todo{padding:84px 0}
+  .stack{padding-bottom:70px}
+  .stack .tag{bottom:84px}
+  .room-list li{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .hero-actions .btn,.foot .btn,.specials .btn{width:100%}
+  .top{flex-wrap:wrap;gap:12px}
+  .brand b{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" id="top"><b>The Inn of Saugatuck</b><span>Bed &amp; Breakfast, Saugatuck, MI</span></a>
+    <nav aria-label="Main">
+      <a href="#rooms">Rooms</a>
+      <a href="#things-to-do">Things to do</a>
+      <a href="#eat">Eat and drink</a>
+      <a href="#specials">Specials</a>
+      <a class="btn btn-line" href="tel:+12698573325">(269) 857-3325</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Welcome">
+    <figure class="hero-figure">
+      <img src="assets/inn-of-saugatuck-mi/maison-victorienne-facade-coucher-soleil.webp" alt="The Inn of Saugatuck, a two-story Victorian house with a wide front porch and American flags, at sunset" width="1600" height="899" fetchpriority="high">
+    </figure>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-text">
+      <p class="where">Bed and breakfast in downtown Saugatuck, Michigan</p>
+      <h1>Walk to everything downtown has to offer.</h1>
+      <p class="sub">Your home base for a Lake Michigan getaway: a 1904 Victorian inn within walking distance of shops, restaurants, galleries, and the Kalamazoo River.</p>
+      <div class="hero-actions">
+        <a class="btn btn-fill" href="https://www.innsaugatuck.com/rooms">Book a room</a>
+        <a class="btn btn-line" href="#things-to-do">Things to do in town</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts" role="list">
+    <div role="listitem"><strong>1904</strong><span>Built for the Koenig Hardware Store owners</span></div>
+    <div role="listitem"><strong>7 rooms</strong><span>Each with a private bath</span></div>
+    <div role="listitem"><strong>$135 to $275</strong><span>A night, depending on the room</span></div>
+    <div role="listitem"><strong>Downtown</strong><span>447 Butler St, minutes from the Lake Michigan shoreline</span></div>
+  </div>
+
+  <section class="story" id="the-inn">
+    <div class="stack">
+      <img class="big rv" src="assets/inn-of-saugatuck-mi/salon-cheminee-bois-sombre.webp" alt="Victorian sitting room with a carved wood mantel, a grandfather clock and rose drapes" loading="lazy" width="1600" height="1066">
+      <img class="small rv" src="assets/inn-of-saugatuck-mi/escalier-horloge-comtoise.webp" alt="Front hall with a dark oak staircase and a carved grandfather clock" loading="lazy" width="1600" height="916">
+      <span class="tag">Original oak woodwork, Victorian trim</span>
+    </div>
+    <div>
+      <h2>A Sears and Roebuck catalogue house, built in 1904.</h2>
+      <p>The inn was originally built in 1904 as the residence for the Koenig Hardware Store owners. It was the second largest version of a Sears and Roebuck catalogue house, at an original cost of $1800.</p>
+      <p>For nearly two decades it was an art gallery, the Highbanks Gallery of Saugatuck. It then became the Saugatuck Victorian Inn, and in 2017 it took its name: The Inn of Saugatuck.</p>
+      <p>The special craftsmanship of the restoration is evident everywhere you turn. Our historic inn keeps all of the original oak woodwork and unique Victorian trim.</p>
+      <p class="note">Take an early morning stroll before breakfast, or sip your coffee on the front porch in the cool lake breeze.</p>
+    </div>
+  </section>
+</div>
+
+<section class="rooms" id="rooms">
+  <div class="wrap rooms-grid">
+    <div class="rooms-photos">
+      <img class="rv" src="assets/inn-of-saugatuck-mi/chambre-lit-baldaquin.webp" alt="Guest room with a carved four-poster bed and fringed lamps" loading="lazy" width="1500" height="1000">
+      <div class="pair">
+        <img class="rv" src="assets/inn-of-saugatuck-mi/chambre-quilt-cheminee.webp" alt="Guest room with a pastel quilt and a fireplace" loading="lazy" width="1500" height="994">
+        <img class="rv" src="assets/inn-of-saugatuck-mi/chambre-papier-peint-fleuri-quilt.webp" alt="Guest room with floral wallpaper, a patchwork quilt and a fireplace" loading="lazy" width="1600" height="1066">
+      </div>
+    </div>
+    <div>
+      <h2>Stay in comfort</h2>
+      <p class="lede">Each room has been thoughtfully re-designed, blending historic charm with modern comforts, fresh paint and new carpeting. Breakfast features fresh local produce.</p>
+      <ul class="room-list">
+        <li><h3>Master Suite</h3><span class="price">from $275 <small>/ night</small></span><p>King size bed, fireplace, private sitting room, over-sized walk in rain shower. Our one guest room on the first floor.</p></li>
+        <li><h3>Room Four</h3><span class="price">from $225 <small>/ night</small></span><p>King size bed, fireplace, second floor.</p></li>
+        <li><h3>Room Three</h3><span class="price">from $190 <small>/ night</small></span><p>Queen size bed, fireplace, second floor.</p></li>
+        <li><h3>Room Six</h3><span class="price">from $155 <small>/ night</small></span><p>Queen size bed, fireplace, second floor.</p></li>
+        <li><h3>Room Seven</h3><span class="price">from $155 <small>/ night</small></span><p>Queen size bed, fireplace, second floor.</p></li>
+        <li><h3>Room Two</h3><span class="price">from $145 <small>/ night</small></span><p>Queen size bed, fireplace, second floor.</p></li>
+        <li><h3>Room Five</h3><span class="price">from $135 <small>/ night</small></span><p>Queen size bed, flat screen TV, second floor.</p></li>
+      </ul>
+      <p class="amen">Every room has a private bathroom, high speed internet, cable TV, soft luxurious sheets, air conditioning and toiletries.</p>
+      <a class="btn btn-fill" href="https://www.innsaugatuck.com/rooms">Check dates and book</a>
+    </div>
+  </div>
+</section>
+
+<section class="todo" id="things-to-do">
+  <div class="wrap">
+    <div class="todo-head">
+      <div>
+        <h2>Things to do in Saugatuck</h2>
+        <p class="lede">Saugatuck is a town surrounded by nature, with something for everyone. Looking to relax? Try the beaches and art galleries. Want to work up a sweat? There are hikes, bikes, and watersports. Looking for more adventure? How about a dune ride or charter fishing.</p>
+      </div>
+      <figure class="todo-photo">
+        <img class="rv" src="assets/inn-of-saugatuck-mi/vue-aerienne-saugatuck.webp" alt="Aerial view of Saugatuck, houses among the trees and the water beyond" loading="lazy" width="1600" height="1065">
+        <span class="tag">Saugatuck from above</span>
+      </figure>
+    </div>
+    <div class="groups">
+      <div class="group">
+        <h3>Explore Saugatuck</h3>
+        <p>The Art Coast: dunes, lakeside beaches like Oval Beach, and art galleries.</p>
+        <ul>
+          <li>Saugatuck Dune Rides</li>
+          <li>Saugatuck art galleries</li>
+          <li>Local beaches</li>
+          <li><a href="#eat">Best restaurants in the area</a></li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Water adventures</h3>
+        <p>Kayaking, canoeing or stand-up paddle boarding. Or let someone else do the work.</p>
+        <ul>
+          <li>Star of Saugatuck Boat Cruise</li>
+          <li>Charter fishing</li>
+          <li>Retro boat rental</li>
+          <li>Kayak and SUP rentals</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Land adventures</h3>
+        <p>Golf courses, disc golf courses and bike trails are plentiful around the area.</p>
+        <ul>
+          <li>Ravines Golf Course</li>
+          <li>Clearbrook Golf Course</li>
+          <li>Shore Acres Disc Golf</li>
+          <li>In the Elements Bike Rentals</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Shopping downtown</h3>
+        <p>Locally owned boutiques and specialty shops, in a walkable, scenic waterfront area.</p>
+        <ul>
+          <li>Art galleries</li>
+          <li>Antiques</li>
+          <li>Jewelry and gifts</li>
+          <li>Clothing and shoes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="eat wrap" id="eat">
+  <div class="eat-grid">
+    <div class="menu">
+      <h2>Eat and drink</h2>
+      <p class="lede">Start your day with a breakfast at the inn, then pick your spot. This list is just a sample of the options in town.</p>
+      <dl>
+        <div><dt>Grow Café &amp; Bistro</dt><dd>Creative, fresh dishes with plenty of vegan and vegetarian options.</dd></div>
+        <div><dt>Phil’s Bar &amp; Grille</dt><dd>Classic American comfort food in a lively neighborhood setting.</dd></div>
+        <div><dt>Duck Alley</dt><dd>Modern American, farm-fresh ingredients and craft cocktails.</dd></div>
+        <div><dt>Bowdies Chophouse</dt><dd>Upscale steakhouse known for premium cuts.</dd></div>
+        <div><dt>The Southerner</dt><dd>A cozy riverside spot for Southern comfort food and cocktails.</dd></div>
+        <div><dt>Marro’s Italian</dt><dd>Family-run, hearty traditional favorites.</dd></div>
+        <div><dt>Coast 236</dt><dd>Seasonally inspired American cuisine, relaxed coastal vibe.</dd></div>
+        <div><dt>Farmhouse Deli</dt><dd>Artisan sandwiches, house-made soups and local specialties.</dd></div>
+        <div><dt>Mitten Brewing</dt><dd>House-brewed beers and creative pizzas.</dd></div>
+        <div><dt>Saugataco</dt><dd>A relaxed, chef-inspired taco joint.</dd></div>
+      </dl>
+      <div class="drinks">
+        <h3>Wine, cider and beer</h3>
+        <p>Local wineries make wine with their own grown grapes, breweries serve all styles of beer, and cideries turn fresh apples into ciders. All within a short walk or drive from Saugatuck.</p>
+      </div>
+    </div>
+    <figure class="eat-side">
+      <img class="rv" src="assets/inn-of-saugatuck-mi/veranda-salle-petit-dejeuner.webp" alt="Long wooden breakfast table under a glass roof, sunflowers and a stone fireplace" loading="lazy" width="1600" height="1067">
+      <span class="tag">Breakfast at the inn</span>
+    </figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests" aria-label="What guests are saying">
+  <figure class="porch">
+    <img class="rv" src="assets/inn-of-saugatuck-mi/porche-fauteuils-osier.webp" alt="Front porch with green wicker sofas and flowered cushions under the inn sign" loading="lazy" width="1600" height="916">
+    <span class="tag">The front porch</span>
+  </figure>
+  <div>
+    <blockquote>
+      <p class="big-quote">“The breakfast experience far exceeded my expectations. The food can’t be beat and the conversation was memorable.”</p>
+      <p class="who">Guest review</p>
+    </blockquote>
+    <div class="small-quotes">
+      <blockquote><p>“A beautiful and quaint B&amp;B. The room was clean, spacious and very comfortable, and the host is extremely nice and kind.”</p></blockquote>
+      <blockquote><p>“We were there for a wedding and this location was perfect for us. It is as advertised: small, private, clean, and comfortable.”</p></blockquote>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="specials">
+  <section class="specials" aria-label="Current specials">
+    <div>
+      <h2>Save with current specials</h2>
+      <p>Use the code at checkout.</p>
+      <a class="btn btn-line" href="https://www.innsaugatuck.com/specials">See specials</a>
+    </div>
+    <div>
+      <h3>Weeknight stay</h3>
+      <p>Stay during the week and save 10% off any 3+ night stay.</p>
+      <span class="code">weeknights</span>
+    </div>
+    <div>
+      <h3>Live like a local</h3>
+      <p>Spend 5 days, explore all that Saugatuck has to offer and save 20% while doing it.</p>
+      <span class="code">livelocal</span>
+    </div>
+    <div>
+      <h3>Celebration package</h3>
+      <p>Flowers and chocolates added to your room for that special occasion, with a saving on the package price.</p>
+      <span class="code">Celebrate</span>
+    </div>
+  </section>
+</div>
+
+<section class="know wrap" id="good-to-know">
+  <div>
+    <h2>Good to know before you come</h2>
+    <p class="lede">We look forward to meeting you. Call or write with any question.</p>
+    <p><a class="btn btn-line" href="mailto:innofsaugatuck@gmail.com">innofsaugatuck@gmail.com</a></p>
+  </div>
+  <div class="know-cols">
+    <div>
+      <h3>Your stay</h3>
+      <ul>
+        <li>Check-in from 3&nbsp;pm to 6&nbsp;pm, check-out at 10:30&nbsp;am.</li>
+        <li>All rooms have a maximum occupancy of 2.</li>
+        <li>We do not allow children under the age of 10.</li>
+        <li>No pets, except registered service animals.</li>
+        <li>Non smoking, in and out of the house.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Getting here</h3>
+      <ul>
+        <li>From Holland, MI: 11 miles, 16 minutes.</li>
+        <li>From Grand Rapids, MI: 40 miles, 40 minutes.</li>
+        <li>Street parking around the inn, first come, first served.</li>
+        <li>Six steps lead into the house: the inn is not handicapped accessible.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div>
+      <p class="name">The Inn of Saugatuck</p>
+      <p>A bed and breakfast in the heart of downtown Saugatuck. Proud member of the Michigan Bed and Breakfast Association.</p>
+      <a class="btn btn-fill" href="https://www.innsaugatuck.com/rooms">Book a room</a>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <p>447 Butler St<br>Saugatuck, MI 49453</p>
+      <p><a href="tel:+12698573325">(269) 857-3325</a></p>
+      <p><a href="mailto:innofsaugatuck@gmail.com">innofsaugatuck@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Arrival</h3>
+      <p>Check-in 3&nbsp;pm to 6&nbsp;pm</p>
+      <p>Check-out 10:30&nbsp;am</p>
+      <p><a href="https://www.facebook.com/innsaugatuck/">Facebook</a></p>
+      <p><a href="https://www.innsaugatuck.com/gift-certificates">Gift certificates</a></p>
+    </div>
+  </div>
+  <div class="proposal">Proposal by Nicolas Masset for The Inn of Saugatuck, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

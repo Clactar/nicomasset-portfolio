@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée aux Fruits de la Plume (SCEA La Plume), Villeneuve-du-Paréage (09), nuit du 2026-10-29.
+     CONTENU : textes, liste des marchés, histoire, coordonnées et photos relevés sur https://www.fruitsdelaplume.fr/
+     (accueil, Notre Domaine, Nos Modes de vente, Drive, Contact) le 29/10/2026. Rien d'inventé.
+     Défaut 1 réglé : le bouton « nos marchés » menait à une page introuvable ; les marchés, jour par jour, sont sur la page.
+     Défaut 2 réglé : le lien « Localisation » de la vente sur place menait à une page introuvable ; l'adresse et l'accès sont sur la page.
+     Écartés faute de certitude : les horaires du magasin (deux versions sur leur site), le minimum de commande (25 € ou aucun),
+     les prix des fruits en vedette (beaucoup d'articles en fin de saison au Drive). Images Pixabay du verger écartées.
+
+     PLAN DESIGN (Nova, direction « jus de pomme et marché »)
+     1. Couleurs : jus pâle #F6EDCB (fond), papier #FBF5E0 (surfaces posées), paille #EBDFB0 (bandeau), vert profond #1F3B2D
+        (encre et section sombre), vert doux #4E6152 (texte doux), pomme rouge #B8382A (bouton plein, pastille de l'étiquette, sélection).
+     2. Typo : Chivo 500 à 600 pour les titres, serrée ; Literata pour le texte. Pas de capitales espacées.
+     3. Héros MIROIR : [ photo des fontaines, passe-partout clair, r24, étiquette posée ]  [ titre + texte + 2 pilules ]
+                        [ bandeau de faits : 38 ha | depuis 1961 | bio | trois départements ]
+        Téléphone : titre / photo / texte / pilules.
+     4. Sections : marchés sur fond vert profond, tableau de la semaine lundi à dimanche (une vraie suite) | vente à la ferme
+        et Drive en deux blocs inégaux | l'étal en grande typographie avec une vignette | histoire en frise datée + citation de Franck | pied vert.
+     5. Revu contre les défauts : richesse par la typographie et la liste des marchés, pas par des images ajoutées ; vignettes
+        jamais agrandies ; pas de « → », pas de méta à points médians, pas de mot coloré dans les titres. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F6EDCB" />
+<title>Les Fruits de la Plume, fruits bio à Villeneuve-du-Paréage</title>
+<meta name="description" content="Petite propriété familiale de 38 hectares en basse Ariège, famille Camarena depuis 1961. Fruits bio vendus à la ferme, sur les marchés de l'Ariège, de l'Aude et de la Haute-Garonne et en tournées." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231F3B2D'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Verdana,sans-serif' font-weight='700' font-size='34' fill='%23F6EDCB'%3EP%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --jus:#F6EDCB;
+  --papier:#FBF5E0;
+  --paille:#EBDFB0;
+  --vert:#1F3B2D;
+  --vert-2:#284A39;
+  --vert-doux:#4E6152;
+  --pomme:#B8382A;
+  --pomme-fonce:#9B2D21;
+  --sur-vert:#F3EACB;
+  --sur-vert-doux:#BCC5AD;
+  --filet:rgba(31,59,45,.16);
+  --ombre:0 36px 70px -36px rgba(24,46,35,.6);
+  --ombre-courte:0 18px 36px -24px rgba(24,46,35,.55);
+  --fd:"Chivo",Georgia,serif;
+  --ft:"Literata",Georgia,serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--jus);color:var(--vert);font-family:var(--ft);font-size:18px;line-height:1.64}
+::selection{background:var(--pomme);color:var(--papier)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pomme);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.02em;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.enveloppe{width:min(var(--max),100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete{padding:22px 0}
+.entete .enveloppe{display:flex;align-items:center;justify-content:space-between;gap:20px 28px;flex-wrap:wrap}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.marque b{font-family:var(--fd);font-weight:600;font-size:22px;letter-spacing:-.02em}
+.marque span{font-size:15px;color:var(--vert-doux);font-style:italic}
+.nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-family:var(--fd);font-weight:500;font-size:16px}
+.nav a:not(.pilule):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+
+/* Boutons */
+.pilule{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 26px;border-radius:999px;font-family:var(--fd);font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--vert);text-align:center;transition:transform .25s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s,box-shadow .25s}
+.pilule.plein{background:var(--pomme);border-color:var(--pomme);color:var(--papier)}
+.pilule.plein:hover{background:var(--pomme-fonce);border-color:var(--pomme-fonce);transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(155,45,33,.8)}
+.pilule.contour{background:transparent;color:var(--vert)}
+.pilule.contour:hover{background:var(--vert);color:var(--papier);transform:translateY(-2px)}
+.nav .pilule{min-height:44px;padding:9px 20px;font-size:16px}
+.nowrap{white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.pilule,.pilule:hover{transition:none;transform:none}}
+
+/* Héros (miroir : photo à gauche) */
+.heros{padding:28px 0 72px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,13fr) minmax(0,11fr);grid-template-areas:"photo titre" "photo texte" "photo actions";grid-template-rows:auto auto 1fr;column-gap:72px;align-items:start}
+.cadre{grid-area:photo;margin:0;background:var(--papier);padding:14px;border-radius:24px;box-shadow:var(--ombre);position:relative;align-self:center}
+.cadre img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:0% 50%;border-radius:14px}
+.etiquette{position:absolute;left:30px;bottom:30px;display:flex;align-items:center;gap:9px;background:rgba(251,245,224,.95);color:var(--vert);font-family:var(--fd);font-weight:500;font-size:15px;line-height:1.3;padding:9px 15px;border-radius:999px;max-width:calc(100% - 60px)}
+.etiquette::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pomme);flex:none}
+.heros h1{grid-area:titre;font-size:clamp(42px,5.2vw,74px);margin-top:40px;line-height:1.02;letter-spacing:-.03em}
+.heros .chapo{grid-area:texte;font-size:19px;line-height:1.62;color:var(--vert-2);margin-top:26px;max-width:42ch}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:12px 14px;align-items:center;margin-top:6px}
+.heros .tel{width:100%;font-size:16px;color:var(--vert-doux);margin:8px 0 0}
+.heros .tel a{font-family:var(--fd);font-weight:600;color:var(--vert);text-underline-offset:4px}
+
+/* Bandeau de faits */
+.faits{padding:0 0 104px}
+.faits ul{list-style:none;margin:0;padding:28px 36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;background:var(--paille);border-radius:20px}
+.faits li{font-size:16px;line-height:1.42;color:var(--vert-2)}
+.faits li + li{border-left:1px solid var(--filet);padding-left:28px}
+.faits b{display:block;font-family:var(--fd);font-weight:600;font-size:30px;letter-spacing:-.025em;line-height:1.05;color:var(--vert);margin-bottom:6px}
+
+/* Marchés (fond vert profond) */
+.marches{background:var(--vert);color:var(--sur-vert);padding:112px 0}
+.marches-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:end;margin-bottom:56px}
+.marches h2{font-size:clamp(36px,4.4vw,60px);color:var(--papier)}
+.marches-tete p{margin:0;color:var(--sur-vert-doux)}
+.semaine{margin:0;border-top:1px solid rgba(243,234,203,.2)}
+.jour{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:32px;padding:22px 0;border-bottom:1px solid rgba(243,234,203,.2);align-items:baseline}
+.jour dt{font-family:var(--fd);font-weight:500;font-size:30px;letter-spacing:-.02em;color:var(--papier)}
+.jour dd{margin:0;display:flex;flex-wrap:wrap;gap:12px 40px}
+.lieu{font-family:var(--fd);font-weight:500;font-size:24px;line-height:1.3;color:var(--sur-vert)}
+.lieu small{display:block;font-family:var(--ft);font-weight:400;font-size:15px;color:var(--sur-vert-doux);margin-top:1px}
+.marches-pied{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;margin-top:48px;align-items:start}
+.marches-pied p{margin:0;color:var(--sur-vert-doux)}
+.encart-tel{background:var(--vert-2);border-radius:18px;padding:26px 28px}
+.encart-tel p{color:var(--sur-vert)}
+.encart-tel a.gros{display:inline-block;font-family:var(--fd);font-weight:600;font-size:28px;letter-spacing:-.01em;color:var(--papier);text-underline-offset:6px;text-decoration-thickness:1.5px;margin-top:8px}
+
+/* Acheter : ferme et drive */
+.section{padding:120px 0}
+.acheter{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:start}
+.ferme-bloc{position:relative;padding:8px 0 0}
+.ferme-bloc h2,.titre-section{font-size:clamp(34px,3.8vw,52px);margin-bottom:22px}
+.adresse{font-family:var(--fd);font-weight:500;font-size:clamp(24px,2.4vw,32px);line-height:1.25;letter-spacing:-.015em;font-style:normal;margin:0 0 22px}
+.acces{max-width:46ch;color:var(--vert-2)}
+.vignettes{display:flex;gap:18px;margin-top:34px;align-items:flex-end;flex-wrap:wrap}
+.vignette{margin:0;width:min(250px,100%);background:var(--papier);padding:8px 8px 10px;border-radius:12px;box-shadow:var(--ombre-courte)}
+.vignette img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px}
+.vignette figcaption{font-size:15px;line-height:1.35;color:var(--vert-doux);padding:8px 4px 0}
+.vignette.penche{transform:rotate(-1.8deg)}
+.vignette.droite{transform:rotate(1.4deg);width:min(210px,100%)}
+.vignette.droite img{aspect-ratio:1/1}
+.drive{background:var(--papier);border-radius:22px;padding:40px;box-shadow:0 30px 60px -44px rgba(24,46,35,.55);display:flex;flex-direction:column}
+.drive h3{font-size:30px;margin-bottom:14px}
+.drive .pilule{align-self:flex-start}
+.drive ul{margin:0 0 28px;padding:0;list-style:none}
+.drive li{padding:12px 0;border-top:1px solid var(--filet)}
+.drive li:last-child{border-bottom:1px solid var(--filet)}
+
+/* L'étal */
+.etal{padding-top:0}
+.etal-grille{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:64px;align-items:center}
+.etal .liste{font-family:var(--fd);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.22;letter-spacing:-.022em;margin:0 0 28px;color:var(--vert)}
+.etal .liste span{color:var(--vert-doux)}
+.etal .aussi{font-size:19px;color:var(--vert-2);max-width:52ch}
+.bio{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.bio h3{grid-column:1/-1;font-size:22px;margin-bottom:14px}
+.bio p{margin:0;padding:12px 0;border-top:1px solid var(--filet);font-size:17px}
+.etal-photo{display:flex;justify-content:center}
+.etal-photo .vignette{width:min(240px,100%);transform:rotate(2.2deg)}
+.etal-photo .vignette img{aspect-ratio:1/1}
+
+/* Histoire */
+.histoire{background:var(--papier)}
+.histoire-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.citation{position:sticky;top:40px}
+.cit{margin:0}
+.citation blockquote{margin:0 0 26px;font-family:var(--ft);font-style:italic;font-size:clamp(22px,2.2vw,27px);line-height:1.5;color:var(--vert)}
+.signature{display:flex;align-items:center;gap:16px}
+.signature img{width:76px;height:76px;object-fit:cover;object-position:60% 30%;border-radius:50%;box-shadow:var(--ombre-courte)}
+.signature b{display:block;font-family:var(--fd);font-weight:600;font-size:18px}
+.signature span{font-size:16px;color:var(--vert-doux)}
+.frise{list-style:none;margin:0;padding:0;position:relative}
+.frise li{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:28px;padding:0 0 34px;position:relative}
+.frise li::before{content:"";position:absolute;left:96px;top:14px;bottom:-6px;width:1px;background:var(--filet)}
+.frise li:last-child::before{display:none}
+.frise .annee{font-family:var(--fd);font-weight:600;font-size:28px;letter-spacing:-.02em;line-height:1.1}
+.frise p{margin:0}
+
+/* Pied */
+.pied{background:var(--vert);color:var(--sur-vert);padding:88px 0 52px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:56px}
+.pied h2{font-size:clamp(30px,3vw,40px);color:var(--papier);margin-bottom:14px}
+.pied h3{font-size:18px;color:var(--papier);margin-bottom:12px}
+.pied p,.pied address,.pied ul{font-size:17px;line-height:1.7;color:var(--sur-vert-doux);font-style:normal}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{color:var(--papier);text-underline-offset:4px;text-decoration-thickness:1px}
+.pied a:hover{text-decoration-thickness:2px}
+.pied .bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(243,234,203,.16);font-size:15px}
+.proposition{background:#17301F;color:var(--sur-vert-doux);text-align:center;font-size:16px;padding:16px 20px}
+.proposition a{color:var(--papier);text-underline-offset:3px}
+
+/* Apparition douce : photos seulement, et seulement si le script tourne */
+.js .apparait{opacity:0;translate:0 20px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.8,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;translate:none;transition:none}}
+
+@media (max-width:1080px){
+  .heros-grille{column-gap:48px}
+  .marches-tete,.histoire-grille{gap:48px}
+}
+@media (max-width:900px){
+  .heros{padding:12px 0 56px}
+  .heros-grille{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros h1{margin:20px 0 24px}
+  .cadre{padding:10px;border-radius:20px}
+  .cadre img{aspect-ratio:4/3;border-radius:12px}
+  .etiquette{left:22px;bottom:22px;max-width:calc(100% - 44px)}
+  .faits{padding-bottom:80px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li + li{border-left:0;padding-left:0}
+  .marches-tete,.marches-pied,.acheter,.etal-grille,.histoire-grille,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .marches-tete{gap:18px}
+  .marches{padding:88px 0}
+  .section{padding:88px 0}
+  .etal{padding-top:0}
+  .etal-photo{justify-content:flex-start}
+  .citation{position:static}
+  .histoire-grille{gap:56px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .enveloppe{width:min(var(--max),100% - 40px)}
+  .marque span,.etiquette,.vignette figcaption,.lieu small,.pied .bas{font-size:16px}
+  .nav{gap:16px}
+  .nav .lien-sec{display:none}
+  .faits ul{padding:8px 22px;gap:0;grid-template-columns:minmax(0,1fr)}
+  .faits li{padding:16px 0}
+  .faits li + li{border-top:1px solid var(--filet)}
+  .faits b{font-size:25px}
+  .heros .chapo{font-size:18px}
+  .jour{grid-template-columns:minmax(0,1fr);gap:8px;padding:20px 0}
+  .jour dt{font-size:24px}
+  .jour dd{gap:8px 26px}
+  .lieu{font-size:19px}
+  .drive{padding:28px 24px}
+  .bio{grid-template-columns:minmax(0,1fr)}
+  .frise li{grid-template-columns:minmax(0,1fr);gap:4px;padding-left:22px}
+  .frise li::before{left:0;top:10px;bottom:-4px}
+  .frise li::after{content:"";position:absolute;left:-4px;top:10px;width:9px;height:9px;border-radius:50%;background:var(--vert)}
+  .encart-tel a.gros{font-size:25px}
+}
+@media (max-width:420px){
+  .heros .actions .pilule,.drive .pilule{width:100%}
+  .nav .pilule{padding:9px 16px}
+  .vignette,.vignette.droite{width:min(240px,100%)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe">
+    <a class="marque" href="#haut" id="haut"><b>Les Fruits de la Plume</b><span>Production et vente de fruits bio</span></a>
+    <nav class="nav" aria-label="Sections de la page">
+      <a class="lien-sec" href="#marches">Nos marchés</a>
+      <a class="lien-sec" href="#a-la-ferme">À la ferme</a>
+      <a class="lien-sec" href="#histoire">Notre histoire</a>
+      <a class="pilule contour" href="tel:+33663864774">06 63 86 47 74</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros">
+    <div class="enveloppe heros-grille">
+      <h1>Nos fruits bio, près de chez vous.</h1>
+      <figure class="cadre">
+        <img src="assets/fruits-de-la-plume-villeneuve-du-pareage/fontaines-a-jus-de-pomme-bio.webp" alt="La fontaine à jus de pommes bio de 3 litres à l'étiquette des Fruits de la Plume, à côté d'un carton de jus" width="1600" height="777" fetchpriority="high" />
+        <figcaption class="etiquette">Notre fontaine à jus de pommes bio, 3 litres</figcaption>
+      </figure>
+      <p class="chapo">Le domaine Les Fruits de la Plume est une petite propriété familiale de 38 hectares à Villeneuve-du-Paréage, dans la basse Ariège. Nos fruits bio et ceux produits en conversion biologique sont vendus à la ferme, sur les marchés de l'Ariège, de l'Aude et de la Haute-Garonne, et sur les tournées.</p>
+      <div class="actions">
+        <a class="pilule plein" href="#marches">Trouver notre marché</a>
+        <a class="pilule contour" href="https://www.fruitsdelaplume.fr/drive/">Commander au Drive</a>
+        <p class="tel">Une question, une commande : <a href="tel:+33663864774">06 63 86 47 74</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le domaine en quelques faits">
+    <div class="enveloppe">
+      <ul>
+        <li><b>38 hectares</b>une petite propriété familiale en basse Ariège</li>
+        <li><b>depuis 1961</b>la famille Camarena, trois générations sur le domaine</li>
+        <li><b>bio</b>fruits bio et en conversion biologique</li>
+        <li><b>3 départements</b>des marchés en Ariège, dans l'Aude et en Haute-Garonne</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="marches" id="marches">
+    <div class="enveloppe">
+      <div class="marches-tete">
+        <h2>Nos marchés, jour par jour</h2>
+        <p>Venez nous rencontrer sur nos marchés et découvrir nos étalages de fruits, nos asperges, nos jus de pomme et jus pétillants bio, nos confitures, notre miel et nos croustades aux pommes « maison ».</p>
+      </div>
+      <dl class="semaine">
+        <div class="jour"><dt>Lundi</dt><dd>
+          <span class="lieu">Mirepoix<small>Ariège</small></span>
+          <span class="lieu">Castelnaudary<small>Aude</small></span>
+          <span class="lieu">Salies-du-Salat<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Mardi</dt><dd>
+          <span class="lieu">Saint-Lys<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Mercredi</dt><dd>
+          <span class="lieu">Le Mas-d'Azil<small>Ariège</small></span>
+          <span class="lieu">Lavelanet<small>Ariège</small></span>
+          <span class="lieu">Labarthe<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Jeudi</dt><dd>
+          <span class="lieu">Carbonne<small>Haute-Garonne</small></span>
+          <span class="lieu">Airbus Blagnac<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Vendredi</dt><dd>
+          <span class="lieu">Foix<small>Ariège</small></span>
+          <span class="lieu">Villefranche-de-Lauragais<small>Haute-Garonne</small></span>
+          <span class="lieu">Castanet<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Samedi</dt><dd>
+          <span class="lieu">Pamiers<small>Ariège</small></span>
+          <span class="lieu">Tarascon<small>Ariège</small></span>
+          <span class="lieu">Saint-Jean-de-l'Union<small>Haute-Garonne</small></span>
+          <span class="lieu">Saint-Orens<small>Haute-Garonne</small></span>
+          <span class="lieu">Ramonville<small>Haute-Garonne</small></span>
+          <span class="lieu">Castelginest<small>Haute-Garonne</small></span>
+        </dd></div>
+        <div class="jour"><dt>Dimanche</dt><dd>
+          <span class="lieu">Léguevin<small>Haute-Garonne</small></span>
+          <span class="lieu">Pinsaguel<small>Haute-Garonne</small></span>
+          <span class="lieu">Montbrun-Bocage<small>Haute-Garonne</small></span>
+        </dd></div>
+      </dl>
+      <div class="marches-pied">
+        <p>Vous avez commandé au Drive ? Vous pouvez retirer votre commande sur le marché de votre choix. Pour la retirer sur un marché cité, pensez à nous appeler pour bénéficier d'un code « Livraison gratuite ».</p>
+        <div class="encart-tel">
+          <p>Un doute sur un marché, ou pour le code livraison :</p>
+          <a class="gros nowrap" href="tel:+33663864774">06 63 86 47 74</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="a-la-ferme">
+    <div class="enveloppe acheter">
+      <div class="ferme-bloc">
+        <h2>Au magasin du domaine</h2>
+        <address class="adresse">SCEA La Plume<br />09100 Villeneuve-du-Paréage</address>
+        <p class="acces">Le domaine se trouve à Villeneuve-du-Paréage, un tout petit village de la basse Ariège blotti contre la périphérie de Pamiers. Avant de venir, appelez Franck au <a class="nowrap" href="tel:+33663864774">06 63 86 47 74</a> ou écrivez à <a href="mailto:fruitsdelaplume@orange.fr">fruitsdelaplume@orange.fr</a>.</p>
+        <div class="vignettes">
+          <figure class="vignette penche apparait">
+            <img src="assets/fruits-de-la-plume-villeneuve-du-pareage/palox-en-bois-et-chariot-elevateur.webp" alt="La cour du domaine : piles de palox en bois et un chariot élévateur, grands pins derrière" width="1024" height="768" loading="lazy" />
+            <figcaption>La cour du domaine</figcaption>
+          </figure>
+          <figure class="vignette droite apparait">
+            <img src="assets/fruits-de-la-plume-villeneuve-du-pareage/moutons-dans-le-verger-en-hiver.webp" alt="Des moutons pâturent sous les rangs de pommiers palissés, en hiver" width="576" height="576" loading="lazy" />
+            <figcaption>Les moutons dans le verger, l'hiver</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="drive">
+        <h3>Le Drive de la Plume</h3>
+        <p>Choisissez vos produits en ligne, réglez votre commande et retirez-la sur le marché de votre choix.</p>
+        <ul>
+          <li>Pensez aux commandes groupées</li>
+          <li>Livraison possible autour de Pamiers : conditions sur le Drive</li>
+        </ul>
+        <a class="pilule contour" href="https://www.fruitsdelaplume.fr/drive/">Ouvrir le Drive</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section etal" aria-labelledby="titre-etal">
+    <div class="enveloppe etal-grille">
+      <div>
+        <h2 class="titre-section" id="titre-etal">Production bio et en agriculture raisonnée</h2>
+        <p class="liste">Pommes, poires, cerises, fraises, raisins, melons, abricots, pêches, kiwis, noix et noisettes, <span>mais aussi asperges et jus bio.</span></p>
+        <p class="aussi">Le jus de pomme bio existe en clair ou en trouble, en bouteille ou en fontaine de 3 litres.</p>
+        <div class="bio">
+          <h3>Nos dispositifs de production biologique</h3>
+          <p>Du fumier pour fertiliser et enrichir les sols</p>
+          <p>Des lâchers de coccinelles</p>
+          <p>Des lâchers de prédateurs des insectes nuisibles aux cultures</p>
+          <p>L'implantation de haies d'arbustes</p>
+        </div>
+      </div>
+      <div class="etal-photo">
+        <figure class="vignette apparait">
+          <img src="assets/fruits-de-la-plume-villeneuve-du-pareage/bouteilles-jus-de-pomme-bio.webp" alt="Une rangée de bouteilles de jus de pomme bio à l'étiquette illustrée d'une pomme" width="400" height="400" loading="lazy" />
+          <figcaption>Jus de pomme bio, clair ou trouble</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section histoire" id="histoire">
+    <div class="enveloppe histoire-grille">
+      <div class="citation">
+        <h2 class="titre-section">Notre histoire</h2>
+        <figure class="cit">
+        <blockquote>« À l'heure de la mondialisation (…), il y a une alternative… Bien sûr, elle fait parfois sourire (…). Puis on regarde la production, on voit ces fruits exempts de pesticides, alors on réfléchit, et on se dit que manger sain a du bon ! »</blockquote>
+        <figcaption class="signature">
+          <img src="assets/fruits-de-la-plume-villeneuve-du-pareage/franck-camarena-caisses-de-fruits.webp" alt="Franck Camarena penché sur une caisse de récolte" width="578" height="464" loading="lazy" />
+          <span><b>Franck Camarena</b>troisième génération sur le domaine</span>
+        </figcaption>
+        </figure>
+      </div>
+      <ol class="frise">
+        <li><span class="annee">1961</span><p>Maxime et Carmelle Camarena s'implantent sur le domaine de la Plume et décident d'y cultiver des pommiers.</p></li>
+        <li><span class="annee">1978</span><p>Leur fils Jacques rachète la propriété et monte un GAEC avec son frère Bernard. Peu à peu, les tournées et les marchés sont mis en place.</p></li>
+        <li><span class="annee">1983</span><p>Jacques rachète les parts de son frère et étend peu à peu le domaine. Il acquiert un verger de 12 hectares dans l'Aude, où sont cultivés les fruits d'été.</p></li>
+        <li><span class="annee">2002</span><p>Franck Camarena, de la troisième génération, introduit les fruits bio, qui connaîtront un véritable succès.</p></li>
+        <li><span class="annee">2014</span><p>Jacques prend sa retraite. Son fils Franck lui succède et fonde l'actuelle SCEA de la Plume et la SAS La Plume.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="pied" id="contact">
+  <div class="enveloppe">
+    <div class="pied-grille">
+      <div>
+        <h2>Les Fruits de la Plume</h2>
+        <p>Production et vente de fruits bio, à Villeneuve-du-Paréage, à côté de Pamiers.</p>
+      </div>
+      <div>
+        <h3>Le domaine</h3>
+        <address>SCEA La Plume<br />Franck Camarena<br />09100 Villeneuve-du-Paréage</address>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li>Tél. <a class="nowrap" href="tel:+33663864774">06 63 86 47 74</a></li>
+          <li><a href="mailto:fruitsdelaplume@orange.fr">fruitsdelaplume@orange.fr</a></li>
+          <li><a href="https://www.fruitsdelaplume.fr/drive/">Le Drive</a></li>
+          <li><a href="https://www.facebook.com/people/Les-fruits-de-la-Plume/61579421505280/?locale=fr_FR" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">Marchés en Ariège, dans l'Aude et en Haute-Garonne, vente à la ferme et tournées. <a href="https://www.fruitsdelaplume.fr/cgv-fruits-de-la-plume/">Conditions générales de vente</a></p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Les Fruits de la Plume, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

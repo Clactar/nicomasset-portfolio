@@ -1,0 +1,594 @@
+<!doctype html>
+<!--
+PLAN · La Ferme du Cantou, « basalte et lait de soja »
+Couleurs : basalte clair #E6E9EC (fond), lait de soja #F3F4F2 (surfaces posées), basalte #1C2630 (encre, section sombre, pied), basalte doux #47525D (texte courant), soja #A9B83A (pastilles, numéros du procédé, bouton plein toujours avec encre basalte dessus).
+Typo : Gabarito 500/600 pour les titres (grotesque ronde, franche comme un bloc de tofu), Spectral 400/500 pour le texte (serif de lecture, chaleur de la ferme). Les deux pages vigneronnes du lot sont en serif de titre : ici la hiérarchie est inversée.
+Héros :  [ Tofu artisanal et local (très grand)  ]   ┌─ portrait r 20 ─┐
+         [ chapo, deux pilules                    ]   │ (pastille ronde │  pastille « 100 % bio » posée en biais sur la photo,
+         [                                        ]   │  sur la photo)  │  étiquette en bas à gauche
+                                                      └─────────────────┘
+Sections : faits (bandeau de cinq) · la ferme (grande phrase | texte + vignette des jeunes plants inclinée) · le procédé en basalte (six étapes numérotées, la seule numérotation de la page, vignettes en quinconce) · nos tofus (liste éditoriale | photo du Caulet Flori + carte Sichuan sur fond soja) · recettes (escalope en entier, astuce tofu ferme, fondamentaux de la marinade en quatre paves, carnet PDF) · faisons la paix avec le soja (bandeau citation) · où nous trouver (marchés en grand, puis colonnes de lieux, vignette du stand) · contact.
+Revue contre les défauts génériques : ni crème ni terre cuite (gris bleu volcanique + vert-jaune du soja), ni noir + accent acide (fond clair, le vert-jaune reste en pastilles avec encre sombre), numérotation réservée au procédé, pas de « → », pas de majuscules espacées.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Ferme du Cantou, tofu artisanal bio à Jax (Haute-Loire)</title>
+<meta name="description" content="À la Ferme du Cantou, à Jax, nous cultivons du soja bio pour transformer directement notre récolte en tofu artisanal.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231C2630'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='38' fill='%23A9B83A'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --basalte-clair:#E6E9EC;
+  --lait:#F3F4F2;
+  --basalte-voile:#D7DCE1;
+  --basalte:#1C2630;
+  --basalte-doux:#47525D;
+  --soja:#A9B83A;
+  --soja-clair:#DDE5A6;
+  --sur-basalte:#E6E9EC;
+  --sur-basalte-doux:#AEB8C2;
+  --filet:rgba(28,38,48,.15);
+  --ombre:0 32px 60px -34px rgba(28,38,48,.55);
+  --ombre-courte:0 18px 36px -24px rgba(28,38,48,.5);
+  --titre:'Gabarito',ui-rounded,sans-serif;
+  --texte:'Spectral',Georgia,serif;
+  --page:min(1200px, 100% - 2*clamp(20px,4vw,40px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--basalte-clair);color:var(--basalte);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-text-size-adjust:100%}
+::selection{background:var(--soja);color:var(--basalte)}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--basalte);outline-offset:3px;border-radius:6px}
+.sombre a:focus-visible,.pied a:focus-visible{outline-color:var(--soja)}
+h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.02;margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+.page{width:var(--page);margin-inline:auto}
+
+/* en-tête */
+.entete{width:var(--page);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px 28px;padding:20px 0;flex-wrap:wrap}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--titre);font-weight:600;font-size:25px;letter-spacing:-.01em}
+.marque span{font-size:15px;color:var(--basalte-doux);font-style:italic;margin-top:3px}
+.entete nav{display:flex;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--titre);font-weight:500;font-size:16.5px}
+.entete nav a{text-decoration:none}
+.entete nav a:hover{text-decoration:underline;text-decoration-color:var(--soja);text-decoration-thickness:3px;text-underline-offset:6px}
+.entete .tel{background:var(--basalte);color:var(--sur-basalte);border-radius:999px;padding:9px 18px;white-space:nowrap}
+.entete .tel:hover{background:var(--soja);color:var(--basalte);text-decoration:none}
+
+/* boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 28px;border-radius:999px;font-family:var(--titre);font-weight:600;font-size:17px;text-decoration:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--soja);color:var(--basalte);box-shadow:var(--ombre-courte)}
+.btn-plein:hover{background:#B9C74E}
+.btn-contour{box-shadow:inset 0 0 0 2px var(--basalte);color:var(--basalte)}
+.btn-contour:hover{background:var(--basalte);color:var(--sur-basalte)}
+.sombre .btn-contour{box-shadow:inset 0 0 0 2px var(--sur-basalte);color:var(--sur-basalte)}
+.sombre .btn-contour:hover{background:var(--sur-basalte);color:var(--basalte)}
+
+/* photos */
+.ph{position:relative;margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);background:var(--basalte-voile)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette{position:absolute;left:14px;bottom:14px;background:rgba(243,244,242,.95);color:var(--basalte);font-family:var(--titre);font-size:15px;font-weight:500;line-height:1.3;padding:8px 14px;border-radius:10px;max-width:calc(100% - 28px)}
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+/* héros */
+.heros{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(16px,4vw,48px)}
+.heros h1{font-size:clamp(50px,7.4vw,104px);line-height:.95;letter-spacing:-.03em}
+.heros h1 span{display:block;color:var(--basalte-doux);font-weight:500}
+.heros .chapo{font-size:20px;line-height:1.6;color:var(--basalte-doux);margin:28px 0 32px;max-width:31em}
+.portrait{position:relative;justify-self:end;width:min(460px,100%)}
+.portrait .ph{aspect-ratio:4 / 5;border-radius:20px;box-shadow:0 44px 80px -40px rgba(28,38,48,.65)}
+.portrait .ph img{object-position:50% 58%}
+.pastille{position:absolute;z-index:2;left:-34px;top:38px;width:128px;height:128px;border-radius:50%;background:var(--soja);color:var(--basalte);display:grid;place-items:center;text-align:center;font-family:var(--titre);font-weight:600;font-size:18px;line-height:1.1;transform:rotate(-10deg);box-shadow:var(--ombre-courte);padding:12px}
+.pastille b{display:block;font-size:30px;line-height:1}
+
+/* faits */
+.faits{margin-top:clamp(48px,6vw,80px);background:var(--lait);border-radius:20px;box-shadow:var(--ombre-courte);display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.faits div{padding:22px 22px 24px}
+.faits div+div{border-left:1px dashed rgba(28,38,48,.22)}
+.faits dt{font-family:var(--titre);font-weight:600;font-size:26px;line-height:1.05}
+.faits dd{margin:8px 0 0;font-size:16px;line-height:1.45;color:var(--basalte-doux)}
+
+/* sections */
+section{scroll-margin-top:20px}
+.bloc{padding-top:clamp(80px,10vw,132px)}
+.h2{font-size:clamp(36px,4.6vw,60px)}
+.texte{color:var(--basalte-doux)}
+.texte p+p{margin-top:16px}
+
+/* ferme */
+.ferme{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px,6vw,80px);align-items:start}
+.ferme .grande{font-family:var(--titre);font-weight:500;font-size:clamp(30px,3.4vw,44px);line-height:1.12;letter-spacing:-.015em}
+.ferme .grande mark{background:linear-gradient(transparent 58%,var(--soja-clair) 58%);color:inherit;padding:0 .08em}
+.ferme-droite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,180px);gap:28px;align-items:start}
+.plants{margin:6px 0 0;background:var(--lait);padding:8px 8px 12px;border-radius:12px;box-shadow:var(--ombre);transform:rotate(2.5deg)}
+.plants .cadre{border-radius:8px;overflow:hidden;aspect-ratio:3 / 4}
+.plants img{width:100%;height:100%;object-fit:cover}
+.plants figcaption{font-family:var(--titre);font-size:14.5px;font-weight:500;padding:8px 2px 0;line-height:1.25}
+.partenaires{margin-top:18px;font-size:16.5px;color:var(--basalte-doux)}
+
+/* procédé, section sombre */
+.sombre{background:var(--basalte);color:var(--sur-basalte);margin-top:clamp(80px,10vw,132px);padding:clamp(72px,9vw,120px) 0}
+.sombre .texte{color:var(--sur-basalte-doux)}
+.procede-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,6vw,80px);align-items:end}
+.ingredients{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ingredients span{font-family:var(--titre);font-weight:500;font-size:16.5px;border-radius:999px;padding:7px 16px;box-shadow:inset 0 0 0 1.5px rgba(169,184,58,.7)}
+.etapes{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px;counter-reset:etape}
+.etapes li{counter-increment:etape;display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:18px;align-items:start}
+.etapes li:nth-child(3n+2){transform:translateY(48px)}
+.etapes .ph{aspect-ratio:3 / 4;border-radius:12px;box-shadow:0 26px 50px -28px rgba(0,0,0,.8)}
+.etapes .ph.vide{background:rgba(230,233,236,.06);box-shadow:none;display:grid;place-items:center;color:var(--sur-basalte-doux);font-family:var(--titre);font-size:14.5px;text-align:center;padding:10px}
+.etapes h3{font-size:22px;line-height:1.15;display:flex;gap:10px;align-items:baseline}
+.etapes h3::before{content:counter(etape);font-size:34px;color:var(--soja);line-height:1}
+.etapes p{margin-top:8px;color:var(--sur-basalte-doux);font-size:16.5px;line-height:1.55}
+.procede-pied{margin-top:96px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(230,233,236,.14)}
+.procede-pied p{color:var(--sur-basalte-doux);max-width:40em}
+
+/* tofus */
+.tofus{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,80px);align-items:start;margin-top:40px}
+.liste-tofus{list-style:none;margin:0;padding:0}
+.liste-tofus li{padding:26px 0;border-top:1px solid var(--filet)}
+.liste-tofus li:last-child{border-bottom:1px solid var(--filet)}
+.liste-tofus h3{font-size:28px}
+.liste-tofus .sous{font-style:italic;color:var(--basalte);margin-top:6px}
+.liste-tofus p{color:var(--basalte-doux);margin-top:8px;font-size:17px}
+.marinades{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.marinades span{font-family:var(--titre);font-weight:500;font-size:15.5px;background:var(--lait);border-radius:999px;padding:6px 14px}
+.tofus-photo{position:relative;padding-bottom:180px}
+.tofus-photo .plat{aspect-ratio:3 / 4;border-radius:20px;width:min(440px,100%)}
+.tofus-photo .plat img{object-position:50% 45%}
+.sichuan{position:absolute;right:-12px;bottom:0;width:min(330px,88%);background:var(--soja);color:var(--basalte);border-radius:20px;padding:24px 24px 26px;box-shadow:var(--ombre)}
+.sichuan h3{font-size:26px;line-height:1.08}
+.sichuan .cri{font-family:var(--titre);font-weight:500;font-size:19px;margin-top:8px}
+.sichuan p{font-size:16.5px;line-height:1.5;margin-top:10px}
+
+/* recettes */
+.recettes-tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,80px);align-items:end}
+.recettes{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;margin-top:44px;align-items:start}
+.recette{background:var(--lait);border-radius:22px;padding:clamp(26px,3.6vw,44px);box-shadow:var(--ombre)}
+.recette h3{font-size:clamp(28px,3vw,38px)}
+.recette .sous{font-style:italic;color:var(--basalte-doux);margin-top:6px}
+.recette ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.recette li{padding-left:28px;position:relative;color:var(--basalte)}
+.recette li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:12px;border-radius:4px;background:var(--soja)}
+.recette .note{margin-top:22px;font-size:16.5px;color:var(--basalte-doux);padding-top:18px;border-top:1px dashed rgba(28,38,48,.22)}
+.astuce{background:var(--basalte-voile);border-radius:22px;padding:28px 30px}
+.astuce h3{font-size:26px}
+.astuce p{margin-top:10px;color:var(--basalte);font-size:17px}
+.marinade{margin-top:28px}
+.marinade h3{font-size:24px}
+.paves{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:14px}
+.paves div{background:var(--lait);border-radius:14px;padding:16px 16px 18px;box-shadow:var(--ombre-courte)}
+.paves b{display:block;font-family:var(--titre);font-weight:600;font-size:18px;line-height:1.15}
+.paves span{display:block;font-size:16px;color:var(--basalte-doux);margin-top:4px;font-style:italic}
+.carnet{margin-top:26px}
+
+/* paix */
+.paix{margin-top:clamp(80px,10vw,132px);background:var(--soja-clair);border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,64px);align-items:center}
+.paix h2{font-size:clamp(34px,4.2vw,56px)}
+.paix p{color:var(--basalte);font-size:18.5px}
+.paix p+p{margin-top:14px}
+
+/* où nous trouver */
+.marches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.marche{border-top:3px solid var(--basalte);padding-top:16px}
+.marche h3{font-size:30px}
+.marche p{color:var(--basalte-doux);margin-top:4px}
+.lieux{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,6vw,80px);margin-top:56px;align-items:start}
+.stand{margin:0;background:var(--lait);padding:10px 10px 14px;border-radius:14px;box-shadow:var(--ombre);transform:rotate(-2deg);width:min(300px,100%)}
+.stand .cadre{border-radius:9px;overflow:hidden;aspect-ratio:500 / 668}
+.stand img{width:100%;height:100%;object-fit:cover}
+.stand figcaption{font-family:var(--titre);font-weight:500;font-size:15px;padding:10px 4px 0;line-height:1.3}
+.colonnes{columns:2 260px;column-gap:40px}
+.groupe{break-inside:avoid;margin-bottom:26px}
+.groupe h3{font-size:21px;margin-bottom:8px}
+.groupe ul{list-style:none;margin:0;padding:0}
+.groupe li{color:var(--basalte-doux);font-size:17px;padding:3px 0}
+.groupe a{color:var(--basalte);text-decoration-color:var(--soja);text-decoration-thickness:2px;text-underline-offset:4px}
+.a-la-ferme{margin-top:8px;background:var(--lait);border-radius:16px;padding:18px 22px;box-shadow:var(--ombre-courte)}
+
+/* contact */
+.contact{margin-top:clamp(80px,10vw,132px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:stretch}
+.contact-carte{background:var(--basalte);color:var(--sur-basalte);border-radius:26px;padding:clamp(30px,4.5vw,56px)}
+.contact-carte h2{font-size:clamp(34px,4.2vw,54px)}
+.contact-carte .gros{display:inline-block;margin-top:24px;font-family:var(--titre);font-weight:600;font-size:clamp(34px,4.4vw,56px);line-height:1;color:var(--soja);text-decoration:none}
+.contact-carte .gros:hover{text-decoration:underline;text-underline-offset:8px}
+.contact-carte .mail{display:inline-block;margin-top:14px;font-size:20px;color:var(--sur-basalte);overflow-wrap:anywhere;text-decoration-color:var(--soja);text-underline-offset:5px}
+.contact-carte a:focus-visible{outline-color:var(--soja)}
+.contact-infos{background:var(--lait);border-radius:26px;padding:clamp(28px,4vw,44px);box-shadow:var(--ombre-courte)}
+.contact-infos h3{font-size:22px;margin-bottom:6px}
+.contact-infos p{color:var(--basalte-doux)}
+.contact-infos div+div{margin-top:22px}
+.contact-infos a{color:var(--basalte);text-decoration-color:var(--soja);text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* pied */
+.pied{background:var(--basalte);color:var(--sur-basalte);margin-top:clamp(80px,10vw,132px);padding:60px 0 38px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:34px}
+.pied .nom{font-family:var(--titre);font-weight:600;font-size:30px;line-height:1.05}
+.pied p,.pied li{color:var(--sur-basalte-doux);font-size:16.5px}
+.pied h3{font-size:17px;color:var(--soja);margin-bottom:10px;letter-spacing:0}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{color:var(--sur-basalte);text-decoration-color:rgba(169,184,58,.7);text-underline-offset:4px}
+.legal{margin-top:40px;padding-top:20px;border-top:1px solid rgba(230,233,236,.14);font-size:15px;color:var(--sur-basalte-doux)}
+.proposition{background:#121A22;color:var(--sur-basalte-doux);text-align:center;font-size:15px;padding:16px 20px}
+.proposition a{color:var(--sur-basalte)}
+
+/* tablette */
+@media (max-width:1060px){
+  .faits{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits div:nth-child(4){border-left:0}
+  .faits div:nth-child(n+4){border-top:1px dashed rgba(28,38,48,.22)}
+  .etapes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .etapes li:nth-child(3n+2){transform:none}
+  .etapes li:nth-child(even){transform:translateY(40px)}
+}
+@media (max-width:900px){
+  .heros,.ferme,.procede-tete,.tofus,.recettes-tete,.recettes,.paix,.lieux,.contact{grid-template-columns:minmax(0,1fr)}
+  .portrait{justify-self:start}
+  .tofus-photo .plat{width:min(440px,100%)}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* téléphone */
+@media (max-width:640px){
+  body{font-size:17.5px}
+  .entete{padding:14px 0 6px;gap:10px 18px}
+  .entete nav .lien-section{display:none}
+  .heros .chapo{font-size:18px;margin:20px 0 24px}
+  .portrait{width:100%;margin-top:4px}
+  .pastille{left:auto;right:12px;top:14px;width:104px;height:104px;font-size:15.5px}
+  .pastille b{font-size:25px}
+  .faits{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faits div,.faits div+div{border-left:0;padding:18px 16px}
+  .faits div:nth-child(even){border-left:1px dashed rgba(28,38,48,.22)}
+  .faits div:nth-child(n+3){border-top:1px dashed rgba(28,38,48,.22)}
+  .faits div:last-child{grid-column:1 / -1;border-left:0}
+  .faits dt{font-size:23px}
+  .ferme-droite{grid-template-columns:minmax(0,1fr)}
+  .plants{width:min(200px,60%);justify-self:end;margin-top:0}
+  .etapes{grid-template-columns:minmax(0,1fr);gap:28px}
+  .etapes li:nth-child(even),.etapes li:nth-child(3n+2){transform:none}
+  .etapes li{grid-template-columns:minmax(0,110px) minmax(0,1fr)}
+  .procede-pied{margin-top:44px}
+  .tofus-photo{padding-bottom:0}
+  .sichuan{position:relative;right:auto;width:auto;margin:-70px 14px 0}
+  .paves{grid-template-columns:minmax(0,1fr)}
+  .marches{grid-template-columns:minmax(0,1fr)}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .faits dd,.etapes p,.liste-tofus p,.groupe li,.pied p,.pied li,.paves span,.sichuan p,.partenaires{font-size:16.5px}
+}
+@media (max-width:380px){
+  .faits{grid-template-columns:minmax(0,1fr)}
+  .faits div:nth-child(even){border-left:0}
+  .faits div:nth-child(n+2){border-top:1px dashed rgba(28,38,48,.22)}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+  .etapes li{grid-template-columns:minmax(0,92px) minmax(0,1fr);gap:14px}
+  .etiquette{font-size:14.5px;left:12px;bottom:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <a class="marque" href="#haut"><b>La Ferme du Cantou</b><span>Le Bloc des Champs, tofu bio de Haute-Loire</span></a>
+  <nav aria-label="Navigation principale">
+    <a class="lien-section" href="#ferme">La ferme</a>
+    <a class="lien-section" href="#procede">Le procédé</a>
+    <a class="lien-section" href="#tofus">Nos tofus</a>
+    <a class="lien-section" href="#recettes">Recettes</a>
+    <a href="#lieux">Où nous trouver</a>
+    <a class="tel" href="tel:+33643727553">06 43 72 75 53</a>
+  </nav>
+</header>
+
+<main id="haut">
+  <section class="heros page" aria-labelledby="titre">
+    <div>
+      <h1 id="titre">Tofu artisanal <span>et local</span></h1>
+      <p class="chapo">À la Ferme du Cantou, à Jax en Haute-Loire, nous cultivons du soja bio pour transformer directement notre récolte en tofu artisanal. La transformation se fait entièrement à la ferme.</p>
+      <div class="btns">
+        <a class="btn btn-plein" href="#lieux">Où trouver nos tofus</a>
+        <a class="btn btn-contour" href="#procede">Voir la fabrication</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <p class="pastille" aria-hidden="true"><span><b>100&nbsp;%</b>bio, sans OGM</span></p>
+      <figure class="ph apparait">
+        <img src="assets/ferme-du-cantou-jax/homme-bloc-tofu-sorti-du-moule.webp" width="800" height="1422" alt="Au laboratoire de la ferme, un producteur souriant tient à deux mains un grand bloc de tofu sur une planche">
+        <figcaption class="etiquette">Un bloc de tofu, au laboratoire de la ferme</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="page">
+    <dl class="faits">
+      <div><dt>3 ingrédients</dt><dd>du soja, du nigari et de l'eau</dd></div>
+      <div><dt>100&nbsp;% bio</dt><dd>soja sans OGM et local</dd></div>
+      <div><dt>Depuis 2016</dt><dd>en agriculture biologique à Jax</dd></div>
+      <div><dt>À la ferme</dt><dd>un laboratoire aménagé en 2024-2025</dd></div>
+      <div><dt>3 marchés</dt><dd>Le Puy-en-Velay, Langeac et Brioude</dd></div>
+    </dl>
+  </div>
+
+  <section id="ferme" class="bloc page" aria-labelledby="t-ferme">
+    <div class="ferme">
+      <div>
+        <h2 id="t-ferme" class="h2">Notre ferme</h2>
+        <p class="grande" style="margin-top:22px">Installés en agriculture biologique depuis 2016 à Jax, nous avons choisi en 2024 de nous lancer dans la fabrication de <mark>tofu fermier</mark>.</p>
+      </div>
+      <div class="ferme-droite">
+        <div class="texte">
+          <p>Nous cultivons des semences potagères paysannes pour Graines del Païs et <a href="https://www.germinance.com/">Germinance</a>. Notre soja bio est transformé directement à la ferme, dans un laboratoire aménagé en 2024-2025.</p>
+          <p>Nous privilégions les produits locaux et les circuits courts, dans une démarche respectueuse du vivant et en accord avec nos valeurs écologiques.</p>
+          <p class="partenaires">Pour sécuriser la production, une partie du soja nous vient de paysans bios de Haute-Loire&nbsp;: David et Marie-Claire Dubois, Christian Baissat, David Montavit et Hélène Beaune.</p>
+        </div>
+        <figure class="plants apparait">
+          <div class="cadre"><img src="assets/ferme-du-cantou-jax/jeunes-plants-de-soja.webp" width="338" height="600" alt="Jeunes plants de soja vert vif dans une terre sèche, en plein soleil" loading="lazy"></div>
+          <figcaption>Nos jeunes plants de soja, au soleil</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="procede" class="sombre" aria-labelledby="t-procede">
+    <div class="page">
+      <div class="procede-tete">
+        <div>
+          <h2 id="t-procede" class="h2">Comment <span style="white-space:nowrap">fabrique-t-on</span> le tofu</h2>
+        </div>
+        <div>
+          <p class="texte">Le tofu est un bloc blanc-crème, fabriqué à partir de lait de soja caillé, puis pressé. À la Ferme du Cantou, nous le fabriquons de manière traditionnelle, avec seulement trois ingrédients&nbsp;:</p>
+          <div class="ingredients"><span>soja bio</span><span>nigari, issu du sel marin</span><span>eau</span></div>
+        </div>
+      </div>
+      <ol class="etapes">
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/tri-graines-soja-trempees.webp" width="600" height="1067" alt="Mains dans une caisse de graines de soja trempées" loading="lazy"></figure>
+          <div><h3>Trempage</h3><p>Nos graines de soja bio sont pesées, lavées plusieurs fois, puis trempées dans l'eau pendant 12 heures.</p></div>
+        </li>
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/broyage-puree-de-soja.webp" width="600" height="1067" alt="Le broyeur d'où coule la purée de soja vers des seaux" loading="lazy"></figure>
+          <div><h3>Broyage</h3><p>Les graines sont broyées en une fine purée, filtrée pour séparer le lait de soja des résidus fibreux, l'okara.</p></div>
+        </li>
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/versement-seau-dans-cuve.webp" width="600" height="1067" alt="Un seau de liquide de soja versé dans la grande cuve inox" loading="lazy"></figure>
+          <div><h3>Cuisson</h3><p>Le lait de soja est ensuite chauffé dans la cuve.</p></div>
+        </li>
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/caille-dans-la-cuve.webp" width="600" height="1067" alt="La main plongée dans le caillé blanc au fond de la cuve" loading="lazy"></figure>
+          <div><h3>Caillage au nigari</h3><p>Le lait chaud est caillé avec du nigari, un sel marin naturel.</p></div>
+        </li>
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/moulage-caille-dans-tissu.webp" width="600" height="1067" alt="Le caillé déposé dans un grand tissu blanc, au fond d'un bac" loading="lazy"></figure>
+          <div><h3>Pressage</h3><p>Le petit-lait est extrait, le tofu est mis dans un moule et pressé pour lui donner sa forme.</p></div>
+        </li>
+        <li>
+          <figure class="ph apparait"><img src="assets/ferme-du-cantou-jax/decoupe-bloc-tofu-presse.webp" width="600" height="1067" alt="Découpe au couteau d'un grand bloc de tofu pressé" loading="lazy"></figure>
+          <div><h3>Découpe et mise sous vide</h3><p>Refroidi, le tofu est découpé en blocs d'environ 250&nbsp;g, puis mis sous vide 12 heures après sa fabrication, pour une fraîcheur optimale.</p></div>
+        </li>
+      </ol>
+      <div class="procede-pied">
+        <p>Riche en protéines, faible en graisses, sans gluten ni lactose, il convient aux végétariens, aux végétaliens et à toute personne qui souhaite réduire sa consommation de viande.</p>
+        <a class="btn btn-contour" href="https://youtu.be/rLm_1yaD9nU">La préparation en vidéo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tofus" class="bloc page" aria-labelledby="t-tofus">
+    <h2 id="t-tofus" class="h2">Vos tofus bio</h2>
+    <div class="tofus">
+      <ul class="liste-tofus">
+        <li>
+          <h3>Le tofu nature</h3>
+          <p class="sous">Un tofu ferme&nbsp;: la base de toutes vos préparations.</p>
+          <p>Ingrédients&nbsp;: soja issu de l'agriculture biologique, nigari et eau.</p>
+        </li>
+        <li>
+          <h3>Le tofu fumé</h3>
+          <p class="sous">Une texture ferme et des saveurs plus intenses, pour vos salades, bouillons ou recettes relevées.</p>
+          <p>Fumé par infusion de thé noir fumé&nbsp;: une méthode qui préserve la pureté du tofu en évitant les composés toxiques des fumées, comme les HAP.</p>
+        </li>
+        <li>
+          <h3>Les tofus marinés</h3>
+          <p class="sous">Une nuit dans sa marinade, froid en salade, réchauffé ou grillé.</p>
+          <div class="marinades"><span>aux herbes</span><span>champignons et livèche</span><span>citron verveine</span><span>poivre de Sichuan</span><span>lentilles vertes</span></div>
+          <p>Verveine bio d'Aubazat, huile de colza bio du GAEC des Clochettes à Céaux-d'Allègre, champignons bios de la ferme des Bourbouilloux&nbsp;: nous privilégions les ingrédients locaux et bio.</p>
+        </li>
+        <li>
+          <h3>Le tofu soyeux</h3>
+          <p class="sous">Lisse, doux et crémeux, d'une consistance proche d'un flan.</p>
+          <p>Il n'est pas pressé et garde une grande partie de son eau. Nous le fabriquons à partir de notre propre lait de soja bio, caillé au sulfate de calcium puis pasteurisé.</p>
+        </li>
+      </ul>
+      <div class="tofus-photo">
+        <figure class="ph plat apparait">
+          <img src="assets/ferme-du-cantou-jax/tofu-marine-sesame-caulet-flori.webp" width="900" height="1600" alt="Deux paves de tofu laqués au sésame dans un bol de sauce, au restaurant" loading="lazy">
+          <figcaption class="etiquette" style="bottom:auto;top:14px">Notre tofu, servi au Caulet Flori</figcaption>
+        </figure>
+        <div class="sichuan">
+          <h3>Nouvelle marinade au poivre de Sichuan</h3>
+          <p class="cri">Ça picote, ça pétille, ça surprend&nbsp;!</p>
+          <p>Citronnée, florale, puissante&nbsp;: une sensation légèrement pétillante en bouche. Le poivre de Sichuan s'épanouit bien dans nos terres de Haute-Loire. À déguster froid, simplement tranché.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recettes" class="bloc page" aria-labelledby="t-recettes">
+    <div class="recettes-tete">
+      <h2 id="t-recettes" class="h2">Idées recettes</h2>
+      <p class="texte">Le tofu traîne parfois une réputation d'ingrédient fade. Pourtant, cette image n'est pas justifiée&nbsp;: imaginez une pomme de terre bouillie nature, sans sel ni matière grasse…</p>
+    </div>
+    <div class="recettes">
+      <article id="escalope" class="recette">
+        <h3>Escalope de tofu, au tofu congelé</h3>
+        <p class="sous">Une astuce gourmande et surprenante&nbsp;: l'escalope ou le steak de tofu.</p>
+        <ul>
+          <li>Placez votre tofu au congélateur&nbsp;: il pourra ainsi se conserver jusqu'à 3 mois.</li>
+          <li>Pour faire les escalopes, laissez le tofu au moins 3 à 4 jours au congélateur.</li>
+        </ul>
+        <p class="note">D'autres idées simples et gourmandes vous attendent dans notre carnet de recettes.</p>
+        <div class="btns carnet">
+          <a class="btn btn-plein" href="https://www.lafermeducantou.fr/wp-content/uploads/2025/04/Depliant-recettes.pdf">Le carnet de recettes (PDF)</a>
+        </div>
+      </article>
+      <div>
+        <div class="astuce">
+          <h3>Astuce tofu ferme</h3>
+          <p>Pour qu'il absorbe mieux les saveurs, raffermissez votre tofu nature&nbsp;: enveloppez les blocs dans un linge absorbant, posez-les sur une assiette, couvrez d'une autre assiette surmontée d'un poids (un bocal, une casserole). Au réfrigérateur au moins une heure, idéalement une nuit, voire jusqu'à 24 heures.</p>
+        </div>
+        <div class="marinade">
+          <h3>Les fondamentaux d'une marinade réussie</h3>
+          <div class="paves">
+            <div><b>Une base liquide</b><span>pour imprégner</span></div>
+            <div><b>Une note grasse</b><span>pour fixer les arômes</span></div>
+            <div><b>Un élément sucré</b><span>pour équilibrer</span></div>
+            <div><b>Un coup de peps</b><span>pour relever</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="paix" id="soja">
+      <h2>Faisons la paix avec le soja</h2>
+      <div>
+        <p>Le soja est une excellente source de protéines végétales complètes, qui contiennent tous les acides aminés essentiels, de fibres, de vitamines et de minéraux.</p>
+        <p>Il est riche en graisses insaturées, bénéfiques pour la santé cardiovasculaire, et pauvre en graisses saturées.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lieux" class="bloc page" aria-labelledby="t-lieux">
+    <h2 id="t-lieux" class="h2">Où trouve-t-on nos produits&nbsp;?</h2>
+    <div class="marches">
+      <div class="marche"><h3>Le Puy-en-Velay</h3><p>Tous les samedis matin, place du Plot</p></div>
+      <div class="marche"><h3>Langeac</h3><p>Tous les jeudis matin</p></div>
+      <div class="marche"><h3>Brioude</h3><p>Tous les samedis matin, place du Postel</p></div>
+    </div>
+    <div class="lieux">
+      <div>
+        <figure class="stand apparait">
+          <div class="cadre"><img src="assets/ferme-du-cantou-jax/stand-marche-puy-en-velay.webp" width="500" height="668" alt="Le stand Le Bloc des Champs sous son parasol, au marché du Puy-en-Velay" loading="lazy"></div>
+          <figcaption>Notre stand au marché du Puy-en-Velay</figcaption>
+        </figure>
+      </div>
+      <div>
+        <div class="colonnes">
+          <div class="groupe">
+            <h3>Magasins de producteurs</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/lebancal43/?locale=fr_FR">Le Bancal</a>, à Craponne</li>
+              <li><a href="https://www.facebook.com/profile.php?id=61579012667941">Épicerie de Lavoûte-Chilhac</a></li>
+              <li><a href="https://www.facebook.com/lesateliers.delabruyere">Boutique des Ateliers de la Bruyère</a></li>
+              <li><a href="https://monepi.fr/home?nomurlsite=ceauxlescoeurs">Céaux les Cœurs</a>, à Céaux-d'Allègre</li>
+              <li><a href="https://www.facebook.com/profile.php?id=61563083393078">Épicerie de Saint-Privat-du-Dragon</a></li>
+              <li><a href="https://www.facebook.com/people/LEpinette-Magasin-paysan/100077898639625/">L'Épinette</a>, à Langeac</li>
+              <li><a href="https://www.facebook.com/profile.php?id=61589770418930">Magasin de producteurs de la Chomette</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100078976488590">Le Serpent d'or</a>, à La Chaise-Dieu</li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>Restaurants</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/cauletfloribarajus?_rdr">Le Caulet Flori</a>, au Puy-en-Velay</li>
+              <li><a href="https://www.lepuyenvelay-tourisme.fr/restaurant/nagori-cave-a-manger/">Le Nagori</a>, au Puy-en-Velay</li>
+              <li><a href="https://williaume.wixsite.com/le-trefle">Le Trèfle à 4 feuilles</a>, à Langeac</li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>Foodtrucks</h3>
+            <ul>
+              <li><a href="https://labouchealendroit.wordpress.com/">La bouche à l'endroit</a></li>
+              <li><a href="https://www.facebook.com/BaptistePatissierEthicurien/?locale=fr_FR">Chez Batiste Blanc, pâtissier</a></li>
+              <li><a href="https://www.facebook.com/foodtruckroulegalettes">Roule galettes</a></li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>AMAP</h3>
+            <ul>
+              <li><a href="https://meygalimenterre.jimdofree.com">AMAP de Saint-Julien-Chapteuil</a></li>
+              <li><a href="https://amap-haut-allier.fr/?PageAccueil">AMAP de Langeac</a></li>
+              <li><a href="https://amapdyke.wixsite.com/site">AMAP dyke d'Aiguilhe</a></li>
+              <li><a href="https://absolu.info/">AMAP de Brioude</a></li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>Collectivités</h3>
+            <ul><li><a href="https://saintjulienchapteuil.fr/cantine-saint-julien-chapteuil-menus-infos/">Le restaurant municipal de Saint-Julien-Chapteuil</a></li></ul>
+          </div>
+        </div>
+        <p class="a-la-ferme">Vous pouvez aussi vous rendre directement à la Ferme du Cantou, à Jax.</p>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <div class="contact-carte">
+        <h2>Nous contacter</h2>
+        <a class="gros" href="tel:+33643727553">06 43 72 75 53</a><br>
+        <a class="mail" href="mailto:contact@lafermeducantou.fr">contact@lafermeducantou.fr</a>
+      </div>
+      <div class="contact-infos">
+        <div><h3>Adresse</h3><p>La Ferme du Cantou<br>43230 Jax</p></div>
+        <div><h3>Sur Facebook</h3><p><a href="https://www.facebook.com/profile.php?id=61569042257962">Notre page Facebook</a></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="page">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">La Ferme du Cantou</p>
+        <p style="margin-top:10px">Le Bloc des Champs&nbsp;: tofu artisanal et local, à partir de soja bio cultivé à la ferme.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33643727553">06 43 72 75 53</a></li>
+          <li><a href="mailto:contact@lafermeducantou.fr">contact@lafermeducantou.fr</a></li>
+          <li>43230 Jax</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Les marchés</h3>
+        <ul><li>Le Puy-en-Velay, samedi matin</li><li>Langeac, jeudi matin</li><li>Brioude, samedi matin</li></ul>
+      </div>
+      <div>
+        <h3>La page</h3>
+        <ul>
+          <li><a href="#procede">Comment fabrique-t-on le tofu</a></li>
+          <li><a href="#recettes">Idées recettes</a></li>
+          <li><a href="#soja">Faisons la paix avec le soja</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© La Ferme du Cantou, 43230 Jax. Tous droits réservés.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour La Ferme du Cantou, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

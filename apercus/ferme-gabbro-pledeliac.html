@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée à la Ferme du Gabbro, Plédéliac (22), nuit du 2026-10-29.
+     CONTENU : textes, calendrier 2026, points de livraison, prix, coordonnées et photos relevés sur https://fermedugabbro.fr/
+     (accueil, La ferme, Les animaux, Nos engagements, Vente directe, Livraisons de l'année 2026) le 29/10/2026. Rien d'inventé.
+     Défaut 1 réglé : l'accueil annonçait encore la livraison « du 21 au 24 avril 2026 » ; la prochaine livraison à jour
+     (bœuf armoricain et merguez, du 26 au 28 novembre, selon leur calendrier 2026) est la carte la plus visible du premier écran.
+     Défaut 2 réglé : le lien « La ferme du Gabbro recrute ! » menait à une page introuvable ; il n'est pas repris.
+     Les porcs (élevage arrêté en 2022) ne sont pas montrés.
+
+     PLAN DESIGN (Nova, direction « lande et gabbro »)
+     1. Couleurs : lichen #E3E6DC (fond), lichen clair #EEF0E8 (surfaces posées), gabbro #23292A (encre et section sombre),
+        mousse #59625F (texte doux), bruyère #8E5A86 (accent : date de livraison, repère « prochaine », sélection ; rien d'autre).
+     2. Typo : Bricolage Grotesque 500 à 600 pour les titres, serrée, sans capitales espacées ; Source Serif 4 pour le texte.
+     3. Héros : [ titre + texte + 2 pilules ]  [ grande photo brebis r18, ombre longue ]
+                                         [carte livraison ]╯ (chevauche le coin bas gauche)
+        Téléphone : titre / carte livraison / photo / texte / pilules.
+     4. Sections : bandeau de faits en ligne | ferme : photo large + petite photo cadrée qui chevauche, texte à droite |
+        animaux : deux races en quinconce | livraisons sur fond gabbro (calendrier daté, jours et lieux) |
+        engagements : grande phrase + liste éditoriale + deux photos inclinées | vente en vif, pied sombre.
+     5. Revu contre les défauts : pas de crème + terre cuite, pas de capitales espacées, pas de « → », pas de 01/02/03
+        (le seul déroulé numéroté est le calendrier, une vraie suite de dates), aucun mot coloré dans les titres. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#E3E6DC" />
+<title>Ferme du Gabbro, élevage de biodiversité à Plédéliac</title>
+<meta name="description" content="Élevage de races locales sur 56 ha à Plédéliac, entre la forêt de la Hunaudaye et les Landes de la Poterie. Colis d'agneau, de bœuf et merguez en vente directe." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%238E5A86'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Verdana,sans-serif' font-weight='700' font-size='36' fill='%23E3E6DC'%3EG%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --lichen:#E3E6DC;
+  --lichen-clair:#EEF0E8;
+  --lichen-fonce:#D5DACB;
+  --gabbro:#23292A;
+  --gabbro-2:#2E3536;
+  --mousse:#59625F;
+  --bruyere:#8E5A86;
+  --bruyere-clair:#D9B9D3;
+  --sur-sombre:#E6E9E0;
+  --sur-sombre-doux:#AEB7B1;
+  --filet:rgba(35,41,42,.14);
+  --ombre:0 34px 70px -36px rgba(25,32,31,.62);
+  --ombre-courte:0 20px 40px -26px rgba(25,32,31,.55);
+  --fd:"Bricolage Grotesque",Georgia,serif;
+  --ft:"Source Serif 4",Georgia,serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--lichen);color:var(--gabbro);font-family:var(--ft);font-size:18px;line-height:1.62;font-optical-sizing:auto}
+::selection{background:var(--bruyere);color:var(--lichen-clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bruyere);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--fd);font-weight:560;letter-spacing:-.022em;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.enveloppe{width:min(var(--max),100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete{padding:22px 0}
+.entete .enveloppe{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--fd);font-weight:600;font-size:23px;letter-spacing:-.02em}
+.marque span{font-size:15px;color:var(--mousse);font-style:italic}
+.nav{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-family:var(--fd);font-weight:500;font-size:16px}
+.nav a:not(.pilule):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+
+/* Boutons */
+.pilule{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:13px 26px;border-radius:999px;font-family:var(--fd);font-weight:560;font-size:17px;text-decoration:none;border:1.5px solid var(--gabbro);transition:transform .25s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s,box-shadow .25s;text-align:center}
+.pilule.plein{background:var(--gabbro);color:var(--lichen-clair)}
+.pilule.plein:hover{transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(25,32,31,.8)}
+.pilule.contour{background:transparent;color:var(--gabbro)}
+.pilule.contour:hover{background:var(--gabbro);color:var(--lichen-clair);transform:translateY(-2px)}
+.nav .pilule{min-height:44px;padding:9px 20px;font-size:16px}
+@media (prefers-reduced-motion:reduce){.pilule,.pilule:hover{transition:none;transform:none}}
+
+/* Héros */
+.heros{padding:24px 0 104px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,13fr);grid-template-areas:"titre photo" "texte photo" "actions photo";grid-template-rows:auto auto 1fr;column-gap:64px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,4.7vw,68px);margin-top:44px}
+.heros .chapo{grid-area:texte;font-size:20px;line-height:1.6;color:var(--gabbro-2);max-width:40ch;margin-top:28px}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.photo-heros{grid-area:photo;margin:0;position:relative}
+.photo-heros img{width:100%;aspect-ratio:1.3/1;object-fit:cover;object-position:30% 55%;border-radius:18px;box-shadow:var(--ombre)}
+.carte-livraison{grid-area:photo;align-self:end;justify-self:start;position:relative;z-index:2;width:min(380px,100%);margin:0 0 -64px -72px;background:var(--gabbro);color:var(--sur-sombre);border-radius:16px;padding:24px 28px 22px;box-shadow:0 34px 60px -28px rgba(25,32,31,.7)}
+.carte-livraison .quand{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:560;font-size:16px;color:var(--sur-sombre-doux);margin:0 0 10px}
+.carte-livraison .quand::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--bruyere-clair);box-shadow:0 0 0 5px rgba(217,185,211,.22);flex:none}
+.carte-livraison .date{font-family:var(--fd);font-weight:600;font-size:clamp(30px,3vw,40px);line-height:1;letter-spacing:-.03em;color:var(--bruyere-clair);margin:0 0 10px}
+.carte-livraison .quoi{font-family:var(--fd);font-weight:560;font-size:19px;line-height:1.25;margin:0 0 8px;color:var(--lichen-clair)}
+.carte-livraison .detail{font-family:var(--ft);font-size:16px;line-height:1.5;color:var(--sur-sombre-doux);margin:0}
+.carte-livraison .detail a{color:var(--lichen-clair)}
+.carte-livraison .detail a{text-underline-offset:3px}
+
+/* Bandeau de faits */
+.faits{background:var(--lichen-fonce);padding:30px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{font-size:16px;line-height:1.4;color:var(--gabbro-2)}
+.faits b{display:block;font-family:var(--fd);font-weight:560;font-size:30px;letter-spacing:-.025em;line-height:1.05;color:var(--gabbro);margin-bottom:6px}
+
+/* Sections */
+.section{padding:120px 0}
+.titre-section{font-size:clamp(34px,4vw,54px);margin-bottom:24px}
+.texte-doux{color:var(--mousse)}
+
+/* La ferme */
+.ferme-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:88px;align-items:center}
+.ferme-photos{position:relative;padding-bottom:72px}
+.ferme-photos .grande{margin:0;position:relative}
+.ferme-photos .grande img{width:86%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(238,240,232,.94);color:var(--gabbro);font-family:var(--fd);font-weight:500;font-size:15px;line-height:1.3;padding:8px 14px;border-radius:10px;max-width:calc(100% - 32px)}
+.ferme-photos .petite{position:absolute;right:0;bottom:0;width:44%;margin:0;background:var(--lichen-clair);padding:10px 10px 12px;border-radius:14px;box-shadow:var(--ombre-courte);transform:rotate(2deg)}
+.ferme-photos .petite img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.ferme-photos .petite figcaption{font-size:15px;color:var(--mousse);padding:8px 4px 0;line-height:1.3}
+.sous-sol{font-family:var(--fd);font-weight:500;font-size:24px;line-height:1.35;letter-spacing:-.01em;margin-bottom:22px}
+
+/* Animaux */
+.animaux-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end;margin-bottom:64px}
+.animaux-tete p{margin:0}
+.race{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+.race + .race{margin-top:88px}
+.race.inverse{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.race.inverse figure{order:2}
+.race figure{margin:0;position:relative}
+.race img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;box-shadow:var(--ombre)}
+.race.inverse img{aspect-ratio:5/4;border-radius:24px 24px 24px 120px}
+.race h3{font-size:clamp(28px,2.6vw,36px);margin-bottom:6px}
+.race .espece{font-family:var(--fd);font-weight:500;color:var(--mousse);font-size:17px;margin-bottom:18px}
+
+/* Livraisons (fond gabbro) */
+.livraisons{background:var(--gabbro);color:var(--sur-sombre)}
+.livraisons .titre-section{color:var(--lichen-clair)}
+.livraisons .texte-doux{color:var(--sur-sombre-doux)}
+.livr-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:end;margin-bottom:64px}
+.livr-tete p{margin:0}
+.calendrier{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;margin-bottom:72px}
+.ligne-cal{background:var(--gabbro-2);border-radius:18px;padding:30px 30px 26px}
+.ligne-cal h3{font-size:24px;color:var(--lichen-clair);margin-bottom:4px}
+.ligne-cal .colis{font-size:16px;line-height:1.5;color:var(--sur-sombre-doux);margin:0 0 20px}
+.ligne-cal ol{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.ligne-cal li{font-family:var(--fd);font-weight:500;font-size:16px;line-height:1.25;padding:12px 10px;border-radius:12px;border:1px solid rgba(230,233,224,.14);color:var(--sur-sombre-doux)}
+.ligne-cal li.passee{text-decoration:line-through;text-decoration-color:rgba(174,183,177,.6);opacity:.72}
+.ligne-cal li.prochaine{background:var(--bruyere-clair);border-color:var(--bruyere-clair);color:var(--gabbro);font-weight:600}
+.ligne-cal li small{display:block;font-family:var(--ft);font-weight:400;font-size:14px;margin-top:4px}
+.ligne-cal .contenu{font-size:16px;line-height:1.55;margin:0;color:var(--sur-sombre)}
+.prix{white-space:nowrap}
+.lieux{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+.lieux figure{margin:0;position:relative}
+.lieux figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:0 34px 70px -30px rgba(0,0,0,.55)}
+.jours{margin:0}
+.jour{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid rgba(230,233,224,.16)}
+.jour:last-of-type{border-bottom:1px solid rgba(230,233,224,.16)}
+.jour dt{font-family:var(--fd);font-weight:560;font-size:22px;color:var(--lichen-clair)}
+.jour dd{margin:0;font-size:17px;line-height:1.6}
+.jour dd span{display:block}
+.lieux .note{margin-top:22px;font-size:16px;color:var(--sur-sombre-doux)}
+.lieux .pilule.plein{background:var(--lichen-clair);color:var(--gabbro);border-color:var(--lichen-clair);margin-top:12px}
+.lieux .pilule.contour{color:var(--lichen-clair);border-color:rgba(230,233,224,.5);margin-top:12px}
+.lieux .pilule.contour:hover{background:var(--lichen-clair);color:var(--gabbro)}
+.lieux .actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Engagements */
+.phrase{font-family:var(--fd);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.18;letter-spacing:-.02em;max-width:24ch;margin:0 0 80px}
+.engag-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:start}
+.engag-liste{margin:0;padding:0;list-style:none}
+.engag-liste li{padding:28px 0;border-top:1px solid var(--filet)}
+.engag-liste li:last-child{border-bottom:1px solid var(--filet)}
+.engag-liste h3{font-size:25px;margin-bottom:10px}
+.engag-liste p{margin:0;color:var(--gabbro-2)}
+.engag-photos{position:relative;padding-top:12px}
+.engag-photos figure{margin:0}
+.engag-photos .a img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;box-shadow:var(--ombre)}
+.engag-photos .a{position:relative}
+.engag-photos .a .etiquette{top:16px;bottom:auto}
+.engag-photos .b{width:68%;margin:-64px 0 0 auto;background:var(--lichen-clair);padding:10px 10px 12px;border-radius:12px;box-shadow:var(--ombre-courte);transform:rotate(-2.2deg);position:relative}
+.engag-photos .b img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px}
+.engag-photos .b figcaption{font-size:15px;color:var(--mousse);padding:8px 4px 0;line-height:1.3}
+
+/* Vente en vif et au détail */
+.autres{padding:0 0 120px}
+.autres-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.encart{background:var(--lichen-clair);border-radius:20px;padding:40px;box-shadow:0 24px 50px -40px rgba(25,32,31,.5)}
+.encart h3{font-size:28px;margin-bottom:14px}
+.encart p:last-child{margin-bottom:0}
+.encart.sobre{background:transparent;box-shadow:none;border:1.5px solid var(--filet)}
+
+/* Pied */
+.pied{background:var(--gabbro);color:var(--sur-sombre);padding:88px 0 56px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:56px}
+.pied h2{font-size:clamp(30px,3vw,40px);color:var(--lichen-clair);margin-bottom:14px}
+.pied p{color:var(--sur-sombre-doux);font-size:17px}
+.pied h3{font-size:18px;color:var(--lichen-clair);margin-bottom:12px;letter-spacing:-.01em}
+.pied address{font-style:normal;font-size:17px;line-height:1.7}
+.pied a{color:var(--lichen-clair);text-underline-offset:4px;text-decoration-thickness:1px}
+.pied a:hover{text-decoration-thickness:2px}
+.pied ul{list-style:none;margin:0;padding:0;font-size:17px;line-height:1.75}
+.pied .bas{margin-top:64px;padding-top:24px;border-top:1px solid rgba(230,233,224,.14);font-size:15px;color:var(--sur-sombre-doux)}
+.proposition{background:#1A1F20;color:var(--sur-sombre-doux);text-align:center;font-size:16px;padding:16px 20px}
+.proposition a{color:var(--lichen-clair);text-underline-offset:3px}
+
+/* Apparition douce des photos (seulement si le script tourne) */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .ferme-photos .petite.apparait.vu{transform:rotate(2deg)}
+.js .engag-photos .b.apparait.vu{transform:rotate(-2.2deg)}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.js .ferme-photos .petite.apparait{transform:rotate(2deg)}.js .engag-photos .b.apparait{transform:rotate(-2.2deg)}}
+
+/* Tablette */
+@media (max-width:1080px){
+  .heros-grille{column-gap:48px}
+  .carte-livraison{margin-left:-48px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ferme-grille,.engag-grille{gap:56px}
+}
+@media (max-width:900px){
+  .heros{padding:16px 0 72px}
+  .heros-grille{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "carte" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros h1{margin-top:20px}
+  .carte-livraison{grid-area:carte;margin:24px 0 24px;width:100%;align-self:auto}
+  .photo-heros img{aspect-ratio:4/3}
+  .heros .chapo{max-width:none}
+  .ferme-grille,.animaux-tete,.race,.race.inverse,.livr-tete,.calendrier,.lieux,.engag-grille,.autres-grille,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .race.inverse figure{order:0}
+  .race,.race.inverse{gap:32px}
+  .animaux-tete,.livr-tete{gap:20px}
+  .lieux{gap:40px}
+  .lieux figure{max-width:440px}
+  .lieux figure img{aspect-ratio:4/3}
+  .section{padding:88px 0}
+  .autres{padding-bottom:88px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .marque span,.etiquette,.ferme-photos .petite figcaption,.engag-photos .b figcaption,.pied .bas,.ligne-cal li small{font-size:16px}
+  .entete .enveloppe{gap:14px}
+  .enveloppe{width:min(var(--max),100% - 40px)}
+  .nav{gap:18px}
+  .nav .lien-sec{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:25px}
+  .heros .chapo{font-size:18px}
+  .ferme-photos{padding-bottom:56px}
+  .ferme-photos .grande img{width:100%}
+  .ferme-photos .petite{width:56%;right:-6px}
+  .ligne-cal{padding:24px 20px}
+  .ligne-cal ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .jour{grid-template-columns:minmax(0,1fr);gap:6px}
+  .encart{padding:28px 24px}
+  .phrase{margin-bottom:48px}
+  .engag-photos .b{width:78%;margin-top:-40px}
+  .race.inverse img{border-radius:20px 20px 20px 72px}
+}
+@media (max-width:420px){
+  .heros .actions .pilule,.lieux .actions .pilule{width:100%}
+  .nav .pilule{padding:9px 16px}
+  .carte-livraison{padding:20px 20px 18px}
+  .faits li:last-child{grid-column:auto}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe">
+    <a class="marque" href="#haut" id="haut"><b>Ferme du Gabbro</b><span>Élevage de biodiversité, Plédéliac</span></a>
+    <nav class="nav" aria-label="Sections de la page">
+      <a class="lien-sec" href="#la-ferme">La ferme</a>
+      <a class="lien-sec" href="#les-animaux">Les animaux</a>
+      <a class="lien-sec" href="#livraisons">Livraisons</a>
+      <a class="pilule contour" href="#contact">Nous joindre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros">
+    <div class="enveloppe heros-grille">
+      <h1>Des races locales, élevées à l'herbe sur une roche rare.</h1>
+      <aside class="carte-livraison" aria-label="Prochaine livraison">
+        <div class="quand">Prochaine livraison</div>
+        <div class="date">du 26 au 28 novembre</div>
+        <div class="quoi">Bœuf armoricain et merguez de brebis</div>
+        <div class="detail">Colis autour de 6 kilos à <span class="prix">19&nbsp;€/kg</span>. Commande par mail : <a href="mailto:contact@fermedugabbro.fr">contact@fermedugabbro.fr</a></div>
+      </aside>
+      <figure class="photo-heros">
+        <img src="assets/ferme-gabbro-pledeliac/brebis-et-agneaux-au-paturage.webp" alt="Un agneau et une brebis Landes de Bretagne dans l'herbe haute, le troupeau derrière eux sous les arbres" width="1600" height="1067" fetchpriority="high" />
+      </figure>
+      <p class="chapo">Située à Plédéliac, dans les Côtes d'Armor, la ferme du Gabbro est un élevage de races locales qui veille avant tout à préserver la biodiversité du milieu face aux urgences climatiques.</p>
+      <div class="actions">
+        <a class="pilule plein" href="mailto:contact@fermedugabbro.fr?subject=Commande%20de%20colis">Commander par mail</a>
+        <a class="pilule contour" href="#livraisons">Points de livraison</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="La ferme en quelques faits">
+    <div class="enveloppe">
+      <ul>
+        <li><b>56 ha</b>entre la forêt de la Hunaudaye et les Landes de la Poterie</li>
+        <li><b>plus de 60&nbsp;%</b>des terres en zones humides</li>
+        <li><b>18&nbsp;km</b>de haies vives, et de nouvelles plantées régulièrement</li>
+        <li><b>depuis 2018</b>reprise par Sophie Nedellec</li>
+        <li><b>Bio</b>certifiée en agriculture biologique par Ecocert</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="la-ferme">
+    <div class="enveloppe ferme-grille">
+      <div class="ferme-photos">
+        <figure class="grande apparait">
+          <img src="assets/ferme-gabbro-pledeliac/moutons-couches-dans-la-prairie.webp" alt="Une quinzaine de moutons blancs, gris et noirs couchés dans une prairie d'herbe haute" width="1600" height="1200" loading="lazy" />
+          <figcaption class="etiquette">Prairie permanente, pâturage tournant</figcaption>
+        </figure>
+        <figure class="petite apparait">
+          <img src="assets/ferme-gabbro-pledeliac/hangar-bois-panneaux-solaires-et-cour.webp" alt="Le bâtiment d'élevage en bardage bois, toit de panneaux solaires, balles de foin sous l'auvent" width="1600" height="1200" loading="lazy" />
+          <figcaption>Le bâtiment, vu de la route</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2 class="titre-section">La ferme</h2>
+        <p class="sous-sol">Sous nos pieds, une roche rare : le gabbro, sur lequel s'est posé de l'argile.</p>
+        <p>La ferme s'étend sur 56 ha à Plédéliac, entre la forêt de la Hunaudaye et les Landes de la Poterie. Plus de 60&nbsp;% des terres sont en zones humides.</p>
+        <p>Sophie Nedellec a repris cette ferme biologique en 2018 en y prolongeant le précieux travail de ses prédécesseurs : gérer un système prairial équilibré, à forte valeur environnementale.</p>
+        <p class="texte-doux">Des animaux de races locales valorisent des prairies permanentes en pâturage tournant dynamique. Un système agroforestier assure leur bien-être en extérieur le plus longtemps possible ; un bâtiment permet de les loger en hiver si besoin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="les-animaux" style="padding-top:0">
+    <div class="enveloppe">
+      <div class="animaux-tete">
+        <h2 class="titre-section" style="margin:0">Les animaux</h2>
+        <p class="texte-doux">L'herbe pousse bien sur ces terres humides et le bocage est très présent : un terroir idéal pour élever des ruminants, avec bien-être animal et autonomie alimentaire.</p>
+      </div>
+
+      <article class="race">
+        <figure class="apparait">
+          <img src="assets/ferme-gabbro-pledeliac/troupeau-moutons-blancs-et-noirs-dans-le-pre.webp" alt="Un rang de moutons blancs et noirs face à l'objectif dans un pré fleuri, sous un ciel bleu" width="1600" height="1200" loading="lazy" />
+          <figcaption class="etiquette">Le troupeau dans le pré</figcaption>
+        </figure>
+        <div>
+          <h3>Agneau Landes de Bretagne</h3>
+          <p class="espece">Race solide et rustique, de taille moyenne</p>
+          <p>L'agneau Landes de Bretagne est élevé à l'herbe. Il s'aventure volontiers en lisière de forêt, favorisant ainsi son automédication.</p>
+          <p class="texte-doux">La viande obtenue est typée, rouge et reconnue pour sa tendresse.</p>
+        </div>
+      </article>
+
+      <article class="race inverse">
+        <figure class="apparait">
+          <img src="assets/ferme-gabbro-pledeliac/vache-rousse-et-son-veau-dans-l-herbe.webp" alt="Une vache Armoricaine rousse couchée dans l'herbe haute, son veau contre elle" width="1600" height="900" loading="lazy" />
+        </figure>
+        <div>
+          <h3>Bœuf de race Armoricaine</h3>
+          <p class="espece">Réputée douce et rustique</p>
+          <p>L'Armoricaine fournit une viande persillée, de plus en plus recherchée. Pigmentée, savoureuse et animale, elle est enrichie en oméga 3 grâce à l'alimentation à l'herbe réservée aux animaux.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section livraisons" id="livraisons">
+    <div class="enveloppe">
+      <div class="livr-tete">
+        <div>
+          <h2 class="titre-section">Livraisons de l'année 2026</h2>
+          <p class="texte-doux">La viande est proposée en vente directe, en colis diversifiés par animal, d'environ 6 kilos, emballée sous vide.</p>
+        </div>
+        <p class="texte-doux">Les merguez sont aussi vendues au détail à chaque livraison, avec le bœuf et l'agneau, conditionnées par 4 (environ 300&nbsp;g), à <span class="prix">19&nbsp;€/kg</span>.</p>
+      </div>
+
+      <div class="calendrier">
+        <div class="ligne-cal">
+          <h3>Bœuf armoricain et merguez de brebis</h3>
+          <p class="colis">4 livraisons, colis autour de 6 kilos à <span class="prix">19&nbsp;€/kg</span></p>
+          <ol>
+            <li class="passee">12 au 14 février</li>
+            <li class="passee">21 au 23 mai</li>
+            <li class="passee">3 au 5 septembre</li>
+            <li class="prochaine">26 au 28 novembre<small>la prochaine</small></li>
+          </ol>
+          <p class="contenu">1 côte ou 1 basse côte, 1 rôti, viande bourguignon, pièce à mijoter (type jarret, paleron, poitrine), environ 6 steaks, viande pour bolognaise et 1 kilo de steak haché par 4.</p>
+        </div>
+        <div class="ligne-cal">
+          <h3>Agneau Landes de Bretagne et merguez</h3>
+          <p class="colis">4 livraisons, colis d'environ 6 kilos à <span class="prix">19&nbsp;€/kg</span></p>
+          <ol>
+            <li class="passee">2 au 4 avril</li>
+            <li class="passee">21 au 24 avril</li>
+            <li class="passee">2 au 4 juillet</li>
+            <li class="passee">15 au 17 octobre</li>
+          </ol>
+          <p class="contenu">Selle d'agneau, gigot raccourci, rôti, épaule, côtelettes, viande à couscous et abats.</p>
+        </div>
+      </div>
+
+      <div class="lieux">
+        <figure class="apparait">
+          <img src="assets/ferme-gabbro-pledeliac/colis-de-viande-sous-vide.webp" alt="Le contenu d'un colis vu de dessus : morceaux de viande sous vide étiquetés et steaks hachés" width="1600" height="1200" loading="lazy" />
+          <figcaption class="etiquette">Un colis, emballé sous vide</figcaption>
+        </figure>
+        <div>
+          <h3 class="titre-section" style="font-size:clamp(28px,3vw,40px)">Où récupérer votre colis</h3>
+          <p class="texte-doux">Les livraisons se font dans les Côtes d'Armor, le jeudi et le vendredi ; les précisions arrivent 2 jours avant la livraison.</p>
+          <dl class="jours">
+            <div class="jour"><dt>Le jeudi</dt><dd><span>Saint-Brieuc : l'Arrêt Galette, 24 av. Corneille</span><span>Lamballe : parking de la Biocoop, ou collège Simone Veil</span><span>Erquy : Ti fournil La Couture</span></dd></div>
+            <div class="jour"><dt>Le vendredi</dt><dd><span>Moncontour : bar Le Contre Temps, et secteur Lamballe</span><span>Secteur Plancoët</span><span>Rennes, Montgermont : vers 18&nbsp;h, parking Saint Maclou</span></dd></div>
+            <div class="jour"><dt>Le samedi</dt><dd><span>11&nbsp;h à la ferme, l'occasion de faire une petite visite de l'élevage.</span></dd></div>
+          </dl>
+          <p class="note">Livraison également à domicile, en fonction des commandes.</p>
+          <div class="actions">
+            <a class="pilule plein" href="mailto:contact@fermedugabbro.fr?subject=Commande%20de%20colis">Commander par mail</a>
+            <a class="pilule contour" href="sms:+33663005056">SMS au 06 63 00 50 56</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="engagements">
+    <div class="enveloppe">
+      <h2 class="titre-section">Nos engagements</h2>
+      <p class="phrase">Ici on cherche à prélever la juste part pour l'élevage, et à renforcer les équilibres entre la prairie et le milieu naturel.</p>
+      <div class="engag-grille">
+        <ul class="engag-liste">
+          <li>
+            <h3>La permanence des pâturages</h3>
+            <p>De petites parcelles où les bêtes tournent rapidement : elles mangent de tout, sans sélectionner leur flore préférée, et n'ont pas le temps de brouter à nouveau ce qui repousse. L'alternance de moutons et de bovins, complétée par une fauche occasionnelle, conserve et améliore l'équilibre de la prairie.</p>
+          </li>
+          <li>
+            <h3>Des haies vives et denses</h3>
+            <p>La densité bocagère est déjà forte (18&nbsp;km de haie) et de nouvelles haies sont plantées régulièrement. Le bois prélevé sert de bois de chauffage, le surplus est broyé pour pailler les jeunes haies ou laissé sur place pour abriter oiseaux et insectes.</p>
+          </li>
+          <li>
+            <h3>La préservation des races locales</h3>
+            <p>Très répandues en Bretagne avant guerre, ces races ont failli s'éteindre au début des années 1980, jugées insuffisamment productives. Leur caractère rustique et la qualité de leur viande en font un formidable atout pour notre « slow farm ».</p>
+          </li>
+        </ul>
+        <div class="engag-photos">
+          <figure class="a apparait">
+            <img src="assets/ferme-gabbro-pledeliac/plantation-en-agriculture-syntropique.webp" alt="Chantier de plantation dans un pré : une femme accroupie plante le long d'une bande paillée, des bénévoles derrière" width="1600" height="1200" loading="lazy" />
+            <figcaption class="etiquette">Chantier de plantation, en agriculture syntropique</figcaption>
+          </figure>
+          <figure class="b apparait">
+            <img src="assets/ferme-gabbro-pledeliac/chantier-de-curage-de-la-mare.webp" alt="Bénévoles en bottes avec pelles et râteaux autour de la mare en cours de curage" width="1600" height="1200" loading="lazy" />
+            <figcaption>L'entretien de la mare, avec des bénévoles</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="autres" aria-label="Autres façons d'acheter">
+    <div class="enveloppe autres-grille">
+      <div class="encart">
+        <h3>Animal en vif</h3>
+        <p>Pour l'éco-pâturage ou l'entretien de votre jardin, la ferme propose des agnelles (ou brebis, ou agneaux) Landes de Bretagne : des animaux rustiques de petite taille, faciles à manipuler. Vous participez ainsi à la sauvegarde de la race.</p>
+        <p><b>Prix : <span class="prix">130&nbsp;€ TTC</span></b></p>
+      </div>
+      <div class="encart sobre">
+        <h3>L'agneau au détail</h3>
+        <p>Uniquement pour l'agneau, la vente au détail se fait aussi sur Voisins de Panier, un système de drive paysan.</p>
+        <p><a href="https://www.voisinsdepaniers.org/" rel="noopener">voisinsdepaniers.org</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied" id="contact">
+  <div class="enveloppe">
+    <div class="pied-grille">
+      <div>
+        <h2>Ferme du Gabbro</h2>
+        <p>Élevage de biodiversité, races locales, viande en vente directe. Certifié en agriculture biologique par Ecocert.</p>
+      </div>
+      <div>
+        <h3>Retrouvez-nous</h3>
+        <address>Ferme du Gabbro<br />1 bis Le Cartret<br />22270 Plédéliac</address>
+      </div>
+      <div>
+        <h3>Commandes et questions</h3>
+        <ul>
+          <li>Par mail : <a href="mailto:contact@fermedugabbro.fr">contact@fermedugabbro.fr</a></li>
+          <li>Par SMS : <a href="sms:+33663005056">06 63 00 50 56</a></li>
+          <li>Le samedi des livraisons, 11&nbsp;h à la ferme</li>
+          <li><a href="https://www.facebook.com/Ferme-du-Gabbro-156456775039003" rel="noopener">La ferme sur Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">Livraison à domicile ou sur différents points de rencontre, entre Saint-Brieuc, Moncontour, Lamballe, Rennes et la côte de Penthièvre.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour la Ferme du Gabbro, <a href="https://nicomasset.com/">nicomasset.com</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
