@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Blue Rock Bed and Breakfast, Millersville, PA</title>
+<meta name="description" content="A bed and breakfast in an 1847 Lancaster County farmhouse, two blocks from Millersville University. Home-cooked breakfast, three suites with private baths, hosts since 2002.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E3352'/%3E%3Crect x='5' y='5' width='54' height='54' rx='10' fill='none' stroke='%23B8412F' stroke-width='2' stroke-dasharray='4 3'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F3EEE5'%3EB%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#1E3352;
+  --indigo-2:#283F62;
+  --flour:#F3EEE5;
+  --flour-card:#FBF8F2;
+  --oat:#E8DFD0;
+  --ink:#3A1E19;
+  --ink-soft:#674741;
+  --red:#B8412F;
+  --red-deep:#9C3324;
+  --on-dark:#F1EADF;
+  --on-dark-soft:#C5CCDA;
+  --shadow-long:0 30px 60px -34px rgba(20,32,52,.55);
+  --shadow-ink:0 30px 60px -34px rgba(36,16,12,.6);
+  --serif:"Alegreya",Georgia,serif;
+  --sans:"Work Sans",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--flour);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:var(--flour)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:100%;max-width:1232px;margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+.skip{position:absolute;left:12px;top:8px;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;background:var(--flour);color:var(--ink);padding:0;border-radius:999px;z-index:20}
+.skip:focus{width:auto;height:auto;clip-path:none;padding:8px 14px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:.8em 1.6em;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:1rem;line-height:1.25;text-decoration:none;text-align:center;border:1.5px solid transparent;transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--red);color:#FFF8F1;box-shadow:0 14px 28px -18px rgba(184,65,47,.9)}
+.btn-fill:hover{background:var(--red-deep)}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-line:hover{background:var(--on-dark);color:var(--indigo);border-color:var(--on-dark)}
+.on-flour .btn-line{color:var(--ink)}
+.on-flour .btn-line:hover{background:var(--ink);color:var(--flour);border-color:var(--ink)}
+
+/* Header */
+.top{background:var(--indigo);color:var(--on-dark)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:22px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.6rem;letter-spacing:.005em}
+.brand span{font-size:1rem;color:var(--on-dark-soft);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:1rem;color:var(--on-dark-soft);transition:color .2s}
+.nav a:hover{color:var(--on-dark)}
+.nav .btn{color:var(--on-dark);min-height:46px;padding:.6em 1.3em}
+.top-book{display:none}
+
+/* Hero */
+.hero{background:var(--indigo);color:var(--on-dark);padding:48px 0 136px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"title photo" "lead photo" "acts photo";grid-template-rows:auto auto 1fr;column-gap:clamp(40px,5vw,72px);align-items:start}
+.hero h1{grid-area:title;align-self:end;font-size:clamp(2.6rem,1.4rem + 3.9vw,4.6rem);font-weight:500;line-height:1.02;margin-top:40px;hyphens:none;overflow-wrap:normal;word-break:normal}
+.hero-lead{grid-area:lead;margin-top:28px;font-size:1.1875rem;line-height:1.6;color:var(--on-dark-soft);max-width:34em}
+.hero-lead strong{color:var(--on-dark);font-weight:500}
+.hero-acts{grid-area:acts;margin-top:36px;display:flex;flex-wrap:wrap;gap:14px 16px;align-items:center}
+.hero-call{flex-basis:100%;margin-top:6px;color:var(--on-dark-soft);font-size:1rem}
+.hero-call a{color:var(--on-dark);text-underline-offset:4px;white-space:nowrap}
+
+.hero-photo{grid-area:photo;position:relative;margin:0;align-self:center}
+.mat{position:relative;background:var(--flour);padding:16px;border-radius:30px;box-shadow:0 46px 80px -40px rgba(4,10,22,.85)}
+.mat::after{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(184,65,47,.6);border-radius:24px;pointer-events:none}
+.mat img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:18% 50%;border-radius:18px}
+.medallion{position:absolute;left:-44px;bottom:-72px;width:min(172px,34vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:7px solid var(--flour);box-shadow:0 26px 44px -22px rgba(4,10,22,.8);z-index:2;margin:0}
+.medallion img{width:100%;height:100%;object-fit:cover;object-position:42% 30%}
+.photo-tag{position:absolute;right:30px;bottom:30px;z-index:3;background:rgba(251,248,242,.95);color:var(--ink);font-size:1rem;line-height:1.3;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(20,32,52,.6);max-width:calc(100% - 60px)}
+
+/* Facts band */
+.facts{background:var(--oat);border-bottom:1px solid rgba(58,30,25,.08)}
+.facts ul{list-style:none;margin:0 auto;padding-block:34px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.facts li{display:flex;flex-direction:column;gap:4px;padding-left:18px;border-left:1.5px dashed rgba(184,65,47,.55)}
+.facts b{font-family:var(--serif);font-weight:500;font-size:1.75rem;line-height:1.1;color:var(--indigo)}
+.facts span{font-size:1rem;line-height:1.4;color:var(--ink-soft)}
+
+/* Section base */
+section{scroll-margin-top:20px}
+.sec{padding:clamp(80px,9vw,128px) 0}
+.sec h2{font-size:clamp(2.1rem,1.4rem + 2.2vw,3.25rem)}
+.lede{font-size:1.1875rem;color:var(--ink-soft);margin-top:20px;max-width:36em}
+
+/* House */
+.house-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(48px,7vw,96px);align-items:center}
+.house-photos{position:relative;padding-bottom:130px;padding-right:56px}
+.house-main{position:relative;margin:0}
+.house-main img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:22px;box-shadow:var(--shadow-ink)}
+.house-main .photo-tag{left:20px;right:auto;bottom:20px;top:auto}
+.house-side{position:absolute;right:0;bottom:0;width:min(50%,340px);margin:0;transform:rotate(3deg);background:var(--flour-card);padding:10px 10px 12px;border-radius:14px;box-shadow:var(--shadow-ink);z-index:2}
+.house-side img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.house-text p+p{margin-top:16px}
+.house-text h2{margin-bottom:24px;font-size:clamp(2.1rem,1.4rem + 1.8vw,3rem)}
+.walk{margin-top:28px;padding:22px 24px;background:var(--flour-card);border-radius:16px;box-shadow:0 20px 40px -32px rgba(36,16,12,.5)}
+.walk p{font-size:1rem;color:var(--ink-soft)}
+.walk p strong{color:var(--ink);font-weight:600}
+.text-link{display:inline-block;margin-top:24px;color:var(--red);font-weight:600;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.text-link:hover{color:var(--red-deep)}
+.text-links{display:flex;flex-wrap:wrap;gap:0 28px}
+
+/* Rooms */
+.rooms{background:var(--flour-card)}
+.rooms-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,6vw,80px);align-items:end}
+.offers{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.offers li{background:var(--flour);border:1px dashed rgba(58,30,25,.28);border-radius:999px;padding:7px 16px;font-size:1rem;line-height:1.35}
+.cabin{margin-top:72px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center}
+.cabin figure{margin:0;position:relative}
+.cabin img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:var(--shadow-ink)}
+.room h3{font-size:clamp(1.75rem,1.4rem + 1vw,2.25rem)}
+.room .room-sub{margin-top:6px;font-family:var(--serif);font-style:italic;font-size:1.1875rem;color:var(--red)}
+.room p.body{margin-top:16px}
+.room .note{margin-top:14px;font-size:1rem;color:var(--ink-soft)}
+.pair{margin-top:72px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,48px);align-items:stretch}
+.sun{position:relative;background:var(--flour);border-radius:22px;padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;justify-content:center}
+.sun::after{content:"";position:absolute;inset:9px;border:1.5px dashed rgba(184,65,47,.4);border-radius:16px;pointer-events:none}
+.dutch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.dutch figure{margin:0}
+.dutch img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%;border-radius:16px;box-shadow:var(--shadow-ink)}
+.rooms-foot{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.rooms-foot p{color:var(--ink-soft);font-size:1rem;max-width:34em}
+
+/* Breakfast */
+.breakfast{background:var(--flour)}
+.bk-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(48px,7vw,104px);align-items:center}
+.menu{margin-top:28px;font-size:1.0625rem}
+.menu p+p{margin-top:14px}
+.farm-line{margin-top:32px;font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,1.2rem + 1vw,2rem);line-height:1.25;color:var(--indigo);max-width:20em}
+.bk-photos{position:relative;padding-left:56px;padding-bottom:40px}
+.bk-table{margin:0}
+.bk-table img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:24px;box-shadow:var(--shadow-ink)}
+.bk-thumb{position:absolute;left:0;bottom:0;width:min(200px,42%);margin:0;transform:rotate(-4deg);background:var(--flour-card);padding:8px;border-radius:14px;box-shadow:var(--shadow-ink);z-index:2}
+.bk-thumb img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+
+/* Packages */
+.packages{background:var(--ink);color:var(--on-dark)}
+.pk-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,7vw,104px);align-items:start}
+.packages .lede{color:#D9C8BE}
+.pk-intro .btn{margin-top:32px;color:var(--on-dark)}
+.pk-intro .btn-line:hover{background:var(--on-dark);color:var(--ink)}
+.pk-fixed{margin-top:22px;font-size:1rem;color:#C9B5AA}
+.pk-list{list-style:none;margin:0;padding:0}
+.pk-list li{padding:24px 0;border-top:1.5px dashed rgba(241,234,223,.28);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 32px}
+.pk-list li:last-child{border-bottom:1.5px dashed rgba(241,234,223,.28)}
+.pk-list h3{font-size:1.5rem;line-height:1.2;color:var(--on-dark)}
+.pk-list p{color:#D9C8BE;font-size:1rem}
+
+/* Hosts */
+.hosts{background:var(--flour)}
+.quote{margin:0 0 72px;max-width:24em;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2rem,1.2rem + 2.8vw,3.6rem);line-height:1.12;color:var(--indigo);text-wrap:balance}
+.quote-by{display:block;margin-top:18px;font-family:var(--sans);font-style:normal;font-size:1rem;color:var(--ink-soft)}
+.hosts-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.hosts-text h2{font-size:clamp(1.9rem,1.4rem + 1.4vw,2.6rem);margin-bottom:22px}
+.hosts-text p+p{margin-top:16px}
+.award{background:var(--flour-card);border-radius:20px;padding:30px 30px 26px;box-shadow:0 24px 50px -36px rgba(36,16,12,.55)}
+.award p{font-size:1rem}
+.award p.big{font-family:var(--serif);font-size:1.375rem;line-height:1.3;color:var(--ink)}
+.award h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin-top:26px;padding-top:20px;border-top:1.5px dashed rgba(58,30,25,.22)}
+.award ul{margin:10px 0 0;padding:0;list-style:none;font-size:1rem;color:var(--ink-soft);line-height:1.55}
+
+/* Contact */
+.contact{background:var(--oat)}
+.ct-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.ct-grid .lede{max-width:30em}
+.route{margin-top:28px;border-top:1.5px dashed rgba(58,30,25,.25)}
+.route details{border-bottom:1.5px dashed rgba(58,30,25,.25)}
+.route summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;position:relative;font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.route summary::-webkit-details-marker{display:none}
+.route summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2px solid var(--red);border-bottom:2px solid var(--red);transform:translateY(-70%) rotate(45deg);transition:transform .25s ease}
+.route details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.route details p{padding:0 0 20px;font-size:1rem;color:var(--ink-soft)}
+.card{background:var(--flour-card);border-radius:22px;padding:clamp(26px,3.5vw,40px);box-shadow:var(--shadow-ink)}
+.card dl{margin:0;display:grid;gap:18px}
+.card dt{font-size:1rem;color:var(--ink-soft)}
+.card dd{margin:2px 0 0;font-family:var(--serif);font-size:1.3rem;line-height:1.3}
+.card dd a{text-decoration:none;border-bottom:1.5px solid rgba(184,65,47,.45)}
+.card dd a:hover{color:var(--red)}
+.card dd small{display:block;font-family:var(--sans);font-size:1rem;color:var(--ink-soft)}
+.card-acts{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* Footer */
+.foot{background:var(--indigo);color:var(--on-dark-soft);padding:72px 0 28px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:40px}
+.foot .brand b{color:var(--on-dark)}
+.foot p{font-size:1rem}
+.foot-tag{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--on-dark)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:1rem}
+.foot a{text-decoration:none;color:var(--on-dark)}
+.foot a:hover{text-decoration:underline;text-underline-offset:4px}
+.foot-bottom{margin-top:56px;padding-top:22px;border-top:1px dashed rgba(197,204,218,.3);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;font-size:1rem}
+.proposal{color:var(--on-dark-soft);opacity:.85}
+
+/* Reveal (photos only) */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .house-side.reveal{transform:translateY(22px) rotate(3deg)}
+.js .bk-thumb.reveal{transform:translateY(22px) rotate(-4deg)}
+.js .reveal.in{opacity:1;transform:none}
+.js .house-side.reveal.in{transform:rotate(3deg)}
+.js .bk-thumb.reveal.in{transform:rotate(-4deg)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .house-side.reveal{transform:rotate(3deg)}
+  .js .bk-thumb.reveal{transform:rotate(-4deg)}
+}
+
+/* Tablet */
+@media (max-width:1060px){
+  .nav a.nav-link{display:none}
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pk-list li{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:880px){
+  .hero{padding:24px 0 88px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "photo" "lead" "acts";grid-template-rows:auto}
+  .hero h1{margin-top:16px}
+  .hero-photo{margin-top:28px;margin-bottom:44px}
+  .medallion{left:auto;right:14px;bottom:-44px;width:min(124px,32vw)}
+  .photo-tag{right:24px;bottom:24px;max-width:calc(100% - 48px)}
+  .hero-photo .photo-tag{left:auto;right:24px;top:24px;bottom:auto;max-width:calc(100% - 48px)}
+  .hero-lead{margin-top:16px}
+  .house-grid,.rooms-head,.cabin,.pair,.bk-grid,.pk-grid,.hosts-grid,.ct-grid{grid-template-columns:minmax(0,1fr)}
+  .house-photos{padding-right:40px;padding-bottom:70px}
+  .house-main .photo-tag{top:16px;bottom:auto;left:16px}
+  .cabin{margin-top:48px}
+  .pair{margin-top:48px}
+  .bk-photos{max-width:520px;padding-left:40px}
+  .quote{margin-bottom:48px}
+}
+@media (max-width:600px){
+  body{font-size:1rem}
+  .top .wrap{padding-block:16px}
+  .brand b{font-size:1.4rem}
+  .brand span{display:none}
+  .nav{display:none}
+  .top-book{display:inline-flex;min-height:44px;padding:.55em 1.2em}
+  .hero h1{font-size:clamp(2.45rem,1.2rem + 6.2vw,3rem)}
+  .mat{padding:10px;border-radius:24px}
+  .mat::after{inset:5px;border-radius:20px}
+  .mat img{border-radius:16px;aspect-ratio:4/3}
+  .hero-photo .photo-tag{right:18px;top:18px;font-size:1rem;padding:7px 12px}
+  .mat img{object-position:6% 50%}
+  .hero-acts .btn,.card-acts .btn,.rooms-foot .btn,.pk-intro .btn{width:100%}
+  .hero-lead,.lede{font-size:1.0625rem}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding-block:28px}
+  .facts li{padding-left:12px}
+  .facts b{font-size:1.5rem}
+  .house-photos{padding-right:28px;padding-bottom:56px}
+  .house-side{width:min(52%,240px)}
+  .house-main .photo-tag{left:12px;top:12px;bottom:auto}
+  .dutch{grid-template-columns:minmax(0,1fr)}
+  .dutch img{aspect-ratio:4/3}
+  .bk-photos{padding-left:24px;padding-bottom:32px}
+  .bk-thumb{width:min(150px,42%)}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .route summary{font-size:1.2rem}
+}
+@media (max-width:360px){
+  .hero h1{font-size:2.4rem}
+  .facts ul{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Blue Rock Bed and Breakfast, home">
+      <b>Blue Rock</b>
+      <span>Bed and Breakfast in Millersville, PA</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#rooms">Rooms</a>
+      <a class="nav-link" href="#breakfast">Breakfast</a>
+      <a class="nav-link" href="#packages">Packages &amp; discounts</a>
+      <a class="nav-link" href="#hosts">Your hosts</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <a class="btn btn-line" href="https://book-it-now.com/bluerockbnb">Book now</a>
+    </nav>
+    <a class="btn btn-fill top-book" href="https://book-it-now.com/bluerockbnb">Book now</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <h1 id="hero-title">Blue Rock Bed and Breakfast, central to all of Lancaster County</h1>
+
+      <figure class="hero-photo">
+        <div class="mat">
+          <img src="assets/blue-rock-bnb-millersville-pa/enseigne-blue-rock-porche-rocking-chairs.webp" width="1600" height="1066" alt="The painted Blue Rock Bed and Breakfast sign hanging in front of the porch, with two white rocking chairs and flag bunting on the brick house">
+        </div>
+        <figure class="medallion">
+          <img src="assets/blue-rock-bnb-millersville-pa/hotes-ed-et-stephanie-portrait.webp" width="1600" height="1135" alt="Innkeepers Stephanie and Ed Hersh, smiling by a window">
+        </figure>
+        <figcaption class="photo-tag">Ed &amp; Stephanie, hosts since 2002</figcaption>
+      </figure>
+
+      <p class="hero-lead"><strong>Two blocks from Millersville University</strong>, with a home-cooked breakfast every morning in our dining room. Let us know at reservation time and we can arrange a visit with a nearby Amish family on their farm.</p>
+
+      <div class="hero-acts">
+        <a class="btn btn-fill" href="https://book-it-now.com/bluerockbnb">Check availability</a>
+        <a class="btn btn-line" href="#packages">Special packages &amp; discounts</a>
+        <p class="hero-call">Or call us at <a href="tel:+17178727440">(717) 872-7440</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts" role="region" aria-label="Blue Rock at a glance">
+    <ul class="wrap">
+      <li><b>2 blocks</b><span>from the Millersville University campus</span></li>
+      <li><b>1847</b><span>the year our colonial farmhouse was built</span></li>
+      <li><b>3 suites</b><span>each with a private bath and a queen bed</span></li>
+      <li><b>3.5 miles</b><span>to the Lancaster City square</span></li>
+      <li><b>Since 2002</b><span>welcoming guests as your hosts</span></li>
+    </ul>
+  </div>
+
+  <section class="sec house" id="house" aria-labelledby="house-title">
+    <div class="wrap house-grid">
+      <div class="house-photos">
+        <figure class="house-main reveal">
+          <img src="assets/blue-rock-bnb-millersville-pa/facade-brique-porche-drapeaux-ete.webp" width="1600" height="1066" loading="lazy" alt="The red brick farmhouse from the street, with its long white-columned porch, rocking chairs and an American flag">
+          <figcaption class="photo-tag">72 Blue Rock Road</figcaption>
+        </figure>
+        <figure class="house-side reveal">
+          <img src="assets/blue-rock-bnb-millersville-pa/entree-porche-jardiniere-pensees.webp" width="1600" height="1200" loading="lazy" alt="The red side doors on the porch, with a planter of yellow and purple pansies and a blue Entrance sign">
+        </figure>
+      </div>
+      <div class="house-text">
+        <h2 id="house-title">A colonial farmhouse, built in 1847</h2>
+        <p>This Lancaster County farmhouse holds a bit of the character of each of its previous residents. On the lower level, an early 20th-century water pump fits into the antique wood paneling and solid brick walls. Upstairs, reached by a curved staircase, the original wooden floors and trim were fashioned by craftsmen of long ago.</p>
+        <p>Outdoors, enjoy a large backyard in a peaceful neighborhood, with a community park across the street and a golf course within a mile.</p>
+        <div class="walk">
+          <p><strong>Within walking distance:</strong> a grocery store, several restaurants, two convenience stores, a post office, a Lancaster County RRTA bus stop and the MU campus. As far as hotels in Millersville, PA, we are it.</p>
+        </div>
+        <div class="text-links">
+          <a class="text-link" href="https://www.youtube.com/watch?v=9VV3HvG98MA">Watch a video of the house</a>
+          <a class="text-link" href="#contact">Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec rooms on-flour" id="rooms" aria-labelledby="rooms-title">
+    <div class="wrap">
+      <div class="rooms-head">
+        <div>
+          <h2 id="rooms-title">Three suites, each with a private bath and a queen bed</h2>
+          <p class="lede">Spacious quarters with three separate sleeping rooms, each with its own features. Two are set up for families or adults traveling together. All 3 rooms are priced the same.</p>
+        </div>
+        <ul class="offers" aria-label="Included with every stay">
+          <li>Home-cooked breakfast</li>
+          <li>Wi-Fi</li>
+          <li>Children welcome</li>
+          <li>Quiet town</li>
+          <li>Public transit nearby</li>
+        </ul>
+      </div>
+
+      <article class="cabin room">
+        <figure class="reveal">
+          <img src="assets/blue-rock-bnb-millersville-pa/family-suite-salon-cheminee-brique-bibliotheque.webp" width="1600" height="1200" loading="lazy" alt="Living room of the Cabin Family Suite: wood paneling, low beams, a cast-iron water pump, brick hearth, bookcase and a floral sofa">
+        </figure>
+        <div>
+          <h3>Cabin Family Suite</h3>
+          <p class="room-sub">About 800&nbsp;sq. ft. on one level, private entrance</p>
+          <p class="body">Queen bed and two twin beds, sleeper sofa, futon, a kitchen with appliances and a living room with TV. Inside this daylight basement stands a 1900 water pump, among barn siding and brick walls. Suitable for the entire family.</p>
+          <p class="note">Low-hanging ceiling beams may be a concern for guests six feet tall. Well-behaved dogs are welcome in this suite only, for a small fee.</p>
+        </div>
+      </article>
+
+      <div class="pair">
+        <article class="sun room">
+          <h3>Sun Suite</h3>
+          <p class="room-sub">For an individual or a couple</p>
+          <p class="body">First-floor living quarters with kitchen, dining and living room. Upstairs, a bedroom with a queen bed and a private bath (shower), opening onto the “sun” room, an enclosed porch balcony. A sleeper sofa is available for an extra person.</p>
+        </article>
+        <article class="dutch room">
+          <figure class="reveal">
+            <img src="assets/blue-rock-bnb-millersville-pa/dutchman-suite-lit-quilt-anneaux.webp" width="1600" height="1200" loading="lazy" alt="Dutchman Suite bedroom: a spindle bed under a blue and rose ring quilt, with two lamps and pale blue valances">
+          </figure>
+          <div>
+            <h3>Dutchman Suite</h3>
+            <p class="room-sub">Two rooms upstairs</p>
+            <p class="body">First-floor living quarters with kitchen, dining and living room. Upstairs, the bedroom has a queen bed and a private bath (shower), with 3 twin beds in the adjoining second room.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="rooms-foot">
+        <a class="btn btn-fill" href="https://book-it-now.com/bluerockbnb">See live rates &amp; availability</a>
+        <p>Our online reservation system shows live rates and availability for every suite.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec breakfast" id="breakfast" aria-labelledby="bk-title">
+    <div class="wrap bk-grid">
+      <div>
+        <h2 id="bk-title">Breakfast on the house</h2>
+        <div class="menu">
+          <p>Start off your day of business or leisure with a complimentary home-cooked breakfast in our dining room, then set out to explore the area.</p>
+          <p>A typical morning: freshly baked muffins, homemade granola with milk, one of many home-cooked egg dishes, pancakes or French toast, fresh fruit (local in season) or homemade applesauce, sausage or bacon, pastries, hot coffee or tea, and juices.</p>
+        </div>
+        <p class="farm-line">Milk is from a local farm, and eggs come directly from the chicken house.</p>
+      </div>
+      <div class="bk-photos">
+        <figure class="bk-table reveal">
+          <img src="assets/blue-rock-bnb-millersville-pa/table-petit-dejeuner-nappe-rouge-chaises-bois.webp" width="1192" height="1600" loading="lazy" alt="The breakfast table set on a red tablecloth with a teapot, juice, apples and a plate of waffles, carved oak chairs around it">
+        </figure>
+        <figure class="bk-thumb reveal">
+          <img src="assets/blue-rock-bnb-millersville-pa/gaufres-chantilly-fruits-rouges.webp" width="1600" height="1501" loading="lazy" alt="Waffles topped with whipped cream, strawberries and blueberries">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec packages" id="packages" aria-labelledby="pk-title">
+    <div class="wrap pk-grid">
+      <div class="pk-intro">
+        <h2 id="pk-title">Special packages &amp; discounts</h2>
+        <p class="lede">Upon request at reservation time, a few extra offerings are available. Just ask when you book.</p>
+        <a class="btn btn-line" href="https://www.bluerockbnb.com/packages-and-specials/">All packages and specials</a>
+        <p class="pk-fixed">Questions? Call <a href="tel:+17178727440" style="color:inherit;white-space:nowrap">(717) 872-7440</a></p>
+      </div>
+      <ul class="pk-list">
+        <li>
+          <h3>A visit with an Amish family</h3>
+          <p>A personal visit with a nearby Amish family on their farm. Let us know at reservation time.</p>
+        </li>
+        <li>
+          <h3>Counseling &amp; marriage enrichment</h3>
+          <p>Packages with host Dr. Ed Hersh, a nationally certified Christian counselor: marriage enrichment, personal prayer ministry and debriefing. Please ask about availability when you reserve.</p>
+        </li>
+        <li>
+          <h3>Small group meetings and retreats</h3>
+          <p>Ask us about our meeting space when you reserve.</p>
+        </li>
+        <li>
+          <h3>Discounted theater tickets</h3>
+          <p>Lancaster County’s theaters are close by: ask us about discounted tickets.</p>
+        </li>
+        <li>
+          <h3>Gift certificates</h3>
+          <p>Available on request.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec hosts" id="hosts" aria-labelledby="hosts-title">
+    <div class="wrap">
+      <blockquote class="quote">“We aim to provide lodging better than a hotel, in the comforts of a home!”<span class="quote-by">Ed and Stephanie Hersh, innkeepers</span></blockquote>
+      <div class="hosts-grid">
+        <div class="hosts-text">
+          <h2 id="hosts-title">Meet your hosts</h2>
+          <p>Innkeepers Ed and Stephanie Hersh have lived in Millersville most of their lives. Both grew up on farms in neighboring York and Dauphin counties, with PA German heritage, met at Millersville University and married in 1980.</p>
+          <p>Stephanie taught Special Education for six years in Lancaster schools, then home-educated their four children. She enjoys being a grandmother, and gardening, cooking, camping and crafts.</p>
+          <p>As a nationally certified Christian counselor, Dr. Hersh also offers optional counseling and prayer ministry for guests. For scheduling, please ask at reservation time.</p>
+        </div>
+        <aside class="award" aria-label="Recognition and memberships">
+          <p class="big">Thanks to our guests, Blue Rock has been given a Best of Pennsylvania Hospitality award. We are also a TripAdvisor Recommended Hospitality site.</p>
+          <h3>Professional memberships</h3>
+          <ul>
+            <li>Association of Lodging Professionals</li>
+            <li>PA Association of Bed and Breakfasts (PABBI)</li>
+            <li>Lancaster County Association of Bed and Breakfast Inns</li>
+            <li>Millersville Business Association</li>
+            <li>Discover Lancaster Visitor’s Bureau</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact on-flour" id="contact" aria-labelledby="ct-title">
+    <div class="wrap ct-grid">
+      <div>
+        <h2 id="ct-title">Finding Blue Rock</h2>
+        <p class="lede">In Lancaster County’s Pennsylvania Dutch country: 3 miles from Franklin and Marshall College, within minutes of Sight and Sound Theater, and a day trip from Washington DC, Baltimore, Gettysburg, Hershey, Philadelphia and New York City.</p>
+        <div class="route">
+          <details>
+            <summary>From Baltimore or Washington DC (south)</summary>
+            <p>From the Baltimore Beltway (Route 695), take Route 83 North to York, then Route 30 East to Lancaster. Exit at Rohrerstown Road (Route 741), turn right and follow 741 East 4 miles to Route 999 West / Manor Avenue. Turn right, go through two traffic lights and bear right onto Blue Rock Rd. (with 999). We are the eighth house on the left.</p>
+          </details>
+          <details>
+            <summary>From Harrisburg (north)</summary>
+            <p>Take the Pennsylvania Turnpike to Exit 19, then 283 East (first exit after the tollbooths) to the Lancaster area. Exit at Millersville / East Petersburg (Route 741) and follow 741 East 5 miles to Route 999 West. Turn right onto Manor Avenue, go through two traffic lights and bear right onto Blue Rock Rd. (with 999). We are the eighth house on the left.</p>
+          </details>
+        </div>
+      </div>
+      <div class="card">
+        <dl>
+          <div><dt>Address</dt><dd>72 Blue Rock Rd.<br>Millersville, PA 17551</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+17178727440">(717) 872-7440</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hosts@bluerockbnb.com">hosts@bluerockbnb.com</a></dd></div>
+          <div><dt>Check-in</dt><dd>3 to 7&nbsp;pm<small>Early or late flexibility</small></dd></div>
+          <div><dt>Check-out</dt><dd>11&nbsp;am<small>Or by special arrangement</small></dd></div>
+          <div><dt>Payment</dt><dd><small>Cash, personal check, or major credit card (Visa, MasterCard, Discover, American Express)</small></dd></div>
+        </dl>
+        <div class="card-acts">
+          <a class="btn btn-fill" href="https://book-it-now.com/bluerockbnb">Book a room</a>
+          <a class="btn btn-line" href="https://maps.app.goo.gl/vqHZ3vHq45idWJz78">Google directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#main"><b>Blue Rock Bed and Breakfast</b></a>
+        <p class="foot-tag">Lancaster County at its best!</p>
+      </div>
+      <div>
+        <ul>
+          <li>72 Blue Rock Rd., Millersville, PA 17551</li>
+          <li><a href="tel:+17178727440">(717) 872-7440</a></li>
+          <li><a href="mailto:hosts@bluerockbnb.com">hosts@bluerockbnb.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="https://www.facebook.com/bluerockbb">Facebook</a></li>
+          <li><a href="http://pinterest.com/bluerockbb">Pinterest</a></li>
+          <li><a href="https://www.youtube.com/watch?v=9VV3HvG98MA">Video tour</a></li>
+          <li><a href="https://lancasterpa.com/bed-and-breakfasts/blue-rock-bed-breakfast/">LancasterPA.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Blue Rock Bed and Breakfast</span>
+      <span class="proposal">Proposal by Nicolas Masset for Blue Rock Bed and Breakfast</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

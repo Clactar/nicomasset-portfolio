@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!--
+PLAN (Nova, lot C, 30/10) Château Cap de Fouste
+1. Couleurs : sable rosé #EFE6DD (fond), sable soutenu #E5D8CB (section salle), surface #FAF5F0 (cartes), rancio #3B2416 (texte, section cave et caveau, pied), ambré #C08A2E (pleins, filets, mot du titre sur fond sombre), ambré foncé #8A5F14 (liens sur fond clair).
+2. Typo : EB Garamond 500 et italique (titres, chiffres, prix) + Red Hat Display 400/500/600 (texte, boutons).
+3. Héros centré, voulu : grande photo de la façade arrondie sur toute la largeur utile, voile rancio dégradé, titre centré en surimpression et deux boutons ; bandeau de faits en carte claire qui chevauche le bas.
+4. Sections : histoire (texte | photo + vignette) ; la cave et le caveau sur rancio (deux rangées en miroir) ; visites et ateliers (liste de prix | photo) ; salle de réception (chiffres en grand, sans photo de salle) ; l'équipe (photo panoramique + noms) ; cave en ligne (photo | conditions) ; pied sombre.
+5. Défaut 1 réglé : « Salle de réception » est une vraie section avec un lien vers la page qui existe. Défaut 2 réglé : « La cave et le caveau » est une vraie section de la page.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Château Cap de Fouste, vins du Roussillon depuis 1860</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233B2416'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Garamond,Georgia,serif' font-size='42' fill='%23C08A2E'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Red+Hat+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sable:#EFE6DD; --sable2:#E5D8CB; --surface:#FAF5F0; --rancio:#3B2416; --rancio2:#4A2F1D;
+  --ambre:#C08A2E; --ambre-f:#8A5F14; --doux:#6A5446; --clair:#E3D3C2;
+  --w:min(1200px, 100% - 48px);
+  --ombre:0 30px 60px -34px rgba(59,36,22,.55);
+  --titre:"EB Garamond", Garamond, Georgia, serif; --texte:"Red Hat Display", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sable);color:var(--rancio);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ambre);color:var(--rancio)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:var(--w);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:500;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(38px, 4.8vw, 62px);letter-spacing:-.01em}
+h2 em,h1 em{font-style:italic}
+h3{font-size:clamp(26px, 2.4vw, 32px)}
+p{margin:0 0 1em;text-wrap:pretty}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--texte);font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s, color .25s, border-color .25s, box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--ambre);color:var(--rancio)}
+.btn-plein:hover{background:#D19A3C;box-shadow:0 16px 30px -18px rgba(192,138,46,.95)}
+.btn-contour{border-color:var(--rancio);color:var(--rancio)}
+.btn-contour:hover{background:var(--rancio);color:var(--sable)}
+.sombre .btn-contour{border-color:rgba(250,245,240,.7);color:var(--surface)}
+.sombre .btn-contour:hover{background:var(--surface);color:var(--rancio);border-color:var(--surface)}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.lien{color:var(--ambre-f);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.lien:hover{text-decoration-thickness:2px}
+
+.ph{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);background:var(--sable2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette.haut{top:14px;bottom:auto}
+.etiquette{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);background:rgba(250,245,240,.95);color:var(--rancio);font-size:16px;font-weight:500;line-height:1.25;padding:8px 14px;border-radius:10px}
+
+/* En-tête */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque b{font-family:var(--titre);font-weight:600;font-size:27px}
+.marque span{font-size:16px;color:var(--doux);margin-top:5px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:17px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav ul a:hover{color:var(--rancio)}
+.nav .btn{min-height:44px;padding:9px 20px;font-size:16px;white-space:nowrap}
+
+/* Héros centré */
+.heros{padding:8px 0 0}
+.heros-photo{position:relative;margin:0;border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(59,36,22,.7);min-height:clamp(560px, 64vw, 720px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--surface)}
+.heros-photo > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.heros-photo::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 72% 66% at 50% 48%, rgba(42,24,13,.74), rgba(42,24,13,.42) 72%, rgba(42,24,13,.24))}
+.heros-contenu{position:relative;z-index:1;padding:80px 28px 150px;max-width:900px}
+.heros .depuis{font-family:var(--titre);font-style:italic;font-size:24px;margin:0 0 14px;color:#F3DDB5}
+.heros h1{font-size:clamp(46px, 7vw, 100px);line-height:.98;letter-spacing:-.015em;text-shadow:0 2px 30px rgba(30,16,8,.35)}
+.heros h1 em{color:#F0C46E}
+.heros-chapo{font-size:20px;line-height:1.55;max-width:640px;margin:24px auto 0;color:#F6ECE2}
+.heros .boutons{justify-content:center}
+.heros .btn-contour{border-color:rgba(250,245,240,.85);color:var(--surface)}
+.heros .btn-contour:hover{background:var(--surface);color:var(--rancio)}
+
+/* Faits */
+.faits{position:relative;z-index:2;margin-top:-80px}
+.faits ul{list-style:none;margin:0 auto;width:calc(100% - 80px);padding:28px 34px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;background:var(--surface);border-radius:18px;box-shadow:var(--ombre)}
+.faits li{font-size:16px;line-height:1.4;color:var(--doux)}
+.faits strong{display:block;font-family:var(--titre);font-size:31px;font-weight:500;color:var(--rancio);line-height:1.05;margin-bottom:6px}
+
+/* Histoire */
+.histoire{padding:130px 0 120px}
+.histoire-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:90px;align-items:center}
+.histoire h2{margin-bottom:26px}
+.histoire p{color:var(--doux)}
+.histoire .chapo{font-family:var(--titre);font-size:25px;line-height:1.4;color:var(--rancio)}
+.tramontane{position:relative;padding:0 0 120px 0}
+.tramontane .grande{aspect-ratio:4/5}
+.tramontane .grande img{object-position:62% 50%}
+.tramontane .petite{position:absolute;left:-40px;bottom:0;width:min(300px, 56%);aspect-ratio:3/2;border:8px solid var(--surface);border-radius:16px;transform:rotate(-3deg)}
+
+/* Cave et caveau */
+.cave{background:var(--rancio);color:var(--clair);padding:120px 0}
+.cave h2{color:var(--surface)}
+.cave h2 em{color:var(--ambre)}
+.rangee{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:center}
+.rangee + .rangee{margin-top:120px}
+.rangee.miroir{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.rangee.miroir .photos{order:2}
+.cave p{color:var(--clair)}
+.cave h2{margin-bottom:24px}
+.photos{position:relative}
+.photos .grande{aspect-ratio:3/2;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.caveau-photos{padding-bottom:110px}
+.caveau-photos .vignette{position:absolute;right:-20px;bottom:0;width:min(290px, 50%);aspect-ratio:4/3;border:8px solid var(--rancio2);border-radius:16px;transform:rotate(3deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.horaires{margin-top:28px;padding:22px 26px;border-radius:16px;background:var(--rancio2);display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}
+.horaires strong{font-family:var(--titre);font-size:26px;font-weight:500;color:var(--surface)}
+.horaires span{color:var(--clair);font-size:17px}
+.labels{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;list-style:none;padding:0}
+.labels li{border:1px solid rgba(192,138,46,.6);color:#F0D6A6;border-radius:999px;padding:7px 15px;font-size:16px;font-weight:500}
+.gestes{list-style:none;padding:0;margin:26px 0 0}
+.gestes li{padding:12px 0 12px 26px;border-top:1px solid rgba(227,211,194,.18);position:relative}
+.gestes li::before{content:"";position:absolute;left:2px;top:23px;width:10px;height:1.5px;background:var(--ambre)}
+
+/* Visites */
+.visites{padding:130px 0}
+.visites-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.visites h2{margin-bottom:20px}
+.visites .intro{color:var(--doux)}
+.offres{list-style:none;margin:34px 0 0;padding:0}
+.offres li{padding:28px 0;border-top:1px solid rgba(59,36,22,.18)}
+.offres li:last-child{border-bottom:1px solid rgba(59,36,22,.18)}
+.offre-tete{display:flex;justify-content:space-between;align-items:baseline;gap:6px 20px;flex-wrap:wrap;margin-bottom:8px}
+.offre-tete h3{font-size:30px}
+.prix{font-family:var(--titre);font-size:30px;white-space:nowrap;color:var(--rancio)}
+.prix small{font-family:var(--texte);font-size:16px;color:var(--doux);font-weight:500}
+.offres p{margin:0;color:var(--doux);font-size:17px}
+.visites-photo{aspect-ratio:4/5;border-radius:24px;margin-top:20px}
+.visites-photo img{object-position:40% 50%}
+
+/* Salle */
+.salle{padding:0 0 130px}
+.salle-cadre{background:var(--sable2);border-radius:28px;padding:72px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.salle h2{margin-bottom:22px}
+.salle p{color:var(--doux)}
+.chiffres{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.chiffre{background:var(--surface);border-radius:18px;padding:26px 26px 22px;box-shadow:0 24px 44px -32px rgba(59,36,22,.5)}
+.chiffre strong{display:block;font-family:var(--titre);font-weight:500;font-size:clamp(40px, 4.4vw, 58px);line-height:1;color:var(--rancio);white-space:nowrap}
+.chiffre span{display:block;margin-top:8px;color:var(--doux);font-size:16px;line-height:1.4}
+.chiffre.large{grid-column:1 / -1;background:var(--rancio);color:var(--surface)}
+.chiffre.large strong{color:var(--surface)}
+.chiffre.large span{color:var(--clair)}
+.chiffre.texte strong{font-size:clamp(30px, 3vw, 38px);white-space:normal}
+
+/* Équipe */
+.equipe{padding:0 0 130px}
+.equipe-photo{aspect-ratio:21/9;border-radius:26px}
+.equipe-photo img{object-position:50% 62%}
+.equipe-bas{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;margin-top:56px;align-items:start}
+.noms{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.noms li{padding:13px 0;border-top:1px solid rgba(59,36,22,.16);font-size:17px;color:var(--doux);line-height:1.35}
+.noms b{font-family:var(--titre);font-weight:500;font-size:23px;color:var(--rancio);margin-right:8px}
+.equipe-bas .note{color:var(--doux);font-size:16px;margin-top:14px}
+
+/* Cave en ligne */
+.boutique{background:var(--surface);padding:120px 0}
+.boutique-grille{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:80px;align-items:center}
+.boutique-photo{aspect-ratio:5/4;border-radius:22px}
+.boutique-photo img{object-position:30% 50%}
+.boutique h2{margin-bottom:20px}
+.boutique p{color:var(--doux)}
+.rayons{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.rayons a{display:inline-block;text-decoration:none;border:1.5px solid rgba(59,36,22,.3);border-radius:999px;padding:9px 18px;font-size:16px;font-weight:600;transition:border-color .2s, background-color .2s}
+.rayons a:hover{border-color:var(--rancio);background:var(--sable)}
+.conditions{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.conditions li{font-size:17px;padding-left:22px;position:relative;line-height:1.45}
+.conditions li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--ambre)}
+
+/* Pied */
+.pied{background:var(--rancio);color:var(--clair);padding:100px 0 0}
+.pied h2{color:var(--surface);margin-bottom:48px}
+.pied h2 em{color:var(--ambre)}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-bottom:70px}
+.pied h3{color:var(--surface);font-size:24px;margin-bottom:12px}
+.pied p{margin:0 0 8px;font-size:17px}
+.pied a{color:var(--surface);text-decoration:none;border-bottom:1px solid rgba(250,245,240,.35);transition:color .2s, border-color .2s}
+.pied a:hover{color:#F0C46E;border-color:#F0C46E}
+.pied .btn{border-bottom:1.5px solid transparent;margin-top:14px}
+.pied .btn-plein{color:var(--rancio)}
+.pied .btn-plein:hover{color:var(--rancio)}
+.mention{border-top:1px solid rgba(250,245,240,.14);padding:22px 0 30px;font-size:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;color:#B09A88}
+.mention a{color:#B09A88}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;translate:0 26px;transition:opacity .9s ease, translate 1s cubic-bezier(.2,.8,.2,1)}
+  .js .rv.in{opacity:1;translate:0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+
+@media (max-width:1060px){
+  .nav ul{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));width:calc(100% - 40px)}
+  .histoire-grille,.rangee,.rangee.miroir,.visites-grille,.salle-cadre,.equipe-bas,.boutique-grille{grid-template-columns:minmax(0,1fr);gap:56px}
+  .rangee.miroir .photos{order:0}
+  .tramontane{max-width:560px;padding-left:30px}
+  .tramontane .petite{left:0}
+  .visites-photo{max-width:560px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros-photo{border-radius:20px;min-height:0}
+  .heros-contenu{padding:56px 20px 120px}
+  .heros .depuis{font-size:21px}
+  .heros-chapo{font-size:17px}
+  .faits{margin-top:-70px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));width:calc(100% - 24px);padding:24px 20px;gap:20px}
+  .faits strong{font-size:27px}
+  .histoire,.visites{padding:90px 0}
+  .cave,.boutique{padding:90px 0}
+  .rangee + .rangee{margin-top:80px}
+  .tramontane{padding:0 0 90px 18px}
+  .tramontane .grande{aspect-ratio:1/1}
+  .caveau-photos{padding-bottom:90px}
+  .caveau-photos .vignette{right:-6px}
+  .salle,.equipe{padding-bottom:90px}
+  .salle-cadre{padding:36px 22px;border-radius:22px}
+  .equipe-photo{aspect-ratio:4/3}
+  .noms{grid-template-columns:minmax(0,1fr)}
+  .conditions{grid-template-columns:minmax(0,1fr)}
+  .pied{padding-top:80px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:34px}
+}
+@media (max-width:420px){
+  .wrap{width:min(1200px, 100% - 36px)}
+  .boutons .btn{width:100%}
+  .marque b{font-size:23px}
+  .nav .btn{padding:8px 14px;font-size:16px}
+  .marque b{font-size:21px}
+  .marque span{font-size:16px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .chiffres{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap nav">
+  <a class="marque" href="#haut"><b>Château Cap de Fouste</b><span>Villeneuve-de-la-Raho</span></a>
+  <ul>
+    <li><a href="#histoire">Le château</a></li>
+    <li><a href="#cave">La cave &amp; le caveau</a></li>
+    <li><a href="#visites">Œnotourisme</a></li>
+    <li><a href="#salle">Salle de réception</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-contour" href="https://chateau-cap-de-fouste.com/cave-en-ligne/">Cave en ligne</a>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <figure class="heros-photo sombre">
+        <img src="assets/chateau-cap-de-fouste-villeneuve-raho/facade-et-portail-du-chateau-sous-les-platanes.webp" alt="Façade du château en pierre et brique, grand portail en fer forgé et platanes" width="1600" height="1066">
+        <figcaption class="heros-contenu">
+          <div class="depuis">Château Cap de Fouste, depuis 1860</div>
+          <h1>Au cœur du terroir catalan, <em>entre mer et montagne</em>.</h1>
+          <p class="heros-chapo">Des vins authentiques, élevés avec passion sur les terres ensoleillées du Roussillon. Ici, chaque cuvée raconte une histoire de nature, de tradition et de partage.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="https://chateau-cap-de-fouste.com/cave-en-ligne/">Découvrir la cave en ligne</a>
+            <a class="btn btn-contour" href="#cave">Venir au caveau</a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap faits">
+    <ul aria-label="Le domaine en quelques faits">
+      <li><strong>1860</strong>parmi les plus anciennes propriétés du département</li>
+      <li><strong>60&nbsp;hectares</strong>de vigne, sur plus de 100</li>
+      <li><strong>2&nbsp;hectares</strong>d’oliviers</li>
+      <li><strong>Bio et HVE3</strong>bio depuis 2023, HVE3 depuis 2019</li>
+      <li><strong>Jusqu’à 90</strong>invités dans la salle de réception</li>
+    </ul>
+  </div>
+
+  <section class="histoire" id="histoire">
+    <div class="wrap histoire-grille">
+      <div>
+        <h2>Depuis 1860, implanté au cœur du Roussillon.</h2>
+        <p class="chapo">Sur la plaine ensoleillée, entre Méditerranée et contreforts des Pyrénées, le château cultive son héritage depuis le XIXe siècle.</p>
+        <p>Ancrée dans les terres catalanes, la propriété figure parmi les plus anciennes du département. Transmis de main en main, le domaine a vu naître des générations de vignerons passionnés, porteurs d’un savoir-faire ancestral.</p>
+        <p>Sous le souffle de la tramontane, les cépages s’épanouissent entre soleil généreux et sols argilo-calcaires. Les parcelles murmurent leur histoire, les cuvées en traduisent l’empreinte.</p>
+        <a class="lien" href="https://chateau-cap-de-fouste.com/carte-interactive/">Parcourir la carte interactive du domaine</a>
+      </div>
+      <div class="tramontane">
+        <figure class="ph grande rv">
+          <img src="assets/chateau-cap-de-fouste-villeneuve-raho/tracteur-entre-les-rangs-de-vigne.webp" alt="Un tracteur travaille le sol entre deux rangs de vigne, au soir" width="1600" height="1066" loading="lazy">
+          <figcaption class="etiquette haut">Entre les rangs, au soir</figcaption>
+        </figure>
+        <figure class="ph petite rv">
+          <img src="assets/chateau-cap-de-fouste-villeneuve-raho/grand-chai-sous-charpente-de-bois.webp" alt="Un très long chai ancien sous une charpente de bois" width="1600" height="1066" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cave sombre" id="cave">
+    <div class="wrap">
+      <div class="rangee">
+        <div class="photos caveau-photos">
+          <figure class="ph grande rv">
+            <img src="assets/chateau-cap-de-fouste-villeneuve-raho/caveau-arche-de-brique-et-barriques.webp" alt="Le caveau&nbsp;: grand oculus de brique rouge dans un mur de galets, barriques derrière" width="1600" height="1066" loading="lazy">
+            <figcaption class="etiquette haut">Le caveau, briques catalanes et galets</figcaption>
+          </figure>
+          <figure class="ph vignette rv">
+            <img src="assets/chateau-cap-de-fouste-villeneuve-raho/degustation-au-comptoir-du-caveau.webp" alt="Au comptoir du caveau, un caviste sert un verre de blanc à un client" width="1600" height="1066" loading="lazy">
+          </figure>
+        </div>
+        <div>
+          <h2>Le caveau, <em>là où tout commence</em>.</h2>
+          <p>Vous entrez dans une cave voûtée en briques catalanes rouges et galets, patinées par le temps, qui gardent naturellement une fraîcheur constante. Rouges charpentés, blancs frais et fruités, rosés légers et vins doux naturels&nbsp;: on vous oriente selon vos préférences, vous goûtez, vous échangez, vous repartez avec vos bouteilles et nos conseils.</p>
+          <div class="horaires"><strong>Du lundi au samedi</strong><span>de 9&nbsp;h à 12&nbsp;h et de 14&nbsp;h&nbsp;30 à 18&nbsp;h&nbsp;30</span></div>
+          <ul class="labels" aria-label="Certifications">
+            <li>Agriculture biologique depuis 2023</li>
+            <li>HVE3 depuis 2019</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rangee miroir">
+        <div class="photos">
+          <figure class="ph grande rv">
+            <img src="assets/chateau-cap-de-fouste-villeneuve-raho/vigneron-en-blouse-reglant-une-cuve-inox.webp" alt="Un vigneron en blouse grise règle une vanne entre une cuve inox et une cuve ancienne" width="1600" height="1066" loading="lazy">
+            <figcaption class="etiquette">Au chai, le geste précis</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h2>La cave, <em>au plus près de la matière</em>.</h2>
+          <p>Elle ne se visite pas comme un simple local technique. Entre murs de cayrous et odeurs de moût en fermentation, c’est ici que les vins prennent forme.</p>
+          <ul class="gestes">
+            <li>Raisins triés, égrappés, pressés, puis mis en cuve</li>
+            <li>Températures, densité, levures, arômes&nbsp;: tout est observé</li>
+            <li>Chaque jour, on goûte, on mesure, on interprète</li>
+          </ul>
+          <p style="margin-top:22px">L’objectif n’est pas de contrôler le vin, mais de l’accompagner avec justesse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visites" id="visites">
+    <div class="wrap visites-grille">
+      <div>
+        <h2>Balades, dégustations et rencontres vigneronnes.</h2>
+        <p class="intro">La visite commence par une plongée dans l’histoire du château, racontée par Rémi, responsable œnotourisme. Puis les coulisses de la vinification, des gestes précis aux choix d’assemblage, et une dégustation commentée pour révéler toutes les nuances des vins du domaine.</p>
+        <ul class="offres">
+          <li>
+            <div class="offre-tete"><h3>Visite et dégustation</h3><span class="prix">10&nbsp;€ <small>par personne</small></span></div>
+            <p>Tous les mardis et jeudis à 17&nbsp;h.</p>
+          </li>
+          <li>
+            <div class="offre-tete"><h3>Ateliers accords mets et vins</h3><span class="prix">20&nbsp;€ <small>par personne</small></span></div>
+            <p>Fromages sélectionnés par un artisan fromager, ou chocolats d’un maître chocolatier. Sur réservation, 6 personnes minimum.</p>
+          </li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://chateau-cap-de-fouste.com/contact/">Réserver une visite</a>
+          <a class="btn btn-contour" href="https://chateau-cap-de-fouste.com/oenotourisme/">Tout l’œnotourisme</a>
+        </div>
+      </div>
+      <figure class="ph visites-photo rv">
+        <img src="assets/chateau-cap-de-fouste-villeneuve-raho/degustation-devant-l-oculus-de-brique.webp" alt="Dégustation au comptoir devant l’oculus de brique et ses barriques" width="1600" height="1066" loading="lazy">
+        <figcaption class="etiquette">Dégustation commentée au caveau</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="salle" id="salle">
+    <div class="wrap">
+      <div class="salle-cadre">
+        <div>
+          <h2>La salle de réception du château.</h2>
+          <p>Le château ouvre sa salle de réception, avec sa cour intérieure et son parc arboré. Vous choisissez librement votre traiteur, et le devis se demande en ligne.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="https://chateau-cap-de-fouste.com/salle-reception/">Découvrir la salle de réception</a>
+            <a class="btn btn-contour" href="https://chateau-cap-de-fouste.com/contact/">Demander un devis</a>
+          </div>
+        </div>
+        <div class="chiffres">
+          <div class="chiffre large"><strong>90</strong><span>personnes au plus dans la salle</span></div>
+          <div class="chiffre"><strong>500&nbsp;m²</strong><span>de cour intérieure</span></div>
+          <div class="chiffre"><strong>1&nbsp;500&nbsp;m²</strong><span>de parc arboré</span></div>
+          <div class="chiffre large texte" style="background:var(--surface)"><strong style="color:var(--rancio)">Libre choix</strong><span style="color:var(--doux)">du traiteur</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipe" aria-labelledby="t-equipe">
+    <div class="wrap">
+      <figure class="ph equipe-photo rv">
+        <img src="assets/chateau-cap-de-fouste-villeneuve-raho/equipe-de-sept-devant-le-portail-du-chateau.webp" alt="Les sept membres de l’équipe en t-shirt blanc devant le portail du château" width="1600" height="1066" loading="lazy">
+        <figcaption class="etiquette">Devant le portail du château</figcaption>
+      </figure>
+      <div class="equipe-bas">
+        <div>
+          <h2 id="t-equipe">Une équipe disponible et <em>passionnée</em>.</h2>
+        </div>
+        <div>
+          <ul class="noms">
+            <li><b>Max</b>ouvrier polyvalent cave</li>
+            <li><b>Etienne</b>tractoriste</li>
+            <li><b>Frédéric</b>ouvrier polyvalent vigne</li>
+            <li><b>Sébastien</b>régisseur</li>
+            <li><b>Rémi</b>responsable boutique et œnotourisme</li>
+            <li><b>Valentin</b>commercial</li>
+            <li><b>Sylvain</b>employé polyvalent</li>
+          </ul>
+          <p class="note">Sur la photo, de gauche à droite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutique" id="boutique">
+    <div class="wrap boutique-grille">
+      <figure class="ph boutique-photo rv">
+        <img src="assets/chateau-cap-de-fouste-villeneuve-raho/caveau-carte-peinte-et-presentoirs-a-bouteilles.webp" alt="La boutique du caveau, carte peinte du domaine au mur et présentoirs de bouteilles" width="1600" height="1066" loading="lazy">
+        <figcaption class="etiquette">La carte du domaine, peinte au caveau</figcaption>
+      </figure>
+      <div>
+        <h2>Le caveau, <em>depuis chez vous</em>.</h2>
+        <p>Vous ne pouvez pas venir jusqu’au domaine&nbsp;? La boutique en ligne vous ouvre les portes du caveau&nbsp;: toute la gamme y est disponible.</p>
+        <ul class="rayons">
+          <li><a href="https://chateau-cap-de-fouste.com/cave-en-ligne/">Toute la cave</a></li>
+          <li><a href="https://chateau-cap-de-fouste.com/vin-doux-naturel/">Vins doux naturels</a></li>
+          <li><a href="https://chateau-cap-de-fouste.com/bag-in-box/">Bag in box</a></li>
+        </ul>
+        <ul class="conditions">
+          <li>Livraison en France métropolitaine</li>
+          <li>Frais de port offerts dès <span class="prix-mini" style="white-space:nowrap">200&nbsp;€</span> d’achat</li>
+          <li>Paiement sécurisé, expédition soignée</li>
+          <li>Un service client pour vous conseiller</li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://chateau-cap-de-fouste.com/cave-en-ligne/">Commander en ligne</a>
+          <a class="btn btn-contour" href="https://chateau-cap-de-fouste.com/evenements/categorie/apero-des-copains/">Les Apéros des copains</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre" id="contact">
+  <div class="wrap">
+    <h2>Venez nous <em>voir</em>.</h2>
+    <div class="pied-grille">
+      <div>
+        <h3>Le château</h3>
+        <p>n°1 D39<br>66180 Villeneuve-de-la-Raho</p>
+        <p>Caveau et boutique du lundi au samedi, de 9&nbsp;h à 12&nbsp;h et de 14&nbsp;h&nbsp;30 à 18&nbsp;h&nbsp;30.</p>
+        <a class="btn btn-plein" href="https://chateau-cap-de-fouste.com/contact/">Nous écrire</a>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <p><a href="tel:+33468559104">04 68 55 91 04</a></p>
+        <p><a href="mailto:boutique@chateau-cap-de-fouste.com">boutique@chateau-cap-de-fouste.com</a></p>
+        <p><a href="https://chateau-cap-de-fouste.com/carte-interactive/">Carte interactive</a></p>
+      </div>
+      <div>
+        <h3>Nous suivre</h3>
+        <p><a href="https://www.facebook.com/capdefouste">Facebook</a></p>
+        <p><a href="https://www.instagram.com/chateaucapdefouste/">Instagram</a></p>
+        <p><a href="https://chateau-cap-de-fouste.com/evenements/">Événements</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap mention">
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+    <span>Proposition de Nicolas Masset pour le Château Cap de Fouste, <a href="https://nicomasset.com/">nicomasset.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

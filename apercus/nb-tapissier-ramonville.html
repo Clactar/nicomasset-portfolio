@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Nicolas Barbier, tapissier d'ameublement à Ramonville-Saint-Agne</title>
+<meta name="description" content="Réfection de sièges, canapés et fauteuils en garniture traditionnelle ou contemporaine, restauration du bois avec un ébéniste, tissus d'ameublement fabriqués en Europe. Atelier à Ramonville-Saint-Agne.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3A33'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23C98A8F'%3ENB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --velours:#1F3A33;
+  --velours-2:#29483F;
+  --velours-nuit:#172C26;
+  --lin:#F1EDE6;
+  --lin-clair:#FAF7F2;
+  --lin-fonce:#E7E0D5;
+  --rose:#C98A8F;
+  --rose-clair:#DDAAAE;
+  --rose-encre:#9A5A60;
+  --encre-douce:#4F5D57;
+  --ombre:0 30px 60px -34px rgba(16,34,29,.55);
+  --ombre-nuit:0 40px 80px -40px rgba(0,0,0,.75);
+  --display:"Bellefair", "Didot", Georgia, serif;
+  --texte:"Lato", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--lin);color:var(--velours);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rose);color:var(--velours-nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:700;font-size:16px;letter-spacing:.01em;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-rose{background:var(--rose);color:var(--velours-nuit)}
+.btn-rose:hover{background:var(--rose-clair);box-shadow:0 18px 30px -16px rgba(201,138,143,.7)}
+.btn-contour-clair{border:1.5px solid rgba(250,247,242,.45);color:var(--lin-clair)}
+.btn-contour-clair:hover{background:var(--lin-clair);color:var(--velours);border-color:var(--lin-clair)}
+.btn-plein{background:var(--velours);color:var(--lin-clair)}
+.btn-plein:hover{background:var(--velours-2);box-shadow:0 18px 30px -18px rgba(31,58,51,.8)}
+.btn-contour{border:1.5px solid var(--velours);color:var(--velours)}
+.btn-contour:hover{background:var(--velours);color:var(--lin-clair)}
+.lien{font-weight:700;text-decoration:underline;text-decoration-color:var(--rose);text-decoration-thickness:2px;text-underline-offset:6px;transition:color .2s}
+.lien:hover{color:var(--rose-encre)}
+
+/* En-tête et héros, fond velours */
+.velours{background:var(--velours);color:var(--lin-clair)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;padding:26px 0;flex-wrap:wrap}
+.marque{display:flex;align-items:center;gap:14px;text-decoration:none;line-height:1.15}
+.marque .mono{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--rose);color:var(--rose);display:grid;place-items:center;font-family:var(--display);font-size:22px;flex:none}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:26px}
+.marque small{display:block;font-size:15px;color:rgba(250,247,242,.7)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px}
+.nav a{text-decoration:none;font-size:16px;color:rgba(250,247,242,.86);transition:color .2s}
+.nav a:hover{color:var(--rose-clair)}
+.nav .pastille{background:var(--rose);color:var(--velours-nuit);font-weight:700;border-radius:999px;padding:10px 22px}
+.nav .pastille:hover{background:var(--rose-clair);color:var(--velours-nuit)}
+
+.heros{padding:40px 0 168px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-texte{grid-column:1 / 7}
+.heros .lieu{font-size:16px;color:rgba(250,247,242,.72);margin-bottom:26px}
+.heros h1{font-size:clamp(2.6rem, 1.2rem + 4.8vw, 5.6rem);line-height:.98;letter-spacing:-.005em}
+.heros h1 em{font-style:normal;color:var(--rose)}
+.heros .chapo{margin-top:32px;max-width:520px;color:rgba(250,247,242,.82)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.tableau{grid-column:8 / 13;margin:0;background:var(--lin-clair);padding:38px 38px 26px;border-radius:6px;box-shadow:var(--ombre-nuit), 0 0 0 1px rgba(0,0,0,.04)}
+.tableau .toile{position:relative;border-radius:3px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(31,58,51,.2)}
+.tableau img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:50% 46%;border-radius:3px}
+.tableau figcaption{margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:15px;color:var(--encre-douce);line-height:1.4}
+.tableau figcaption b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--velours)}
+
+/* Faits, carte posée à cheval */
+.faits{margin-top:-104px;position:relative;z-index:2}
+.faits ul{list-style:none;margin:0;padding:36px 40px;background:var(--lin-clair);border-radius:22px;box-shadow:var(--ombre);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:6px}
+.faits strong{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.05;white-space:nowrap}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.45}
+
+/* L'atelier */
+.atelier{padding:136px 0 128px}
+.at-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.at-photos{grid-column:1 / 6;position:relative;padding-bottom:110px}
+.at-photos figure{margin:0;position:relative}
+.at-photos .portrait img{width:100%;aspect-ratio:1 / 1.08;object-fit:cover;object-position:50% 30%;border-radius:22px;box-shadow:var(--ombre);filter:saturate(.9)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(250,247,242,.94);color:var(--velours);font-size:15px;font-weight:700;padding:8px 14px;border-radius:10px;line-height:1.3}
+.at-photos .semences{position:absolute;right:-36px;bottom:0;width:min(250px, 52%);background:var(--lin-clair);padding:12px 12px 16px;border-radius:6px;transform:rotate(3deg);box-shadow:var(--ombre)}
+.at-photos .semences img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 70%;border-radius:2px}
+.at-photos .semences figcaption{font-size:15px;color:var(--encre-douce);margin-top:8px;line-height:1.3}
+.at-texte{grid-column:7 / 13}
+.at-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.9rem)}
+.at-texte p{margin-top:22px;color:var(--encre-douce)}
+.at-texte p.trouvailles{color:var(--velours);font-size:20px;line-height:1.6}
+.bienfaire{margin:36px 0 0;padding:28px 32px;background:var(--lin-fonce);border-radius:18px}
+.bienfaire p{margin:0;font-family:var(--display);font-size:clamp(1.5rem, 1.1rem + 1vw, 2rem);line-height:1.25;color:var(--velours)}
+.bienfaire footer{margin-top:12px;font-size:15px;color:var(--encre-douce)}
+.at-texte .suite{margin-top:28px}
+
+/* Prestations */
+.prestations{background:var(--lin-fonce);padding:128px 0}
+.pr-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.pr-tete h2{grid-column:1 / 7;font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.9rem)}
+.pr-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.pr-corps{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.pr-photos{grid-column:1 / 6;position:sticky;top:32px;padding-bottom:64px}
+.pr-photos figure{margin:0;position:relative}
+.pr-photos .marteau img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:62% 50%;border-radius:200px 200px 22px 22px;box-shadow:var(--ombre)}
+.pr-photos .accoudoir{position:absolute;left:-28px;bottom:0;width:min(230px, 50%)}
+.pr-photos .accoudoir img{width:100%;aspect-ratio:1;object-fit:cover;object-position:40% 50%;border-radius:50%;border:8px solid var(--lin-fonce);box-shadow:var(--ombre)}
+.pr-liste{grid-column:7 / 13;list-style:none;margin:0;padding:0}
+.pr-liste li{padding:34px 0;border-top:1px solid rgba(31,58,51,.18)}
+.pr-liste li:last-child{border-bottom:1px solid rgba(31,58,51,.18)}
+.pr-liste h3{font-size:clamp(1.8rem, 1.3rem + 1.2vw, 2.4rem)}
+.pr-liste p{margin-top:12px;color:var(--encre-douce)}
+.pr-liste .matieres{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.pr-liste .matieres li{padding:5px 14px;border:0;border-radius:999px;background:var(--lin-clair);font-size:15px;color:var(--velours)}
+.pr-liste .matieres li:last-child{border:0}
+.styles{margin-top:28px;font-size:17px;color:var(--encre-douce)}
+
+/* Tissus, fond velours */
+.tissus{padding:128px 0;overflow:clip}
+.ti-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.ti-texte{grid-column:1 / 6}
+.ti-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.9rem)}
+.ti-texte p{margin-top:22px;color:rgba(250,247,242,.8)}
+.compteur{margin-top:40px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.compteur strong{font-family:var(--display);font-weight:400;font-size:clamp(3.4rem, 2rem + 4vw, 5.6rem);line-height:.9;color:var(--rose);white-space:nowrap}
+.compteur span{font-size:16px;color:rgba(250,247,242,.72);max-width:260px;line-height:1.45}
+.maisons{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.maisons li{border:1px solid rgba(250,247,242,.28);border-radius:999px;padding:7px 16px;font-size:16px}
+.ti-photo{grid-column:7 / 13;margin:0 calc(-1 * max(0px, (100vw - 1200px) / 2)) 0 0;position:relative}
+.ti-photo img{width:100%;aspect-ratio:16 / 11;object-fit:cover;object-position:30% 50%;border-radius:28px 0 0 28px;box-shadow:var(--ombre-nuit)}
+.ti-photo .etiquette{left:22px;bottom:22px}
+
+/* Galerie */
+.galerie{padding:128px 0}
+.ga-tete{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.ga-tete h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.9rem)}
+.ga-tete p{max-width:440px;color:var(--encre-douce)}
+.mosaique{margin-top:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.mosaique img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.m-wax{grid-column:1 / 6;grid-row:1 / 3}
+.m-wax img{aspect-ratio:4 / 5;border-radius:24px}
+.m-louis{grid-column:6 / 13}
+.m-louis img{aspect-ratio:16 / 10;object-position:50% 60%;border-radius:18px}
+.m-merisier{grid-column:6 / 9;margin-top:8px !important}
+.m-merisier img{aspect-ratio:3 / 4;object-position:50% 40%;border-radius:14px}
+.m-bridge{grid-column:9 / 13;margin-top:56px !important}
+.m-bridge img{aspect-ratio:4 / 3;border-radius:14px}
+.m-tabouret{grid-column:2 / 5;margin-top:-40px !important;background:var(--lin-clair);padding:12px 12px 16px;border-radius:6px;transform:rotate(-3deg);box-shadow:var(--ombre);z-index:2}
+.m-tabouret img{aspect-ratio:1;border-radius:2px;box-shadow:none}
+.m-tabouret figcaption{font-size:15px;color:var(--encre-douce);margin-top:8px}
+.m-club{grid-column:6 / 13;margin-top:24px !important}
+.m-club img{aspect-ratio:16 / 8;object-position:30% 60%;border-radius:22px}
+.ga-pied{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+
+/* Contact */
+.contact{background:var(--velours-nuit);color:var(--lin-clair);padding:120px 0 48px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.5rem, 1.4rem + 3.6vw, 4.6rem)}
+.ct-titre p{margin-top:22px;color:rgba(250,247,242,.8)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.ct-carte{grid-column:7 / 13;background:var(--velours);border-radius:24px;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;box-shadow:var(--ombre-nuit)}
+.ct-carte h3{font-family:var(--texte);font-size:15px;font-weight:700;color:var(--rose);letter-spacing:.01em}
+.ct-carte p{margin-top:8px;font-size:17px;color:rgba(250,247,242,.9);overflow-wrap:anywhere}
+.ct-carte a{text-decoration:none;border-bottom:1px solid rgba(250,247,242,.3)}
+.ct-carte a:hover{border-color:var(--rose)}
+.ct-carte .large{grid-column:1 / -1}
+.ct-carte .note{font-size:16px;color:rgba(250,247,242,.7)}
+.pied{margin-top:96px;padding-top:28px;border-top:1px solid rgba(250,247,242,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:rgba(250,247,242,.6)}
+.pied a{color:inherit}
+.proposition{background:#10201C;color:rgba(250,247,242,.58);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .m-tabouret.rv.in{transform:rotate(-3deg)}
+.js .semences.rv.in{transform:rotate(3deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .at-photos .semences{right:-8px}
+  .tableau{grid-column:7 / 13;padding:28px 28px 20px}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{padding:18px 0 8px}
+  .nav{gap:6px 20px;width:100%}
+  .nav a{font-size:15px}
+  .nav .pastille{padding:5px 14px;margin-left:auto}
+  .heros{padding:20px 0 140px}
+  .heros-grille,.at-grille,.pr-tete,.pr-corps,.ti-grille,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-texte,.tableau,.at-photos,.at-texte,.pr-tete h2,.pr-tete p,.pr-photos,.pr-liste,.ti-texte,.ti-photo,.ct-titre,.ct-carte{grid-column:1}
+  .heros-texte{display:contents}
+  .heros .lieu{order:1;margin-bottom:-8px;font-size:15px}
+  .heros h1{order:2}
+  .heros .chapo{order:3}
+  .tableau{order:4}
+  .heros .actions{order:5}
+  .heros .chapo{margin-top:0}
+  .tableau{margin-top:4px;max-width:420px;padding:16px 16px 12px}
+  .tableau img{aspect-ratio:5 / 4;object-position:50% 52%}
+  .tableau figcaption{margin-top:12px}
+  .heros .actions{margin-top:8px}
+  .faits{margin-top:-88px}
+  .faits ul{padding:28px 24px;gap:22px}
+  .faits strong{font-size:28px}
+  .atelier{padding:88px 0}
+  .at-photos{max-width:440px;padding-bottom:96px;margin-bottom:24px}
+  .at-photos .semences{right:0;width:min(190px, 48%)}
+  .prestations,.tissus,.galerie{padding:88px 0}
+  .pr-tete p{margin-top:4px}
+  .pr-corps{margin-top:40px}
+  .pr-photos{position:relative;top:0;max-width:420px;padding-bottom:56px;margin-bottom:24px}
+  .pr-photos .accoudoir{left:auto;right:0;width:min(170px, 44%)}
+  .ti-photo{margin:40px -20px 0 0}
+  .ti-photo img{aspect-ratio:4 / 3}
+  .mosaique{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:40px}
+  .m-wax{grid-column:1 / 7;grid-row:auto}
+  .m-wax img{aspect-ratio:1}
+  .m-louis{grid-column:1 / 7}
+  .m-merisier{grid-column:1 / 4}
+  .m-bridge{grid-column:4 / 7;margin-top:40px !important}
+  .m-tabouret{grid-column:2 / 6;margin-top:0 !important}
+  .m-club{grid-column:1 / 7}
+  .m-club img{aspect-ratio:4 / 3}
+  .contact{padding:88px 0 40px}
+  .ct-carte{margin-top:40px;padding:28px 24px;grid-template-columns:minmax(0,1fr);gap:22px}
+  .pied{margin-top:56px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .bienfaire{padding:22px 20px}
+  .marque b{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="velours">
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="NB Tapissier, accueil"><span class="mono" aria-hidden="true">NB</span><span><b>Nicolas Barbier</b><small>Tapissier d'ameublement</small></span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#atelier">L'atelier</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#galerie">Galerie</a>
+      <a class="pastille" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <div class="heros-texte">
+        <p class="lieu">Atelier de tapisserie à Ramonville-Saint-Agne, près de Toulouse</p>
+        <h1>Des fauteuils <em>singuliers</em> qui s'adaptent à vos intérieurs.</h1>
+        <p class="chapo">Garnitures traditionnelles en sangles, toiles de jute, ressorts et crin végétal piqué pour former l'assise. Fûts restaurés avec un ébéniste, bois relooké par aérogommage ou sablage.</p>
+        <div class="actions">
+          <a class="btn btn-rose" href="#contact">Demander un devis</a>
+          <a class="btn btn-contour-clair" href="#prestations">Voir les prestations</a>
+        </div>
+      </div>
+      <figure class="tableau rv">
+        <div class="toile"><img src="assets/nb-tapissier-ramonville/bergere-blanche-tissu-graphique-bleu.webp" width="900" height="1600" alt="Bergère à bois peint blanc regarnie d'un tissu graphique bleu marine et blanc, devant le portant d'échantillons de l'atelier"></div>
+        <figcaption><b>Bergère, bois peint blanc</b><span>Regarnie à l'atelier</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+</div>
+
+<div class="faits">
+  <div class="cadre">
+    <ul>
+      <li><strong>20&nbsp;000 tours</strong><span>au test Martindale, au minimum, pour chacun de nos tissus</span></li>
+      <li><strong>Europe</strong><span>tous nos tissus y sont fabriqués, dont des collections recyclées</span></li>
+      <li><strong>Crin végétal</strong><span>piqué pour tasser et donner sa forme à l'assise</span></li>
+      <li><strong>Un ébéniste</strong><span>en étroite collaboration pour restaurer les fûts</span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="atelier" id="atelier">
+  <div class="cadre at-grille">
+    <div class="at-photos">
+      <figure class="portrait rv">
+        <img src="assets/nb-tapissier-ramonville/portrait-nicolas-barbier.webp" width="1600" height="1309" alt="Portrait de Nicolas Barbier, tapissier d'ameublement" loading="lazy">
+        <figcaption class="etiquette">Nicolas Barbier, artisan tapissier</figcaption>
+      </figure>
+      <figure class="semences rv">
+        <img src="assets/nb-tapissier-ramonville/semences-de-tapissier-en-vrac.webp" width="1600" height="1200" alt="Semences de tapissier en vrac sur l'établi" loading="lazy">
+        <figcaption>Semences sur l'établi</figcaption>
+      </figure>
+    </div>
+    <div class="at-texte">
+      <h2>Le métier de tapissier réserve de belles surprises.</h2>
+      <p class="trouvailles">Une chaînette égarée entre les interstices d'une méridienne, une date et une signature griffonnées par un menuisier sur une chaise Art déco, une estampille sur un fauteuil d'époque, un mot laissé par un précédent artisan.</p>
+      <p>Ce métier, nous l'avons choisi pour écrire une nouvelle histoire pour chacune des pièces qui nous est confiée. Un métier où l'esprit créatif et le travail minutieux sont des valeurs essentielles.</p>
+      <blockquote class="bienfaire">
+        <p>« Bien faire, c'est respecter l'objet à restaurer. Bien faire, c'est s'inscrire dans la durabilité. »</p>
+        <footer>L'éthique du bien-faire (Arthur Lockmann, 2019)</footer>
+      </blockquote>
+      <p class="suite"><a class="lien" href="https://nb-tapissier.fr/index.php/latelier/">Lire la page de l'atelier</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="prestations" id="prestations">
+  <div class="cadre">
+    <div class="pr-tete">
+      <h2>Composer à partir de vos envies.</h2>
+      <p>Notre savoir-faire traditionnel, notre goût pour associer les matières et les couleurs, et vos envies : canapés, fauteuils, chaises, tabourets, quel que soit le style.</p>
+    </div>
+    <div class="pr-corps">
+      <div class="pr-photos">
+        <figure class="marteau rv">
+          <img src="assets/nb-tapissier-ramonville/marteau-de-tapissier-sur-l-etabli.webp" width="1600" height="1200" alt="Marteau de tapissier posé sur l'établi en bois" loading="lazy">
+        </figure>
+        <figure class="accoudoir rv">
+          <img src="assets/nb-tapissier-ramonville/detail-accoudoir-bois-et-tissu-geometrique.webp" width="1600" height="1240" alt="Accoudoir en bois d'un fauteuil, flanc anthracite et assise en tissu à petits motifs" loading="lazy">
+        </figure>
+      </div>
+      <ul class="pr-liste">
+        <li>
+          <h3>Garnitures traditionnelles</h3>
+          <p>L'étape primordiale consiste à piquer le crin pour le tasser et donner la forme définitive à l'assise selon le style du siège. Garniture en plein, à pelote, en cuvette : à chaque style sa garniture.</p>
+          <ul class="matieres"><li>Sangles</li><li>Toiles de jute</li><li>Ressorts</li><li>Crin végétal</li></ul>
+        </li>
+        <li>
+          <h3>Méthode contemporaine</h3>
+          <p>En associant différentes épaisseurs de mousse, on joue sur le confort, ferme, intermédiaire ou souple. La mousse peut aussi se combiner avec des ressorts pour un effet rebond.</p>
+          <ul class="matieres"><li>Mousse haute résilience</li><li>Bultex</li><li>Dryfell pour l'extérieur</li><li>Polyester</li></ul>
+        </li>
+        <li>
+          <h3>Restauration du bois et ébénisterie</h3>
+          <p>Les fûts des sièges sont systématiquement contrôlés et, si besoin, restaurés, recollés et traités, en étroite collaboration avec un ébéniste. Pour relooker le bois : aérogommage pour les bois vernis ou cirés, sablage pour les bois peints. Cire, teinte, huile ou peinture, selon le tissu, l'état et l'essence. Nous aimons particulièrement faire réapparaître les veines du bois.</p>
+        </li>
+        <li>
+          <h3>Confection sur mesure</h3>
+          <p>Rideaux, coussins, têtes de lit et banquettes, dans un large choix de tissus d'ameublement, de cuir et de simili-cuir.</p>
+        </li>
+      </ul>
+    </div>
+    <p class="styles">Louis XV, Empire, Art déco ou plus contemporain : nous sommes à votre écoute. <a class="lien" href="https://nb-tapissier.fr/index.php/prestations/">Toutes les prestations</a></p>
+  </div>
+</section>
+
+<section class="tissus velours" id="tissus">
+  <div class="cadre ti-grille">
+    <div class="ti-texte">
+      <h2>Des tissus testés et fabriqués en Europe.</h2>
+      <p>Le test Martindale mesure la résistance d'un tissu à l'usure, en tours : une toupie tourne sur l'étoffe. Pour un canapé à usage domestique, la norme est de 10&nbsp;000 à 15&nbsp;000 tours.</p>
+      <div class="compteur"><strong>20&nbsp;000</strong><span>tours au minimum : nous n'utilisons que des tissus qui y ont résisté.</span></div>
+      <ul class="maisons" aria-label="Maisons d'édition de tissus">
+        <li>Élitis</li><li>Nobilis</li><li>Canovas</li><li>Lelièvre Paris</li><li>Thevenon</li>
+      </ul>
+    </div>
+    <figure class="ti-photo rv">
+      <img src="assets/nb-tapissier-ramonville/gros-plan-tissu-chrysanthemes-et-clous-decoratifs.webp" width="1600" height="950" alt="Gros plan d'un tissu bordeaux tissé de chrysanthèmes, bordé de clous décoratifs noirs" loading="lazy">
+      <figcaption class="etiquette">Tissu à chrysanthèmes, clous décoratifs</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="cadre">
+    <div class="ga-tete">
+      <h2>Passés par l'atelier.</h2>
+      <p>Chaises des années 70, fauteuils d'époque, tabourets, bergères : quelques pièces regarnies, parmi une soixantaine dans notre galerie.</p>
+    </div>
+    <div class="mosaique">
+      <figure class="m-wax rv">
+        <img src="assets/nb-tapissier-ramonville/chaises-chromees-annees-70-tissu-wax.webp" width="1600" height="1600" alt="Chaises à piètement chromé des années 70, assises et dossiers en tissu wax à zigzags orange, noir et blanc" loading="lazy">
+        <figcaption class="etiquette">Chaises chromées, tissu wax</figcaption>
+      </figure>
+      <figure class="m-louis rv">
+        <img src="assets/nb-tapissier-ramonville/paire-fauteuils-louis-xvi-tissu-raye-vert-d-eau.webp" width="1600" height="1467" alt="Paire de fauteuils en bois sculpté garnis d'un tissu rayé blanc et vert d'eau bordé de clous, dans l'atelier" loading="lazy">
+      </figure>
+      <figure class="m-merisier rv">
+        <img src="assets/nb-tapissier-ramonville/fauteuil-merisier-tissu-chevrons-passepoil-turquoise.webp" width="1022" height="1600" alt="Fauteuil ancien en bois fruitier, tissu à chevrons souligné d'un passepoil turquoise" loading="lazy">
+      </figure>
+      <figure class="m-bridge rv">
+        <img src="assets/nb-tapissier-ramonville/fauteuil-bridge-tissu-losanges-mur-orange.webp" width="1600" height="1014" alt="Fauteuil bridge en bois clair, tissu à losanges rouge et blanc, devant un mur orange" loading="lazy">
+      </figure>
+      <figure class="m-tabouret rv">
+        <img src="assets/nb-tapissier-ramonville/tabouret-soie-fleurs-de-chrysantheme.webp" width="1541" height="1600" alt="Tabouret à pieds peints, couvert d'un tissu à grandes fleurs de chrysanthème bordé de clous" loading="lazy">
+        <figcaption>Tabouret aux chrysanthèmes</figcaption>
+      </figure>
+      <figure class="m-club rv">
+        <img src="assets/nb-tapissier-ramonville/fauteuil-club-tissu-geometrique-gris-salon.webp" width="1600" height="950" alt="Fauteuil à accoudoirs en bois clair, tissu à petits motifs géométriques gris et flancs anthracite, dans un salon" loading="lazy">
+      </figure>
+    </div>
+    <div class="ga-pied">
+      <a class="btn btn-plein" href="https://nb-tapissier.fr/index.php/notre-univers/">Voir toute la galerie</a>
+      <a class="btn btn-contour" href="https://www.instagram.com/nb.tapissier/">Suivre l'atelier sur Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Un renseignement, un devis ?</h2>
+      <p>Souvent en déplacement : pensez à nous contacter avant de vous rendre à l'atelier ou au siège social.</p>
+      <div class="actions">
+        <a class="btn btn-rose" href="tel:+33676938248">06 76 93 82 48</a>
+        <a class="btn btn-contour-clair" href="mailto:contact@nb-tapissier.fr">Écrire à l'atelier</a>
+      </div>
+    </div>
+    <div class="ct-carte">
+      <div class="large"><h3>Horaires d'ouverture</h3><p>Du mardi au vendredi de 10&nbsp;h à 13&nbsp;h et de 14&nbsp;h à 18&nbsp;h&nbsp;30.<br>Le samedi de 10&nbsp;h à 13&nbsp;h et de 14&nbsp;h à 18&nbsp;h.</p></div>
+      <div><h3>Atelier</h3><p>19 place Marnac<br>Ramonville-Saint-Agne</p></div>
+      <div><h3>Siège social</h3><p>46 route d'Agde<br>31500 Toulouse</p></div>
+      <div><h3>Téléphone</h3><p><a href="tel:+33676938248">06 76 93 82 48</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@nb-tapissier.fr">contact@nb-tapissier.fr</a></p></div>
+      <div class="large"><h3>Nous suivre</h3><p><a href="https://www.facebook.com/profile.php?id=100086266085070">Facebook</a> &nbsp; <a href="https://www.instagram.com/nb.tapissier/">Instagram</a></p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Nicolas Barbier, tapissier d'ameublement. Photographies : Nicolas Barbier, Jary Killian</span>
+    <a href="https://nb-tapissier.fr/index.php/mentions-legales/">Mentions légales</a>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour NB Tapissier d'ameublement</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

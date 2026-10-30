@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Terre &amp; Racines, céramiques artisanales à Saint-Jean-de-Cuculles</title>
+<meta name="description" content="Atelier de poterie à Saint-Jean-de-Cuculles : vaisselle, pots et jardin, art déco et créations personnalisées. Visite de l'atelier sur rendez-vous, du lundi au vendredi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='32' rx='27' ry='31' fill='%233A2A24'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%237FA79A'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#F2E6E1;
+  --rose-clair:#FBF6F3;
+  --rose-fonce:#E8D7CF;
+  --brun:#3A2A24;
+  --brun-2:#4A372F;
+  --brun-nuit:#2C1F1A;
+  --celadon:#7FA79A;
+  --celadon-clair:#A3C2B8;
+  --celadon-encre:#4A7769;
+  --encre-douce:#65534B;
+  --ombre:0 30px 60px -34px rgba(48,30,22,.55);
+  --ombre-nuit:0 40px 80px -40px rgba(0,0,0,.8);
+  --display:"Yeseva One", "Didot", Georgia, serif;
+  --texte:"Source Sans 3", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--rose);color:var(--brun);font-family:var(--texte);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--celadon);color:var(--brun-nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--brun);color:var(--rose-clair)}
+.btn-plein:hover{background:var(--brun-2);box-shadow:0 18px 30px -16px rgba(58,42,36,.75)}
+.btn-contour{border:1.5px solid var(--brun);color:var(--brun)}
+.btn-contour:hover{background:var(--brun);color:var(--rose-clair)}
+.btn-celadon{background:var(--celadon);color:var(--brun-nuit)}
+.btn-celadon:hover{background:var(--celadon-clair);box-shadow:0 18px 30px -16px rgba(127,167,154,.7)}
+.btn-contour-clair{border:1.5px solid rgba(251,246,243,.45);color:var(--rose-clair)}
+.btn-contour-clair:hover{background:var(--rose-clair);color:var(--brun);border-color:var(--rose-clair)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;padding:24px 0;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.15}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:28px}
+.marque small{display:block;font-size:15px;color:var(--encre-douce)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px}
+.nav a{text-decoration:none;font-size:17px;transition:color .2s}
+.nav a:hover{color:var(--celadon-encre)}
+.nav .pastille{background:var(--brun);color:var(--rose-clair);border-radius:999px;padding:10px 22px;font-weight:700}
+.nav .pastille:hover{background:var(--brun-2);color:var(--rose-clair)}
+
+/* Héros : texte à gauche, photo ovale à droite */
+.heros{padding:24px 0 104px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-texte{grid-column:1 / 8}
+.heros .lieu{font-size:17px;color:var(--encre-douce);margin-bottom:22px}
+.heros h1{font-size:clamp(2.5rem, 1.3rem + 3.3vw, 4.15rem);line-height:1.04;letter-spacing:-.005em}
+.heros h1 em{font-style:normal;color:var(--celadon-encre)}
+.heros .chapo{margin-top:30px;max-width:520px;color:var(--encre-douce)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.heros-photo{grid-column:8 / 13;margin:0;position:relative;justify-self:end;width:min(100%, 440px)}
+.heros-photo img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:50% 62%;border-radius:50%;box-shadow:var(--ombre)}
+.heros-photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1.5px solid var(--celadon);z-index:-1}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(251,246,243,.95);color:var(--brun);font-size:16px;font-weight:600;padding:8px 15px;border-radius:999px;line-height:1.3}
+.heros-photo .etiquette{left:50%;bottom:22px;transform:translateX(-50%);white-space:nowrap;box-shadow:0 12px 24px -14px rgba(48,30,22,.6)}
+
+/* Faits, bande céladon */
+.faits{background:var(--celadon);color:var(--brun-nuit)}
+.faits ul{list-style:none;margin:0 auto;padding:36px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:4px}
+.faits strong{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.faits span{font-size:17px;line-height:1.4;color:#2E231E}
+
+/* Les pièces */
+.pieces{padding:128px 0}
+.pi-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.pi-tete h2{grid-column:1 / 8;font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.pi-tete p{grid-column:9 / 13;color:var(--encre-douce)}
+.pi-grille{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px;align-items:start}
+.famille{margin:0;position:relative}
+.famille h3{font-size:30px;margin-top:22px}
+.famille p{margin-top:8px;color:var(--encre-douce);font-size:18px}
+.f-vaisselle{grid-column:1 / 6;grid-row:1 / 3}
+.f-vaisselle img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:50% 55%;border-radius:26px;box-shadow:var(--ombre)}
+.f-jardin{grid-column:7 / 10}
+.f-jardin img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:50% 70%;border-radius:999px 999px 20px 20px;box-shadow:var(--ombre)}
+.f-deco{grid-column:10 / 13;margin-top:96px}
+.f-deco img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:50% 40%;border-radius:20px;box-shadow:var(--ombre)}
+.f-mesure{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:28px;align-items:center;background:var(--rose-clair);border-radius:24px;padding:28px 32px 28px 28px;box-shadow:0 24px 44px -34px rgba(48,30,22,.6)}
+.f-mesure .polaroid{margin:0;background:#fff8f4;padding:10px 10px 14px;border-radius:6px;transform:rotate(-3deg);box-shadow:var(--ombre)}
+.f-mesure .polaroid img{width:100%;aspect-ratio:4 / 5;object-fit:cover;border-radius:2px}
+.f-mesure h3{margin-top:0}
+
+/* L'atelier, fond brun */
+.atelier{background:var(--brun);color:var(--rose-clair);padding:128px 0;overflow:clip}
+.at-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.at-photos{grid-column:1 / 7;position:relative;padding-bottom:120px}
+.at-photos figure{margin:0;position:relative}
+.at-photos .tours img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:50% 55%;border-radius:24px;box-shadow:var(--ombre-nuit)}
+.at-photos .pot{position:absolute;right:-40px;bottom:0;width:min(230px, 42%);background:var(--rose-clair);padding:12px;border-radius:12px;box-shadow:var(--ombre-nuit)}
+.at-photos .pot img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:50% 40%;border-radius:6px}
+.at-texte{grid-column:8 / 13}
+.at-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.at-texte p{margin-top:22px;color:rgba(251,246,243,.82)}
+.at-texte blockquote{margin:36px 0 0;padding-left:0}
+.at-texte blockquote p{margin:0;font-family:var(--display);font-size:clamp(1.5rem, 1.1rem + 1.1vw, 2.1rem);line-height:1.3;color:var(--celadon-clair)}
+
+/* Engagement */
+.engagement{padding:128px 0}
+.en-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.en-texte{grid-column:1 / 7}
+.en-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.en-texte > p{margin-top:22px;color:var(--encre-douce)}
+.valeurs{list-style:none;margin:36px 0 0;padding:0}
+.valeurs li{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid rgba(58,42,36,.16)}
+.valeurs li:last-child{border-bottom:1px solid rgba(58,42,36,.16)}
+.valeurs b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2}
+.valeurs span{color:var(--encre-douce);font-size:18px}
+.en-photos{grid-column:8 / 13;position:relative;padding:0 0 64px 0}
+.en-photos figure{margin:0;position:relative}
+.en-photos .echelle img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:50% 35%;border-radius:28px;box-shadow:var(--ombre)}
+.en-photos .bol{position:absolute;left:-64px;bottom:0;width:min(190px, 44%)}
+.en-photos .bol img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 45%;border-radius:50%;border:8px solid var(--rose);box-shadow:var(--ombre)}
+
+/* Contact */
+.contact{background:var(--rose-fonce);padding:120px 0}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4.2rem)}
+.ct-titre p{margin-top:20px;color:var(--encre-douce)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-carte{grid-column:7 / 13;background:var(--rose-clair);border-radius:28px;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px 32px;box-shadow:var(--ombre)}
+.ct-carte h3{font-family:var(--texte);font-size:15px;font-weight:700;color:var(--celadon-encre)}
+.ct-carte p{margin-top:6px;font-size:18px;overflow-wrap:anywhere}
+.ct-carte a{text-decoration:none;border-bottom:1px solid rgba(58,42,36,.28)}
+.ct-carte a:hover{border-color:var(--celadon)}
+.ct-carte .large{grid-column:1 / -1}
+.pied{background:var(--brun);color:rgba(251,246,243,.72);font-size:16px}
+.pied .cadre{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 32px;padding:34px 0}
+.pied b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--rose-clair)}
+.pied .coord{display:flex;flex-wrap:wrap;gap:6px 24px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--rose-clair)}
+.proposition{background:var(--brun-nuit);color:rgba(251,246,243,.58);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .at-photos .pot{right:-12px}
+  .en-photos .bol{left:-16px}
+  .f-mesure{grid-template-columns:minmax(0,150px) minmax(0,1fr)}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{padding:18px 0 6px}
+  .nav{gap:6px 20px;width:100%}
+  .nav a{font-size:16px}
+  .nav .pastille{padding:5px 14px;margin-left:auto}
+  .heros{padding:16px 0 72px}
+  .heros-grille,.pi-tete,.at-grille,.en-grille,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-texte{display:contents}
+  .heros .lieu{order:1;margin-bottom:-10px;font-size:16px}
+  .heros h1{order:2;font-size:clamp(2.2rem, 1.2rem + 4.6vw, 3rem)}
+  .heros-photo{order:3;grid-column:1;justify-self:start;width:min(64%, 300px);margin:6px 0 4px 10px}
+  .heros-photo::before{inset:-9px}
+  .heros-photo .etiquette{font-size:15px;bottom:14px}
+  .heros .chapo{order:4;margin-top:0}
+  .heros .actions{order:5;margin-top:0}
+  .pi-tete h2,.pi-tete p,.at-photos,.at-texte,.en-texte,.en-photos,.ct-titre,.ct-carte{grid-column:1}
+  .pieces,.atelier,.engagement,.contact{padding:88px 0}
+  .pi-tete p{margin-top:4px}
+  .pi-grille{margin-top:40px;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 16px}
+  .f-vaisselle{grid-column:1 / 3;grid-row:auto}
+  .f-jardin{grid-column:1}
+  .f-deco{grid-column:2;margin-top:64px}
+  .famille h3{font-size:26px}
+  .f-mesure{grid-column:1 / 3;grid-template-columns:minmax(0,1fr);padding:24px}
+  .f-mesure .polaroid{width:min(200px, 60%)}
+  .at-photos{padding-bottom:96px;margin-bottom:24px}
+  .at-photos .pot{right:0;width:min(160px, 40%)}
+  .valeurs li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .en-photos{margin-top:48px;max-width:420px;margin-left:auto;padding-bottom:56px}
+  .en-photos .bol{left:-8px;width:min(150px, 38%)}
+  .ct-carte{margin-top:36px;padding:28px 24px;grid-template-columns:minmax(0,1fr);gap:22px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:20px}
+  .marque b{font-size:24px}
+  .famille p{font-size:17px}
+}
+</style>
+<style id="reprise-nova-3010">
+@media (min-width:1081px){
+  .faits ul{grid-template-columns:minmax(0,.9fr) minmax(0,.9fr) minmax(0,1.2fr) minmax(0,1.7fr)}
+  .faits strong{font-size:26px}
+  .faits li:nth-child(3) strong,.faits li:nth-child(4) strong{white-space:nowrap}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Terre &amp; Racines, accueil"><b>Terre &amp; Racines</b><small>Atelier de céramique</small></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#pieces">Les pièces</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#engagement">Engagement</a>
+      <a class="pastille" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <div class="heros-texte">
+        <p class="lieu">Poterie artisanale à Saint-Jean-de-Cuculles</p>
+        <h1>Des céramiques <em>uniques</em>, pour la table, la maison et le jardin.</h1>
+        <p class="chapo">Des poteries artisanales qui allient beauté et fonctionnalité, pour votre intérieur comme pour votre extérieur. J'allie techniques traditionnelles et designs modernes, afin que chaque pièce soit unique.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#contact">Venir à l'atelier</a>
+          <a class="btn btn-contour" href="#pieces">Découvrir les pièces</a>
+        </div>
+      </div>
+      <figure class="heros-photo rv">
+        <img src="assets/terre-et-racines-saint-jean-de-cuculles/stand-marche-bols-gobelets-colores-caisses-bois.webp" width="1200" height="1600" alt="Bols, gobelets et saladier aux émaux orange, rouge, vert et jaune, rangés dans des caisses en bois">
+        <figcaption class="etiquette">Bols et gobelets émaillés</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<section class="faits" aria-label="En bref">
+  <div class="cadre">
+    <ul>
+      <li><strong>Faites main</strong><span>du modelage de l'argile à l'émaillage</span></li>
+      <li><strong>4 familles</strong><span>vaisselle, pots et jardin, art déco, créations personnalisées</span></li>
+      <li><strong>Sur rendez-vous</strong><span>l'atelier vous reçoit du lundi au vendredi</span></li>
+      <li><strong>Saint-Jean-de-Cuculles</strong><span>160 impasse du Roumégaïre</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pieces" id="pieces">
+  <div class="cadre">
+    <div class="pi-tete">
+      <h2>Des objets fonctionnels aussi beaux que pratiques.</h2>
+      <p>Chaque bol, assiette et objet décoratif est fabriqué avec passion et soin, pour embellir votre table et votre intérieur.</p>
+    </div>
+    <div class="pi-grille">
+      <figure class="famille f-vaisselle">
+        <img class="rv" src="assets/terre-et-racines-saint-jean-de-cuculles/stand-pieces-email-blanc-coulant-terre-rouge.webp" width="1200" height="1600" alt="Gobelets, bols et grands plats en terre rouge à émail blanc coulant, rangés dans des caisses en bois" loading="lazy">
+        <figcaption><h3>Vaisselle</h3><p>Gobelets, bols, assiettes, grands plats : des pièces pour le quotidien, en terre rouge ou émaillées de couleurs franches.</p></figcaption>
+      </figure>
+      <figure class="famille f-jardin">
+        <img class="rv" src="assets/terre-et-racines-saint-jean-de-cuculles/jarre-terre-cuite-jardiniere-bougainvillier.webp" width="1200" height="1600" alt="Jarre en terre cuite à couvercle rouge dans une jardinière, au pied d'un bougainvillier en fleurs" loading="lazy">
+        <figcaption><h3>Pots &amp; Jardin</h3><p>Des poteries pensées aussi pour vos extérieurs.</p></figcaption>
+      </figure>
+      <figure class="famille f-deco">
+        <div style="position:relative">
+          <img class="rv" src="assets/terre-et-racines-saint-jean-de-cuculles/sphere-ajouree-blanche-etiquette-la-fete.webp" width="1200" height="1600" alt="Sphère blanche ajourée décorée de traits noirs, présentée sous l'étiquette « La Fête »" loading="lazy">
+          <span class="etiquette">« La Fête »</span>
+        </div>
+        <figcaption><h3>Art déco</h3><p>Sphères ajourées, vases, objets décoratifs.</p></figcaption>
+      </figure>
+      <div class="famille f-mesure">
+        <figure class="polaroid rv">
+          <img src="assets/terre-et-racines-saint-jean-de-cuculles/gobelet-personnalise-recadre.webp" width="400" height="500" alt="Gobelet en terre rouge à émail violet, marqué de lettres en relief" loading="lazy">
+        </figure>
+        <div>
+          <h3>Créations personnalisées</h3>
+          <p>Des pièces marquées ou imaginées pour vous. Je suis là pour vous guider dans le choix des pièces qui vous conviennent.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="cadre at-grille">
+    <div class="at-photos">
+      <figure class="tours rv">
+        <img src="assets/terre-et-racines-saint-jean-de-cuculles/tours-de-potier-atelier-tournassures.webp" width="1600" height="1200" alt="Deux tours de potier couverts de tournassures dans l'atelier, barbotine sur le sol et la vitre" loading="lazy">
+        <figcaption class="etiquette">Les tours de l'atelier</figcaption>
+      </figure>
+      <figure class="pot rv">
+        <img src="assets/terre-et-racines-saint-jean-de-cuculles/pot-rond-couvert-rose-sur-mousse.webp" width="1200" height="1600" alt="Pot rond à couvercle, blanc rosé, posé sur de la mousse dans la nuit" loading="lazy">
+      </figure>
+    </div>
+    <div class="at-texte">
+      <h2>De l'argile à la création.</h2>
+      <p>Mon aventure a commencé par un simple amour pour l'argile. Ce qui n'était au départ qu'un hobby est devenu une véritable passion pour la création de poteries belles et fonctionnelles.</p>
+      <p>La nature et la vie quotidienne m'inspirent : je transforme des matières premières en pièces qui embellissent un intérieur. Chaque étape, du modelage de l'argile à l'émaillage, est réalisée avec soin et souci du détail.</p>
+      <blockquote><p>« La poterie est ma passion, et chaque pièce reflète mon cœur et mon âme. »</p></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="engagement" id="engagement">
+  <div class="cadre en-grille">
+    <div class="en-texte">
+      <h2>Respecter les principes d'un art ancestral.</h2>
+      <p>Dans mon atelier, je m'engage à offrir des pièces de qualité, fabriquées avec les meilleurs matériaux et le plus grand soin.</p>
+      <ul class="valeurs">
+        <li><b>La durabilité</b><span>Je m'efforce de réduire les déchets et d'utiliser des pratiques respectueuses de l'environnement.</span></li>
+        <li><b>La communauté</b><span>Je soutiens les artisans locaux et je partage mon amour de la poterie avec tout le monde.</span></li>
+        <li><b>Le conseil</b><span>Je suis là pour vous guider dans le choix des pièces, à chaque fois.</span></li>
+      </ul>
+    </div>
+    <div class="en-photos">
+      <figure class="echelle rv">
+        <img src="assets/terre-et-racines-saint-jean-de-cuculles/echelle-presentoir-spheres-ajourees-marche.webp" width="1200" height="1600" alt="Vieille échelle en bois transformée en présentoir : sphères ajourées, bols, vases et plats, panneau Saint-Jean-de-Cuculles" loading="lazy">
+      </figure>
+      <figure class="bol rv">
+        <img src="assets/terre-et-racines-saint-jean-de-cuculles/bol-vu-de-dessus-email-blanc-bord-terre.webp" width="1200" height="1600" alt="Bol vu du dessus, émail blanc laiteux et liseré de terre rouge" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Venir à l'atelier, sur rendez-vous.</h2>
+      <p>Pour voir les pièces, parler d'une création personnalisée ou passer à l'atelier, appelez, envoyez un SMS ou écrivez.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33612893318">06 12 89 33 18</a>
+        <a class="btn btn-contour" href="mailto:lacuculloisemag@sfr.fr">Écrire à l'atelier</a>
+      </div>
+    </div>
+    <div class="ct-carte">
+      <div class="large"><h3>Adresse de l'atelier</h3><p>160 impasse du Roumégaïre<br>34270 Saint-Jean-de-Cuculles<br><a href="https://maps.app.goo.gl/rFs4MQ9cjd4tpsYQ9">Voir le plan</a></p></div>
+      <div><h3>Heures d'ouverture</h3><p>Du lundi au vendredi,<br>sur rendez-vous</p></div>
+      <div><h3>Téléphone et SMS</h3><p><a href="tel:+33612893318">06 12 89 33 18</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:lacuculloisemag@sfr.fr">lacuculloisemag@sfr.fr</a></p></div>
+      <div><h3>Rejoignez-nous</h3><p><a href="https://www.facebook.com/terre.racines">Terre &amp; Racines sur Facebook</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="cadre">
+    <b>Terre &amp; Racines</b>
+    <div class="coord">
+      <a href="mailto:lacuculloisemag@sfr.fr">lacuculloisemag@sfr.fr</a>
+      <a href="tel:+33612893318">06 12 89 33 18</a>
+      <span>160 impasse du Roumégaïre, 34270 Saint-Jean-de-Cuculles</span>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Terre &amp; Racines</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

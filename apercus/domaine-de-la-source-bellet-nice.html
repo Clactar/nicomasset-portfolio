@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine de la Source, vin de Bellet sur les collines de Nice</title>
+<meta name="description" content="Domaine familial de 7 hectares en AOP Bellet, sur les collines de Nice : vins bio, visites et dégustations, gîte au milieu des vignes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2314304A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='38' fill='%23E3B23C'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brume:#E8EEF2;
+  --brume-clair:#F4F7F9;
+  --brume-fonce:#D5DFE6;
+  --nuit:#14304A;
+  --nuit-2:#1D3F5F;
+  --encre-douce:#46596B;
+  --mimosa:#E3B23C;
+  --ombre:0 30px 60px -34px rgba(12,32,52,.55);
+  --display:"Italiana", Didot, Georgia, serif;
+  --texte:"Outfit", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--brume);color:var(--nuit);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--mimosa);color:var(--nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--nuit);color:var(--brume-clair)}
+.btn-plein:hover{background:var(--nuit-2);box-shadow:0 18px 30px -18px rgba(20,48,74,.8)}
+.btn-contour{border:1.5px solid var(--nuit);color:var(--nuit)}
+.btn-contour:hover{background:var(--nuit);color:var(--brume-clair)}
+.btn-mimosa{background:var(--mimosa);color:var(--nuit)}
+.btn-mimosa:hover{background:#EDC25A;box-shadow:0 18px 30px -18px rgba(227,178,60,.8)}
+.btn-contour-clair{border:1.5px solid rgba(244,247,249,.5);color:var(--brume-clair)}
+.btn-contour-clair:hover{background:var(--brume-clair);color:var(--nuit)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0}
+.marque{text-decoration:none;display:flex;align-items:center;gap:14px;line-height:1.1}
+.marque .rond{width:44px;height:44px;border-radius:50%;background:var(--nuit);color:var(--mimosa);display:grid;place-items:center;font-family:var(--display);font-size:26px;flex:none}
+.marque b{font-family:var(--display);font-weight:400;font-size:28px;display:block}
+.marque small{font-size:15px;color:var(--encre-douce)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.nav a{text-decoration:none;font-size:16px;transition:color .2s}
+.nav a:hover{color:var(--nuit-2);text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--mimosa)}
+.nav .tel{background:var(--nuit);color:var(--brume-clair);border-radius:999px;padding:10px 20px;font-weight:500;white-space:nowrap}
+.nav .tel:hover{background:var(--nuit-2);color:var(--brume-clair);text-decoration:none}
+
+/* Héros */
+.heros{padding:24px 0 112px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-texte{grid-column:1 / 7}
+.heros h1{font-size:clamp(3rem, 1.2rem + 5vw, 6.1rem);letter-spacing:-.005em;line-height:.98}
+.heros h1 .trait{background:linear-gradient(transparent 72%, rgba(227,178,60,.55) 72%, rgba(227,178,60,.55) 90%, transparent 90%)}
+.heros .chapo{margin-top:32px;max-width:500px;color:var(--encre-douce)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.heros-photo{grid-column:7 / 13;position:relative;margin:0}
+.heros-photo > img{width:100%;aspect-ratio:5 / 6;object-fit:cover;object-position:45% 50%;border-radius:28px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:20px;bottom:20px;background:rgba(244,247,249,.95);color:var(--nuit);font-size:15px;font-weight:500;padding:8px 14px;border-radius:10px;line-height:1.3}
+.heros-photo .aop{left:auto;bottom:auto;right:24px;top:24px;font-family:var(--display);font-size:24px;font-weight:400;padding:10px 20px;border-radius:999px}
+.medaillon{position:absolute;left:-72px;bottom:-56px;width:min(220px, 40%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--brume);box-shadow:var(--ombre)}
+.medaillon img{width:100%;height:100%;object-fit:cover;object-position:52% 88%}
+
+/* Faits */
+.faits{background:var(--nuit);color:var(--brume-clair)}
+.faits ul{list-style:none;margin:0 auto;padding:40px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:6px}
+.faits strong{font-family:var(--texte);font-weight:300;font-size:36px;line-height:1;color:var(--mimosa);white-space:nowrap}
+.faits span{font-size:16px;color:rgba(244,247,249,.78);line-height:1.4}
+
+/* Histoire */
+.histoire{padding:128px 0}
+.hist-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.hist-texte{grid-column:1 / 6;position:relative}
+.hist-texte h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4rem)}
+.hist-texte p{margin-top:22px;color:var(--encre-douce)}
+.hist-texte p.fort{color:var(--nuit);font-size:20px}
+.archive{margin:40px 0 0;width:min(360px, 100%);background:var(--brume-clair);padding:14px 14px 18px;border-radius:6px;transform:rotate(-2deg);box-shadow:var(--ombre)}
+.archive img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:2px}
+.archive figcaption{font-size:15px;color:var(--encre-douce);margin-top:10px;line-height:1.35}
+.hist-photos{grid-column:7 / 13;display:grid;gap:24px}
+.hist-photos figure{margin:0;position:relative}
+.hist-photos .famille img{width:100%;aspect-ratio:4 / 3;object-fit:cover;border-radius:24px;box-shadow:var(--ombre)}
+.jalons{list-style:none;margin:0;padding:32px 36px;background:var(--brume-clair);border-radius:20px;display:grid;gap:18px;box-shadow:0 20px 40px -32px rgba(12,32,52,.45)}
+.jalons li{display:grid;grid-template-columns:minmax(0,90px) minmax(0,1fr);gap:16px;align-items:baseline}
+.jalons b{font-family:var(--texte);font-weight:300;font-size:28px;line-height:1}
+.jalons span{color:var(--encre-douce);font-size:17px}
+
+/* Citation, section sombre */
+.citation{background:var(--nuit);color:var(--brume-clair);padding:0;overflow:clip}
+.cit-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:560px}
+.cit-photo{position:relative;margin:0}
+.cit-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;border-radius:0 32px 32px 0}
+.cit-texte{display:flex;flex-direction:column;justify-content:center;padding:96px max(24px, calc((100vw - 1200px) / 2)) 96px 80px}
+.cit-texte blockquote{margin:0}
+.cit-texte blockquote p{font-family:var(--display);font-size:clamp(2.2rem, 1.2rem + 3.2vw, 4.2rem);line-height:1.08}
+.cit-texte blockquote footer{margin-top:24px;color:var(--mimosa);font-size:17px}
+.cit-texte p.terroir{margin-top:40px;color:rgba(244,247,249,.78);max-width:520px}
+
+/* Vins */
+.vins{padding:128px 0}
+.vins-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.vins-tete h2{grid-column:1 / 7;font-size:clamp(2.4rem, 1.4rem + 3vw, 4rem)}
+.vins-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.vins-corps{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.carte-vins-bloc{grid-column:1 / 8}
+.carte-vins{list-style:none;margin:0;padding:0}
+.carte-vins li{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:24px;padding:32px 0;border-top:1px solid rgba(20,48,74,.18)}
+.carte-vins li:last-child{border-bottom:1px solid rgba(20,48,74,.18)}
+.carte-vins .type{font-size:15px;font-weight:500;color:var(--encre-douce);padding-top:10px}
+.carte-vins h3{font-size:42px}
+.carte-vins h3 small{font-size:22px;color:var(--encre-douce);margin-left:8px}
+.carte-vins p{margin-top:10px;color:var(--encre-douce);font-size:17px}
+.vins-photos{grid-column:9 / 13;position:relative;padding-bottom:96px}
+.vins-photos figure{margin:0;position:relative}
+.vins-photos .grappes img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:62% 50%;border-radius:200px 200px 24px 24px;box-shadow:var(--ombre)}
+.vins-photos .caisse{position:absolute;right:-24px;bottom:0;width:62%;transform:rotate(3deg)}
+.vins-photos .caisse img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;border:8px solid var(--brume-clair);box-shadow:var(--ombre)}
+.cepages{margin-top:24px;font-size:17px;color:var(--encre-douce)}
+.vins .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+
+/* Visites */
+.visites{background:var(--brume-fonce);padding:128px 0}
+.vis-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.vis-photos{grid-column:1 / 7;position:relative;padding-bottom:88px}
+.vis-photos figure{margin:0;position:relative}
+.vis-photos .pente img{width:100%;aspect-ratio:4 / 3;object-fit:cover;border-radius:22px;box-shadow:var(--ombre)}
+.vis-photos .vigneron{position:absolute;right:-40px;bottom:0;width:48%}
+.vis-photos .vigneron img{width:100%;aspect-ratio:1;object-fit:cover;object-position:70% 50%;border-radius:50%;border:8px solid var(--brume-fonce);box-shadow:var(--ombre)}
+.vis-texte{grid-column:8 / 13}
+.vis-texte h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4rem)}
+.vis-texte p{margin-top:22px;color:var(--encre-douce)}
+.formule{margin-top:32px;background:var(--brume-clair);border-radius:20px;padding:28px 32px;box-shadow:0 20px 40px -30px rgba(12,32,52,.5)}
+.formule .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.formule h3{font-size:32px}
+.formule .prix{font-family:var(--texte);font-weight:300;font-size:34px;white-space:nowrap}
+.formule p{margin-top:8px;font-size:17px}
+.vis-texte .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+.repas{margin-top:28px;font-size:17px}
+
+/* Gîte */
+.gite{padding:128px 0}
+.gite-carte{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--brume-clair);border-radius:32px;overflow:hidden;box-shadow:var(--ombre)}
+.gite-carte figure{margin:0;position:relative;min-height:440px}
+.gite-carte figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+.gite-texte{padding:64px 56px}
+.gite-texte h2{font-size:clamp(2.2rem, 1.3rem + 2.6vw, 3.6rem)}
+.gite-texte p{margin-top:20px;color:var(--encre-douce)}
+.gite-chiffres{display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:28px}
+.gite-chiffres div{display:flex;flex-direction:column}
+.gite-chiffres b{font-family:var(--texte);font-weight:300;font-size:36px;line-height:1;white-space:nowrap}
+.gite-chiffres span{font-size:15px;color:var(--encre-douce)}
+.gite-texte .actions{margin-top:36px}
+
+/* Contact */
+.contact{background:var(--nuit);color:var(--brume-clair);padding:112px 0 48px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.6rem, 1.4rem + 4vw, 5rem)}
+.ct-titre p{margin-top:20px;color:rgba(244,247,249,.78)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-infos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px 32px;align-content:start}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--mimosa)}
+.ct-infos p{margin-top:8px;font-size:18px;overflow-wrap:anywhere}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(244,247,249,.3)}
+.ct-infos a:hover{border-color:var(--mimosa)}
+.pied{margin-top:88px;padding-top:28px;border-top:1px solid rgba(244,247,249,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:rgba(244,247,249,.62)}
+.proposition{background:#0D2236;color:rgba(244,247,249,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .nav{gap:8px 20px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .medaillon{left:-32px}
+  .vis-photos .vigneron{right:-12px}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 0}
+  .nav{gap:6px 18px}
+  .nav a{font-size:15px}
+  .nav .tel{padding:6px 14px}
+  .heros{padding:12px 0 96px}
+  .heros-grille,.hist-grille,.vins-tete,.vins-corps,.vis-grille,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-texte,.heros-photo,.hist-texte,.hist-photos,.vins-tete h2,.vins-tete p,.carte-vins-bloc,.vins-photos,.vis-photos,.vis-texte,.ct-titre,.ct-infos{grid-column:1}
+  .heros .chapo{margin-top:20px}
+  .heros .actions{margin-top:28px}
+  .heros-photo{margin-top:36px}
+  .heros-photo > img{aspect-ratio:4 / 3}
+  .heros-photo .aop{font-size:20px;right:14px;top:14px;padding:8px 16px}
+  .medaillon{left:-6px;bottom:-44px;width:min(130px, 36%);border-width:6px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));padding:32px 0}
+  .faits strong{font-size:34px}
+  .histoire,.vins,.visites,.gite{padding:88px 0}
+  .hist-photos{margin-top:48px}
+  .jalons{padding:24px}
+  .jalons li{grid-template-columns:minmax(0,72px) minmax(0,1fr);gap:12px}
+  .cit-grille{grid-template-columns:minmax(0,1fr);min-height:0}
+  .cit-photo{height:300px}
+  .cit-photo img{border-radius:0 0 28px 28px}
+  .cit-texte{padding:64px 20px 72px}
+  .vins-tete p{margin-top:8px}
+  .vins-corps{margin-top:40px}
+  .carte-vins li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .carte-vins .type{padding-top:0}
+  .carte-vins h3{font-size:36px}
+  .vins-photos{margin-top:48px;max-width:420px;padding-bottom:72px}
+  .vins-photos .caisse{right:0;width:52%}
+  .vis-photos{padding-bottom:72px;margin-bottom:40px}
+  .vis-photos .vigneron{right:0;width:42%}
+  .gite-carte{grid-template-columns:minmax(0,1fr);border-radius:24px}
+  .gite-carte figure{min-height:0;aspect-ratio:4 / 3}
+  .gite-texte{padding:36px 24px 40px}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}
+  .pied{margin-top:56px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .formule{padding:24px 20px}
+}
+</style>
+<style id="reprise-nova-3010">
+@media (max-width:600px){
+  .heros-grille{display:flex;flex-direction:column}
+  .heros-texte{display:contents}
+  .heros h1{order:1}
+  .heros-photo{order:2;margin:28px 0 56px}
+  .heros .chapo{order:3;margin-top:0}
+  .heros .actions{order:4}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Domaine de la Source, accueil"><span class="rond" aria-hidden="true">S</span><span><b>Domaine de la Source</b><small>AOP Bellet, Nice</small></span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#domaine">Le domaine</a>
+      <a href="#vins">Nos vins</a>
+      <a href="#visites">Expériences</a>
+      <a href="#gite">Hébergement</a>
+      <a href="https://domainedelasource.fr/boutique-2/">Boutique</a>
+      <a class="tel" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <div class="heros-texte">
+        <h1>Entre mer et montagne, des vins produits avec <span class="trait">passion</span>.</h1>
+        <p class="chapo">Un des plus petits vignobles de France, niché sur les collines de Nice, à 10 minutes de la Baie des Anges. Sept hectares de vignes en bio, cultivés par la famille Dalmasso au cœur de l’appellation Bellet.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#visites">Venez nous rencontrer</a>
+          <a class="btn btn-contour" href="https://domainedelasource.fr/vins-domaine-de-la-source/">Voir nos vins</a>
+        </div>
+      </div>
+      <figure class="heros-photo">
+        <img src="assets/domaine-de-la-source-bellet-nice/vignes-en-terrasses-vues-du-ciel.webp" alt="Vue du ciel des vignes en terrasses du domaine, sur la colline" width="1600" height="1065">
+        <figcaption class="etiquette aop">AOP Bellet</figcaption>
+        <div class="medaillon"><img src="assets/domaine-de-la-source-bellet-nice/caisse-de-vendange-raisins-noirs-et-blancs.webp" alt="Caisse de vendange pleine de raisins noirs et blancs" width="1600" height="1066"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le domaine en bref">
+    <ul class="cadre">
+      <li><strong>1941</strong><span>Bellet est une AOC depuis 1941</span></li>
+      <li><strong>7 hectares</strong><span>de vignes sur la colline de Saquier</span></li>
+      <li><strong>3 générations</strong><span>de la famille Dalmasso</span></li>
+      <li><strong>Bio</strong><span>tous les vins certifiés par Ecocert depuis 2007</span></li>
+      <li><strong>10&nbsp;h à 18&nbsp;h</strong><span>dégustation du lundi au samedi</span></li>
+    </ul>
+  </section>
+
+  <section class="histoire" id="domaine">
+    <div class="cadre hist-grille">
+      <div class="hist-texte">
+        <h2>Les serres laissent place au vignoble.</h2>
+        <p class="fort">Aux XIXe et XXe siècles, Nice était réputée pour ses œillets, ses roses, ses cyclamens et ses fleurs d’oranger. En 1960, le domaine n’existe pas encore, mais la propriété est déjà celle de la famille Dalmasso.</p>
+        <p>Jacques et Hélène se prennent de passion pour la vigne, ses cépages et la vinification : l’horticulture laisse place à la viticulture. Quelques serres subsistent encore, souvenir d’une époque liée à la vie niçoise. Carine et Éric, qui gambadaient enfants entre les œillets de leur grand-père, rejoignent ensuite leurs parents au domaine.</p>
+        <figure class="archive rv">
+          <img src="assets/domaine-de-la-source-bellet-nice/photo-d-archive-devant-les-serres-de-fleurs.webp" alt="Photo d’archive : deux personnes sous une serre, devant des rangées de fleurs" width="1600" height="900" loading="lazy">
+          <figcaption>Le temps des serres de fleurs</figcaption>
+        </figure>
+      </div>
+      <div class="hist-photos">
+        <figure class="famille">
+          <img class="rv" src="assets/domaine-de-la-source-bellet-nice/famille-dalmasso-dans-les-vignes.webp" alt="La famille Dalmasso debout dans un rang de vigne" width="1600" height="1066" loading="lazy">
+          <figcaption class="etiquette">La famille Dalmasso</figcaption>
+        </figure>
+        <ol class="jalons">
+          <li><b>1960</b><span>La propriété appartient déjà à la famille Dalmasso.</span></li>
+          <li><b>2007</b><span>Carine et Éric font certifier tous les vins en bio par Ecocert.</span></li>
+          <li><b>7 ha</b><span>Quelques hectares par ici, quelques ares par là : les vignes prennent de l’ampleur sur la colline de Saquier.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Le terroir">
+    <div class="cit-grille">
+      <figure class="cit-photo">
+        <img class="rv" src="assets/domaine-de-la-source-bellet-nice/vieux-cep-face-aux-montagnes.webp" alt="Un vieux cep au premier plan, rangs de vigne et montagnes dans la lumière du soir" width="1600" height="1000" loading="lazy">
+      </figure>
+      <div class="cit-texte">
+        <blockquote>
+          <p>«&nbsp;Notre terroir est petit mais ses offrandes sont immenses.&nbsp;»</p>
+          <footer>Éric Dalmasso, viticulteur</footer>
+        </blockquote>
+        <p class="terroir">Les parcelles sont réparties sur le versant le plus à l’ouest de l’appellation Bellet : un large ensoleillement, un climat tempéré, la Méditerranée pour horizon au sud et le Mercantour au nord.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre">
+      <div class="vins-tete">
+        <h2>Nos vins, rares et de caractère</h2>
+        <p>Des cépages uniques : le Rolle pour le blanc, le Braquet pour le rosé, la Folle Noire et le Grenache pour le rouge. Tous les vins sont certifiés bio, et certains travaux à la vigne et en cave suivent les cycles lunaires.</p>
+      </div>
+      <div class="vins-corps">
+        <div class="carte-vins-bloc">
+          <ul class="carte-vins">
+            <li><span class="type">Rouge, Folle Noire</span><div><h3>Fuella Nera</h3><p>Rubis pourpre sombre, un caractère sauvage et sanguin, des nuances de fruit noir, de cerise marasque et d’épices douces, dans la trame d’un élevage sage.</p></div></li>
+            <li><span class="type">Bulles</span><div><h3>So Niiice&nbsp;!</h3><p>Une méthode traditionnelle au nez net et fruité, aux arômes de pêche, avec de légères notes levuriennes qui lui donnent un caractère de pain frais.</p></div></li>
+            <li><span class="type">Blanc, 100&nbsp;% Rolle</span><div><h3>Le grand Rolle</h3><p>Jaune citron pâle aux reflets or blanc, un nez délicat au voile toasté et d’amande, puis des notes de pêche et de citron à l’aération.</p></div></li>
+            <li><span class="type">Rosé</span><div><h3>Braquet</h3><p>L’expression d’un cépage emblématique de Bellet, cultivé exclusivement sur quelques hectares de l’appellation.</p></div></li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://domainedelasource.fr/vins-domaine-de-la-source/">Voir nos vins</a>
+            <a class="btn btn-contour" href="https://domainedelasource.fr/boutique-2/">Commander en ligne</a>
+          </div>
+        </div>
+        <div class="vins-photos">
+          <figure class="grappes">
+            <img class="rv" src="assets/domaine-de-la-source-bellet-nice/grappes-de-raisin-en-veraison.webp" alt="Grappes de raisin en véraison, grains rouges et noirs" width="1600" height="1066" loading="lazy">
+          </figure>
+          <figure class="caisse rv">
+            <img src="assets/domaine-de-la-source-bellet-nice/vigneron-inspecte-les-grappes-de-raisin-blanc.webp" alt="Grappes de raisin blanc, un vigneron examine la vigne derrière" width="1600" height="1066" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visites" id="visites">
+    <div class="cadre vis-grille">
+      <div class="vis-photos">
+        <figure class="pente">
+          <img class="rv" src="assets/domaine-de-la-source-bellet-nice/travail-a-la-main-dans-la-vigne-en-pente.webp" alt="Travail à la main dans une parcelle de vigne en pente" width="1600" height="1065" loading="lazy">
+          <figcaption class="etiquette">Au milieu des vignes</figcaption>
+        </figure>
+        <figure class="vigneron rv">
+          <img src="assets/domaine-de-la-source-bellet-nice/vigneron-au-travail-dans-le-feuillage.webp" alt="Un vigneron au travail dans le feuillage de la vigne" width="1600" height="1066" loading="lazy">
+        </figure>
+      </div>
+      <div class="vis-texte">
+        <h2>Venez nous rencontrer au domaine.</h2>
+        <p>Une visite guidée et commentée avec un membre de la famille Dalmasso, au milieu des vignes et dans la cave. Ou une flânerie dans les vignes, et la dégustation de nos crus à l’ombre du patio.</p>
+        <div class="formule">
+          <div class="ligne"><h3>Formule Découverte</h3><span class="prix">25&nbsp;€</span></div>
+          <p>Par personne, pour 3 vins. Une promenade dans les vignes au-dessus de la plaine du Var, et le coucher de soleil sur le Baou de Saint-Jeannet, un verre à la main.</p>
+        </div>
+        <p class="repas">Repas et apéros au domaine : spécialités niçoises, viandes au barbecue, socca au four à bois, avec nos vins de Bellet et notre cuvée effervescente.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#contact">Réserver votre visite</a>
+          <a class="btn btn-contour" href="https://domainedelasource.fr/experiences/">Toutes les expériences</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gite" id="gite">
+    <div class="cadre">
+      <div class="gite-carte">
+        <figure>
+          <img class="rv" src="assets/domaine-de-la-source-bellet-nice/rose-et-verres-au-bord-de-la-piscine-du-gite.webp" alt="Une bouteille de rosé du domaine et deux verres au bord de la piscine du gîte" width="1600" height="1200" loading="lazy">
+          <figcaption class="etiquette">Le Gîte de Bellet</figcaption>
+        </figure>
+        <div class="gite-texte">
+          <h2>Une villa entre mer et vignes</h2>
+          <p>Le Gîte de Bellet jouxte le domaine. Les propriétaires vous y accueillent pour une visite guidée au milieu des vignes et une dégustation commentée de leurs vins de Bellet.</p>
+          <div class="gite-chiffres">
+            <div><b>147&nbsp;m²</b><span>de villa de charme</span></div>
+            <div><b>8</b><span>couchages</span></div>
+            <div><b>4</b><span>chambres</span></div>
+            <div><b>2</b><span>salles de bain</span></div>
+          </div>
+          <div class="actions"><a class="btn btn-plein" href="https://domainedelasource.fr/hebergement-2/">Découvrir le gîte</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Venez déguster.</h2>
+      <p>Réservez votre visite en nous contactant, par téléphone ou par mail.</p>
+      <div class="actions">
+        <a class="btn btn-mimosa" href="tel:+33493298160">04 93 29 81 60</a>
+        <a class="btn btn-contour-clair" href="mailto:contact@domainedelasource.fr">Écrire au domaine</a>
+      </div>
+    </div>
+    <div class="ct-infos">
+      <div><h3>Dégustation</h3><p>Du lundi au samedi<br>de 10&nbsp;h à 18&nbsp;h</p></div>
+      <div><h3>Adresse</h3><p>303, chemin de Saquier<br>06200 Nice</p></div>
+      <div><h3>Téléphones</h3><p><a href="tel:+33493298160">04 93 29 81 60</a><br><a href="tel:+33617778798">06 17 77 87 98</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@domainedelasource.fr">contact@domainedelasource.fr</a></p></div>
+      <div><h3>Nous suivre</h3><p><a href="https://www.instagram.com/domainedelasource/">Instagram</a><br><a href="https://www.facebook.com/carinedalmasso06/">Facebook</a></p></div>
+      <div><h3>Certifiés AB</h3><p>Tous nos vins et produits oléicoles.</p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Domaine de la Source, AOP vin de Bellet, Nice</span>
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine de la Source</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

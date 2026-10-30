@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Terrafeu Créations, céramiques en grès et Raku à Saint-Dézéry (Gard)</title>
+<meta name="description" content="Catherine Guigon, artisan d'art membre des Ateliers d'Art de France : poissons en grès à poser, à suspendre, dessous de plat, oursins, et stages Raku et Enfumage à Saint-Dézéry, près de Nîmes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232A2826'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Rockwell,Georgia,serif' font-size='36' fill='%233E8C7E'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fumee:#2A2826;
+  --fumee-2:#36332F;
+  --fumee-nuit:#211F1D;
+  --argile:#ECE7E1;
+  --argile-clair:#F7F4F0;
+  --argile-fonce:#E0D8CE;
+  --patine:#3E8C7E;
+  --patine-clair:#5FAE9F;
+  --patine-encre:#2E6E62;
+  --encre-douce:#5D5752;
+  --ombre:0 30px 60px -34px rgba(36,30,26,.55);
+  --ombre-nuit:0 40px 80px -40px rgba(0,0,0,.8);
+  --display:"Hepta Slab", Rockwell, Georgia, serif;
+  --texte:"Instrument Sans", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--argile);color:var(--fumee);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--patine);color:var(--argile-clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--patine-encre);color:var(--argile-clair)}
+.btn-plein:hover{background:var(--patine);box-shadow:0 18px 30px -16px rgba(46,110,98,.75)}
+.btn-contour{border:1.5px solid var(--fumee);color:var(--fumee)}
+.btn-contour:hover{background:var(--fumee);color:var(--argile-clair)}
+.btn-patine{background:var(--patine);color:var(--argile-clair)}
+.btn-patine:hover{background:var(--patine-clair);color:var(--fumee-nuit);box-shadow:0 18px 30px -16px rgba(95,174,159,.6)}
+.btn-contour-clair{border:1.5px solid rgba(247,244,240,.4);color:var(--argile-clair)}
+.btn-contour-clair:hover{background:var(--argile-clair);color:var(--fumee);border-color:var(--argile-clair)}
+.lien{font-weight:600;text-decoration:underline;text-decoration-color:var(--patine);text-decoration-thickness:2px;text-underline-offset:6px;transition:color .2s}
+.lien:hover{color:var(--patine-encre)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;padding:24px 0;flex-wrap:wrap}
+.marque{display:flex;align-items:baseline;gap:10px;text-decoration:none;font-family:var(--display);font-size:26px;font-weight:500;line-height:1.1}
+.marque span{font-weight:300;color:var(--patine-encre)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.nav a{text-decoration:none;font-size:16px;transition:color .2s}
+.nav a:hover{color:var(--patine-encre)}
+.nav .pastille{background:var(--fumee);color:var(--argile-clair);border-radius:999px;padding:10px 22px;font-weight:600}
+.nav .pastille:hover{background:var(--fumee-2);color:var(--argile-clair)}
+
+/* Héros : photo à gauche, titre à droite */
+.heros{padding:32px 0 96px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-photo{grid-column:1 / 8;margin:0 0 0 calc(-1 * min(48px, max(0px, (100vw - 1200px) / 2)));position:relative}
+.heros-photo img{width:100%;aspect-ratio:16 / 11;object-fit:cover;object-position:100% 62%;border-radius:28px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(247,244,240,.94);color:var(--fumee);font-size:15px;font-weight:600;padding:8px 14px;border-radius:10px;line-height:1.3}
+.heros-photo .credit{left:20px;top:20px;bottom:auto;font-weight:500}
+.heros-texte{grid-column:8 / 13;padding-left:8px}
+.heros h1{font-size:clamp(2.6rem, 1.4rem + 3.4vw, 4.25rem);font-weight:400;line-height:1}
+.heros h1 em{font-style:normal;color:var(--patine-encre);font-weight:300}
+.heros .chapo{margin-top:28px;color:var(--encre-douce)}
+.heros .signe{margin-top:20px;font-size:16px;color:var(--fumee);display:flex;gap:12px;align-items:center}
+.heros .signe::before{content:"";width:28px;height:2px;background:var(--patine);flex:none}
+.heros .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+
+/* Faits */
+.faits{background:var(--argile-fonce)}
+.faits ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.faits li{padding:0 28px;border-left:1px solid rgba(42,40,38,.16);display:flex;flex-direction:column;gap:4px}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits strong{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1;white-space:nowrap}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.45}
+
+/* Créations : liste éditoriale, photos petites */
+.creations{padding:128px 0}
+.cr-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.cr-tete{grid-column:1 / 5;position:sticky;top:32px}
+.cr-tete h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.cr-tete p{margin-top:22px;color:var(--encre-douce)}
+.cr-tete .actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+.cr-liste{grid-column:6 / 13;list-style:none;margin:0;padding:0}
+.cr-liste li{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:28px;align-items:center;padding:24px 0;border-top:1px solid rgba(42,40,38,.15)}
+.cr-liste li:last-child{border-bottom:1px solid rgba(42,40,38,.15)}
+.cr-liste img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;box-shadow:0 20px 34px -24px rgba(36,30,26,.6)}
+.cr-liste h3{font-size:28px;font-weight:500}
+.cr-liste p{margin-top:6px;color:var(--encre-douce);font-size:17px}
+.cr-liste a{display:inline-block;margin-top:8px;font-size:16px}
+.nuances{margin-top:28px;font-size:16px;color:var(--encre-douce);max-width:620px}
+
+/* Atelier : bandeau panoramique + gestes */
+.atelier{background:var(--argile-clair);padding:120px 0}
+.at-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.at-tete h2{grid-column:1 / 7;font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.at-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.panorama{margin:56px 0 0;position:relative}
+.panorama > img{width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:40% 55%;border-radius:26px;box-shadow:var(--ombre)}
+.panorama .mains{position:absolute;right:48px;bottom:-72px;width:min(320px, 34%);background:var(--argile-clair);padding:12px 12px 16px;border-radius:8px;transform:rotate(2.5deg);box-shadow:var(--ombre)}
+.panorama .mains img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:60% 40%;border-radius:3px}
+.panorama .mains figcaption{font-size:15px;color:var(--encre-douce);margin-top:8px}
+.gestes{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;max-width:860px}
+.gestes li{display:flex;flex-direction:column;gap:10px;font-size:17px;color:var(--encre-douce)}
+.gestes li::before{content:"";width:14px;height:14px;border-radius:50%;border:2px solid var(--patine)}
+.gestes li:last-child::before{background:var(--patine)}
+.gestes b{color:var(--fumee);font-weight:600}
+.at-citation{margin-top:48px;max-width:760px;font-family:var(--display);font-weight:300;font-size:clamp(1.6rem, 1.1rem + 1.4vw, 2.4rem);line-height:1.25}
+
+/* Catherine */
+.catherine{padding:128px 0}
+.ca-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.ca-texte{grid-column:1 / 7}
+.ca-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.ca-texte p{margin-top:22px;color:var(--encre-douce)}
+.ca-texte p.fort{color:var(--fumee);font-size:20px}
+.label{margin-top:36px;background:var(--argile-clair);border-radius:20px;padding:28px 30px;box-shadow:0 20px 40px -30px rgba(36,30,26,.5)}
+.label b{font-family:var(--display);font-weight:500;font-size:22px;display:block}
+.label p{margin-top:8px !important;font-size:17px}
+.label .liens{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:14px}
+.ca-photos{grid-column:8 / 13;position:relative;padding-bottom:80px}
+.ca-photos figure{margin:0;position:relative}
+.ca-photos .tour img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:62% 50%;border-radius:24px;box-shadow:var(--ombre)}
+.ca-photos .outils{position:absolute;left:-56px;bottom:0;width:min(220px, 50%)}
+.ca-photos .outils img{width:100%;aspect-ratio:1;object-fit:cover;object-position:40% 50%;border-radius:50%;border:8px solid var(--argile);box-shadow:var(--ombre)}
+
+/* Stages, fond fumée */
+.stages{background:var(--fumee);color:var(--argile-clair);padding:128px 0;overflow:clip}
+.st-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.st-texte{grid-column:1 / 7}
+.st-texte h2{font-size:clamp(2.2rem, 1.4rem + 2.2vw, 3.3rem)}
+.st-texte > p{margin-top:22px;color:rgba(247,244,240,.8)}
+.stage{margin-top:28px;padding:30px 32px;border-radius:20px;background:var(--fumee-2)}
+.stage h3{font-size:30px;font-weight:500}
+.stage p{margin-top:10px;color:rgba(247,244,240,.82);font-size:17px}
+.stage.enfumage{background:var(--argile-clair);color:var(--fumee);box-shadow:var(--ombre-nuit)}
+.stage.enfumage p{color:var(--encre-douce)}
+.etapes{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.etapes li{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:16px;font-size:17px;padding-top:12px;border-top:1px solid rgba(42,40,38,.14)}
+.etapes b{font-weight:600}
+.tarif{margin-top:18px;display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
+.tarif strong{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;color:var(--patine-encre);white-space:nowrap}
+.tarif span{font-size:16px;color:var(--encre-douce)}
+.points{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.points li{border:1px solid rgba(247,244,240,.26);border-radius:999px;padding:7px 16px;font-size:16px}
+.st-texte .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.st-photos{grid-column:8 / 13;position:relative;padding-top:24px}
+.st-photos figure{margin:0;position:relative}
+.st-photos .laminoir img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:52% 50%;border-radius:200px 200px 24px 24px;box-shadow:var(--ombre-nuit)}
+.st-photos .emaux{margin-top:-80px !important;margin-left:-64px !important;width:min(280px, 62%);background:var(--argile-clair);padding:12px 12px 16px;border-radius:8px;transform:rotate(-3deg);box-shadow:var(--ombre-nuit)}
+.st-photos .emaux img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:30% 50%;border-radius:3px}
+.st-photos .emaux figcaption{font-size:15px;color:var(--encre-douce);margin-top:8px}
+
+/* Contact */
+.contact{padding:120px 0}
+.ct-carte{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;background:var(--argile-clair);border-radius:32px;padding:64px;box-shadow:var(--ombre)}
+.ct-titre{grid-column:1 / 7}
+.ct-titre h2{font-size:clamp(2.2rem, 1.4rem + 2.2vw, 3.3rem)}
+.ct-titre p{margin-top:20px;color:var(--encre-douce)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-infos{grid-column:8 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-content:start}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--patine-encre)}
+.ct-infos p{margin-top:6px;font-size:18px;overflow-wrap:anywhere}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(42,40,38,.25)}
+.ct-infos a:hover{border-color:var(--patine)}
+.pied{background:var(--fumee);color:rgba(247,244,240,.66);font-size:15px}
+.pied .cadre{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding:32px 0}
+.pied nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--argile-clair)}
+.proposition{background:var(--fumee-nuit);color:rgba(247,244,240,.56);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .mains.rv.in{transform:rotate(2.5deg)}
+.js .emaux.rv.in{transform:rotate(-3deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .heros-texte{padding-left:0}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+  .faits li:nth-child(3){border-left:0;padding-left:0}
+  .gestes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ca-photos .outils{left:-16px}
+  .st-photos .emaux{margin-left:-16px !important}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{padding:18px 0 6px}
+  .nav{gap:6px 18px;width:100%}
+  .nav a{font-size:15px}
+  .nav .pastille{padding:5px 14px;margin-left:auto}
+  .heros{padding:18px 0 72px}
+  .heros-grille,.cr-grille,.at-tete,.ca-grille,.st-grille,.ct-carte{grid-template-columns:minmax(0,1fr)}
+  .heros-texte{display:contents}
+  .heros h1{order:1;font-size:clamp(2.3rem, 1.2rem + 5vw, 3.2rem)}
+  .heros-photo{order:2;grid-column:1;margin:0}
+  .heros-photo img{aspect-ratio:4 / 3;border-radius:22px}
+  .heros .chapo{order:3;margin-top:0}
+  .heros .signe{order:4;margin-top:-8px}
+  .heros .actions{order:5;margin-top:0}
+  .cr-tete,.cr-liste,.at-tete h2,.at-tete p,.ca-texte,.ca-photos,.st-texte,.st-photos,.ct-titre,.ct-infos{grid-column:1}
+  .cr-tete{position:static}
+  .cr-liste{margin-top:32px}
+  .cr-liste li{grid-template-columns:minmax(0,96px) minmax(0,1fr);gap:18px;align-items:start}
+  .cr-liste h3{font-size:24px}
+  .creations,.atelier,.catherine,.stages,.contact{padding:88px 0}
+  .at-tete p{margin-top:4px}
+  .panorama{margin-top:36px}
+  .panorama > img{aspect-ratio:4 / 3;object-position:42% 50%;border-radius:22px}
+  .panorama .mains{right:12px;bottom:-56px;width:min(190px, 50%)}
+  .panorama > .etiquette{top:14px;left:14px;bottom:auto}
+  .gestes{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:88px}
+  .ca-photos{margin-top:40px;max-width:440px;padding-bottom:64px}
+  .ca-photos .outils{left:auto;right:-8px;width:min(160px, 40%)}
+  .st-photos{margin-top:48px;max-width:420px}
+  .st-photos .emaux{margin-left:auto !important;margin-right:-8px}
+  .stage{padding:24px 22px}
+  .etapes li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .ct-carte{padding:36px 24px;border-radius:24px}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:22px;margin-top:32px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{border-left:0;padding-left:0}
+  .marque{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Terrafeu Créations, accueil">Terrafeu <span>Créations</span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#creations">Mes créations</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#stages">Stages</a>
+      <a href="https://terrafeucreations.fr/boutique/">Boutique</a>
+      <a class="pastille" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <figure class="heros-photo rv">
+        <img src="assets/terrafeu-creations-gard/poissons-en-ceramique-sur-table-au-jardin.webp" width="1600" height="952" alt="Poissons-boules en céramique à écailles turquoise et blanc craquelé posés sur une nappe bleue, au jardin">
+        <figcaption class="etiquette credit">Photo : Cécile Garou</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <h1>Chaque objet prend vie entre <em>terre et feu</em>.</h1>
+        <p class="chapo">Des céramiques artisanales uniques en grès et Raku, façonnées à la main dans mon petit atelier de Saint-Dézéry, dans le Gard. Oursins, pièces à suspendre, grès à poser et dessous de plat, autour d'un thème : le poisson.</p>
+        <p class="signe">Catherine Guigon, artisan d'art</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://terrafeucreations.fr/boutique/">Découvrir la boutique</a>
+          <a class="btn btn-contour" href="#stages">Les stages Raku et Enfumage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="faits" aria-label="En bref">
+  <div class="cadre">
+    <ul>
+      <li><strong>Ateliers d'Art</strong><span>de France : Terrafeu Créations en est membre</span></li>
+      <li><strong>Depuis 2019</strong><span>une reconversion pour exprimer pleinement ma créativité</span></li>
+      <li><strong>950&nbsp;°C</strong><span>la cuisson Raku qui carbonise les pièces</span></li>
+      <li><strong>Saint-Dézéry</strong><span>l'atelier, dans le Gard, près de Nîmes</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="creations" id="creations">
+  <div class="cadre cr-grille">
+    <div class="cr-tete">
+      <h2>Un thème : le poisson.</h2>
+      <p>Une forme qui m'inspire une poésie délicate et une infinie liberté d'interprétation. Avec tant d'espèces et de formes possibles, chaque pièce peut être une toile personnalisée, aux couleurs et aux décors variés.</p>
+      <div class="actions"><a class="btn btn-plein" href="https://terrafeucreations.fr/mes-creations/">Voir mes créations</a></div>
+    </div>
+    <ul class="cr-liste">
+      <li>
+        <img src="assets/terrafeu-creations-gard/poisson-boule-craquele-turquoise.webp" width="1600" height="777" alt="Poisson-boule à poser, écailles turquoise et cuivrées, tête blanche craquelée" loading="lazy" style="object-position:58% 50%">
+        <div><h3>À poser</h3><p>Des poissons en grès à poser, pour une touche poétique et artisanale dans vos espaces.</p><a class="lien" href="https://terrafeucreations.fr/categorie-produit/a-poser/">Les pièces à poser</a></div>
+      </li>
+      <li>
+        <img src="assets/terrafeu-creations-gard/sardines-ceramique-a-suspendre.webp" width="1600" height="777" alt="Cinq sardines en céramique aux émaux verts, bronze et rouge cuivré" loading="lazy" style="object-position:50% 50%">
+        <div><h3>À suspendre</h3><p>Des créations à suspendre, inspirées par les nuances de la mer, pour une décoration aérienne.</p><a class="lien" href="https://terrafeucreations.fr/categorie-produit/a-suspendre/">Les pièces à suspendre</a></div>
+      </li>
+      <li>
+        <img src="assets/terrafeu-creations-gard/dessous-de-plat-poisson-bleu.webp" width="1600" height="777" alt="Dessous de plat rond en forme de poisson, écailles bleu outremer et turquoise" loading="lazy" style="object-position:47% 50%">
+        <div><h3>Dessous de plat</h3><p>Esthétique et fonctionnels : des dessous de plat en grès, élégants et résistants à la chaleur.</p><a class="lien" href="https://terrafeucreations.fr/categorie-produit/dessous-de-plat/">Les dessous de plat</a></div>
+      </li>
+      <li>
+        <img src="assets/terrafeu-creations-gard/poisson-en-ceramique-sur-tige-table-atelier.webp" width="1600" height="952" alt="Poisson en céramique à écailles vertes et dorées monté sur une tige, sur la table de l'atelier" loading="lazy" style="object-position:58% 45%">
+        <div><h3>Sur socle</h3><p>Des poissons façonnés en grès et montés sur socle, véritables pièces maîtresses pour votre intérieur.</p><a class="lien" href="https://terrafeucreations.fr/categorie-produit/piece-unique/">Les pièces uniques</a></div>
+      </li>
+      <li>
+        <img src="assets/terrafeu-creations-gard/oursin-ceramique-ajoure-noir.webp" width="1600" height="777" alt="Oursin en céramique noir métallisé, ajouré de petits trous" loading="lazy" style="object-position:45% 55%">
+        <div><h3>Oursins</h3><p>Des oursins décoratifs en grès ou porcelaine, pour une touche originale et raffinée dans la maison.</p><a class="lien" href="https://terrafeucreations.fr/boutique/">Voir la boutique</a></div>
+      </li>
+    </ul>
+  </div>
+  <div class="cadre"><p class="nuances">Grâce au Raku, aucune pièce ne ressemble à une autre : les créations peuvent légèrement varier en nuances et en détails.</p></div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="cadre">
+    <div class="at-tete">
+      <h2>Un lieu de création entre terre et feu.</h2>
+      <p>L'atelier est simple, lumineux et calme. Je façonne des pièces en grès, une à une, je privilégie les petites séries et les commandes sur mesure, avec une attention particulière aux finitions.</p>
+    </div>
+    <figure class="panorama">
+      <img class="rv" src="assets/terrafeu-creations-gard/atelier-grande-table-et-etageres.webp" width="1600" height="777" alt="L'atelier de Saint-Dézéry : grande table en bois, poisson sur tige, étagères chargées de pots d'émaux et de pièces" loading="lazy">
+      <figcaption class="etiquette">L'atelier, à Saint-Dézéry</figcaption>
+      <figure class="mains rv">
+        <img src="assets/terrafeu-creations-gard/mains-gravant-un-dessous-de-plat-cru.webp" width="1600" height="952" alt="Mains qui creusent les écailles d'un dessous de plat en terre crue" loading="lazy">
+        <figcaption>Les écailles, creusées dans la terre crue</figcaption>
+      </figure>
+    </figure>
+    <ol class="gestes" aria-label="Le chemin d'une pièce">
+      <li><span><b>Je prépare</b> les pâtes</span></li>
+      <li><span><b>Je tourne</b> ou je modèle</span></li>
+      <li><span><b>Je laisse</b> sécher</span></li>
+      <li><span><b>J'émaille</b></span></li>
+      <li><span><b>Le four</b> fait le reste</span></li>
+    </ol>
+    <p class="at-citation">« Le Raku apporte une part d'imprévu. C'est ce moment que j'aime. »</p>
+  </div>
+</section>
+
+<section class="catherine" id="catherine">
+  <div class="cadre ca-grille">
+    <div class="ca-texte">
+      <h2>Depuis toujours, la terre m'appelle.</h2>
+      <p class="fort">Ce matériau brut, parfois ocre ou rouillé, façonné par nos garrigues, nos vignes et nos oliviers, a éveillé en moi une passion dès l'enfance.</p>
+      <p>La vie m'a éloignée de ce chemin, mais l'amour pour la matière a refait surface : après plus de 30&nbsp;ans, j'ai entrepris une reconversion professionnelle qui, depuis 2019, m'offre la possibilité d'exprimer pleinement ma créativité. En parallèle, je commence à travailler la porcelaine, une matière exigeante qui impose patience et humilité.</p>
+      <div class="label">
+        <b>Artisan d'art, Ateliers d'Art de France</b>
+        <p>Catherine Guigon possède la qualité d'artisan d'art. Chaque pièce est façonnée dans le respect des savoir-faire, avec une exigence de qualité et une âme profondément artisanale.</p>
+        <div class="liens"><a class="lien" href="https://terrafeucreations.fr/a-propos/">En savoir plus sur Catherine</a><a class="lien" href="https://www.ateliersdart.com/">Ateliers d'Art de France</a></div>
+      </div>
+    </div>
+    <div class="ca-photos">
+      <figure class="tour rv">
+        <img src="assets/terrafeu-creations-gard/tournassage-bol-cru-sur-plaque.webp" width="1600" height="952" alt="Mains de la céramiste qui découpent une plaque d'argile autour d'un bol en terre crue" loading="lazy">
+        <figcaption class="etiquette">Un bol encore cru</figcaption>
+      </figure>
+      <figure class="outils rv">
+        <img src="assets/terrafeu-creations-gard/outils-et-rouleaux-a-motifs.webp" width="1600" height="900" alt="Rouleaux à motifs, emporte-pièce et pinceaux sur la table de l'atelier" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="stages" id="stages">
+  <div class="cadre st-grille">
+    <div class="st-texte">
+      <h2>Raku et Enfumage : des pièces uniques grâce aux flammes.</h2>
+      <p>Deux stages complémentaires pour découvrir des techniques ancestrales où le feu sublime vos créations. Débutant ou confirmé, vous repartez avec des pièces qui vous ressemblent.</p>
+      <div class="stage">
+        <h3>Stage Raku</h3>
+        <p>Une cuisson rapide et spectaculaire, pour des pièces aux contrastes et aux textures saisissants. À chaque fournée, l'imprévisible devient art.</p>
+      </div>
+      <div class="stage enfumage">
+        <h3>Stage Enfumage</h3>
+        <p>Une aventure en plein air, où la flamme et la fumée viennent peindre des nuances uniques sur votre pièce : boule, vase ou autre.</p>
+        <ul class="etapes">
+          <li><b>Une demi-journée</b><span>Création de votre pièce en argile, avec des outils et des moules à disposition.</span></li>
+          <li><b>Une semaine plus tard</b><span>Une journée complète : lissage, biscuitage, puis cuisson finale au feu en plein air.</span></li>
+        </ul>
+        <div class="tarif"><strong>145&nbsp;€</strong><span>les deux sessions, matériel et cuissons inclus. 8 participants au maximum, 4 par session.</span></div>
+      </div>
+      <ul class="points">
+        <li>Aucun prérequis</li><li>Accompagnement personnalisé</li><li>Cadre bienveillant</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-patine" href="mailto:contact@terrafeucreations.fr?subject=Prochaines%20dates%20de%20stage">Demander les prochaines dates</a>
+        <a class="btn btn-contour-clair" href="https://terrafeucreations.fr/stages/">La page des stages</a>
+      </div>
+    </div>
+    <div class="st-photos">
+      <figure class="laminoir rv">
+        <img src="assets/terrafeu-creations-gard/laminoir-a-plaques-d-argile.webp" width="1600" height="900" alt="Machine à étaler les plaques d'argile, volant noir et manivelle rouge, sur l'établi" loading="lazy">
+      </figure>
+      <figure class="emaux rv">
+        <img src="assets/terrafeu-creations-gard/pots-d-emaux-sur-etagere.webp" width="1600" height="777" alt="Pots d'émaux rangés sur une étagère en bois de l'atelier" loading="lazy">
+        <figcaption>Les émaux de l'atelier</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="cadre">
+    <div class="ct-carte">
+      <div class="ct-titre">
+        <h2>Une pièce, un stage, une commande sur mesure ?</h2>
+        <p>Pour une pièce de la boutique, une commande sur mesure ou les prochaines dates de stage, écrivez-moi ou appelez l'atelier.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@terrafeucreations.fr">Écrire à Catherine</a>
+          <a class="btn btn-contour" href="tel:+33677779887">06 77 77 98 87</a>
+        </div>
+      </div>
+      <div class="ct-infos">
+        <div><h3>Atelier</h3><p>12 route de Moussac<br>30190 Saint-Dézéry</p></div>
+        <div><h3>Téléphone</h3><p><a href="tel:+33677779887">06 77 77 98 87</a></p></div>
+        <div><h3>Mail</h3><p><a href="mailto:contact@terrafeucreations.fr">contact@terrafeucreations.fr</a></p></div>
+        <div><h3>Me suivre</h3><p><a href="https://www.instagram.com/terrafeucreations/">Instagram</a><br><a href="https://www.facebook.com/profile.php?id=100057188030079">Facebook</a></p></div>
+        <div><h3>Boutique en ligne</h3><p><a href="https://terrafeucreations.fr/boutique/">terrafeucreations.fr/boutique</a></p></div>
+        <div><h3>Formulaire</h3><p><a href="https://terrafeucreations.fr/contact/">Page contact</a></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="cadre">
+    <span>Terrafeu Créations, céramiques en grès et Raku, membre des Ateliers d'Art de France. Photos : Cécile Garou</span>
+    <nav aria-label="Pied de page"><a href="https://terrafeucreations.fr/a-propos/">À propos</a><a href="https://terrafeucreations.fr/stages/">Stages</a><a href="https://terrafeucreations.fr/boutique/">Boutique</a></nav>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Terrafeu Créations</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

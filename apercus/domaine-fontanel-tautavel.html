@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--
+PLAN (Nova, lot C, 30/10) Domaine Fontanel, Tautavel
+1. Couleurs : schiste #2A2726 (héros, section des vins, pied), lin #F2EEE8 (fond), lin soutenu #E7DFD3 (section vigne et cave), surface #FAF7F2 (cartes), muscat #D9822B (pleins, mot du titre sur fond sombre), muscat foncé #9A5414 (liens sur fond clair).
+2. Typo : Archivo Narrow 500/600 (titres condensés, chiffres) + Lora 400/italique (texte).
+3. Héros sombre : titre condensé très haut à gauche, vue aérienne recadrée sur ses deux tiers du haut (logo incrusté hors champ) à droite, étiquette posée dessus ; bandeau de faits en carte claire qui chevauche la jonction.
+4. Sections : le domaine (collage deux photos | texte) ; vigne et cave (photo | liste éditoriale de chiffres) ; nos vins sur schiste (photo panoramique puis deux colonnes, lien « Toutes nos récompenses » qui marche) ; caveau (photo + vignette inclinée | texte et liste) ; gîtes (deux fiches de taille différente + vignette) ; pied sombre « Nous vous accueillons ».
+5. Défaut 1 réglé : « Toutes nos récompenses » mène à la page des vins récompensés (200). Défaut 2 réglé : « Séjourner dans nos gîtes » et « Découvrir nos activités en photos » mènent aux pages qui existent.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine Fontanel, vins de Tautavel au pied des Corbières</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232A2726'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='600' font-size='40' fill='%23D9822B'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --schiste:#2A2726; --schiste2:#353130; --lin:#F2EEE8; --lin2:#E7DFD3; --surface:#FAF7F2;
+  --muscat:#D9822B; --muscat-f:#9A5414; --encre:#2A2726; --doux:#5E5650; --sur-sombre:#D8D0C6;
+  --w:min(1200px, 100% - 48px);
+  --ombre:0 30px 60px -34px rgba(26,22,20,.55);
+  --titre:"Archivo Narrow", "Arial Narrow", sans-serif; --texte:"Lora", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--lin);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--muscat);color:var(--schiste)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:var(--w);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(36px, 5vw, 64px)}
+h3{font-size:clamp(24px, 2.4vw, 30px);font-weight:500;line-height:1.1}
+p{margin:0 0 1em;text-wrap:pretty}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--titre);font-size:19px;font-weight:600;text-decoration:none;letter-spacing:.01em;border:2px solid transparent;transition:transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s, color .25s, border-color .25s, box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--muscat);color:var(--schiste)}
+.btn-plein:hover{background:#E8913A;box-shadow:0 16px 30px -18px rgba(217,130,43,.9)}
+.btn-contour{border-color:currentColor}
+.sombre .btn-contour{color:var(--lin)}
+.sombre .btn-contour:hover{background:var(--lin);color:var(--schiste);border-color:var(--lin)}
+.clair .btn-contour{color:var(--schiste)}
+.clair .btn-contour:hover{background:var(--schiste);color:var(--lin);border-color:var(--schiste)}
+.clair .btn-plein{background:var(--schiste);color:var(--lin)}
+.clair .btn-plein:hover{background:#000;box-shadow:0 16px 30px -18px rgba(26,22,20,.9)}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.lien{color:var(--muscat-f);font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.lien:hover{text-decoration-thickness:2px}
+
+/* Photos */
+.ph{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);background:var(--lin2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette.haut{top:14px;bottom:auto}
+.etiquette{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);background:rgba(250,247,242,.94);color:var(--schiste);font-family:var(--titre);font-size:16px;font-weight:500;line-height:1.25;padding:8px 14px;border-radius:10px}
+
+/* En-tête */
+.entete{background:var(--schiste);color:var(--lin)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque b{font-family:var(--titre);font-weight:600;font-size:25px;letter-spacing:.01em}
+.marque span{font-family:var(--titre);font-size:16px;color:var(--muscat);margin-top:4px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-family:var(--titre);font-size:18px}
+.nav ul a{text-decoration:none;color:var(--sur-sombre);transition:color .2s}
+.nav ul a:hover{color:var(--muscat)}
+.nav .btn{min-height:44px;padding:9px 20px;font-size:17px}
+
+/* Héros */
+.heros{background:var(--schiste);color:var(--lin);padding:40px 0 140px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);grid-template-areas:"titre photo" "texte photo";column-gap:72px;align-items:start}
+.heros-titre{grid-area:titre;padding-top:28px}
+.heros-titre .lieu{font-family:var(--titre);font-size:19px;color:var(--sur-sombre);margin:0 0 22px}
+.heros h1{font-size:clamp(48px, 8.4vw, 124px);line-height:.94;letter-spacing:-.012em;font-weight:600}
+.heros h1 em{font-style:italic;font-weight:500;color:var(--muscat)}
+.heros-texte{grid-area:texte;max-width:540px;margin-top:30px;color:var(--sur-sombre);font-size:19px}
+.heros-photo{grid-area:photo;align-self:start;margin-top:64px;aspect-ratio:1/1;border-radius:24px;box-shadow:0 40px 80px -36px rgba(0,0,0,.75)}
+.heros-photo img{object-position:50% 0}
+
+/* Faits */
+.faits{position:relative;z-index:2;margin-top:-80px}
+.faits ul{list-style:none;margin:0;padding:30px 36px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;background:var(--surface);border-radius:20px;box-shadow:var(--ombre)}
+.faits li{display:flex;flex-direction:column;gap:6px;color:var(--doux);font-size:16px;line-height:1.4}
+.faits strong{font-family:var(--titre);font-size:30px;font-weight:600;color:var(--schiste);line-height:1;white-space:nowrap}
+
+/* Domaine */
+.domaine{padding:130px 0 120px}
+.domaine-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+.collage{position:relative;padding:0 70px 110px 0}
+.collage .grande{aspect-ratio:4/3}
+.collage .grande img{object-position:50% 0}
+.collage .petite{position:absolute;right:0;bottom:0;width:min(250px, 48%);aspect-ratio:1/1;border-radius:6px;padding:10px 10px 0;background:var(--surface);transform:rotate(3.5deg);box-shadow:0 30px 50px -26px rgba(26,22,20,.6)}
+.collage .petite img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:3px;object-position:50% 0}
+.collage .petite figcaption{font-family:var(--titre);font-size:16px;color:var(--doux);padding:8px 2px 10px;line-height:1.2}
+.domaine-texte p{color:var(--doux)}
+.domaine-texte h2{margin-bottom:28px}
+.citation{font-family:var(--texte);font-style:italic;font-size:22px;line-height:1.45;color:var(--schiste);margin:30px 0 26px;padding-left:22px;border-left:2px solid var(--muscat)}
+
+/* Vigne et cave */
+.cave{background:var(--lin2);padding:120px 0}
+.cave-grille{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:80px;align-items:start}
+.cave-photo{position:sticky;top:40px;aspect-ratio:1/1;border-radius:200px 200px 22px 22px}
+.cave-photo img{object-position:50% 0}
+.cave h2{margin-bottom:18px}
+.cave .chapo{font-size:21px;color:var(--doux);max-width:620px}
+.reperes{list-style:none;margin:40px 0 0;padding:0}
+.reperes li{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:28px;padding:26px 0;border-top:1px solid rgba(42,39,38,.16)}
+.reperes li:last-child{border-bottom:1px solid rgba(42,39,38,.16)}
+.reperes strong{font-family:var(--titre);font-size:34px;font-weight:600;line-height:1;color:var(--schiste)}
+.reperes p{margin:0;color:var(--doux)}
+
+/* Vins */
+.vins{background:var(--schiste);color:var(--lin);padding:110px 0 120px}
+.vins-photo{aspect-ratio:16/7;border-radius:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.vins-photo img{object-position:50% 40%}
+.vins-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;margin-top:64px;align-items:start}
+.vins h2 em{font-style:italic;font-weight:500;color:var(--muscat)}
+.vins p{color:var(--sur-sombre);font-size:20px}
+
+/* Caveau */
+.caveau{padding:130px 0 120px}
+.caveau-grille{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:center}
+.caveau-photos{position:relative;padding-bottom:90px}
+.caveau-photos .grande{aspect-ratio:3/2}
+.caveau-photos .vignette{position:absolute;right:-24px;bottom:0;width:min(230px, 42%);aspect-ratio:1/1;border:8px solid var(--surface);border-radius:16px;transform:rotate(-4deg)}
+.caveau-photos .vignette img{object-position:50% 0}
+.caveau h2{margin-bottom:22px}
+.caveau p{color:var(--doux)}
+.facons{list-style:none;margin:28px 0 0;padding:0}
+.facons li{padding:18px 0;border-top:1px solid rgba(42,39,38,.16)}
+.facons li:last-child{border-bottom:1px solid rgba(42,39,38,.16)}
+.facons h3{font-size:24px;margin-bottom:4px}
+.facons p{margin:0;font-size:17px}
+
+/* Gîtes */
+.gites{padding:0 0 130px}
+.gites-cadre{background:var(--surface);border-radius:28px;box-shadow:var(--ombre);padding:64px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:64px;align-items:center}
+.gites h2{margin-bottom:20px}
+.gites p{color:var(--doux)}
+.fiches{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;margin-top:30px}
+.fiche{border-radius:16px;padding:24px;background:var(--lin)}
+.fiche.alzina{background:var(--schiste);color:var(--lin)}
+.fiche.alzina .lien{color:var(--muscat)}
+.fiche h3{font-size:28px;margin-bottom:6px}
+.fiche p{margin:0 0 12px;font-size:17px}
+.fiche.alzina p{color:var(--sur-sombre)}
+.gites-photo{aspect-ratio:1/1;max-width:400px;justify-self:end;width:100%;border-radius:18px;transform:rotate(2deg)}
+.gites-photo img{object-position:50% 0}
+.insta{font-size:17px;margin-top:22px}
+
+/* Pied */
+.pied{background:var(--schiste);color:var(--sur-sombre);padding:100px 0 0}
+.pied h2{color:var(--lin);margin-bottom:48px}
+.pied h2 em{font-style:italic;font-weight:500;color:var(--muscat)}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-bottom:70px}
+.pied h3{color:var(--lin);font-size:22px;margin-bottom:12px}
+.pied p{margin:0 0 8px;font-size:17px}
+.pied a{color:var(--lin);text-decoration:none;border-bottom:1px solid rgba(242,238,232,.35);transition:border-color .2s, color .2s}
+.pied a:hover{color:var(--muscat);border-color:var(--muscat)}
+.pied .btn{border-bottom:2px solid transparent;margin-top:14px}
+.pied .btn-plein{color:var(--schiste)}
+.pied .btn-plein:hover{color:var(--schiste)}
+.mention{border-top:1px solid rgba(242,238,232,.14);padding:22px 0 30px;font-size:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;color:#A79E94}
+.mention a{color:#A79E94}
+
+/* Apparitions douces, photos seulement */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .petite.rv.in{transform:rotate(3.5deg)}
+  .js .vignette.rv.in{transform:rotate(-4deg)}
+  .js .gites-photo.rv.in{transform:rotate(2deg)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+
+/* Tablette */
+@media (max-width:1060px){
+  .nav ul{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .domaine-grille,.cave-grille,.vins-grille,.caveau-grille,.gites-cadre{grid-template-columns:minmax(0,1fr);gap:56px}
+  .cave-photo{position:relative;top:0;max-width:520px}
+  .gites-photo{justify-self:start}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* Téléphone */
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros{padding:18px 0 110px}
+  .heros-grille{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .heros-titre{padding-top:12px}
+  .heros-titre .lieu{font-size:17px;margin-bottom:14px}
+  .heros-photo{margin:26px 0 0;border-radius:18px}
+  .heros-texte{font-size:17px;margin-top:26px}
+  .faits{margin-top:-70px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 22px;gap:20px}
+  .faits strong{font-size:26px}
+  .domaine,.caveau{padding:90px 0}
+  .cave,.vins{padding:90px 0}
+  .collage{padding:0 30px 90px 0}
+  .reperes li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .reperes strong{font-size:30px}
+  .vins-photo{aspect-ratio:4/3}
+  .vins-grille{margin-top:44px;gap:20px}
+  .caveau-photos .vignette{right:0}
+  .gites-cadre{padding:36px 22px;border-radius:22px}
+  .fiches{grid-template-columns:minmax(0,1fr)}
+  .pied{padding-top:80px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:34px}
+  .citation{font-size:20px}
+}
+@media (max-width:420px){
+  .wrap{width:min(1200px, 100% - 36px)}
+  .boutons .btn{width:100%}
+  .nav .btn{padding:8px 16px;font-size:16px}
+  .marque b{font-size:22px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .etiquette{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete sombre">
+  <div class="wrap nav">
+    <a class="marque" href="#haut" aria-label="Domaine Fontanel, accueil"><b>Domaine Fontanel</b><span>Tautavel</span></a>
+    <ul>
+      <li><a href="#domaine">Le domaine</a></li>
+      <li><a href="#vins">Nos vins</a></li>
+      <li><a href="#caveau">Visiter</a></li>
+      <li><a href="#gites">Nos gîtes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-plein" href="https://domainefontanel.fr/boutique/">Boutique</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros sombre">
+    <div class="wrap heros-grille">
+      <div class="heros-titre">
+        <div class="lieu">Vigneron à Tautavel, Pyrénées-Orientales</div>
+        <h1>Nos vins de Tautavel, au pied des <em>Corbières</em>.</h1>
+      </div>
+      <figure class="ph heros-photo rv">
+        <img src="assets/domaine-fontanel-tautavel/vignes-en-coteaux-et-pins-vues-du-ciel.webp" alt="Parcelles de vigne en coteaux sur terre ocre, pins parasols et falaises, vues du ciel" width="1200" height="1600">
+        <figcaption class="etiquette">Nos coteaux, vus du ciel</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p>Sur les contreforts des Corbières, entre Méditerranée et Pyrénées, le domaine s’étend sur 30&nbsp;hectares, dont 20 en vignes. Des rendements très faibles, des vins vinifiés de façon traditionnelle.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://domainefontanel.fr/boutique/">Commander en ligne</a>
+          <a class="btn btn-contour" href="https://domainefontanel.fr/reserver-un-creneau-de-visite-degustation/">Réserver une dégustation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap faits">
+    <ul aria-label="Le domaine en quelques faits">
+      <li><strong>30&nbsp;ha</strong>dont 20 en vignes</li>
+      <li><strong>&lt;&nbsp;30&nbsp;hl/ha</strong>des rendements souvent sous ce seuil</li>
+      <li><strong>1989</strong>des vins reconnus depuis, en France et à l’étranger</li>
+      <li><strong>HVE&nbsp;3</strong>depuis notre millésime 2018</li>
+      <li><strong>Gîtes 4*</strong>le gîte Alzina et le lodge Escala</li>
+    </ul>
+  </div>
+
+  <section class="domaine clair" id="domaine">
+    <div class="wrap domaine-grille">
+      <div class="collage">
+        <figure class="ph grande rv">
+          <img src="assets/domaine-fontanel-tautavel/couple-de-vignerons-verre-en-main-au-chai.webp" alt="Une vigneronne et un vigneron souriants, verre de vin rouge à la main, devant les fûts du chai" width="1200" height="1200" loading="lazy">
+          <figcaption class="etiquette haut">Au chai, verre en main</figcaption>
+        </figure>
+        <figure class="petite rv">
+          <img src="assets/domaine-fontanel-tautavel/vigneron-portant-un-seau-de-vendange.webp" alt="Un vigneron hisse un seau de vendange au-dessus des vignes" width="1200" height="1600" loading="lazy">
+          <figcaption>Les vendanges</figcaption>
+        </figure>
+      </div>
+      <div class="domaine-texte">
+        <h2>Depuis 1864, six générations de vignerons.</h2>
+        <p>Six générations se sont attachées à perpétuer la vocation agricole de cette région du Roussillon et à tirer le meilleur parti d’un terroir prédestiné. En 1989, Pierre et Marie-Claude Fontaneil ont créé le Domaine Fontanel, fruit du rapprochement de leurs deux familles.</p>
+        <p>Fin 2016, Elodie et Matthieu Collet ont pris leur suite. Vous continuerez à trouver les cuvées qui font l’identité du domaine.</p>
+        <p class="citation">À Tautavel, la richesse des terroirs est peu commune. Une diversité qui offre des possibilités de créer des assemblages et cuvées d’exception.</p>
+        <p>Nous travaillons les terroirs qui bordent l’Agly et ses affluents, à Tautavel, Vingrau et Maury.</p>
+        <a class="lien" href="https://domainefontanel.fr/album-photo-phototheque/">Découvrir nos activités en photos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cave clair" aria-labelledby="t-cave">
+    <div class="wrap cave-grille">
+      <figure class="ph cave-photo rv">
+        <img src="assets/domaine-fontanel-tautavel/seau-de-grappes-noires-vide-dans-la-benne.webp" alt="Un seau rouge déverse des grappes de raisin noir sous un ciel bleu" width="1200" height="1600" loading="lazy">
+      </figure>
+      <div>
+        <h2 id="t-cave">À la cave, notre travail est assez simple.</h2>
+        <p class="chapo">Simple parce que nous rentrons des raisins d’excellente qualité, sains et à maturité optimale.</p>
+        <ul class="reperes">
+          <li><strong>HVE niveau&nbsp;3</strong><p>Certifié Haute Valeur Environnementale au niveau le plus élevé depuis notre millésime 2018. Nous suivons principalement le cahier des charges bio, avec des interceps pour désherber sans chimie.</p></li>
+          <li><strong>Moins de 30&nbsp;hl/ha</strong><p>Traitements raisonnés, labours&nbsp;: les rendements sont très faibles, souvent moins de 30&nbsp;hectolitres par hectare.</p></li>
+          <li><strong>18&nbsp;mois en cave</strong><p>Après des vinifications traditionnelles, nos rouges passent par des élevages longs&nbsp;: en moyenne 18&nbsp;mois en cave, puis 6 à 12&nbsp;mois en bouteille avant la vente.</p></li>
+          <li><strong>Depuis 2025</strong><p>Nos vendanges sont accueillies dans notre nouveau chai, à Montner, équipé de cuves inox et d’un pressoir à membrane.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="vins sombre" id="vins">
+    <div class="wrap">
+      <figure class="ph vins-photo rv">
+        <img src="assets/domaine-fontanel-tautavel/caviste-sur-les-futs-dans-le-chai-sombre.webp" alt="Une rangée de fûts dans le chai, un vigneron penché au-dessus d’un fût au fond" width="1600" height="900" loading="lazy">
+        <figcaption class="etiquette">Dans la pénombre du chai</figcaption>
+      </figure>
+      <div class="vins-grille">
+        <h2>Des vins reconnus <em>depuis 1989</em>.</h2>
+        <div>
+          <p>Depuis 1989, nos vins sont reconnus dans des revues spécialisées en France, à l’étranger et dans de nombreux concours nationaux.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="https://domainefontanel.fr/vins-recompenses-medailles-concours/">Toutes nos récompenses</a>
+            <a class="btn btn-contour" href="https://domainefontanel.fr/boutique/">Commander en ligne</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caveau clair" id="caveau">
+    <div class="wrap caveau-grille">
+      <div class="caveau-photos">
+        <figure class="ph grande rv">
+          <img src="assets/domaine-fontanel-tautavel/degustation-au-caveau-entre-amis.webp" alt="Des visiteurs dégustent debout autour de tonneaux, cuves inox derrière" width="1600" height="1066" loading="lazy">
+          <figcaption class="etiquette haut">Dégustation au caveau</figcaption>
+        </figure>
+        <figure class="ph vignette rv">
+          <img src="assets/domaine-fontanel-tautavel/facade-de-la-cave-portes-en-bois-et-futs.webp" alt="Façade rose de la cave, portes en bois et deux fûts devant" width="1080" height="1450" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2>Venez goûter dans la rue principale de Tautavel.</h2>
+        <p>Notre cave historique est devenue notre caveau d’accueil et de dégustation. Nous vous présentons nos vins en toute simplicité, avec des explications plus techniques si vous le voulez aussi. Sentez-vous à l’aise, posez toutes vos questions.</p>
+        <ul class="facons">
+          <li><h3>Au caveau</h3><p>25 avenue Jean Jaurès, d’avril à octobre du lundi au samedi de 15&nbsp;h à 18&nbsp;h, sur rendez-vous le reste de l’année.</p></li>
+          <li><h3>Au chai de Montner</h3><p>Notre nouveau lieu de production se visite sur réservation préalable.</p></li>
+          <li><h3>Dans les vignes</h3><p>Accompagnez-nous dans nos terroirs. Prévoyez de bonnes chaussures, nos terroirs se méritent&nbsp;!</p></li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://domainefontanel.fr/reserver-un-creneau-de-visite-degustation/">Réserver un créneau</a>
+          <a class="btn btn-contour" href="tel:+33611070122">06 11 07 01 22</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gites clair" id="gites">
+    <div class="wrap">
+      <div class="gites-cadre">
+        <div>
+          <h2>Séjourner dans nos gîtes 4*.</h2>
+          <p>Une nature intacte et le charme de notre vallée, entre mer et montagne. Les hébergements et la piscine donnent sur le Cirque de Vingrau, la vallée du Verdouble et les Pyrénées. Pendant votre séjour, nous pouvons organiser des dégustations vins et tapas et des randonnées dans les vignes.</p>
+          <div class="fiches">
+            <div class="fiche alzina">
+              <h3>Gîte Alzina 4*</h3>
+              <p>De 2 à 5 personnes</p>
+              <a class="lien" href="https://domainefontanel.fr/wp-content/uploads/2025/05/Description-du-Gite-Alzina.pdf">Le descriptif du gîte</a>
+            </div>
+            <div class="fiche">
+              <h3>Lodge Escala 4*</h3>
+              <p>De 2 à 4 personnes</p>
+              <a class="lien" href="https://domainefontanel.fr/wp-content/uploads/2025/05/Description-du-Lodge-Escala.pdf">Le descriptif du lodge</a>
+            </div>
+          </div>
+          <div class="boutons">
+            <a class="btn btn-plein" href="https://domainefontanel.fr/gites-nos-hebergements-a-vingrau/">Séjourner dans nos gîtes</a>
+            <a class="btn btn-contour" href="https://calendar.google.com/calendar/embed?src=8e84c8bb37735443763b77f13ce035c3fd3635c4071abf64618a792c53ef976b%40group.calendar.google.com&amp;ctz=Europe%2FParis">Voir les disponibilités</a>
+          </div>
+          <p class="insta">Sur Instagram&nbsp;: <a class="lien" href="https://www.instagram.com/alzina_gite_roussillon/">Alzina</a> et <a class="lien" href="https://www.instagram.com/escala_lodge_roussillon/">Escala</a></p>
+        </div>
+        <figure class="ph gites-photo rv">
+          <img src="assets/domaine-fontanel-tautavel/equipe-de-vendangeurs-sous-les-pins.webp" alt="Une équipe de vendangeurs dans les ceps, grands pins et montagnes enneigées à l’horizon" width="1200" height="1600" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre" id="contact">
+  <div class="wrap">
+    <h2>Nous vous <em>accueillons</em>.</h2>
+    <div class="pied-grille">
+      <div>
+        <h3>Le caveau</h3>
+        <p>25 avenue Jean Jaurès<br>Tautavel, dans la rue principale</p>
+        <p>D’avril à octobre, du lundi au samedi, 15&nbsp;h à 18&nbsp;h. Sur rendez-vous le reste de l’année et en dehors de ces créneaux.</p>
+        <a class="btn btn-plein" href="https://domainefontanel.fr/reserver-un-creneau-de-visite-degustation/">Réserver une visite</a>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <p><a href="tel:+33611070122">06 11 07 01 22</a></p>
+        <p><a href="tel:+33661652141">06 61 65 21 41</a></p>
+        <p><a href="mailto:contact@domainefontanel.fr">contact@domainefontanel.fr</a></p>
+      </div>
+      <div>
+        <h3>Nous suivre</h3>
+        <p><a href="https://www.facebook.com/domainefontanel/">Facebook</a></p>
+        <p><a href="https://www.instagram.com/domainefontanel/">Instagram</a></p>
+        <p><a href="https://domainefontanel.fr/boutique/">Boutique en ligne</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap mention">
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+    <span>Proposition de Nicolas Masset pour le Domaine Fontanel, <a href="https://nicomasset.com/">nicomasset.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine de Guillau, vins des Coteaux du Quercy à Montalzat</title>
+<meta name="description" content="À Montalzat, entre Cahors et Montauban, la famille Lartigue élabore et vinifie ses vins sur la propriété, en Coteaux du Quercy. Boutique en ligne, visites du domaine.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%233F7C78'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23EFE2D9'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terre:#EFE2D9;
+  --terre-clair:#F8F1EB;
+  --terre-fonce:#E4D3C6;
+  --chene:#2E2A22;
+  --chene-2:#3A352C;
+  --chene-doux:#5E5548;
+  --vert:#3F7C78;
+  --vert-2:#346763;
+  --vert-clair:#A9CFCB;
+  --ombre:0 30px 60px -34px rgba(46,36,24,.55);
+  --display:"Marcellus", "Trajan Pro", Georgia, serif;
+  --texte:"Albert Sans", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--terre);color:var(--chene);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--vert);color:var(--terre-clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--vert);color:var(--terre-clair)}
+.btn-plein:hover{background:var(--vert-2);box-shadow:0 18px 30px -18px rgba(63,124,120,.9)}
+.btn-contour{border:1.5px solid var(--chene);color:var(--chene)}
+.btn-contour:hover{background:var(--chene);color:var(--terre-clair)}
+.btn-clair{background:var(--terre-clair);color:var(--chene)}
+.btn-clair:hover{background:var(--terre);box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.btn-contour-clair{border:1.5px solid rgba(248,241,235,.5);color:var(--terre-clair)}
+.btn-contour-clair:hover{background:var(--terre-clair);color:var(--chene)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;padding:24px 0;flex-wrap:wrap}
+.marque{text-decoration:none;display:flex;align-items:center;gap:14px;line-height:1.15}
+.marque .rond{width:46px;height:46px;border-radius:50%;background:var(--vert);color:var(--terre-clair);display:grid;place-items:center;font-family:var(--display);font-size:24px;flex:none}
+.marque b{font-family:var(--display);font-weight:400;font-size:27px;display:block}
+.marque small{font-size:15px;color:var(--chene-doux)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--vert)}
+.nav .contact-lien{border:1.5px solid var(--chene);border-radius:999px;padding:9px 22px}
+.nav .contact-lien:hover{background:var(--chene);color:var(--terre-clair);text-decoration:none}
+
+/* Héros miroir */
+.heros{padding:16px 0 120px}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-photo{grid-column:1 / 7;grid-row:1;margin:0;position:relative;padding-bottom:28px}
+.heros-photo img{width:100%;aspect-ratio:1;object-fit:cover;object-position:40% 55%;border-radius:30px;box-shadow:var(--ombre)}
+.heros-photo figcaption{position:absolute;left:32px;right:32px;bottom:0;display:flex;align-items:center;gap:14px;background:var(--terre-clair);border-radius:18px;padding:16px 20px;box-shadow:0 24px 40px -28px rgba(46,36,24,.6)}
+.heros-photo figcaption .pastille{width:12px;height:12px;border-radius:50%;background:var(--vert);flex:none}
+.heros-photo figcaption span{font-size:16px;line-height:1.35}
+.heros-photo figcaption b{font-weight:600}
+.heros-texte{grid-column:8 / 13;grid-row:1}
+.heros h1{font-size:clamp(2.6rem, 1rem + 4.1vw, 5rem);line-height:1.02}
+.heros h1 em{font-style:normal;color:var(--vert)}
+.heros .chapo{margin-top:28px;color:var(--chene-doux)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+
+/* Faits */
+.faits{background:var(--vert);color:var(--terre-clair)}
+.faits ul{list-style:none;margin:0 auto;padding:44px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:16px}
+.faits strong{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;white-space:nowrap}
+.faits span{font-size:16px;line-height:1.4;color:rgba(248,241,235,.9)}
+
+/* Domaine */
+.domaine{padding:136px 0}
+.dom-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.dom-texte{grid-column:1 / 6}
+.dom-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.dom-texte p{margin-top:22px;color:var(--chene-doux)}
+.dom-texte p.fort{color:var(--chene);font-size:21px}
+.dom-texte .actions{margin-top:32px}
+.dom-droite{grid-column:7 / 13}
+.dom-photos{position:relative;padding-bottom:64px}
+.dom-photos figure{margin:0;position:relative}
+.dom-photos .chai img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:40% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.dom-photos .chai .etiquette{left:auto;right:20px;top:20px;bottom:auto}
+.archive{position:absolute;left:-40px;bottom:0;width:min(230px, 44%);background:var(--terre-clair);padding:10px 10px 14px;border-radius:6px;transform:rotate(-3deg);box-shadow:var(--ombre)}
+.archive img{width:100%;aspect-ratio:300 / 214;object-fit:cover;border-radius:2px}
+.archive figcaption{font-size:15px;color:var(--chene-doux);margin-top:8px;line-height:1.3}
+.jalons{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:0}
+.jalons li{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:24px;padding:18px 0;border-top:1px solid rgba(46,42,34,.16)}
+.jalons b{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15}
+.jalons span{color:var(--chene-doux);font-size:17px}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(248,241,235,.95);color:var(--chene);font-size:15px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+
+/* Vins */
+.vins{background:var(--terre-fonce);padding:136px 0}
+.vins-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.vins-tete{grid-column:1 / 13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end;margin-bottom:64px}
+.vins-tete h2{grid-column:1 / 7;font-size:clamp(2.4rem, 1.4rem + 3vw, 4.2rem)}
+.vins-tete p{grid-column:8 / 13;color:var(--chene-doux)}
+.canotier{grid-column:1 / 7;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center}
+.canotier figure{margin:0;position:relative}
+.canotier figure img{width:100%;aspect-ratio:4 / 5.4;object-fit:cover;object-position:50% 40%;border-radius:220px 220px 22px 22px;box-shadow:var(--ombre)}
+.canotier figure .etiquette{background:var(--vert);color:var(--terre-clair)}
+.canotier .appel{font-size:15px;font-weight:600;color:var(--vert)}
+.canotier h3{font-size:44px;margin-top:6px}
+.canotier p{margin-top:16px;color:var(--chene-doux);font-size:17px}
+.canotier .actions{margin-top:24px}
+.carte{grid-column:8 / 13;background:var(--terre-clair);border-radius:26px;padding:36px 36px 32px;box-shadow:var(--ombre)}
+.carte h3{font-size:30px}
+.carte > p{margin-top:8px;color:var(--chene-doux);font-size:17px}
+.carte ul{list-style:none;margin:20px 0 0;padding:0}
+.carte li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;border-bottom:1px dotted rgba(46,42,34,.25);font-size:18px}
+.carte li:last-child{border-bottom:0}
+.carte .prix{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--chene-doux)}
+.carte .actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:14px}
+.cepages{grid-column:1 / 13;margin-top:72px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding-top:40px;border-top:1px solid rgba(46,42,34,.18)}
+.cepages h3{grid-column:1 / 5;font-size:30px}
+.cepages p{grid-column:5 / 13;color:var(--chene-doux)}
+
+/* Terroir, section sombre */
+.terroir{background:var(--chene);color:var(--terre-clair);padding:136px 0;overflow:clip}
+.ter-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.ter-photos{grid-column:1 / 7;position:relative;padding:0 0 80px}
+.ter-photos figure{margin:0;position:relative}
+.ter-photos .vue img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.75)}
+.ter-photos .feuilles{position:absolute;right:-32px;bottom:0;width:min(220px, 38%);transform:rotate(3deg)}
+.ter-photos .feuilles img{width:100%;aspect-ratio:4 / 5;object-fit:cover;border-radius:14px;border:8px solid var(--chene-2);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
+.ter-texte{grid-column:8 / 13}
+.ter-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.8vw, 3.8rem)}
+.ter-texte .bloc{margin-top:32px;padding-top:24px;border-top:1px solid rgba(248,241,235,.16)}
+.ter-texte h3{font-family:var(--texte);font-weight:600;font-size:17px;color:var(--vert-clair)}
+.ter-texte p{margin-top:8px;color:rgba(248,241,235,.82)}
+
+/* Visites */
+.visites{padding:136px 0}
+.vis-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.vis-texte{grid-column:1 / 6}
+.vis-texte h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4.2rem)}
+.vis-texte p{margin-top:22px;color:var(--chene-doux)}
+.reserver{margin-top:32px;background:var(--terre-clair);border-radius:22px;padding:28px 30px;box-shadow:0 24px 44px -32px rgba(46,36,24,.55)}
+.reserver h3{font-size:28px}
+.reserver p{margin-top:8px;font-size:17px}
+.reserver .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.hebergement{margin-top:24px;font-size:17px;color:var(--chene-doux)}
+.hebergement a{color:var(--vert);font-weight:600;text-underline-offset:4px}
+.vis-photos{grid-column:7 / 13;position:relative;padding-left:72px}
+.vis-photos figure{margin:0;position:relative}
+.vis-photos .coteaux img{width:100%;aspect-ratio:5 / 6;object-fit:cover;object-position:60% 50%;border-radius:26px;box-shadow:var(--ombre)}
+.vis-photos .grange{position:absolute;left:0;bottom:56px;width:min(210px, 40%);transform:rotate(-2.5deg)}
+.vis-photos .grange img{width:100%;aspect-ratio:4 / 5;object-fit:cover;border-radius:14px;border:8px solid var(--terre-clair);box-shadow:var(--ombre)}
+
+/* Contact */
+.contact{background:var(--chene);color:var(--terre-clair);padding:112px 0 48px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.3rem, 1.2rem + 3.2vw, 4.1rem)}
+.ct-titre p{margin-top:20px;color:rgba(248,241,235,.8)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-infos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px 32px;align-content:start}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--vert-clair)}
+.ct-infos p{margin-top:8px;font-size:18px;overflow-wrap:anywhere}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(248,241,235,.3)}
+.ct-infos a:hover{border-color:var(--vert-clair)}
+.pied{margin-top:88px;padding-top:28px;border-top:1px solid rgba(248,241,235,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:rgba(248,241,235,.62)}
+.proposition{background:#24211B;color:rgba(248,241,235,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .archive{left:-16px}
+  .ter-photos .feuilles{right:-8px}
+  .canotier{grid-template-columns:minmax(0,1fr)}
+  .canotier figure{max-width:320px}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{padding:18px 0}
+  .marque .rond{width:40px;height:40px;font-size:21px}
+  .marque b{font-size:23px}
+  .marque small{font-size:14px}
+  .nav{gap:6px 18px}
+  .nav a{font-size:15px}
+  .nav .masque-tel{display:none}
+  .nav .contact-lien{padding:6px 16px}
+  .heros{padding:4px 0 88px}
+  .heros-grille,.dom-grille,.vins-grille,.vins-tete,.cepages,.ter-grille,.vis-grille,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-photo,.heros-texte,.dom-texte,.dom-droite,.vins-tete,.vins-tete h2,.vins-tete p,.canotier,.carte,.cepages,.cepages h3,.cepages p,.ter-photos,.ter-texte,.vis-texte,.vis-photos,.ct-titre,.ct-infos{grid-column:1;grid-row:auto}
+  .heros-texte{display:contents}
+  .heros h1{order:1}
+  .heros-photo{order:2;margin-top:22px}
+  .heros .chapo{order:3;margin-top:28px}
+  .heros .actions{order:4;margin-top:28px}
+  .heros-photo img{aspect-ratio:5 / 4;border-radius:24px}
+  .heros-photo figcaption{left:16px;right:16px;padding:12px 16px}
+  .heros-photo figcaption span{font-size:15px}
+  .faits ul{padding:32px 0;gap:20px}
+  .faits strong{font-size:36px}
+  .domaine,.vins,.terroir,.visites{padding:88px 0}
+  .dom-droite{margin-top:48px}
+  .archive{left:-4px;width:min(190px, 50%)}
+  .jalons li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .vins-tete{margin-bottom:40px}
+  .vins-tete p{margin-top:8px}
+  .canotier figure{max-width:300px}
+  .carte{margin-top:48px;padding:28px 22px}
+  .cepages{margin-top:48px}
+  .cepages p{margin-top:8px}
+  .ter-photos{padding-bottom:72px}
+  .ter-photos .feuilles{right:-4px;width:min(160px, 40%)}
+  .ter-texte{margin-top:40px}
+  .vis-photos{margin-top:48px;padding-left:40px;max-width:520px}
+  .vis-photos .grange{width:min(150px, 40%);bottom:32px}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}
+  .pied{margin-top:56px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .reserver{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Domaine de Guillau, accueil"><span class="rond" aria-hidden="true">G</span><span><b>Domaine de Guillau</b><small>Coteaux du Quercy, Montalzat</small></span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a class="masque-tel" href="#domaine">Le domaine</a>
+      <a href="#vins">Les vins</a>
+      <a class="masque-tel" href="#terroir">Terroir</a>
+      <a class="masque-tel" href="#visite">Visites</a>
+      <a class="contact-lien" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <figure class="heros-photo">
+        <img src="assets/domaine-de-guillau-montalzat/deux-vignerons-dans-les-rangs.webp" alt="Deux vignerons du domaine debout dans une allée enherbée, entre deux rangs de vigne" width="1600" height="1069">
+        <figcaption><span class="pastille" aria-hidden="true"></span><span><b>Montalzat</b>, entre Cahors et Montauban</span></figcaption>
+      </figure>
+      <div class="heros-texte">
+        <h1>L’authenticité des vins du <em>Sud-Ouest</em>.</h1>
+        <p class="chapo">À Montalzat, la famille Lartigue cultive la terre de génération en génération. Au Domaine de Guillau, chaque vin est élaboré et vinifié sur la propriété, pour révéler les terroirs méconnus des Coteaux du Quercy.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#vins">Découvrir les vins</a>
+          <a class="btn btn-contour" href="#visite">Réserver une visite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le domaine en bref">
+    <ul class="cadre">
+      <li><strong>XIX<sup>e</sup></strong><span>siècle : les premières vignes plantées à Montalzat</span></li>
+      <li><strong>1989</strong><span>Jean-Claude Lartigue crée le Domaine de Guillau</span></li>
+      <li><strong>17 ha</strong><span>de vignes, et des vergers de pruniers</span></li>
+      <li><strong>2011</strong><span>les Coteaux du Quercy obtiennent l’AOC</span></li>
+    </ul>
+  </section>
+
+  <section class="domaine" id="domaine">
+    <div class="cadre dom-grille">
+      <div class="dom-texte">
+        <h2>Une histoire familiale ancrée dans le Quercy.</h2>
+        <p class="fort">Dans le Quercy blanc, la vigne est cultivée depuis l’époque gallo-romaine. Au Domaine de Guillau, cette histoire s’inscrit dans le temps long, au cœur d’une exploitation familiale transmise de génération en génération.</p>
+        <p>La grange centenaire est devenue le chai du domaine, agrandi au fil des décennies. La prune y est toujours transformée en pruneaux, dans le respect des traditions agricoles locales : vigneron et agriculteur, la polyculture est au cœur de la philosophie du domaine.</p>
+        <div class="actions"><a class="btn btn-contour" href="https://www.domainedeguillau.fr/le-domaine">Lire toute l’histoire</a></div>
+      </div>
+      <div class="dom-droite">
+        <div class="dom-photos">
+          <figure class="chai">
+            <img class="rv" src="assets/domaine-de-guillau-montalzat/chai-sous-la-halle-en-pierre.webp" alt="Le chai en pierre sous son grand toit de tuiles, tonneaux et vieux tracteur devant" width="1600" height="900" loading="lazy">
+            <figcaption class="etiquette">La grange devenue chai</figcaption>
+          </figure>
+          <figure class="archive rv">
+            <img src="assets/domaine-de-guillau-montalzat/photo-ancienne-sepia-grange-et-attelage.webp" alt="Photo ancienne : le hangar à toit de tuiles, une femme debout, des animaux couchés" width="300" height="214" loading="lazy">
+            <figcaption>La grange, autrefois</figcaption>
+          </figure>
+        </div>
+        <ol class="jalons">
+          <li><b>Fin XIX<sup>e</sup></b><span>Charles Besombes, charpentier, fait construire la grange et plante les premières vignes.</span></li>
+          <li><b>Années 1950</b><span>André Lartigue développe la culture des pruniers et de la vigne.</span></li>
+          <li><b>1989</b><span>Son fils Jean-Claude crée officiellement le Domaine de Guillau.</span></li>
+          <li><b>2011</b><span>Les Coteaux du Quercy, que Jean-Claude a contribué à faire reconnaître, obtiennent l’AOC.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre vins-grille">
+      <div class="vins-tete">
+        <h2>L’appellation confidentielle des Coteaux du Quercy.</h2>
+        <p>Aux portes du Quercy Blanc, guidée par les cépages Cabernet Franc, Tannat, Malbec, Merlot et Gamay. Commandez votre vin directement depuis la propriété, livré chez vous.</p>
+      </div>
+      <article class="canotier">
+        <figure>
+          <img class="rv" src="assets/domaine-de-guillau-montalzat/bouteille-lo-canotier-posee-dans-la-vigne.webp" alt="Une bouteille de Lo Canotièr plantée dans la terre d’un rang de vigne" width="1280" height="1600" loading="lazy">
+          <figcaption class="etiquette">Nouvelle cuvée</figcaption>
+        </figure>
+        <div>
+          <span class="appel">Merlot et Abouriou, IGP Comté Tolosan</span>
+          <h3>Lo Canotièr</h3>
+          <p>Un rouge léger et fruité. L’abouriou, riche en couleur et en tannins, assemblé au merlot qui apporte du fruit, de la souplesse et de la rondeur.</p>
+          <p>Un hommage au chapeau canotier, typique de Caussade, non loin des vignes qui ont vu naître ce vin.</p>
+          <div class="actions"><a class="btn btn-plein" href="https://www.domainedeguillau.fr/shop/lo-canotier-8">Découvrir Lo Canotièr</a></div>
+        </div>
+      </article>
+      <div class="carte">
+        <h3>La boutique du domaine</h3>
+        <p>Livraison en 2 à 3 jours ouvrables.</p>
+        <ul>
+          <li><span>Tradition</span><span class="prix">7,00&nbsp;€</span></li>
+          <li><span>Abouriou</span><span class="prix">7,00&nbsp;€</span></li>
+          <li><span>Rosé</span><span class="prix">6,50&nbsp;€</span></li>
+          <li><span>Prélude</span><span class="prix">8,50&nbsp;€</span></li>
+          <li><span>Calypso</span><span class="prix">8,50&nbsp;€</span></li>
+          <li><span>Orphée</span><span class="prix">9,00&nbsp;€</span></li>
+          <li><span>Plénitude</span><span class="prix">11,50&nbsp;€</span></li>
+          <li><span>L’Ove de Guillau</span><span class="prix">12,50&nbsp;€</span></li>
+          <li><span>Sonate</span><span class="prix">12,50&nbsp;€</span></li>
+        </ul>
+        <div class="actions"><a class="btn btn-plein" href="https://www.domainedeguillau.fr/shop">Commander en ligne</a></div>
+      </div>
+      <div class="cepages">
+        <h3>Une production diversifiée</h3>
+        <p>Cabernet Franc, Merlot, Tannat, Gamay et Cot (Malbec) pour les rouges et les rosés. L’Abouriou, cépage ancien et typique de la région, pour des cuvées plus singulières. Et des cépages blancs, Viognier et Chardonnay, pour des blancs secs et un blanc doux issu de vendanges tardives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="terroir" id="terroir">
+    <div class="cadre ter-grille">
+      <div class="ter-photos">
+        <figure class="vue"><img class="rv" src="assets/domaine-de-guillau-montalzat/vignoble-en-rangs-vu-d-en-haut.webp" alt="Les parcelles de vigne en rangs serrés vues de haut, lumière rasante" width="1600" height="900" loading="lazy"></figure>
+        <figure class="feuilles rv"><img src="assets/domaine-de-guillau-montalzat/feuilles-de-vigne-au-soleil.webp" alt="Jeunes feuilles de vigne éclairées par le soleil" width="1280" height="1600" loading="lazy"></figure>
+      </div>
+      <div class="ter-texte">
+        <h2>Un patrimoine naturel encore préservé.</h2>
+        <div class="bloc">
+          <h3>Terroir</h3>
+          <p>Vignoble confidentiel, les Coteaux du Quercy révèlent une grande diversité de terroirs et de paysages, témoins d’un patrimoine naturel encore préservé.</p>
+        </div>
+        <div class="bloc">
+          <h3>Engagement</h3>
+          <p>Véritable mosaïque agricole, la sauvegarde de la biodiversité et la préservation des sols sont au cœur de nos pratiques. Le domaine garde l’équilibre entre vigne, vergers et cultures agricoles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visites" id="visite">
+    <div class="cadre vis-grille">
+      <div class="vis-texte">
+        <h2>Venez découvrir le domaine.</h2>
+        <p>Une invitation à découvrir le domaine, les paysages du Quercy et une tradition agricole vivante, au fil de moments de partage et de transmission.</p>
+        <div class="reserver">
+          <h3>Réserver une visite</h3>
+          <p>Balades dans les vignes, visite guidée : réservez dès maintenant, par téléphone ou par mail.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33611862204">06 11 86 22 04</a>
+            <a class="btn btn-contour" href="mailto:contact@domainedeguillau.fr?subject=R%C3%A9server%20une%20visite">Écrire pour réserver</a>
+          </div>
+        </div>
+        <p class="hebergement">Le domaine propose aussi un <a href="https://www.airbnb.fr/rooms/1527540716730713696">hébergement</a>.</p>
+      </div>
+      <div class="vis-photos">
+        <figure class="coteaux">
+          <img class="rv" src="assets/domaine-de-guillau-montalzat/coteaux-de-vignes-et-bois.webp" alt="Un rang de vigne dans l’herbe haute, puis les bois et les coteaux plantés de vignes" width="1600" height="1067" loading="lazy">
+          <figcaption class="etiquette" style="left:auto;right:18px">Balade dans les vignes</figcaption>
+        </figure>
+        <figure class="grange rv"><img src="assets/domaine-de-guillau-montalzat/grange-en-pierre-et-porte-en-bois.webp" alt="Mur de pierre de la vieille grange, porte et volet en bois" width="1280" height="1600" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Contactez-nous</h2>
+      <p>Une question sur nos vins, une commande, une visite : appelez ou écrivez au domaine.</p>
+      <div class="actions">
+        <a class="btn btn-clair" href="tel:+33611862204">06 11 86 22 04</a>
+        <a class="btn btn-contour-clair" href="mailto:contact@domainedeguillau.fr">Écrire au domaine</a>
+      </div>
+    </div>
+    <div class="ct-infos">
+      <div><h3>Adresse</h3><p>Domaine de Guillau<br>181 route de Borredon<br>82270 Montalzat</p></div>
+      <div><h3>Téléphone</h3><p><a href="tel:+33611862204">+33 6 11 86 22 04</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@domainedeguillau.fr">contact@domainedeguillau.fr</a></p></div>
+      <div><h3>Boutique</h3><p><a href="https://www.domainedeguillau.fr/shop">Les vins en ligne</a></p></div>
+      <div><h3>Actualités</h3><p><a href="https://www.domainedeguillau.fr/blog">Deux médailles d’or à Paris, et toute la vie du domaine</a></p></div>
+      <div><h3>Réseaux sociaux</h3><p><a href="https://www.facebook.com/domainedeguillau">Facebook</a>, <a href="https://www.instagram.com/domaine_de_guillau/">Instagram</a>, <a href="https://fr.linkedin.com/company/domainedeguillau">LinkedIn</a></p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Domaine de Guillau, Coteaux du Quercy</span>
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération. Vente interdite aux mineurs de moins de 18 ans.</span>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine de Guillau</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

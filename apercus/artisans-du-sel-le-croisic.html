@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée aux Artisans du Sel, Le Croisic (44), nuit du 2026-10-30.
+     CONTENU : textes, labels, coordonnées et photos relevés sur https://artisansdusel.fr/ (accueil, A propos,
+     Le métier de Paludier, Contact), dossier de Marco. Rien d'inventé. Horaires : trois versions différentes
+     sur leur site, aucune heure reprise (seuls les jours, identiques partout).
+     Défaut 1 réglé : les liens « fleur de sel » et « sels aromatisés » du texte menaient à une 404 ; chaque sel a
+     maintenant sa place sur la page et un lien vers la boutique en ligne qui marche.
+     Défaut 2 réglé : « Paludier, l'alchimiste des marais » et « marais salants de Guérande » menaient à une 404 ;
+     le marais a sa section, le titre du métier mène à la vraie page « Le métier de Paludier ».
+     DESIGN (Nova) : sel, vasière, salicorne. DM Serif Display et Public Sans. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#ECEFEE" />
+<title>Les Artisans du Sel, sel de Guérande IGP et fleur de sel artisanale, Le Croisic</title>
+<meta name="description" content="Sels de Guérande IGP récoltés à la main par les paludiers, transformés au Croisic : fleur de sel, gros sel, sel fin, sels aromatisés biologiques." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2322343F'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23ECEFEE'%3EA%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --sel:#ECEFEE;
+  --sel-2:#DFE5E3;
+  --surface:#F8FAF9;
+  --vasiere:#22343F;
+  --vasiere-2:#2D4350;
+  --encre-douce:#4F5F68;
+  --salicorne:#6E8B3D;
+  --salicorne-fonce:#56702C;
+  --salicorne-clair:#A9C477;
+  --sur-sombre:#E6ECEA;
+  --sur-sombre-doux:#AFBDC2;
+  --filet:rgba(34,52,63,.14);
+  --ombre:0 30px 60px -34px rgba(20,36,46,.5);
+  --ombre-longue:0 44px 80px -38px rgba(20,36,46,.6);
+  --ombre-courte:0 16px 34px -22px rgba(20,36,46,.45);
+  --fd:"DM Serif Display",Georgia,serif;
+  --ft:"Public Sans",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--sel);color:var(--vasiere);font-family:var(--ft);font-size:18px;line-height:1.6}
+::selection{background:var(--salicorne);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--vasiere);color:var(--surface);box-shadow:var(--ombre-courte)}
+.btn-plein:hover{background:var(--salicorne-fonce)}
+.btn-contour{border:1.5px solid var(--vasiere);color:var(--vasiere)}
+.btn-contour:hover{background:var(--vasiere);color:var(--surface)}
+a:focus-visible{outline:3px solid var(--salicorne);outline-offset:3px}
+.etiquette{position:absolute;background:var(--surface);color:var(--vasiere);font-size:15px;font-weight:600;line-height:1.35;padding:9px 14px;border-radius:999px;box-shadow:var(--ombre-courte)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,239,238,.94)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.marque{text-decoration:none;font-family:var(--fd);font-size:26px;line-height:1}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a.lien:hover{color:var(--salicorne-fonce)}
+.nav .tel{background:var(--vasiere);color:var(--surface);padding:12px 20px;border-radius:999px;font-weight:600;white-space:nowrap}
+
+/* Héros : bandeau panoramique + carte-titre */
+.heros{padding:16px 0 0}
+.bandeau{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-longue);aspect-ratio:1200/560}
+.bandeau img{width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.bandeau .etiquette{top:20px;right:20px}
+.carte-titre{position:relative;z-index:2;width:min(680px,100%);margin:-210px 0 0 40px;background:var(--surface);border-radius:22px;padding:44px 48px 40px;box-shadow:var(--ombre)}
+.carte-titre h1{font-size:clamp(2.4rem,1.3rem + 3.4vw,4.1rem)}
+.carte-titre h1 em{color:var(--salicorne)}
+.carte-titre p{margin-top:20px;font-size:19px;color:var(--encre-douce);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+
+/* Faits */
+.faits{margin-top:72px;background:var(--sel-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:var(--fd);font-weight:400;font-size:28px;line-height:1.15}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.4}
+
+/* Nos sels (défaut 1) */
+.sels{padding:128px 0}
+.sels .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:start}
+.sels h2{font-size:clamp(2.1rem,1.2rem + 2.6vw,3.4rem)}
+.sels .intro{margin-top:22px;font-size:19px;color:var(--encre-douce);max-width:30em}
+.liste-sels{list-style:none;margin:40px 0 0;padding:0}
+.liste-sels li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:6px 20px;padding:22px 0;border-top:1px solid var(--filet)}
+.liste-sels li:last-child{border-bottom:1px solid var(--filet)}
+.liste-sels h3{font-size:28px}
+.liste-sels .cal{font-size:16px;color:var(--encre-douce);white-space:nowrap}
+.liste-sels .sig{grid-column:1/-1;font-size:16px;color:var(--encre-douce)}
+.liste-sels li.phare h3{font-size:34px}
+.liste-sels li.phare h3 em{color:var(--salicorne)}
+.sels .lien-boutique{display:inline-block;margin-top:28px;font-weight:700;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:var(--salicorne)}
+.sels .lien-boutique:hover{color:var(--salicorne-fonce)}
+.pile{position:relative;padding:0 0 150px}
+.pile .grande{margin:0;position:relative}
+.pile .grande img{border-radius:20px;box-shadow:var(--ombre);aspect-ratio:4/5;width:100%;object-fit:cover;object-position:62% 50%}
+.pile .grande .etiquette{left:18px;bottom:18px}
+.pile .petite{position:absolute;right:-28px;bottom:0;width:min(300px,56%);margin:0;background:var(--surface);padding:10px;border-radius:14px;box-shadow:var(--ombre);transform:rotate(3deg)}
+.pile .petite img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.contient{margin-top:48px;background:var(--surface);border-radius:20px;padding:30px 32px;box-shadow:var(--ombre-courte)}
+.contient h3{font-size:24px}
+.contient ul{margin:14px 0 0;padding:0 0 0 20px}
+.contient li{margin-top:6px;color:var(--encre-douce)}
+.contient li::marker{color:var(--salicorne)}
+
+/* Marais (sombre, défaut 2) */
+.marais{background:var(--vasiere);color:var(--sur-sombre);padding:120px 0 128px}
+.marais .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end}
+.marais h2{font-size:clamp(2.1rem,1.2rem + 2.8vw,3.6rem);color:var(--surface)}
+.marais h2 em{color:var(--salicorne-clair)}
+.marais .tete p{color:var(--sur-sombre-doux);font-size:19px}
+.chiffres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:64px;padding-top:40px;border-top:1px solid rgba(230,236,234,.18)}
+.chiffres b{display:block;font-family:var(--fd);font-weight:400;font-size:clamp(2.6rem,1.6rem + 2.6vw,4rem);line-height:1;color:var(--surface)}
+.chiffres span{display:block;margin-top:10px;color:var(--sur-sombre-doux);font-size:17px}
+.marais .photos{position:relative;margin-top:80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);gap:56px;align-items:center}
+.marais .large{margin:0;position:relative}
+.marais .large img{border-radius:22px;aspect-ratio:16/9;object-fit:cover;width:100%;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.marais .large .etiquette{left:18px;bottom:18px}
+.scene-marais{position:relative;padding-bottom:56px}
+.marais .large .etiquette{bottom:auto;top:18px}
+.mulon{position:absolute;margin:0;right:28px;bottom:0;width:min(250px,42%);background:var(--sur-sombre);padding:8px;border-radius:12px;transform:rotate(-3deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.mulon img{border-radius:7px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.protections h3{font-size:26px;color:var(--surface)}
+.protections ul{list-style:none;margin:18px 0 0;padding:0}
+.protections li{padding:12px 0;border-top:1px solid rgba(230,236,234,.14);color:var(--sur-sombre-doux);font-size:17px;line-height:1.45}
+.protections li b{color:var(--surface);font-weight:600}
+
+/* Métier (défaut 2) */
+.metier{padding:144px 0 120px}
+.metier .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:80px;align-items:center}
+.metier h2{font-size:clamp(2.1rem,1.2rem + 2.6vw,3.4rem)}
+.metier h2 a{text-decoration:none;background-image:linear-gradient(var(--salicorne),var(--salicorne));background-size:100% 3px;background-repeat:no-repeat;background-position:0 96%;transition:color .25s}
+.metier h2 a:hover{color:var(--salicorne-fonce)}
+.metier .intro{margin-top:22px;font-size:19px;color:var(--encre-douce);max-width:32em}
+.metier blockquote{margin:44px 0 0;font-family:var(--fd);font-size:clamp(1.7rem,1.1rem + 1.8vw,2.6rem);line-height:1.18;max-width:20em}
+.metier blockquote em{color:var(--salicorne)}
+.metier .source{margin-top:14px;font-size:16px;color:var(--encre-douce)}
+.metier .actions{margin-top:36px}
+.metier figure{margin:0;position:relative}
+.metier figure img{border-radius:999px 999px 24px 24px;aspect-ratio:4/5;width:100%;object-fit:cover;object-position:30% 50%;box-shadow:var(--ombre)}
+.metier figure .etiquette{left:18px;bottom:18px}
+
+/* Histoire */
+.histoire{padding:0 0 128px}
+.histoire .bloc{background:var(--sel-2);border-radius:28px;padding:72px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:center}
+.histoire figure{margin:0;background:var(--surface);padding:14px 14px 46px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-2.5deg);position:relative}
+.histoire figure img{border-radius:3px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.histoire figcaption{position:absolute;left:18px;right:18px;bottom:14px;font-size:15px;color:var(--encre-douce)}
+.histoire h2{font-size:clamp(2.1rem,1.2rem + 2.6vw,3.4rem)}
+.histoire p{margin-top:18px;color:var(--encre-douce)}
+.histoire p.fort{font-family:var(--fd);font-size:26px;line-height:1.25;color:var(--vasiere)}
+.histoire .actions{margin-top:30px}
+
+/* Contact et pied */
+.contact{background:var(--vasiere);color:var(--sur-sombre);padding:112px 0 0}
+.contact .wrap.grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.contact h2{font-size:clamp(2.1rem,1.2rem + 2.6vw,3.4rem);color:var(--surface)}
+.contact .intro{margin-top:20px;color:var(--sur-sombre-doux);font-size:19px;max-width:28em}
+.contact .pros{margin-top:32px;background:var(--vasiere-2);border-radius:18px;padding:26px 28px}
+.contact .pros h3{font-size:22px;color:var(--surface)}
+.contact .pros p{margin-top:8px;color:var(--sur-sombre-doux);font-size:17px}
+.contact .pros a{color:var(--surface);font-weight:600;text-underline-offset:4px;text-decoration-color:var(--salicorne-clair)}
+.contact .actions .btn-plein{background:var(--surface);color:var(--vasiere)}
+.contact .actions .btn-plein:hover{background:var(--salicorne-clair)}
+.contact .actions .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.contact .actions .btn-contour:hover{background:var(--sur-sombre);color:var(--vasiere)}
+.coord{background:var(--surface);color:var(--vasiere);border-radius:22px;padding:36px 40px;display:grid;gap:22px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.coord dt{font-size:15px;color:var(--encre-douce);font-weight:600}
+.coord dd{margin:4px 0 0;font-size:19px}
+.coord a{text-decoration:none;border-bottom:1.5px solid var(--salicorne)}
+.coord a:hover{color:var(--salicorne-fonce)}
+.pied{margin-top:96px;border-top:1px solid rgba(230,236,234,.16)}
+.pied .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0;font-size:15px;color:var(--sur-sombre-doux)}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--surface)}
+.pied .liens{display:flex;flex-wrap:wrap;gap:20px}
+.proposition{background:#17242C;color:var(--sur-sombre-doux);text-align:center;font-size:14px;padding:14px 24px}
+.proposition a{color:var(--sur-sombre)}
+
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  .btn,.metier h2 a{transition:none}
+  .btn:hover{transform:none}
+}
+
+@media (max-width:1060px){
+  .nav a.lien{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .histoire .bloc{padding:56px;gap:48px}
+}
+@media (max-width:900px){
+  .bandeau{aspect-ratio:4/3}
+  .carte-titre{margin:-96px 0 0 16px;width:calc(100% - 32px);padding:36px 32px}
+  .faits{margin-top:56px}
+  .sels,.metier{padding:96px 0}
+  .sels .wrap,.marais .tete,.metier .wrap,.contact .wrap.grille,.histoire .bloc{grid-template-columns:minmax(0,1fr);gap:48px}
+  .pile{max-width:520px}
+  .pile .petite{right:-8px}
+  .marais{padding:96px 0}
+  .marais .photos{grid-template-columns:minmax(0,1fr);gap:48px}
+  .metier figure{max-width:440px}
+  .histoire .bloc{padding:48px 36px}
+  .histoire figure{max-width:440px}
+  .contact{padding-top:96px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{width:min(var(--max),100% - 40px)}
+  .entete .wrap{padding:14px 0;gap:12px}
+  .marque{font-size:21px}
+  .nav .tel{padding:10px 14px;font-size:15px}
+  .heros{padding-top:6px}
+  .bandeau{aspect-ratio:5/4;border-radius:18px}
+  .bandeau .etiquette{top:12px;right:12px;font-size:14px}
+  .carte-titre{margin:-64px 0 0 10px;width:calc(100% - 20px);padding:26px 22px;border-radius:18px}
+  .carte-titre p{font-size:17px;margin-top:16px}
+  .actions{flex-direction:column;align-items:stretch;margin-top:24px}
+  .actions .btn{width:100%;white-space:normal}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px;padding:24px 0}
+  .faits b{font-size:23px}
+  .faits li:last-child{grid-column:1/-1}
+  .sels .intro,.marais .tete p,.metier .intro,.contact .intro{font-size:17px}
+  .liste-sels h3{font-size:24px}
+  .liste-sels li.phare h3{font-size:28px}
+  .liste-sels li{grid-template-columns:minmax(0,1fr)}
+  .pile{padding-bottom:110px}
+  .pile .petite{width:min(220px,60%)}
+  .contient{padding:24px 22px}
+  .chiffres{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}
+  .mulon{width:min(170px,50%);right:8px}
+  .scene-marais{padding-bottom:44px}
+  .histoire .bloc{padding:32px 20px;border-radius:22px}
+  .histoire p.fort{font-size:22px}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:17px;overflow-wrap:anywhere}
+  .contact .pros{padding:22px 20px}
+}
+@media (max-width:360px){
+  .marque{font-size:19px}
+  .nav .tel{font-size:14px;padding:9px 12px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Les Artisans du Sel</a>
+    <nav class="nav" aria-label="Menu principal">
+      <a class="lien" href="#sels">Nos sels</a>
+      <a class="lien" href="#marais">Les marais</a>
+      <a class="lien" href="#metier">Le métier</a>
+      <a class="lien" href="#histoire">Notre histoire</a>
+      <a class="tel" href="tel:+33240111144">02 40 11 11 44</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <figure class="bandeau rv">
+        <img src="assets/artisans-du-sel-le-croisic/marais-salants-vus-du-ciel-au-coucher-du-soleil.webp" width="1600" height="1200" alt="Les marais salants de Guérande vus du ciel au soleil couchant, bassins qui reflètent le ciel orangé." fetchpriority="high" />
+        <figcaption class="etiquette">Les marais salants de Guérande</figcaption>
+      </figure>
+      <div class="carte-titre">
+        <h1>Sel de Guérande IGP et <em>fleur de sel</em> artisanale.</h1>
+        <p>Récoltés à la main par les paludiers dans les marais salants de Guérande, transformés au Croisic. Pas de broyage, pas de chauffage&nbsp;: nous préservons les cristaux naturels récoltés dans les salines.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://artisansdusel.fr/sel-guerande-artisans-du-sel-boutique-en-ligne">Boutique en ligne</a>
+          <a class="btn btn-contour" href="#sels">Découvrir nos sels</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En quelques faits">
+    <ul class="wrap">
+      <li><b>IGP</b><span>et Nature et Progrès</span></li>
+      <li><b>Depuis 1999</b><span>une transformation douce du sel</span></li>
+      <li><b>Repris en 2018</b><span>par Mérédith et Gautier</span></li>
+      <li><b>Une quarantaine</b><span>de personnes aujourd'hui</span></li>
+      <li><b>Le Croisic</b><span>notre atelier boutique</span></li>
+    </ul>
+  </section>
+
+  <section class="sels" id="sels">
+    <div class="wrap">
+      <div>
+        <h2>Nos sels, 100&nbsp;% naturels, sans additif, sans raffinage.</h2>
+        <p class="intro">Pour un assaisonnement, de la cuisine à la touche finale. Le nôtre n'est jamais lavé, ni raffiné, ni chauffé&nbsp;: il garde sa structure cristalline naturelle, ses oligo-éléments et ses nuances de goût.</p>
+        <ul class="liste-sels">
+          <li class="phare"><h3>La <em>fleur de sel</em> de Guérande IGP</h3></li>
+          <li><h3>Le gros sel de Guérande</h3><span class="cal">3 à 7&nbsp;mm</span></li>
+          <li><h3>Le sel fin de Guérande</h3><span class="cal">moins de 3&nbsp;mm</span></li>
+          <li><h3>Les sels aromatisés biologiques</h3><span class="sig">Notre signature&nbsp;: des sels aromatisés biologiques de haute qualité.</span></li>
+        </ul>
+        <a class="lien-boutique" href="https://artisansdusel.fr/sel-guerande-artisans-du-sel-boutique-en-ligne">Voir nos sels et nos avis sur la boutique en ligne</a>
+        <div class="contient">
+          <h3>Nos sels contiennent</h3>
+          <ul>
+            <li>des oligo-éléments naturels&nbsp;;</li>
+            <li>moins de sodium pur que le sel industriel&nbsp;;</li>
+            <li>aucun additif&nbsp;: antiagglomérants, glutamate, fluor, iode, etc.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pile">
+        <figure class="grande rv">
+          <img src="assets/artisans-du-sel-le-croisic/las-qui-tire-le-sel-hors-de-l-eau.webp" width="1200" height="802" alt="Un las en bois tire un tas de sel humide hors de l'eau du bassin, lumière dorée." loading="lazy" />
+          <figcaption class="etiquette">Récolté à la main</figcaption>
+        </figure>
+        <figure class="petite rv">
+          <img src="assets/artisans-du-sel-le-croisic/tas-de-sel-recolte-sur-la-ladure.webp" width="1200" height="801" alt="Deux tas de sel récolté au bord du marais, lumière de fin de journée." loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="marais" id="marais">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Les marais salants de Guérande, <em>le berceau du sel</em>.</h2>
+        <p>Nos sels proviennent exclusivement des marais salants de Guérande, un ouvrage écologique et productif entièrement façonné par l'homme et dédié au sel depuis 2000 ans.</p>
+      </div>
+      <div class="chiffres">
+        <div><b>2000 ans</b><span>de marais dédiés au sel</span></div>
+        <div><b>2600 ha</b><span>plus de 2600 hectares d'écosystème</span></div>
+        <div><b>360</b><span>producteurs environ y travaillent</span></div>
+      </div>
+      <div class="photos">
+        <div class="scene-marais">
+        <figure class="large rv">
+          <img src="assets/artisans-du-sel-le-croisic/oeillets-et-petits-tas-de-sel-au-soleil-couchant.webp" width="1600" height="900" alt="Bassins quadrillés au ras de l'eau, petits tas de sel alignés sur les bords au soleil couchant." loading="lazy" />
+          <figcaption class="etiquette">Un paysage protégé</figcaption>
+        </figure>
+        <figure class="mulon rv">
+          <img src="assets/artisans-du-sel-le-croisic/mulon-de-sel-au-crepuscule.webp" width="1067" height="600" alt="Un mulon de sel en contre-jour au crépuscule." loading="lazy" />
+        </figure>
+        </div>
+        <div class="protections">
+          <h3>Ils sont répertoriés</h3>
+          <ul>
+            <li><b>Zone naturelle d'intérêt écologique, floristique et faunistique</b> depuis 1991</li>
+            <li><b>Zone humide d'importance majeure</b> en France depuis 1994</li>
+            <li><b>Convention de Ramsar</b>, zone humide d'importance internationale, depuis 1979</li>
+            <li><b>Natura 2000</b></li>
+            <li>L'un des <b>100 Sites remarquables du goût</b> en France</li>
+            <li>Au <b>patrimoine immatériel</b> de France</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metier" id="metier">
+    <div class="wrap">
+      <div>
+        <h2><a href="https://artisansdusel.fr/metier-paludier">Paludier, l'alchimiste des marais</a></h2>
+        <p class="intro">Véritable façonneur d'argile, le paludier œuvre toute l'année dans ses marais&nbsp;: 8 mois de l'année, il les entretient pour la possibilité d'une récolte en période estivale. C'est un métier hors norme, au plus proche des éléments.</p>
+        <blockquote>Le sel n'est jamais garanti&nbsp;; il est espéré, accompagné, <em>accueilli</em>.</blockquote>
+        <p class="source">Le métier de Paludier, à la lumière des écrits et travaux de Gildas Buron</p>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://artisansdusel.fr/metier-paludier">Lire le métier de paludier</a>
+        </div>
+      </div>
+      <figure class="rv">
+        <img src="assets/artisans-du-sel-le-croisic/las-qui-pousse-le-sel-sur-la-ladure.webp" width="1200" height="801" alt="Un las en bois pousse un tas de sel au bord d'un bassin." loading="lazy" />
+        <figcaption class="etiquette">Le geste du paludier</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="wrap">
+      <div class="bloc">
+        <figure class="rv">
+          <img src="assets/artisans-du-sel-le-croisic/meredith-et-gautier-devant-les-marais.webp" width="1600" height="1200" alt="Mérédith et Gautier, souriants devant les marais, en noir et blanc." loading="lazy" />
+          <figcaption>Mérédith et Gautier, devant les marais</figcaption>
+        </figure>
+        <div>
+          <h2>Notre histoire</h2>
+          <p>Les Artisans du Sel est né en 1999, animé par une vision simple mais exigeante&nbsp;: une transformation douce du sel de Guérande labellisée Nature et Progrès, gage d'un sel resté fidèle à ses cristaux d'origine.</p>
+          <p class="fort">Frère et sœur, nous avons repris l'entreprise en 2018, proche de la disparition, et l'avons reconstruite en conservant son âme.</p>
+          <p>Aujourd'hui, elle réunit une quarantaine de personnes.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://artisansdusel.fr/histoire-entreprise">Nous découvrir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grille">
+      <div>
+        <h2>Notre atelier boutique, au Croisic.</h2>
+        <p class="intro">Tous nos produits sont en vente dans notre boutique à l'atelier, du lundi au vendredi.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33240111144">Appeler le 02 40 11 11 44</a>
+          <a class="btn btn-contour" href="https://www.google.fr/maps/place/Artisans+du+Sel/@47.2878641,-2.505046,17z/data=!3m1!4b1!4m6!3m5!1s0x48055ce991a895a9:0xed7de0a16a45eab7!8m2!3d47.2878641!4d-2.5024711!16s%2Fg%2F1hm5l75_3?entry=ttu">Voir le plan</a>
+        </div>
+        <div class="pros">
+          <h3>Professionnels</h3>
+          <p>Épicerie, grossiste, export, cadeaux et coffrets, événements et mariage&nbsp;: <a href="https://artisansdusel.fr/espace-pro">l'espace professionnels</a>. Dans votre message, précisez vos coordonnées, votre activité, les produits souhaités, la quantité et l'adresse de livraison.</p>
+        </div>
+      </div>
+      <dl class="coord">
+        <div><dt>Adresse</dt><dd>3 rue du Simalion<br />44490 Le Croisic</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33240111144">02 40 11 11 44</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contact@artisansdusel.fr">contact@artisansdusel.fr</a></dd></div>
+        <div><dt>Boutique en ligne</dt><dd><a href="https://artisansdusel.fr/sel-guerande-artisans-du-sel-boutique-en-ligne">artisansdusel.fr</a></dd></div>
+        <div><dt>Nous suivre</dt><dd><a href="https://www.instagram.com/artisans_du_sel_officiel/">Instagram</a> et <a href="https://www.facebook.com/artisansdusel">Facebook</a></dd></div>
+      </dl>
+    </div>
+    <div class="pied">
+      <div class="wrap">
+        <span>Les Artisans du Sel, Le Croisic</span>
+        <span class="liens"><a href="#sels">Nos sels</a><a href="#marais">Les marais</a><a href="https://artisansdusel.fr/metier-paludier">Le métier de Paludier</a><a href="https://artisansdusel.fr/galerie">Galerie</a><a href="https://artisansdusel.fr/cadeaux">Cadeaux</a></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Les Artisans du Sel</div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

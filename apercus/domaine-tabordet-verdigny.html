@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine Tabordet, Sancerre et Pouilly-Fumé à Verdigny</title>
+<meta name="description" content="Domaine familial à Verdigny-en-Sancerre : 12 cuvées en Sancerre et Pouilly-Fumé, vinifications en levures indigènes, caveau ouvert du lundi au samedi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232E3236'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EEF0E8'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --craie:#EEF0E8;
+  --craie-clair:#F8F9F4;
+  --craie-fonce:#DFE3D8;
+  --silex:#2E3236;
+  --silex-2:#3B4045;
+  --silex-doux:#5A6066;
+  --loire:#3D6E8F;
+  --loire-clair:#9DBBD0;
+  --ombre:0 30px 60px -34px rgba(30,34,38,.55);
+  --display:"Gilda Display", Didot, Georgia, serif;
+  --texte:"Rubik", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--craie);color:var(--silex);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--loire);color:var(--craie-clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--loire);color:var(--craie-clair)}
+.btn-plein:hover{background:#335E7B;box-shadow:0 18px 30px -18px rgba(61,110,143,.9)}
+.btn-contour{border:1.5px solid var(--silex);color:var(--silex)}
+.btn-contour:hover{background:var(--silex);color:var(--craie-clair)}
+.btn-clair{background:var(--craie-clair);color:var(--silex)}
+.btn-clair:hover{background:#E4E8DD;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.btn-contour-clair{border:1.5px solid rgba(248,249,244,.5);color:var(--craie-clair)}
+.btn-contour-clair:hover{background:var(--craie-clair);color:var(--silex)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;padding:26px 0;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:30px;display:block;letter-spacing:.01em}
+.marque small{font-size:15px;color:var(--silex-doux)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.nav a{text-decoration:none;font-size:16px}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--loire)}
+.nav .vins-lien{color:var(--loire);font-weight:500}
+.nav .contact-lien{background:var(--silex);color:var(--craie-clair);border-radius:999px;padding:10px 22px;font-weight:500}
+.nav .contact-lien:hover{background:var(--silex-2);text-decoration:none}
+
+/* Héros */
+.heros{padding:16px 0 0;position:relative}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-texte{grid-column:1 / 8;padding-bottom:40px}
+.heros h1{font-size:clamp(3rem, 1.1rem + 5.4vw, 6.4rem);line-height:.98;letter-spacing:-.01em}
+.heros h1 em{font-style:normal;color:var(--loire)}
+.heros .chapo{margin-top:32px;max-width:540px;color:var(--silex-doux)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.heros-photos{grid-column:8 / 13;display:flex;flex-direction:column;align-items:flex-end;padding-bottom:24px}
+.heros-photos figure{margin:0;position:relative}
+.ph-grappe{width:100%}
+.ph-grappe img{width:100%;aspect-ratio:5 / 4;object-fit:cover;object-position:62% 40%;border-radius:24px;box-shadow:var(--ombre)}
+.heros-photos .ph-portrait{width:60%;align-self:flex-start;margin-top:-64px;margin-left:-56px;position:relative;z-index:2}
+.ph-portrait img{width:100%;aspect-ratio:1;object-fit:cover;object-position:28% 30%;border-radius:18px;border:10px solid var(--craie-clair);box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(248,249,244,.95);color:var(--silex);font-size:15px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+.ph-grappe .etiquette{left:auto;right:18px;top:18px;bottom:auto}
+
+/* Faits */
+.faits{position:relative;z-index:3;margin-top:24px}
+.faits ul{list-style:none;margin:0;padding:28px 40px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;background:var(--craie-clair);border-radius:22px;box-shadow:0 24px 50px -36px rgba(30,34,38,.55)}
+.faits li{display:flex;flex-direction:column;gap:4px;padding-left:20px;border-left:1px solid rgba(46,50,54,.14)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits strong{font-family:var(--display);font-weight:400;font-size:38px;line-height:1.05;white-space:nowrap}
+.faits span{font-size:16px;color:var(--silex-doux);line-height:1.4}
+
+/* Domaine */
+.domaine{padding:136px 0 120px}
+.dom-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.dom-texte{grid-column:1 / 6}
+.dom-texte h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4.1rem)}
+.dom-texte p{margin-top:22px;color:var(--silex-doux)}
+.dom-texte p.fort{color:var(--silex);font-size:21px}
+.dom-texte .actions{margin-top:32px}
+.dom-photos{grid-column:7 / 13;position:relative;padding-bottom:120px}
+.dom-photos figure{margin:0;position:relative}
+.dom-photos .panorama img{width:100%;aspect-ratio:16 / 10;object-fit:cover;object-position:60% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.dom-photos .sol{position:absolute;left:-48px;bottom:0;width:min(300px, 52%);transform:rotate(-3deg)}
+.dom-photos .sol img{width:100%;aspect-ratio:4 / 3;object-fit:cover;border-radius:12px;border:10px solid var(--craie-clair);box-shadow:var(--ombre)}
+.dom-photos .sol .etiquette{left:22px;bottom:22px}
+
+/* Famille */
+.famille{background:var(--craie-fonce);padding:128px 0}
+.fam-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.fam-tete h2{grid-column:1 / 7;font-size:clamp(2.4rem, 1.4rem + 3vw, 4.1rem)}
+.fam-tete p{grid-column:8 / 13;color:var(--silex-doux)}
+.fam-corps{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.fam-photos{grid-column:1 / 6;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.fam-photos figure{margin:0;position:relative}
+.fam-photos img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.fam-photos .gouter img{aspect-ratio:2 / 3;object-position:30% 50%;border-radius:200px 200px 20px 20px}
+.fam-photos .eprouvette{margin-top:96px}
+.fam-photos .eprouvette img{aspect-ratio:2 / 3;object-position:60% 40%;border-radius:20px}
+.generations{grid-column:7 / 13;list-style:none;margin:0;padding:0}
+.generations li{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid rgba(46,50,54,.16)}
+.generations li:last-child{border-bottom:1px solid rgba(46,50,54,.16)}
+.generations b{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.generations h3{font-family:var(--texte);font-weight:500;font-size:19px;line-height:1.35}
+.generations p{margin-top:6px;color:var(--silex-doux);font-size:17px}
+
+/* Vigne, section sombre */
+.vigne{background:var(--silex);color:var(--craie-clair);padding:128px 0;overflow:clip}
+.vig-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.vig-texte{grid-column:1 / 7}
+.vig-texte blockquote{margin:0}
+.vig-texte blockquote p{font-family:var(--display);font-size:clamp(2.2rem, 1.2rem + 3vw, 4rem);line-height:1.1}
+.vig-texte blockquote p::before{content:"«\00a0";color:var(--loire-clair)}
+.vig-texte blockquote p::after{content:"\00a0»";color:var(--loire-clair)}
+.gestes{margin-top:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.gestes h3{font-family:var(--texte);font-weight:500;font-size:17px;color:var(--loire-clair)}
+.gestes p{margin-top:10px;color:rgba(248,249,244,.8);font-size:17px}
+.vig-photos{grid-column:8 / 13;position:relative;padding-bottom:110px}
+.vig-photos figure{margin:0;position:relative}
+.vig-photos .rangs img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:50% 50%;border-radius:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.vig-photos .tracteurs{position:absolute;right:-40px;bottom:0;width:72%;transform:rotate(2.5deg)}
+.vig-photos .tracteurs img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:14px;border:8px solid var(--silex-2);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+
+/* Les vins */
+.vins{padding:136px 0}
+.vins-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.vins-tete h2{grid-column:1 / 7;font-size:clamp(2.6rem, 1.4rem + 3.6vw, 4.6rem)}
+.vins-tete p{grid-column:8 / 13;color:var(--silex-doux)}
+.vins-corps{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.appellations{grid-column:1 / 7;display:grid;gap:40px}
+.appellation h3{font-size:34px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(46,50,54,.2)}
+.appellation h3 small{font-family:var(--texte);font-size:15px;color:var(--silex-doux);white-space:nowrap}
+.appellation ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 24px}
+.appellation li{padding:12px 0;border-bottom:1px dashed rgba(46,50,54,.16);font-size:18px}
+.appellation li.marque-rive{color:var(--loire);font-weight:500}
+.autre-rive{grid-column:8 / 13;position:relative}
+.rive-carte{background:var(--craie-clair);border-radius:26px;padding:0 0 32px;box-shadow:var(--ombre);overflow:hidden}
+.rive-carte figure{margin:0;position:relative}
+.rive-carte figure img{width:100%;aspect-ratio:16 / 10;object-fit:cover;object-position:50% 60%}
+.rive-carte .contenu{padding:28px 32px 0}
+.rive-carte .appel{font-size:15px;color:var(--loire);font-weight:500}
+.rive-carte h3{font-size:44px;margin-top:4px}
+.rive-carte dl{margin:24px 0 0;display:grid;gap:14px}
+.rive-carte dl div{display:grid;grid-template-columns:minmax(0,96px) minmax(0,1fr);gap:16px;align-items:baseline}
+.rive-carte dt{font-size:15px;color:var(--silex-doux)}
+.rive-carte dd{margin:0;font-size:18px}
+.vins-note{margin-top:28px;font-size:17px;color:var(--silex-doux)}
+.vins .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+
+/* Caveau */
+.caveau{padding:0 0 136px}
+.cav-carte{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center;background:var(--craie-fonce);border-radius:36px;padding:72px 64px}
+.cav-photos{grid-column:1 / 7;position:relative;padding-bottom:80px}
+.cav-photos figure{margin:0;position:relative}
+.cav-photos .facade img{width:100%;aspect-ratio:3 / 2;object-fit:cover;object-position:70% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.cav-photos .comptoir{position:absolute;right:-36px;bottom:0;width:min(280px, 50%);transform:rotate(-2.5deg)}
+.cav-photos .comptoir img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:50% 40%;border-radius:12px;border:8px solid var(--craie-clair);box-shadow:var(--ombre)}
+.cav-texte{grid-column:8 / 13}
+.cav-texte h2{font-size:clamp(2.4rem, 1.4rem + 3vw, 4rem)}
+.cav-texte p{margin-top:20px;color:var(--silex-doux)}
+.horaires{margin-top:28px;background:var(--craie-clair);border-radius:18px;padding:22px 26px;display:grid;gap:6px}
+.horaires b{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.15}
+.horaires span{font-size:16px;color:var(--silex-doux)}
+.cav-texte .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* Contact */
+.contact{background:var(--silex);color:var(--craie-clair);padding:112px 0 48px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.6rem, 1.4rem + 4vw, 5rem)}
+.ct-titre p{margin-top:20px;color:rgba(248,249,244,.78)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-infos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px 32px;align-content:start}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--loire-clair)}
+.ct-infos p{margin-top:8px;font-size:18px;overflow-wrap:anywhere}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(248,249,244,.3)}
+.ct-infos a:hover{border-color:var(--loire-clair)}
+.pied{margin-top:88px;padding-top:28px;border-top:1px solid rgba(248,249,244,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:rgba(248,249,244,.62)}
+.proposition{background:#24272A;color:rgba(248,249,244,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));padding:28px}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+  .heros-photos .ph-portrait{margin-left:-24px}
+  .cav-carte{padding:56px 40px}
+  .cav-photos .comptoir{right:-16px}
+  .vig-photos .tracteurs{right:-12px}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{padding:18px 0}
+  .marque b{font-size:25px}
+  .marque small{font-size:14px}
+  .nav{gap:6px 18px}
+  .nav a{font-size:15px}
+  .nav .masque-tel{display:none}
+  .nav .contact-lien{padding:7px 16px}
+  .heros{padding:4px 0 0}
+  .heros-grille,.dom-grille,.fam-tete,.fam-corps,.vig-grille,.vins-tete,.vins-corps,.cav-carte,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-texte,.heros-photos,.dom-texte,.dom-photos,.fam-tete h2,.fam-tete p,.fam-photos,.generations,.vig-texte,.vig-photos,.vins-tete h2,.vins-tete p,.appellations,.autre-rive,.cav-photos,.cav-texte,.ct-titre,.ct-infos{grid-column:1}
+  .heros-texte{display:contents}
+  .heros h1{order:1}
+  .heros-photos{order:2;flex-direction:row;align-items:flex-start;gap:14px;margin-top:20px;padding-bottom:0}
+  .heros .chapo{order:3;margin-top:28px}
+  .heros .actions{order:4;margin-top:28px}
+  .ph-grappe{width:auto;flex:1.5 1 0;min-width:0}
+  .ph-grappe img{aspect-ratio:4 / 5;border-radius:20px}
+  .ph-grappe .etiquette{right:10px;top:10px;font-size:14px;padding:6px 12px}
+  .heros-photos .ph-portrait{flex:1 1 0;min-width:0;width:auto;margin:48px 0 0;align-self:auto}
+  .ph-portrait img{aspect-ratio:3 / 4;border-width:6px;border-radius:16px}
+  .faits{margin-top:48px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px}
+  .faits li,.faits li:nth-child(4){border-left:0;padding-left:0}
+  .faits strong{font-size:32px}
+  .domaine{padding:96px 0 88px}
+  .dom-photos{margin-top:48px;padding-bottom:96px}
+  .dom-photos .sol{left:-4px;width:min(220px, 56%)}
+  .famille,.vigne,.vins{padding:88px 0}
+  .fam-tete p{margin-top:8px}
+  .fam-corps{margin-top:40px}
+  .fam-photos{max-width:460px}
+  .fam-photos .eprouvette{margin-top:56px}
+  .generations{margin-top:40px}
+  .generations li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .gestes{grid-template-columns:minmax(0,1fr);gap:24px}
+  .vig-photos{margin-top:56px;padding-bottom:88px;max-width:460px}
+  .vig-photos .tracteurs{right:-4px;width:70%}
+  .vins-tete p{margin-top:8px}
+  .vins-corps{margin-top:40px}
+  .autre-rive{margin-top:56px}
+  .caveau{padding:0 0 88px}
+  .cav-carte{padding:32px 20px 40px;border-radius:28px;width:min(1200px, 100% - 24px)}
+  .cav-photos{padding-bottom:72px}
+  .cav-photos .comptoir{right:-6px;width:min(200px, 52%)}
+  .cav-texte{margin-top:32px}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}
+  .pied{margin-top:56px}
+}
+@media (max-width: 520px){
+  .appellation ul{grid-template-columns:minmax(0,1fr)}
+  .rive-carte .contenu{padding:24px 22px 0}
+  .rive-carte h3{font-size:38px}
+  .rive-carte dl div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .appellation h3{flex-wrap:wrap}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .horaires{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Domaine Tabordet, accueil"><b>Domaine Tabordet</b><small>Sancerre, Pouilly-Fumé</small></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a class="masque-tel" href="#domaine">Le domaine</a>
+      <a class="masque-tel" href="#famille">L’histoire</a>
+      <a class="masque-tel" href="#vigne">La vigne</a>
+      <a class="vins-lien" href="#vins">Les vins</a>
+      <a class="masque-tel" href="#caveau">Caveau</a>
+      <a class="contact-lien" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <div class="heros-texte">
+        <h1>Un domaine, une aventure <em>sensible</em>.</h1>
+        <p class="chapo">12 cuvées sont élaborées, 4 cuvées Domaine et 8 parcellaires, en Sancerre et en Pouilly-Fumé. Les vinifications se réalisent naturellement en levures indigènes et avec un minimum d’intrants.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#vins">Découvrir les vins</a>
+          <a class="btn btn-contour" href="#caveau">Venir au caveau</a>
+        </div>
+      </div>
+      <div class="heros-photos">
+        <figure class="ph-grappe">
+          <img src="assets/domaine-tabordet-verdigny/vendangeur-coupe-une-grappe-de-pinot-noir.webp" alt="Deux mains coupent au sécateur une grappe de raisin noir, caisse de vendange en dessous" width="1600" height="900">
+          <figcaption class="etiquette">Le Pinot Noir</figcaption>
+        </figure>
+        <figure class="ph-portrait">
+          <img src="assets/domaine-tabordet-verdigny/vigneron-verre-en-main-devant-une-jarre-noir-et-blanc.webp" alt="Portrait noir et blanc d’un vigneron, un verre de blanc à la main, à côté d’une jarre" width="1280" height="750">
+        </figure>
+      </div>
+    </div>
+    <div class="cadre faits" aria-label="Le domaine en bref">
+      <ul>
+        <li><strong>12 cuvées</strong><span>4 Domaine et 8 parcellaires</span></li>
+        <li><strong>5 ha</strong><span>en appellation Sancerre</span></li>
+        <li><strong>16 ha</strong><span>en appellation Pouilly-Fumé</span></li>
+        <li><strong>7 à 36 mois</strong><span>d’élevage, en inox, bois et grès</span></li>
+        <li><strong>Bio</strong><span>labellisé sur le millésime 2021, conduite en biodynamie</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="domaine" id="domaine">
+    <div class="cadre dom-grille">
+      <div class="dom-texte">
+        <h2>Sous les pieds de vigne, vibre un fabuleux trésor.</h2>
+        <p class="fort">Sur les rives de la Loire se sont formés, il y a bien longtemps, les terroirs de Sancerre et de Pouilly-Fumé.</p>
+        <p>Le domaine se répartit sur deux appellations, Sancerre (5 ha) et Pouilly-Fumé (16 ha), et deux cépages : Sauvignon Blanc et Pinot Noir. Nous travaillons en Agriculture Biologique et en conduite biodynamique, afin d’aider la vigne à révéler ses terroirs et son meilleur potentiel.</p>
+        <p>Les terroirs apportent à nos vins toutes leurs saveurs et leurs caractéristiques.</p>
+      </div>
+      <div class="dom-photos">
+        <figure class="panorama">
+          <img class="rv" src="assets/domaine-tabordet-verdigny/vignoble-et-colline-de-sancerre.webp" alt="Rangs de jeunes vignes, village perché sur la colline à l’horizon" width="1280" height="750" loading="lazy">
+        </figure>
+        <figure class="sol rv">
+          <img src="assets/domaine-tabordet-verdigny/trois-vues-du-sol-caillouteux-au-pied-des-ceps.webp" alt="Trois vues du sol caillouteux au pied des ceps" width="1280" height="750" loading="lazy">
+          <figcaption class="etiquette">Au pied des ceps</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="famille" id="famille">
+    <div class="cadre">
+      <div class="fam-tete">
+        <h2>Une famille ancrée dans son terroir.</h2>
+        <p>Leur philosophie : s’approprier les différents terroirs et en extraire le meilleur, le plus naturellement et simplement possible.</p>
+      </div>
+      <div class="fam-corps">
+        <div class="fam-photos">
+          <figure class="gouter"><img class="rv" src="assets/domaine-tabordet-verdigny/vigneron-goute-le-vin-dans-le-chai.webp" alt="Un vigneron goûte un jus dans le chai, deux hommes derrière lui" width="1600" height="900" loading="lazy"></figure>
+          <figure class="eprouvette"><img class="rv" src="assets/domaine-tabordet-verdigny/vigneron-observe-une-eprouvette.webp" alt="Un vigneron scrute deux éprouvettes dans le chai" width="1600" height="900" loading="lazy"></figure>
+        </div>
+        <ol class="generations">
+          <li><b>Années 60</b><div><h3>Raymond Tabordet crée le domaine</h3><p>À Verdigny, par l’acquisition de 4,5 ha de vignes sur l’appellation Sancerre.</p></div></li>
+          <li><b>Années 80</b><div><h3>Yvon et Pascal le rejoignent</h3><p>Ses fils agrandissent le domaine sur l’appellation Pouilly-Fumé. Aujourd’hui, Yvon est en retraite ; Pascal s’occupe des commandes, des expéditions et des salons, et Marie-Laure, son épouse, de la partie administrative et commerciale.</p></div></li>
+          <li><b>2012</b><div><h3>Marius et Gaël s’installent</h3><p>Ils agrandissent le domaine, également sur Pouilly. Marius a mené la conversion en Agriculture Biologique, la conduite de la vigne, les vinifications ; Gaël s’occupe de la partie technique, de la vendange et de la taille. Floriane seconde Marie-Laure.</p></div></li>
+          <li><b>2021</b><div><h3>Nouvelle génération, nouvelle vision</h3><p>Traitements à base de tisanes de plantes, labellisation en Agriculture Biologique sur le millésime 2021 et, en parallèle, conduite du domaine en biodynamie.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="vigne" id="vigne">
+    <div class="cadre vig-grille">
+      <div class="vig-texte">
+        <blockquote><p>La réussite d’un vin est le résultat de la bonne santé de son terroir et de son végétal.</p></blockquote>
+        <div class="gestes">
+          <div>
+            <h3>Accompagner le vivant</h3>
+            <p>Des composts de qualité, un travail des sols limité, une taille non mutilante et réfléchie, des traitements à base de plantes, et une récolte du raisin à son meilleur potentiel.</p>
+          </div>
+          <div>
+            <h3>Restituer l’âme des terroirs</h3>
+            <p>Une récolte manuelle ou mécanique suivant les cuvées, une fermentation en levure indigène propre à son terroir. Chaque cuvée est vinifiée dans son contenant : inox, bois ou grès.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vig-photos">
+        <figure class="rangs"><img class="rv" src="assets/domaine-tabordet-verdigny/equipe-dans-les-rangs-de-vigne.webp" alt="Vue plongeante sur les rangs de vigne, l’équipe au travail" width="1600" height="900" loading="lazy"></figure>
+        <figure class="tracteurs rv"><img src="assets/domaine-tabordet-verdigny/tracteurs-dans-les-vignes-au-couchant.webp" alt="Un tracteur et un enjambeur au bord des vignes, rayons de soleil dans les nuages" width="1600" height="900" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre">
+      <div class="vins-tete">
+        <h2>Les vins</h2>
+        <p>C’est l’aboutissement de longs mois de travail. De la rigueur, de l’accompagnement, du suivi. Surtout du plaisir à faire le métier de vigneron. Nous pensons que tous ces points font que nos vins expriment au mieux leurs terroirs.</p>
+      </div>
+      <div class="vins-corps">
+        <div class="appellations">
+          <div class="appellation">
+            <h3>Pouilly-Fumé <small>vins blancs</small></h3>
+            <ul>
+              <li>Pouilly-Fumé Domaine</li>
+              <li>Les Petites Aubues</li>
+              <li>Les Champs des Chaumes</li>
+              <li class="marque-rive">L’Autre Rive</li>
+              <li>Les Calcis</li>
+              <li>Amphore</li>
+            </ul>
+          </div>
+          <div class="appellation">
+            <h3>Sancerre <small>vins blancs</small></h3>
+            <ul>
+              <li>Sancerre Domaine</li>
+              <li>La Belle Oreille</li>
+              <li>Aventure</li>
+            </ul>
+          </div>
+          <div class="appellation">
+            <h3>Sancerre <small>rouges et rosé</small></h3>
+            <ul>
+              <li>Sancerre Domaine, rouge</li>
+              <li>Cuvée Raymond, rouge</li>
+              <li>Sancerre rosé</li>
+            </ul>
+          </div>
+          <p class="vins-note">Suivant les cuvées, les vins sont filtrés et ajustés en soufre. Les élevages durent en moyenne de 7 à 36 mois, pour notre blanc Aventure.</p>
+        </div>
+        <aside class="autre-rive">
+          <div class="rive-carte">
+            <figure>
+              <img class="rv" src="assets/domaine-tabordet-verdigny/cuverie-inox.webp" alt="La cuverie : rangées de cuves inox et passerelle" width="1600" height="900" loading="lazy">
+              <figcaption class="etiquette">18 mois en cuves inox</figcaption>
+            </figure>
+            <div class="contenu">
+              <span class="appel">Pouilly-Fumé</span>
+              <h3>L’Autre Rive</h3>
+              <dl>
+                <div><dt>Cépage</dt><dd>Sauvignon Blanc</dd></div>
+                <div><dt>Sols</dt><dd>Silex</dd></div>
+                <div><dt>Élevage</dt><dd>18 mois sur lies en cuves inox avant mise en bouteille</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-plein" href="#contact">Commander au domaine</a>
+            <a class="btn btn-contour" href="#caveau">Déguster au caveau</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="caveau" id="caveau">
+    <div class="cadre cav-carte">
+      <div class="cav-photos">
+        <figure class="facade">
+          <img class="rv" src="assets/domaine-tabordet-verdigny/facade-du-domaine-tabordet.webp" alt="La façade du Domaine Tabordet, jardinières fleuries" width="1280" height="749" loading="lazy">
+          <figcaption class="etiquette">Chaudoux, Verdigny</figcaption>
+        </figure>
+        <figure class="comptoir rv">
+          <img src="assets/domaine-tabordet-verdigny/deux-femmes-au-comptoir-du-caveau.webp" alt="Deux femmes derrière le comptoir du caveau, verres alignés" width="1600" height="900" loading="lazy">
+        </figure>
+      </div>
+      <div class="cav-texte">
+        <h2>Déguster au caveau, ou sur les salons.</h2>
+        <p>Nous serons heureux de vous recevoir pour déguster nos vins sur les différents salons, et également au caveau.</p>
+        <div class="horaires">
+          <b>Du lundi au samedi</b>
+          <span>de 9&nbsp;h à 12&nbsp;h et de 14&nbsp;h à 18&nbsp;h</span>
+        </div>
+        <p>Les salons et la vie du domaine se suivent sur Instagram, @mariustabordet.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33248793401">02 48 79 34 01</a>
+          <a class="btn btn-contour" href="https://www.instagram.com/mariustabordet/">Suivre sur Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Contact</h2>
+      <p>Pascal, Gaël et Marius Tabordet, SCEV Domaine Tabordet.</p>
+      <div class="actions">
+        <a class="btn btn-clair" href="tel:+33248793401">02 48 79 34 01</a>
+        <a class="btn btn-contour-clair" href="mailto:contact@domaine-tabordet.fr">Écrire au domaine</a>
+      </div>
+    </div>
+    <div class="ct-infos">
+      <div><h3>Adresse</h3><p>52 rue du Carroir Perrin, Chaudoux<br>18300 Verdigny-en-Sancerre</p></div>
+      <div><h3>Caveau</h3><p>Du lundi au samedi<br>9&nbsp;h à 12&nbsp;h, 14&nbsp;h à 18&nbsp;h</p></div>
+      <div><h3>Téléphone</h3><p><a href="tel:+33248793401">02 48 79 34 01</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@domaine-tabordet.fr">contact@domaine-tabordet.fr</a></p></div>
+      <div><h3>Instagram</h3><p><a href="https://www.instagram.com/mariustabordet/">@mariustabordet</a></p></div>
+      <div><h3>Le domaine en détail</h3><p><a href="https://www.domaine-tabordet.fr/histoire">L’histoire</a>, <a href="https://www.domaine-tabordet.fr/vigne">la vigne</a>, <a href="https://www.domaine-tabordet.fr/vinification">la vinification</a></p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Domaine Tabordet, Sancerre et Pouilly-Fumé</span>
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine Tabordet</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

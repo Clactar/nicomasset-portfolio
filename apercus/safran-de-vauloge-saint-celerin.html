@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée au Safran de Vaulogé, Saint-Célerin (72), nuit du 2026-10-30.
+     CONTENU : textes, prix, coordonnées et photos relevés sur https://safrandevauloge.fr/ (accueil, Notre activité,
+     Boutique, Idées recettes, Nous contacter), dossier de Marco. Rien d'inventé, aucune date de marché reprise.
+     Défaut 1 réglé : « Nos prochaines ventes » menait à une page 404 ; il mène maintenant à une vraie section
+     (boutique, lieu de vente à Saint-Célerin, marchés et foires).
+     Défaut 2 réglé : le code « [wpforms] » et les pages du modèle dans le pied laissent place à un bloc contact
+     complet (téléphone et mail cliquables, adresse, Facebook).
+     DESIGN (Nova) : pétale de crocus, aubergine, stigmate. Young Serif et Karla. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#EDE7F2" />
+<title>Safran de Vaulogé, safran cultivé à la main à Saint-Célerin (Sarthe)</title>
+<meta name="description" content="Benoît Jardin cultive le crocus sativus à Saint-Célerin, dans la Sarthe : désherbage à la main, aucun pesticide, safran de catégorie 1, confits et sirop au safran." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232C1A33'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EDE7F2'%3ES%3C/text%3E%3Ccircle cx='47' cy='17' r='5' fill='%23C8441B'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:ital,wght@0,400..700;1,400..500&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --petale:#EDE7F2;
+  --petale-2:#E3DAEA;
+  --surface:#F8F5FA;
+  --aubergine:#2C1A33;
+  --aubergine-2:#3A2543;
+  --encre-douce:#5B4763;
+  --stigmate:#C8441B;
+  --stigmate-fonce:#A93714;
+  --sur-sombre:#EFE8F3;
+  --sur-sombre-doux:#C4B3CC;
+  --filet:rgba(44,26,51,.14);
+  --ombre:0 30px 60px -34px rgba(44,26,51,.5);
+  --ombre-longue:18px 40px 70px -30px rgba(44,26,51,.55);
+  --ombre-courte:0 16px 34px -22px rgba(44,26,51,.45);
+  --fd:"Young Serif",Georgia,serif;
+  --ft:"Karla",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--petale);color:var(--aubergine);font-family:var(--ft);font-size:18px;line-height:1.6}
+::selection{background:var(--stigmate);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+em.ac{font-style:italic;color:var(--stigmate)}
+.wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--aubergine);color:var(--surface);box-shadow:var(--ombre-courte)}
+.btn-plein:hover{background:var(--stigmate-fonce)}
+.btn-contour{border:1.5px solid var(--aubergine);color:var(--aubergine)}
+.btn-contour:hover{background:var(--aubergine);color:var(--surface)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--stigmate);outline-offset:3px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(237,231,242,.94);backdrop-filter:saturate(1.2)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--fd);font-weight:400;font-size:24px}
+.marque span{font-size:14px;color:var(--encre-douce);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a.lien:hover{color:var(--stigmate-fonce)}
+.nav .tel{background:var(--surface);padding:12px 20px;border-radius:999px;font-weight:700;box-shadow:var(--ombre-courte);white-space:nowrap}
+
+/* Héros */
+.heros{padding:56px 0 96px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(2.45rem,1.3rem + 3.9vw,4.6rem)}
+.heros .chapo{margin-top:28px;font-size:19px;max-width:34em;color:var(--encre-douce)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros .note{margin-top:20px;font-size:16px;color:var(--encre-douce)}
+.scene{position:relative;padding:0 0 64px 56px}
+.photo-heros{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre-longue);transform:rotate(2.2deg);aspect-ratio:5/6}
+.photo-heros .etiquette{left:auto;right:16px;max-width:min(300px,62%)}
+.photo-heros img{width:100%;height:100%;object-fit:cover;object-position:46% 62%}
+.etiquette{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);background:var(--surface);color:var(--aubergine);font-size:15px;line-height:1.35;font-weight:600;padding:10px 14px;border-radius:10px;box-shadow:var(--ombre-courte)}
+.passe{position:absolute;left:0;bottom:0;width:min(210px,44%);background:var(--surface);padding:12px 12px 10px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-4deg)}
+.passe img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.passe figcaption{font-size:14px;line-height:1.3;color:var(--encre-douce);margin-top:8px}
+
+/* Bandeau de faits */
+.faits{background:var(--petale-2)}
+.faits ul{list-style:none;margin:0 auto;padding:28px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:2px}
+.faits b{font-family:var(--fd);font-weight:400;font-size:26px;line-height:1.15}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.4}
+
+/* Activité */
+.activite{padding:128px 0 112px}
+.activite .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px;align-items:start}
+.activite figure{margin:0;position:relative}
+.activite figure img{border-radius:18px;box-shadow:var(--ombre);aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 55%}
+.activite h2{font-size:clamp(2rem,1.2rem + 2.4vw,3.2rem)}
+.activite .intro{margin-top:24px;font-size:19px;max-width:33em}
+.raisons{margin-top:40px;display:grid;gap:16px}
+.raison{background:var(--surface);border-radius:16px;padding:24px 28px;box-shadow:var(--ombre-courte)}
+.raison h3{font-size:22px;margin-bottom:8px}
+.raison p{color:var(--encre-douce)}
+.activite .phrase{margin-top:32px;font-family:var(--fd);font-size:24px;line-height:1.3;max-width:24em}
+
+/* Récolte (sombre) */
+.recolte{background:var(--aubergine);color:var(--sur-sombre);padding:120px 0 128px}
+.recolte .tete{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:72px;align-items:end}
+.recolte h2{font-size:clamp(2rem,1.1rem + 2.8vw,3.5rem);color:var(--surface)}
+.recolte h2 em{font-style:italic;color:#E9825C}
+.recolte .tete p{color:var(--sur-sombre-doux);font-size:19px}
+.recolte .tete p + p{margin-top:16px}
+.etapes{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px;position:relative;counter-reset:e}
+.etapes::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:rgba(239,232,243,.25)}
+.etapes li{position:relative;padding-top:52px;counter-increment:e}
+.etapes li::before{content:counter(e);position:absolute;top:0;left:0;width:31px;height:31px;border-radius:50%;background:var(--aubergine);border:1px solid #E9825C;color:#E9825C;font-weight:700;font-size:15px;display:grid;place-items:center}
+.etapes h3{font-size:24px;color:var(--surface);margin-bottom:10px}
+.etapes p{color:var(--sur-sombre-doux);font-size:17px}
+.analyse{margin-top:80px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:32px;align-items:center;background:var(--surface);color:var(--aubergine);border-radius:20px;padding:32px 40px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.analyse .cat{font-family:var(--fd);font-size:56px;line-height:1;color:var(--stigmate);white-space:nowrap}
+.analyse .cat small{display:block;font-family:var(--ft);font-size:15px;color:var(--encre-douce);font-weight:600;margin-top:6px}
+.analyse p{color:var(--encre-douce)}
+.analyse p b{color:var(--aubergine)}
+
+/* Produits */
+.produits{padding:128px 0}
+.produits .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:start}
+.produits h2{font-size:clamp(2rem,1.2rem + 2.4vw,3.2rem)}
+.produits .intro{margin-top:20px;font-size:19px;color:var(--encre-douce);max-width:30em}
+.galerie{position:relative;margin-top:48px;padding-bottom:120px}
+.galerie .grande{margin:0;position:relative}
+.galerie .grande .etiquette{bottom:auto;top:16px}
+.galerie .grande img{border-radius:20px;box-shadow:var(--ombre);width:100%;aspect-ratio:4/3;object-fit:cover}
+.polaroid{position:absolute;margin:0;background:var(--surface);padding:10px 10px 36px;border-radius:4px;box-shadow:var(--ombre)}
+.polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.polaroid figcaption{position:absolute;left:12px;right:12px;bottom:9px;font-size:14px;color:var(--encre-douce);line-height:1.2}
+.pola-a{width:min(190px,38%);right:-18px;bottom:0;transform:rotate(4deg)}
+.pola-b{width:min(170px,34%);left:48px;bottom:24px;transform:rotate(-3deg)}
+.carte-prix{background:var(--surface);border-radius:22px;padding:40px 40px 36px;box-shadow:var(--ombre)}
+.carte-prix h3{font-size:26px}
+.prix{list-style:none;margin:20px 0 0;padding:0}
+.prix li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:18px 0;border-top:1px solid var(--filet)}
+.prix li:first-child{border-top:0}
+.prix .nom{font-weight:700;font-size:18px;line-height:1.35}
+.prix .val{font-family:var(--fd);font-size:22px;white-space:nowrap;text-align:right}
+.prix .desc{grid-column:1/-1;font-size:16px;color:var(--encre-douce);line-height:1.5}
+.conditions{margin-top:24px;padding-top:24px;border-top:1px solid var(--filet);font-size:16px;color:var(--encre-douce)}
+.carte-prix .btn{margin-top:28px;width:100%}
+
+/* Conseil */
+.conseil{padding:0 0 128px}
+.conseil .bloc{background:var(--petale-2);border-radius:28px;padding:72px 80px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:center}
+.conseil blockquote{margin:0;font-family:var(--fd);font-size:clamp(1.75rem,1.1rem + 2vw,2.75rem);line-height:1.18}
+.conseil blockquote em{font-style:italic;color:var(--stigmate)}
+.conseil .bloc > div p{color:var(--encre-douce)}
+.conseil .bloc > div p + p{margin-top:14px}
+.conseil a.souligne{display:inline-block;margin-top:22px;font-weight:700;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--stigmate)}
+.conseil a.souligne:hover{color:var(--stigmate-fonce)}
+
+/* Ventes (défaut 1) */
+.ventes{padding:0 0 128px}
+.ventes .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.ventes h2{font-size:clamp(2rem,1.2rem + 2.4vw,3.2rem)}
+.ventes .intro{margin-top:20px;font-size:19px;color:var(--encre-douce)}
+.ventes .vignette{margin:40px 0 0;width:min(280px,100%);position:relative}
+.ventes .vignette img{border-radius:14px;box-shadow:var(--ombre);aspect-ratio:4/3;object-fit:cover;width:100%}
+.lieux{list-style:none;margin:0;padding:0}
+.lieux li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;padding:36px 0;border-top:1px solid var(--filet)}
+.lieux li:last-child{border-bottom:1px solid var(--filet)}
+.lieux h3{font-size:26px}
+.lieux h3 small{display:block;font-family:var(--ft);font-size:16px;color:var(--encre-douce);margin-top:8px;line-height:1.4}
+.lieux p{color:var(--encre-douce)}
+.lieux p + p{margin-top:10px}
+.lieux a{font-weight:700;text-underline-offset:4px;text-decoration-color:var(--stigmate)}
+
+/* Contact et pied (défaut 2) */
+.contact{background:var(--aubergine);color:var(--sur-sombre);padding:112px 0 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.contact h2{font-size:clamp(2rem,1.2rem + 2.6vw,3.4rem);color:var(--surface)}
+.contact .intro{margin-top:20px;color:var(--sur-sombre-doux);font-size:19px;max-width:28em}
+.contact .actions .btn-plein{background:var(--surface);color:var(--aubergine)}
+.contact .actions .btn-plein:hover{background:#E9825C;color:var(--aubergine)}
+.contact .actions .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.contact .actions .btn-contour:hover{background:var(--sur-sombre);color:var(--aubergine)}
+.coord{background:var(--aubergine-2);border-radius:22px;padding:36px 40px;display:grid;gap:22px}
+.coord dt{font-size:15px;color:var(--sur-sombre-doux);font-weight:600}
+.coord dd{margin:4px 0 0;font-size:19px;color:var(--surface)}
+.coord a{text-decoration:none;border-bottom:1px solid rgba(233,130,92,.6)}
+.coord a:hover{color:#E9825C}
+.pied{margin-top:96px;border-top:1px solid rgba(239,232,243,.16)}
+.pied .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0;font-size:15px;color:var(--sur-sombre-doux)}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--surface)}
+.pied .liens{display:flex;flex-wrap:wrap;gap:20px}
+.proposition{background:#1E1123;color:var(--sur-sombre-doux);text-align:center;font-size:14px;padding:14px 24px}
+.proposition a{color:var(--sur-sombre)}
+
+/* Apparitions douces (photos seulement) */
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+
+/* Tablette */
+@media (max-width:1060px){
+  .nav a.lien{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .etapes{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .etapes::before{display:none}
+  .conseil .bloc{padding:56px;grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:900px){
+  .heros{padding:32px 0 72px}
+  .heros .wrap,.activite .wrap,.recolte .tete,.produits .wrap,.ventes .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .scene{padding:0 0 56px 32px;max-width:520px}
+  .activite,.produits{padding:96px 0}
+  .activite figure{max-width:520px}
+  .recolte{padding:96px 0}
+  .etapes{margin-top:56px}
+  .analyse{grid-template-columns:minmax(0,1fr);gap:16px;padding:28px}
+  .conseil,.ventes{padding-bottom:96px}
+  .lieux li{grid-template-columns:minmax(0,1fr);gap:12px}
+  .contact{padding-top:96px}
+}
+/* Téléphone */
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{width:min(var(--max),100% - 40px)}
+  .entete .wrap{padding:14px 0}
+  .marque b{font-size:19px;white-space:nowrap}
+  .heros .note{display:none}
+  .heros{padding-top:24px}
+  .marque span{display:none}
+  .nav .tel{padding:10px 16px;font-size:15px}
+  .heros .chapo{font-size:17px;margin-top:20px}
+  .actions{flex-direction:column;align-items:stretch;margin-top:28px}
+  .actions .btn{width:100%;white-space:normal}
+  .scene{padding:0 0 48px 20px;margin-top:-8px}
+  .photo-heros{aspect-ratio:4/5;transform:rotate(1.6deg)}
+  .passe{width:min(150px,42%);padding:8px 8px 6px}
+  .passe figcaption{font-size:13px}
+  .etiquette{font-size:14px;left:12px;bottom:12px;max-width:calc(100% - 24px)}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px;padding:24px 0}
+  .faits b{font-size:22px}
+  .faits li:last-child{grid-column:1/-1}
+  .activite .intro,.produits .intro,.ventes .intro,.contact .intro,.recolte .tete p{font-size:17px}
+  .raison{padding:20px}
+  .activite .phrase{font-size:21px}
+  .etapes{grid-template-columns:minmax(0,1fr);row-gap:36px}
+  .analyse .cat{font-size:40px}
+  .galerie{padding-bottom:96px;margin-top:36px}
+  .pola-a{right:-6px}
+  .pola-b{left:16px}
+  .carte-prix{padding:28px 22px}
+  .prix .nom{font-size:17px}
+  .conseil .bloc{padding:36px 24px;border-radius:22px}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:17px;overflow-wrap:anywhere}
+}
+@media (max-width:360px){
+  .nav .tel{font-size:14px;padding:9px 12px}
+  .marque b{font-size:18px;white-space:normal}
+  .entete .wrap{gap:12px}
+  .analyse .cat{font-size:34px}
+}
+</style>
+<style id="reprise-nova-3010">
+@media (max-width:600px){
+  .heros .wrap{display:flex;flex-direction:column;gap:0}
+  .heros .wrap>div:first-child{display:contents}
+  .heros h1{order:1}
+  .heros .scene{order:2;margin:28px 0 4px}
+  .heros .chapo{order:3}
+  .heros .actions{order:4}
+  .heros .note{order:5}
+  .heros .photo-heros .etiquette{top:14px;bottom:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Safran de Vaulogé, accueil"><b>Safran de Vaulogé</b><span>Saint-Célerin, Sarthe</span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a class="lien" href="#activite">Notre activité</a>
+      <a class="lien" href="#produits">Nos produits</a>
+      <a class="lien" href="#ventes">Nos prochaines ventes</a>
+      <a class="tel" href="tel:+33686884034">06 86 88 40 34</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Du safran cultivé et récolté <em class="ac">à la main</em> à Saint-Célerin.</h1>
+        <p class="chapo">La safranière bénéficie d'une terre sablonneuse et drainante, condition essentielle au bon développement du bulbe de crocus sativus. Le désherbage est fait intégralement à la main ou à la houe maraîchère&nbsp;: aucun pesticide n'est utilisé sur nos parcelles.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://safrandevauloge.fr/boutique/">Commander sur la boutique</a>
+          <a class="btn btn-contour" href="#ventes">Nos prochaines ventes</a>
+        </div>
+        <p class="note">Commandes préparées sous 48&nbsp;h, retrait gratuit à Saint-Célerin.</p>
+      </div>
+      <div class="scene">
+        <figure class="photo-heros rv" style="margin:0">
+          <img src="assets/safran-de-vauloge-saint-celerin/crocus-qui-pointe-de-terre-la-nuit.webp" width="1200" height="1600" alt="Un bouton de crocus violet encore fermé sort d'une terre sableuse, de nuit." fetchpriority="high" />
+          <figcaption class="etiquette">La fleur profite de la fraîcheur de la nuit pour sortir de terre</figcaption>
+        </figure>
+        <figure class="passe rv" style="margin:0">
+          <img src="assets/safran-de-vauloge-saint-celerin/crocus-en-fleur-dans-la-safraniere.webp" width="680" height="907" alt="Rangs de crocus en fleur, pistils rouges visibles, dans la safranière." />
+          <figcaption>La safranière durant la récolte 2019</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En quelques faits">
+    <ul class="wrap">
+      <li><b>Sarthe (72)</b><span>safranière basée à Saint-Célerin</span></li>
+      <li><b>2 parcelles</b><span>la seconde à 15&nbsp;km, même sol</span></li>
+      <li><b>Aucun pesticide</b><span>désherbage à la main ou à la houe</span></li>
+      <li><b>Catégorie 1</b><span>à l'analyse en laboratoire</span></li>
+      <li><b>16 produits</b><span>sur notre boutique en ligne</span></li>
+    </ul>
+  </section>
+
+  <section class="activite" id="activite">
+    <div class="wrap">
+      <figure class="rv">
+        <img src="assets/safran-de-vauloge-saint-celerin/houe-a-roue-desherbage-entre-les-rangs.webp" width="1200" height="1600" alt="Une houe maraîchère à roue posée dans un rang fraîchement désherbé, feuilles de crocus au premier plan." loading="lazy" />
+        <figcaption class="etiquette">La houe maraîchère permet de désherber les parcelles</figcaption>
+      </figure>
+      <div>
+        <h2>L'entretien des parcelles, tout au long de l'année.</h2>
+        <p class="intro">Afin d'agrandir la surface exploitée et de disperser le risque sanitaire (maladies, nuisibles), nous exploitons aussi une parcelle située à 15 kilomètres, aux caractéristiques de sol sensiblement identiques. Le bulbe supporte assez peu l'humidité stagnante&nbsp;: la terre sablonneuse lui convient.</p>
+        <div class="raisons">
+          <div class="raison">
+            <h3>Le safran supporte mal la concurrence</h3>
+            <p>Les adventices viennent puiser l'énergie de la terre et le freinent dans son développement.</p>
+          </div>
+          <div class="raison">
+            <h3>Les hautes herbes attirent les rongeurs</h3>
+            <p>Ils raffolent des bulbes et peuvent détruire une safranière en quelques semaines.</p>
+          </div>
+        </div>
+        <p class="phrase">D'où des désherbages toute l'année, faits intégralement à la main ou à la houe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recolte" id="recolte">
+    <div class="wrap">
+      <div class="tete">
+        <h2>La récolte, chaque fleur se travaille <em>en 24 heures</em>.</h2>
+        <div>
+          <p>Aux alentours de la mi-octobre, quand la température nocturne avoisine les 8 degrés, les tiges commencent à sortir de terre&nbsp;: c'est le début de 3 semaines à 1 mois de travail intensif.</p>
+          <p>La fleur du crocus sativus ne vit qu'une journée. Toutes les étapes se font en 24 heures et se répètent ainsi chaque jour.</p>
+        </div>
+      </div>
+      <ol class="etapes">
+        <li>
+          <h3>La cueillette</h3>
+          <p>Après l'évaporation de la rosée, avant l'éclosion. Les fleurs sont pincées à leur base et placées dans des paniers, plusieurs fois par jour aux pics de production.</p>
+        </li>
+        <li>
+          <h3>L'émondage</h3>
+          <p>On écarte les corolles pour récupérer les 3 stigmates, aux ciseaux ou à la pince à épiler. Nous ne gardons que la partie rouge et orange foncé.</p>
+        </li>
+        <li>
+          <h3>Le séchage</h3>
+          <p>Au déshydrateur et au four électrique, la durée et la température suivant l'humidité des stigmates. Puis un mois à l'abri de la lumière avant la vente.</p>
+        </li>
+        <li>
+          <h3>L'analyse</h3>
+          <p>Chaque année, un échantillon part au laboratoire&nbsp;: saveur (picrocrocine), arôme (safranal) et couleur (crocine).</p>
+        </li>
+      </ol>
+      <div class="analyse">
+        <div class="cat">Catégorie 1<small>résultat de l'analyse</small></div>
+        <p><b>Le Safran de Vaulogé appartient à la catégorie 1, gage d'une qualité optimum.</b> Notre rapport d'analyse est en ligne, vous pouvez le lire en entier.</p>
+        <a class="btn btn-plein" href="https://safrandevauloge.fr/wp-content/uploads/2020/06/022420RA141s.pdf">Lire le rapport (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="produits" id="produits">
+    <div class="wrap">
+      <div>
+        <h2>Nos confits et notre sirop au safran.</h2>
+        <p class="intro">Le safran associé au Champagne, au Jasnières, au Poiré, au vin rouge ou à la menthe, pour vos fromages, votre foie gras, vos crêpes ou vos petits déjeuners.</p>
+        <div class="galerie">
+          <figure class="grande rv">
+            <img src="assets/safran-de-vauloge-saint-celerin/confit-de-champagne-au-safran-et-bouchon.webp" width="1600" height="1200" alt="Pot hexagonal de confit de Champagne au safran, un bouchon de champagne posé sur le couvercle." loading="lazy" />
+            <figcaption class="etiquette">Confit de Champagne au Safran</figcaption>
+          </figure>
+          <figure class="polaroid pola-b rv">
+            <img src="assets/safran-de-vauloge-saint-celerin/pot-confit-de-vin-rouge-au-safran-sur-billot.webp" width="1200" height="1600" alt="Petit pot de confit de vin rouge au safran sur un billot de bois." loading="lazy" />
+            <figcaption>Vin rouge, 40&nbsp;g</figcaption>
+          </figure>
+          <figure class="polaroid pola-a rv">
+            <img src="assets/safran-de-vauloge-saint-celerin/bouteille-sirop-de-safran.webp" width="1200" height="1600" alt="Bouteille de sirop de safran de 25 cl." loading="lazy" />
+            <figcaption>Sirop de safran, 25&nbsp;cl</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="carte-prix">
+        <h3>Sur la boutique</h3>
+        <ul class="prix">
+          <li><span class="nom">Confit de Champagne au Safran, 105&nbsp;g</span><span class="val">7,00&nbsp;€</span><span class="desc">Il accompagnera parfaitement le foie gras mais aussi votre plateau de fromages.</span></li>
+          <li><span class="nom">Confit de Jasnières au Safran, 105&nbsp;g</span><span class="val">7,00&nbsp;€</span><span class="desc">L'association de 2 produits sarthois, pour votre foie gras ou votre plateau de fromages.</span></li>
+          <li><span class="nom">Confit de Poiré au Safran, 105&nbsp;g</span><span class="val">4,50&nbsp;€</span><span class="desc">La subtilité du Poiré, pour vos fromages ou vos crêpes.</span></li>
+          <li><span class="nom">Confit de vin rouge au Safran, 40&nbsp;g</span><span class="val">2,40&nbsp;€</span></li>
+          <li><span class="nom">Confit de menthe au safran, 40&nbsp;g</span><span class="val">2,10&nbsp;€</span><span class="desc">Pour vos melons, vos crêpes, vos entremets ou vos glaces.</span></li>
+          <li><span class="nom">Confit de Safran, 40&nbsp;g</span><span class="val">1,90&nbsp;€</span><span class="desc">Une touche originale à vos petits déjeuners ou instants sucrés.</span></li>
+        </ul>
+        <p class="conditions">Paiement sécurisé. Commandes préparées dans un délai de 48&nbsp;h (hors week-end et jours fériés), expédition standard par Colissimo, ou retrait gratuit lors de nos ventes en extérieur et sur notre lieu de vente à Saint-Célerin.</p>
+        <a class="btn btn-plein" href="https://safrandevauloge.fr/boutique/">Voir les 16 produits</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="conseil" aria-label="Conseil de préparation">
+    <div class="wrap">
+      <div class="bloc">
+        <blockquote>Faites-le infuser quelques heures, idéalement la veille. Attention&nbsp;: le safran ne supporte pas <em>l'ébullition</em>.</blockquote>
+        <div>
+          <p>Le safran est séché après la récolte pour se conserver. Une petite quantité d'eau, de vinaigre, de vin blanc ou de lait suffit pour l'infusion, que vous incorporez en fin de préparation.</p>
+          <p>Le plat typique du safranier&nbsp;? L'omelette du Safranier.</p>
+          <a class="souligne" href="https://safrandevauloge.fr/idees-recettes-conseils-dutilisation/">Nos idées recettes&nbsp;: omelette, risotto, crème anglaise</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ventes" id="ventes">
+    <div class="wrap">
+      <div>
+        <h2>Nos prochaines ventes.</h2>
+        <p class="intro">Vous retrouvez nos produits sur notre boutique en ligne, mais également sur différents marchés et foires, et à Saint-Célerin.</p>
+        <figure class="vignette rv">
+          <img src="assets/safran-de-vauloge-saint-celerin/confit-de-jasnieres-au-safran.webp" width="1600" height="1200" alt="Pot hexagonal de confit de Jasnières au safran." loading="lazy" />
+        </figure>
+      </div>
+      <ul class="lieux">
+        <li>
+          <h3>Sur les marchés et foires<small>retrait gratuit de vos commandes</small></h3>
+          <div>
+            <p>Pour connaître nos prochaines dates, appelez-nous au <a href="tel:+33686884034">06 86 88 40 34</a> ou écrivez à <a href="mailto:contact@safrandevauloge.fr">contact@safrandevauloge.fr</a>.</p>
+          </div>
+        </li>
+        <li>
+          <h3>À Saint-Célerin<small>Lieu-dit Vaulogé, 72110 Saint-Célerin</small></h3>
+          <div>
+            <p>Notre lieu de vente, où vous pouvez aussi retirer gratuitement une commande passée en ligne.</p>
+          </div>
+        </li>
+        <li>
+          <h3>Sur la boutique en ligne<small>paiement sécurisé, Colissimo</small></h3>
+          <div>
+            <p>Vos commandes sont préparées dans un délai de 48&nbsp;h, hors week-end et jours fériés.</p>
+            <p><a href="https://safrandevauloge.fr/boutique/">Ouvrir la boutique</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Restons en contact.</h2>
+        <p class="intro">N'hésitez pas à nous contacter. Nous nous ferons un plaisir de vous répondre.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33686884034">Appeler le 06 86 88 40 34</a>
+          <a class="btn btn-contour" href="mailto:contact@safrandevauloge.fr">Nous écrire</a>
+        </div>
+      </div>
+      <dl class="coord">
+        <div><dt>Le safranier</dt><dd>Benoît Jardin</dd></div>
+        <div><dt>Adresse</dt><dd>Lieu-dit Vaulogé<br />72110 Saint-Célerin</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33686884034">06 86 88 40 34</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contact@safrandevauloge.fr">contact@safrandevauloge.fr</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/Safran-de-vauloge-348762275146802/">Safran de Vaulogé</a></dd></div>
+      </dl>
+    </div>
+    <div class="pied">
+      <div class="wrap">
+        <span>Safran de Vaulogé, Saint-Célerin (Sarthe)</span>
+        <span class="liens"><a href="#activite">Notre activité</a><a href="#produits">Nos produits</a><a href="#ventes">Nos prochaines ventes</a><a href="https://safrandevauloge.fr/idees-recettes-conseils-dutilisation/">Idées recettes</a></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Safran de Vaulogé</div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

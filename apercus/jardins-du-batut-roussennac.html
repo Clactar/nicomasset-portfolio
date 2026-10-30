@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- Page d'accueil proposée aux Jardins du Batut, Roussennac (12), nuit du 2026-10-30.
+     CONTENU : textes, produits, tarifs du gîte, coordonnées et photos relevés sur https://lesjardinsdubatut.com/
+     (accueil, À propos, Légumes et Produits Bio, Location d'Éco-Gîte, Contact), dossier de Marco. Rien d'inventé.
+     Non repris : l'article de blog daté de 2023, les âges de la famille, le marché de Tournhac (page non datée),
+     la commande de paniers « prochainement » en ligne. Le selfie sous la serre n'est pas légendé de prénoms.
+     Défaut 1 réglé : « Légumes et Produits Bio » et « Location d'Éco-Gîte » menaient à une 404 ; ils mènent à leurs
+     sections sur la page, qui renvoient aux vraies pages du site et à la réservation Airbnb.
+     Défaut 2 réglé : la consigne de l'éditeur (« Bloc Newsletter… ») et le lien « Politique de confidentalité » en 404
+     laissent place à un pied de page propre avec les coordonnées cliquables.
+     DESIGN (Nova) : pois chiche, poireau, radis. Bree Serif et Mulish. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F0EADA" />
+<title>Les Jardins du Batut, maraîchage bio et éco-gîte à Roussennac (Aveyron)</title>
+<meta name="description" content="Ferme maraîchère bio sur près de deux hectares, dans une ferme aveyronnaise de 1809 : légumes et produits en vente directe, éco-gîte classé et labellisé Accueil Paysan, accueil participatif." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232F4A2A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F0EADA'%3EJ%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Mulish:ital,wght@0,400..800;1,400&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --pois:#F0EADA;
+  --pois-2:#E6DEC8;
+  --surface:#FAF7EF;
+  --poireau:#2F4A2A;
+  --poireau-2:#3B5A35;
+  --encre-douce:#56604F;
+  --radis:#C0395B;
+  --radis-fonce:#A02C4A;
+  --radis-clair:#F09AAE;
+  --sur-sombre:#EEEBDD;
+  --sur-sombre-doux:#C3CBB5;
+  --filet:rgba(47,74,42,.16);
+  --ombre:0 30px 60px -34px rgba(38,52,30,.5);
+  --ombre-longue:16px 42px 72px -32px rgba(38,52,30,.55);
+  --ombre-courte:0 16px 34px -22px rgba(38,52,30,.45);
+  --fd:"Bree Serif",Georgia,serif;
+  --ft:"Mulish",system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--pois);color:var(--poireau);font-family:var(--ft);font-size:18px;line-height:1.6}
+::selection{background:var(--radis);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),background-color .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--poireau);color:var(--surface);box-shadow:var(--ombre-courte)}
+.btn-plein:hover{background:var(--radis-fonce)}
+.btn-contour{border:1.5px solid var(--poireau);color:var(--poireau)}
+.btn-contour:hover{background:var(--poireau);color:var(--surface)}
+a:focus-visible{outline:3px solid var(--radis);outline-offset:3px}
+.etiquette{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);background:var(--surface);color:var(--poireau);font-size:15px;font-weight:700;line-height:1.35;padding:9px 14px;border-radius:12px;box-shadow:var(--ombre-courte)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(240,234,218,.95)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--fd);font-weight:400;font-size:25px}
+.marque span{font-size:14px;color:var(--encre-douce);margin-top:4px}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-size:16px;font-weight:600}
+.nav a.lien:hover{color:var(--radis-fonce)}
+.nav .tel{background:var(--surface);padding:12px 20px;border-radius:999px;font-weight:800;box-shadow:var(--ombre-courte);white-space:nowrap}
+
+/* Héros */
+.heros{padding:48px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.heros h1{font-size:clamp(2.5rem,1.3rem + 4vw,4.75rem);line-height:1.04}
+.heros h1 em{font-style:normal;color:var(--radis)}
+.heros .chapo{margin-top:26px;font-size:19px;color:var(--encre-douce);max-width:31em}
+.duo{position:relative;padding:0 0 88px 0}
+.duo .grande{margin:0 0 0 48px;position:relative}
+.duo .grande img{border-radius:24px;box-shadow:var(--ombre-longue);aspect-ratio:6/5;width:100%;object-fit:cover;object-position:40% 60%}
+.duo .grande .etiquette{left:auto;right:16px;bottom:auto;top:16px}
+.polaroid{position:absolute;left:0;bottom:0;width:min(230px,42%);margin:0;background:var(--surface);padding:10px 10px 40px;border-radius:4px;box-shadow:var(--ombre);transform:rotate(-5deg)}
+.polaroid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.polaroid figcaption{position:absolute;left:12px;right:12px;bottom:10px;font-size:14px;color:var(--encre-douce);line-height:1.25}
+
+/* Faits */
+.faits{background:var(--pois-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:var(--fd);font-weight:400;font-size:27px;line-height:1.15}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.4}
+
+/* Sol vivant */
+.sol{padding:128px 0 120px}
+.sol .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:center}
+.sol figure{margin:0;position:relative}
+.sol figure img{border-radius:20px;box-shadow:var(--ombre);aspect-ratio:4/3;width:100%;object-fit:cover}
+.sol h2{font-size:clamp(2rem,1.2rem + 2.4vw,3.2rem)}
+.sol .intro{margin-top:22px;font-size:19px}
+.sol .intro + p{margin-top:16px;color:var(--encre-douce)}
+.trois{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
+.trois li{background:var(--surface);border-radius:999px;padding:10px 18px;font-weight:700;font-size:16px;box-shadow:var(--ombre-courte)}
+
+/* Légumes (sombre, défaut 1) */
+.legumes{background:var(--poireau);color:var(--sur-sombre);padding:0 0 120px;margin-top:120px}
+.legumes .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end}
+.legumes .tete figure{margin:-96px 0 0;position:relative}
+.legumes .tete figure img{border-radius:22px;aspect-ratio:16/10;width:100%;object-fit:cover;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.legumes h2{font-size:clamp(2rem,1.2rem + 2.6vw,3.4rem);color:var(--surface);padding-top:96px}
+.legumes h2 em{font-style:normal;color:var(--radis-clair)}
+.legumes .tete p{margin-top:20px;font-size:19px;color:var(--sur-sombre-doux)}
+.legumes .corps{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;margin-top:72px;align-items:start}
+.legumes h3{font-size:26px;color:var(--surface)}
+.ou{list-style:none;margin:20px 0 0;padding:0}
+.ou li{padding:18px 0;border-top:1px solid rgba(238,235,221,.16)}
+.ou li b{display:block;color:var(--surface);font-weight:700}
+.ou li span{color:var(--sur-sombre-doux);font-size:17px}
+.legumes .actions .btn-plein{background:var(--surface);color:var(--poireau)}
+.legumes .actions .btn-plein:hover{background:var(--radis-clair)}
+.legumes .actions .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.legumes .actions .btn-contour:hover{background:var(--sur-sombre);color:var(--poireau)}
+.carte-produits{background:var(--surface);color:var(--poireau);border-radius:24px;padding:40px 44px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.carte-produits h3{color:var(--poireau)}
+.famille{padding:22px 0;border-top:1px solid var(--filet)}
+.famille:first-of-type{border-top:0;padding-top:16px}
+.famille h4{margin:0;font-family:var(--fd);font-weight:400;font-size:21px;color:var(--poireau)}
+.famille h4 small{font-family:var(--ft);font-size:15px;color:var(--encre-douce);font-weight:600;margin-left:8px}
+.famille p{margin-top:6px;color:var(--encre-douce);font-size:17px}
+.sol-vivant{margin-top:22px;font-size:16px;color:var(--encre-douce)}
+
+/* Gîte (défaut 1) */
+.gite{padding:136px 0 128px}
+.gite .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:0;align-items:center}
+.gite .photo{margin:0;position:relative}
+.gite .photo img{border-radius:24px;box-shadow:var(--ombre);aspect-ratio:4/3;width:100%;object-fit:cover;object-position:30% 50%}
+.gite .carte{position:relative;z-index:2;margin-left:-96px;background:var(--surface);border-radius:24px;padding:44px 44px 40px;box-shadow:var(--ombre)}
+.gite h2{font-size:clamp(2rem,1.2rem + 2.2vw,3rem)}
+.gite .intro{margin-top:16px;color:var(--encre-douce)}
+.formules{list-style:none;margin:24px 0 0;padding:0}
+.formules li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;padding:16px 0;border-top:1px solid var(--filet)}
+.formules b{font-size:18px}
+.formules .px{font-family:var(--fd);font-size:20px;white-space:nowrap;text-align:right;color:var(--radis-fonce)}
+.formules .px small{display:block;font-family:var(--ft);font-size:14px;color:var(--encre-douce)}
+.formules .d{grid-column:1/-1;font-size:16px;color:var(--encre-douce)}
+.gite .actions{margin-top:26px}
+.lieu{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.lieu p{color:var(--encre-douce)}
+.lieu p.fort{font-family:var(--fd);font-size:24px;line-height:1.3;color:var(--poireau)}
+
+/* Participatif */
+.participatif{padding:0 0 128px}
+.participatif .bloc{background:var(--pois-2);border-radius:28px;padding:72px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.participatif h2{font-size:clamp(2rem,1.2rem + 2.2vw,3rem)}
+.participatif p{margin-top:16px;color:var(--encre-douce)}
+.participatif p.fort{font-size:20px;color:var(--poireau);font-weight:600}
+.participatif .liens{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px 24px}
+.participatif .liens a{font-weight:800;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:var(--radis)}
+.participatif .liens a:hover{color:var(--radis-fonce)}
+.collage{position:relative;padding:0 0 120px 0}
+.collage .a{margin:0;position:relative}
+.collage .a img{border-radius:20px;box-shadow:var(--ombre);aspect-ratio:16/10;width:100%;object-fit:cover}
+.collage .b{position:absolute;right:-24px;bottom:0;width:min(300px,62%);margin:0;background:var(--surface);padding:10px;border-radius:16px;box-shadow:var(--ombre);transform:rotate(3deg)}
+.collage .b img{border-radius:10px;aspect-ratio:4/3;width:100%;object-fit:cover}
+.collage .b figcaption{font-size:14px;color:var(--encre-douce);padding:8px 4px 2px;line-height:1.3}
+
+/* Qui sommes-nous */
+.nous{padding:0 0 128px}
+.nous .wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:80px;align-items:start}
+.nous figure{margin:0;position:relative}
+.nous figure img{border-radius:22px;box-shadow:var(--ombre-longue);aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 40%;transform:rotate(-2deg)}
+.nous h2{font-size:clamp(2rem,1.2rem + 2.4vw,3.2rem)}
+.nous .intro{margin-top:20px;font-size:19px}
+.nous .intro + p{margin-top:14px;color:var(--encre-douce)}
+.actions-liste{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.actions-liste li{padding:14px 0 14px 28px;border-top:1px solid var(--filet);position:relative;color:var(--encre-douce);font-size:17px;line-height:1.45}
+.actions-liste li::before{content:"";position:absolute;left:4px;top:23px;width:9px;height:9px;border-radius:50%;background:var(--radis)}
+.respirer{margin-top:28px;font-family:var(--fd);font-size:28px;color:var(--poireau)}
+
+/* Contact et pied (défaut 2) */
+.contact{background:var(--poireau);color:var(--sur-sombre);padding:112px 0 0}
+.contact .wrap.grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.contact h2{font-size:clamp(2rem,1.2rem + 2.6vw,3.4rem);color:var(--surface)}
+.contact .intro{margin-top:20px;color:var(--sur-sombre-doux);font-size:19px;max-width:28em}
+.contact .actions .btn-plein{background:var(--surface);color:var(--poireau)}
+.contact .actions .btn-plein:hover{background:var(--radis-clair)}
+.contact .actions .btn-contour{border-color:var(--sur-sombre);color:var(--sur-sombre)}
+.contact .actions .btn-contour:hover{background:var(--sur-sombre);color:var(--poireau)}
+.coord{background:var(--poireau-2);border-radius:22px;padding:36px 40px;display:grid;gap:22px}
+.coord dt{font-size:15px;color:var(--sur-sombre-doux);font-weight:700}
+.coord dd{margin:4px 0 0;font-size:19px;color:var(--surface)}
+.coord a{text-decoration:none;border-bottom:1.5px solid var(--radis-clair)}
+.coord a:hover{color:var(--radis-clair)}
+.pied{margin-top:96px;border-top:1px solid rgba(238,235,221,.16)}
+.pied .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0;font-size:15px;color:var(--sur-sombre-doux)}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--surface)}
+.pied .liens{display:flex;flex-wrap:wrap;gap:20px}
+.pied .marque-iy{flex-basis:100%;font-size:14px}
+.proposition{background:#22371F;color:var(--sur-sombre-doux);text-align:center;font-size:14px;padding:14px 24px}
+.proposition a{color:var(--sur-sombre)}
+
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+
+@media (max-width:1060px){
+  .nav a.lien{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .participatif .bloc{padding:56px;gap:48px}
+  .gite .carte{margin-left:-64px;padding:36px}
+}
+@media (max-width:900px){
+  .heros{padding:28px 0 80px}
+  .heros .wrap,.sol .wrap,.legumes .tete,.legumes .corps,.gite .wrap,.lieu,.participatif .bloc,.nous .wrap,.contact .wrap.grille{grid-template-columns:minmax(0,1fr);gap:48px}
+  .duo{max-width:560px}
+  .sol{padding:96px 0}
+  .legumes{margin-top:96px;padding-bottom:96px}
+  .legumes .tete figure{order:-1;margin-top:-72px}
+  .legumes h2{padding-top:0}
+  .legumes .corps{margin-top:56px}
+  .gite{padding:96px 0}
+  .gite .wrap{gap:0}
+  .gite .carte{margin:-72px 16px 0}
+  .participatif,.nous{padding-bottom:96px}
+  .participatif .bloc{padding:48px 32px}
+  .nous figure{max-width:420px}
+  .contact{padding-top:96px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{width:min(var(--max),100% - 40px)}
+  .entete .wrap{padding:14px 0;gap:12px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .nav .tel{padding:10px 14px;font-size:15px}
+  .heros{padding-top:20px}
+  .heros .chapo{font-size:17px;margin-top:18px}
+  .actions{flex-direction:column;align-items:stretch;margin-top:26px}
+  .actions .btn{width:100%;white-space:normal}
+  .duo{padding-bottom:64px}
+  .duo .grande{margin-left:24px}
+  .polaroid{width:min(150px,44%);padding:7px 7px 30px}
+  .polaroid figcaption{font-size:13px;bottom:7px;left:9px;right:9px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px;padding:24px 0}
+  .faits b{font-size:22px}
+  .faits li:last-child{grid-column:1/-1}
+  .sol .intro,.legumes .tete p,.nous .intro,.contact .intro{font-size:17px}
+  .carte-produits{padding:28px 22px}
+  .gite .carte{margin:-48px 8px 0;padding:28px 22px}
+  .formules li{grid-template-columns:minmax(0,1fr)}
+  .formules .px{text-align:left}
+  .lieu p.fort{font-size:21px}
+  .participatif .bloc{padding:32px 20px;border-radius:22px}
+  .collage{padding-bottom:110px}
+  .collage .b{right:-6px;width:min(220px,66%)}
+  .actions-liste{grid-template-columns:minmax(0,1fr)}
+  .respirer{font-size:24px}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:17px;overflow-wrap:anywhere}
+}
+@media (max-width:360px){
+  .marque b{font-size:18px}
+  .nav .tel{font-size:14px;padding:9px 11px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Les Jardins du Batut</b><span>Maraîchage et accueil sur sol vivant</span></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a class="lien" href="#legumes">Légumes et produits bio</a>
+      <a class="lien" href="#gite">Éco-gîte</a>
+      <a class="lien" href="#participatif">Accueil participatif</a>
+      <a class="tel" href="tel:+33634075382">06 34 07 53 82</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Bienvenue dans nos Jardins <em>Vivants</em>.</h1>
+        <p class="chapo">Une ferme maraîchère bio, un espace familial de vie, d'accueil et de partage, sur près de deux hectares au cœur d'une authentique ferme aveyronnaise de 1809, à Roussennac.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#legumes">Nos légumes et produits</a>
+          <a class="btn btn-contour" href="#gite">Séjourner à l'éco-gîte</a>
+        </div>
+      </div>
+      <div class="duo">
+        <figure class="grande rv">
+          <img src="assets/jardins-du-batut-roussennac/potager-paille-et-bordure-de-tulipes-face-aux-collines.webp" width="1600" height="900" alt="Planches de potager paillées bordées de tulipes rouges et jaunes, collines de l'Aveyron au fond." fetchpriority="high" />
+          <figcaption class="etiquette">Roussennac, Aveyron</figcaption>
+        </figure>
+        <figure class="polaroid rv">
+          <img src="assets/jardins-du-batut-roussennac/bol-de-fleurs-comestibles-primeveres-et-violettes.webp" width="1600" height="1373" alt="Un bol de salade garni de primevères et de violettes." />
+          <figcaption>Primevères et violettes</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En quelques faits">
+    <ul class="wrap">
+      <li><b>Bio</b><span>ferme certifiée en Agriculture Biologique</span></li>
+      <li><b>Près de 2 ha</b><span>de jardins, poulailler mobile, vergers</span></li>
+      <li><b>Ferme de 1809</b><span>une authentique ferme aveyronnaise</span></li>
+      <li><b>Depuis 2020</b><span>installés à Roussennac</span></li>
+      <li><b>Accueil Paysan</b><span>éco-gîte classé meublé de tourisme</span></li>
+    </ul>
+  </section>
+
+  <section class="sol" id="jardins">
+    <div class="wrap">
+      <figure class="rv">
+        <img src="assets/jardins-du-batut-roussennac/serre-planches-paillees-en-pleine-pousse.webp" width="1600" height="1200" alt="Sous la serre, rangs de légumes en pleine pousse sur des buttes paillées." loading="lazy" />
+        <figcaption class="etiquette">Sous la serre, sur buttes paillées</figcaption>
+      </figure>
+      <div>
+        <h2>Aller plus loin que le label bio.</h2>
+        <p class="intro">Nous privilégions une démarche qui favorise la vie des sols, des insectes, des vers de terre et de tous les micro-organismes, en s'inspirant du maraîchage sur sol vivant et du bio-intensif.</p>
+        <p>Nous minimisons le travail mécanique de nos sols, cultivons des engrais verts et des couverts permanents, et apportons de la matière organique fraîche pour faire pousser des légumes plus riches en nutriments et en goût.</p>
+        <ul class="trois">
+          <li>Nos jardins maraîchers</li>
+          <li>Notre poulailler mobile</li>
+          <li>Nos vergers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="legumes" id="legumes">
+    <div class="wrap">
+      <div class="tete">
+        <div>
+          <h2>Nos légumes et produits <em>bio</em>, en vente directe.</h2>
+          <p>Retrouvez nos légumes bio, fruits et conserves à la ferme et sur les marchés locaux.</p>
+        </div>
+        <figure class="rv">
+          <img src="assets/jardins-du-batut-roussennac/caisses-de-pommes-recoltees-sous-la-grange.webp" width="1600" height="900" alt="Cagettes de pommes vertes et bassines de pommes rouges à l'entrée de la grange en pierre." loading="lazy" />
+          <figcaption class="etiquette">Les pommes, sous la grange</figcaption>
+        </figure>
+      </div>
+      <div class="corps">
+        <div>
+          <h3>Où trouver nos produits</h3>
+          <ul class="ou">
+            <li><b>À la ferme, le vendredi de 18&nbsp;h à 19&nbsp;h</b><span>Commandez votre panier et venez le récupérer. Pour avoir la liste de légumes, contactez-nous.</span></li>
+            <li><b>Au marché de Montbazens</b><span>Les mercredis matin, de mai à décembre.</span></li>
+            <li><b>Sur les marchés gourmands festifs, le soir</b><span>Marchés gourmands de Bournazel, marché des producteurs de Roussennac&nbsp;: venez déguster nos assiettes végétales.</span></li>
+            <li><b>Chez nos restaurateurs préférés du moment</b><span>et en magasins bio.</span></li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33634075382">Commander un panier</a>
+            <a class="btn btn-contour" href="https://lesjardinsdubatut.com/legumes-et-produits-bio-1">Voir la page produits</a>
+          </div>
+        </div>
+        <div class="carte-produits">
+          <h3>Nos produits</h3>
+          <div class="famille">
+            <h4>Les douceurs potagères<small>sucré</small></h4>
+            <p>Compote de coing, gelée de coing au safran, chutney.</p>
+          </div>
+          <div class="famille">
+            <h4>Les saveurs maraîchères<small>salé</small></h4>
+            <p>Confidou (sauce de tomates cerises aigre-douce), coulis de tomates safrané, Tarticourgette, Patapéro (pesto, lentilles et cumin toasté), Navetine.</p>
+          </div>
+          <div class="famille">
+            <h4>Les folies vergères<small>boissons</small></h4>
+            <p>Jus de pomme, sirop de citronnelle, sirop de Noël, sirop de safran.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gite" id="gite">
+    <div class="wrap">
+      <figure class="photo rv">
+        <img src="assets/jardins-du-batut-roussennac/ferme-en-pierre-et-pigeonnier-fleuris.webp" width="1600" height="900" alt="La ferme en pierre et son pigeonnier, massif de fleurs au premier plan." loading="lazy" />
+        <figcaption class="etiquette">Le corps de ferme et son pigeonnier</figcaption>
+      </figure>
+      <div class="carte">
+        <h2>Notre éco-gîte, de 1 à 6 personnes.</h2>
+        <p class="intro">Séjournez en plein cœur de nos Jardins Vivants. Classé meublé de tourisme deux étoiles et labellisé Accueil Paysan, 3 chambres, avec grand jardin dans un hameau calme.</p>
+        <ul class="formules">
+          <li><b>Petite formule</b><span class="px">55 à 65&nbsp;€<small>la nuitée</small></span><span class="d">Pour 1 ou 2 personnes&nbsp;: le rez-de-chaussée avec la chambre de plain-pied.</span></li>
+          <li><b>Gîte entier</b><span class="px">90 à 105&nbsp;€<small>la nuitée</small></span><span class="d">Jusqu'à 6 personnes, 3 chambres, lit parapluie ou lit d'une personne en plus possible.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.airbnb.fr/rooms/51115047">Réserver via Airbnb</a>
+          <a class="btn btn-contour" href="https://lesjardinsdubatut.com/location-eco-gite-1-2">Voir le gîte</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap lieu">
+      <p class="fort">Votre éco-gîte est dans l'aile sud-est du corps de ferme, avec son entrée de plain-pied sur le jardin, indépendante.</p>
+      <p>À l'extrémité d'un hameau familial calme, à proximité d'un haras, en bout de route non passante qui se transforme en chemin de promenade, au milieu d'un paysage bocager et vallonné menant au château de Bournazel, à l'étang du Roudillou et au village de Roussennac.</p>
+    </div>
+  </section>
+
+  <section class="participatif" id="participatif">
+    <div class="wrap">
+      <div class="bloc">
+        <div>
+          <h2>Participez à la vie et au développement des Jardins.</h2>
+          <p class="fort">Nous avons débuté en avril 2022 la construction de notre maison en paille porteuse, de type « Nebraska ».</p>
+          <p>Co-construite avec l'équipe des Batifrères, Ecodomus et en chantiers participatifs, cette construction est avant tout une belle aventure humaine, riche de rencontres et d'entraide.</p>
+          <p>Et les cours et ateliers de yoga Iyengar, avec Camille.</p>
+          <div class="liens">
+            <a href="https://lesjardinsdubatut.com/accueil-participatif">L'accueil participatif</a>
+            <a href="https://wwoof.fr/fr/host/13906">Notre annonce WWOOF</a>
+            <a href="https://lesjardinsdubatut.com/cours-et-ateliers-de-yoga">Cours et ateliers de yoga</a>
+          </div>
+        </div>
+        <div class="collage">
+          <figure class="a rv">
+            <img src="assets/jardins-du-batut-roussennac/groupe-de-benevoles-devant-un-mur-de-paille.webp" width="1600" height="900" alt="Sept personnes souriantes devant un mur de bottes de paille, pendant le chantier de la maison." loading="lazy" />
+            <figcaption class="etiquette">Chantier participatif</figcaption>
+          </figure>
+          <figure class="b rv">
+            <img src="assets/jardins-du-batut-roussennac/maison-en-paille-au-soleil-couchant.webp" width="1600" height="900" alt="La maison en paille terminée dans la lumière du soir." loading="lazy" />
+            <figcaption>La maison de paille</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nous" id="nous">
+    <div class="wrap">
+      <figure class="rv">
+        <img src="assets/jardins-du-batut-roussennac/couple-souriant-sous-la-serre.webp" width="1280" height="960" alt="Une femme et un homme au chapeau de paille, souriants sous la serre." loading="lazy" />
+      </figure>
+      <div>
+        <h2>Qui sommes-nous&nbsp;?</h2>
+        <p class="intro">Nous sommes Camille et Daniel. Nous nous sommes installés en 2020 en Aveyron pour créer un lieu en cohérence avec nos convictions, et l'aménager petit à petit selon nos expérimentations et nos rencontres.</p>
+        <p>Camille, installée officiellement comme maraîchère depuis 2022, cherche l'équilibre entre le yoga et la terre. Daniel a toujours cultivé son jardin&nbsp;: il rencontre la permaculture en 2001 et l'expérimente depuis dans des jardins vivriers en Drôme, en Camargue et en Aveyron.</p>
+        <ul class="actions-liste">
+          <li>Produire des aliments sains, frais et savoureux</li>
+          <li>S'impliquer dans le territoire, commercialiser en circuit court</li>
+          <li>Proposer un lieu de vacances éthique, qui soutient l'agriculture paysanne</li>
+          <li>Créer un espace locatif convivial</li>
+          <li>Favoriser la biodiversité et aggrader les sols</li>
+          <li>Expérimenter, échanger, construire, partager des alternatives de vie</li>
+        </ul>
+        <p class="respirer">Et ne pas oublier de respirer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grille">
+      <div>
+        <h2>Contactez-nous.</h2>
+        <p class="intro">Pour la liste de légumes, un panier à retirer le vendredi ou une question sur le gîte, appelez-nous ou écrivez-nous.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33634075382">Appeler le 06 34 07 53 82</a>
+          <a class="btn btn-contour" href="mailto:lesjardinsdubatut@gmail.com">Nous écrire</a>
+        </div>
+      </div>
+      <dl class="coord">
+        <div><dt>Adresse</dt><dd>375 route de la Margasse<br />12220 Roussennac</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33634075382">06 34 07 53 82</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:lesjardinsdubatut@gmail.com">lesjardinsdubatut@gmail.com</a></dd></div>
+        <div><dt>Retrait des paniers</dt><dd>À la ferme, le vendredi de 18&nbsp;h à 19&nbsp;h</dd></div>
+      </dl>
+    </div>
+    <div class="pied">
+      <div class="wrap">
+        <span>Les Jardins du Batut, Roussennac (Aveyron)</span>
+        <span class="liens"><a href="#legumes">Légumes et produits bio</a><a href="#gite">Éco-gîte</a><a href="https://lesjardinsdubatut.com/a-propos">À propos</a><a href="https://lesjardinsdubatut.com/contact">Contact</a></span>
+        <span class="marque-iy">IYENGAR® utilisé avec la permission de BKS IYENGAR, propriétaire de la marque.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="proposition">Proposition de <a href="https://nicomasset.com/">Nicolas Masset</a> pour Les Jardins du Batut</div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

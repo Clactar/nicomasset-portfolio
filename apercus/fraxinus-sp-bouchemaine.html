@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Fraxinus sp, pépinière locale à Bouchemaine</title>
+<meta name="description" content="Pépinière locale et biologique à Bouchemaine : végétaux d’origine sauvage sous la marque Végétal Local, traction animale, génie écologique.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E2A22'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23A7B24A'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ecorce:#E7E5DE;
+  --ecorce-clair:#F2F1EC;
+  --ecorce-fonce:#D9D6CB;
+  --sousbois:#1E2A22;
+  --sousbois-2:#2A382E;
+  --encre-douce:#4C574F;
+  --bourgeon:#A7B24A;
+  --bourgeon-fonce:#6F7826;
+  --ombre:0 30px 60px -34px rgba(20,30,22,.55);
+  --display:"Libre Caslon Display", Georgia, serif;
+  --texte:"IBM Plex Sans", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ecorce);color:var(--sousbois);font-family:var(--texte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--bourgeon);color:var(--sousbois)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--bourgeon);color:var(--sousbois)}
+.btn-plein:hover{background:#B8C35A;box-shadow:0 18px 30px -18px rgba(167,178,74,.8)}
+.btn-contour{border:1.5px solid rgba(231,229,222,.55);color:var(--ecorce)}
+.btn-contour:hover{background:var(--ecorce);color:var(--sousbois);border-color:var(--ecorce)}
+.btn-sombre{background:var(--sousbois);color:var(--ecorce)}
+.btn-sombre:hover{background:var(--sousbois-2)}
+.btn-contour-sombre{border:1.5px solid var(--sousbois);color:var(--sousbois)}
+.btn-contour-sombre:hover{background:var(--sousbois);color:var(--ecorce)}
+
+/* En-tête */
+.entete{background:var(--sousbois);color:var(--ecorce)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:30px}
+.marque b span{color:var(--bourgeon)}
+.marque small{font-size:14px;color:rgba(231,229,222,.7);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:16px;color:rgba(231,229,222,.86);transition:color .2s}
+.nav a:hover{color:var(--bourgeon)}
+.nav .tel{border:1.5px solid rgba(231,229,222,.4);border-radius:999px;padding:9px 18px;color:var(--ecorce);font-weight:500;white-space:nowrap}
+.nav .tel:hover{background:var(--ecorce);color:var(--sousbois)}
+
+/* Héros */
+.heros{background:var(--sousbois);color:var(--ecorce);padding:32px 0 136px;position:relative}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.heros-texte{grid-column:1 / 8;grid-row:1;position:relative;z-index:2}
+.heros h1{font-size:clamp(2.75rem, 1.2rem + 6.4vw, 7rem);letter-spacing:-.01em;line-height:.98;margin-right:-140px;text-shadow:0 2px 30px rgba(10,18,12,.45)}
+.heros h1 em{font-style:normal;color:var(--bourgeon)}
+.heros .chapo{max-width:520px;margin-top:32px;font-size:18px;color:rgba(231,229,222,.86)}
+.heros .chapo a{color:var(--bourgeon);text-underline-offset:4px}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.heros-photo{grid-column:7 / 13;grid-row:1;position:relative}
+.heros-photo img{width:100%;aspect-ratio:1 / 1;object-fit:cover;object-position:30% 85%;border-radius:22px;box-shadow:0 40px 80px -36px rgba(0,0,0,.75)}
+.etiquette{position:absolute;left:16px;bottom:16px;background:rgba(242,241,236,.94);color:var(--sousbois);font-size:15px;font-weight:500;padding:8px 14px;border-radius:10px;line-height:1.3}
+.heros-photo .etiquette{left:auto;right:16px}
+
+/* Bandeau de faits */
+.faits{margin-top:-80px;position:relative;z-index:3}
+.faits ul{list-style:none;margin:0;padding:32px 40px;background:var(--ecorce-clair);border-radius:20px;box-shadow:var(--ombre);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:4px}
+.faits strong{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.faits span{font-size:15px;color:var(--encre-douce);line-height:1.4}
+
+/* Pépinière */
+.pepiniere{padding:128px 0 112px}
+.pep-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.pep-texte{grid-column:1 / 6}
+.pep-texte h2{font-size:clamp(2.25rem, 1.4rem + 3vw, 3.75rem)}
+.pep-texte p{margin-top:24px;color:var(--encre-douce)}
+.pep-texte p.fort{color:var(--sousbois);font-size:19px}
+.especes{margin:32px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px}
+.especes li{font-style:italic;background:var(--ecorce-clair);padding:6px 14px;border-radius:999px;font-size:16px}
+.pep-texte .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.pep-photos{grid-column:7 / 13;position:relative;padding-bottom:120px}
+.pep-photos .grande img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.pep-photos .petite{position:absolute;left:-56px;bottom:0;width:min(250px, 46%);transform:rotate(-3deg);background:var(--ecorce-clair);padding:12px 12px 16px;border-radius:6px;box-shadow:var(--ombre)}
+.pep-photos .petite img{width:100%;aspect-ratio:3 / 4;object-fit:cover;border-radius:3px}
+.pep-photos .petite p{font-size:15px;margin-top:10px;color:var(--encre-douce);line-height:1.35}
+.pep-photos .petite i{color:var(--sousbois)}
+.pep-photos .grande{position:relative}
+
+/* Traction animale */
+.traction{background:var(--bourgeon);color:var(--sousbois);padding:112px 0}
+.tr-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.tr-photo{grid-column:1 / 5;position:relative}
+.tr-photo img{width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:50% 45%;border-radius:200px 200px 18px 18px;box-shadow:0 30px 60px -34px rgba(30,42,34,.7)}
+.tr-texte{grid-column:6 / 13}
+.tr-texte h2{font-size:clamp(2.25rem, 1.2rem + 3.6vw, 4.25rem)}
+.tr-texte .chapo{font-size:19px;margin-top:24px;max-width:600px}
+.engagements{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:0}
+.engagements li{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid rgba(30,42,34,.28)}
+.engagements li:last-child{border-bottom:1px solid rgba(30,42,34,.28)}
+.engagements b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.15}
+
+/* Entreprise */
+.entreprise{padding:128px 0 96px}
+.ent-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.ent-tete h2{grid-column:1 / 8;font-size:clamp(2.25rem, 1.4rem + 3vw, 3.75rem)}
+.ent-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.solutions{margin-top:56px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:stretch}
+.solutions .photo{position:relative}
+.solutions .photo img{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:16px;box-shadow:var(--ombre)}
+.liste-sol{list-style:none;margin:0;padding:0}
+.liste-sol li{padding:24px 0;border-bottom:1px solid var(--ecorce-fonce)}
+.liste-sol li:first-child{padding-top:0}
+.liste-sol h3{font-size:28px}
+.liste-sol p{margin-top:8px;color:var(--encre-douce)}
+.liste-sol a{color:var(--bourgeon-fonce);font-weight:500;text-underline-offset:4px}
+
+/* Citation génie écologique */
+.citation{padding:24px 0 128px}
+.citation blockquote{margin:0;background:var(--ecorce-clair);border-radius:24px;padding:72px clamp(24px, 6vw, 96px);box-shadow:var(--ombre)}
+.citation p{font-family:var(--display);font-size:clamp(1.75rem, 1rem + 2.4vw, 3rem);line-height:1.18;max-width:980px}
+.citation footer{margin-top:24px;font-size:16px;color:var(--encre-douce)}
+
+/* Pourquoi ce nom */
+.nom{background:var(--ecorce-fonce);padding:112px 0}
+.nom-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.nom-texte{grid-column:1 / 7}
+.nom-texte h2{font-size:clamp(2.25rem, 1.4rem + 3vw, 3.75rem)}
+.nom-texte h2 i{font-style:normal;color:var(--bourgeon-fonce)}
+.nom-texte p{margin-top:24px;color:var(--encre-douce)}
+.nom-texte p.fin{color:var(--sousbois);font-family:var(--display);font-size:26px;line-height:1.25}
+.nom-photo{grid-column:8 / 13}
+.passe{background:var(--ecorce-clair);padding:18px;border-radius:8px;box-shadow:var(--ombre);position:relative}
+.passe img{width:100%;aspect-ratio:3 / 4;object-fit:cover;border-radius:2px}
+.passe .etiquette{left:34px;bottom:34px}
+
+/* Actualités */
+.actus{padding:128px 0}
+.actus-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.actus-tete{grid-column:1 / 5}
+.actus-tete h2{font-size:clamp(2.25rem, 1.4rem + 3vw, 3.75rem)}
+.actus-tete p{margin-top:20px;color:var(--encre-douce)}
+.actus-tete img{margin-top:40px;width:min(300px, 100%);aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:var(--ombre)}
+.actus-cartes{grid-column:6 / 13;display:grid;gap:20px}
+.carte{background:var(--ecorce-clair);border-radius:18px;padding:32px 36px;box-shadow:0 20px 40px -32px rgba(20,30,22,.45)}
+.carte h3{font-size:30px}
+.carte p{margin-top:12px;color:var(--encre-douce)}
+.carte .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.rayons{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:20px}
+.rayons div{display:flex;align-items:baseline;gap:8px}
+.rayons b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1}
+.carte.ferme{background:var(--sousbois);color:var(--ecorce)}
+.carte.ferme p{color:rgba(231,229,222,.8)}
+
+/* Contact */
+.contact{background:var(--sousbois);color:var(--ecorce);padding:112px 0 64px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.5rem, 1.4rem + 4vw, 4.75rem)}
+.ct-titre h2 em{font-style:normal;color:var(--bourgeon)}
+.ct-titre p{margin-top:24px;color:rgba(231,229,222,.8);max-width:440px}
+.ct-infos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 32px}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--bourgeon);letter-spacing:0}
+.ct-infos p{margin-top:8px;font-size:18px}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(231,229,222,.35);transition:border-color .2s, color .2s}
+.ct-infos a:hover{color:var(--bourgeon);border-color:var(--bourgeon)}
+.pied{margin-top:96px;padding-top:32px;border-top:1px solid rgba(231,229,222,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:15px;color:rgba(231,229,222,.62)}
+.proposition{background:#141D17;color:rgba(231,229,222,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .petite.rv{transform:rotate(-3deg) translateY(24px)}
+.js .petite.rv.in{transform:rotate(-3deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+/* Tablette */
+@media (max-width: 1040px){
+  .heros h1{margin-right:-90px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .engagements li{grid-template-columns:minmax(0,1fr)}
+  .engagements li{gap:6px}
+}
+/* Téléphone */
+@media (max-width: 820px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{flex-direction:column;align-items:flex-start;gap:16px;padding:20px 0}
+  .nav{gap:10px 20px}
+  .nav .tel{display:none}
+  .heros{padding:24px 0 120px}
+  .heros-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-texte,.heros-photo{grid-column:1;grid-row:auto}
+  .heros h1{margin-right:0}
+  .heros .chapo{margin-top:20px;font-size:17px}
+  .heros .actions{margin-top:28px}
+  .heros-photo{margin-top:32px}
+  .heros-photo img{aspect-ratio:4 / 3}
+  .faits{margin-top:-72px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px}
+  .faits strong{font-size:26px}
+  .pepiniere,.entreprise,.actus{padding:88px 0}
+  .pep-grille,.tr-grille,.nom-grille,.actus-grille,.ct-grille,.ent-tete{grid-template-columns:minmax(0,1fr)}
+  .pep-texte,.pep-photos,.tr-photo,.tr-texte,.nom-texte,.nom-photo,.actus-tete,.actus-cartes,.ct-titre,.ct-infos,.ent-tete h2,.ent-tete p{grid-column:1}
+  .pep-photos{margin-top:48px;padding-bottom:0}
+  .pep-photos .petite{position:relative;left:auto;bottom:auto;margin:-64px 0 0 16px;width:min(220px, 62%)}
+  .traction,.nom{padding:88px 0}
+  .tr-photo{max-width:340px;margin-bottom:40px}
+  .solutions{grid-template-columns:minmax(0,1fr);gap:40px}
+  .solutions .photo img{min-height:0;aspect-ratio:4 / 3}
+  .citation{padding:0 0 88px}
+  .citation blockquote{padding:40px 24px}
+  .nom-photo{margin-top:48px}
+  .actus-tete img{width:min(220px, 70%)}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}
+  .pied{margin-top:64px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .carte{padding:28px 22px}
+}
+</style>
+<style id="reprise-nova-3010">
+@media (min-width:821px){
+  .heros h1{margin-right:0;font-size:clamp(2.75rem, 1rem + 3.9vw, 4.75rem);line-height:1.02}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Fraxinus sp, accueil"><b>Fraxinus <span>sp</span></b><small>Pépinière locale à Bouchemaine</small></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#entreprise">L’entreprise</a>
+      <a href="#pepiniere">Pépinière locale</a>
+      <a href="#traction">Traction animale</a>
+      <a href="#actualites">Actualités</a>
+      <a href="https://fraxinus-sp.fr/boutique/">Boutique</a>
+      <a class="tel" href="tel:+33616165614">06 16 16 56 14</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <div class="heros-texte">
+        <h1>Une pépinière locale d’un <em>nouveau genre</em>.</h1>
+        <p class="chapo">Une pépinière biologique qui veut supprimer les énergies fossiles et les intrants, avec la <a href="#traction">traction animale</a> comme énergie principale. Des végétaux d’origine sauvage, robustes et nécessaires à la biodiversité et au climat. Le conseil de plantation est gratuit.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://fraxinus-sp.fr/boutique/">Voir les végétaux</a>
+          <a class="btn btn-contour" href="#contact">Venir à la ferme</a>
+        </div>
+      </div>
+      <figure class="heros-photo" style="margin:0">
+        <img src="assets/fraxinus-sp-bouchemaine/rangs-de-jeunes-plants-en-pleine-terre-a-la-pepiniere.webp" alt="Rangs de jeunes arbres et arbustes en pleine terre à la pépinière, allée enherbée et paillage" width="1600" height="1062">
+        <figcaption class="etiquette">Photo © MDepinoy</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="cadre faits">
+    <ul>
+      <li><strong>2019</strong><span>Végétaux de la marque depuis le 2 septembre 2019</span></li>
+      <li><strong>44 espèces</strong><span>sous la marque Végétal Local</span></li>
+      <li><strong>051</strong><span>numéro de bénéficiaire de la marque, déposée à l’INPI</span></li>
+      <li><strong>FR-BIO-01</strong><span>production en agriculture biologique</span></li>
+      <li><strong>Bouchemaine</strong><span>une ferme qui se visite</span></li>
+    </ul>
+  </div>
+
+  <section class="pepiniere" id="pepiniere">
+    <div class="cadre pep-grille">
+      <div class="pep-texte">
+        <h2>Des végétaux récoltés ici, à la main.</h2>
+        <p class="fort">Fraxinus sp produit et vend des arbres, arbustes et herbacées d’origine locale, sous la marque Végétal Local.</p>
+        <p>Ils sont récoltés dans la région, à la main, sur des spécimens sauvages, pour le Bassin Parisien Sud et le Massif Armoricain. Des végétaux adaptés au climat, robustes et nécessaires à la biodiversité locale. La production repose sur la traçabilité, avec un cahier des charges strict sur les sites de récolte, les récoltes et la mise en production.</p>
+        <ul class="especes" aria-label="Quelques espèces disponibles">
+          <li>Sorbus torminalis</li><li>Ulmus laevis</li><li>Sambucus nigra</li><li>Ligustrum vulgare</li><li>Quercus robur</li><li>Fraxinus sp</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-sombre" href="mailto:contact@fraxinus-sp.fr?subject=Demande%20de%20devis">Demander un devis</a>
+          <a class="btn btn-contour-sombre" href="https://fraxinus-sp.fr/pepiniere/">La pépinière en détail</a>
+        </div>
+      </div>
+      <div class="pep-photos">
+        <figure class="grande" style="margin:0">
+          <img class="rv" src="assets/fraxinus-sp-bouchemaine/godets-de-framboisiers-alignes.webp" alt="Jeunes framboisiers en godets alignés, paillis de copeaux" width="1600" height="906" loading="lazy">
+          <figcaption class="etiquette" style="left:auto;right:16px;bottom:auto;top:16px">Framboisiers en godets</figcaption>
+        </figure>
+        <figure class="petite rv" style="margin:0">
+          <img src="assets/fraxinus-sp-bouchemaine/jeunes-merisiers-en-plaques-sous-serre.webp" alt="Jeunes merisiers en plaques alvéolées sous serre" width="1200" height="1600" loading="lazy">
+          <p>Merisiers <i>(Prunus avium)</i></p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="traction" id="traction">
+    <div class="cadre tr-grille">
+      <figure class="tr-photo" style="margin:0">
+        <img class="rv" src="assets/fraxinus-sp-bouchemaine/rainette-sur-feuilles-d-aulne.webp" alt="Une rainette verte posée sur des feuilles d’aulne glutineux" width="1200" height="1600" loading="lazy">
+        <figcaption class="etiquette">Rainette verte sur Aulne glutineux</figcaption>
+      </figure>
+      <div class="tr-texte">
+        <h2>La traction animale comme énergie principale.</h2>
+        <p class="chapo">Les travaux agricoles de la ferme se font avec la traction équine, dans une démarche bas carbone. Fraxinus sp propose aussi des prestations de service en traction animale, pour limiter l’impact carbone des entreprises.</p>
+        <ul class="engagements">
+          <li><b>Agriculture biologique</b><span>Production certifiée FR-BIO-01.</span></li>
+          <li><b>Zéro phytosanitaire</b><span>Pas de produit phytosanitaire, même biologique.</span></li>
+          <li><b>Bas carbone</b><span>Utilisation de la traction équine pour les travaux agricoles.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="entreprise" id="entreprise">
+    <div class="cadre">
+      <div class="ent-tete">
+        <h2>Une entreprise engagée, pour les générations futures.</h2>
+        <p>Face au réchauffement climatique et à la perte de biodiversité, la SARL Fraxinus sp propose plusieurs solutions, pour retrouver de la biodiversité partout.</p>
+      </div>
+      <div class="solutions">
+        <figure class="photo" style="margin:0">
+          <img class="rv" src="assets/fraxinus-sp-bouchemaine/chemin-creux-sous-les-chenes.webp" alt="Chemin de terre ombragé sous de vieux chênes" width="1600" height="1200" loading="lazy">
+        </figure>
+        <ul class="liste-sol">
+          <li><h3>Une pépinière Végétal Local</h3><p>Des végétaux d’origine sauvage, et le conseil de plantation gratuit.</p></li>
+          <li><h3>La traction animale</h3><p>Des prestations de service pour limiter l’impact carbone des entreprises.</p></li>
+          <li><h3>Le génie écologique</h3><p>Conseils, études et travaux pour tous, pour restaurer les milieux.</p></li>
+          <li><h3>La formation</h3><p>Pour accompagner les paysans dans leur transition en agroécologie.</p><p><a href="https://fraxinus-sp.fr/nos-prestations/">Toutes les prestations</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Le génie écologique">
+    <div class="cadre">
+      <blockquote>
+        <p>«&nbsp;Travailler pour et par la nature, dans une gestion concertée et une vision intégrée, en favorisant la résilience des écosystèmes.&nbsp;»</p>
+        <footer>Le génie écologique, selon Fraxinus sp</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="nom">
+    <div class="cadre nom-grille">
+      <div class="nom-texte">
+        <h2>Pourquoi <i>Fraxinus sp</i> ?</h2>
+        <p>Fraxinus est le nom latin des frênes. Fraxinus sp désigne un frêne dont on ne connaît pas l’espèce exacte. Dans nos régions, il en existe deux, le frêne à feuilles étroites et le frêne élevé, et la quasi totalité des frênes qui bordent la Loire sont des hybrides des deux : Fraxinus sp les représente tous.</p>
+        <p>Les frênes acceptent bien la taille en têtard, toutes les branches tous les 6 à 10 ans. Elle crée des arbres aux formes étranges, les trognes, colonisés ensuite par d’innombrables espèces. Pas d’inquiétude, l’arbre en souffre peu et pousse encore plus vite.</p>
+        <p class="fin">De nombreuses raisons de porter son nom.</p>
+      </div>
+      <div class="nom-photo">
+        <figure class="passe" style="margin:0">
+          <img class="rv" src="assets/fraxinus-sp-bouchemaine/frene-tetard-en-bord-de-haie.webp" alt="Vieux frêne têtard au tronc noueux en bord de haie" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Frêne têtard</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="actus" id="actualites">
+    <div class="cadre actus-grille">
+      <div class="actus-tete">
+        <h2>Actualités de la pépinière</h2>
+        <p>La saison des plantations, la boutique, les visites : ce qu’il faut savoir en ce moment.</p>
+        <img class="rv" src="assets/fraxinus-sp-bouchemaine/centauree-des-pres-sur-ciel-bleu.webp" alt="Fleur de centaurée des prés sur un ciel bleu" width="1600" height="1152" loading="lazy">
+      </div>
+      <div class="actus-cartes">
+        <article class="carte">
+          <h3>Les végétaux arrivent en boutique</h3>
+          <p>Ils sont disponibles à partir de mi-novembre pour les mottes, et à partir de décembre pour les végétaux en racines nues.</p>
+          <div class="rayons">
+            <div><b>24</b><span>arbres</span></div>
+            <div><b>33</b><span>arbustes</span></div>
+            <div><b>1</b><span>liane</span></div>
+          </div>
+          <div class="actions"><a class="btn btn-sombre" href="https://fraxinus-sp.fr/boutique/">Ouvrir la boutique</a></div>
+        </article>
+        <article class="carte">
+          <h3>Associations, collectivités, professionnels</h3>
+          <p>Merci de faire votre demande par mail.</p>
+          <div class="actions"><a class="btn btn-contour-sombre" href="mailto:contact@fraxinus-sp.fr">contact@fraxinus-sp.fr</a></div>
+        </article>
+        <article class="carte ferme">
+          <h3>Fraxinus sp sur Facebook</h3>
+          <p>Pour suivre la pépinière et la ferme entre deux visites.</p>
+          <div class="actions"><a class="btn btn-plein" href="https://www.facebook.com/Fraxinussp/">Suivre sur Facebook</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Venez nous <em>visiter</em>.</h2>
+      <p>Notre ferme, basée à Bouchemaine, réunit la pépinière, la traction animale et le génie écologique.</p>
+    </div>
+    <div class="ct-infos">
+      <div><h3>Ouverture</h3><p>La ferme est ouverte le vendredi de 14&nbsp;h à 17&nbsp;h, ou sur rendez-vous.</p></div>
+      <div><h3>Adresse</h3><p>22 bis route de la Pommeraye<br>49080 Bouchemaine</p></div>
+      <div><h3>Téléphone</h3><p>Florent Dupont<br><a href="tel:+33616165614">06 16 16 56 14</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@fraxinus-sp.fr">contact@fraxinus-sp.fr</a></p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Fraxinus sp, SARL, Bouchemaine</span>
+    <span><a href="https://www.facebook.com/Fraxinussp/" style="text-decoration:none">Facebook</a></span>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Fraxinus sp</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

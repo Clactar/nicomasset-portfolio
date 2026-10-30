@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine Delaunay, Muscadet et Goulaine au Loroux-Bottereau</title>
+<meta name="description" content="Au Moulin du Pé, le Domaine Delaunay façonne depuis plus de 3&nbsp;générations des muscadets purs et vibrants, sur des sols d’amphibolites et de gneiss.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312312E'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Rockwell,Georgia,serif' font-weight='600' font-size='38' fill='%23D4B13A'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --eau:#E7EEEC;
+  --eau-clair:#F4F8F7;
+  --eau-fonce:#D3E0DC;
+  --loire:#12312E;
+  --loire-2:#1C4440;
+  --encre-douce:#3F5A56;
+  --melon:#D4B13A;
+  --ombre:0 30px 60px -34px rgba(8,36,33,.55);
+  --display:"Zilla Slab", Rockwell, Georgia, serif;
+  --texte:"Lexend", "Avenir Next", sans-serif;
+  --h1:clamp(3rem, .9rem + 6.6vw, 7.25rem);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--eau);color:var(--loire);font-family:var(--texte);font-weight:300;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--melon);color:var(--loire)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+strong{font-weight:500}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:400;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--loire);color:var(--eau-clair)}
+.btn-plein:hover{background:var(--loire-2);box-shadow:0 18px 30px -18px rgba(18,49,46,.8)}
+.btn-contour{border:1.5px solid var(--loire);color:var(--loire)}
+.btn-contour:hover{background:var(--loire);color:var(--eau-clair)}
+.btn-melon{background:var(--melon);color:var(--loire);font-weight:500}
+.btn-melon:hover{background:#E0C255;box-shadow:0 18px 30px -18px rgba(212,177,58,.8)}
+.btn-contour-clair{border:1.5px solid rgba(244,248,247,.5);color:var(--eau-clair)}
+.btn-contour-clair:hover{background:var(--eau-clair);color:var(--loire)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:600;font-size:28px;display:block;letter-spacing:-.01em}
+.marque small{font-size:15px;color:var(--encre-douce)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.nav a{text-decoration:none;font-size:16px;font-weight:400}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--melon);text-decoration-thickness:2px}
+.nav .tel{background:var(--loire);color:var(--eau-clair);border-radius:999px;padding:10px 20px;white-space:nowrap}
+.nav .tel:hover{background:var(--loire-2);text-decoration:none}
+
+/* Héros */
+.heros{padding:40px 0 0}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.heros h1{grid-column:1 / 13;grid-row:1;position:relative;z-index:2;font-size:var(--h1);font-weight:500;letter-spacing:-.025em;line-height:.94}
+.heros h1 .l2{display:block;padding-left:35%}
+.heros h1 em{font-style:italic;font-weight:400}
+.heros-photo{grid-column:5 / 13;grid-row:2;margin:calc(var(--h1) * -.62) 0 0;position:relative}
+.heros-photo img{width:100%;aspect-ratio:16 / 10.4;object-fit:cover;object-position:50% 40%;border-radius:26px;box-shadow:var(--ombre)}
+.heros-texte{grid-column:1 / 5;grid-row:2;padding-top:56px}
+.heros .chapo{color:var(--encre-douce)}
+.heros .chapo strong{color:var(--loire)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.heros .btn{padding:14px 22px}
+.etiquette{position:absolute;left:20px;bottom:20px;background:rgba(244,248,247,.95);color:var(--loire);font-size:15px;font-weight:400;padding:8px 14px;border-radius:10px;line-height:1.3}
+
+/* Faits */
+.faits{margin-top:88px;border-top:1px solid rgba(18,49,46,.2);border-bottom:1px solid rgba(18,49,46,.2)}
+.faits ul{list-style:none;margin:0;padding:32px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:6px}
+.faits strong{font-family:var(--display);font-weight:500;font-size:36px;line-height:1;white-space:nowrap}
+.faits strong::after{content:"";display:block;width:28px;height:3px;border-radius:2px;background:var(--melon);margin-top:14px}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.45}
+
+/* La maison */
+.maison{padding:136px 0 128px}
+.mai-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.mai-texte{grid-column:1 / 6}
+.mai-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.6vw, 3.8rem)}
+.mai-texte p{margin-top:22px;color:var(--encre-douce)}
+.mai-texte .fort{font-family:var(--display);font-style:italic;font-size:26px;line-height:1.35;color:var(--loire)}
+.mai-photos{grid-column:7 / 13;position:relative;padding-bottom:110px}
+.mai-photos figure{margin:0;position:relative}
+.mai-photos .moulin img{width:100%;aspect-ratio:5 / 4;object-fit:cover;object-position:60% 50%;border-radius:24px;box-shadow:var(--ombre)}
+.mai-photos .moulin .etiquette{left:auto;right:20px;bottom:auto;top:20px}
+.mai-photos .oncle{position:absolute;left:-56px;bottom:0;width:min(300px, 52%);background:var(--eau-clair);padding:12px 12px 16px;border-radius:6px;transform:rotate(-3deg);box-shadow:var(--ombre)}
+.mai-photos .oncle img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:2px}
+.mai-photos .oncle figcaption{font-size:15px;color:var(--encre-douce);margin-top:10px;line-height:1.35}
+
+/* Le vigneron, section sombre */
+.vigneron{background:var(--loire);color:var(--eau-clair);padding:128px 0}
+.vig-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.vig-photo{grid-column:1 / 6;margin:0;position:sticky;top:40px}
+.vig-photo img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:42% 50%;border-radius:28px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.vig-texte{grid-column:7 / 13}
+.vig-texte blockquote{margin:0}
+.vig-texte blockquote p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.9rem, 1.2rem + 2vw, 3rem);line-height:1.14;color:var(--eau-clair)}
+.vig-texte blockquote p span{color:var(--melon)}
+.vig-texte blockquote footer{margin-top:20px;font-size:16px;color:rgba(244,248,247,.66)}
+.vig-texte h2{margin-top:72px;font-size:clamp(1.9rem, 1.3rem + 1.6vw, 2.6rem)}
+.vig-texte h2 + p{margin-top:20px}
+.vig-texte p.corps{color:rgba(244,248,247,.8);margin-top:18px}
+.jalons{list-style:none;margin:44px 0 0;padding:0}
+.jalons li{display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(244,248,247,.16)}
+.jalons li:last-child{border-bottom:1px solid rgba(244,248,247,.16)}
+.jalons b{font-family:var(--display);font-weight:500;font-size:30px;line-height:1;color:var(--melon);white-space:nowrap}
+.jalons span{font-size:17px;line-height:1.45;color:rgba(244,248,247,.8)}
+
+/* Cuvées */
+.cuvees{padding:128px 0}
+.cuv-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.cuv-tete h2{grid-column:1 / 7;font-size:clamp(2.3rem, 1.4rem + 2.6vw, 3.8rem)}
+.cuv-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.cuv-corps{margin-top:72px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.familles{grid-column:1 / 8;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px 40px}
+.famille.large{grid-column:1 / 3}
+.famille h3{font-family:var(--texte);font-weight:500;font-size:16px;color:var(--encre-douce);padding-bottom:12px;border-bottom:1.5px solid var(--loire)}
+.famille ul{list-style:none;margin:0;padding:0}
+.famille.large ul{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px}
+.famille li{padding:18px 0;border-bottom:1px solid rgba(18,49,46,.16)}
+.famille li b{display:block;font-family:var(--display);font-weight:500;font-size:26px;line-height:1.1}
+.famille li span{display:block;margin-top:4px;font-size:16px;color:var(--encre-douce)}
+.famille li a{display:inline-block;margin-top:8px;font-size:15px;font-weight:400;text-decoration:none;border-bottom:1.5px solid var(--melon);padding-bottom:1px}
+.famille li a:hover{color:var(--loire-2);border-color:var(--loire)}
+.cuv-photos{grid-column:9 / 13;position:relative;padding-bottom:180px}
+.cuv-photos figure{margin:0;position:relative}
+.cuv-photos .huitres img{width:100%;aspect-ratio:2 / 3;object-fit:cover;border-radius:24px;box-shadow:var(--ombre)}
+.cuv-photos .plage{position:absolute;left:-64px;bottom:0;width:min(220px, 62%);transform:rotate(-4deg)}
+.cuv-photos .plage img{width:100%;aspect-ratio:3 / 4;object-fit:cover;border-radius:14px;border:7px solid var(--eau-clair);box-shadow:var(--ombre)}
+
+/* Goulaine */
+.goulaine{background:var(--eau-fonce);padding:120px 0}
+.gou-carte{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:var(--eau-clair);border-radius:32px;overflow:hidden;box-shadow:var(--ombre)}
+.gou-carte figure{margin:0;position:relative;min-height:480px}
+.gou-carte figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.gou-texte{padding:64px 56px}
+.gou-texte h2{font-size:clamp(2.1rem, 1.3rem + 2.4vw, 3.4rem)}
+.gou-texte h2 em{font-style:italic;font-weight:400}
+.gou-texte p{margin-top:20px;color:var(--encre-douce)}
+.gou-texte .lies{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 14px;margin-top:28px}
+.gou-texte .lies b{font-family:var(--display);font-weight:500;font-size:44px;line-height:1;white-space:nowrap}
+.gou-texte .lies span{font-size:16px;color:var(--encre-douce)}
+.gou-texte .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+
+/* Actualités */
+.actus{padding:128px 0}
+.act-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.act-texte{grid-column:1 / 6}
+.act-texte h2{font-size:clamp(2.3rem, 1.4rem + 2.6vw, 3.8rem)}
+.act-texte p{margin-top:20px;color:var(--encre-douce)}
+.act-texte .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.act-photos{grid-column:7 / 13;position:relative;min-height:440px}
+.act-photos figure{margin:0;position:absolute;background:var(--eau-clair);padding:12px 12px 16px;border-radius:6px;box-shadow:var(--ombre)}
+.act-photos figure img{width:100%;object-fit:cover;border-radius:2px}
+.act-photos figcaption{font-size:15px;color:var(--encre-douce);margin-top:10px;line-height:1.35}
+.act-photos .neige{left:0;top:24px;width:min(360px, 62%);transform:rotate(-3deg)}
+.act-photos .neige img{aspect-ratio:4 / 3}
+.act-photos .comptoir{right:0;top:0;width:min(250px, 44%);transform:rotate(4deg)}
+.act-photos .comptoir img{aspect-ratio:3 / 4}
+
+/* Contact */
+.contact{background:var(--loire);color:var(--eau-clair);padding:112px 0 48px}
+.ct-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.ct-titre{grid-column:1 / 6}
+.ct-titre h2{font-size:clamp(2.4rem, 1.4rem + 3.4vw, 4.4rem)}
+.ct-titre p{margin-top:20px;color:rgba(244,248,247,.8)}
+.ct-titre .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.ct-photo{margin:44px 0 0;position:relative;width:min(460px, 100%)}
+.ct-photo img{width:100%;aspect-ratio:3 / 2;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.ct-infos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px 32px;align-content:start;padding-top:12px}
+.ct-infos h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--melon)}
+.ct-infos p{margin-top:8px;font-size:18px;overflow-wrap:anywhere}
+.ct-infos a{text-decoration:none;border-bottom:1px solid rgba(244,248,247,.3)}
+.ct-infos a:hover{border-color:var(--melon)}
+.pied{margin-top:88px;padding-top:28px;border-top:1px solid rgba(244,248,247,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:rgba(244,248,247,.62)}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(244,248,247,.3)}
+.proposition{background:#0B2220;color:rgba(244,248,247,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .oncle.rv.in{transform:rotate(-3deg)}
+.js .plage.rv.in{transform:rotate(-4deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .nav{gap:8px 20px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}
+  .mai-photos .oncle{left:-20px}
+  .cuv-photos .plage{left:-24px}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 0}
+  .nav{gap:6px 18px}
+  .nav .tel{padding:6px 14px}
+  .heros{padding:16px 0 0}
+  .heros-grille{grid-template-columns:minmax(0,1fr)}
+  .heros h1,.heros-photo,.heros-texte{grid-column:1;grid-row:auto}
+  .heros h1 .l2{padding-left:0}
+  .heros-photo{margin-top:calc(var(--h1) * -.42)}
+  .heros-photo img{aspect-ratio:4 / 3.5;object-position:50% 30%;border-radius:22px}
+  .heros-texte{padding-top:32px}
+  .faits{margin-top:64px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .maison,.vigneron,.cuvees,.actus{padding:88px 0}
+  .goulaine{padding:72px 0}
+  .mai-grille,.vig-grille,.cuv-tete,.cuv-corps,.act-grille,.ct-grille{grid-template-columns:minmax(0,1fr)}
+  .mai-texte,.mai-photos,.vig-photo,.vig-texte,.cuv-tete h2,.cuv-tete p,.familles,.cuv-photos,.act-texte,.act-photos,.ct-titre,.ct-infos{grid-column:1}
+  .mai-photos{margin-top:48px;padding-bottom:96px}
+  .mai-photos .oncle{left:12px;width:min(240px, 62%)}
+  .vig-photo{position:static;max-width:420px}
+  .vig-texte{margin-top:56px}
+  .vig-texte h2{margin-top:56px}
+  .cuv-tete p{margin-top:8px}
+  .cuv-corps{margin-top:40px}
+  .familles{grid-template-columns:minmax(0,1fr);gap:48px}
+  .famille.large{grid-column:1}
+  .famille.large ul{grid-template-columns:minmax(0,1fr)}
+  .cuv-photos{margin:56px 0 0 auto;width:min(340px, 82%);padding-bottom:140px}
+  .cuv-photos .plage{left:-48px;width:min(180px, 58%)}
+  .gou-carte{grid-template-columns:minmax(0,1fr);border-radius:24px}
+  .gou-carte figure{min-height:0;aspect-ratio:3 / 2}
+  .gou-texte{padding:36px 24px 40px}
+  .act-photos{margin-top:48px;min-height:0;height:min(400px, 100vw)}
+  .ct-infos{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}
+  .pied{margin-top:56px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .jalons li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .faits ul{grid-template-columns:max-content minmax(0,1fr);gap:22px 18px;align-items:baseline}
+  .faits li{display:contents}
+  .faits strong{font-size:26px}
+  .faits strong::after{display:none}
+  .famille li b{font-size:24px}
+}
+@media (max-width: 360px){
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:20px}
+  .faits li{display:flex}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Domaine Delaunay, accueil"><b>Domaine Delaunay</b><small>Muscadet, Le Loroux-Bottereau</small></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#maison">La maison</a>
+      <a href="#vigneron">Le vigneron</a>
+      <a href="#cuvees">Les cuvées</a>
+      <a href="#actualites">Actualités</a>
+      <a class="tel" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-grille">
+      <h1>Plongez au cœur <span class="l2">du <em>Muscadet</em>.</span></h1>
+      <figure class="heros-photo">
+        <img src="assets/domaine-delaunay-loroux-bottereau/florent-delaunay-sourit-dans-les-vignes.webp" alt="Florent Delaunay, souriant, debout dans les vignes en plein soleil, la vallée derrière lui" width="1600" height="1066">
+        <figcaption class="etiquette">Florent Delaunay, la nouvelle génération</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p class="chapo">Au <strong>Moulin du Pé</strong>, chaque racine plonge dans la mémoire profonde d’un terroir unique. Depuis plus de 3&nbsp;générations, le domaine façonne au Loroux-Bottereau des muscadets purs et vibrants.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#cuvees">Explorer nos vins</a>
+          <a class="btn btn-contour" href="#contact">Nous rencontrer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits cadre" aria-label="Le domaine en bref">
+    <ul>
+      <li><strong>3&nbsp;générations</strong><span>de vignerons autour du Moulin du Pé</span></li>
+      <li><strong>2020</strong><span>Florent Delaunay reprend l’exploitation</span></li>
+      <li><strong>30 hectares</strong><span>environ, en majorité de Melon de Bourgogne</span></li>
+      <li><strong>24 mois</strong><span>d’élevage sur lies pour le cru Goulaine</span></li>
+      <li><strong>Amphibolites</strong><span>et gneiss, les sols du domaine</span></li>
+    </ul>
+  </section>
+
+  <section class="maison" id="maison">
+    <div class="cadre mai-grille">
+      <div class="mai-texte">
+        <h2>Domaine Delaunay, au cœur du Muscadet</h2>
+        <p class="fort">Au Moulin du Pé, chaque racine plonge dans la mémoire profonde d’un terroir unique.</p>
+        <p>Depuis plus de 3&nbsp;générations, le Domaine Delaunay façonne au Loroux-Bottereau des muscadets purs et vibrants. Sur des sols d’amphibolites et de gneiss, il révèle toute la force d’un terroir et la finesse d’une histoire familiale.</p>
+      </div>
+      <div class="mai-photos">
+        <figure class="moulin">
+          <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/vignoble-et-moulin-du-pe-sur-la-colline.webp" alt="Coteau de vignes vertes, avec la tour du Moulin du Pé au sommet, sous un ciel bleu" width="1600" height="1066" loading="lazy">
+          <figcaption class="etiquette">Le Moulin du Pé</figcaption>
+        </figure>
+        <figure class="oncle rv">
+          <img src="assets/domaine-delaunay-loroux-bottereau/florent-et-son-oncle-loic-face-au-moulin-du-pe.webp" alt="Florent et son oncle Loïc, de dos dans une parcelle d’automne, face aux tours du Moulin du Pé" width="1000" height="625" loading="lazy">
+          <figcaption>Florent et son oncle Loïc</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="vigneron" id="vigneron">
+    <div class="cadre vig-grille">
+      <figure class="vig-photo">
+        <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/florent-et-son-fils-dans-les-vignes-en-hiver.webp" alt="Florent Delaunay porte son petit garçon dans une parcelle taillée en hiver, au soleil couchant" width="1600" height="1066" loading="lazy">
+      </figure>
+      <div class="vig-texte">
+        <blockquote>
+          <p>«&nbsp;Je suis né en 92, pendant des vendanges, <span>un signe du destin</span> diront les anciens. De mon père et mon oncle, j’ai reçu les gestes, la patience et l’amour de mon terroir.&nbsp;»</p>
+          <footer>Florent Delaunay</footer>
+        </blockquote>
+        <h2>Florent Delaunay, la nouvelle génération</h2>
+        <p class="corps">J’ai grandi au cœur des vignes au Loroux-Bottereau, autour du Moulin du Pé. Très jeune, j’ai aidé mes parents à la vigne et à la cave. Après une école de commerce et une carrière commerciale, j’ai ressenti le besoin de revenir à quelque chose de plus concret, plus vivant.</p>
+        <p class="corps">Aujourd’hui, je travaille une trentaine d’hectares, majoritairement en Melon de Bourgogne, avec une volonté forte de conversion en viticulture bio et de recentrage à taille humaine. Mon objectif : des vins sincères, peu interventionnistes, qui reflètent pleinement nos terroirs.</p>
+        <ol class="jalons">
+          <li><b>Briacé</b><span>la formation de la reconversion</span></li>
+          <li><b>2017</b><span>le retour au domaine, puis des stages chez des vignerons à travers la France</span></li>
+          <li><b>2020</b><span>la reprise de l’exploitation</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cuvees" id="cuvees">
+    <div class="cadre">
+      <div class="cuv-tete">
+        <h2>Les cuvées</h2>
+        <p>Des muscadets Sèvre et Maine, des cuvées monocépages, deux méthodes traditionnelles et Flò, la gamme signature.</p>
+      </div>
+      <div class="cuv-corps">
+        <div class="familles">
+          <div class="famille large">
+            <h3>Nos muscadets Sèvre et Maine</h3>
+            <ul>
+              <li><b>Le Val-Fleuri</b><span>Muscadet Sèvre et Maine sur lie</span><a href="https://www.domainedelaunay.fr/wp-content/uploads/2026/04/FT-Muscadet-Le-Val-Fleuri-2025.pdf">Fiche technique</a></li>
+              <li><b>Clos du Paradis</b><span>Muscadet Sèvre et Maine</span><a href="https://www.domainedelaunay.fr/wp-content/uploads/2026/04/FT-Muscadet-Clos-du-Paradis-2024.pdf">Fiche technique</a></li>
+              <li><b>Goulaine</b><span>Muscadet Sèvre et Maine Goulaine</span><a href="https://www.domainedelaunay.fr/wp-content/uploads/2025/09/fiche_technique_goulaine_2022.pdf">Fiche technique</a></li>
+              <li><b>Eclipse</b><span>Vin orange nature, 100&nbsp;% Melon B.</span><a href="#contact">Fiche technique sur demande</a></li>
+            </ul>
+          </div>
+          <div class="famille">
+            <h3>Nos cuvées monocépages</h3>
+            <ul>
+              <li><b>La Bonnaudière</b><span>Sauvignon</span></li>
+              <li><b>Les Pièces de Fromenteau</b><span>Chardonnay</span></li>
+              <li><b>Les Régales</b><span>Pinot Gris</span></li>
+              <li><b>Le Clos des Rochettes</b><span>Pinot Noir</span></li>
+            </ul>
+          </div>
+          <div class="famille">
+            <h3>Nos méthodes traditionnelles</h3>
+            <ul>
+              <li><b>Brut Blanc</b><span>75&nbsp;% Chardonnay, 25&nbsp;% Melon B.</span></li>
+              <li><b>Extra Brut</b><span>100&nbsp;% Chardonnay</span></li>
+            </ul>
+            <h3 style="margin-top:40px">Flò, la gamme signature</h3>
+            <ul>
+              <li><b>Flò Rosé</b><span>Vin de France</span></li>
+              <li><b>Flò Rouge</b><span>Vin de France</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cuv-photos">
+          <figure class="huitres">
+            <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/clos-du-paradis-et-huitres-sur-les-rochers.webp" alt="Une bouteille de Clos du Paradis, un verre de blanc et des huîtres ouvertes sur un rocher, la mer derrière" width="1066" height="1600" loading="lazy">
+            <figcaption class="etiquette">Clos du Paradis</figcaption>
+          </figure>
+          <figure class="plage rv">
+            <img src="assets/domaine-delaunay-loroux-bottereau/pique-nique-clos-du-paradis-sur-la-plage.webp" alt="Pique-nique sur la plage : nappe vichy, panier en osier, Clos du Paradis et deux verres" width="1066" height="1600" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goulaine" aria-label="Muscadet Cru Goulaine">
+    <div class="cadre">
+      <div class="gou-carte">
+        <figure>
+          <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/florent-sert-du-muscadet-a-des-clients-noir-et-blanc.webp" alt="En noir et blanc, Florent Delaunay sert du vin à des visiteurs devant des caisses-palettes en bois" width="1600" height="1066" loading="lazy">
+          <figcaption class="etiquette">Florent Delaunay, en dégustation</figcaption>
+        </figure>
+        <div class="gou-texte">
+          <h2>Muscadet Cru Goulaine, <em>l’expression d’un terroir unique</em></h2>
+          <p>Né sur les sols d’amphibolites des coteaux du Loroux-Bottereau, notre Goulaine révèle une minéralité subtile et une belle tension. Il développe des notes élégantes et une longueur remarquable, reflet authentique de ce terroir façonné par la nature et le temps.</p>
+          <div class="lies"><b>24 mois</b><span>d’élevage sur lies</span></div>
+          <div class="actions">
+            <a class="btn btn-plein" href="#contact">Déguster le Goulaine</a>
+            <a class="btn btn-contour" href="https://www.domainedelaunay.fr/wp-content/uploads/2025/09/fiche_technique_goulaine_2022.pdf">Fiche technique</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="actus" id="actualites">
+    <div class="cadre act-grille">
+      <div class="act-texte">
+        <h2>Actualités</h2>
+        <p>Les nouvelles du domaine et les photos de la vigne, de la neige aux vendanges, sont sur notre compte Instagram.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.instagram.com/domainedelaunay/">@domainedelaunay</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/vignobledelaunay">Facebook</a>
+        </div>
+      </div>
+      <div class="act-photos">
+        <figure class="neige">
+          <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/vignes-sous-la-neige-et-tours-du-moulin.webp" alt="Rangs de vigne sous la neige, les tours du Moulin du Pé dans le brouillard" width="1024" height="771" loading="lazy">
+          <figcaption>Les vignes sous la neige</figcaption>
+        </figure>
+        <figure class="comptoir">
+          <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/florent-debouche-une-bouteille-au-comptoir.webp" alt="Florent Delaunay débouche une bouteille derrière un comptoir" width="1024" height="1365" loading="lazy">
+          <figcaption>Au comptoir</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="cadre ct-grille">
+    <div class="ct-titre">
+      <h2>Venez nous rencontrer sur le domaine.</h2>
+      <p>Vous souhaitez en savoir plus sur nos muscadets, organiser une visite ou simplement nous écrire&nbsp;? Nos équipes vous contactent du lundi au vendredi, de 9&nbsp;h à 18&nbsp;h.</p>
+      <div class="actions">
+        <a class="btn btn-melon" href="tel:+33240338684">02 40 33 86 84</a>
+        <a class="btn btn-contour-clair" href="mailto:contact@domainedelaunay.fr">Nous écrire</a>
+      </div>
+      <figure class="ct-photo">
+        <img class="rv" src="assets/domaine-delaunay-loroux-bottereau/florent-montre-un-cep-a-des-visiteurs.webp" alt="Florent Delaunay montre une feuille de vigne à trois visiteurs, au milieu d’un rang" width="1600" height="1066" loading="lazy">
+        <figcaption class="etiquette">Une visite dans les rangs</figcaption>
+      </figure>
+    </div>
+    <div class="ct-infos">
+      <div><h3>Le caveau</h3><p>Du lundi au vendredi<br>9&nbsp;h à 12&nbsp;h&nbsp;30 et 14&nbsp;h à 18&nbsp;h</p></div>
+      <div><h3>Adresse</h3><p>118 Le Val-Fleuri<br>44430 Le Loroux-Bottereau</p></div>
+      <div><h3>Téléphone</h3><p><a href="tel:+33240338684">02 40 33 86 84</a></p></div>
+      <div><h3>Mail</h3><p><a href="mailto:contact@domainedelaunay.fr">contact@domainedelaunay.fr</a></p></div>
+      <div><h3>Nous suivre</h3><p><a href="https://www.instagram.com/domainedelaunay/">Instagram</a><br><a href="https://www.facebook.com/vignobledelaunay">Facebook</a><br><a href="https://www.linkedin.com/company/domainedelaunay/posts/?feedView=all">LinkedIn</a></p></div>
+      <div><h3>Fiches techniques</h3><p><a href="https://www.domainedelaunay.fr/wp-content/uploads/2026/04/FT-Muscadet-Le-Val-Fleuri-2025.pdf">Le Val-Fleuri</a><br><a href="https://www.domainedelaunay.fr/wp-content/uploads/2026/04/FT-Muscadet-Clos-du-Paradis-2024.pdf">Clos du Paradis</a><br><a href="https://www.domainedelaunay.fr/wp-content/uploads/2025/09/fiche_technique_goulaine_2022.pdf">Goulaine</a></p></div>
+    </div>
+  </div>
+  <div class="cadre pied">
+    <span>Domaine Delaunay, EARL Vignoble Delaunay, Le Loroux-Bottereau. <a href="https://www.domainedelaunay.fr/mentions-legales-et-cgu/">Mentions légales et CGU</a></span>
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine Delaunay</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

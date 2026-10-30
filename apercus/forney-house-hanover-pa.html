@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Forney House Bed and Breakfast, a historic B&amp;B in downtown Hanover, PA</title>
+<meta name="description" content="A restored 1905 house on the National Register of Historic Places, with two suites and one queen room named after the Forney family, in downtown Hanover, Pennsylvania.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2326384B'/%3E%3Cpath d='M22 15h24v6h-17v9h14v6H29v13h-7z' fill='%23F5F0E6'/%3E%3Crect x='18' y='52' width='28' height='2' fill='%23B08D57'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F5F0E6;
+  --paper:#FBF8F2;
+  --shutter:#26384B;
+  --shutter-deep:#1D2C3C;
+  --ink-soft:#4A5768;
+  --berry:#5A4A86;
+  --brass:#B08D57;
+  --line:rgba(38,56,75,.14);
+  --shadow:0 30px 60px -34px rgba(29,44,60,.55);
+  --shadow-sm:0 18px 36px -22px rgba(29,44,60,.55);
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Figtree", "Helvetica Neue", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--shutter);font-family:var(--sans);font-size:18px;line-height:1.6}
+::selection{background:var(--berry);color:var(--ivory)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--berry);outline-offset:3px;border-radius:6px}
+h1,h2,h3,.price,.facts b,.phone,.places a,.places .nolink{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.skip{position:absolute;left:16px;top:16px;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip:focus{width:auto;height:auto;clip-path:none;z-index:50;background:var(--paper);padding:8px 14px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 28px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:17px;text-decoration:none;text-align:center;line-height:1.25;transition:background-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.btn-solid{background:var(--shutter);color:var(--ivory);box-shadow:0 14px 26px -16px rgba(29,44,60,.8)}
+.btn-solid:hover{background:var(--berry);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--shutter);color:var(--shutter)}
+.btn-line:hover{background:var(--shutter);color:var(--ivory);transform:translateY(-2px)}
+.btn-light{border:1.5px solid rgba(245,240,230,.6);color:var(--ivory)}
+.btn-light:hover{background:var(--ivory);color:var(--shutter);transform:translateY(-2px)}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:var(--ivory);border-bottom:1px solid transparent;transition:border-color .3s ease}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:84px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:var(--serif);font-weight:600;font-size:30px;letter-spacing:.005em}
+.brand span{font-size:14px;color:var(--ink-soft);margin-top:5px;letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:not(.btn){position:relative}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a:not(.btn):hover::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:9px 22px;font-size:16px}
+
+/* Hero */
+.hero{padding:40px 0 112px}
+.hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px;align-items:center}
+.hero-fig{grid-column:1 / span 7;position:relative;margin:0}
+.hero-fig .facade{border-radius:14px;box-shadow:var(--shadow);aspect-ratio:4 / 3.15;width:100%;object-fit:cover;object-position:50% 40%}
+.tag{position:absolute;left:18px;top:18px;background:rgba(251,248,242,.94);color:var(--shutter);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;box-shadow:0 8px 18px -12px rgba(29,44,60,.6)}
+.archive{position:absolute;right:-34px;bottom:-62px;width:min(270px,42%);margin:0;background:#FDFBF6;padding:10px 10px 0;border-radius:4px;transform:rotate(-4deg);box-shadow:0 26px 40px -24px rgba(29,44,60,.7);z-index:2}
+.archive img{border-radius:2px;filter:sepia(.18) contrast(1.02)}
+.archive figcaption{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;text-align:center;padding:6px 4px 9px;color:var(--shutter)}
+.hero-text{grid-column:8 / span 5}
+.hero h1{font-size:clamp(42px,6.3vw,74px);line-height:1.02}
+.hero h1 em{font-style:italic;color:var(--berry);font-weight:600}
+.lead{margin-top:26px;font-size:19px;color:var(--ink-soft);max-width:34em}
+.lead strong{color:var(--shutter);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+/* Facts */
+.facts{background:var(--paper);border-block:1px solid var(--line)}
+.facts ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.facts li{position:relative;padding-left:22px}
+.facts li::before{content:"";position:absolute;left:0;top:10px;bottom:6px;width:1px;background:var(--brass)}
+.facts b{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.1}
+.facts span{display:block;font-size:16px;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+
+/* Section rhythm */
+.sec{padding:120px 0}
+.sec-head{max-width:620px}
+.sec-head h2,.h2{font-size:clamp(36px,4.4vw,56px)}
+.sec-head p{margin-top:18px;color:var(--ink-soft)}
+.price{white-space:nowrap;font-family:var(--serif);font-weight:600;font-size:25px;color:var(--berry)}
+.meta{font-size:16px;color:var(--ink-soft)}
+
+/* Rooms: featured Matthias */
+.feature{position:relative;margin-top:64px}
+.feature .shot{position:relative;width:min(900px,100%)}
+.feature .shot img{border-radius:20px;box-shadow:var(--shadow);aspect-ratio:16 / 10;width:100%;object-fit:cover;object-position:30% 50%}
+.feature .shot .tag{top:auto;bottom:20px;left:20px}
+.feature-card{position:absolute;right:0;top:50%;transform:translateY(-50%);width:min(440px,100%);background:var(--paper);border-radius:16px;padding:38px 38px 34px;box-shadow:var(--shadow)}
+.feature-card h3,.suite h3{font-size:clamp(30px,3vw,38px)}
+.row-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:12px 0 16px}
+.feature-card p+p{margin-top:12px}
+.feature-card .link{display:inline-block;margin-top:22px;font-weight:600;color:var(--berry);text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:2px;transition:color .2s ease,border-color .2s ease}
+.feature-card .link:hover{color:var(--shutter);border-color:var(--shutter)}
+
+/* Suites pair */
+.suites{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:72px;margin-top:120px}
+.suite:nth-child(2){margin-top:96px}
+.suite .pair{position:relative;margin-bottom:56px}
+.suite .main{border-radius:18px;box-shadow:var(--shadow);aspect-ratio:4 / 3;width:100%;object-fit:cover}
+.suite .inset{position:absolute;width:min(220px,44%);bottom:-40px;border-radius:12px;border:6px solid var(--ivory);box-shadow:var(--shadow-sm);aspect-ratio:1 / 1;object-fit:cover}
+.suite:nth-child(1) .inset{right:-20px}
+.suite:nth-child(2) .inset{left:-20px}
+.suite p{max-width:32em}
+.carriage{margin-top:96px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;padding-top:36px;border-top:1px solid var(--line)}
+.carriage h3{font-size:32px}
+.carriage p{color:var(--ink-soft)}
+.carriage a{color:var(--shutter);font-weight:600}
+
+/* History */
+.history{background:var(--paper)}
+.history .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px;align-items:center}
+.mat{grid-column:1 / span 6;margin:0;background:var(--ivory);padding:14px;border-radius:20px;box-shadow:var(--shadow)}
+.mat img{border-radius:10px;aspect-ratio:4 / 3;object-fit:cover;width:100%}
+.mat figcaption{font-size:15px;color:var(--ink-soft);padding:12px 6px 2px}
+.history .text{grid-column:8 / span 5;padding-top:24px}
+.history .text p{margin-top:18px;color:var(--ink-soft)}
+.pull{margin:40px 0 0;padding:4px 0 0 24px;border-left:1px solid var(--brass)}
+.pull p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(28px,2.6vw,34px);line-height:1.2;color:var(--shutter);margin:0}
+.hall{margin-top:44px;display:flex;gap:20px;align-items:center}
+.hall img{width:min(260px,52%);border-radius:10px;box-shadow:var(--shadow-sm);aspect-ratio:3 / 2;object-fit:cover}
+.hall span{font-size:16px;color:var(--ink-soft)}
+
+/* Tea, contrasted */
+.tea{background:var(--shutter);color:var(--ivory)}
+.tea .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px;align-items:center}
+.tea .text{grid-column:1 / span 6}
+.tea .h2{color:var(--ivory)}
+.tea .text>p{margin-top:20px;color:rgba(245,240,230,.82);max-width:32em}
+.big-quote{margin:0 0 30px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(30px,3vw,40px);line-height:1.15;color:#D9CFEA}
+.services{list-style:none;margin:34px 0 36px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.services li{padding:12px 0;border-top:1px solid rgba(245,240,230,.16);font-size:17px}
+.tea-pics{grid-column:8 / span 5;position:relative;padding-bottom:40px}
+.tea-pics .pot{border-radius:18px;box-shadow:0 34px 60px -30px rgba(0,0,0,.7);aspect-ratio:3 / 4;width:100%;object-fit:cover}
+.tea-pics .table{position:absolute;left:-56px;bottom:0;width:min(250px,52%);margin:0;background:#FDFBF6;padding:8px;border-radius:6px;transform:rotate(3deg);box-shadow:0 24px 40px -20px rgba(0,0,0,.65)}
+.tea-pics .table img{border-radius:3px;aspect-ratio:3 / 2;object-fit:cover}
+
+/* Things to do */
+.todo .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.todo .intro p{margin-top:18px;color:var(--ink-soft)}
+.places{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.places li{border-top:1px solid var(--line);padding:16px 0 18px}
+.places a,.places .nolink{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.2;text-decoration:none;display:inline-block}
+.places a{background:linear-gradient(var(--brass),var(--brass)) 0 100% / 0 1px no-repeat;transition:background-size .3s ease,color .2s ease}
+.places a:hover{background-size:100% 1px;color:var(--berry)}
+.places small{display:block;font-size:15px;color:var(--ink-soft);margin-top:3px}
+
+/* Book */
+.book{padding-top:24px}
+.book-card{background:var(--paper);border-radius:24px;box-shadow:var(--shadow);padding:64px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px}
+.book-card .lead2{margin-top:18px;color:var(--ink-soft)}
+.rates{margin:30px 0 0;padding:0;list-style:none}
+.rates li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.rates li span:first-child{font-weight:500}
+.rates .price{font-size:23px}
+.contact{display:flex;flex-direction:column;gap:22px;padding-left:48px;border-left:1px solid var(--line)}
+.contact .label{font-size:15px;color:var(--ink-soft);margin-bottom:2px}
+.contact .phone{font-family:var(--serif);font-weight:600;font-size:clamp(32px,3.4vw,44px);line-height:1.1;text-decoration:none;white-space:nowrap}
+.contact .phone:hover,.contact .mail:hover{color:var(--berry)}
+.contact .mail{font-size:20px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--brass);overflow-wrap:anywhere}
+.contact address{font-style:normal}
+.contact .btn{align-self:flex-start;margin-top:6px}
+
+/* Footer */
+.foot{background:var(--shutter-deep);color:rgba(245,240,230,.82);margin-top:120px;padding:80px 0 0;font-size:16px}
+.foot .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:48px}
+.foot .brand b{color:var(--ivory)}
+.foot .brand span{color:rgba(245,240,230,.7)}
+.foot p{margin-top:20px;max-width:28em}
+.foot h3{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--brass);margin-bottom:14px;letter-spacing:.02em}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li+li{margin-top:8px}
+.foot a{text-decoration:none;color:var(--ivory)}
+.foot a:hover{text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:4px}
+.foot .book-link{font-weight:600}
+.proposal{margin-top:64px;border-top:1px solid rgba(245,240,230,.12);padding:22px 0 26px;text-align:center;font-size:14px;color:rgba(245,240,230,.6)}
+.proposal a{color:rgba(245,240,230,.85)}
+
+/* Reveal on photos only */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .archive.rv{transform:rotate(-4deg) translateY(18px)}
+.js .archive.rv.in{transform:rotate(-4deg)}
+.js .table.rv{transform:rotate(3deg) translateY(18px)}
+.js .table.rv.in{transform:rotate(3deg)}
+
+@media (max-width:1100px){
+  .nav{gap:22px}
+  .archive{right:-12px}
+  .feature-card{position:relative;top:auto;transform:none;margin:-90px 0 0 auto;width:min(520px,92%)}
+  .tea-pics .table{left:-24px}
+}
+@media (max-width:900px){
+  .nav a:not(.btn){display:none}
+  .hero-grid{gap:36px}
+  .hero-fig{grid-column:1 / -1}
+  .hero-text{grid-column:1 / -1;margin-top:40px}
+  .archive{right:16px;bottom:-48px}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
+  .suites{grid-template-columns:minmax(0,1fr);gap:96px;margin-top:96px}
+  .suite:nth-child(2){margin-top:0}
+  .carriage{grid-template-columns:minmax(0,1fr);gap:12px}
+  .history .grid,.tea .grid{grid-template-columns:minmax(0,1fr)}
+  .mat,.history .text,.tea .text,.tea-pics{grid-column:1 / -1}
+  .tea-pics{max-width:480px;margin:24px auto 0;width:100%}
+  .todo .grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .book-card{grid-template-columns:minmax(0,1fr);padding:44px;gap:40px}
+  .contact{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:32px}
+  .foot .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .foot .grid>div:first-child{grid-column:1 / -1}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .top .wrap{min-height:70px}
+  .brand b{font-size:25px}
+  .brand span{font-size:13px}
+  .hero{padding:20px 0 80px}
+  .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .hero-text{display:contents}
+  .hero h1{order:1;font-size:clamp(40px,11.4vw,52px)}
+  .hero-fig{order:2;margin:24px 0 70px}
+  .lead{order:3;margin-top:0;font-size:18px}
+  .ctas{order:4}
+  .hero-fig .facade{aspect-ratio:4 / 3.3}
+  .tag{left:12px;top:12px;font-size:14px;padding:6px 12px}
+  .archive{width:min(180px,48%);right:10px;bottom:-56px;padding:7px 7px 0}
+  .archive figcaption{font-size:18px;padding:4px 2px 6px}
+  .ctas .btn{width:100%}
+  .facts ul{padding:26px 0}
+  .facts b{font-size:26px}
+  .sec{padding:80px 0}
+  .feature{margin-top:40px}
+  .feature .shot img{aspect-ratio:4 / 3.4;border-radius:16px}
+  .feature .shot .tag{bottom:auto;top:12px;left:12px}
+  .feature-card{margin:-48px 12px 0;width:auto;padding:28px 24px}
+  .suites{margin-top:80px;gap:80px}
+  .suite .inset{width:min(150px,42%);bottom:-34px}
+  .suite:nth-child(1) .inset{right:-6px}
+  .suite:nth-child(2) .inset{left:-6px}
+  .mat{padding:10px;border-radius:16px}
+  .hall{flex-direction:column;align-items:flex-start}
+  .hall img{width:min(300px,100%)}
+  .services{grid-template-columns:minmax(0,1fr)}
+  .tea-pics .table{left:-8px;width:min(190px,50%)}
+  .places{grid-template-columns:minmax(0,1fr)}
+  .book-card{padding:32px 22px;border-radius:18px}
+  .contact .phone{white-space:normal}
+  .contact .btn{align-self:stretch}
+  .rates li{flex-wrap:wrap}
+  .foot{padding-top:60px;margin-top:80px}
+  .foot .grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .nav .btn{padding:8px 16px}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .rv{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Forney House Bed and Breakfast, back to top">
+      <b>Forney House</b>
+      <span>Bed and Breakfast in Hanover, PA</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#rooms">Rooms &amp; Suites</a>
+      <a href="#services">Guest Services</a>
+      <a href="#hanover">Things to Do</a>
+      <a class="btn btn-solid" href="#book">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <figure class="hero-fig">
+      <img class="facade" src="assets/forney-house-hanover-pa/facade-brique-volets-bleus-porche-printemps.webp" width="1600" height="1200" alt="Forney House in spring: red brick, blue shutters, a rounded white porch and a dogwood in bloom on Frederick Street" fetchpriority="high">
+      <span class="tag">252 Frederick Street, Hanover</span>
+      <figure class="archive rv">
+        <img src="assets/forney-house-hanover-pa/facade-archive-noir-et-blanc.webp" width="1600" height="1075" alt="Archive black and white photo of the house, with its slate roof and columned porch">
+        <figcaption>Built in 1905</figcaption>
+      </figure>
+    </figure>
+    <div class="hero-text">
+      <h1>A charming <em>historic</em> B&amp;B in downtown Hanover</h1>
+      <p class="lead">This restored 1905 house is on the <strong>National Register of Historic Places</strong>. Its suites are named after the Forney family, and the Matthias Nace Forney Room is decorated with vintage horse paintings.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="#book">Book Now</a>
+        <a class="btn btn-line" href="tel:+14432440306">Call (443) 244-0306</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Forney House at a glance">
+  <ul class="wrap">
+    <li><b>1905</b><span>the year the house was built</span></li>
+    <li><b>Historic</b><span>on the National Register of Historic Places</span></li>
+    <li><b>3 rooms</b><span>in the main house, each with its own bathroom</span></li>
+    <li><b>From $160</b><span>a night, with free gated parking</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="rooms">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Rooms named for the Forney family</h2>
+      <p>Two suites and one queen room in the main house. Every room has an en-suite bathroom with a sitting area.</p>
+    </div>
+
+    <article class="feature">
+      <div class="shot">
+        <img class="rv" src="assets/forney-house-hanover-pa/matthias-nace-room-lit-tableaux-chevaux-miroir-dore.webp" width="1600" height="1200" alt="The Matthias Nace Forney Room: iron bed, mustard curtains, a hunting print and a gilded oval mirror reflecting a horse painting" loading="lazy">
+        <span class="tag">Vintage horse paintings and decor</span>
+      </div>
+      <div class="feature-card">
+        <h3>Matthias Nace Forney Room</h3>
+        <div class="row-price"><span class="price">From $160/night</span><span class="meta">Queen bed, for 2 guests</span></div>
+        <p>A pioneer in the early railroad world, Matthias left the area when he went off to college and spent the rest of his life in New York City. He kept a beautiful home here, at his brother's, for his visits.</p>
+        <p>This queen room has its own en-suite bathroom and is decorated with vintage horse paintings and decor.</p>
+        <a class="link" href="#book">Book this room</a>
+      </div>
+    </article>
+
+    <div class="suites">
+      <article class="suite">
+        <div class="pair">
+          <img class="main rv" src="assets/forney-house-hanover-pa/amanda-hinkle-suite-lit-rideaux-bordeaux.webp" width="1600" height="1200" alt="Amanda Hinkle Forney Suite: iron bed with a floral quilt, burgundy velvet curtains and a Tiffany lamp" loading="lazy">
+          <img class="inset rv" src="assets/forney-house-hanover-pa/amanda-hinkle-suite-coin-salon-fauteuils-fleuris.webp" width="1600" height="1200" alt="The suite's living room with floral armchairs and a sofa" loading="lazy">
+        </div>
+        <h3>Amanda Hinkle Forney Suite</h3>
+        <div class="row-price"><span class="price">From $175/night</span><span class="meta">King bed, for 2 guests</span></div>
+        <p>This king suite is named after the matriarch of this line of the Forney family, and it is decorated where history meets modern. It has an en-suite bathroom and a separate living room with a daybed that can sleep two more guests.</p>
+      </article>
+      <article class="suite">
+        <div class="pair">
+          <img class="main rv" src="assets/forney-house-hanover-pa/david-peter-suite-lit-fer-forge-lustre.webp" width="1600" height="1200" alt="David Peter Forney Suite: black iron bed, crystal chandelier and navy patterned curtains" loading="lazy">
+          <img class="inset rv" src="assets/forney-house-hanover-pa/david-peter-suite-salon-murs-bleus.webp" width="1600" height="1200" alt="The suite's blue living room with a yellow wingback chair" loading="lazy">
+        </div>
+        <h3>David Peter Forney Suite</h3>
+        <div class="row-price"><span class="price">From $175/night</span><span class="meta">King bed, for 2 guests</span></div>
+        <p>In beautiful blue hues, this king suite has its own en-suite bathroom with the original refinished claw-foot tub and shower, and a separate living room.</p>
+      </article>
+    </div>
+
+    <div class="carriage">
+      <h3>The Carriage House</h3>
+      <p>Three bedrooms (a king, a queen and 5 twins), with its own living room, bathroom and make-up area. <a href="tel:+14432440306">Call for availability</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec history" id="history">
+  <div class="wrap grid">
+    <figure class="mat">
+      <img class="rv" src="assets/forney-house-hanover-pa/trottoir-enseigne-forney-house-cornouillers.webp" width="1600" height="1200" alt="Frederick Street in spring, with the Forney House sign on the lawn and dogwoods in bloom" loading="lazy">
+      <figcaption>Frederick Street in spring</figcaption>
+    </figure>
+    <div class="text">
+      <h2 class="h2">A gourmet breakfast, then downtown on foot</h2>
+      <p>In the main house, breakfast is served in one of the dining rooms: each morning, a homecooked gourmet breakfast with many foods locally sourced.</p>
+      <p>Downtown Hanover offers many breweries, shops and restaurants within walking distance, and Gettysburg National Military Park and Codorus State Park are close by.</p>
+      <blockquote class="pull"><p>Luxury with a small town feel.</p></blockquote>
+      <div class="hall">
+        <img class="rv" src="assets/forney-house-hanover-pa/couloir-escalier-cadres-applique.webp" width="1600" height="1073" alt="Entrance hall with framed prints, a gilded sconce and the turned wooden staircase" loading="lazy">
+        <span>The entrance hall and staircase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tea" id="services">
+  <div class="wrap grid">
+    <div class="text">
+      <h2 class="h2">Afternoon tea, small weddings and events</h2>
+      <p>The large dining rooms and sitting area are suitable for small weddings and tea parties, for personal and business stays alike.</p>
+      <ul class="services" aria-label="Guest services">
+        <li>Private bathrooms</li>
+        <li>Wedding facilities</li>
+        <li>Meeting and event facilities</li>
+        <li>Free Wi-Fi</li>
+        <li>Gated off-street parking</li>
+        <li>Air conditioning</li>
+        <li>Flat-screen television</li>
+        <li>Afternoon tea</li>
+      </ul>
+      <a class="btn btn-light" href="tel:+14432440306">Call for availability</a>
+    </div>
+    <div class="tea-pics">
+      <img class="pot rv" src="assets/forney-house-hanover-pa/the-myrtille-theiere-enseigne-est-1905.webp" width="1200" height="1600" alt="Blueberry green tea served in a blue floral teapot under the carved Forney House est. 1905 sign" loading="lazy">
+      <figure class="table rv">
+        <img src="assets/forney-house-hanover-pa/table-the-roses-carafes-nappe-rose.webp" width="1600" height="1075" alt="A table set for tea with roses, iced tea carafes and a porcelain sugar bowl" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec todo" id="hanover">
+  <div class="wrap grid">
+    <div class="intro">
+      <h2 class="h2">Things to do in Hanover</h2>
+      <p>Hanover's charming downtown offers many breweries, shops and restaurants, all within walking distance from the B&amp;B. For more on local activities, start here.</p>
+    </div>
+    <ul class="places">
+      <li><a href="https://discoverhanoverpa.org" target="_blank" rel="noopener">Main Street Hanover District</a><small>discoverhanoverpa.org</small></li>
+      <li><a href="https://hanoverchamber.com" target="_blank" rel="noopener">Hanover Chamber of Commerce</a><small>hanoverchamber.com</small></li>
+      <li><a href="https://www.timelinearcade.org/" target="_blank" rel="noopener">Timeline Arcade</a><small>timelinearcade.org</small></li>
+      <li><a href="https://mainstreethanover.org/warehime-myers-mansion/" target="_blank" rel="noopener">Warehime-Myers Mansion</a><small>mainstreethanover.org</small></li>
+      <li><a href="https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/codorus-state-park.html" target="_blank" rel="noopener">Codorus State Park</a><small>pa.gov</small></li>
+      <li><a href="https://www.nps.gov/gett/index.htm" target="_blank" rel="noopener">Gettysburg National Military Park</a><small>nps.gov</small></li>
+      <li><a href="https://www.hickoryfalls.com/" target="_blank" rel="noopener">Hickory Falls</a><small>hickoryfalls.com</small></li>
+      <li><span class="nolink">Eichelberger Performing Arts Center</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div class="book-card">
+      <div>
+        <h2 class="h2" id="book-title">Book your stay</h2>
+        <p class="lead2">Call for availability, or email your dates and the room you would like.</p>
+        <ul class="rates">
+          <li><span>Amanda Hinkle Forney Suite</span><span class="price">From $175/night</span></li>
+          <li><span>David Peter Forney Suite</span><span class="price">From $175/night</span></li>
+          <li><span>Matthias Nace Forney Room</span><span class="price">From $160/night</span></li>
+          <li><span>The Carriage House</span><span class="meta">Call for rates</span></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <div>
+          <div class="label">Call</div>
+          <a class="phone" href="tel:+14432440306">(443) 244-0306</a>
+        </div>
+        <div>
+          <div class="label">Email</div>
+          <a class="mail" href="mailto:forneyhouse@yahoo.com?subject=Stay%20at%20Forney%20House">forneyhouse@yahoo.com</a>
+        </div>
+        <div>
+          <div class="label">Address</div>
+          <address>252 Frederick St<br>Hanover, PA 17331</address>
+        </div>
+        <a class="btn btn-solid" href="tel:+14432440306">Call to book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap grid">
+    <div>
+      <a class="brand" href="#top"><b>Forney House</b><span>Bed and Breakfast in Hanover, PA</span></a>
+      <p>A beautifully restored historic bed and breakfast with charming rooms, homemade gourmet breakfasts, and Hanover's shops, restaurants and breweries close by.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#rooms">Rooms &amp; Suites</a></li>
+        <li><a href="#services">Guest Services</a></li>
+        <li><a href="#hanover">Things to Do</a></li>
+        <li><a class="book-link" href="#book">Book Now</a></li>
+        <li><a href="https://forneyhousepa.com/privacy-policy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>252 Frederick St, Hanover, PA 17331</li>
+        <li><a href="tel:+14432440306">(443) 244-0306</a></li>
+        <li><a href="mailto:forneyhouse@yahoo.com">forneyhouse@yahoo.com</a></li>
+        <li><a href="https://www.facebook.com/forneyhouse" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap proposal">Proposal by Nicolas Masset for Forney House Bed and Breakfast, <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+</footer>
+
+<script>
+(function(){
+  var top = document.getElementById('top');
+  window.addEventListener('scroll', function(){ top.classList.toggle('scrolled', window.scrollY > 8); }, {passive:true});
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine des Coteaux des Travers, vigneron en biodynamie à Rasteau</title>
+<meta name="description" content="Domaine familial depuis 1920 à Rasteau, en agriculture biologique et en biodynamie : Rasteau, Cairanne, Massif d’Uchaux, vins doux naturels.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234A1626'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='40' fill='%23E4E6DA'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sauge:#E4E6DA;
+  --sauge-clair:#F1F2EA;
+  --sauge-fonce:#D3D6C4;
+  --grenache:#4A1626;
+  --grenache-2:#5C2033;
+  --encre-douce:#5A4148;
+  --olive:#7C7A2E;
+  --olive-clair:#C9C77A;
+  --ombre:0 30px 60px -34px rgba(58,14,28,.55);
+  --display:"Bodoni Moda", Didot, Georgia, serif;
+  --texte:"Jost", "Futura", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sauge);color:var(--grenache);font-family:var(--texte);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--grenache);color:var(--sauge)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--olive)}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px, 100% - 48px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--grenache);color:var(--sauge-clair)}
+.btn-plein:hover{background:var(--grenache-2);box-shadow:0 18px 30px -18px rgba(74,22,38,.8)}
+.btn-contour{border:1.5px solid var(--grenache);color:var(--grenache)}
+.btn-contour:hover{background:var(--grenache);color:var(--sauge-clair)}
+.btn-clair{background:var(--sauge-clair);color:var(--grenache)}
+.btn-clair:hover{background:#fff8;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.btn-contour-clair{border:1.5px solid rgba(241,242,234,.55);color:var(--sauge-clair)}
+.btn-contour-clair:hover{background:var(--sauge-clair);color:var(--grenache)}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0}
+.marque{text-decoration:none;line-height:1.1;display:flex;flex-direction:column}
+.marque b{font-family:var(--display);font-weight:500;font-size:26px}
+.marque small{font-size:15px;color:var(--encre-douce);margin-top:4px}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 26px}
+.nav a{text-decoration:none;font-size:16px;transition:color .2s}
+.nav a:hover{color:var(--olive)}
+.nav .boutique{border:1.5px solid var(--grenache);border-radius:999px;padding:8px 18px;font-weight:500}
+.nav .boutique:hover{background:var(--grenache);color:var(--sauge-clair)}
+
+/* Héros 50/50, photo collée au bord droit */
+.heros{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:64px;padding:24px 0 0 max(24px, calc((100% - 1200px) / 2))}
+.heros-texte{padding:32px 0 48px}
+.heros .lieu{font-size:17px;color:var(--olive);font-weight:500}
+.heros h1{font-size:clamp(2.6rem, 1.3rem + 4.6vw, 5.4rem);margin-top:20px;letter-spacing:-.01em}
+.heros .chapo{margin-top:28px;max-width:520px;color:var(--encre-douce)}
+.heros .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.heros-photo{position:relative;margin:0}
+.heros-photo img{width:100%;height:min(680px, 78vh);min-height:460px;object-fit:cover;object-position:30% 55%;border-radius:32px 0 0 32px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:20px;bottom:20px;background:rgba(241,242,234,.94);color:var(--grenache);font-size:15px;font-weight:500;padding:8px 14px;border-radius:10px;line-height:1.3}
+
+/* Bandeau de faits */
+.faits{padding:56px 0 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid rgba(74,22,38,.22);border-bottom:1px solid rgba(74,22,38,.22)}
+.faits li{padding:28px 24px;display:flex;flex-direction:column;gap:6px}
+.faits li + li{border-left:1px solid rgba(74,22,38,.14)}
+.faits strong{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;white-space:nowrap}
+.faits span{font-size:16px;color:var(--encre-douce);line-height:1.4}
+
+/* Famille */
+.famille{padding:128px 0 96px}
+.fam-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.fam-photos{grid-column:1 / 7;position:relative;padding:0 0 120px 0}
+.fam-photos .archive{width:78%;background:var(--sauge-clair);padding:16px 16px 56px;border-radius:6px;transform:rotate(-2.5deg);box-shadow:var(--ombre);position:relative}
+.fam-photos .archive img{width:100%;aspect-ratio:4 / 3;object-fit:cover;filter:sepia(.18);border-radius:2px}
+.fam-photos .archive p{position:absolute;left:20px;bottom:14px;max-width:44%;line-height:1.2;font-family:var(--display);font-style:italic;font-size:16px;color:var(--encre-douce)}
+.fam-photos .portrait{position:absolute;right:0;bottom:0;width:60%}
+.fam-photos .portrait img{width:100%;aspect-ratio:4 / 3;object-fit:cover;border-radius:18px;box-shadow:var(--ombre);border:6px solid var(--sauge)}
+.fam-photos .portrait .etiquette{left:22px;bottom:22px}
+.fam-texte{grid-column:8 / 13}
+.fam-texte h2{font-size:clamp(2.2rem, 1.4rem + 2.8vw, 3.6rem)}
+.fam-texte p{margin-top:24px;color:var(--encre-douce)}
+.fam-texte p.fort{color:var(--grenache);font-size:20px}
+.dates{margin-top:96px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;list-style:none;padding:0;position:relative}
+.dates::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:rgba(74,22,38,.25)}
+.dates li{position:relative;padding-top:40px}
+.dates li::before{content:"";position:absolute;left:0;top:2px;width:15px;height:15px;border-radius:50%;background:var(--sauge);border:1.5px solid var(--olive)}
+.dates b{font-family:var(--display);font-weight:400;font-size:34px;display:block;line-height:1}
+.dates span{display:block;margin-top:10px;font-size:16px;color:var(--encre-douce);line-height:1.45}
+
+/* Terroir */
+.terroir{background:var(--sauge-clair);padding:120px 0}
+.ter-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.ter-tete h2{grid-column:1 / 8;font-size:clamp(2.2rem, 1.4rem + 2.8vw, 3.6rem)}
+.ter-tete p{grid-column:8 / 13;color:var(--encre-douce)}
+.ter-corps{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.ter-photo{grid-column:1 / 6;position:sticky;top:32px;margin:0}
+.ter-photo img{width:100%;aspect-ratio:4 / 5;object-fit:cover;object-position:60% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.ter-liste{grid-column:7 / 13;list-style:none;margin:0;padding:0}
+.ter-liste li{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:24px;padding:36px 0;border-bottom:1px solid var(--sauge-fonce)}
+.ter-liste li:first-child{padding-top:0}
+.ter-liste .ha{font-family:var(--display);font-size:64px;line-height:.9;white-space:nowrap}
+.ter-liste .ha small{font-size:22px;margin-left:4px}
+.ter-liste h3{font-size:30px}
+.ter-liste p{margin-top:10px;color:var(--encre-douce)}
+.ter-liste img{margin-top:20px;width:min(300px, 100%);aspect-ratio:4 / 3;object-fit:cover;border-radius:14px;box-shadow:var(--ombre)}
+
+/* Biodynamie, section sombre */
+.bio{background:var(--grenache);color:var(--sauge-clair);padding:128px 0}
+.bio h2 em{color:var(--olive-clair)}
+.bio-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.bio-texte{grid-column:1 / 6}
+.bio-texte h2{font-size:clamp(2.2rem, 1.4rem + 2.8vw, 3.6rem)}
+.bio-texte p{margin-top:24px;color:rgba(241,242,234,.82)}
+.bio-texte .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.bio-photos{grid-column:7 / 13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.bio-photos figure{margin:0;position:relative}
+.bio-photos img{width:100%;object-fit:cover;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.bio-photos .faisan{grid-column:1 / 3}
+.bio-photos .faisan img{aspect-ratio:16 / 10;border-radius:20px}
+.bio-photos .cornes{margin-top:-8px}
+.bio-photos .cornes img{aspect-ratio:1;border-radius:16px}
+.bio-photos .fut{margin-top:56px;transform:rotate(2.5deg)}
+.bio-photos .fut img{aspect-ratio:4 / 5;border-radius:12px;border:10px solid var(--sauge-clair)}
+.pratiques{grid-column:1 / 13;margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px;list-style:none;padding:40px 0 0;border-top:1px solid rgba(241,242,234,.2)}
+.pratiques h3{font-size:24px}
+.pratiques p{margin-top:10px;font-size:17px;color:rgba(241,242,234,.75)}
+
+/* Vins */
+.vins{padding:128px 0}
+.vins-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.vins-tete{grid-column:1 / 6}
+.vins-tete h2{font-size:clamp(2.2rem, 1.4rem + 2.8vw, 3.6rem)}
+.vins-tete p{margin-top:24px;color:var(--encre-douce)}
+.vins-tete figure{margin:48px 0 0;position:relative}
+.vins-tete figure img{width:100%;aspect-ratio:5 / 4;object-fit:cover;object-position:40% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.vins-liste{grid-column:7 / 13}
+.cuvees{list-style:none;margin:0;padding:0}
+.cuvees li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:baseline;padding:26px 0;border-bottom:1px solid rgba(74,22,38,.18)}
+.cuvees li:first-child{border-top:1px solid rgba(74,22,38,.18)}
+.cuvees h3{font-size:32px}
+.cuvees .ap{font-size:15px;color:var(--olive);font-weight:500;white-space:nowrap}
+.cuvees p{grid-column:1 / 3;color:var(--encre-douce);font-size:17px}
+.vdn{margin-top:40px;display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:28px;align-items:center;background:var(--sauge-clair);border-radius:22px;padding:24px 32px 24px 16px;box-shadow:0 20px 40px -30px rgba(58,14,28,.5)}
+.vdn img{width:100%;max-width:180px;mix-blend-mode:multiply}
+.vdn h3{font-size:28px}
+.vdn p{margin-top:8px;color:var(--encre-douce);font-size:17px}
+.vdn a{display:inline-block;margin-top:14px;font-weight:500;color:var(--olive);text-underline-offset:4px}
+.vins .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+
+/* Caveau */
+.caveau{padding:0 0 128px}
+.cav-scene{position:relative}
+.cav-scene > img{width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:50% 60%;border-radius:28px;box-shadow:var(--ombre)}
+.cav-carte{position:relative;margin:-160px 0 0 auto;width:min(560px, 100%);background:var(--sauge-clair);border-radius:24px;padding:48px;box-shadow:0 40px 70px -36px rgba(58,14,28,.6);margin-right:48px}
+.cav-carte h2{font-size:clamp(2rem, 1.3rem + 2.4vw, 3.2rem)}
+.cav-carte p{margin-top:18px;color:var(--encre-douce)}
+.cav-infos{margin-top:28px;display:grid;gap:16px}
+.cav-infos div{display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:16px}
+.cav-infos dt{font-size:15px;color:var(--olive);font-weight:500;padding-top:3px}
+.cav-infos dd{margin:0;overflow-wrap:anywhere}
+.pied li{overflow-wrap:anywhere}
+.cav-infos a{text-decoration:none;border-bottom:1px solid rgba(74,22,38,.3)}
+.cav-infos a:hover{border-color:var(--grenache)}
+.cav-carte .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* Pied */
+.pied{background:var(--grenache);color:var(--sauge-clair);padding:80px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied h2{font-size:34px}
+.pied p{margin-top:12px;color:rgba(241,242,234,.75);font-size:17px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--olive-clair)}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(241,242,234,.3)}
+.pied a:hover{border-color:var(--sauge-clair)}
+.pied ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;font-size:17px}
+.pied .bas{margin-top:64px;padding-top:24px;border-top:1px solid rgba(241,242,234,.16);font-size:15px;color:rgba(241,242,234,.6)}
+.proposition{background:#3A0F1D;color:rgba(241,242,234,.6);font-size:14px;text-align:center;padding:14px 24px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+}
+
+@media (max-width: 1080px){
+  .nav{gap:8px 18px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits li:nth-child(4){border-left:0}
+  .pratiques{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 860px){
+  .cadre{width:min(1200px, 100% - 40px)}
+  .entete .cadre{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 0}
+  .heros{grid-template-columns:minmax(0,1fr);gap:0;padding:0 0 0 20px}
+  .heros-texte{padding:8px 20px 28px 0}
+  .heros .lieu{font-size:16px}
+  .nav a{font-size:15px}
+  .nav .boutique{padding:5px 14px}
+  .heros h1{margin-top:14px}
+  .heros .chapo{margin-top:20px}
+  .heros .actions{margin-top:28px}
+  .heros-photo img{height:auto;min-height:0;aspect-ratio:4 / 3;border-radius:24px 0 0 24px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li{padding:22px 16px}
+  .faits li + li{border-left:0}
+  .faits li:nth-child(even){border-left:1px solid rgba(74,22,38,.14)}
+  .faits strong{font-size:32px}
+  .famille,.vins{padding:88px 0}
+  .fam-grille,.ter-tete,.ter-corps,.bio-grille,.vins-grille,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .fam-photos,.fam-texte,.ter-tete h2,.ter-tete p,.ter-photo,.ter-liste,.bio-texte,.bio-photos,.pratiques,.vins-tete,.vins-liste{grid-column:1}
+  .fam-photos{padding-bottom:90px;margin-bottom:40px}
+  .fam-photos .archive{width:86%;padding:12px 12px 40px}
+  .fam-photos .archive p{display:none}
+  .fam-photos .portrait{width:64%}
+  .fam-photos .portrait .etiquette{left:10px;bottom:10px;font-size:14px;padding:6px 10px}
+  .dates{grid-template-columns:minmax(0,1fr);gap:0;margin-top:56px}
+  .dates::before{left:7px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .dates li{padding:0 0 28px 40px}
+  .dates li::before{top:6px}
+  .terroir,.bio{padding:88px 0}
+  .ter-tete p{margin-top:8px}
+  .ter-corps{margin-top:40px}
+  .ter-photo{position:relative;top:0;margin-bottom:40px}
+  .ter-photo img{aspect-ratio:4 / 3}
+  .ter-liste li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .bio-photos{margin-top:48px}
+  .pratiques{margin-top:56px;grid-template-columns:minmax(0,1fr);gap:28px}
+  .cuvees{margin-top:48px}
+  .vdn{grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:16px;padding:20px 20px 20px 8px}
+  .cav-scene > img{aspect-ratio:4 / 3;border-radius:22px}
+  .cav-carte{margin:-64px 12px 0;width:auto;padding:32px 24px}
+  .cav-infos div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pied-grille{gap:32px}
+}
+@media (max-width: 420px){
+  .btn{width:100%}
+  .nav{gap:6px 16px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li:nth-child(even){border-left:0}
+  .faits li + li{border-top:1px solid rgba(74,22,38,.14)}
+  .cuvees li{grid-template-columns:minmax(0,1fr)}
+  .cuvees p{grid-column:1}
+  .vdn{grid-template-columns:minmax(0,1fr);padding:24px}
+  .vdn img{max-width:140px}
+  .bio-photos{gap:16px}
+}
+</style>
+<style id="reprise-nova-3010">
+@media (max-width:600px){
+  .heros{display:flex;flex-direction:column}
+  .heros-texte{display:contents}
+  .heros-texte>*{padding-right:20px}
+  .heros .lieu{order:1;margin-top:8px}
+  .heros h1{order:2}
+  .heros-photo{order:3;margin:24px 0 0}
+  .heros .chapo{order:4}
+  .heros .actions{order:5;margin-bottom:32px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Domaine des Coteaux des Travers, accueil"><b>Coteaux des Travers</b><small>Domaine familial à Rasteau</small></a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#domaine">Le domaine</a>
+      <a href="#terroir">Le terroir</a>
+      <a href="#biodynamie">Savoir-faire &amp; biodynamie</a>
+      <a href="#vins">Nos vins</a>
+      <a href="https://www.coteauxdestravers.com/blog/actualites/">Actualités</a>
+      <a href="#contact">Contact</a>
+      <a class="boutique" href="https://www.coteauxdestravers.com/boutique/">Boutique</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="heros-texte">
+      <p class="lieu">Rasteau, Cairanne et Massif d’Uchaux, vallée du Rhône</p>
+      <h1>Une histoire de <em>famille</em>, depuis 1920.</h1>
+      <p class="chapo">Un domaine viticole familial au cœur de la vallée du Rhône, certifié en agriculture biologique et conduit en biodynamie. Marine et Paul, quatrième génération, y travaillent aux côtés de leur père, Robert Charavin.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="https://www.coteauxdestravers.com/vin-appellations/">Découvrir tous nos vins</a>
+        <a class="btn btn-contour" href="#contact">Venir au caveau</a>
+      </div>
+    </div>
+    <figure class="heros-photo">
+      <img src="assets/coteaux-des-travers-rasteau/pied-de-vigne-au-lever-du-soleil-sur-le-vignoble.webp" alt="Jeune rameau de vigne à contre-jour, soleil bas sur les collines et le vignoble" width="1600" height="1000">
+    </figure>
+  </section>
+
+  <div class="cadre faits">
+    <ul>
+      <li><strong>1920</strong><span>les premières vignes de la famille</span></li>
+      <li><strong>10 ha</strong><span>sur la commune de Rasteau</span></li>
+      <li><strong>2 ha</strong><span>sur la commune de Cairanne</span></li>
+      <li><strong>30 ha</strong><span>sur le Massif d’Uchaux, acquis en 2017</span></li>
+      <li><strong>2018</strong><span>certification Biodyvin, bio depuis 2010</span></li>
+    </ul>
+  </div>
+
+  <section class="famille" id="domaine">
+    <div class="cadre">
+      <div class="fam-grille">
+        <div class="fam-photos">
+          <figure class="archive rv" style="margin:0">
+            <img src="assets/coteaux-des-travers-rasteau/photo-de-famille-ancienne-en-noir-et-blanc.webp" alt="Photographie ancienne de la famille Charavin posant dans une rue" width="1200" height="900" loading="lazy">
+            <p>Les Charavin, de père en fils et fille</p>
+          </figure>
+          <figure class="portrait rv" style="margin:0">
+            <img src="assets/coteaux-des-travers-rasteau/famille-charavin-portrait-noir-et-blanc.webp" alt="Marine, Robert et Paul Charavin" width="1200" height="900" loading="lazy">
+            <figcaption class="etiquette">Marine, Paul et Robert Charavin</figcaption>
+          </figure>
+        </div>
+        <div class="fam-texte">
+          <h2>Plus de 100 ans de vigne, de <em>génération</em> en génération.</h2>
+          <p class="fort">Le nom du domaine vient du mot «&nbsp;Travers&nbsp;», le côté exposé au soleil levant.</p>
+          <p>Attaché à la préservation des sols et à l’expression naturelle des terroirs, Robert Charavin a engagé le vignoble dans l’agriculture biologique, puis dans la biodynamie. Marine, docteure en chimie organique thérapeutique, est revenue au domaine pour approfondir la vinification. Paul, ingénieur en génie industriel, se consacre surtout au travail de la vigne.</p>
+        </div>
+      </div>
+      <ol class="dates">
+        <li><b>1920</b><span>L’arrière-grand-père de Marine et Paul plante les premières vignes.</span></li>
+        <li><b>1976</b><span>Robert Charavin Senior commercialise les premières bouteilles de la propriété.</span></li>
+        <li><b>1984</b><span>Son fils Robert reprend le domaine et lui donne un nouvel élan.</span></li>
+        <li><b>2010</b><span>Certification en Agriculture Biologique.</span></li>
+        <li><b>2016</b><span>Marine et Paul, quatrième génération, rejoignent l’exploitation.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="terroir" id="terroir">
+    <div class="cadre">
+      <div class="ter-tete">
+        <h2>Un terroir aux identités <em>complémentaires</em>.</h2>
+        <p>Des parcelles réparties sur plusieurs terroirs de la vallée du Rhône méridionale. Cette diversité géologique donne des vins biologiques aux profils complémentaires, marqués par chaque appellation.</p>
+      </div>
+      <div class="ter-corps">
+        <figure class="ter-photo">
+          <img class="rv" src="assets/coteaux-des-travers-rasteau/village-de-rasteau-au-dessus-des-vignes.webp" alt="Le village perché de Rasteau au-dessus des vignes, lumière du matin" width="1200" height="900" loading="lazy">
+          <figcaption class="etiquette">Village de Rasteau</figcaption>
+        </figure>
+        <ul class="ter-liste">
+          <li>
+            <div class="ha">10<small>ha</small></div>
+            <div>
+              <h3>Rasteau, des coteaux plein sud</h3>
+              <p>Une quinzaine de parcelles, surtout exposées plein sud. Des sols riches en argile, qui donnent des vins structurés, généreux et profondément liés à leur terroir.</p>
+            </div>
+          </li>
+          <li>
+            <div class="ha">2<small>ha</small></div>
+            <div>
+              <h3>Cairanne, argile rouge et garrigue</h3>
+              <p>Un vignoble regroupé au sud de l’appellation, sur un sol argilo-limoneux de garrigue très riche en fer. Cette terre rouge a inspiré le nom de la cuvée «&nbsp;Terra Rosea&nbsp;».</p>
+              <img class="rv" src="assets/coteaux-des-travers-rasteau/sol-de-pierres-calcaires-dans-la-vigne.webp" alt="Pierres et terre ocre au pied des vignes" width="1200" height="900" loading="lazy">
+            </div>
+          </li>
+          <li>
+            <div class="ha">30<small>ha</small></div>
+            <div>
+              <h3>Le Massif d’Uchaux, sableux et singulier</h3>
+              <p>Acquises en 2017 au point culminant de l’appellation, vers 280 mètres d’altitude, ces parcelles sont en restructuration : 7,5 hectares déjà replantés. Des sols sableux, rouges, très peu calcaires, couverts de pierres plates, les «&nbsp;lauzes&nbsp;».</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bio" id="biodynamie">
+    <div class="cadre bio-grille">
+      <div class="bio-texte">
+        <h2>Savoir-faire &amp; <em>biodynamie</em></h2>
+        <p>Le domaine est certifié en Agriculture Biologique depuis 2010 : pas de produits chimiques de synthèse, une attention constante à la vie des sols, à la biodiversité et à l’équilibre du vignoble. Il a ensuite adopté les principes de la biodynamie, et bénéficie de la certification Biodyvin depuis 2018.</p>
+        <p>Depuis le passage en biodynamie, le domaine a observé le retour de plusieurs insectes : lombrics, araignées, coccinelles.</p>
+        <div class="actions">
+          <a class="btn btn-clair" href="https://www.coteauxdestravers.com/savoir-faire-vins-biodynamie/">Tout le savoir-faire du domaine</a>
+        </div>
+      </div>
+      <div class="bio-photos">
+        <figure class="faisan">
+          <img class="rv" src="assets/coteaux-des-travers-rasteau/faisan-entre-les-vieux-ceps-enherbes.webp" alt="Un faisan entre de vieux ceps dans les herbes hautes" width="1200" height="900" loading="lazy">
+          <figcaption class="etiquette">Biodynamie et enherbement</figcaption>
+        </figure>
+        <figure class="cornes">
+          <img class="rv" src="assets/coteaux-des-travers-rasteau/cornes-de-vache-pour-la-bouse-de-corne.webp" alt="Caisse de cornes de vache pour la préparation de la bouse de corne" width="1200" height="900" loading="lazy">
+          <figcaption class="etiquette">Bouse de corne</figcaption>
+        </figure>
+        <figure class="fut rv">
+          <img src="assets/coteaux-des-travers-rasteau/fut-de-chene-au-chai.webp" alt="Fût de chêne au chai, avec son robinet de dégustation" width="1200" height="900" loading="lazy">
+        </figure>
+      </div>
+      <ul class="pratiques">
+        <li><h3>L’agroforesterie</h3><p>Des arbres plantés en bordure et au sein des parcelles, des nichoirs et des perchoirs à rapaces, pour rappeler les prédateurs naturels des nuisibles de la vigne.</p></li>
+        <li><h3>Des vendanges à la main</h3><p>Un tri à la parcelle, puis sur une table de tri vibrante à l’arrivée au chai.</p></li>
+        <li><h3>Une cuverie variée</h3><p>Bois, béton, acier émaillé et fibre de verre. Depuis 2016, des amphores et des œufs en terre cuite pour les vins blancs.</p></li>
+        <li><h3>Mis en bouteille au domaine</h3><p>Une maîtrise complète de la production, de la vigne jusqu’à la commercialisation.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre vins-grille">
+      <div class="vins-tete">
+        <h2>Nos <em>vins</em></h2>
+        <p>Une sélection de vins biologiques issus de plusieurs appellations de la vallée du Rhône. Chaque bouteille traduit l’identité de son terroir, le travail fait dans les vignes et l’engagement familial du domaine.</p>
+        <figure>
+          <img class="rv" src="assets/coteaux-des-travers-rasteau/grappe-de-grenache-tenue-en-main-au-coucher-du-soleil.webp" alt="Une grappe de raisin noir tenue en main devant les rangs de vigne au soleil couchant" width="1200" height="900" loading="lazy">
+          <figcaption class="etiquette">Vin de Rasteau en biodynamie</figcaption>
+        </figure>
+      </div>
+      <div class="vins-liste">
+        <ul class="cuvees">
+          <li><h3>Rasteau</h3><span class="ap">Coteaux plein sud</span><p>Des vins structurés et généreux, nés de sols riches en argile.</p></li>
+          <li><h3>Cairanne</h3><span class="ap">Argile rouge</span><p>Une identité méditerranéenne : fraîcheur, finesse et expression aromatique.</p></li>
+          <li><h3>Côtes du Rhône Villages</h3><span class="ap">Blanc et rouge</span><p>Les deux couleurs de l’appellation.</p></li>
+          <li><h3>Massif d’Uchaux</h3><span class="ap">Sables rouges</span><p>Des vins élégants, frais et équilibrés.</p></li>
+          <li><h3>Zouzou</h3><span class="ap">La gamme Zouzou</span></li>
+        </ul>
+        <div class="vdn">
+          <img src="assets/coteaux-des-travers-rasteau/bouteille-vin-doux-naturel-rasteau-ambre.webp" alt="Carafe de vin doux naturel de Rasteau ambré" width="1000" height="1000" loading="lazy">
+          <div>
+            <h3>Vins doux naturels de Rasteau</h3>
+            <p>Dont le Rasteau ambré hors d’âge.</p>
+            <a href="https://www.coteauxdestravers.com/categorie/vins-doux-naturels/">Voir les vins doux naturels</a>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.coteauxdestravers.com/vin-appellations/">Découvrir tous nos vins</a>
+          <a class="btn btn-contour" href="https://www.coteauxdestravers.com/boutique/">Commander en ligne</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caveau" id="contact">
+    <div class="cadre cav-scene">
+      <img class="rv" src="assets/coteaux-des-travers-rasteau/grand-pin-dans-les-vignes-au-soleil-couchant.webp" alt="Un grand pin au bord d’une parcelle de vigne, au soleil couchant" width="1600" height="1066" loading="lazy">
+      <div class="cav-carte">
+        <h2>Venir au <em>caveau</em></h2>
+        <p>À l’entrée du village de Rasteau depuis 1970, le caveau est un lieu de dégustation et de vente directe : Robert, Marine ou Paul vous y conseillent. Vous pouvez aussi commander en ligne et retirer vos vins au domaine (click and collect).</p>
+        <dl class="cav-infos">
+          <div><dt>Adresse</dt><dd>15, route de la cave<br>84110 Rasteau</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33490461369">04 90 46 13 69</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:contact@coteauxdestravers.com">contact@coteauxdestravers.com</a></dd></div>
+          <div><dt>Groupes</dt><dd>Pour les dégustations ou les visites en groupe, merci de téléphoner au préalable.</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33490461369">Appeler le caveau</a>
+          <a class="btn btn-contour" href="mailto:contact@coteauxdestravers.com">Écrire au domaine</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <h2>Domaine des Coteaux des Travers</h2>
+        <p>Dans le village viticole de Rasteau, au cœur de la vallée du Rhône. Vins de Rasteau, Cairanne, Côtes du Rhône, Côtes du Rhône Villages, Massif d’Uchaux et Vin Doux Naturel.</p>
+      </div>
+      <div>
+        <h3>Le caveau</h3>
+        <ul>
+          <li>15, route de la cave, 84110 Rasteau</li>
+          <li><a href="tel:+33490461369">04 90 46 13 69</a></li>
+          <li><a href="mailto:contact@coteauxdestravers.com">contact@coteauxdestravers.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre le domaine</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/coteauxdestravers/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/CoteauxdesTravers/">Facebook</a></li>
+          <li><a href="https://www.coteauxdestravers.com/blog/actualites/">Actualités</a></li>
+          <li><a href="https://www.coteauxdestravers.com/boutique/">Boutique en ligne</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Domaine des Coteaux des Travers</div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

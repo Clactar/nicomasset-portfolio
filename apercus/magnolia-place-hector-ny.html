@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Magnolia Place Bed &amp; Breakfast, a historic inn on Seneca Lake in Hector, NY</title>
+<meta name="description" content="A historic 1837 farmhouse inn above Seneca Lake, in the heart of the Finger Lakes wine region. Rooms and suites with fireplaces, spa tubs and lake views.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231A3148'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F4EDD8'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..500;1,9..144,400..500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --butter:#F4EDD8;
+  --butter-deep:#EBE0C2;
+  --paper:#FBF7EA;
+  --lake:#1A3148;
+  --lake-deep:#132538;
+  --lake-soft:#4B5D70;
+  --vine:#8C3A44;
+  --shadow:0 30px 60px -34px rgba(19,37,56,.5);
+  --wrap:1200px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--butter);color:var(--lake);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--vine);color:var(--butter)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+address{font-style:normal}
+a:focus-visible,button:focus-visible{outline:3px solid var(--vine);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;font-variation-settings:"opsz" 120;letter-spacing:-.015em;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{width:min(var(--wrap),100%);margin:0 auto;padding:0 24px}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:rgba(244,237,216,.94);backdrop-filter:saturate(1.2) blur(6px);-webkit-backdrop-filter:saturate(1.2) blur(6px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.45rem;font-variation-settings:"opsz" 60;letter-spacing:-.01em}
+.brand span{font-size:.82rem;color:var(--lake-soft);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;position:relative}
+.nav a.link::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:var(--vine);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav a.link:hover::after{transform:scaleX(1)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;text-align:center;transition:background-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease;border:1.5px solid var(--lake)}
+.btn-full{background:var(--lake);color:var(--butter)}
+.btn-full:hover{background:var(--vine);border-color:var(--vine);transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(140,58,68,.7)}
+.btn-line{background:transparent;color:var(--lake)}
+.btn-line:hover{background:var(--lake);color:var(--butter);transform:translateY(-2px)}
+.btn-small{min-height:44px;padding:10px 20px;font-size:.92rem}
+.btn-cream{background:var(--butter);color:var(--lake);border-color:var(--butter)}
+.btn-cream:hover{background:transparent;color:var(--butter);transform:translateY(-2px)}
+
+/* Hero */
+.hero{padding:56px 0 104px}
+.hero .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.hero-text{grid-column:1 / span 5}
+.hero h1{font-size:clamp(2.6rem,1.4rem + 3.9vw,4.5rem);font-weight:400;line-height:1.02;margin-bottom:28px}
+.hero h1 em{font-style:italic;color:var(--vine);font-weight:400}
+.hero .lead{font-size:1.12rem;color:var(--lake-soft);max-width:30em;margin-bottom:32px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .call{margin-top:22px;font-size:.98rem;color:var(--lake-soft)}
+.hero .call a{color:var(--lake);font-weight:600;text-decoration-color:rgba(140,58,68,.5);text-underline-offset:4px;white-space:nowrap}
+.hero-fig{grid-column:6 / span 7;position:relative;margin:0 0 0 48px}
+.hero-main{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1.28}
+.hero-main img{width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.est{position:absolute;top:22px;right:22px;width:104px;height:104px;border-radius:50%;background:var(--butter);color:var(--lake);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--serif);line-height:1;box-shadow:0 18px 30px -18px rgba(19,37,56,.6);text-align:center}
+.est small{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--vine);margin-bottom:4px}
+.est span{font-size:1.75rem;font-style:italic;font-variation-settings:"opsz" 72}
+.hero-card{position:absolute;left:-56px;bottom:-64px;width:44%;margin:0;background:var(--paper);padding:8px;border-radius:18px;box-shadow:var(--shadow);transform:rotate(-2.5deg)}
+.hero-card img{border-radius:12px;aspect-ratio:4/3;width:100%;object-fit:cover;object-position:50% 70%}
+.tag{position:absolute;left:18px;bottom:18px;white-space:nowrap;max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis;background:rgba(251,247,234,.95);color:var(--lake);font-size:.84rem;font-weight:600;line-height:1.3;padding:7px 12px;border-radius:999px}
+
+/* Facts */
+.facts{background:var(--butter-deep)}
+.facts ul{list-style:none;margin:0;padding:36px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.facts li{display:flex;flex-direction:column;gap:6px}
+.facts strong{font-family:var(--serif);font-weight:400;font-size:2.3rem;line-height:1;font-variation-settings:"opsz" 96;white-space:nowrap}
+.facts span{font-size:.98rem;color:var(--lake-soft);line-height:1.45;max-width:20ch}
+
+/* Inn story */
+.inn{padding:128px 0 120px}
+.inn .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.inn-text{grid-column:1 / span 5}
+.inn h2{font-size:clamp(2.1rem,1.5rem + 2vw,3.2rem);margin-bottom:28px}
+.inn-text p{font-size:1.06rem}
+.inn-text .more{margin-top:12px}
+.inn-photos{grid-column:7 / span 6;position:relative;padding-bottom:120px}
+.inn-main{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin:0;position:relative}
+.inn-main img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.inn-main .tag{left:auto;right:18px;top:18px;bottom:auto}
+.inn-porch{position:absolute;left:-64px;bottom:0;width:min(380px,62%);margin:0;background:var(--paper);padding:10px 10px 14px;border-radius:6px;box-shadow:var(--shadow);transform:rotate(3deg)}
+.inn-porch img{aspect-ratio:16/10;width:100%;object-fit:cover;border-radius:3px}
+.inn-porch figcaption{font-family:var(--serif);font-style:italic;font-size:1rem;padding:10px 4px 0;color:var(--lake-soft)}
+
+/* Porch quote */
+.porch{background:var(--lake);color:var(--butter);padding:120px 0 96px}
+.porch blockquote{margin:0}
+.porch blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;font-variation-settings:"opsz" 144;font-size:clamp(1.9rem,1.1rem + 3vw,3.6rem);line-height:1.14;letter-spacing:-.01em;margin:0;max-width:17em}
+.porch cite{display:block;margin-top:28px;font-style:normal;font-size:1rem;color:rgba(244,237,216,.75)}
+.porch-wide{margin:72px 0 0;border-radius:24px;overflow:hidden;position:relative;box-shadow:0 40px 70px -40px rgba(0,0,0,.7)}
+.porch-wide img{width:100%;aspect-ratio:2.35;object-fit:cover;object-position:50% 40%}
+
+/* Rooms */
+.rooms{padding:128px 0 120px}
+.rooms-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end;margin-bottom:72px}
+.rooms-head h2{grid-column:1 / span 6;font-size:clamp(2.4rem,1.5rem + 3vw,4rem)}
+.rooms-head p{grid-column:8 / span 5;margin:0;color:var(--lake-soft)}
+.group{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.group + .group{margin-top:112px}
+.group h3{font-size:2rem;margin-bottom:8px}
+.group .sub{color:var(--lake-soft);margin-bottom:24px}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:18px 0;border-top:1px solid rgba(26,49,72,.16)}
+.list li:last-child{border-bottom:1px solid rgba(26,49,72,.16)}
+.list b{display:block;font-family:var(--serif);font-weight:500;font-size:1.3rem;font-variation-settings:"opsz" 36;margin-bottom:4px}
+.list span{display:block;color:var(--lake-soft);font-size:1rem;line-height:1.55}
+.list .note{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:600;color:var(--vine)}
+.suites-photos{grid-column:1 / span 7;position:relative;padding-bottom:90px}
+.suites-list{grid-column:9 / span 4}
+.ph{margin:0;position:relative}
+.ph-big{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.ph-big img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.ph-over{position:absolute;right:-32px;bottom:0;width:min(330px,50%);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper)}
+.ph-over img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.ph-over .tag{left:10px;bottom:10px}
+.rooms-list{grid-column:1 / span 4}
+.rooms-photos{grid-column:6 / span 7;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;align-items:start}
+.rp-lake{grid-column:1 / span 4;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.rp-lake img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.rp-rose{grid-column:5 / span 2;margin-top:120px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.rp-rose .tag{left:8px;bottom:8px;font-size:.78rem;padding:5px 10px}
+.rp-rose img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:40% 50%}
+.rp-seneca{grid-column:2 / span 3;margin-top:-56px;background:var(--paper);padding:8px;border-radius:14px;box-shadow:var(--shadow);transform:rotate(-2deg);z-index:2}
+.rp-seneca img{border-radius:9px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.rp-seneca .tag{left:18px;bottom:18px}
+.rooms-cta{margin-top:88px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.rooms-cta p{margin:0;color:var(--lake-soft);flex:1 1 280px}
+
+/* Experience */
+.experience{background:var(--paper);padding:120px 0}
+.experience .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.exp-head{grid-column:1 / span 12;margin-bottom:56px}
+.exp-head h2{font-size:clamp(2.1rem,1.5rem + 2vw,3.2rem);max-width:16em}
+.bfast{grid-column:1 / span 6;padding-right:24px}
+.bfast h3{font-size:clamp(1.9rem,1.4rem + 1.4vw,2.6rem);margin-bottom:20px}
+.bfast p{font-size:1.15rem;line-height:1.7}
+.bfast .menu{list-style:none;padding:0;margin:28px 0 32px;display:flex;flex-wrap:wrap;gap:10px}
+.bfast .menu li{background:var(--butter);border-radius:999px;padding:8px 16px;font-size:.95rem;font-weight:500}
+.side{grid-column:8 / span 5;display:flex;flex-direction:column;gap:40px}
+.side h3{font-size:1.6rem;margin-bottom:12px}
+.side p{color:var(--lake-soft);margin:0}
+.side article + article{padding-top:40px;border-top:1px solid rgba(26,49,72,.16)}
+
+/* Gatherings */
+.gather{padding:128px 0}
+.gather .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.gather-intro{grid-column:1 / span 5;position:sticky;top:110px}
+.gather-intro h2{font-size:clamp(2.1rem,1.5rem + 2vw,3.2rem);margin-bottom:24px}
+.gather-intro p{color:var(--lake-soft)}
+.gather-card{grid-column:7 / span 6;background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:16px 40px}
+.occ{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:28px 0;border-bottom:1px solid rgba(26,49,72,.14)}
+.occ:last-child{border-bottom:0}
+.occ h3{font-size:1.5rem;font-variation-settings:"opsz" 48}
+.occ p{margin:0;color:var(--lake-soft)}
+.occ a{font-weight:600;color:var(--vine);text-underline-offset:4px;margin-top:6px;justify-self:start}
+
+/* Hosts */
+.hosts{padding:0 0 128px}
+.hosts .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.hosts-photo{grid-column:2 / span 4;margin:0;background:var(--paper);padding:12px 12px 16px;border-radius:8px;box-shadow:var(--shadow);transform:rotate(-2.5deg);max-width:min(380px,100%)}
+.hosts-photo img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 35%;border-radius:4px}
+.hosts-photo figcaption{font-family:var(--serif);font-style:italic;padding:12px 4px 0;font-size:1.05rem}
+.hosts-text{grid-column:7 / span 6}
+.hosts-text h2{font-size:clamp(2rem,1.5rem + 1.6vw,2.8rem);margin-bottom:24px}
+.hosts-text p{font-size:1.06rem}
+
+/* Visit */
+.visit{background:var(--butter-deep);padding:120px 0}
+.visit .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.visit-head{grid-column:1 / span 12;margin-bottom:48px;display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px}
+.visit-head h2{font-size:clamp(2.2rem,1.5rem + 2.4vw,3.6rem)}
+.v-col{grid-column:span 4}
+.v-col h3{font-family:var(--sans);font-weight:700;font-size:1rem;letter-spacing:0;margin-bottom:12px}
+.v-col p{margin:0 0 14px}
+.v-col h3 ~ h3{margin-top:30px}
+.v-col a{text-underline-offset:4px;text-decoration-color:rgba(140,58,68,.5)}
+.v-big{font-family:var(--serif);font-size:1.6rem;line-height:1.25;font-variation-settings:"opsz" 48}
+.v-big a{text-decoration:none;white-space:nowrap}
+.v-mail{overflow-wrap:anywhere}
+.offer{background:var(--lake);color:var(--butter);border-radius:20px;padding:32px;box-shadow:var(--shadow)}
+.offer h3{font-family:var(--serif);font-weight:400;font-size:1.7rem;letter-spacing:-.01em;margin-bottom:10px}
+.offer p{color:rgba(244,237,216,.86)}
+.offer .btn{margin-top:6px}
+
+/* Footer */
+.foot{background:var(--lake-deep);color:var(--butter);padding:80px 0 40px}
+.foot .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.foot-brand{grid-column:1 / span 5}
+.foot-brand b{font-family:var(--serif);font-weight:400;font-size:2rem;display:block;margin-bottom:10px}
+.foot-brand p{color:rgba(244,237,216,.75);max-width:26em}
+.foot-col{grid-column:span 2}
+.foot-col.wide{grid-column:span 3}
+.foot h3{font-family:var(--sans);font-weight:700;font-size:.95rem;margin-bottom:14px;color:var(--butter)}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:8px}
+.foot a{color:rgba(244,237,216,.86);text-decoration:none}
+.foot a:hover{color:var(--butter);text-decoration:underline;text-underline-offset:4px}
+.foot address{font-style:normal;color:rgba(244,237,216,.86)}
+.proposal{background:var(--lake-deep);color:rgba(244,237,216,.6);text-align:center;font-size:.85rem;padding:18px 24px 28px;border-top:1px solid rgba(244,237,216,.12)}
+.proposal a{color:rgba(244,237,216,.8)}
+
+/* Reveal on photos only */
+.rv{opacity:1}
+.js .rv{opacity:0;translate:0 22px;transition:opacity .8s ease,translate .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;translate:0 0}
+
+/* Tablet */
+@media (max-width:1100px){
+  .hero-fig{margin-left:24px}
+  .hero-card{left:-32px}
+  .inn-porch{left:-24px}
+  .ph-over{right:-12px}
+}
+@media (max-width:900px){
+  .nav .link{display:none}
+  .hero{padding:32px 0 88px}
+  .hero-text,.hero-fig{grid-column:1 / -1}
+  .hero-fig{margin:24px 0 40px}
+  .hero-card{left:-8px;bottom:-56px;width:46%}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inn-text,.inn-photos{grid-column:1 / -1}
+  .inn-photos{margin-top:32px}
+  .inn-porch{left:-8px}
+  .rooms-head h2,.rooms-head p{grid-column:1 / -1}
+  .suites-photos,.suites-list,.rooms-list,.rooms-photos{grid-column:1 / -1}
+  .suites-list{margin-top:24px}
+  .rooms-photos{margin-top:40px}
+  .ph-over{right:-8px}
+  .exp-head,.bfast,.side{grid-column:1 / -1}
+  .bfast{padding-right:0;margin-bottom:48px}
+  .gather-intro,.gather-card{grid-column:1 / -1}
+  .gather-intro{position:static;margin-bottom:24px}
+  .hosts-photo{grid-column:1 / -1;margin:0 auto 40px}
+  .hosts-text{grid-column:1 / -1}
+  .v-col{grid-column:1 / -1}
+  .foot-brand,.foot-col,.foot-col.wide{grid-column:1 / -1}
+}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .wrap{padding:0 20px}
+  .top .wrap{min-height:66px}
+  .brand b{font-size:1.25rem}
+  .brand span{font-size:.78rem}
+  .hero .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .hero-text{display:contents}
+  .hero h1{order:1;margin-bottom:24px}
+  .hero-fig{order:2;margin:0 0 76px}
+  .hero .lead{order:3;margin-bottom:24px}
+  .hero .actions{order:4}
+  .hero .call{order:5}
+  .hero-main{aspect-ratio:1.1}
+  .hero-main img{object-position:42% 50%}
+  .est{width:80px;height:80px;top:14px;right:14px}
+  .est span{font-size:1.35rem}
+  .est small{font-size:.72rem}
+  .hero-card{width:52%;bottom:-52px;left:-6px;padding:6px}
+  .hero-card .tag{display:none}
+  .facts ul{gap:28px 16px;padding:32px 0}
+  .facts strong{font-size:1.9rem}
+  .inn,.rooms,.gather{padding:88px 0}
+  .experience,.visit{padding:88px 0}
+  .porch{padding:88px 0 72px}
+  .porch-wide{margin-top:48px;border-radius:18px}
+  .porch-wide img{aspect-ratio:4/3}
+  .inn-photos{padding-bottom:150px}
+  .inn-porch{width:72%}
+  .suites-photos{padding-bottom:110px}
+  .ph-over{width:58%}
+  .rooms-head{margin-bottom:48px}
+  .group + .group{margin-top:88px}
+  .rooms-photos{gap:12px}
+  .rp-rose{margin-top:64px}
+  .rp-rose .tag{top:8px;bottom:auto}
+  .rp-seneca{grid-column:1 / span 5;margin-top:-40px}
+  .gather-card{padding:8px 24px}
+  .hosts{padding-bottom:88px}
+  .offer{padding:26px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .top .btn-small{padding:10px 16px}
+  .v-big{font-size:1.4rem}
+  .rooms-cta .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  .btn,.nav a.link::after{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Magnolia Place Bed and Breakfast, home">
+      <b>Magnolia Place</b>
+      <span>Bed &amp; Breakfast in Hector, NY</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="link" href="#rooms">Rooms</a>
+      <a class="link" href="#inn">The inn</a>
+      <a class="link" href="#breakfast">Breakfast</a>
+      <a class="link" href="#visit">Visit</a>
+      <a class="btn btn-full btn-small" href="https://secure.thinkreservations.com/magnoliawelcome/reservations">Check availability</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>A historic country inn in the Finger Lakes <em>wine region</em></h1>
+        <p class="lead">This historic inn, established in 1837, began its life as a farmhouse, crafted from the very trees that once flourished on the grounds. From the porch, the view runs over the vineyards to Seneca Lake.</p>
+        <div class="actions">
+          <a class="btn btn-full" href="https://secure.thinkreservations.com/magnoliawelcome/reservations">Check availability</a>
+          <a class="btn btn-line" href="#rooms">Explore our rooms</a>
+        </div>
+        <p class="call">Prefer to talk? Call us at <a href="tel:+16075465338">(607) 546-5338</a></p>
+      </div>
+      <figure class="hero-fig">
+        <div class="hero-main rv">
+          <img src="assets/magnolia-place-hector-ny/maison-jaune-galeries-blanches-vue-drone-ete.webp" alt="Aerial view of Magnolia Place in summer: the yellow farmhouse with its brick chimney and two-story white wraparound porch" width="1920" height="1098" fetchpriority="high">
+        </div>
+        <div class="est" aria-label="Established in 1837"><small>Est.</small><span>1837</span></div>
+        <figure class="hero-card rv">
+          <img src="assets/magnolia-place-hector-ny/rangs-de-vigne-face-au-lac-seneca.webp" alt="Rows of vines running down toward Seneca Lake under a summer sky" width="1920" height="1280">
+          <span class="tag">Vineyards above Seneca Lake</span>
+        </figure>
+      </figure>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Magnolia Place at a glance">
+    <div class="wrap">
+      <ul>
+        <li><strong>1837</strong><span>Built as a farmhouse from trees felled on the grounds</span></li>
+        <li><strong>7 miles</strong><span>North of Watkins Glen on Route 414, east side of the lake</span></li>
+        <li><strong>Up to 18</strong><span>Guests hosted for meetings and retreats</span></li>
+        <li><strong>10% off</strong><span>Our regular rates when you stay a week</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="inn" id="inn">
+    <div class="wrap">
+      <div class="inn-text">
+        <h2>Magnolia Place is here for making memories</h2>
+        <p>Step through our front door and settle into your room or suite. The history of the old farmhouse is part of every corner of the inn.</p>
+        <p>Enjoy the wraparound porches, the lake views and the relaxing common areas. Have a hot beverage in the Garden Room, play some music on our family’s baby grand piano, then hike the property and watch the sunset from the Adirondack chairs by the fire pit.</p>
+        <p>Nestled among the region’s finest wineries, we are just minutes from Watkins Glen International Speedway, with Cornell University and Ithaca College a short drive away.</p>
+        <p class="more"><a class="btn btn-line btn-small" href="https://www.magnoliawelcome.com/about-the-inn/">About the inn</a></p>
+      </div>
+      <div class="inn-photos">
+        <figure class="inn-main rv">
+          <img src="assets/magnolia-place-hector-ny/salon-cheminee-brique-piano-a-queue.webp" alt="The living room: brick fireplace with a white mantel, cream sofas, a floral armchair and the baby grand piano by the windows" width="1600" height="1067" loading="lazy">
+          <span class="tag">The living room and the family’s baby grand</span>
+        </figure>
+        <figure class="inn-porch rv">
+          <img src="assets/magnolia-place-hector-ny/galerie-couverte-fauteuils-osier-vue-lac.webp" alt="The covered porch along the yellow facade, with white wicker chairs and the lake in the distance" width="1024" height="576" loading="lazy">
+          <figcaption>On the wraparound porch</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="porch" aria-label="The view from the porch">
+    <div class="wrap">
+      <blockquote>
+        <p>“The stunning view from our porch, overlooking the majestic Seneca Lake and picturesque vineyards, will captivate your senses.”</p>
+        <cite>From the porch at Magnolia Place, above New York’s largest Finger Lake</cite>
+      </blockquote>
+      <figure class="porch-wide rv">
+        <img src="assets/magnolia-place-hector-ny/vue-drone-vignes-et-lac-seneca.webp" alt="Aerial view of the countryside in early fall: vineyards and tree lines running down to the blue water of Seneca Lake" width="1920" height="1078" loading="lazy">
+        <span class="tag">Vineyards and Seneca Lake, east side of the lake</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rooms" id="rooms">
+    <div class="wrap">
+      <div class="rooms-head">
+        <h2>Our rooms and suites</h2>
+        <p>Original artisan creations, locally made lavender soaps and beds draped in the finest linens. Many rooms open onto our two-story wraparound porch, and each private suite has a jetted spa tub, soaking tub or hot tub.</p>
+      </div>
+
+      <div class="group">
+        <div class="suites-photos">
+          <figure class="ph ph-big rv">
+            <img src="assets/magnolia-place-hector-ny/chambre-lit-a-voilages-et-cheminee.webp" alt="A bedroom with a canopy bed draped in sheer white curtains, a gas fireplace and an oval mirror" width="1600" height="1067" loading="lazy">
+          </figure>
+          <figure class="ph ph-over rv">
+            <img src="assets/magnolia-place-hector-ny/harvest-suite-salon-porte-coulissante-terrasse.webp" alt="The Harvest Suite living room, with a white sliding barn door and a glass door onto a deck with two rocking chairs" width="1336" height="1040" loading="lazy">
+            <span class="tag">Harvest Suite</span>
+          </figure>
+        </div>
+        <div class="suites-list">
+          <h3>The suites</h3>
+          <p class="sub">Fireplaces, spa tubs and private porch access.</p>
+          <ul class="list">
+            <li><b>Magnolia Suite</b><span>Lofty ceilings, a queen bed, a fireplace and dark wood furniture, with a shower bath and a separate Jacuzzi room.</span></li>
+            <li><b>Lilac Suite</b><span>A private sitting area on the first-floor porch, a gas fireplace and an oversized soaking tub.</span><span class="note">First-floor accessible room</span></li>
+            <li><b>Harvest Suite</b><span>Our newest and most expansive: two rooms, starting with a cozy living room.</span></li>
+            <li><b>Champagne Suite</b><span>Lake and vineyard views from two large windows, a four-poster queen bed and a private door to the second-floor porch.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="rooms-list">
+          <h3>The rooms</h3>
+          <p class="sub">Each one decorated in its own colors.</p>
+          <ul class="list">
+            <li><b>Lake Room</b><span>A bay window onto the vineyards and the lake, in leafy green with white accents.</span></li>
+            <li><b>Rose Room</b><span>Deep greens, pale rose and mahogany. Vintage-inspired and cozy.</span></li>
+            <li><b>Seneca Room</b><span>Bold blue with pale yellow and white flowers, like bluebells, sky and water.</span></li>
+            <li><b>Vineyard Room</b><span>Soft earth tones, an ensuite bath and a king bed that converts into two twins.</span></li>
+            <li><b>Vintner’s Room</b><span>Rich burgundy, gold and dark wood, like the vintner’s study at the back of the winery.</span></li>
+          </ul>
+        </div>
+        <div class="rooms-photos">
+          <figure class="ph rp-lake rv">
+            <img src="assets/magnolia-place-hector-ny/lake-room-bow-window-table-ronde.webp" alt="The Lake Room: green walls, a three-window bay with white curtains and a small round glass table with two chairs" width="1336" height="1040" loading="lazy">
+            <span class="tag">Lake Room</span>
+          </figure>
+          <figure class="ph rp-rose rv">
+            <img src="assets/magnolia-place-hector-ny/rose-room-lit-fleuri-ciel-de-lit-rouge.webp" alt="The Rose Room: olive green walls, a bed with a cream quilt covered in pink flowers and a red canopy" width="1336" height="1040" loading="lazy">
+            <span class="tag">Rose Room</span>
+          </figure>
+          <figure class="ph rp-seneca rv">
+            <img src="assets/magnolia-place-hector-ny/seneca-room-lit-a-baldaquin-bleu.webp" alt="The Seneca Room: lavender blue walls, a white canopy bed with blue patterned drapes and yellow pillows" width="1336" height="1040" loading="lazy">
+            <span class="tag">Seneca Room</span>
+          </figure>
+        </div>
+      </div>
+
+      <div class="rooms-cta">
+        <p>See every room in photos, with its rates, on our Rooms page, or check the dates you have in mind.</p>
+        <a class="btn btn-full" href="https://secure.thinkreservations.com/magnoliawelcome/reservations">Check availability</a>
+        <a class="btn btn-line" href="https://www.magnoliawelcome.com/rooms/">Rooms and rates</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="breakfast">
+    <div class="wrap">
+      <div class="exp-head">
+        <h2>Experience the inn and the area</h2>
+      </div>
+      <article class="bfast">
+        <h3>Breakfast</h3>
+        <p>Join us each morning for a continental breakfast. Start with our custom-blended coffee, your choice of juice and freshly baked pastries. We always offer fruit and yogurt to round out your meal.</p>
+        <ul class="menu" aria-label="On the breakfast table">
+          <li>Custom-blended coffee</li>
+          <li>Tea</li>
+          <li>Juice</li>
+          <li>Freshly baked pastries</li>
+          <li>Locally sourced fruit</li>
+          <li>Yogurt</li>
+        </ul>
+        <a class="btn btn-line btn-small" href="https://www.magnoliawelcome.com/breakfast/">More about breakfast</a>
+      </article>
+      <div class="side">
+        <article>
+          <h3>Indulgences</h3>
+          <p>Chocolate treats, chocolate-covered strawberries, a platter of select cheeses with a fine bottle of wine, and fresh flowers delivered to your room. Special indulgences are just a phone call away.</p>
+        </article>
+        <article>
+          <h3>Things to do</h3>
+          <p>Wineries, breweries and distilleries, the clear waters of Seneca Lake, waterfalls, local museums, shops and restaurants. We are happy to help you arrange tours, visits and itineraries.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gather" id="events">
+    <div class="wrap">
+      <div class="gather-intro">
+        <h2>Get together with friends, family and coworkers</h2>
+        <p>Plan events, meetings, retreats and parties here in the Finger Lakes. Reach out to discuss booking the entire inn.</p>
+        <a class="btn btn-line" href="https://www.magnoliawelcome.com/event-venue/">Plan an event</a>
+      </div>
+      <div class="gather-card">
+        <article class="occ">
+          <h3>Family reunions</h3>
+          <p>A once-in-a-lifetime event or an annual gathering: breakfast together, games, and stories around the fire pit with lake views.</p>
+        </article>
+        <article class="occ">
+          <h3>A getaway with friends</h3>
+          <p>Shop, dine out, visit vineyards and relax by the lakes, then come back to a room with a fireplace, whirlpool tub, outdoor veranda and fine linens.</p>
+        </article>
+        <article class="occ">
+          <h3>Meetings and retreats</h3>
+          <p>A budget meeting, a team-building session or an executive retreat. With breakout spaces and communal areas for breakfast and evening gatherings, we can comfortably host up to 18 people.</p>
+        </article>
+        <article class="occ">
+          <h3>A gift certificate</h3>
+          <p>The perfect gift is a getaway. We help plan the escape, from meals at the inn to things to do.</p>
+          <a href="https://secure.thinkreservations.com/magnoliawelcome/gift-certificates">Buy a gift certificate</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="hosts" aria-label="Your innkeepers">
+    <div class="wrap">
+      <figure class="hosts-photo rv">
+        <img src="assets/magnolia-place-hector-ny/ron-et-katy-hotes-devant-le-lac.webp" alt="Ron and Katy smiling in winter coats, with the lake and hills behind them" width="960" height="734" loading="lazy">
+        <figcaption>Ron and Katy</figcaption>
+      </figure>
+      <div class="hosts-text">
+        <h2>Welcome to our home</h2>
+        <p>As your innkeepers, we are dedicated to giving you a warm welcome and a stay that leaves you rested and eager to return. Share your interests with us and we will guide you to the experiences you are looking for.</p>
+        <p>Ron brings years of hospitality experience, from the room details to the breakfast he prepares each morning. Katy, an educator, is the decorator of the team, always shaping the look of Magnolia Place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="visit-head">
+        <h2>Plan your stay</h2>
+        <a class="btn btn-full" href="https://secure.thinkreservations.com/magnoliawelcome/reservations">Check availability</a>
+      </div>
+      <div class="v-col">
+        <h3>Call or write</h3>
+        <p class="v-big"><a href="tel:+16075465338">(607) 546-5338</a></p>
+        <p class="v-mail"><a href="mailto:magnoliaplace1ny@gmail.com">magnoliaplace1ny@gmail.com</a></p>
+        <h3>Find us</h3>
+        <address>5240 Route 414<br>Hector, NY 14841</address>
+        <p>7 miles north of Watkins Glen on Route 414, on the east side of the lake. <a href="https://www.magnoliawelcome.com/map-directions/">Map and directions</a></p>
+      </div>
+      <div class="v-col">
+        <h3>Check-in and check-out</h3>
+        <p>Check-in is from 4&nbsp;pm to 5&nbsp;pm. All check-ins after 5&nbsp;pm are self check-ins.</p>
+        <p>Check-out is at 11&nbsp;am.</p>
+        <h3>Minimum stay</h3>
+        <p>During our high season (May to November), weekend reservations are a 2 night minimum, 3 nights on event weekends. Check-in and check-out on Saturdays are not possible.</p>
+        <p><a href="https://www.magnoliawelcome.com/policies/">All our policies</a></p>
+      </div>
+      <div class="v-col">
+        <div class="offer">
+          <h3>Stay a week and save</h3>
+          <p>Stay with us for a week and save 10% off our regular rates. Call to take advantage of this offer.</p>
+          <a class="btn btn-cream" href="tel:+16075465338">Call (607) 546-5338</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <b>Magnolia Place</b>
+      <p>A historic 1837 farmhouse, now a bed and breakfast overlooking Seneca Lake in the Finger Lakes wine region.</p>
+    </div>
+    <div class="foot-col wide">
+      <h3>Contact</h3>
+      <address>5240 Route 414<br>Hector, NY 14841</address>
+      <ul style="margin-top:10px">
+        <li><a href="tel:+16075465338">(607) 546-5338</a></li>
+        <li><a href="mailto:magnoliaplace1ny@gmail.com">magnoliaplace1ny@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>The inn</h3>
+      <ul>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="https://www.magnoliawelcome.com/photo-gallery/">Photo gallery</a></li>
+        <li><a href="https://www.magnoliawelcome.com/specials/">Specials</a></li>
+        <li><a href="https://www.magnoliawelcome.com/policies/">Policies</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>Follow us</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/MagnoliaPlaceBandB/">Facebook</a></li>
+        <li><a href="https://www.instagram.com/magnolia.place.bandb/">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Magnolia Place Bed &amp; Breakfast. <a href="https://nicomasset.com/en/">nicomasset.com/en</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

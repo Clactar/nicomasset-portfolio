@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--
+PLAN (Nova, lot C, 30/10) La Ferme des Arnaud
+1. Couleurs : papier journal #ECEBE7 (fond), papier soutenu #E1DFD8 (produits), surface #F7F6F2 (cartes, passe-partout), encre #1F1D1B (texte, section des voix, pied), vin #A3202B réservé aux actions (boutons pleins, survols).
+2. Typo : Libre Bodoni 400/500 et italique (titres, citations) + Hanken Grotesk 400/500/600 (texte, boutons).
+3. Héros : titre éditorial à gauche, portrait noir et blanc des deux frères en demi-écran à droite dans un passe-partout épais, étiquette « Deux poids, deux mesures » posée dessus. Bandeau de faits en filets dessous.
+4. Sections : histoire (photo noir et blanc + vignette de Pierre | texte et citation) ; les voix de la famille sur encre (citations de tailles différentes) ; savoir-faire (texte et engagements | photo du pigeage) ; produits (planche produit | texte) ; soirées au vignoble (mosaïque de vignettes inclinées | détails des Régalades) ; contact complet ; pied.
+5. Défaut 1 réglé : « Contact » mène à une vraie section avec téléphone, mail, horaires et plan d'accès cliquables. Défaut 2 réglé : « Vente groupée » mène à cette même section, avec la marche à suivre.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Ferme des Arnaud, domaine en bio depuis 1978</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ECEBE7'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Didot,Bodoni 72,Georgia,serif' font-style='italic' font-size='44' fill='%23A3202B'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#ECEBE7; --papier2:#E1DFD8; --surface:#F7F6F2; --encre:#1F1D1B; --doux:#56524D; --gris:#8D8880;
+  --vin:#A3202B; --vin2:#87161F;
+  --w:min(1200px, 100% - 48px);
+  --ombre:0 30px 60px -34px rgba(31,29,27,.55);
+  --titre:"Libre Bodoni", "Bodoni 72", Didot, Georgia, serif; --texte:"Hanken Grotesk", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--vin);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:var(--w);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+h1 em,h2 em{font-style:italic}
+h2{font-size:clamp(36px, 4.6vw, 60px);letter-spacing:-.01em}
+h3{font-size:clamp(24px, 2.3vw, 30px)}
+p{margin:0 0 1em;text-wrap:pretty}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--texte);font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s, color .25s, border-color .25s, box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--vin);color:#fff}
+.btn-plein:hover{background:var(--vin2);box-shadow:0 16px 30px -18px rgba(163,32,43,.9)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{border-color:var(--vin);color:var(--vin)}
+.sombre .btn-contour{border-color:rgba(236,235,231,.6);color:var(--papier)}
+.sombre .btn-contour:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.06)}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.lien{font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;transition:color .2s}
+.lien:hover{color:var(--vin)}
+
+.ph{position:relative;margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);background:var(--papier2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.etiquette{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);background:rgba(247,246,242,.95);color:var(--encre);font-size:16px;font-weight:500;line-height:1.25;padding:8px 14px;border-radius:999px}
+
+/* En-tête */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0}
+.marque{text-decoration:none;font-family:var(--titre);font-size:26px;line-height:1}
+.marque em{font-style:italic}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:17px}
+.nav ul a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav ul a:hover{color:var(--vin)}
+.nav .btn{min-height:44px;padding:9px 20px;font-size:16px}
+
+/* Héros */
+.heros{padding:36px 0 70px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"titre photo" "texte photo";column-gap:80px;align-items:start}
+.heros-titre{grid-area:titre;padding-top:70px}
+.heros .surtitre{font-size:17px;color:var(--doux);margin:0 0 22px;font-weight:500}
+.heros h1{font-size:clamp(46px, 6.6vw, 96px);line-height:1;letter-spacing:-.02em}
+.heros-texte{grid-area:texte;max-width:520px;margin-top:30px;color:var(--doux);font-size:19px}
+.cadre{grid-area:photo;margin:0;background:var(--surface);padding:clamp(14px, 2.4vw, 30px);border-radius:8px;box-shadow:0 40px 70px -38px rgba(31,29,27,.6)}
+.cadre .ph{aspect-ratio:4/5;border-radius:4px;box-shadow:none}
+.cadre .ph img{object-position:50% 30%}
+.cadre figcaption.legende{font-family:var(--titre);font-style:italic;font-size:18px;color:var(--doux);padding-top:14px;line-height:1.3}
+
+/* Faits */
+.faits{border-top:1px solid rgba(31,29,27,.2);border-bottom:1px solid rgba(31,29,27,.2)}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.faits li{padding:26px 24px 26px 0;font-size:16px;color:var(--doux);line-height:1.4}
+.faits li+li{padding-left:24px;border-left:1px solid rgba(31,29,27,.2)}
+.faits strong{display:block;font-family:var(--titre);font-weight:400;font-size:32px;color:var(--encre);line-height:1.05;margin-bottom:6px}
+
+/* Histoire */
+.histoire{padding:130px 0 120px}
+.histoire-grille{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:center}
+.duo{position:relative;padding-bottom:120px}
+.duo .large{aspect-ratio:16/10}
+.duo .pierre{position:absolute;right:6%;bottom:0;width:min(250px, 46%);margin:0;background:var(--surface);padding:10px 10px 0;border-radius:4px;transform:rotate(-3deg);box-shadow:0 30px 50px -26px rgba(31,29,27,.65)}
+.duo .pierre img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;border-radius:2px}
+.duo .pierre figcaption{font-family:var(--titre);font-style:italic;font-size:17px;color:var(--doux);padding:8px 2px 12px;line-height:1.2}
+.histoire h2{margin-bottom:24px}
+.histoire p{color:var(--doux)}
+.pierre-citation{margin:34px 0 0;padding:0}
+.pierre-citation p{font-family:var(--titre);font-style:italic;font-size:23px;line-height:1.45;color:var(--encre);margin:0 0 12px}
+.pierre-citation footer{font-size:16px;color:var(--doux)}
+
+/* Voix */
+.voix{background:var(--encre);color:var(--papier);padding:120px 0}
+.voix-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:end;margin-bottom:80px}
+.voix-tete p{color:#C9C5BE;margin:0}
+.paroles{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-rows:auto auto;gap:56px 80px}
+.parole{margin:0}
+.parole p{font-family:var(--titre);line-height:1.15;margin:0 0 16px}
+.parole footer{font-size:16px;color:#A9A49C}
+.parole.yves{grid-row:span 2;align-self:center}
+.parole.yves p{font-size:clamp(44px, 6vw, 84px);font-style:italic}
+.parole.martial p{font-size:clamp(28px, 2.8vw, 38px)}
+.parole.samuel{border-top:1px solid rgba(236,235,231,.2);padding-top:40px}
+.parole.samuel p{font-size:clamp(28px, 2.8vw, 38px);font-style:italic}
+
+/* Savoir-faire */
+.savoir{padding:130px 0}
+.savoir-grille{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:90px;align-items:start}
+.savoir h2{margin-bottom:24px}
+.savoir p{color:var(--doux)}
+.savoir .chapo{font-family:var(--titre);font-size:25px;line-height:1.4;color:var(--encre)}
+.engagements{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 36px}
+.engagements li{padding:16px 0 16px 28px;border-top:1px solid rgba(31,29,27,.18);position:relative;font-size:17px;line-height:1.45}
+.engagements li::before{content:"";position:absolute;left:4px;top:25px;width:8px;height:8px;border-radius:50%;border:1.5px solid var(--encre)}
+.savoir-photo{aspect-ratio:3/4;border-radius:22px;position:sticky;top:40px}
+.savoir-photo img{object-position:50% 40%}
+
+/* Produits */
+.produits{background:var(--papier2);padding:120px 0}
+.produits-grille{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px;align-items:center}
+.planche{aspect-ratio:1/1;border-radius:24px;background:#F3EFE8}
+.produits h2{margin-bottom:22px}
+.produits p{color:var(--doux)}
+.gamme{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:26px 0 0}
+.gamme li{background:var(--surface);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:500}
+
+/* Soirées */
+.soirees{padding:130px 0}
+.soirees-tete{max-width:760px;margin-bottom:64px}
+.soirees-tete p{color:var(--doux);font-size:19px}
+.soirees-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.mosaique{position:relative;min-height:660px}
+.mosaique .ph{position:absolute;width:min(360px, 66%);aspect-ratio:1/1}
+.mosaique .m1{left:0;top:0;transform:rotate(-2.5deg);z-index:1}
+.mosaique .m2{right:0;top:120px;width:min(300px, 56%);transform:rotate(3deg);z-index:2;border:8px solid var(--surface)}
+.mosaique .m3{left:20%;top:390px;width:min(260px, 48%);transform:rotate(-1deg);z-index:3;border:8px solid var(--surface)}
+.carte-soiree{background:var(--surface);border-radius:22px;box-shadow:var(--ombre);padding:40px}
+.carte-soiree h3{font-size:clamp(30px, 3vw, 40px);margin-bottom:6px}
+.carte-soiree .quand{font-weight:600;margin-bottom:18px}
+.carte-soiree p{color:var(--doux)}
+.compris{list-style:none;margin:6px 0 0;padding:0}
+.compris li{padding:11px 0;border-top:1px solid rgba(31,29,27,.14);font-size:17px;line-height:1.45}
+.prix{white-space:nowrap;font-family:var(--titre);font-size:30px;color:var(--encre)}
+.ligne-prix{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-top:22px}
+.ligne-prix span{color:var(--doux);font-size:16px}
+.autres{margin-top:34px;display:grid;gap:22px}
+.autres div{padding-left:22px;border-left:1.5px solid var(--encre)}
+.autres h3{font-size:26px;margin-bottom:6px}
+.autres p{margin:0;color:var(--doux);font-size:17px}
+
+/* Contact */
+.contact{padding:0 0 130px}
+.contact-bandeau{aspect-ratio:21/8;border-radius:24px}
+.contact-bandeau img{object-position:50% 70%}
+.contact-carte{position:relative;z-index:2;margin:-110px auto 0;width:calc(100% - 80px);background:var(--surface);border-radius:22px;box-shadow:var(--ombre);padding:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.contact-carte .intro{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+.contact-carte .intro p{margin:12px 0 0;color:var(--doux);max-width:560px}
+.contact h3{font-size:24px;margin-bottom:10px}
+.contact .bloc p{margin:0 0 6px;color:var(--doux);font-size:17px}
+.contact .grand{font-family:var(--titre);font-size:30px;color:var(--encre);text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(31,29,27,.3);transition:color .2s, border-color .2s}
+.contact .grand:hover{color:var(--vin);border-color:var(--vin)}
+.contact .mail{font-size:17px;font-weight:500;overflow-wrap:anywhere}
+.groupee{grid-column:1 / -1;background:var(--papier);border-radius:16px;padding:26px 30px;display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between}
+.groupee p{margin:0;color:var(--doux);max-width:700px}
+.groupee h3{margin-bottom:4px}
+
+/* Pied */
+.pied{background:var(--encre);color:#C9C5BE;padding:70px 0 0}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px;padding-bottom:56px}
+.pied .marque{color:var(--papier);font-size:32px;display:block;margin-bottom:12px}
+.pied p{margin:0 0 6px;font-size:17px}
+.pied a{color:var(--papier);text-decoration:none;border-bottom:1px solid rgba(236,235,231,.3)}
+.pied a:hover{border-color:#fff}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:600;color:var(--papier);margin-bottom:12px}
+.mention{border-top:1px solid rgba(236,235,231,.14);padding:22px 0 30px;font-size:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;color:#9A958D}
+.mention a{color:#9A958D}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;translate:0 26px;transition:opacity .9s ease, translate 1s cubic-bezier(.2,.8,.2,1)}
+  .js .rv.in{opacity:1;translate:0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+
+@media (max-width:1060px){
+  .nav ul{display:none}
+  .heros-grille{column-gap:48px}
+  .heros-titre{padding-top:30px}
+  .histoire-grille,.savoir-grille,.produits-grille,.soirees-grille,.voix-tete{grid-template-columns:minmax(0,1fr);gap:56px}
+  .savoir-photo{position:relative;top:0;max-width:520px}
+  .planche{max-width:560px}
+  .contact-carte{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid rgba(31,29,27,.2)}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros{padding:14px 0 56px}
+  .heros-grille{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .heros-titre{padding-top:10px}
+  .heros .surtitre{margin-bottom:14px;font-size:16px}
+  .cadre{margin-top:26px;padding:12px}
+  .cadre .ph{aspect-ratio:1/1;border-radius:6px}
+  .cadre .ph img{object-position:50% 25%}
+  .heros-texte{font-size:17px;margin-top:24px}
+  .histoire,.savoir,.soirees{padding:90px 0}
+  .voix,.produits{padding:90px 0}
+  .voix-tete{margin-bottom:50px}
+  .paroles{grid-template-columns:minmax(0,1fr);gap:40px}
+  .parole.yves{grid-row:auto}
+  .engagements{grid-template-columns:minmax(0,1fr)}
+  .mosaique{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .mosaique .ph{position:relative;inset:auto;width:100%}
+  .mosaique .m1{grid-column:1 / -1;width:100%;aspect-ratio:4/3}
+  .mosaique .m2,.mosaique .m3{top:0;left:0;right:auto;border-width:6px}
+  .carte-soiree{padding:28px 22px}
+  .contact-bandeau{aspect-ratio:4/3}
+  .contact-carte{width:calc(100% - 24px);margin-top:-60px;padding:30px 22px;grid-template-columns:minmax(0,1fr);gap:30px}
+  .groupee{padding:22px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .wrap{width:min(1200px, 100% - 36px)}
+  .boutons .btn,.groupee .btn,.contact-carte .intro .btn{width:100%}
+  .marque{font-size:22px}
+  .nav .btn{padding:8px 16px;font-size:16px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li,.faits li+li{padding:20px 0;border-left:0}
+  .faits li+li{border-top:1px solid rgba(31,29,27,.2)}
+  .contact .grand{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap nav">
+  <a class="marque" href="#haut">La Ferme des <em>Arnaud</em></a>
+  <ul>
+    <li><a href="#histoire">Notre histoire</a></li>
+    <li><a href="#metier">Notre métier</a></li>
+    <li><a href="#produits">Nos produits</a></li>
+    <li><a href="#soirees">Événements</a></li>
+    <li><a href="#vente-groupee">Vente groupée</a></li>
+  </ul>
+  <a class="btn btn-contour" href="#contact">Contact</a>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap heros-grille">
+      <div class="heros-titre">
+        <div class="surtitre">Vignerons, troisième génération de la famille Arnaud</div>
+        <h1>Deux frères, une ferme en bio <em>depuis 1978</em>.</h1>
+      </div>
+      <figure class="cadre rv">
+        <div class="ph">
+          <img src="assets/ferme-des-arnaud-villedieu/deux-freres-degustent-devant-les-cuves-inox.webp" alt="En noir et blanc, deux hommes goûtent le vin rouge devant les cuves inox" width="1201" height="1600">
+          <span class="etiquette">Deux poids, deux mesures</span>
+        </div>
+        <figcaption class="legende">Samuel serait la raison, Martial l’émotion.</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p>Avec Samuel et Martial Arnaud, c’est la troisième génération qui reprend l’exploitation familiale. Toute la vendange est déplacée en caisses, les palox, pour un cheminement gravitaire&nbsp;: ne jamais brusquer le raisin, garder un maximum d’élégance et de fruit.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://www.fermedesarnaud.com/notre-boutique/">Commander nos produits</a>
+          <a class="btn btn-contour" href="#contact">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap faits">
+    <ul aria-label="La ferme en quelques faits">
+      <li><strong>Années 40</strong>les premières vignes, plantées par le grand-père Yves</li>
+      <li><strong>1978</strong>toute la surface convertie en agriculture biologique</li>
+      <li><strong>1980</strong>les premiers produits sous la marque «&nbsp;ferme des Arnaud&nbsp;»</li>
+      <li><strong>6&nbsp;jours sur&nbsp;7</strong>le caveau vous accueille, du lundi au samedi</li>
+    </ul>
+  </div>
+
+  <section class="histoire" id="histoire">
+    <div class="wrap histoire-grille">
+      <div class="duo">
+        <figure class="ph large rv">
+          <img src="assets/ferme-des-arnaud-villedieu/trois-vignerons-en-chapeau-vendanges-2011.webp" alt="En noir et blanc, trois hommes de générations différentes en chapeau de paille discutent dans les vignes" width="1600" height="896" loading="lazy">
+          <span class="etiquette">Vendanges 2011</span>
+        </figure>
+        <figure class="pierre rv">
+          <img src="assets/ferme-des-arnaud-villedieu/pierre-arnaud-panier-de-raisin-dans-les-vignes.webp" alt="En noir et blanc, un homme aux cheveux gris tient un panier de raisin dans la vigne" width="1000" height="1054" loading="lazy">
+          <figcaption>Pierre Arnaud</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Deux fils en aiguille.</h2>
+        <p>C’est le grand-père, Yves, qui planta les premières vignes de la ferme dans les années 40. Leur père, Pierre, convertit dès 1978 la totalité de la surface en agriculture biologique. Les premiers produits (jus, huile, olives) sont vendus sous la marque «&nbsp;ferme des Arnaud&nbsp;» à partir de 1980. Après l’arrivée de Martial, puis de Samuel, les deux frères créent leur cave particulière.</p>
+        <blockquote class="pierre-citation">
+          <p>«&nbsp;J’avais l’intime conviction que le monde du vivant n’était pas compatible avec l’agriculture intensive et chimique, qu’une autre voie était possible. Comme tous les pionniers, j’étais seul ou presque avec mon idée.&nbsp;»</p>
+          <footer>Pierre Arnaud, sur 1978</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="voix" aria-labelledby="t-voix">
+    <div class="wrap">
+      <div class="voix-tete">
+        <h2 id="t-voix">Deux poids, <em>deux mesures</em>.</h2>
+        <p>Si l’on devait distinguer les deux frères, Samuel serait la raison et Martial l’émotion. L’un apporte la confiance, l’optimisme et l’entrain, l’autre l’affect, le sentiment et la temporisation. C’est peut-être cela, la clé de leur dynamisme.</p>
+      </div>
+      <div class="paroles">
+        <blockquote class="parole yves"><p>«&nbsp;Ça fait du bien à ma terre…&nbsp;»</p><footer>Yves, le grand-père</footer></blockquote>
+        <blockquote class="parole martial"><p>«&nbsp;J’aime quand mon vin sent le raisin frais.&nbsp;»</p><footer>Martial</footer></blockquote>
+        <blockquote class="parole samuel"><p>«&nbsp;Rendre l’agriculture vivante et résiliente&nbsp;!&nbsp;»</p><footer>Samuel</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="savoir" id="metier">
+    <div class="wrap savoir-grille">
+      <div>
+        <h2>Quand le vigneron cultive l’originalité.</h2>
+        <p class="chapo">Dans la famille Arnaud, l’agriculture biologique est la conception spontanée du métier de vigneron.</p>
+        <p>Loin d’un opportunisme commercial ou d’un enfermement dogmatique, les deux frères gardent la liberté de s’échapper des standards du bio pour continuer à expérimenter et innover. Bien avant les premiers logos verts, le grand-père avait voulu bannir le désherbant de ses terres. C’est grâce à cette vision qu’ils sont arrivés aujourd’hui à un équilibre des écosystèmes et de la vie microbienne des sols, où les vins puisent tout leur caractère.</p>
+        <ul class="engagements">
+          <li>Recherche continue de la biodiversité des sols et des bordures</li>
+          <li>Fournisseurs d’énergie 100&nbsp;% renouvelable</li>
+          <li>Gestion responsable des emballages</li>
+          <li>Raisin de table et oliviers à côté des vignes&nbsp;; demain lavande, amandiers, herbes aromatiques</li>
+        </ul>
+      </div>
+      <figure class="ph savoir-photo rv">
+        <img src="assets/ferme-des-arnaud-villedieu/vigneron-pigeage-a-la-pelle-dans-la-cuve.webp" alt="Vue plongeante dans une cuve inox, un vigneron travaille le raisin égrappé à la pelle" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">De la grappe au tonneau</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="produits" id="produits">
+    <div class="wrap produits-grille">
+      <figure class="ph planche rv">
+        <img src="assets/ferme-des-arnaud-villedieu/gamme-vin-huile-d-olive-jus-de-muscat.webp" alt="Quatre produits de la ferme&nbsp;: Côtes du Rhône, huile d’olive de Nyons, pur jus de muscat, Vacqueyras" width="1600" height="1600" loading="lazy">
+      </figure>
+      <div>
+        <h2>Du vin, de l’huile, du jus de raisin.</h2>
+        <p>La polyculture est pour eux essentielle. En plus des vignes qui donnent leurs vins, Martial et Samuel cultivent le raisin de table et l’olivier. Commandez-les en ligne, ou passez au caveau.</p>
+        <ul class="gamme">
+          <li>Côtes du Rhône</li>
+          <li>Vacqueyras</li>
+          <li>Huile d’olive de Nyons</li>
+          <li>Pur jus de muscat</li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://www.fermedesarnaud.com/notre-boutique/">Commander nos produits</a>
+          <a class="btn btn-contour" href="https://www.fermedesarnaud.com/notre-actualite/">Prendre des nouvelles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soirees" id="soirees">
+    <div class="wrap">
+      <div class="soirees-tete">
+        <h2>Les pieds dans les vignes, <em>la tête sous les étoiles</em>.</h2>
+        <p>Une grande tablée entre amis, des légumes du jardin, des grillades et les vins de la ferme, au milieu des vignes, face au Mont-Ventoux.</p>
+      </div>
+      <div class="soirees-grille">
+        <div class="mosaique">
+          <figure class="ph m1 rv">
+            <img src="assets/ferme-des-arnaud-villedieu/longue-table-dressee-entre-les-rangs-de-vigne.webp" alt="Une longue table nappée de blanc dressée entre deux rangs de vigne" width="900" height="900" loading="lazy">
+            <span class="etiquette">La table, entre deux rangs</span>
+          </figure>
+          <figure class="ph m2 rv">
+            <img src="assets/ferme-des-arnaud-villedieu/soiree-jedis-vin-tablees-dans-les-vignes.webp" alt="Des convives attablés dans les vignes sous des guirlandes d’ampoules" width="900" height="900" loading="lazy">
+          </figure>
+          <figure class="ph m3 rv">
+            <img src="assets/ferme-des-arnaud-villedieu/vin-rouge-verse-dans-le-verre-grave-a.webp" alt="Du vin rouge versé dans un verre gravé du A de la ferme" width="900" height="900" loading="lazy">
+          </figure>
+        </div>
+        <div>
+          <article class="carte-soiree">
+            <h3>Les Régalades</h3>
+            <p class="quand">Braséro privatisé, les mardis et vendredis de 18&nbsp;h&nbsp;30 à 22&nbsp;h</p>
+            <p>Autour d’un braséro garni et servi par nos soins, un instant de partage entre amis ou en famille. La réservation vous donne droit à&nbsp;:</p>
+            <ul class="compris">
+              <li>un espace unique au cœur de nos vignes</li>
+              <li>un assortiment de viandes cuites au braséro et ses petits légumes grillés</li>
+              <li>une planche de fromages de la fromagerie LouCanesteou, à Vaison-la-Romaine</li>
+              <li>une glace en pot du glacier Léone, à Vaison-la-Romaine</li>
+              <li>un verre d’accueil</li>
+            </ul>
+            <div class="ligne-prix"><span class="prix">30&nbsp;€ par personne</span><span>sur réservation, 10 personnes minimum</span></div>
+            <div class="boutons">
+              <a class="btn btn-plein" href="https://www.fermedesarnaud.com/produit/les_regalades/">Réserver une Régalade</a>
+            </div>
+          </article>
+          <div class="autres">
+            <div>
+              <h3>Les Je’dis Vin</h3>
+              <p>Nos soirées festives des jeudis d’été&nbsp;: l’amitié, le partage, la simplicité et les plaisirs de la table, au cœur des vignes.</p>
+            </div>
+            <div>
+              <h3>Pour un groupe</h3>
+              <p>Comité d’entreprise, association ou tout autre collectif&nbsp;: un lieu privatisé, au cœur de la nature. <a class="lien" href="#contact">Écrivez-nous</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <figure class="ph contact-bandeau rv">
+        <img src="assets/ferme-des-arnaud-villedieu/vignes-et-ferme-au-pied-des-collines.webp" alt="Rangs de vigne, bâtisse claire et collines boisées sous un ciel nuageux" width="1600" height="799" loading="lazy">
+      </figure>
+      <div class="contact-carte">
+        <div class="intro">
+          <div>
+            <h2>Nous contacter.</h2>
+            <p>Nous vous accueillons avec plaisir au caveau. Pour une question, une commande ou une soirée, appelez-nous ou écrivez-nous.</p>
+          </div>
+          <a class="btn btn-plein" href="tel:+33490415647">Appeler le caveau</a>
+        </div>
+        <div class="bloc">
+          <h3>Téléphone</h3>
+          <p><a class="grand" href="tel:+33490415647">04 90 41 56 47</a></p>
+        </div>
+        <div class="bloc">
+          <h3>Mail</h3>
+          <p><a class="lien mail" href="mailto:service.client@fermedesarnaud.com">service.client@fermedesarnaud.com</a></p>
+        </div>
+        <div class="bloc">
+          <h3>Le caveau</h3>
+          <p>Du lundi au samedi, de 10&nbsp;h à 12&nbsp;h et de 15&nbsp;h à 19&nbsp;h.</p>
+          <p><a class="lien" href="https://goo.gl/maps/gwzf1D3RNvUuDBB79">Plan d’accès au domaine</a></p>
+        </div>
+        <div class="groupee" id="vente-groupee">
+          <div>
+            <h3>Organiser une vente groupée</h3>
+            <p>Pour organiser une vente groupée de nos produits, appelez le caveau ou écrivez-nous.</p>
+          </div>
+          <a class="btn btn-contour" href="mailto:service.client@fermedesarnaud.com?subject=Vente%20group%C3%A9e">Écrire pour une vente groupée</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied sombre">
+  <div class="wrap pied-grille">
+    <div>
+      <a class="marque" href="#haut">La Ferme des <em>Arnaud</em></a>
+      <p>Domaine en bio depuis 1978.</p>
+    </div>
+    <div>
+      <h3>Nous joindre</h3>
+      <p><a href="tel:+33490415647">04 90 41 56 47</a></p>
+      <p><a href="mailto:service.client@fermedesarnaud.com">service.client@fermedesarnaud.com</a></p>
+      <p><a href="https://goo.gl/maps/gwzf1D3RNvUuDBB79">Plan d’accès</a></p>
+    </div>
+    <div>
+      <h3>Nous suivre</h3>
+      <p><a href="https://www.facebook.com/FermeDesArnaud">Facebook</a></p>
+      <p><a href="https://www.fermedesarnaud.com/notre-actualite/">Actualités</a></p>
+      <p><a href="https://www.fermedesarnaud.com/notre-boutique/">Boutique en ligne</a></p>
+    </div>
+  </div>
+  <div class="wrap mention">
+    <span>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</span>
+    <span>Proposition de Nicolas Masset pour La Ferme des Arnaud, <a href="https://nicomasset.com/">nicomasset.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
