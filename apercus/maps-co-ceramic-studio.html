@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cò Ceramic · Atelier et boutique de céramique à Poitiers</title>
+<meta name="description" content="Rocío San Juan, céramiste argentine installée à Poitiers depuis 2023 : pièces uniques en grès, cours et ateliers au 59 rue Carnot.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232D4DA3'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-style='italic' font-size='38' text-anchor='middle' fill='%23F6EEE8'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EBDDD3; --base2:#E1CEC0; --surface:#F6EEE8; --ink:#2A211D; --ink2:#5E4F47; --cobalt:#2D4DA3; --cobalt2:#3A5DBB; --dark:#2A211D;
+  --ombre:0 30px 60px -34px rgba(42,33,29,.5);
+  --ombre-l:0 46px 80px -42px rgba(42,33,29,.6);
+  --serif:'Instrument Serif', Georgia, serif;
+  --sans:'Instrument Sans', 'Instrument Serif', sans-serif;
+  --pad:clamp(20px, 5vw, 48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--cobalt);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px, 100%);margin:0 auto;padding-inline:var(--pad)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:20;background:rgba(235,221,211,.95);border-bottom:1px solid rgba(42,33,29,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px}
+.marque b{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1}
+.marque small{font-size:14px;color:var(--ink2)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--ink2);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.appel{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink);border-radius:999px;padding:9px 18px;text-decoration:none;font-weight:500;color:var(--ink) !important;white-space:nowrap;transition:background .25s, color .25s, border-color .25s}
+.appel:hover{background:var(--cobalt);border-color:var(--cobalt);color:var(--surface) !important}
+.appel svg{width:15px;height:15px;flex:none}
+
+/* Boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:17px;text-decoration:none;transition:transform .3s cubic-bezier(.2,.8,.2,1), background .25s, color .25s, border-color .25s}
+.btn-plein{background:var(--cobalt);color:var(--surface);box-shadow:0 18px 32px -20px rgba(45,77,163,.9)}
+.btn-plein:hover{transform:translateY(-3px);background:var(--cobalt2)}
+.btn-contour{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-contour:hover{transform:translateY(-3px);background:var(--ink);color:var(--surface)}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* Héros */
+.hero{padding:clamp(40px, 6vw, 88px) 0 clamp(72px, 8vw, 120px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5.6fr) minmax(0,6.4fr);gap:clamp(32px, 5vw, 72px);align-items:center}
+.hero h1{font-size:clamp(46px, 6.6vw, 96px);line-height:1;letter-spacing:-.02em}
+.hero h1 em{color:var(--cobalt)}
+.hero .chapo{font-size:clamp(18px, 1.45vw, 20px);color:var(--ink2);margin-top:28px;max-width:31em}
+.hero .chapo strong{font-weight:600;color:var(--ink)}
+.hero .lieu{margin-top:22px;font-size:16px;color:var(--ink2)}
+.duo{position:relative;padding:0 0 18% 0;margin:0}
+.duo .grande{position:relative;width:86%;margin:0}
+.duo .grande img{border-radius:22px;aspect-ratio:1/1.02;object-fit:cover;object-position:42% 62%;box-shadow:var(--ombre-l)}
+.duo .pastille{position:absolute;left:18px;top:18px;background:var(--surface);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500;box-shadow:0 10px 24px -16px rgba(42,33,29,.7)}
+.duo .pola{position:absolute;right:0;bottom:0;width:min(270px, 44%);margin:0;background:#FBF7F3;padding:10px 10px 44px;border-radius:6px;transform:rotate(5deg);box-shadow:0 34px 56px -30px rgba(42,33,29,.65)}
+.duo .pola img{border-radius:3px;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+.duo .pola figcaption{position:absolute;left:12px;right:12px;bottom:10px;text-align:center;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink2)}
+
+/* Bandeau de faits */
+.faits{background:var(--base2)}
+.faits ul{list-style:none;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;padding-block:22px}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:500}
+.faits li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cobalt);flex:none}
+
+/* Sections */
+.sec{padding-block:clamp(80px, 9vw, 128px)}
+.sec h2{font-size:clamp(36px, 4.4vw, 60px);line-height:1.04}
+.lede{font-size:clamp(18px, 1.4vw, 19px);color:var(--ink2);margin-top:22px;max-width:36em}
+
+/* Ateliers et tarifs */
+.ateliers .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+.ateliers .corps{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px, 6vw, 96px);margin-top:56px;align-items:start}
+.ateliers .photo{position:sticky;top:110px;margin:0}
+.ateliers .photo img{border-radius:20px;aspect-ratio:3/4;object-fit:cover;object-position:50% 55%;box-shadow:var(--ombre-l)}
+.ateliers .photo figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+.groupe + .groupe{margin-top:52px}
+.groupe h3{font-size:30px;padding-bottom:12px;border-bottom:1.5px solid var(--ink)}
+.offre{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:22px 0;border-bottom:1px solid rgba(42,33,29,.16)}
+.offre h4{margin:0;font-family:var(--sans);font-weight:600;font-size:19px}
+.offre .prix{font-family:var(--serif);font-size:30px;line-height:1;white-space:nowrap;text-align:right}
+.offre .prix small{display:block;font-family:var(--sans);font-size:14px;color:var(--ink2);margin-top:6px}
+.offre p{grid-column:1/2;font-size:16px;color:var(--ink2)}
+.offre .quand{grid-column:1/-1;font-size:15px;color:var(--ink);margin-top:4px}
+.compris{margin-top:36px;background:var(--surface);border-radius:20px;padding:26px 28px;box-shadow:var(--ombre)}
+.compris p{font-size:16px;color:var(--ink2)}
+.compris p strong{color:var(--ink);font-weight:600}
+.compris p + p{margin-top:10px}
+
+/* L'atelier-boutique */
+.boutique{background:var(--surface)}
+.pano{position:relative;margin:0}
+.pano img{width:100%;border-radius:24px;aspect-ratio:12/5;object-fit:cover;object-position:50% 55%;box-shadow:var(--ombre-l)}
+.pano .pastille{position:absolute;right:20px;top:20px;background:var(--surface);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500}
+.boutique .bas{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,5.6fr);gap:clamp(28px, 5vw, 72px);align-items:start}
+.boutique .carte{position:relative;margin-top:-120px;margin-left:clamp(0px, 3vw, 40px);background:var(--base);border-radius:24px;padding:clamp(28px, 4vw, 48px);box-shadow:var(--ombre)}
+.boutique .carte .lede{margin-top:18px}
+.boutique .carte a.lien{display:inline-block;margin-top:22px;font-weight:500;text-underline-offset:4px;color:var(--cobalt)}
+.horaires-cours{margin-top:40px}
+.horaires-cours h3{font-size:28px}
+.horaires-cours dl{margin:16px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 24px}
+.horaires-cours dt,.horaires-cours dd{padding:14px 0;border-bottom:1px solid rgba(42,33,29,.14);margin:0}
+.horaires-cours dt{font-weight:600}
+.horaires-cours dd{text-align:right;font-family:var(--serif);font-size:24px;line-height:1.2}
+.horaires-cours p{margin-top:16px;font-size:15px;color:var(--ink2)}
+.tours{margin:40px 0 0 auto;width:min(360px, 100%);transform:rotate(-2deg)}
+.tours img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;box-shadow:var(--ombre);border:7px solid #FBF7F3}
+
+/* Parcours */
+.parcours .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+.parcours figure{margin:0;position:relative}
+.parcours figure img{border-radius:200px 200px 22px 22px;aspect-ratio:4/5;object-fit:cover;object-position:40% 30%;box-shadow:var(--ombre-l)}
+.parcours figure figcaption{position:absolute;left:18px;bottom:18px;background:var(--surface);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500}
+.frise{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:24px;position:relative}
+.frise::before{content:"";position:absolute;left:6px;right:0;top:6px;height:1.5px;background:var(--ink);opacity:.3}
+.frise li{position:relative;padding-top:30px}
+.frise li::before{content:"";position:absolute;left:0;top:0;width:13px;height:13px;border-radius:50%;background:var(--base);border:1.5px solid var(--ink)}
+.frise li:last-child::before{background:var(--cobalt);border-color:var(--cobalt)}
+.frise b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1}
+.frise span{display:block;font-size:15px;color:var(--ink2);margin-top:8px;line-height:1.5}
+.parcours blockquote{margin:44px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(24px, 2.4vw, 32px);line-height:1.25;max-width:24em}
+
+/* Créations, fond sombre */
+.creations{background:var(--dark);color:#EADFD6}
+.creations h2{color:var(--surface)}
+.creations .lede{color:#C5B6AB}
+.creations .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+.creations .tete .btns{margin-top:0;justify-content:flex-end}
+.trio{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(16px, 2.4vw, 32px);margin-top:56px;align-items:start}
+.trio figure{margin:0}
+.trio img{width:100%;object-fit:cover;border-radius:20px;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.trio .t1 img{aspect-ratio:4/3.3;object-position:50% 60%}
+.trio .t2{margin-top:72px}
+.trio .t2 img{aspect-ratio:3/4;object-position:50% 60%}
+.trio .t3 img{aspect-ratio:3/4.3;object-position:50% 50%}
+.trio figcaption{margin-top:14px;font-size:15px;color:#B5A69B}
+.creations .btn-contour{border-color:#EADFD6;color:var(--surface)}
+.creations .btn-contour:hover{background:var(--surface);color:var(--ink)}
+
+/* Bon cadeau, fond cobalt */
+.cadeau{background:var(--cobalt);color:#F1F3FA;padding-block:clamp(72px, 8vw, 112px)}
+.cadeau .wrap{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:32px;align-items:center}
+.cadeau p.grand{font-family:var(--serif);font-size:clamp(32px, 4.2vw, 58px);line-height:1.08;text-wrap:balance}
+.cadeau .petit{margin-top:20px;font-size:15px;color:#C9D2EE}
+.cadeau .btn-plein{background:var(--surface);color:var(--ink);box-shadow:0 18px 32px -20px rgba(0,0,0,.6)}
+.cadeau .btn-plein:hover{background:#fff}
+.cadeau .actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px, 6vw, 96px);align-items:center}
+.contact figure{margin:0;position:relative}
+.contact figure img{border-radius:22px;aspect-ratio:5/4;object-fit:cover;object-position:50% 50%;box-shadow:var(--ombre-l)}
+.fiche{margin-top:34px;background:var(--surface);border-radius:24px;padding:clamp(26px, 3.5vw, 40px);box-shadow:var(--ombre)}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 24px;align-items:baseline}
+.fiche dt{font-size:14px;color:var(--ink2)}
+.fiche dd{margin:0;font-size:18px;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none;border-bottom:1.5px solid var(--cobalt);font-weight:500}
+.fiche .tel{white-space:nowrap}
+.contact .note{margin-top:16px;font-size:15px;color:var(--ink2)}
+
+/* Pied */
+.pied{background:var(--dark);color:#C5B6AB;padding:64px 0 28px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:32px}
+.pied b{font-family:var(--serif);font-weight:400;font-size:34px;color:var(--surface);line-height:1}
+.pied p,.pied li{font-size:16px;line-height:1.75;overflow-wrap:anywhere}
+.pied p{margin-top:12px}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{color:#EADFD6;text-underline-offset:3px}
+.pied .tel{white-space:nowrap}
+.signature{background:var(--dark);color:#8A7A70;font-size:13px;text-align:center;padding:30px var(--pad) 26px;margin:0}
+
+/* Apparition douce */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .duo .pola.rv{transform:rotate(5deg) translateY(22px)}
+.js .duo .pola.rv.in{transform:rotate(5deg)}
+.js .tours.rv{transform:rotate(-2deg) translateY(22px)}
+.js .tours.rv.in{transform:rotate(-2deg)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transition:none}.js .duo .pola.rv{transform:rotate(5deg)}.js .tours.rv{transform:rotate(-2deg)}.js .rv:not(.pola):not(.tours){transform:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.appel){display:none}
+  .hero .wrap,.ateliers .tete,.ateliers .corps,.boutique .bas,.parcours .wrap,.creations .tete,.cadeau .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .ateliers .photo{position:relative;top:auto;max-width:460px}
+  .creations .tete .btns{justify-content:flex-start}
+  .boutique .carte{margin-left:0;margin-top:-64px}
+  .parcours figure{max-width:440px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .top .wrap{min-height:62px}
+  .marque b{font-size:28px}
+  .marque small{display:none}
+  .appel{padding:8px 14px;font-size:15px}
+  .hero{padding-top:28px}
+  .duo{padding-bottom:26%}
+  .duo .grande{width:92%}
+  .duo .pola{width:min(170px, 46%);padding:7px 7px 34px}
+  .duo .pola figcaption{font-size:16px;bottom:7px}
+  .faits ul{flex-direction:column;gap:10px}
+  .pano img{aspect-ratio:4/3}
+  .boutique .carte{margin-top:-40px;margin-inline:10px}
+  .horaires-cours dl{grid-template-columns:minmax(0,1fr)}
+  .horaires-cours dt{border-bottom:0;padding-bottom:0}
+  .horaires-cours dd{text-align:left;padding-top:4px}
+  .frise{grid-template-columns:minmax(0,1fr);gap:22px}
+  .frise::before{left:6px;right:auto;top:6px;bottom:6px;width:1.5px;height:auto}
+  .frise li{padding-top:0;padding-left:32px}
+  .trio{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .trio .t1{grid-column:1/-1}
+  .trio .t2{margin-top:0}
+  .trio .t3{margin-top:40px}
+  .fiche dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .fiche dd{margin-bottom:12px}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+  .cadeau .actions{align-items:stretch}
+  .offre .prix{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Cò Ceramic, retour en haut"><b>Cò Ceramic</b><small>par Rocío San Juan</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#ateliers">Ateliers et tarifs</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#rocio">À propos</a>
+      <a href="#creations">Créations</a>
+      <a class="appel" href="tel:+33767099370"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07 67 09 93 70</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>La terre garde la trace du <em>geste</em>.</h1>
+        <p class="chapo">Bienvenue chez Cò Ceramic. Je suis <strong>Rocío San Juan</strong>, céramiste argentine installée à Poitiers depuis 2023. Dans mon atelier-boutique, je crée des pièces uniques en grès et je partage ma passion à travers des cours et des ateliers.</p>
+        <div class="btns">
+          <a class="btn btn-plein" href="#ateliers">Voir les ateliers et les tarifs</a>
+          <a class="btn btn-contour" href="tel:+33767099370"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07 67 09 93 70</a>
+        </div>
+        <p class="lieu">Atelier et boutique au 59 rue Carnot, à Poitiers.</p>
+      </div>
+      <div class="duo">
+        <figure class="grande"><img src="assets/maps-co-ceramic-studio/mains-qui-centrent-la-terre-sur-le-tour.webp" width="1600" height="1066" alt="Deux mains couvertes de barbotine centrent une motte de terre sur le tour" fetchpriority="high"><figcaption class="pastille">Au tour, dans l'atelier</figcaption></figure>
+        <figure class="pola rv"><img src="assets/maps-co-ceramic-studio/vase-email-bleu-sur-gres-brut.webp" width="1200" height="1600" alt="Vase en grès clair, le haut couvert d'un émail bleu bullé" loading="lazy"><figcaption>Grès et émail bleu</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>À Poitiers depuis 2023</li>
+      <li>Pièces uniques en grès</li>
+      <li>Modelage et tournage, tous niveaux</li>
+      <li>Matériel et cuisson compris</li>
+    </ul>
+  </div>
+
+  <section class="sec ateliers" id="ateliers">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Des ateliers pour apprendre, expérimenter et créer avec la terre.</h2>
+        <p class="lede">Modelage et tournage au centre-ville de Poitiers, que vous soyez débutant ou passionné&nbsp;: un moment de création et de détente.</p>
+      </div>
+      <div class="corps">
+        <figure class="photo rv"><img src="assets/maps-co-ceramic-studio/eleve-qui-faconne-un-vase-a-la-main.webp" width="1200" height="1600" alt="Deux mains façonnent un vase pansu en terre crue sur une table en bois" loading="lazy"><figcaption>Un vase monté à la main</figcaption></figure>
+        <div>
+          <div class="groupe">
+            <h3>Séances uniques</h3>
+            <div class="offre"><h4>Atelier Petit-Déjeuner</h4><span class="prix">69&nbsp;€</span><p>Votre ensemble tasse et assiette en grès, pour s'initier aux gestes de la terre&nbsp;: modelage et estampage.</p><span class="quand">Le samedi, de 14&nbsp;h à 16&nbsp;h 30</span></div>
+            <div class="offre"><h4>Atelier Vase</h4><span class="prix">55&nbsp;€</span><p>Un petit vase unique, selon vos envies, aux techniques traditionnelles du modelage&nbsp;: colombin ou plaque.</p><span class="quand">Le samedi, de 10&nbsp;h à 12&nbsp;h</span></div>
+            <div class="offre"><h4>Atelier Enfants</h4><span class="prix">45&nbsp;€<small>par enfant</small></span><p>Deux heures pour découvrir l'argile, apprendre les bases du modelage et créer sa propre pièce, dans une ambiance ludique et bienveillante.</p></div>
+            <div class="offre"><h4>Atelier de Noël</h4><span class="prix">45&nbsp;€<small>par personne</small></span><p>Ornements, suspensions, étoiles, sapins&nbsp;: vos décorations en céramique, à offrir ou à garder. Adultes et enfants, matériel et cuisson inclus.</p><span class="quand">2 heures, de 10&nbsp;h à 12&nbsp;h</span></div>
+          </div>
+          <div class="groupe">
+            <h3>Cours réguliers</h3>
+            <div class="offre"><h4>Tournage et décor</h4><span class="prix">160&nbsp;€<small>les 4 cours</small></span><p>Progressez à votre rythme sur le tour&nbsp;: de la préparation de l'argile au tournage, puis le tournassage et l'émaillage. Forfait de 10 cours&nbsp;: 370&nbsp;€.</p></div>
+            <div class="offre"><h4>Modelage et décor</h4><span class="prix">160&nbsp;€<small>les 4 cours</small></span><p>Quatre cours de 2 heures répartis sur un mois&nbsp;: trois dédiés aux techniques du modelage, un au décor des pièces réalisées.</p></div>
+          </div>
+          <div class="compris">
+            <p><strong>Chaque atelier comprend</strong> tout le matériel, l'accompagnement pas à pas, la décoration de la pièce, la cuisson et la récupération de votre création une fois terminée.</p>
+            <p>Places limitées, réservation conseillée par mail ou par téléphone. Modification ou annulation possible jusqu'à 7 jours avant le cours.</p>
+            <div class="btns" style="margin-top:22px"><a class="btn btn-plein" href="mailto:coceramicstudio@gmail.com?subject=R%C3%A9servation%20d%27un%20atelier">Réserver un atelier</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec boutique" id="atelier">
+    <div class="wrap">
+      <figure class="pano rv"><img src="assets/maps-co-ceramic-studio/tasses-crues-en-train-de-secher.webp" width="1600" height="1066" alt="Une douzaine de tasses en terre crue grise qui sèchent, vues d'en haut" loading="lazy"><figcaption class="pastille">Des tasses qui sèchent avant la cuisson</figcaption></figure>
+      <div class="bas">
+        <div class="carte">
+          <h2>L'atelier-boutique, au 59 rue Carnot.</h2>
+          <p class="lede">Venez découvrir mon univers céramique. C'est ici que je donne mes cours et que je vends mes pièces. J'utilise souvent le tour et je fabrique généralement mes propres émaux.</p>
+          <a class="lien" href="https://www.google.com/maps/search/59+Rue+Carnot,+Poitiers,+86000+France">Voir le plan d'accès</a>
+        </div>
+        <div>
+          <div class="horaires-cours">
+            <h3>Les cours réguliers</h3>
+            <dl>
+              <dt>Lundi et mardi</dt><dd>10&nbsp;h – 12&nbsp;h</dd>
+              <dt>Mercredi</dt><dd>18&nbsp;h – 20&nbsp;h</dd>
+            </dl>
+          </div>
+          <figure class="tours rv"><img src="assets/maps-co-ceramic-studio/atelier-tours-et-tabourets.webp" width="1386" height="1600" alt="La salle de cours : trois tours de potier et leurs tabourets en bois clair" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec parcours" id="rocio">
+    <div class="wrap">
+      <figure class="rv"><img src="assets/maps-co-ceramic-studio/rocio-au-tour-dans-l-atelier.webp" width="1430" height="1600" alt="Rocío San Juan tourne un grand bol au tour, dans son atelier" loading="lazy"><figcaption>Rocío San Juan, au tour</figcaption></figure>
+      <div>
+        <h2>Céramiste d'Argentine, et aussi d'ailleurs.</h2>
+        <ol class="frise">
+          <li><b>Buenos Aires</b><span>Mon cher atelier du quartier de Palermo, quitté en 2017.</span></li>
+          <li><b>Madrid, 2018</b><span>Des cours de poterie à Caolín Cerámica, l'atelier ouvert en pleine pandémie dans le quartier de Las Letras.</span></li>
+          <li><b>Poitiers, 2023</b><span>L'atelier-boutique de la rue Carnot, où je donne des cours et vends mes pièces.</span></li>
+        </ol>
+        <blockquote>«&nbsp;Je m'efforce de trouver un équilibre entre l'esthétique et le fonctionnel. Mon inspiration vient du quotidien, des gens et de la nature.&nbsp;»</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec creations" id="creations">
+    <div class="wrap">
+      <div class="tete">
+        <div>
+          <h2>Les créations.</h2>
+          <p class="lede">Des pièces uniques et des petites séries, réalisées à la main dans mon atelier. Chaque pièce raconte un moment de création.</p>
+        </div>
+        <div class="btns">
+          <a class="btn btn-contour" href="https://www.instagram.com/coceramicstudio/">Suivre l'atelier sur Instagram</a>
+        </div>
+      </div>
+      <div class="trio">
+        <figure class="t1 rv"><img src="assets/maps-co-ceramic-studio/vase-en-gres-noir-strie-en-gros-plan.webp" width="1600" height="1066" alt="Gros plan d'un vase boule en grès anthracite creusé de stries" loading="lazy"><figcaption>Vase boule en grès anthracite, strié</figcaption></figure>
+        <figure class="t2 rv"><img src="assets/maps-co-ceramic-studio/vase-strie-et-monnaie-du-pape.webp" width="1200" height="1600" alt="Vase bas en grès blanc strié avec une branche de monnaie-du-pape" loading="lazy"><figcaption>Grès blanc strié et monnaie-du-pape</figcaption></figure>
+        <figure class="t3 rv"><img src="assets/maps-co-ceramic-studio/vases-et-bouquets-secs-au-soleil-de-la-vitrine.webp" width="1200" height="1600" alt="Vases cylindriques en grès à coups de pinceau bruns, au soleil de la vitrine" loading="lazy"><figcaption>Dans la vitrine de la rue Carnot</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cadeau">
+    <div class="wrap">
+      <div>
+        <p class="grand">Offrez un bon cadeau Cò Ceramic&nbsp;: un atelier, ou le montant de votre choix à dépenser dans la boutique.</p>
+        <p class="petit">Les cartes cadeaux ne sont ni échangeables ni remboursables.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:coceramicstudio@gmail.com?subject=Bon%20cadeau">Offrir un bon cadeau</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <figure class="rv"><img src="assets/maps-co-ceramic-studio/mains-qui-tournent-un-bol.webp" width="1206" height="760" alt="Des mains couvertes de barbotine montent les parois d'un bol au tour" loading="lazy"></figure>
+      <div>
+        <h2>Passez à l'atelier, ou écrivez-moi.</h2>
+        <div class="fiche">
+          <dl>
+            <dt>Téléphone</dt><dd><a class="tel" href="tel:+33767099370">07 67 09 93 70</a></dd>
+            <dt>E-mail</dt><dd><a href="mailto:coceramicstudio@gmail.com">coceramicstudio@gmail.com</a></dd>
+            <dt>Adresse</dt><dd>59 rue Carnot, 86000 Poitiers</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/coceramicstudio/">@coceramicstudio</a></dd>
+          </dl>
+        </div>
+        <p class="note">Les réservations d'ateliers et les bons cadeaux se font par mail ou par téléphone.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Cò Ceramic</b>
+      <p>Atelier et boutique de céramique artisanale à Poitiers. Des pièces uniques façonnées à la main.</p>
+    </div>
+    <ul>
+      <li>59 rue Carnot, 86000 Poitiers</li>
+      <li><a class="tel" href="tel:+33767099370">07 67 09 93 70</a></li>
+      <li><a href="mailto:coceramicstudio@gmail.com">coceramicstudio@gmail.com</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.instagram.com/coceramicstudio/">Instagram</a></li>
+      <li><a href="https://coceramic.wordpress.com/ateliers-tarifs/">Ateliers et tarifs</a></li>
+      <li><a href="https://coceramic.wordpress.com/creations/">Créations</a></li>
+      <li><a href="https://coceramic.wordpress.com/about/">À propos</a></li>
+    </ul>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Cò Ceramic</p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

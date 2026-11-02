@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Les Ateliers du Pâtis · Ébénisterie à Briollay</title>
+<meta name="description" content="Thierry Menuau, ébéniste à Briollay : restauration et création de meubles en essences nobles, stages d'initiation à l'ébénisterie.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237A2E3A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23F3EFE8'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#E7E1D7; --surface:#F3EFE8; --encre:#2B1E16; --accent:#7A2E3A; --sombre:#2B1E16;
+  --bande:#DCD3C4; --doux:#5C4B3F; --clair:#EDE5D8; --clair-doux:#C9BBA9;
+  --ombre:0 30px 60px -34px rgba(43,30,22,.55), 0 4px 12px -6px rgba(43,30,22,.12);
+  --gout:clamp(16px,4vw,40px);
+  --display:'Brygada 1918', Georgia, serif;
+  --texte:'Hanken Grotesk', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:.8em 1.6em;border-radius:999px;font:600 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 14px 28px -16px rgba(122,46,58,.8)}
+.btn-plein:hover{background:#65242F;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.sombre .btn-contour{border-color:var(--clair-doux);color:var(--clair)}
+.sombre .btn-contour:hover{background:var(--clair);color:var(--encre)}
+.num{white-space:nowrap}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(231,225,215,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(43,30,22,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:500 24px/1.1 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.marque span{font-size:13px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:not(.tel-haut):hover{color:var(--accent)}
+.tel-haut{display:inline-flex;align-items:center;gap:8px;background:var(--surface);padding:10px 18px;border-radius:999px;font-weight:600;transition:background-color .25s, color .25s}
+.tel-haut:hover{background:var(--encre);color:var(--surface)}
+.tel-haut svg{width:16px;height:16px}
+.tel-court{display:none}
+
+/* héros */
+.heros{position:relative;padding:64px 0 96px;min-height:880px}
+.heros .wrap{position:static}
+.lieu{font-size:17px;color:var(--doux);margin-bottom:18px}
+.heros h1{position:relative;z-index:2;font-size:clamp(42px,7.3vw,108px);line-height:1.02;font-weight:500;max-width:7.4em;letter-spacing:-.02em}
+.heros h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.photo-heros{position:absolute;z-index:1;top:170px;left:calc(50% - 110px);right:0;height:640px;margin:0;border-radius:20px 0 0 20px;overflow:hidden;box-shadow:var(--ombre)}
+.photo-heros img{width:100%;height:100%;object-fit:cover;object-position:58% 62%}
+.photo-heros::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(231,225,215,.8) 0%,rgba(231,225,215,.35) 20%,rgba(231,225,215,0) 38%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 32%,transparent 52%);mask-image:linear-gradient(180deg,#000 0%,#000 32%,transparent 52%);pointer-events:none}
+.pastille{position:absolute;z-index:2;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;line-height:1.35;padding:10px 16px;border-radius:12px;box-shadow:0 10px 24px -12px rgba(43,30,22,.45);max-width:calc(100% - 32px)}
+.photo-heros .pastille{right:28px;bottom:28px}
+.chapo{position:relative;z-index:2;max-width:29rem;margin-top:34px;font-size:19px;color:var(--doux)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;position:relative;z-index:2}
+
+/* bandeau de faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.faits li{padding:4px 22px;border-left:1px solid rgba(43,30,22,.16)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font:500 21px/1.2 var(--display)}
+.faits span{display:block;font-size:15px;color:var(--doux);margin-top:4px;line-height:1.4}
+
+/* métier */
+.section{padding:120px 0}
+.metier .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.metier h2,.stages h2,.realisations h2,.contact h2{font-size:clamp(34px,4.2vw,56px)}
+.metier .texte p{margin-top:22px;max-width:34rem}
+.metier .texte p:first-of-type{margin-top:28px;font-size:20px}
+.lien{display:inline-block;margin-top:28px;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--accent)}
+.lien:hover{color:var(--accent)}
+.essences{position:relative;background:var(--surface);border-radius:22px;padding:36px 36px 30px;box-shadow:var(--ombre);margin-top:8px}
+.essences .coffret{margin:-90px -10px 8px auto;width:min(300px,78%);mix-blend-mode:multiply;transform:rotate(-4deg)}
+.essences h3{font-size:26px;margin-bottom:6px}
+.essences > p{color:var(--doux);font-size:16px}
+.essences dl{margin:20px 0 0}
+.essences dt{font-size:14px;color:var(--doux);padding-top:16px;border-top:1px solid rgba(43,30,22,.14)}
+.essences dd{margin:4px 0 16px;font:400 22px/1.3 var(--display)}
+
+/* savoir-faire (sombre) */
+.sombre{background:var(--sombre);color:var(--clair)}
+.savoir .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.savoir h2{font-size:clamp(34px,4.4vw,60px);color:var(--clair)}
+.savoir .tete p{color:var(--clair-doux)}
+.savoir .corps{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:72px;margin-top:72px;align-items:start}
+.services{list-style:none;margin:0;padding:0}
+.services li{display:grid;grid-template-columns:minmax(0,1fr);padding:22px 0;border-top:1px solid rgba(237,229,216,.16)}
+.services li:last-child{border-bottom:1px solid rgba(237,229,216,.16)}
+.services b{font:400 25px/1.25 var(--display);color:var(--clair)}
+.services span{font-size:16px;color:var(--clair-doux);margin-top:4px}
+.duo{position:relative;padding-bottom:120px}
+.duo figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.75)}
+.duo .grande{width:88%;margin-left:auto;aspect-ratio:4/4.4}
+.duo .grande img{width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.duo .petite{position:absolute;left:0;bottom:0;width:58%;aspect-ratio:16/10;border:6px solid var(--sombre)}
+.duo .petite img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.duo .grande .pastille{left:20px;top:20px}
+.duo .petite .pastille{left:14px;bottom:14px;font-size:13px}
+.savoir .liens{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:32px}
+.savoir .lien{margin-top:0;color:var(--clair);text-decoration-color:#B8707B}
+
+/* stages */
+.stages .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center}
+.pile{position:relative;padding:0 0 90px}
+.pile .large{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:5/4}
+.pile .large img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.polaroid{position:absolute;right:-18px;bottom:0;width:min(260px,46%);background:var(--surface);padding:12px 12px 46px;border-radius:6px;box-shadow:0 30px 50px -28px rgba(43,30,22,.6);transform:rotate(4deg);margin:0}
+.polaroid img{aspect-ratio:1/1;width:100%;object-fit:cover;object-position:46% 60%;border-radius:2px}
+.polaroid figcaption{position:absolute;left:14px;right:14px;bottom:12px;font:italic 400 17px/1.2 var(--display);color:var(--doux)}
+.stages .texte p{margin-top:20px}
+.stages .texte p:first-of-type{margin-top:28px}
+.compris{margin-top:30px;background:var(--surface);border-radius:18px;padding:24px 28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;box-shadow:0 20px 40px -30px rgba(43,30,22,.45)}
+.compris div{font-size:15px;color:var(--doux);line-height:1.4}
+.compris b{display:block;font:500 22px/1.2 var(--display);color:var(--encre);margin-bottom:4px}
+.stages .actions{margin-top:30px}
+
+/* citation */
+.citation{background:var(--surface);text-align:center;padding:128px 0}
+.citation blockquote{margin:0 auto;max-width:21ch;font:italic 400 clamp(32px,4.4vw,60px)/1.14 var(--display);text-wrap:balance;letter-spacing:-.01em}
+.citation .signe{margin-top:30px;font-size:16px;color:var(--doux)}
+.citation .histoire{margin:22px auto 0;max-width:36rem;font-size:17px;color:var(--doux)}
+
+/* réalisations */
+.realisations .tete{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.realisations .tete p{max-width:30rem;color:var(--doux)}
+.mosaique{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;margin-top:64px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.m-table{grid-column:1/8;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:16/11}
+.m-table img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.m-table .pastille{left:20px;bottom:20px}
+.m-semainier{grid-column:9/13;background:var(--surface);border-radius:20px;padding:26px 26px 20px;box-shadow:var(--ombre);transform:rotate(2.5deg);margin-top:20px !important}
+.m-semainier img{width:min(220px,100%);margin:0 auto;mix-blend-mode:multiply}
+.m-semainier figcaption{font-size:15px;color:var(--doux);margin-top:12px;text-align:center}
+.m-biblio{grid-column:4/11;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/2;margin-top:-40px !important}
+.m-biblio img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.m-biblio .pastille{left:20px;bottom:20px}
+.oxymore{grid-column:1/4;align-self:end;font-size:16px;color:var(--doux)}
+.oxymore b{display:block;font:500 22px/1.2 var(--display);color:var(--encre);margin-bottom:6px}
+.realisations .liens{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:56px}
+.realisations .liens .lien{margin-top:0}
+
+/* contact */
+.contact{background:var(--bande)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact .texte p{margin-top:24px;max-width:30rem;font-size:19px;color:var(--doux)}
+.carte{background:var(--surface);border-radius:22px;padding:36px;box-shadow:var(--ombre)}
+.carte dl{margin:0;display:grid;gap:0}
+.carte div{padding:16px 0;border-top:1px solid rgba(43,30,22,.12)}
+.carte div:first-child{border-top:0;padding-top:0}
+.carte dt{font-size:14px;color:var(--doux)}
+.carte dd{margin:4px 0 0;font:400 22px/1.35 var(--display);overflow-wrap:anywhere}
+.carte dd a{text-decoration:none}
+.carte dd a:hover{color:var(--accent)}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .marque b{font-size:28px}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.7}
+.pied h3{font:500 15px/1.3 var(--texte);color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline;text-underline-offset:4px}
+.mentions{margin-top:64px;border-top:1px solid rgba(237,229,216,.12);padding:22px 0 26px}
+.mentions .wrap{display:block;font-size:14px;color:#9C8C7B}
+.signature{background:#22170F;color:#9C8C7B;font-size:13px;text-align:center;padding:14px var(--gout)}
+
+/* apparition douce */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.tel-haut{transition:none}
+}
+
+/* tablettes */
+@media (max-width:1100px){
+  .nav a:not(.tel-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+}
+@media (max-width:900px){
+  .heros{min-height:0;padding:36px 0 72px}
+  .heros h1{max-width:none}
+  .photo-heros{position:relative;top:auto;left:auto;right:auto;height:auto;aspect-ratio:4/3;margin:-0.32em calc(-1*var(--gout)) 0 0;border-radius:18px 0 0 18px}
+  .photo-heros::before{background:linear-gradient(180deg,rgba(231,225,215,.7) 0%,rgba(231,225,215,0) 26%)}
+  .photo-heros .pastille{right:14px;bottom:14px;font-size:13px}
+  .chapo{max-width:none;margin-top:28px;font-size:18px}
+  .section{padding:88px 0}
+  .metier .wrap,.savoir .tete,.savoir .corps,.stages .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .essences{margin-top:60px}
+  .stages .pile{order:2}
+  .mosaique{grid-template-columns:minmax(0,1fr);gap:28px}
+  .m-table,.m-biblio,.m-semainier,.oxymore{grid-column:1/-1}
+  .m-biblio{margin-top:0 !important}
+  .m-semainier{width:min(320px,100%);justify-self:center;margin-top:0 !important}
+  .pied .wrap{grid-template-columns:minmax(0,1fr);gap:36px}
+  .citation{padding:96px 0}
+}
+/* téléphone */
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:62px;gap:10px}
+  .marque b{font-size:19px}
+  .marque span{display:none}
+  .tel-haut{padding:9px 14px;font-size:15px}
+  .tel-long{display:none}
+  .tel-court{display:inline}
+  .lieu{font-size:15px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:26px 0}
+  .faits li,.faits li:nth-child(4){border-left:0;padding:0 8px 0 0}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:19px}
+  .essences{padding:28px 22px 22px}
+  .essences .coffret{margin-top:-70px}
+  .duo{padding-bottom:90px}
+  .duo .grande{width:100%}
+  .duo .petite{width:64%}
+  .compris{grid-template-columns:minmax(0,1fr);gap:14px;padding:22px}
+  .polaroid{right:-6px;width:min(200px,52%)}
+  .carte{padding:26px 22px}
+  .carte dd{font-size:20px}
+  .services b{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Les Ateliers du Pâtis, retour en haut">
+      <b>Les Ateliers du Pâtis</b>
+      <span>Ébénisterie à Briollay</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#metier">L'atelier</a>
+      <a href="#savoir-faire">Restauration</a>
+      <a href="#stages">Stages</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-haut" href="tel:+33695273844" aria-label="Appeler le 06 95 27 38 44">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span class="tel-long num">06 95 27 38 44</span><span class="tel-court">Appeler</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <p class="lieu">Ébénisterie et restauration de meubles, à Briollay</p>
+      <h1>Noyer, chêne, <em>amarante</em>, bois de rose.</h1>
+      <figure class="photo-heros">
+        <img src="assets/maps-les-ateliers-du-patis/mains-au-ciseau-a-bois-sur-l-etabli.webp" width="1600" height="1062" alt="Deux mains évident au ciseau à bois une découpe ovale dans une planchette claire, sur un établi couvert de copeaux" fetchpriority="high">
+        <figcaption class="pastille">Scie, rabot, ciseau à bois : les outils du stage</figcaption>
+      </figure>
+      <p class="chapo">Issu d'une famille d'ébénistes, Thierry Menuau fabrique et restaure dans son atelier des pièces uniques en essences nobles ou rares. Il redonne vie aux meubles démodés et propose des stages d'initiation à l'ébénisterie.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="#stages">Découvrir les stages</a>
+        <a class="btn btn-contour" href="tel:+33695273844">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <span class="num">06 95 27 38 44</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="wrap">
+      <li><b>Briollay</b><span>27 route de Soucelles</span></li>
+      <li><b>Tradition familiale</b><span>La maison Menuau, de 1950 à 1975</span></li>
+      <li><b>CAP et brevet de maîtrise</b><span>appris dans l'entreprise familiale</span></li>
+      <li><b>4 à 5 personnes</b><span>par stage d'initiation</span></li>
+      <li><b>9&nbsp;h à 17&nbsp;h</b><span>café, machines et bois compris</span></li>
+    </ul>
+  </section>
+
+  <section class="section metier" id="metier">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Un métier appris en famille, des bois gardés par les générations d'avant.</h2>
+        <p>Vous avez toujours voulu connaître les métiers du bois, vous aimez l'odeur de l'atelier&nbsp;? Bienvenue aux Ateliers du Pâtis.</p>
+        <p>Thierry Menuau a appris l'ébénisterie dans l'entreprise familiale, où il a obtenu le CAP et le brevet de maîtrise. Il a suivi six mois de formation de formateur, dirigé une ressourcerie, puis travaillé dix ans comme artisan ébéniste.</p>
+        <p>Aujourd'hui, il fabrique dans son atelier des pièces uniques, avec des bois anciens qui proviennent des stocks des générations antérieures.</p>
+        <a class="lien" href="https://www.lesateliersdupatis.com/a-propos">Qui sommes-nous</a>
+      </div>
+      <aside class="essences">
+        <img class="coffret reveal" src="assets/maps-les-ateliers-du-patis/coffret-marquete-en-eventail.webp" width="1600" height="1226" alt="Coffret marqueté de rayons de bois clairs, bruns et violacés" loading="lazy">
+        <h3>Les bois de l'atelier</h3>
+        <p>Des essences locales, et des matières plus précieuses pour le placage.</p>
+        <dl>
+          <dt>Essences locales</dt>
+          <dd>Merisier, noyer, frêne, chêne</dd>
+          <dt>Bois de placage</dt>
+          <dd>Bois de rose, amarante, érable moucheté</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section sombre savoir" id="savoir-faire">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Vos meubles de famille, réparés, transformés ou relookés.</h2>
+        <p>Thierry redonne vie aux meubles démodés : il les répare, les transforme, les relooke, ou en conçoit de nouveaux à partir de mobilier ancien et d'objets insolites.</p>
+      </div>
+      <div class="corps">
+        <div>
+          <ul class="services">
+            <li><b>Réparation et transformation</b><span>de vos meubles de famille</span></li>
+            <li><b>Relooking à la demande</b><span>pour les meubles démodés</span></li>
+            <li><b>Conception de meubles</b><span>à partir d'objets insolites ou de mobilier démodé</span></li>
+            <li><b>Création de meubles</b><span>pièces uniques, fabriquées à l'atelier</span></li>
+            <li><b>Petits travaux d'ébénisterie à façon</b><span>sur vos pièces</span></li>
+            <li><b>Prototypes</b><span>en collaboration avec des designers et des artistes</span></li>
+          </ul>
+          <div class="liens">
+            <a class="lien" href="https://www.lesateliersdupatis.com/relooking">Voir les relookings</a>
+            <a class="lien" href="https://www.lesateliersdupatis.com/up-cycling">Voir le recyclage créatif</a>
+          </div>
+        </div>
+        <div class="duo">
+          <figure class="grande reveal">
+            <img src="assets/maps-les-ateliers-du-patis/armoire-en-restauration-a-l-atelier.webp" width="1600" height="1200" alt="Meuble en bois foncé verni, porte vitrée ouverte, en cours de restauration dans l'atelier" loading="lazy">
+            <figcaption class="pastille">En restauration à l'atelier</figcaption>
+          </figure>
+          <figure class="petite reveal">
+            <img src="assets/maps-les-ateliers-du-patis/buffet-moulure-relooke-blanc.webp" width="1600" height="900" alt="Grand buffet galbé à portes moulurées repeint en blanc patiné, dessus en bois" loading="lazy">
+            <figcaption class="pastille">Buffet relooké</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stages" id="stages">
+    <div class="wrap">
+      <div class="pile">
+        <figure class="large reveal">
+          <img src="assets/maps-les-ateliers-du-patis/planche-a-bord-naturel-dans-l-etau.webp" width="1600" height="900" alt="Planche aux bords naturels ondulés serrée dans l'étau d'un vieil établi" loading="lazy">
+        </figure>
+        <figure class="polaroid">
+          <img src="assets/maps-les-ateliers-du-patis/tranche-de-tronc-sur-l-etabli.webp" width="1600" height="900" alt="Épaisse tranche de tronc à l'écorce irrégulière posée sur l'établi, entre copeaux, niveau et maillet" loading="lazy">
+          <figcaption>Sur l'établi</figcaption>
+        </figure>
+      </div>
+      <div class="texte">
+        <h2>Une journée d'initiation à l'ébénisterie.</h2>
+        <p>Vous voulez découvrir les rudiments du métier&nbsp;? Thierry vous apprend à vous servir d'une scie, d'un rabot et du ciseau à bois, dans son atelier de Briollay.</p>
+        <p>Toute la journée, vous manipulez les principaux outils et réalisez des assemblages qui vous permettront de fabriquer un objet plus tard. Vous apprenez aussi à reconnaître les essences, pour bien choisir celle que vous utiliserez chez vous.</p>
+        <div class="compris">
+          <div><b>9&nbsp;h à 17&nbsp;h</b>une journée à l'établi</div>
+          <div><b>4 à 5</b>personnes par groupe</div>
+          <div><b>Compris</b>le café, les machines, le bois</div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33695273844">Réserver par téléphone</a>
+          <a class="btn btn-contour" href="https://www.lesateliersdupatis.com/stage-c1mt4">Le détail des stages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Histoire familiale">
+    <div class="wrap">
+      <blockquote>« Les bois anciens que je travaille proviennent des stocks des générations antérieures. »</blockquote>
+      <p class="signe">Thierry Menuau</p>
+      <p class="histoire">De 1950 à 1975, la maison Menuau a conçu et réalisé du mobilier en merisier de style Louis&nbsp;XV.</p>
+      <a class="lien" href="https://www.lesateliersdupatis.com/propos1-c1plh">L'histoire de la maison Menuau</a>
+    </div>
+  </section>
+
+  <section class="section realisations" id="realisations">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Sorties de l'atelier.</h2>
+        <p>Des tables, des coffrets, des bibliothèques nées d'anciens meubles : chaque pièce est unique.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="m-table reveal">
+          <img src="assets/maps-les-ateliers-du-patis/table-plateau-bord-naturel-pieds-metal.webp" width="1600" height="900" alt="Table au plateau épais à bord naturel sur piètement métallique, avec deux chaises, dans l'atelier" loading="lazy">
+          <figcaption class="pastille">Table en cèdre du Liban, réalisée à l'atelier</figcaption>
+        </figure>
+        <figure class="m-semainier">
+          <img src="assets/maps-les-ateliers-du-patis/semainier-mondrian-tiroirs-colores.webp" width="931" height="1600" alt="Semainier à tiroirs décalés laqué noir, façades rouges, jaunes et bleues" loading="lazy">
+          <figcaption>Le semainier Mondrian</figcaption>
+        </figure>
+        <p class="oxymore"><b>La ligne Oxymore</b>L'opposition entre deux matières, deux formes, deux créateurs : le fil conducteur d'une ligne de meubles et d'objets.</p>
+        <figure class="m-biblio reveal">
+          <img src="assets/maps-les-ateliers-du-patis/bibliotheque-et-vitrine-issues-de-meubles-anciens.webp" width="1600" height="1064" alt="Mur d'étagères en bois clair reliant un bas de meuble Art déco et une vitrine sculptée" loading="lazy">
+          <figcaption class="pastille">Une bibliothèque née d'une salle à manger Art déco et d'une chambre Louis&nbsp;XV</figcaption>
+        </figure>
+      </div>
+      <div class="liens">
+        <a class="lien" href="https://www.lesateliersdupatis.com/galerie">Toute la galerie</a>
+        <a class="lien" href="https://www.lesateliersdupatis.com/atelier">L'atelier en vidéo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Un meuble à sauver, un stage à réserver&nbsp;?</h2>
+        <p>Appelez Thierry ou écrivez-lui pour une restauration, une création ou une date de stage.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33695273844"><span class="num">Appeler le 06 95 27 38 44</span></a>
+          <a class="btn btn-contour" href="mailto:thierry.menuau@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <div><dt>Atelier</dt><dd>27 route de Soucelles<br>49125 Briollay</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33695273844">06 95 27 38 44</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:thierry.menuau@gmail.com">thierry.menuau@gmail.com</a></dd></div>
+          <div><dt>Stages</dt><dd>De 9&nbsp;h à 17&nbsp;h</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Les Ateliers du Pâtis</b></div>
+      <p style="margin-top:14px">Thierry Menuau, ébéniste.<br>Restauration, création, stages d'initiation.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <p>27 route de Soucelles, 49125 Briollay<br><a class="num" href="tel:+33695273844">06 95 27 38 44</a><br><a href="mailto:thierry.menuau@gmail.com">thierry.menuau@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>À voir</h3>
+      <ul>
+        <li><a href="https://www.lesateliersdupatis.com/stage-c1mt4">Les stages</a></li>
+        <li><a href="https://www.lesateliersdupatis.com/galerie">La galerie</a></li>
+        <li><a href="https://www.lesateliersdupatis.com/propos1-c1plh">Histoire familiale</a></li>
+        <li><a href="http://www.facebook.com/pages/Les-Ateliers-du-Patis/550908038290628">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mentions"><div class="wrap">Les Ateliers du Pâtis, R.C.S. 793&nbsp;743&nbsp;915</div></div>
+  <p class="signature">Proposition de Nicolas Masset pour Les Ateliers du Pâtis</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

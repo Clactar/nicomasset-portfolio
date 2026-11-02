@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier Re Confort · Tapissier décorateur à Poitiers</title>
+<meta name="description" content="Gladys Pichereau, tapissière à Poitiers : restauration de fauteuils, canapés, chaises et têtes de lit en tissu ou en cuir, confection sur mesure.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2324332D'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23C8962E'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#DDE2D9; --surface:#EEF1EB; --encre:#1F2A26; --accent:#C8962E; --sombre:#24332D;
+  --bande:#CDD5C8; --doux:#4A5852; --clair:#E8ECE5; --clair-doux:#B4C0B7;
+  --ombre:0 30px 60px -34px rgba(31,42,38,.55), 0 4px 14px -8px rgba(31,42,38,.14);
+  --gout:clamp(16px,4vw,40px);
+  --display:'Gloock', Georgia, serif;
+  --texte:'Figtree', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--accent);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+.num{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:54px;padding:.8em 1.6em;border-radius:999px;font:600 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--encre);box-shadow:0 16px 30px -18px rgba(150,104,20,.9)}
+.btn-plein:hover{background:#B5841F;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(221,226,217,.95);border-bottom:1px solid rgba(31,42,38,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:78px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.marque b{font:400 25px/1.05 var(--display);white-space:nowrap}
+.marque span{font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-weight:500;font-size:16px}
+.nav a:not(.tel-haut):hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px;text-decoration-thickness:2px}
+.tel-haut{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:var(--sombre);color:var(--clair);font-weight:600;transition:background-color .25s}
+.tel-haut:hover{background:#33473F}
+.tel-haut svg{width:16px;height:16px}
+.tel-court{display:none}
+
+/* héros */
+.heros{position:relative;padding:48px 0 96px}
+.heros-grille{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:start}
+.photo-heros{grid-column:1/2;grid-row:1;margin:0 0 0 calc(-1*(100vw - min(1200px,100vw - 2*var(--gout)))/2);margin-right:-80px;position:relative;border-radius:0 24px 24px 0;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:16/10.4}
+.photo-heros img{width:100%;height:100%;object-fit:cover;object-position:0% 62%}
+.pastille{position:absolute;z-index:2;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;line-height:1.35;padding:10px 16px;border-radius:12px;box-shadow:0 12px 24px -14px rgba(31,42,38,.5);max-width:calc(100% - 28px)}
+.photo-heros .pastille{left:calc((100vw - min(1200px,100vw - 2*var(--gout)))/2 + 4px);bottom:24px}
+.carte-heros{grid-column:2/3;grid-row:1;position:relative;z-index:2;margin-top:44px;margin-left:-40px;background:var(--surface);border-radius:24px;padding:52px 48px 48px;box-shadow:0 40px 80px -40px rgba(31,42,38,.6),0 2px 8px rgba(31,42,38,.05)}
+.carte-heros .lieu{font-size:16px;color:var(--doux);margin-bottom:16px}
+.carte-heros h1{font-size:clamp(40px,4.5vw,66px);line-height:1.04;letter-spacing:-.005em}
+.carte-heros p.chapo{margin-top:24px;font-size:18px;color:var(--doux)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.faits li{position:relative;padding-left:20px}
+.faits li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+.faits b{display:block;font:400 21px/1.2 var(--display)}
+.faits span{display:block;font-size:15px;color:var(--doux);margin-top:5px;line-height:1.4}
+
+/* constat */
+.section{padding:128px 0}
+.constat .wrap{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:64px;align-items:center}
+.constat .grand{font:400 clamp(30px,3.5vw,48px)/1.2 var(--display);text-wrap:balance}
+.constat .grand span{display:block;margin-top:.5em;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:10px}
+.constat .petit{margin-top:28px;color:var(--doux);max-width:36rem}
+.incline{margin:0;background:var(--surface);padding:12px 12px 16px;border-radius:16px;box-shadow:var(--ombre);transform:rotate(2.5deg)}
+.incline img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%;width:100%}
+.incline figcaption{font-size:14px;color:var(--doux);margin-top:12px;line-height:1.4;padding:0 4px}
+
+/* services */
+.services{background:var(--surface)}
+.services .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.services h2,.atelier h2,.contact h2{font-size:clamp(34px,4vw,56px)}
+.services .intro{margin-top:22px;color:var(--doux)}
+.empile{position:relative;margin-top:56px;padding-bottom:110px}
+.empile figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.empile .a{width:92%;aspect-ratio:4/3.3}
+.empile .a img{width:100%;height:100%;object-fit:cover;object-position:42% 60%}
+.empile .b{position:absolute;right:0;bottom:0;width:62%;aspect-ratio:16/10;border:6px solid var(--surface)}
+.empile .b img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.empile .a .pastille{left:14px;top:14px}
+.empile .b .pastille{left:12px;bottom:12px;font-size:13px}
+.liste{list-style:none;margin:0;padding:0}
+.liste li{padding:30px 0;border-top:1px solid rgba(31,42,38,.14)}
+.liste li:first-child{border-top:0;padding-top:6px}
+.liste h3{font-size:clamp(24px,2.3vw,30px);line-height:1.15}
+.liste p{margin-top:10px;color:var(--doux);max-width:38rem}
+.liste .defi{display:inline-block;margin-top:12px;font-weight:600;color:var(--encre);background:rgba(200,150,46,.22);padding:2px 10px;border-radius:6px}
+
+/* avant / après (sombre) */
+.sombre{background:var(--sombre);color:var(--clair)}
+.sombre h2{color:var(--clair);font-size:clamp(34px,4.2vw,58px)}
+.renouveau .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.renouveau p{color:var(--clair-doux);margin-top:22px;max-width:32rem}
+.renouveau .eco{margin-top:34px;padding:24px 26px;border-radius:16px;background:rgba(232,236,229,.06);border:1px solid rgba(232,236,229,.12)}
+.renouveau .eco b{display:block;font:400 24px/1.2 var(--display);color:var(--clair)}
+.renouveau .eco p{margin-top:10px;font-size:16px}
+.vignettes{display:flex;justify-content:center;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.vignette{margin:0;width:min(240px,100%);background:var(--surface);padding:10px 10px 18px;border-radius:10px;box-shadow:0 34px 60px -30px rgba(0,0,0,.7)}
+.vignette img{width:100%;border-radius:4px}
+.vignette figcaption{font-size:14px;color:var(--doux);margin-top:12px;line-height:1.4;padding:0 4px}
+.vignette:nth-child(1){transform:rotate(-3deg)}
+.vignette:nth-child(2){transform:rotate(2.5deg);margin-top:64px}
+.vignette .etiq{display:inline-block;font-size:12px;font-weight:600;color:var(--encre);background:var(--accent);padding:3px 9px;border-radius:999px;margin-bottom:8px}
+
+/* gladys */
+.atelier .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.portrait{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:68% 30%}
+.portrait .pastille{left:18px;bottom:18px}
+.atelier .texte p{margin-top:22px;max-width:36rem}
+.atelier .texte p.premier{font-size:20px;margin-top:28px}
+.citation{margin:40px 0 0;padding:28px 0 0;border-top:1px solid rgba(31,42,38,.16);font:400 clamp(28px,3vw,40px)/1.15 var(--display)}
+.citation::before{content:"« ";color:var(--accent)}
+.citation::after{content:" »";color:var(--accent)}
+.lien{display:inline-block;margin-top:26px;font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--accent)}
+
+/* contact */
+.contact{background:var(--bande)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact .texte p{margin-top:22px;max-width:32rem;font-size:19px;color:var(--doux)}
+.coord{background:var(--surface);border-radius:24px;padding:38px;box-shadow:var(--ombre)}
+.coord dl{margin:0}
+.coord div{padding:16px 0;border-top:1px solid rgba(31,42,38,.12)}
+.coord div:first-child{border-top:0;padding-top:0}
+.coord dt{font-size:14px;color:var(--doux)}
+.coord dd{margin:4px 0 0;font:400 23px/1.35 var(--display);overflow-wrap:anywhere}
+.coord a{text-decoration:none}
+.coord a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .marque b{font-size:30px}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.75}
+.pied h3{font:600 15px/1.3 var(--texte);color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline;text-underline-offset:4px}
+.copyright{margin-top:64px;border-top:1px solid rgba(232,236,229,.12);padding:22px 0 26px;font-size:14px;color:#8E9D93}
+.signature{background:#1B2723;color:#8E9D93;font-size:13px;text-align:center;padding:14px var(--gout);margin:0}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+.js .vignette.reveal.vu:nth-child(1){transform:rotate(-3deg)}
+.js .vignette.reveal.vu:nth-child(2){transform:rotate(2.5deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transition:none}
+  .js .reveal:not(.vignette){transform:none}
+  .btn{transition:none}
+}
+
+@media (max-width:1100px){
+  .nav a:not(.tel-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .carte-heros{padding:40px 34px}
+}
+@media (max-width:900px){
+  .heros{padding:20px 0 80px}
+  .heros-grille{grid-template-columns:minmax(0,1fr)}
+  .photo-heros{grid-column:1;grid-row:1;margin:0 calc(-1*var(--gout));border-radius:0 0 22px 22px;aspect-ratio:4/3}
+  .photo-heros img{object-position:6% 70%}
+  .photo-heros .pastille{left:calc(var(--gout) + 2px);right:auto;top:14px;bottom:auto;font-size:13px;padding:8px 12px}
+  .carte-heros{grid-column:1;grid-row:2;margin-top:-44px;margin-inline:0;padding:32px 26px 28px}
+  .section{padding:88px 0}
+  .constat .wrap,.services .wrap,.renouveau .wrap,.atelier .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .incline{width:min(420px,100%);justify-self:center}
+  .portrait{width:min(440px,100%);justify-self:center}
+  .pied .wrap{grid-template-columns:minmax(0,1fr);gap:34px}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:62px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .tel-haut{padding:9px 14px;font-size:15px}
+  .tel-long{display:none}
+  .tel-court{display:inline}
+  .carte-heros h1{font-size:clamp(34px,10vw,42px)}
+  .carte-heros .lieu{font-size:15px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 18px;padding:28px 0}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:19px}
+  .empile{padding-bottom:80px}
+  .empile .a{width:100%}
+  .empile .b{width:66%}
+  .vignettes{gap:28px}
+  .vignette{width:min(240px,82%)}
+  .vignette:nth-child(2){margin-top:0}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Atelier Re Confort, retour en haut">
+      <b>Atelier Re Confort</b>
+      <span>Tapissier décorateur à Poitiers</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#avant-apres">Avant, après</a>
+      <a href="#gladys">L'atelier</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-haut" href="tel:+33676444752" aria-label="Appeler le 06 76 44 47 52">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span class="tel-long num">06 76 44 47 52</span><span class="tel-court">Appeler</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap heros-grille">
+      <figure class="photo-heros">
+        <img src="assets/maps-atelier-re-confort/canape-angle-convertible-tetieres-reglables.webp" width="1600" height="900" alt="Canapé d'angle en tissu chiné beige-gris, méridienne à gauche, trois têtières relevées, sur un parquet clair devant une tenture noire" fetchpriority="high">
+        <figcaption class="pastille">Canapé d'angle convertible, têtières réglables</figcaption>
+      </figure>
+      <div class="carte-heros">
+        <p class="lieu">Atelier Re Confort, à Poitiers</p>
+        <h1>Votre fauteuil a besoin de soin&nbsp;?</h1>
+        <p class="chapo">Fauteuil, canapé, chaise, tête de lit : Gladys Pichereau restaure tous les sièges recouverts de tissu ou de cuir, change la garniture, traditionnelle ou en mousse, et leur choisit avec vous un nouveau tissu.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#contact">Parler de votre meuble</a>
+          <a class="btn btn-contour" href="tel:+33676444752">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <span class="num">06 76 44 47 52</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="wrap">
+      <li><b>Poitiers</b><span>33 rue de la Foucaudière</span></li>
+      <li><b>Tissu ou cuir</b><span>sièges d'époque, de style ou contemporains</span></li>
+      <li><b>Garniture</b><span>traditionnelle, avec ou sans ressorts, ou mousse</span></li>
+      <li><b>Qualifiée en 2024</b><span>qualification en mars, atelier lancé en octobre</span></li>
+      <li><b>Une quinzaine d'années</b><span>de rideaux, coussins et housses</span></li>
+    </ul>
+  </section>
+
+  <section class="section constat">
+    <div class="wrap">
+      <div>
+        <p class="grand">Abîmé, usé, cassé, défraîchi. Un tissu déchiré, sale, décoloré par le soleil, ou qui ne vous plaît plus. Une garniture qui s'affaisse et n'est plus confortable.<span>Vous êtes au bon endroit.</span></p>
+        <p class="petit">Chaque meuble a sa solution : une nouvelle garniture, un nouveau tissu, une réparation de la structure, ou tout cela à la fois.</p>
+      </div>
+      <figure class="incline reveal">
+        <img src="assets/maps-atelier-re-confort/canape-angle-reversible-gris-et-pouf.webp" width="1600" height="965" alt="Canapé d'angle convertible recouvert d'un tissu gris clair uni, pouf assorti" loading="lazy">
+        <figcaption>Réparation et recouverture d'un canapé d'angle réversible, convertible</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div>
+        <h2>Ce que l'atelier fait pour vos sièges.</h2>
+        <p class="intro">Du fauteuil d'époque au canapé contemporain, avec la garniture et la finition qui en feront une pièce maîtresse de votre intérieur.</p>
+        <div class="empile">
+          <figure class="a reveal">
+            <img src="assets/maps-atelier-re-confort/deux-fauteuils-bois-assises-cuir-noir.webp" width="1600" height="901" alt="Deux fauteuils en bois massif aux accoudoirs courbes, assises et dossiers en cuir noir" loading="lazy">
+            <figcaption class="pastille">Fauteuils contemporains recouverts de cuir</figcaption>
+          </figure>
+          <figure class="b reveal">
+            <img src="assets/maps-atelier-re-confort/canape-convertible-bleu-coussin-motifs.webp" width="1600" height="902" alt="Canapé trois places en tissu bleu jean avec un coussin à motifs de spirales" loading="lazy">
+            <figcaption class="pastille">Canapé convertible déhoussable</figcaption>
+          </figure>
+        </div>
+      </div>
+      <ul class="liste">
+        <li>
+          <h3>Restauration de vos sièges d'époque ou de style</h3>
+          <p>Fauteuil, canapé, chaise, tête de lit : on choisit ensemble la garniture, traditionnelle (avec ou sans ressorts, crin) ou contemporaine (mousse), et le tissu qui lui va.</p>
+        </li>
+        <li>
+          <h3>Sièges et meubles contemporains, en tissu ou en cuir</h3>
+          <p>Chaises de salle à manger en fin de vie, canapé à rhabiller après les assauts du chat ou des enfants, simili cuir de tête de lit qui s'effrite : à chaque besoin sa solution.</p>
+        </li>
+        <li>
+          <h3>Réparation de la structure</h3>
+          <p>Un accident a abîmé la structure de votre canapé, votre chaise a perdu sa stabilité&nbsp;? Une réparation est sûrement possible.</p>
+        </li>
+        <li>
+          <h3>Confection sur mesure</h3>
+          <p>Coussins, housses de coussins et de sièges, rideaux. Une envie hors norme, une caravane ou un camping-car à rafraîchir&nbsp;?</p>
+          <span class="defi">Parlons-en, j'adore les défis&nbsp;!</span>
+        </li>
+        <li>
+          <h3>Reconditionnement et vente</h3>
+          <p>Des sièges malmenés par la vie, remis en état puis proposés à la vente pour s'installer dans un nouvel intérieur.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section sombre renouveau" id="avant-apres">
+    <div class="wrap">
+      <div>
+        <h2>Avant, après : la même pièce, une autre vie.</h2>
+        <p>Un fauteuil anglais à la frange fatiguée, un canapé griffé par le chat : chacun a retrouvé sa garniture ou un velours neuf.</p>
+        <div class="eco">
+          <b>Pour toujours plus de RE Confort</b>
+          <p>Réparer, réemployer, réutiliser : offrir une nouvelle vie aux sièges, c'est aussi réduire les déchets.</p>
+        </div>
+      </div>
+      <div class="vignettes">
+        <figure class="vignette reveal">
+          <img src="assets/maps-atelier-re-confort/fauteuil-anglais-avant-apres-velours-rouge-a-pois.webp" width="891" height="623" alt="Avant et après : fauteuil anglais en tissu bordeaux usé, puis refait en tissu orange à pois rouges" loading="lazy">
+          <figcaption><span class="etiq">Avant, après</span><br>Fauteuil de style anglais, garniture traditionnelle, recouvert de velours</figcaption>
+        </figure>
+        <figure class="vignette reveal">
+          <img src="assets/maps-atelier-re-confort/canape-scandinave-avant-apres-velours-bleu-canard.webp" width="597" height="743" alt="Avant et après : canapé scandinave gris aux flancs lacérés, puis recouvert de velours bleu canard" loading="lazy">
+          <figcaption><span class="etiq">Avant, après</span><br>Canapé griffé par un chat, recouvert de velours</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section atelier" id="gladys">
+    <div class="wrap">
+      <figure class="portrait reveal">
+        <img src="assets/maps-atelier-re-confort/gladys-agrafeuse-en-main-dans-l-atelier.webp" width="1483" height="1600" alt="Gladys Pichereau, casque antibruit et agrafeuse en main, tend un tissu sur un bâti de tête de lit dans son atelier" loading="lazy">
+        <figcaption class="pastille">Gladys, au travail</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Gladys Pichereau, tapissière.</h2>
+        <p class="premier">Je restaure tous types de mobilier recouverts de tissu, et je confectionne rideaux, coussins et housses depuis une quinzaine d'années.</p>
+        <p>Le métier de tapissier s'est imposé quand le besoin de me reconvertir s'est fait sentir. J'ai obtenu la qualification en mars 2024, puis créé mon entreprise en octobre 2024. Je serai ravie de vous rencontrer pour étudier vos besoins et donner vie à vos envies.</p>
+        <p class="citation">Votre canapé a besoin d'un tissu neuf après les assauts de votre chat&nbsp;? À chaque besoin sa solution.</p>
+        <a class="lien" href="https://atelier-re-confort.com/presentation/">Lire la présentation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Parlons de votre meuble.</h2>
+        <p>Un appel ou un e-mail suffit pour décrire votre fauteuil, votre canapé ou votre projet de confection.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33676444752"><span class="num">Appeler le 06 76 44 47 52</span></a>
+          <a class="btn btn-contour" href="mailto:contact@atelier-re-confort.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Atelier</dt><dd>33 rue de la Foucaudière<br>86000 Poitiers</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33676444752">06 76 44 47 52</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:contact@atelier-re-confort.com">contact@atelier-re-confort.com</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Atelier Re Confort</b></div>
+      <p style="margin-top:14px">Gladys Pichereau, tapissier décorateur.<br>Restauration de sièges, réparation, confection sur mesure.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <p>33 rue de la Foucaudière, 86000 Poitiers<br><a class="num" href="tel:+33676444752">06 76 44 47 52</a><br><a href="mailto:contact@atelier-re-confort.com">contact@atelier-re-confort.com</a></p>
+    </div>
+    <div>
+      <h3>Sur le site</h3>
+      <ul>
+        <li><a href="https://atelier-re-confort.com/presentation/">Présentation</a></li>
+        <li><a href="https://atelier-re-confort.com/decouvrez-mes-services/">Découvrez mes services</a></li>
+        <li><a href="https://atelier-re-confort.com/me-contacter/">Me contacter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copyright">© Atelier Re Confort, Gladys Pichereau, Poitiers</div>
+  <p class="signature">Proposition de Nicolas Masset pour Atelier Re Confort</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

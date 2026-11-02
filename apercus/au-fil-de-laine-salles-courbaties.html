@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Au Fil de Laine · Matelas et literie en laine, Salles-Courbatiès (Aveyron)</title>
+<meta name="description" content="Fabrique artisanale de literie en laine à Salles-Courbatiès depuis 1896 : matelas, futons, couettes, oreillers, traversins, surmatelas et sommiers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E4FA0'/%3E%3Crect x='6' y='6' width='52' height='52' rx='10' fill='none' stroke='%23F5F6F1' stroke-width='2' stroke-dasharray='4 3'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F5F6F1'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Commissioner:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#E9ECE4; --surface:#F5F6F1; --encre:#2B2A26; --accent:#3E4FA0; --sombre:#232A3A;
+  --bande:#DEE2D7; --doux:#5A5A52; --clair:#ECEEE7; --clair-doux:#AEB4C4; --fil:rgba(43,42,38,.28);
+  --ombre:0 30px 60px -34px rgba(35,42,58,.6), 0 6px 16px -10px rgba(35,42,58,.18);
+  --gout:clamp(20px,4vw,40px);
+  --display:'Gelasio', Georgia, serif;
+  --texte:'Commissioner', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.012em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+.num{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:.85em 1.7em;border-radius:999px;font:500 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 16px 30px -18px rgba(62,79,160,.9)}
+.btn-plein:hover{background:#33438C;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.lien{font-weight:500;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px;transition:color .2s}
+.lien:hover{color:var(--accent)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(233,236,228,.95);border-bottom:1px dashed var(--fil)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:500 25px/1.1 var(--display);white-space:nowrap}
+.marque span{font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:not(.tel-haut):hover{color:var(--accent)}
+.tel-haut{display:inline-flex;align-items:center;gap:8px;background:var(--surface);padding:11px 19px;border-radius:999px;font-weight:600;box-shadow:0 10px 24px -18px rgba(35,42,58,.7);transition:background-color .25s,color .25s}
+.tel-haut:hover{background:var(--accent);color:var(--surface)}
+.tel-haut svg{width:16px;height:16px}
+
+/* héros */
+.heros{padding:72px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,6vw,88px);align-items:center}
+.lieu{font-size:16px;color:var(--doux);margin-bottom:22px}
+.heros h1{font-size:clamp(38px,5.4vw,76px);line-height:1.04;font-weight:500}
+.heros .intro{font-size:19px;color:var(--doux);margin-top:28px;max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.photo-heros{position:relative;margin:0}
+.cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.cadre img{width:100%;aspect-ratio:6/5;object-fit:cover;object-position:100% 55%}
+.pique::after{content:"";position:absolute;inset:12px;border:2px dashed rgba(245,246,241,.72);border-radius:13px;pointer-events:none}
+.etiquette{position:absolute;left:-26px;top:40px;transform:rotate(-4deg);filter:drop-shadow(0 18px 22px rgba(35,42,58,.45))}
+.etiquette div{background:
+   repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px),
+   repeating-linear-gradient(0deg,rgba(0,0,0,.08) 0 1px,transparent 1px 3px),var(--accent);
+  color:var(--surface);padding:16px 34px 15px;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 50%,100% 100%,0 100%,14px 50%);text-align:center;position:relative}
+.etiquette div::before{content:"";position:absolute;inset:6px 22px;border-top:1.5px dashed rgba(245,246,241,.6);border-bottom:1.5px dashed rgba(245,246,241,.6)}
+.etiquette b{display:block;font:italic 500 22px/1.1 var(--display)}
+.etiquette small{display:block;font-size:13px;letter-spacing:.02em;margin-top:5px;opacity:.88}
+
+/* faits */
+.faits{background:var(--bande);border-block:1px dashed var(--fil)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.faits li{padding:4px 22px;border-left:1.5px dashed var(--fil)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font:500 21px/1.15 var(--display)}
+.faits span{display:block;font-size:15px;color:var(--doux);margin-top:6px;line-height:1.4}
+
+/* sections */
+section{padding:120px 0}
+.titre{font-size:clamp(32px,4vw,52px)}
+.chapo{font-size:19px;color:var(--doux);margin-top:22px;max-width:36em}
+
+/* literie */
+.literie .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.literie figure{margin:0;position:sticky;top:110px}
+.literie figure .cadre img{aspect-ratio:4/5;object-position:42% 60%}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:9px 15px;border-radius:999px;box-shadow:0 10px 20px -12px rgba(35,42,58,.6);max-width:calc(100% - 36px)}
+.gamme{list-style:none;margin:44px 0 0;padding:0}
+.gamme li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 28px;padding:26px 0;border-top:1.5px dashed var(--fil)}
+.gamme li:last-child{border-bottom:1.5px dashed var(--fil)}
+.gamme h3{font-size:27px}
+.gamme .compte{font-size:15px;color:var(--accent);font-weight:500;align-self:center;white-space:nowrap}
+.gamme p{grid-column:1/-1;color:var(--doux);font-size:17px;max-width:38em}
+.gamme .voir{grid-column:1/-1;margin-top:6px;font-size:16px}
+
+/* fabrication */
+.fabrication{background:var(--surface)}
+.fab-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 96px;align-items:end}
+.fil{position:relative;list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.fil::before{content:"";position:absolute;left:0;right:0;top:11px;border-top:2px dashed var(--accent);opacity:.55}
+.fil li{position:relative;padding-top:40px}
+.fil li::before{content:"";position:absolute;top:2px;left:0;width:20px;height:20px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);box-shadow:inset 0 0 0 4px var(--surface),inset 0 0 0 10px var(--accent)}
+.fil b{font:500 23px/1.15 var(--display)}
+.vignettes{display:flex;flex-wrap:wrap;gap:32px;margin-top:80px;align-items:flex-start}
+.polaroid{margin:0;width:min(240px,100%);background:#FBFBF8;padding:10px 10px 14px;border-radius:6px;box-shadow:0 24px 40px -26px rgba(35,42,58,.65)}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.polaroid figcaption{font-size:14px;color:var(--doux);margin-top:10px;line-height:1.4}
+.vignettes .polaroid:nth-child(1){transform:rotate(-2deg)}
+.vignettes .polaroid:nth-child(2){transform:rotate(1.5deg);margin-top:28px}
+.vignettes .polaroid:nth-child(3){transform:rotate(-1deg)}
+.vignettes .note{flex:1 1 260px;align-self:center;font-size:17px;color:var(--doux);max-width:24em}
+
+/* citation */
+.citation .wrap{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(40px,6vw,88px);align-items:center}
+.citation blockquote{margin:0}
+.citation blockquote p{font:italic 400 clamp(28px,3.4vw,44px)/1.22 var(--display);text-wrap:balance}
+.citation .qualites{margin-top:30px;font-size:18px;color:var(--doux);max-width:34em}
+.citation .actions{margin-top:30px}
+.citation figure{margin:0}
+.citation figure .cadre img{aspect-ratio:3/4;object-position:40% 50%}
+
+/* histoire (sombre) */
+.histoire{background:var(--sombre);color:var(--clair)}
+.histoire .chapo{color:var(--clair-doux)}
+.hist-grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(40px,6vw,96px);align-items:start}
+.hist-grille .polaroid{margin-top:48px;transform:rotate(-2.5deg);background:#F1F2EC}
+.annees{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.annees li{padding:24px 0;border-top:1.5px dashed rgba(236,238,231,.25)}
+.annees b{display:block;font:400 40px/1 var(--display);color:#C9D0EE}
+.annees span{display:block;margin-top:10px;font-size:17px;color:var(--clair-doux);line-height:1.5}
+.annees .fort span{color:var(--clair)}
+
+/* reportages */
+.reportages .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.reportages .polaroid{margin-top:44px;transform:rotate(2deg)}
+.ecrans{list-style:none;margin:0;padding:0}
+.ecrans li{padding:28px 0;border-top:1.5px dashed var(--fil)}
+.ecrans li:last-child{border-bottom:1.5px dashed var(--fil)}
+.ecrans small{display:block;font-size:15px;color:var(--accent);font-weight:500}
+.ecrans h3{font-size:clamp(24px,2.4vw,30px);margin-top:8px}
+.ecrans .actions{margin-top:36px}
+
+/* contact */
+.contact{background:var(--bande);border-top:1px dashed var(--fil)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
+.services{list-style:none;margin:30px 0 0;padding:0}
+.services li{padding:14px 0 14px 30px;position:relative;font-size:17px;border-top:1px dashed var(--fil)}
+.services li::before{content:"";position:absolute;left:4px;top:24px;width:10px;height:10px;border-radius:50%;border:2px solid var(--accent)}
+.carte{background:var(--surface);border-radius:20px;padding:38px clamp(24px,3vw,44px);box-shadow:var(--ombre);position:relative}
+.carte::after{content:"";position:absolute;inset:10px;border:1.5px dashed var(--fil);border-radius:13px;pointer-events:none}
+.carte dl{margin:0}
+.carte dt{font-size:14px;color:var(--doux)}
+.carte dd{margin:4px 0 22px;font:500 20px/1.35 var(--display);overflow-wrap:anywhere}
+.carte dd:last-child{margin-bottom:0}
+.carte dd a{text-decoration:none}
+.carte dd a:hover{color:var(--accent)}
+.carte .horaires{font:400 17px/1.5 var(--texte)}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .marque span{color:var(--clair-doux)}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.7}
+.pied h3{font:500 15px/1.2 var(--texte);color:var(--clair);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair)}
+.mentions{margin-top:64px;border-top:1px dashed rgba(236,238,231,.18);padding:22px 0;font-size:14px;color:var(--clair-doux)}
+.signature{margin:0;text-align:center;font-size:13px;color:#8F96A8;padding:18px var(--gout) 26px;background:#1D2331}
+
+/* apparition */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+.js .vignettes .reveal.vu:nth-child(1){transform:rotate(-2deg)}
+.js .vignettes .reveal.vu:nth-child(2){transform:rotate(1.5deg)}
+.js .vignettes .reveal.vu:nth-child(3){transform:rotate(-1deg)}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+/* tablette */
+@media (max-width:1080px){
+  .nav a:not(.tel-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+  .fil{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
+  .fil::before{display:none}
+}
+@media (max-width:860px){
+  section{padding:88px 0}
+  .heros{padding:40px 0 72px}
+  .heros .wrap,.literie .wrap,.citation .wrap,.hist-grille,.reportages .wrap,.contact .wrap,.fab-tete{grid-template-columns:minmax(0,1fr)}
+  .heros .wrap{gap:36px}
+  .etiquette{left:-8px;top:24px}
+  .literie figure{position:relative;top:0}
+  .citation figure{max-width:420px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:66px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .tel-haut{padding:10px 14px;font-size:15px}
+  .tel-haut .num{display:none}
+  .tel-haut::after{content:"Appeler"}
+  .fil b{font-size:19px}
+  .carte dd{font-size:18px}
+  .lieu{font-size:15px}
+  .heros .intro{font-size:17px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li,.faits li:nth-child(4){border-left:0;padding:0 12px 0 0}
+  .faits b{font-size:19px}
+  .fil{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gamme li{grid-template-columns:minmax(0,1fr)}
+  .gamme .compte{align-self:start}
+  .gamme h3{font-size:24px}
+  .annees{grid-template-columns:minmax(0,1fr)}
+  .annees b{font-size:34px}
+  .vignettes{gap:24px}
+  .vignettes .polaroid:nth-child(2){margin-top:0}
+  .pique::after{inset:8px}
+  .etiquette div{padding:13px 28px 12px}
+  .etiquette b{font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Au Fil de Laine</b><span>Fabrique de literie en laine, Aveyron</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#literie">La literie</a>
+      <a href="#fabrication">La fabrication</a>
+      <a href="#histoire">L'histoire</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-haut" href="tel:+33565816365" aria-label="Appeler le 05 65 81 63 65"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="num">05 65 81 63 65</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-labelledby="titre-heros">
+    <div class="wrap">
+      <div>
+        <p class="lieu">Fabrique artisanale de literie à Salles-Courbatiès, en Aveyron</p>
+        <h1 id="titre-heros">Des matelas en laine, confectionnés à la main depuis 1896.</h1>
+        <p class="intro">Matelas, futons, couettes, oreillers, traversins, surmatelas et sommiers&nbsp;: tout est fabriqué dans notre atelier aveyronnais, avec la laine d'éleveurs de la région et des machines de 1945 toujours en activité.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.aufildelaine.com/3-matelas-traditionnel-">Voir nos matelas</a>
+          <a class="btn btn-contour" href="tel:+33565816365"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="num">05 65 81 63 65</span></a>
+        </div>
+      </div>
+      <figure class="photo-heros">
+        <div class="cadre pique">
+          <img src="assets/au-fil-de-laine-salles-courbaties/matelas-laine-fleuri-bleu-mouton-et-rouet.webp" width="1600" height="1049" alt="Matelas capitonné en coutil fleuri bleu sur son sommier, un agneau couché devant, un rouet à droite">
+        </div>
+        <div class="etiquette" aria-label="Label Fabriqué en Aveyron"><div><b>Fabriqué en Aveyron</b><small>certifie l'authenticité de nos produits</small></div></div>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><b>Depuis 1896</b><span>un savoir-faire de plus d'un siècle</span></li>
+      <li><b>Machines de 1945</b><span>toujours en activité</span></li>
+      <li><b>Laine de la région</b><span>principalement d'éleveurs de notre région</span></li>
+      <li><b>Eau de source</b><span>la laine est lavée sans savon, au moulin</span></li>
+      <li><b>Sur mesure</b><span>toutes dimensions et réfection de matelas</span></li>
+    </ul>
+  </div>
+
+  <section class="literie" id="literie" aria-labelledby="titre-literie">
+    <div class="wrap">
+      <figure class="reveal">
+        <div class="cadre">
+          <img src="assets/au-fil-de-laine-salles-courbaties/matelas-laine-raye-et-coffre-de-laine-brute.webp" width="1600" height="1049" loading="lazy" alt="Matelas capitonné en coutil rayé gris et blanc, à côté d'un coffre en bois rempli de laine brute">
+          <span class="pastille">Coutil rayé et coffre de laine brute</span>
+        </div>
+      </figure>
+      <div>
+        <h2 class="titre" id="titre-literie">Toute la literie, de la laine au sommier.</h2>
+        <p class="chapo">Chaque pièce est réalisée avec soin, grâce à un savoir-faire transmis au fil des générations, où l'expérience humaine reste au cœur de chaque étape.</p>
+        <ul class="gamme">
+          <li><h3>Matelas</h3><span class="compte">4 choix</span>
+            <p>Tout laine confectionné à la main, 1 côté laine et 1 côté coton, ou laine sur un cœur en mousse haute résilience, en 2 faces laine ou 1 face laine et 1 face coton.</p>
+            <a class="lien voir" href="https://www.aufildelaine.com/3-matelas-traditionnel-">Voir les matelas</a></li>
+          <li><h3>Futons</h3><span class="compte">3 gammes</span>
+            <p>Tout laine, tout coton pour un confort ferme, ou 1 côté laine et 1 côté coton, en confection traditionnelle.</p>
+            <a class="lien voir" href="https://www.aufildelaine.com/6-futons">Voir les futons</a></li>
+          <li><h3>Couettes</h3><span class="compte">laine ou duvet</span>
+            <p>Couettes laine simple, 4 saisons ou duo, pour un confort naturel toute l'année, et couettes duvet, légères et chaudes.</p>
+            <a class="lien voir" href="https://www.aufildelaine.com/9-couettes">Voir les couettes</a></li>
+          <li><h3>Oreillers et traversins</h3><span class="compte">en laine</span>
+            <p>Oreillers et traversins en laine, pour des nuits douces.</p>
+            <a class="lien voir" href="https://www.aufildelaine.com/11-oreillers-et-traversins">Voir les oreillers</a></li>
+          <li><h3>Sommiers et pieds</h3><span class="compte">lattes ou ressorts</span>
+            <p>Solides et durables.</p>
+            <a class="lien voir" href="https://www.aufildelaine.com/7-sommiers-et-pieds">Voir les sommiers</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="fabrication" id="fabrication" aria-labelledby="titre-fab">
+    <div class="wrap">
+      <div class="fab-tete">
+        <h2 class="titre" id="titre-fab">De la toison au matelas, tout se passe à l'atelier.</h2>
+        <p class="chapo" style="margin-top:0">La laine est lavée dans notre moulin avec une eau de source, sans savon, puis préparée grâce à nos machines et aux gestes précis de nos artisans. Elle garde ainsi ses qualités&nbsp;: absorber l'humidité, réguler la température, offrir un confort sain et durable.</p>
+      </div>
+      <ol class="fil" aria-label="Les machines de la fabrique, dans l'ordre du travail">
+        <li><b>Le lavoir</b></li>
+        <li><b>L'essoreuse</b></li>
+        <li><b>Le battoir</b></li>
+        <li><b>La loup-carde</b></li>
+        <li><b>La carde</b></li>
+        <li><b>La capitonneuse</b></li>
+      </ol>
+      <div class="vignettes">
+        <figure class="polaroid reveal"><img src="assets/au-fil-de-laine-salles-courbaties/nappe-de-laine-preparee-sur-la-table.webp" width="800" height="600" loading="lazy" alt="Épaisse nappe de laine étalée sur une grande table en bois de l'atelier"><figcaption>La nappe de laine, prête sur la table</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/au-fil-de-laine-salles-courbaties/artisane-a-la-capitonneuse.webp" width="800" height="600" loading="lazy" alt="Une artisane pique un matelas rayé tendu dans une capitonneuse ancienne peinte en vert"><figcaption>Le matelas tendu dans la capitonneuse</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/au-fil-de-laine-salles-courbaties/couture-a-la-main-du-bourrelet.webp" width="800" height="600" loading="lazy" alt="Deux mains cousent à l'aiguille le bourrelet d'un matelas en coutil rayé"><figcaption>Le bourrelet, cousu à l'aiguille</figcaption></figure>
+        <p class="note">Certaines machines datent de plusieurs générations. Entretenues et adaptées au fil du temps, elles participent encore à chaque fabrication. <a class="lien" href="https://www.aufildelaine.com/Information/9-photos-des-machines-de-la-societe-au-fil-de-laine">Voir les machines</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="La laine">
+    <div class="wrap">
+      <div>
+        <blockquote>
+          <p>«&nbsp;Tout le monde aime la laine. Le but n'est pas de vous la faire aimer, mais de vous prouver que vous avez raison de l'aimer… objectivement.&nbsp;»</p>
+        </blockquote>
+        <p class="qualites">Chaude, résistante, isolante&nbsp;: notre plaquette réunit ce qui fait de la laine une matière de qualité pour dormir.</p>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://www.aufildelaine.com/PDF/plaquette_performance_laine_V2.pdf">Lire la plaquette sur la laine</a>
+        </div>
+      </div>
+      <figure class="reveal">
+        <div class="cadre">
+          <img src="assets/au-fil-de-laine-salles-courbaties/coin-de-futon-en-lin-capitonne-gros-plan.webp" width="1600" height="1200" loading="lazy" alt="Gros plan sur l'angle d'un futon en lin naturel, son bouton de capiton en laine et la couture du bord">
+          <span class="pastille">Bouton de capiton en laine</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire" aria-labelledby="titre-hist">
+    <div class="wrap hist-grille">
+      <div>
+        <h2 class="titre" id="titre-hist">Du «&nbsp;Fil de l'Âne&nbsp;» au Fil de Laine.</h2>
+        <p class="chapo">Au début du XX<sup>e</sup> siècle, le moulin de Granayrac était un moulin à froment et à huile. Les bâtiments construits autour dans les années 1940-1950 et les machines de cette époque sont encore aujourd'hui au cœur de notre activité.</p>
+        <figure class="polaroid reveal"><img src="assets/au-fil-de-laine-salles-courbaties/batiment-de-la-fabrique-brique-et-pierre.webp" width="491" height="330" loading="lazy" alt="Le long bâtiment de la fabrique en brique et pierre, volets blancs et escalier extérieur"><figcaption>La fabrique, à Salles-Courbatiès</figcaption></figure>
+      </div>
+      <ul class="annees">
+        <li><b>1896</b><span>Le savoir-faire remonte à la fin du XIX<sup>e</sup> siècle, quand la filature Blanc débute à Cajarc.</span></li>
+        <li><b>1918</b><span>Paul Blanc, mécanicien formé à Saint-Étienne, installe ses machines au Moulin Neuf, près de Naussac.</span></li>
+        <li><b>1938</b><span>Il acquiert le moulin de Granayrac et l'adapte en filature&nbsp;: le «&nbsp;Fil de l'Âne&nbsp;» devient le «&nbsp;Fil de Laine&nbsp;».</span></li>
+        <li><b>1972</b><span>Pierre et Léa Blanc poursuivent l'activité, puis Gérard Blanc la dirige de 1984 à 2003.</span></li>
+        <li><b>2003</b><span>Chantal et Jean-Michel Mallent reprennent la filature et la développent pendant plus de vingt ans.</span></li>
+        <li class="fort"><b>2024</b><span>Leur fille Coralie et son mari Jean-Philippe Calvié reprennent l'entreprise, pour transmettre à leur tour ce savoir-faire.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reportages" aria-labelledby="titre-rep">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-rep">La fabrique, vue à la télévision.</h2>
+        <p class="chapo">Trois reportages et une publicité, à revoir en vidéo.</p>
+        <figure class="polaroid reveal"><img src="assets/au-fil-de-laine-salles-courbaties/troupeau-de-moutons-dans-le-pre-titre-au-fil-de-laine.webp" width="1600" height="920" loading="lazy" alt="Troupeau de brebis tondues en file sur un pré en pente, titre Au Fil de Laine" style="aspect-ratio:16/10"><figcaption>La publicité Au Fil de Laine</figcaption></figure>
+      </div>
+      <div>
+        <ul class="ecrans">
+          <li><small>France 3, Météo à la carte</small><h3>Artisanat&nbsp;: le dernier fabricant de matelas en laine d'Aveyron</h3></li>
+          <li><small>Arte, Détour(s) de mob</small><h3>Le reportage sur Au Fil de Laine</h3></li>
+          <li><small>France 3 Occitanie, Vous êtes formidables</small><h3>Reportage sur le Fil de Laine</h3></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.aufildelaine.com/Information/8-videos-de-au-fil-de-laine">Regarder les vidéos</a>
+          <a class="btn btn-contour" href="https://www.aufildelaine.com/Information/10-photos-de-la-tonte-des-moutons">Photos de la tonte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-contact">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-contact">Venir à la fabrique, ou se faire livrer.</h2>
+        <p class="chapo">Notre service client répond à vos questions et vous conseille, par téléphone ou par e-mail.</p>
+        <ul class="services">
+          <li>Retrait gratuit de votre commande dans notre salle d'exposition, à l'atelier</li>
+          <li>Livraison offerte en France métropolitaine dès 350&nbsp;€ d'achat</li>
+          <li>Livraison à la date de votre choix, même des mois après la commande</li>
+          <li>Rendez-vous possible le samedi et hors des horaires d'ouverture</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33565816365">Appeler le <span class="num">05 65 81 63 65</span></a>
+          <a class="btn btn-contour" href="mailto:contact@aufildelaine.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <dt>La fabrique</dt>
+          <dd>16 impasse du Fil de Laine<br>12260 Salles-Courbatiès</dd>
+          <dt>Téléphone</dt>
+          <dd><a class="num" href="tel:+33565816365">05 65 81 63 65</a></dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:contact@aufildelaine.com">contact@aufildelaine.com</a></dd>
+          <dt>Horaires</dt>
+          <dd class="horaires">Du lundi au vendredi, 8h-12h et 13h-17h<br>Samedi sur rendez-vous</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Au Fil de Laine</b><span>Fabrication artisanale aveyronnaise depuis 1896</span></div>
+      <p style="margin-top:16px">16 impasse du Fil de Laine, 12260 Salles-Courbatiès<br><a class="num" href="tel:+33565816365">05 65 81 63 65</a><br><a href="mailto:contact@aufildelaine.com">contact@aufildelaine.com</a></p>
+      <p style="margin-top:12px">Du lundi au vendredi, 8h-12h et 13h-17h. Samedi sur rendez-vous.</p>
+    </div>
+    <div>
+      <h3>La literie</h3>
+      <ul>
+        <li><a href="https://www.aufildelaine.com/3-matelas-traditionnel-">Matelas</a></li>
+        <li><a href="https://www.aufildelaine.com/6-futons">Futons</a></li>
+        <li><a href="https://www.aufildelaine.com/9-couettes">Couettes</a></li>
+        <li><a href="https://www.aufildelaine.com/11-oreillers-et-traversins">Oreillers et traversins</a></li>
+        <li><a href="https://www.aufildelaine.com/7-sommiers-et-pieds">Sommiers et pieds</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>La fabrique</h3>
+      <ul>
+        <li><a href="https://www.aufildelaine.com/Information/6-presentation-du-fil-de-laine">Notre histoire</a></li>
+        <li><a href="https://www.aufildelaine.com/Information/1-livraison">Livraison et retours</a></li>
+        <li><a href="https://www.aufildelaine.com/nous-contacter">Nous contacter</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100064128991365">Facebook</a></li>
+        <li><a href="https://www.instagram.com/aufildelaine12/">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mentions"><div class="wrap">Au Fil de Laine, label Fabriqué en Aveyron</div></div>
+  <p class="signature">Proposition de Nicolas Masset pour Au Fil de Laine</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

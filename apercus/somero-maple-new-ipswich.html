@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Somero Maple Farm · Maple syrup from New Ipswich, NH</title>
+<meta name="description" content="Family owned and operated maple farm in New Ipswich, New Hampshire. Award-winning maple syrup and maple products, gift shop open all year at the sugar house.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23A8322A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23F8F1E6'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EDE4D3; --base-2:#E3D6BF; --surface:#F8F1E6; --ink:#2A1A12; --ink-2:#5B4637; --ink-3:#7A6655;
+  --red:#A8322A; --red-d:#8E2922; --char:#2A2522; --char-2:#3A332F; --cream-on-dark:#EFE5D6; --muted-on-dark:#BFB2A3;
+  --line:rgba(42,26,18,.16);
+  --shadow:0 30px 60px -34px rgba(42,26,18,.55);
+  --shadow-s:0 18px 36px -24px rgba(42,26,18,.5);
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--ink);font-family:"Work Sans",ui-serif,Georgia,serif;font-weight:400;font-size:18px;line-height:1.6}
+::selection{background:var(--red);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Bree Serif",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+section{padding-block:112px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(237,228,211,.94);backdrop-filter:saturate(1.1);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-family:"Bree Serif",Georgia,serif;font-weight:400;font-size:24px}
+.brand small{font-size:13px;color:var(--ink-3);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;color:var(--ink-2);transition:color .2s}
+.nav a:hover{color:var(--red)}
+.nav .call{color:var(--ink);font-weight:500;background:var(--surface);padding:11px 20px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);white-space:nowrap}
+.nav .call:hover{color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:500;font-size:17px;line-height:1.2;transition:transform .25s ease,background-color .25s ease,box-shadow .25s ease,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--red);color:var(--surface);box-shadow:0 14px 28px -16px rgba(168,50,42,.8)}
+.btn-fill:hover{background:var(--red-d)}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--surface)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* hero */
+.hero{padding-block:56px 104px}
+.hero .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;grid-template-areas:"ph ph ph ph ph . ti ti ti ti ti ti" "ph ph ph ph ph . le le le le le le" "ph ph ph ph ph . ac ac ac ac ac ac";grid-template-rows:auto auto 1fr;align-items:start}
+.hero h1{grid-area:ti;font-size:clamp(38px,5.3vw,76px);line-height:1.04;align-self:end;padding-top:56px}
+.hero .lead{grid-area:le;margin-top:28px;font-size:19px;color:var(--ink-2);max-width:56ch;font-weight:300}
+.hero .lead strong{font-weight:500;color:var(--ink)}
+.hero .actions{grid-area:ac;margin-top:36px}
+.hero .row{display:flex;flex-wrap:wrap;gap:14px}
+.hero .hours{margin-top:22px;font-size:15px;color:var(--ink-3);display:flex;align-items:center;gap:10px}
+.hero .hours i{width:8px;height:8px;border-radius:50%;background:#5E7A3E;flex:none;box-shadow:0 0 0 4px rgba(94,122,62,.16)}
+.photo-hero{grid-area:ph;position:relative;margin:0 18px 18px 0}
+.photo-hero::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:18px;background-color:var(--red);
+  background-image:repeating-linear-gradient(0deg,rgba(42,37,34,.62) 0 26px,transparent 26px 52px),repeating-linear-gradient(90deg,rgba(42,37,34,.62) 0 26px,transparent 26px 52px)}
+.photo-hero img{position:relative;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:62% 40%;border-radius:18px;box-shadow:var(--shadow)}
+.tag{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:500;padding:9px 14px;border-radius:10px;line-height:1.25;box-shadow:0 10px 24px -14px rgba(42,26,18,.6)}
+
+/* facts */
+.facts{background:var(--base-2);padding-block:34px}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.facts li{padding:4px 24px;border-left:1px solid var(--line)}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{display:block;font-family:"Bree Serif",Georgia,serif;font-weight:400;font-size:24px;line-height:1.2}
+.facts span{display:block;font-size:15px;color:var(--ink-2);margin-top:4px;line-height:1.4}
+
+/* story */
+.story .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.story h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08;max-width:15ch}
+.story .txt p{margin-top:22px;color:var(--ink-2);max-width:60ch}
+.story .txt p:first-of-type{margin-top:30px;font-size:21px;color:var(--ink);line-height:1.5}
+.collage{position:relative;min-height:540px;background:var(--base-2);border-radius:24px}
+.pola{position:absolute;background:var(--surface);padding:10px 10px 0;border-radius:6px;box-shadow:var(--shadow-s)}
+.pola img{width:100%;border-radius:3px;object-fit:cover}
+.pola figcaption{font-size:14px;color:var(--ink-2);padding:10px 4px 12px;line-height:1.3}
+.pola-a{width:min(240px,58%);top:44px;left:9%;transform:rotate(-3deg)}
+.pola-a img{aspect-ratio:1000/475}
+.pola-b{width:min(176px,40%);top:236px;right:9%;transform:rotate(2.5deg)}
+.pola-b img{aspect-ratio:3/4;object-position:50% 40%}
+.seal{position:absolute;left:16%;bottom:40px;width:156px;height:156px;border-radius:50%;background:var(--char);color:var(--cream-on-dark);display:grid;place-content:center;text-align:center;box-shadow:var(--shadow-s);transform:rotate(-6deg)}
+.seal b{font-family:"Bree Serif",Georgia,serif;font-weight:400;font-size:40px;line-height:1}
+.seal span{font-size:13px;line-height:1.3;color:var(--muted-on-dark);margin-top:6px;padding-inline:18px}
+
+/* process (dark) */
+.process{background:var(--char);color:var(--cream-on-dark)}
+.process .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:end}
+.process h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.process .head p{margin-top:20px;color:var(--muted-on-dark);max-width:58ch}
+.steam{display:flex;gap:18px;align-items:flex-end;justify-content:flex-end}
+.steam figure{margin:0;position:relative;width:min(240px,54%);flex:none}
+.steam img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.steam figure:last-child{width:min(190px,42%);margin-bottom:44px}
+.steam figure:last-child img{aspect-ratio:1/1}
+.ratio{margin-top:64px;display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(239,229,214,.16)}
+.ratio b{font-family:"Bree Serif",Georgia,serif;font-weight:400;font-size:clamp(56px,7vw,96px);line-height:.95;color:var(--surface)}
+.ratio span{font-size:19px;color:var(--muted-on-dark);max-width:30ch}
+.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:rgba(239,229,214,.22)}
+.steps li{position:relative}
+.steps .n{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--char);box-shadow:inset 0 0 0 1.5px var(--red);color:var(--surface);font-size:14px;font-weight:500;position:relative}
+.steps h3{font-size:24px;margin-top:22px;color:var(--surface)}
+.steps p{margin-top:10px;font-size:16.5px;color:var(--muted-on-dark);line-height:1.6}
+.process .tail{margin-top:56px;font-family:"Bree Serif",Georgia,serif;font-size:24px;color:var(--surface)}
+
+/* shelf */
+.shelf .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end}
+.shelf h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.shelf .intro p{color:var(--ink-2);max-width:52ch}
+.rack{margin-top:64px;position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;align-items:end;padding:0 8px}
+.rack::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;border-radius:4px;background:linear-gradient(#6B4A34,#563B29);box-shadow:0 22px 30px -20px rgba(42,26,18,.6)}
+.item{background:var(--surface);border-radius:16px 16px 6px 6px;padding:12px 12px 18px;box-shadow:0 24px 40px -30px rgba(42,26,18,.45)}
+.item img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+.item h3{font-family:"Work Sans",Georgia,serif;font-weight:500;font-size:16px;line-height:1.35;margin-top:14px}
+.item p{font-size:15px;color:var(--ink-3);margin-top:3px}
+.item:nth-child(2){margin-bottom:46px}
+.item:nth-child(4){margin-bottom:28px}
+.item.tall img{aspect-ratio:9/14}
+.cats{margin-top:64px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.cats > span{font-size:16px;color:var(--ink-2);margin-right:8px}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;border-radius:999px;background:var(--surface);text-decoration:none;font-size:16px;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s,transform .2s}
+.chip:hover{box-shadow:inset 0 0 0 1.5px var(--ink);transform:translateY(-1px)}
+.cats .btn{margin-left:auto}
+
+/* questions */
+.faq{background:var(--surface)}
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.frame{position:sticky;top:110px;background:var(--base);padding:18px;border-radius:22px;box-shadow:var(--shadow)}
+.frame figure{margin:0;position:relative}
+.frame img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 45%;border-radius:12px}
+.faq h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.faq .sub{margin-top:18px;color:var(--ink-2)}
+.qa{margin-top:40px;border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;font-family:"Bree Serif",Georgia,serif;font-size:22px;line-height:1.3}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s ease}
+.qa details[open] summary::after{transform:rotate(225deg) translate(-3px,-3px)}
+.qa .a{padding:0 0 26px;color:var(--ink-2);max-width:64ch}
+.qa .a p + p{margin-top:14px}
+
+/* verse */
+.verse{padding-block:120px;text-align:left}
+.verse blockquote{margin:0;max-width:1000px}
+.verse p{font-family:"Bree Serif",Georgia,serif;font-size:clamp(34px,5vw,68px);line-height:1.08;text-wrap:balance}
+.verse cite{display:block;margin-top:24px;font-style:normal;font-size:17px;color:var(--ink-3)}
+
+/* trade */
+.trade{padding-top:0}
+.trade .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:stretch}
+.card{background:var(--surface);border-radius:22px;padding:48px;box-shadow:0 30px 60px -44px rgba(42,26,18,.5)}
+.trade h2{font-size:clamp(28px,3vw,40px);line-height:1.1}
+.trade p{margin-top:18px;color:var(--ink-2)}
+.list{list-style:none;margin:26px 0 0;padding:0}
+.list li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:20px;font-size:17px}
+.list li b{font-weight:500}
+.list li span{color:var(--ink-2)}
+.trade .btn{margin-top:32px}
+.equip{padding:48px 8px 48px 24px;display:flex;flex-direction:column}
+.equip .links{margin-top:0;padding-top:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.tlink{font-weight:500;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-color:var(--red);transition:color .2s}
+.tlink:hover{color:var(--red)}
+
+/* visit */
+.visit{background:var(--base-2)}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.visit h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.visit .txt p{margin-top:20px;color:var(--ink-2);max-width:54ch}
+.visit .row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.contact{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--shadow)}
+.contact dl{margin:0}
+.contact div{padding:18px 0;border-top:1px solid var(--line)}
+.contact div:first-child{border-top:0;padding-top:0}
+.contact dt{font-size:14px;color:var(--ink-3)}
+.contact dd{margin:4px 0 0;font-size:19px;line-height:1.45;overflow-wrap:anywhere}
+.contact dd a{text-decoration:none}
+.contact dd a:hover{color:var(--red)}
+
+/* footer */
+footer{background:var(--char);color:var(--cream-on-dark);padding-block:80px 32px}
+footer .grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr) minmax(0,2fr);gap:40px}
+footer .name{font-family:"Bree Serif",Georgia,serif;font-size:28px;line-height:1.15}
+footer p,footer li{font-size:16px;color:var(--muted-on-dark);line-height:1.6}
+footer h3{font-family:"Work Sans",Georgia,serif;font-weight:500;font-size:15px;color:var(--cream-on-dark);margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0}
+footer a{text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--surface)}
+footer .name + p{margin-top:12px;max-width:34ch}
+.credit{margin-top:64px;padding-top:24px;border-top:1px solid rgba(239,229,214,.12);font-size:13px;color:#9C8F81}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .pola-a.reveal.in{transform:rotate(-3deg)}
+.js .pola-b.reveal.in{transform:rotate(2.5deg)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .js .pola-a.reveal{transform:rotate(-3deg)}
+  .js .pola-b.reveal{transform:rotate(2.5deg)}
+  .btn,.chip{transition:none}
+}
+
+/* tablet */
+@media (max-width:1080px){
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .facts li:nth-child(4){border-left:0;padding-left:0}
+  .rack{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:56px}
+  .rack::after{display:none}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}
+  .steps::before{display:none}
+  footer .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:900px){
+  section{padding-block:88px}
+  .nav a:not(.call){display:none}
+  .hero{padding-block:24px 72px}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"ti" "ph" "le" "ac";grid-template-rows:auto}
+  .hero h1{padding-top:8px}
+  .photo-hero{margin-top:28px}
+  .photo-hero img{aspect-ratio:4/5}
+  .story .wrap,.faq .wrap,.visit .wrap,.trade .wrap,.shelf .intro{grid-template-columns:minmax(0,1fr);gap:40px}
+  .collage{min-height:540px;max-width:460px}
+  .process .head{grid-template-columns:minmax(0,1fr)}
+  .frame{position:relative;top:0;max-width:440px}
+  .equip{padding:8px 0 0}
+  .cats .btn{margin-left:0}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .wrap{width:min(var(--wrap),100% - 40px)}
+  section{padding-block:72px}
+  .top .wrap{min-height:64px}
+  .brand b{font-size:20px}
+  .brand small{display:none}
+  .nav .call{padding:9px 16px;font-size:15px}
+  .hero .lead{font-size:18px}
+  .hero .row .btn,.visit .row .btn{width:100%}
+  .facts ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .facts li,.facts li:nth-child(4){border-left:0;padding:0}
+  .facts li:last-child{grid-column:1/-1}
+  .facts b{font-size:21px}
+  .collage{min-height:470px}
+  .pola-a{width:min(240px,70%);top:28px;left:6%}
+  .pola-b{width:min(150px,42%);top:206px;right:5%}
+  .seal{width:128px;height:128px;left:8%;bottom:28px}
+  .seal b{font-size:32px}
+  .steam{justify-content:flex-start}
+  .steam figure{width:min(240px,56%)}
+  .steam figure:last-child{width:min(160px,38%);margin-bottom:28px}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .rack{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;row-gap:24px;padding:0}
+  .item:nth-child(2),.item:nth-child(4){margin-bottom:0}
+  .item:nth-child(2n){transform:translateY(28px)}
+  .item h3{font-size:15px}
+  .card,.contact{padding:28px 22px}
+  .contact dd{font-size:17px}
+  .list li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .qa summary{font-size:19px}
+  .cats .btn{width:100%}
+  footer .grid{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Somero Maple Farm</b><small>New Ipswich, New Hampshire</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#syrup">Sap to syrup</a>
+      <a href="#shop">Shop</a>
+      <a href="#visit">Visit</a>
+      <a class="call" href="tel:+16035620822">603-562-0822</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1>Award-winning maple syrup, from our farm to you.</h1>
+    <figure class="photo-hero">
+      <img src="assets/somero-maple-new-ipswich/collecte-de-seve-au-pied-d-un-vieil-erable.webp" width="1200" height="1600" alt="Pouring a bucket of sap at the foot of an old maple tree on a clear late-winter day" fetchpriority="high">
+      <figcaption class="tag">Collecting sap, one bucket at a time</figcaption>
+    </figure>
+    <p class="lead">A <strong>family owned and operated</strong> maple farm in the Monadnock region of southern New Hampshire, creating fine maple products since 2008. Our gift shop at the sugar house is open all year.</p>
+    <div class="actions">
+      <div class="row">
+        <a class="btn btn-fill" href="http://someromaplefarm.com/maple-store/">Shop maple products</a>
+        <a class="btn btn-line" href="tel:+16035620822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 603-562-0822</a>
+      </div>
+      <p class="hours"><i></i>Gift shop open Monday to Saturday, 7&nbsp;am to 8&nbsp;pm</p>
+    </div>
+  </div>
+</section>
+
+<div class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>Since 2008</b><span>First batch boiled over a backyard campfire</span></li>
+      <li><b>New Ipswich, NH</b><span>Monadnock region, southern New Hampshire</span></li>
+      <li><b>Open all year</b><span>Monday to Saturday, 7&nbsp;am to 8&nbsp;pm</span></li>
+      <li><b>40 to 1</b><span>Gallons of sap for one gallon of syrup, on average</span></li>
+      <li><b>Award-winning</b><span>Multiple awards over the years</span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="txt">
+      <h2>Two brothers and a backyard campfire.</h2>
+      <p>Somero Maple Farm began in 2008, when brothers Peter and Reuben, just 13 and 11, boiled their first batch of maple syrup over a campfire in the back yard.</p>
+      <p>Their passion for maple grew with them, and so did the facility, the production and the product line. Every spring, when the sap starts to flow, we work long days to make our syrup, and each batch is filtered, tasted and graded.</p>
+      <p>Winning multiple awards over the years, we are committed to the best quality maple syrup and a variety of maple products, made in the hills of southern New Hampshire.</p>
+    </div>
+    <div class="collage" aria-label="Family photos">
+      <figure class="pola pola-a reveal">
+        <img src="assets/somero-maple-new-ipswich/famille-devant-la-cabane-a-sucre.webp" width="1000" height="475" alt="The Somero family in front of the sugar house doors" loading="lazy">
+        <figcaption>The family at the sugar house</figcaption>
+      </figure>
+      <figure class="pola pola-b reveal">
+        <img src="assets/somero-maple-new-ipswich/bebe-dans-un-seau-a-seve-accroche-a-l-arbre.webp" width="720" height="960" alt="A baby in a pink knit hat sitting in a sap bucket hung on a maple" loading="lazy">
+        <figcaption>Sugaring season</figcaption>
+      </figure>
+      <div class="seal"><b>&rsquo;08</b><span>Family owned and operated</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="syrup">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Boiled, and boiled, and boiled.</h2>
+        <p>Plain and simple, maple syrup is the sap from a maple tree boiled down to the proper density. Here is how it happens at our sugar house each spring.</p>
+      </div>
+      <div class="steam">
+        <figure class="reveal"><img src="assets/somero-maple-new-ipswich/sirop-qui-coule-de-l-evaporateur-dans-la-vapeur.webp" width="1000" height="563" alt="Amber syrup pouring from the evaporator through the steam" loading="lazy"></figure>
+        <figure class="reveal"><img src="assets/somero-maple-new-ipswich/seve-qui-bout-dans-l-evaporateur.webp" width="1000" height="563" alt="Sap boiling in the stainless steel evaporator pan" loading="lazy"></figure>
+      </div>
+    </div>
+    <div class="ratio"><b>40&nbsp;:&nbsp;1</b><span>On average, it takes 40 gallons of sap to make one gallon of pure maple syrup.</span></div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Tap</h3><p>When days reach the 40s and nights stay below freezing, we drill a small hole in each maple and insert a spout.</p></li>
+      <li><span class="n">2</span><h3>Collect</h3><p>We gather some of the sap flowing up and down the tree and bring it to the sugar house.</p></li>
+      <li><span class="n">3</span><h3>Boil</h3><p>The sap goes into the evaporator and boils down until it reaches the right density for syrup.</p></li>
+      <li><span class="n">4</span><h3>Grade and bottle</h3><p>After filtering, every batch is tested and graded, then bottled and sealed for our friends and neighbors.</p></li>
+    </ol>
+    <p class="tail">Natural. Nutritious. Nothing added.</p>
+  </div>
+</section>
+
+<section class="shelf" id="shop">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Bring some home today.</h2>
+      <p>We sell year round from our store at the sugar house, and online for all of your maple needs: syrup in glass and plastic, baking, candy, honey, and even treats for pets.</p>
+    </div>
+    <div class="rack">
+      <article class="item reveal">
+        <img src="assets/somero-maple-new-ipswich/sirop-en-bouteille-feuille-d-erable.webp" width="1333" height="1600" alt="Maple leaf glass bottle filled with amber syrup" loading="lazy">
+        <h3>Maple leaf glass bottle</h3><p>Glass bottles</p>
+      </article>
+      <article class="item tall reveal">
+        <img src="assets/somero-maple-new-ipswich/sirop-en-flacon-coeur.webp" width="900" height="1600" alt="Heart-shaped glass bottle of golden maple syrup" loading="lazy">
+        <h3>3.4&nbsp;oz. Heart Maple Syrup Bottle</h3><p>$13.99</p>
+      </article>
+      <article class="item reveal">
+        <img src="assets/somero-maple-new-ipswich/sirop-en-bidon-new-hampshire.webp" width="1333" height="1600" alt="Traditional New Hampshire pure maple syrup jug with a green cap" loading="lazy">
+        <h3>New Hampshire jug</h3><p>Plastic bottles</p>
+      </article>
+      <article class="item tall reveal">
+        <img src="assets/somero-maple-new-ipswich/mug-somero-maple-farm.webp" width="900" height="1600" alt="White Somero Maple Farm mug with a red maple leaf" loading="lazy">
+        <h3>Somero Maple Farm Mug</h3><p>$16.00</p>
+      </article>
+      <article class="item reveal">
+        <img src="assets/somero-maple-new-ipswich/sirop-en-chope-etiquette-pure-maple.webp" width="1333" height="1600" alt="Glass mug of dark maple syrup with a Pure Maple label and twine bow" loading="lazy">
+        <h3>Pure Maple glass mug</h3><p>Glass bottles</p>
+      </article>
+    </div>
+    <div class="cats">
+      <span>Browse the store:</span>
+      <a class="chip" href="http://someromaplefarm.com/product-category/plastic/">Plastic bottles</a>
+      <a class="chip" href="http://someromaplefarm.com/product-category/glass/">Glass bottles</a>
+      <a class="chip" href="http://someromaplefarm.com/product-category/baking/">Baking</a>
+      <a class="chip" href="http://someromaplefarm.com/product-category/candy/">Candy</a>
+      <a class="chip" href="http://someromaplefarm.com/product-category/honey/">Honey</a>
+      <a class="chip" href="http://someromaplefarm.com/product-category/pets/">For pets</a>
+      <a class="btn btn-fill" href="http://someromaplefarm.com/maple-store/">Open the maple store</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="questions">
+  <div class="wrap">
+    <div class="frame reveal">
+      <figure>
+        <img src="assets/somero-maple-new-ipswich/sirop-en-flacon-rond-motif-feuille.webp" width="1333" height="1600" alt="Round glass bottle etched with a maple leaf, filled with golden syrup" loading="lazy">
+        <figcaption class="tag">Every batch tested and graded</figcaption>
+      </figure>
+    </div>
+    <div>
+      <h2>Questions we hear at the sugar house.</h2>
+      <p class="sub">Pure maple syrup is simple. Here is what people ask us most.</p>
+      <div class="qa">
+        <details open>
+          <summary>What is 100% pure maple syrup?</summary>
+          <div class="a"><p>It is the sap from a maple tree boiled, and boiled, and boiled down to the proper density, to create a pure, all-natural sweetener.</p><p>In the spring in New Hampshire, when temperatures are in the 40s during the day and the nights are below freezing, we tap the trees, collect the sap and boil it in the evaporator. Yes, plain and simple.</p></div>
+        </details>
+        <details>
+          <summary>What is the difference between grades?</summary>
+          <div class="a"><p>At the beginning of the season we generally get a lighter syrup with a delicate taste. As the season goes on, the syrup gets darker and the taste gets stronger. One grade is not &ldquo;better&rdquo; for you than another: it just depends on what you like.</p></div>
+        </details>
+        <details>
+          <summary>What are the ingredients in pure maple syrup?</summary>
+          <div class="a"><p>There is nothing added to maple syrup. It is just maple sap from the tree, boiled down into syrup.</p></div>
+        </details>
+        <details>
+          <summary>What do I use maple sugar on?</summary>
+          <div class="a"><p>Anything you like. It is a good substitute for brown sugar when baking, and good on toast, in your coffee or tea, on squash, and in the foil on a baked potato.</p></div>
+        </details>
+        <details>
+          <summary>Beyond pancakes, where does the syrup go?</summary>
+          <div class="a"><p>Besides pancakes and waffles, try our syrup in your coffee, tea or milk, hot or cold, and on your ice cream and cereal. In fact, it can replace any other sweetener.</p></div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="verse">
+  <div class="wrap">
+    <blockquote>
+      <p>&ldquo;The trees of the Lord are full of sap.&rdquo;</p>
+      <cite>Psalms 104:16</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="trade" id="wholesale">
+  <div class="wrap">
+    <div class="card">
+      <h2>Wholesale, from our sugarhouse to your shelves.</h2>
+      <p>Our custom-made processing equipment keeps turnaround times fast, and every batch is filtered, tasted and graded.</p>
+      <ul class="list">
+        <li><b>Bulk syrup</b><span>Drums from 5 to 55 gallons</span></li>
+        <li><b>Retail ready</b><span>Traditional recyclable plastic jugs, vintage style tin and glass</span></li>
+        <li><b>Maple treats</b><span>Maple sugar, maple sugar candies and maple cream</span></li>
+        <li><b>Your brand</b><span>Custom printing on glass, or your labels on plastic</span></li>
+      </ul>
+      <a class="btn btn-line" href="http://someromaplefarm.com/wholesale-customers/">Become a wholesale customer</a>
+    </div>
+    <div class="equip">
+      <h2>Making your own syrup?</h2>
+      <p>We also sell maple sugaring equipment, including H2O Innovation, through our supply store, and our YouTube videos walk you through it.</p>
+      <div class="links">
+        <a class="tlink" href="https://www.maplesyrupsupplystore.com/">Visit the Maple Syrup Supply Store</a>
+        <a class="tlink" href="https://www.youtube.com/channel/UCqe0HBfz-gjw4SNmQOaSUHA">Learn from our YouTube videos</a>
+        <a class="tlink" href="http://someromaplefarm.com/recipes/">Maple recipes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="txt">
+      <h2>Come by the sugar house.</h2>
+      <p>Our maple gift shop is right at the sugar house on Poor Farm Road, open all year, Monday through Saturday. Closed Sundays.</p>
+      <p>During the season, call us for boiling times and free tours.</p>
+      <div class="row">
+        <a class="btn btn-fill" href="tel:+16035620822">Call 603-562-0822</a>
+        <a class="btn btn-line" href="mailto:someromaplefarm@gmail.com">Email us</a>
+      </div>
+    </div>
+    <div class="contact">
+      <dl>
+        <div><dt>Address</dt><dd>21 Poor Farm Road<br>New Ipswich, NH 03071</dd></div>
+        <div><dt>Gift shop hours</dt><dd>Monday to Saturday, 7&nbsp;am to 8&nbsp;pm<br>Closed Sundays</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+16035620822">603-562-0822</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:someromaplefarm@gmail.com">someromaplefarm@gmail.com</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="name">Somero Maple Farm</p>
+        <p>Family owned and operated maple farm in the Monadnock region of southern New Hampshire, since 2008.</p>
+      </div>
+      <div>
+        <h3>Sugar house</h3>
+        <p>21 Poor Farm Road<br>New Ipswich, NH 03071<br><a href="tel:+16035620822">603-562-0822</a><br><a href="mailto:someromaplefarm@gmail.com">someromaplefarm@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Gift shop</h3>
+        <p>Open all year<br>Monday to Saturday, 7&nbsp;am to 8&nbsp;pm<br>Closed Sundays</p>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <ul>
+          <li><a href="http://someromaplefarm.com/maple-store/">Maple store</a></li>
+          <li><a href="http://someromaplefarm.com/wholesale-customers/">Wholesale</a></li>
+          <li><a href="https://www.facebook.com/Somero-Maple-Farm-539874322787798/">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCqe0HBfz-gjw4SNmQOaSUHA">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="credit">Proposal by Nicolas Masset for Somero Maple Farm</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document.documentElement, top=document.getElementById('top');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  d.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

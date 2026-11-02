@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier Tutti Colori, sculpture en dentelle de bois en Aveyron</title>
+<meta name="description" content="Corinne Bouloc, artisan d'art à Pruines (Aveyron) : sculptures en dentelle de bois, luminaires, objets décoratifs et bijoux chantournés à la main. 06 76 42 49 26.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23241F1C'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23D9A21B'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Golos+Text:wght@400..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#E6E2DD; --bande:#DAD4CC; --surface:#F3F1EE;
+    --encre:#241F1C; --encre-doux:#57504A; --accent:#D9A21B; --accent-fonce:#8A6408; --sombre:#241F1C;
+    --clair:#F3F1EE; --clair-doux:rgba(243,241,238,.76);
+    --ombre:0 30px 60px -34px rgba(36,31,28,.55);
+    --ombre-forte:0 48px 84px -40px rgba(36,31,28,.72);
+    --display:"Hedvig Letters Serif", Georgia, serif;
+    --texte:"Golos Text", "Avenir Next", sans-serif;
+    --large:min(1200px, 100% - 40px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--encre)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
+  p{margin:0;text-wrap:pretty}
+  .large{width:var(--large);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--accent-fonce);outline-offset:3px;border-radius:6px}
+  .nowrap{white-space:nowrap}
+
+  /* En-tête */
+  .entete{position:sticky;top:0;z-index:20;background:rgba(230,226,221,.95);border-bottom:1px solid rgba(36,31,28,.09)}
+  .entete .large{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+  .marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .marque b{font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:-.02em}
+  .marque span{font-size:14px;color:var(--encre-doux);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:30px;font-size:16px}
+  .nav a{text-decoration:none;color:var(--encre-doux);transition:color .2s}
+  .nav a:hover{color:var(--encre)}
+  .nav .appel{color:var(--clair);background:var(--encre);padding:11px 20px;border-radius:999px;font-weight:500;transition:transform .25s, background .25s}
+  .nav .appel:hover{transform:translateY(-2px);background:#3A322D;color:var(--clair)}
+
+  /* Boutons */
+  .boutons{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;font:500 17px/1.2 var(--texte);text-decoration:none;transition:transform .25s ease, background .25s, color .25s, box-shadow .25s}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-plein{background:var(--encre);color:var(--clair);box-shadow:0 18px 34px -20px rgba(36,31,28,.85)}
+  .btn-plein:hover{transform:translateY(-2px);background:#3A322D}
+  .btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+  .btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+
+  /* Héros */
+  .heros{padding:72px 0 64px;position:relative}
+  .heros .large{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+  .qui{font-size:16px;color:var(--encre-doux);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+  .qui::before{content:"";width:28px;height:2px;background:var(--accent);flex:none}
+  .heros h1{font-size:clamp(38px, 5.3vw, 76px);line-height:1.04}
+  .heros .chapo{font-size:19px;color:var(--encre-doux);max-width:33em;margin:28px 0 38px}
+  .heros .ecrire{margin-top:22px;font-size:16px;color:var(--encre-doux)}
+  .heros .ecrire a{text-underline-offset:3px;text-decoration-color:rgba(36,31,28,.35)}
+  .compo{position:relative;width:min(500px,100%);aspect-ratio:500/680;margin:0 0 -110px auto;z-index:3}
+  .compo figure{margin:0;position:absolute}
+  .colonne{left:4%;top:0;width:58%;height:86%}
+  .colonne img{width:100%;height:100%;object-fit:cover;object-position:2% 50%;border-radius:28px;box-shadow:var(--ombre-forte)}
+  .colonne figcaption{position:absolute;left:16px;top:18px;background:var(--surface);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;line-height:1.3}
+  .lampe{right:0;bottom:0;width:44%;aspect-ratio:1/1}
+  .lampe img{width:100%;height:100%;object-fit:cover;border-radius:20px;border:8px solid var(--surface);box-shadow:var(--ombre-forte)}
+
+  /* Faits */
+  .faits{background:var(--bande);padding:34px 0;position:relative;z-index:1}
+  .faits ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .faits li{display:flex;flex-direction:column;gap:4px;font-size:15px;color:var(--encre-doux);line-height:1.4}
+  .faits b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--encre);line-height:1.15}
+  .faits .avec-compo{padding-right:min(250px,22%)}
+
+  /* Atelier */
+  .atelier{padding:136px 0 112px}
+  .atelier .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+  .atelier h2,.sculptures h2,.savoir h2,.demarche h2{font-size:clamp(32px,3.8vw,54px)}
+  .atelier .texte p{color:var(--encre-doux);margin-top:20px;max-width:34em}
+  .atelier .texte .lead{font-family:var(--display);font-size:clamp(22px,2.1vw,27px);line-height:1.3;color:var(--encre);margin-top:22px}
+  .scie{position:relative;padding-bottom:80px}
+  .scie .grande{margin:0;position:relative}
+  .scie .grande img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:40% 25%;border-radius:22px;box-shadow:var(--ombre)}
+  .scie .grande figcaption{position:absolute;right:18px;top:18px;background:var(--surface);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px}
+  .portrait{position:absolute;left:-28px;bottom:0;width:min(210px,42%);margin:0;background:var(--surface);padding:9px 9px 0;border-radius:6px;transform:rotate(-4deg);box-shadow:var(--ombre-forte)}
+  .portrait img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+  .portrait figcaption{font-size:13px;color:var(--encre-doux);padding:8px 3px 10px;line-height:1.3}
+
+  /* Savoir-faire */
+  .savoir{background:var(--surface);padding:120px 0}
+  .savoir .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:48px}
+  .savoir .tete p{color:var(--encre-doux);max-width:32em}
+  .bandeau{margin:0;position:relative}
+  .bandeau img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:30% 70%;border-radius:24px;box-shadow:var(--ombre)}
+  .etapes{list-style:none;margin:-64px 4% 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative;counter-reset:etape}
+  .etapes li{background:var(--base);border-radius:18px;padding:26px 24px 28px;box-shadow:0 26px 50px -34px rgba(36,31,28,.55);font-size:16px;color:var(--encre-doux);line-height:1.55;counter-increment:etape}
+  .etapes li::before{content:counter(etape);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--encre);font-weight:600;font-size:15px;margin-bottom:16px}
+  .etapes b{display:block;font-family:var(--display);font-weight:400;font-size:23px;color:var(--encre);margin-bottom:8px;line-height:1.15}
+
+  /* Sculptures */
+  .sculptures{padding:120px 0}
+  .sculptures .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:start}
+  .pieces{position:relative;padding-bottom:120px}
+  .pieces .allegresse{margin:0;position:relative;width:88%}
+  .pieces .allegresse img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 50%;border-radius:22px;box-shadow:var(--ombre)}
+  .pieces .allegresse figcaption{position:absolute;left:18px;bottom:18px;background:var(--surface);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px}
+  .pieces .murale{position:absolute;right:0;bottom:0;width:62%;margin:0}
+  .pieces .murale img{width:100%;aspect-ratio:1600/1073;object-fit:cover;border-radius:14px;border:8px solid var(--surface);box-shadow:var(--ombre-forte)}
+  .sculptures .intro{color:var(--encre-doux);margin:20px 0 34px;max-width:34em}
+  .collections{list-style:none;margin:0;padding:0;border-top:1px solid rgba(36,31,28,.16)}
+  .collections li{border-bottom:1px solid rgba(36,31,28,.16)}
+  .collections a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:18px 0;text-decoration:none}
+  .collections b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2;transition:color .2s}
+  .collections a:hover b{color:var(--accent-fonce)}
+  .collections .voir{font-size:15px;color:var(--encre-doux);align-self:center}
+  .collections small{grid-column:1/-1;font-size:15px;color:var(--encre-doux);line-height:1.5}
+  .murmures{margin-top:40px;background:var(--surface);border-radius:20px;padding:28px 30px;box-shadow:var(--ombre)}
+  .murmures h3{font-size:22px;margin-bottom:12px}
+  .murmures ul{list-style:none;margin:0;padding:0}
+  .murmures li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 20px;padding:10px 0;border-top:1px solid rgba(36,31,28,.12);font-size:16px}
+  .murmures li:first-child{border-top:0}
+  .murmures li span{color:var(--encre-doux);font-size:14px;grid-column:1}
+  .murmures li em{font-style:normal;font-family:var(--display);font-size:20px;white-space:nowrap;grid-column:2;grid-row:1/3;align-self:center}
+  .murmures p{font-size:14px;color:var(--encre-doux);margin-top:12px}
+
+  /* Citation */
+  .citation{padding:24px 0 120px}
+  .citation blockquote{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:36px;align-items:start;max-width:980px}
+  .citation blockquote::before{content:"";width:6px;height:100%;min-height:120px;border-radius:3px;background:repeating-linear-gradient(to bottom, var(--accent) 0 14px, transparent 14px 22px)}
+  .citation p{font-family:var(--display);font-size:clamp(28px,3.5vw,48px);line-height:1.2;letter-spacing:-.02em;text-wrap:balance}
+  .citation cite{display:block;margin-top:22px;font-style:normal;font-size:16px;color:var(--encre-doux)}
+
+  /* Boutique (sombre) */
+  .boutique{background:var(--sombre);color:var(--clair);padding:120px 0}
+  .boutique .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:56px}
+  .boutique h2{font-size:clamp(32px,3.8vw,54px)}
+  .boutique .tete p{color:var(--clair-doux);max-width:32em}
+  .rayons{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:start}
+  .rayons a{display:block;text-decoration:none;color:var(--clair)}
+  .rayons figure{margin:0}
+  .rayons img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;box-shadow:0 40px 70px -38px rgba(0,0,0,.85);transition:transform .5s ease}
+  .rayons a:hover img{transform:translateY(-4px)}
+  .rayons figcaption{margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .rayons figcaption b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2}
+  .rayons figcaption span{font-size:15px;color:var(--clair-doux);white-space:nowrap}
+  .r1{grid-column:1/6;grid-row:1/3}
+  .r1 img{aspect-ratio:4/5 !important}
+  .r2{grid-column:6/9}
+  .r3{grid-column:9/13;margin-top:72px}
+  .r4{grid-column:6/9}
+  .r5{grid-column:9/13}
+  .r5 .texte-rayon{background:rgba(243,241,238,.06);border-radius:18px;padding:28px;color:var(--clair-doux);font-size:16px;line-height:1.6}
+  .r5 .texte-rayon b{display:block;font-family:var(--display);font-weight:400;font-size:24px;color:var(--clair);margin-bottom:8px}
+  .r5 .btn-clair{margin-top:20px;background:var(--surface);color:var(--encre)}
+  .r5 .btn-clair:hover{transform:translateY(-2px);background:var(--accent)}
+
+  /* Démarche */
+  .demarche{padding:120px 0}
+  .demarche .large{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:88px;align-items:center}
+  .collines{margin:0;position:relative}
+  .collines img{width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:50% 10%;border-radius:22px;box-shadow:var(--ombre)}
+  .collines figcaption{position:absolute;left:18px;bottom:18px;background:var(--surface);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px}
+  .demarche .intro{color:var(--encre-doux);margin-top:20px;max-width:34em}
+  .trois{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px}
+  .trois div{border-top:2px solid var(--encre);padding-top:18px}
+  .trois h3{font-size:22px;margin-bottom:8px}
+  .trois p{font-size:16px;color:var(--encre-doux);line-height:1.55}
+  .labels{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px 22px;font-size:15px}
+  .labels a{text-underline-offset:3px;color:var(--encre-doux)}
+  .labels a:hover{color:var(--encre)}
+
+  /* Contact */
+  .contact{background:var(--bande);padding:120px 0}
+  .contact .large{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+  .contact h2{font-size:clamp(34px,4.2vw,58px)}
+  .contact .texte p{color:var(--encre-doux);margin:20px 0 34px;max-width:32em}
+  .fiche{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--ombre)}
+  .fiche dl{margin:0;display:grid;gap:22px}
+  .fiche dt{font-size:14px;color:var(--encre-doux);margin-bottom:4px}
+  .fiche dd{margin:0;font-family:var(--display);font-size:22px;line-height:1.35}
+  .fiche dd a{text-decoration:none}
+  .fiche dd a:hover{text-decoration:underline;text-underline-offset:3px}
+  .fiche .reseaux{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--texte);font-size:17px}
+  .fiche .reseaux a{text-decoration:underline;text-underline-offset:3px}
+
+  /* Pied */
+  .pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 48px;font-size:16px}
+  .pied .large{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .pied b{font-family:var(--display);font-weight:400;font-size:28px;color:var(--clair);display:block;margin-bottom:12px}
+  .pied h3{font-family:var(--texte);font-weight:500;font-size:15px;color:var(--clair);margin-bottom:14px;letter-spacing:0}
+  .pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .pied a{text-decoration:none}
+  .pied a:hover{color:var(--clair);text-decoration:underline;text-underline-offset:3px}
+  .signature{background:#1A1614;color:rgba(243,241,238,.55);text-align:center;font-size:13px;padding:16px 20px;margin:0}
+
+  /* Apparition */
+  .js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s ease}
+  .js .apparait.vu{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .js .apparait{opacity:1;transform:none;transition:none}
+    .rayons img{transition:none}
+  }
+
+  /* Tablette */
+  @media (max-width: 1020px){
+    .nav a:not(.appel){display:none}
+    .heros .large,.atelier .large,.sculptures .large,.demarche .large,.contact .large,.savoir .tete,.boutique .tete{grid-template-columns:minmax(0,1fr);gap:48px}
+    .compo{margin:0 auto}
+    .heros{padding-bottom:84px}
+    .faits .avec-compo{padding-right:0}
+    .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .atelier{padding-top:96px}
+    .scie,.pieces{max-width:600px}
+    .portrait{left:-8px}
+    .etapes{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:-40px}
+    .collines{max-width:440px}
+  }
+  /* Téléphone */
+  @media (max-width: 720px){
+    body{font-size:17px}
+    .entete .large{min-height:64px}
+    .marque b{font-size:22px}
+    .marque span{display:none}
+    .nav .appel{padding:10px 16px;font-size:15px}
+    .heros{padding:32px 0 76px}
+    .heros .large{gap:0}
+    .heros .large > div:first-child{display:contents}
+    .qui{order:1}.heros h1{order:2}.compo{order:3;width:min(340px,100%);margin:32px auto 8px}.heros .chapo{order:4}.heros .boutons{order:5}.heros .ecrire{order:6}
+    .heros .chapo{font-size:18px;margin:26px 0 30px}
+    .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .atelier,.savoir,.sculptures,.boutique,.demarche,.contact{padding:84px 0}
+    .citation{padding:8px 0 84px}
+    .citation blockquote{gap:20px}
+    .portrait{left:0}
+    .bandeau img{aspect-ratio:4/3}
+    .etapes{grid-template-columns:minmax(0,1fr);margin:-28px 12px 0}
+    .rayons{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .r1,.r5{grid-column:1/3;grid-row:auto}
+    .r2,.r3,.r4{grid-column:auto;margin-top:0}
+    .r1 img{aspect-ratio:4/3 !important}
+    .rayons figcaption{flex-direction:column;gap:2px}
+    .rayons figcaption b{font-size:20px}
+    .trois{grid-template-columns:minmax(0,1fr);gap:22px}
+    .murmures{padding:22px 20px}
+    .fiche{padding:28px 24px}
+    .pied .large{grid-template-columns:minmax(0,1fr);gap:32px}
+  }
+  @media (max-width: 420px){
+    .boutons .btn{width:100%}
+    .faits ul{grid-template-columns:minmax(0,1fr)}
+    .collections b{font-size:21px}
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="large">
+    <a class="marque" href="#haut"><b>Atelier Tutti Colori</b><span>Corinne Bouloc, artisan d'art en Aveyron</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#atelier">L'atelier</a>
+      <a href="#sculptures">Sculptures</a>
+      <a href="#boutique">Créations</a>
+      <a href="#contact">Contact</a>
+      <a class="appel nowrap" href="tel:+33676424926">06 76 42 49 26</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="large">
+      <div>
+        <p class="qui">Corinne Bouloc, sculptrice sur bois à Pruines</p>
+        <h1>La dentelle de bois, un travail de sculpture ajourée.</h1>
+        <p class="chapo">Des sculptures fines et ajourées, entièrement réalisées à la main. Chaque pièce est unique, issue d'un travail patient du bois où le chantournage fait dialoguer la matière et le vide, et l'ombre projetée en est le prolongement.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://www.tutticolori.fr/sculptures-dentelle-bois/">Découvrir les sculptures</a>
+          <a class="btn btn-contour" href="tel:+33676424926"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nowrap">06 76 42 49 26</span></a>
+        </div>
+        <p class="ecrire">Ou écrivez à <a href="mailto:contact@tutticolori.fr">contact@tutticolori.fr</a></p>
+      </div>
+      <div class="compo">
+        <figure class="colonne"><img src="assets/tutti-colori-pruines/trois-hautes-sculptures-en-dentelle-de-bois.webp" alt="Hautes sculptures ajourées en bois foncé et en bois clair sur socles noirs, leur ombre projetée sur le mur" width="1600" height="1600"><figcaption>Pièces uniques</figcaption></figure>
+        <figure class="lampe apparait"><img src="assets/tutti-colori-pruines/lampe-a-vagues-allumee.webp" alt="Lampe carrée en bois clair aux faces découpées en vagues, allumée" width="1600" height="1600"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <div class="large avec-compo">
+      <ul>
+        <li><b>Pruines</b>au cœur de la campagne aveyronnaise</li>
+        <li><b>Artisan d'art</b>sculpture sur bois, chantournage</li>
+        <li><b>Route des Métiers d'Art</b>d'Occitanie</li>
+        <li><b>Fabriqué en Aveyron</b>et Fabriqué en Occitanie</li>
+        <li><b>Fait main</b>pièces uniques et petites séries</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="atelier" id="atelier">
+    <div class="large">
+      <div class="texte">
+        <h2>Bienvenue à l'atelier Tutti Colori</h2>
+        <p class="lead">Je suis Corinne Bouloc, artisan d'art autodidacte. Je crée des sculptures en dentelle de bois et des œuvres façonnées entièrement à la main.</p>
+        <p>J'ai appris la sculpture sur bois par la pratique, l'observation et la répétition du geste. Le chantournage a d'abord été un loisir, puis un métier, autour d'objets décoratifs, de luminaires et de bijoux. La sculpture est venue presque naturellement.</p>
+        <p>Après plusieurs années d'activité, la mention artisan d'art, sculpture sur bois et chantournage, est venue confirmer ce chemin et m'a ouvert la Route des Métiers d'Art d'Occitanie. L'atelier est installé à Pruines&nbsp;: un lieu simple et calme, qui influence profondément ma manière de créer.</p>
+      </div>
+      <div class="scie">
+        <figure class="grande apparait"><img src="assets/tutti-colori-pruines/doigts-guidant-la-lame-de-chantournage.webp" alt="Doigts poudrés de sciure guidant un bois dessiné sous la lame fine de la scie à chantourner" width="1200" height="900" loading="lazy"><figcaption>Sous la lame de la scie</figcaption></figure>
+        <figure class="portrait apparait"><img src="assets/tutti-colori-pruines/corinne-a-la-scie-a-chantourner-dans-l-atelier.webp" alt="Corinne Bouloc découpe une planchette à la scie à chantourner dans son atelier" width="822" height="822" loading="lazy"><figcaption>Corinne, à l'atelier</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="savoir" id="savoir-faire">
+    <div class="large">
+      <div class="tete">
+        <h2>De la planche à la dentelle</h2>
+        <p>Une technique exigeante, qui permet une découpe fine et précise. La découpe n'est qu'une première étape&nbsp;: une grande partie du temps va aux finitions, pour que le toucher soit aussi juste que le regard.</p>
+      </div>
+      <figure class="bandeau apparait"><img src="assets/tutti-colori-pruines/poncage-au-micro-outil-d-une-piece-ajouree.webp" alt="Des mains poncent à la mini-perceuse l'intérieur des découpes d'une pièce en noyer ajourée" width="1200" height="900" loading="lazy"></figure>
+      <ol class="etapes">
+        <li><b>Le dessin</b>Chaque pièce commence par le dessin&nbsp;: l'équilibre des lignes, la respiration des pleins et des vides.</li>
+        <li><b>La découpe</b>Le bois est travaillé à la scie à chantourner.</li>
+        <li><b>Le ponçage</b>Les parties intérieures sont poncées pour effacer toute trace de lame, puis les arêtes adoucies sur les deux faces.</li>
+        <li><b>L'huile, en deux temps</b>Une couche au pinceau pour atteindre chaque espace ajouré, une seconde en surface pour protéger le bois et révéler ses nuances.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sculptures" id="sculptures">
+    <div class="large">
+      <div class="pieces">
+        <figure class="allegresse apparait"><img src="assets/tutti-colori-pruines/sculpture-allegresse-en-v-ajouree.webp" alt="Sculpture Allégresse en orme : deux longues branches en V ajourées d'alvéoles sur un socle noir" width="1600" height="1600" loading="lazy"><figcaption>Allégresse, en orme</figcaption></figure>
+        <figure class="murale apparait"><img src="assets/tutti-colori-pruines/tableau-archipels-interieurs-encadre.webp" alt="Tableau en relief dans un cadre en noyer : trois îlots ajourés sur fond clair" width="1600" height="1073" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2>Les sculptures</h2>
+        <p class="intro">Des pièces uniques, conçues, découpées et façonnées à la main, qui jouent avec les textures, les formes naturelles et les jeux d'ombre et de lumière.</p>
+        <ul class="collections">
+          <li><a href="https://www.tutticolori.fr/collection-murmures/"><b>Murmures</b><span class="voir">Voir</span><small>Des formes libres, présences discrètes, mouvements intérieurs et paysages suggérés.</small></a></li>
+          <li><a href="https://www.tutticolori.fr/collection-mini-foret/"><b>Mini Forêt</b><span class="voir">Voir</span><small>De petites sculptures qui évoquent la diversité et la singularité des formes d'arbres.</small></a></li>
+          <li><a href="https://www.tutticolori.fr/collection-vibrations/"><b>Vibrations</b><span class="voir">Voir</span><small>Des formes élancées et ondulantes, le corps traversé par l'émotion, le rythme et l'élan.</small></a></li>
+          <li><a href="https://www.tutticolori.fr/sculptures-murales/"><b>Sculptures murales</b><span class="voir">Voir</span><small>Pensées comme des tableaux en relief, où la lumière et l'ombre prolongent la sculpture.</small></a></li>
+        </ul>
+        <div class="murmures">
+          <h3>Dans la collection Murmures</h3>
+          <ul>
+            <li>Au fond de ton cœur<span>Platane, orme et noyer, Ø&nbsp;29&nbsp;cm</span><em>1&nbsp;200&nbsp;€</em></li>
+            <li>Éclosion<span>Noyer, 25,5&nbsp;×&nbsp;17,5&nbsp;cm</span><em>600&nbsp;€</em></li>
+            <li>Céleste<span>Noyer, Ø&nbsp;19&nbsp;cm</span><em>380&nbsp;€</em></li>
+            <li>Horizon<span>Merisier, Ø&nbsp;19&nbsp;cm</span><em>1&nbsp;200&nbsp;€</em></li>
+          </ul>
+          <p>Expédition possible, avec une estimation personnalisée sur demande.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Citation">
+    <div class="large">
+      <blockquote>
+        <div>
+          <p>La lumière, en traversant la matière, prolonge l'œuvre dans l'ombre qu'elle projette.</p>
+          <cite>Corinne Bouloc</cite>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="boutique" id="boutique">
+    <div class="large">
+      <div class="tete">
+        <h2>Les créations de l'atelier</h2>
+        <p>Lampes, miroirs, décorations murales ou petits objets sculptés, en petites séries ou en pièces uniques&nbsp;: pour embellir le quotidien ou offrir un cadeau authentique.</p>
+      </div>
+      <div class="rayons">
+        <a class="r1 apparait" href="https://www.tutticolori.fr/categorie/luminaires-artisanaux-en-bois-lustres-suspensions-lampe-lampeaposer/"><figure><img src="assets/tutti-colori-pruines/lampe-galets-en-merisier-lumiere-violette.webp" alt="Lampe carrée en merisier massif allumée, découpes en galets sur fond violet" width="1600" height="1600" loading="lazy"><figcaption><b>Luminaires</b><span>15 créations</span></figcaption></figure></a>
+        <a class="r2 apparait" href="https://www.tutticolori.fr/categorie/objets-decoratifs-artisanaux-en-bois/"><figure><img src="assets/tutti-colori-pruines/diffuseurs-d-huiles-essentielles-arbre-et-oiseau.webp" alt="Trois diffuseurs d'huiles essentielles en bois chantourné : arbre de vie, alvéoles, oiseau sur une branche" width="1600" height="1600" loading="lazy"><figcaption><b>Objets décoratifs</b><span>24 créations</span></figcaption></figure></a>
+        <a class="r3 apparait" href="https://www.tutticolori.fr/categorie/decorations-murales/"><figure><img src="assets/tutti-colori-pruines/arbre-de-vie-mural-dans-un-cercle.webp" alt="Décoration murale ronde : arbre de vie découpé dans un cercle de bois brun" width="1600" height="1600" loading="lazy"><figcaption><b>Décorations murales</b><span>12 créations</span></figcaption></figure></a>
+        <a class="r4 apparait" href="https://www.tutticolori.fr/categorie/bijous-artisanaux-en-bois-bijouxbois-bijouxartisanaux/"><figure><img src="assets/tutti-colori-pruines/boucles-d-oreilles-et-collier-tayla-en-noyer.webp" alt="Boucles d'oreilles et collier en noyer, pendentifs en goutte évidée, dans des écrins noirs" width="1600" height="1600" loading="lazy"><figcaption><b>Bijoux en bois</b><span>22 créations</span></figcaption></figure></a>
+        <div class="r5">
+          <div class="texte-rayon"><b>Diffuseurs, arbre de vie, lampes en merisier</b>Des pièces chantournées à la main à Pruines, à découvrir dans la boutique en ligne.<br><a class="btn btn-clair" href="https://www.tutticolori.fr/boutique-creations/">Découvrir la boutique</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demarche" id="demarche">
+    <div class="large">
+      <figure class="collines apparait"><img src="assets/tutti-colori-pruines/disque-de-bois-ajoure-face-aux-collines.webp" alt="Sculpture ronde en bois clair ajourée en bandes ondulées, posée en extérieur face aux collines boisées" width="900" height="1200" loading="lazy"><figcaption>Face aux collines de l'Aveyron</figcaption></figure>
+      <div>
+        <h2>Fabriqué à la main, en Aveyron</h2>
+        <p class="intro">Le bois est une matière vivante, travaillée avec respect. Chaque pièce est réalisée entièrement à la main, en pièce unique ou en petite série, avec une attention au temps, à la matière et à l'environnement.</p>
+        <div class="trois">
+          <div><h3>Fabrication artisanale</h3><p>Conçue et fabriquée à l'atelier Tutti Colori, labellisée Fabriqué en Aveyron et Fabriqué en Occitanie.</p></div>
+          <div><h3>Démarche qualité</h3><p>Un choix attentif des matériaux et des fournisseurs, et un soin particulier apporté aux finitions.</p></div>
+          <div><h3>Éco-responsable</h3><p>Des bois locaux, des matériaux respectueux de l'environnement et des finitions simples et durables.</p></div>
+        </div>
+        <p class="labels"><a href="https://www.fabrique-en-aveyron.fr/entreprises/atelier-tutti-colori/">La fiche Fabriqué en Aveyron</a><a href="https://www.fabrique-en-occitanie.fr/produits/sculptures-au-fond-de-ton-coeur-atelier-tutti-colori/">La fiche Fabriqué en Occitanie</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="large">
+      <div class="texte">
+        <h2>Rencontrer Corinne</h2>
+        <p>Une sculpture vous intéresse, une lampe, un cadeau&nbsp;? Appelez ou écrivez pour recevoir toutes les informations. Corinne présente aussi son travail lors d'expositions, de salons de métiers d'art et dans des lieux partenaires.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33676424926">Appeler le <span class="nowrap">06 76 42 49 26</span></a>
+          <a class="btn btn-contour" href="mailto:contact@tutticolori.fr">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="fiche">
+        <dl>
+          <div><dt>L'atelier</dt><dd>Atelier Tutti Colori<br>La Gaunhe, 12320 Pruines</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33676424926">06 76 42 49 26</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:contact@tutticolori.fr">contact@tutticolori.fr</a></dd></div>
+          <div><dt>Suivre l'atelier</dt><dd class="reseaux"><a href="https://www.instagram.com/ateliertutticolori/">Instagram</a><a href="https://www.facebook.com/AtelierTuttiColori/">Facebook</a><a href="https://www.tutticolori.fr/formulaire-contact-atelier-tutti-colori/">Formulaire de contact</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <b>Atelier Tutti Colori</b>
+      <p>Corinne Bouloc, artisan d'art, sculpture sur bois. Dentelle de bois, luminaires, objets décoratifs et bijoux chantournés à Pruines.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>La Gaunhe, 12320 Pruines</li>
+        <li><a class="nowrap" href="tel:+33676424926">06 76 42 49 26</a></li>
+        <li><a href="mailto:contact@tutticolori.fr">contact@tutticolori.fr</a></li>
+        <li><a href="https://www.instagram.com/ateliertutticolori/">Instagram</a> et <a href="https://www.facebook.com/AtelierTuttiColori/">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sur le site de l'atelier</h3>
+      <ul>
+        <li><a href="https://www.tutticolori.fr/atelier-sculpture-bois-aveyron/">À propos de l'atelier</a></li>
+        <li><a href="https://www.tutticolori.fr/sculptures/">Sculptures</a></li>
+        <li><a href="https://www.tutticolori.fr/boutique-creations/">Boutique créations</a></li>
+        <li><a href="https://www.tutticolori.fr/conditions-generales-de-vente/">Conditions générales de vente</a></li>
+        <li><a href="https://www.tutticolori.fr/mentions-legales/">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour l'Atelier Tutti Colori</p>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = document.querySelectorAll('.apparait');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function(e){ e.classList.add('vu'); }); return;
+    }
+    var io = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>

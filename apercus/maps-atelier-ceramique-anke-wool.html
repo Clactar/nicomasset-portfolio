@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Anke Wool · Atelier de céramique à Angers</title>
+<meta name="description" content="Atelier de céramique artisanale d'Anke Wool à Angers : grès tourné et émaillé, poterie des étangs, cours hebdomadaires et stages de tournage en tout petit effectif.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%2314302A'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23D99BA6'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#DCE5E0; --surface:#EEF3F0; --encre:#14302A; --accent:#D99BA6; --sombre:#14302A;
+  --bande:#CCD8D1; --doux:#3F5751; --clair:#E6EEEA; --clair-doux:#A9BDB5; --rose-fonce:#9E4F5D;
+  --ombre:0 30px 60px -34px rgba(20,48,42,.55), 0 4px 14px -8px rgba(20,48,42,.14);
+  --gout:clamp(16px,4vw,40px);
+  --display:'Young Serif', Georgia, serif;
+  --texte:'Albert Sans', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--accent);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--rose-fonce);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+.num{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:54px;padding:.8em 1.6em;border-radius:999px;font:600 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--encre);color:var(--surface)}
+.btn-plein:hover{background:#21463D;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.sur-photo .btn-plein,.sombre .btn-plein{background:var(--accent);color:var(--encre)}
+.sur-photo .btn-plein:hover,.sombre .btn-plein:hover{background:#E6B2BB}
+.sur-photo .btn-contour,.sombre .btn-contour{border-color:rgba(238,243,240,.75);color:var(--surface)}
+.sur-photo .btn-contour:hover,.sombre .btn-contour:hover{background:var(--surface);color:var(--encre)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(220,229,224,.95);border-bottom:1px solid rgba(20,48,42,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.marque b{font:400 25px/1.05 var(--display);white-space:nowrap}
+.marque span{font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-weight:500;font-size:16px}
+.nav a:not(.tel-haut):hover{color:var(--rose-fonce)}
+.tel-haut{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--surface);font-weight:600;transition:background-color .25s,color .25s}
+.tel-haut:hover{background:var(--encre);color:var(--surface)}
+.tel-haut svg{width:16px;height:16px}
+.tel-court{display:none}
+
+/* héros */
+.heros{padding:20px 0 0}
+.etang{position:relative;width:min(1392px,100% - 2*clamp(12px,2vw,24px));margin-inline:auto;height:clamp(560px,calc(100vh - 150px),700px);border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.etang img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.etang::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,34,30,.88) 0%,rgba(13,34,30,.62) 38%,rgba(13,34,30,.22) 72%,rgba(13,34,30,.08) 100%),linear-gradient(90deg,rgba(13,34,30,.62) 0%,rgba(13,34,30,.3) 38%,rgba(13,34,30,0) 62%)}
+.sur-photo{position:absolute;z-index:2;left:clamp(20px,5vw,72px);right:clamp(20px,5vw,72px);bottom:120px;color:var(--surface)}
+.sur-photo .lieu{font-size:17px;color:#D3E0DA;margin-bottom:16px}
+.sur-photo h1{font-size:clamp(40px,6.4vw,92px);line-height:1.02;max-width:12ch;color:var(--surface)}
+.sur-photo .chapo{margin-top:22px;max-width:34rem;font-size:19px;color:#DCE7E2}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.pastille{position:absolute;z-index:2;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;line-height:1.35;padding:9px 15px 9px 13px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(20,48,42,.55);max-width:calc(100% - 28px);display:inline-flex;align-items:center;gap:8px}
+.pastille::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.etang .pastille{top:24px;right:24px}
+
+/* faits à cheval */
+.faits{position:relative;z-index:3;margin-top:-62px}
+.faits ul{list-style:none;margin:0 auto;padding:26px 34px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;background:var(--surface);border-radius:20px;box-shadow:0 30px 60px -30px rgba(20,48,42,.5)}
+.faits li{padding-left:22px;border-left:1px solid rgba(20,48,42,.14)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font:400 21px/1.2 var(--display)}
+.faits span{display:block;font-size:15px;color:var(--doux);margin-top:4px;line-height:1.4}
+
+.section{padding:128px 0}
+h2{font-size:clamp(34px,4.3vw,58px)}
+
+/* atelier */
+.atelier .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:88px;align-items:center}
+.atelier .texte p{margin-top:22px;max-width:35rem}
+.atelier .texte p.premier{font-size:20px;margin-top:28px}
+.lien{display:inline-block;margin-top:26px;font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--accent)}
+.lien:hover{color:var(--rose-fonce)}
+.geste{position:relative;padding:0 0 70px 60px}
+.geste .bol{margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/4.6}
+.geste .bol img{width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.geste .bol .pastille{right:16px;top:16px}
+.geste .tour{position:absolute;left:0;bottom:0;margin:0;width:min(230px,46%);background:var(--surface);padding:10px 10px 14px;border-radius:12px;box-shadow:0 26px 50px -24px rgba(20,48,42,.6);transform:rotate(-4deg)}
+.geste .tour img{border-radius:6px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.geste .tour figcaption{font-size:13px;color:var(--doux);margin-top:8px;line-height:1.35}
+
+/* cours et stages */
+.cours{background:var(--surface)}
+.cours .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.cours .tete p{color:var(--doux)}
+.offres{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;margin-top:64px;align-items:stretch}
+.stage{background:var(--sombre);color:var(--clair);border-radius:24px;padding:44px 40px;box-shadow:var(--ombre);display:flex;flex-direction:column}
+.stage h3{font-size:clamp(28px,2.6vw,36px);color:var(--clair)}
+.stage .prix{display:flex;align-items:baseline;gap:12px;margin-top:20px}
+.stage .prix b{font:400 54px/1 var(--display);color:var(--accent);white-space:nowrap}
+.stage .prix span{color:var(--clair-doux);font-size:16px}
+.stage ul{list-style:none;margin:26px 0 0;padding:0}
+.stage li{padding:12px 0;border-top:1px solid rgba(230,238,234,.14);font-size:16px;color:var(--clair-doux)}
+.stage li b{color:var(--clair);font-weight:600}
+.stage .petit{margin-top:18px;font-size:15px;color:var(--clair-doux)}
+.stage .actions{margin-top:auto;padding-top:28px}
+.hebdo{background:var(--base);border-radius:24px;padding:44px 40px}
+.hebdo h3{font-size:clamp(28px,2.6vw,36px)}
+.hebdo > p{margin-top:14px;color:var(--doux);font-size:17px;max-width:38rem}
+.creneaux{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.jour{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:var(--surface);border-radius:14px;padding:12px 16px}
+.jour b{min-width:110px;font:400 20px/1.2 var(--display)}
+.jour span{font-size:15px;font-weight:500;padding:4px 12px;background:var(--base);border-radius:999px;white-space:nowrap}
+.tarif-hebdo{margin-top:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px}
+.tarif-hebdo div{font-size:15px;color:var(--doux)}
+.tarif-hebdo strong{display:block;font:400 26px/1.15 var(--display);color:var(--encre);white-space:nowrap}
+.hebdo .note{margin-top:22px;font-size:15px;color:var(--doux)}
+.cours .liens{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:40px}
+.cours .liens .lien{margin-top:0}
+
+/* étangs (sombre) */
+.sombre{background:var(--sombre);color:var(--clair)}
+.sombre h2{color:var(--clair)}
+.etangs .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.etangs blockquote{margin:30px 0 0;font:400 clamp(24px,2.3vw,31px)/1.32 var(--display);color:var(--clair)}
+.etangs blockquote::before{content:"« ";color:var(--accent)}
+.etangs blockquote::after{content:" »";color:var(--accent)}
+.etangs .apres{margin-top:24px;color:var(--clair-doux);max-width:30rem}
+.etangs .lien{color:var(--clair)}
+.berge{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:start}
+.berge figure{margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -36px rgba(0,0,0,.8)}
+.berge .haut{grid-row:1/3;aspect-ratio:2/3}
+.berge .haut img,.berge .pierre img,.berge .serre img{width:100%;height:100%;object-fit:cover}
+.berge .haut img{object-position:50% 70%}
+.berge .pierre{aspect-ratio:4/3;margin-top:64px}
+.berge .pierre img{object-position:50% 50%}
+.berge .serre{aspect-ratio:16/10;border-radius:22px 22px 22px 120px}
+.berge .serre img{object-position:40% 50%}
+.berge .haut .pastille{left:14px;bottom:14px}
+
+/* petits textes */
+.textes .tete{max-width:44rem}
+.textes .tete p{margin-top:18px;color:var(--doux)}
+.recueil{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px;margin-top:64px;align-items:start}
+.texte-carte{background:var(--surface);border-radius:22px;padding:38px 36px;box-shadow:0 24px 50px -32px rgba(20,48,42,.45);margin:0}
+.texte-carte h3{font:500 15px/1.3 var(--texte);color:var(--rose-fonce);margin-bottom:14px}
+.texte-carte p{font:400 22px/1.45 var(--display)}
+.texte-carte p.long{font:400 18px/1.6 var(--texte);color:var(--doux)}
+.t1{grid-column:1/7}
+.t2{grid-column:7/13;margin-top:80px !important}
+.t3{grid-column:2/8;margin-top:-30px !important}
+.chawan{grid-column:8/12;margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/3;margin-top:24px !important}
+.chawan img{width:100%;height:100%;object-fit:cover;object-position:45% 60%}
+.chawan .pastille{left:14px;bottom:14px}
+
+/* contact */
+.contact{background:var(--bande)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact .texte p{margin-top:22px;max-width:32rem;font-size:19px;color:var(--doux)}
+.coord{background:var(--surface);border-radius:24px;padding:38px;box-shadow:var(--ombre)}
+.coord dl{margin:0}
+.coord div{padding:15px 0;border-top:1px solid rgba(20,48,42,.12)}
+.coord div:first-child{border-top:0;padding-top:0}
+.coord dt{font-size:14px;color:var(--doux)}
+.coord dd{margin:4px 0 0;font:400 22px/1.35 var(--display);overflow-wrap:anywhere}
+.coord a{text-decoration:none}
+.coord a:hover{color:var(--rose-fonce)}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .marque b{font-size:30px}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.75}
+.pied h3{font:600 15px/1.3 var(--texte);color:var(--clair);margin-bottom:12px;letter-spacing:0}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--accent)}
+.copyright{margin-top:64px;border-top:1px solid rgba(230,238,234,.12);padding:22px 0 26px;font-size:14px;color:#86A097}
+.signature{background:#0E2420;color:#86A097;font-size:13px;text-align:center;padding:14px var(--gout);margin:0}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+@media (max-width:1100px){
+  .nav a:not(.tel-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+  .offres{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .etang{height:auto;min-height:620px}
+  .sur-photo{bottom:96px}
+  .section{padding:88px 0}
+  .atelier .wrap,.cours .tete,.etangs .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .geste{padding-left:30px}
+  .recueil{grid-template-columns:minmax(0,1fr);gap:24px}
+  .t1,.t2,.t3,.chawan{grid-column:1/-1;margin-top:0 !important}
+  .pied .wrap{grid-template-columns:minmax(0,1fr);gap:34px}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:62px}
+  .marque b{font-size:22px}
+  .marque span{display:none}
+  .tel-haut{padding:9px 14px;font-size:15px}
+  .tel-long{display:none}
+  .tel-court{display:inline}
+  .heros{padding-top:12px}
+  .etang{min-height:600px;border-radius:20px}
+  .etang img{object-position:38% 50%}
+  .etang .pastille{top:14px;right:14px;font-size:13px}
+  .sur-photo{left:20px;right:20px;bottom:84px}
+  .sur-photo .lieu{display:none}
+  .sur-photo .chapo{font-size:17px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .faits{margin-top:-52px}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 16px;padding:22px 20px}
+  .faits li,.faits li:nth-child(4){border-left:0;padding-left:0}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:19px}
+  .geste{padding:0 0 60px 0}
+  .geste .tour{width:min(190px,52%);left:-4px}
+  .stage,.hebdo{padding:30px 22px}
+  .jour b{min-width:0;width:100%}
+  .tarif-hebdo{grid-template-columns:minmax(0,1fr)}
+  .berge{grid-template-columns:minmax(0,1fr)}
+  .berge .haut{grid-row:auto;aspect-ratio:4/5}
+  .berge .pierre{margin-top:0}
+  .texte-carte{padding:28px 22px}
+  .texte-carte p{font-size:20px}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Anke Wool, retour en haut">
+      <b>Anke Wool</b>
+      <span>Atelier de céramique à Angers</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#atelier">L'atelier</a>
+      <a href="#cours">Cours et stages</a>
+      <a href="#etangs">Poterie des étangs</a>
+      <a href="#petits-textes">Petits textes</a>
+      <a class="tel-haut" href="tel:+33782223979" aria-label="Appeler le 07 82 22 39 79">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span class="tel-long num">07 82 22 39 79</span><span class="tel-court">Appeler</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="etang">
+      <img src="assets/maps-atelier-ceramique-anke-wool/nenuphars-en-gres-vert-sur-l-eau.webp" width="1600" height="1066" alt="Assiettes en grès émaillé vert en forme de feuilles de nénuphar, posées à fleur d'eau" fetchpriority="high">
+      <p class="pastille">Poterie des étangs, grès émaillé</p>
+      <div class="sur-photo">
+        <p class="lieu">Anke Wool, atelier de céramique artisanale à Angers</p>
+        <h1>Du grès, un tour et des nénuphars.</h1>
+        <p class="chapo">Des pièces tournées pour la maison, des bols à thé, et des cours et stages de tournage en tout petit effectif, au cœur d'Angers.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#cours">Cours et stages</a>
+          <a class="btn btn-contour" href="tel:+33782223979">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <span class="num">07 82 22 39 79</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="wrap">
+      <li><b>Angers</b><span>9 rue Parcheminerie, centre-ville</span></li>
+      <li><b>3 personnes</b><span>par cours et par stage</span></li>
+      <li><b>Grès</b><span>haute température, plus de 1200°</span></li>
+      <li><b>Stage à 65&nbsp;€</b><span>2&nbsp;h 30, tout compris</span></li>
+      <li><b>Dès 15 ans</b><span>débutants ou confirmés</span></li>
+    </ul>
+  </section>
+
+  <section class="section atelier" id="atelier">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Le grès tourné, et des émaux faits maison.</h2>
+        <p class="premier">Je travaille le grès, une terre de haute température, principalement au tour, et je fabrique mes émaux.</p>
+        <p>Je réalise des pièces pour la maison, utilitaires, avec un intérêt particulier pour les bols à thé et les formes qui rappellent la faune et la flore des étangs. Je m'inspire des pièces classiques de l'histoire de la céramique, mais aussi d'œuvres picturales et cinématographiques.</p>
+        <p>Après des débuts à Lyon en 2018, une formation et un premier atelier dans un fort en haut d'une colline lyonnaise, je me suis installée à Angers en 2021. L'atelier du 9 rue Parcheminerie est à la fois un lieu de production, de transmission et de partage.</p>
+        <a class="lien" href="https://ankewool.com/66-2/">Le parcours d'Anke</a>
+      </div>
+      <div class="geste">
+        <figure class="bol reveal">
+          <img src="assets/maps-atelier-ceramique-anke-wool/bol-a-the-tenmoku-tenu-en-main.webp" width="1600" height="1200" alt="Deux mains tiennent un bol à thé à émail noir moucheté de bleu qui reflète le ciel" loading="lazy">
+          <p class="pastille">Un bol à thé de l'atelier</p>
+        </figure>
+        <figure class="tour">
+          <img src="assets/maps-atelier-ceramique-anke-wool/mains-sur-le-tour-de-potier.webp" width="838" height="471" alt="Deux mains mouillées de barbotine centrent une motte de terre sur le tour" loading="lazy">
+          <figcaption>Centrer la terre sur le tour</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cours" id="cours">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Apprendre le tournage, à trois par session.</h2>
+        <p>Cours et stages en tout petit effectif, pour accompagner chacun au mieux. Chaque élève a son tour électrique professionnel et silencieux, et tout le matériel est fourni.</p>
+      </div>
+      <div class="offres">
+        <article class="stage">
+          <h3>Les stages de tournage</h3>
+          <div class="prix"><b>65&nbsp;€</b><span>la session de 2&nbsp;h 30, tout compris</span></div>
+          <ul>
+            <li><b>De 14&nbsp;h à 16&nbsp;h 30</b>, l'après-midi</li>
+            <li><b>Un week-end et un vendredi par mois</b>, et pendant les vacances scolaires</li>
+            <li><b>Terre et matériel fournis</b>, finitions, émaillage et cuissons compris</li>
+          </ul>
+          <p class="petit">Prévoir une tenue et des chaussures qui peuvent être salies, et si possible les ongles courts. À trois, un créneau peut aussi s'ouvrir à une date choisie ensemble.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="mailto:anke.wool@gmail.com?subject=R%C3%A9servation%20d'un%20stage">Réserver par e-mail</a>
+          </div>
+        </article>
+        <article class="hebdo">
+          <h3>Les cours hebdomadaires</h3>
+          <p>Deux heures par semaine, hors vacances scolaires et jours fériés, inscription au semestre ou à l'année. Vous découvrez ou pratiquez le tournage et toutes les étapes de fabrication : tournassage, décors, émaillage.</p>
+          <div class="creneaux">
+            <div class="jour"><b>Lundi</b><span>18&nbsp;h à 20&nbsp;h</span></div>
+            <div class="jour"><b>Mardi</b><span>15&nbsp;h 30 à 17&nbsp;h 30</span><span>18&nbsp;h à 20&nbsp;h</span></div>
+            <div class="jour"><b>Mercredi</b><span>15&nbsp;h 30 à 17&nbsp;h 30</span><span>18&nbsp;h à 20&nbsp;h</span></div>
+            <div class="jour"><b>Jeudi</b><span>15&nbsp;h 30 à 17&nbsp;h 30</span><span>18&nbsp;h à 20&nbsp;h</span></div>
+          </div>
+          <div class="tarif-hebdo">
+            <div><strong>512 à 544&nbsp;€</strong>le semestre, 16 ou 17 cours</div>
+            <div><strong>1 cours offert</strong>pour une inscription à l'année</div>
+          </div>
+          <p class="note">Cuisson 4&nbsp;€ le kilo, paiement possible en plusieurs fois. Certains créneaux sont complets : écrivez pour une place libérée au second semestre ou en cas de désistement.</p>
+        </article>
+      </div>
+      <div class="liens">
+        <a class="lien" href="https://ankewool.com/wp-content/uploads/2026/06/Plaquette-2026-2027.pdf">La plaquette 2026-2027</a>
+        <a class="lien" href="https://ankewool.com/cours-et-stages/">Les prochaines dates de stage</a>
+        <a class="lien" href="https://ankewool.com/foire-aux-questions/">Questions fréquentes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sombre etangs" id="etangs">
+    <div class="wrap">
+      <div>
+        <h2>La poterie des étangs.</h2>
+        <blockquote>Des nénuphlons, des lentilles d'eau… et bientôt d'autres pièces à destination de la petite faune amatrice d'étendue stagnante et de vase.</blockquote>
+        <p class="apres">Des feuilles de nénuphar en grès émaillé vert, avec leur encoche et leurs nervures, et de petites coupelles pour les accompagner.</p>
+        <a class="lien" href="https://ankewool.com/poterie-des-etangs/">Voir la série</a>
+      </div>
+      <div class="berge">
+        <figure class="haut reveal">
+          <img src="assets/maps-atelier-ceramique-anke-wool/nenuphars-au-bord-du-ruisseau.webp" width="1066" height="1600" alt="Feuilles de nénuphar en céramique posées sur un rocher moussu et dans un ruisseau" loading="lazy">
+          <figcaption class="pastille">Au bord du ruisseau</figcaption>
+        </figure>
+        <figure class="pierre reveal">
+          <img src="assets/maps-atelier-ceramique-anke-wool/coupelles-et-nenuphars-sur-la-pierre.webp" width="1600" height="1066" alt="Petites coupelles beige clair et grandes feuilles de nénuphar vertes étalées sur une pierre plate" loading="lazy">
+        </figure>
+        <figure class="serre reveal">
+          <img src="assets/maps-atelier-ceramique-anke-wool/nenuphars-en-gres-vert-gros-plan.webp" width="1600" height="1066" alt="Gros plan de feuilles de nénuphar en grès vert, émail tacheté de noir, sur l'eau" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section textes" id="petits-textes">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Petits textes.</h2>
+        <p>Quelques mots d'Anke sur son travail, glanés dans les pages de son site.</p>
+      </div>
+      <div class="recueil">
+        <blockquote class="texte-carte t1">
+          <h3>Transparences</h3>
+          <p>J'aime qu'il y ait une part d'évènement imprévu dans la création, que la pièce m'échappe un peu et advienne comme par elle-même.</p>
+        </blockquote>
+        <blockquote class="texte-carte t2">
+          <h3>À propos</h3>
+          <p>Anke Wool est née à Saint-Thégonnec, dans le Finistère, dans une étable, d'un père charpentier et d'une mère lavandière, lors d'une nuit pluvieuse de la fin des années 80.</p>
+        </blockquote>
+        <blockquote class="texte-carte t3">
+          <h3>Tout, toute seule</h3>
+          <p class="long">De la conception de l'objet aux recherches pour une recette d'émail, toutes les étapes jusqu'au produit fini, mais aussi ce site, les photos, l'expédition des commandes et les réseaux sociaux : je fais tout seule.</p>
+        </blockquote>
+        <figure class="chawan reveal">
+          <img src="assets/maps-atelier-ceramique-anke-wool/chawan-blanc-et-tulipe.webp" width="1600" height="1199" alt="Bol à thé blanc cassé à bord irrégulier près d'une fenêtre, une tulipe rose couchée derrière" loading="lazy">
+          <figcaption class="pastille">Choses pour boire</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Écrire à l'atelier.</h2>
+        <p>Pour un stage, une inscription aux cours ou une question, l'e-mail est à privilégier. Vous pouvez aussi passer directement à l'atelier.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:anke.wool@gmail.com">anke.wool@gmail.com</a>
+          <a class="btn btn-contour" href="tel:+33782223979"><span class="num">07 82 22 39 79</span></a>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Atelier</dt><dd>9 rue Parcheminerie<br>centre-ville d'Angers</dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:anke.wool@gmail.com">anke.wool@gmail.com</a></dd></div>
+          <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33782223979">07 82 22 39 79</a></dd></div>
+          <div><dt>Instagram et Facebook</dt><dd><a href="https://www.instagram.com/anke.wool/">@anke.wool</a><br><a href="https://www.facebook.com/ankewoolceramique">@ankewoolceramique</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Anke Wool</b></div>
+      <p style="margin-top:14px">Atelier de céramique artisanale.<br>Cours de loisirs, stages de tournage, poterie des étangs.</p>
+    </div>
+    <div>
+      <h3>L'atelier</h3>
+      <p>9 rue Parcheminerie, Angers<br><a href="mailto:anke.wool@gmail.com">anke.wool@gmail.com</a><br><a class="num" href="tel:+33782223979">07 82 22 39 79</a></p>
+    </div>
+    <div>
+      <h3>À lire</h3>
+      <ul>
+        <li><a href="https://ankewool.com/cours-et-stages/">Cours et stages</a></li>
+        <li><a href="https://ankewool.com/bols-a-the/">Choses pour boire</a></li>
+        <li><a href="https://ankewool.com/transparences/">Transparences</a></li>
+        <li><a href="https://ankewool.com/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copyright">© 2026 Anke Wool, atelier de céramique à Angers</div>
+  <p class="signature">Proposition de Nicolas Masset pour Anke Wool</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

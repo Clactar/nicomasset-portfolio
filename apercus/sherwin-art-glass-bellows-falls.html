@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sherwin Art Glass, glassblowing studio and gallery in Bellows Falls, Vermont</title>
+<meta name="description" content="Hand-sculpted and blown glass animals, birds, paperweights and fruit, made by Chris Sherwin in a 1925 mill overlooking the Connecticut River.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23121820'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23E66B1E' stroke-width='2.5'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial,sans-serif' font-weight='700' font-size='30' text-anchor='middle' fill='%23F2F4F3'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --smoke:#121820; --smoke-2:#1A222C; --fire:#E66B1E;
+    --base:#E4E8E8; --band:#D9DFDF; --surface:#F2F4F3; --ink:#18202A; --ink-soft:#4C5763;
+    --on-dark:#EEF1F0; --on-dark-soft:#A9B4BE;
+    --shadow:0 30px 60px -34px rgba(18,24,32,.6);
+    --shadow-deep:0 40px 80px -36px rgba(0,0,0,.8);
+    --display:"Chivo", "Franklin Gothic Medium", Georgia, serif;
+    --text:"Source Serif 4", Georgia, serif;
+    --wrap:1200px; --gut:clamp(20px,5vw,48px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--base);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.6}
+  ::selection{background:var(--fire);color:var(--smoke)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  p{margin:0 0 1em;text-wrap:pretty}
+  h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;letter-spacing:-.02em}
+  .wrap{width:min(var(--wrap),100% - 2*var(--gut));margin-inline:auto}
+  section{scroll-margin-top:80px}
+
+  /* ---------- header ---------- */
+  .top{position:sticky;top:0;z-index:20;background:rgba(18,24,32,.96);color:var(--on-dark);border-bottom:1px solid rgba(238,241,240,.07)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+  .brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .brand b{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .brand span{font-family:var(--display);font-weight:400;font-size:13px;color:var(--on-dark-soft);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:30px;font-family:var(--display);font-size:15px}
+  .nav a{text-decoration:none;color:var(--on-dark-soft);transition:color .2s}
+  .nav a:hover{color:var(--on-dark)}
+  .nav .call{color:var(--smoke)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--fire);color:var(--smoke);border-radius:999px;padding:11px 20px;font-family:var(--display);font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .2s, background .2s}
+  .call:hover{background:#F07A2D;transform:translateY(-1px)}
+  .call svg{width:16px;height:16px;flex:none}
+  .call .short{display:none}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 28px;font-family:var(--display);font-size:16px;font-weight:500;text-decoration:none;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1), background .25s, color .25s, box-shadow .25s}
+  .btn svg{width:17px;height:17px;flex:none}
+  .btn-fire{background:var(--fire);color:var(--smoke);box-shadow:0 16px 34px -18px rgba(230,107,30,.85)}
+  .btn-fire:hover{background:#F07A2D;transform:translateY(-2px);box-shadow:0 22px 40px -18px rgba(230,107,30,.9)}
+  .btn-ghost{border:1.5px solid rgba(238,241,240,.55);color:var(--on-dark)}
+  .btn-ghost:hover{background:var(--on-dark);color:var(--smoke);transform:translateY(-2px)}
+  .btn-ink{background:var(--ink);color:var(--surface)}
+  .btn-ink:hover{background:#26303C;transform:translateY(-2px)}
+  .btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-line:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+
+  /* ---------- hero (dark) ---------- */
+  .hero{background:var(--smoke);color:var(--on-dark);padding:56px 0 112px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"title art" "body art";column-gap:56px;align-items:start}
+  .hero-title{grid-area:title;align-self:end;padding-top:56px}
+  .hero-body{grid-area:body}
+  .hero-art{grid-area:art;position:relative;justify-self:center;width:min(390px,100%);margin:0 0 40px}
+  .where{font-size:17px;color:var(--on-dark-soft);margin:0 0 26px}
+  h1{font-size:clamp(42px,5.4vw + 6px,88px);line-height:1.0;letter-spacing:-.035em;color:var(--on-dark);max-width:11ch}
+  .lede{font-size:20px;line-height:1.6;color:#C7CFD6;max-width:50ch;margin:34px 0 38px}
+  .ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .appt{font-size:16px;color:var(--on-dark-soft);margin:24px 0 0}
+  .appt a{color:var(--on-dark);text-decoration-color:var(--fire);text-underline-offset:4px}
+
+  .halo{position:absolute;inset:-18% -30% -10%;background:radial-gradient(closest-side, rgba(230,107,30,.30), rgba(230,107,30,.10) 55%, rgba(230,107,30,0) 100%);pointer-events:none}
+  .capsule{position:relative;border-radius:999px;overflow:hidden;box-shadow:var(--shadow-deep), 0 0 0 1px rgba(238,241,240,.08)}
+  .capsule img{width:100%;aspect-ratio:39/62;object-fit:cover;object-position:52% 42%}
+  .hot{position:absolute;left:8%;top:47%;display:inline-flex;align-items:center;gap:8px;background:rgba(18,24,32,.82);color:var(--on-dark);font-family:var(--display);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;max-width:84%;line-height:1.3}
+  .hot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fire);box-shadow:0 0 10px 2px rgba(230,107,30,.7)}
+  .pebble{position:absolute;width:min(112px,30%);aspect-ratio:1/1;margin:0;border-radius:50%;overflow:hidden;border:5px solid var(--smoke);background:var(--surface);box-shadow:0 18px 34px -14px rgba(0,0,0,.75)}
+  .pebble img{width:100%;height:100%;object-fit:cover}
+  .pb1{left:-14%;bottom:12%}
+  .pb2{left:22%;bottom:-9%}
+  .pb3{right:-10%;bottom:4%}
+  .pb1 img{object-position:50% 50%}
+  .pb2 img{object-position:50% 45%}
+  .pb3 img{object-position:50% 55%}
+
+  /* ---------- facts (light) ---------- */
+  .facts{background:var(--surface);padding:36px 0}
+  .facts ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .facts li{display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.45;color:var(--ink-soft)}
+  .facts strong{font-family:var(--display);font-weight:600;font-size:30px;line-height:1.1;color:var(--ink);letter-spacing:-.02em}
+
+  /* ---------- sections ---------- */
+  .sec{padding:120px 0}
+  h2{font-size:clamp(32px,2.2vw + 18px,54px);line-height:1.06}
+  .intro{font-size:19px;color:var(--ink-soft);max-width:56ch;margin-top:22px}
+
+  /* collections */
+  .coll-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+  .feature{position:sticky;top:108px;margin:0}
+  .feature img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:46% 50%;border-radius:22px;box-shadow:var(--shadow)}
+  .tag{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--ink);font-family:var(--display);font-size:14px;font-weight:500;padding:9px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(18,24,32,.6)}
+  .lines{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(24,32,42,.15)}
+  .lines li{border-bottom:1px solid rgba(24,32,42,.15)}
+  .lines a{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:22px;align-items:center;padding:16px 0;text-decoration:none}
+  .lines .thumb{width:76px;height:76px;border-radius:50%;overflow:hidden;background:var(--surface);box-shadow:0 10px 20px -12px rgba(18,24,32,.5)}
+  .lines .thumb img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+  .lines h3{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.015em}
+  .lines p{margin:4px 0 0;font-size:16px;color:var(--ink-soft);line-height:1.5}
+  .lines .go{font-family:var(--display);font-size:15px;color:var(--ink-soft);transition:color .2s, transform .25s}
+  .lines a:hover .go{color:var(--ink);transform:translateX(3px)}
+  .lines a:hover h3{color:#A9470F}
+  .ship{margin-top:30px;background:var(--surface);border-radius:16px;padding:24px 28px;font-size:16px;color:var(--ink-soft)}
+  .ship b{color:var(--ink);font-family:var(--display);font-weight:500}
+  .coll-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+  /* quote */
+  .quote{background:var(--band);padding:112px 0}
+  .quote-grid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:64px;align-items:center}
+  .quote blockquote{margin:0}
+  .quote blockquote p{font-family:var(--text);font-weight:400;font-size:clamp(26px,1.6vw + 16px,42px);line-height:1.28;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
+  .quote footer{display:flex;align-items:center;gap:16px;font-family:var(--display);font-size:15px;color:var(--ink-soft);margin-top:28px}
+  .quote footer::before{content:"";width:44px;height:2px;background:var(--fire);flex:none}
+  .torch{margin:0;position:relative}
+  .torch img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:44% 50%;border-radius:50% 50% 24px 24px;box-shadow:var(--shadow)}
+  .torch figcaption{font-family:var(--display);font-size:14px;color:var(--ink-soft);margin-top:14px}
+
+  /* timeline */
+  .path h2{max-width:20ch}
+  .frise{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;position:relative}
+  .frise::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:rgba(24,32,42,.25)}
+  .frise li{position:relative;padding-top:38px}
+  .frise li::before{content:"";position:absolute;left:0;top:3px;width:13px;height:13px;border-radius:50%;background:var(--base);border:1.5px solid var(--ink)}
+  .frise li:last-child::before{background:var(--fire);border-color:var(--fire)}
+  .frise .yr{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:-.02em;line-height:1}
+  .frise h3{font-family:var(--display);font-size:17px;font-weight:500;margin:12px 0 8px;letter-spacing:0;line-height:1.3}
+  .frise p{font-size:16px;color:var(--ink-soft);line-height:1.55;margin:0}
+
+  /* studio (dark) */
+  .studio{background:var(--smoke);color:var(--on-dark);padding:128px 0}
+  .studio-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+  .studio h2{color:var(--on-dark)}
+  .studio p{color:var(--on-dark-soft)}
+  .studio-head p{margin:0}
+  .studio-photos{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;margin-top:64px;align-items:start}
+  .shot{margin:0;position:relative}
+  .shot img{width:100%;object-fit:cover;border-radius:20px;box-shadow:var(--shadow-deep)}
+  .shot figcaption{font-family:var(--display);font-size:14px;color:var(--on-dark-soft);margin-top:14px}
+  .s-main img{aspect-ratio:3/2;object-position:60% 50%}
+  .s-side{display:grid;gap:28px}
+  .s-river{width:86%}
+  .s-river img{aspect-ratio:4/3;object-position:40% 60%}
+  .s-gallery{width:92%;justify-self:end;margin-top:-12px}
+  .s-gallery img{aspect-ratio:4/3;object-position:50% 55%}
+  .studio-note{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:56px;padding-top:32px;border-top:1px solid rgba(238,241,240,.14);font-size:17px}
+
+  /* visit */
+  .visit-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:stretch}
+  .card{background:var(--surface);border-radius:24px;padding:48px;box-shadow:0 34px 70px -42px rgba(18,24,32,.55)}
+  .card h2{font-size:clamp(30px,1.6vw + 18px,44px)}
+  .card .intro{margin-bottom:28px}
+  .card dl{margin:0 0 32px;display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);font-size:17px}
+  .card dt,.card dd{margin:0;padding:14px 0;border-top:1px solid rgba(24,32,42,.12)}
+  .card dt{font-family:var(--display);font-size:15px;color:var(--ink-soft);padding-top:16px}
+  .card dd a{text-decoration-color:rgba(230,107,30,.7);text-underline-offset:3px}
+  .card-dark{background:var(--smoke-2);color:var(--on-dark)}
+  .card-dark h2{color:var(--on-dark)}
+  .card-dark p{color:var(--on-dark-soft)}
+  .card-dark .ctas{margin-top:28px}
+  .card-dark .btn-ghost{border-color:rgba(238,241,240,.45)}
+  .card-dark .more{font-size:16px;margin-top:22px}
+  .card-dark .more a{color:var(--on-dark);text-decoration-color:var(--fire);text-underline-offset:4px}
+  .near{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;font-size:17px;color:var(--ink-soft)}
+  .near b{display:block;font-family:var(--display);font-weight:500;color:var(--ink);font-size:17px;margin-bottom:6px}
+  .near a{text-decoration-color:rgba(230,107,30,.7);text-underline-offset:3px}
+
+  /* footer */
+  .foot{background:var(--smoke);color:var(--on-dark-soft);padding:88px 0 40px;font-size:16px}
+  .foot-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+  .foot .brand b{color:var(--on-dark);font-size:26px}
+  .foot address{font-style:normal;margin-top:22px;line-height:1.7}
+  .foot h4{font-family:var(--display);font-weight:500;font-size:15px;color:var(--on-dark);margin:0 0 14px}
+  .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+  .foot a{text-decoration:none;transition:color .2s}
+  .foot a:hover{color:var(--on-dark)}
+  .foot-bottom{margin-top:64px;padding-top:24px;border-top:1px solid rgba(238,241,240,.12);font-size:14px}
+  .proposal{background:#0C1117;color:#8893A0;font-family:var(--display);font-size:13px;text-align:center;padding:14px var(--gut)}
+
+  /* reveal */
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1!important;transform:none!important;transition:none!important}
+    .btn,.call,.lines .go{transition:none}
+  }
+
+  /* responsive */
+  @media (max-width:1240px){ .halo{inset:-14% -8% -8%} }
+  @media (max-width:1100px){
+    .nav{gap:20px}
+    .nav .opt{display:none}
+    .facts ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+    .frise{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:44px}
+    .frise::before{display:none}
+  }
+  @media (max-width:900px){
+    .nav a:not(.call){display:none}
+    .hero{padding:32px 0 96px}
+    .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "art" "body"}
+    .hero-title{padding-top:0}
+    .hero-art{justify-self:start;width:min(300px,74%);margin:40px 0 64px 12%}
+    .halo{inset:-12% -12% -8%}
+    .pb1{left:-12%}
+    .pb3{right:-8%}
+    .lede{margin-top:0}
+    .sec{padding:88px 0}
+    .coll-grid,.studio-head,.quote-grid,.visit-grid{grid-template-columns:minmax(0,1fr);gap:44px}
+    .feature{position:relative;top:auto}
+    .feature img{aspect-ratio:4/3}
+    .torch{width:min(360px,100%)}
+    .studio{padding:96px 0}
+    .studio-photos{grid-template-columns:minmax(0,1fr)}
+    .s-side{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+    .s-river,.s-gallery{width:100%;margin-top:0}
+    .s-gallery{margin-top:40px}
+    .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .foot-grid > :first-child{grid-column:1/-1}
+  }
+  @media (max-width:640px){
+    body{font-size:17px}
+    .top .wrap{min-height:64px}
+    .brand b{font-size:19px}
+    .brand span{font-size:12px}
+    .call{padding:10px 16px}
+    .call .long{display:none}
+    .call .short{display:inline}
+    .lede,.intro{font-size:17px}
+    .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .facts strong{font-size:26px}
+    .lines a{grid-template-columns:64px minmax(0,1fr);gap:16px}
+    .lines .thumb{width:64px;height:64px}
+    .lines .go{display:none}
+    .lines h3{font-size:20px}
+    .frise{grid-template-columns:minmax(0,1fr);row-gap:0;margin-top:44px}
+    .frise::before{display:block;left:6px;right:auto;top:6px;bottom:6px;width:1px;height:auto}
+    .frise li{padding:0 0 32px 36px}
+    .frise li::before{top:9px}
+    .s-side{grid-template-columns:minmax(0,1fr)}
+    .s-river{width:88%}
+    .s-gallery{width:88%;justify-self:end;margin-top:0}
+    .studio-note{grid-template-columns:minmax(0,1fr);gap:8px}
+    .card{padding:32px 22px}
+    .card dl{grid-template-columns:minmax(0,1fr)}
+    .card dt{padding-bottom:0}
+    .card dd{border-top:0;padding-top:2px}
+    .near{grid-template-columns:minmax(0,1fr);gap:24px}
+    .foot-grid{grid-template-columns:minmax(0,1fr)}
+  }
+  @media (max-width:420px){
+    .ctas,.coll-ctas{flex-direction:column;align-items:stretch}
+    .btn{width:100%}
+    .hero-art{width:min(250px,72%);margin-left:14%}
+  }
+</style>
+</head>
+<body id="top">
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sherwin Art Glass, back to top"><b>Sherwin Art Glass</b><span>Bellows Falls, Vermont</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#glass">The glass</a>
+      <a href="#chris" class="opt">Chris</a>
+      <a href="#studio">The studio</a>
+      <a href="#memorials" class="opt">Memorials</a>
+      <a href="#visit">Visit</a>
+      <a class="call" href="tel:+18023765744"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">802-376-5744</span><span class="short">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-title">
+        <p class="where">Glassblowing studio and gallery in Bellows Falls, Vermont</p>
+        <h1 id="hero-title">The beauty of nature, in glass.</h1>
+      </div>
+      <div class="hero-body">
+        <p class="lede">Chris Sherwin hand-sculpts and blows glass animals, birds, paperweights and fruit in an old 1925 mill building in downtown Bellows Falls, overlooking the Connecticut River, from a furnace that runs on renewable energy.</p>
+        <div class="ctas">
+          <a class="btn btn-fire" href="https://sherwinartglass.com/shop/">Shop handmade glass</a>
+          <a class="btn btn-ghost" href="tel:+18023765744"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>802-376-5744</a>
+        </div>
+        <p class="appt">Coming to Vermont? <a href="sms:+18023765744">Text Chris</a> or call ahead to set up a studio visit.</p>
+      </div>
+      <div class="hero-art">
+        <div class="halo" aria-hidden="true"></div>
+        <figure class="capsule" style="margin:0">
+          <img src="assets/sherwin-art-glass-bellows-falls/cueillette-de-verre-en-fusion-qui-coule.webp" alt="Chris Sherwin lifts a blowpipe with a glowing gather of molten glass dripping into a bucket" width="1200" height="1600" fetchpriority="high">
+          <figcaption class="hot">Molten glass, 2100+ degrees</figcaption>
+        </figure>
+        <figure class="pebble pb1"><img src="assets/sherwin-art-glass-bellows-falls/cardinal-rouge-en-verre.webp" alt="Red glass cardinal" width="800" height="800"></figure>
+        <figure class="pebble pb2"><img src="assets/sherwin-art-glass-bellows-falls/grenouille-bleue-sur-presse-papier-noir.webp" alt="Blue glass frog on a black glass sphere" width="800" height="800"></figure>
+        <figure class="pebble pb3"><img src="assets/sherwin-art-glass-bellows-falls/poire-verte-et-pomme-rouge-en-verre.webp" alt="Green glass pear and red glass apple" width="800" height="800"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Sherwin Art Glass in a few facts">
+    <ul class="wrap">
+      <li><strong>1925</strong>mill building on the Connecticut River</li>
+      <li><strong>30+ years</strong>of glassmaking for Chris</li>
+      <li><strong>2005</strong>Sherwin Art Glass opens in Bellows Falls</li>
+      <li><strong>100 yards</strong>to the dam whose hydro power runs the furnace</li>
+      <li><strong>No molds</strong>every piece hand-shaped, hot</li>
+    </ul>
+  </section>
+
+  <section class="sec" id="glass" aria-labelledby="glass-title">
+    <div class="wrap coll-grid">
+      <figure class="feature reveal">
+        <img src="assets/sherwin-art-glass-bellows-falls/presse-papier-fleur-au-chalumeau.webp" alt="A pink torchwork flower being set on a deep blue paperweight decorated with gold leaf" width="1600" height="1074" loading="lazy">
+        <figcaption class="tag">Torchwork on a paperweight</figcaption>
+      </figure>
+      <div>
+        <h2 id="glass-title">Hand-sculpted, straight from the furnace</h2>
+        <p class="intro">Every piece starts as a small gather of clear, molten glass. Chris uses no molds: everything is made hot, then hand-shaped with wet newspaper, so each piece is a little different from its picture.</p>
+        <ul class="lines">
+          <li><a href="https://sherwinartglass.com/glass-animal-figurines/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/grenouille-bleue-sur-presse-papier-noir.webp" alt="" width="800" height="800" loading="lazy"></span><div><h3>Glass animal figurines</h3><p>His most popular work, inspired by time spent outdoors.</p></div><span class="go">Shop</span></a></li>
+          <li><a href="https://sherwinartglass.com/glass-bird-figurines/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/cardinal-rouge-en-verre.webp" alt="" width="800" height="800" loading="lazy"></span><div><h3>Glass bird figurines</h3><p>Cardinals and other birds, sculpted by hand.</p></div><span class="go">Shop</span></a></li>
+          <li><a href="https://sherwinartglass.com/glass-paperweights/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/feuille-d-or-et-verre-en-fusion-au-chalumeau.webp" alt="" width="1600" height="1074" loading="lazy" style="object-position:50% 55%;transform:scale(1.6)"></span><div><h3>Art glass paperweights</h3><p>Torchwork flowers and gold leaf on deep color.</p></div><span class="go">Shop</span></a></li>
+          <li><a href="https://sherwinartglass.com/glass-fruit-sculptures/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/poire-verte-et-pomme-rouge-en-verre.webp" alt="" width="800" height="800" loading="lazy"></span><div><h3>Glass fruit sculptures</h3><p>Pears in jade green, apples in bright red.</p></div><span class="go">Shop</span></a></li>
+          <li><a href="https://sherwinartglass.com/fruit-sculptures/pumpkins/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/citrouilles-orange-en-verre-illuminees.webp" alt="" width="800" height="800" loading="lazy"></span><div><h3>Pumpkins</h3><p>Solid glass, in several sizes and colors. Seasonal, like his snowmen.</p></div><span class="go">Shop</span></a></li>
+          <li><a href="https://sherwinartglass.com/glass-vases/"><span class="thumb"><img src="assets/sherwin-art-glass-bellows-falls/vase-iris-bleu-sur-verre-mouchete.webp" alt="" width="800" height="800" loading="lazy"></span><div><h3>Glass vases</h3><p>Blue irises and leaves, applied with the torch.</p></div><span class="go">Shop</span></a></li>
+        </ul>
+        <p class="ship"><b>Shipped with care.</b> Each piece comes in a Kraft gift box made from recycled materials and goes out by USPS Priority Mail. If it isn't in stock, it is made to order: allow 3 to 4 weeks.</p>
+        <div class="coll-ctas">
+          <a class="btn btn-ink" href="https://sherwinartglass.com/shop/">Visit the shop</a>
+          <a class="btn btn-line" href="https://sherwinartglass.com/new-work/">See new work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote" aria-label="Artist statement">
+    <div class="wrap quote-grid">
+      <blockquote>
+        <p>“I melt and shape the tips of the glass canes and apply them to the glass form being created. It is best described as ‘Painting with Glass.’”</p>
+        <footer>Chris Sherwin, on torchwork. A piece takes from ten minutes to almost three hours.</footer>
+      </blockquote>
+      <figure class="torch reveal">
+        <img src="assets/sherwin-art-glass-bellows-falls/feuille-d-or-et-verre-en-fusion-au-chalumeau.webp" alt="A glowing cane of glass laid onto a dark sphere covered in gold leaf, in front of the torch" width="1600" height="1074" loading="lazy">
+        <figcaption>Gold leaf and a hand-pulled cane, at the torch</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec path" id="chris" aria-labelledby="chris-title">
+    <div class="wrap">
+      <h2 id="chris-title">Born and raised in Vermont, with glass for more than 30 years</h2>
+      <p class="intro">Chris has also played music and worked in ceramics, drawing, painting and woodturning.</p>
+      <ol class="frise">
+        <li><span class="yr">1991</span><h3>The first gather</h3><p>Glassblowing as an elective in his senior year at Southern Connecticut State University, New Haven.</p></li>
+        <li><span class="yr">1993</span><h3>Simon Pearce</h3><p>Hired at the Windsor and Quechee glass facility, known for high-quality functional crystal.</p></li>
+        <li><span class="yr">1997</span><h3>Orient &amp; Flume</h3><p>Glassblower in Chico, California, at a studio known for intricate paperweights and torchwork.</p></li>
+        <li><span class="yr">2004</span><h3>Back home</h3><p>Return to New England to raise their daughter, and a year spent building the studio.</p></li>
+        <li><span class="yr">2005</span><h3>Sherwin Art Glass</h3><p>In August, a Vermont business, with its view over the Connecticut River in Bellows Falls.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="studio" id="studio" aria-labelledby="studio-title">
+    <div class="wrap">
+      <div class="studio-head">
+        <h2 id="studio-title">A studio in a 1925 mill, above the Connecticut River</h2>
+        <p>Chris works solo in downtown Bellows Falls. His furnace and all his equipment, except the torch, run on hydro power from the dam about 100 yards away: green glassblowing in the Green Mountain State.</p>
+      </div>
+      <div class="studio-photos">
+        <figure class="shot s-main reveal">
+          <img src="assets/sherwin-art-glass-bellows-falls/souffleur-detachant-un-cardinal-noir-et-blanc.webp" alt="Black and white photo of Chris in a cap and work glove, holding a red glass cardinal on a rod in front of the studio's multi-pane window" width="1600" height="1067" loading="lazy">
+          <figcaption>A red cardinal at the studio window, with the brick chimney and the hills behind.</figcaption>
+        </figure>
+        <div class="s-side">
+          <figure class="shot s-river reveal">
+            <img src="assets/sherwin-art-glass-bellows-falls/vue-sur-la-riviere-et-la-cheminee-de-brique.webp" alt="The Connecticut River between autumn hills, with a tall brick chimney in the foreground" width="1600" height="1200" loading="lazy">
+            <figcaption>Overlooking the Connecticut River.</figcaption>
+          </figure>
+          <figure class="shot s-gallery reveal">
+            <img src="assets/sherwin-art-glass-bellows-falls/galerie-de-l-atelier-vitrines-et-fauteuils.webp" alt="The retail gallery: lit wooden display cases with glass pumpkins, snowmen and vases, and two blue armchairs by the factory windows" width="1600" height="1200" loading="lazy">
+            <figcaption>The retail gallery, inside the mill.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="studio-note">
+        <p>At the studio you will find a retail gallery and a viewing area, in a warm, family-friendly setting. Chris is blowing glass most weekdays and will happily show you and explain his process.</p>
+        <p>Design ideas come from the beauty he finds in nature, and from family, friends and studio visitors. His work is in the permanent collections of the New Bedford Museum of Glass and the Sandwich Glass Museum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-title">
+    <div class="wrap visit-grid">
+      <div class="card">
+        <h2 id="visit-title">Coming to Vermont?</h2>
+        <p class="intro">The studio is open by appointment. Call or text Chris before you come, to be sure he is at the studio that day.</p>
+        <dl>
+          <dt>Studio</dt><dd>33 Bridge Street<br>Bellows Falls, VT 05101</dd>
+          <dt>Mail</dt><dd>PO Box 168, Bellows Falls, VT 05101</dd>
+          <dt>Phone</dt><dd><a href="tel:+18023765744">802-376-5744</a>, calls and texts</dd>
+          <dt>Hours</dt><dd>By appointment, glassblowing most weekdays</dd>
+        </dl>
+        <div class="ctas">
+          <a class="btn btn-ink" href="tel:+18023765744"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 802-376-5744</a>
+          <a class="btn btn-line" href="sms:+18023765744">Send a text</a>
+        </div>
+        <div class="near">
+          <p><b>While you're in town</b>Scenic Bellows Falls has shops, eateries and the <a href="https://www.bellowsfallsoperahouse.com">Bellows Falls Opera House</a>, with views up and down the river.</p>
+          <p><b>A cold beer after?</b><a href="https://www.7ballsbrewing.com">7 Balls Brewing</a>, Chris's nano brewery and taproom, is about 1/2 mile from the studio.</p>
+        </div>
+      </div>
+      <div class="card card-dark" id="memorials">
+        <h2>Glass memorials with ashes</h2>
+        <p class="intro">Memorial pieces, which Chris calls Spirit Pieces, have become a significant part of his work, made with care for what each one means.</p>
+        <p>He works with both people and pet ashes, and only needs a small amount to complete a piece.</p>
+        <div class="ctas">
+          <a class="btn btn-fire" href="tel:+18023765744">Talk to Chris</a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/pages/Sherwin-Art-Glass/425036005315?ref=ts">See examples</a>
+        </div>
+        <p class="more">Examples are in the “Spirit Pieces” album on Facebook. More answers in the <a href="https://sherwinartglass.com/frequently-asked-questions-glassblowing-studio-in-vermont/">FAQ</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><b>Sherwin Art Glass</b><span>Glassblowing studio and gallery</span></a>
+        <address>33 Bridge Street, PO Box 168<br>Bellows Falls, VT 05101<br><a href="tel:+18023765744">802-376-5744</a>, by appointment</address>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="https://sherwinartglass.com/shop/">All glass</a></li>
+          <li><a href="https://sherwinartglass.com/best-sellers/">Best sellers</a></li>
+          <li><a href="https://sherwinartglass.com/seasonal-work/">Seasonal work</a></li>
+          <li><a href="https://sherwinartglass.com/new-work/">New work</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://sherwinartglass.com/about-chris-sherwin-glassblowing-for-over-30-years-vermont-art-glass-studio/">About Chris</a></li>
+          <li><a href="https://sherwinartglass.com/upcoming-shows-tours-and-retail-gallery-locations-for-chris-sherwin-vermont-glassblower-and-where-to-find-his-art-glass-paperweights-art-glass-animals-glass-fruit-paperweights-glass-pumpkins-cardinals-and-glass-snowman/">Galleries carrying his work</a></li>
+          <li><a href="https://sherwinartglass.com/frequently-asked-questions-glassblowing-studio-in-vermont/">FAQ</a></li>
+          <li><a href="https://www.facebook.com/pages/Sherwin-Art-Glass/425036005315?ref=ts">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCC1Cc7aZpRHXYjHBhLx-t6w">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">Handcrafted and made in Vermont.</div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Sherwin Art Glass</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

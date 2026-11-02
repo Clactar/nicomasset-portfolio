@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sara Mesnard, tapissière d'ameublement · La Tisse en l'Air</title>
+<meta name="description" content="Rénovation de chaises et fauteuils et ateliers pour restaurer vos sièges vous-même, à Saint-Martin-l'Ars, à 45 minutes de Poitiers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 60V28a24 24 0 0 1 48 0v32z' fill='%232E1F33'/%3E%3Ctext x='32' y='50' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F7F4F8'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rethink+Sans:wght@400..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#ECE7EE; --surface:#F7F4F8; --bande:#E2DAE5;
+    --encre:#2E1F33; --encre-doux:#56475B; --accent:#E07A3A; --accent-fonce:#B5571C; --sombre:#2E1F33;
+    --clair:#F1ECF2; --clair-doux:#C9BDCD;
+    --ombre:0 30px 60px -34px rgba(46,31,51,.55);
+    --ombre-forte:0 44px 80px -40px rgba(46,31,51,.7);
+    --display:"DM Serif Display", Georgia, serif;
+    --texte:"Rethink Sans", "Avenir Next", sans-serif;
+    --large:min(1200px, 100% - 48px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--surface)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.005em}
+  p{margin:0;text-wrap:pretty}
+  .large{width:var(--large);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--accent-fonce);outline-offset:3px;border-radius:4px}
+
+  .entete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(46,31,51,.08)}
+  .entete .large{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+  .marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .marque b{font-family:var(--display);font-weight:400;font-size:24px}
+  .marque span{font-size:14px;color:var(--encre-doux);margin-top:3px}
+  .nav{display:flex;align-items:center;gap:30px;font-size:16px}
+  .nav a{text-decoration:none;color:var(--encre-doux);transition:color .2s}
+  .nav a:hover{color:var(--encre)}
+  .nav .tel{color:var(--surface);background:var(--encre);padding:10px 18px;border-radius:999px;white-space:nowrap;font-weight:500}
+  .nav .tel:hover{color:var(--surface);background:var(--accent-fonce)}
+  .appel{display:none}
+
+  .boutons{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-plein{background:var(--accent);color:var(--encre)}
+  .btn-plein:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+  .btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+  .btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+
+  /* Héros */
+  .heros{padding:64px 0 104px}
+  .heros .large{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:center}
+  .lieu{font-size:16px;color:var(--encre-doux);margin-bottom:22px;font-weight:500}
+  .heros h1{font-size:clamp(42px, 6.4vw, 92px);line-height:1}
+  .heros .chapo{font-size:19px;color:var(--encre-doux);max-width:33em;margin:30px 0 36px}
+  .heros .mail{margin-top:22px;font-size:16px;color:var(--encre-doux)}
+  .heros .mail a{text-decoration-color:rgba(46,31,51,.3);text-underline-offset:3px}
+  .arche{position:relative;margin:0 0 0 auto;width:min(460px, 100%);padding:0 0 26px 0}
+  .arche::before{content:"";position:absolute;inset:-18px -18px 44px 18px;border:1.5px solid var(--accent);border-radius:300px 300px 26px 26px;pointer-events:none}
+  .arche .photo{position:relative;border-radius:300px 300px 24px 24px;overflow:hidden;box-shadow:var(--ombre-forte);background:var(--surface)}
+  .arche img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:16% 50%}
+  .pastille{position:absolute;left:-36px;bottom:0;background:var(--surface);color:var(--encre);border-radius:16px;padding:14px 18px;box-shadow:var(--ombre);font-size:15px;line-height:1.35;max-width:min(250px, 80%)}
+  .pastille b{display:block;font-family:var(--display);font-weight:400;font-size:21px;margin-bottom:2px}
+
+  .faits{background:var(--bande)}
+  .faits ul{list-style:none;margin:0 auto;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:16px}
+  .faits li{display:flex;align-items:center;gap:10px}
+  .faits li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);flex:none}
+
+  section{padding:112px 0}
+
+  /* Ateliers */
+  .ateliers .large{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:center}
+  .duo{position:relative;padding:0 0 120px 0}
+  .duo .p1{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte)}
+  .duo .p1 img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:30% 50%}
+  .duo .p2{position:absolute;right:-8px;bottom:0;width:44%;border-radius:20px;overflow:hidden;border:8px solid var(--base);box-shadow:var(--ombre)}
+  .duo .p2 img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:60% 40%}
+  .duo .etiquette{position:absolute;left:16px;top:16px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;box-shadow:0 12px 24px -16px rgba(46,31,51,.7)}
+  .ateliers h2{font-size:clamp(34px, 4.4vw, 58px);margin-bottom:24px}
+  .ateliers .corps p{color:var(--encre-doux);max-width:34em}
+  .ateliers .corps p + p{margin-top:16px}
+  .pourquoi{list-style:none;margin:30px 0 36px;padding:0}
+  .pourquoi li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(46,31,51,.14);font-size:17px}
+  .pourquoi li::before{content:"";position:absolute;left:4px;top:21px;width:10px;height:10px;border-radius:50%;border:2px solid var(--accent)}
+
+  /* Formules */
+  .formules{background:var(--surface)}
+  .formules .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end;margin-bottom:48px}
+  .formules h2{font-size:clamp(32px, 4vw, 52px)}
+  .formules .tete p{color:var(--encre-doux)}
+  .tableau{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--encre)}
+  .tableau li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:12px 40px;padding:28px 0;border-bottom:1px solid rgba(46,31,51,.16);align-items:baseline}
+  .tableau h3{font-size:27px;line-height:1.12}
+  .tableau p{color:var(--encre-doux);font-size:17px}
+  .tableau .prix{font-family:var(--display);font-size:25px;text-align:right}
+  .tableau .prix small{display:block;font-family:var(--texte);font-size:14px;color:var(--encre-doux)}
+  .tableau .prix a{font-family:var(--texte);font-size:16px;font-weight:500;color:var(--accent-fonce);text-underline-offset:3px}
+  .formules .note{margin-top:24px;font-size:15px;color:var(--encre-doux)}
+
+  /* Rénovation, section sombre */
+  .renovation{background:var(--sombre);color:var(--clair)}
+  .renovation .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+  .renovation h2{font-size:clamp(34px, 4.6vw, 62px);color:#FBF8FC}
+  .renovation .tete p{color:var(--clair-doux)}
+  .atelier-photos{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:28px;margin:56px 0 72px;align-items:end}
+  .atelier-photos figure{margin:0;position:relative}
+  .atelier-photos .ph{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -36px rgba(10,4,12,.9)}
+  .atelier-photos .large-ph img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 45%}
+  .atelier-photos .haute{position:relative;padding-bottom:40px}
+  .atelier-photos .haute .ph img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:45% 60%}
+  .atelier-photos figcaption{margin-top:14px;font-size:15px;color:var(--clair-doux)}
+  .mini{position:absolute;left:-56px;top:-34px;width:min(150px, 46%);background:var(--surface);padding:8px;border-radius:12px;transform:rotate(-4deg);box-shadow:0 30px 50px -26px rgba(10,4,12,.9)}
+  .mini img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+  .colonnes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;padding-bottom:64px;border-bottom:1px solid rgba(241,236,242,.16)}
+  .colonnes h3{font-size:27px;color:#FBF8FC;margin-bottom:10px}
+  .colonnes p{color:var(--clair-doux);font-size:17px}
+  .pas{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;counter-reset:pas}
+  .pas li{counter-increment:pas;position:relative;padding-top:56px}
+  .pas li::before{content:counter(pas);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--encre);font-family:var(--display);font-size:20px}
+  .pas li::after{content:"";position:absolute;left:52px;right:-12px;top:20px;height:1px;background:rgba(241,236,242,.25)}
+  .pas li:last-child::after{display:none}
+  .pas h3{font-family:var(--texte);font-weight:600;font-size:18px;line-height:1.3;color:#FBF8FC;margin-bottom:6px;letter-spacing:0}
+  .pas p{font-size:16px;color:var(--clair-doux)}
+  .renovation .appel-devis{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+  .renovation .appel-devis p{color:var(--clair-doux);font-size:17px}
+  .renovation .btn-contour{border-color:rgba(241,236,242,.7);color:var(--clair)}
+  .renovation .btn-contour:hover{background:var(--clair);color:var(--encre)}
+  .renovation .btn-plein:hover{background:var(--clair);color:var(--encre)}
+
+  /* Zone */
+  .zone{padding:128px 0 112px}
+  .zone .large{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:64px;align-items:end}
+  .zone h2{font-size:clamp(34px, 4.8vw, 66px);line-height:1.04}
+  .zone p{color:var(--encre-doux)}
+
+  /* Formation entreprises */
+  .formation{padding-top:0}
+  .formation .bloc{background:var(--surface);border-radius:28px;padding:56px;box-shadow:var(--ombre);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,220px);gap:56px;align-items:center}
+  .formation h2{font-size:clamp(28px, 3.2vw, 42px);margin-bottom:16px}
+  .formation p{color:var(--encre-doux);max-width:38em}
+  .gestes{list-style:none;margin:28px 0 28px;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+  .gestes li{background:var(--base);border-radius:999px;padding:8px 16px;font-size:15px}
+  .formation a.lien{color:var(--accent-fonce);font-weight:500;text-underline-offset:3px}
+  .formation figure{margin:0;transform:rotate(3deg)}
+  .formation figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:110px 110px 14px 14px;box-shadow:var(--ombre)}
+
+  /* Contact */
+  .contact{background:var(--bande)}
+  .contact .large{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+  .contact h2{font-size:clamp(34px, 4.4vw, 58px);margin-bottom:24px}
+  .contact .intro{color:var(--encre-doux);margin-bottom:34px;max-width:30em}
+  .carte{background:var(--surface);border-radius:22px;padding:16px 40px;box-shadow:var(--ombre-forte)}
+  .carte dl{margin:0}
+  .carte div{display:grid;grid-template-columns:minmax(0,7em) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid rgba(46,31,51,.12)}
+  .carte div:last-child{border-bottom:0}
+  .carte dt{font-size:15px;color:var(--encre-doux);padding-top:3px}
+  .carte dd{margin:0;font-size:18px;overflow-wrap:anywhere}
+  .carte dd a{text-decoration-color:rgba(46,31,51,.3);text-underline-offset:3px}
+  .carte .num{font-family:var(--display);font-size:25px;white-space:nowrap}
+
+  .pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 56px;font-size:16px}
+  .pied .large{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .pied b{display:block;font-family:var(--display);font-weight:400;font-size:28px;color:var(--clair);margin-bottom:12px}
+  .pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--clair);margin-bottom:14px;letter-spacing:0}
+  .pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .pied a{color:var(--clair);text-decoration-color:rgba(241,236,242,.3);text-underline-offset:3px}
+  .signature{background:var(--base);text-align:center;font-size:14px;color:var(--encre-doux);padding:18px 24px}
+
+  .js .apparait{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .apparait.vu{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .js .apparait{opacity:1;transform:none;transition:none}
+    .btn{transition:none}
+  }
+
+  @media (max-width: 1080px){
+    .pas{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
+    .pas li:nth-child(3)::after{display:none}
+  }
+  @media (max-width: 980px){
+    .nav a:not(.tel){display:none}
+    .heros .large,.ateliers .large,.contact .large,.zone .large,.formules .tete,.renovation .tete{grid-template-columns:minmax(0,1fr);gap:48px}
+    .arche{margin:0 auto 0 0;width:min(420px, 100%)}
+    .tableau li{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .tableau .prix{text-align:left}
+    .tableau p{grid-column:1 / -1;grid-row:2}
+    .colonnes{grid-template-columns:minmax(0,1fr);gap:28px}
+    .pied .large{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  }
+  @media (max-width: 640px){
+    :root{--large:min(1200px, 100% - 40px)}
+    body{font-size:17px}
+    .entete .large{min-height:62px}
+    .marque b{font-size:21px}
+    .marque span{display:none}
+    .nav{display:none}
+    .appel{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--surface);text-decoration:none;font-size:15px;font-weight:500;padding:10px 16px;border-radius:999px;white-space:nowrap}
+    .appel svg{width:15px;height:15px}
+    .heros{padding:36px 0 72px}
+    .lieu{font-size:15px;margin-bottom:16px}
+    .heros .chapo{font-size:17px;margin:20px 0 26px}
+    .heros .large{gap:52px}
+    .arche{width:calc(100% - 22px);margin-left:4px}
+    .arche::before{inset:-12px -12px 40px 12px}
+    .pastille{left:-4px;font-size:14px;padding:12px 14px}
+    .pastille b{font-size:19px}
+    .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+    section{padding:80px 0}
+    .duo{padding-bottom:90px}
+    .duo .p2{width:48%;right:0;border-width:6px}
+    .tableau li{grid-template-columns:minmax(0,1fr);padding:22px 0}
+    .tableau p{grid-row:auto}
+    .tableau h3{font-size:24px}
+    .atelier-photos{grid-template-columns:minmax(0,1fr);gap:32px;margin:40px 0 56px}
+    .atelier-photos .haute{width:78%;margin-left:auto}
+    .mini{left:-28%;width:min(120px, 44%)}
+    .pas{grid-template-columns:minmax(0,1fr);gap:24px}
+    .pas li{padding:4px 0 0 58px}
+    .pas li::after{display:none}
+    .zone{padding:88px 0 80px}
+    .formation .bloc{grid-template-columns:minmax(0,1fr);padding:32px 24px;gap:32px;border-radius:22px}
+    .formation figure{width:min(200px, 70%)}
+    .carte{padding:8px 22px}
+    .carte div{grid-template-columns:minmax(0,1fr);gap:2px}
+    .pied .large{grid-template-columns:minmax(0,1fr);gap:36px}
+  }
+  @media (max-width: 420px){
+    .boutons .btn,.appel-devis .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="large">
+    <a class="marque" href="#haut" aria-label="La Tisse en l'Air, retour en haut">
+      <b>La Tisse en l'Air</b>
+      <span>Sara Mesnard, tapissière d'ameublement</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#ateliers">Ateliers</a>
+      <a href="#renovation">Rénovation de sièges</a>
+      <a href="#entreprises">Entreprises</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33603179351">06 03 17 93 51</a>
+    </nav>
+    <a class="appel" href="tel:+33603179351"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-labelledby="titre">
+    <div class="large">
+      <div>
+        <p class="lieu">Sara Mesnard, tapissière à Saint-Martin-l'Ars</p>
+        <h1 id="titre">Vos fauteuils, votre histoire, mon expertise.</h1>
+        <p class="chapo">Je redonne vie à vos chaises et fauteuils en alliant authenticité, confort et modernité. Forte de plus de 10 ans d'expérience, je transmets aussi mon savoir-faire dans des ateliers éco-responsables.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://www.tapissierpoitiers.fr/book-online">Réserver un atelier</a>
+          <a class="btn btn-contour" href="tel:+33603179351"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 03 17 93 51</a>
+        </div>
+        <p class="mail">Ou par e-mail&nbsp;: <a href="mailto:tisseenlair@gmail.com">tisseenlair@gmail.com</a></p>
+      </div>
+      <figure class="arche">
+        <div class="photo">
+          <img src="assets/maps-tapisserie-ameublement-garnisseur-atelie/tapissiere-souriante-ciseaux-en-main.webp" width="1248" height="832" alt="Une tapissière souriante, ciseaux et marteau en main, derrière une chaise ancienne en cours de garniture">
+        </div>
+        <figcaption class="pastille"><b>Atelier ou à domicile</b>Restaurez vos sièges vous-même, guidé pas à pas.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits" role="region" aria-label="L'atelier en bref">
+    <ul class="large">
+      <li>Plus de 10 ans d'expérience</li>
+      <li>Saint-Martin-l'Ars, sud Vienne</li>
+      <li>Traditionnelle ou semi-traditionnelle</li>
+      <li>Tissus d'éditeurs haut de gamme</li>
+    </ul>
+  </div>
+
+  <section class="ateliers" id="ateliers" aria-labelledby="t-ateliers">
+    <div class="large">
+      <div class="duo">
+        <div class="p1 apparait">
+          <img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/deux-mains-sur-le-crin-d-un-fauteuil.webp" width="1536" height="1024" alt="Deux personnes posent les mains sur la garniture de crin d'un fauteuil médaillon en bois sculpté">
+          <span class="etiquette">Les mains sur le crin</span>
+        </div>
+        <div class="p2 apparait">
+          <img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/stagiaire-au-travail-sur-un-fauteuil-medaillon.webp" width="1024" height="1536" alt="Une stagiaire, de dos, travaille sur un fauteuil médaillon posé sur une table, dans un atelier clair">
+        </div>
+      </div>
+      <div>
+        <h2 id="t-ateliers">Ateliers éco‑responsables&nbsp;: restaurez vos sièges vous-même.</h2>
+        <div class="corps">
+          <p>Que vous soyez futur artisan ou amateur de savoir-faire artisanal, j'organise des ateliers où vous apprenez à rénover vos fauteuils de vos propres mains.</p>
+          <p>Méthode traditionnelle ou semi-traditionnelle&nbsp;: je vous guide pas à pas, et vous repartez avec un siège unique, créé par vous.</p>
+        </div>
+        <ul class="pourquoi">
+          <li>Travaillez à votre rythme, en solo ou en petit groupe</li>
+          <li>Une expérience ludique, où le plaisir prime</li>
+          <li>Redonnez vie, confort et caractère à vos meubles</li>
+          <li>Un geste éco-responsable</li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://www.tapissierpoitiers.fr/book-online">Réserver en ligne</a>
+          <a class="btn btn-contour" href="https://www.tapissierpoitiers.fr/ateliers-rénovation-fauteuils">Tous les ateliers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="formules" aria-labelledby="t-formules">
+    <div class="large">
+      <div class="tete">
+        <h2 id="t-formules">Chez moi, chez vous ou dans vos locaux.</h2>
+        <p>Pour le cours à l'atelier, venez en tenue de travail et chaussures fermées, avec votre chaise ou votre fauteuil à rénover&nbsp;: installation à 9&nbsp;h, atelier de 9&nbsp;h 30 à 16&nbsp;h 30.</p>
+      </div>
+      <ul class="tableau">
+        <li>
+          <h3>Cours particulier à l'atelier</h3>
+          <p>À Saint-Martin-l'Ars, 6 heures, deux personnes au maximum. Les bases de la tapisserie et la rénovation de votre siège, guidé pas à pas.</p>
+          <span class="prix"><a href="https://www.tapissierpoitiers.fr/service-page/atelier-à-saint-martin-l-ars">Tarif et dates</a></span>
+        </li>
+        <li>
+          <h3>Atelier chez vous</h3>
+          <p>Pour les particuliers, chez vous ou dans un lieu partenaire, groupe conseillé de 3 à 6 personnes. Cycle de 3 à 5 séances sur devis, tarif dégressif.</p>
+          <span class="prix"><a href="https://www.tapissierpoitiers.fr/atelier-de-rénovation-de-sièges">Grille de tarif</a></span>
+        </li>
+        <li>
+          <h3>Collectivités</h3>
+          <p>Centres sociaux, recycleries, associations, mairies, MJC&nbsp;: j'interviens directement dans vos structures.</p>
+          <span class="prix"><a href="mailto:tisseenlair@gmail.com?subject=Atelier%20pour%20une%20collectivit%C3%A9">Me consulter</a></span>
+        </li>
+        <li>
+          <h3>Entreprises</h3>
+          <p>Événementiel, team building, animation et formation professionnelle, jusqu'à 8 participants.</p>
+          <span class="prix">70&nbsp;€ <small>par personne, la journée</small></span>
+        </li>
+      </ul>
+      <p class="note">Ateliers itinérants&nbsp;: frais de déplacement de 0,50&nbsp;€ par kilomètre, calculés sur l'aller-retour.</p>
+    </div>
+  </section>
+
+  <section class="renovation" id="renovation" aria-labelledby="t-renovation">
+    <div class="large">
+      <div class="tete">
+        <h2 id="t-renovation">Redonnez vie à vos fauteuils.</h2>
+        <p>Fauteuils, chaises ou canapés, classiques, contemporains ou design&nbsp;: je leur offre une seconde jeunesse avec des tissus d'éditeurs haut de gamme et un savoir-faire artisanal.</p>
+      </div>
+      <div class="atelier-photos">
+        <figure class="large-ph apparait">
+          <div class="ph"><img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/toile-de-jute-piquee-et-epingles.webp" width="1600" height="1200" alt="Assise couverte de toile de jute piquée de ficelle, épingles vertes et rouges sur le bord"></div>
+          <figcaption>Toile de jute piquée, épingles en place</figcaption>
+        </figure>
+        <figure class="haute apparait">
+          <div class="ph"><img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/echantillons-de-tissus-a-rayures.webp" width="1060" height="1600" alt="Liasse d'échantillons de tissus rayés beige, gris et noir"></div>
+          <div class="mini"><img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/ressorts-guindes-sur-une-assise.webp" width="768" height="1024" alt="Ressorts guindés à la ficelle sur les sangles d'une assise"></div>
+          <figcaption>Échantillons de tissus d'éditeurs</figcaption>
+        </figure>
+      </div>
+      <div class="colonnes">
+        <div><h3>Sièges anciens</h3><p>Je remets en état les ressorts, les sangles et le crin, pour un style authentique et une solidité durable.</p></div>
+        <div><h3>Sièges modernes</h3><p>Mousse et techniques contemporaines, pour un confort immédiat et adapté aux assises actuelles.</p></div>
+        <div><h3>Les finitions</h3><p>Une touche classique ou moderne&nbsp;: clous, passepoils, galons ou franges.</p></div>
+      </div>
+      <ol class="pas" aria-label="Comment se déroule une rénovation">
+        <li><h3>Des photos pour commencer</h3><p>Quelques photos de votre siège, sous différents angles.</p></li>
+        <li><h3>Un devis estimatif rapide</h3><p>Une première estimation, établie à partir de vos photos.</p></li>
+        <li><h3>Le choix du tissu ensemble</h3><p>Parmi un large choix d'éditeurs reconnus.</p></li>
+        <li><h3>La restauration commence</h3><p>Ressorts, sangles et crin, ou mousse, selon votre siège.</p></li>
+        <li><h3>Votre satisfaction avant tout</h3><p>Les finitions font toute la différence.</p></li>
+      </ol>
+      <div class="appel-devis">
+        <a class="btn btn-plein" href="mailto:tisseenlair@gmail.com?subject=Photos%20de%20mon%20si%C3%A8ge%20pour%20un%20devis">Envoyer mes photos</a>
+        <p>Votre devis estimatif est gratuit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" aria-labelledby="t-zone">
+    <div class="large">
+      <h2 id="t-zone">De Poitiers à Angoulême, en passant par Civray, Montmorillon ou Confolens.</h2>
+      <p>Mon atelier est installé à Saint-Martin-l'Ars, au cœur du sud Vienne, à 45 minutes de Poitiers et tout près de la Charente et de la Haute-Vienne. J'interviens dans toute la région Poitou-Charentes.</p>
+    </div>
+  </section>
+
+  <section class="formation" id="entreprises" aria-labelledby="t-formation">
+    <div class="large">
+      <div class="bloc apparait">
+        <div>
+          <h2 id="t-formation">Pour les entreprises&nbsp;: une formation en tapisserie traditionnelle.</h2>
+          <p>Pour développer les compétences de vos collaborateurs ou préserver un savoir-faire artisanal d'excellence, j'enseigne la réfection de sièges en traditionnelle, étape par étape.</p>
+          <ol class="gestes" aria-label="Étapes enseignées">
+            <li>Sanglage</li><li>Guindage</li><li>Mise en crin</li><li>Piqûre</li><li>Mise en blanc</li><li>Couverture</li><li>Finitions</li>
+          </ol>
+          <a class="lien" href="https://www.tapissierpoitiers.fr/about-3">La formation en détail</a>
+        </div>
+        <figure>
+          <img loading="lazy" src="assets/maps-tapisserie-ameublement-garnisseur-atelie/travail-sur-la-toile-de-jute-epinglee.webp" width="767" height="1024" alt="Une tapissière trace au crayon sur une toile de jute épinglée sur un fauteuil en bois brut">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="large">
+      <div>
+        <h2 id="t-contact">Envoyez-moi une photo de votre siège.</h2>
+        <p class="intro">Pour un devis de rénovation, un atelier chez vous ou une question sur un tissu, appelez-moi ou écrivez-moi.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33603179351">Appeler Sara</a>
+          <a class="btn btn-contour" href="mailto:tisseenlair@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="carte apparait">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33603179351">06 03 17 93 51</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:tisseenlair@gmail.com">tisseenlair@gmail.com</a></dd></div>
+          <div><dt>Atelier</dt><dd>5 lieu-dit La Brunelière<br>86350 Saint-Martin-l'Ars</dd></div>
+          <div><dt>Ateliers</dt><dd>9&nbsp;h installation, 9&nbsp;h 30 à 16&nbsp;h 30</dd></div>
+          <div><dt>Suivre</dt><dd><a href="https://www.instagram.com/tisse_en_lair/">Instagram</a> · <a href="https://www.facebook.com/tisseenlair/">Facebook</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <b>La Tisse en l'Air</b>
+      <p>Sara Mesnard, tapissière d'ameublement. Rénovation de chaises et fauteuils, ateliers et formation.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>5 lieu-dit La Brunelière, 86350 Saint-Martin-l'Ars</li>
+        <li><a href="tel:+33603179351">06 03 17 93 51</a></li>
+        <li><a href="mailto:tisseenlair@gmail.com">tisseenlair@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Liens</h3>
+      <ul>
+        <li><a href="https://www.tapissierpoitiers.fr/book-online">Réservation en ligne</a></li>
+        <li><a href="https://www.tapissierpoitiers.fr/tapisserie-ameublement-garnisseur">Rénovation de sièges</a></li>
+        <li><a href="https://www.instagram.com/tisse_en_lair/">Instagram @tisse_en_lair</a></li>
+        <li><a href="https://www.facebook.com/tisseenlair/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour La Tisse en l'Air, Sara Mesnard</p>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = document.querySelectorAll('.apparait');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function(e){ e.classList.add('vu'); }); return;
+    }
+    var io = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>

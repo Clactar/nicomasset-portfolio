@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Guillaume Héraud · Photographe à Poitiers</title>
+<meta name="description" content="Guillaume Héraud, photographe à Poitiers et en Nouvelle-Aquitaine : photo d'entreprise, évènementiel, photo aérienne au drone, portrait, famille, naissance, mariage.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C2430'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' text-anchor='middle' fill='%239CC3E6'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EDEFF2; --base2:#E1E5EB; --surface:#F8F9FA; --ink:#1C2430; --ink2:#4C5869; --ciel:#9CC3E6; --ciel2:#BCD7EF; --dark:#1C2430; --dark2:#232D3B;
+  --ombre:0 30px 60px -34px rgba(28,36,48,.5);
+  --ombre-l:0 46px 80px -42px rgba(28,36,48,.6);
+  --display:'Epilogue', 'Spectral', sans-serif;
+  --texte:'Spectral', Georgia, serif;
+  --pad:clamp(20px, 5vw, 48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-size:19px;line-height:1.66;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ciel);color:var(--ink)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1240px, 100%);margin:0 auto;padding-inline:var(--pad)}
+:focus-visible{outline:2px solid var(--ciel);outline-offset:3px;border-radius:6px}
+.sans{font-family:var(--display)}
+
+/* En-tête, sur le héros sombre */
+.top{position:sticky;top:0;z-index:20;background:rgba(28,36,48,.96);color:var(--surface);border-bottom:1px solid rgba(248,249,250,.07)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.02em}
+.marque small{font-family:var(--display);font-size:13px;color:#A6B3C4;margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px;font-family:var(--display);font-size:15px}
+.nav a{text-decoration:none;color:#C6D0DC;transition:color .2s}
+.nav a:hover{color:#fff}
+.appel{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ciel);border-radius:999px;padding:9px 18px;text-decoration:none;color:var(--surface) !important;font-weight:500;white-space:nowrap;transition:background .25s, color .25s}
+.appel:hover{background:var(--ciel);color:var(--ink) !important}
+.appel svg{width:15px;height:15px;flex:none}
+
+/* Boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--display);font-weight:500;font-size:16px;text-decoration:none;transition:transform .3s cubic-bezier(.2,.8,.2,1), background .25s, color .25s, border-color .25s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-ciel{background:var(--ciel);color:var(--ink)}
+.btn-ciel:hover{transform:translateY(-3px);background:var(--ciel2)}
+.btn-clair{border:1.5px solid rgba(248,249,250,.7);color:var(--surface)}
+.btn-clair:hover{transform:translateY(-3px);background:var(--surface);color:var(--ink)}
+.btn-encre{background:var(--ink);color:var(--surface)}
+.btn-encre:hover{transform:translateY(-3px);background:#2B3747}
+.btn-contour{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-contour:hover{transform:translateY(-3px);background:var(--ink);color:var(--surface)}
+
+/* Héros sombre */
+.hero{background:var(--dark);color:#DCE3EC;padding:clamp(24px, 3vw, 40px) 0 clamp(72px, 8vw, 112px)}
+.ciel-photo{position:relative;margin:0}
+.ciel-photo img{width:100%;aspect-ratio:1240/500;object-fit:cover;object-position:50% 30%;border-radius:24px;box-shadow:0 50px 90px -50px rgba(0,0,0,.85)}
+.ciel-photo::after{content:"";position:absolute;inset:0;border-radius:24px;background:linear-gradient(180deg, rgba(28,36,48,0) 52%, rgba(28,36,48,.72) 100%);pointer-events:none}
+.ciel-photo figcaption{position:absolute;left:22px;top:22px;z-index:1;background:rgba(248,249,250,.94);color:var(--ink);border-radius:999px;padding:8px 16px;font-family:var(--display);font-size:14px;font-weight:500}
+.hero h1{position:relative;z-index:2;color:var(--surface);font-size:clamp(40px, 6vw, 86px);line-height:1;letter-spacing:-.04em;font-weight:500;margin-top:-.95em;padding-left:clamp(0px, 3vw, 44px);max-width:14em;text-shadow:0 2px 30px rgba(28,36,48,.35)}
+.hero .bas{display:grid;grid-template-columns:minmax(0,6.5fr) minmax(0,5.5fr);gap:clamp(24px, 5vw, 72px);align-items:end;margin-top:clamp(28px, 3vw, 40px);padding-left:clamp(0px, 3vw, 44px)}
+.hero .chapo{font-size:clamp(18px, 1.5vw, 21px);color:#C3CEDB;max-width:33em}
+.hero .btns{justify-content:flex-end}
+
+/* Bandeau de faits */
+.faits{background:var(--base2)}
+.faits ul{list-style:none;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;padding-block:22px}
+.faits li{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:15px;font-weight:500}
+.faits li::before{content:"";width:16px;height:2px;background:var(--ink);flex:none;opacity:.5}
+
+/* Sections */
+.sec{padding-block:clamp(80px, 9vw, 128px)}
+.sec h2{font-size:clamp(32px, 3.8vw, 54px);line-height:1.06}
+.lede{font-size:clamp(18px, 1.45vw, 20px);color:var(--ink2);margin-top:22px;max-width:34em}
+.lien{display:inline-block;margin-top:26px;font-family:var(--display);font-weight:500;font-size:16px;text-underline-offset:5px;text-decoration-thickness:1.5px}
+
+/* Entreprise */
+.entreprise .wrap{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+.usages{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.usages li{font-family:var(--display);font-size:14px;background:var(--surface);border-radius:999px;padding:7px 14px;box-shadow:0 8px 20px -16px rgba(28,36,48,.6)}
+.paire{position:relative;padding:0 0 16% 14%}
+.paire figure{margin:0;position:relative}
+.paire .p1 img{border-radius:22px;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%;box-shadow:var(--ombre-l)}
+.paire .p1 figcaption{position:absolute;right:18px;top:18px;background:var(--surface);border-radius:999px;padding:7px 14px;font-family:var(--display);font-size:14px;font-weight:500}
+.paire .p2{position:absolute;left:0;bottom:0;width:36%}
+.paire .p2 img{border-radius:16px;aspect-ratio:2/3;object-fit:cover;object-position:50% 25%;border:6px solid var(--base);box-shadow:var(--ombre)}
+
+/* Famille */
+.famille{background:var(--surface)}
+.famille .wrap{display:grid;grid-template-columns:minmax(0,6.3fr) minmax(0,5.7fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+.scene{position:relative;padding-right:16%;padding-bottom:10%}
+.scene figure{margin:0}
+.scene .s1 img{border-radius:24px 24px 24px 120px;aspect-ratio:7/5;object-fit:cover;object-position:50% 60%;box-shadow:var(--ombre-l)}
+.scene .s2{position:absolute;right:0;bottom:0;width:34%;background:#FCFCFD;padding:8px 8px 34px;border-radius:6px;transform:rotate(3deg);box-shadow:0 30px 50px -28px rgba(28,36,48,.6)}
+.scene .s2 img{border-radius:3px;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.scene .s2 figcaption{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--display);font-size:13px;color:var(--ink2)}
+.remise{margin-top:28px;padding-top:22px;border-top:1px solid rgba(28,36,48,.14);font-size:17px;color:var(--ink2)}
+
+/* Mariage, photo pleine largeur */
+.mariage{padding-block:0 clamp(80px, 9vw, 128px);background:var(--surface)}
+.mariage figure{position:relative;margin:0}
+.mariage img{width:100%;aspect-ratio:1240/600;object-fit:cover;object-position:50% 45%;border-radius:24px;box-shadow:var(--ombre-l)}
+.mariage .carte{position:relative;margin:-110px clamp(16px, 4vw, 56px) 0 auto;width:min(540px, calc(100% - 32px));background:var(--surface);border-radius:20px;padding:clamp(22px, 3vw, 34px);box-shadow:var(--ombre)}
+.mariage .carte h2{font-size:clamp(26px, 2.4vw, 34px)}
+.mariage .carte p{margin-top:12px;font-size:17px;color:var(--ink2)}
+
+/* Bio */
+.bio .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px, 6vw, 96px);align-items:start}
+.bio blockquote{margin:0;font-family:var(--texte);font-style:italic;font-weight:400;font-size:clamp(30px, 3.6vw, 52px);line-height:1.14;letter-spacing:-.01em;text-wrap:balance}
+.bio .qui{margin-top:28px;font-family:var(--display);font-size:16px;color:var(--ink2)}
+.bio .texte{margin-top:28px;max-width:36em;color:var(--ink2);font-size:18px}
+.dates{list-style:none;padding:0;margin:0;position:relative}
+.dates::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1.5px;background:var(--ink);opacity:.22}
+.dates li{position:relative;padding:0 0 26px 34px}
+.dates li:last-child{padding-bottom:0}
+.dates li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:50%;background:var(--base);border:1.5px solid var(--ink)}
+.dates li:first-child::before{background:var(--ciel);border-color:var(--ink)}
+.dates b{display:block;font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.02em}
+.dates span{display:block;font-size:17px;color:var(--ink2);margin-top:4px}
+.bio .portrait{margin:40px 0 0;width:min(320px, 100%)}
+.bio .portrait img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;object-position:55% 40%;box-shadow:var(--ombre)}
+
+/* Trio sombre */
+.trio-sec{background:var(--dark);color:#DCE3EC}
+.trio-sec h2{color:var(--surface)}
+.trio-sec .lede{color:#B4C0CF}
+.trio-sec .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+.trio-sec .tete .btns{justify-content:flex-end}
+.trio{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.2fr);gap:clamp(16px, 2.4vw, 32px);margin-top:56px;align-items:start}
+.trio figure{margin:0}
+.trio img{width:100%;object-fit:cover;border-radius:20px;box-shadow:0 40px 70px -40px rgba(0,0,0,.85)}
+.trio .t1 img{aspect-ratio:4/5;object-position:46% 40%}
+.trio .t2{margin-top:96px}
+.trio .t2 img{aspect-ratio:1/1;object-position:50% 50%}
+.trio .t3{margin-top:32px}
+.trio .t3 img{aspect-ratio:4/4.6;object-position:55% 50%}
+.trio figcaption{margin-top:14px;font-family:var(--display);font-size:15px;color:#A6B3C4}
+
+/* Stages et carte cadeau */
+.stages .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px, 5vw, 72px);align-items:center}
+.cadeau{background:var(--surface);border-radius:24px;padding:clamp(28px, 4vw, 44px);box-shadow:var(--ombre);position:relative}
+.cadeau h3{font-size:clamp(26px, 2.4vw, 32px)}
+.cadeau p{margin-top:14px;font-size:17px;color:var(--ink2)}
+.cadeau .btns{margin-top:24px}
+.cadeau .rond{position:absolute;top:-28px;right:28px;width:64px;height:64px;border-radius:50%;background:var(--ciel);display:grid;place-items:center;box-shadow:0 14px 28px -16px rgba(28,36,48,.6)}
+.cadeau .rond svg{width:28px;height:28px}
+.stages .points{list-style:none;padding:0;margin:26px 0 0}
+.stages .points li{padding:14px 0;border-bottom:1px solid rgba(28,36,48,.14);font-size:18px}
+.stages .points li:first-child{border-top:1px solid rgba(28,36,48,.14)}
+
+/* Contact */
+.contact{background:var(--base2)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px, 6vw, 96px);align-items:center}
+.contact .grand-tel{display:inline-block;margin-top:26px;font-family:var(--display);font-weight:500;font-size:clamp(34px, 4.4vw, 60px);letter-spacing:-.03em;text-decoration:none;white-space:nowrap;border-bottom:3px solid var(--ciel);line-height:1.15}
+.contact .grand-tel:hover{border-color:var(--ink)}
+.fiche{background:var(--dark);color:#DCE3EC;border-radius:24px;padding:clamp(28px, 4vw, 44px);box-shadow:var(--ombre-l)}
+.fiche dl{margin:0}
+.fiche dt{font-family:var(--display);font-size:13px;color:#93A2B5;margin-top:18px}
+.fiche dt:first-child{margin-top:0}
+.fiche dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
+.fiche dd a{color:var(--surface);text-decoration:none;border-bottom:1.5px solid var(--ciel)}
+.fiche .tel{white-space:nowrap}
+.fiche .nb{margin-top:24px;padding-top:20px;border-top:1px solid rgba(248,249,250,.12);font-size:16px;color:#B4C0CF}
+
+/* Pied */
+.pied{background:var(--dark);color:#B4C0CF;padding:64px 0 28px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) minmax(0,.7fr);gap:32px}
+.pied b{font-family:var(--display);font-weight:500;font-size:24px;color:var(--surface)}
+.pied p,.pied li{font-size:16px;line-height:1.75;overflow-wrap:anywhere}
+.pied p{margin-top:10px}
+.pied ul{list-style:none;padding:0;margin:0;font-family:var(--display);font-size:15px}
+.pied a{color:#DCE3EC;text-underline-offset:3px}
+.pied .tel{white-space:nowrap}
+.pied .legal{grid-column:1/-1;border-top:1px solid rgba(248,249,250,.1);padding-top:22px;font-size:14px;color:#8494A8}
+.signature{background:var(--dark);color:#6F7F93;font-family:var(--display);font-size:13px;text-align:center;padding:0 var(--pad) 26px;margin:0}
+
+/* Apparition douce */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .scene .s2.rv{transform:rotate(3deg) translateY(22px)}
+.js .scene .s2.rv.in{transform:rotate(3deg)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .scene .s2.rv{transform:rotate(3deg)}.btn:hover{transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.appel){display:none}
+  .hero .bas,.entreprise .wrap,.famille .wrap,.bio .wrap,.trio-sec .tete,.stages .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero .btns,.trio-sec .tete .btns{justify-content:flex-start}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:18px}
+  .top .wrap{min-height:62px}
+  .marque b{font-size:19px}
+  .marque small{display:none}
+  .appel{padding:8px 14px;font-size:15px}
+  .ciel-photo img{aspect-ratio:4/3.4;object-position:58% 60%;border-radius:20px}
+  .ciel-photo::after{border-radius:20px;background:linear-gradient(180deg, rgba(28,36,48,0) 40%, rgba(28,36,48,.8) 100%)}
+  .ciel-photo figcaption{left:14px;top:14px;font-size:13px}
+  .hero h1{margin-top:-1.6em;padding-left:16px;padding-right:12px}
+  .hero .bas{padding-left:0}
+  .faits ul{flex-direction:column;gap:10px}
+  .paire{padding-left:10%}
+  .scene{padding-right:12%}
+  .scene .s1 img{border-radius:20px 20px 20px 64px}
+  .scene .s2{width:42%}
+  .mariage img{aspect-ratio:4/3.6}
+  .mariage .carte{width:auto;margin:-48px 12px 0}
+  .trio{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .trio .t1{grid-column:1/-1}
+  .trio .t1 img{aspect-ratio:4/3}
+  .trio .t2{margin-top:0}
+  .trio .t3{margin-top:40px}
+  .contact .grand-tel{font-size:clamp(30px, 9.4vw, 40px)}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+}
+@media (max-width:400px){.top .wrap{gap:10px}.marque b{font-size:17px;white-space:nowrap}.appel{padding:7px 12px;font-size:14px}.appel svg{display:none}.hero h1{margin-top:-1.25em}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Guillaume Héraud, retour en haut"><b>Guillaume Héraud</b><small>Photographe à Poitiers</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#entreprise">Entreprise</a>
+      <a href="#famille">Famille</a>
+      <a href="#bio">Bio</a>
+      <a href="#stages">Stages</a>
+      <a class="appel" href="tel:+33661523702"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 61 52 37 02</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="hero">
+    <div class="wrap">
+      <figure class="ciel-photo"><img src="assets/maps-guillaume-heraud-photographe/poitiers-vue-du-ciel-au-drone.webp" width="1400" height="933" alt="Poitiers vue du ciel au drone : la rivière, le pont, le centre ancien et ses églises" fetchpriority="high"><figcaption>Poitiers, vue du ciel au drone</figcaption></figure>
+      <h1>Photographe à Poitiers, du drone au portrait.</h1>
+      <div class="bas">
+        <p class="chapo">Installé à Poitiers depuis une vingtaine d'années, je photographie les entreprises et leurs évènements, les familles, les naissances et les mariages, et je prends la ville de haut, au drone.</p>
+        <div class="btns">
+          <a class="btn btn-ciel" href="#contact">Demander un devis</a>
+          <a class="btn btn-clair" href="tel:+33661523702"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 61 52 37 02</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Poitiers et Nouvelle-Aquitaine</li>
+      <li>Photo aérienne au drone</li>
+      <li>Entreprise, famille, mariage</li>
+      <li>Stages photo et Photoshop</li>
+    </ul>
+  </div>
+
+  <section class="sec entreprise" id="entreprise">
+    <div class="wrap">
+      <div>
+        <h2>Des images porteuses de sens pour votre organisation.</h2>
+        <p class="lede">Entrepreneurs, entreprises, collectivités, administrations ou associations&nbsp;: je fais le reportage de vos évènements et vos portraits professionnels, pour illustrer avec justesse tous vos supports.</p>
+        <ul class="usages" aria-label="Supports">
+          <li>Réseaux sociaux</li><li>Rapports annuels</li><li>Site internet</li><li>Campagnes de publicité</li><li>Articles de presse</li>
+        </ul>
+        <a class="lien" href="http://www.guillaume-heraud.com/prestations/photographe-entreprise/">La photo d'entreprise en détail</a>
+      </div>
+      <div class="paire">
+        <figure class="p1 rv"><img src="assets/maps-guillaume-heraud-photographe/mains-d-artisan-sur-une-peau-de-cuir.webp" width="1400" height="933" alt="Deux mains d'artisan tendent une peau de cuir fauve, lumière chaude" loading="lazy"><figcaption>Artisanat et entreprise</figcaption></figure>
+        <figure class="p2 rv"><img src="assets/maps-guillaume-heraud-photographe/portrait-corporate-homme-bras-croises.webp" width="933" height="1400" alt="Portrait noir et blanc d'un homme souriant, bras croisés" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec famille" id="famille">
+    <div class="wrap">
+      <div class="scene">
+        <figure class="s1 rv"><img src="assets/maps-guillaume-heraud-photographe/couple-et-chien-en-foret-d-automne.webp" width="1400" height="933" alt="Un couple assis dans les fougères d'un sous-bois doré embrasse leur chien" loading="lazy"></figure>
+        <figure class="s2 rv"><img src="assets/maps-guillaume-heraud-photographe/nouveau-ne-dans-les-mains-de-son-pere.webp" width="933" height="1400" alt="En noir et blanc, un père embrasse le front de son nouveau-né" loading="lazy"><figcaption>Naissance</figcaption></figure>
+      </div>
+      <div>
+        <h2>Pas de sourires forcés&nbsp;: juste vous, votre naturel et vos émotions.</h2>
+        <p class="lede">Entre frères et sœurs, avec les parents, les grands-parents ou toute la famille, du ventre rond de maman aux premiers pas de bébé. Dans un lieu que vous aimez, chez vous ou dans un petit coin de nature, nous ferons les photos qui vous ressemblent.</p>
+        <p class="remise">Toutes les photos sont remises en numérique sur un serveur privé, à télécharger et partager en ligne. Tirages, agrandissements, tableaux et posters en option.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mariage">
+    <div class="wrap">
+      <figure class="rv">
+        <img src="assets/maps-guillaume-heraud-photographe/maries-main-dans-la-main-dans-les-herbes.webp" width="1400" height="933" alt="Une mariée et son marié se tiennent par la main dans les hautes herbes, au soleil couchant" loading="lazy">
+        <figcaption class="carte">
+          <h2>Photographier une union, c'est raconter une histoire.</h2>
+          <p>Engagement, fiançailles ou mariage, ma démarche de photo-reporter reste la même&nbsp;: être discret, et figer l'un des jours les plus marquants de votre vie.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec bio" id="bio">
+    <div class="wrap">
+      <div>
+        <blockquote>«&nbsp;Pour moi le mot photogénique n'a pas de sens. Tout le monde est photogénique. Il suffit de trouver l'angle. Le moment.&nbsp;»</blockquote>
+        <p class="qui">Guillaume Héraud</p>
+        <p class="texte">Originaire d'un petit village de Charente-Maritime, entre l'île d'Oléron et La Rochelle, j'ai fait mes premiers pas avec le vieil appareil argentique de mon père, un Minolta X700. Passionné par le règne animal et végétal, je suis venu à la macrophotographie, puis je me suis surpris à photographier de plus en plus l'Humain.</p>
+      </div>
+      <div>
+        <ol class="dates">
+          <li><b>2013</b><span>Major de promotion du D.U. de photographie nature et animalière de l'IFFCAM, à Ménigoute. Premier ouvrage numérique, «&nbsp;Premières Lueurs&nbsp;», et prix du concours photo du Fifo dans la catégorie insecte.</span></li>
+          <li><b>2008</b><span>2e prix national du concours universitaire de la photo.</span></li>
+          <li><b>2006 à 2009</b><span>1er prix régional du concours universitaire de la photo, quatre années de suite.</span></li>
+        </ol>
+        <figure class="portrait rv"><img src="assets/maps-guillaume-heraud-photographe/portrait-noir-et-blanc-jeune-femme.webp" width="1400" height="934" alt="Portrait noir et blanc d'une jeune femme qui regarde par-dessus l'épaule, sur un quai de gare" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec trio-sec">
+    <div class="wrap">
+      <div class="tete">
+        <div>
+          <h2>Sur scène, en reportage, en évènement.</h2>
+          <p class="lede">Spectacles et concerts, évènements d'entreprise, reportage&nbsp;: de bonnes images sont indispensables à votre communication.</p>
+        </div>
+        <div class="btns"><a class="btn btn-clair" href="http://www.guillaume-heraud.com/prestations/">Toutes les prestations</a></div>
+      </div>
+      <div class="trio">
+        <figure class="t1 rv"><img src="assets/maps-guillaume-heraud-photographe/batteur-en-concert.webp" width="1400" height="933" alt="Un batteur joue derrière ses cymbales dans une lumière de scène orange" loading="lazy"><figcaption>Spectacles et concerts</figcaption></figure>
+        <figure class="t2 rv"><img src="assets/maps-guillaume-heraud-photographe/toast-de-verres-de-vin-blanc.webp" width="1400" height="933" alt="Une dizaine de mains trinquent avec des verres de vin blanc" loading="lazy"><figcaption>Évènementiel</figcaption></figure>
+        <figure class="t3 rv"><img src="assets/maps-guillaume-heraud-photographe/equipe-au-travail-cabinet-dentaire.webp" width="1400" height="934" alt="Trois praticiens en blouses bleues penchés sur un patient dans un cabinet dentaire" loading="lazy"><figcaption>Reportage en entreprise</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec stages" id="stages">
+    <div class="wrap">
+      <div>
+        <h2>Stages et formations&nbsp;: de la prise de vue à la retouche.</h2>
+        <p class="lede">Cadrer, gérer les contrastes et les couleurs, comprendre ce qui influe sur le rendu d'une image. Par des exercices sur le terrain et des temps plus théoriques, vous apprenez à maîtriser votre boîtier.</p>
+        <ul class="points">
+          <li>Du parfait débutant au photographe confirmé, ou pour votre activité professionnelle</li>
+          <li>Un boîtier plein format et plusieurs objectifs série L à disposition si vous le souhaitez</li>
+        </ul>
+        <a class="lien" href="http://www.guillaume-heraud.com/stage-cours-photo/">Les stages en détail</a>
+      </div>
+      <div class="cadeau">
+        <span class="rond" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#1C2430" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg></span>
+        <h3>Offrez une séance photo.</h3>
+        <p>Shooting, séance en famille, naissance&nbsp;: choisissez la séance à offrir, contactez-moi pour finaliser votre cadeau, puis recevez la carte ou faites-la envoyer directement à la personne concernée.</p>
+        <div class="btns"><a class="btn btn-encre" href="http://www.guillaume-heraud.com/photographe-portrait/">La carte cadeau</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>N'hésitez pas à m'appeler directement.</h2>
+        <p class="lede">Internet est un formidable outil, mais j'apporte une grande importance aux relations humaines. Appelez-moi, ou laissez-moi votre numéro pour que je vous rappelle.</p>
+        <a class="grand-tel" href="tel:+33661523702">06 61 52 37 02</a>
+      </div>
+      <div class="fiche">
+        <dl>
+          <dt>Téléphone</dt><dd><a class="tel" href="tel:+33661523702">06 61 52 37 02</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:guillaume.heraud.photographies@gmail.com">guillaume.heraud.photographies@gmail.com</a></dd>
+          <dt>Formulaire de contact</dt><dd><a href="http://www.guillaume-heraud.com/contact/">guillaume-heraud.com/contact</a></dd>
+        </dl>
+        <p class="nb">Je ne laisse aucun message sans réponse. Les premiers échanges par mail finissent parfois dans les courriers indésirables&nbsp;: pensez à vérifier vos spams.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Guillaume Héraud</b>
+      <p>Photographe professionnel à Poitiers (86) et en Nouvelle-Aquitaine.</p>
+    </div>
+    <ul>
+      <li><a class="tel" href="tel:+33661523702">06 61 52 37 02</a></li>
+      <li><a href="mailto:guillaume.heraud.photographies@gmail.com">guillaume.heraud.photographies@gmail.com</a></li>
+      <li><a href="http://www.guillaume-heraud.com/bio/">Bio</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.facebook.com/GuillaumeHeraudPhotographies">Facebook</a></li>
+      <li><a href="https://www.flickr.com/photos/133358213@N05/">Flickr</a></li>
+      <li><a href="https://500px.com/gizprodz">500px</a></li>
+    </ul>
+    <p class="legal">Guillaume Héraud, 41 bis rue Ferdinand Foch, 86000 Poitiers. Siren 523097384. Toutes les images sont la propriété de Guillaume Héraud.</p>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour Guillaume Héraud, photographe</p>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Isy Dog · Toilettage, libre-service et éducation canine à Dijon</title>
+<meta name="description" content="Isabelle Procyk, toiletteuse et éducatrice canine au 135 rue d'Auxonne à Dijon. Le 1er libre-service de Dijon, ouvert depuis juin 2015.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='22' fill='%2310302F'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='700' font-size='36' text-anchor='middle' fill='%23F2B632'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#DFF0EA; --base2:#CFE6DD; --surface:#F3FAF7; --ink:#10302F; --ink2:#3C5856; --sun:#F2B632; --sun2:#F7CF6B; --dark:#10302F;
+  --ombre:0 30px 60px -34px rgba(16,48,47,.5);
+  --ombre-l:0 44px 80px -40px rgba(16,48,47,.55);
+  --display:'Bricolage Grotesque', 'Nunito Sans', sans-serif;
+  --texte:'Nunito Sans', 'Bricolage Grotesque', sans-serif;
+  --pad:clamp(20px, 5vw, 48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--sun);color:var(--ink)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px, 100%);margin:0 auto;padding-inline:var(--pad)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:20;background:rgba(223,240,234,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(16,48,47,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:600;font-size:26px;letter-spacing:-.03em}
+.marque small{font-size:13px;color:var(--ink2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;font-weight:600;color:var(--ink2);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.appel{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border-radius:999px;padding:10px 18px;text-decoration:none;font-weight:700;color:var(--ink);white-space:nowrap;box-shadow:0 10px 24px -18px rgba(16,48,47,.6);transition:transform .25s, background .25s}
+.appel:hover{transform:translateY(-2px);background:#fff8e6}
+.appel svg{width:16px;height:16px;flex:none}
+
+/* Boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--texte);font-weight:700;font-size:17px;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .25s, color .25s}
+.btn-plein{background:var(--ink);color:var(--surface);box-shadow:0 18px 30px -20px rgba(16,48,47,.8)}
+.btn-plein:hover{transform:translateY(-3px);background:#1b4644}
+.btn-contour{border:2px solid var(--ink);color:var(--ink)}
+.btn-contour:hover{transform:translateY(-3px);background:var(--sun);border-color:var(--sun)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Héros */
+.hero{padding:clamp(40px, 7vw, 96px) 0 clamp(56px, 7vw, 104px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px, 5vw, 72px);align-items:center}
+.hero h1{font-size:clamp(38px, 5.4vw, 76px);line-height:1.03;font-weight:500;letter-spacing:-.035em}
+.hero .chapo{font-size:clamp(18px, 1.5vw, 20px);color:var(--ink2);margin-top:28px;max-width:34em}
+.hero .chapo strong{color:var(--ink);font-weight:700}
+.hero .second{margin-top:18px;font-size:16px;color:var(--ink2)}
+.hero .second a{font-weight:700;color:var(--ink);white-space:nowrap}
+.portrait{position:relative;margin:0}
+.portrait .forme{border-radius:120px 48px 120px 48px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:1/1.08;background:var(--base2)}
+.portrait .forme img{width:100%;height:100%;object-fit:cover;object-position:48% 30%}
+.soleil{position:absolute;top:-22px;left:-26px;width:140px;height:140px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:600;font-size:14px;line-height:1.15;padding:14px;transform:rotate(-10deg);box-shadow:0 18px 30px -18px rgba(16,48,47,.6)}
+.soleil .in{display:block}
+.soleil .big{display:block;font-size:30px;letter-spacing:-.03em;margin-bottom:2px}
+.soleil span.ls{display:inline;font-size:inherit;letter-spacing:0;white-space:nowrap}
+.pastille{position:absolute;left:22px;bottom:22px;background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:700;box-shadow:0 12px 26px -16px rgba(16,48,47,.6)}
+
+/* Bandeau de faits */
+.faits{background:var(--base2)}
+.faits ul{list-style:none;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px;padding-block:22px}
+.faits li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px}
+.faits li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--sun);flex:none;box-shadow:0 0 0 3px rgba(242,182,50,.25)}
+
+/* Sections */
+.sec{padding-block:clamp(72px, 9vw, 128px)}
+.sec h2{font-size:clamp(32px, 3.8vw, 52px);line-height:1.06}
+.lede{font-size:clamp(18px, 1.4vw, 19px);color:var(--ink2);margin-top:22px;max-width:36em}
+
+/* Libre-service */
+.libre .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px, 5vw, 80px);align-items:start}
+.questions{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.questions li{background:var(--surface);border-radius:999px 999px 999px 10px;padding:10px 18px;font-size:16px;font-weight:600;box-shadow:0 10px 22px -18px rgba(16,48,47,.6)}
+.questions li:nth-child(2n){border-radius:999px 999px 10px 999px;background:#FBEFCF}
+.carte-ls{position:relative;background:var(--surface);border-radius:28px;padding:clamp(28px, 4vw, 52px);box-shadow:var(--ombre)}
+.carte-ls h3{font-size:clamp(24px, 2.2vw, 30px);max-width:15em;padding-right:min(190px, 34%)}
+.coches{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:16px 28px}
+.coches li{position:relative;padding-left:34px;font-size:17px;line-height:1.45}
+.coches li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310302F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+.serviette{margin-top:30px;padding:18px 22px;border-radius:18px;background:var(--base);font-size:16px;color:var(--ink2)}
+.serviette strong{color:var(--ink)}
+.polaroid{position:absolute;top:-34px;right:clamp(16px, 3vw, 40px);width:min(200px, 34%);background:#FFFDF6;padding:8px 8px 30px;border-radius:6px;transform:rotate(4deg);box-shadow:0 26px 44px -26px rgba(16,48,47,.6)}
+.polaroid img{border-radius:3px;aspect-ratio:4/3;object-fit:cover}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-size:13px;font-weight:600;color:var(--ink2)}
+.ls-note{margin-top:22px;font-size:16px;color:var(--ink2)}
+
+/* Toilettage */
+.toil{background:var(--surface)}
+.toil .wrap{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,5.6fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+.duo{position:relative;padding-bottom:12%;padding-right:10%}
+.duo figure{margin:0;position:relative}
+.duo .av{width:70%;transform:rotate(-3deg)}
+.duo .ap{position:absolute;right:0;bottom:0;width:64%;transform:rotate(2.5deg)}
+.duo img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;box-shadow:var(--ombre);border:6px solid var(--surface)}
+.duo .av img{object-position:50% 30%}
+.duo .ap img{object-position:50% 40%}
+.duo .tag{position:absolute;left:18px;top:18px;background:var(--surface);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
+.duo .ap .tag{background:var(--sun)}
+.etapes{list-style:none;padding:0;margin:36px 0 0;counter-reset:e;position:relative}
+.etapes::before{content:"";position:absolute;left:19px;top:12px;bottom:12px;width:2px;background:repeating-linear-gradient(var(--ink) 0 6px, transparent 6px 12px);opacity:.25}
+.etapes li{counter-increment:e;position:relative;padding-left:62px;padding-bottom:22px}
+.etapes li:last-child{padding-bottom:0}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:-4px;width:40px;height:40px;border-radius:50%;background:var(--base);display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:18px}
+.etapes li:last-child::before{background:var(--sun)}
+.etapes b{display:block;font-family:var(--display);font-weight:600;font-size:20px;line-height:1.25}
+.etapes span{display:block;color:var(--ink2);font-size:17px;margin-top:4px}
+.comprend{margin-top:36px;padding-top:24px;border-top:1px solid rgba(16,48,47,.14);font-size:16px;color:var(--ink2)}
+.comprend strong{color:var(--ink)}
+
+/* Cosmétique */
+.cosme .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(36px, 5vw, 80px);align-items:center}
+.cosme figure{margin:0;position:relative}
+.cosme figure img{border-radius:999px 999px 24px 24px;aspect-ratio:3/4;object-fit:cover;object-position:50% 35%;box-shadow:var(--ombre-l)}
+.cosme blockquote{margin:26px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(28px, 3.4vw, 46px);line-height:1.14;letter-spacing:-.025em;text-wrap:balance}
+.cosme .lede{max-width:38em}
+.marques{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding:0;list-style:none}
+.marques li{border:2px solid rgba(16,48,47,.18);border-radius:999px;padding:7px 16px;font-weight:700;font-size:15px}
+
+/* Éducation, fond sombre */
+.edu{background:var(--dark);color:#E6F2EE}
+.edu .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+.edu h2{color:#F3FAF7}
+.edu .lede{color:#BCD6CF}
+.edu-photos{position:relative;padding-bottom:22%}
+.edu-photos figure{margin:0;position:relative}
+.edu-photos .grand img{border-radius:24px;aspect-ratio:3/2;object-fit:cover;object-position:45% 50%;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.edu-photos .petit{position:absolute;right:-4%;bottom:0;width:52%}
+.edu-photos .petit img{border-radius:20px;aspect-ratio:1/1;object-fit:cover;object-position:38% 35%;border:6px solid var(--dark);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.edu-photos .tag{position:absolute;left:18px;bottom:18px;background:var(--sun);color:var(--ink);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:700}
+.premier{margin-top:34px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 22px;align-items:baseline}
+.premier dt{font-family:var(--display);font-weight:600;font-size:22px;color:var(--sun);white-space:nowrap}
+.premier dd{margin:0;color:#D3E6E0;font-size:17px}
+.parcours{margin-top:30px;font-size:16px;color:#A9C6BF;max-width:36em}
+.edu .btn-contour{border-color:#E6F2EE;color:#F3FAF7}
+.edu .btn-contour:hover{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.edu .btn-plein{background:var(--sun);color:var(--ink)}
+.edu .btn-plein:hover{background:var(--sun2)}
+
+/* Galerie décalée */
+.gal-tete{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.gal-tete a{font-weight:700;text-underline-offset:4px}
+.gal{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr) minmax(0,.9fr) minmax(0,1.25fr);gap:clamp(14px, 2vw, 24px);margin-top:48px;align-items:start}
+.gal figure{margin:0}
+.gal img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.gal .g1 img{aspect-ratio:4/3.4;border-radius:24px 24px 24px 72px;object-position:55% 40%}
+.gal .g2{margin-top:64px}
+.gal .g2 img{aspect-ratio:3/4.2;border-radius:20px;object-position:50% 30%}
+.gal .g3 img{aspect-ratio:3/4.2;border-radius:20px;object-position:50% 30%}
+.gal .g4{margin-top:96px}
+.gal .g4 img{aspect-ratio:4/3.4;border-radius:72px 24px 24px 24px;object-position:50% 35%}
+
+/* Horaires et contact */
+.infos{background:var(--base2)}
+.infos .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px, 4vw, 56px);align-items:start}
+.horaires{background:var(--surface);border-radius:28px;padding:clamp(28px, 4vw, 52px);box-shadow:var(--ombre)}
+.horaires table{width:100%;border-collapse:collapse;margin-top:26px}
+.horaires th,.horaires td{text-align:left;padding:16px 0;border-bottom:1px solid rgba(16,48,47,.12);vertical-align:baseline}
+.horaires tr:last-child th,.horaires tr:last-child td{border-bottom:0}
+.horaires th{font-weight:600;font-size:17px;padding-right:16px}
+.horaires td{font-family:var(--display);font-weight:500;font-size:clamp(20px, 2vw, 24px);text-align:right}
+.horaires td small{display:block;font-family:var(--texte);font-size:15px;color:var(--ink2);font-weight:400}
+.horaires .rdv{margin-top:22px;font-size:16px;color:var(--ink2)}
+.coord{position:relative;background:var(--dark);color:#E6F2EE;border-radius:28px;padding:clamp(28px, 4vw, 44px);box-shadow:var(--ombre-l)}
+.coord h3{color:#F3FAF7;font-size:26px}
+.coord dl{margin:22px 0 0}
+.coord dt{font-size:14px;color:#9FC0B8;margin-top:18px}
+.coord dd{margin:2px 0 0;font-size:18px}
+.coord dd a{text-decoration:none;font-weight:700;color:#F3FAF7;border-bottom:2px solid var(--sun)}
+.coord dd a.tel{white-space:nowrap}
+.devanture{margin:26px 0 0;width:min(232px, 100%);transform:rotate(-2deg)}
+.devanture img{border-radius:14px;border:5px solid #F3FAF7;aspect-ratio:3/2;object-fit:cover;box-shadow:0 20px 34px -22px rgba(0,0,0,.7)}
+.devanture figcaption{font-size:14px;color:#9FC0B8;margin-top:8px}
+
+/* Pied */
+.pied{background:var(--dark);color:#BCD6CF;padding:64px 0 28px;border-top:1px solid rgba(243,250,247,.08)}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:32px}
+.pied b{font-family:var(--display);font-size:24px;font-weight:600;color:#F3FAF7}
+.pied p,.pied li{font-size:16px;line-height:1.7}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{color:#E6F2EE;text-underline-offset:3px}
+.pied .tel{white-space:nowrap}
+.pied .cert{grid-column:1/-1;border-top:1px solid rgba(243,250,247,.12);padding-top:22px;font-size:14px;color:#86A8A0}
+.signature{background:var(--dark);color:#6F918A;font-size:13px;text-align:center;padding:0 var(--pad) 26px}
+
+/* Apparition douce des photos */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.btn:hover,.appel:hover{transform:none}html{scroll-behavior:auto}}
+
+/* Tablette */
+@media (max-width:980px){
+  .nav a:not(.appel){display:none}
+  .hero .wrap,.libre .wrap,.toil .wrap,.cosme .wrap,.edu .wrap,.infos .wrap{grid-template-columns:minmax(0,1fr)}
+  .portrait{max-width:560px}
+  .cosme figure{max-width:380px}
+  .gal{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .gal .g2{margin-top:48px}.gal .g4{margin-top:0}.gal .g3{margin-top:-48px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+/* Téléphone */
+@media (max-width:560px){
+  body{font-size:17px}
+  .top .wrap{min-height:62px}
+  .marque b{font-size:22px}
+  .marque small{display:none}
+  .appel{padding:9px 14px;font-size:15px}
+  .hero{padding-top:28px}
+  .hero .chapo{margin-top:20px}
+  .portrait .forme{border-radius:72px 28px 72px 28px;aspect-ratio:1/1}
+  .soleil{width:104px;height:104px;font-size:12px;top:-18px;left:-8px;padding:12px}
+  .soleil .big{font-size:24px}.soleil span.ls{font-size:inherit}
+  .pastille{left:14px;bottom:14px;font-size:14px}
+  .faits ul{flex-direction:column;gap:12px}
+  .carte-ls h3{padding-right:0}
+  .polaroid{position:relative;top:auto;right:auto;margin:0 0 22px auto;width:min(180px, 60%)}
+  .coches{grid-template-columns:minmax(0,1fr)}
+  .duo{padding-right:6%}
+  .edu-photos .petit{right:0}
+  .premier{grid-template-columns:minmax(0,1fr);gap:4px}
+  .premier dd{margin-bottom:12px}
+  .gal{gap:12px}
+  .gal .g1 img,.gal .g4 img{border-radius:18px 18px 18px 48px}
+  .horaires td{text-align:left}
+  .horaires th,.horaires td{display:block;padding:0}
+  .horaires tr{display:block;padding:14px 0;border-bottom:1px solid rgba(16,48,47,.12)}
+  .horaires tr:last-child{border-bottom:0}
+  .horaires th,.horaires td{border:0}
+}
+@media (max-width:420px){
+  .btns{flex-direction:column}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Isy Dog, retour en haut">
+      <b>Isy Dog</b>
+      <small>Toilettage et éducation canine à Dijon</small>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#libre-service">Libre-service</a>
+      <a href="#toilettage">Toilettage</a>
+      <a href="#education">Éducation</a>
+      <a href="#horaires">Horaires</a>
+      <a class="appel" href="tel:+33380198505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03 80 19 85 05</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Toiletteuse et éducatrice canine, un atout pour comprendre votre chien.</h1>
+        <p class="chapo">Au salon du <strong>135 rue d'Auxonne</strong>, Isabelle Procyk accueille toutes les races de chiens&nbsp;: bain, tonte, coupe, épilation. Et si vous préférez le faire vous-même, le premier libre-service de Dijon vous attend.</p>
+        <div class="btns">
+          <a class="btn btn-plein" href="#libre-service">Découvrir le libre-service</a>
+          <a class="btn btn-contour" href="tel:+33380198505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03 80 19 85 05</a>
+        </div>
+        <p class="second">Pour l'éducation de votre chien&nbsp;: <a href="tel:+33621658152">06 21 65 81 52</a></p>
+      </div>
+      <figure class="portrait">
+        <div class="forme"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/portrait-chien-boucle-gris.webp" width="1600" height="1066" alt="Un chien au poil bouclé gris et brun, fraîchement toiletté, regarde l'objectif sur la table du salon" fetchpriority="high"></div>
+        <p class="soleil" aria-label="Le premier libre-service de Dijon, depuis juin 2015"><span class="in"><span class="big">1er</span><span class="ls">libre&#8209;service</span><br>de Dijon</span></p>
+        <figcaption class="pastille">Toutes les races sont acceptées</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Libre-service depuis juin 2015</li>
+      <li>Bain, tonte, coupe, épilation</li>
+      <li>Mardi au vendredi, 9&nbsp;h à 17&nbsp;h 30 non-stop</li>
+            <li>Stationnement non payant</li>
+    </ul>
+  </div>
+
+  <section class="sec libre" id="libre-service">
+    <div class="wrap">
+      <div>
+        <h2>Le premier libre-service de Dijon, ouvert depuis juin 2015.</h2>
+        <p class="lede">Une salle adaptée rien que pour vous et du matériel professionnel, pour entretenir votre chien vous-même dans un salon chaleureux. Besoin d'un conseil&nbsp;? Vous n'êtes pas seul, je suis là pour vous renseigner.</p>
+        <ul class="questions" aria-label="Le libre-service, pour qui ?">
+          <li>Votre chien rentre de promenade un peu boueux&nbsp;?</li>
+          <li>Un entretien entre deux toilettages&nbsp;?</li>
+          <li>Mal au dos, pas envie de vous agenouiller&nbsp;?</li>
+          <li>Envie de maîtriser votre budget toilettage&nbsp;?</li>
+        </ul>
+      </div>
+      <div class="carte-ls">
+        <figure class="polaroid rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/salle-de-toilettage-table-et-baignoire.webp" width="960" height="640" alt="La salle de toilettage : table réglable, baignoire inox et séchoirs" loading="lazy"><figcaption>La salle, rien que pour vous</figcaption></figure>
+        <h3>Vous arrivez avec votre chien, tout le reste est sur place.</h3>
+        <ul class="coches">
+          <li>Un shampoing haut de gamme vous est offert</li>
+          <li>Baignoire, séchoir, table et brosse à disposition</li>
+          <li>Matériel professionnel pour chiens de toutes tailles</li>
+          <li>Blouse jetable fournie</li>
+          <li>Coupe des griffes gratuite</li>
+          <li>Toutes les races sont acceptées</li>
+        </ul>
+        <p class="serviette"><strong>Pensez à votre serviette.</strong> Pour une question d'hygiène, elle n'est pas fournie, mais vous pouvez en acheter une en microfibre au salon, de 5 à 10&nbsp;€ selon la taille.</p>
+        <p class="ls-note">Tarifs au forfait horaire selon la taille de votre chien. La prise de rendez-vous est fortement conseillée. Je reste disponible pour vous guider dans l'utilisation du matériel et vous conseiller sur l'entretien de sa fourrure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec toil" id="toilettage">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="av rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/chien-mouille-avant-la-coupe.webp" width="1305" height="1600" alt="Un petit chien à poil long, trempé, assis sur la table de toilettage" loading="lazy"><figcaption class="tag">Avant</figcaption></figure>
+        <figure class="ap rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/le-meme-chien-apres-la-coupe.webp" width="1190" height="1600" alt="Le même petit chien, séché et brushé, le poil fauve et noir bien gonflé" loading="lazy"><figcaption class="tag">Après</figcaption></figure>
+      </div>
+      <div>
+        <h2>Le toilettage par votre toiletteuse.</h2>
+        <p class="lede">Dès votre arrivée, on confirme ensemble le toilettage à faire et vous savez exactement le temps qu'il me faudra. Vous pouvez attendre dans la salle d'attente, en vitrine du salon, ou revenir chercher votre chien.</p>
+        <ol class="etapes">
+          <li><b>Démêlage ou tonte</b><span>Avec des soins qui facilitent le démêlage. Pour les chiens en épilation, toujours avant le bain.</span></li>
+          <li><b>Le bain</b><span>Un shampoing soin adapté à son type de poil, puis un soin selon les besoins de sa fourrure.</span></li>
+          <li><b>Séchage et brushing</b><span>Pour éliminer les nœuds éventuels.</span></li>
+          <li><b>Coupe ou tonte de finition</b><span>Et la coupe des griffes si besoin.</span></li>
+          <li><b>La petite touche finale</b><span>Si vous le souhaitez, une note de parfum spécial animaux avant de le récupérer.</span></li>
+        </ol>
+        <p class="comprend"><strong>Le toilettage comprend</strong> le bain, un soin ou masque haute cosmétique, la coupe, tonte ou épilation, le dégagement des coussinets, le retrait en douceur des poils du conduit de l'oreille et la coupe des griffes. Les tarifs varient selon le toilettage et la race&nbsp;: <a href="https://www.isydog.com/tarifs-salon-isy-dog">voir les tarifs</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cosme">
+    <div class="wrap">
+      <figure class="rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/spitz-roux-sur-la-table.webp" width="1066" height="1600" alt="Un petit spitz au poil roux très gonflé, debout sur la table du salon" loading="lazy"></figure>
+      <div>
+        <h2>La cosmétique au service de votre chien.</h2>
+        <blockquote>Poils secs, feutrés, gras, mue abondante, pellicules, grattage, alopécie&nbsp;?</blockquote>
+        <p class="lede">Que votre chien ait un problème ou non, une solution adaptée lui est apportée&nbsp;: shampoing et soin systématiques. Au besoin, un protocole prémasque, shampoing et soin peut être mis en place pour restaurer une bonne santé à sa peau et à sa fourrure.</p>
+        <ul class="marques" aria-label="Produits utilisés au salon">
+          <li>IV Saint Bernard</li><li>Puppy</li><li>Artéro</li><li>Spécial One</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec edu" id="education">
+    <div class="wrap">
+      <div>
+        <h2>Besoin d'éduquer votre chien&nbsp;? Décidons ensemble d'un programme.</h2>
+        <p class="lede">Aucune méthode miracle n'existe, mais un ensemble de méthodes adaptées au tempérament de votre chien. Je travaille grâce au jeu et à la récompense émotionnelle, la clé de la réussite, pour trouver l'harmonie et la complicité entre vous.</p>
+        <dl class="premier">
+          <dt>1&nbsp;h 30</dt><dd>Le premier rendez-vous, parfois plus, pour évaluer le travail à accomplir. Il est facturé 60&nbsp;€, déplacement en sus selon la distance.</dd>
+          <dt>Sur mesure</dt><dd>Vous repartez en sachant le nombre de séances et le prix du programme. Les séances se font à domicile, en ville ou en terrain neutre.</dd>
+        </dl>
+        <p class="parcours">J'ai découvert l'éducation en 2004 dans une association de travail à l'eau et de sauvetage aquatique avec Uranis, ma chienne terre-neuve. Formation d'éducateur canin et conseiller cynotechnicien en 2012, certificat «&nbsp;Chiens difficiles et troubles du comportement&nbsp;», puis six mois auprès d'un toiletteur expérimenté en 2014 pour ouvrir le salon.</p>
+        <div class="btns">
+          <a class="btn btn-plein" href="tel:+33621658152">06 21 65 81 52</a>
+          <a class="btn btn-contour" href="https://www.isydog.com/deroulement-dune-seance">Le déroulement d'une séance</a>
+        </div>
+      </div>
+      <div class="edu-photos">
+        <figure class="grand rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/chien-saute-dans-les-pneus-agility.webp" width="1600" height="1066" alt="Un chien noir et feu saute à travers un pneu suspendu, une jeune femme à côté" loading="lazy"><figcaption class="tag">Éducation&nbsp;: sur rendez-vous</figcaption></figure>
+        <figure class="petit rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/femme-souriante-joue-contre-un-chien-noir.webp" width="1600" height="1066" alt="Une femme rit, joue contre joue avec un grand chien noir à poil long" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="gal-tete">
+        <h2>Passés sur la table du salon.</h2>
+        <a href="https://www.isydog.com/galerie-photos">Toute la galerie du salon</a>
+      </div>
+      <div class="gal">
+        <figure class="g1 rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/chien-noir-et-blanc-toilette-sur-la-table.webp" width="1600" height="1066" alt="Petit chien noir et blanc, coupe courte et pattes en manchons, sur la table" loading="lazy"></figure>
+        <figure class="g2 rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/chien-poil-dur-assis-sur-la-table.webp" width="1066" height="1600" alt="Grand chien à poil dur gris moucheté, assis sur la table de toilettage" loading="lazy"></figure>
+        <figure class="g3 rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/chien-poil-long-noir-fond-sombre.webp" width="1066" height="1600" alt="Petit chien au poil long noir et lisse, plastron blanc, dans la pénombre du salon" loading="lazy"></figure>
+        <figure class="g4 rv"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/deux-toiletteuses-au-travail-dans-le-salon.webp" width="1600" height="1066" alt="Dans la salle de toilettage, un chien tricolore brossé sur la table" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec infos" id="horaires">
+    <div class="wrap">
+      <div class="horaires">
+        <h2>Les horaires du salon.</h2>
+        <table>
+          <tr><th scope="row">Mardi au vendredi</th><td>9&nbsp;h – 17&nbsp;h 30<small>sans interruption</small></td></tr>
+          <tr><th scope="row">Samedi</th><td>14&nbsp;h – 18&nbsp;h</td></tr>
+          <tr><th scope="row">Lundi</th><td>Selon la demande</td></tr>
+          <tr><th scope="row">Éducation canine</th><td>Sur rendez-vous</td></tr>
+        </table>
+        <p class="rdv">Les rendez-vous de toilettage se prennent au salon ou par téléphone, au 03 80 19 85 05.</p>
+      </div>
+      <div class="coord">
+        <h3>Venir au salon</h3>
+        <dl>
+          <dt>Adresse</dt><dd>135 rue d'Auxonne, 21000 Dijon<br>Stationnement non payant</dd>
+          <dt>Toilettage et libre-service</dt><dd><a class="tel" href="tel:+33380198505">03 80 19 85 05</a></dd>
+          <dt>Éducation canine</dt><dd><a class="tel" href="tel:+33621658152">06 21 65 81 52</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:isy-dog@orange.fr">isy-dog@orange.fr</a></dd>
+        </dl>
+        <figure class="devanture"><img src="assets/maps-salon-de-toilettage-isy-dog-toilettage-l/devanture-du-salon-isy-dog.webp" width="960" height="640" alt="La vitrine du salon Isy Dog, rue d'Auxonne" loading="lazy"><figcaption>La vitrine, rue d'Auxonne</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Isy Dog</b>
+      <p>Isabelle Procyk, toiletteuse et éducatrice canine.<br>135 rue d'Auxonne, 21000 Dijon.</p>
+    </div>
+    <ul>
+      <li>Fixe&nbsp;: <a class="tel" href="tel:+33380198505">03 80 19 85 05</a></li>
+      <li>Mobile&nbsp;: <a class="tel" href="tel:+33621658152">06 21 65 81 52</a></li>
+      <li><a href="mailto:isy-dog@orange.fr">isy-dog@orange.fr</a></li>
+      <li><a href="https://www.facebook.com/isydogdijon">Facebook</a></li>
+    </ul>
+    <ul>
+      <li>Mardi au vendredi&nbsp;: 9&nbsp;h – 17&nbsp;h 30</li>
+      <li>Samedi&nbsp;: 14&nbsp;h – 18&nbsp;h</li>
+      <li>Lundi selon la demande</li>
+      <li><a href="https://www.isydog.com/qui-suis-je">Qui suis-je</a></li>
+    </ul>
+    <p class="cert">Certificat de capacité relatif à l'exercice des activités liées aux animaux de compagnie n° 21-0174, préfecture de Côte-d'Or.</p>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour Isy Dog</p>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

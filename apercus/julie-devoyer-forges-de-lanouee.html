@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Julie Devoyer Céramiste · Grès tourné à la main en Bretagne</title>
+<meta name="description" content="Julie Devoyer, céramiste à Forges de Lanouée : tasses, gobelets, plats, cruches, ornements de jardin et décorations en grès, émaux bleu profond, vert d'eau et olive.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23A4552B'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23EEF0EF'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#DDE0DF; --surface:#EEF0EF; --encre:#222826; --accent:#A4552B; --sombre:#2A302E;
+  --bande:#D2D6D4; --doux:#545C59; --clair:#ECEEEC; --clair-doux:#AEB6B3; --filet:rgba(34,40,38,.15);
+  --ombre:0 30px 60px -34px rgba(34,40,38,.6), 0 6px 16px -10px rgba(34,40,38,.16);
+  --gout:clamp(20px,4vw,40px);
+  --display:'Castoro', Georgia, serif;
+  --texte:'Onest', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+.num{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:.85em 1.7em;border-radius:999px;font:500 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 16px 30px -18px rgba(164,85,43,.95)}
+.btn-plein:hover{background:#8C4622;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.sombre .btn-contour{border-color:var(--clair-doux);color:var(--clair)}
+.sombre .btn-contour:hover{background:var(--clair);color:var(--encre)}
+.lien{font-weight:500;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px;transition:color .2s}
+.lien:hover{color:var(--accent)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(221,224,223,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:400 25px/1.1 var(--display);white-space:nowrap}
+.marque span{font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;font-weight:500}
+.nav a:not(.ecrire-haut):hover{color:var(--accent)}
+.ecrire-haut{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--surface);padding:11px 20px;border-radius:999px;font-weight:500;transition:background-color .25s}
+.ecrire-haut:hover{background:var(--accent)}
+.ecrire-haut svg{width:16px;height:16px}
+
+/* héros */
+.heros{padding:40px 0 112px}
+.scene{position:relative}
+.scene .photo img{aspect-ratio:2.3/1;object-position:50% 45%}
+.photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre)}
+.photo img{width:100%;object-fit:cover}
+.pastille{position:absolute;right:18px;top:18px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:9px 15px;border-radius:999px;box-shadow:0 10px 20px -12px rgba(34,40,38,.6);max-width:calc(100% - 36px)}
+.pastille.bas{top:auto;bottom:18px}
+.pastille.gauche{right:auto;left:18px}
+.carte-heros{position:relative;z-index:2;width:min(540px,100%);margin:-160px 0 0 -8px;background:var(--surface);border-radius:24px;padding:44px 48px 46px;box-shadow:0 40px 70px -36px rgba(34,40,38,.7),0 8px 20px -12px rgba(34,40,38,.18)}
+.lieu{font-size:16px;color:var(--doux);margin-bottom:16px}
+.heros h1{font-size:clamp(38px,4.3vw,60px);line-height:1.04}
+.heros .intro{font-size:18px;color:var(--doux);margin-top:22px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.sous-scene{display:grid;grid-template-columns:minmax(0,540px) minmax(0,1fr);gap:72px;align-items:end}
+.mer{padding:0 0 18px;align-self:center;margin-top:64px}
+.mer p{font:italic 400 clamp(22px,2.2vw,28px)/1.35 var(--display);max-width:22em}
+.mer cite{display:block;font-style:normal;font-size:15px;color:var(--doux);margin-top:14px}
+
+/* faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:32px 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.faits b{display:block;font:400 22px/1.15 var(--display)}
+.faits span{display:block;font-size:14px;color:var(--doux);margin-top:6px;line-height:1.45}
+
+section{padding:120px 0}
+.titre{font-size:clamp(34px,4.2vw,56px)}
+.chapo{font-size:19px;color:var(--doux);margin-top:22px;max-width:36em}
+
+/* le geste */
+.geste .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.geste .texte p{font-size:18px;color:var(--doux);margin-top:18px;max-width:32em}
+.tour{display:flex;gap:22px;align-items:center;margin-top:36px}
+.vignette{margin:0;width:min(168px,40%);flex:none;background:#F6F7F6;padding:8px 8px 10px;border-radius:8px;transform:rotate(-2.5deg);box-shadow:0 22px 36px -24px rgba(34,40,38,.7)}
+.vignette img{aspect-ratio:3/4;object-fit:cover;border-radius:4px;width:100%}
+.tour p{font-size:15px!important;margin:0!important}
+.geste .photo img{aspect-ratio:11/10;object-position:50% 50%}
+
+/* portfolio */
+.portfolio{background:var(--surface)}
+.portfolio .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 96px;align-items:end}
+.familles{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:56px 32px;margin-top:72px}
+.famille h3{font-size:32px;margin-top:24px}
+.famille p{font-size:17px;color:var(--doux);margin-top:10px;max-width:30em}
+.famille .lien{display:inline-block;margin-top:14px;font-size:16px}
+.f-tasses{grid-column:1 / span 7}
+.f-tasses .photo img{aspect-ratio:5/4;object-position:50% 55%}
+.f-plats{grid-column:9 / span 4;margin-top:120px}
+.f-plats .photo img{aspect-ratio:4/5;object-position:50% 50%}
+.f-cruches{grid-column:1 / span 5}
+.f-cruches .photo img{aspect-ratio:1/1;object-position:50% 60%}
+.f-deco{grid-column:7 / span 6;margin-top:-80px}
+.duo{position:relative;padding:0 0 70px 0}
+.duo .a img{aspect-ratio:1/1;object-position:50% 55%}
+.duo .a{width:72%}
+.duo .b{position:absolute;right:0;bottom:0;width:42%;border:7px solid var(--surface);border-radius:20px}
+.duo .b img{aspect-ratio:3/4;object-position:50% 50%}
+.autres{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:12px;align-items:center;border-top:1px solid var(--filet);padding-top:30px}
+.autres span{font-size:16px;color:var(--doux);margin-right:6px}
+.autres a{text-decoration:none;font-size:16px;font-weight:500;padding:9px 18px;border-radius:999px;background:var(--base);transition:background-color .2s,color .2s}
+.autres a:hover{background:var(--encre);color:var(--surface)}
+
+/* boutique (sombre) */
+.boutique{background:var(--sombre);color:var(--clair);position:relative;margin-top:40px}
+.boutique .vague{position:absolute;left:0;right:0;top:-39px;height:40px;width:100%;display:block;color:var(--sombre)}
+.boutique .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center}
+.boutique .chapo{color:var(--clair-doux)}
+.boutique .photo{box-shadow:0 34px 60px -30px rgba(0,0,0,.75)}
+.boutique .photo img{aspect-ratio:3/2;object-position:50% 50%}
+.prix{display:flex;align-items:baseline;gap:14px;margin-top:30px;flex-wrap:wrap}
+.prix b{font:400 54px/1 var(--display);color:#E7A27C;white-space:nowrap}
+.prix span{font-size:16px;color:var(--clair-doux)}
+.teintes{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.teintes li{display:flex;align-items:center;gap:9px;font-size:15px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(236,238,236,.08)}
+.teintes i{width:18px;height:18px;border-radius:50%;display:block}
+
+/* citation */
+.citation .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
+.citation blockquote{margin:0}
+.citation blockquote p{font:italic 400 clamp(30px,3.8vw,50px)/1.18 var(--display);text-wrap:balance}
+.citation cite{display:block;font-style:normal;font-size:16px;color:var(--doux);margin-top:22px}
+.citation .photo img{aspect-ratio:4/3;object-position:50% 50%}
+
+/* contact */
+.contact{background:var(--bande)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
+.carte{background:var(--surface);border-radius:22px;padding:38px clamp(24px,3vw,44px);box-shadow:var(--ombre)}
+.carte dl{margin:0}
+.carte dt{font-size:14px;color:var(--doux)}
+.carte dd{margin:4px 0 22px;font:400 21px/1.35 var(--display);overflow-wrap:anywhere}
+.carte dd:last-child{margin-bottom:0}
+.carte dd a{text-decoration:none}
+.carte dd a:hover{color:var(--accent)}
+.services{list-style:none;margin:28px 0 0;padding:0}
+.services li{padding:13px 0;border-top:1px solid var(--filet);font-size:17px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .marque span{color:var(--clair-doux)}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.7}
+.pied h3{font:500 15px/1.2 var(--texte);color:var(--clair);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair)}
+.mentions{margin-top:64px;border-top:1px solid rgba(236,238,236,.14);padding:22px 0;font-size:14px;color:var(--clair-doux)}
+.signature{margin:0;text-align:center;font-size:13px;color:#8E9894;padding:18px var(--gout) 26px;background:#232826}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.btn,.autres a{transition:none}}
+
+@media (max-width:1080px){
+  .nav a:not(.ecrire-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:24px}
+  .sous-scene{grid-template-columns:minmax(0,1fr)}
+  .mer{margin-top:36px}
+  .carte-heros{margin-top:-140px}
+}
+@media (max-width:860px){
+  section{padding:88px 0}
+  .heros{padding:24px 0 80px}
+  .scene .photo img{aspect-ratio:4/3;object-position:42% 50%}
+  .carte-heros{margin:-64px 0 0;padding:32px 26px 34px;border-radius:20px}
+  .geste .wrap,.portfolio .tete,.boutique .wrap,.citation .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .familles{grid-template-columns:minmax(0,1fr);gap:56px}
+  .f-tasses,.f-plats,.f-cruches,.f-deco{grid-column:1 / -1;margin-top:0}
+  .f-plats .photo img{aspect-ratio:4/3}
+  .citation .photo{max-width:480px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:66px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .ecrire-haut{padding:10px 15px;font-size:15px}
+  .ecrire-haut .long{display:none}
+  .lieu{font-size:15px}
+  .heros .intro{font-size:17px}
+  .carte-heros{margin:-40px 0 0;padding:28px 20px 30px}
+  .actions .btn{width:100%}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .famille h3{font-size:28px}
+  .prix b{font-size:46px}
+  .carte dd{font-size:19px}
+  .pastille{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Julie Devoyer</b><span>Céramiste en Bretagne</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#atelier">L'atelier</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#contact">Contact</a>
+      <a class="ecrire-haut" href="mailto:jdevoyerceramiste@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Écrire<span class="long"> à Julie</span></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-labelledby="titre-heros">
+    <div class="wrap">
+      <div class="scene">
+        <div class="photo">
+          <img src="assets/julie-devoyer-forges-de-lanouee/table-de-vaisselle-en-gres-devant-un-mur-de-pierre.webp" width="1600" height="864" alt="Table devant un mur de pierres : cruche, gobelets et tasses ondulés en blanc, vert d'eau et bleu profond, plats creux et grand saladier bleu">
+          <span class="pastille">Cruche, gobelets, plats et saladier en grès</span>
+        </div>
+      </div>
+      <div class="sous-scene">
+        <div class="carte-heros">
+          <p class="lieu">Julie Devoyer, céramiste à Forges de Lanouée</p>
+          <h1 id="titre-heros">Céramiques artisanales, uniques et intemporelles.</h1>
+          <p class="intro">Chaque pièce est en grès et façonnée à la main&nbsp;: tasses, gobelets, plats, cruches et décorations, pour le quotidien.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#portfolio">Voir le portfolio</a>
+            <a class="btn btn-contour" href="https://www.juliedevoyer.fr/boutique">La boutique</a>
+          </div>
+        </div>
+        <blockquote class="mer">
+          <p>«&nbsp;Formée à Barcelone et à Séné, je puise mon inspiration dans la mer.&nbsp;»</p>
+          <cite>Julie Devoyer</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><b>Grès blanc</b><span>tourné et façonné à la main</span></li>
+      <li><b>Émaux maison</b><span>développés et fabriqués à l'atelier</span></li>
+      <li><b>Pièces uniques</b><span>chaque forme, chaque teinte varie</span></li>
+      <li><b>En Bretagne</b><span>atelier à Forges de Lanouée</span></li>
+      <li><b>Envoi sous 5 jours</b><span>ouvrables, Colissimo ou Mondial Relay</span></li>
+      <li><b>14 jours</b><span>retour possible sur tous les produits</span></li>
+    </ul>
+  </div>
+
+  <section class="geste" id="atelier" aria-labelledby="titre-geste">
+    <div class="wrap">
+      <div class="texte">
+        <h2 class="titre" id="titre-geste">Des ondulations douces, nées au tour.</h2>
+        <p>Chaque objet naît au tour, où j'aime lui insuffler des ondulations douces et organiques, signature de mon travail. Je recherche la justesse du geste, cette finesse qui permet de modeler la matière encore malléable, de la faire vibrer.</p>
+        <p>Mes émaux bleu profond, vert d'eau ou olive développent à la cuisson de délicates micro-cristallisations qui captent la lumière&nbsp;: chaque pièce est unique.</p>
+        <div class="tour">
+          <figure class="vignette reveal"><img src="assets/julie-devoyer-forges-de-lanouee/ceramiste-au-tour-vase-en-noir-et-blanc.webp" width="1066" height="1600" loading="lazy" alt="En noir et blanc, une personne tourne un vase élancé au tour, mains couvertes de barbotine"></figure>
+          <p>Au tour, un vase élancé prend forme.</p>
+        </div>
+      </div>
+      <figure style="margin:0" class="reveal">
+        <div class="photo">
+          <img src="assets/julie-devoyer-forges-de-lanouee/cinq-bols-a-spirale-brune-dans-la-lumiere.webp" width="1600" height="1452" loading="lazy" alt="Cinq bols vus de dessus, intérieur crème marbré d'une spirale brune, extérieurs vert, olive et bleu nuit, dans le soleil">
+          <span class="pastille bas gauche">Cinq bols, la spirale du tournage</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio" aria-labelledby="titre-portfolio">
+    <div class="wrap">
+      <div class="tete">
+        <h2 class="titre" id="titre-portfolio">Le portfolio, famille par famille.</h2>
+        <p class="chapo" style="margin-top:0">Des pièces utilitaires et décoratives en grès blanc, inspirées par la mer et les éléments. Ouvrez une famille pour voir toutes les pièces.</p>
+      </div>
+      <div class="familles">
+        <article class="famille f-tasses">
+          <div class="photo reveal">
+            <img src="assets/julie-devoyer-forges-de-lanouee/trois-mugs-ondules-au-soleil-du-jardin.webp" width="1600" height="1562" loading="lazy" alt="Trois grandes tasses aux flancs ondulés, olive, turquoise et vert d'eau, sur une vieille poutre au soleil">
+            <span class="pastille bas gauche">Le bestseller&nbsp;: les tasses en grès</span>
+          </div>
+          <h3>Tasses</h3>
+          <p>Ses courbes simples, ses teintes naturelles racontent la terre et le feu. Elle accueille les matins calmes, les pauses suspendues, les infusions partagées.</p>
+          <a class="lien" href="https://www.juliedevoyer.fr/portfolio/tasses">Voir les tasses</a>
+        </article>
+        <article class="famille f-plats">
+          <div class="photo reveal">
+            <img src="assets/julie-devoyer-forges-de-lanouee/bols-et-assiettes-a-spirale-au-soleil.webp" width="1600" height="1204" loading="lazy" alt="Bols et assiettes vus de dessus, intérieurs crème à spirale brune, assiettes bleu profond et turquoise">
+          </div>
+          <h3>Plats</h3>
+          <p>Le bleu profond dialogue avec l'argile, le vert d'eau caresse les crêtes, et la blancheur du grès éclaire les formes.</p>
+          <a class="lien" href="https://www.juliedevoyer.fr/portfolio/plats">Voir les plats</a>
+        </article>
+        <article class="famille f-cruches">
+          <div class="photo reveal">
+            <img src="assets/julie-devoyer-forges-de-lanouee/service-vert-d-eau-cruche-mugs-et-vase.webp" width="1600" height="1346" loading="lazy" alt="Ensemble vert d'eau : vase ondulé avec fleurs séchées, bol, mugs, gobelet, petite tasse et cruche sur un présentoir en bois">
+          </div>
+          <h3>Cruches et gobelets</h3>
+          <p>Élancée, généreuse, la cruche est tournée lentement et cuite à haute température. Les gobelets, façonnés un à un, portent la trace de l'humain.</p>
+          <a class="lien" href="https://www.juliedevoyer.fr/portfolio/cruches">Voir les cruches</a>
+          &nbsp; <a class="lien" href="https://www.juliedevoyer.fr/portfolio/gobelets">Voir les gobelets</a>
+        </article>
+        <article class="famille f-deco">
+          <div class="duo">
+            <div class="photo a reveal">
+              <img src="assets/julie-devoyer-forges-de-lanouee/pot-a-couvercle-a-pois-vert-olive-et-turquoise.webp" width="1468" height="1600" loading="lazy" alt="Pot rond à couvercle, émail turquoise coulant sur vert olive, décor de pois en grès nu">
+            </div>
+            <div class="photo b reveal">
+              <img src="assets/julie-devoyer-forges-de-lanouee/petit-vase-ondule-et-pissenlits.webp" width="1174" height="1600" loading="lazy" alt="Petit vase en cloche aux anneaux ondulés, vert d'eau et turquoise, garni de pissenlits, sur une marche de granit">
+            </div>
+          </div>
+          <h3>Décorations</h3>
+          <p>Sculptées, tournées, émaillées, elles flirtent avec le végétal, la mer ou l'abstraction. Elles n'ont pas toujours de fonction, mais elles ont toujours une présence.</p>
+          <a class="lien" href="https://www.juliedevoyer.fr/portfolio/decoration">Voir les décorations</a>
+        </article>
+        <div class="autres">
+          <span>Tout le portfolio&nbsp;:</span>
+          <a href="https://www.juliedevoyer.fr/portfolio/gobelets">Gobelets</a>
+          <a href="https://www.juliedevoyer.fr/portfolio/plats">Plats</a>
+          <a href="https://www.juliedevoyer.fr/portfolio/ornement-jardin">Ornements de jardin</a>
+          <a href="https://www.juliedevoyer.fr/portfolio/cruches">Cruches</a>
+          <a href="https://www.juliedevoyer.fr/portfolio/tasses">Tasses</a>
+          <a href="https://www.juliedevoyer.fr/portfolio/decoration">Décorations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutique sombre" id="boutique" aria-labelledby="titre-boutique">
+    <svg class="vague" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V22C120 6 240 6 360 20s240 16 360 0 240-16 360 0 240 16 360 0V40Z" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-boutique">Au jardin, des fleurs de pavot en grès.</h2>
+        <p class="chapo">Inspirés des graines de pavot ou sculptés en sphères douces, ces ornements se piquent dans l'herbe, entre les pierres ou au creux d'un massif. Ils résistent au froid, au vent, au temps.</p>
+        <div class="prix"><b>26,00&nbsp;€</b><span>la fleur de pavot ou la boule ornementale</span></div>
+        <ul class="teintes" aria-label="Teintes">
+          <li><i style="background:#2F4F86"></i>Bleu profond</li>
+          <li><i style="background:#8DB8D8"></i>Bleu clair</li>
+          <li><i style="background:#A9CFC6"></i>Vert d'eau</li>
+          <li><i style="background:#7C7A33"></i>Olive</li>
+          <li><i style="background:#3FA3A6"></i>Turquoise mat</li>
+          <li><i style="background:#F2F1EC"></i>Blanc</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.juliedevoyer.fr/boutique/ornement-de-jardin">Voir les ornements en boutique</a>
+          <a class="btn btn-contour" href="https://www.juliedevoyer.fr/portfolio/ornement-jardin">Le portfolio des ornements</a>
+        </div>
+      </div>
+      <figure style="margin:0" class="reveal">
+        <div class="photo">
+          <img src="assets/julie-devoyer-forges-de-lanouee/ornements-de-jardin-boules-et-pavots-tons-verts.webp" width="1296" height="864" loading="lazy" alt="Bouquet d'ornements de jardin sur tiges : boules striées et capsules de pavot en vert d'eau, olive et blanc">
+          <span class="pastille bas gauche">Boules et fleurs de pavot, sur tiges</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Citation">
+    <div class="wrap">
+      <blockquote>
+        <p>«&nbsp;Ils ne cherchent pas la perfection, mais la beauté dans l'imperceptible.&nbsp;»</p>
+        <cite>Julie Devoyer, à propos de ses gobelets</cite>
+      </blockquote>
+      <figure style="margin:0" class="reveal">
+        <div class="photo">
+          <img src="assets/julie-devoyer-forges-de-lanouee/stand-de-ceramiques-pots-a-pois-et-suspensions.webp" width="1600" height="1067" loading="lazy" alt="Stand d'exposition : étagères de tasses, pots à couvercle à pois, théières, bols et cloches suspendues">
+          <span class="pastille bas gauche">Sur un stand d'exposition</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-contact">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-contact">Une question, une pièce personnalisée&nbsp;?</h2>
+        <p class="chapo">Pour une collaboration, une visite de l'atelier ou simplement dire bonjour, écrivez-moi&nbsp;: je vous réponds dans les plus brefs délais.</p>
+        <ul class="services">
+          <li>Pièces personnalisées sur demande</li>
+          <li>Retrait de votre commande à l'atelier, en écrivant à Julie</li>
+          <li>Visite de l'atelier sur demande</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:jdevoyerceramiste@gmail.com">Écrire à Julie</a>
+          <a class="btn btn-contour" href="https://www.juliedevoyer.fr/contact">Formulaire de contact</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <dt>L'atelier</dt>
+          <dd>6 Bogas<br>56120 Forges de Lanouée</dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:jdevoyerceramiste@gmail.com">jdevoyerceramiste@gmail.com</a></dd>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/juliedevoyerpoterie/">@juliedevoyerpoterie</a></dd>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/people/Julie-Devoyer-Poterie/61569121376151/">Julie Devoyer Poterie</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Julie Devoyer</b><span>Céramiste en Bretagne</span></div>
+      <p style="margin-top:16px">6 Bogas, 56120 Forges de Lanouée<br><a href="mailto:jdevoyerceramiste@gmail.com">jdevoyerceramiste@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Les créations</h3>
+      <ul>
+        <li><a href="#haut">Accueil</a></li>
+        <li><a href="https://www.juliedevoyer.fr/portfolio">Portfolio</a></li>
+        <li><a href="https://www.juliedevoyer.fr/boutique">Boutique</a></li>
+        <li><a href="https://www.juliedevoyer.fr/contact">Contact</a></li>
+        <li><a href="https://www.instagram.com/juliedevoyerpoterie/">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Informations</h3>
+      <ul>
+        <li><a href="https://www.juliedevoyer.fr/cgv">Conditions générales de vente</a></li>
+        <li><a href="https://www.juliedevoyer.fr/mentions-legales">Mentions légales</a></li>
+        <li><a href="https://www.juliedevoyer.fr/politique-de-confidentialite">Politique de confidentialité</a></li>
+        <li><a href="https://www.juliedevoyer.fr/politiques-de-cookies">Politique de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mentions"><div class="wrap">Julie Devoyer EI, SIRET 921&nbsp;590&nbsp;394&nbsp;00018. TVA non applicable, article 293 B du CGI.</div></div>
+  <p class="signature">Proposition de Nicolas Masset pour Julie Devoyer Céramiste</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

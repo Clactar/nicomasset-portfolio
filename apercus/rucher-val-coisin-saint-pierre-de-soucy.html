@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rucher du Val Coisin · Miel et gelée royale bio, Saint-Pierre-de-Soucy</title>
+<meta name="description" content="Apiculteur récoltant bio en Cœur de Savoie : miels, Gelée Royale Française®, pollen frais, essaims et reines, en vente directe à Saint-Pierre-de-Soucy.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B5651D'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Rockwell,Georgia,serif' font-weight='700' font-size='38' fill='%23FBF5E4'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#F5E9C8; --surface:#FBF5E4; --encre:#2D2414; --accent:#B5651D; --sombre:#2D2414;
+  --bande:#EEDDB0; --doux:#615338; --clair:#F6EEDA; --clair-doux:#CDBF9F; --filet:rgba(45,36,20,.16);
+  --ombre:0 30px 60px -34px rgba(45,36,20,.6), 0 6px 16px -10px rgba(45,36,20,.16);
+  --gout:clamp(20px,4vw,40px);
+  --display:'Zilla Slab', Rockwell, Georgia, serif;
+  --texte:'Source Sans 3', 'Helvetica Neue', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:19px;line-height:1.6;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 2*var(--gout));margin-inline:auto}
+.num{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:.85em 1.7em;border-radius:999px;font:600 17px/1.2 var(--texte);text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 16px 30px -18px rgba(181,101,29,.95)}
+.btn-plein:hover{background:#9A5418;transform:translateY(-2px)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.sombre .btn-contour{border-color:var(--clair-doux);color:var(--clair)}
+.sombre .btn-contour:hover{background:var(--clair);color:var(--encre)}
+.lien{font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:1px;transition:color .2s}
+.lien:hover{color:var(--accent)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(245,233,200,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:600 25px/1.1 var(--display);white-space:nowrap}
+.marque span{font-size:14px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:17px;font-weight:500}
+.nav a:not(.tel-haut):hover{color:var(--accent)}
+.tel-haut{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--surface);padding:11px 20px;border-radius:999px;font-weight:600;transition:background-color .25s}
+.tel-haut:hover{background:var(--accent)}
+.tel-haut svg{width:16px;height:16px}
+
+/* héros */
+.heros{padding:48px 0 120px}
+.heros-tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px clamp(40px,6vw,88px);align-items:end}
+.lieu{font-size:17px;color:var(--doux);margin-bottom:18px}
+.heros h1{font-size:clamp(40px,5.2vw,74px);line-height:1.02;font-weight:500}
+.heros .intro{font-size:19px;color:var(--doux)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.panorama{position:relative;margin:44px 0 0}
+.panorama .vue{border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.panorama .vue img{width:100%;aspect-ratio:2.2/1;object-fit:cover;object-position:50% 32%}
+.etiquette{position:absolute;left:22px;bottom:22px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:10px 17px;border-radius:999px;box-shadow:0 12px 22px -12px rgba(45,36,20,.6);max-width:calc(100% - 44px)}
+.pot{position:absolute;right:-28px;bottom:-56px;width:min(250px,32%);margin:0;transform:rotate(3deg);background:var(--surface);padding:9px;border-radius:20px;box-shadow:0 34px 50px -26px rgba(45,36,20,.7)}
+.pot img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:13px}
+.pot figcaption{font:500 15px/1.3 var(--display);text-align:center;padding:9px 4px 3px}
+
+/* faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:32px 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.faits b{display:block;font:600 24px/1.1 var(--display)}
+.faits span{display:block;font-size:15px;color:var(--doux);margin-top:6px;line-height:1.4}
+
+section{padding:120px 0}
+.titre{font-size:clamp(32px,4.2vw,54px)}
+.chapo{font-size:19px;color:var(--doux);margin-top:22px;max-width:36em}
+
+/* miels */
+.miels .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:start}
+.tarifs{margin-top:44px;width:100%;border-collapse:collapse}
+.tarifs th{font:500 15px/1.2 var(--texte);color:var(--doux);text-align:right;padding:0 0 12px 16px}
+.tarifs th:first-child{text-align:left;padding-left:0}
+.tarifs td{padding:15px 0 15px 16px;border-top:1px solid var(--filet);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:18px}
+.tarifs td:first-child{text-align:left;padding-left:0;white-space:normal;font:500 21px/1.25 var(--display)}
+.tarifs td.vide{color:var(--clair-doux)}
+.tarifs tr:last-child td{border-bottom:1px solid var(--filet)}
+.note{font-size:16px;color:var(--doux);margin-top:18px;max-width:36em}
+.miels figure{margin:0;position:sticky;top:110px}
+.photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.photo img{width:100%;object-fit:cover}
+.miels .photo img{aspect-ratio:4/5;object-position:50% 50%}
+.pastille{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:9px 15px;border-radius:999px;box-shadow:0 10px 20px -12px rgba(45,36,20,.6);max-width:calc(100% - 32px)}
+.encart{margin-top:28px;background:var(--surface);border-radius:18px;padding:26px 28px;box-shadow:0 22px 40px -30px rgba(45,36,20,.6)}
+.encart h3{font-size:24px}
+.encart p{font-size:17px;color:var(--doux);margin-top:8px}
+
+/* gelée royale */
+.gelee{background:var(--sombre);color:var(--clair)}
+.gelee .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center}
+.chiffre{font:500 clamp(96px,13vw,180px)/.9 var(--display);color:#E9A55E;letter-spacing:-.03em}
+.gelee h2{font-size:clamp(28px,3.2vw,40px);margin-top:18px;max-width:16em}
+.gelee .chapo{color:var(--clair-doux)}
+.gelee ul{list-style:none;margin:30px 0 0;padding:0}
+.gelee li{padding:13px 0;border-top:1px solid rgba(246,238,218,.16);font-size:17px;color:var(--clair-doux)}
+.gelee li b{color:var(--clair);font-weight:600}
+.prix-gr{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.prix-gr span{background:rgba(246,238,218,.1);border:1px solid rgba(246,238,218,.22);border-radius:999px;padding:9px 18px;font-size:17px;white-space:nowrap}
+.duo{position:relative;padding-bottom:90px}
+.duo .grande img{aspect-ratio:4/3;object-position:50% 50%}
+.duo .petite{position:absolute;right:-20px;bottom:0;width:min(300px,52%);border:8px solid var(--sombre);border-radius:22px}
+.duo .petite img{aspect-ratio:4/3;object-position:50% 60%}
+.photo.sur-sombre{box-shadow:0 34px 60px -30px rgba(0,0,0,.75)}
+
+/* l'apiculteur */
+.apiculteur .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.apiculteur .photo img{aspect-ratio:3/4;object-position:50% 40%}
+.apiculteur .texte p+p{margin-top:18px}
+.apiculteur .texte p{color:var(--doux);font-size:18px}
+.mot{margin:36px 0 0;padding:28px 0 0;border-top:1px solid var(--filet)}
+.apiculteur .mot p{font:italic 400 clamp(24px,2.6vw,32px)/1.25 var(--display);color:var(--encre)!important}
+.mot cite{display:block;font-style:normal;font-size:16px;color:var(--doux);margin-top:14px}
+
+/* élevage */
+.elevage{background:var(--surface)}
+.elevage-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;margin-top:56px;align-items:start}
+.bloc-essaims .photo img{aspect-ratio:16/9;object-position:50% 55%}
+.bloc-essaims h3,.colonne h3{font-size:28px;margin-top:26px}
+.bloc-essaims p,.colonne p{color:var(--doux);font-size:18px;margin-top:10px;max-width:34em}
+.colonne{display:grid;gap:24px}
+.colonne article{background:var(--base);border-radius:20px;padding:30px 30px 32px}
+.colonne article h3{margin-top:0}
+.colonne .prix{display:inline-block;margin-top:14px;font:600 18px/1 var(--display);color:var(--accent);white-space:nowrap}
+.colonne .lien,.bloc-essaims .lien{display:inline-block;margin-top:16px;font-size:17px}
+
+/* ruchers */
+.ruchers .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.mosaique{position:relative;padding:0 0 120px 0}
+.mosaique .a img{aspect-ratio:4/3;object-position:50% 60%}
+.mosaique .b{position:absolute;left:-48px;bottom:0;width:min(330px,50%);border:8px solid var(--base);border-radius:24px;transform:rotate(-2.5deg)}
+.mosaique .b img{aspect-ratio:4/3;object-position:50% 70%}
+
+/* contact */
+.contact{background:var(--bande)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
+.horaire{display:inline-flex;flex-direction:column;margin-top:30px;background:var(--surface);border-radius:18px;padding:22px 26px;box-shadow:0 22px 40px -30px rgba(45,36,20,.7)}
+.horaire b{font:600 26px/1.15 var(--display)}
+.horaire span{font-size:17px;color:var(--doux);margin-top:6px}
+.carte{background:var(--surface);border-radius:22px;padding:38px clamp(24px,3vw,44px);box-shadow:var(--ombre)}
+.carte dl{margin:0}
+.carte dt{font-size:15px;color:var(--doux)}
+.carte dd{margin:4px 0 22px;font:500 21px/1.35 var(--display);overflow-wrap:anywhere}
+.carte dd:last-child{margin-bottom:0}
+.carte dd a{text-decoration:none}
+.carte dd a:hover{color:var(--accent)}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair);padding:80px 0 0}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .marque span{color:var(--clair-doux)}
+.pied p,.pied li{font-size:16px;color:var(--clair-doux);line-height:1.7}
+.pied h3{font:600 16px/1.2 var(--texte);color:var(--clair);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair)}
+.mentions{margin-top:64px;border-top:1px solid rgba(246,238,218,.14);padding:22px 0;font-size:14px;color:var(--clair-doux)}
+.signature{margin:0;text-align:center;font-size:13px;color:#A2957A;padding:18px var(--gout) 26px;background:#251D10}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+@media (max-width:1080px){
+  .nav a:not(.tel-haut){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:24px}
+  .pot{right:-8px}
+}
+@media (max-width:860px){
+  section{padding:88px 0}
+  .heros{padding:40px 0 100px}
+  .heros-tete,.miels .wrap,.gelee .wrap,.apiculteur .wrap,.elevage-grille,.ruchers .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .panorama{margin-top:36px}
+  .panorama .vue img{aspect-ratio:4/3;object-position:50% 50%}
+  .miels figure{position:relative;top:0;max-width:520px}
+  .mosaique .b{left:-8px}
+  .apiculteur .photo{max-width:440px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .entete .wrap{min-height:66px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .tel-haut{padding:10px 15px;font-size:15px}
+  .tel-haut .num{display:none}
+  .tel-haut::after{content:"Appeler"}
+  .lieu{font-size:16px}
+  .heros .intro{font-size:17px}
+  .actions .btn{width:100%}
+  .etiquette{left:12px;top:12px;bottom:auto;font-size:13px;max-width:calc(100% - 24px)}
+  .pot{width:38%;bottom:-48px;padding:6px;border-radius:14px}
+  .pot figcaption{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits b{font-size:21px}
+  .tarifs td{font-size:16px;padding-left:10px}
+  .tarifs th{padding-left:10px}
+  .tarifs td:first-child{font-size:18px}
+  .duo .petite{right:0}
+  .pot{right:4px}
+  .mosaique .b{left:0;transform:rotate(-1.5deg)}
+  .colonne article{padding:24px 22px 26px}
+  .carte dd{font-size:19px}
+}
+@media (max-width:370px){.marque b{font-size:19px}.tel-haut::after{content:none}.tel-haut{padding:12px}}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Rucher du Val Coisin</b><span>Apiculteur récoltant bio, Cœur de Savoie</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#miels">Les miels</a>
+      <a href="#gelee">Gelée royale</a>
+      <a href="#elevage">Essaims</a>
+      <a href="#contact">Venir au rucher</a>
+      <a class="tel-haut" href="tel:+33611713969" aria-label="Appeler le 06 11 71 39 69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="num">06 11 71 39 69</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-labelledby="titre-heros">
+    <div class="wrap">
+      <div class="heros-tete">
+        <div>
+          <p class="lieu">Saint-Pierre-de-Soucy, en Cœur de Savoie</p>
+          <h1 id="titre-heros">Le miel bio du Cœur de Savoie, en direct du rucher.</h1>
+        </div>
+        <div>
+          <p class="intro">Apiculteurs récoltants certifiés en Agriculture Biologique, nous exploitons 400 colonies sur une dizaine de ruchers, dans le respect de l'environnement et des abeilles.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://rucherduvalcoisin.fr/boutique/">Voir la boutique</a>
+            <a class="btn btn-contour" href="tel:+33611713969"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="num">06 11 71 39 69</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="panorama">
+        <div class="vue">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/ruches-dans-un-champ-de-sarrasin-en-fleur-face-a-la-montagne.webp" width="1600" height="1200" alt="Six ruches à toit de tôle au bord d'un champ de sarrasin en fleur, face à un sommet savoyard">
+          <span class="etiquette">Six ruches au bord du sarrasin en fleur</span>
+        </div>
+        <figure class="pot">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/pots-de-miel-a-l-etiquette-du-rucher.webp" width="1600" height="1600" alt="Trois pots de miel ambré à l'étiquette du Rucher du Val Coisin">
+          <figcaption>L'étiquette du rucher</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><b>400 colonies</b><span>réparties sur une dizaine de ruchers</span></li>
+      <li><b>Bio</b><span>certifié par Alpes Contrôles, FR-BIO-15</span></li>
+      <li><b>Carnica</b><span>des abeilles douces et rustiques</span></li>
+      <li><b>Reines maison</b><span>toutes élevées sur l'exploitation</span></li>
+      <li><b>Sédentaire</b><span>des ruchers qui ne transhument pas</span></li>
+      <li><b>Gelée Royale Française®</b><span>récoltée en Savoie</span></li>
+    </ul>
+  </div>
+
+  <section class="miels" id="miels" aria-labelledby="titre-miels">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-miels">Doux ou corsé, liquide ou cristallisé.</h2>
+        <p class="chapo">Couleur, texture et puissance aromatique varient selon la fleur butinée&nbsp;: miels de cru ou monofloraux, tous produits localement, sur des ruchers sédentaires, à part le miel de montagne.</p>
+        <table class="tarifs">
+          <thead><tr><th scope="col">Miel bio</th><th scope="col">500&nbsp;g</th><th scope="col">1&nbsp;kg</th></tr></thead>
+          <tbody>
+            <tr><td>Montagne</td><td>9,00&nbsp;€</td><td>17,00&nbsp;€</td></tr>
+            <tr><td>Lavande</td><td>9,00&nbsp;€</td><td>17,00&nbsp;€</td></tr>
+            <tr><td>Crémeux</td><td>10,00&nbsp;€</td><td>19,00&nbsp;€</td></tr>
+            <tr><td>Tilleul</td><td>8,00&nbsp;€</td><td>15,00&nbsp;€</td></tr>
+            <tr><td>Fleurs sauvages</td><td>8,00&nbsp;€</td><td>15,00&nbsp;€</td></tr>
+            <tr><td>Châtaignier</td><td>9,00&nbsp;€</td><td class="vide" aria-label="non proposé">–</td></tr>
+            <tr><td>Acacia</td><td>9,00&nbsp;€</td><td class="vide" aria-label="non proposé">–</td></tr>
+            <tr><td>Forêt</td><td>8,00&nbsp;€</td><td class="vide" aria-label="non proposé">–</td></tr>
+            <tr><td>Printemps</td><td>8,00&nbsp;€</td><td class="vide" aria-label="non proposé">–</td></tr>
+          </tbody>
+        </table>
+        <p class="note">La gamme change chaque année avec la flore locale et la météo. La cristallisation est un phénomène naturel&nbsp;: elle ne dit rien de la qualité du miel. <a class="lien" href="https://rucherduvalcoisin.fr/miel-bio/">Commander un miel</a></p>
+      </div>
+      <figure class="reveal">
+        <div class="photo">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/abeilles-sur-les-cadres-de-la-ruche.webp" width="1437" height="1437" loading="lazy" alt="Vue plongeante sur les cadres d'une ruche ouverte couverts d'abeilles">
+          <span class="pastille">Une ruche ouverte, cadres couverts d'abeilles</span>
+        </div>
+        <div class="encart">
+          <h3>Coffret découverte</h3>
+          <p>Trois miels de 500&nbsp;g, pour goûter la gamme&nbsp;: <span class="num">25,00&nbsp;€</span>.</p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="gelee sombre" id="gelee" aria-labelledby="titre-gelee">
+    <div class="wrap">
+      <div>
+        <p class="chiffre" aria-hidden="true">98&nbsp;%</p>
+        <h2 id="titre-gelee">de la gelée royale consommée en France est importée. La nôtre est produite en Savoie, sur l'exploitation.</h2>
+        <ul>
+          <li><b>Récoltée tous les 3 jours et demi</b>, d'avril à juillet, par des colonies qui lui sont dédiées</li>
+          <li><b>Stockée au frais dès la récolte</b>, ni congelée ni lyophilisée</li>
+          <li><b>Labellisée Gelée Royale Française®</b> et certifiée bio</li>
+          <li><b>En cure de plusieurs semaines</b>, 1&nbsp;g par jour, le matin à jeun</li>
+        </ul>
+        <div class="prix-gr"><span>10&nbsp;g, <b>23,00&nbsp;€</b></span><span>20&nbsp;g, <b>43,00&nbsp;€</b></span></div>
+        <p class="chapo" style="font-size:17px">Livraison offerte dès 100&nbsp;€ pour une commande de gelée royale seule.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://rucherduvalcoisin.fr/boutique-gelee-royale/">Commander la gelée royale</a>
+          <a class="btn btn-contour" href="https://rucherduvalcoisin.fr/la-gelee-royale/">Tout savoir sur la gelée royale</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="photo sur-sombre grande reveal">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/cadre-de-recolte-de-gelee-royale-sur-la-ruche.webp" width="1600" height="1200" loading="lazy" alt="Une main tient un cadre portant des barrettes de cellules royales au-dessus d'une ruche">
+          <span class="pastille" style="top:16px;bottom:auto">Un cadre de cellules royales, sorti de la ruche</span>
+        </div>
+        <div class="photo sur-sombre petite reveal">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/pots-de-gelee-royale-francaise-etiquetes.webp" width="1600" height="1200" loading="lazy" alt="Petits pots de gelée royale blanc nacré étiquetés Gelée Royale Française">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apiculteur" aria-labelledby="titre-api">
+    <div class="wrap">
+      <figure style="margin:0" class="reveal">
+        <div class="photo">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/cadre-de-couvain-couvert-d-abeilles-tenu-a-la-main.webp" width="1200" height="1600" loading="lazy" alt="Deux mains tiennent un cadre de cire couvert d'abeilles, couvain et miel visibles">
+          <span class="pastille">Un cadre de couvain, au rucher</span>
+        </div>
+      </figure>
+      <div class="texte">
+        <h2 class="titre" id="titre-api">Un métier choisi, plus proche de la nature.</h2>
+        <p style="margin-top:24px">Après plusieurs années dans le commerce, j'ai créé le Rucher du Val Coisin. J'ai suivi une formation professionnelle d'un an en apiculture et travaillé plusieurs saisons chez un apiculteur professionnel. Pendant ces deux années, j'ai développé en parallèle mon cheptel&nbsp;: 400 colonies aujourd'hui, réparties sur une dizaine de ruchers.</p>
+        <p>Je travaille avec des abeilles de race Carnica, douces et rustiques. J'élève toutes mes reines et colonies pour être le plus autonome possible, ainsi que des essaims destinés à la vente et des colonies spécifiques pour la gelée royale. Contre le varroa, les traitements n'utilisent que des médicaments à base d'acide oxalique, ajustés par des comptages réguliers.</p>
+        <blockquote class="mot">
+          <p>«&nbsp;Je pratique une apiculture non transhumante pour éviter le stress des abeilles et limiter mon empreinte carbone.&nbsp;»</p>
+          <cite>Rémi Coche, apiculteur récoltant</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="elevage" id="elevage" aria-labelledby="titre-elevage">
+    <div class="wrap">
+      <h2 class="titre" id="titre-elevage">Essaims, reines et pollen frais.</h2>
+      <div class="elevage-grille">
+        <article class="bloc-essaims">
+          <div class="photo reveal">
+            <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/barrettes-de-cupules-pour-la-gelee-royale.webp" width="1600" height="1200" loading="lazy" alt="Caisse en bois posée sur une ruche, remplie de barrettes de cupules en cire pour l'élevage des reines">
+            <span class="pastille">Barrettes de cupules, pour l'élevage des reines</span>
+          </div>
+          <h3>Essaims et reines</h3>
+          <p>Élevés à partir de souches Carnica sélectionnées par des éleveurs allemands et suisses, dans des zones de fécondation saturées en mâles sélectionnés. Sur demande et selon disponibilité, essaims ou cellules royales de génétique gelée royale. Éligibles aux aides FranceAgriMer.</p>
+          <a class="lien" href="https://rucherduvalcoisin.fr/essaims-reines/">Voir les essaims et reines</a>
+        </article>
+        <div class="colonne">
+          <article>
+            <h3>Pollen frais</h3>
+            <p>Une grille à l'entrée de la ruche décroche une partie des pelotes&nbsp;: seulement 10&nbsp;% environ du pollen récolté par les abeilles est collecté, le reste nourrit la colonie. Il est congelé dès la récolte pour garder ses qualités.</p>
+            <span class="prix">14,00&nbsp;€</span>
+            <br><a class="lien" href="https://rucherduvalcoisin.fr/pollen-frais/">Commander du pollen</a>
+          </article>
+          <article>
+            <h3>Miel personnalisé</h3>
+            <p>Mariage, anniversaire, baptême, naissance&nbsp;: des petits pots remplis par nos soins, avec vos pots, vos étiquettes et votre décoration. Dites-le avec du miel&nbsp;!</p>
+            <a class="lien" href="https://rucherduvalcoisin.fr/miel-personnalise/">Préparer vos pots</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ruchers" aria-labelledby="titre-ruchers">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-ruchers">Une dizaine de ruchers, au pied des montagnes.</h2>
+        <p class="chapo">Parce que les ruches ne voyagent pas, les miels de chaque année sont liés à la flore et au climat d'ici. Le printemps, le sarrasin, la neige&nbsp;: la galerie suit les saisons.</p>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://rucherduvalcoisin.fr/portfolio/galerie-photo/">Voir la galerie photo</a>
+        </div>
+      </div>
+      <div class="mosaique">
+        <div class="photo a reveal">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/ruches-colorees-sur-palettes-au-soleil-couchant.webp" width="1600" height="1600" loading="lazy" alt="Ruches rouges, blanches et bleues sur palettes dans un pré en pente, vallée et montagnes dans la brume">
+          <span class="pastille" style="left:auto;right:16px">Ruches sur palettes, lumière du soir</span>
+        </div>
+        <div class="photo b reveal">
+          <img src="assets/rucher-val-coisin-saint-pierre-de-soucy/rucher-sous-la-neige-en-lisiere-de-foret.webp" width="1600" height="1200" loading="lazy" alt="Rangée de ruches colorées dans un pré enneigé, au pied d'une lisière de sapins">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-contact">
+    <div class="wrap">
+      <div>
+        <h2 class="titre" id="titre-contact">Passer au rucher, ou recevoir un colis.</h2>
+        <p class="chapo">Une question sur les produits, l'envoi d'un colis ou les abeilles&nbsp;? Écrivez, appelez, ou venez le mercredi.</p>
+        <div class="horaire"><b>Le mercredi, de 16h30 à 18h30</b><span>101 Chemin de Côte Pelat, Saint-Pierre-de-Soucy</span></div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33611713969">Appeler le <span class="num">06 11 71 39 69</span></a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/place/Rucher+du+Val+Coisin/@45.4924865,6.1081847,17z/data=!3m1!4b1!4m5!3m4!1s0x478bb3dd8a90c3f3:0x9f1bbd506089ada4!8m2!3d45.4924865!4d6.1103734">Voir le plan</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <dt>Téléphone</dt>
+          <dd><a class="num" href="tel:+33611713969">06 11 71 39 69</a></dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:contact@rucherduvalcoisin.fr">contact@rucherduvalcoisin.fr</a></dd>
+          <dt>Courrier</dt>
+          <dd>634 route de Villard Prin<br>73800 Saint-Pierre-de-Soucy</dd>
+          <dt>Professionnels</dt>
+          <dd><a href="https://rucherduvalcoisin.fr/professionnel/">Distribuer nos produits</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <div class="marque"><b>Rucher du Val Coisin</b><span>Apiculteur récoltant bio, Cœur de Savoie</span></div>
+      <p style="margin-top:16px">101 Chemin de Côte Pelat, 73800 Saint-Pierre-de-Soucy<br>Ouvert le mercredi de 16h30 à 18h30<br><a class="num" href="tel:+33611713969">06 11 71 39 69</a><br><a href="mailto:contact@rucherduvalcoisin.fr">contact@rucherduvalcoisin.fr</a></p>
+    </div>
+    <div>
+      <h3>La boutique</h3>
+      <ul>
+        <li><a href="https://rucherduvalcoisin.fr/miel-bio/">Miel bio</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/boutique-gelee-royale/">Gelée Royale Française® bio</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/pollen-frais/">Pollen frais</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/essaims-reines/">Essaims et reines</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/boutique/les-produits/">Tous les produits</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Le rucher</h3>
+      <ul>
+        <li><a href="https://rucherduvalcoisin.fr/qui-sommes-nous/">Qui sommes-nous</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/apiculture-biologique/">Apiculture biologique</a></li>
+        <li><a href="https://annuaire.agencebio.org/fiche/8387">Certificat bio</a></li>
+        <li><a href="https://rucherduvalcoisin.fr/professionnel/">Accès pro</a></li>
+        <li><a href="https://www.facebook.com/rucherduvalcoisin/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mentions"><div class="wrap">Rucher du Val Coisin, certifié bio par Alpes Contrôles, FR-BIO-15</div></div>
+  <p class="signature">Proposition de Nicolas Masset pour le Rucher du Val Coisin</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

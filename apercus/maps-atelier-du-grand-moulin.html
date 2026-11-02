@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier du Grand Moulin, ébénisterie d'art près d'Angers</title>
+<meta name="description" content="Restauration et fabrication de mobilier depuis 1995 à Saint-Jean-de-Linières : de l'abattage au meuble estampillé et signé.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F2A1E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='600' text-anchor='middle' fill='%23F2F1EA'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400..600;1,400..500&family=Archivo:wght@400..500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#E6E4DA; --surface:#F2F1EA; --bande:#DAD8CB;
+    --encre:#1D241B; --encre-doux:#454D41; --accent:#6B7A2E; --sombre:#1F2A1E;
+    --clair:#EEEDE4; --clair-doux:#BFC4B4;
+    --ombre:0 30px 60px -34px rgba(29,36,27,.55);
+    --ombre-forte:0 44px 80px -40px rgba(29,36,27,.7);
+    --display:"Bitter", Georgia, serif;
+    --texte:"Archivo", "Helvetica Neue", sans-serif;
+    --large:min(1200px, 100% - 48px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--surface)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+  p{margin:0;text-wrap:pretty}
+  .large{width:var(--large);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  /* En-tête */
+  .entete{position:sticky;top:0;z-index:20;background:var(--sombre);color:var(--clair);border-bottom:1px solid rgba(238,237,228,.08)}
+  .entete .large{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+  .marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .marque b{font-family:var(--display);font-weight:500;font-size:21px}
+  .marque span{font-size:14px;color:var(--clair-doux);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:30px;font-size:16px}
+  .nav a{text-decoration:none;color:var(--clair-doux);transition:color .2s}
+  .nav a:hover{color:var(--clair)}
+  .nav .tel{color:var(--sombre);background:var(--clair);padding:10px 18px;border-radius:999px;white-space:nowrap;font-weight:500}
+  .nav .tel:hover{color:var(--sombre);background:#fffef6}
+  .appel{display:none}
+
+  /* Boutons */
+  .boutons{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-plein{background:var(--encre);color:var(--surface)}
+  .btn-plein:hover{background:var(--accent);transform:translateY(-2px)}
+  .btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+  .btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+  .sur-sombre .btn-plein{background:var(--clair);color:var(--sombre)}
+  .sur-sombre .btn-plein:hover{background:#C9D39A;color:var(--sombre)}
+  .sur-sombre .btn-contour{border-color:rgba(238,237,228,.7);color:var(--clair)}
+  .sur-sombre .btn-contour:hover{background:var(--clair);color:var(--sombre);border-color:var(--clair)}
+
+  /* Héros sombre */
+  .heros{background:var(--sombre);color:var(--clair);padding:80px 0 128px}
+  .heros .large{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+  .lieu{font-size:16px;color:#C9D39A;margin-bottom:24px}
+  .heros h1{font-size:clamp(38px, 5.5vw, 76px);line-height:1.04;color:#F4F3EA}
+  .heros .chapo{font-size:19px;color:var(--clair-doux);max-width:33em;margin:28px 0 36px}
+  .heros .mail{margin-top:22px;font-size:16px;color:var(--clair-doux);overflow-wrap:anywhere}
+  .heros .mail a{color:var(--clair);text-decoration-color:rgba(238,237,228,.35);text-underline-offset:3px}
+  .visuel{position:relative}
+  .visuel .photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(4,8,4,.85), 0 18px 30px -18px rgba(4,8,4,.6)}
+  .visuel img{width:100%;aspect-ratio:1/1.02;object-fit:cover;object-position:57% 50%}
+  .etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:8px 14px;border-radius:8px;box-shadow:0 12px 24px -16px rgba(29,36,27,.8);max-width:calc(100% - 32px)}
+  .tampon{position:absolute;right:-30px;top:-34px;width:132px;height:132px;border-radius:50%;background:var(--surface);color:var(--encre);display:grid;place-items:center;box-shadow:0 24px 40px -22px rgba(4,8,4,.9);transform:rotate(-12deg)}
+  .tampon svg{width:116px;height:116px}
+
+  /* Bandeau de faits */
+  .faits{background:var(--bande)}
+  .faits ul{list-style:none;margin:0 auto;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:16px}
+  .faits li{display:flex;align-items:center;gap:10px}
+  .faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+
+  section{padding:112px 0}
+
+  /* Bienvenue */
+  .bienvenue .large{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:88px;align-items:start}
+  .bienvenue h2{font-size:clamp(32px, 4vw, 52px);margin-bottom:28px}
+  .bienvenue p + p{margin-top:18px}
+  .bienvenue .corps{color:var(--encre-doux);max-width:36em}
+  .bienvenue .corps strong{color:var(--encre);font-weight:500}
+  .domaines{background:var(--surface);border-radius:20px;padding:34px 36px 20px;box-shadow:var(--ombre);margin-top:12px}
+  .domaines h3{font-size:24px;margin-bottom:10px}
+  .domaines ul{list-style:none;margin:0;padding:0}
+  .domaines li{padding:15px 0;border-top:1px solid rgba(29,36,27,.13);font-size:17px}
+
+  /* De l'arbre à l'atelier */
+  .filiere{padding-top:24px}
+  .filiere h2{font-size:clamp(32px, 4vw, 52px);max-width:15em}
+  .filiere .intro{color:var(--encre-doux);max-width:38em;margin-top:20px}
+  .etapes{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;position:relative}
+  .etapes li:nth-child(2){margin-top:72px}
+  .etapes li:nth-child(3){margin-top:144px}
+  .etapes .photo{border-radius:18px;overflow:hidden;box-shadow:var(--ombre-forte)}
+  .etapes img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+  .etapes .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-family:var(--display);font-size:16px;font-weight:600;margin:26px 0 12px}
+  .etapes h3{font-size:27px;margin-bottom:10px}
+  .etapes p{color:var(--encre-doux);font-size:17px}
+
+  /* Savoir-faire */
+  .savoir .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+  .savoir figure{margin:0;position:sticky;top:104px}
+  .savoir .photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre-forte)}
+  .savoir .photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%}
+  .savoir h2{font-size:clamp(32px, 4vw, 52px);margin-bottom:18px}
+  .savoir .intro{color:var(--encre-doux);margin-bottom:34px;max-width:34em}
+  .gestes{list-style:none;margin:0;padding:0;border-top:1px solid rgba(29,36,27,.2)}
+  .gestes li{padding:24px 0;border-bottom:1px solid rgba(29,36,27,.2);display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:6px 32px}
+  .gestes h3{font-size:23px;line-height:1.15}
+  .gestes h3 a{text-decoration:none;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 1.5px no-repeat;transition:background-size .3s}
+  .gestes h3 a:hover{background-size:100% 1.5px}
+  .gestes p{color:var(--encre-doux);font-size:17px}
+
+  /* Mosaïque des gestes */
+  .mains{background:var(--bande)}
+  .mains .tete{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px}
+  .mains h2{font-size:clamp(30px, 3.6vw, 46px);max-width:13em}
+  .mains .tete p{color:var(--encre-doux);max-width:26em}
+  .mosaique{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px}
+  .mosaique figure{margin:0;position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+  .mosaique img{width:100%;height:100%;object-fit:cover}
+  .mosaique .grand{grid-row:span 2}
+  .mosaique .grand img{aspect-ratio:auto;min-height:100%;object-position:40% 50%}
+  .mosaique .petit img{aspect-ratio:16/10}
+  .mosaique .petit:last-child{margin-left:-64px;margin-right:0;z-index:1;border:8px solid var(--bande);border-radius:26px}
+
+  /* Citation */
+  .citation{padding:120px 0}
+  .citation blockquote{margin:0;max-width:22em;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(28px, 3.4vw, 46px);line-height:1.2;text-wrap:balance}
+  .citation blockquote::before{content:"«";display:block;font-style:normal;font-size:1.6em;line-height:.7;color:var(--accent);margin-bottom:10px}
+  .citation p{margin-top:26px;color:var(--encre-doux);font-size:16px}
+
+  /* Réalisations */
+  .realisations{padding-top:24px}
+  .realisations .large{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 40px;align-items:start}
+  .realisations .tete{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end;margin-bottom:16px}
+  .realisations h2{font-size:clamp(32px, 4vw, 52px)}
+  .realisations .tete p{color:var(--encre-doux)}
+  .meuble{margin:0;background:var(--surface);border-radius:22px;padding:28px 28px 26px;box-shadow:var(--ombre)}
+  .meuble .fond{border-radius:12px;overflow:hidden;background:var(--surface)}
+  .meuble img{width:100%;aspect-ratio:16/10;object-fit:cover;mix-blend-mode:multiply}
+  .meuble figcaption{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-top:20px;font-family:var(--display);font-size:22px}
+  .meuble figcaption span{font-family:var(--texte);font-size:15px;color:var(--encre-doux)}
+  .meuble.decale{margin-top:96px}
+  .titres{grid-column:1 / -1;margin-top:40px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .titres span{background:var(--surface);border-radius:999px;padding:8px 16px;font-size:15px;color:var(--encre-doux)}
+  .titres .btn{margin-left:auto}
+
+  /* Contact */
+  .contact{background:var(--surface)}
+  .contact .large{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+  .contact h2{font-size:clamp(34px, 4.4vw, 58px);margin-bottom:24px}
+  .contact .intro{color:var(--encre-doux);margin-bottom:34px;max-width:30em}
+  .carte-zone{position:relative;padding-top:56px}
+  .carte{background:var(--base);border-radius:22px;padding:16px 40px;box-shadow:var(--ombre-forte)}
+  .carte dl{margin:0}
+  .carte div{display:grid;grid-template-columns:minmax(0,6.5em) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid rgba(29,36,27,.13)}
+  .carte div:last-child{border-bottom:0}
+  .carte dt{font-size:15px;color:var(--encre-doux);padding-top:3px}
+  .carte dd{margin:0;font-size:18px;overflow-wrap:anywhere}
+  .carte dd a{text-decoration-color:rgba(29,36,27,.3);text-underline-offset:3px}
+  .carte .num{font-family:var(--display);font-size:24px;font-weight:500;white-space:nowrap}
+  .polaroid{position:absolute;right:-18px;top:0;width:min(210px, 44%);background:#FBFAF4;padding:9px 9px 0;border-radius:4px;box-shadow:var(--ombre);transform:rotate(3deg);margin:0;z-index:1}
+  .polaroid img{width:100%;aspect-ratio:500/324;object-fit:cover;border-radius:2px}
+  .polaroid figcaption{font-size:13px;color:var(--encre-doux);padding:7px 2px 9px}
+
+  /* Pied */
+  .pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 56px;font-size:16px}
+  .pied .large{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .pied b{display:block;font-family:var(--display);font-weight:500;font-size:26px;color:var(--clair);margin-bottom:12px}
+  .pied h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--clair);margin-bottom:14px;letter-spacing:0}
+  .pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .pied a{color:var(--clair);text-decoration-color:rgba(238,237,228,.3);text-underline-offset:3px;overflow-wrap:anywhere}
+  .signature{background:var(--base);text-align:center;font-size:14px;color:var(--encre-doux);padding:18px 24px}
+
+  /* Apparition douce des photos */
+  .js .apparait{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .apparait.vu{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .js .apparait{opacity:1;transform:none;transition:none}
+    .btn,.gestes h3 a{transition:none}
+  }
+
+  @media (max-width: 980px){
+    .nav a:not(.tel){display:none}
+    .heros .large,.bienvenue .large,.savoir .large,.contact .large{grid-template-columns:minmax(0,1fr);gap:56px}
+    .visuel{max-width:560px}
+    .savoir figure{position:relative;top:0;max-width:480px}
+    .etapes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .etapes li:nth-child(3){margin-top:0}
+    .mains .tete{flex-direction:column;align-items:start}
+    .realisations .large,.realisations .tete{grid-template-columns:minmax(0,1fr)}
+    .meuble.decale{margin-top:0}
+    .pied .large{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  }
+  @media (max-width: 640px){
+    :root{--large:min(1200px, 100% - 40px)}
+    body{font-size:17px}
+    .entete .large{min-height:62px}
+    .marque b{font-size:19px}
+    .marque span{display:none}
+    .nav{display:none}
+    .appel{display:inline-flex;align-items:center;gap:8px;background:var(--clair);color:var(--sombre);text-decoration:none;font-size:15px;font-weight:500;padding:10px 16px;border-radius:999px;white-space:nowrap}
+    .appel svg{width:15px;height:15px}
+    .heros{padding:36px 0 80px}
+    .lieu{font-size:15px;margin-bottom:16px}
+    .heros .chapo{font-size:17px;margin:20px 0 26px}
+    .heros .large{gap:48px}
+    .tampon{width:96px;height:96px;right:-6px;top:-26px}
+    .tampon svg{width:84px;height:84px}
+    .etiquette{font-size:13px;left:12px;bottom:12px;padding:7px 11px}
+    .visuel img{aspect-ratio:4/3.4}
+    .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+    section{padding:80px 0}
+    .domaines{padding:26px 22px 12px}
+    .etapes{grid-template-columns:minmax(0,1fr);gap:48px;margin-top:44px}
+    .etapes li:nth-child(2){margin-top:0}
+    .etapes img{aspect-ratio:4/3}
+    .gestes li{grid-template-columns:minmax(0,1fr);padding:20px 0}
+    .mosaique{grid-template-columns:minmax(0,1fr);gap:20px}
+    .mosaique .grand{grid-row:auto}
+    .mosaique .grand img{aspect-ratio:4/3}
+    .mosaique .petit:last-child{margin-left:0;border:0;border-radius:20px}
+    .citation{padding:80px 0}
+    .meuble{padding:16px 16px 18px}
+    .meuble figcaption{flex-direction:column;gap:4px;font-size:20px}
+    .titres .btn{margin-left:0}
+    .carte{padding:8px 22px}
+    .carte div{grid-template-columns:minmax(0,1fr);gap:2px}
+    .carte-zone{padding-top:0}
+    .polaroid{position:relative;right:auto;top:auto;display:block;width:min(180px, 56%);margin:0 4px -28px auto}
+    .pied .large{grid-template-columns:minmax(0,1fr);gap:36px}
+  }
+  @media (max-width: 420px){
+    .boutons .btn,.titres .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="large">
+    <a class="marque" href="#haut" aria-label="Atelier du Grand Moulin, retour en haut">
+      <b>Atelier du Grand Moulin</b>
+      <span>Ébénisterie d'art depuis 1995</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#filiere">De l'arbre au meuble</a>
+      <a href="#savoir">Savoir-faire</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33241397622">02 41 39 76 22</a>
+    </nav>
+    <a class="appel" href="tel:+33241397622"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros sur-sombre" aria-labelledby="titre">
+    <div class="large">
+      <div>
+        <p class="lieu">Ébénisterie d'art près d'Angers, depuis 1995</p>
+        <h1 id="titre">De l'abattage au meuble estampillé et signé.</h1>
+        <p class="chapo">Chaque hiver, nous abattons nous-mêmes nos arbres. Sciés dans notre scierie puis séchés à l'air libre pendant plusieurs années, ils servent à restaurer ou à fabriquer vos meubles, entièrement dans notre atelier.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://ebenisterie-atelierdugrandmoulin.fr/realisations">Voir nos réalisations</a>
+          <a class="btn btn-contour" href="tel:+33241397622"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>02 41 39 76 22</a>
+        </div>
+        <p class="mail">Par e-mail&nbsp;: <a href="mailto:chaillou.atelierdugrandmoulin@orange.fr">chaillou.atelierdugrandmoulin@<wbr>orange.fr</a></p>
+      </div>
+      <div class="visuel">
+        <div class="photo">
+          <img src="assets/maps-atelier-du-grand-moulin/sculpture-a-quatre-mains-a-l-etabli.webp" width="1600" height="899" alt="Une femme et un homme travaillent côte à côte à un établi couvert de copeaux et de gouges, dans l'atelier">
+          <span class="etiquette">Sculpture à l'établi, gouges alignées</span>
+        </div>
+        <div class="tampon">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="cercle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+            <circle cx="60" cy="60" r="56" fill="none" stroke="#6B7A2E" stroke-width="1.5"/>
+            <circle cx="60" cy="60" r="33" fill="none" stroke="#6B7A2E" stroke-width="1"/>
+            <text font-family="Archivo, sans-serif" font-size="10.6" letter-spacing="2.2" fill="#1D241B"><textPath href="#cercle" textLength="268" lengthAdjust="spacing">ESTAMPILLÉ ET SIGNÉ · GRAND MOULIN ·</textPath></text>
+            <text x="60" y="58" text-anchor="middle" font-family="Bitter, serif" font-size="11" fill="#454D41">depuis</text>
+            <text x="60" y="76" text-anchor="middle" font-family="Bitter, serif" font-size="19" font-weight="600" fill="#1D241B">1995</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" role="region" aria-label="L'atelier en bref">
+    <ul class="large">
+      <li>Depuis 1995</li>
+      <li>Près d'Angers, en Anjou</li>
+      <li>Abattage, sciage, séchage sur place</li>
+      <li>Bois séché entre 9 et 13&nbsp;%</li>
+      <li>Estampillé et signé</li>
+    </ul>
+  </div>
+
+  <section class="bienvenue" aria-labelledby="t-bienvenue">
+    <div class="large">
+      <div>
+        <h2 id="t-bienvenue">Notre passion pour le bois, alliée à l'amour du patrimoine.</h2>
+        <div class="corps">
+          <p>Nous avons créé notre atelier d'ébénisterie en 1995, en Anjou, près d'Angers. Nous associons notre créativité et notre savoir-faire à vos commandes spéciales, pour des réalisations sur mesure, quelle qu'en soit la dimension.</p>
+          <p>Tradition et innovation&nbsp;: nous voulons perpétuer et conserver l'héritage de nos ancêtres pour les générations futures. <strong>Par gage de qualité, toutes nos restaurations et réalisations sont estampillées et signées.</strong></p>
+        </div>
+      </div>
+      <div class="domaines">
+        <h3>Cinq domaines</h3>
+        <ul>
+          <li>Restauration du mobilier civil</li>
+          <li>Fabrication du mobilier civil</li>
+          <li>Restauration de l'art sacré</li>
+          <li>Restauration du patrimoine ancien</li>
+          <li>Création contemporaine</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="filiere" id="filiere" aria-labelledby="t-filiere">
+    <div class="large">
+      <h2 id="t-filiere">Avant le meuble, il y a l'arbre.</h2>
+      <p class="intro">Nous avons depuis longtemps choisi de transformer le bois dans notre propre atelier. Cela demande beaucoup de patience et de longues heures de travail, mais c'est indispensable pour obtenir une matière première maîtrisée et de qualité.</p>
+      <ol class="etapes">
+        <li class="apparait">
+          <div class="photo"><img loading="lazy" src="assets/maps-atelier-du-grand-moulin/abattage-d-un-arbre-a-la-tronconneuse.webp" width="1600" height="839" style="object-position:62% 50%" alt="Un bûcheron casqué tronçonne un gros tronc moussu couché au sol, feuillage d'automne autour"></div>
+          <span class="num">1</span>
+          <h3>Abattage</h3>
+          <p>À des moments choisis de l'hiver, nous abattons nos arbres, en forêt ou chez le particulier&nbsp;: noyer, merisier, tilleul, chêne, frêne, poirier, if, buis, orme, érable…</p>
+        </li>
+        <li class="apparait">
+          <div class="photo"><img loading="lazy" src="assets/maps-atelier-du-grand-moulin/grumes-numerotees-avant-sciage.webp" width="1600" height="1600" style="object-position:40% 70%" alt="Pile de grumes écorcées marquées de numéros verts, dans une cour devant un bâtiment à toit d'ardoise"></div>
+          <span class="num">2</span>
+          <h3>Sciage</h3>
+          <p>Notre scierie débite les grumes «&nbsp;façon 18e&nbsp;»&nbsp;: toutes les épaisseurs d'un meuble sortent d'une même grume. Les chutes chauffent l'atelier.</p>
+        </li>
+        <li class="apparait">
+          <div class="photo"><img loading="lazy" src="assets/maps-atelier-du-grand-moulin/planches-sciees-empilees-au-sechage.webp" width="1597" height="1600" style="object-position:50% 40%" alt="Deux piles de planches de bois brut cerclées de sangles blanches, en train de sécher"></div>
+          <span class="num">3</span>
+          <h3>Séchage et débit</h3>
+          <p>Les planches sèchent à l'air libre plusieurs années, jusqu'à 9 à 13&nbsp;% d'humidité. Ensuite seulement, nous les délignons pour vos meubles.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="savoir" id="savoir" aria-labelledby="t-savoir">
+    <div class="large">
+      <figure class="apparait">
+        <div class="photo">
+          <img loading="lazy" src="assets/maps-atelier-du-grand-moulin/sculpture-d-un-panneau-a-rinceaux.webp" width="1200" height="1600" alt="Une main tient une gouge sur un panneau de bois sculpté de rinceaux, à côté d'un panneau ancien au même motif">
+          <span class="etiquette">Panneau à rinceaux, à côté de l'ancien</span>
+        </div>
+      </figure>
+      <div>
+        <h2 id="t-savoir">Tout se fait chez nous, jusqu'à la serrure.</h2>
+        <p class="intro">Nos prestations sont entièrement réalisées par nos soins, dans notre atelier.</p>
+        <ul class="gestes">
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/sculpture">Sculpture</a></h3><p>Bas-relief, haut-relief et ronde-bosse.</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/node/135">Tournage</a></h3><p>Colonnes, balustres et pieds de table jusqu'à 2,50 m de long&nbsp;; en tournage frontal, pièces jusqu'à 90&nbsp;cm de diamètre. Filetages de différents diamètres.</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/marqueterie">Marqueterie</a></h3><p>Notre propre placage, de 6/10 de millimètre à 2&nbsp;mm. Incrustations de laiton, cuivre, nacre, écaille de tortue, ivoire et corne.</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/peinture-polychrome-finition-serigraphie-sur-verre">Peinture et finitions</a></h3><p>Polychrome ou monochrome, teinte cire à l'ancienne, Noir Napoléon, vernis à l'ancienne, huile biologique, sérigraphie sur verre.</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/bronze-et-petite-feronnerie">Bronze et petite ferronnerie</a></h3><p>Serrures, ferrages et entrées de clés restaurés ou recréés à l'identique.</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/restauration-des-marbres-et-polissage">Marbres et polissage</a></h3><p>Dessus de commode, buffet ou chevet&nbsp;: greffes en inox, puis polissage à la main (1&nbsp;cm d'épaisseur au minimum).</p></li>
+          <li><h3><a href="https://ebenisterie-atelierdugrandmoulin.fr/decapage-ecologique">Décapage écologique</a></h3><p>Par aérogommage en cabine, sans produits de décapage conventionnels.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mains" aria-labelledby="t-mains">
+    <div class="large">
+      <div class="tete">
+        <h2 id="t-mains">Les gestes de nos ancêtres, refaits à la main.</h2>
+        <p>Nous reproduisons leurs gestes pour la restauration comme pour la fabrication, dans une approche écologique.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="grand apparait">
+          <img loading="lazy" src="assets/maps-atelier-du-grand-moulin/tournage-d-un-pied-au-tour-a-bois.webp" width="1600" height="885" alt="Gros plan d'une main tenant un outil sur une pièce de bois qui tourne, copeaux qui volent">
+          <span class="etiquette">Tournage d'un pied</span>
+        </figure>
+        <figure class="petit apparait">
+          <img loading="lazy" src="assets/maps-atelier-du-grand-moulin/marqueterie-retouche-au-pinceau.webp" width="1600" height="1200" alt="Une main retouche au pinceau fin des motifs floraux de marqueterie">
+          <span class="etiquette">Retouche d'une marqueterie</span>
+        </figure>
+        <figure class="petit apparait">
+          <img loading="lazy" src="assets/maps-atelier-du-grand-moulin/polissage-d-un-marbre-noir.webp" width="1600" height="1200" style="object-position:50% 45%" alt="Une artisane polit à la machine un dessus de marbre noir veiné de blanc posé sur des tréteaux">
+          <span class="etiquette">Polissage d'un marbre noir</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Notre démarche">
+    <div class="large">
+      <blockquote>Notre passion pour l'histoire, l'architecture et le mobilier de notre pays est devenue notre métier. Nous nous tournons à présent vers l'avenir pour transmettre notre savoir-faire.</blockquote>
+      <p>L'Atelier du Grand Moulin</p>
+    </div>
+  </section>
+
+  <section class="realisations" id="realisations" aria-labelledby="t-realisations">
+    <div class="large">
+      <div class="tete">
+        <h2 id="t-realisations">Quelques-unes de nos réalisations.</h2>
+        <p>Mobilier civil, art sacré, patrimoine ancien, création contemporaine&nbsp;: 64 réalisations sont à voir sur notre site.</p>
+      </div>
+      <figure class="meuble apparait">
+        <div class="fond"><img loading="lazy" src="assets/maps-atelier-du-grand-moulin/commode-transition-restauree.webp" width="1600" height="943" alt="Commode à trois rangs de tiroirs en placage de bois clair, entrées de serrure en bronze doré, dessus de marbre gris"></div>
+        <figcaption>Commode secrétaire Transition</figcaption>
+      </figure>
+      <figure class="meuble decale apparait">
+        <div class="fond"><img loading="lazy" src="assets/maps-atelier-du-grand-moulin/enfilade-louis-philippe.webp" width="1600" height="899" alt="Enfilade en bois blond à trois portes et trois tiroirs, boutons tournés">
+        </div>
+        <figcaption>Enfilade Louis-Philippe</figcaption>
+      </figure>
+      <div class="titres">
+        <span>Cariatide fin 16e</span>
+        <span>Chapelle de Chambellay</span>
+        <span>Oratoire 18e</span>
+        <span>Escalier 18e</span>
+        <span>Parquet du château de Montgeoffroy</span>
+        <a class="btn btn-plein" href="https://ebenisterie-atelierdugrandmoulin.fr/realisations">Voir les 64 réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="large">
+      <div>
+        <h2 id="t-contact">Parlons de votre meuble.</h2>
+        <p class="intro">Restauration, fabrication sur mesure ou création&nbsp;: appelez l'atelier ou écrivez-nous, et décrivez-nous votre projet.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33241397622">Appeler le 02 41 39 76 22</a>
+          <a class="btn btn-contour" href="mailto:chaillou.atelierdugrandmoulin@orange.fr">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="carte-zone">
+        <figure class="polaroid">
+          <img loading="lazy" src="assets/maps-atelier-du-grand-moulin/portrait-du-couple-dans-l-atelier.webp" width="500" height="324" alt="Une femme et un homme souriants devant leur établi">
+          <figcaption>À l'établi, au Grand Moulin</figcaption>
+        </figure>
+        <div class="carte apparait">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33241397622">02 41 39 76 22</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:chaillou.atelierdugrandmoulin@orange.fr">chaillou.atelierdugrandmoulin@<wbr>orange.fr</a></dd></div>
+            <div><dt>Adresse</dt><dd>Lieu-dit du Grand Moulin<br>49070 Saint-Jean-de-Linières</dd></div>
+            <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/pages/Atelier-du-Grand-Moulin/404920019882222">Atelier du Grand Moulin</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <b>Atelier du Grand Moulin</b>
+      <p>Restauration, fabrication et création de mobilier, de l'abattage jusqu'au produit fini. En Anjou, depuis 1995.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>Lieu-dit du Grand Moulin<br>49070 Saint-Jean-de-Linières</li>
+        <li><a href="tel:+33241397622">02 41 39 76 22</a></li>
+        <li><a href="mailto:chaillou.atelierdugrandmoulin@orange.fr">chaillou.atelierdugrandmoulin@<wbr>orange.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>À voir aussi</h3>
+      <ul>
+        <li><a href="https://ebenisterie-atelierdugrandmoulin.fr/realisations">Toutes les réalisations</a></li>
+        <li><a href="https://ebenisterie-atelierdugrandmoulin.fr/abattage">Abattage</a> · <a href="https://ebenisterie-atelierdugrandmoulin.fr/sciage">Sciage</a></li>
+        <li><a href="https://ebenisterie-atelierdugrandmoulin.fr/contact-atelier-grand-moulin">Page contact</a></li>
+        <li><a href="https://www.facebook.com/pages/Atelier-du-Grand-Moulin/404920019882222">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour Atelier du Grand Moulin</p>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = document.querySelectorAll('.apparait');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function(e){ e.classList.add('vu'); }); return;
+    }
+    var io = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>

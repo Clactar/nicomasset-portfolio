@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La mère LaChaise, tapisserie d'ameublement à Limoges</title>
+<meta name="description" content="Réfection de sièges en mousse ou en crin, cours de tapisserie d'ameublement et commande de tissus à Limoges. 07 83 01 91 09.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233B5BA9'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23FBF7E6'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Manrope:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#F3EBC8; --bande:#EADFAE; --surface:#FBF7E6;
+    --encre:#1C2C4C; --encre-doux:#46536F; --accent:#3B5BA9; --sombre:#1C2C4C;
+    --ombre:0 30px 60px -34px rgba(28,44,76,.55);
+    --ombre-forte:0 46px 84px -40px rgba(28,44,76,.72);
+    --display:"Yeseva One", "Didot", Georgia, serif;
+    --texte:"Manrope", "Avenir Next", sans-serif;
+    --large:min(1200px, 100% - 40px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--surface)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.005em}
+  p{margin:0;text-wrap:pretty}
+  .large{width:var(--large);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+  .nowrap{white-space:nowrap}
+
+  /* En-tête */
+  .entete{position:sticky;top:0;z-index:20;background:rgba(243,235,200,.95);border-bottom:1px solid rgba(28,44,76,.1)}
+  .entete .large{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+  .marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .marque b{font-family:var(--display);font-weight:400;font-size:24px}
+  .marque span{font-size:14px;color:var(--encre-doux);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:500}
+  .nav a{text-decoration:none;color:var(--encre-doux);transition:color .2s}
+  .nav a:hover{color:var(--encre)}
+  .nav .appel{color:var(--surface);background:var(--accent);padding:11px 20px;border-radius:999px;transition:transform .25s, background .25s}
+  .nav .appel:hover{transform:translateY(-2px);background:#30509C}
+
+  /* Boutons */
+  .boutons{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;font:600 17px/1.2 var(--texte);text-decoration:none;transition:transform .25s ease, background .25s, color .25s, box-shadow .25s}
+  .btn-plein{background:var(--encre);color:var(--surface);box-shadow:0 18px 34px -20px rgba(28,44,76,.85)}
+  .btn-plein:hover{transform:translateY(-2px);background:var(--accent)}
+  .btn-contour{border:2px solid var(--encre);color:var(--encre)}
+  .btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* Héros */
+  .heros{padding:56px 0 100px}
+  .scene{display:grid}
+  .scene > *{grid-area:1/1}
+  .photo-heros{margin:0 0 0 36%;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:16/10.4}
+  .photo-heros img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+  .photo-heros::after{content:"";position:absolute;inset:0;background:linear-gradient(14deg, rgba(243,235,200,.94) 0%, rgba(243,235,200,.72) 18%, rgba(243,235,200,0) 42%)}
+  .photo-heros .pastille{position:absolute;right:20px;top:20px;z-index:2;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(28,44,76,.7)}
+  .accroche{align-self:start;justify-self:start;width:30%;padding-top:8px;position:relative;z-index:1}
+  .accroche-texte{font-family:var(--display);font-size:clamp(19px,1.6vw,22px);line-height:1.35;color:var(--encre)}
+  .sceau{display:grid;place-items:center;text-align:center;width:150px;aspect-ratio:1;border-radius:50%;margin-top:36px;background:var(--accent);color:var(--surface);font:600 15px/1.3 var(--texte);transform:rotate(-10deg);box-shadow:0 24px 40px -22px rgba(28,44,76,.8);outline:1.5px dashed rgba(251,247,230,.6);outline-offset:-9px}
+  .scene h1{align-self:end;position:relative;z-index:2;font-size:clamp(38px, 7.6vw, 108px);line-height:1;margin-bottom:-1.1em;letter-spacing:-.01em}
+  .scene h1 span{display:block}
+  .heros-bas{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-top:calc(1.1 * clamp(38px, 7.6vw, 108px) + 36px)}
+  .heros-bas .chapo{font-size:19px;color:var(--encre-doux);max-width:34em}
+  .heros-bas .boutons{margin-top:30px}
+  .devis{font-size:16px;color:var(--encre-doux);border-left:0;padding:22px 26px;background:var(--surface);border-radius:18px;box-shadow:var(--ombre)}
+  .devis b{display:block;font-family:var(--display);font-weight:400;font-size:24px;color:var(--encre);margin-bottom:4px}
+  .devis a{text-underline-offset:3px}
+
+  /* Faits */
+  .faits{background:var(--bande);padding:30px 0}
+  .faits ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .faits li{display:flex;flex-direction:column;gap:4px;font-size:15px;color:var(--encre-doux);line-height:1.4}
+  .faits b{font-family:var(--display);font-weight:400;font-size:21px;color:var(--encre);line-height:1.15}
+
+  /* Histoire */
+  .histoire{padding:124px 0 112px}
+  .histoire .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+  .colonne-photos{position:relative;padding:0 0 70px}
+  .colonne-photos .grande{width:84%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--ombre)}
+  .polaroid{position:absolute;right:0;bottom:0;width:44%;margin:0;background:var(--surface);padding:10px 10px 0;border-radius:6px;transform:rotate(4deg);box-shadow:var(--ombre-forte)}
+  .polaroid img{width:100%;aspect-ratio:1/1.1;object-fit:cover;object-position:50% 50%;border-radius:2px}
+  .polaroid figcaption{font-size:14px;color:var(--encre-doux);padding:10px 4px 12px;line-height:1.3}
+  .histoire h2,.restauration h2,.galerie h2,.tissus h2{font-size:clamp(32px,3.8vw,52px)}
+  .histoire .texte p{color:var(--encre-doux);margin-top:20px;max-width:34em}
+  .histoire .fil{margin-top:36px;font-family:var(--display);font-size:clamp(24px,2.4vw,32px);line-height:1.22;color:var(--accent);max-width:20em}
+
+  /* Restauration */
+  .restauration{background:var(--surface);padding:120px 0}
+  .restauration .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+  .restauration .texte > p{color:var(--encre-doux);margin-top:20px;max-width:32em}
+  .points{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid rgba(28,44,76,.15)}
+  .points li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:20px;padding:16px 0;border-bottom:1px solid rgba(28,44,76,.15);font-size:16px;color:var(--encre-doux)}
+  .points b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--encre);line-height:1.3}
+  .etabli{position:relative;margin:0}
+  .etabli img{width:100%;aspect-ratio:1600/1139;object-fit:cover;border-radius:20px;box-shadow:var(--ombre)}
+  .etabli .pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px}
+
+  /* Galerie */
+  .galerie{padding:120px 0}
+  .galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
+  .galerie .tete p{color:var(--encre-doux);max-width:28em;margin-top:16px}
+  .mosaique{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+  .mosaique figure{margin:0;position:relative}
+  .mosaique img{width:100%;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+  .m1{grid-column:1/6}
+  .m1 img{aspect-ratio:4/5;object-position:50% 50%}
+  .m2{grid-column:6/9;margin-top:64px !important}
+  .m2 img{aspect-ratio:3/4;object-position:50% 60%}
+  .m3{grid-column:9/13}
+  .m3 img{aspect-ratio:1/1;object-position:50% 55%}
+  .m4{grid-column:9/13;margin-top:-90px !important;width:78%;justify-self:end;background:var(--surface);padding:10px 10px 0;border-radius:6px;transform:rotate(-3deg);box-shadow:var(--ombre-forte)}
+  .m4 img{aspect-ratio:1/1;border-radius:2px;box-shadow:none;object-position:50% 50%}
+  .m4 figcaption{padding:9px 4px 11px !important;position:static !important;background:none !important;box-shadow:none !important}
+  .m5{grid-column:6/9;margin-top:-40px !important}
+  .m5 img{aspect-ratio:1/1.05;object-position:50% 60%}
+  .mosaique figcaption{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;line-height:1.3;max-width:calc(100% - 28px)}
+
+  /* Cours */
+  .cours{background:var(--sombre);color:var(--surface);padding:120px 0}
+  .cours .large{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:center}
+  .cours h2{font-size:clamp(32px,3.8vw,52px);color:var(--surface)}
+  .cours .intro{color:rgba(251,247,230,.78);margin-top:18px;max-width:32em}
+  .formules{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .formules li{border-top:1px solid rgba(251,247,230,.28);padding-top:20px;color:rgba(251,247,230,.78);font-size:16px;line-height:1.5}
+  .formules b{display:block;font-family:var(--display);font-weight:400;font-size:24px;color:var(--surface);margin-bottom:6px;line-height:1.15}
+  .formules .quand{display:block;color:#F3EBC8;font-weight:600;margin-bottom:6px}
+  .cours .photo{position:relative;margin:0}
+  .cours .photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 60%;border-radius:22px;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+  .cours .photo figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px}
+  .cours .btn-clair{margin-top:44px;background:var(--surface);color:var(--encre)}
+  .cours .btn-clair:hover{transform:translateY(-2px);background:var(--base)}
+
+  /* Tissus */
+  .tissus{padding:120px 0}
+  .tissus .large{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:72px;align-items:center}
+  .tissus .intro{color:var(--encre-doux);margin-top:18px;max-width:32em}
+  .editeurs{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+  .editeurs li{font-family:var(--display);font-size:clamp(22px,2.3vw,31px);line-height:1.25}
+  .editeurs li:not(:last-child)::after{content:"/";color:var(--accent);margin-left:14px;font-family:var(--texte);font-weight:300}
+  .editeurs .fin{font-family:var(--texte);font-size:17px;color:var(--encre-doux)}
+  .tissus .detail{margin:0;position:relative}
+  .tissus .detail img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 40%;border-radius:22px 22px 22px 120px;box-shadow:var(--ombre)}
+
+  /* Citation */
+  .citation{background:var(--accent);color:var(--surface);padding:104px 0}
+  .citation blockquote{margin:0}
+  .citation p{font-family:var(--display);font-size:clamp(28px,3.6vw,50px);line-height:1.16;max-width:20em;text-wrap:balance}
+  .citation cite{display:block;margin-top:24px;font-style:normal;font-size:17px;color:rgba(251,247,230,.8)}
+
+  /* Contact */
+  .contact{background:var(--bande);padding:120px 0}
+  .contact .large{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+  .contact h2{font-size:clamp(34px,4.2vw,58px)}
+  .contact .texte p{color:var(--encre-doux);margin:20px 0 34px;max-width:30em}
+  .fiche{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--ombre)}
+  .fiche dl{margin:0;display:grid;gap:22px}
+  .fiche dt{font-size:14px;color:var(--encre-doux);margin-bottom:4px;font-weight:500}
+  .fiche dd{margin:0;font-family:var(--display);font-size:22px;line-height:1.35}
+  .fiche dd a{text-decoration:none}
+  .fiche dd a:hover{text-decoration:underline;text-underline-offset:3px}
+  .fiche .petit{font-family:var(--texte);font-size:16px;color:var(--encre-doux)}
+
+  /* Pied */
+  .pied{background:var(--sombre);color:rgba(251,247,230,.8);padding:72px 0 48px;font-size:16px}
+  .pied .large{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .pied b{font-family:var(--display);font-weight:400;font-size:28px;color:var(--surface);display:block;margin-bottom:12px}
+  .pied h3{font-family:var(--texte);font-weight:600;font-size:15px;color:var(--surface);margin-bottom:14px}
+  .pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .pied a{text-decoration:none}
+  .pied a:hover{color:var(--surface);text-decoration:underline;text-underline-offset:3px}
+  .signature{background:#15223C;color:rgba(251,247,230,.55);text-align:center;font-size:13px;padding:16px 20px;margin:0}
+
+  /* Apparition */
+  .js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s ease}
+  .js .apparait.vu{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .js .apparait{opacity:1;transform:none;transition:none}
+  }
+
+  /* Tablette */
+  @media (max-width: 1020px){
+    .nav a:not(.appel){display:none}
+    .histoire .large,.restauration .large,.cours .large,.tissus .large,.contact .large,.heros-bas{grid-template-columns:minmax(0,1fr);gap:52px}
+    .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .colonne-photos{max-width:560px}
+    .cours .photo{max-width:420px}
+    .tissus .detail{max-width:420px}
+  }
+  /* Téléphone */
+  @media (max-width: 720px){
+    body{font-size:17px}
+    .entete .large{min-height:64px}
+    .marque b{font-size:21px}
+    .marque span{display:none}
+    .nav .appel{padding:10px 16px;font-size:15px}
+    .heros{padding:32px 0 72px}
+    .scene{display:flex;flex-direction:column}
+    .scene h1{order:1;margin-bottom:24px}
+    .scene h1 span{display:inline}
+    .photo-heros{order:2;margin:0;aspect-ratio:4/3}
+    .photo-heros::after{display:none}
+    .accroche{display:none}
+    .heros-bas{margin-top:30px}
+    .heros-bas .chapo{font-size:18px}
+    .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .histoire,.restauration,.galerie,.cours,.tissus,.contact{padding:84px 0}
+    .citation{padding:76px 0}
+    .points li{grid-template-columns:minmax(0,1fr);gap:4px}
+    .mosaique{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .m1{grid-column:1/3}
+    .m2,.m3,.m4,.m5{grid-column:auto;margin-top:0 !important}
+    .m4{width:auto;justify-self:stretch;transform:rotate(-2deg)}
+    .formules{grid-template-columns:minmax(0,1fr);gap:22px}
+    .fiche{padding:28px 24px}
+    .pied .large{grid-template-columns:minmax(0,1fr);gap:32px}
+  }
+  @media (max-width: 420px){
+    .boutons .btn{width:100%}
+    .faits ul{grid-template-columns:minmax(0,1fr)}
+    .mosaique figcaption{font-size:12px;left:8px;bottom:8px;max-width:calc(100% - 16px)}
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="large">
+    <a class="marque" href="#haut"><b>La mère LaChaise</b><span>Tapisserie d'ameublement, Limoges</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#restauration">Restauration</a>
+      <a href="#cours">Cours</a>
+      <a href="#tissus">Tissus</a>
+      <a href="#contact">Contact</a>
+      <a class="appel nowrap" href="tel:+33783019109">07 83 01 91 09</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="large">
+      <div class="scene">
+        <figure class="photo-heros">
+          <img src="assets/maps-la-mere-lachaise/paire-de-fauteuils-bleus-velours-et-fleuri-dehors.webp" alt="Deux fauteuils refaits au bord d'une rivière, l'un en tissu bleu roi, l'autre au dossier fleuri sur fond rouge" width="1600" height="900">
+          <span class="pastille">Une paire, tissus Casal et Thevenon</span>
+        </figure>
+        <div class="accroche">
+          <div class="accroche-texte">Tapisserie d'ameublement à Limoges, depuis 2018. Réfection de sièges, cours et tissus d'éditeurs.</div>
+          <span class="sceau" aria-hidden="true">Devis gratuit<br>et sur demande</span>
+        </div>
+        <h1><span>Vos sièges,</span> <span>refaits à Limoges.</span></h1>
+      </div>
+      <div class="heros-bas">
+        <div>
+          <p class="chapo">La mère LaChaise s'occupe de la réfection de vos sièges, en mousse ou en crin, dans le respect des savoir-faire et des styles, avec un conseil personnalisé. Pour un fauteuil unique, choisi selon vos goûts et pensé pour votre intérieur.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="mailto:lmlachaise@gmail.com?subject=Demande%20de%20devis">Demander un devis</a>
+            <a class="btn btn-contour" href="tel:+33783019109"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nowrap">07 83 01 91 09</span></a>
+          </div>
+        </div>
+        <p class="devis"><b>37 ter rue François Chénieux</b>87000 Limoges. Par téléphone ou à <a href="mailto:lmlachaise@gmail.com">lmlachaise@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="large">
+      <li><b>Depuis 2018</b>tapisserie d'ameublement à Limoges</li>
+      <li><b>Mousse ou crin</b>méthodes traditionnelles</li>
+      <li><b>Histoire de l'art</b>master, spécialité Art décoratif</li>
+      <li><b>Cours</b>mercredi soir et mardi matin</li>
+      <li><b>Tissus d'éditeurs</b>Casal, Lelièvre, Nobilis…</li>
+    </ul>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="large">
+      <div class="colonne-photos">
+        <img class="grande apparait" src="assets/maps-la-mere-lachaise/bergere-sculptee-en-velours-gris.webp" alt="Bergère à oreilles en bois sculpté garnie de velours gris perle, devant un papier peint jungle" width="1066" height="1600" loading="lazy">
+        <figure class="polaroid apparait"><img src="assets/maps-la-mere-lachaise/fauteuil-accoudoirs-jaunes-et-tissu-graphique.webp" alt="Fauteuil années 50 aux accoudoirs jaunes et au tissu abstrait multicolore, dans l'atelier aux murs de pierre" width="1200" height="1600" loading="lazy"><figcaption>Dans l'atelier</figcaption></figure>
+      </div>
+      <div class="texte">
+        <h2>Du musée à l'atelier de tapisserie</h2>
+        <p>Après un master en Histoire de l'art avec une spécialisation en Art décoratif, La mère LaChaise travaille dans plusieurs institutions culturelles. Que ce soit au musée d'Aubusson ou au Mobilier National, c'est là qu'elle découvre les métiers de l'artisanat d'art, et particulièrement celui de tapissier d'ameublement.</p>
+        <p>Elle quitte alors le monde de la culture pour se consacrer à cette passion, et fonde La mère LaChaise à Limoges en 2018.</p>
+        <p class="fil">De la tapisserie d'Aubusson à la tapisserie d'ameublement, il n'y a qu'un fil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="restauration" id="restauration">
+    <div class="large">
+      <div class="texte">
+        <h2>La réfection de vos sièges</h2>
+        <p>Faire appel à un tapissier d'ameublement est le meilleur moyen d'avoir un fauteuil unique, réalisé à partir de vos goûts et spécialement conçu pour correspondre à votre intérieur.</p>
+        <ul class="points">
+          <li><b>En mousse ou en crin</b><span>pour la réfection de vos sièges</span></li>
+          <li><b>Dans le respect des styles</b><span>et des savoir-faire</span></li>
+          <li><b>Méthodes traditionnelles</b><span>avec un conseil personnalisé</span></li>
+          <li><b>Devis gratuit</b><span>et sur demande</span></li>
+        </ul>
+      </div>
+      <figure class="etabli apparait">
+        <img src="assets/maps-la-mere-lachaise/siege-demonte-et-pieds-sur-l-etabli.webp" alt="Assise ronde démontée, pieds tournés et cerceau de dossier posés sur l'établi avec clous, ciseaux et maillets" width="1600" height="1139" loading="lazy">
+        <span class="pastille">Un siège démonté, sur l'établi</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="galerie" id="galerie">
+    <div class="large">
+      <div class="tete">
+        <div>
+          <h2>Quelques sièges refaits</h2>
+          <p>Un aperçu des sièges passés par l'atelier. La galerie complète en montre 28.</p>
+        </div>
+        <a class="btn btn-contour" href="https://lamerelachaise.wixsite.com/accueil/galerie">Voir la galerie complète</a>
+      </div>
+      <div class="mosaique">
+        <figure class="m1 apparait"><img src="assets/maps-la-mere-lachaise/deux-fauteuils-club-verts-a-motif-grec.webp" alt="Deux fauteuils à accoudoirs courbés en tissu à carrés verts et blancs, velours vert sur le devant de l'assise" width="1204" height="1600" loading="lazy"><figcaption>Deux fauteuils, carrés verts et velours</figcaption></figure>
+        <figure class="m2 apparait"><img src="assets/maps-la-mere-lachaise/fauteuil-cocktail-turquoise.webp" alt="Fauteuil cocktail à dossier en éventail en velours turquoise" width="1200" height="1600" loading="lazy"><figcaption>Fauteuil cocktail, velours turquoise</figcaption></figure>
+        <figure class="m3 apparait"><img src="assets/maps-la-mere-lachaise/fauteuil-crapaud-velours-fleuri-passepoil-rose.webp" alt="Petit fauteuil crapaud en tissu fleuri sur fond rose pâle avec passepoil rose vif" width="1438" height="1600" loading="lazy"><figcaption>Crapaud fleuri, passepoil rose</figcaption></figure>
+        <figure class="m5 apparait"><img src="assets/maps-la-mere-lachaise/chaises-turquoise-et-rouge-assises-fleuries.webp" alt="Deux chaises de bistrot turquoise et rouge aux assises fleuries" width="1200" height="1600" loading="lazy"><figcaption>Chaises de bistrot</figcaption></figure>
+        <figure class="m4 apparait"><img src="assets/maps-la-mere-lachaise/fauteuil-tulipe-en-tissu-ecossais.webp" alt="Fauteuil tulipe sur pied chromé garni d'un tissu écossais jaune, bleu et brun" width="1204" height="1600" loading="lazy"><figcaption>Fauteuil tulipe, tissu écossais</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="large">
+      <div>
+        <h2>Apprendre la tapisserie d'ameublement</h2>
+        <p class="intro">La mère LaChaise partage aussi sa passion à travers des cours, sous différents formats. Elle vous accompagne dans la réfection de votre propre siège.</p>
+        <ul class="formules">
+          <li><b>Les cours du mercredi soir</b><span class="quand">17&nbsp;h 30 à 19&nbsp;h 30</span>Au sein de l'atelier, tout au long de l'année, pour la réfection de votre siège.</li>
+          <li><b>Les cours du mardi matin</b><span class="quand">9&nbsp;h à 12&nbsp;h</span>Tous les 15&nbsp;jours, à Javerdat.</li>
+          <li><b>Les cours particuliers</b><span class="quand">Sur demande</span>Pour plus de renseignements, contactez La mère LaChaise.</li>
+        </ul>
+        <a class="btn btn-clair" href="tel:+33783019109">Se renseigner au <span class="nowrap">07 83 01 91 09</span></a>
+      </div>
+      <figure class="photo apparait">
+        <img src="assets/maps-la-mere-lachaise/fauteuil-bridge-jaune-moutarde.webp" alt="Petit fauteuil à accoudoirs croisés en bois clair, tissu jaune moutarde, devant un mur noir" width="1204" height="1600" loading="lazy">
+        <figcaption>Fauteuil bridge, jaune moutarde</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="tissus" id="tissus">
+    <div class="large">
+      <div>
+        <h2>Commander votre tissu</h2>
+        <p class="intro">La mère LaChaise travaille avec de nombreux éditeurs de tissus et de passementerie, notamment&nbsp;:</p>
+        <ul class="editeurs">
+          <li>Casal</li><li>Belinac</li><li>Blendworth</li><li>Nobilis</li><li>Lelièvre</li><li>Aristide</li><li>Thevenon</li><li>Osborne &amp; Little</li><li>Zimmer + Rohde</li><li>Houlès</li><li>Les passementeries de l'Île de France</li><li class="fin">et bien d'autres encore.</li>
+        </ul>
+      </div>
+      <figure class="detail apparait">
+        <img src="assets/maps-la-mere-lachaise/fauteuil-fleuri-et-accoudoir-bleu-canard.webp" alt="Détail d'un fauteuil années 50 en jacquard à grandes fleurs avec un accoudoir bleu canard" width="1204" height="1600" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Citation">
+    <div class="large">
+      <blockquote>
+        <p>« L'art devrait être quelque chose comme un bon fauteuil dans lequel se reposer de la fatigue physique. »</p>
+        <cite>Henri Matisse</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="large">
+      <div class="texte">
+        <h2>Parlons de votre siège.</h2>
+        <p>Un fauteuil à refaire, un tissu à choisir, une place aux cours&nbsp;: appelez ou écrivez, le devis est gratuit.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33783019109">Appeler le <span class="nowrap">07 83 01 91 09</span></a>
+          <a class="btn btn-contour" href="mailto:lmlachaise@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="fiche">
+        <dl>
+          <div><dt>Adresse</dt><dd>37 ter rue François Chénieux<br>87000 Limoges</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33783019109">07 83 01 91 09</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:lmlachaise@gmail.com">lmlachaise@gmail.com</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/la.mere.lachaise/">@la.mere.lachaise</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <b>La mère LaChaise</b>
+      <p>Tapisserie d'ameublement à Limoges depuis 2018. Réfection de sièges, cours, commande de tissus.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>37 ter rue François Chénieux, 87000 Limoges</li>
+        <li><a class="nowrap" href="tel:+33783019109">07 83 01 91 09</a></li>
+        <li><a href="mailto:lmlachaise@gmail.com">lmlachaise@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/la.mere.lachaise/">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sur le site de l'atelier</h3>
+      <ul>
+        <li><a href="https://lamerelachaise.wixsite.com/accueil/restauration">Restauration</a></li>
+        <li><a href="https://lamerelachaise.wixsite.com/accueil/ateliers">Ateliers</a></li>
+        <li><a href="https://lamerelachaise.wixsite.com/accueil/commande-de-tissu">Commande de tissu</a></li>
+        <li><a href="https://lamerelachaise.wixsite.com/accueil/galerie">Galerie</a></li>
+        <li><a href="https://lamerelachaise.wixsite.com/accueil/a-propos">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour La mère LaChaise</p>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = document.querySelectorAll('.apparait');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function(e){ e.classList.add('vu'); }); return;
+    }
+    var io = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>

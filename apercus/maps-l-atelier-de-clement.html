@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>L'Atelier de Clément, fleuriste et cours d'art floral à Limoges</title>
+<meta name="description" content="Cours d'art floral à Limoges : fleurs coupées, fleurs séchées, stabilisé, terrarium, bijoux floraux. 8 rue Jean Jaurès, 07 77 05 90 27.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2322301F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F3F6EF'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,300..600;1,300..500&family=Outfit:wght@300..500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#E3EADB; --bande:#D5DFCA; --surface:#F3F6EF;
+    --encre:#22301F; --encre-doux:#4B5B46; --accent:#C2457A; --sombre:#22301F;
+    --ombre:0 30px 60px -34px rgba(34,48,31,.55);
+    --ombre-forte:0 46px 80px -40px rgba(34,48,31,.7);
+    --display:"Petrona", Georgia, serif;
+    --texte:"Outfit", "Avenir Next", sans-serif;
+    --large:min(1200px, 100% - 40px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:350;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--surface)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:450;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.015em}
+  p{margin:0;text-wrap:pretty}
+  .large{width:var(--large);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+  .nowrap{white-space:nowrap}
+
+  /* En-tête */
+  .entete{position:sticky;top:0;z-index:20;background:rgba(227,234,219,.94);border-bottom:1px solid rgba(34,48,31,.08)}
+  .entete .large{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+  .marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+  .marque b{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:-.01em}
+  .marque span{font-size:14px;color:var(--encre-doux);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:30px;font-size:16px}
+  .nav a{text-decoration:none;color:var(--encre-doux);transition:color .2s}
+  .nav a:hover{color:var(--encre)}
+  .nav .appel{color:var(--encre);background:var(--surface);padding:11px 20px;border-radius:999px;font-weight:450;box-shadow:0 12px 26px -18px rgba(34,48,31,.6);transition:transform .25s, box-shadow .25s}
+  .nav .appel:hover{transform:translateY(-2px);box-shadow:0 18px 30px -18px rgba(34,48,31,.7)}
+
+  /* Boutons */
+  .boutons{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font:450 17px/1.2 var(--texte);text-decoration:none;transition:transform .25s ease, background .25s, color .25s, box-shadow .25s}
+  .btn-plein{background:var(--encre);color:var(--surface);box-shadow:0 18px 34px -20px rgba(34,48,31,.8)}
+  .btn-plein:hover{transform:translateY(-2px);background:#2F4229}
+  .btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+  .btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* Héros */
+  .heros{padding:72px 0 104px}
+  .heros .large{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5.4fr);gap:56px;align-items:center}
+  .situe{font-size:16px;color:var(--encre-doux);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+  .situe::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+  .heros h1{font-size:clamp(38px, 5.4vw, 78px);font-weight:400;line-height:1.04}
+  .heros h1 em{font-style:italic;color:var(--accent);font-weight:400}
+  .heros .chapo{font-size:19px;color:var(--encre-doux);max-width:33em;margin:28px 0 36px}
+  .heros .ecrire{margin-top:22px;font-size:16px;color:var(--encre-doux)}
+  .heros .ecrire a{text-underline-offset:3px;text-decoration-color:rgba(34,48,31,.35)}
+
+  /* Pile de polaroïds */
+  .pile{position:relative;width:min(560px,100%);aspect-ratio:1/1.02;margin-left:auto}
+  .pola{position:absolute;margin:0;background:var(--surface);padding:3.2% 3.2% 0;border-radius:6px;box-shadow:var(--ombre-forte)}
+  .pola img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+  .pola figcaption{font-family:var(--display);font-style:italic;font-size:17px;color:var(--encre-doux);padding:12px 4px 14px;line-height:1.2}
+  .pola.p1,.pola.p2{padding-bottom:13%}
+  .pola.p1{width:52%;top:0;right:0;transform:rotate(6deg)}
+  .pola.p1 img{object-position:50% 40%}
+  .pola.p2{width:50%;top:24%;left:0;transform:rotate(-7deg)}
+  .pola.p3{width:60%;bottom:0;left:22%;transform:rotate(2deg);z-index:2}
+  .pola.p3 img{object-position:50% 0%}
+
+  /* Bandeau de faits */
+  .faits{background:var(--bande);padding:30px 0}
+  .faits ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+  .faits li{display:flex;flex-direction:column;gap:4px;font-size:15px;color:var(--encre-doux);line-height:1.4}
+  .faits b{font-family:var(--display);font-weight:500;font-size:21px;color:var(--encre);line-height:1.15}
+
+  /* Univers */
+  .univers{padding:120px 0 112px}
+  .univers .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:start}
+  .duo{position:relative;padding-bottom:96px}
+  .duo .grande{border-radius:22px;box-shadow:var(--ombre);width:88%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+  .duo .petite{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:1/1.12;object-fit:cover;object-position:50% 55%;border-radius:16px;border:8px solid var(--surface);box-shadow:var(--ombre-forte)}
+  .duo .etiquette{position:absolute;left:18px;top:18px;background:var(--surface);font-size:14px;font-weight:450;padding:7px 13px;border-radius:999px}
+  .univers h2{font-size:clamp(32px,3.6vw,50px)}
+  .univers .intro{font-size:19px;color:var(--encre-doux);margin:22px 0 40px;max-width:34em}
+  .liste{list-style:none;margin:0;padding:0;border-top:1px solid rgba(34,48,31,.16)}
+  .liste li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(34,48,31,.16)}
+  .liste li span{font-family:var(--display);font-size:22px;line-height:1.25}
+  .liste li small{font-size:15px;color:var(--encre-doux)}
+  .liste li.cle span{font-weight:500}
+  .liste li.cle small{color:var(--accent);font-weight:450}
+  .liste-fin{margin-top:22px;font-size:16px;color:var(--encre-doux)}
+
+  /* Citation */
+  .citation{padding:24px 0 120px}
+  .citation blockquote{margin:0;background:var(--surface);border-radius:24px;padding:72px 8%;box-shadow:0 30px 60px -44px rgba(34,48,31,.45)}
+  .citation blockquote::before{content:"«";display:block;font-family:var(--display);font-size:96px;line-height:.6;color:var(--accent);margin-bottom:22px}
+  .citation p{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,46px);line-height:1.18;letter-spacing:-.01em;max-width:22em;text-wrap:balance}
+  .citation cite{display:block;margin-top:24px;font-style:normal;font-size:16px;color:var(--encre-doux)}
+
+  /* Prestations (sombre) */
+  .prestations{background:var(--sombre);color:var(--surface);padding:120px 0}
+  .prestations .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
+  .prestations h2{font-size:clamp(32px,3.6vw,50px);color:var(--surface)}
+  .prestations p{color:rgba(243,246,239,.8);margin-top:20px;max-width:32em}
+  .prestations .btn-clair{margin-top:34px;background:var(--surface);color:var(--encre)}
+  .prestations .btn-clair:hover{transform:translateY(-2px);background:#fff8fb}
+  .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+  .trio figure{margin:0;max-width:220px}
+  .trio figure:nth-child(2){margin-top:72px}
+  .trio figure:nth-child(3){margin-top:24px}
+  .trio img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:14px;box-shadow:0 30px 50px -30px rgba(0,0,0,.7)}
+  .trio figcaption{font-size:15px;color:rgba(243,246,239,.75);margin-top:12px;line-height:1.4}
+
+  /* Carte cadeau */
+  .cadeau{padding:120px 0}
+  .cadeau .large{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+  .carte{position:relative;background:var(--encre);color:var(--surface);border-radius:22px;padding:40px 40px 36px;aspect-ratio:1.6/1;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-3deg);box-shadow:var(--ombre-forte);max-width:460px}
+  .carte::after{content:"";position:absolute;inset:12px;border:1px dashed rgba(243,246,239,.35);border-radius:14px;pointer-events:none}
+  .carte b{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.6vw,34px);line-height:1.1}
+  .carte .montant{font-family:var(--display);font-size:clamp(40px,4.4vw,60px);line-height:1;color:#F4C9DA}
+  .carte small{display:block;font-size:15px;color:rgba(243,246,239,.75);margin-top:8px}
+  .cadeau h2{font-size:clamp(32px,3.6vw,50px)}
+  .cadeau .texte p{color:var(--encre-doux);margin-top:18px;max-width:34em}
+  .paiement{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-top:26px;border-top:1px solid rgba(34,48,31,.16)}
+  .paiement b{display:block;font-family:var(--display);font-weight:500;font-size:20px}
+  .paiement span{font-size:16px;color:var(--encre-doux);line-height:1.5}
+  .cadeau .boutons{margin-top:34px}
+
+  /* Contact */
+  .contact{background:var(--bande);padding:120px 0}
+  .contact .large{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+  .contact h2{font-size:clamp(34px,4vw,56px)}
+  .contact .texte p{color:var(--encre-doux);margin:20px 0 34px;max-width:30em}
+  .fiche{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--ombre)}
+  .fiche dl{margin:0;display:grid;gap:22px}
+  .fiche dt{font-size:14px;color:var(--encre-doux);margin-bottom:4px}
+  .fiche dd{margin:0;font-family:var(--display);font-size:21px;line-height:1.35}
+  .fiche dd a{text-decoration:none}
+  .fiche dd a:hover{text-decoration:underline;text-underline-offset:3px}
+  .horaires{font-family:var(--texte) !important;font-size:17px !important}
+  .horaires span{display:block}
+  .horaires small{display:block;font-size:15px;color:var(--encre-doux);margin-top:4px}
+
+  /* Pied */
+  .pied{background:var(--sombre);color:rgba(243,246,239,.8);padding:72px 0 48px;font-size:16px}
+  .pied .large{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .pied b{font-family:var(--display);font-weight:500;font-size:26px;color:var(--surface);display:block;margin-bottom:12px}
+  .pied h3{font-family:var(--texte);font-weight:450;font-size:15px;color:var(--surface);margin-bottom:14px;letter-spacing:0}
+  .pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .pied a{text-decoration:none}
+  .pied a:hover{color:var(--surface);text-decoration:underline;text-underline-offset:3px}
+  .signature{background:#1A2518;color:rgba(243,246,239,.55);text-align:center;font-size:13px;padding:16px 20px;margin:0}
+
+  /* Apparition */
+  .js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s ease}
+  .js .apparait.vu{opacity:1;transform:none}
+  .js .pola.apparait{transform:translateY(22px) rotate(var(--r,0deg))}
+  .js .pola.apparait.vu{transform:rotate(var(--r,0deg))}
+  .pola.p1{--r:6deg}.pola.p2{--r:-7deg}.pola.p3{--r:2deg}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .js .apparait,.js .pola.apparait{opacity:1;transform:rotate(var(--r,0deg));transition:none}
+  }
+
+  /* Tablette */
+  @media (max-width: 1020px){
+    .nav a:not(.appel){display:none}
+    .heros .large,.univers .large,.prestations .large,.cadeau .large,.contact .large{grid-template-columns:minmax(0,1fr);gap:56px}
+    .pile{margin:0 auto}
+    .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .duo{max-width:560px}
+    .carte{margin:0 auto}
+  }
+  /* Téléphone */
+  @media (max-width: 620px){
+    .heros .large > div:first-child{display:contents}
+    .heros .large{gap:0}
+    .heros .situe{order:1}.heros h1{order:2}.pile{order:3;width:min(330px,92%);margin:30px auto 8px}.heros .chapo{order:4}.heros .boutons{order:5}.heros .ecrire{order:6}
+    body{font-size:17px}
+    .entete .large{min-height:64px}
+    .marque b{font-size:21px}
+    .marque span{display:none}
+    .nav .appel{padding:10px 16px;font-size:15px}
+    .heros{padding:36px 0 72px}
+    .heros .chapo{font-size:18px;margin:22px 0 28px}
+    .pola figcaption{font-size:15px;padding:8px 2px 10px}
+      .univers,.prestations,.cadeau,.contact{padding:84px 0}
+    .citation{padding:8px 0 84px}
+    .citation blockquote{padding:44px 26px}
+    .liste li{grid-template-columns:minmax(0,1fr)}
+    .liste li span{font-size:20px}
+    .trio{gap:12px}
+    .trio figure:nth-child(2){margin-top:40px}
+    .carte{padding:28px 26px 26px}
+    .paiement{grid-template-columns:minmax(0,1fr)}
+    .fiche{padding:28px 24px}
+    .pied .large{grid-template-columns:minmax(0,1fr);gap:32px}
+  }
+  @media (max-width: 420px){
+    .boutons .btn{width:100%}
+    .faits ul{grid-template-columns:minmax(0,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="large">
+    <a class="marque" href="#haut"><b>L'Atelier de Clément</b><span>Fleuriste, cours d'art floral à Limoges</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#univers">Les cours</a>
+      <a href="#prestations">Événements</a>
+      <a href="#cadeau">Carte cadeau</a>
+      <a href="#contact">Contact</a>
+      <a class="appel nowrap" href="tel:+33777059027">07 77 05 90 27</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="large">
+      <div>
+        <p class="situe">8 rue Jean Jaurès, à Limoges</p>
+        <h1>Des fleurs, des <em>gestes</em>, un savoir-faire à votre portée.</h1>
+        <p class="chapo">L'Atelier de Clément vous propose un moment convivial et chaleureux pour découvrir le métier de fleuriste. Ayant à cœur de vous transmettre une partie de mon savoir-faire, je vous guiderai pour réaliser vos propres créations florales et végétales.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#univers">Découvrir nos cours</a>
+          <a class="btn btn-contour" href="tel:+33777059027"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nowrap">07 77 05 90 27</span></a>
+        </div>
+        <p class="ecrire">Ou écrivez à <a href="mailto:latelierdeclement.durond@gmail.com">latelierdeclement.durond@gmail.com</a></p>
+      </div>
+      <div class="pile" aria-label="Photos de l'atelier">
+        <figure class="pola p1 apparait"><img src="assets/maps-l-atelier-de-clement/bouquet-tropical-protea-et-feuilles-de-palmier.webp" alt="Bouquet tropical : protéa rose, fleurs rouges et jaunes, feuilles de palmier" width="1228" height="1600"></figure>
+        <figure class="pola p2 apparait"><img src="assets/maps-l-atelier-de-clement/bouquet-de-pivoines-et-roses-dans-du-kraft.webp" alt="Bouquet de pivoines corail, roses fuchsia et eucalyptus dans du papier kraft" width="1210" height="1600"></figure>
+        <figure class="pola p3 apparait"><img src="assets/maps-l-atelier-de-clement/quatre-participantes-et-leurs-creations-devant-l-atelier.webp" alt="Quatre participantes tiennent leurs cloches de fleurs séchées devant la vitrine de L'Atelier de Clément" width="1200" height="1600"><figcaption>Chacune sa cloche, devant l'atelier</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="large">
+      <li><b>Limoges</b>8 rue Jean Jaurès</li>
+      <li><b>Mercredi au samedi</b>14&nbsp;h à 19&nbsp;h, sur rendez-vous selon le planning des ateliers</li>
+      <li><b>Fleurs coupées, séchées, stabilisées</b>terrarium, décoration, bijoux floraux</li>
+      <li><b>Carte cadeau</b>à partir de 55&nbsp;€</li>
+    </ul>
+  </section>
+
+  <section class="univers" id="univers">
+    <div class="large">
+      <div class="duo">
+        <img class="grande apparait" src="assets/maps-l-atelier-de-clement/bouquet-de-fleurs-sechees-et-graminees.webp" alt="Bouquet rond de fleurs séchées aux tons sable, protéa, blé et queues-de-lièvre" width="1302" height="1600" loading="lazy">
+        <span class="etiquette">Fleurs séchées</span>
+        <img class="petite apparait" src="assets/maps-l-atelier-de-clement/cache-pot-en-beton-aux-oiseaux.webp" alt="Cache-pot rond en béton bordé de petits oiseaux sculptés" width="1209" height="1600" loading="lazy">
+      </div>
+      <div>
+        <h2>L'univers de l'atelier</h2>
+        <p class="intro">Nos cours d'art floral : fleurs coupées, stabilisé, terrarium, décoration, fleurs séchées et bijoux floraux.</p>
+        <ul class="liste">
+          <li><span>Le travail des fleurs coupées</span></li>
+          <li><span>La découverte des fleurs séchées</span></li>
+          <li class="cle"><span>Le travail de la terre</span><small>terrarium, jardin de plantes</small></li>
+          <li class="cle"><span>Les bijoux floraux</span></li>
+          <li><span>Les décorations diverses</span></li>
+          <li><span>Les structures florales et végétales</span></li>
+          <li class="cle"><span>Le travail du stabilisé</span></li>
+          <li><span>Les événements de la vie</span><small>naissance, mariage…</small></li>
+          <li><span>Les fêtes</span><small>Noël, Saint-Valentin, fête des Mères, Pâques…</small></li>
+        </ul>
+        <p class="liste-fin">Les plannings des ateliers sont publiés sur <a href="https://www.instagram.com/fleuriste.clement/">Instagram</a>. Vos idées et vos envies sont les bienvenues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Citation">
+    <div class="large">
+      <blockquote>
+        <p>Vos idées et vos envies feront germer de nouvelles créations.</p>
+        <cite>Clément Durond, fleuriste</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="prestations" id="prestations">
+    <div class="large">
+      <div>
+        <h2>Vos événements, fleuris sur mesure</h2>
+        <p>Au-delà des cours, je mets mon savoir-faire et ma créativité au service de vos événements : mariages, anniversaires, réceptions, événements professionnels ou projets particuliers.</p>
+        <p>J'imagine des compositions florales uniques, en harmonie avec vos envies, votre univers et votre budget, avec une attention particulière aux détails et à la qualité des fleurs. Que vous ayez une idée précise ou simplement une envie à explorer, je vous accompagne à chaque étape.</p>
+        <a class="btn btn-clair" href="https://latelierdeclement.wixsite.com/latelier/copie-de-carte-cadeau">Voir nos prestations</a>
+      </div>
+      <div class="trio">
+        <figure class="apparait"><img src="assets/maps-l-atelier-de-clement/bouquet-de-roses-stabilisees-et-pampa.webp" alt="Bouquet de mariée en roses stabilisées bordeaux et vieux rose, pampa et ruban" width="736" height="1104" loading="lazy"><figcaption>Bouquet de mariée, roses stabilisées et pampa</figcaption></figure>
+        <figure class="apparait"><img src="assets/maps-l-atelier-de-clement/couronnes-vegetales-suspendues-et-rubans.webp" alt="Trois cerceaux garnis de feuillage et de rubans suspendus sous une charpente" width="736" height="1104" loading="lazy"><figcaption>Couronnes végétales suspendues</figcaption></figure>
+        <figure class="apparait"><img src="assets/maps-l-atelier-de-clement/couronne-de-fleurs-sechees-sur-un-buste.webp" alt="Couronne de cheveux en fleurs séchées roses et mauves sur un buste en lin" width="736" height="1308" loading="lazy"><figcaption>Couronne de fleurs séchées</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cadeau" id="cadeau">
+    <div class="large">
+      <div class="carte" aria-hidden="true">
+        <b>Une carte cadeau pour un atelier</b>
+        <div><span class="montant">55&nbsp;€</span><small>valeur minimale, ou plus si le cœur vous en dit</small></div>
+      </div>
+      <div class="texte">
+        <h2>Offrir un atelier, la bonne idée</h2>
+        <p>La carte cadeau vaut 55&nbsp;€ ou plus, si le cœur vous en dit. Vous la recevez par e-mail ou vous la récupérez à l'atelier, avec votre message pour la personne qui la reçoit.</p>
+        <div class="paiement">
+          <div><b>Paiement</b><span>Carte bancaire, chèque ou espèces.</span></div>
+          <div><b>Réservation</b><span>Validée à réception du paiement, par lien de paiement ou à l'atelier.</span></div>
+        </div>
+        <div class="boutons">
+          <a class="btn btn-plein" href="https://latelierdeclement.wixsite.com/latelier/carte-cadeau-1">Commander une carte cadeau</a>
+          <a class="btn btn-contour" href="https://latelierdeclement.wixsite.com/latelier/moyens-de-paiement">Moyens de paiement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="large">
+      <div class="texte">
+        <h2>Une question sur les cours&nbsp;?</h2>
+        <p>Besoin d'aide ou d'un renseignement sur les cours floraux, une carte cadeau ou un événement&nbsp;? N'hésitez pas à appeler ou à écrire.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33777059027">Appeler le <span class="nowrap">07 77 05 90 27</span></a>
+          <a class="btn btn-contour" href="mailto:latelierdeclement.durond@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="fiche">
+        <dl>
+          <div><dt>L'atelier</dt><dd>8 rue Jean Jaurès<br>87000 Limoges</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33777059027">07 77 05 90 27</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:latelierdeclement.durond@gmail.com" style="word-break:break-word">latelierdeclement.durond@gmail.com</a></dd></div>
+          <div><dt>Heures d'ouverture</dt><dd class="horaires"><span>Mercredi, jeudi, vendredi, samedi</span><span>14&nbsp;h à 19&nbsp;h</span><small>Sur rendez-vous selon le planning des ateliers</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <b>L'Atelier de Clément</b>
+      <p>Clément Durond, fleuriste. Cours d'art floral, compositions pour vos événements, cartes cadeaux.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>8 rue Jean Jaurès, 87000 Limoges</li>
+        <li><a class="nowrap" href="tel:+33777059027">07 77 05 90 27</a></li>
+        <li><a href="mailto:latelierdeclement.durond@gmail.com" style="word-break:break-word">latelierdeclement.durond@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/fleuriste.clement/">Instagram : @fleuriste.clement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sur le site de l'atelier</h3>
+      <ul>
+        <li><a href="https://latelierdeclement.wixsite.com/latelier/copie-de-carte-cadeau">Nos prestations</a></li>
+        <li><a href="https://latelierdeclement.wixsite.com/latelier/carte-cadeau-1">Carte cadeau</a></li>
+        <li><a href="https://latelierdeclement.wixsite.com/latelier/nos-partenaires">Nos partenaires</a></li>
+        <li><a href="https://latelierdeclement.wixsite.com/latelier/nous-contacter">Nous contacter</a></li>
+        <li><a href="https://latelierdeclement.wixsite.com/latelier/mentions-l%C3%A9gales-1">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour L'Atelier de Clément</p>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = document.querySelectorAll('.apparait');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function(e){ e.classList.add('vu'); }); return;
+    }
+    var io = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>
