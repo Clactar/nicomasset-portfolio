@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Greenville Arms 1889 Inn · Greenville, NY</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235B2A4E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F3F2EC'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#E6E8DF; --linen-deep:#D9DCCF; --surface:#F3F2EC;
+  --plum-ink:#2B1828; --plum:#5B2A4E; --gilt:#A87A2A;
+  --text:#2B1828; --soft:#5C5059; --rule:#C9CCBE;
+  --shadow:0 34px 64px -36px rgba(43,24,40,.55);
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--linen);color:var(--text);font:400 17px/1.6 "Hanken Grotesk",sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--plum);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:"Bodoni Moda",serif;font-weight:500;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--plum);transition:background .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-full{background:var(--plum);color:var(--surface)}
+.btn-full:hover{background:var(--plum-ink);border-color:var(--plum-ink)}
+.btn-line{color:var(--plum)}
+.btn-line:hover{background:var(--plum);color:var(--surface)}
+
+/* header */
+.top{position:sticky;top:0;z-index:10;background:rgba(230,232,223,.94);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{text-decoration:none;font-family:"Bodoni Moda",serif;font-size:22px;line-height:1.1}
+.brand small{display:block;font-family:"Hanken Grotesk",sans-serif;font-size:13px;color:var(--soft)}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--plum)}
+.nav .btn{min-height:42px;padding:8px 20px;font-size:15px}
+
+/* hero */
+.hero{padding:64px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,4.4vw,62px);letter-spacing:0}
+.hero h1 em{font-style:italic;color:var(--plum)}
+.lede{margin-top:26px;font-size:19px;color:var(--soft);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-art{position:relative;padding:0 0 56px 0}
+.hero-main{border-radius:24px;box-shadow:var(--shadow);aspect-ratio:16/11;object-fit:cover;object-position:50% 60%;width:100%}
+.tag{position:absolute;background:var(--surface);color:var(--plum-ink);font-size:14px;font-weight:500;padding:8px 14px;border-radius:10px;box-shadow:0 10px 24px -14px rgba(43,24,40,.5)}
+.hero-art .tag{left:18px;top:18px}
+.polaroid{position:absolute;left:-34px;bottom:0;width:min(250px,42%);background:var(--surface);padding:10px 10px 34px;border-radius:6px;box-shadow:var(--shadow);transform:rotate(-4deg)}
+.polaroid img{aspect-ratio:4/3;object-fit:cover;border-radius:3px;width:100%}
+.polaroid span{position:absolute;left:12px;bottom:9px;font-family:"Bodoni Moda",serif;font-style:italic;font-size:15px}
+
+/* facts */
+.facts{background:var(--linen-deep)}
+.facts ul{list-style:none;margin:0;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.facts b{display:block;font-family:"Bodoni Moda",serif;font-weight:500;font-size:30px;line-height:1.1;color:var(--plum)}
+.facts span{font-size:15px;color:var(--soft)}
+
+/* espresso */
+.espresso{padding:120px 0}
+.espresso .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.espresso figure{margin:0;position:relative}
+.espresso figure img{border-radius:20px;box-shadow:var(--shadow);aspect-ratio:1;object-fit:cover;width:100%}
+.espresso figure .tag{left:18px;bottom:18px}
+h2{font-size:clamp(32px,3.6vw,50px)}
+.intro{margin-top:18px;color:var(--soft);max-width:36em}
+.menu{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--rule)}
+.menu li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.menu strong{font-weight:600}
+.menu .price{font-family:"Bodoni Moda",serif;font-size:19px;white-space:nowrap;color:var(--plum)}
+.menu small{grid-column:1/-1;color:var(--soft);font-size:15px}
+.hours{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.hours p{font-size:16px}
+
+/* chocolate (dark) */
+.choc{background:var(--plum-ink);color:var(--surface);padding:120px 0;border-radius:36px;margin-inline:12px}
+.choc .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+.choc img{border-radius:22px;aspect-ratio:16/10;object-fit:cover;width:100%;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.choc h2 em{font-style:italic}
+.choc p{color:#D8CFD5;margin-top:20px}
+.choc .btn{margin-top:32px;border-color:var(--surface);color:var(--surface)}
+.choc .btn:hover{background:var(--surface);color:var(--plum-ink)}
+
+/* workshops */
+.art{padding:128px 0 112px}
+.art-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end}
+.art-head blockquote{margin:0;font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(28px,3.2vw,44px);line-height:1.18}
+.art-head p{color:var(--soft)}
+.art-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;margin-top:72px;align-items:start}
+.stack{position:relative;padding-bottom:70px}
+.stack img:first-child{border-radius:18px;box-shadow:var(--shadow);aspect-ratio:1;object-fit:cover;width:86%}
+.stack img:last-child{position:absolute;right:0;bottom:0;width:min(230px,52%);aspect-ratio:3/2;object-fit:cover;border:8px solid var(--surface);border-radius:8px;box-shadow:var(--shadow);transform:rotate(3deg)}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--rule)}
+.timeline li:last-child{border-bottom:1px solid var(--rule)}
+.timeline b{font-family:"Bodoni Moda",serif;font-weight:500;font-size:28px;color:var(--plum);line-height:1.1}
+.timeline p{color:var(--soft)}
+.art .actions{margin-top:30px}
+
+/* rooms */
+.rooms{background:var(--surface);padding:120px 0}
+.rooms-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+.rooms-head p{color:var(--soft);max-width:30em}
+.room-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:56px}
+.room img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 26px 44px -30px rgba(43,24,40,.5)}
+.room:first-child img{aspect-ratio:4/3.6}
+.room:nth-child(2){margin-top:64px}
+.room h3{font-size:26px;margin-top:20px}
+.room p{color:var(--soft);font-size:16px;margin-top:8px}
+.room .rate{display:inline-block;margin-top:12px;font-weight:600;color:var(--plum);white-space:nowrap}
+.more-rooms{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 48px}
+.more-rooms div{display:flex;justify-content:space-between;gap:16px;font-size:16px}
+.more-rooms span:last-child{white-space:nowrap;color:var(--plum);font-weight:600}
+.rooms .note{margin-top:28px;font-size:15px;color:var(--soft)}
+
+/* breakfast + seasons */
+.morning{padding:128px 0}
+.morning .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:72px;align-items:center}
+.morning figure{margin:0;position:relative}
+.morning figure img{border-radius:999px 999px 24px 24px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+.morning p{color:var(--soft);margin-top:18px}
+.morning ul{margin:26px 0 0;padding:0;list-style:none}
+.morning li{padding:12px 0 12px 28px;border-bottom:1px solid var(--rule);position:relative}
+.morning li::before{content:"";position:absolute;left:4px;top:22px;width:8px;height:8px;border-radius:50%;background:var(--gilt)}
+.seasons{padding:0 0 128px}
+.seasons h2{max-width:16em}
+.season-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);gap:24px;margin-top:48px;align-items:end}
+.season-row figure{margin:0;position:relative}
+.season-row img{width:100%;object-fit:cover;border-radius:18px;box-shadow:0 26px 44px -30px rgba(43,24,40,.5)}
+.season-row figure:nth-child(1) img{aspect-ratio:3/4}
+.season-row figure:nth-child(2) img{aspect-ratio:4/3.4}
+.season-row figure:nth-child(3) img{aspect-ratio:3/4}
+.season-row .tag{left:14px;bottom:14px}
+
+/* footer */
+footer{background:var(--plum-ink);color:var(--surface);padding:96px 0 40px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.foot h2{font-size:clamp(30px,3.4vw,46px)}
+.foot h3{font-family:"Hanken Grotesk",sans-serif;font-size:15px;font-weight:600;color:#C9B9C4;margin-bottom:12px}
+.foot p,.foot a{color:#EDE6EA;font-size:16px}
+.foot a{text-decoration-color:rgba(237,230,234,.4);text-underline-offset:3px}
+.foot .btn{margin-top:28px;background:var(--surface);color:var(--plum-ink);border-color:var(--surface)}
+.foot .btn:hover{background:transparent;color:var(--surface)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 18px}
+.legal{margin-top:72px;padding-top:24px;border-top:1px solid rgba(237,230,234,.18);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#B9A9B4}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1060px){
+  .nav a:not(.btn){display:none}
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .hero{padding:40px 0 72px}
+  .hero .wrap,.espresso .wrap,.choc .wrap,.art-head,.art-body,.morning .wrap,.foot{grid-template-columns:minmax(0,1fr);gap:40px}
+  .hero-art{padding-bottom:48px}
+  .polaroid{left:auto;right:8px}
+  .room-grid{grid-template-columns:minmax(0,1fr)}
+  .room:nth-child(2){margin-top:0}
+  .more-rooms{grid-template-columns:minmax(0,1fr)}
+  .season-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .season-row figure:nth-child(2){grid-column:1/-1;order:-1}
+  .espresso,.choc,.rooms{padding:88px 0}
+  .art,.morning{padding:88px 0}
+  .seasons{padding-bottom:88px}
+  .morning figure{max-width:440px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 40px)}
+  .top .wrap{min-height:64px}
+  .brand{font-size:19px}
+  .brand small{display:none}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+  .facts b{font-size:25px}
+  .lede{font-size:17px}
+  .actions .btn{width:100%}
+  .choc{margin-inline:6px;border-radius:26px}
+  .timeline li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .stack img:first-child{width:100%}
+  .stack{padding-bottom:90px}
+  .more-rooms div{flex-wrap:wrap}
+}
+@media (max-width:420px){
+  .nav .btn{padding:8px 14px;font-size:14px}
+  .btn{white-space:normal;text-align:center}
+  .polaroid{width:min(190px,56%)}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Greenville Arms<small>1889 Inn · Greenville, NY</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#espresso">Espresso Bar</a>
+      <a href="#chocolate">Chocolate</a>
+      <a href="#workshops">Art Workshops</a>
+      <a href="#rooms">Rooms</a>
+      <a href="tel:+15189665219">(518) 966-5219</a>
+      <a class="btn btn-full" href="https://via.eviivo.com/GrnvllArms1889Inn12083">Book your stay</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>A Victorian inn with a gallery, a chocolate kitchen and an <em>espresso bar</em>.</h1>
+      <p class="lede">Built in 1889 for William S. and Mary Reed Chapman Vanderbilt, the Inn sits on six acres of gardens, lawns and woodlands in Greenville. Sixteen guest rooms, open year-round, so you can come back for every season.</p>
+      <div class="actions">
+        <a class="btn btn-full" href="https://via.eviivo.com/GrnvllArms1889Inn12083">Book your stay</a>
+        <a class="btn btn-line" href="#espresso">See the espresso bar menu</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="hero-main" src="assets/greenville-arms-greenville-ny/facade-auberge-ete.webp" alt="The white Victorian main inn in summer, with its double porch and the Greenville Arms sign" width="2500" height="1406">
+      <span class="tag">Queen Anne Revival, 1889</span>
+      <figure class="polaroid" style="margin:0">
+        <img src="assets/greenville-arms-greenville-ny/facade-auberge-hiver.webp" alt="The inn under snow, red Adirondack chairs on the porch" width="2500" height="1406" loading="lazy">
+        <span>Open all winter</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>1889</b><span>Historically registered inn</span></li>
+      <li><b>16</b><span>Guest rooms in three buildings</span></li>
+      <li><b>6 acres</b><span>Gardens, lawns and woodlands</span></li>
+      <li><b>Since 1982</b><span>Hudson River Valley Art Workshops</span></li>
+      <li><b>8:30&nbsp;am</b><span>Hot breakfast, made to order</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="espresso" id="espresso">
+  <div class="wrap">
+    <figure class="reveal">
+      <img src="assets/greenville-arms-greenville-ny/trois-boissons-espresso-bar-latte-matcha.webp" alt="A latte, a matcha and a pink frothy drink from the espresso bar, seen from above" width="2500" height="2500" loading="lazy">
+      <span class="tag">The only locally owned espresso bar in town</span>
+    </figure>
+    <div>
+      <h2>Coffee on the porch, or to go</h2>
+      <p class="intro">Locally roasted coffee, as espresso drinks or pour-over. Take it to go, to the front porch, or out on the six acres of grounds. If there's snow, bring your snowshoes.</p>
+      <ul class="menu">
+        <li><strong>The Vanderbilt</strong><span class="price">$5.50</span><small>A chocolate cherry latte with a splash of bitters.</small></li>
+        <li><strong>Flavored sipping chocolates</strong><span class="price">$4.75 / 6.65</span><small>Lavender ganache, caramel crème, maple crème, raspberry cordial, rum raisin, peppermint, milk apricot Grand Marnier.</small></li>
+        <li><strong>Espresso</strong><span class="price">$3.00</span></li>
+        <li><strong>Soup, by the pint</strong><span class="price">$8.00</span><small>Potato and four onion, tomato fennel, cream of artichoke, sweet potato ginger, wild mushroom with sherry and thyme.</small></li>
+        <li><strong>Box of chocolates, 8 pieces</strong><span class="price">$15.00</span><small>Traditional and exotic house-made confections.</small></li>
+      </ul>
+      <div class="hours">
+        <p><strong>Wednesday to Monday, 9&nbsp;am to 3&nbsp;pm.</strong> Open till 4&nbsp;pm on Fridays.</p>
+        <a class="btn btn-line" href="https://www.greenvillearms.com/espresso">Full menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="choc" id="chocolate">
+  <div class="wrap">
+    <img class="reveal" src="assets/greenville-arms-greenville-ny/chocolats-maison-sur-palette.webp" alt="House-made truffles, gold-flecked squares and maple leaf chocolates on a porcelain painter's palette" width="2500" height="1406" loading="lazy">
+    <div>
+      <h2>Life By Chocolate, <em>made in the house</em></h2>
+      <p>Our own line of artisanal confections: milk and dark cordials, bark, bars and more. A dedicated vegan line is crafted on separate equipment.</p>
+      <p>Chocolate bark in milk, dark, vegan dark or white, and boxes of eight house-made pieces.</p>
+      <a class="btn" href="https://www.lifebychocolates.com/">Shop Life By Chocolate</a>
+    </div>
+  </div>
+</section>
+
+<section class="art" id="workshops">
+  <div class="wrap">
+    <div class="art-head">
+      <blockquote>Since 1982, the Inn has welcomed artists and instructors from around the world to learn, create and relax.</blockquote>
+      <p>Hudson River Valley Art Workshops run from March to December, painting and fiber art alike. The Inn also runs the only independently owned art supply shop in Greene County carries paints, canvas, fabric and notions.</p>
+    </div>
+    <div class="art-body">
+      <div class="stack reveal">
+        <img src="assets/greenville-arms-greenville-ny/toile-sur-chevalet-atelier-peinture.webp" alt="An abstract canvas of blue flowers on yellow, drying on a studio easel" width="2500" height="2500" loading="lazy">
+        <img src="assets/greenville-arms-greenville-ny/carriage-house-passerelle-bois.webp" alt="The white Carriage House with green shutters, reached by a wooden footbridge" width="2500" height="1667" loading="lazy">
+      </div>
+      <div>
+        <h2>A bit of history</h2>
+        <ol class="timeline" style="margin-top:28px">
+          <li><b>1889</b><p>William S. Vanderbilt builds a farmhouse in the country town of Greenville. A generation later come the turret, the grand dining rooms and the Victorian details.</p></li>
+          <li><b>1952</b><p>The Stevens family turns the property into a boarding house for summer guests while raising their four daughters.</p></li>
+          <li><b>1980</b><p>Two of the daughters, Laura and Barbara, become the innkeepers and found the Hudson River Valley Art Workshops with local painters.</p></li>
+          <li><b>2004</b><p>The LaPollas take ownership and add a fiber art program, stretching the workshops from March to December.</p></li>
+        </ol>
+        <div class="actions">
+          <a class="btn btn-full" href="https://www.artworkshops.com/">See the art workshops</a>
+          <a class="btn btn-line" href="https://www.greenvillearms.com/shop">Visit the art supply shop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="rooms-head">
+      <h2>Sixteen rooms, no two alike</h2>
+      <p>Antiques and modern comforts in the Main Inn, the Carriage House and the Cottage. Private bathroom, your own A/C and heat, a mini-fridge and daily housekeeping. No TVs or phones, WiFi everywhere.</p>
+    </div>
+    <div class="room-grid">
+      <article class="room reveal">
+        <img src="assets/greenville-arms-greenville-ny/chambre-south-cottage-cheminee.webp" alt="The South Cottage: two beds, a gas fireplace and a round table by a large window" width="2500" height="1667" loading="lazy">
+        <h3>The South Cottage</h3>
+        <p>Whirlpool tub, gas fireplace, a sitting area and private porches, with some of the best views down the lawn between the garden and the forest.</p>
+        <span class="rate">$235 / $250</span>
+      </article>
+      <article class="room reveal">
+        <img src="assets/greenville-arms-greenville-ny/chambre-1-tourelle-fauteuils-roses.webp" alt="Room 1: two pink wingback chairs in the turret reading nook" width="2500" height="1667" loading="lazy">
+        <h3>Room 1</h3>
+        <p>Second floor of the Main Inn: a queen bed, vintage Victorian wallpaper, porch access and a reading corner in the turret.</p>
+        <span class="rate">$195 / $210</span>
+      </article>
+      <article class="room reveal">
+        <img src="assets/greenville-arms-greenville-ny/chambre-courtepointe-bleue-papier-peint.webp" alt="A guest room with a blue and white patchwork quilt and toile wallpaper" width="2500" height="1667" loading="lazy">
+        <h3>Antiques in every room</h3>
+        <p>Each room is decorated on its own, with William Roam bath products and extra towels always at hand.</p>
+      </article>
+    </div>
+    <div class="more-rooms">
+      <div><span>Room 18, the former Hay Loft, Carriage House</span><span>$195 / $210</span></div>
+      <div><span>Room 15, king bed, one of the quietest rooms</span><span>$165 / $175</span></div>
+      <div><span>Room 5, queen bed, south-facing morning light</span><span>$150 / $160</span></div>
+      <div><span>Room 4, double bed, windows on three sides</span><span>$125 / $140</span></div>
+    </div>
+    <p class="note">Rates are for double occupancy and include a hot, cooked-to-order breakfast. Each extra guest is $55.</p>
+    <div class="actions"><a class="btn btn-full" href="https://via.eviivo.com/GrnvllArms1889Inn12083">Check availability</a></div>
+  </div>
+</section>
+
+<section class="morning">
+  <div class="wrap">
+    <figure class="reveal">
+      <img src="assets/greenville-arms-greenville-ny/petit-dejeuner-fruits-rouges-pain-perdu.webp" alt="A bowl of fresh berries in front of French toast and a stoneware mug" width="2500" height="1667" loading="lazy">
+      <span class="tag" style="left:18px;bottom:18px">Breakfast, 8:30 to 10&nbsp;am</span>
+    </figure>
+    <div>
+      <h2>Breakfast is cooked when you sit down</h2>
+      <p>Hot, made-to-order breakfasts are included in every stay, with daily specials such as:</p>
+      <ul>
+        <li>Poached eggs with artichoke cheese sauce</li>
+        <li>Cottage cheese pancakes with lingonberry</li>
+        <li>Goat cheese and chive scrambles</li>
+      </ul>
+      <p>Common spaces include the front parlor, two dining rooms and the Carriage House Studio, along with a wine, beer and cider cellar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seasons">
+  <div class="wrap">
+    <h2>We welcome guests year-round</h2>
+    <div class="season-row">
+      <figure class="reveal"><img src="assets/greenville-arms-greenville-ny/auberge-tourelle-jonquilles-printemps.webp" alt="The turret of the main inn above spring daffodils" width="1613" height="907" loading="lazy"><span class="tag">Spring</span></figure>
+      <figure class="reveal"><img src="assets/greenville-arms-greenville-ny/facade-auberge-automne.webp" alt="The inn behind dried corn stalks and orange maples in fall" width="2500" height="1406" loading="lazy"><span class="tag">Fall</span></figure>
+      <figure class="reveal"><img src="assets/greenville-arms-greenville-ny/facade-auberge-hiver.webp" alt="The inn under fresh snow" width="2500" height="1406" loading="lazy" style="object-position:40% 50%"><span class="tag">Winter</span></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2>Greenville Arms 1889 Inn</h2>
+        <a class="btn" href="https://via.eviivo.com/GrnvllArms1889Inn12083">Book your stay</a>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <p>11135 State Route 32<br>Greenville, NY 12083</p>
+        <p style="margin-top:14px"><a href="tel:+15189665219">(518) 966-5219</a><br><a href="mailto:stay@greenvillearms.com">stay@greenvillearms.com</a></p>
+      </div>
+      <div>
+        <h3>Your stay</h3>
+        <p>Check-in from 3&nbsp;pm, let us know if you arrive after 6&nbsp;pm.<br>Check-out by 11&nbsp;am.</p>
+        <div class="foot-links" style="margin-top:14px">
+          <a href="https://www.instagram.com/greenvillearms">Instagram</a>
+          <a href="https://www.facebook.com/GreenvilleArms1889Inn">Facebook</a>
+          <a href="https://www.greenvillearms.com/shop">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>The Greenville Arms 1889 Inn, a DBA of Woodchuck Ventures Inc.</span>
+      <span>Proposal by Nicolas Masset for Greenville Arms 1889 Inn</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

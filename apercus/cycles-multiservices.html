@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cycles &amp; Multiservices · Réparations vélo à domicile, Joué-lès-Tours</title>
+<meta name="description" content="Révision, réglages, diagnostic et électrification de vélos à domicile, en Touraine Sud et dans la Vienne. Guillaume Artaud, 06 33 05 18 50.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313212B'/%3E%3Ctext x='32' y='46' font-family='Arial Narrow,sans-serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23F26B1D'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E3E9EE; --base-2:#D6DFE6; --surface:#F3F6F8; --encre:#13212B; --encre-2:#3D4C57;
+  --accent:#F26B1D; --accent-fonce:#C9520E; --sombre:#13212B;
+  --ombre:0 30px 60px -34px rgba(19,33,43,.55);
+  --ombre-douce:0 18px 40px -28px rgba(19,33,43,.45);
+  --large:min(1200px, 100% - 48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font:400 18px/1.62 "Barlow",ui-sans-serif,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Barlow Condensed",ui-sans-serif,sans-serif;font-weight:600;letter-spacing:-.005em;text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+.nowrap{white-space:nowrap}
+.cadre{width:var(--large);margin-inline:auto}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(227,233,238,.94);border-bottom:1px solid rgba(19,33,43,.07)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:25px;letter-spacing:.01em;text-decoration:none;line-height:1}
+.marque span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px;font-weight:500}
+.nav a.lien{text-decoration:none;color:var(--encre-2)}
+.nav a.lien:hover{color:var(--encre)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 28px;font:600 17px/1.2 "Barlow",sans-serif;text-decoration:none;transition:transform .25s ease, background-color .25s ease, box-shadow .25s ease, color .25s ease;text-align:center}
+.btn-plein{background:var(--accent);color:#FFF8F2;box-shadow:0 14px 30px -16px rgba(242,107,29,.8)}
+.btn-plein:hover{background:var(--accent-fonce);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-petit{padding:10px 18px;font-size:15px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* héros */
+.heros{padding:72px 0 104px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"titre photo" "texte photo";column-gap:72px;align-items:start}
+.heros-titre{grid-area:titre;padding-top:48px}
+.heros-titre .lieu{font-weight:500;font-size:17px;color:var(--encre-2);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.heros-titre .lieu::before{content:"";width:28px;height:2px;background:var(--accent);flex:none}
+.heros h1{font-size:clamp(46px, 8vw, 118px);line-height:.98;text-transform:uppercase;letter-spacing:-.01em}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros-texte{grid-area:texte;margin-top:30px}
+.heros-texte p{font-size:20px;max-width:34em;color:var(--encre-2)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros-photo{grid-area:photo;position:relative;margin-top:-24px}
+.heros-photo .ph{border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);border-radius:12px;padding:10px 14px;font-size:15px;font-weight:600;line-height:1.3;box-shadow:var(--ombre-douce)}
+.pastille small{display:block;font-weight:400;color:var(--encre-2);font-size:14px}
+.note-ronde{position:absolute;right:-26px;top:38px;width:118px;height:118px;border-radius:50%;background:var(--sombre);color:var(--surface);display:grid;place-content:center;text-align:center;box-shadow:var(--ombre);text-decoration:none;transition:transform .3s ease}
+.note-ronde:hover{transform:rotate(-6deg) scale(1.03)}
+.note-ronde b{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:38px;line-height:1}
+.note-ronde span{font-size:13px;line-height:1.25;color:#C7D2DA}
+.note-ronde i{font-style:normal;color:var(--accent);font-size:14px;letter-spacing:2px}
+
+/* bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:2px;padding-left:18px;border-left:2px solid rgba(19,33,43,.12)}
+.faits b{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:26px;line-height:1.1}
+.faits span{font-size:16px;color:var(--encre-2)}
+
+/* vélo : photo + liste */
+.velo{padding:128px 0 120px}
+.velo .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.velo-photos{position:relative;padding-bottom:90px}
+.velo-photos .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.velo-photos .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.velo-photos .petite{position:absolute;right:-40px;bottom:0;width:min(240px,52%);border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);aspect-ratio:1/1;background:var(--surface)}
+.velo-photos .petite img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.etiquette{position:absolute;left:16px;top:16px;background:var(--accent);color:#FFF8F2;font-weight:600;font-size:14px;padding:7px 13px;border-radius:999px}
+.velo h2{font-size:clamp(38px,5vw,64px);line-height:1.02}
+.velo .intro{margin-top:20px;font-size:19px;color:var(--encre-2);max-width:36em}
+.prestations{list-style:none;margin:40px 0 0;padding:0}
+.prestations li{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid rgba(19,33,43,.16)}
+.prestations li:last-child{border-bottom:1px solid rgba(19,33,43,.16)}
+.prestations h3{font-size:28px;line-height:1.1}
+.prestations p{color:var(--encre-2);font-size:17px}
+
+/* pompe : section sombre */
+.pompe{background:var(--sombre);color:#E6ECF0;padding:120px 0 128px;border-radius:32px 32px 0 0}
+.pompe-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:end}
+.pompe h2{font-size:clamp(38px,5.4vw,72px);line-height:1;color:var(--surface)}
+.pompe-tete p{color:#B9C6CF;font-size:19px}
+.pompe-corps{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;margin-top:72px;align-items:start}
+.pompe-photos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.pompe-photos figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.pompe-photos figure:first-child{grid-row:span 2;aspect-ratio:3/5}
+.pompe-photos figure:nth-child(2){aspect-ratio:1/1;margin-top:56px}
+.pompe-photos figure:nth-child(3){aspect-ratio:1/1}
+.pompe-photos img{width:100%;height:100%;object-fit:cover}
+.pompe-photos figcaption{position:absolute;left:12px;bottom:12px;right:12px;width:max-content;max-width:calc(100% - 24px);background:rgba(243,246,248,.95);color:var(--encre);font-size:14px;font-weight:600;padding:6px 11px;border-radius:9px;line-height:1.3}
+.soin{list-style:none;padding:0;margin:0 0 40px;display:grid;gap:14px}
+.soin li{display:flex;gap:14px;align-items:baseline;font-size:19px}
+.soin li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-2px)}
+.tarifs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.tarif{background:#1C2E3B;border-radius:18px;padding:24px 26px}
+.tarif span{display:block;color:#B9C6CF;font-size:16px}
+.tarif b{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:46px;line-height:1.05;color:var(--surface);white-space:nowrap}
+.tarif b small{font-size:22px;color:#B9C6CF;font-weight:500;margin-right:6px}
+.frise{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:etape}
+.frise li{counter-increment:etape;position:relative;padding-top:52px;font-size:17px;line-height:1.35;color:#DCE3E8}
+.frise li::before{content:counter(etape);position:absolute;top:0;left:0;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);display:grid;place-content:center;font-weight:600;font-size:16px;background:var(--sombre);z-index:1}
+.frise li:not(:last-child)::after{content:"";position:absolute;top:18px;left:44px;right:4px;height:1.5px;background:rgba(242,107,29,.45)}
+.pompe .actions .btn-contour{border-color:#E6ECF0;color:#E6ECF0}
+.pompe .actions .btn-contour:hover{background:#E6ECF0;color:var(--encre)}
+
+/* Guillaume */
+.portrait{padding:128px 0 112px}
+.portrait .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:96px;align-items:center}
+.portrait h2{font-size:clamp(38px,5vw,64px);line-height:1.02}
+.citation{margin:34px 0 0;padding:0;font-size:clamp(22px,2.4vw,28px);line-height:1.4;font-weight:500;color:var(--encre)}
+.citation::before{content:"« ";color:var(--accent)}
+.citation::after{content:" »";color:var(--accent)}
+.portrait .signe{margin-top:16px;color:var(--encre-2);font-size:16px}
+.portrait .bio{margin-top:30px;color:var(--encre-2);max-width:36em}
+.polaroid{background:var(--surface);padding:14px 14px 0;border-radius:14px;box-shadow:var(--ombre);transform:rotate(2.5deg);max-width:420px;justify-self:center;width:100%}
+.polaroid .ph{border-radius:8px;overflow:hidden;aspect-ratio:4/5}
+.polaroid img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.polaroid p{font-family:"Barlow Condensed",sans-serif;font-weight:500;font-size:22px;text-align:center;padding:14px 0 16px}
+
+/* et aussi */
+.aussi{padding:0 0 128px}
+.aussi-carte{background:var(--surface);border-radius:28px;box-shadow:var(--ombre-douce);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);overflow:hidden}
+.aussi-texte{padding:64px 64px 60px}
+.aussi h2{font-size:clamp(36px,4.4vw,56px);line-height:1.02}
+.aussi-texte > p{margin-top:16px;color:var(--encre-2)}
+.aussi dl{margin:32px 0 0;display:grid;gap:22px}
+.aussi dt{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:25px;line-height:1.15}
+.aussi dd{margin:4px 0 0;color:var(--encre-2);font-size:17px}
+.aussi-photo{position:relative;min-height:420px}
+.aussi-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.aussi-photo .pastille{left:20px;bottom:20px}
+
+/* contact */
+.contact{padding:120px 0 128px;background:var(--base-2)}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center}
+.contact h2{font-size:clamp(40px,6vw,84px);line-height:.98;text-transform:uppercase}
+.contact .cadre > div > p{margin-top:22px;font-size:19px;color:var(--encre-2);max-width:30em}
+.carte-coord{background:var(--surface);border-radius:24px;padding:36px 36px 30px;box-shadow:var(--ombre)}
+.carte-coord dl{margin:0;display:grid;gap:20px}
+.carte-coord dt{font-size:14px;font-weight:600;color:var(--encre-2);letter-spacing:.02em}
+.carte-coord dd{margin:2px 0 0;font-size:18px}
+.carte-coord dd a{text-decoration-color:rgba(242,107,29,.6);text-underline-offset:4px}
+.carte-coord .tel{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:38px;line-height:1.1;text-decoration:none;white-space:nowrap}
+.carte-coord .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;padding-top:24px;border-top:1px solid rgba(19,33,43,.12)}
+.mail{overflow-wrap:anywhere}
+
+/* pied */
+.pied{background:var(--sombre);color:#C7D2DA;padding:72px 0 28px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .marque{color:var(--surface);font-size:30px}
+.pied p{font-size:16px;margin-top:12px}
+.pied h3{font-family:"Barlow",sans-serif;font-weight:600;font-size:15px;color:var(--surface);margin-bottom:10px}
+.pied a{color:#E6ECF0;text-underline-offset:4px;text-decoration-color:rgba(242,107,29,.6)}
+.pied ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:16px}
+.proposition{width:var(--large);margin:56px auto 0;padding-top:20px;border-top:1px solid rgba(230,236,240,.12);font-size:13px;color:#8797A3}
+
+/* mouvement */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn,.note-ronde{transition:none}
+}
+
+/* tablette */
+@media (max-width: 1080px){
+  .heros .cadre{column-gap:48px}
+  .note-ronde{right:-10px}
+  .velo .cadre,.portrait .cadre,.contact .cadre{gap:56px}
+  .velo-photos .petite{right:-16px}
+  .aussi-texte{padding:48px 40px}
+}
+@media (max-width: 860px){
+  body{font-size:17px}
+  .nav a.lien{display:none}
+  .heros{padding:32px 0 72px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .heros-titre{padding-top:12px}
+  .heros-photo{margin-top:28px}
+  .heros-photo .ph{aspect-ratio:5/4}
+  .heros-photo img{object-position:50% 78%}
+  .note-ronde{right:12px;top:-20px;width:96px;height:96px}
+  .note-ronde b{font-size:30px}
+  .note-ronde span{font-size:12px}
+  .heros-texte{margin-top:28px}
+  .heros-texte p{font-size:18px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}
+  .faits b{font-size:23px}
+  .velo{padding:88px 0}
+  .velo .cadre,.portrait .cadre,.contact .cadre,.pompe-tete,.pompe-corps{grid-template-columns:minmax(0,1fr)}
+  .velo-photos{padding-bottom:70px;margin-right:24px}
+  .velo-photos .grande{aspect-ratio:1/1}
+  .velo-photos .petite{right:-24px;width:min(180px,48%)}
+  .prestations li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .pompe{padding:88px 0;border-radius:24px 24px 0 0}
+  .pompe-tete{gap:20px}
+  .pompe-corps{margin-top:48px;gap:48px}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+  .frise li:nth-child(2)::after{display:none}
+  .portrait{padding:88px 0}
+  .portrait .polaroid{order:-1;max-width:340px}
+  .aussi{padding-bottom:88px}
+  .aussi-carte{grid-template-columns:minmax(0,1fr)}
+  .aussi-photo{min-height:0;aspect-ratio:4/3;order:-1}
+  .aussi-texte{padding:36px 26px 40px}
+  .contact{padding:88px 0}
+  .pied .cadre{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width: 520px){
+  :root{--large:min(1200px, 100% - 40px)}
+  .entete .cadre{min-height:62px;gap:10px}
+  .marque{font-size:20px}
+  .actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%;padding:16px 20px}
+  .entete .btn{width:auto;padding:9px 16px}
+  .tarifs{grid-template-columns:minmax(0,1fr)}
+  .tarif b{font-size:40px}
+  .frise{grid-template-columns:minmax(0,1fr);gap:18px}
+  .frise li{padding:4px 0 0 52px;min-height:36px}
+  .frise li::after{display:none}
+  .carte-coord{padding:28px 22px 24px}
+  .carte-coord .tel{font-size:32px}
+  .carte-coord .liens .btn{width:100%}
+}
+@media (max-width: 360px){
+  .marque{font-size:18px}
+  .entete .btn{padding:8px 12px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut">Cycles <span>&amp;</span> Multiservices</a>
+    <nav class="nav" aria-label="Navigation">
+      <a class="lien" href="#velo">Vélo</a>
+      <a class="lien" href="#pompe">Pompes</a>
+      <a class="lien" href="#guillaume">Guillaume</a>
+      <a class="btn btn-plein btn-petit" href="tel:+33633051850"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nowrap">06 33 05 18 50</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div class="heros-titre">
+        <p class="lieu">Joué-lès-Tours · Touraine Sud · Vienne</p>
+        <h1>Votre vélo remis au top, à <em>domicile</em>.</h1>
+      </div>
+      <div class="heros-photo apparait">
+        <div class="ph"><img src="assets/cycles-multiservices/velo-electrifie-devant-eglise.webp" alt="Vélo de ville électrifié, batterie sur le cadre, garé devant une église" width="1536" height="2048"></div>
+        <p class="pastille">Vélo classique électrifié<small>batterie posée sur le cadre</small></p>
+        <a class="note-ronde" href="https://www.google.com/maps/search/?api=1&amp;query=Cycles%20%26%20Multiservices&amp;query_place_id=ChIJhxCFvL8uSiwRpzkHoyrBfeI" target="_blank" rel="noopener"><i>★★★★★</i><b>5,0</b><span>10 avis<br>Google</span></a>
+      </div>
+      <div class="heros-texte">
+        <p>Réparations à domicile et dépannages. Révision, réglages, diagnostic et électrification de vélos classiques&nbsp;: Guillaume intervient en Touraine Sud, proche de Tours, et dans la Vienne autour de Châtellerault.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33633051850"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Appeler le <span class="nowrap">06 33 05 18 50</span></span></a>
+          <a class="btn btn-contour" href="#velo">Ce que je répare</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>À domicile</b><span>réparations et dépannages</span></li>
+      <li><b>Touraine Sud</b><span>proche de Tours, et la Vienne autour de Châtellerault</span></li>
+      <li><b>CFA de La&nbsp;Rochelle</b><span>formé à la réparation des cycles</span></li>
+      <li><b>5,0 sur 5</b><span>10 avis sur Google</span></li>
+    </ul>
+  </section>
+
+  <section class="velo" id="velo">
+    <div class="cadre">
+      <div class="velo-photos">
+        <div class="grande apparait"><img src="assets/cycles-multiservices/velo-electrifie-rue-panneaux.webp" alt="Vélo électrifié de profil dans une rue" loading="lazy" width="1536" height="2048"></div>
+        <span class="etiquette">Électrification</span>
+        <div class="petite apparait"><img src="assets/cycles-multiservices/roue-moteur-electrique-velo.webp" alt="Roue de vélo équipée d'un moteur dans le moyeu" loading="lazy" width="2048" height="2048"></div>
+      </div>
+      <div>
+        <h2>La saison vélo démarre, votre vélo aussi.</h2>
+        <p class="intro">Les beaux jours arrivent&nbsp;: pensez à remettre votre vélo au top avant de rouler. L'intervention est rapide et professionnelle, chez vous.</p>
+        <ul class="prestations">
+          <li><h3>Révision</h3><p>Remettre votre vélo au top avant de rouler.</p></li>
+          <li><h3>Réglages</h3><p>Entretenir et régler vos vélos pour la belle saison qui revient.</p></li>
+          <li><h3>Diagnostic</h3><p>Trouver d'où vient la panne, sur place.</p></li>
+          <li><h3>Électrification</h3><p>Un vélo classique passé à l'électrique&nbsp;: moteur dans la roue avant, la roue arrière ou au pédalier, selon le type de vélo et la sensation de pédalage voulue.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="pompe" id="pompe">
+    <div class="cadre">
+      <div class="pompe-tete">
+        <h2>Pompe Waterair P40&nbsp;: réparée plutôt que remplacée.</h2>
+        <p>Votre pompe P40 est en panne ou fait du bruit&nbsp;? Inutile de la remplacer à prix élevé. La réparation est simple, rapide et économique.</p>
+      </div>
+      <div class="pompe-corps">
+        <div class="pompe-photos">
+          <figure class="apparait"><img src="assets/cycles-multiservices/bobinage-cuivre-moteur-pompe.webp" alt="Bobinage cuivre d'un moteur de pompe ouvert" loading="lazy" width="1536" height="2048"><figcaption>Le bobinage, moteur ouvert</figcaption></figure>
+          <figure class="apparait"><img src="assets/cycles-multiservices/rotor-moteur-dans-etau.webp" alt="Rotor de moteur avec ses roulements serré dans un étau" loading="lazy" width="1536" height="2048" style="object-position:50% 55%"></figure>
+          <figure class="apparait"><img src="assets/cycles-multiservices/moteur-pompe-demonte-ailettes.webp" alt="Moteur de pompe démonté, carter et ailettes" loading="lazy" width="1536" height="2048" style="object-position:50% 40%"></figure>
+        </div>
+        <div>
+          <ul class="soin">
+            <li>Remise en état avec roulements inox et joint neuf</li>
+            <li>Graissage anti-corrosion spécial eau et sel</li>
+            <li>Pompe testée avant envoi&nbsp;: une solution fiable et durable</li>
+          </ul>
+          <div class="tarifs">
+            <div class="tarif"><span>Réparation</span><b><small>dès</small>110&nbsp;€</b></div>
+            <div class="tarif"><span>Pompe reconditionnée disponible</span><b>190&nbsp;€</b></div>
+          </div>
+          <ol class="frise" aria-label="Comment ça se passe">
+            <li>Vous envoyez votre pompe</li>
+            <li>Intervention rapide</li>
+            <li>Paiement</li>
+            <li>Retour prêt à l'emploi</li>
+          </ol>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33633051850">Parler de ma pompe</a>
+            <a class="btn btn-contour" href="mailto:cycles.multiservices@gmail.com">Écrire un mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portrait" id="guillaume">
+    <div class="cadre">
+      <div>
+        <h2>Guillaume Artaud, réparer par passion.</h2>
+        <p class="citation">J'adore réparer et me dépanner grâce à mes connaissances acquises ces dernières années, aussi bien au travail que seul à la maison face à des imprévus.</p>
+        <p class="signe">Guillaume, en se présentant</p>
+        <p class="bio">Ancien enseignant de la conduite automobile pendant près de dix ans, Guillaume s'est reconverti et s'est formé à la réparation des cycles au CFA de La&nbsp;Rochelle, fin 2022. Il entretient et répare aujourd'hui vos vélos, chez vous.</p>
+      </div>
+      <figure class="polaroid apparait">
+        <div class="ph"><img src="assets/cycles-multiservices/guillaume-artaud-cle-a-molette.webp" alt="Guillaume Artaud tenant une grosse clé à molette" loading="lazy" width="1440" height="1800"></div>
+        <p>Guillaume, clé en main</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="aussi">
+    <div class="cadre">
+      <div class="aussi-carte">
+        <div class="aussi-texte">
+          <h2>Et tout le reste du quotidien.</h2>
+          <p>Le «&nbsp;multiservices&nbsp;» du nom&nbsp;: Guillaume vous aide aussi pour tout ce qui est du quotidien.</p>
+          <dl>
+            <div><dt>Petit bricolage à domicile</dt><dd>Régler ou réparer divers objets du quotidien.</dd></div>
+            <div><dt>Livraisons</dt><dd>Sur demande, il suffit d'appeler.</dd></div>
+            <div><dt>Diagnostic automobile</dt><dd>Lecture des codes défauts après un voyant allumé, avec une valise&nbsp;: elle oriente sur la panne et vous rassure avant de réparer vous-même ou de passer au garage.</dd></div>
+          </dl>
+        </div>
+        <div class="aussi-photo">
+          <img src="assets/cycles-multiservices/renault-scenic-gris-face.webp" alt="Renault Scénic gris vu de face" loading="lazy" width="2048" height="2048">
+          <p class="pastille">Côté automobile<small>diagnostic à la valise</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div>
+        <h2>Un vélo à reprendre&nbsp;? Appelez Guillaume.</h2>
+        <p>Révision, réglage, électrification ou dépannage&nbsp;: décrivez le souci au téléphone ou par mail, Guillaume vous dit comment il intervient.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33633051850"><span>Appeler le <span class="nowrap">06 33 05 18 50</span></span></a>
+        </div>
+      </div>
+      <div class="carte-coord apparait">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33633051850">06 33 05 18 50</a></dd></div>
+          <div><dt>Mail</dt><dd><a class="mail" href="mailto:cycles.multiservices@gmail.com">cycles.multiservices@gmail.com</a></dd></div>
+          <div><dt>Adresse</dt><dd>29 rue de Chissay<br>37300 Joué-lès-Tours</dd></div>
+          <div><dt>Interventions</dt><dd>Touraine Sud, proche de Tours, et la Vienne autour de Châtellerault</dd></div>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-contour btn-petit" href="https://www.google.com/maps/search/?api=1&amp;query=Cycles%20%26%20Multiservices&amp;query_place_id=ChIJhxCFvL8uSiwRpzkHoyrBfeI" target="_blank" rel="noopener">Voir les 10 avis Google</a>
+          <a class="btn btn-contour btn-petit" href="https://www.facebook.com/profile.php?id=100090730330450" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut">Cycles <span>&amp;</span> Multiservices</a>
+      <p>Réparations à domicile et dépannages&nbsp;: vélos, pompes, petit bricolage.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li><a href="tel:+33633051850" class="nowrap">06 33 05 18 50</a></li>
+        <li><a class="mail" href="mailto:cycles.multiservices@gmail.com">cycles.multiservices@gmail.com</a></li>
+        <li>29 rue de Chissay, 37300 Joué-lès-Tours</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Cycles%20%26%20Multiservices&amp;query_place_id=ChIJhxCFvL8uSiwRpzkHoyrBfeI" target="_blank" rel="noopener">Fiche Google · 5,0 sur 5</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090730330450" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposition de Nicolas Masset pour Cycles &amp; Multiservices</p>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

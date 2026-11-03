@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Au printemps du fauteuil · Atelier tapisserie à Toulouse</title>
+<meta name="description" content="Au printemps du fauteuil, atelier de tapisserie de Maïotte Cartiaux, tapissière garnisseuse diplômée, 98 rue Michel-Ange à Toulouse. 06 76 95 54 12.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231C2340'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' text-anchor='middle' fill='%23EEF0E2'%3EA%3C/text%3E%3Ccircle cx='32' cy='54' r='3' fill='%23C9A13B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EEF0E2; --base2:#E2E6D0; --surface:#F8F9F1; --ink:#1C2340; --ink2:#4B5170; --accent:#C9A13B; --dark:#1C2340;
+  --clair:#EEF0E2; --clair2:#B9BED3;
+  --ombre:0 30px 60px -34px rgba(28,35,64,.5);
+  --ombre-l:0 50px 90px -42px rgba(28,35,64,.62);
+  --display:'Marcellus', 'Iowan Old Style', Georgia, serif;
+  --texte:'Host Grotesk', 'Trebuchet MS', sans-serif;
+  --pad:clamp(20px, 5vw, 56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-size:18px;line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--ink)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px, 100% - 2*var(--pad));margin-inline:auto}
+
+/* En-tête */
+.tete{position:sticky;top:0;z-index:20;background:rgba(238,240,226,.95);border-bottom:1px solid rgba(28,35,64,.08)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.marque b{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:-.005em}
+.marque small{font-size:14px;color:var(--ink2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;color:var(--ink2);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 28px;font-family:var(--texte);font-weight:500;font-size:17px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;white-space:nowrap}
+.pill:hover{transform:translateY(-2px)}
+.pill.plein{background:var(--ink);color:var(--surface);box-shadow:0 18px 30px -22px rgba(28,35,64,.85)}
+.pill.plein:hover{background:#2B3560}
+.pill.contour{border:1.5px solid var(--ink);color:var(--ink)}
+.pill.contour:hover{background:var(--ink);color:var(--surface)}
+.pill.petit{padding:10px 20px;font-size:16px;background:var(--surface);box-shadow:0 10px 24px -16px rgba(28,35,64,.55)}
+.pill.petit:hover{background:var(--ink);color:var(--surface)}
+
+/* Héros */
+.heros{padding:clamp(28px, 3.5vw, 56px) 0 clamp(72px, 8vw, 120px)}
+.heros-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);grid-template-areas:"intro eventail" "suite eventail";column-gap:clamp(32px, 5vw, 72px);align-items:start}
+.intro{grid-area:intro;align-self:end;padding-top:clamp(8px, 3vw, 48px)}
+.suite{grid-area:suite}
+.metier{font-size:17px;color:var(--ink2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.metier::before{content:"";width:28px;height:1.5px;background:var(--accent);flex:none}
+.heros h1{font-size:clamp(40px, 5.6vw, 80px);line-height:1.04;letter-spacing:-.02em}
+.heros .chapo{font-size:19px;line-height:1.6;color:var(--ink2);max-width:33em;margin-top:28px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.adresse-heros{margin-top:26px;font-size:16px;color:var(--ink2)}
+
+.eventail{grid-area:eventail;position:relative;margin:0;aspect-ratio:1/0.92;align-self:center}
+.eventail .f{position:absolute;margin:0;width:44%;aspect-ratio:3/4;border-radius:14px;overflow:hidden;box-shadow:var(--ombre);background:var(--base2)}
+.eventail .f img{width:100%;height:100%;object-fit:cover}
+.eventail .g{left:0;top:15%;rotate:-4deg;z-index:1}
+.eventail .d{right:0;top:15%;rotate:4deg;z-index:1}
+.eventail .c{left:23%;width:54%;top:0;z-index:2;box-shadow:var(--ombre-l);outline:8px solid var(--surface)}
+.eventail .g img{object-position:50% 45%}
+.eventail .d img{object-position:50% 50%}
+.eventail .c img{object-position:50% 58%}
+.etiquette{position:absolute;left:14px;bottom:14px;right:14px;width:fit-content;max-width:calc(100% - 28px);background:rgba(248,249,241,.96);color:var(--ink);font-size:14px;line-height:1.35;padding:8px 13px;border-radius:9px}
+.note{position:absolute;z-index:3;left:-2%;bottom:0;background:var(--surface);border-radius:16px;padding:14px 18px 14px 16px;box-shadow:var(--ombre);display:flex;align-items:center;gap:14px}
+.note .chiffre{font-family:var(--display);font-size:34px;line-height:1}
+.note .etoiles{color:var(--accent);font-size:15px;letter-spacing:2px;line-height:1}
+.note small{display:block;font-size:14px;color:var(--ink2);margin-top:4px}
+
+/* Bandeau de faits */
+.faits{background:var(--base2);padding:26px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 34px}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px;color:var(--ink)}
+.faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+
+/* Sections */
+section{padding:clamp(80px, 9vw, 128px) 0}
+.titre-section{font-size:clamp(32px, 3.9vw, 54px);line-height:1.08;letter-spacing:-.015em}
+.lead{font-size:19px;color:var(--ink2);max-width:34em;margin-top:22px}
+
+/* Ce que l'atelier refait */
+.refait{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px, 7vw, 104px);align-items:start}
+.refait .photo{margin:0;position:sticky;top:110px}
+.refait .photo .cadre{border-radius:20px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:4/5;background:var(--base2);position:relative}
+.refait .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.liste{list-style:none;margin:42px 0 0;padding:0;border-top:1px solid rgba(28,35,64,.16)}
+.liste li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:8px 32px;padding:26px 0;border-bottom:1px solid rgba(28,35,64,.16)}
+.liste h3{font-size:24px;line-height:1.2}
+.liste p{color:var(--ink2);font-size:17px}
+.devis{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.devis p{font-size:17px;color:var(--ink2);max-width:22em}
+
+/* Section sombre : un cabriolet de près */
+.sombre{background:var(--dark);color:var(--clair)}
+.pres{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px, 7vw, 104px);align-items:center}
+.duo{position:relative;padding-bottom:18%;padding-right:22%}
+.duo .a{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 50px 90px -40px rgba(5,8,20,.9)}
+.duo .b{margin:0;position:absolute;right:0;bottom:0;width:46%;border-radius:16px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 40px 70px -30px rgba(5,8,20,.95);outline:8px solid var(--dark)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .a img{object-position:50% 40%}
+.duo .b img{object-position:40% 55%}
+.sombre .titre-section{color:var(--clair)}
+.sombre .lead{color:var(--clair2)}
+.details{list-style:none;margin:40px 0 0;padding:0}
+.details li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(238,240,226,.16);font-size:17px;color:var(--clair)}
+.details li span{font-family:var(--display);color:var(--accent);font-size:22px;min-width:4.6em}
+
+/* Réalisations */
+.real-tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:56px}
+.real-tete .lead{margin-top:0;max-width:26em}
+.mosaique{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));column-gap:24px;row-gap:28px}
+.mosaique figure{margin:0;position:relative}
+.mosaique .cadre{position:relative}
+.m1{grid-column:1 / 8;grid-row:1 / 3}
+.m1 .cadre{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:1/1.06}
+.m1 img{object-position:50% 58%}
+.m2{grid-column:8 / 13;grid-row:1;margin-top:56px !important}
+.m2 .cadre{border-radius:18px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/3}
+.m2 img{object-position:50% 55%}
+.m3{grid-column:8 / 11;grid-row:2;align-self:start;z-index:1}
+.m3 .polaroid{background:var(--surface);padding:12px 12px 14px;border-radius:6px;box-shadow:var(--ombre);rotate:-3deg}
+.m3 .polaroid .cadre{aspect-ratio:3/4;overflow:hidden;border-radius:3px}
+.m3 img{object-position:50% 40%}
+.m3 figcaption{font-size:14px;color:var(--ink2);padding:10px 4px 0;line-height:1.35}
+.m4{grid-column:10 / 13;grid-row:2;align-self:start;margin-top:110px !important;z-index:2}
+.m4 .cadre{border-radius:16px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:3/4;outline:7px solid var(--base)}
+.m4 img{object-position:55% 60%}
+.mosaique img{width:100%;height:100%;object-fit:cover}
+
+/* Citation */
+.citation{background:var(--surface);padding:clamp(88px, 10vw, 136px) 0}
+.citation blockquote{margin:0 auto;max-width:980px;text-align:center}
+.citation blockquote p{font-family:var(--display);font-size:clamp(28px, 3.5vw, 46px);line-height:1.22;letter-spacing:-.01em;text-wrap:balance}
+.citation .guill{display:block;font-family:var(--display);color:var(--accent);font-size:84px;line-height:.5;margin-bottom:26px}
+.citation footer{margin-top:30px;font-size:17px;color:var(--ink2)}
+
+/* Coordonnées */
+.contact{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px, 7vw, 96px);align-items:start}
+.horaires{margin-top:40px;max-width:30em}
+.horaires h3{font-size:24px;margin-bottom:12px}
+.horaires dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) auto;border-top:1px solid rgba(28,35,64,.16)}
+.horaires dt,.horaires dd{margin:0;padding:13px 0;border-bottom:1px solid rgba(28,35,64,.16);font-size:17px}
+.horaires dd{text-align:right;color:var(--ink2)}
+.horaires .ferme{color:#7A7F95}
+.carte{background:var(--surface);border-radius:24px;padding:clamp(28px, 4vw, 44px);box-shadow:var(--ombre-l)}
+.carte .ligne{padding:18px 0;border-bottom:1px solid rgba(28,35,64,.12)}
+.carte .ligne:first-child{padding-top:0}
+.carte .ligne:last-of-type{border-bottom:0}
+.carte .lib{display:block;font-size:14px;color:var(--ink2);margin-bottom:4px}
+.carte .val{font-size:19px;text-decoration:none;overflow-wrap:anywhere}
+.carte a.val{border-bottom:1.5px solid rgba(201,161,59,.7);transition:border-color .2s}
+.carte a.val:hover{border-color:var(--ink)}
+.carte .tel{font-family:var(--display);font-size:34px;line-height:1.1;border:0;white-space:nowrap}
+.carte .pill{width:100%;margin-top:26px}
+
+/* Pied */
+.pied{background:var(--dark);color:var(--clair2);padding:72px 0 36px;font-size:16px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:30px;color:var(--clair);line-height:1.15}
+.pied p{margin-top:12px}
+.pied h3{font-family:var(--texte);font-weight:500;font-size:16px;color:var(--clair);margin-bottom:12px}
+.pied a{color:var(--clair);text-decoration:none;border-bottom:1px solid rgba(201,161,59,.6)}
+.pied a:hover{border-color:var(--clair)}
+.signature{border-top:1px solid rgba(238,240,226,.12);margin-top:56px;padding-top:24px;font-size:14px;color:#8D93AC}
+
+/* Apparition douce des photos */
+.js .apparait{opacity:0;translate:0 28px;transition:opacity .9s ease, translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;translate:none;transition:none}
+  .pill{transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* Tablette */
+@media (max-width: 980px){
+  .nav a:not(.pill){display:none}
+  .heros-grille{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "eventail" "suite"}
+  .eventail{width:min(620px, 100%);margin:40px auto 8px}
+  .refait,.pres,.contact{grid-template-columns:minmax(0,1fr)}
+  .refait .photo{position:relative;top:0;max-width:560px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied-grille > div:first-child{grid-column:1 / -1}
+}
+/* Téléphone */
+@media (max-width: 640px){
+  body{font-size:17px}
+  .tete .wrap{min-height:64px;gap:12px}
+  .marque b{font-size:19px}
+  .marque small{display:none}
+  .pill.petit{padding:9px 14px;font-size:15px}
+  .metier{font-size:16px;margin-bottom:16px}
+  .heros{padding-top:28px}
+  .heros .chapo{font-size:17px;margin-top:6px}
+  .eventail{margin:30px auto 26px}
+  .eventail .c{outline-width:5px}
+  .note{left:0;bottom:-4%;padding:10px 14px 10px 12px;gap:10px}
+  .note .chiffre{font-size:26px}
+  .etiquette{font-size:13px;left:10px;bottom:10px;max-width:calc(100% - 20px);padding:6px 10px}
+  .actions{margin-top:28px}
+  .faits ul{flex-direction:column;gap:12px}
+  .liste li{grid-template-columns:minmax(0,1fr)}
+  .duo{padding-right:16%;padding-bottom:22%}
+  .details li{flex-direction:column;gap:2px}
+  .mosaique{column-gap:14px;row-gap:18px}
+  .m1{grid-column:1 / -1;grid-row:auto}
+  .m1 .cadre{aspect-ratio:4/5}
+  .m2{grid-column:1 / -1;grid-row:auto;margin-top:0 !important}
+  .m3{grid-column:1 / 8;grid-row:auto}
+  .m4{grid-column:7 / 13;grid-row:auto;margin-top:72px !important}
+  .citation .guill{font-size:64px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 420px){
+  .actions .pill,.devis .pill{width:100%;white-space:normal;text-align:center}
+  .m3{grid-column:1 / 9}
+  .m4{grid-column:6 / 13}
+  .carte .tel{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Au printemps du fauteuil</b><small>Atelier tapisserie · Toulouse</small></a>
+    <nav class="nav">
+      <a href="#atelier">L'atelier</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#venir">Horaires</a>
+      <a class="pill petit" href="tel:+33676955412">06 76 95 54 12</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap heros-grille">
+      <div class="intro">
+        <p class="metier">Tapissière garnisseuse diplômée, à Toulouse</p>
+        <h1>Vos fauteuils et vos chaises ont droit à leur printemps.</h1>
+      </div>
+
+      <div class="eventail">
+        <figure class="f g apparait"><img src="assets/au-printemps-du-fauteuil/fauteuil-crapaud-tissu-bleu-arabesques.webp" alt="Fauteuil recouvert d'un tissu bleu à arabesques, vu de trois quarts" width="1200" height="1600"></figure>
+        <figure class="f d apparait"><img src="assets/au-printemps-du-fauteuil/fauteuil-voltaire-tissu-cactus-perroquet.webp" alt="Fauteuil Voltaire, dossier en tissu illustré de perroquets et de cactus, assise en velours vert" width="3024" height="4032"></figure>
+        <figure class="f c"><img src="assets/au-printemps-du-fauteuil/fauteuil-louis-xv-tissu-vagues-bleu.webp" alt="Fauteuil cabriolet refait en tissu bleu nuit à vagues dorées, dans l'atelier" width="3024" height="4032"><figcaption class="etiquette">Cabriolet, tissu bleu nuit à vagues dorées</figcaption></figure>
+        <div class="note" aria-label="Note Google&nbsp;: 5,0 sur 5, 12 avis">
+          <span class="chiffre">5,0</span>
+          <span><span class="etoiles" aria-hidden="true">★★★★★</span><small>12 avis Google</small></span>
+        </div>
+      </div>
+
+      <div class="suite">
+        <p class="chapo">Maïotte Cartiaux rénove et refait vos sièges, fauteuils, chaises, tabourets et banquettes, en traditionnel comme en contemporain, dans son atelier au fond d'une cour de la rue Michel-Ange.</p>
+        <div class="actions">
+          <a class="pill plein" href="mailto:auprintempsdufauteuil@gmail.com?subject=Demande%20de%20devis">Envoyer des photos pour un devis</a>
+          <a class="pill contour" href="tel:+33676955412">06 76 95 54 12</a>
+        </div>
+        <p class="adresse-heros">98 rue Michel-Ange, fond de cour, 31200 Toulouse</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li>Diplôme de tapissier garnisseur</li>
+        <li>Traditionnel et contemporain</li>
+        <li>5,0 sur 5, 12 avis Google</li>
+        <li>Du lundi au vendredi, 9&nbsp;h à 17&nbsp;h 30</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="atelier">
+    <div class="wrap refait">
+      <figure class="photo apparait">
+        <div class="cadre">
+          <img src="assets/au-printemps-du-fauteuil/chaises-medaillon-bicolores.webp" alt="Série de chaises médaillon, assises alternées écru et bleu nuit, dans l'atelier" width="3024" height="4032" loading="lazy">
+          <span class="etiquette">Chaises médaillon, assises écru et bleu nuit</span>
+        </div>
+      </figure>
+      <div>
+        <h2 class="titre-section">Ce qui passe entre ses mains, à l'atelier.</h2>
+        <p class="lead">Rénovation ou réfection complète, dans l'esprit d'origine ou avec un tissu qui change tout.</p>
+        <ul class="liste">
+          <li><h3>Fauteuils</h3><p>Cabriolet, Voltaire ou crapaud, rénovés et refaits en traditionnel comme en contemporain.</p></li>
+          <li><h3>Chaises</h3><p>Chaises de salon, médaillon ou Louis XV, à l'unité ou en série.</p></li>
+          <li><h3>Tabourets et banquettes</h3><p>Les petits sièges de la maison ont aussi leur place à l'atelier.</p></li>
+          <li><h3>Les tissus</h3><p>Velours, tissus illustrés, motifs graphiques&nbsp;: les dernières réalisations sont habillées de tissus Nobilis et Casal.</p></li>
+        </ul>
+        <div class="devis">
+          <a class="pill plein" href="mailto:auprintempsdufauteuil@gmail.com?subject=Demande%20de%20devis">Demander un devis</a>
+          <p>Devis sur photos et sur rendez-vous&nbsp;: une photo de votre siège suffit pour commencer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sombre">
+    <div class="wrap pres">
+      <div class="duo">
+        <figure class="a apparait"><img src="assets/au-printemps-du-fauteuil/detail-accoudoir-tissu-vagues.webp" alt="Gros plan sur l'accoudoir sculpté et le tissu à vagues, passepoil jaune" width="3024" height="4032" loading="lazy"></figure>
+        <figure class="b apparait"><img src="assets/au-printemps-du-fauteuil/detail-dossier-passepoil-jaune.webp" alt="Détail du dossier et de l'assise, passepoil moutarde" width="3024" height="4032" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2 class="titre-section">Un cabriolet, vu de près.</h2>
+        <p class="lead">Accoudoirs sculptés, tissu bleu nuit à vagues dorées, et un passepoil moutarde qui suit chaque courbe du dossier et de l'assise.</p>
+        <ul class="details">
+          <li><span>Tissu</span>Bleu nuit à vagues dorées</li>
+          <li><span>Finition</span>Passepoil moutarde</li>
+          <li><span>Bois</span>Accoudoirs sculptés</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="realisations">
+    <div class="wrap">
+      <div class="real-tete">
+        <h2 class="titre-section">Quelques sièges sortis de l'atelier.</h2>
+        <p class="lead">Des séries de chaises comme des pièces uniques, du gris bleuté sage au velours vert canard.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="m1 apparait">
+          <div class="cadre"><img src="assets/au-printemps-du-fauteuil/serie-cinq-chaises-gris-bleu.webp" alt="Cinq chaises Louis XV refaites en tissu gris bleuté dans l'atelier" width="3024" height="4032" loading="lazy"><span class="etiquette">Cinq chaises Louis XV, tissu gris bleuté</span></div>
+        </figure>
+        <figure class="m2 apparait">
+          <div class="cadre"><img src="assets/au-printemps-du-fauteuil/chaises-velours-vert-canard.webp" alt="Chaises modernes recouvertes de velours vert canard" width="3024" height="4032" loading="lazy"><span class="etiquette">Velours vert canard</span></div>
+        </figure>
+        <figure class="m3">
+          <div class="polaroid">
+            <div class="cadre"><img src="assets/au-printemps-du-fauteuil/chaises-gris-bleu-passepoil-marine.webp" alt="Chaises en tissu gris bleuté et passepoil marine, vues de trois quarts" width="3024" height="4032" loading="lazy"></div>
+            <figcaption>Passepoil marine</figcaption>
+          </div>
+        </figure>
+        <figure class="m4 apparait">
+          <div class="cadre"><img src="assets/au-printemps-du-fauteuil/chaise-medaillon-assise-velours-marine.webp" alt="Assise en velours marine avec passepoil bleu" width="3024" height="4032" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="citation">
+    <div class="wrap">
+      <blockquote>
+        <span class="guill" aria-hidden="true">«</span>
+        <p>Rénovation et réfection, traditionnelle et contemporaine, de vos sièges, fauteuils, chaises, tabourets, banquettes.</p>
+        <footer>Maïotte Cartiaux, titulaire d'un diplôme de tapissier garnisseur</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <section id="venir">
+    <div class="wrap contact">
+      <div>
+        <h2 class="titre-section">Passer à l'atelier, au fond de la cour.</h2>
+        <p class="lead">L'atelier est au 98 rue Michel-Ange, à Toulouse. Envoyez d'abord quelques photos de votre siège&nbsp;: le devis se fait sur photos, puis sur rendez-vous.</p>
+        <div class="horaires">
+          <h3>Horaires</h3>
+          <dl>
+            <dt>Lundi</dt><dd>9&nbsp;h à 17&nbsp;h 30</dd>
+            <dt>Mardi</dt><dd>9&nbsp;h à 17&nbsp;h 30</dd>
+            <dt>Mercredi</dt><dd>9&nbsp;h à 17&nbsp;h 30</dd>
+            <dt>Jeudi</dt><dd>9&nbsp;h à 17&nbsp;h 30</dd>
+            <dt>Vendredi</dt><dd>9&nbsp;h à 17&nbsp;h 30</dd>
+            <dt>Samedi et dimanche</dt><dd class="ferme">Fermé</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="carte">
+        <div class="ligne"><span class="lib">Téléphone</span><a class="val tel" href="tel:+33676955412">06 76 95 54 12</a></div>
+        <div class="ligne"><span class="lib">E-mail</span><a class="val" href="mailto:auprintempsdufauteuil@gmail.com">auprintempsdufauteuil@gmail.com</a></div>
+        <div class="ligne"><span class="lib">Adresse</span><span class="val">98 rue Michel-Ange, fond de cour<br>31200 Toulouse</span></div>
+        <div class="ligne"><span class="lib">Note Google</span><span class="val">5,0 sur 5, 12 avis</span></div>
+        <div class="ligne"><span class="lib">Les dernières réalisations</span><a class="val" href="https://www.facebook.com/auprintempsdufauteuil/" rel="noopener" target="_blank">Page Facebook de l'atelier</a></div>
+        <a class="pill plein" href="tel:+33676955412">Appeler l'atelier</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Au printemps du fauteuil</p>
+        <p>Atelier tapisserie de Maïotte Cartiaux, tapissière garnisseuse diplômée.<br>98 rue Michel-Ange, fond de cour, 31200 Toulouse.</p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <p style="margin-top:0">Du lundi au vendredi<br>9&nbsp;h à 17&nbsp;h 30</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p style="margin-top:0"><a href="tel:+33676955412">06 76 95 54 12</a></p>
+        <p style="margin-top:8px"><a href="mailto:auprintempsdufauteuil@gmail.com">Écrire à l'atelier</a></p>
+        <p style="margin-top:8px"><a href="https://www.facebook.com/auprintempsdufauteuil/" rel="noopener" target="_blank">Facebook</a></p>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour Au printemps du fauteuil</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

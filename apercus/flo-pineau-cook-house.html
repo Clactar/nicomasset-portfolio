@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Flo Pineau by Cook House · Chef à domicile à Toulouse</title>
+<meta name="description" content="Florent Pineau, chef à domicile et traiteur à Toulouse : plancha, paella géante, planches à partager, cocktails dînatoires et séminaires.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231B1714'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-weight='700' font-size='38' text-anchor='middle' fill='%23D08A2E'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=Chivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3EEE6; --base-2:#EAE2D5; --surface:#FBF8F3; --encre:#1B1714; --encre-2:#5C534A;
+  --ambre:#D08A2E; --ambre-f:#93591A; --sombre:#1B1714; --sombre-2:#26201B; --clair:#FBF8F3; --clair-2:#CFC6B9;
+  --ombre:0 30px 60px -34px rgba(27,23,20,.5); --ombre-forte:0 50px 90px -44px rgba(27,23,20,.65);
+  --display:'Unna',Georgia,serif; --texte:'Chivo','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62}
+::selection{background:var(--ambre);color:var(--sombre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(27,23,20,.96);color:var(--clair)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:80px}
+.marque{text-decoration:none;line-height:1;min-width:0}
+.marque b{display:block;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.005em}
+.marque span{display:block;font-size:13px;color:var(--clair-2);margin-top:5px;letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:30px;font-size:15.5px}
+.nav a{text-decoration:none;color:var(--clair-2);transition:color .2s}
+.nav a:hover{color:var(--ambre)}
+.nav .tel{display:inline-flex;align-items:center;gap:8px;background:var(--ambre);color:var(--sombre);font-weight:600;padding:11px 20px;border-radius:999px;transition:background-color .2s}
+.nav .tel:hover{background:var(--clair);color:var(--sombre)}
+.nav .tel svg{width:16px;height:16px;flex:none}
+.court{display:none}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:16.5px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--ambre);color:var(--sombre);box-shadow:0 18px 34px -20px rgba(208,138,46,.75)}
+.btn-plein:hover{background:var(--clair);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid rgba(251,248,243,.7);color:var(--clair)}
+.btn-contour:hover{background:var(--clair);color:var(--sombre);transform:translateY(-2px)}
+.clair .btn-plein{background:var(--encre);color:var(--clair);box-shadow:var(--ombre)}
+.clair .btn-plein:hover{background:var(--ambre-f)}
+.clair .btn-contour{border-color:var(--encre);color:var(--encre)}
+.clair .btn-contour:hover{background:var(--encre);color:var(--clair)}
+
+/* héros sombre */
+.heros{background:var(--sombre);color:var(--clair);padding:clamp(28px,4vw,56px) 0 clamp(80px,9vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"media titre" "media copie";column-gap:clamp(40px,5.4vw,80px);align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.6vw,84px);line-height:1;align-self:end;padding-top:clamp(0px,6vw,96px)}
+.heros h1 .pt{color:var(--ambre)}
+.heros .copie{grid-area:copie;margin-top:28px}
+.heros .copie p{font-size:clamp(17px,1.35vw,19.5px);color:var(--clair-2);font-weight:300;max-width:30em}
+.heros .copie p strong{color:var(--clair);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros .btn{padding-inline:26px}
+.heros-media{grid-area:media;position:relative;margin:0;padding-bottom:40px}
+.heros-media .grande{border-radius:22px;overflow:hidden;aspect-ratio:1/1.02;box-shadow:0 60px 100px -50px rgba(0,0,0,.9)}
+.heros-media .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.heros-media .etiquette{position:absolute;left:20px;bottom:60px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:500;padding:9px 16px;border-radius:999px;line-height:1.3;box-shadow:0 12px 26px -14px rgba(0,0,0,.7)}
+.heros-media .plat{position:absolute;right:-56px;bottom:0;width:min(220px,40%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--sombre);box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.heros-media .plat img{width:100%;height:100%;object-fit:cover;object-position:50% 56%}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);width:min(1220px,100%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:3px}
+.faits strong{font-family:var(--display);font-weight:700;font-size:25px;line-height:1.15}
+.faits span{font-size:15px;color:var(--encre-2);line-height:1.4}
+
+/* cuisine */
+.cuisine{padding:clamp(96px,11vw,136px) 0}
+.cuisine .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(48px,7vw,112px);align-items:center}
+h2{font-size:clamp(34px,4.2vw,58px);line-height:1.04}
+.lede{margin-top:22px;color:var(--encre-2);max-width:32em}
+.carte{list-style:none;margin:38px 0 0;padding:0;counter-reset:none}
+.carte li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;padding:20px 0;border-top:1px solid rgba(27,23,20,.18);align-items:baseline}
+.carte li:last-child{border-bottom:1px solid rgba(27,23,20,.18)}
+.carte h3{font-size:24px;line-height:1.15}
+.carte p{font-size:16.5px;color:var(--encre-2)}
+.duo{position:relative;padding:0 0 90px 0}
+.duo .un{width:78%;border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre-forte)}
+.duo .un img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.duo .deux{position:absolute;right:0;bottom:0;width:min(300px,52%);aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:8px solid var(--base);box-shadow:var(--ombre-forte)}
+.duo .deux img{width:100%;height:100%;object-fit:cover;object-position:60% 70%}
+.duo .pastille{position:absolute;left:18px;top:18px;background:var(--surface);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3;box-shadow:0 12px 26px -16px rgba(27,23,20,.7)}
+
+/* citation + panoramique */
+.table{padding:0 0 clamp(96px,11vw,136px)}
+.table blockquote{margin:0 auto;max-width:21em;font-family:var(--display);font-weight:400;font-size:clamp(30px,4.2vw,60px);line-height:1.1;text-align:left;text-wrap:balance}
+.table blockquote .a{color:var(--ambre-f)}
+.table cite{display:block;margin-top:22px;font-style:normal;font-size:16px;color:var(--encre-2)}
+.panorama{position:relative;margin:clamp(48px,6vw,72px) 0 0;border-radius:24px;overflow:hidden;aspect-ratio:21/9;box-shadow:var(--ombre-forte)}
+.panorama img{width:100%;height:100%;object-fit:cover;object-position:50% 44%}
+.panorama .pastille{position:absolute;left:20px;bottom:20px;background:var(--surface);font-size:14.5px;font-weight:500;padding:9px 16px;border-radius:999px;line-height:1.3}
+
+/* planches, sombre */
+.planches{background:var(--sombre);color:var(--clair);padding:clamp(96px,11vw,136px) 0}
+.planches .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,104px);align-items:center}
+.planches h2{color:var(--clair)}
+.planches .lede{color:var(--clair-2);font-weight:300}
+.saveurs{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.saveurs li{border:1px solid rgba(251,248,243,.3);border-radius:999px;padding:7px 16px;font-size:15.5px}
+.saveurs-note{margin-top:16px;font-size:15px;color:#A79D90}
+.mosaique{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.mosaique .grande .ph{aspect-ratio:3/4;border-radius:20px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.85)}
+.mosaique .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.mosaique .pola{margin-top:90px;background:var(--surface);padding:12px 12px 16px;border-radius:12px;transform:rotate(3deg);box-shadow:0 40px 70px -36px rgba(0,0,0,.9)}
+.mosaique .pola .ph{aspect-ratio:4/5;border-radius:6px;overflow:hidden}
+.mosaique .pola img{width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.mosaique .pola figcaption{color:var(--encre-2);font-size:14px;margin-top:10px;line-height:1.35}
+.mosaique .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+
+/* réceptions */
+.receptions{padding:clamp(96px,11vw,136px) 0 clamp(72px,9vw,104px)}
+.receptions .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(48px,7vw,104px);align-items:start}
+.receptions .colonnes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);margin-top:44px}
+.receptions .colonnes h3{font-size:26px;line-height:1.15}
+.receptions .colonnes p{margin-top:10px;font-size:16.5px;color:var(--encre-2)}
+.receptions .colonnes p q{font-style:italic;quotes:"«\00a0" "\00a0»"}
+.etage{position:relative;padding-top:20px}
+.etage .haut{width:min(400px,100%);margin-left:auto;border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre-forte)}
+.etage .haut img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.etage .vignette{position:absolute;left:0;bottom:-40px;width:min(220px,46%);background:var(--surface);padding:10px 10px 12px;border-radius:12px;transform:rotate(-4deg);box-shadow:var(--ombre)}
+.etage .vignette img{border-radius:6px;width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 60%}
+.etage .vignette figcaption{font-size:13.5px;color:var(--encre-2);margin-top:8px;line-height:1.35}
+
+/* contact */
+.contact{background:var(--base-2);padding:clamp(88px,10vw,128px) 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.portrait{margin:44px 0 0;position:relative;width:min(380px,100%)}
+.portrait .ph{border-radius:50% 50% 20px 20px / 36% 36% 20px 20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+.portrait .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+.fiche{background:var(--surface);border-radius:24px;padding:clamp(26px,4vw,48px);box-shadow:var(--ombre-forte)}
+.fiche .gros{font-family:var(--display);font-weight:700;font-size:clamp(30px,3.6vw,44px);line-height:1;text-decoration:none;display:inline-block;white-space:nowrap}
+.fiche .gros:hover{color:var(--ambre-f)}
+.fiche .bloc{padding:22px 0;border-top:1px solid rgba(27,23,20,.14)}
+.fiche .bloc:first-child{padding-top:0;border-top:0}
+.fiche .lab{display:block;font-size:14.5px;color:var(--encre-2);margin-bottom:6px}
+.fiche .deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.fiche a.lien{color:var(--ambre-f);font-weight:600;text-underline-offset:4px;overflow-wrap:anywhere}
+.heures{font-family:var(--display);font-weight:700;font-size:27px;line-height:1.15}
+.note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:40px;font-weight:700;line-height:1}
+.liens{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-2);padding:76px 0 44px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-weight:700;font-size:32px;color:var(--clair);display:block;line-height:1.05}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:var(--ambre)}
+.pied h3{font-family:var(--texte);font-size:14.5px;font-weight:600;color:var(--ambre);margin-bottom:10px}
+.signature{background:var(--sombre);color:#8E857A;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(251,248,243,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .heros-media .plat{right:-28px}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-areas:"titre" "media" "copie";grid-template-columns:minmax(0,1fr)}
+  .heros h1{padding-top:8px}
+  .heros-media{margin-top:28px;margin-right:16px;padding-bottom:36px}
+  .heros-media .grande{aspect-ratio:4/3.7}
+  .heros-media .grande img{object-position:50% 40%}
+  .heros-media .plat{right:-16px;width:min(130px,36%);border-width:6px}
+  .heros-media .etiquette{left:14px;bottom:50px}
+  .heros .copie{margin-top:26px}
+  .cuisine .wrap,.planches .wrap,.receptions .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .duo{order:-1}
+  .panorama{aspect-ratio:4/3}
+  .etage{margin-bottom:40px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:68px}
+  .marque b{font-size:23px}
+  .marque span{font-size:12px}
+  .nav .tel{padding:10px 15px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:26px}
+  .faits strong{font-size:22px}
+  .carte li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .actions .btn{width:100%}
+  .duo{padding-bottom:70px}
+  .duo .un{width:86%}
+  .duo .deux{width:min(200px,50%);border-width:6px}
+  .mosaique{gap:14px}
+  .mosaique .pola{margin-top:56px;padding:8px 8px 12px}
+  .receptions .colonnes{grid-template-columns:minmax(0,1fr)}
+  .fiche .deux{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .nav .tel .long{display:none}
+  .nav .tel .court{display:inline}
+  .marque span{display:none}
+  .fiche .gros{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Flo Pineau</b><span>by Cook House, chef à domicile</span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#cuisine">La cuisine</a>
+      <a href="#planches">Planches et buffets</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33632368692"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">06 32 36 86 92</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Un repas de chef, sans quitter la maison<span class="pt">.</span></h1>
+      <figure class="heros-media">
+        <div class="grande"><img src="assets/flo-pineau-cook-house/florent-pineau-plancha-soiree.webp" alt="Florent Pineau à la plancha, les invités derrière lui" width="3024" height="4032" fetchpriority="high"></div>
+        <span class="etiquette">Florent, à la plancha</span>
+        <div class="plat"><img src="assets/flo-pineau-cook-house/assiette-entree-dressee-terrasse.webp" alt="Une assiette d'entrée dressée" width="3072" height="4096"></div>
+      </figure>
+      <div class="copie">
+        <p><strong>Florent Pineau, chef à domicile à Toulouse.</strong> Il se déplace et cuisine chez vous&nbsp;: plancha, paella géante, planches à partager, cocktails dînatoires et séminaires.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:p.florentpineau@gmail.com">Écrire à Florent</a>
+          <a class="btn btn-contour" href="tel:+33632368692"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 32 36 86 92</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul>
+      <li><strong>Chef à domicile</strong><span>et traiteur, Toulouse</span></li>
+      <li><strong>5,0 sur 5 sur Google</strong><span>63 avis</span></li>
+      <li><strong>Tous les jours</strong><span>joignable de 8&nbsp;h à 23&nbsp;h</span></li>
+      <li><strong>Plancha et paella</strong><span>cuites devant vos invités</span></li>
+    </ul>
+  </section>
+
+  <section class="cuisine clair" id="cuisine">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Le chef vient, la cuisine se fait chez vous</h2>
+        <p class="lede">Florent se déplace et cuisine sur place&nbsp;: au jardin, en terrasse, au domaine ou en bord de mer.</p>
+        <ul class="carte">
+          <li><h3>La plancha</h3><p>Gambas et viandes saisies devant les invités.</p></li>
+          <li><h3>Le brasero</h3><p>Grandes pièces grillées sur le feu, en plein air.</p></li>
+          <li><h3>La paella géante</h3><p>Une poêle immense de gambas, à partager au jardin.</p></li>
+          <li><h3>Les assiettes</h3><p>Entrées dressées une à une, desserts aux fraises et meringue.</p></li>
+        </ul>
+      </div>
+      <div class="duo reveal">
+        <div class="un"><img src="assets/flo-pineau-cook-house/florent-pineau-grill-viandes.webp" alt="Florent grille des viandes sur un brasero, en plein air" width="3072" height="4096" loading="lazy"></div>
+        <div class="deux"><img src="assets/flo-pineau-cook-house/florent-pineau-paella-gambas.webp" alt="Florent devant une paella géante de gambas" width="3072" height="4096" loading="lazy"></div>
+        <span class="pastille">Brasero et paella, en plein air</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="table">
+    <div class="wrap">
+      <blockquote>Envie d'un repas confectionné par un chef tout en restant chez vous&nbsp;? C'est possible&nbsp;!</blockquote>
+      <cite>Florent Pineau, Cook House</cite>
+      <figure class="panorama reveal">
+        <img src="assets/flo-pineau-cook-house/table-dressee-pins-bord-de-mer.webp" alt="Une longue table en bois dressée sous les pins, la mer au fond" width="2386" height="3176" loading="lazy">
+        <span class="pastille">Une longue table, la mer au fond</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="planches" id="planches">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Planches à partager et grands buffets</h2>
+        <p class="lede">Charcuteries, fromages, légumes, fruits et bouquets&nbsp;: des tables généreuses où chacun se sert. En ce moment, des couleurs d'automne sur les planches.</p>
+        <ul class="saveurs">
+          <li>Cœur d'artichaut teriyaki</li>
+          <li>Pesto de roquette et pistache</li>
+          <li>Tomates rôties</li>
+        </ul>
+      </div>
+      <div class="mosaique">
+        <figure class="grande reveal">
+          <div class="ph"><img src="assets/flo-pineau-cook-house/buffet-champetre-invites-se-servent.webp" alt="Un grand buffet de planches où les invités se servent" width="3024" height="4032" loading="lazy"></div>
+          <span class="pastille">Le buffet champêtre</span>
+        </figure>
+        <figure class="pola reveal">
+          <div class="ph"><img src="assets/flo-pineau-cook-house/buffet-fleurs-planches-a-partager.webp" alt="Buffet avec bouquet de fleurs, fruits, planches et fromages de chèvre" width="3024" height="4032" loading="lazy"></div>
+          <figcaption>Fleurs, fruits, chèvres et thé glacé.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="receptions clair">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Cocktails, séminaires et grandes soirées</h2>
+        <p class="lede">Du cocktail dînatoire au séminaire de plusieurs jours, Florent cuisine pour les grandes tablées, jusqu'aux dizaines de cocottes dressées à la nuit tombée.</p>
+        <div class="colonnes">
+          <div>
+            <h3>L'atelier découpe de jambon</h3>
+            <p>Un incontournable pour vos cocktails dînatoires. La découpe de jambon, tout un art.</p>
+          </div>
+          <div>
+            <h3>Les séminaires</h3>
+            <p>Comme pour Naka Conseil cet automne&nbsp;: <q>quelques jours placés sous le signe du partage et de la gourmandise</q>.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:p.florentpineau@gmail.com">Écrire à Florent</a>
+          <a class="btn btn-contour" href="tel:+33632368692">06 32 36 86 92</a>
+        </div>
+      </div>
+      <div class="etage reveal">
+        <div class="haut"><img src="assets/flo-pineau-cook-house/chef-dresse-verrines-gaspacho.webp" alt="Le chef dresse des dizaines de petites cocottes de gaspacho, de nuit" width="2594" height="3458" loading="lazy"></div>
+        <figure class="vignette" style="margin:0">
+          <img src="assets/flo-pineau-cook-house/chef-finition-assiettes-guinguette.webp" alt="Le chef presse un citron sur des assiettes sous un chapiteau à guirlandes" width="960" height="1200" loading="lazy">
+          <figcaption>La finition, sous les guirlandes.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact clair" id="contact">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Parlons de votre repas</h2>
+        <p class="lede">Un dîner, une fête, un séminaire&nbsp;: appelez Florent ou écrivez-lui.</p>
+        <figure class="portrait reveal">
+          <div class="ph"><img src="assets/flo-pineau-cook-house/florent-pineau-rire-domaine.webp" alt="Florent Pineau qui rit, devant une bâtisse en pierre et des tables dressées" width="3072" height="4096" loading="lazy"></div>
+          <span class="pastille">Florent Pineau</span>
+        </figure>
+      </div>
+      <div class="fiche">
+        <div class="bloc">
+          <span class="lab">Téléphone</span>
+          <a class="gros" href="tel:+33632368692">06 32 36 86 92</a>
+        </div>
+        <div class="bloc deux">
+          <div>
+            <span class="lab">Horaires</span>
+            <p class="heures">Tous les jours<br>8&nbsp;h à 23&nbsp;h</p>
+          </div>
+          <div>
+            <span class="lab">Secteur</span>
+            <p>Chef à domicile<br>Toulouse (31000)</p>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">Note Google</span>
+          <p class="note"><b>5,0 / 5</b><span>63 avis</span></p>
+          <div class="liens">
+            <a class="lien" href="https://www.google.com/maps/place/Chef+%C3%A0+domicile+Florent+Pineau+COOK+HOUSE/@44.7544597,1.5267695,7z" target="_blank" rel="noopener">Voir les avis sur Google</a>
+            <a class="lien" href="https://www.facebook.com/flocookhouse/" target="_blank" rel="noopener">Sa page Facebook</a>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">E-mail</span>
+          <a class="lien" href="mailto:p.florentpineau@gmail.com">p.florentpineau@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="nom">Flo Pineau by Cook House</span>
+      <p>Florent Pineau, chef à domicile et traiteur à Toulouse.</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p style="margin-top:0">Tous les jours, de 8&nbsp;h à 23&nbsp;h<br>Toulouse (31000)</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-top:0"><a href="tel:+33632368692">06 32 36 86 92</a><br><a href="mailto:p.florentpineau@gmail.com">p.florentpineau@gmail.com</a><br><a href="https://www.facebook.com/flocookhouse/" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Flo Pineau by Cook House</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

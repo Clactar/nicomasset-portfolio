@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier Mamout cycle (Solution.s Vélo) · Réparation de vélos sur rendez-vous à Tournefeuille</title>
+<meta name="description" content="Atelier Mamout cycle, Solution.s Vélo : réparation de vélos sur rendez-vous, remise en état et électrification, 35 rue Gaston Doumergue à Tournefeuille.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D13A2F'/%3E%3Ctext x='32' y='47' font-family='Impact,sans-serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23F5F7F1'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E9EDE3; --base-2:#DEE4D6; --surface:#F5F7F1; --encre:#1B2420; --encre-2:#4E5A53;
+  --rouge:#D13A2F; --rouge-f:#AE2E25; --sombre:#24302A; --clair:#F5F7F1; --clair-2:#C9D2CB;
+  --ombre:0 30px 60px -34px rgba(27,36,32,.5); --ombre-forte:0 50px 90px -44px rgba(27,36,32,.62);
+  --display:'Big Shoulders Display','Big Shoulders',Impact,sans-serif; --texte:'Overpass','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.6}
+::selection{background:var(--rouge);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;letter-spacing:-.005em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(233,237,227,.95)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:80px}
+.marque{text-decoration:none;line-height:1;min-width:0}
+.marque b{display:block;font-family:var(--display);font-weight:800;font-size:29px;letter-spacing:.01em;text-transform:uppercase}
+.marque span{display:block;font-size:13.5px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--rouge-f)}
+.nav .tel{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--clair);font-weight:600;padding:11px 20px;border-radius:999px;transition:background-color .2s}
+.nav .tel:hover{background:var(--rouge);color:var(--clair)}
+.nav .tel svg{width:16px;height:16px;flex:none}
+.court{display:none}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--rouge);color:var(--clair);box-shadow:0 18px 32px -18px rgba(174,46,37,.85)}
+.btn-plein:hover{background:var(--rouge-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+.fonce .btn-contour{border-color:rgba(245,247,241,.7);color:var(--clair)}
+.fonce .btn-contour:hover{background:var(--clair);color:var(--encre)}
+
+/* héros */
+.heros{padding:clamp(32px,5vw,72px) 0 clamp(72px,8vw,112px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"titre media" "copie media";column-gap:clamp(36px,5vw,80px);align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(44px,5.7vw,82px);padding-top:clamp(0px,3vw,48px);line-height:1;text-transform:uppercase;letter-spacing:-.005em;font-weight:800}
+.heros h1 .r{color:var(--rouge)}
+.heros .copie{grid-area:copie;margin-top:30px}
+.heros .copie p{font-size:clamp(17px,1.35vw,19.5px);color:var(--encre-2);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.heros-media{grid-area:media;position:relative;margin:clamp(0px,4vw,64px) 0 0;align-self:center}
+.heros-media .ph{border-radius:16px;overflow:hidden;aspect-ratio:3/2.3;box-shadow:var(--ombre-forte)}
+.heros-media img{width:100%;height:100%;object-fit:cover;object-position:50% 72%}
+.bagage{position:absolute;left:-30px;top:44px;display:flex;flex-direction:column;gap:2px;background:radial-gradient(circle at 18px 50%,var(--surface) 0 5px,rgba(0,0,0,.18) 5.5px 7px,transparent 7.5px),var(--rouge);color:var(--clair);padding:14px 24px 14px 38px;clip-path:polygon(16px 0,100% 0,100% 100%,16px 100%,0 calc(100% - 16px),0 16px);transform:rotate(-7deg);filter:drop-shadow(0 16px 18px rgba(27,36,32,.35))}
+.bagage b{font-family:var(--display);font-weight:800;font-size:26px;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.bagage span{font-size:13px;line-height:1.2;opacity:.92}
+.heros-media .legende{position:absolute;right:16px;bottom:16px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3;box-shadow:0 12px 26px -16px rgba(27,36,32,.7)}
+
+/* faits + langues */
+.faits{background:var(--base-2)}
+.faits .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);gap:28px;padding-top:30px;padding-bottom:30px;align-items:start}
+.faits .f{display:flex;flex-direction:column;gap:3px}
+.faits strong{font-family:var(--display);font-weight:700;font-size:27px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+.faits span{font-size:15.5px;color:var(--encre-2);line-height:1.4}
+.langues{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.langues li{list-style:none;background:var(--surface);border-radius:999px;padding:5px 13px;font-size:15px;font-weight:500;box-shadow:0 8px 18px -14px rgba(27,36,32,.6)}
+.langues{padding:0;margin-bottom:0}
+
+/* atelier */
+.atelier{padding:clamp(96px,11vw,136px) 0}
+.atelier .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,112px);align-items:center}
+.pied-atelier{position:relative;margin:0}
+.pied-atelier .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre-forte)}
+.pied-atelier img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.pied-atelier .pastille{position:absolute;left:16px;top:16px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+h2{font-size:clamp(40px,5vw,72px);line-height:.98;text-transform:uppercase;font-weight:800}
+.lede{margin-top:22px;color:var(--encre-2);max-width:32em}
+.services{list-style:none;margin:40px 0 0;padding:0}
+.services li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:22px 0;border-top:1.5px solid rgba(27,36,32,.16);align-items:baseline}
+.services li:last-child{border-bottom:1.5px solid rgba(27,36,32,.16)}
+.services h3{font-size:28px;line-height:1.05;text-transform:uppercase;font-weight:700}
+.services p{font-size:16.5px;color:var(--encre-2)}
+
+/* remises en état */
+.remises{background:var(--surface);padding:clamp(96px,11vw,136px) 0}
+.remises .tete-s{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:end}
+.remises .tete-s .lede{margin-top:0}
+.atelier-photos{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:clamp(20px,3vw,44px);margin-top:clamp(56px,6vw,80px);align-items:start}
+.atelier-photos figure{margin:0;position:relative}
+.atelier-photos .ph{overflow:hidden}
+.atelier-photos img{width:100%;height:100%;object-fit:cover}
+.atelier-photos .rouge .ph{aspect-ratio:4/5;border-radius:20px;box-shadow:var(--ombre-forte)}
+.atelier-photos .rouge img{object-position:40% 70%}
+.atelier-photos .blanc{margin-top:90px;background:var(--base);padding:12px 12px 16px;border-radius:12px;transform:rotate(2.5deg);box-shadow:var(--ombre)}
+.atelier-photos .blanc .ph{aspect-ratio:4/5;border-radius:6px}
+.atelier-photos .blanc img{object-position:50% 70%}
+.atelier-photos .blanc figcaption{font-size:14px;color:var(--encre-2);margin-top:10px;line-height:1.35}
+.atelier-photos .col3{display:flex;flex-direction:column;gap:28px}
+.atelier-photos .guido .ph{aspect-ratio:3/4;border-radius:16px;box-shadow:var(--ombre)}
+.atelier-photos .guido img{object-position:30% 70%}
+.atelier-photos .direction{width:min(200px,100%);align-self:flex-end}
+.atelier-photos .direction .ph{aspect-ratio:1;border-radius:50%;border:6px solid var(--surface);box-shadow:var(--ombre)}
+.atelier-photos .direction img{object-position:50% 55%}
+.atelier-photos figcaption{font-size:14px;color:var(--encre-2);margin-top:10px;line-height:1.35}
+.atelier-photos .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+
+/* électrification, sombre */
+.elec{background:var(--sombre);color:var(--clair);padding:clamp(96px,11vw,136px) 0}
+.elec .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(48px,7vw,104px);align-items:center}
+.elec h2{color:var(--clair)}
+.elec figure{margin:0;position:relative}
+.elec .ph{border-radius:20px;overflow:hidden;aspect-ratio:3/2;box-shadow:0 50px 90px -40px rgba(0,0,0,.8);background:#E8E8E2}
+.elec img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.elec .pastille{position:absolute;left:16px;bottom:16px;background:var(--rouge);color:var(--clair);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+.elec blockquote{margin:26px 0 0;font-size:clamp(19px,1.6vw,22px);line-height:1.5;color:var(--clair-2);font-weight:300;max-width:28em}
+.elec blockquote::before{content:"«\00a0"}
+.elec blockquote::after{content:"\00a0»"}
+.elec .chiffre{display:flex;align-items:baseline;gap:14px;margin-top:30px;padding-top:24px;border-top:1px solid rgba(245,247,241,.18)}
+.elec .chiffre b{font-family:var(--display);font-weight:800;font-size:56px;line-height:1;color:var(--clair)}
+.elec .chiffre span{font-size:16px;color:var(--clair-2);line-height:1.4}
+
+/* venir */
+.venir{padding:clamp(88px,10vw,128px) 0}
+.venir .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.remorque{margin:44px 0 0;position:relative;width:min(420px,100%)}
+.remorque .ph{border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--ombre)}
+.remorque img{width:100%;height:100%;object-fit:cover;object-position:60% 60%}
+.remorque .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+.fiche{background:var(--surface);border-radius:22px;padding:clamp(26px,4vw,48px);box-shadow:var(--ombre-forte)}
+.fiche .gros{font-family:var(--display);font-weight:800;font-size:clamp(34px,4vw,50px);line-height:1;text-decoration:none;display:inline-block;white-space:nowrap}
+.fiche .gros:hover{color:var(--rouge-f)}
+.fiche .bloc{padding:22px 0;border-top:1.5px solid rgba(27,36,32,.12)}
+.fiche .bloc:first-child{padding-top:0;border-top:0}
+.fiche .lab{display:block;font-size:14.5px;color:var(--encre-2);margin-bottom:8px}
+.fiche .deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.fiche a.lien{color:var(--rouge-f);font-weight:600;text-underline-offset:4px;overflow-wrap:anywhere}
+.semaine{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:12px}
+.semaine li{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px;row-gap:5px;align-items:center}
+.semaine .j{font-weight:600;font-size:16px}
+.semaine .h{font-size:15.5px;color:var(--encre-2)}
+.semaine .barre{grid-column:2;position:relative;height:8px;border-radius:99px;background:var(--base-2)}
+.semaine .barre i{position:absolute;top:0;bottom:0;left:var(--d);width:var(--l);border-radius:99px;background:var(--encre)}
+.semaine .ferme .j,.semaine .ferme .h{color:var(--encre-2)}
+.echelle{grid-column:2;display:flex;justify-content:space-between;font-size:12.5px;color:var(--encre-2)}
+.note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:44px;font-weight:800;line-height:1}
+.liens{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-2);padding:76px 0 44px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-weight:800;font-size:34px;color:var(--clair);display:block;line-height:1;text-transform:uppercase}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:#F2A49D}
+.pied h3{font-family:var(--texte);font-size:14.5px;font-weight:600;color:#F2A49D;margin-bottom:10px}
+.signature{background:var(--sombre);color:#8C9890;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(245,247,241,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-areas:"titre" "media" "copie";grid-template-columns:minmax(0,1fr)}
+  .heros-media{margin:30px 0 0 14px}
+  .bagage{left:-14px;top:20px;padding:10px 18px 10px 32px}
+  .bagage b{font-size:21px}
+  .heros .copie{margin-top:30px}
+  .atelier .wrap,.remises .tete-s,.elec .wrap,.venir .wrap{grid-template-columns:minmax(0,1fr)}
+  .atelier-photos{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .atelier-photos .rouge{grid-column:1/-1}
+  .atelier-photos .rouge .ph{aspect-ratio:4/3.4}
+  .atelier-photos .blanc{margin-top:0}
+  .pied-atelier .ph{aspect-ratio:4/3.6}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:68px}
+  .marque b{font-size:24px}
+  .marque span{font-size:12.5px}
+  .nav .tel{padding:10px 15px;font-size:15px}
+  .faits .wrap{grid-template-columns:minmax(0,1fr);gap:18px;padding-top:26px;padding-bottom:26px}
+  .services li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .actions .btn{width:100%}
+  .atelier-photos{gap:16px}
+  .atelier-photos .col3{gap:16px}
+  .fiche .deux{grid-template-columns:minmax(0,1fr)}
+  .semaine li{grid-template-columns:78px minmax(0,1fr);column-gap:12px}
+}
+@media (max-width:420px){
+  .nav .tel .long{display:none}
+  .nav .tel .court{display:inline}
+  .marque span{display:none}
+  .fiche .gros{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Atelier Mamout</b><span>cycle, Solution.s Vélo</span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#atelier">L'atelier</a>
+      <a href="#electrification">Électrification</a>
+      <a href="#venir">Horaires</a>
+      <a class="tel" href="tel:+33621269936"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">06 21 26 99 36</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Votre vélo réparé, à Tournefeuille<span class="r">.</span></h1>
+      <figure class="heros-media">
+        <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/velo-randonnee-sacoches-rouges.webp" alt="Vélo de randonnée bleu équipé de sacoches rouges et noires, posé sur l'herbe au soleil" width="2048" height="1618" fetchpriority="high"></div>
+        <div class="bagage" aria-hidden="true"><b>Sur rendez-vous</b><span>Tournefeuille 31170</span></div>
+        <figcaption class="legende">Prêt pour la randonnée</figcaption>
+      </figure>
+      <div class="copie">
+        <p>L'Atelier Mamout cycle, c'est Solution.s Vélo&nbsp;: un service de réparation de vélos sur rendez-vous, rue Gaston Doumergue. Remise en état, électrification, conseil&nbsp;: on vous reçoit en français, en anglais, en portugais ou en espagnol.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33621269936"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 21 26 99 36</a>
+          <a class="btn btn-contour" href="#venir">Horaires et adresse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <div class="f"><strong>Sur rendez-vous</strong><span>Réparation de vélos</span></div>
+      <div class="f"><strong>5,0 sur Google</strong><span>54 avis</span></div>
+      <div class="f"><strong>Tournefeuille</strong><span>35 rue Gaston Doumergue</span></div>
+      <div class="f"><strong>Quatre langues</strong>
+        <ul class="langues"><li lang="fr">Français</li><li lang="en">English</li><li lang="pt">Português</li><li lang="es">Español</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="atelier" id="atelier">
+    <div class="wrap">
+      <figure class="pied-atelier reveal">
+        <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/vtt-cannondale-sur-pied.webp" alt="VTT Cannondale noir et blanc sur pied d'atelier, sur la terrasse" width="1536" height="2048" loading="lazy"></div>
+        <figcaption class="pastille">Sur le pied d'atelier</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Ce qui passe par l'atelier</h2>
+        <p class="lede">Vélo de route, VTT, vélo de ville ou de randonnée&nbsp;: tous passent par l'atelier, sur rendez-vous.</p>
+        <ul class="services">
+          <li><h3>Réparations</h3><p>Sur rendez-vous, à l'atelier ou à domicile.</p></li>
+          <li><h3>Remise en état</h3><p>Vélos anciens remis en route, guidoline neuve, jeu de direction.</p></li>
+          <li><h3>Électrification</h3><p>Avec le kit homologué 250&nbsp;W OZO&nbsp;: presque tous les vélos s'y prêtent.</p></li>
+          <li><h3>Conseil et formation</h3><p>Pour votre vélo, en plus des réparations.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="remises">
+    <div class="wrap">
+      <div class="tete-s">
+        <h2>Remis en route</h2>
+        <p class="lede">Un vieux cadre rouge, un vélo de course blanc, une guidoline neuve&nbsp;: quelques vélos passés par l'atelier.</p>
+      </div>
+      <div class="atelier-photos">
+        <figure class="rouge reveal">
+          <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/velo-ancien-rouge-restaure.webp" alt="Vélo de ville ancien à cadre rouge, devant la verdure" width="1432" height="1909" loading="lazy"></div>
+          <figcaption class="pastille">Le vélo de ville rouge</figcaption>
+        </figure>
+        <figure class="blanc reveal">
+          <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/velo-vintage-blanc.webp" alt="Vélo de course vintage blanc dans les feuillages" width="1536" height="2048" loading="lazy"></div>
+          <figcaption>Le vélo de course blanc, guidon droit.</figcaption>
+        </figure>
+        <div class="col3">
+          <figure class="guido reveal">
+            <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/velo-route-guidoline-rouge.webp" alt="Avant d'un vélo de route noir et rouge avec guidoline rouge neuve" width="1536" height="2048" loading="lazy"></div>
+            <figcaption>Guidoline rouge neuve.</figcaption>
+          </figure>
+          <figure class="direction reveal">
+            <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/detail-jeu-de-direction-cadre-vert.webp" alt="Jeu de direction noir monté sur un cadre vert" width="1536" height="2048" loading="lazy"></div>
+            <figcaption>Jeu de direction, cadre vert.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="elec fonce" id="electrification">
+    <div class="wrap">
+      <figure class="reveal">
+        <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/vtc-electrifie-kit-ozo.webp" alt="VTC blanc électrifié, batterie sur le tube, contre un mur blanc" width="2048" height="1338" loading="lazy"></div>
+        <figcaption class="pastille">Un VTC électrifié à l'atelier</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Électrifier son vélo</h2>
+        <blockquote>Quasiment tous les vélos sont électrifiables, je suis à votre disposition pour discuter de vos besoins et déterminer la solution la plus adaptée.</blockquote>
+        <div class="chiffre"><b>250&nbsp;W</b><span>Kit homologué OZO,<br>monté sur votre vélo</span></div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33621269936">En parler</a>
+          <a class="btn btn-contour" href="mailto:solution.s.velo@proton.me">Écrire un e-mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Prendre rendez-vous</h2>
+        <p class="lede">Un appel ou un e-mail pour fixer le créneau, puis direction le 35 rue Gaston Doumergue, à Tournefeuille.</p>
+        <figure class="remorque reveal">
+          <div class="ph"><img src="assets/atelier-mamout-cycle-solution-s-velo/velo-et-remorque-bois.webp" alt="Vélo noir attelé à une remorque en bois, sur la terrasse" width="2048" height="1536" loading="lazy"></div>
+          <figcaption class="pastille">Vélo et remorque en bois</figcaption>
+        </figure>
+      </div>
+      <div class="fiche">
+        <div class="bloc">
+          <span class="lab">Téléphone</span>
+          <a class="gros" href="tel:+33621269936">06 21 26 99 36</a>
+        </div>
+        <div class="bloc">
+          <span class="lab">Horaires</span>
+          <ul class="semaine">
+            <li><span class="j">Lundi</span><span class="h">9&nbsp;h 30 à 12&nbsp;h 30, 13&nbsp;h 30 à 18&nbsp;h 30</span><span class="barre"><i style="--d:5%;--l:30%"></i><i style="--d:45%;--l:50%"></i></span></li>
+            <li><span class="j">Mardi</span><span class="h">9&nbsp;h 30 à 12&nbsp;h 30, 13&nbsp;h 30 à 18&nbsp;h 30</span><span class="barre"><i style="--d:5%;--l:30%"></i><i style="--d:45%;--l:50%"></i></span></li>
+            <li><span class="j">Mercredi</span><span class="h">9&nbsp;h 30 à 12&nbsp;h 30</span><span class="barre"><i style="--d:5%;--l:30%"></i></span></li>
+            <li><span class="j">Jeudi</span><span class="h">13&nbsp;h 30 à 18&nbsp;h 30</span><span class="barre"><i style="--d:45%;--l:50%"></i></span></li>
+            <li><span class="j">Vendredi</span><span class="h">9&nbsp;h 30 à 12&nbsp;h 30, 13&nbsp;h 30 à 18&nbsp;h 30</span><span class="barre"><i style="--d:5%;--l:30%"></i><i style="--d:45%;--l:50%"></i></span></li>
+            <li class="ferme"><span class="j">Samedi</span><span class="h">Fermé</span></li>
+            <li class="ferme"><span class="j">Dimanche</span><span class="h">Fermé</span></li>
+          </ul>
+        </div>
+        <div class="bloc deux">
+          <div>
+            <span class="lab">Adresse</span>
+            <p>35 rue Gaston Doumergue<br>31170 Tournefeuille</p>
+          </div>
+          <div>
+            <span class="lab">E-mail</span>
+            <a class="lien" href="mailto:solution.s.velo@proton.me">solution.s.velo@proton.me</a>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">Note Google</span>
+          <p class="note"><b>5,0 / 5</b><span>54 avis</span></p>
+          <div class="liens">
+            <a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Atelier+Mamout+cycle+35+rue+Gaston+Doumergue+31170+Tournefeuille" target="_blank" rel="noopener">Voir les avis sur Google</a>
+            <a class="lien" href="https://www.facebook.com/Solutionsvelo/" target="_blank" rel="noopener">Page Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="nom">Atelier Mamout cycle</span>
+      <p>Solution.s Vélo, réparation de vélos sur rendez-vous à Tournefeuille.</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p style="margin-top:0">Lundi, mardi, vendredi&nbsp;: 9&nbsp;h 30 à 12&nbsp;h 30, 13&nbsp;h 30 à 18&nbsp;h 30<br>Mercredi&nbsp;: 9&nbsp;h 30 à 12&nbsp;h 30<br>Jeudi&nbsp;: 13&nbsp;h 30 à 18&nbsp;h 30<br>Samedi et dimanche&nbsp;: fermé</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-top:0"><a href="tel:+33621269936">06 21 26 99 36</a><br><a href="mailto:solution.s.velo@proton.me">solution.s.velo@proton.me</a><br>35 rue Gaston Doumergue, 31170 Tournefeuille<br><a href="https://www.facebook.com/Solutionsvelo/" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour l'Atelier Mamout cycle (Solution.s Vélo)</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

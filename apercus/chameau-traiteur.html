@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Chameau Traiteur « Les 5 Sens » · Charcuterie traiteur, place de la Visitation à Angers</title>
+<meta name="description" content="Chameau Traiteur, charcuterie traiteur de père en fils, 9 place de la Visitation à Angers : pâtés en croûte, terrines, plats à emporter, cocktails.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C23B2A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23FBF7EE'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600;700&family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3ECDD; --base-2:#EADFCA; --surface:#FBF7EE; --marine:#1F2A44; --marine-2:#4A5370;
+  --rouge:#C23B2A; --rouge-fonce:#A22F21; --sombre:#1F2A44; --clair:#FBF7EE;
+  --ombre:0 30px 60px -34px rgba(31,42,68,.5); --ombre-forte:0 46px 80px -40px rgba(31,42,68,.6);
+  --display:'Rokkitt',Georgia,serif; --texte:'Asap','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--marine);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--rouge);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-.01em;word-spacing:-.08em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* store rayé */
+.store{height:16px;background:repeating-linear-gradient(90deg,var(--rouge) 0 30px,var(--surface) 30px 60px);position:relative;z-index:31}
+.store::after{content:"";position:absolute;left:0;right:0;top:16px;height:10px;background:radial-gradient(circle at 15px 0,var(--rouge) 14.5px,transparent 15px) 0 0/60px 10px repeat-x}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(243,236,221,.95)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;padding-top:6px}
+.marque{text-decoration:none;line-height:1}
+.marque b{display:block;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.005em}
+.marque span{display:block;font-size:13.5px;color:var(--marine-2);margin-top:5px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--marine-2)}
+.nav a:hover{color:var(--rouge)}
+.nav .tel{background:var(--marine);color:var(--clair);font-weight:600;padding:11px 20px;border-radius:999px;transition:background-color .2s}
+.nav .tel:hover{background:var(--rouge);color:var(--clair)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:16.5px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.btn-plein{background:var(--rouge);color:var(--clair);box-shadow:0 18px 32px -20px rgba(162,47,33,.8)}
+.btn-plein:hover{background:var(--rouge-fonce);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--marine);color:var(--marine)}
+.btn-contour:hover{background:var(--marine);color:var(--clair);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.sombre-fond .btn-contour{border-color:var(--clair);color:var(--clair)}
+.sombre-fond .btn-contour:hover{background:var(--clair);color:var(--marine)}
+
+/* héros */
+.heros{padding:clamp(40px,6vw,88px) 0 clamp(72px,8vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"titre media" "copie media";column-gap:clamp(40px,6vw,96px);align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(44px,7.4vw,112px);line-height:.98;font-weight:600;align-self:end;padding-top:clamp(0px,3vw,40px)}
+.heros .copie{grid-area:copie;margin-top:30px}
+.heros .copie p{font-size:clamp(17px,1.4vw,20px);color:var(--marine-2);max-width:32em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.cadre{grid-area:media;position:relative;margin:0 0 0 auto;width:100%;max-width:450px;background:var(--surface);padding:18px 18px 22px;border-radius:14px;transform:rotate(2deg);box-shadow:var(--ombre-forte)}
+.cadre .ph{aspect-ratio:4/5;border-radius:6px;overflow:hidden}
+.cadre img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.cadre figcaption{font-size:14.5px;color:var(--marine-2);padding:14px 4px 0;line-height:1.4}
+.etiquette{position:absolute;left:-26px;top:36px;background:var(--rouge);color:var(--clair);font-family:var(--display);font-weight:600;font-size:20px;line-height:1.1;padding:12px 20px 12px 18px;border-radius:999px;transform:rotate(-6deg);box-shadow:0 16px 30px -18px rgba(162,47,33,.9)}
+
+/* faits */
+.faits{background:var(--marine);color:var(--clair)}
+.faits ul{list-style:none;margin:0 auto;padding:28px var(--pad);width:min(1220px,100%);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);gap:28px}
+.faits li{display:flex;flex-direction:column;gap:2px}
+.faits strong{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.15}
+.faits span{font-size:15px;color:#C9CDDA;line-height:1.4}
+
+/* charcuterie */
+.charcuterie{padding:clamp(88px,11vw,136px) 0}
+.charcuterie .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(48px,7vw,112px);align-items:center}
+.pile{position:relative;padding:0 0 70px 0}
+.pile .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:4/5;width:88%}
+.pile .grande img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+.pile .petite{position:absolute;right:0;bottom:0;width:min(220px,46%);background:var(--surface);padding:10px;border-radius:12px;transform:rotate(-4deg);box-shadow:var(--ombre)}
+.pile .petite img{border-radius:6px;aspect-ratio:1;width:100%;object-fit:cover}
+.pile .pastille{position:absolute;left:18px;top:18px;background:var(--surface);font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(31,42,68,.6)}
+h2{font-size:clamp(36px,4.4vw,62px);line-height:1.02}
+.lede{margin-top:22px;color:var(--marine-2);max-width:34em}
+.carte-plats{list-style:none;margin:40px 0 0;padding:0}
+.carte-plats li{padding:22px 0;border-top:1.5px dashed rgba(31,42,68,.25)}
+.carte-plats li:last-child{border-bottom:1.5px dashed rgba(31,42,68,.25)}
+.carte-plats h3{font-size:26px;line-height:1.15;font-weight:600}
+.carte-plats p{margin-top:6px;font-size:16.5px;color:var(--marine-2)}
+
+/* cocktail, sombre */
+.cocktail{background:var(--sombre);color:var(--clair);padding:clamp(88px,11vw,136px) 0;position:relative}
+.cocktail .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,104px);align-items:center}
+.cocktail h2{color:var(--clair)}
+.cocktail .lede{color:#D5D8E2}
+.cocktail ul{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.cocktail ul li{border:1px solid rgba(251,247,238,.28);border-radius:999px;padding:7px 16px;font-size:15.5px}
+.collage{position:relative;padding:0 0 0 0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;align-items:start}
+.collage figure{margin:0;position:relative}
+.collage .ph{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage figure:first-child .ph{aspect-ratio:3/4}
+.collage figure:first-child img{object-position:40% 30%}
+.collage figure:last-child{margin-top:120px}
+.collage figure:last-child .ph{aspect-ratio:3/4}
+.collage figure:last-child img{object-position:50% 50%}
+.collage .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--marine);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px}
+.collage figcaption{margin-top:12px;font-size:14.5px;color:#BFC4D3}
+
+/* famille */
+.famille{padding:clamp(96px,12vw,144px) 0 clamp(72px,9vw,112px)}
+.famille .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(32px,5vw,72px);align-items:start}
+.famille .rond{width:min(240px,100%);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--ombre);margin-top:10px}
+.famille .rond img{width:100%;height:100%;object-fit:cover;object-position:45% 30%;filter:contrast(1.05)}
+.famille .rond-legende{font-size:14px;color:var(--marine-2);margin-top:14px;max-width:16em}
+.famille h2{font-size:clamp(30px,3vw,40px);color:var(--rouge)}
+.famille blockquote{margin:22px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(26px,3.1vw,44px);line-height:1.2;text-wrap:pretty}
+.famille cite{display:block;margin-top:24px;font-style:normal;font-size:15.5px;color:var(--marine-2)}
+.famille .suite{margin-top:28px;max-width:44em;color:var(--marine-2)}
+
+/* sucré */
+.sucre{padding:clamp(40px,5vw,64px) 0 clamp(96px,12vw,144px)}
+.sucre .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,104px);align-items:center}
+.sucre .texte p{margin-top:20px;color:var(--marine-2);max-width:32em}
+.decale{position:relative;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.decale figure{margin:0}
+.decale .un{grid-column:1/2;grid-row:1;border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:1;z-index:1;margin-right:-18%}
+.decale .deux{grid-column:2/3;grid-row:1;border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:1;margin-top:34%;margin-left:4%;z-index:2;border:8px solid var(--base)}
+.decale img{width:100%;height:100%;object-fit:cover}
+.decale .un img{object-position:50% 55%}
+.decale .deux img{object-position:50% 55%}
+.decale .tag{position:absolute;left:18px;top:18px;z-index:3;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(31,42,68,.6)}
+
+/* visite */
+.visite{background:var(--base-2);padding:clamp(88px,11vw,128px) 0}
+.visite .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.visite .gauche p{margin-top:20px;color:var(--marine-2);max-width:30em}
+.polas{display:flex;gap:20px;margin-top:48px;align-items:flex-start}
+.pola{margin:0;width:min(200px,48%);background:var(--surface);padding:10px 10px 12px;border-radius:10px;box-shadow:var(--ombre)}
+.pola:first-child{transform:rotate(-4deg)}
+.pola:last-child{transform:rotate(3deg);margin-top:30px}
+.pola img{border-radius:5px;width:100%;aspect-ratio:3/4;object-fit:cover}
+.pola:last-child img{aspect-ratio:1}
+.pola figcaption{font-size:13.5px;color:var(--marine-2);margin-top:8px;line-height:1.35}
+.fiche{background:var(--surface);border-radius:22px;padding:clamp(28px,4vw,48px);box-shadow:var(--ombre-forte);position:relative}
+.fiche .gros{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1;text-decoration:none;display:inline-block}
+.fiche .gros:hover{color:var(--rouge)}
+.fiche .bloc{padding:22px 0;border-top:1.5px dashed rgba(31,42,68,.2)}
+.fiche .bloc:first-child{padding-top:0;border-top:0}
+.fiche .lab{display:block;font-size:14px;color:var(--marine-2);margin-bottom:6px}
+.jours{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 24px;font-size:16.5px}
+.jours .ferme{color:var(--marine-2)}
+.fiche a.lien{color:var(--rouge);font-weight:600;text-underline-offset:4px}
+.note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:34px;font-weight:600;line-height:1}
+
+/* pied */
+.pied{background:var(--sombre);color:#D5D8E2;padding:72px 0 44px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied b{font-family:var(--display);font-weight:700;font-size:30px;color:var(--clair);display:block;line-height:1.05}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:#F0A99E}
+.pied h3{font-family:var(--texte);font-size:14.5px;font-weight:600;color:#F0A99E;margin-bottom:10px}
+.signature{background:var(--sombre);color:#8F96AB;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(251,247,238,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-areas:"titre" "media" "copie";grid-template-columns:minmax(0,1fr)}
+  .heros h1{padding-top:0}
+  .cadre{margin:34px auto 0 0;max-width:none;width:calc(100% - 14px);padding:12px 12px 16px;transform:rotate(1.5deg)}
+  .cadre .ph{aspect-ratio:1}
+  .etiquette{left:-6px;top:20px;font-size:17px;padding:10px 16px}
+  .heros .copie{margin-top:36px}
+  .charcuterie .wrap,.cocktail .wrap,.famille .wrap,.sucre .wrap,.visite .wrap{grid-template-columns:minmax(0,1fr)}
+  .sucre .decale{order:2}
+  .famille .rond{width:min(160px,50%)}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:72px}
+  .marque b{font-size:23px}
+  .marque span{font-size:12.5px}
+  .nav .tel{padding:10px 14px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:26px}
+  .faits strong{font-size:21px}
+  .collage{gap:14px}
+  .collage figure:last-child{margin-top:64px}
+  .pile{padding-bottom:56px}
+  .jours{gap:2px 16px;font-size:16px}
+  .polas{gap:14px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .nav .tel .long{display:none}
+}
+</style>
+</head>
+<body>
+<div class="store" aria-hidden="true"></div>
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Chameau Traiteur</b><span>« Les 5 Sens » · Angers</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#charcuterie">La charcuterie</a>
+      <a href="#cocktail">Cocktails</a>
+      <a href="#visite">Horaires</a>
+      <a class="tel" href="tel:+33241874025"><span class="long">Appeler · </span><span class="nw">02&nbsp;41&nbsp;87&nbsp;40&nbsp;25</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Charcuterie traiteur de père en fils.</h1>
+      <figure class="cadre">
+        <div class="ph"><img src="assets/chameau-traiteur/pate-en-croute-tenu-en-main.webp" alt="Coupe d'un pâté en croûte à étages de viande rosée, tenu à la main" width="1440" height="1799" fetchpriority="high"></div>
+        <figcaption>Pâté en croûte, en coupe.</figcaption>
+        <span class="etiquette">Place de la Visitation</span>
+      </figure>
+      <div class="copie">
+        <p>Au 9 place de la Visitation, à Angers, Chameau Traiteur prépare pâtés en croûte, terrines, plats à emporter, buffets cocktail et pâtisseries. Une affaire de famille, du laboratoire à la vitrine.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33241874025"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nw">02&nbsp;41&nbsp;87&nbsp;40&nbsp;25</span></a>
+          <a class="btn btn-contour" href="#visite">Horaires de la boutique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul>
+      <li><strong>Charcutier traiteur</strong><span>pâtés en croûte, terrines, cocktails</span></li>
+      <li><strong>4,4 sur 5</strong><span>106 avis Google</span></li>
+      <li><strong>9 place de la Visitation</strong><span>49100 Angers</span></li>
+      <li><strong>Du mardi au samedi</strong><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30 et 15&nbsp;h – 19&nbsp;h</span></li>
+    </ul>
+  </div>
+
+  <section class="charcuterie" id="charcuterie">
+    <div class="wrap">
+      <div class="pile">
+        <div class="grande reveal"><img src="assets/chameau-traiteur/terrine-herbes-vitrine-traiteur.webp" alt="Terrine en croûte décorée d'herbes et de fleurs, tenue au-dessus de la vitrine traiteur" width="1440" height="1758" loading="lazy"></div>
+        <span class="pastille">Au-dessus de la vitrine</span>
+        <figure class="petite reveal"><img src="assets/chameau-traiteur/pate-en-croute-pistache-coupe.webp" alt="Deux tranches de pâté en croûte pistache et cranberries" width="800" height="800" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2>La vitrine du charcutier, chaque jour.</h2>
+        <p class="lede">Ce qui sort du laboratoire, en quelques photos de la maison.</p>
+        <ul class="carte-plats">
+          <li><h3>Pâtés en croûte</h3><p>À étages de viande rosée, ou à la pistache et aux cranberries.</p></li>
+          <li><h3>Terrines</h3><p>En croûte, décorées d'herbes et de fleurs.</p></li>
+          <li><h3>Plats à emporter</h3><p>Magret rosé, noisettes, jus et farce, en barquette.</p></li>
+          <li><h3>Entrées et plateaux</h3><p>Radis, grenade et fleurs comestibles ; charcuterie, fromage et pickles maison.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cocktail sombre-fond" id="cocktail">
+    <div class="wrap">
+      <div>
+        <h2>Le cocktail, préparé au laboratoire.</h2>
+        <p class="lede">Canapés, makis, pains surprise et pièce montée pour un baptême : la maison prépare des prestations cocktail. Demandez par téléphone ou par mail.</p>
+        <ul>
+          <li>Canapés</li><li>Sushis et makis</li><li>Mini-burgers</li><li>Pains surprise</li><li>Verrines</li><li>Pièces montées</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:chameautraiteur@gmail.com?subject=Prestation%20cocktail">Demander par mail</a>
+          <a class="btn btn-contour" href="tel:+33241874025"><span class="nw">02&nbsp;41&nbsp;87&nbsp;40&nbsp;25</span></a>
+        </div>
+      </div>
+      <div class="collage">
+        <figure class="reveal"><div class="ph"><img src="assets/chameau-traiteur/chef-dressant-canapes-cocktail.webp" alt="Le charcutier dresse des rangées de canapés sur plaques au laboratoire" width="1440" height="1920" loading="lazy"></div><span class="pastille">Au laboratoire</span></figure>
+        <figure class="reveal"><div class="ph"><img src="assets/chameau-traiteur/buffet-cocktail-sushis-verrines.webp" alt="Buffet cocktail : makis, verrines, bouchées de jambon cru, toasts" width="1536" height="2048" loading="lazy"></div><figcaption>Makis, verrines, bouchées de jambon cru.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="famille">
+    <div class="wrap">
+      <div>
+        <div class="rond reveal"><img src="assets/chameau-traiteur/cuisinier-noir-et-blanc-concours.webp" alt="Jeune cuisinier en veste noire versant une sauce au chinois" width="1440" height="1440" loading="lazy"></div>
+        <p class="rond-legende">En cuisine au salon Serbotel.</p>
+      </div>
+      <div>
+        <h2>Bercés au labo</h2>
+        <blockquote>« L'un comme l'autre ont choisi leur métier, même s'il est vrai que, tout petits, ils venaient avec moi au labo. Disons qu'ils ont été bercés là-dedans. »</blockquote>
+        <cite>Le père, à propos de ses fils Jérémy et Anthony, dans le magazine Charcuterie Gastronomie (2022)</cite>
+        <p class="suite">Dans cet article, Jérémy était responsable de la production ; Anthony, pâtissier de métier, avait rejoint la maison pour hausser le niveau sur le sucré.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sucre">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Et pour finir, le sucré.</h2>
+        <p>Fraisier, tartes aux fruits frais : le côté pâtisserie de la maison, depuis qu'un pâtissier de métier a rejoint l'équipe.</p>
+        <p>La carte est disponible en boutique et sur demande par mail.</p>
+        <div class="actions"><a class="btn btn-contour" href="mailto:chameautraiteur@gmail.com?subject=Demande%20de%20carte">Demander la carte par mail</a></div>
+      </div>
+      <div class="decale">
+        <span class="tag">Fraisier entier</span>
+        <figure class="un reveal"><img src="assets/chameau-traiteur/fraisier-chef-patissier.webp" alt="Fraisier entier sur une planche en bois" width="1440" height="1440" loading="lazy"></figure>
+        <figure class="deux reveal"><img src="assets/chameau-traiteur/tarte-fruits-rouges-ete.webp" alt="Tarte aux fruits frais : framboises, myrtilles, raisins, pêches" width="1440" height="1440" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>La boutique, place de la Visitation.</h2>
+        <p>Passez en boutique du mardi au samedi, ou appelez pour une commande et un cocktail.</p>
+        <div class="polas">
+          <figure class="pola reveal"><img src="assets/chameau-traiteur/devanture-boutique-place-visitation.webp" alt="Devanture de la boutique Chameau Traiteur, vitrine éclairée le soir" width="1152" height="2048" loading="lazy"><figcaption>La boutique, 9 place de la Visitation.</figcaption></figure>
+          <figure class="pola reveal"><img src="assets/chameau-traiteur/plateau-charcuterie-fromage.webp" alt="Plateau de charcuterie et de fromage avec bocaux de pickles" width="960" height="960" loading="lazy"><figcaption>Plateau charcuterie et fromage.</figcaption></figure>
+        </div>
+      </div>
+      <div class="fiche">
+        <div class="bloc"><span class="lab">Téléphone</span><a class="gros nw" href="tel:+33241874025">02&nbsp;41&nbsp;87&nbsp;40&nbsp;25</a></div>
+        <div class="bloc"><span class="lab">Adresse</span>9 place de la Visitation<br>49100 Angers</div>
+        <div class="bloc"><span class="lab">Horaires</span>
+          <div class="jours">
+            <span>Lundi</span><span class="ferme">fermé</span>
+            <span>Mardi</span><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30, 15&nbsp;h – 19&nbsp;h</span>
+            <span>Mercredi</span><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30, 15&nbsp;h – 19&nbsp;h</span>
+            <span>Jeudi</span><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30, 15&nbsp;h – 19&nbsp;h</span>
+            <span>Vendredi</span><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30, 15&nbsp;h – 19&nbsp;h</span>
+            <span>Samedi</span><span>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30, 15&nbsp;h – 19&nbsp;h</span>
+            <span>Dimanche</span><span class="ferme">fermé</span>
+          </div>
+        </div>
+        <div class="bloc"><span class="lab">E-mail</span><a class="lien" href="mailto:chameautraiteur@gmail.com">chameautraiteur@gmail.com</a></div>
+        <div class="bloc"><span class="lab">Avis Google</span><div class="note"><b>4,4 sur 5</b><span>106 avis</span></div><a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Chameau%20Traiteur%20%22Les%205%20Sens%22%20-%20La%20Visitation&amp;query_place_id=ChIJdTSSRL94CEgRO8IuAxJW9IE" rel="noopener" target="_blank">Voir les avis et l'itinéraire</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div><b>Chameau Traiteur<br>« Les 5 Sens »</b><p>Charcuterie traiteur de père en fils, à Angers.</p></div>
+    <div><h3>Boutique</h3><p>9 place de la Visitation, 49100 Angers<br><a class="nw" href="tel:+33241874025">02&nbsp;41&nbsp;87&nbsp;40&nbsp;25</a><br><a href="mailto:chameautraiteur@gmail.com">chameautraiteur@gmail.com</a></p></div>
+    <div><h3>Horaires</h3><p>Du mardi au samedi<br>8&nbsp;h&nbsp;30 – 13&nbsp;h&nbsp;30 et 15&nbsp;h – 19&nbsp;h<br>Fermé dimanche et lundi</p><p><a href="https://www.facebook.com/chameautraiteur" rel="noopener" target="_blank">Facebook · Chameau Traiteur</a></p></div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Chameau Traiteur « Les 5 Sens »</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

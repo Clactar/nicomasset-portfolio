@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Margote · Traiteur, plats à emporter et événements</title>
+<meta name="description" content="Margote, traiteur : plats à emporter ou sur commande, événements privés sur devis, live cooking. 06 10 85 05 93.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23FBF6EA'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F4EAD5; --base-2:#EBDDC0; --surface:#FBF6EA; --encre:#2E1E10; --encre-2:#5B4632;
+  --accent:#C2410C; --accent-fonce:#9F340A; --sombre:#34261A;
+  --ombre:0 30px 60px -34px rgba(46,30,16,.55);
+  --ombre-douce:0 20px 44px -30px rgba(46,30,16,.5);
+  --large:min(1220px, 100% - 48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font:400 18px/1.65 "Rubik",ui-sans-serif,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Rufina",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.nowrap{white-space:nowrap}
+.cadre{width:var(--large);margin-inline:auto}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(244,234,213,.95);border-bottom:1px solid rgba(46,30,16,.08)}
+.entete .cadre{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:74px}
+.marque{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.marque b{font-family:"Rufina",serif;font-weight:700;font-size:30px;line-height:1;letter-spacing:-.01em}
+.marque span{font-size:14px;font-weight:500;color:var(--accent);letter-spacing:.04em}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav .lien{text-decoration:none;color:var(--encre-2)}
+.nav .lien:hover{color:var(--encre)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 28px;font:500 17px/1.25 "Rubik",sans-serif;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 14px 28px -16px rgba(194,65,12,.85)}
+.btn-plein:hover{background:var(--accent-fonce);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-petit{padding:10px 18px;font-size:15px}
+
+/* héros : bandeau photo + carte qui chevauche */
+.heros{padding:28px 0 0}
+.bandeau{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:1220/470}
+.bandeau img{width:100%;height:100%;object-fit:cover;object-position:50% 88%}
+.pastille{position:absolute;right:20px;top:20px;background:var(--surface);color:var(--encre);border-radius:12px;padding:9px 14px;font-size:15px;font-weight:500;line-height:1.3;box-shadow:var(--ombre-douce)}
+.pastille small{display:block;font-size:13px;font-weight:400;color:var(--encre-2)}
+.carte-heros{position:relative;z-index:2;width:min(760px,100%);margin:-190px 0 0 48px;background:var(--surface);border-radius:22px;padding:42px 52px 44px;box-shadow:var(--ombre)}
+.carte-heros .metier{font-weight:500;font-size:16px;color:var(--accent);margin-bottom:16px}
+.carte-heros h1{font-size:clamp(40px,4.4vw,62px);line-height:1.04}
+.carte-heros p.texte{margin-top:18px;font-size:19px;color:var(--encre-2);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.note{display:inline-flex;align-items:center;gap:12px;position:absolute;right:24px;top:110px;z-index:3;background:var(--sombre);color:var(--surface);border-radius:999px;padding:12px 22px 12px 14px;text-decoration:none;box-shadow:var(--ombre);font-size:15px;transition:transform .25s ease}
+.note:hover{transform:translateY(-2px)}
+.note b{font-family:"Rufina",serif;font-weight:700;font-size:26px;background:var(--accent);border-radius:999px;padding:4px 12px;line-height:1.1}
+.heros-bas{position:relative}
+
+/* faits */
+.faits{margin-top:72px;background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:"Rufina",serif;font-weight:700;font-size:23px;line-height:1.2}
+.faits span{font-size:16px;color:var(--encre-2)}
+
+/* événements */
+.evenements{padding:128px 0 120px}
+.evenements .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.evenements h2{font-size:clamp(36px,4.6vw,60px);line-height:1.06}
+.evenements .intro{margin-top:22px;color:var(--encre-2);font-size:19px;max-width:32em}
+.liste{list-style:none;margin:36px 0 0;padding:0}
+.liste li{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid rgba(46,30,16,.16);font-size:18px}
+.liste li:last-child{border-bottom:1px solid rgba(46,30,16,.16)}
+.liste li span{color:var(--encre-2);font-size:16px;text-align:right}
+.evenements .actions{margin-top:36px}
+.photos-ev{position:relative;padding:0 0 110px 0}
+.photos-ev .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/3;margin-left:56px}
+.photos-ev .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.photos-ev .grande .pastille{right:18px;left:auto;top:18px;bottom:auto}
+.vignette{position:absolute;left:0;bottom:0;width:min(220px,44%);border-radius:14px;padding:7px;box-shadow:var(--ombre);aspect-ratio:4/5;transform:rotate(-4deg);background:var(--surface)}
+.vignette img{width:100%;height:100%;object-fit:cover;border-radius:9px}
+.photos-ev .vignette.deux{left:auto;right:40px;bottom:30px;width:min(190px,38%);transform:rotate(3deg)}
+
+/* live cooking : section sombre */
+.live{background:var(--sombre);color:#EADFC8;padding:120px 0 128px}
+.live .tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:end}
+.live h2{font-size:clamp(36px,4.6vw,60px);line-height:1.06;color:var(--surface)}
+.live .tete p{color:#CBB89A;margin-top:18px;max-width:30em}
+.live blockquote{margin:0;font-family:"Rufina",serif;font-size:clamp(26px,3.2vw,40px);line-height:1.25;color:var(--surface)}
+.live blockquote em{font-style:normal;color:#F08A57}
+.live blockquote cite{display:block;margin-top:16px;font:400 16px/1.4 "Rubik",sans-serif;color:#CBB89A}
+.trio{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,5fr);gap:22px;margin-top:72px;align-items:start}
+.trio figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(0,0,0,.85)}
+.trio figure img{width:100%;height:100%;object-fit:cover}
+.trio figure:nth-child(1){aspect-ratio:4/5}
+.trio figure:nth-child(2){aspect-ratio:3/4;margin-top:80px}
+.trio figure:nth-child(3){aspect-ratio:4/3;margin-top:28px}
+.trio figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:rgba(251,246,234,.95);color:var(--encre);font-size:14px;font-weight:500;line-height:1.3;padding:7px 12px;border-radius:9px}
+
+/* plats : carte de menu */
+.plats{padding:128px 0}
+.menu{background:var(--surface);border-radius:28px;box-shadow:var(--ombre-douce);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:0;overflow:hidden}
+.menu-photo{position:relative;min-height:560px}
+.menu-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.menu-photo .pastille{right:auto;left:20px;top:auto;bottom:20px}
+.menu-texte{padding:64px 64px 56px}
+.menu-texte h2{font-size:clamp(34px,4.2vw,54px);line-height:1.06}
+.menu-texte > p{margin-top:16px;color:var(--encre-2)}
+.assiettes{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:18px}
+.assiettes li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:center}
+.assiettes img{width:96px;height:96px;border-radius:50%;object-fit:cover;box-shadow:0 14px 26px -16px rgba(46,30,16,.6)}
+.assiettes h3{font-size:24px;line-height:1.2}
+.assiettes p{font-size:16px;color:var(--encre-2)}
+
+/* contact */
+.contact{padding:0 0 128px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:start}
+.contact h2{font-size:clamp(40px,5.6vw,76px);line-height:1.02}
+.contact .cadre > div:first-child > p{margin-top:22px;font-size:19px;color:var(--encre-2);max-width:30em}
+.carte-coord{background:var(--surface);border-radius:24px;padding:38px 38px 32px;box-shadow:var(--ombre)}
+.carte-coord .tel{display:inline-block;font-family:"Rufina",serif;font-weight:700;font-size:38px;line-height:1.1;text-decoration:none;white-space:nowrap;color:var(--accent)}
+.carte-coord .mail{display:block;margin-top:6px;overflow-wrap:anywhere}
+.horaires{width:100%;border-collapse:collapse;margin-top:26px;font-size:17px}
+.horaires caption{text-align:left;font-weight:600;font-size:15px;color:var(--encre-2);padding-bottom:8px}
+.horaires th{text-align:left;font-weight:400;padding:9px 0;border-top:1px solid rgba(46,30,16,.12)}
+.horaires td{text-align:right;padding:9px 0;border-top:1px solid rgba(46,30,16,.12);white-space:nowrap;font-variant-numeric:tabular-nums}
+.carte-coord .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+
+.pied{background:var(--sombre);color:#CBB89A;padding:72px 0 28px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .marque b{color:var(--surface)}
+.pied p{font-size:16px;margin-top:12px}
+.pied h3{font:600 15px/1.3 "Rubik",sans-serif;color:var(--surface);margin-bottom:10px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:16px}
+.pied a{color:#EADFC8;text-underline-offset:4px;text-decoration-color:rgba(240,138,87,.6)}
+.proposition{width:var(--large);margin:56px auto 0;padding-top:20px;border-top:1px solid rgba(234,223,200,.14);font-size:13px;color:#9C8A70}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .vignette.apparait{transform:translateY(24px) rotate(-4deg)}
+.js .vignette.apparait.vu{transform:rotate(-4deg)}
+.js .vignette.deux.apparait{transform:translateY(24px) rotate(3deg)}
+.js .vignette.deux.apparait.vu{transform:rotate(3deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transition:none}
+  .btn,.note{transition:none}
+}
+
+@media (max-width: 1080px){
+  .carte-heros{margin-left:28px;padding:40px 40px 38px}
+  .evenements .cadre,.contact .cadre{gap:56px}
+  .menu-texte{padding:48px 40px}
+}
+@media (max-width: 860px){
+  body{font-size:17px}
+  .nav .lien{display:none}
+  .heros{padding-top:16px}
+  .bandeau{aspect-ratio:4/3}
+  .bandeau img{object-position:50% 80%}
+  .pastille{right:12px;top:12px}
+  .carte-heros{margin:-56px auto 0;width:calc(100% - 24px);padding:30px 24px 30px}
+  .carte-heros p.texte{font-size:18px}
+  .note{position:relative;right:auto;top:auto;margin:20px 0 0 12px}
+  .faits{margin-top:48px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}
+  .faits b{font-size:21px}
+  .evenements{padding:88px 0}
+  .evenements .cadre,.live .tete,.contact .cadre{grid-template-columns:minmax(0,1fr)}
+  .photos-ev{padding-bottom:90px}
+  .photos-ev .grande{margin-left:0}
+  .photos-ev .vignette.deux{display:none}
+  .live{padding:88px 0}
+  .live .tete{gap:28px}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:48px;gap:14px}
+  .trio figure:nth-child(2){margin-top:48px}
+  .trio figure:nth-child(3){grid-column:1 / -1;margin-top:0}
+  .plats{padding:88px 0}
+  .menu{grid-template-columns:minmax(0,1fr)}
+  .menu-photo{min-height:0;aspect-ratio:4/3}
+  .menu-texte{padding:36px 24px 40px}
+  .assiettes li{grid-template-columns:76px minmax(0,1fr);gap:16px}
+  .assiettes img{width:76px;height:76px}
+  .assiettes h3{font-size:21px}
+  .contact{padding-bottom:88px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width: 520px){
+  :root{--large:min(1220px, 100% - 40px)}
+  .entete .cadre{min-height:62px}
+  .marque b{font-size:26px}
+  .marque span{display:none}
+  .actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%;padding:16px 20px}
+  .entete .btn{width:auto;padding:9px 16px}
+  .liste li{flex-direction:column;gap:2px}
+  .liste li span{text-align:left}
+  .carte-coord{padding:28px 22px 24px}
+  .carte-coord .tel{font-size:32px}
+  .carte-coord .liens .btn{width:100%}
+}
+@media (max-width: 360px){
+  .entete .btn{padding:8px 12px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Margote</b><span>Traiteur</span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a class="lien" href="#evenements">Événements</a>
+      <a class="lien" href="#plats">Plats à emporter</a>
+      <a class="lien" href="#contact">Horaires</a>
+      <a class="btn btn-plein btn-petit" href="tel:+33610850593"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nowrap">06 10 85 05 93</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div class="bandeau">
+        <img src="assets/margote-traiteur/paella-geante-gambas-soiree-disco.webp" alt="Paella géante aux gambas, moules et citrons, salle des fêtes décorée en fond" width="2040" height="1536">
+        <p class="pastille">Paella géante<small>soirée disco à Bellefond</small></p>
+      </div>
+      <div class="heros-bas">
+        <div class="carte-heros">
+          <p class="metier">Traiteur · plats et événements</p>
+          <h1>La cuisine de Margote, pour vos grandes tablées.</h1>
+          <p class="texte">Plats à emporter ou sur commande, événements privés sur devis, et le live cooking pour mettre un «&nbsp;Whaou&nbsp;» à votre cocktail.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33610850593"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Appeler le <span class="nowrap">06 10 85 05 93</span></span></a>
+            <a class="btn btn-contour" href="mailto:m.meunier@aol.fr?subject=Demande%20de%20devis">Demander un devis</a>
+          </div>
+        </div>
+        <a class="note" href="https://www.google.com/maps/search/?api=1&amp;query=Margote&amp;query_place_id=ChIJKx_XPJecTk8RkJEaSy-7VG0" target="_blank" rel="noopener"><b>4,8</b><span>sur 5 · 23 avis Google</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>Plats à emporter</b><span>ou sur commande</span></li>
+      <li><b>Événements privés</b><span>sur devis</span></li>
+      <li><b>7 jours sur 7</b><span>9&nbsp;h à 18&nbsp;h, le dimanche jusqu'à 17&nbsp;h</span></li>
+      <li><b>Live cooking</b><span>pour vos cocktails</span></li>
+    </ul>
+  </section>
+
+  <section class="evenements" id="evenements">
+    <div class="cadre">
+      <div>
+        <h2>Les grandes poêles sortent pour vos fêtes.</h2>
+        <p class="intro">Soirée en salle des fêtes, repas sous barnums dans un jardin, cocktail&nbsp;: Margote vient cuisiner pour vos événements privés. Chaque prestation se fait sur devis.</p>
+        <ul class="liste">
+          <li>Paella géante <span>gambas, moules, citron</span></li>
+          <li>Buffet <span>verrines, mini-burgers, pains</span></li>
+          <li>Planche de bœuf tranché <span>pommes de terre rôties</span></li>
+          <li>Live cooking <span>pour votre cocktail</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33610850593">Parler de mon événement</a>
+        </div>
+      </div>
+      <div class="photos-ev">
+        <div class="grande apparait">
+          <img src="assets/margote-traiteur/paella-moules-fete-en-plein-air.webp" alt="Grande poêle de paella aux moules dehors, barnums et invités sur la pelouse" loading="lazy" width="2040" height="1536">
+          <p class="pastille">En plein air<small>Chambolle-Musigny</small></p>
+        </div>
+        <div class="vignette apparait"><img src="assets/margote-traiteur/buffet-verrines-mini-burgers.webp" alt="Buffet de verrines et mini-burgers" loading="lazy" width="1086" height="1357"></div>
+        <div class="vignette deux apparait"><img src="assets/margote-traiteur/planche-boeuf-tranche-buffet.webp" alt="Longue planche de bœuf tranché sur un buffet" loading="lazy" width="1086" height="1357" style="object-position:50% 40%"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="live">
+    <div class="cadre">
+      <div class="tete">
+        <div>
+          <h2>Le live cooking, ou cooking show.</h2>
+        </div>
+        <blockquote>Une petite touche en plus, pour mettre un <em>«&nbsp;Whaou&nbsp;»</em> lors de votre cocktail.<cite>Margote, sur sa page</cite></blockquote>
+      </div>
+      <div class="trio">
+        <figure class="apparait"><img src="assets/margote-traiteur/cuisiniere-margote-poele-geante.webp" alt="La cuisinière sert une poêle géante de légumes et saucisses" loading="lazy" width="1204" height="1505" style="object-position:30% 40%"><figcaption>Service à la poêle géante</figcaption></figure>
+        <figure class="apparait"><img src="assets/margote-traiteur/plancha-saucisses-stand-barnum.webp" alt="Poêle géante de saucisses et poêle de pâtes sous un barnum" loading="lazy" width="1536" height="2048" style="object-position:50% 70%"></figure>
+        <figure class="apparait"><img src="assets/margote-traiteur/stand-margote-traiteur-marche.webp" alt="Stand Margote Traiteur sous barnum blanc, nappes noires au logo" loading="lazy" width="2040" height="1536" style="object-position:60% 60%"><figcaption>Le stand Margote Traiteur</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="plats" id="plats">
+    <div class="cadre">
+      <div class="menu">
+        <div class="menu-photo apparait">
+          <img src="assets/margote-traiteur/risotto-gambas-assiette.webp" alt="Assiette de risotto au safran, gambas et copeaux de parmesan" loading="lazy" width="1536" height="2048">
+          <p class="pastille">Risotto au safran<small>gambas et parmesan</small></p>
+        </div>
+        <div class="menu-texte">
+          <h2>Plats à emporter ou sur commande.</h2>
+          <p>Quelques assiettes passées par la cuisine de Margote. Un coup de fil pour savoir ce qui est au menu.</p>
+          <ul class="assiettes">
+            <li><img src="assets/margote-traiteur/couscous-merguez-poelon.webp" alt="" loading="lazy" width="1086" height="1357"><div><h3>Couscous</h3><p>merguez, carottes, pois chiches</p></div></li>
+            <li><img src="assets/margote-traiteur/poulet-sauce-champignons.webp" alt="" loading="lazy" width="1086" height="1357"><div><h3>Poulet Gaston</h3><p>sauce crème aux champignons</p></div></li>
+            <li><img src="assets/margote-traiteur/boeuf-bourguignon-puree.webp" alt="" loading="lazy" width="1086" height="1357"><div><h3>Bœuf en sauce</h3><p>et sa purée</p></div></li>
+            <li><img src="assets/margote-traiteur/assiette-boeuf-pommes-de-terre.webp" alt="" loading="lazy" width="1075" height="1346"><div><h3>Bœuf tranché</h3><p>pommes de terre rôties, courgette, purée de carotte</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div>
+        <h2>Un repas, une fête, un cocktail&nbsp;? Parlons-en.</h2>
+        <p>Appelez Margote pour une commande ou un plat à emporter. Pour un événement privé, c'est sur devis&nbsp;: appelez ou écrivez.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33610850593"><span>Appeler le <span class="nowrap">06 10 85 05 93</span></span></a>
+          <a class="btn btn-contour" href="mailto:m.meunier@aol.fr?subject=Demande%20de%20devis">Écrire un mail</a>
+        </div>
+      </div>
+      <div class="carte-coord apparait">
+        <a class="tel" href="tel:+33610850593">06 10 85 05 93</a>
+        <a class="mail" href="mailto:m.meunier@aol.fr">m.meunier@aol.fr</a>
+        <table class="horaires">
+          <caption>Horaires</caption>
+          <tr><th>Du lundi au samedi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+          <tr><th>Dimanche</th><td>9&nbsp;h – 17&nbsp;h</td></tr>
+        </table>
+        <div class="liens">
+          <a class="btn btn-contour btn-petit" href="https://www.google.com/maps/search/?api=1&amp;query=Margote&amp;query_place_id=ChIJKx_XPJecTk8RkJEaSy-7VG0" target="_blank" rel="noopener">Voir les 23 avis Google</a>
+          <a class="btn btn-contour btn-petit" href="https://www.facebook.com/latoquedemargote" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut"><b>Margote</b></a>
+      <p>Traiteur&nbsp;: plats à emporter ou sur commande, événements privés sur devis.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33610850593">06 10 85 05 93</a></li>
+        <li><a href="mailto:m.meunier@aol.fr">m.meunier@aol.fr</a></li>
+        <li>Lundi au samedi 9&nbsp;h – 18&nbsp;h, dimanche 9&nbsp;h – 17&nbsp;h</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Margote&amp;query_place_id=ChIJKx_XPJecTk8RkJEaSy-7VG0" target="_blank" rel="noopener">Fiche Google · 4,8 sur 5</a></li>
+        <li><a href="https://www.facebook.com/latoquedemargote" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposition de Nicolas Masset pour Margote</p>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

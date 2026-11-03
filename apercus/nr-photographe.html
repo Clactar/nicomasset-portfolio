@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>NR Photographe · Photographe de mariage à Perpignan</title>
+<meta name="description" content="NR Photographe, photographe de mariage à Perpignan : mariages sur la côte catalane, paysages, nuits étoilées. 2 rue Théodore Géricault, 66000 Perpignan.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E2226'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-weight='500' font-size='30' text-anchor='middle' fill='%23E9A57F'%3ENR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Afacad:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F1ECE6; --base-2:#E8E0D6; --surface:#F9F6F2; --encre:#1E2226; --encre-2:#545A60;
+  --terre:#B4562F; --terre-f:#97441F; --sombre:#1E2226; --clair:#F9F6F2; --clair-2:#C8CBCE; --peche:#E9A57F;
+  --ombre:0 30px 60px -34px rgba(30,34,38,.5); --ombre-forte:0 50px 90px -44px rgba(30,34,38,.62);
+  --display:'EB Garamond',Garamond,Georgia,serif; --texte:'Afacad','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:19px;line-height:1.58}
+::selection{background:var(--terre);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* photos signées : le bas du cadre (où se trouve le filigrane) reste hors champ */
+.ph{overflow:hidden;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.sans-nr img{height:122%}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(241,236,230,.95)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:80px}
+.marque{text-decoration:none;line-height:1;min-width:0}
+.marque b{display:block;font-family:var(--display);font-weight:500;font-size:28px;letter-spacing:-.01em}
+.marque span{display:block;font-size:14px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16.5px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--terre-f)}
+.nav .tel{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--clair);font-weight:500;padding:11px 20px;border-radius:999px;transition:background-color .2s}
+.nav .tel:hover{background:var(--terre);color:var(--clair)}
+.nav .tel svg{width:16px;height:16px;flex:none}
+.court{display:none}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:500;font-size:17.5px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--terre);color:var(--clair);box-shadow:0 18px 32px -18px rgba(151,68,31,.85)}
+.btn-plein:hover{background:var(--terre-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+
+/* héros */
+.heros{padding:clamp(40px,6vw,88px) 0 clamp(72px,8vw,112px)}
+.heros .haut{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(32px,5vw,72px);align-items:end}
+.heros h1{font-size:clamp(42px,7vw,104px);line-height:1;font-weight:400}
+.heros h1 em{font-style:italic;color:var(--terre)}
+.heros .copie p{font-size:clamp(17px,1.35vw,19.5px);color:var(--encre-2)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cinema{margin:clamp(40px,5vw,64px) 0 0;position:relative}
+.cinema .ph{border-radius:20px;aspect-ratio:21/9;box-shadow:var(--ombre-forte)}
+.cinema .ph img{object-position:50% 60%}
+.cinema .legende{position:absolute;right:20px;bottom:20px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;line-height:1.3;box-shadow:0 12px 26px -16px rgba(30,34,38,.7)}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);width:min(1220px,100%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:2px}
+.faits strong{font-family:var(--display);font-weight:500;font-size:26px;line-height:1.15}
+.faits span{font-size:16px;color:var(--encre-2);line-height:1.4}
+
+/* mariages */
+.mariages{padding:clamp(96px,11vw,136px) 0}
+.mariages .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(48px,7vw,104px);align-items:center}
+.duo{position:relative;padding:0 0 110px}
+.duo .mer{width:58%;border-radius:20px;aspect-ratio:4/5;box-shadow:var(--ombre-forte)}
+.duo .mer img{object-position:5% 50%}
+.duo .arche{position:absolute;right:0;bottom:0;width:62%;border-radius:16px;aspect-ratio:3/2;border:10px solid var(--surface);box-shadow:var(--ombre-forte)}
+.duo .arche.sans-nr img{height:130%;object-position:38% 50%}
+.duo .coeur{position:absolute;right:4%;top:6%;width:min(220px,34%);background:var(--surface);padding:9px 9px 12px;border-radius:10px;transform:rotate(4deg);box-shadow:var(--ombre)}
+.duo .coeur .ph{aspect-ratio:1;border-radius:5px}
+.duo .coeur img{object-position:45% 50%}
+.duo .coeur figcaption{font-size:13.5px;color:var(--encre-2);margin-top:8px;line-height:1.3}
+.duo .pastille{position:absolute;left:16px;top:16px;background:var(--surface);font-size:14.5px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+h2{font-size:clamp(36px,4.6vw,64px);line-height:1.04}
+.lede{margin-top:22px;color:var(--encre-2);max-width:31em}
+.moments{list-style:none;margin:36px 0 0;padding:0}
+.moments li{padding:16px 0;border-top:1px solid rgba(30,34,38,.18);font-family:var(--display);font-size:24px;line-height:1.2}
+.moments li:last-child{border-bottom:1px solid rgba(30,34,38,.18)}
+.moments li span{display:block;font-family:var(--texte);font-size:16px;color:var(--encre-2);margin-top:2px}
+
+/* nuits, sombre */
+.nuits{background:var(--sombre);color:var(--clair);padding:clamp(96px,11vw,136px) 0}
+.nuits .tete-s{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:end}
+.nuits h2{color:var(--clair)}
+.nuits .lede{color:var(--clair-2);margin-top:0}
+.ciel{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);margin-top:clamp(56px,6vw,80px);align-items:start}
+.ciel figure{margin:0;position:relative}
+.ciel .grand .ph{aspect-ratio:4/3.5;border-radius:20px;box-shadow:0 50px 90px -40px rgba(0,0,0,.85)}
+.ciel .grand img{object-position:50% 50%}
+.ciel .pile{display:flex;flex-direction:column;gap:clamp(20px,3vw,40px);padding-top:70px}
+.ciel .pile .ph{aspect-ratio:3/2;border-radius:16px;box-shadow:0 40px 70px -36px rgba(0,0,0,.85)}
+.ciel .pile figure:last-child{margin-left:-22%;width:min(400px,100%)}
+.ciel .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+.ciel figcaption.dessous{margin-top:12px;font-size:15px;color:var(--clair-2);line-height:1.4}
+
+/* voyages */
+.voyages{padding:clamp(96px,11vw,136px) 0 clamp(80px,9vw,112px)}
+.voyages .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(40px,6vw,88px);align-items:end}
+.voyages .texte{padding-bottom:20px}
+.lot{margin:0;position:relative}
+.lot .ph{border-radius:22px;aspect-ratio:16/10;box-shadow:var(--ombre-forte)}
+.lot .ph img{object-position:50% 50%}
+.lot .pastille{position:absolute;right:18px;top:18px;background:var(--surface);font-size:14.5px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.3}
+.tram{margin:36px 0 0;width:min(230px,100%);background:var(--surface);padding:10px 10px 12px;border-radius:10px;transform:rotate(-3deg);box-shadow:var(--ombre)}
+.tram .ph{aspect-ratio:4/3;border-radius:5px}
+.tram img{object-position:40% 50%}
+.tram figcaption{font-size:14px;color:var(--encre-2);margin-top:8px;line-height:1.3}
+
+/* contact */
+.contact{background:var(--base-2);padding:clamp(88px,10vw,128px) 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.contact blockquote{margin:28px 0 0;font-family:var(--display);font-style:italic;font-size:clamp(26px,2.6vw,34px);line-height:1.2;color:var(--encre)}
+.contact cite{display:block;margin-top:12px;font-style:normal;font-size:15.5px;color:var(--encre-2)}
+.fiche{background:var(--surface);border-radius:22px;padding:clamp(26px,4vw,48px);box-shadow:var(--ombre-forte)}
+.fiche .gros{font-family:var(--display);font-weight:500;font-size:clamp(32px,3.8vw,46px);line-height:1;text-decoration:none;display:inline-block;white-space:nowrap}
+.fiche .gros:hover{color:var(--terre-f)}
+.fiche .bloc{padding:22px 0;border-top:1px solid rgba(30,34,38,.14)}
+.fiche .bloc:first-child{padding-top:0;border-top:0}
+.fiche .lab{display:block;font-size:15px;color:var(--encre-2);margin-bottom:6px}
+.fiche .deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.fiche a.lien{color:var(--terre-f);font-weight:500;text-underline-offset:4px;overflow-wrap:anywhere}
+.heures{font-family:var(--display);font-size:29px;line-height:1.15}
+.note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:42px;font-weight:500;line-height:1}
+.liens{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-2);padding:76px 0 44px;font-size:16.5px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-weight:500;font-size:34px;color:var(--clair);display:block;line-height:1.05}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:var(--peche)}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--peche);margin-bottom:10px}
+.signature{background:var(--sombre);color:#8A9096;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(249,246,242,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .heros .haut{display:contents}
+  .heros h1{order:1}
+  .heros .copie{order:3}
+  .cinema{order:2}
+  .heros .wrap{display:flex;flex-direction:column}
+  .cinema{margin:28px 0 30px}
+  .cinema .ph{aspect-ratio:4/3.3}
+  .cinema .ph img{height:122%;object-position:62% 50%}
+  .cinema .legende{right:12px;bottom:12px;font-size:14px}
+  .mariages .wrap,.nuits .tete-s,.voyages .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .duo{order:-1}
+  .ciel{grid-template-columns:minmax(0,1fr)}
+  .ciel .pile{padding-top:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ciel .pile figure:last-child{margin-left:0;width:auto;margin-top:40px}
+  .voyages .texte{padding-bottom:0}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17.5px}
+  .tete .wrap{min-height:68px}
+  .marque b{font-size:24px}
+  .marque span{font-size:13px}
+  .nav .tel{padding:10px 15px;font-size:15.5px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:26px}
+  .faits strong{font-size:23px}
+  .actions .btn{width:100%}
+  .duo{padding-bottom:84px}
+  .duo .mer{width:64%}
+  .duo .arche{width:70%;border-width:6px}
+  .duo .coeur{width:min(130px,34%);padding:6px 6px 8px}
+  .duo .coeur figcaption{display:none}
+  .ciel .pile{gap:14px}
+  .fiche .deux{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .nav .tel .long{display:none}
+  .nav .tel .court{display:inline}
+  .marque span{display:none}
+  .fiche .gros{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>NR Photographe</b><span>Perpignan</span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#mariages">Mariages</a>
+      <a href="#nuits">Paysages</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33608633081"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">06 08 63 30 81</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="haut">
+        <h1>Photographe de <em>mariage</em>, à Perpignan.</h1>
+        <div class="copie">
+          <p>Des mariés face à la Méditerranée, le pont Valentré à l'automne, la voie lactée au-dessus d'un arbre&nbsp;: ici, toute sorte de photos. N'hésitez pas à me contacter.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="mailto:nrphotographe66@hotmail.com">Écrire</a>
+            <a class="btn btn-contour" href="tel:+33608633081"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 08 63 30 81</a>
+          </div>
+        </div>
+      </div>
+      <figure class="cinema">
+        <div class="ph"><img src="assets/nr-photographe/maries-de-dos-face-a-la-baie.webp" alt="Des mariés de dos, assis face à la baie et à la Méditerranée" width="2048" height="1365" fetchpriority="high"></div>
+        <figcaption class="legende">Un mariage sur la côte catalane</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul>
+      <li><strong>Mariages</strong><span>Photographe à Perpignan</span></li>
+      <li><strong>Tous les jours</strong><span>de 14&nbsp;h à 19&nbsp;h</span></li>
+      <li><strong>5,0 sur Google</strong><span>1 avis</span></li>
+      <li><strong>Côte catalane, Lot, Milan</strong><span>Mariages, paysages, nuits</span></li>
+    </ul>
+  </section>
+
+  <section class="mariages" id="mariages">
+    <div class="wrap">
+      <div class="duo">
+        <div class="ph mer sans-nr reveal"><img src="assets/nr-photographe/mariee-dans-la-mer.webp" alt="La mariée debout dans la mer, un village coloré en fond" width="2048" height="1365" loading="lazy"></div>
+        <span class="pastille">Dans la mer</span>
+        <div class="ph arche sans-nr reveal"><img src="assets/nr-photographe/maries-sous-une-arche-blanche.webp" alt="Les mariés assis de part et d'autre d'une grande arche blanche" width="2048" height="1365" loading="lazy"></div>
+        <figure class="coeur reveal" style="margin:0">
+          <div class="ph sans-nr"><img src="assets/nr-photographe/maries-coeur-avec-les-mains-belvedere.webp" alt="Les mariés forment un cœur avec leurs mains sur un belvédère" width="2048" height="1365" loading="lazy"></div>
+          <figcaption>Un cœur, au belvédère.</figcaption>
+        </figure>
+      </div>
+      <div class="texte">
+        <h2>Le mariage, entre la mer et les villages</h2>
+        <p class="lede">Un mariage photographié sur la côte catalane&nbsp;: le couple, la mer, les villages colorés en fond, et la lumière du Sud.</p>
+        <ul class="moments">
+          <li>Au belvédère<span>Un cœur avec les mains, la ville et la mer derrière.</span></li>
+          <li>Sous l'arche blanche<span>Une composition graphique, les mariés de part et d'autre.</span></li>
+          <li>Dans l'eau<span>La mariée en robe, debout dans la mer.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="nuits" id="nuits">
+    <div class="wrap">
+      <div class="tete-s">
+        <h2>Quand la nuit tombe</h2>
+        <p class="lede">La voie lactée au-dessus d'un arbre, une ville à l'heure bleue, un canal et ses terrasses éclairées&nbsp;: la photo ne s'arrête pas au coucher du soleil.</p>
+      </div>
+      <div class="ciel">
+        <figure class="grand reveal">
+          <div class="ph sans-nr"><img src="assets/nr-photographe/voie-lactee-silhouette-arbre.webp" alt="La voie lactée au-dessus de la silhouette d'un arbre" width="2048" height="1365" loading="lazy"></div>
+          <figcaption class="pastille">La voie lactée</figcaption>
+        </figure>
+        <div class="pile">
+          <figure class="reveal">
+            <div class="ph sans-nr"><img src="assets/nr-photographe/ville-de-nuit-heure-bleue.webp" alt="Une ville illuminée vue d'en haut au crépuscule" width="2048" height="1365" loading="lazy"></div>
+            <figcaption class="dessous">Une ville à l'heure bleue.</figcaption>
+          </figure>
+          <figure class="reveal">
+            <div class="ph sans-nr"><img src="assets/nr-photographe/canal-de-nuit-terrasses-eclairees.webp" alt="Un canal de nuit bordé de terrasses éclairées" width="2048" height="1365" loading="lazy"></div>
+            <figcaption class="dessous">Un canal et ses terrasses, la nuit.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voyages">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Du Lot à Milan</h2>
+        <p class="lede">Le pont Valentré vu d'en haut en couleurs d'automne, Cahors, Saint-Cirq-Lapopie, puis les rues de Milan et leur vieux tramway jaune.</p>
+        <figure class="tram reveal">
+          <div class="ph sans-nr"><img src="assets/nr-photographe/tramway-ancien-milan.webp" alt="Un tramway jaune ancien dans une rue de Milan" width="2048" height="1365" loading="lazy"></div>
+          <figcaption>Le tramway, à Milan.</figcaption>
+        </figure>
+      </div>
+      <figure class="lot reveal">
+        <div class="ph sans-nr"><img src="assets/nr-photographe/pont-valentre-cahors-vue-aerienne.webp" alt="Le pont Valentré sur le Lot vu d'en haut, couleurs d'automne" width="2048" height="1365" loading="lazy"></div>
+        <figcaption class="pastille">Le pont Valentré, Cahors</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Parlons de vos photos</h2>
+        <p class="lede">Un mariage, un projet, une question&nbsp;: un appel ou un e-mail suffit.</p>
+        <blockquote>«&nbsp;Sur cette page, vous allez trouver toute sorte de photos. N'hésitez pas à me contacter.&nbsp;»</blockquote>
+        <cite>NR Photographe</cite>
+      </div>
+      <div class="fiche">
+        <div class="bloc">
+          <span class="lab">Téléphone</span>
+          <a class="gros" href="tel:+33608633081">06 08 63 30 81</a>
+        </div>
+        <div class="bloc deux">
+          <div>
+            <span class="lab">Horaires</span>
+            <p class="heures">Tous les jours<br>14&nbsp;h à 19&nbsp;h</p>
+          </div>
+          <div>
+            <span class="lab">Adresse</span>
+            <p>2 rue Théodore Géricault<br>66000 Perpignan</p>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">Note Google</span>
+          <p class="note"><b>5,0 / 5</b><span>1 avis</span></p>
+          <div class="liens">
+            <a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=NR+Photographe+2+rue+Th%C3%A9odore+G%C3%A9ricault+66000+Perpignan" target="_blank" rel="noopener">Voir l'avis sur Google</a>
+            <a class="lien" href="https://www.facebook.com/nrphotographe66" target="_blank" rel="noopener">Toutes les photos sur Facebook</a>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">E-mail</span>
+          <a class="lien" href="mailto:nrphotographe66@hotmail.com">nrphotographe66@hotmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="nom">NR Photographe</span>
+      <p>Photographe de mariage à Perpignan.</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p style="margin-top:0">Tous les jours, de 14&nbsp;h à 19&nbsp;h<br>2 rue Théodore Géricault, 66000 Perpignan</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-top:0"><a href="tel:+33608633081">06 08 63 30 81</a><br><a href="mailto:nrphotographe66@hotmail.com">nrphotographe66@hotmail.com</a><br><a href="https://www.facebook.com/nrphotographe66" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour NR Photographe</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

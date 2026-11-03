@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier Lanceleur · Florentin Lanceleur, ébéniste à Angers</title>
+<meta name="description" content="Florentin Lanceleur, ébéniste à Angers, champion de France WorldSkills Ébénisterie 2022 : agencement de boutique, meubles, claustras, bibliothèques.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231F2A23'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23E6E3D8'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E6E3D8; --base-2:#DCD8CA; --surface:#F2F0E8; --encre:#1F2620; --encre-2:#4A524B;
+  --sauge:#4E7A5C; --sauge-clair:#A9C2AF; --sombre:#1F2A23; --clair:#F2F0E8;
+  --ombre:0 30px 60px -34px rgba(31,42,35,.5); --ombre-forte:0 44px 80px -40px rgba(31,42,35,.62);
+  --display:'Besley',Georgia,serif; --texte:'Mulish','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:400}
+::selection{background:var(--sauge);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.015em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease;text-align:center}
+.btn-plein{background:var(--sombre);color:var(--clair);box-shadow:0 18px 30px -20px rgba(31,42,35,.7)}
+.btn-plein:hover{background:var(--sauge);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:20;background:rgba(230,227,216,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(31,38,32,.08)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:-.01em}
+.marque span{font-size:13px;color:var(--encre-2);letter-spacing:.02em;margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15.5px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--sauge)}
+.nav .tel{background:var(--surface);color:var(--encre);font-weight:600;padding:11px 20px;border-radius:999px;box-shadow:0 10px 24px -18px rgba(31,42,35,.6)}
+.nav .tel:hover{background:var(--sombre);color:var(--clair)}
+
+/* héros */
+.heros{padding:clamp(40px,7vw,96px) 0 clamp(64px,8vw,112px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"titre media" "copie media";column-gap:clamp(40px,6vw,88px);align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,6.1vw,86px);line-height:1.04;font-weight:450;align-self:end;padding-top:clamp(0px,4vw,56px)}
+.heros h1 em{font-style:italic;color:var(--sauge);font-weight:400}
+.heros .copie{grid-area:copie;margin-top:32px}
+.heros .copie p{font-size:clamp(17px,1.4vw,19.5px);color:var(--encre-2);max-width:34em;font-weight:400}
+.heros .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.media{grid-area:media;position:relative;margin:0 0 0 auto;width:100%;max-width:470px}
+.media .grande{aspect-ratio:4/5;border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte)}
+.media .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.pastille{position:absolute;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 14px 30px -18px rgba(31,42,35,.6);line-height:1.3}
+.media .pastille{top:22px;right:22px}
+.portrait{position:absolute;left:-44px;bottom:-40px;width:clamp(116px,12vw,164px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--base);box-shadow:var(--ombre)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:57% 22%;transform:scale(1.9);transform-origin:57% 24%}
+.portrait-legende{position:absolute;left:clamp(90px,10vw,136px);bottom:-30px;font-size:14px;color:var(--encre-2);background:var(--base);padding:4px 12px 4px 18px;border-radius:999px}
+
+/* bandeau de faits */
+.faits{background:var(--base-2);border-block:1px solid rgba(31,38,32,.06)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);width:min(1200px,100%);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:4px;padding-left:18px;border-left:1px solid rgba(31,38,32,.16)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits strong{font-family:var(--display);font-weight:500;font-size:21px;line-height:1.2}
+.faits span{font-size:15px;color:var(--encre-2);line-height:1.4}
+
+/* réalisations */
+.realisations{padding:clamp(80px,10vw,128px) 0}
+.realisations .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,7vw,104px);align-items:center}
+.duo{position:relative;padding-bottom:90px}
+.duo .a{border-radius:20px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:4/5;width:84%}
+.duo .a img{width:100%;height:100%;object-fit:cover;object-position:60% 45%}
+.duo .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre)}
+.duo .b img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.duo .pastille{left:18px;top:18px}
+h2{font-size:clamp(32px,3.9vw,54px);line-height:1.08}
+.intro{margin-top:22px;color:var(--encre-2);max-width:36em}
+.liste{list-style:none;margin:40px 0 0;padding:0}
+.liste li{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid rgba(31,38,32,.16)}
+.liste li:last-child{border-bottom:1px solid rgba(31,38,32,.16)}
+.liste h3{font-size:20px;line-height:1.3;font-weight:500}
+.liste p{font-size:16.5px;color:var(--encre-2);line-height:1.6}
+
+/* bande photo */
+.bande{padding:0 0 clamp(80px,10vw,128px)}
+.bande figure{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:21/8}
+.bande img{width:100%;height:100%;object-fit:cover;object-position:50% 34%}
+.bande .pastille{left:24px;bottom:24px}
+
+/* finition, sombre */
+.finition{background:var(--sombre);color:var(--clair);padding:clamp(88px,11vw,136px) 0}
+.finition .haut{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,88px);align-items:end}
+.finition h2{color:var(--clair)}
+.finition blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(22px,2.2vw,30px);line-height:1.4;color:#E4E9E1;text-wrap:pretty}
+.finition cite{display:block;margin-top:18px;font-style:normal;font-family:var(--texte);font-size:15px;color:var(--sauge-clair)}
+.trio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:clamp(20px,3vw,40px);margin-top:clamp(56px,7vw,88px);align-items:start}
+.trio figure{margin:0;position:relative}
+.trio .ph{border-radius:18px;overflow:hidden;box-shadow:0 34px 60px -30px rgba(0,0,0,.55)}
+.trio img{width:100%;height:100%;object-fit:cover}
+.trio figure:nth-child(1) .ph{aspect-ratio:4/5}
+.trio figure:nth-child(1) img{object-position:60% 50%}
+.trio figure:nth-child(2){margin-top:96px}
+.trio figure:nth-child(2) .ph{aspect-ratio:1/1}
+.trio figure:nth-child(2) img{object-position:50% 40%}
+.trio figure:nth-child(3){margin-top:32px}
+.trio figure:nth-child(3) .ph{aspect-ratio:3/4}
+.trio figure:nth-child(3) img{object-position:40% 60%}
+.trio figcaption{margin-top:14px;font-size:15px;color:#C7D0C6;line-height:1.45}
+
+/* florentin */
+.florentin{padding:clamp(88px,11vw,136px) 0}
+.florentin .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:center}
+.florentin figure{margin:0;position:relative}
+.florentin .ph{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:3/2}
+.florentin .ph img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.florentin .pastille{left:20px;bottom:20px}
+.florentin p{margin-top:20px;color:var(--encre-2)}
+.florentin .lien{display:inline-flex;margin-top:28px;font-weight:600;color:var(--sauge);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
+.florentin .lien:hover{color:var(--encre)}
+
+/* contact */
+.contact{background:var(--base-2);padding:clamp(88px,11vw,128px) 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,88px);align-items:start}
+.contact .gauche p{margin-top:20px;color:var(--encre-2);max-width:30em}
+.contact .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.vignette{margin:56px 0 0;width:min(220px,60%);transform:rotate(-3deg);background:var(--surface);padding:10px 10px 14px;border-radius:10px;box-shadow:var(--ombre)}
+.vignette img{border-radius:6px;aspect-ratio:3/4;width:100%;object-fit:cover;object-position:50% 45%}
+.vignette figcaption{font-size:14px;color:var(--encre-2);margin-top:8px;line-height:1.35}
+.carte{background:var(--surface);border-radius:22px;padding:clamp(28px,4vw,48px);box-shadow:var(--ombre-forte)}
+.carte dl{margin:0;display:grid;gap:0}
+.carte .ligne{display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:20px;padding:18px 0;border-top:1px solid rgba(31,38,32,.12)}
+.carte .ligne:first-child{border-top:0;padding-top:0}
+.carte dt{font-size:14px;color:var(--encre-2);padding-top:3px}
+.carte dd{margin:0;font-size:17px}
+.carte dd a{text-decoration:none;font-weight:600}
+.carte dd a:hover{color:var(--sauge)}
+.carte .grand{font-family:var(--display);font-size:26px;font-weight:500}
+.horaires{display:grid;grid-template-columns:auto auto;gap:2px 20px;font-size:16px;justify-content:start}
+.etoiles{color:var(--sauge);letter-spacing:2px}
+.carte .avis{display:inline-block;margin-top:4px;font-size:15px;color:var(--sauge);text-decoration:underline;text-underline-offset:4px;font-weight:600}
+
+/* pied */
+.pied{background:var(--sombre);color:#D8DED6;padding:72px 0 40px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied b{font-family:var(--display);font-weight:500;font-size:26px;color:var(--clair);display:block}
+.pied p{margin-top:8px;line-height:1.6}
+.pied a{text-decoration:none;color:var(--clair)}
+.pied a:hover{color:var(--sauge-clair)}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:600;color:var(--sauge-clair);margin-bottom:10px;letter-spacing:.02em}
+.signature{background:var(--sombre);color:#8E998F;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(242,240,232,.08)}
+
+/* apparition */
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+/* tablette */
+@media (max-width:1020px){
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+  .nav a:not(.tel){display:none}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "media" "copie"}
+  .heros h1{padding-top:0}
+  .media{margin:32px 0 0;max-width:none;width:calc(100% - 8px)}
+  .media .grande{aspect-ratio:5/4}
+  .portrait{left:-6px;bottom:-34px;width:112px;border-width:5px}
+  .portrait-legende{left:112px;bottom:-26px}
+  .heros .copie{margin-top:60px}
+  .realisations .wrap,.florentin .wrap,.contact .wrap,.finition .haut{grid-template-columns:minmax(0,1fr)}
+  .florentin figure{order:2}
+  .bande figure{aspect-ratio:4/3}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .trio figure:nth-child(1){grid-column:1/-1}
+  .trio figure:nth-child(1) .ph{aspect-ratio:4/3}
+  .trio figure:nth-child(2){margin-top:0}
+  .trio figure:nth-child(3){margin-top:40px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:64px}
+  .marque b{font-size:20px}
+  .marque span{font-size:12.5px}
+  .nav .tel{padding:10px 14px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-block:26px;gap:20px 18px}
+  .faits li,.faits li:nth-child(4){border-left:0;padding-left:0}
+  .faits li:last-child{grid-column:1/-1}
+  .faits strong{font-size:19px}
+  .liste li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .duo{padding-bottom:70px}
+  .duo .pastille{top:12px;left:12px}
+  .carte .ligne{grid-template-columns:minmax(0,1fr);gap:4px}
+  .media .pastille{top:14px;right:14px;font-size:13px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .nav .tel .long{display:none}
+  .portrait-legende{display:none}
+}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Atelier Lanceleur</b><span>Ébéniste à Angers</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#realisations">Réalisations</a>
+      <a href="#florentin">Florentin</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33628816737"><span class="long">Appeler · </span><span class="nw">06&nbsp;28&nbsp;81&nbsp;67&nbsp;37</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Ébéniste à Angers, le bois <em>en main.</em></h1>
+      <figure class="media">
+        <div class="grande"><img src="assets/atelier-lanceleur/agencement-boutique-vetements-chene.webp" alt="Boutique de vêtements agencée en chêne : penderies, casiers, poutres apparentes" width="1600" height="2133" fetchpriority="high"></div>
+        <span class="pastille">Agencement d'une boutique en chêne</span>
+        <div class="portrait"><img src="assets/atelier-lanceleur/florentin-lanceleur-dans-son-atelier.webp" alt="Florentin Lanceleur dans son atelier" width="1600" height="1067"></div>
+        <span class="portrait-legende">Florentin Lanceleur</span>
+      </figure>
+      <div class="copie">
+        <p>Florentin Lanceleur, champion de France WorldSkills d'ébénisterie en 2022 et classé dans le top 5 mondial la même année, a monté son atelier à Angers. Agencement de boutique, meubles et niches, claustras, bibliothèques : il fabrique chaque pièce jusqu'à la dernière couche de finition.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:leboisenmain@gmail.com?subject=Demande%20de%20devis">Demander un devis</a>
+          <a class="btn btn-contour" href="tel:+33628816737"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nw">06&nbsp;28&nbsp;81&nbsp;67&nbsp;37</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul>
+      <li><strong>Champion de France</strong><span>WorldSkills Ébénisterie 2022</span></li>
+      <li><strong>Top 5 mondial</strong><span>WorldSkills Ébénisterie 2022</span></li>
+      <li><strong>5,0 sur 5</strong><span>16 avis Google</span></li>
+      <li><strong>Angers</strong><span>6 rue Guillaume Lekeu</span></li>
+      <li><strong>7&nbsp;h à 20&nbsp;h</strong><span>du lundi au samedi</span></li>
+    </ul>
+  </div>
+
+  <section class="realisations" id="realisations">
+    <div class="wrap">
+      <div class="duo">
+        <div class="a reveal"><img src="assets/atelier-lanceleur/boutique-etageres-chemises-poutres.webp" alt="Grande étagère à chemises en chêne dans une boutique, mur vert" width="1600" height="2133" loading="lazy"></div>
+        <span class="pastille">Étagères à chemises en chêne</span>
+        <div class="b reveal"><img src="assets/atelier-lanceleur/claustra-lattes-chene-entree.webp" alt="Claustra en lattes de chêne avec niche dans une entrée" width="1600" height="2133" loading="lazy"></div>
+      </div>
+      <div>
+        <h2>De la boutique au salon, ce qui sort de l'atelier.</h2>
+        <p class="intro">Boutique, salons, entrées, chambres : un aperçu de ses chantiers à travers les photos de l'atelier.</p>
+        <ul class="liste">
+          <li><h3>Agencement de boutique</h3><p>Penderies, casiers et étagères à chemises en chêne, sous les poutres et les spots.</p></li>
+          <li><h3>Meubles TV et niches</h3><p>Un meuble blanc aux angles arrondis, des niches en chêne posées en composition libre.</p></li>
+          <li><h3>Claustras</h3><p>Des lattes de chêne pour habiller une entrée ou encadrer le passage vers la cuisine.</p></li>
+          <li><h3>Bibliothèques</h3><p>Toute hauteur ou arrondie en angle, avec l'éclairage intégré aux niches.</p></li>
+          <li><h3>Chambres et rangements</h3><p>Tête de lit ondulée rétroéclairée, placard sous pente à tiroirs.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bande">
+    <div class="wrap">
+      <figure class="reveal"><img src="assets/atelier-lanceleur/composition-niches-chene-salon.webp" alt="Meuble TV blanc et niches en chêne en composition libre sur un mur vert sauge" width="1600" height="2133" loading="lazy"><span class="pastille">Niches en chêne sur mur vert sauge</span></figure>
+    </div>
+  </section>
+
+  <section class="finition">
+    <div class="wrap">
+      <div class="haut">
+        <h2>La finition, le moment qu'il préfère.</h2>
+        <blockquote>« Après le ponçage, la peinture vient révéler les derniers détails du meuble. Un travail de patience où chaque couche compte pour obtenir la teinte et la protection voulues. »<cite>Florentin, sur Instagram</cite></blockquote>
+      </div>
+      <div class="trio">
+        <figure class="reveal"><div class="ph"><img src="assets/atelier-lanceleur/bibliotheque-arrondie-eclairee.webp" alt="Bibliothèque d'angle blanche arrondie, niches éclairées à fond bois" width="1600" height="2133" loading="lazy"></div><figcaption>Bibliothèque d'angle arrondie, niches éclairées à fond bois.</figcaption></figure>
+        <figure class="reveal"><div class="ph"><img src="assets/atelier-lanceleur/tete-de-lit-ondulee-led.webp" alt="Tête de lit en bois aux bords ondulés, rétroéclairée" width="1600" height="2133" loading="lazy"></div><figcaption>Tête de lit ondulée, rétroéclairée.</figcaption></figure>
+        <figure class="reveal"><div class="ph"><img src="assets/atelier-lanceleur/placard-sous-pente-tiroirs.webp" alt="Placard sous pente avec tiroirs ouverts et façades bois" width="1600" height="2133" loading="lazy"></div><figcaption>Placard sous pente, tiroirs à façade bois.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="florentin" id="florentin">
+    <div class="wrap">
+      <figure class="reveal"><div class="ph"><img src="assets/atelier-lanceleur/florentin-lanceleur-dans-son-atelier.webp" alt="Florentin Lanceleur souriant devant son mur d'outils, à l'atelier" width="1600" height="1067" loading="lazy"></div><span class="pastille">Florentin, à l'atelier</span></figure>
+      <div>
+        <h2>Un champion de France à l'établi.</h2>
+        <p>En 2022, Florentin Lanceleur devient champion de France WorldSkills en ébénisterie, puis se classe parmi les cinq meilleurs du monde. En 2025, il monte son entreprise à Angers.</p>
+        <p>Il montre ses chantiers en vidéo sur son compte Instagram, Le bois en main, suivi par 24,4&nbsp;k abonnés.</p>
+        <a class="lien" href="https://www.instagram.com/le_bois_en_main/" rel="noopener" target="_blank">Voir ses réalisations sur Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Un projet de meuble ou d'agencement ?</h2>
+        <p>Pour un devis, écrivez à Florentin ou appelez l'atelier, du lundi au samedi.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:leboisenmain@gmail.com?subject=Demande%20de%20devis">Écrire à Florentin</a>
+          <a class="btn btn-contour" href="tel:+33628816737"><span class="nw">06&nbsp;28&nbsp;81&nbsp;67&nbsp;37</span></a>
+        </div>
+        <figure class="vignette reveal"><img src="assets/atelier-lanceleur/claustras-ouverture-cuisine.webp" alt="Deux claustras en chêne encadrant le passage vers une cuisine" width="1600" height="2133" loading="lazy"><figcaption>Deux claustras pour ouvrir la cuisine.</figcaption></figure>
+      </div>
+      <div class="carte">
+        <dl>
+          <div class="ligne"><dt>Téléphone</dt><dd><a class="grand nw" href="tel:+33628816737">06&nbsp;28&nbsp;81&nbsp;67&nbsp;37</a></dd></div>
+          <div class="ligne"><dt>E-mail</dt><dd><a href="mailto:leboisenmain@gmail.com">leboisenmain@gmail.com</a></dd></div>
+          <div class="ligne"><dt>Atelier</dt><dd>6 rue Guillaume Lekeu<br>49100 Angers</dd></div>
+          <div class="ligne"><dt>Horaires</dt><dd><div class="horaires"><span>Lundi au samedi</span><span class="nw">7&nbsp;h – 20&nbsp;h</span><span>Dimanche</span><span>fermé</span></div></dd></div>
+          <div class="ligne"><dt>Avis Google</dt><dd><span class="etoiles" aria-hidden="true">★★★★★</span> <strong>5,0 sur 5</strong>, 16 avis<br><a class="avis" href="https://www.google.com/maps/search/?api=1&amp;query=Atelier%20LANCELEUR%20-%20Florentin%20Lanceleur%20-%20Eb%C3%A9niste&amp;query_place_id=ChIJU8LgiAN5CEgRi0Hfr4ZfWKo" rel="noopener" target="_blank">Voir les avis sur Google</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div><b>Atelier Lanceleur</b><p>Florentin Lanceleur, ébéniste.<br>Champion de France WorldSkills Ébénisterie 2022.</p></div>
+    <div><h3>Coordonnées</h3><p><a href="tel:+33628816737" class="nw">06&nbsp;28&nbsp;81&nbsp;67&nbsp;37</a><br><a href="mailto:leboisenmain@gmail.com">leboisenmain@gmail.com</a><br>6 rue Guillaume Lekeu, 49100 Angers</p></div>
+    <div><h3>Horaires</h3><p>Du lundi au samedi, 7&nbsp;h – 20&nbsp;h<br>Fermé le dimanche</p><p><a href="https://www.instagram.com/le_bois_en_main/" rel="noopener" target="_blank">Instagram · @le_bois_en_main</a></p></div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Atelier Lanceleur</div>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  d.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

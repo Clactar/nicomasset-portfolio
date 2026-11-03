@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>L'appétit suprême · Traiteur au marché Victor Hugo, Toulouse</title>
+<meta name="description" content="L'appétit suprême, entreprise familiale au marché Victor Hugo à Toulouse : cuisine maison, de saison, produits frais et régionaux. Traiteur du quotidien.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235E6B22'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-weight='500' font-size='38' text-anchor='middle' fill='%23F8F2E5'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EFE6D2; --base-2:#E6DABE; --surface:#F8F2E5; --encre:#24200F; --encre-2:#585036;
+  --olive:#7B8B2E; --olive-f:#5E6B22; --sombre:#2E2A16; --clair:#F8F2E5; --clair-2:#D9D2BC;
+  --ombre:0 30px 60px -34px rgba(46,42,22,.5); --ombre-forte:0 50px 90px -44px rgba(46,42,22,.62);
+  --display:'Vollkorn',Georgia,serif; --texte:'Cabin','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--olive);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+/* en-tête */
+.tete{position:sticky;top:0;z-index:30;background:rgba(239,230,210,.94);-webkit-backdrop-filter:saturate(1.2);backdrop-filter:saturate(1.2)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:82px}
+.marque{text-decoration:none;line-height:1;min-width:0}
+.marque b{display:block;font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:-.01em}
+.marque span{display:block;font-size:13.5px;color:var(--encre-2);margin-top:6px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--olive-f)}
+.nav .tel{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:var(--clair);font-weight:600;padding:11px 20px;border-radius:999px;transition:background-color .2s}
+.nav .tel:hover{background:var(--olive-f);color:var(--clair)}
+.nav .tel svg{width:16px;height:16px;flex:none}
+.court{display:none}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--olive-f);color:var(--clair);box-shadow:0 18px 32px -20px rgba(70,80,20,.9)}
+.btn-plein:hover{background:var(--encre);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+
+/* héros */
+.heros{padding:clamp(32px,5vw,72px) 0 clamp(80px,9vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"media titre" "media copie";column-gap:clamp(40px,6.5vw,104px);align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(38px,6.2vw,92px);line-height:1.02;align-self:end;padding-top:clamp(0px,5vw,80px)}
+.heros .copie{grid-area:copie;margin-top:30px}
+.heros .copie p{font-size:clamp(17px,1.35vw,20px);color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.heros-media{grid-area:media;position:relative;margin:0;padding-bottom:64px}
+.heros-media .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:4/5.4;width:100%}
+.heros-media .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.heros-media .etiquette{position:absolute;left:18px;top:18px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(46,42,22,.7);line-height:1.3}
+.heros-media .plat{position:absolute;right:-34px;bottom:0;width:min(210px,44%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--base);box-shadow:var(--ombre)}
+.heros-media .plat img{width:100%;height:100%;object-fit:cover;object-position:40% 62%}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);width:min(1220px,100%);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:3px}
+.faits strong{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.15}
+.faits span{font-size:15.5px;color:var(--encre-2);line-height:1.4}
+
+/* vitrine */
+.vitrine{padding:clamp(96px,11vw,136px) 0}
+.vitrine .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(48px,7vw,112px);align-items:center}
+.pile{position:relative;padding:0 0 96px 0}
+.pile .grande{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:4/5;width:84%}
+.pile .grande img{width:100%;height:100%;object-fit:cover;object-position:45% 45%}
+.pile .bocaux{position:absolute;right:0;bottom:0;width:min(330px,62%);background:var(--surface);padding:16px 16px 12px;border-radius:16px;box-shadow:var(--ombre);transform:rotate(-2.5deg)}
+.pile .bocaux .ph{aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:var(--surface)}
+.pile .bocaux img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;mix-blend-mode:multiply}
+.pile .bocaux figcaption{font-size:14.5px;color:var(--encre-2);padding:10px 4px 0;line-height:1.35}
+h2{font-size:clamp(34px,4.3vw,60px);line-height:1.04}
+.lede{margin-top:22px;color:var(--encre-2);max-width:32em}
+.carte{list-style:none;margin:40px 0 0;padding:0}
+.carte li{display:grid;grid-template-columns:minmax(0,1fr);padding:22px 0;border-top:1px solid rgba(36,32,15,.2)}
+.carte li:last-child{border-bottom:1px solid rgba(36,32,15,.2)}
+.carte h3{font-size:25px;line-height:1.2}
+.carte p{margin-top:6px;font-size:16.5px;color:var(--encre-2)}
+
+/* citation */
+.citation{background:var(--surface);padding:clamp(88px,10vw,128px) 0;position:relative}
+.citation .wrap{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(40px,6vw,96px);align-items:center}
+.citation blockquote{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(32px,4.6vw,66px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+.citation blockquote::before{content:"«\00a0";color:var(--olive)}
+.citation blockquote::after{content:"\00a0»";color:var(--olive)}
+.citation cite{display:block;margin-top:26px;font-style:normal;font-size:16px;color:var(--encre-2)}
+.citation .suite{font-size:17px;color:var(--encre-2);border-left:0;padding-top:22px;border-top:1px solid rgba(36,32,15,.2)}
+.citation .suite p+p{margin-top:12px}
+
+/* saison, sombre */
+.saison{background:var(--sombre);color:var(--clair);padding:clamp(96px,11vw,136px) 0}
+.saison .haut{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:end}
+.saison h2{color:var(--clair)}
+.saison .lede{color:var(--clair-2)}
+.trio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:clamp(20px,3vw,40px);margin-top:clamp(56px,6vw,80px);align-items:start}
+.trio figure{margin:0;position:relative}
+.trio .ph{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.75)}
+.trio img{width:100%;height:100%;object-fit:cover}
+.trio .a .ph{aspect-ratio:4/5}
+.trio .a img{object-position:50% 55%}
+.trio .b{margin-top:110px}
+.trio .b .pola{background:var(--surface);padding:12px 12px 16px;border-radius:12px;transform:rotate(2.5deg);box-shadow:0 40px 70px -36px rgba(0,0,0,.8)}
+.trio .b .pola .ph{aspect-ratio:4/5;border-radius:6px;box-shadow:none}
+.trio .b .pola img{object-position:40% 40%}
+.trio .b .pola figcaption{color:var(--encre-2);font-size:14.5px;margin-top:10px;line-height:1.35}
+.trio .c{margin-top:40px;width:min(220px,100%)}
+.trio .c .ph{aspect-ratio:4/5;border-radius:14px}
+.trio .c img{object-position:50% 50%}
+.trio figcaption{margin-top:12px;font-size:14.5px;color:var(--clair-2);line-height:1.4}
+.trio .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+
+/* événements */
+.tablees{padding:clamp(96px,11vw,136px) 0 clamp(80px,9vw,112px)}
+.tablees .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,104px);align-items:center}
+.tablees .texte .lede+.lede{margin-top:16px}
+.tablees .actions{margin-top:34px}
+.large{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:16/11}
+.large img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.large .pastille{position:absolute;right:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;line-height:1.3}
+
+/* venir */
+.venir{background:var(--base-2);padding:clamp(88px,10vw,128px) 0}
+.venir .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.venir .gauche .lede{max-width:28em}
+.stand{margin:44px 0 0;position:relative;width:min(400px,100%)}
+.stand .ph{border-radius:18px;overflow:hidden;aspect-ratio:4/4.4;box-shadow:var(--ombre)}
+.stand img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.stand .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.3}
+.fiche{background:var(--surface);border-radius:24px;padding:clamp(26px,4vw,48px);box-shadow:var(--ombre-forte)}
+.fiche .gros{font-family:var(--display);font-weight:500;font-size:clamp(30px,3.6vw,44px);line-height:1;text-decoration:none;display:inline-block;white-space:nowrap}
+.fiche .gros:hover{color:var(--olive-f)}
+.fiche .bloc{padding:22px 0;border-top:1px solid rgba(36,32,15,.16)}
+.fiche .bloc:first-child{padding-top:0;border-top:0}
+.fiche .lab{display:block;font-size:14.5px;color:var(--encre-2);margin-bottom:6px}
+.fiche .deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.fiche a.lien{color:var(--olive-f);font-weight:600;text-underline-offset:4px;overflow-wrap:anywhere}
+.heures{font-family:var(--display);font-size:28px;line-height:1.15}
+.note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:38px;font-weight:500;line-height:1}
+.liens{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-2);padding:76px 0 44px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-weight:500;font-size:32px;color:var(--clair);display:block;line-height:1.05}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:#C9D58A}
+.pied h3{font-family:var(--texte);font-size:14.5px;font-weight:600;color:#C9D58A;margin-bottom:10px}
+.signature{background:var(--sombre);color:#968F74;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(248,242,229,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-areas:"titre" "media" "copie";grid-template-columns:minmax(0,1fr)}
+  .heros h1{padding-top:0}
+  .heros-media{margin-top:30px;padding-bottom:40px;margin-right:18px}
+  .heros-media .grande{aspect-ratio:4/3.6}
+  .heros-media .grande img{object-position:50% 18%}
+  .heros-media .plat{right:-18px;width:min(140px,38%);border-width:6px}
+  .heros .copie{margin-top:28px}
+  .vitrine .wrap,.citation .wrap,.saison .haut,.tablees .wrap,.venir .wrap{grid-template-columns:minmax(0,1fr)}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .trio .a{grid-column:1/-1}
+  .trio .a .ph{aspect-ratio:4/3.4}
+  .trio .b{margin-top:0}
+  .trio .c{margin-top:60px}
+  .tablees .large{order:-1}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:68px}
+  .marque b{font-size:22px}
+  .marque span{font-size:12.5px}
+  .nav .tel{padding:10px 15px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:26px}
+  .faits strong{font-size:21px}
+  .pile{padding-bottom:80px}
+  .pile .grande{width:90%}
+  .pile .bocaux{width:min(230px,62%);padding:10px 10px 8px}
+  .actions .btn{width:100%}
+  .fiche .deux{grid-template-columns:minmax(0,1fr)}
+  .trio{gap:16px}
+}
+@media (max-width:420px){
+  .nav .tel .long{display:none}
+  .nav .tel .court{display:inline}
+  .marque span{display:none}
+  .fiche .gros{font-size:28px}
+  .stand .ph{aspect-ratio:1}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>L'appétit suprême</b><span>Traiteur, marché Victor Hugo</span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#vitrine">La vitrine</a>
+      <a href="#tablees">Buffets</a>
+      <a href="#venir">Horaires</a>
+      <a class="tel" href="tel:+33534337264"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">05 34 33 72 64</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Du fait maison, du frais, de la saison.</h1>
+      <figure class="heros-media">
+        <div class="grande"><img src="assets/l-appetit-supreme/cuisinier-sert-vitrine-stand.webp" alt="Le cuisinier sert une barquette derrière la vitrine du stand" width="1440" height="1920" fetchpriority="high"></div>
+        <span class="etiquette">Au stand, marché Victor Hugo</span>
+        <div class="plat"><img src="assets/l-appetit-supreme/tartelettes-rillettes-persil.webp" alt="Tartelettes garnies et persil sur ardoise" width="1600" height="2133"></div>
+      </figure>
+      <div class="copie">
+        <p>Entreprise familiale installée au marché Victor Hugo, à Toulouse. Une cuisine maison et de saison, avec des produits frais et régionaux&nbsp;: le traiteur du quotidien, et des assiettes qui font toujours plaisir.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#venir">Venir au marché</a>
+          <a class="btn btn-contour" href="tel:+33534337264"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>05 34 33 72 64</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul>
+      <li><strong>Marché Victor Hugo</strong><span>Loges 184 à 186, Toulouse</span></li>
+      <li><strong>Tous les jours</strong><span>de 8&nbsp;h à 13&nbsp;h 30</span></li>
+      <li><strong>4,8 sur 5 sur Google</strong><span>37 avis</span></li>
+      <li><strong>Entreprise familiale</strong><span>Produits frais et régionaux</span></li>
+    </ul>
+  </section>
+
+  <section class="vitrine" id="vitrine">
+    <div class="wrap">
+      <div class="pile reveal">
+        <div class="grande"><img src="assets/l-appetit-supreme/service-au-comptoir-plats-maison.webp" alt="Un plat servi à la pince au-dessus de la vitrine" width="1440" height="1920" loading="lazy"></div>
+        <figure class="bocaux" style="margin:0">
+          <div class="ph"><img src="assets/l-appetit-supreme/bocaux-maison-planche-bois.webp" alt="Trois bocaux maison sur une planche en bois" width="1600" height="1200" loading="lazy"></div>
+          <figcaption>Bocaux maison&nbsp;: légumes, blanquette.</figcaption>
+        </figure>
+      </div>
+      <div class="texte">
+        <h2>Ce qui vous attend derrière la vitrine</h2>
+        <p class="lede">Des plats maison, servis à la barquette au comptoir du stand, et tout ce qu'il faut pour une tablée.</p>
+        <ul class="carte">
+          <li><h3>Les plats chauds maison</h3><p>Cuisinés avec les produits de saison, servis au comptoir.</p></li>
+          <li><h3>Les bocaux</h3><p>Légumes, blanquette&nbsp;: la cuisine maison à garder sous la main.</p></li>
+          <li><h3>Tartelettes et bouchées</h3><p>Garnies d'une mousse fine, relevées de persil frais.</p></li>
+          <li><h3>Les plateaux de buffet</h3><p>Bagels, tartines et bouchées pour vos tablées.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="wrap">
+      <div>
+        <blockquote>Purée maison, saucisse bien cuite, zéro chichi. Quand c'est bien fait, y'a rien à ajouter.</blockquote>
+        <cite>L'appétit suprême, sur le plat qui leur rappelle l'enfance</cite>
+      </div>
+      <div class="suite">
+        <p>Le plat qu'on a tous mangé petit, à la cantine ou le mercredi midi.</p>
+        <p>On en mange encore aujourd'hui. Et franchement&nbsp;? Ça marche toujours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="saison">
+    <div class="wrap">
+      <div class="haut">
+        <h2>Une famille au marché, une cuisine qui suit la saison</h2>
+        <p class="lede">Au marché Victor Hugo, les étals donnent le rythme. Produits frais et régionaux, tout est cuisiné maison, et la vitrine change avec les saisons.</p>
+      </div>
+      <div class="trio">
+        <figure class="a reveal">
+          <div class="ph"><img src="assets/l-appetit-supreme/vitrine-plats-feuilles-automne.webp" alt="La vitrine de plats préparés, un bras qui sert" width="1440" height="1920" loading="lazy"></div>
+          <span class="pastille">La vitrine du stand</span>
+        </figure>
+        <figure class="b reveal">
+          <div class="pola">
+            <div class="ph"><img src="assets/l-appetit-supreme/equipe-tablier-calendrier-saison.webp" alt="Deux membres de l'équipe en tablier tiennent un calendrier des fruits et légumes" width="1350" height="1688" loading="lazy"></div>
+            <figcaption>En tablier, le calendrier des fruits et légumes en main.</figcaption>
+          </div>
+        </figure>
+        <figure class="c reveal">
+          <div class="ph"><img src="assets/l-appetit-supreme/potirons-musquee-marche.webp" alt="Courges musquées au marché" width="1080" height="1350" loading="lazy"></div>
+          <figcaption>Les courges du marché.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="tablees" id="tablees">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Pour vos tablées</h2>
+        <p class="lede">Bagels, tartines, bouchées&nbsp;: le traiteur prépare aussi des plateaux à partager pour un buffet.</p>
+        <p class="lede">Pour en parler, passez au stand, appelez ou écrivez à l'équipe.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:lappetitsupreme@gmail.com">Écrire à l'équipe</a>
+          <a class="btn btn-contour" href="tel:+33534337264">05 34 33 72 64</a>
+        </div>
+      </div>
+      <figure class="large reveal">
+        <img src="assets/l-appetit-supreme/buffet-bagels-tartines-traiteur.webp" alt="Plateaux de bagels, tartines et bouchées pour un buffet" width="1600" height="2133" loading="lazy">
+        <span class="pastille">Plateaux de buffet</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Au marché Victor Hugo</h2>
+        <p class="lede">Le stand est au marché couvert, loges 184 à 186 et 213 à 214A. Ouvert tous les matins, du lundi au dimanche.</p>
+        <figure class="stand reveal">
+          <div class="ph"><img src="assets/l-appetit-supreme/stand-marche-victor-hugo-enseigne.webp" alt="L'enseigne et la vitrine du stand au marché Victor Hugo" width="1600" height="2133" loading="lazy"></div>
+          <span class="pastille">Produits d'ici, traiteur du quotidien</span>
+        </figure>
+      </div>
+      <div class="fiche">
+        <div class="bloc">
+          <span class="lab">Téléphone</span>
+          <a class="gros" href="tel:+33534337264">05 34 33 72 64</a>
+        </div>
+        <div class="bloc deux">
+          <div>
+            <span class="lab">Horaires</span>
+            <p class="heures">Tous les jours<br>8&nbsp;h à 13&nbsp;h 30</p>
+            <p style="font-size:15.5px;color:var(--encre-2);margin-top:6px">Du lundi au dimanche.</p>
+          </div>
+          <div>
+            <span class="lab">Adresse</span>
+            <p>Marché Victor Hugo<br>Loges 184 à 186 et 213 à 214A<br>31000 Toulouse</p>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">Note Google</span>
+          <p class="note"><b>4,8 / 5</b><span>37 avis</span></p>
+          <div class="liens">
+            <a class="lien" href="https://www.google.com/maps/place/l'app%C3%A9tit+supr%C3%AAme/@43.6060839,1.4466448,17z" target="_blank" rel="noopener">Voir les avis et l'itinéraire</a>
+            <a class="lien" href="https://www.facebook.com/lappetitsupreme" target="_blank" rel="noopener">Leur page Facebook</a>
+          </div>
+        </div>
+        <div class="bloc">
+          <span class="lab">E-mail</span>
+          <a class="lien" href="mailto:lappetitsupreme@gmail.com">lappetitsupreme@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="nom">L'appétit suprême</span>
+      <p>Entreprise familiale. Cuisine maison, de saison, produits frais et régionaux.</p>
+    </div>
+    <div>
+      <h3>Le stand</h3>
+      <p style="margin-top:0">Marché Victor Hugo, loges 184 à 186 et 213 à 214A, 31000 Toulouse<br>Tous les jours, 8&nbsp;h à 13&nbsp;h 30</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p style="margin-top:0"><a href="tel:+33534337264">05 34 33 72 64</a><br><a href="mailto:lappetitsupreme@gmail.com">lappetitsupreme@gmail.com</a><br><a href="https://www.facebook.com/lappetitsupreme" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour L'appétit suprême</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

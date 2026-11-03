@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Com' Chiens et Chats · Salon de toilettage chiens et chats à Angers</title>
+<meta name="description" content="Com' Chiens et Chats, salon de toilettage de chiens et de chats depuis 2012, 205 avenue Pasteur à Angers. Coupe aux ciseaux, débourrage, soins bien-être.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%237A3E8C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23FDF6F8'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Reddit+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F5E6EC; --base-2:#EDD6E0; --surface:#FDF6F8; --encre:#2B1730; --encre-2:#5E4864;
+  --violet:#7A3E8C; --violet-fonce:#63307A; --sombre:#2B1730; --clair:#FDF6F8; --lilas:#D9B9E2;
+  --ombre:0 30px 60px -34px rgba(43,23,48,.5); --ombre-forte:0 48px 84px -42px rgba(43,23,48,.6);
+  --display:'Gilda Display',Georgia,serif; --texte:'Reddit Sans','Helvetica Neue',sans-serif;
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--violet);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.005em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,100%);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+
+.tete{position:sticky;top:0;z-index:30;background:rgba(245,230,236,.95);border-bottom:1px solid rgba(43,23,48,.07)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px}
+.marque{text-decoration:none;line-height:1.05}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:27px}
+.marque span{display:block;font-size:13.5px;color:var(--encre-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2)}
+.nav a:hover{color:var(--violet)}
+.nav .tel{border:1.5px solid var(--encre);color:var(--encre);font-weight:600;padding:10px 20px;border-radius:999px;transition:background-color .2s,color .2s}
+.nav .tel:hover{background:var(--encre);color:var(--clair)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16.5px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.btn-plein{background:var(--violet);color:var(--clair);box-shadow:0 18px 32px -20px rgba(99,48,122,.85)}
+.btn-plein:hover{background:var(--violet-fonce);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* héros : photo à gauche, carte qui mord */
+.heros{padding:clamp(28px,4vw,56px) 0 clamp(72px,8vw,112px)}
+.heros .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center}
+.heros figure{grid-column:1/8;grid-row:1;margin:0;position:relative}
+.heros .ph{border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:9/10}
+.heros .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.heros .pastille{position:absolute;left:22px;bottom:22px}
+.pastille{background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 14px 28px -18px rgba(43,23,48,.7);line-height:1.3}
+.heros .carte{grid-column:8/13;grid-row:1;margin-left:-56px;position:relative;z-index:2;background:var(--surface);border-radius:24px;padding:clamp(32px,3.6vw,52px);box-shadow:var(--ombre-forte);margin-top:120px}
+.heros h1{font-size:clamp(36px,3.9vw,56px);line-height:1.05}
+.heros .carte p{margin-top:22px;color:var(--encre-2);font-size:clamp(17px,1.3vw,19px)}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);width:min(1220px,100%);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:2px}
+.faits strong{font-family:var(--display);font-weight:400;font-size:25px;line-height:1.15}
+.faits span{font-size:15px;color:var(--encre-2);line-height:1.4}
+
+/* prestations */
+.prestations{padding:clamp(96px,12vw,144px) 0}
+.prestations .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(48px,7vw,112px);align-items:center}
+h2{font-size:clamp(34px,4.2vw,58px);line-height:1.06}
+.lede{margin-top:22px;color:var(--encre-2);max-width:34em}
+.soins{list-style:none;margin:40px 0 0;padding:0;counter-reset:s}
+.soins li{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-top:1px solid rgba(43,23,48,.14)}
+.soins li:last-child{border-bottom:1px solid rgba(43,23,48,.14)}
+.soins h3{font-size:27px;line-height:1.15}
+.soins p{font-size:16.5px;color:var(--encre-2)}
+.chat{position:relative;padding:0 0 64px 40px}
+.chat .grande{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:4/5}
+.chat .grande img{width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.chat .pastille{position:absolute;right:18px;top:18px}
+.chat .rond{position:absolute;left:0;bottom:0;width:min(220px,46%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--base);box-shadow:var(--ombre)}
+.chat .rond img{width:100%;height:100%;object-fit:cover;object-position:45% 45%}
+
+/* au rythme, sombre */
+.rythme{background:var(--sombre);color:var(--clair);padding:clamp(96px,12vw,144px) 0}
+.rythme blockquote{margin:0;max-width:22em;font-family:var(--display);font-size:clamp(30px,3.8vw,54px);line-height:1.14;color:var(--clair);text-wrap:balance}
+.rythme cite{display:block;margin-top:22px;font-style:normal;font-size:15.5px;color:var(--lilas)}
+.histoires{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);margin-top:clamp(64px,8vw,96px);align-items:start}
+.histoire{background:rgba(253,246,248,.06);border-radius:22px;padding:28px 28px 32px}
+.histoire:nth-child(2){margin-top:56px}
+.histoire:nth-child(3){margin-top:20px}
+.histoire h3{font-size:28px;line-height:1.15;color:var(--clair);margin-top:20px}
+.histoire p{margin-top:12px;font-size:16.5px;color:#E3D5E6;line-height:1.6}
+.histoire .vig{width:min(200px,100%);aspect-ratio:1;border-radius:16px;overflow:hidden;box-shadow:0 26px 44px -26px rgba(0,0,0,.7)}
+.histoire .vig img{width:100%;height:100%;object-fit:cover}
+.histoire .gros{font-family:var(--display);font-size:64px;line-height:1;color:var(--lilas)}
+
+/* le salon */
+.salon{padding:clamp(96px,12vw,144px) 0 clamp(80px,9vw,120px)}
+.salon .titre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:end;margin-bottom:48px}
+.salon .titre p{color:var(--encre-2)}
+.large{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:2000/924}
+.large img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.large .pastille{position:absolute;left:24px;top:24px}
+.fil{display:flex;justify-content:center;align-items:flex-start;gap:clamp(16px,3vw,40px);margin-top:-72px;position:relative;z-index:2;padding:0 clamp(8px,4vw,64px);flex-wrap:wrap}
+.pola{margin:0;width:min(220px,44%);background:var(--surface);padding:10px 10px 12px;border-radius:12px;box-shadow:var(--ombre)}
+.pola img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:7px}
+.pola figcaption{font-size:14px;color:var(--encre-2);margin-top:8px;line-height:1.35}
+.pola:nth-child(1){transform:rotate(-4deg);margin-top:20px}
+.pola:nth-child(2){transform:rotate(2deg)}
+.pola:nth-child(3){transform:rotate(-1.5deg);margin-top:36px}
+.pola:nth-child(4){transform:rotate(4deg);margin-top:8px}
+
+/* contact */
+.contact{background:var(--base-2);padding:clamp(88px,11vw,128px) 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.contact .gauche p{margin-top:20px;color:var(--encre-2);max-width:30em}
+.fiche{background:var(--surface);border-radius:24px;padding:clamp(28px,4vw,48px);box-shadow:var(--ombre-forte);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 40px}
+.fiche .plein{grid-column:1/-1}
+.fiche .lab{display:block;font-size:14px;color:var(--encre-2);margin-bottom:6px}
+.fiche .gros{font-family:var(--display);font-size:clamp(30px,3.2vw,40px);line-height:1;text-decoration:none}
+.fiche .gros:hover{color:var(--violet)}
+.jours{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 20px;font-size:16.5px}
+.jours .f{color:var(--encre-2)}
+.fiche a.lien{color:var(--violet);font-weight:600;text-underline-offset:4px}
+.note b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1}
+.note span{display:block;color:var(--encre-2);font-size:16px;margin-top:4px}
+.vig-contact{margin:44px 0 0;width:min(210px,58%);transform:rotate(-3deg);background:var(--surface);padding:10px 10px 12px;border-radius:12px;box-shadow:var(--ombre)}
+.vig-contact img{border-radius:7px;aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 40%}
+.vig-contact figcaption{font-size:14px;color:var(--encre-2);margin-top:8px}
+
+.pied{background:var(--sombre);color:#E3D5E6;padding:72px 0 44px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied b{font-family:var(--display);font-weight:400;font-size:30px;color:var(--clair);display:block}
+.pied p{margin-top:10px}
+.pied a{color:var(--clair);text-decoration:none}
+.pied a:hover{color:var(--lilas)}
+.pied h3{font-family:var(--texte);font-size:14.5px;font-weight:600;color:var(--lilas);margin-bottom:10px}
+.signature{background:var(--sombre);color:#A08AA6;font-size:13px;text-align:center;padding:18px var(--pad) 26px;border-top:1px solid rgba(253,246,248,.08)}
+
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a:not(.tel){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .heros .wrap{grid-template-columns:minmax(0,1fr)}
+  .heros figure{grid-column:1;grid-row:1}
+  .heros .ph{aspect-ratio:5/4}
+  .heros .pastille{left:14px;top:14px;bottom:auto}
+  .heros .carte{grid-column:1;grid-row:2;margin:-56px 12px 0}
+  .prestations .wrap,.contact .wrap,.salon .titre{grid-template-columns:minmax(0,1fr)}
+  .histoires{grid-template-columns:minmax(0,1fr)}
+  .histoire:nth-child(2),.histoire:nth-child(3){margin-top:0}
+  .chat{padding-left:24px}
+  .fil{margin-top:-40px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .tete .wrap{min-height:66px}
+  .marque b{font-size:19px}
+  .marque span{font-size:12.5px}
+  .nav .tel{padding:9px 14px;font-size:15px}
+  .heros .carte{margin:-44px 8px 0;padding:28px 22px 30px}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 16px}
+  .faits li:last-child{grid-column:1/-1}
+  .faits strong{font-size:22px}
+  .soins li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .fiche{grid-template-columns:minmax(0,1fr);gap:26px}
+  .large{aspect-ratio:4/3}
+  .large img{object-position:42% 50%}
+  .fil{margin-top:-28px;gap:14px}
+  .pola:nth-child(n){margin-top:0}
+  .pola:nth-child(even){margin-top:24px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .nav .tel .long{display:none}
+}
+@media (max-width:370px){
+  .marque b{font-size:17px}
+  .nav .tel{padding:8px 12px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Com' Chiens et Chats</b><span>Toilettage · Angers</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#soins">Les soins</a>
+      <a href="#salon">Le salon</a>
+      <a href="#contact">Horaires</a>
+      <a class="tel" href="tel:+33241200147"><span class="long">Appeler · </span><span class="nw">02&nbsp;41&nbsp;20&nbsp;01&nbsp;47</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <figure>
+        <div class="ph"><img src="assets/com-chiens-et-chats/deux-shih-tzu-toilettes-salon.webp" alt="Deux shih tzu tout juste toilettés, côte à côte sur la table du salon" width="1980" height="2640" fetchpriority="high"></div>
+        <span class="pastille">Deux shih tzu, tout beaux</span>
+      </figure>
+      <div class="carte">
+        <h1>Toilettage chiens et chats, au rythme de chacun.</h1>
+        <p>Depuis 2012, avenue Pasteur à Angers, le salon accueille les chats et tous les chiens, du chiot à son premier toilettage jusqu'aux grands chiens de 120&nbsp;kg. Coupe aux ciseaux, débourrage, soins bien-être : on s'adapte à l'animal.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33241200147"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nw">02&nbsp;41&nbsp;20&nbsp;01&nbsp;47</span></a>
+          <a class="btn btn-contour" href="#contact">Horaires et adresse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul>
+      <li><strong>Depuis 2012</strong><span>salon de toilettage à Angers</span></li>
+      <li><strong>4,8 sur 5</strong><span>170 avis Google</span></li>
+      <li><strong>Jusqu'à 120&nbsp;kg</strong><span>les grands chiens aussi</span></li>
+      <li><strong>Chiens et chats</strong><span>toutes les races accueillies</span></li>
+      <li><strong>Du lundi au vendredi</strong><span>à partir de 9&nbsp;h</span></li>
+    </ul>
+  </div>
+
+  <section class="prestations" id="soins">
+    <div class="wrap">
+      <div>
+        <h2>Des soins sur mesure, pas seulement des coupes classiques.</h2>
+        <p class="lede">Ce n'est pas parce qu'une race ne figure pas sur la liste des tarifs qu'elle n'est pas accueillie : le salon est équipé pour recevoir tout le monde.</p>
+        <ul class="soins">
+          <li><h3>Coupe aux ciseaux</h3><p>Selon vos envies et surtout selon les besoins réels de votre compagnon.</p></li>
+          <li><h3>Débourrage</h3><p>Comme ce spitz roux, tout juste débourré, ciseaux encore posés sur la table.</p></li>
+          <li><h3>Soins bien-être</h3><p>Un moment de douceur, à son rythme, avec des pauses quand il faut.</p></li>
+          <li><h3>Les chats</h3><p>Le salon toilette aussi les chats, comme ce maine coon.</p></li>
+        </ul>
+      </div>
+      <div class="chat">
+        <div class="grande reveal"><img src="assets/com-chiens-et-chats/maine-coon-sur-table-toilettage.webp" alt="Grand maine coon couché sur la table de toilettage, salon rose" width="1440" height="1440" loading="lazy"></div>
+        <span class="pastille">Un maine coon au salon</span>
+        <div class="rond reveal"><img src="assets/com-chiens-et-chats/spitz-loulou-debourre-profil.webp" alt="Spitz roux de profil après débourrage, ciseaux posés à côté" width="1409" height="1242" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rythme">
+    <div class="wrap">
+      <blockquote>« L'esprit du salon : transformer le premier rendez-vous en un moment de confiance pour toute sa vie. »<cite>Com' Chiens et Chats, octobre 2026</cite></blockquote>
+      <div class="histoires">
+        <article class="histoire reveal">
+          <div class="vig"><img src="assets/com-chiens-et-chats/chiot-shiba-premier-toilettage.webp" alt="Chiot shiba inu debout sur la table, pour son premier toilettage" width="1088" height="1344" loading="lazy"></div>
+          <h3>Le premier toilettage</h3>
+          <p>Pour Baiku, chiot shiba inu, il a fallu du temps, du calme et des associations positives pour découvrir les bruits, le bain et les brosses. Aucune contrainte : on avance au rythme du chiot.</p>
+        </article>
+        <article class="histoire reveal">
+          <div class="gros" aria-hidden="true">Hermès</div>
+          <h3>Les doyens</h3>
+          <p>Quand le papi schnauzer a besoin de souffler, on pose la brosse et on fait une pause câlin. S'il préfère rester assis ou s'allonger sur le côté, on le toilette dans cette position.</p>
+        </article>
+        <article class="histoire reveal">
+          <div class="gros" aria-hidden="true">120&nbsp;kg</div>
+          <h3>Les grands chiens</h3>
+          <p>Le salon est équipé pour recevoir absolument tout le monde, y compris les grands chiens jusqu'à 120&nbsp;kg.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="salon" id="salon">
+    <div class="wrap">
+      <div class="titre">
+        <h2>Le salon rose de l'avenue Pasteur.</h2>
+        <p>Les tables, les chaînes, les murs roses et violets : c'est ici que chiens et chats repartent légers et tout beaux.</p>
+      </div>
+      <figure class="large reveal"><img src="assets/com-chiens-et-chats/caniche-abricot-salon-panoramique.webp" alt="Vue large du salon avec un caniche abricot de profil sur la table" width="2000" height="924" loading="lazy"><span class="pastille">Un caniche abricot, vue sur le salon</span></figure>
+      <div class="fil">
+        <figure class="pola"><img src="assets/com-chiens-et-chats/bichon-blanc-assis-apres-toilettage.webp" alt="Bichon blanc assis sur la table après toilettage" width="1446" height="2048" loading="lazy"><figcaption>Bichon, après toilettage.</figcaption></figure>
+        <figure class="pola"><img src="assets/com-chiens-et-chats/cocker-marron-apres-toilettage.webp" alt="Cocker marron au poil long brillant, debout sur la table" width="1024" height="1280" loading="lazy"><figcaption>Cocker, poil long brillant.</figcaption></figure>
+        <figure class="pola"><img src="assets/com-chiens-et-chats/spitz-nain-pomeranian-face.webp" alt="Spitz nain roux de face, gueule ouverte" width="837" height="837" loading="lazy"><figcaption>Roméo, spitz nain.</figcaption></figure>
+        <figure class="pola"><img src="assets/com-chiens-et-chats/shih-tzu-toilette-sur-table.webp" alt="Shih tzu beige et blanc assis, langue tirée, sur la table" width="3024" height="4032" loading="lazy"><figcaption>Shih tzu, langue tirée.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Prendre rendez-vous.</h2>
+        <p>Appelez le salon pour fixer un rendez-vous, ou écrivez-nous.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33241200147"><span class="nw">02&nbsp;41&nbsp;20&nbsp;01&nbsp;47</span></a>
+          <a class="btn btn-contour" href="mailto:contact@comchiensetchats.fr">Écrire au salon</a>
+        </div>
+        <figure class="vig-contact reveal"><img src="assets/com-chiens-et-chats/toiletteuse-au-travail-bichon.webp" alt="Toiletteuse coupant le poil d'un bichon blanc sur la table" width="1080" height="1350" loading="lazy"><figcaption>Aux ciseaux, sur un bichon.</figcaption></figure>
+      </div>
+      <div class="fiche">
+        <div class="plein"><span class="lab">Téléphone</span><a class="gros nw" href="tel:+33241200147">02&nbsp;41&nbsp;20&nbsp;01&nbsp;47</a></div>
+        <div><span class="lab">Adresse</span>205 avenue Pasteur<br>49100 Angers</div>
+        <div><span class="lab">E-mail</span><a class="lien" href="mailto:contact@comchiensetchats.fr">contact@comchiensetchats.fr</a></div>
+        <div><span class="lab">Horaires</span>
+          <div class="jours">
+            <span>Lundi</span><span>9&nbsp;h – 18&nbsp;h</span>
+            <span>Mardi</span><span>9&nbsp;h – 17&nbsp;h&nbsp;30</span>
+            <span>Mercredi</span><span>9&nbsp;h – 18&nbsp;h</span>
+            <span>Jeudi</span><span>9&nbsp;h – 18&nbsp;h</span>
+            <span>Vendredi</span><span>9&nbsp;h – 17&nbsp;h&nbsp;30</span>
+            <span>Samedi</span><span class="f">fermé</span>
+            <span>Dimanche</span><span class="f">fermé</span>
+          </div>
+        </div>
+        <div><span class="lab">Avis Google</span><div class="note"><b>4,8 sur 5</b><span>170 avis</span></div><p style="margin-top:12px"><a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Com'%20Chiens%20et%20Chats&amp;query_place_id=ChIJy-GG81d4CEgRkpVmZupRDK4" rel="noopener" target="_blank">Voir les avis sur Google</a></p><p style="margin-top:8px"><a class="lien" href="https://www.facebook.com/saloncomchiensetchats" rel="noopener" target="_blank">Le salon sur Facebook</a></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div><b>Com' Chiens et Chats</b><p>Salon de toilettage de chiens et de chats à Angers, depuis 2012.</p></div>
+    <div><h3>Le salon</h3><p>205 avenue Pasteur, 49100 Angers<br><a class="nw" href="tel:+33241200147">02&nbsp;41&nbsp;20&nbsp;01&nbsp;47</a><br><a href="mailto:contact@comchiensetchats.fr">contact@comchiensetchats.fr</a></p></div>
+    <div><h3>Horaires</h3><p>Lundi, mercredi, jeudi : 9&nbsp;h – 18&nbsp;h<br>Mardi, vendredi : 9&nbsp;h – 17&nbsp;h&nbsp;30<br>Fermé le week-end</p><p><a href="https://www.facebook.com/saloncomchiensetchats" rel="noopener" target="_blank">Facebook · Com' Chiens et Chats</a></p></div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Com' Chiens et Chats</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
