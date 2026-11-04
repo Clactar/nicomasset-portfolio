@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Galerie Cyha · Tapissier décorateur à Rennes</title>
+<meta name="description" content="Galerie Cyha, artisan tapissier décorateur à Rennes : réfection de sièges, rideaux et stores sur mesure, tissus d'ameublement au mètre. 24 rue de Châteaudun.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D9622B'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23FAF7F3'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Questrial&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F1ECE5; --base-2:#E8E0D5; --surface:#FAF7F3; --encre:#26211E; --encre-2:#5A504A;
+  --accent:#D9622B; --accent-fonce:#A9461A; --ardoise:#2D3A45; --ardoise-2:#3A4855;
+  --g:clamp(20px,4vw,48px);
+  --ombre:0 30px 60px -34px rgba(38,33,30,.55);
+  --ombre-longue:0 40px 80px -40px rgba(45,58,69,.55),0 18px 36px -24px rgba(38,33,30,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Questrial",Georgia,serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:#D9622B;color:#FAF7F3}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Bellefair",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 2*var(--g)));margin-inline:auto}
+.nb{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(241,236,229,.94);border-bottom:1px solid rgba(38,33,30,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:"Bellefair",Georgia,serif;font-weight:400;font-size:28px;letter-spacing:.01em}
+.marque span{font-size:13px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a.lien{text-decoration:none;font-size:15px;color:var(--encre-2);transition:color .2s}
+.nav a.lien:hover{color:var(--encre)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 28px;font-size:16px;text-decoration:none;font-family:inherit;transition:background .25s,color .25s,transform .25s,box-shadow .25s;text-align:center}
+.btn-plein{background:var(--encre);color:var(--surface)}
+.btn-plein:hover{background:var(--accent-fonce);transform:translateY(-2px);box-shadow:0 14px 28px -16px rgba(169,70,26,.7)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.entete .btn{padding:11px 20px;font-size:15px;background:var(--surface);box-shadow:0 6px 18px -12px rgba(38,33,30,.4)}
+.entete .btn:hover{background:var(--encre);color:var(--surface)}
+.court{display:none}
+
+/* Héros */
+.heros{padding:clamp(48px,7vw,104px) 0 clamp(64px,8vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:center}
+.heros h1{font-size:clamp(40px,6.2vw,90px);line-height:1.02}
+.heros .chapo{margin-top:28px;font-size:clamp(17px,1.4vw,19px);color:var(--encre-2);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:var(--encre-2);text-decoration:none;border-bottom:1px solid rgba(38,33,30,.2);padding-bottom:3px}
+.note:hover{color:var(--encre);border-color:var(--encre)}
+.etoiles{color:var(--accent);letter-spacing:2px}
+.visuel{position:relative}
+.photo-heros{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.photo-heros img{width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:scale(1.1);transform-origin:50% 100%}
+.etiquette{position:absolute;left:auto;right:16px;bottom:16px;background:var(--surface);color:var(--encre);border-radius:999px;padding:9px 16px;font-size:14px;line-height:1.3;box-shadow:0 10px 24px -14px rgba(38,33,30,.6)}
+.echantillon{position:absolute;filter:drop-shadow(0 14px 16px rgba(38,33,30,.32)) drop-shadow(0 3px 4px rgba(38,33,30,.18))}
+.echantillon .tissu{aspect-ratio:1/1;overflow:hidden}
+.echantillon img{width:100%;height:100%;object-fit:cover}
+.e1{left:-64px;top:12%;width:clamp(84px,10.5vw,150px)}
+.e1 .tissu{clip-path:polygon(0% 0%,5% 3.2%,10% 0%,15% 3.2%,20% 0%,25% 3.2%,30% 0%,35% 3.2%,40% 0%,45% 3.2%,50% 0%,55% 3.2%,60% 0%,65% 3.2%,70% 0%,75% 3.2%,80% 0%,85% 3.2%,90% 0%,95% 3.2%,100% 0%,96.8% 5%,100% 10%,96.8% 15%,100% 20%,96.8% 25%,100% 30%,96.8% 35%,100% 40%,96.8% 45%,100% 50%,96.8% 55%,100% 60%,96.8% 65%,100% 70%,96.8% 75%,100% 80%,96.8% 85%,100% 90%,96.8% 95%,100% 100%,95% 96.8%,90% 100%,85% 96.8%,80% 100%,75% 96.8%,70% 100%,65% 96.8%,60% 100%,55% 96.8%,50% 100%,45% 96.8%,40% 100%,35% 96.8%,30% 100%,25% 96.8%,20% 100%,15% 96.8%,10% 100%,5% 96.8%,0% 100%,3.2% 95%,0% 90%,3.2% 85%,0% 80%,3.2% 75%,0% 70%,3.2% 65%,0% 60%,3.2% 55%,0% 50%,3.2% 45%,0% 40%,3.2% 35%,0% 30%,3.2% 25%,0% 20%,3.2% 15%,0% 10%,3.2% 5%);transform:rotate(-5deg)}
+.e1 img{object-position:72% 55%;transform:scale(1.7)}
+.e2{left:-36px;top:60%;width:clamp(72px,8.6vw,122px)}
+.e2 .tissu{border-radius:3px;transform:rotate(4deg)}
+.e2 img{object-position:40% 50%;transform:scale(1.3)}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{display:flex;gap:12px;align-items:baseline;font-size:16px;line-height:1.4}
+.faits li::before{content:"";flex:none;width:9px;height:9px;border-radius:2px;background:var(--accent);transform:translateY(-1px) rotate(45deg)}
+.faits strong{font-weight:400;color:var(--encre)}
+
+/* Savoir-faire */
+.section{padding:clamp(80px,9vw,128px) 0}
+.savoir .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.cadre-atelier{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.cadre-atelier img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.savoir .colle{position:sticky;top:110px}
+h2{font-size:clamp(34px,4.4vw,60px);line-height:1.06}
+.intro{margin-top:20px;color:var(--encre-2);max-width:36em}
+.liste{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(38,33,30,.18)}
+.liste li{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;padding:30px 0;border-bottom:1px solid rgba(38,33,30,.18)}
+.liste h3{font-size:clamp(26px,2.4vw,32px);line-height:1.15}
+.liste p{color:var(--encre-2);max-width:38em}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;padding:0;list-style:none}
+.puces li{all:unset;font-size:14px;line-height:1.3;background:var(--surface);border-radius:999px;padding:7px 14px;box-shadow:0 6px 14px -10px rgba(38,33,30,.45)}
+
+/* Réalisations, fond ardoise */
+.ardoise{background:var(--ardoise);color:#EDE6DC}
+.ardoise .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:end;margin-bottom:56px}
+.ardoise .intro{color:#C9C3BA;margin:0}
+.mosaique{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.carte-photo{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,14,18,.75)}
+.carte-photo img{width:100%;height:100%;object-fit:cover}
+.m-canape{grid-column:1/9;grid-row:1;aspect-ratio:2040/918}
+.m-rideaux{grid-column:9/13;grid-row:1/3;aspect-ratio:3/5;margin-top:72px}
+.m-rideaux img{object-position:50% 40%}
+.m-banquette{grid-column:3/8;grid-row:2;aspect-ratio:4/3;margin-top:-56px;outline:8px solid var(--ardoise)}
+.m-banquette img{object-position:45% 60%}
+.legende{position:absolute;left:14px;bottom:14px;background:rgba(250,247,243,.95);color:var(--encre);border-radius:999px;padding:8px 15px;font-size:14px;line-height:1.3;max-width:calc(100% - 28px)}
+
+/* Showroom */
+.showroom .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center}
+.editeurs{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 26px;font-family:"Bellefair",Georgia,serif;font-size:clamp(24px,2.2vw,30px);color:var(--encre)}
+.editeurs span{white-space:nowrap}
+.showroom .petit{margin-top:24px;color:var(--encre-2);font-size:17px}
+.pile{position:relative;padding:0 0 70px 0}
+.pile .grande{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-longue);aspect-ratio:1/1;margin-left:12%}
+.pile .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.pile .passe{position:absolute;left:0;bottom:0;width:min(46%,250px)}
+.pile .passe .papier{background:var(--surface);padding:12px 12px 14px;border-radius:6px;box-shadow:0 26px 50px -26px rgba(38,33,30,.6);transform:rotate(-4deg)}
+.pile .passe img{aspect-ratio:1/1;object-fit:cover;width:100%;height:auto;border-radius:3px}
+.pile .passe small{display:block;font-size:13px;color:var(--encre-2);margin-top:8px;line-height:1.3}
+
+/* Citation */
+.citation{background:var(--surface);padding:clamp(72px,8vw,112px) 0}
+.citation blockquote{margin:0;font-family:"Bellefair",Georgia,serif;font-size:clamp(36px,5.4vw,76px);line-height:1.05;text-wrap:balance;max-width:16em}
+.citation blockquote::before{content:"«\00a0";color:var(--accent)}
+.citation blockquote::after{content:"\00a0»";color:var(--accent)}
+.citation cite{display:block;margin-top:26px;font-style:normal;color:var(--encre-2);font-size:16px}
+
+/* Venir */
+.venir .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.photo-venir{margin-top:44px;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:16/10;position:relative}
+.photo-venir img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.coord{background:var(--surface);border-radius:22px;padding:clamp(26px,3.4vw,44px);box-shadow:var(--ombre-longue)}
+.coord dl{margin:0;display:grid;gap:22px}
+.coord dt{font-size:13px;color:var(--encre-2);margin-bottom:4px}
+.coord dd{margin:0;font-size:18px;line-height:1.45}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(38,33,30,.25)}
+.coord dd a:hover{border-color:var(--accent)}
+.coord .gros{font-family:"Bellefair",Georgia,serif;font-size:32px;line-height:1.1}
+.horaires{width:100%;border-collapse:collapse;font-size:16px}
+.horaires td{padding:5px 0;border-bottom:1px solid rgba(38,33,30,.1)}
+.horaires td:last-child{text-align:right;white-space:nowrap}
+.coord .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.coord .liens .btn{padding:12px 20px;font-size:15px}
+
+/* Pied */
+.pied{background:var(--ardoise);color:#D8D1C7;padding:72px 0 28px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied b{font-family:"Bellefair",Georgia,serif;font-weight:400;font-size:34px;color:#F1ECE5;display:block;line-height:1.1}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(216,209,199,.3)}
+.pied a:hover{border-color:#D9622B}
+.pied h3{font-family:"Questrial",Georgia,serif;font-size:13px;color:#A9A399;margin-bottom:12px;letter-spacing:.02em}
+.pied .bas{display:block}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(216,209,199,.14);font-size:13px;color:#9C968D}
+
+/* Apparition */
+html.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+html.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1000px){
+  .nav a.lien{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .heros .wrap,.savoir .wrap,.showroom .wrap,.venir .wrap,.ardoise .tete{grid-template-columns:minmax(0,1fr)}
+  .heros .wrap{gap:40px}
+  .visuel{margin-left:14px}
+  .e1{left:-14px;top:8%}
+  .e2{left:-14px;top:62%}
+  .savoir .colle{position:static}
+  .cadre-atelier{aspect-ratio:5/4}
+  .mosaique{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .m-canape{grid-column:1/3;grid-row:auto}
+  .m-rideaux{grid-column:2/3;grid-row:auto;margin-top:0;aspect-ratio:3/4}
+  .m-banquette{grid-column:1/2;grid-row:auto;margin-top:0;outline:0;aspect-ratio:3/4}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:14px;padding:26px 0}
+  .mosaique{grid-template-columns:minmax(0,1fr)}
+  .m-canape,.m-rideaux,.m-banquette{grid-column:1/-1;aspect-ratio:4/3}
+  .actions .btn{width:100%}
+  .coord .liens .btn{width:100%}
+  .pile{padding-bottom:90px}
+  .pile .grande{margin-left:8%}
+}
+@media (max-width:420px){
+  .long{display:none}
+  .court{display:inline}
+  .marque b{font-size:24px}
+  .marque span{font-size:12px}
+  .legende{font-size:13px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Galerie Cyha</b><span>Tapissier décorateur · Rennes</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#savoir-faire">Savoir-faire</a>
+      <a class="lien" href="#interieurs">Intérieurs</a>
+      <a class="lien" href="#showroom">Le showroom</a>
+      <a class="lien" href="#venir">Venir</a>
+      <a class="btn btn-contour" href="tel:+33699557404"><span class="long nb">06&nbsp;99&nbsp;55&nbsp;74&nbsp;04</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Redonner vie à vos fauteuils, canapés et rideaux.</h1>
+        <p class="chapo">Artisan tapissier décorateur à Rennes, entre le Thabor et Saint-Hélier. Réfection de sièges, rideaux et stores sur mesure, tissus d'ameublement au mètre&nbsp;: la Galerie Cyha vous accompagne du conseil couleur et matière jusqu'à la pose à domicile.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#venir">Venir au showroom</a>
+          <a class="btn btn-contour" href="tel:+33699557404"><span class="nb">06&nbsp;99&nbsp;55&nbsp;74&nbsp;04</span></a>
+        </div>
+        <a class="note" href="https://www.google.com/maps/search/Galerie+CYHA+Rennes" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><span>4,7 sur&nbsp;5 · 15&nbsp;avis Google</span></a>
+      </div>
+      <div class="visuel">
+        <div class="photo-heros">
+          <img src="assets/galerie-cyha/fauteuil-refait-tissu-orange.webp" alt="Fauteuil ancien retapissé dans un tissu à petits carreaux orange, coupons de tissus assortis posés au pied" width="1600" height="1600" fetchpriority="high">
+          <span class="etiquette">Fauteuil ancien, retapissé</span>
+        </div>
+        <div class="echantillon e1" aria-hidden="true"><div class="tissu"><img src="assets/galerie-cyha/fauteuil-tissu-motif-feuillage.webp" alt="" width="715" height="1600"></div></div>
+        <div class="echantillon e2" aria-hidden="true"><div class="tissu"><img src="assets/galerie-cyha/rideaux-velours-bleu.webp" alt="" width="1600" height="720"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><strong>Artisan tapissier décorateur</strong></li>
+      <li><span>24 rue de Châteaudun, Thabor · Saint-Hélier</span></li>
+      <li><span>Particuliers et professionnels</span></li>
+      <li><span>Du conseil à la pose à domicile</span></li>
+    </ul>
+  </section>
+
+  <section class="section savoir" id="savoir-faire">
+    <div class="wrap">
+      <div class="colle">
+        <figure class="cadre-atelier apparait" style="margin:0">
+          <img src="assets/galerie-cyha/atelier-machine-a-coudre-showroom.webp" alt="Le coin atelier du showroom : machine à coudre industrielle, catalogues d'éditeurs et coussins" width="987" height="1600" loading="lazy">
+          <figcaption class="legende">Le coin atelier, au showroom</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Sièges, fenêtres, murs et sols.</h2>
+        <p class="intro">Chaque projet est unique. Le savoir-faire de l'atelier se décline autour de spécialités techniques et d'éditeurs de prestige, pour les particuliers comme pour les professionnels.</p>
+        <ul class="liste">
+          <li>
+            <h3>Tapisserie et réfection de sièges</h3>
+            <p>Redonner vie à vos fauteuils, chaises et canapés, anciens ou contemporains, grâce à un geste précis et une sélection rigoureuse de tissus d'ameublement haut de gamme. Confection de housses et de coussins.</p>
+          </li>
+          <li>
+            <h3>Rideaux et stores sur mesure</h3>
+            <p>Rideaux, voilages, stores, tentures, passementerie et habillage de fenêtres, avec des textiles choisis selon l'usage de la pièce.</p>
+            <ul class="puces">
+              <li>Thermique</li><li>Dépolluant</li><li>Occultant</li><li>Anti-taches</li><li>Non-feu, norme&nbsp;M1</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Murs et sols d'exception</h3>
+            <p>Papiers peints panoramiques et papiers peints d'éditeurs, tapis sur mesure, moquettes de prestige en laine et en matières naturelles.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ardoise" id="interieurs">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Des intérieurs habillés sur mesure.</h2>
+        <p class="intro">Un canapé repris dans un tissu chiné, une banquette garnie de coussins en velours, des rideaux plein jour sous un lustre&nbsp;: des créations durables, raffinées et intemporelles.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="carte-photo m-canape apparait" style="margin:0">
+          <img src="assets/galerie-cyha/canape-coussins-velours.webp" alt="Canapé en cuir fauve, assise et dossier en tissu chiné rose, coussins en velours rouge, bordeaux et taupe" width="1600" height="720" loading="lazy">
+          <figcaption class="legende">Canapé et coussins en velours</figcaption>
+        </figure>
+        <figure class="carte-photo m-rideaux apparait" style="margin:0">
+          <img src="assets/galerie-cyha/rideaux-blancs-salon-lustre.webp" alt="Salon à moulures : rideaux blancs plein jour devant les fenêtres, lustre en cristal" width="683" height="1600" loading="lazy">
+          <figcaption class="legende">Rideaux plein jour</figcaption>
+        </figure>
+        <figure class="carte-photo m-banquette apparait" style="margin:0">
+          <img src="assets/galerie-cyha/banquette-coussins-sol-damier.webp" alt="Longue banquette blanche et rangée de coussins en velours, rayures et motif léopard, sol en damier" width="1600" height="1600" loading="lazy">
+          <figcaption class="legende">Banquette et coussins</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section showroom" id="showroom">
+    <div class="wrap">
+      <div>
+        <h2>Venez toucher les matières.</h2>
+        <p class="intro">Au showroom, on vous conseille pour choisir les tissus adaptés à votre intérieur, à vos envies et à votre usage. Une sélection de grands éditeurs, dont une collection de velours haut de gamme pour les rideaux, les sièges, les banquettes et les canapés.</p>
+        <div class="editeurs" aria-label="Éditeurs présentés"><span>Pierre Frey</span><span>Dedar</span><span>Zimmer Rohde</span></div>
+        <ul class="puces" style="margin-top:28px">
+          <li>Tissus d'ameublement au mètre</li><li>Tringles et rails</li><li>Tapis et moquettes sur mesure</li><li>Papier peint</li><li>Décoration d'intérieur</li>
+        </ul>
+      </div>
+      <div class="pile">
+        <div class="grande apparait"><img src="assets/galerie-cyha/vitrine-rideaux-motif-orange.webp" alt="La vitrine du showroom : rideaux à grands motifs orange et brun, présentoir de tissus, store plissé et échantillons de tapis" width="1600" height="1600" loading="lazy"></div>
+        <div class="passe">
+          <div class="papier">
+            <img src="assets/galerie-cyha/nuancier-tapis-fischbacher.webp" alt="Nuancier de trente-six échantillons ronds de tapis à poils longs" width="1600" height="1515" loading="lazy">
+            <small>Nuancier de tapis sur mesure</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="La devise de la galerie">
+    <div class="wrap">
+      <blockquote>Le tissu au service de vos intérieurs.</blockquote>
+      <cite>Galerie Cyha, Rennes</cite>
+    </div>
+  </section>
+
+  <section class="section venir" id="venir">
+    <div class="wrap">
+      <div>
+        <h2>Passez au 24 rue de Châteaudun.</h2>
+        <p class="intro">Entre le quartier du Thabor et Saint-Hélier. Appelez ou écrivez pour échanger sur votre projet ou planifier un rendez-vous, ou passez directement en boutique.</p>
+        <figure class="photo-venir apparait" style="margin-inline:0">
+          <img src="assets/galerie-cyha/fauteuils-cabriolet-showroom.webp" alt="Deux fauteuils cabriolet en tissu graphique gris devant le mur d'échantillons de tissus du showroom" width="1600" height="1535" loading="lazy">
+          <figcaption class="legende">Le mur d'échantillons du showroom</figcaption>
+        </figure>
+      </div>
+      <aside class="coord" aria-label="Coordonnées">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="gros nb" href="tel:+33699557404">06&nbsp;99&nbsp;55&nbsp;74&nbsp;04</a></dd></div>
+          <div><dt>Adresse</dt><dd>24 rue de Châteaudun<br>35000 Rennes</dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:galerie.cyha@gmail.com">galerie.cyha@gmail.com</a></dd></div>
+          <div><dt>Horaires</dt><dd>
+            <table class="horaires">
+              <tr><td>Lundi</td><td>10h–19h</td></tr>
+              <tr><td>Mardi</td><td>10h–19h</td></tr>
+              <tr><td>Mercredi</td><td>13h–19h</td></tr>
+              <tr><td>Jeudi</td><td>10h–19h</td></tr>
+              <tr><td>Vendredi</td><td>10h–19h</td></tr>
+              <tr><td>Samedi</td><td>10h–16h</td></tr>
+              <tr><td>Dimanche</td><td>Fermé</td></tr>
+            </table>
+          </dd></div>
+          <div><dt>Note Google</dt><dd>4,7 sur&nbsp;5, 15&nbsp;avis</dd></div>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/Galerie+CYHA+Rennes" target="_blank" rel="noopener">Voir les avis et l'itinéraire</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/cherifartetdesign" target="_blank" rel="noopener">Les nouveautés sur Facebook</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Galerie Cyha</b>
+      <p style="margin-top:12px">Artisan tapissier décorateur à Rennes. Réfection de sièges, rideaux et stores sur mesure, tissus d'ameublement, tapis et papiers peints.</p>
+    </div>
+    <div>
+      <h3>Showroom</h3>
+      <ul>
+        <li>24 rue de Châteaudun, 35000 Rennes</li>
+        <li><a class="nb" href="tel:+33699557404">06&nbsp;99&nbsp;55&nbsp;74&nbsp;04</a></li>
+        <li><a href="mailto:galerie.cyha@gmail.com">galerie.cyha@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi, mardi, jeudi, vendredi&nbsp;: 10h–19h</li>
+        <li>Mercredi&nbsp;: 13h–19h</li>
+        <li>Samedi&nbsp;: 10h–16h</li>
+        <li style="margin-top:12px"><a href="https://www.google.com/maps/search/Galerie+CYHA+Rennes" target="_blank" rel="noopener">Fiche Google</a> · <a href="https://www.facebook.com/cherifartetdesign" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap bas"><p class="proposition">Proposition de Nicolas Masset pour Galerie Cyha</p></div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

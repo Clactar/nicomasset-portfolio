@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ferme de La Barthe · Boissons végétales bio et fermières au Fousseret</title>
+<meta name="description" content="Boissons végétales bio faites à la ferme, au Fousseret, du semis des graines jusqu'à l'embouteillage : soja, soja et miel, avoine, orge, millet, petit épeautre.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232E3B2C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23EEE9DC'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300..700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EEE9DC; --base-2:#E4DDCB; --surface:#F8F5EC; --encre:#2A2A1F; --encre-2:#55554A;
+  --accent:#C44536; --accent-fonce:#A53628; --sombre:#2E3B2C; --sombre-2:#3A4937; --clair:#F3EFE3;
+  --ombre:0 30px 60px -34px rgba(36,46,34,.55);
+  --ombre-forte:0 44px 80px -40px rgba(36,46,34,.62);
+  --display:"Young Serif", Georgia, serif;
+  --texte:"Karla", "Helvetica Neue", sans-serif;
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.conteneur{width:var(--large);margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(238,233,220,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(42,42,31,.07)}
+.entete .conteneur{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:22px}
+.marque span{font-size:13px;color:var(--encre-2);letter-spacing:.02em;margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.pilule{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 26px;font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;text-align:center}
+.pilule:hover{transform:translateY(-2px)}
+.pilule-pleine{background:var(--accent);color:var(--surface);box-shadow:0 18px 30px -20px rgba(165,54,40,.7)}
+.pilule-pleine:hover{background:var(--accent-fonce)}
+.pilule-contour{border-color:rgba(42,42,31,.35);color:var(--encre)}
+.pilule-contour:hover{border-color:var(--encre);background:var(--surface)}
+.pilule-petite{padding:10px 20px;font-size:16px}
+.nowrap{white-space:nowrap}
+
+/* Héros */
+.heros{padding:clamp(40px,6vw,88px) 0 clamp(72px,8vw,112px)}
+.heros .conteneur{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:clamp(40px,6vw,88px);
+  grid-template-areas:". photo" "titre photo" "texte photo" "actions photo" ". photo";grid-template-rows:1fr auto auto auto 1fr}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.6vw,80px);line-height:1.04}
+.heros .chapo{grid-area:texte;margin-top:28px;max-width:34em;font-size:clamp(17px,1.4vw,19.5px);color:var(--encre-2)}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros-photo{grid-area:photo;position:relative;margin:0;align-self:center}
+.heros-photo .cadre{border-radius:22px;overflow:hidden;box-shadow:var(--ombre-forte);aspect-ratio:1/1}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.tampon{position:absolute;top:-38px;left:-42px;width:138px;height:138px;border-radius:50%;background:var(--accent);color:var(--surface);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);box-shadow:0 22px 40px -22px rgba(120,30,20,.75)}
+.tampon::before{content:"";position:absolute;inset:8px;border-radius:50%;border:1.5px dashed rgba(248,245,236,.7)}
+.tampon span{font-family:var(--display);font-size:17px;line-height:1.15;padding:0 18px}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);border-radius:12px;padding:9px 14px;font-size:15px;font-weight:500;box-shadow:0 14px 26px -18px rgba(36,46,34,.6)}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:2px;padding-left:18px;position:relative}
+.faits li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.faits b{font-family:var(--display);font-weight:400;font-size:19px;line-height:1.25}
+.faits span{font-size:15.5px;color:var(--encre-2);line-height:1.4}
+
+section{scroll-margin-top:84px}
+.section{padding:clamp(80px,9vw,128px) 0}
+.titre-section{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.intro{margin-top:20px;max-width:36em;color:var(--encre-2);font-size:clamp(17px,1.3vw,19px)}
+
+/* Boissons */
+.boissons .conteneur{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:start}
+.boissons-visuel{position:relative;padding-bottom:64px}
+.boissons-visuel .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.boissons-visuel .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.carte-saine{position:relative;margin:-120px 0 0 auto;width:min(380px,92%);background:var(--surface);border-radius:20px;padding:28px 30px;box-shadow:var(--ombre)}
+.carte-saine h3{font-size:24px;line-height:1.2}
+.carte-saine p{margin-top:12px;font-size:17px;color:var(--encre-2)}
+.liste-boissons{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(42,42,31,.18)}
+.liste-boissons li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:8px 24px;padding:22px 0;border-bottom:1px solid rgba(42,42,31,.18)}
+.liste-boissons h3{font-size:clamp(26px,2.4vw,34px);line-height:1.1}
+.liste-boissons .grains{font-size:15.5px;color:var(--encre-2);text-align:right}
+.liste-boissons .detail{grid-column:1/-1;font-size:17px;color:var(--encre-2);max-width:40em}
+.liste-boissons .detail strong{color:var(--encre);font-weight:600}
+
+/* Frise */
+.frise{background:var(--surface)}
+.frise-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
+.frise ol{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative}
+.frise ol::before{content:"";position:absolute;top:22px;left:0;right:0;height:1.5px;background:linear-gradient(90deg,var(--accent) 0 12%,rgba(42,42,31,.22) 12% 100%)}
+.frise li{position:relative;padding-top:64px}
+.frise li .num{position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;background:var(--base);border:1.5px solid rgba(42,42,31,.25);display:grid;place-items:center;font-family:var(--display);font-size:18px}
+.frise li:first-child .num{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.frise h3{font-size:24px;line-height:1.2}
+.frise li p{margin-top:10px;font-size:17px;color:var(--encre-2)}
+
+/* Citation pleine largeur */
+.citation{padding:clamp(24px,3vw,40px) 0}
+.citation figure{margin:0;position:relative;border-radius:24px;overflow:hidden;min-height:clamp(420px,46vw,600px);display:grid;align-items:end;box-shadow:var(--ombre)}
+.citation img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.citation figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,36,26,0) 25%,rgba(28,36,26,.72) 100%)}
+.citation blockquote{position:relative;z-index:1;margin:0;padding:clamp(28px,5vw,64px);max-width:900px;color:var(--clair)}
+.citation blockquote p{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);line-height:1.15;text-wrap:balance}
+.citation figcaption{margin-top:18px;font-size:16px;color:rgba(243,239,227,.85)}
+
+/* Histoire */
+.histoire{background:var(--sombre);color:var(--clair)}
+.histoire .conteneur{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px)}
+.histoire .intro{color:rgba(243,239,227,.8)}
+.annees{list-style:none;margin:48px 0 0;padding:0}
+.annees li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid rgba(243,239,227,.16)}
+.annees li:last-child{border-bottom:1px solid rgba(243,239,227,.16)}
+.annees .an{font-family:var(--display);font-size:30px;line-height:1;color:#E9A497}
+.annees h3{font-size:22px;line-height:1.25}
+.annees p{margin-top:8px;font-size:17px;color:rgba(243,239,227,.82)}
+.annees li.fort .an{color:var(--clair)}
+.annees li.fort h3::after{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-left:12px;vertical-align:middle}
+.album{position:relative;display:flex;flex-direction:column;gap:28px;padding-top:12px}
+.album .grande{margin:0;border-radius:20px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(0,0,0,.55);position:relative}
+.album .grande img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 50%}
+.album .grande figcaption,.vignette figcaption{font-size:15px;color:rgba(243,239,227,.78);margin-top:10px}
+.album .grande figcaption{position:absolute;left:16px;bottom:16px;margin:0;background:var(--surface);color:var(--encre);padding:8px 13px;border-radius:11px;font-weight:500}
+.vignettes{display:flex;gap:20px;align-items:flex-start}
+.vignette{margin:0;width:min(200px,48%)}
+.vignette img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;box-shadow:0 24px 40px -26px rgba(0,0,0,.6)}
+.vignette:nth-child(1){transform:rotate(-2.5deg)}
+.vignette:nth-child(2){transform:rotate(2deg);margin-top:30px}
+
+/* Agriculture */
+.agri .conteneur{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,7vw,104px);align-items:center}
+.duo{position:relative;padding:0 0 90px 0}
+.duo .une{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);width:82%}
+.duo .une img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:55% 60%}
+.duo .deux{position:absolute;right:0;bottom:0;width:min(240px,46%);background:var(--surface);padding:12px 12px 14px;border-radius:6px;transform:rotate(3deg);box-shadow:var(--ombre-forte)}
+.duo .deux img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:52% 60%;border-radius:3px}
+.duo .deux figcaption{font-size:15px;color:var(--encre-2);margin-top:8px;text-align:center}
+.agri .texte p+p{margin-top:16px}
+.agri .texte p{color:var(--encre-2)}
+.pastilles{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;list-style:none;padding:0}
+.pastilles li{background:var(--surface);border-radius:999px;padding:8px 16px;font-size:15.5px;box-shadow:0 10px 22px -18px rgba(36,46,34,.6)}
+
+/* Où trouver + contact */
+.trouver{background:var(--base-2)}
+.trouver .conteneur{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.points{list-style:none;margin:36px 0 0;padding:0}
+.points li{padding:18px 0;border-top:1px solid rgba(42,42,31,.18)}
+.points li:last-child{border-bottom:1px solid rgba(42,42,31,.18)}
+.points b{font-family:var(--display);font-weight:400;font-size:21px;display:block;line-height:1.2}
+.points span{font-size:16px;color:var(--encre-2)}
+.trouver .note{margin-top:24px;color:var(--encre-2);font-size:17px}
+.trouver .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.carte-contact{background:var(--surface);border-radius:22px;padding:clamp(28px,3.4vw,44px);box-shadow:var(--ombre-forte)}
+.carte-contact h3{font-size:30px;line-height:1.1}
+.carte-contact dl{margin:24px 0 0;display:grid;gap:18px}
+.carte-contact dt{font-size:14px;color:var(--encre-2);letter-spacing:.02em}
+.carte-contact dd{margin:2px 0 0;font-size:18px}
+.carte-contact dd a{text-decoration:none;border-bottom:1px solid rgba(196,69,54,.35);transition:border-color .2s,color .2s}
+.carte-contact dd a:hover{color:var(--accent);border-color:var(--accent)}
+.carte-contact .ligne{display:flex;flex-wrap:wrap;gap:4px 14px}
+.mail{overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair);padding:72px 0 36px}
+.pied .conteneur{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:30px;line-height:1.1}
+.pied p,.pied li{font-size:16px;color:rgba(243,239,227,.8)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(243,239,227,.25)}
+.pied a:hover{border-color:var(--clair)}
+.pied h4{margin:0 0 12px;font-family:var(--texte);font-weight:600;font-size:15px;color:var(--clair)}
+.proposition{background:var(--sombre);color:rgba(243,239,227,.55);font-size:14px;text-align:center;padding:18px 24px 28px;border-top:1px solid rgba(243,239,227,.1)}
+
+/* Apparitions */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .pilule{transition:none}
+}
+
+@media (max-width:1080px){
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .nav a:not(.pilule){display:none}
+}
+@media (max-width:860px){
+  .heros .conteneur{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros-photo{margin-top:32px;max-width:560px}
+  .heros-photo .cadre{aspect-ratio:5/4}
+  .tampon{top:-24px;left:auto;right:-6px;width:112px;height:112px}
+  .tampon span{font-size:14.5px;padding:0 14px}
+  .boissons .conteneur,.histoire .conteneur,.agri .conteneur,.trouver .conteneur,.frise-tete{grid-template-columns:minmax(0,1fr)}
+  .boissons-visuel{order:2}
+  .frise ol{grid-template-columns:minmax(0,1fr) minmax(0,1fr);row-gap:40px}
+  .frise ol::before{display:none}
+  .pied .conteneur{grid-template-columns:minmax(0,1fr)}
+  .album .grande img{aspect-ratio:4/3}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  :root{--large:min(1200px, 100% - 40px)}
+  .entete .conteneur{min-height:64px}
+  .marque b{font-size:19px}
+  .marque span{display:none}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 16px;padding:26px 0}
+  .faits b{font-size:17px}
+  .faits span{font-size:15px}
+  .frise ol{grid-template-columns:minmax(0,1fr)}
+  .annees li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .liste-boissons li{grid-template-columns:minmax(0,1fr)}
+  .liste-boissons .grains{text-align:left}
+  .carte-saine{margin:-70px 0 0 auto}
+  .duo{padding-bottom:70px}
+}
+@media (max-width:420px){
+  .heros .actions .pilule,.trouver .actions .pilule{width:100%}
+  .entete .pilule-petite{padding:9px 14px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#haut"><b>Ferme de La Barthe</b><span>Boissons végétales bio, Le Fousseret</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#boissons">Les boissons</a>
+      <a href="#histoire">L'histoire de la ferme</a>
+      <a href="#trouver">Où nous trouver</a>
+      <a class="pilule pilule-contour pilule-petite nowrap" href="tel:+33656664449">06 56 66 44 49</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="conteneur">
+      <h1>Bienvenue à la Ferme de la Barthe.</h1>
+      <figure class="heros-photo">
+        <div class="cadre"><img src="assets/ferme-de-la-barthe-le-fousseret/bouteilles-avoine-soja-soja-miel.webp" alt="Trois bouteilles de boissons Avoine, Soja et Soja et miel posées au milieu de l'avoine et des marguerites, avec un verre et des grains" width="1600" height="1600" fetchpriority="high"></div>
+        <div class="tampon" aria-hidden="true"><span>Bouteilles consignées</span></div>
+        <figcaption class="etiquette">Avoine, soja, soja &amp; miel</figcaption>
+      </figure>
+      <p class="chapo">Une ferme familiale bio au cœur de la Haute-Garonne. Nous cultivons céréales et protéagineux, et nous en faisons des boissons végétales, réalisées intégralement à la ferme, au Fousseret, du semis des graines jusqu'à l'embouteillage.</p>
+      <div class="actions">
+        <a class="pilule pilule-pleine" href="#boissons">Découvrir nos boissons</a>
+        <a class="pilule pilule-contour nowrap" href="tel:+33656664449">06 56 66 44 49</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="La ferme en bref">
+    <ul class="conteneur">
+      <li><b>Six boissons</b><span>soja, soja &amp; miel, avoine, orge, millet, petit épeautre</span></li>
+      <li><b>Faites à la ferme</b><span>du semis à l'embouteillage, au Fousseret</span></li>
+      <li><b>Certifiées AB</b><span>par BIO-01-FR</span></li>
+      <li><b>Sans conservateurs</b><span>ingrédients bio, 100&nbsp;% naturels</span></li>
+      <li><b>Bouteilles consignées</b><span>déchets compostés, recyclés ou réutilisés</span></li>
+    </ul>
+  </div>
+
+  <section class="section boissons" id="boissons">
+    <div class="conteneur">
+      <div class="boissons-visuel">
+        <figure class="grande apparait" style="margin:0"><img src="assets/ferme-de-la-barthe-le-fousseret/moisson-du-soja.webp" alt="Moissonneuse dans un champ de soja doré sous un grand ciel nuageux" width="1066" height="1600" loading="lazy"></figure>
+        <div class="carte-saine">
+          <h3>Des boissons saines et délicieuses</h3>
+          <p>Nos grains viennent d'une sélection naturelle qui se fait d'année en année dans nos champs&nbsp;: c'est ce qui donne un goût authentique à nos boissons.</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="titre-section">Nos boissons végétales</h2>
+        <p class="intro">Les recettes ont été élaborées par nos soins pour des boissons que l'on boit telles quelles, ou que l'on utilise en cuisine et en pâtisserie.</p>
+        <ul class="liste-boissons">
+          <li>
+            <h3>Soja</h3><span class="grains">1&nbsp;L ou 50&nbsp;cl</span>
+            <p class="detail">Naturellement onctueux&nbsp;: à boire tel quel, au petit déjeuner ou en cuisine. Une fois cuit, le goût du soja disparaît au profit des autres aliments. <strong>Eau et soja bio et fermier (13&nbsp;%).</strong> Se conserve à température ambiante, DLC de 3&nbsp;mois.</p>
+          </li>
+          <li><h3>Soja &amp; miel</h3></li>
+          <li><h3>Avoine</h3></li>
+          <li><h3>Orge</h3></li>
+          <li><h3>Petit épeautre</h3></li>
+          <li><h3>Millet</h3></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section frise">
+    <div class="conteneur">
+      <div class="frise-tete">
+        <h2 class="titre-section">Du semis des graines jusqu'à l'embouteillage</h2>
+        <p class="intro" style="margin-top:0">Tout se fait à la ferme, de manière artisanale et avec attention. Fabriqués en Occitanie.</p>
+      </div>
+      <ol>
+        <li><span class="num">1</span><h3>Le semis</h3><p>Des grains bio issus de nos propres champs, sélectionnés d'année en année.</p></li>
+        <li><span class="num">2</span><h3>Le soin des cultures</h3><p>Soja, blé, orge, avoine… cultivés selon le cahier des charges de l'Agriculture Biologique.</p></li>
+        <li><span class="num">3</span><h3>La préparation</h3><p>Des recettes simples, sans conservateurs, préparées à la ferme.</p></li>
+        <li><span class="num">4</span><h3>L'embouteillage</h3><p>Au Fousseret, en bouteilles consignées.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="conteneur">
+      <figure class="apparait">
+        <img src="assets/ferme-de-la-barthe-le-fousseret/champ-de-cereales-coquelicots.webp" alt="Champ de céréales vertes parsemé de coquelicots, lisière d'arbres au fond" width="1600" height="1081" loading="lazy">
+        <blockquote>
+          <p>La Ferme de la Barthe, c'est une histoire de transmissions, de paysage et de savoir-faire.</p>
+          <figcaption>Plus qu'un projet agricole, un projet de paysage.</figcaption>
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section histoire" id="histoire">
+    <div class="conteneur">
+      <div>
+        <h2 class="titre-section">Une histoire de famille</h2>
+        <p class="intro">Nous sommes agriculteurs, mais pas seulement&nbsp;: nous maîtrisons tout le chemin, de la production de céréales biologiques jusqu'à des produits simples comme les boissons végétales.</p>
+        <ol class="annees">
+          <li><span class="an">1979</span><div><h3>Installation</h3><p>Marie-Rose et sa famille, venues d'Aveyron, s'installent à Lavelanet et au Fousseret&nbsp;: une ferme en polyculture élevage, avec des vaches laitières.</p></div></li>
+          <li><span class="an">1983</span><div><h3>L'Aveyron rencontre la Gascogne</h3><p>Jacques, le Gascon, épouse Marie-Rose, l'Aveyronnaise, et rejoint le GAEC. Naîtront deux petites filles. Marie-Rose commence un atelier de canard gras.</p></div></li>
+          <li><span class="an">1995</span><div><h3>Changement de perspective</h3><p>Marie-Rose et Jacques continuent le canard gras et les céréales. Ils stockent le grain et essaient l'arrêt du labour, le semis direct et les couverts végétaux.</p></div></li>
+          <li><span class="an">2015</span><div><h3>Un projet de transmission</h3><p>Pendant ses études de paysage, Johanna, la petite dernière, songe à reprendre la ferme. La conversion bio démarre en 2016, et Johanna rejoint ses parents en 2017.</p></div></li>
+          <li class="fort"><span class="an">2020</span><div><h3>Johanna reprend la ferme</h3><p>À la suite de Marie-Rose et Jacques, ses parents, toujours actifs à ses côtés, elle garde les grandes cultures et crée l'atelier des boissons végétales. Aujourd'hui, nous travaillons à 8 mains.</p></div></li>
+        </ol>
+      </div>
+      <div class="album">
+        <figure class="grande apparait"><img src="assets/ferme-de-la-barthe-le-fousseret/agriculteur-accroupi-dans-un-champ.webp" alt="Agriculteur accroupi, la main posée sur la terre d'un champ travaillé" width="1600" height="1600" loading="lazy"><figcaption>Dans les champs de la ferme</figcaption></figure>
+        <div class="vignettes">
+          <figure class="vignette"><img src="assets/ferme-de-la-barthe-le-fousseret/femme-et-canards-photo-archive.webp" alt="Photo d'archive : canards sortant d'une cabane en bois" width="1600" height="1600" loading="lazy"><figcaption>Photo d'archive, le temps des canards</figcaption></figure>
+          <figure class="vignette"><img src="assets/ferme-de-la-barthe-le-fousseret/couple-devant-la-ferme.webp" alt="Couple devant le corps de ferme en pierre" width="1600" height="1600" loading="lazy"><figcaption>Devant la ferme</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section agri">
+    <div class="conteneur">
+      <div class="duo">
+        <figure class="une apparait" style="margin:0"><img src="assets/ferme-de-la-barthe-le-fousseret/rainette-dans-le-soja.webp" alt="Petite rainette verte abritée sous les feuilles d'un plant de soja" width="1600" height="1600" loading="lazy"></figure>
+        <figure class="deux apparait" style="margin:0"><img src="assets/ferme-de-la-barthe-le-fousseret/jeune-pousse-sol-de-la-ferme.webp" alt="Jeune pousse de chêne parmi les feuilles mortes" width="1600" height="1081" loading="lazy"><figcaption>Le sol de la ferme</figcaption></figure>
+      </div>
+      <div class="texte">
+        <h2 class="titre-section">Une agriculture respectueuse de l'environnement</h2>
+        <p class="intro">Les savoir-faire agronomiques développés sur la ferme ont une priorité&nbsp;: le respect des écosystèmes qui la constituent.</p>
+        <p style="margin-top:16px">Obtenir un système écologiquement équilibré et durable est un long chemin. La vente des boissons fait avancer notre projet agroécologique&nbsp;: plantations d'arbres, nouvelles techniques agronomiques, vergers.</p>
+        <ul class="pastilles">
+          <li>Haies plantées</li>
+          <li>Un troupeau de brebis</li>
+          <li>Préservation des sols</li>
+          <li>Déchets compostés</li>
+          <li>Bouteilles consignées</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section trouver" id="trouver">
+    <div class="conteneur">
+      <div>
+        <h2 class="titre-section">Où trouver nos boissons</h2>
+        <p class="intro">Nous n'avons pas de magasin à la ferme&nbsp;: nos boissons sont en vente dans des points de vente de Haute-Garonne, du Tarn, de l'Ariège et de la Gironde. Par exemple&nbsp;:</p>
+        <ul class="points">
+          <li><b>Campillo</b><span>1 rue Job, 31000 Toulouse</span></li>
+          <li><b>Ferme Attitude St George</b><span>23 rue d'Astorg, 31000 Toulouse</span></li>
+          <li><b>Biocoop Martres-Tolosane</b><span>56 bis avenue des Pyrénées, 31220 Martres-Tolosane</span></li>
+        </ul>
+        <p class="note">Nous accueillons du public 1 à 2 fois par an, pour des marchés ou des journées à thème. Pour être prévenu, envoyez-nous un mail avec vos coordonnées.</p>
+        <div class="actions">
+          <a class="pilule pilule-pleine" href="https://fermedelabarthe.fr/contact/">Voir tous les points de vente</a>
+          <a class="pilule pilule-contour" href="https://fermedelabarthe.socleo.org/">Espace professionnel</a>
+        </div>
+      </div>
+      <aside class="carte-contact apparait" aria-label="Coordonnées">
+        <h3>Nous contacter</h3>
+        <dl>
+          <div><dt>Adresse</dt><dd>Ferme de La Barthe<br>Chemin du Morou, 31430 Le Fousseret</dd></div>
+          <div><dt>Les produits</dt><dd class="ligne"><a class="nowrap" href="tel:+33656664449">06 56 66 44 49</a><a class="mail" href="mailto:produits@fermedelabarthe.fr">produits@fermedelabarthe.fr</a></dd></div>
+          <div><dt>Johanna</dt><dd class="ligne"><a class="nowrap" href="tel:+33648394963">06 48 39 49 63</a><a class="mail" href="mailto:johanna.daran@fermedelabarthe.fr">johanna.daran@fermedelabarthe.fr</a></dd></div>
+          <div><dt>La ferme</dt><dd><a class="nowrap" href="tel:+33561983903">05 61 98 39 03</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div>
+      <p class="nom" style="color:var(--clair)">Ferme de La Barthe</p>
+      <p style="margin-top:12px;max-width:26em">Produits végétaux, bio et fermiers. Certifié bio par BIO-01-FR.</p>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul>
+        <li>Chemin du Morou, 31430 Le Fousseret</li>
+        <li><a class="nowrap" href="tel:+33561983903">05 61 98 39 03</a></li>
+        <li><a class="mail" href="mailto:produits@fermedelabarthe.fr">produits@fermedelabarthe.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Liens</h4>
+      <ul>
+        <li><a href="#boissons">Nos boissons</a></li>
+        <li><a href="#histoire">L'histoire de la ferme</a></li>
+        <li><a href="https://fermedelabarthe.fr/contact/">Points de vente</a></li>
+        <li><a href="https://fermedelabarthe.socleo.org/">Espace professionnel</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour la Ferme de La Barthe</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(entrees){entrees.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

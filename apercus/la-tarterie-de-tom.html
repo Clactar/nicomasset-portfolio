@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Tarterie de Tom · Food truck et traiteur à Orléans</title>
+<meta name="description" content="La Tarterie de Tom, food truck et traiteur à Orléans : tartes salées et sucrées, soupes de saison, plats cuisinés et desserts, cuisine maison. Mariages, anniversaires, repas d'entreprise.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Ctext x='32' y='47' font-family='Impact,sans-serif' font-size='40' text-anchor='middle' fill='%23E8B54A'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rethink+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F2EEE6; --base-2:#E7E0D3; --surface:#FBF7EF; --encre:#171717; --encre-2:#4F4A43;
+  --moutarde:#E8B54A; --moutarde-fonce:#C9942A; --noir:#171717; --noir-2:#232220; --clair:#EFE9DE; --clair-2:#B9B2A6;
+  --g:clamp(20px,4vw,48px);
+  --ombre:0 30px 60px -34px rgba(23,23,23,.55);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Rethink Sans",Georgia,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:#E8B54A;color:#171717}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Anton",Impact,sans-serif;font-weight:400;margin:0;text-wrap:balance;text-transform:uppercase;letter-spacing:.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1220px,calc(100% - 2*var(--g)));margin-inline:auto}
+.nb{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(23,23,23,.95);color:var(--clair);border-bottom:1px solid rgba(239,233,222,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;font-family:"Anton",Impact,sans-serif;font-size:24px;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.marque span{color:var(--moutarde)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav .lien{text-decoration:none;font-size:15px;color:var(--clair-2);transition:color .2s}
+.nav .lien:hover{color:var(--clair)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 28px;font-size:16px;font-weight:600;text-decoration:none;text-align:center;line-height:1.25;transition:background .25s,color .25s,transform .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--moutarde);color:var(--noir)}
+.btn-plein:hover{background:#F2C766;transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(232,181,74,.9)}
+.btn-contour{border:1.5px solid rgba(239,233,222,.55);color:var(--clair)}
+.btn-contour:hover{border-color:var(--clair);background:var(--clair);color:var(--noir);transform:translateY(-2px)}
+.clair .btn-contour{border-color:var(--encre);color:var(--encre)}
+.clair .btn-contour:hover{background:var(--encre);color:var(--surface)}
+.clair .btn-plein{background:var(--encre);color:var(--surface)}
+.clair .btn-plein:hover{background:#2E2D2A;box-shadow:0 16px 30px -18px rgba(23,23,23,.8)}
+.entete .btn{padding:10px 18px;font-size:15px}
+.court{display:none}
+
+/* Héros noir */
+.heros{background:var(--noir);color:var(--clair);padding:clamp(40px,6vw,80px) 0 clamp(64px,8vw,112px)}
+.heros .haut{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(28px,4vw,64px);align-items:end}
+.heros h1{font-size:clamp(44px,8vw,120px);line-height:1.17;letter-spacing:.003em}
+.heros h1 em{font-style:normal;color:var(--moutarde)}
+.heros .chapo{font-size:clamp(17px,1.35vw,19px);color:#D3CCC0;max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.note{display:inline-flex;gap:10px;align-items:center;margin-top:22px;font-size:15px;color:var(--clair-2);text-decoration:none;border-bottom:1px solid rgba(239,233,222,.2);padding-bottom:3px}
+.note:hover{color:var(--clair)}
+.etoiles{color:var(--moutarde);letter-spacing:2px}
+.cinema{position:relative;margin-top:clamp(40px,5vw,64px);border-radius:20px;overflow:hidden;aspect-ratio:21/9;box-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(239,233,222,.06)}
+.cinema img{position:absolute;left:0;top:-48.9%;width:128%;max-width:none;height:auto}
+.etiquette{position:absolute;left:20px;bottom:20px;display:inline-flex;align-items:center;gap:10px;background:var(--surface);color:var(--noir);border-radius:999px;padding:11px 18px 11px 14px;font-size:15px;font-weight:500;line-height:1.3;text-decoration:none;box-shadow:0 14px 30px -14px rgba(0,0,0,.7);transition:transform .25s;max-width:calc(100% - 40px)}
+.etiquette:hover{transform:translateY(-2px)}
+.etiquette i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--moutarde);box-shadow:0 0 0 4px rgba(232,181,74,.28)}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:28px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{font-size:16px;line-height:1.4;display:flex;flex-direction:column;gap:2px}
+.faits b{font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:24px;text-transform:uppercase;line-height:1.1;letter-spacing:.01em}
+.faits span{color:var(--encre-2)}
+
+/* Sections */
+.section{padding:clamp(80px,9vw,128px) 0}
+h2{font-size:clamp(36px,5vw,72px);line-height:1.14}
+.intro{margin-top:20px;color:var(--encre-2);max-width:34em}
+
+/* Menu */
+.menu .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center}
+.duo{position:relative;padding:0 0 90px 0}
+.duo .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5;width:86%}
+.duo .grande img,.duo .petite img{width:100%;height:100%;object-fit:cover}
+.duo .petite{position:absolute;right:0;bottom:0;width:min(44%,260px)}
+.duo .petite .rond{aspect-ratio:1/1;border-radius:18px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);transform:rotate(3deg)}
+.duo .legende{position:absolute;left:16px;top:16px}
+.legende{background:rgba(251,247,239,.96);color:var(--encre);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500;line-height:1.3;max-width:calc(100% - 32px)}
+.carte{list-style:none;margin:36px 0 0;padding:0;border-top:2px solid var(--encre)}
+.carte li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 0;border-bottom:1px solid rgba(23,23,23,.16)}
+.carte h3{font-size:clamp(24px,2.3vw,32px);line-height:1.15}
+.carte span{color:var(--encre-2);font-size:16px;text-align:right}
+.menu .petit{margin-top:24px;font-size:16px;color:var(--encre-2)}
+
+/* Semaine */
+.semaine{background:var(--surface)}
+.semaine .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:end}
+.jours{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;position:relative}
+.jours::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:repeating-linear-gradient(90deg,var(--encre) 0 10px,transparent 10px 18px);opacity:.25}
+.jours li{position:relative;padding-top:56px}
+.jours li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;background:var(--surface);border:2px solid var(--encre)}
+.jours li.ouvert::before{background:var(--moutarde)}
+.jours b{display:block;font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:24px;text-transform:uppercase;line-height:1.1}
+.jours span{display:block;margin-top:6px;font-size:16px;color:var(--encre-2)}
+.semaine .bas{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;padding:26px 30px;background:var(--base);border-radius:18px}
+.semaine .bas p{flex:1 1 320px;color:var(--encre-2);font-size:17px}
+
+/* Événements, fond noir */
+.noir{background:var(--noir);color:var(--clair)}
+.noir .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.noir .intro{color:#CFC8BC}
+.photo-mariage{position:sticky;top:112px;border-radius:22px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 80px -40px rgba(0,0,0,.95)}
+.photo-mariage img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.photo-mariage .legende{position:absolute;left:18px;bottom:18px}
+.evts{list-style:none;margin:32px 0 0;padding:0}
+.evts li{padding:16px 0;border-bottom:1px solid rgba(239,233,222,.14);display:flex;gap:14px;align-items:baseline}
+.evts li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--moutarde);transform:translateY(-2px)}
+.vignettes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:36px}
+.vignettes figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 26px 50px -30px rgba(0,0,0,.9)}
+.vignettes figure:nth-child(2){transform:translateY(28px)}
+.vignettes img{width:100%;height:100%;object-fit:cover}
+.noir .actions{margin-top:56px}
+
+/* Coordonnées */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,88px);align-items:center}
+.fromages{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre)}
+.fromages img{width:100%;height:100%;object-fit:cover}
+.fromages .legende{position:absolute;left:16px;bottom:16px}
+.coord{background:var(--surface);border-radius:22px;padding:clamp(26px,3.4vw,44px);box-shadow:0 34px 70px -40px rgba(23,23,23,.55)}
+.coord h2{font-size:clamp(34px,4vw,56px)}
+.coord dl{margin:28px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 28px}
+.coord dt{font-size:13px;font-weight:500;color:var(--encre-2);margin-bottom:4px}
+.coord dd{margin:0;font-size:18px;line-height:1.45;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(23,23,23,.25)}
+.coord dd a:hover{border-color:var(--moutarde-fonce)}
+.coord .gros{font-family:"Anton",Impact,sans-serif;font-size:30px;letter-spacing:.01em;line-height:1.1}
+.coord .large{grid-column:1/-1}
+.coord .actions{margin-top:30px}
+
+/* Pied */
+.pied{background:var(--noir);color:#CFC8BC;padding:72px 0 28px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:"Anton",Impact,sans-serif;font-size:clamp(34px,4vw,52px);text-transform:uppercase;line-height:1;color:var(--clair)}
+.pied .nom span{color:var(--moutarde)}
+.pied h3{font-family:"Rethink Sans",Georgia,sans-serif;text-transform:none;font-size:13px;font-weight:500;color:#8F897F;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li,.pied p{font-size:16px;line-height:1.65}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(239,233,222,.25)}
+.pied a:hover{border-color:var(--moutarde)}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(239,233,222,.1);font-size:13px;color:#8F897F}
+
+/* Apparition */
+html.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+html.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.etiquette{transition:none}}
+
+@media (max-width:1000px){
+  .nav .lien{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .jours{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:8px}
+  .jours::before{display:none}
+}
+@media (max-width:900px){
+  .heros .haut,.menu .wrap,.semaine .tete,.noir .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .cinema{aspect-ratio:16/10}
+  .cinema img{top:-17.9%}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+  .photo-mariage{position:relative;top:auto}
+  .fromages{aspect-ratio:16/11}
+  .fromages img{object-position:50% 40%}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px}
+  .jours{grid-template-columns:minmax(0,1fr);margin-top:36px}
+  .jours li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0 12px 34px;border-bottom:1px solid rgba(23,23,23,.12)}
+  .jours li::before{top:16px;width:16px;height:16px}
+  .jours span{margin:0}
+  .actions .btn{width:100%}
+  .coord dl{grid-template-columns:minmax(0,1fr)}
+  .carte li{flex-direction:column;gap:4px}
+  .carte span{text-align:left}
+  .semaine .bas{padding:22px}
+  .semaine .bas .btn{width:100%}
+  .etiquette{left:12px;bottom:12px;font-size:14px;padding:9px 14px 9px 12px}
+}
+@media (max-width:420px){
+  .long{display:none}
+  .court{display:inline}
+  .marque{font-size:21px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">La Tarterie <span>de Tom</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#menu">Au menu</a>
+      <a class="lien" href="#semaine">La semaine</a>
+      <a class="lien" href="#evenements">Événements</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn btn-contour" href="tel:+33627493074"><span class="long nb">06&nbsp;27&nbsp;49&nbsp;30&nbsp;74</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="haut">
+        <h1>Tartes salées et sucrées, cuisine maison.</h1>
+        <div>
+          <p class="chapo">Le camion noir de La Tarterie de Tom s'installe sur les marchés, au Parc Floral et sur des sites d'entreprise autour d'Orléans. Au menu&nbsp;: tartes, soupes de saison, plats cuisinés et desserts.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://www.facebook.com/latarteriedetom" target="_blank" rel="noopener">Où est le camion cette semaine&nbsp;?</a>
+            <a class="btn btn-contour" href="tel:+33627493074"><span class="nb">06&nbsp;27&nbsp;49&nbsp;30&nbsp;74</span></a>
+          </div>
+          <a class="note" href="https://www.google.com/maps/place/La+Tarterie+de+Tom/@47.9027941,1.903474,17z/data=!4m6!3m5!1s0x47e4ebf2d6f22133:0x8ce6a5820d549eaf!8m2!3d47.9027941!4d1.903474" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><span>5,0 sur&nbsp;5 · 91&nbsp;avis Google</span></a>
+        </div>
+      </div>
+      <div class="cinema">
+        <img src="assets/la-tarterie-de-tom/food-truck-noir-parking.webp" alt="Le food truck noir de La Tarterie de Tom, flanc peint : tartes salées et sucrées, soupes de saison, plats cuisinés, desserts" width="1600" height="946" fetchpriority="high">
+        <a class="etiquette" href="https://www.facebook.com/latarteriedetom" target="_blank" rel="noopener"><i aria-hidden="true"></i>Les lieux de la semaine sur Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>Orléans</b><span>Food truck et traiteur</span></li>
+      <li><b>Fait maison</b><span>Tartes, soupes, plats, desserts</span></li>
+      <li><b>Événements</b><span>Mariages, anniversaires, entreprises</span></li>
+      <li><b>5,0 sur&nbsp;5</b><span>91&nbsp;avis Google</span></li>
+    </ul>
+  </section>
+
+  <section class="section menu clair" id="menu">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="grande apparait" style="margin:0;position:relative">
+          <img src="assets/la-tarterie-de-tom/mini-quiches-plaque.webp" alt="Plaque de mini-quiches dorées aux herbes" width="1600" height="1600" loading="lazy">
+          <figcaption class="legende">Mini-quiches aux herbes</figcaption>
+        </figure>
+        <div class="petite">
+          <div class="rond"><img src="assets/la-tarterie-de-tom/part-tarte-aux-pommes.webp" alt="Part de tarte aux pommes caramélisées" width="1600" height="1600" loading="lazy"></div>
+        </div>
+      </div>
+      <div>
+        <h2>Ce qu'il y a dans le camion.</h2>
+        <p class="intro">Une cuisine maison, avec des légumes de producteurs de la région, comme la Ferme des Champs Moreau à Cléry-Saint-André. Le menu change chaque semaine.</p>
+        <ul class="carte">
+          <li><h3>Tartes salées et sucrées</h3><span>Mini-quiches, feuilletés, parts de tarte</span></li>
+          <li><h3>Soupes de saison</h3><span>Selon les légumes du moment</span></li>
+          <li><h3>Plats cuisinés</h3><span>Recettes cuisinées maison</span></li>
+          <li><h3>Desserts</h3><span>Tartes, crumbles, verrines</span></li>
+        </ul>
+        <p class="petit">Le menu de la semaine est publié avec les lieux sur la page Facebook de La Tarterie de Tom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section semaine clair" id="semaine">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Une semaine avec le camion.</h2>
+        <p class="intro" style="margin:0">Les lieux changent chaque semaine&nbsp;: marchés, Parc Floral, sites d'entreprise. Voici les horaires de la fiche Google.</p>
+      </div>
+      <ul class="jours">
+        <li><b>Lundi</b><span>Fermé</span></li>
+        <li class="ouvert"><b>Mardi</b><span>9h–15h</span></li>
+        <li class="ouvert"><b>Mercredi</b><span>9h–20h</span></li>
+        <li class="ouvert"><b>Jeudi</b><span>8h–20h</span></li>
+        <li class="ouvert"><b>Vendredi</b><span>11h–20h</span></li>
+        <li class="ouvert"><b>Samedi</b><span>9h–18h</span></li>
+        <li class="ouvert"><b>Dimanche</b><span>9h–18h</span></li>
+      </ul>
+      <div class="bas">
+        <p>Pour savoir où se gare le camion aujourd'hui et ce qu'il y a au menu, le plus simple est de regarder la publication de la semaine.</p>
+        <a class="btn btn-plein" href="https://www.facebook.com/latarteriedetom" target="_blank" rel="noopener">Où est le camion cette semaine&nbsp;?</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section noir" id="evenements">
+    <div class="wrap">
+      <figure class="photo-mariage apparait" style="margin:0">
+        <img src="assets/la-tarterie-de-tom/food-truck-voiture-mariage.webp" alt="Le food truck noir derrière une Coccinelle noire décorée de rubans blancs et de fleurs pour un mariage" width="1600" height="1600" loading="lazy">
+        <figcaption class="legende">Brunch de mariage, 50&nbsp;invités</figcaption>
+      </figure>
+      <div>
+        <h2>Le traiteur de vos événements.</h2>
+        <p class="intro">Mariages, anniversaires, repas d'entreprise&nbsp;: La Tarterie de Tom prépare le repas, du brunch au dîner, et peut livrer.</p>
+        <ul class="evts">
+          <li>Brunch de mariage</li>
+          <li>Goûter et dîner d'anniversaire de mariage</li>
+          <li>Anniversaires</li>
+          <li>Déjeuner de CSE, plats au choix dont une proposition végétarienne</li>
+        </ul>
+        <div class="vignettes">
+          <figure><img src="assets/la-tarterie-de-tom/verrines-fruits-et-chocolat.webp" alt="Verrines de salade de fruits et de mousse au chocolat" width="1600" height="1600" loading="lazy"></figure>
+          <figure><img src="assets/la-tarterie-de-tom/wraps-roules-saumon-epinards.webp" alt="Plateau de wraps roulés au saumon et aux épinards" width="1600" height="1600" loading="lazy"></figure>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:latarteriedetom@gmail.com">Parler de votre événement</a>
+          <a class="btn btn-contour" href="tel:+33627493074"><span class="nb">06&nbsp;27&nbsp;49&nbsp;30&nbsp;74</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact clair" id="contact">
+    <div class="wrap">
+      <figure class="fromages apparait" style="margin:0">
+        <img src="assets/la-tarterie-de-tom/plateau-fromages-bois.webp" alt="Planche de fromages, tranches de pomme et raisins secs, vue de dessus" width="1247" height="1600" loading="lazy">
+        <figcaption class="legende">Plateau de fromages</figcaption>
+      </figure>
+      <aside class="coord" aria-label="Coordonnées">
+        <h2>Joindre La Tarterie.</h2>
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="gros nb" href="tel:+33627493074">06&nbsp;27&nbsp;49&nbsp;30&nbsp;74</a></dd></div>
+          <div><dt>Note Google</dt><dd>5,0 sur&nbsp;5<br>91&nbsp;avis</dd></div>
+          <div class="large"><dt>E-mail</dt><dd><a href="mailto:latarteriedetom@gmail.com">latarteriedetom@gmail.com</a></dd></div>
+          <div class="large"><dt>Où</dt><dd>Food truck à Orléans (45000) et alentours, lieux publiés chaque semaine sur Facebook</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.google.com/maps/place/La+Tarterie+de+Tom/@47.9027941,1.903474,17z/data=!4m6!3m5!1s0x47e4ebf2d6f22133:0x8ce6a5820d549eaf!8m2!3d47.9027941!4d1.903474" target="_blank" rel="noopener">Voir les avis sur Google</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/latarteriedetom" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <p class="nom">La Tarterie <span>de Tom</span></p>
+        <p style="margin-top:16px;max-width:26em">Food truck et traiteur à Orléans. Tartes salées et sucrées, soupes de saison, plats cuisinés, desserts.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nb" href="tel:+33627493074">06&nbsp;27&nbsp;49&nbsp;30&nbsp;74</a></li>
+          <li><a href="mailto:latarteriedetom@gmail.com">latarteriedetom@gmail.com</a></li>
+          <li>45000 Orléans</li>
+          <li style="margin-top:12px"><a href="https://www.facebook.com/latarteriedetom" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.google.com/maps/place/La+Tarterie+de+Tom/@47.9027941,1.903474,17z/data=!4m6!3m5!1s0x47e4ebf2d6f22133:0x8ce6a5820d549eaf!8m2!3d47.9027941!4d1.903474" target="_blank" rel="noopener">Fiche Google</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Mardi&nbsp;: 9h–15h</li>
+          <li>Mercredi&nbsp;: 9h–20h</li>
+          <li>Jeudi&nbsp;: 8h–20h</li>
+          <li>Vendredi&nbsp;: 11h–20h</li>
+          <li>Samedi et dimanche&nbsp;: 9h–18h</li>
+          <li>Lundi&nbsp;: fermé</li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour La Tarterie de Tom</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

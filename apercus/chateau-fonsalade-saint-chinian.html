@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Château Fonsalade · Saint-Chinian et Roquebrun</title>
+<meta name="description" content="Château Fonsalade, domaine viticole à Causses-et-Veyran : 32 hectares de vignes en Saint-Chinian et Roquebrun, sept types de sols, visites et dégustations au caveau.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237A2335'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F6F2EC'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#ECE6DD; --surface:#F6F2EC; --encre:#1F1A1C; --grenat:#7A2335; --sombre:#1F1A1C;
+  --doux:#5B5053; --clair:#F3EEE6; --clair-doux:#C9BFB8;
+  --s-calcaire:#DCD0BE; --s-marne:#C7B49A; --s-galet:#A88E72; --s-gres:#7D6A63; --s-schiste:#4A3E42;
+  --ombre:0 30px 60px -34px rgba(31,26,28,.55);
+  --ombre-claire:0 30px 60px -30px rgba(0,0,0,.7);
+  --w:1200px; --pad:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Jost",ui-sans-serif,sans-serif;font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--grenat);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Della Respira",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--pad)}
+.tel{white-space:nowrap}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 "Jost",sans-serif;text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--grenat);color:var(--surface)}
+.btn-plein:hover{background:#8E2B40}
+.btn-contour{border:1.5px solid currentColor;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);border-color:var(--encre)}
+.sur-sombre .btn-contour{color:var(--clair)}
+.sur-sombre .btn-contour:hover{background:var(--clair);color:var(--encre);border-color:var(--clair)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(31,26,28,.94);color:var(--clair);backdrop-filter:none}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;white-space:nowrap}
+.marque b{font:400 26px/1 "Della Respira",Georgia,serif}
+.marque small{font-size:13px;letter-spacing:.04em;color:var(--clair-doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--clair-doux);transition:color .2s}
+.nav a:hover{color:var(--clair)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:16px;color:var(--clair);border:1.5px solid rgba(243,238,230,.5)}
+.nav .btn:hover{background:var(--clair);color:var(--encre)}
+.num-court{display:none}
+
+/* Héros sombre */
+.heros{background:var(--sombre);color:var(--clair);padding:72px 0 112px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,13fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(38px,4.7vw,68px);line-height:1.04}
+.heros h1 em{font-style:normal;color:#D9A6B0}
+.heros .chapo{font-size:19px;color:var(--clair-doux);margin-top:28px;max-width:31em;font-weight:300}
+.heros .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros .lieu{margin-top:28px;font-size:15px;color:#A99E99}
+.photo-heros{position:relative;margin:0}
+.photo-heros img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:60% 30%;border-radius:18px;box-shadow:var(--ombre-claire)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 30px -16px rgba(0,0,0,.6)}
+
+/* Bandeau en strates */
+.strates{position:relative;background:var(--s-schiste)}
+.strate{position:relative;color:var(--encre)}
+.strate .wrap{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.strate .chiffre{font:400 clamp(40px,4.6vw,60px)/1 "Della Respira",Georgia,serif}
+.strate .legende{font-size:18px;max-width:30em;font-weight:500}
+.strate-1{background:var(--s-calcaire);padding:40px 0 34px;clip-path:polygon(0 0,100% 0,100% 100%,78% 94%,52% 100%,24% 92%,0 98%)}
+.strate-2{background:var(--s-marne);padding:44px 0 34px;margin-top:-14px;clip-path:polygon(0 6%,26% 0,55% 8%,80% 2%,100% 7%,100% 100%,70% 93%,38% 100%,0 94%)}
+.strate-2 .wrap{justify-content:center}
+.strate-3{background:var(--s-galet);padding:44px 0 36px;margin-top:-14px;clip-path:polygon(0 4%,30% 9%,64% 0,100% 6%,100% 100%,0 100%)}
+.strate-3 .wrap{justify-content:flex-end}
+.strate-4{background:var(--s-gres);height:22px;margin-top:-6px}
+.strate-5{background:var(--s-schiste);height:14px}
+
+/* Sections */
+section{padding:112px 0}
+.titre-section{font-size:clamp(32px,3.6vw,50px);line-height:1.1}
+.texte{color:var(--doux);font-size:18px}
+.texte + .texte{margin-top:18px}
+
+/* Histoire */
+.histoire .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.histoire .titre-section{margin-bottom:28px}
+.duo{position:relative;min-height:540px}
+.duo figure{margin:0;position:absolute;width:min(240px,62%)}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:var(--ombre)}
+.duo .a{top:0;left:0}
+.duo .b{top:210px;right:0}
+.duo .a img{transform:rotate(-2.5deg)}
+.duo .b img{transform:rotate(2deg)}
+.duo .a img{object-position:50% 40%}
+.duo .b img{object-position:60% 50%}
+.duo figcaption{font-size:14px;color:var(--doux);margin-top:12px}
+
+/* Sols */
+.sols{background:var(--surface)}
+.vue{position:relative;margin:0 0 64px}
+.vue img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 45%;border-radius:22px;box-shadow:var(--ombre)}
+.vue .etiquette{left:22px;bottom:22px}
+.sols .tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.faits-vignes{list-style:none;margin:0;padding:0}
+.faits-vignes li{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid rgba(31,26,28,.14)}
+.faits-vignes li:last-child{border-bottom:1px solid rgba(31,26,28,.14)}
+.faits-vignes b{font-weight:500}
+.faits-vignes span{color:var(--doux)}
+
+/* Citation */
+.citation{background:var(--grenat);color:var(--surface);padding:120px 0}
+.citation blockquote{margin:0;max-width:980px}
+.citation p{font:400 clamp(28px,3.4vw,46px)/1.22 "Della Respira",Georgia,serif;text-wrap:balance}
+.citation cite{display:block;margin-top:28px;font:400 16px/1.4 "Jost",sans-serif;font-style:normal;color:#E6C9CF}
+
+/* Vins */
+.vins .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.cuvees{list-style:none;margin:36px 0 0;padding:0}
+.cuvees li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:22px 0;border-top:1px solid rgba(31,26,28,.16)}
+.cuvees li:last-child{border-bottom:1px solid rgba(31,26,28,.16)}
+.cuvees h3{font-size:clamp(24px,2.3vw,30px);line-height:1.15}
+.cuvees span{color:var(--doux);font-size:16px;text-align:right}
+.vins .note{margin-top:22px;font-size:16px;color:var(--doux)}
+.vins .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.carte-huile{position:relative;background:var(--surface);border-radius:22px;padding:112px 34px 40px;box-shadow:var(--ombre);margin-top:96px}
+.carte-huile h3{font-size:30px;line-height:1.15;margin-bottom:14px}
+.carte-huile .vignette{position:absolute;top:-96px;right:28px;width:min(150px,40%);margin:0}
+.carte-huile .vignette img{transform:rotate(3deg)}
+.carte-huile .vignette img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;box-shadow:var(--ombre);border:6px solid var(--surface)}
+.engagements{margin-top:28px;padding-top:22px;border-top:1px solid rgba(31,26,28,.14);display:grid;gap:10px;font-size:16px;color:var(--doux)}
+.engagements b{color:var(--encre);font-weight:500}
+
+/* Visiter */
+.visiter{background:#E3DACD}
+.visiter .tete{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.visiter .tete .texte{max-width:34em}
+.visites{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:start}
+.visites .photo{position:relative;margin:0}
+.visites .photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%;border-radius:20px;box-shadow:var(--ombre);filter:brightness(1.5) contrast(1.06) saturate(1.1)}
+.offres{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.offres li{padding:24px 0;border-top:1px solid rgba(31,26,28,.16)}
+.offres li:first-child{border-top:0;padding-top:0}
+.offres h3{font-size:27px;line-height:1.15;margin-bottom:8px}
+.offres p{color:var(--doux);font-size:17px}
+.horaires{position:relative;margin:-90px 0 0 40px;width:min(440px,calc(100% - 40px));background:var(--surface);border-radius:20px;padding:30px 32px;box-shadow:var(--ombre)}
+.horaires h3{font-size:26px;margin-bottom:14px}
+.horaires dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 22px;margin:0;font-size:17px}
+.horaires dt{font-weight:500}
+.horaires dd{margin:0;color:var(--doux)}
+.acces{margin-top:22px;font-size:16px;color:var(--doux)}
+
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:center}
+.carte-coord{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--ombre)}
+.carte-coord dl{margin:0;display:grid;gap:22px}
+.carte-coord dt{font-size:14px;color:var(--doux);margin-bottom:4px}
+.carte-coord dd{margin:0;font-size:19px}
+.carte-coord dd a{text-decoration:none;border-bottom:1px solid rgba(122,35,53,.35)}
+.carte-coord dd a:hover{color:var(--grenat)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:80px 0 36px;font-size:16px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied h2{font-size:34px;color:var(--clair);margin-bottom:12px}
+.pied h3{font:500 15px/1.4 "Jost",sans-serif;color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair)}
+.signature{margin-top:64px;padding-top:24px;border-top:1px solid rgba(243,238,230,.12);font-size:13px;color:#8F8487}
+
+/* Apparition douce des photos */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+/* Tablette et téléphone */
+@media (max-width:980px){
+  .nav a:not(.btn){display:none}
+  .heros{padding:44px 0 72px}
+  .heros .wrap,.histoire .wrap,.sols .tete,.vins .wrap,.visites,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:44px}
+  .photo-heros{order:0}
+  .duo{min-height:520px;max-width:520px}
+  .carte-huile{margin-top:120px}
+  .horaires{margin:-60px 0 0 20px}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+  section{padding:88px 0}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:22px}
+  .marque small{display:none}
+  .heros .wrap{gap:28px}
+  .heros h1{order:1}
+  .heros .texte-heros{display:contents}
+  .heros .chapo{order:3;margin-top:0}
+  .photo-heros{order:2}
+  .heros .actions{order:4;margin-top:0}
+  .heros .lieu{order:5;margin-top:0}
+  .photo-heros img{aspect-ratio:4/3}
+  .strate .wrap{justify-content:flex-start!important;gap:6px 14px}
+  .strate-1,.strate-2,.strate-3{padding:30px 0 26px}
+  .vue img{aspect-ratio:4/3}
+  .faits-vignes li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .cuvees li{flex-direction:column;gap:4px}
+  .cuvees span{text-align:left}
+  .carte-huile{padding:108px 24px 32px}
+  .duo figure{width:56%}
+  .duo .a figcaption{max-width:72%}
+  .duo{min-height:500px}
+  .duo .b{top:200px}
+  .horaires{margin:-48px 0 0 12px;width:calc(100% - 12px);padding:24px}
+  .carte-coord{padding:28px 24px}
+  .citation{padding:88px 0}
+  section{padding:72px 0}
+}
+@media (max-width:420px){
+  .btn{width:100%}
+  .entete .btn{width:auto;padding:10px 18px}
+  .num-long{display:none}
+  .num-court{display:inline}
+}
+@media (max-width:360px){
+  .marque b{font-size:19px}
+  .entete .btn{padding:10px 14px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete sur-sombre">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Château Fonsalade</b><small>Saint-Chinian · Roquebrun</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#domaine">Le domaine</a>
+      <a href="#vins">Nos vins</a>
+      <a href="#visiter">Visiter</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-contour tel" href="tel:+33449068250"><span class="num-long">04 49 06 82 50</span><span class="num-court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros sur-sombre" aria-label="Présentation">
+    <div class="wrap">
+      <div class="texte-heros">
+        <h1>Grands vins du Languedoc, entre schistes et <em>calcaires</em>.</h1>
+        <p class="chapo">Au pied de la Montagne noire, nos 32 hectares de vignes en Saint-Chinian et Roquebrun donnent deux visages&nbsp;: des vins structurés, fruités et élégants sur les calcaires, soyeux et veloutés sur les schistes.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#visiter">Visiter le domaine</a>
+          <a class="btn btn-contour tel" href="tel:+33449068250">04 49 06 82 50</a>
+        </div>
+        <p class="lieu">Famille Barbe, propriétaires vignerons · Causses-et-Veyran, à 20 minutes de Béziers</p>
+      </div>
+      <figure class="photo-heros">
+        <img src="assets/chateau-fonsalade-saint-chinian/vue-aerienne-maison-piscine-cypres.webp" alt="Vue du ciel du Château Fonsalade : la grande maison, les cyprès, la piscine et les collines de vignes" width="1600" height="1066" fetchpriority="high">
+        <span class="etiquette">Lieu-dit Fonsalade, Causses-et-Veyran</span>
+      </figure>
+    </div>
+  </section>
+
+  <div class="strates" aria-label="Le domaine en bref">
+    <div class="strate strate-1"><div class="wrap"><span class="chiffre">32 ha</span><span class="legende">de vignes en appellation, au cœur du Languedoc</span></div></div>
+    <div class="strate strate-2"><div class="wrap"><span class="chiffre">2 appellations</span><span class="legende">Saint-Chinian et Roquebrun</span></div></div>
+    <div class="strate strate-3"><div class="wrap"><span class="chiffre">7 sols</span><span class="legende">du schisto-gréseux aux marnes gypseuses, en passant par les galets roulés</span></div></div>
+    <div class="strate strate-4" aria-hidden="true"></div>
+    <div class="strate strate-5" aria-hidden="true"></div>
+  </div>
+
+  <section class="histoire" id="domaine">
+    <div class="wrap">
+      <div>
+        <h2 class="titre-section">Une histoire de passion, autour d'une source.</h2>
+        <p class="texte">Les premiers vignerons, venus des alentours de Saint-Pons-de-Thomières, se sont installés autour d'une source d'eau naturelle, riche en bicarbonate de sodium. Son goût très légèrement salé a donné son nom au domaine&nbsp;: «&nbsp;Funt Salad&nbsp;» en vieil occitan.</p>
+        <p class="texte">C'est à partir de 1839 que les ventes de vin sont enregistrées sous le nom Château Fonsalade. Sur la voie d'Arles, les pèlerins en route pour Saint-Jacques-de-Compostelle y trouvaient l'hospitalité.</p>
+        <p class="texte">La famille Barbe a repris la propriété en 2014. Famille d'entrepreneurs depuis plusieurs générations, elle s'est lancée dans cette aventure viticole avec passion, attachée à l'amitié et au travail d'équipe.</p>
+      </div>
+      <div class="duo">
+        <figure class="a apparait">
+          <img src="assets/chateau-fonsalade-saint-chinian/cypres-et-vignes-soleil-couchant.webp" alt="Trois cyprès devant les vignes au coucher du soleil" width="1600" height="1386" loading="lazy">
+          <figcaption>Les cyprès, au soleil couchant</figcaption>
+        </figure>
+        <figure class="b apparait">
+          <img src="assets/chateau-fonsalade-saint-chinian/fontaine-pompe-ancienne-grille.webp" alt="Ancienne pompe à bras sur un bac de pierre fleuri, devant une grille en fer" width="1600" height="1386" loading="lazy">
+          <figcaption>L'ancienne pompe, contre le mur de pierre</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sols" id="vignes">
+    <div class="wrap">
+      <figure class="vue apparait">
+        <img src="assets/chateau-fonsalade-saint-chinian/coteaux-vignes-en-terrasses-capitelle.webp" alt="Coteaux de vignes en rangs serrés, chemin de terre et cabane de pierre dans la lumière du soir" width="1600" height="850" loading="lazy">
+        <span class="etiquette">Coteaux de vignes et capitelle</span>
+      </figure>
+      <div class="tete">
+        <div>
+          <h2 class="titre-section">Une mosaïque de sols sur une faille géologique.</h2>
+        </div>
+        <div>
+          <p class="texte">Le domaine se situe sur une faille géologique. Les schistes et les argilo-calcaires dominent, mais nous travaillons sur pas moins de sept types de sols différents, avec une grande variété d'expositions et d'altitudes.</p>
+          <ul class="faits-vignes" style="margin-top:32px">
+            <li><b>Plaine et coteaux</b><span>Les parcelles les plus hautes atteignent 350 mètres d'altitude, sur les hauteurs de Roquebrun.</span></li>
+            <li><b>Un terroir plus frais</b><span>Généralement 3 à 4&nbsp;°C de moins que le reste de l'appellation&nbsp;: cette fraîcheur marque les vins de Fonsalade.</span></li>
+            <li><b>Vendanges à la main</b><span>La majorité, la nuit ou au lever du jour exclusivement, pour démarrer les fermentations sous 14&nbsp;°C et garder le maximum d'arômes.</span></li>
+            <li><b>Parcelle par parcelle</b><span>Chaque parcelle est vinifiée séparément, pour garder ses caractéristiques.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Les trois cyprès">
+    <div class="wrap">
+      <blockquote>
+        <p>«&nbsp;Trois cyprès plantés à l'entrée du domaine signifiaient que les pèlerins pouvaient s'arrêter boire, manger et dormir.&nbsp;»</p>
+        <cite>Ils sont aujourd'hui sur notre logo, trait d'union entre passé et présent.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="wrap">
+      <div>
+        <h2 class="titre-section">Nos vins&nbsp;: rouge, blanc ou rosé.</h2>
+        <p class="texte" style="margin-top:20px">Il y en a pour tous les goûts et toutes les papilles. Les cuvées Château Fonsalade et Felix Culpa sont issues de parcelles uniques, identiques année après année.</p>
+        <ul class="cuvees">
+          <li><h3>Felix Culpa</h3><span>Saint-Chinian rouge</span></li>
+          <li><h3>Château Fonsalade</h3><span>Saint-Chinian rouge</span></li>
+          <li><h3>Cuvée F</h3><span>Saint-Chinian rouge</span></li>
+          <li><h3>Petit Bonheur</h3><span>Pays d'Oc rouge</span></li>
+          <li><h3>Petit Bonheur rosé</h3><span>Rosé</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://chateau-fonsalade.plugwine.com/vins">Commander sur l'e-shop</a>
+          <a class="btn btn-contour" href="https://fonsalade.com/nos-vins-fonsalade-languedoc/">Toute la gamme</a>
+        </div>
+      </div>
+      <aside class="carte-huile">
+        <figure class="vignette apparait">
+          <img src="assets/chateau-fonsalade-saint-chinian/chai-de-vinification-cuves-inox.webp" alt="Le chai du domaine et sa rangée de cuves inox" width="1512" height="1600" loading="lazy">
+        </figure>
+        <h3>Huile d'olive et miel</h3>
+        <p class="texte">Notre terroir abrite quelques centaines d'oliviers, dont nous extrayons une huile délicieuse. Nous produisons aussi notre propre miel.</p>
+        <div class="engagements">
+          <p><b>Certifiés HVE3</b>, sans désherbants chimiques depuis 2020.</p>
+          <p><b>Vignerons indépendants</b>, engagés pour une agriculture durable.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="visiter" id="visiter">
+    <div class="wrap">
+      <div class="tete">
+        <h2 class="titre-section">Visiter le domaine</h2>
+        <p class="texte">Sillonnez avec nous le domaine et découvrez nos cépages, et comment ils expriment la richesse des terroirs, en dégustant une sélection de nos cuvées les plus emblématiques.</p>
+      </div>
+      <div class="visites">
+        <div>
+          <figure class="photo apparait">
+            <img src="assets/chateau-fonsalade-saint-chinian/domaine-entre-pins-et-vignes-assombri.webp" alt="Les bâtiments du domaine entre pins et cyprès, vignes au premier plan" width="1600" height="850" loading="lazy">
+          </figure>
+          <div class="horaires">
+            <h3>Le caveau est ouvert</h3>
+            <dl>
+              <dt>Lundi au vendredi</dt><dd>10h – 17h</dd>
+              <dt>Samedi</dt><dd>sur rendez-vous</dd>
+              <dt>Dimanche</dt><dd>fermé</dd>
+            </dl>
+          </div>
+        </div>
+        <ul class="offres">
+          <li><h3>Atelier dégustation</h3><p>Une visite du vignoble, suivie d'une dégustation à la carte au bar du caveau ou dans une salle privative. Nos sommeliers vous révèlent les secrets des vins Fonsalade.</p></li>
+          <li><h3>Visite des vignes</h3><p>À pied, à vélo ou avec des ânes, parcourez le domaine et la mosaïque de terres qui fait nos cuvées.</p></li>
+          <li><h3>Notre gîte</h3><p>La grande maison du domaine fait office de gîte&nbsp;: plus de 10 chambres, pour vos retrouvailles entre amis ou vos événements.</p></li>
+          <li>
+            <p class="acces">Le gîte et les visites se demandent par téléphone ou par écrit. 20 minutes de Béziers, 45 de Narbonne, une heure de Montpellier.</p>
+            <div class="actions" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:22px">
+              <a class="btn btn-plein tel" href="tel:+33449068250">Appeler le domaine</a>
+              <a class="btn btn-contour" href="https://fonsalade.com/visiter-chateau-fonsalade/">Les visites en détail</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2 class="titre-section">Venir à Fonsalade</h2>
+        <p class="texte" style="margin-top:20px">Le domaine se trouve à une vingtaine de kilomètres au nord de Béziers, au pied de la Montagne noire. Appelez-nous ou écrivez-nous pour préparer votre venue.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@fonsalade.com">Écrire au domaine</a>
+          <a class="btn btn-contour" href="https://fonsalade.com/contact-chateau-fonsalade/">Formulaire de contact</a>
+        </div>
+      </div>
+      <div class="carte-coord">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33449068250">04 49 06 82 50</a></dd></div>
+          <div><dt>Adresse</dt><dd>Château Fonsalade<br>Lieu-dit Fonsalade<br>34490 Causses-et-Veyran</dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:contact@fonsalade.com">contact@fonsalade.com</a></dd></div>
+          <div><dt>Caveau</dt><dd>Lundi au vendredi, 10h – 17h<br>Samedi sur rendez-vous</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <h2>Château Fonsalade</h2>
+        <p>Lieu-dit Fonsalade, 34490 Causses-et-Veyran<br><a class="tel" href="tel:+33449068250">04 49 06 82 50</a> · <a href="mailto:contact@fonsalade.com">contact@fonsalade.com</a></p>
+      </div>
+      <div>
+        <h3>Caveau</h3>
+        <ul><li>Lundi au vendredi, 10h – 17h</li><li>Samedi sur rendez-vous</li><li>Fermé le dimanche</li></ul>
+      </div>
+      <div>
+        <h3>Suivez-nous</h3>
+        <ul>
+          <li><a href="https://chateau-fonsalade.plugwine.com/vins">E-shop</a></li>
+          <li><a href="https://www.instagram.com/chateau_fonsalade/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/Fonsalade">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour Château Fonsalade</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

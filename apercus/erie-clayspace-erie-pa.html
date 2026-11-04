@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Erie ClaySpace · Community pottery studio in downtown Erie, PA</title>
+<meta name="description" content="A community hub for all pottery lovers: wheel-throwing and handbuilding classes, private parties and studio memberships at 1505 State St., Erie, PA.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231D2A33'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-weight='600' font-size='32' fill='%23E9E6E1'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#E9E6E1; --band:#DEDAD3; --surface:#F6F4F1; --ink:#1F1D1B; --muted:#55504A;
+  --accent:#3A7CA5; --accent-deep:#2C6488; --dark:#1D2A33; --dark-2:#263744; --on-dark:#E9E6E1;
+  --shadow:0 30px 60px -34px rgba(29,42,51,.5);
+  --shadow-soft:0 20px 40px -28px rgba(29,42,51,.42);
+  --display:"Familjen Grotesk", "Helvetica Neue", sans-serif;
+  --text:"Spectral", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 var(--display);text-decoration:none;border:1.5px solid transparent;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-fill{background:var(--dark);color:var(--on-dark)}
+.btn-fill:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+.nw{white-space:nowrap}
+
+.top{position:sticky;top:0;z-index:20;background:rgba(233,230,225,.95);border-bottom:1px solid rgba(31,29,27,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.brand{text-decoration:none;font:600 23px/1 var(--display);letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.nav{display:flex;align-items:center;gap:30px;font:400 16px/1 var(--display)}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.nav .cta{background:var(--surface);color:var(--ink);padding:13px 20px;border-radius:999px;font-weight:500;box-shadow:var(--shadow-soft);transition:transform .2s}
+.nav .cta:hover{transform:translateY(-1px)}
+
+.hero{padding:72px 0 112px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"h photo" "body photo";column-gap:72px;align-items:end}
+.hero h1{grid-area:h;font-size:clamp(42px,7.2vw,104px);line-height:1;font-weight:500;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-body{grid-area:body;align-self:start;margin-top:32px}
+.lede{font-size:20px;color:var(--muted);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-photo{grid-area:photo;position:relative;margin:0;padding:56px 0 0 40px}
+.hero-photo .main{width:100%;aspect-ratio:1/1.12;object-fit:cover;object-position:55% 50%;border-radius:20px;box-shadow:var(--shadow)}
+.hero-photo .chip{position:absolute;left:0;top:0;width:min(190px,42%)}
+.chip-in{transform:rotate(3deg);background:var(--surface);padding:8px;border-radius:14px;box-shadow:var(--shadow)}
+.chip-in img{aspect-ratio:1/1;object-fit:cover;object-position:40% 50%;border-radius:8px}
+.label{position:absolute;right:18px;bottom:18px;background:var(--surface);color:var(--ink);font:500 15px/1.2 var(--display);padding:10px 16px;border-radius:12px;box-shadow:var(--shadow-soft);display:flex;align-items:center;gap:9px}
+.label i{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+
+.facts{background:var(--band)}
+.facts ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.facts b{display:block;font:500 25px/1.1 var(--display);letter-spacing:-.02em}
+.facts span{display:block;font-size:16px;color:var(--muted);line-height:1.4;margin-top:5px}
+
+section{padding:120px 0}
+h2{font-size:clamp(36px,4.4vw,62px)}
+
+/* classes */
+.classes-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+.classes-head p{color:var(--muted)}
+.menu{list-style:none;margin:64px 0 0;padding:0;border-top:1px solid rgba(31,29,27,.18)}
+.menu li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;padding:28px 0;border-bottom:1px solid rgba(31,29,27,.18);transition:background-color .3s}
+.menu h3{font-size:clamp(25px,2.4vw,34px);font-weight:500}
+.menu p{color:var(--muted);font-size:18px}
+.multi{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center;margin-top:88px}
+.multi figure{margin:0;position:relative}
+.multi figure img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--shadow)}
+.multi .card{background:var(--surface);border-radius:20px;padding:44px 46px;box-shadow:var(--shadow);margin-left:-120px;position:relative;z-index:2}
+.multi .card h3{font-size:34px}
+.multi .card p{margin-top:16px;color:var(--muted)}
+.weeks{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.weeks span{font:500 17px/1 var(--display);padding:11px 18px;border-radius:999px;background:var(--base)}
+.open{margin-top:22px;padding-top:20px;border-top:1px solid rgba(31,29,27,.14);font-size:17px}
+.open b{font-family:var(--display);font-weight:500}
+
+/* parties */
+.party{background:var(--dark);color:var(--on-dark)}
+.party-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.party .lede-d{margin-top:22px;color:rgba(233,230,225,.8);max-width:32em}
+.rates{border-top:1px solid rgba(233,230,225,.22)}
+.rate{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(233,230,225,.22)}
+.rate b{font:500 22px/1.2 var(--display)}
+.rate span{font:500 24px/1.2 var(--display);white-space:nowrap;color:#9CC6E2}
+.rate small{grid-column:1/-1;font-size:16px;color:rgba(233,230,225,.68);margin-top:-12px}
+.included{margin-top:26px;font-size:17px;color:rgba(233,230,225,.8)}
+.party .actions .btn-fill{background:var(--on-dark);color:var(--dark)}
+.party .actions .btn-fill:hover{background:#fff}
+.party .actions .btn-line{border-color:rgba(233,230,225,.55);color:var(--on-dark)}
+.party .actions .btn-line:hover{background:var(--on-dark);color:var(--dark)}
+.trio{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,.95fr);gap:28px;margin-top:88px;align-items:end}
+.trio figure{margin:0}
+.trio img{width:100%;object-fit:cover;border-radius:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.trio .a img{aspect-ratio:4/3.2;object-position:50% 40%}
+.trio .b img{aspect-ratio:3/4;object-position:50% 40%}
+.trio .c img{aspect-ratio:1/1.05;object-position:50% 50%}
+.trio figcaption{margin-top:14px;font-size:16px;color:rgba(233,230,225,.72)}
+.groups{margin-top:64px;padding-top:30px;border-top:1px solid rgba(233,230,225,.18)}
+.groups h3{font-size:22px}
+.groups ul{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.groups li{font-size:16px;padding:7px 15px;border:1px solid rgba(233,230,225,.25);border-radius:999px;color:rgba(233,230,225,.88)}
+
+/* quote */
+.quote{padding:120px 0 0}
+.quote blockquote{margin:0 auto;max-width:1000px}
+.quote p{font:400 italic clamp(30px,3.6vw,50px)/1.2 var(--text);text-wrap:balance;letter-spacing:-.01em}
+.quote cite{display:block;margin-top:22px;font:500 16px/1.3 var(--display);font-style:normal;color:var(--muted)}
+
+/* membership */
+.member{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:start}
+.member figure{margin:0;position:sticky;top:110px}
+.member figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:40% 40%;border-radius:22px;box-shadow:var(--shadow)}
+.member .intro{margin-top:22px;color:var(--muted);max-width:34em}
+.tiers{margin-top:40px;border-top:1px solid rgba(31,29,27,.18)}
+.tier{padding:28px 0;border-bottom:1px solid rgba(31,29,27,.18);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:baseline}
+.tier h3{font-size:28px}
+.tier .price{font:500 22px/1.2 var(--display);white-space:nowrap;text-align:right}
+.tier .price small{display:block;font:400 15px/1.4 var(--text);color:var(--muted)}
+.tier p{grid-column:1/-1;color:var(--muted);font-size:17.5px;font-style:italic}
+.tier ul{grid-column:1/-1;margin:4px 0 0;padding:0;list-style:none;font-size:17px}
+.note{margin-top:26px;padding:20px 24px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow-soft);font-size:17px;color:var(--muted)}
+
+/* crew */
+.crew-wrap{background:var(--surface)}
+.crew{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:center}
+.crew-list{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.crew-list li{padding:20px 0;border-top:1px solid rgba(31,29,27,.14)}
+.crew-list b{display:block;font:500 26px/1.1 var(--display);letter-spacing:-.02em}
+.crew-list small{display:block;font:500 14.5px/1.3 var(--display);color:var(--accent-deep);margin-top:4px}
+.crew-list p{margin-top:8px;font-size:17px;color:var(--muted)}
+.crew figure{margin:0;position:relative}
+.crew figure .tall{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:20px;box-shadow:var(--shadow)}
+.crew figure .kiln{position:absolute;left:-64px;bottom:-40px;width:min(200px,52%);aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:7px solid var(--surface);box-shadow:var(--shadow)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0;align-items:center}
+.visit-grid > img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:60% 50%;border-radius:24px;box-shadow:var(--shadow)}
+.contact{background:var(--surface);border-radius:20px;padding:40px 42px;box-shadow:var(--shadow);margin-left:-90px;position:relative;z-index:2}
+.contact h2{font-size:clamp(32px,3vw,44px)}
+.contact dl{margin:26px 0 0;display:grid;gap:18px}
+.contact dt{font:500 14px/1.3 var(--display);color:var(--muted)}
+.contact dd{margin:3px 0 0;font-size:19px;line-height:1.45}
+.contact dd a{text-decoration:none;border-bottom:1.5px solid rgba(58,124,165,.5);transition:border-color .2s}
+.contact dd a:hover{border-color:var(--ink)}
+.more{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.more a{font:500 15.5px/1 var(--display);text-decoration:none;padding:11px 16px;border-radius:999px;background:var(--base);transition:background-color .2s}
+.more a:hover{background:var(--band)}
+
+footer{background:var(--dark);color:var(--on-dark);padding:88px 0 40px;margin-top:120px}
+.foot{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.foot .name{font:500 40px/1 var(--display);letter-spacing:-.03em}
+.foot .mission{margin-top:14px;font-style:italic;color:rgba(233,230,225,.75);font-size:19px}
+.foot h3{font:500 15px/1.3 var(--display);color:rgba(233,230,225,.6);margin-bottom:12px;letter-spacing:0}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:17px;color:rgba(233,230,225,.82)}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(233,230,225,.3);transition:border-color .2s}
+.foot a:hover{border-color:var(--on-dark)}
+.proposal{background:var(--dark);border-top:1px solid rgba(233,230,225,.12);text-align:center;padding:18px 24px;font:400 13.5px/1.4 var(--display);color:rgba(233,230,225,.55)}
+
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.nav .cta{transition:none}}
+
+@media (max-width:1080px){
+  .nav a:not(.cta){display:none}
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero-grid{column-gap:44px}
+  .member,.crew,.party-head{gap:56px}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .hero{padding:32px 0 80px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"h" "photo" "body"}
+  .hero-photo{margin-top:20px;padding:36px 0 0 28px}
+  .hero-photo .main{aspect-ratio:4/3.6}
+  .classes-head,.multi,.party-head,.member,.crew,.visit-grid{grid-template-columns:minmax(0,1fr)}
+  .menu li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .multi{gap:0}
+  .multi .card{margin:-80px 16px 0}
+  .member figure{position:static}
+  .member figure img{aspect-ratio:4/3.4}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .trio .a{grid-column:1/-1}
+  .crew figure{max-width:480px}
+  .crew figure .kiln{left:auto;right:-12px}
+  .contact{margin:-70px 16px 0}
+  .foot{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .foot > div:first-child{grid-column:1/-1}
+  .classes-head{gap:20px}
+  .quote{padding-top:88px}
+  footer{margin-top:88px}
+}
+@media (max-width:640px){
+  body{font-size:18px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .top .wrap{min-height:64px}
+  .brand{font-size:21px}
+  .nav .cta{padding:11px 16px;font-size:15.5px}
+  .hero h1{font-size:clamp(40px,12.4vw,58px);line-height:1.02}
+  .lede{font-size:18px}
+  .hero-photo{padding:28px 0 0 22px}
+  .hero-photo .chip{width:min(118px,36%)}
+  .label{right:12px;bottom:12px;font-size:14px}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding:30px 0}
+  .facts li:last-child{grid-column:1/-1}
+  .facts b{font-size:22px}
+  .multi .card{margin:-56px 10px 0;padding:30px 24px}
+  .trio{grid-template-columns:minmax(0,1fr)}
+  .trio .b img{aspect-ratio:4/3.4}
+  .crew-list{grid-template-columns:minmax(0,1fr)}
+  .crew figure .kiln{width:min(130px,40%);bottom:-28px}
+  .contact{margin:-48px 10px 0;padding:30px 24px}
+  .tier{grid-template-columns:minmax(0,1fr)}
+  .tier .price{text-align:left}
+  .rate b{font-size:19px}
+  .rate span{font-size:20px}
+  .foot{grid-template-columns:minmax(0,1fr)}
+  footer{padding:64px 0 32px}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Erie ClaySpace</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#classes">Classes</a>
+      <a href="#party">Private parties</a>
+      <a href="#membership">Membership</a>
+      <a href="#crew">The crew</a>
+      <a class="cta" href="mailto:info@erieclayspace.com">Email us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Welcome">
+    <div class="wrap hero-grid">
+      <h1>A community hub for all <em>pottery</em> lovers.</h1>
+      <figure class="hero-photo">
+        <img class="main" src="assets/erie-clayspace-erie-pa/cours-tour-atelier-state-street.webp" width="1600" height="1235" alt="A wheel-throwing class in the studio, students at their wheels by the big window" loading="eager" fetchpriority="high">
+        <div class="chip"><div class="chip-in"><img src="assets/erie-clayspace-erie-pa/pieces-crues-bols-sur-etagere.webp" width="1600" height="1200" alt="Unfired bowls drying on a shelf" loading="eager"></div></div>
+        <span class="label"><i aria-hidden="true"></i>1505 State St., 3rd floor</span>
+      </figure>
+      <div class="hero-body">
+        <p class="lede">Beginners, hobbyists and independent artists: wheel-throwing and handbuilding classes, private parties and studio memberships, on the 3rd floor of the PACA Building in downtown Erie.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://www.eventbrite.com/o/erie-clayspace-12187112772">See the current classes</a>
+          <a class="btn btn-line" href="#party">Host a private party</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul class="wrap">
+      <li><b>Since 1981</b><span>A creativity hub in downtown Erie</span></li>
+      <li><b>501(c)(3)</b><span>Independent nonprofit</span></li>
+      <li><b>Wheel &amp; hand</b><span>Throwing and handbuilding classes</span></li>
+      <li><b>2-hour parties</b><span>Materials and firing included</span></li>
+      <li><b>Open Studio</b><span>Sat <span class="nw">12–2&nbsp;pm</span>, Wed <span class="nw">6–8&nbsp;pm</span></span></li>
+    </ul>
+  </div>
+
+  <section id="classes" aria-labelledby="classes-title">
+    <div class="wrap">
+      <div class="classes-head">
+        <h2 id="classes-title">One night, or eight weeks.</h2>
+        <p>From one-day introductory workshops to multi-week classes, on the wheel or by hand. Dates are on our class schedule.</p>
+      </div>
+      <ul class="menu">
+        <li><h3>Mud to Mugs</h3><p>A fun, beginner-friendly night out: turn a slab of clay into your very own handmade mug. No experience needed.</p></li>
+        <li><h3>MYO Tiki Tumblers</h3><p>Craft one-of-a-kind tiki cups and bring some tropical vibes to your next cocktail.</p></li>
+        <li><h3>Sip &amp; Spin</h3><p>Bring a drink, bring a friend: our laid-back, BYOB class where you learn the basics of throwing on the wheel.</p></li>
+        <li><h3>Tandem Throw: Pottery Date Night</h3><p>Grab a partner, friend, spouse, coworker or actual date. Learn the basics solo, then team up for a tandem session: trust, creativity and a little clay-covered chaos.</p></li>
+        <li><h3>Try It! One Day of Wheel Throwing</h3><p>Curious about the pottery wheel? The perfect beginner-friendly way to dip your hands into clay.</p></li>
+      </ul>
+      <div class="multi">
+        <figure>
+          <img class="reveal" src="assets/erie-clayspace-erie-pa/eleve-tatoue-centrage-argile.webp" width="1600" height="1600" alt="A student in an apron centering clay on the wheel during class" loading="lazy">
+        </figure>
+        <div class="card">
+          <h3>Multi-week classes</h3>
+          <p>For a new hobby, a new medium for your portfolio, or just to get your hands dirty. Something for every skill level.</p>
+          <div class="weeks"><span>4&nbsp;weeks</span><span>6&nbsp;weeks</span><span>8&nbsp;weeks</span></div>
+          <p class="open"><b>Open Studio included.</b> While classes are in session, every enrolled student may practice in the studio on Saturdays, <span class="nw">12–2&nbsp;pm</span>, and Wednesdays, <span class="nw">6–8&nbsp;pm</span>.</p>
+          <div class="actions"><a class="btn btn-fill" href="https://www.eventbrite.com/o/erie-clayspace-12187112772">View the schedule</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="party" id="party" aria-labelledby="party-title">
+    <div class="wrap">
+      <div class="party-head">
+        <div>
+          <h2 id="party-title">Host a private party.</h2>
+          <p class="lede-d">Two hours of personalized instruction from a professional teaching artist. Bring your group to throw bowls on the wheel, handbuild a custom mug, or sculpt your pet.</p>
+          <p class="included">Included: a dedicated ECS instructor; clay, tools, glazes and all firing, bisque and glaze; studio setup and cleanup; tables for food and drinks (BYOB for adults 21+). Finished pieces are ready in 2 to 4&nbsp;weeks.</p>
+          <div class="actions">
+            <a class="btn btn-fill" href="https://erieclayspace.com/private-event">Request a private party</a>
+            <a class="btn btn-line" href="mailto:info@erieclayspace.com?subject=Private%20party">Email us</a>
+          </div>
+        </div>
+        <div class="rates">
+          <div class="rate"><b>1 to 4&nbsp;people</b><span>$300 total</span><small>Flat rate</small></div>
+          <div class="rate"><b>5 or more</b><span>$65 per person</span></div>
+          <div class="rate"><b>Handbuilding events</b><span>Up to 20</span></div>
+          <div class="rate"><b>Wheel-throwing events</b><span>Up to 10</span></div>
+        </div>
+      </div>
+      <div class="trio">
+        <figure class="a"><img class="reveal" src="assets/erie-clayspace-erie-pa/atelier-modelage-groupe-table.webp" width="1600" height="1200" alt="A group around a table while an instructor explains a handbuilding project" loading="lazy"><figcaption>Handbuilding around the big table</figcaption></figure>
+        <figure class="b"><img class="reveal" src="assets/erie-clayspace-erie-pa/enfant-et-monitrice-au-tour.webp" width="1200" height="1600" alt="A girl throwing on the wheel while an adult guides her hands" loading="lazy"><figcaption>Classes for all ages and skill levels</figcaption></figure>
+        <figure class="c"><img class="reveal" src="assets/erie-clayspace-erie-pa/cours-tournage-cylindres-bonnets.webp" width="1200" height="1600" alt="Two students in beanies pulling cylinders on the wheel" loading="lazy"><figcaption>Wheel or handbuilding, your choice</figcaption></figure>
+      </div>
+      <div class="groups">
+        <h3>We’ve hosted private workshops for</h3>
+        <ul>
+          <li>Sports teams</li><li>Book &amp; social clubs</li><li>Field trips &amp; after school programs</li><li>Refugee &amp; international groups</li><li>Special needs groups</li><li>Private lessons</li><li>Homeschoolers</li><li>Family &amp; friends</li><li>Bachelorette parties</li><li>Birthday parties</li><li>Boy/Girl Scout merit badges</li><li>Corporate team building</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    <blockquote class="wrap">
+      <p>“Erie ClaySpace is a place where community &amp; creativity intersect.”</p>
+      <cite>Caelin, Executive Director</cite>
+    </blockquote>
+  </div>
+
+  <section id="membership" aria-labelledby="member-title">
+    <div class="wrap member">
+      <figure><img class="reveal" src="assets/erie-clayspace-erie-pa/potier-chalumeau-grand-vase.webp" width="1200" height="1600" alt="A potter drying a tall vase with a torch, still on the wheel" loading="lazy"></figure>
+      <div>
+        <h2 id="member-title">Become a member.</h2>
+        <p class="intro">Membership lets self-directed ceramic artists and hobbyists create independently in a fully equipped co-working studio. Tiers follow your predicted studio use and the amount of work you plan to make.</p>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Satellite</h3>
+            <div class="price">$45/month<small>or $486/year, prepaid</small></div>
+            <p>Minimum obligation, maximum potential.</p>
+            <ul><li>Open Studio hours: Saturdays <span class="nw">12–2&nbsp;pm</span>, Wednesdays <span class="nw">6–8&nbsp;pm</span>, or by appointment</li></ul>
+          </div>
+          <div class="tier">
+            <h3>Full</h3>
+            <div class="price">$65/month<small>or $702/year, prepaid, 10% off</small></div>
+            <p>Tailored for your creative journey.</p>
+            <ul><li>24/7 studio and glaze lab access</li></ul>
+          </div>
+          <div class="tier">
+            <h3>Semi-Private Studio</h3>
+            <div class="price">$250/month<small>or $2,700/year, prepaid, 10% off</small></div>
+            <p>Expand, create, collaborate.</p>
+          </div>
+        </div>
+        <p class="note">New to clay? We highly recommend one or more multi-week classes first, so you feel confident working on your own.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://forms.monday.com/forms/3f30037251a005622bb9443944b7a317?r=use1">Apply for membership</a>
+          <a class="btn btn-line" href="https://erieclayspace.com/membership">Membership details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="crew-wrap" id="crew">
+    <section aria-labelledby="crew-title">
+      <div class="wrap crew">
+        <div>
+          <h2 id="crew-title">Meet the crew.</h2>
+          <ul class="crew-list">
+            <li><b>Anne</b><small>Instructor</small><p>90%&nbsp;clay, 10%&nbsp;human at this point. Slinging pots since 2002.</p></li>
+            <li><b>Caelin</b><small>Executive Director</small><p>Causing muddy mayhem since 2010.</p></li>
+            <li><b>Jess</b><small>Instructor</small><p>Over 20&nbsp;years in clay and still searching for the perfect mug handle.</p></li>
+            <li><b>Mel</b><small>Instructor</small><p>In a committed relationship with clay since 1996… it’s complicated.</p></li>
+            <li><b>Morgan</b><small>Membership Coordinator</small><p>I came, I threw, I conquered! Playing in the mud since 2024.</p></li>
+            <li><b>Taylor</b><small>Instructor</small><p>I came here to make pottery &amp; avoid my responsibilities. Spinning the wheel since 2018.</p></li>
+          </ul>
+        </div>
+        <figure>
+          <img class="tall reveal" src="assets/erie-clayspace-erie-pa/potiere-tablier-erie-clayspace-au-tour.webp" width="1200" height="1600" alt="A smiling instructor at the wheel in an Erie ClaySpace apron" loading="lazy">
+          <img class="kiln reveal" src="assets/erie-clayspace-erie-pa/enfournement-vase-four.webp" width="1198" height="1600" alt="A potter loading a large white vase into the brick kiln" loading="lazy">
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <section id="visit" aria-labelledby="visit-title" style="padding-bottom:0">
+    <div class="wrap visit-grid">
+      <img class="reveal" src="assets/erie-clayspace-erie-pa/tour-en-rotation-outils-vue-dessus.webp" width="1600" height="1067" alt="A spinning wheel seen from above, with throwing tools and a sponge" loading="lazy">
+      <div class="contact">
+        <h2 id="visit-title">Find the studio.</h2>
+        <dl>
+          <div><dt>Address</dt><dd>1505 State St., 3rd Floor<br>PACA Building, Erie, PA 16501</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@erieclayspace.com">info@erieclayspace.com</a></dd></div>
+          <div><dt>Open Studio</dt><dd>Saturdays, <span class="nw">12–2&nbsp;pm</span><br>Wednesdays, <span class="nw">6–8&nbsp;pm</span></dd></div>
+        </dl>
+        <div class="more">
+          <a href="https://erieclayspace.com/pick-up-your-pot">Pick up your pot</a>
+          <a href="https://erieclayspace.com/gift-cards">Gift cards</a>
+          <a href="https://erieclayspace.app.neoncrm.com/forms/erie-clayspace">Donate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p class="name">Erie ClaySpace</p>
+      <p class="mission">To educate, empower, and inspire through ceramic arts.</p>
+    </div>
+    <div>
+      <h3>Studio</h3>
+      <ul>
+        <li>1505 State St., 3rd Floor<br>PACA Building<br>Erie, PA 16501</li>
+        <li><a href="mailto:info@erieclayspace.com">info@erieclayspace.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Join in</h3>
+      <ul>
+        <li><a href="https://www.eventbrite.com/o/erie-clayspace-12187112772">Class schedule</a></li>
+        <li><a href="https://erieclayspace.com/private-event">Private events</a></li>
+        <li><a href="https://erieclayspace.com/membership">Membership</a></li>
+        <li><a href="https://erieclayspace.com/gift-cards">Gift cards</a></li>
+        <li><a href="https://erieclayspace.app.neoncrm.com/forms/erie-clayspace">Donate</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Erie ClaySpace</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

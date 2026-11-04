@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Spring Street Studios · Fused and stained glass in Zelienople, PA</title>
+<meta name="description" content="Fused and stained glass classes, drop-in workshops, BYOB private groups and a glass art shop at 100 E Spring Street, Zelienople, PA.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317231F'/%3E%3Crect x='8' y='8' width='22' height='22' rx='3' fill='%23B3263E'/%3E%3Crect x='34' y='8' width='22' height='22' rx='3' fill='%23E0A040'/%3E%3Crect x='8' y='34' width='22' height='22' rx='3' fill='%235FAAA0'/%3E%3Ctext x='45' y='53' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23F8FAF7'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EEF1EC; --band:#E1E7E0; --surface:#F8FAF7; --ink:#17231F; --muted:#4A5752;
+  --accent:#B3263E; --accent-deep:#951D32; --dark:#17231F; --dark-2:#22322C; --on-dark:#EEF1EC;
+  --amber:rgba(224,160,64,.78); --ruby:rgba(179,38,62,.78); --sea:rgba(95,170,160,.74);
+  --shadow:0 30px 60px -34px rgba(23,35,31,.55);
+  --shadow-soft:0 20px 40px -28px rgba(23,35,31,.42);
+  --display:"Marcellus", Georgia, serif;
+  --text:"Figtree", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font:600 17px/1.2 var(--text);text-decoration:none;border:1.5px solid transparent;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-fill{background:var(--accent);color:var(--surface)}
+.btn-fill:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+.nw{white-space:nowrap}
+
+.top{position:sticky;top:0;z-index:20;background:rgba(238,241,236,.95);border-bottom:1px solid rgba(23,35,31,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font:400 24px/1 var(--display)}
+.brand .tiles{display:grid;grid-template-columns:repeat(2,9px);gap:2px}
+.brand .tiles i{width:9px;height:9px;border-radius:2px;background:var(--ruby)}
+.brand .tiles i:nth-child(2){background:var(--amber)}
+.brand .tiles i:nth-child(3){background:var(--sea)}
+.brand .tiles i:nth-child(4){background:var(--ink)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.nav .call{background:var(--dark);color:var(--on-dark);padding:11px 20px;border-radius:999px;font-weight:600;transition:transform .2s,background-color .2s}
+.nav .call:hover{background:var(--dark-2);transform:translateY(-1px)}
+.call-short{display:none}
+
+.hero{padding:76px 0 112px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"h photo" "body photo";column-gap:72px;align-items:end}
+.hero h1{grid-area:h;font-size:clamp(42px,5.8vw,84px);line-height:1.04}
+.hero-body{grid-area:body;align-self:start;margin-top:28px}
+.lede{font-size:19.5px;color:var(--muted);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-photo{grid-area:photo;position:relative;margin:0}
+.lead{border:10px solid var(--dark);border-radius:18px;box-shadow:var(--shadow);background:var(--dark);position:relative}
+.lead img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:56% 40%;border-radius:8px}
+.tess{position:absolute;display:block;border-radius:4px;border:1.5px solid rgba(248,250,247,.55);box-shadow:0 10px 18px -10px rgba(23,35,31,.5)}
+.tess.r{width:44px;height:44px;background:var(--ruby);left:-26px;top:58px;transform:rotate(-8deg)}
+.tess.a{width:32px;height:32px;background:var(--amber);left:-12px;top:112px;transform:rotate(12deg)}
+.tess.s{width:28px;height:28px;background:var(--sea);right:64px;top:-16px;transform:rotate(18deg)}
+.byob{position:absolute;left:24px;bottom:24px;background:var(--surface);color:var(--ink);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:var(--shadow-soft)}
+
+.facts{background:var(--band)}
+.facts ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.facts b{display:block;font:400 27px/1.1 var(--display)}
+.facts span{display:block;font-size:15.5px;color:var(--muted);line-height:1.4;margin-top:5px}
+
+section{padding:120px 0}
+h2{font-size:clamp(36px,4vw,58px)}
+
+/* three ways */
+.ways-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+.ways-head p{color:var(--muted)}
+.ways{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:72px;align-items:start}
+.way figure{margin:0}
+.way img{width:100%;object-fit:cover;border-radius:16px;box-shadow:var(--shadow)}
+.way.fuse img{aspect-ratio:4/4.4;object-position:50% 45%}
+.way.solder{margin-top:120px}
+.way.solder img{aspect-ratio:4/3.4;object-position:30% 50%}
+.way.break{margin-top:40px}
+.way.break img{aspect-ratio:4/3;object-position:50% 60%}
+.way h3{font-size:34px;margin-top:26px}
+.way p{margin-top:10px;color:var(--muted);font-size:17px}
+.way a{display:inline-block;margin-top:14px;font-weight:600;font-size:16px;color:var(--accent);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px;transition:color .2s}
+.way a:hover{color:var(--ink)}
+
+/* season */
+.season-wrap{background:var(--surface)}
+.season{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:start}
+.ginger{position:sticky;top:110px}
+.ginger .frame{border:10px solid var(--dark);border-radius:18px;box-shadow:var(--shadow);background:var(--dark)}
+.ginger img{width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:50% 45%;border-radius:8px}
+.ginger .card{position:relative;margin:-64px 24px 0;background:var(--surface);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow)}
+.ginger h3{font-size:30px}
+.ginger p{margin-top:8px;color:var(--muted);font-size:17px}
+.ginger .actions{margin-top:20px}
+.ginger .btn{min-height:46px;padding:11px 22px;font-size:16px}
+.season .intro{margin-top:20px;color:var(--muted);max-width:34em}
+.list{margin-top:36px;border-top:1px solid rgba(23,35,31,.16)}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(23,35,31,.16)}
+.item h3{font-size:26px}
+.item p{grid-column:1/-1;color:var(--muted);font-size:17px}
+.item a{font-weight:600;font-size:16px;color:var(--accent);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px;white-space:nowrap;transition:color .2s}
+.item a:hover{color:var(--ink)}
+.item .flag{display:inline-block;font:600 13px/1 var(--text);color:var(--accent);background:rgba(179,38,62,.09);padding:6px 10px;border-radius:999px;margin-left:10px;vertical-align:middle}
+.youth{margin-top:44px;background:var(--base);border-radius:18px;padding:32px 34px}
+.youth-top{display:grid;grid-template-columns:minmax(0,1fr) min(200px,38%);gap:28px;align-items:start}
+.youth .kid{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:45% 40%;border-radius:14px;box-shadow:var(--shadow);margin-top:-58px}
+.youth h3{font-size:28px}
+.youth-top p{margin-top:10px;color:var(--muted);font-size:17px}
+.youth ul{border-top:1px solid rgba(23,35,31,.12);padding-top:20px!important}
+.youth ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
+.youth li b{display:block;font-weight:600;font-size:17px}
+.youth li span{font-size:16px;color:var(--muted)}
+.youth .actions{margin-top:24px}
+
+/* private */
+.private{background:var(--dark);color:var(--on-dark)}
+.private-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.private .lede-d{margin-top:22px;color:rgba(238,241,236,.82);max-width:32em;font-size:19px}
+.occasions{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.occasions li{font-size:15.5px;padding:7px 15px;border:1px solid rgba(238,241,236,.25);border-radius:999px;color:rgba(238,241,236,.9)}
+.private .actions .btn-fill:hover{background:#C8344D}
+.private .actions .btn-line{border-color:rgba(238,241,236,.55);color:var(--on-dark)}
+.private .actions .btn-line:hover{background:var(--on-dark);color:var(--dark)}
+.terms{background:var(--dark-2);border-radius:18px;padding:30px 32px;border:1px solid rgba(238,241,236,.1)}
+.terms dl{margin:0;display:grid;gap:18px}
+.terms dt{font:400 22px/1.2 var(--display)}
+.terms dd{margin:4px 0 0;font-size:16.5px;color:rgba(238,241,236,.75)}
+.faves{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr) minmax(0,1fr);gap:24px;margin-top:88px;align-items:start}
+.fave img{width:100%;object-fit:cover;border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.fave:nth-child(1) img{aspect-ratio:4/3.4;object-position:50% 50%}
+.fave:nth-child(2){margin-top:56px}
+.fave:nth-child(2) img{aspect-ratio:3/4;object-position:50% 40%}
+.fave:nth-child(3){margin-top:20px}
+.fave:nth-child(3) img{aspect-ratio:1/1;object-position:50% 45%}
+.fave:nth-child(4){margin-top:76px}
+.fave:nth-child(4) img{aspect-ratio:3/3.6;object-position:50% 50%}
+.fave h3{font-size:23px;margin-top:18px}
+.fave p{margin-top:6px;font-size:15.5px;color:rgba(238,241,236,.72)}
+.fave a{display:inline-block;margin-top:10px;font-size:15.5px;font-weight:600;color:var(--on-dark);text-decoration:none;border-bottom:1px solid rgba(238,241,236,.45)}
+.fave a:hover{border-color:var(--on-dark)}
+
+/* words */
+.words{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:center}
+.big-quote p{font:400 clamp(32px,3.8vw,54px)/1.16 var(--display);text-wrap:balance}
+.big-quote cite{display:block;margin-top:22px;font-style:normal;font-size:16px;color:var(--muted)}
+.small-quotes{display:grid;gap:18px}
+.small-quotes blockquote{margin:0;background:var(--surface);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-soft)}
+.small-quotes p{font-size:16.5px;font-style:italic;color:var(--ink)}
+.small-quotes cite{display:block;margin-top:8px;font-style:normal;font-size:14.5px;color:var(--muted);font-weight:500}
+
+/* studio */
+.studio-wrap{background:var(--band)}
+.studio{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center}
+.studio-photos{position:relative;padding-bottom:70px}
+.studio-photos .room{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%;border-radius:20px;box-shadow:var(--shadow)}
+.studio-photos .front{position:absolute;right:-24px;bottom:0;width:min(230px,42%)}
+.front-in{transform:rotate(3deg);background:var(--surface);padding:8px 8px 12px;border-radius:8px;box-shadow:var(--shadow)}
+.front-in img{aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.front-in p{margin-top:8px;font-size:14px;text-align:center;color:var(--muted)}
+.studio-photos .tag{position:absolute;left:18px;top:18px;background:var(--surface);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:var(--shadow-soft)}
+.studio p{margin-top:20px;color:var(--muted)}
+.founders{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.founders div{background:var(--surface);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow-soft)}
+.founders b{display:block;font:400 22px/1.2 var(--display)}
+.founders span{font-size:15px;color:var(--muted)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:start}
+.visit .intro{margin-top:20px;color:var(--muted)}
+.hours{margin-top:28px;border-top:1px solid rgba(23,35,31,.16)}
+.hours div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid rgba(23,35,31,.16);font-size:17.5px}
+.hours dt{font-weight:500}
+.hours dd{margin:0;color:var(--muted);text-align:right}
+.card{background:var(--surface);border-radius:20px;padding:38px 40px;box-shadow:var(--shadow);position:relative}
+.card .tess.r{left:auto;right:-14px;top:-14px;width:36px;height:36px}
+.card dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px}
+.card dt{font-size:14px;color:var(--muted);font-weight:500}
+.card dd{margin:3px 0 0;font:400 20px/1.4 var(--display)}
+.card dd small{display:block;font:400 15.5px/1.5 var(--text);color:var(--muted);margin-top:4px}
+.card a{text-decoration:none;border-bottom:1.5px solid rgba(179,38,62,.45);transition:border-color .2s}
+.card a:hover{border-color:var(--ink)}
+.card .wide{grid-column:1/-1}
+.card .mail{overflow-wrap:anywhere}
+
+footer{background:var(--dark);color:var(--on-dark);padding:88px 0 40px}
+.foot{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.foot .name{font:400 38px/1.05 var(--display)}
+.foot .motto{margin-top:12px;color:rgba(238,241,236,.72);font-size:17px}
+.foot h3{font:600 15px/1.3 var(--text);color:rgba(238,241,236,.6);margin-bottom:12px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16.5px;color:rgba(238,241,236,.82)}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(238,241,236,.3);transition:border-color .2s}
+.foot a:hover{border-color:var(--on-dark)}
+.foot .mail{overflow-wrap:anywhere}
+.proposal{background:var(--dark);border-top:1px solid rgba(238,241,236,.12);text-align:center;padding:18px 24px;font-size:13.5px;color:rgba(238,241,236,.55)}
+
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.nav .call{transition:none}}
+
+@media (max-width:1080px){
+  .nav a:not(.call){display:none}
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero-grid{column-gap:44px}
+  .season,.private-head,.words,.studio,.visit{gap:56px}
+  .faves{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fave:nth-child(n){margin-top:0}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .hero{padding:32px 0 80px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"h" "photo" "body"}
+  .hero-photo{margin-top:26px}
+  .tess.r{left:-12px}
+  .tess.a{left:-6px}
+  .ways-head,.season,.private-head,.words,.studio,.visit{grid-template-columns:minmax(0,1fr)}
+  .ways{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+  .way.fuse{grid-column:1/-1}
+  .way.fuse img{aspect-ratio:4/3}
+  .way.solder,.way.break{margin-top:0}
+  .ginger{position:static;max-width:560px}
+  .studio-photos .front{right:12px}
+  .foot{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .foot > div:first-child{grid-column:1/-1}
+  .ways-head{gap:20px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .top .wrap{min-height:64px}
+  .brand{font-size:21px;gap:10px}
+  .nav .call{padding:10px 16px;font-size:15.5px}
+  .hero h1{font-size:clamp(40px,12vw,54px)}
+  .lede{font-size:17.5px}
+  .lead{border-width:8px}
+  .lead img{aspect-ratio:4/3.4}
+  .tess.r{width:34px;height:34px;top:40px}
+  .tess.a{width:26px;height:26px;top:82px}
+  .tess.s{width:24px;height:24px;right:40px;top:-12px}
+  .byob{left:14px;bottom:14px;font-size:14px}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding:30px 0}
+  .facts li:last-child{grid-column:1/-1}
+  .facts b{font-size:24px}
+  .ways{grid-template-columns:minmax(0,1fr)}
+  .big-quote p{font-size:clamp(26px,8.2vw,36px)}
+  .way h3{font-size:30px}
+  .ginger .card{margin:-48px 12px 0;padding:22px 22px}
+  .youth{padding:26px 22px}
+  .youth-top{grid-template-columns:minmax(0,1fr) min(120px,34%);gap:16px}
+  .youth .kid{margin-top:-44px}
+  .youth ul{grid-template-columns:minmax(0,1fr)}
+  .faves{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 16px}
+  .fave h3{font-size:20px}
+  .founders{grid-template-columns:minmax(0,1fr)}
+  .studio-photos{padding-bottom:50px}
+  .studio-photos .front{width:min(150px,44%)}
+  .card{padding:28px 24px}
+  .card dl{grid-template-columns:minmax(0,1fr)}
+  .card .mail{font:500 17px/1.4 var(--text)}
+  .foot{grid-template-columns:minmax(0,1fr)}
+  footer{padding:64px 0 32px}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .call-long{display:none}
+  .call-short{display:inline}
+  .item{grid-template-columns:minmax(0,1fr)}
+  .item a{justify-self:start}
+  .faves{grid-template-columns:minmax(0,1fr)}
+  .hours div{flex-direction:column;gap:2px}
+  .hours dd{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="tiles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Spring Street Studios</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#classes">Classes</a>
+      <a href="#season">This season</a>
+      <a href="#private">Private events</a>
+      <a href="#visit">Visit</a>
+      <a class="call" href="tel:+17244734899"><span class="call-long nw">(724) 473-4899</span><span class="call-short">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Welcome">
+    <div class="wrap hero-grid">
+      <h1>Fuse it. Solder it. Break it.</h1>
+      <figure class="hero-photo">
+        <div class="lead">
+          <img src="assets/spring-street-studios-zelienople-pa/groupe-amies-trinquent-atelier-verre.webp" width="1600" height="1067" alt="Five friends raising their glasses around a workbench, a fused glass bowl in front of them" loading="eager" fetchpriority="high">
+          <span class="byob">BYOB welcome</span>
+        </div>
+        <i class="tess r" aria-hidden="true"></i><i class="tess a" aria-hidden="true"></i><i class="tess s" aria-hidden="true"></i>
+      </figure>
+      <div class="hero-body">
+        <p class="lede">Drop in, register for a class or plan a private group. A teaching and working glass studio, and a shop, on East Spring Street in Zelienople. All levels welcome.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://zelieglass.com/class-catalouge">Book a class</a>
+          <a class="btn btn-line" href="tel:+17244734899"><span class="nw">(724) 473-4899</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul class="wrap">
+      <li><b>Drop-ins</b><span>Welcome; registration recommended</span></li>
+      <li><b>6 or more</b><span>Any class as a private event, BYOB</span></li>
+      <li><b>1,000&nbsp;sq&nbsp;ft</b><span>Studio and event space</span></li>
+      <li><b>800&nbsp;sq&nbsp;ft</b><span>Retail shop</span></li>
+      <li><b>4 spots</b><span>Parking right past the storefront</span></li>
+    </ul>
+  </div>
+
+  <section id="classes" aria-labelledby="ways-title">
+    <div class="wrap">
+      <div class="ways-head">
+        <h2 id="ways-title">Three ways into glass.</h2>
+        <p>We specialize in fused and stained glass. Most fused classes run during drop-in hours, with no group minimums; stained glass and longer, more specialized classes are offered as open registration or by request.</p>
+      </div>
+      <div class="ways">
+        <article class="way fuse">
+          <img class="reveal" src="assets/spring-street-studios-zelienople-pa/bol-mosaique-fusionne-arc-en-ciel.webp" width="1600" height="1067" alt="Two hands holding a fused glass bowl with rainbow mosaic pieces" loading="lazy">
+          <h3>Fuse it.</h3>
+          <p>A good entry point into glass making: learn how to cut, decorate, melt or slump glass sheets into your own unique creation.</p>
+          <a href="https://zelieglass.com/fuse-workshop">Fused glass workshops</a>
+        </article>
+        <article class="way solder">
+          <img class="reveal" src="assets/spring-street-studios-zelienople-pa/deux-eleves-vitrail-tournesol.webp" width="1600" height="1200" alt="Two smiling students cutting glass for stained glass sunflower panels" loading="lazy">
+          <h3>Solder it.</h3>
+          <p>Make your own stained glass. All levels are welcome to learn how to cut, foil, lead and solder, from basic forms to unique windows.</p>
+          <a href="https://zelieglass.com/stainedglassworkshop">Stained glass workshops</a>
+        </article>
+        <article class="way break">
+          <img class="reveal" src="assets/spring-street-studios-zelienople-pa/kits-mosaique-a-emporter.webp" width="1600" height="1067" alt="Glass mosaic frame, coasters, pot and plate in front of a Mosaic to Go box" loading="lazy">
+          <h3>Break it.</h3>
+          <p>Leftover stained glass scraps? Like breaking things and solving puzzles? Mosaic is a great fit to make beautiful works.</p>
+          <a href="https://zelieglass.com/mosaics">Mosaics</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="season-wrap" id="season">
+    <section aria-labelledby="season-title">
+      <div class="wrap season">
+        <div class="ginger">
+          <div class="frame"><img class="reveal" src="assets/spring-street-studios-zelienople-pa/maisons-pain-epice-verre-fusionne.webp" width="1600" height="1600" alt="Two fused glass gingerbread houses, one white with a red door, one brown with snow" loading="lazy"></div>
+          <div class="card">
+            <h3>Fused Gingerbread House</h3>
+            <p>Choose from a gingerbread, santa house or a nativity!</p>
+            <div class="actions">
+              <a class="btn btn-fill" href="https://zelieglass.com/fused-gingerbread-house">Make it</a>
+              <a class="btn btn-line" href="https://zelieglass.com/kid-classes">Youth class</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 id="season-title">On the worktables this season.</h2>
+          <p class="intro">Registration recommended, drop-ins welcome. Have a group of 6 or more? <a href="mailto:springstreetstudioszelie@gmail.com?subject=Class%20request">Request a class.</a></p>
+          <div class="list">
+            <div class="item"><h3>Fused Mosaic Bowl <span class="flag">Most popular</span></h3><a href="https://zelieglass.com/ice-bowl">Make it</a><p>Our most popular class! Learn to design, break and assemble glass.</p></div>
+            <div class="item"><h3>Drop-in Fused Ornament</h3><a href="https://zelieglass.com/holidayornament">Make it</a><p>Drop in during studio hours.</p></div>
+            <div class="item"><h3>Fused Leaves and Trees Suncatcher</h3><a href="https://zelieglass.com/fusedleavesandtrees">Make it</a></div>
+            <div class="item"><h3>Stained Glass Turkey!</h3><a href="https://zelieglass.com/stained-glassturkey-registration">Make it</a><p>Gobble. Offered at specific times, open registration.</p></div>
+          </div>
+          <div class="youth">
+            <div class="youth-top">
+              <div><h3>Youth classes</h3>
+              <p>Littles welcome! No sharps for 8 and under, partnering with an adult. Ages 8 to 12 welcome with adult supervision.</p></div>
+              <img class="kid reveal" src="assets/spring-street-studios-zelienople-pa/mere-et-fils-lunettes-protection.webp" width="1600" height="1200" alt="A mother and her son in safety glasses smiling over their project" loading="lazy">
+            </div>
+            <ul>
+              <li><b>Youth Gingerbread House</b><span>A gingerbread, santa house or a nativity</span></li>
+              <li><b>Youth Ornament</b><span>Make your own 3.5” ornament</span></li>
+              <li><b>Youth Fused Nightlight</b><span>Use glass to decorate your own nightlight</span></li>
+              <li><b>Youth Cast Heart Pendant</b><span>Glass sprinkles in a heart-shaped mold</span></li>
+            </ul>
+            <div class="actions"><a class="btn btn-line" href="https://zelieglass.com/kid-classes">See the youth classes</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="private" id="private" aria-labelledby="private-title">
+    <div class="wrap">
+      <div class="private-head">
+        <div>
+          <h2 id="private-title">Bring your group. Bring a bottle.</h2>
+          <p class="lede-d">BYOB welcome! Any of our classes can be booked as a private event with 6 or more participants. Think art class meets cozy party: relaxed, creative, beginner-friendly. We’ll handle the mess. You bring the snacks.</p>
+          <ul class="occasions">
+            <li>Holiday parties</li><li>Baby showers</li><li>Bridal showers</li><li>Kids parties</li><li>Birthday parties</li><li>Office parties</li><li>Employee appreciation</li><li>Team building</li><li>Bachelorette</li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-fill" href="https://zelieglass.com/private-event-landing-page">Book a private event</a>
+            <a class="btn btn-line" href="mailto:springstreetstudioszelie@gmail.com?subject=Private%20group">Email us</a>
+          </div>
+        </div>
+        <div class="terms">
+          <dl>
+            <div><dt>No extra space fees</dt><dd>Pay per participant only. All materials are included.</dd></div>
+            <div><dt>Larger events</dt><dd>We’re happy to work with larger groups.</dd></div>
+            <div><dt>Group favorites</dt><dd>A few of our faves are below, plus the <a href="https://zelieglass.com/holidayornamentprivategroup" style="color:inherit">Holiday Ornament Group</a>.</dd></div>
+            <div><dt>Deposit</dt><dd>A $250 deposit may be required; 100% of it goes to project costs.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="faves">
+        <article class="fave"><img class="reveal" src="assets/spring-street-studios-zelienople-pa/planche-charcuterie-verre-fusionne.webp" width="1600" height="1099" alt="A green and white fused glass charcuterie board with cheese, crackers and cherries" loading="lazy"><h3>Fused Charcuterie Board</h3><p>Learn how to design, cut and fuse in this two-hour workshop.</p><a href="https://zelieglass.com/fused-cheese-board">Make it</a></article>
+        <article class="fave"><img class="reveal" src="assets/spring-street-studios-zelienople-pa/plaque-sapin-noel-cadeaux.webp" width="1207" height="1600" alt="A clear fused glass plate with a Christmas tree and colorful presents" loading="lazy"><h3>Holiday Plate</h3><a href="https://zelieglass.com/holiday-plate">Make it</a></article>
+        <article class="fave"><img class="reveal" src="assets/spring-street-studios-zelienople-pa/citrouilles-vitrail-tenues-en-main.webp" width="1596" height="1600" alt="Three stained glass pumpkins in amber, iridescent and yellow glass" loading="lazy"><h3>Stained Glass Pumpkin</h3><p>Learn how to cut, grind and solder to make your own unique pumpkin suncatcher.</p><a href="https://zelieglass.com/stained-glass-pumpkin-private">Make it</a></article>
+              </div>
+    </div>
+  </section>
+
+  <section aria-label="What people are saying">
+    <div class="wrap words">
+      <blockquote class="big-quote">
+        <p>“Liz is knowledgeable, patient and above all, very kind. Please clone her.”</p>
+        <cite>Lori</cite>
+      </blockquote>
+      <div class="small-quotes">
+        <blockquote><p>“What a great day! Enjoyed trying something totally out of my comfort zone. The staff made it so fun and easy.”</p><cite>Rebecca</cite></blockquote>
+        <blockquote><p>“We had a great time making our glass bowls and the selection of handmade gifts was amazing!”</p><cite>Jessica</cite></blockquote>
+        <blockquote><p>“I was visiting from out of town and was happy to find this lovely shop. I will definitely come again!”</p><cite>Garret</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <div class="studio-wrap">
+    <section aria-labelledby="studio-title">
+      <div class="wrap studio">
+        <div class="studio-photos">
+          <img class="room reveal" src="assets/spring-street-studios-zelienople-pa/atelier-vide-tables-de-travail.webp" width="1600" height="1200" alt="The bright studio with high worktables and stools, ready for class" loading="lazy">
+          <span class="tag">1,000&nbsp;sq&nbsp;ft of studio</span>
+          <div class="front"><div class="front-in"><img src="assets/spring-street-studios-zelienople-pa/facade-enseigne-spring-street-studios.webp" width="1600" height="1198" alt="The Spring Street Studios storefront at night, with its striped awning" loading="lazy"><p>100 E Spring Street</p></div></div>
+        </div>
+        <div>
+          <h2 id="studio-title">A studio, and a shop.</h2>
+          <p>Renee Ayers and her long-time glass collaborator Elizabeth Fortunato drew up the plan for Spring Street Studios together: a teaching and working glass studio as well as a retail shop. The goal is to cultivate the existing glass community, educate and inspire those new to glass, and support our local artists.</p>
+          <div class="founders">
+            <div><b>Renee Ayers</b><span>Co-Founder and Operations Manager</span></div>
+            <div><b>Elizabeth Fortunato</b><span>Co-Founder and Education Coordinator</span></div>
+          </div>
+          <div class="actions"><a class="btn btn-line" href="https://zelieglass.com/shop">Visit the shop</a></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="visit" aria-labelledby="visit-title">
+    <div class="wrap visit">
+      <div>
+        <h2 id="visit-title">Come make something.</h2>
+        <p class="intro">Registration recommended, drop-ins welcome.</p>
+        <dl class="hours">
+          <div><dt>Tuesday–Wednesday</dt><dd class="nw">11&nbsp;am–4&nbsp;pm</dd></div>
+          <div><dt>Thursday</dt><dd class="nw">12–8&nbsp;pm</dd></div>
+          <div><dt>Friday–Saturday</dt><dd class="nw">11&nbsp;am–6&nbsp;pm</dd></div>
+          <div><dt>Sunday</dt><dd class="nw">12–4&nbsp;pm</dd></div>
+          <div><dt>Other times</dt><dd>By appointment</dd></div>
+        </dl>
+      </div>
+      <div class="card">
+        <i class="tess r" aria-hidden="true"></i>
+        <dl>
+          <div><dt>Address</dt><dd>100 E Spring Street<br>Zelienople, PA 16063</dd></div>
+          <div><dt>Phone</dt><dd><a class="nw" href="tel:+17244734899">(724) 473-4899</a></dd></div>
+          <div class="wide"><dt>Email</dt><dd><a class="mail" href="mailto:springstreetstudioszelie@gmail.com">springstreetstudioszelie<wbr>@gmail.com</a></dd></div>
+          <div class="wide"><dt>Parking</dt><dd>Our own small lot<small>4 spots just past the storefront on East Spring Street. No space there? Free street parking and several free public lots.</small></dd></div>
+          <div class="wide"><dt>Before you come</dt><dd>Closed-toe shoes required<small>Safety glasses are provided; bring prescription glasses if you need them. Finished fused pieces are ready in 1 to 3&nbsp;weeks.</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p class="name">Spring Street Studios</p>
+      <p class="motto">Make it · Experience glass · All levels</p>
+    </div>
+    <div>
+      <h3>Studio and shop</h3>
+      <ul>
+        <li>100 E Spring Street<br>Zelienople, PA 16063</li>
+        <li><a class="nw" href="tel:+17244734899">(724) 473-4899</a></li>
+        <li><a class="mail" href="mailto:springstreetstudioszelie@gmail.com">springstreetstudioszelie<wbr>@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Book</h3>
+      <ul>
+        <li><a href="https://zelieglass.com/class-catalouge">All classes</a></li>
+        <li><a href="https://zelieglass.com/kid-classes">Youth classes</a></li>
+        <li><a href="https://zelieglass.com/private-event-landing-page">Private events</a></li>
+        <li><a href="https://zelieglass.com/shop">Shop</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Spring Street Studios</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

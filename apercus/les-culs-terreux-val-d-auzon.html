@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Les Culs-Terreux · Paysans meuniers à Val d'Auzon</title>
+<meta name="description" content="Les Culs-Terreux, paysans meuniers à Villehardouin (Val d'Auzon, Aube) : farines bio moulues sur meule de pierre, lentilles vertes, agneaux en plein air, bourgeons et feuillages de cassis.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232B2118'/%3E%3Ctext x='32' y='44' font-family='Georgia, serif' font-size='36' text-anchor='middle' fill='%23E6C27A'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EDE4D3; --base2:#E4D7BF; --surface:#F7F1E6; --ink:#2B2118; --ink2:#5C4D3E; --accent:#B07A1F; --accent-f:#8A5E14; --dark:#2B2118;
+  --clair:#F7F1E6; --clair2:#CBBBA2;
+  --ombre:0 30px 60px -34px rgba(43,33,24,.5);
+  --ombre-l:0 50px 90px -44px rgba(43,33,24,.62);
+  --display:'Sanchez', Georgia, serif;
+  --texte:'Nunito Sans', 'Trebuchet MS', sans-serif;
+  --pad:clamp(20px, 5vw, 56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px, 100% - 2*var(--pad));margin-inline:auto}
+.nw{white-space:nowrap}
+
+/* En-tête */
+.tete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(43,33,24,.08)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.marque b{font-family:var(--display);font-weight:400;font-size:22px}
+.marque small{font-size:14px;color:var(--ink2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:16px;color:var(--ink2);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:999px;font-family:var(--texte);font-weight:600;font-size:17px;line-height:1.2;padding:15px 28px;border:1.5px solid var(--ink);transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn.plein{background:var(--ink);color:var(--clair)}
+.btn.plein:hover{background:#43352A;box-shadow:0 18px 30px -18px rgba(43,33,24,.7)}
+.btn.contour{background:transparent;color:var(--ink)}
+.btn.contour:hover{background:var(--surface)}
+.btn.petit{padding:11px 20px;font-size:16px}
+.tete .appel{display:none}
+
+/* Héros */
+.heros{padding:48px 0 104px}
+.nom{font-size:clamp(46px, 10.6vw, 152px);line-height:.98;letter-spacing:-.035em;margin-left:-.04em}
+.heros-bas{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;margin-top:44px;align-items:start}
+.heros-texte{padding-top:20px}
+.metier{font-family:var(--display);font-size:clamp(22px, 2.2vw, 28px);line-height:1.25;color:var(--accent-f);margin-bottom:22px}
+.chapo{font-size:19px;color:var(--ink2);max-width:46ch}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.duo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start}
+.ph{margin:0;position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.duo .sac{grid-column:1 / 8;grid-row:1;aspect-ratio:4/5}
+.duo .sac img{object-position:50% 30%}
+.duo .epis{grid-column:7 / 13;grid-row:1;aspect-ratio:3/4;margin-top:150px;z-index:2;box-shadow:var(--ombre-l);outline:8px solid var(--base)}
+.duo .epis img{object-position:50% 60%}
+.duo .sac .etiquette{max-width:calc(100% - 90px)}
+.etiquette{position:absolute;left:14px;bottom:14px;right:auto;max-width:calc(100% - 28px);background:var(--surface);color:var(--ink);font-size:15px;font-weight:600;line-height:1.3;padding:9px 14px;border-radius:10px;box-shadow:0 10px 24px -14px rgba(43,33,24,.6)}
+
+/* Bandeau de faits */
+.faits{background:var(--base2);padding:34px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:4px;padding-left:18px;border-left:1px solid rgba(43,33,24,.18)}
+.faits b{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1;color:var(--ink)}
+.faits span{font-size:16px;color:var(--ink2);line-height:1.4}
+
+/* Section ferme */
+.sect{padding:120px 0}
+.ferme .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.ferme .ph{aspect-ratio:4/5;border-radius:20px;box-shadow:var(--ombre-l)}
+.ferme .ph img{object-position:50% 40%}
+h2{font-size:clamp(34px, 4vw, 52px);line-height:1.08}
+.texte p + p{margin-top:16px}
+.texte p{color:var(--ink2);max-width:62ch}
+.texte h2{margin-bottom:26px}
+.frise{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:rgba(43,33,24,.25)}
+.frise li{position:relative;padding-top:34px}
+.frise li::before{content:"";position:absolute;left:0;top:3px;width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--base)}
+.frise b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1;margin-bottom:8px}
+.frise span{display:block;font-size:16px;line-height:1.5;color:var(--ink2)}
+
+/* Section sombre : du champ au moulin */
+.moulin{background:var(--dark);color:var(--clair);padding:120px 0}
+.moulin .haut{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px}
+.moulin h2{color:var(--clair)}
+.moulin .intro{margin-top:24px;color:var(--clair2);max-width:44ch}
+.points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 44px}
+.points h3{font-size:23px;line-height:1.2;color:#E6C27A;margin-bottom:10px}
+.points p{font-size:17px;color:var(--clair2)}
+.moulin .photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:80px;align-items:start}
+.moulin .ph{box-shadow:0 34px 70px -36px rgba(0,0,0,.75)}
+.moulin .p1{grid-column:1 / 8;aspect-ratio:4/3;border-radius:22px}
+.moulin .p2{grid-column:8 / 13;aspect-ratio:4/5;margin-top:90px;border-radius:22px}
+.moulin .p1 img{object-position:50% 55%}
+
+/* Produits */
+.produits .grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.liste{list-style:none;margin:36px 0 0;padding:0}
+.liste li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:24px 0;border-top:1px solid rgba(43,33,24,.2)}
+.liste li:last-child{border-bottom:1px solid rgba(43,33,24,.2)}
+.liste h3{font-size:24px;line-height:1.2}
+.liste .tag{font-size:15px;font-weight:600;color:var(--accent-f);align-self:center;white-space:nowrap}
+.liste p{grid-column:1 / -1;color:var(--ink2);font-size:17px;max-width:60ch}
+.liste a.lien{font-weight:600;color:var(--ink);text-underline-offset:3px}
+.produits .colonne-photo{position:sticky;top:110px}
+.produits .ph{aspect-ratio:3/4;border-radius:20px;box-shadow:var(--ombre-l)}
+.produits .ph img{object-position:50% 70%}
+.legende-carte{margin-top:-46px;margin-left:28px;position:relative;z-index:2;background:var(--surface);border-radius:14px;padding:20px 22px;box-shadow:var(--ombre);max-width:min(330px, 100% - 28px)}
+.legende-carte b{font-family:var(--display);font-weight:400;font-size:21px;display:block;line-height:1.2;margin-bottom:6px}
+.legende-carte span{font-size:16px;color:var(--ink2);line-height:1.5;display:block}
+
+/* Vente à la ferme */
+.vente{background:var(--base2);padding:120px 0}
+.vente .grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;align-items:stretch}
+.carte{background:var(--surface);border-radius:22px;padding:44px;box-shadow:var(--ombre)}
+.carte.principale .jour{font-family:var(--display);font-size:clamp(34px, 4vw, 50px);line-height:1.05;margin:18px 0 6px}
+.carte.principale .heure{font-family:var(--display);font-size:clamp(26px, 2.6vw, 32px);color:var(--accent-f)}
+.carte .sous{font-size:16px;color:var(--ink2);margin-top:4px}
+.etapes{list-style:none;margin:30px 0 0;padding:0;counter-reset:e}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid rgba(43,33,24,.14);font-size:17px;color:var(--ink2)}
+.etapes li::before{content:counter(e);width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--clair);display:grid;place-items:center;font-size:15px;font-weight:700}
+.etapes strong{color:var(--ink);font-weight:600}
+.carte .boutons{margin-top:26px}
+.droite{display:flex;flex-direction:column;gap:40px}
+.carte.halles h3{font-size:28px;line-height:1.15;margin-bottom:10px}
+.carte.halles p{color:var(--ink2);font-size:17px}
+.carte.halles .heure{font-family:var(--display);font-size:24px;color:var(--accent-f);margin-top:12px}
+.ou h3{font-size:28px;line-height:1.15;margin-bottom:18px}
+.ou .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ou h4{margin:0 0 8px;font-size:15px;font-weight:700;color:var(--accent-f)}
+.ou ul{list-style:none;margin:0;padding:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.ou li + li{margin-top:6px}
+
+/* Contact */
+.contact .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.contact .texte p{max-width:40ch}
+.coord{position:relative;background:var(--surface);border-radius:24px;padding:48px;box-shadow:var(--ombre-l)}
+.coord dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+.coord dt{font-size:14px;font-weight:700;color:var(--accent-f);margin-bottom:6px}
+.coord dd{margin:0;font-size:18px;line-height:1.45}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(43,33,24,.3)}
+.coord dd a:hover{border-color:var(--ink)}
+.coord .tel{font-family:var(--display);font-size:26px;border-bottom:none !important}
+.coord .large{grid-column:1 / -1}
+.polaroid{margin:44px 0 0 8px;width:min(230px, 70%);background:var(--clair);padding:9px 9px 12px;border-radius:6px;transform:rotate(4deg);box-shadow:var(--ombre)}
+.polaroid img{aspect-ratio:4/3;object-fit:cover;border-radius:3px;width:100%}
+.coord .boutons{margin-top:34px}
+
+/* Pied */
+.pied{background:var(--dark);color:var(--clair2);padding:84px 0 40px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr) minmax(0,2fr);gap:40px}
+.pied .nom-pied{font-family:var(--display);font-size:30px;color:var(--clair);line-height:1.1}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied h4{margin:0 0 12px;font-size:14px;font-weight:700;color:#E6C27A}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{color:var(--clair);text-decoration:none;border-bottom:1px solid rgba(247,241,230,.25)}
+.pied a:hover{border-color:var(--clair)}
+.pied .bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(247,241,230,.12);font-size:14px}
+.signature{background:var(--dark);color:#9C8C77;text-align:center;font-size:13px;padding:0 20px 26px;margin:0}
+
+/* Apparition */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .nav a.lien-nav{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .heros-bas,.ferme .grille,.moulin .haut,.produits .grille,.vente .grille,.contact .grille{grid-template-columns:minmax(0,1fr);gap:44px}
+  .produits .colonne-photo{position:static;max-width:520px}
+  .pied .grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sect,.moulin,.vente{padding:96px 0}
+}
+@media (max-width:720px){
+  .nav{display:none}
+  .tete .appel{display:inline-flex}
+  .tete .wrap{min-height:64px}
+  .marque b{font-size:20px}
+  .heros{padding:28px 0 72px}
+  .heros-bas{display:flex;flex-direction:column;gap:0;margin-top:22px}
+  .heros-texte{display:contents}
+  .metier{order:1;margin-bottom:22px}
+  .duo{order:2;margin-bottom:30px}
+  .chapo{order:3}
+  .heros .boutons{order:4}
+  .duo .epis{margin-top:70px;outline-width:5px}
+  .duo .sac .etiquette{max-width:calc(100% - 50px);font-size:14px;left:10px;bottom:10px}
+  .points{grid-template-columns:minmax(0,1fr);gap:28px}
+  .frise{grid-template-columns:minmax(0,1fr);gap:22px}
+  .frise::before{left:6px;right:auto;top:6px;bottom:6px;width:1px;height:auto}
+  .frise li{padding:0 0 0 34px}
+  .frise li::before{top:6px}
+  .moulin .photos{gap:14px;margin-top:52px}
+  .moulin .p2{margin-top:50px}
+  .carte,.coord{padding:30px 24px}
+  .coord dl{grid-template-columns:minmax(0,1fr)}
+  .ou .cols{grid-template-columns:minmax(0,1fr)}
+  .polaroid{width:min(200px, 60%);margin-top:32px}
+  .coord{margin-top:40px}
+  .sect,.moulin,.vente{padding:80px 0}
+  .faits b{font-size:26px}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .boutons .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .tete .appel{padding:10px 16px}
+  .marque small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Les Culs-Terreux</b><small>Paysans meuniers · Val d'Auzon</small></a>
+    <nav class="nav" aria-label="Menu">
+      <a class="lien-nav" href="#ferme">La ferme</a>
+      <a class="lien-nav" href="#moulin">Du champ au moulin</a>
+      <a class="lien-nav" href="#produits">Nos produits</a>
+      <a class="lien-nav" href="#vente">Vente à la ferme</a>
+      <a class="btn plein petit" href="#contact">Contactez-nous</a>
+    </nav>
+    <a class="btn plein petit appel" href="tel:+33616465277">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1 class="nom">Les Culs-Terreux</h1>
+      <div class="heros-bas">
+        <div class="heros-texte">
+          <div class="metier">Paysans meuniers à Villehardouin, dans l'Aube</div>
+          <p class="chapo">Des céréales, des légumineuses et des farines bio, moulues à la ferme sur meule de pierre. Des brebis en plein air intégral, et du cassis pour la parfumerie et la fleuristerie. La ferme a été reprise par Fabien en 2004, à la suite de plusieurs générations.</p>
+          <div class="boutons">
+            <a class="btn plein" href="#vente">Passer commande</a>
+            <a class="btn contour" href="tel:+33616465277">06 16 46 52 77</a>
+          </div>
+        </div>
+        <div class="duo">
+          <figure class="ph sac rv"><img src="assets/les-culs-terreux-val-d-auzon/sac-de-farine-dans-l-herbe.webp" alt="Sac de farine de blé population semi-complète des Culs-Terreux posé dans l'herbe" width="1200" height="1600"><span class="etiquette">Blé population, moulu à la ferme</span></figure>
+          <figure class="ph epis rv"><img src="assets/les-culs-terreux-val-d-auzon/epis-de-ble-murs.webp" alt="Épis de blé mûrs dans un champ de la ferme" width="1200" height="1600"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="La ferme en bref">
+    <div class="wrap">
+      <ul>
+        <li><b>130&nbsp;ha</b><span>de cultures, dont 20&nbsp;ha de cassis</span></li>
+        <li><b>200 brebis</b><span>Est à laine mérinos, en plein air</span></li>
+        <li><b>Meule de pierre</b><span>farines moulues au fil des commandes</span></li>
+        <li><b>1, 5 et 25&nbsp;kg</b><span>pour les particuliers et les professionnels</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sect ferme" id="ferme">
+    <div class="wrap grille">
+      <figure class="ph rv"><img src="assets/les-culs-terreux-val-d-auzon/coucher-de-soleil-sur-les-cultures.webp" alt="Soleil couchant sur les rangs d'un champ de la ferme, lisière de bois à l'horizon" width="1200" height="1600" loading="lazy"><span class="etiquette">Les champs de la ferme, au couchant</span></figure>
+      <div class="texte">
+        <h2>Une ferme de famille, entre cultures et brebis</h2>
+        <p>Située à Villehardouin, hameau de Val d'Auzon, dans l'Aube, la ferme a été reprise par Fabien en 2004 à la suite de plusieurs générations. Elle compte 130 hectares de cultures, dont 20 hectares de cassis.</p>
+        <p>Dans un souci de maintien de la fertilité des sols, la ferme allie cultures et élevage d'ovins en plein air intégral. Vingt pour cent des parcelles sont en prairies temporaires et accueillent les brebis, qui donnent un grand coup de «&nbsp;patte&nbsp;» à la vie du sol.</p>
+        <ol class="frise">
+          <li><b>2004</b><span>Fabien reprend la ferme&nbsp;; l'atelier bourgeons et feuillages de cassis démarre dès le début.</span></li>
+          <li><b>2018</b><span>Installation du moulin et de l'atelier de triage. Céréales et farines en agriculture biologique.</span></li>
+          <li><b>2021</b><span>Arrivée des brebis, de race Est à laine mérinos.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="moulin" id="moulin">
+    <div class="wrap">
+      <div class="haut">
+        <div>
+          <h2>Du champ au moulin, une production suivie de A à Z</h2>
+          <p class="intro">«&nbsp;Blé population&nbsp;», sur nos étiquettes&nbsp;: un mélange de variétés de blé cultivées ensemble et ressemées année après année. Ces blés évoluent avec leur sol, leur climat et nos pratiques, et gagnent en résilience.</p>
+        </div>
+        <div class="points">
+          <div><h3>Nos semences</h3><p>Nous sélectionnons, trions et semons nos propres semences fermières, avec les collectifs Graines de Noé et Initiatives Paysannes.</p></div>
+          <div><h3>Le moulin</h3><p>Nos céréales sont triées, stockées et moulues à la ferme au fil des commandes, sur meules de granit, pour garder leurs qualités gustatives et nutritionnelles.</p></div>
+          <div><h3>Nos farines</h3><p>50&nbsp;% de variétés anciennes, idéales pour le pain au levain, et 50&nbsp;% de variétés plus modernes comme le Soissons&nbsp;: des farines robustes pour la panification et riches en saveurs.</p></div>
+          <div><h3>La rotation</h3><p>Une rotation sur une dizaine d'années, dont 5 ans de prairie riche de 50&nbsp;% de légumineuses, qui nourrit les brebis et repose le sol. Nos sacs sont en papier, fermés par un fil cousu.</p></div>
+        </div>
+      </div>
+      <div class="photos">
+        <figure class="ph p1 rv"><img src="assets/les-culs-terreux-val-d-auzon/epis-verts-dans-le-champ.webp" alt="Épis de céréale encore verts, champ jusqu'à l'horizon" width="1600" height="1200" loading="lazy"><span class="etiquette">Épis encore verts</span></figure>
+        <figure class="ph p2 rv"><img src="assets/les-culs-terreux-val-d-auzon/champ-de-tournesols.webp" alt="Champ de tournesols en fleur, haie et ciel bleu" width="1600" height="1200" loading="lazy"><span class="etiquette">Tournesols en fleur</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect produits" id="produits">
+    <div class="wrap grille">
+      <div class="texte">
+        <h2>Nos produits, cultivés, transformés et ensachés à la ferme</h2>
+        <ul class="liste">
+          <li><h3>Farines moulues sur meule de pierre</h3><span class="tag">Bio</span><p>Blé semi-complète et complète, seigle, petit épeautre, sarrasin. Moulues au fil des commandes et certifiées en agriculture biologique, en sacs de 1, 5 et 25&nbsp;kg.</p></li>
+          <li><h3>Lentilles vertes et légumineuses</h3><span class="tag">Aussi en vrac</span><p>Lentilles vertes, petit épeautre décortiqué, et aussi des pois et des féveroles.</p></li>
+          <li><h3>Agneaux et brebis</h3><span class="tag">Plein air</span><p>Environ 200 brebis de race Est à laine mérinos, une race rustique qui aime être au grand air.</p></li>
+          <li><h3>Couettes et oreillers en laine</h3><span class="tag">Pré-commande</span><p>Confectionnés avec la laine de nos brebis, pour des nuits paisibles et durables. <a class="lien" href="https://forms.gle/CC56Ne5dUEeArGDx9">Pré-commander une couette ou un oreiller</a></p></li>
+          <li><h3>Bourgeons et feuillages de cassis</h3><span class="tag">20&nbsp;ha</span><p>Les bourgeons sont récoltés l'hiver, surtout pour la parfumerie&nbsp;; le feuillage de mai à septembre, pour la fleuristerie. En collaboration, notamment, avec la coopérative Socofruit.</p></li>
+          <li><h3>Pain au levain</h3><span class="tag">Sur commande</span><p>Fait à partir de nos farines par nos partenaires Claire et Hugo, à commander avec la vente du mois.</p></li>
+        </ul>
+      </div>
+      <div class="colonne-photo">
+        <figure class="ph rv"><img src="assets/les-culs-terreux-val-d-auzon/brebis-dans-la-prairie.webp" alt="Brebis blanche couchée dans l'herbe haute, d'autres brebis derrière" width="900" height="1600" loading="lazy"></figure>
+        <p class="legende-carte"><b>Est à laine mérinos</b><span>Nos brebis pâturent les prairies temporaires de la rotation.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vente" id="vente">
+    <div class="wrap grille">
+      <div class="carte principale">
+        <h2>Vente à la ferme</h2>
+        <p class="jour">Le dernier jeudi du mois</p>
+        <p class="heure">de 17h à 19h</p>
+        <p class="sous">1 bis route de Brévonnes, Villehardouin. Paiement en espèces ou par chèque.</p>
+        <ol class="etapes">
+          <li><span><strong>Commandez jusqu'à l'avant-dernier jeudi du mois</strong>&nbsp;: farines, lentilles, alimentation animale et pain au levain.</span></li>
+          <li><span><strong>Venez chercher votre commande</strong> le dernier jeudi du mois, à la ferme.</span></li>
+          <li><span><strong>Sans commande</strong>, achetez en vrac le jour du retrait, pour moins de 5&nbsp;kg.</span></li>
+        </ol>
+        <div class="boutons">
+          <a class="btn plein" href="https://forms.gle/Zqd1UWFP4bpRE29LA">Remplir le bon de commande</a>
+          <a class="btn contour" href="tel:+33687169965">Emilie&nbsp;: 06 87 16 99 65</a>
+        </div>
+      </div>
+      <div class="droite">
+        <div class="carte halles">
+          <h3>Sous les halles de Lesmont</h3>
+          <p>Farines, lentilles et petit épeautre décortiqué uniquement.</p>
+          <p class="heure">Le dernier vendredi du mois, de 17h à 20h</p>
+        </div>
+        <div class="ou">
+          <h3>Où trouver nos produits</h3>
+          <div class="cols">
+            <div>
+              <h4>Boutiques</h4>
+              <ul><li>Biocoop La Source</li><li>Maison Taupin</li><li>La Ferme de la Diligence</li><li>Cocotte et Potager</li><li>La Ferme à Guigui</li></ul>
+            </div>
+            <div>
+              <h4>Boulangeries</h4>
+              <ul><li>Boulangerie-restaurant «&nbsp;Claire &amp; Hugo&nbsp;»</li><li>Boulangerie et atelier «&nbsp;L'atelier P1&nbsp;»</li><li>Boulangerie 105 Miettes</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect contact" id="contact">
+    <div class="wrap grille">
+      <div class="texte">
+        <h2>Contactez-nous</h2>
+        <p>Une commande, un retrait, une question sur nos farines ou sur la laine&nbsp;: appelez la ferme ou écrivez-nous.</p>
+        <figure class="polaroid"><img src="assets/les-culs-terreux-val-d-auzon/troupeau-de-moutons-noir-et-blanc.webp" alt="Le troupeau de brebis au pâturage, en noir et blanc" width="1600" height="1200" loading="lazy"></figure>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Appelez-nous</dt><dd><a class="tel nw" href="tel:+33616465277">06 16 46 52 77</a></dd></div>
+          <div><dt>Emilie, pour les retraits</dt><dd><a class="tel nw" href="tel:+33687169965">06 87 16 99 65</a></dd></div>
+          <div><dt>Écrivez-nous</dt><dd><a href="mailto:contact.lct10@gmail.com">contact.lct10@gmail.com</a></dd></div>
+          <div><dt>La ferme</dt><dd>1 bis route de Brévonnes<br>Villehardouin<br>10220 Val d'Auzon</dd></div>
+          <div class="large"><dt>Vente à la ferme</dt><dd>Le dernier jeudi du mois, de 17h à 19h, sur commande.</dd></div>
+        </dl>
+        <div class="boutons">
+          <a class="btn plein" href="mailto:contact.lct10@gmail.com">Écrire à la ferme</a>
+          <a class="btn contour" href="tel:+33616465277">Appeler la ferme</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <p class="nom-pied">Les Culs-Terreux</p>
+        <p style="margin-top:12px">Paysans meuniers. Farines bio, céréales et lentilles vertes, élevage d'ovins en plein air, feuillages et bourgeons de cassis.</p>
+      </div>
+      <div>
+        <h4>La ferme</h4>
+        <p>1 bis route de Brévonnes<br>Villehardouin, 10220 Val d'Auzon</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33616465277">06 16 46 52 77</a></li>
+          <li><a href="mailto:contact.lct10@gmail.com">contact.lct10@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Commander</h4>
+        <ul>
+          <li><a href="https://forms.gle/Zqd1UWFP4bpRE29LA">Bon de commande</a></li>
+          <li><a href="#vente">Vente du mois</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">© EARL Lacour Brouet · Les Culs-Terreux</p>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour Les Culs-Terreux</p>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

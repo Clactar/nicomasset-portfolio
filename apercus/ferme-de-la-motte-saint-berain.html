@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ferme de la Motte · Produits fermiers bio à Saint-Bérain-sous-Sanvignes</title>
+<meta name="description" content="Ferme de la Motte : plants potagers, légumes, fruits et œufs bio, en libre service à la boutique de la ferme, en libre cueillette et en click and collect, à Saint-Bérain-sous-Sanvignes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='24' fill='%232F4A2A'/%3E%3Ctext x='32' y='44' font-family='Trebuchet MS, sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23F4F0DF'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#F4F0DF; --base2:#EAE4CB; --surface:#FCFAF0; --ink:#23301E; --ink2:#4E5A47; --accent:#E0592A; --accent-f:#C2461B; --dark:#2F4A2A;
+  --clair:#FCFAF0; --clair2:#C9D3BF;
+  --ombre:0 30px 60px -34px rgba(35,48,30,.5);
+  --ombre-l:0 50px 90px -44px rgba(35,48,30,.62);
+  --display:'Gabarito', 'Trebuchet MS', sans-serif;
+  --texte:'Lora', Georgia, serif;
+  --pad:clamp(20px, 5vw, 56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px, 100% - 2*var(--pad));margin-inline:auto}
+.nw{white-space:nowrap}
+
+.tete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(35,48,30,.08)}
+.tete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.marque b{font-family:var(--display);font-weight:600;font-size:23px;letter-spacing:-.02em}
+.marque small{font-size:14px;color:var(--ink2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.lien-nav{text-decoration:none;font-family:var(--display);font-size:17px;color:var(--ink2);transition:color .2s}
+.nav a.lien-nav:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;font-family:var(--display);font-weight:500;font-size:18px;line-height:1.2;padding:15px 28px;border:1.5px solid var(--ink);transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn.plein{background:var(--accent-f);border-color:var(--accent-f);color:var(--clair)}
+.btn.plein:hover{background:#A93C17;box-shadow:0 18px 30px -18px rgba(169,60,23,.8)}
+.btn.contour{background:transparent;color:var(--ink)}
+.btn.contour:hover{background:var(--surface)}
+.btn.clair{border-color:rgba(252,250,240,.55);color:var(--clair);background:transparent}
+.btn.clair:hover{background:rgba(252,250,240,.08)}
+.btn.petit{padding:11px 20px;font-size:16px}
+.tete .appel{display:none}
+
+/* Héros */
+.heros{padding:64px 0 120px}
+.heros .grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:72px;align-items:center}
+.lieu{font-family:var(--display);font-size:18px;color:var(--ink2);margin-bottom:20px}
+h1{font-size:clamp(42px, 5.8vw, 84px);line-height:1.02;font-weight:500}
+.chapo{font-size:19px;color:var(--ink2);margin-top:28px;max-width:48ch}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.visuel{position:relative;padding:0 0 70px 0}
+.forme{margin:0;border-radius:140px 24px 140px 24px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:1/1}
+.forme img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.horaires{position:absolute;left:-56px;bottom:0;z-index:2;background:var(--surface);border-radius:20px;padding:26px 30px;box-shadow:var(--ombre-l);width:min(330px, 90%)}
+.horaires h2{font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.01em}
+.horaires p.sous{font-size:15px;color:var(--ink2);margin-top:2px}
+.horaires dl{margin:14px 0 0;display:grid;grid-template-columns:auto auto;gap:6px 18px;font-size:17px}
+.horaires dt{font-family:var(--display);font-weight:500}
+.horaires dd{margin:0;text-align:right;white-space:nowrap}
+.horaires .point{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:1px}
+
+/* Faits */
+.faits{background:var(--base2);padding:34px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{display:flex;flex-direction:column;gap:2px}
+.faits b{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.faits span{font-size:16px;color:var(--ink2);line-height:1.45}
+
+.sect{padding:120px 0}
+h2{font-size:clamp(34px, 4.2vw, 56px);line-height:1.04}
+
+/* La ferme */
+.ferme .grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:start}
+.ferme .texte p{color:var(--ink2);max-width:60ch}
+.ferme .texte h2{margin-bottom:28px}
+.ferme .texte p + p{margin-top:16px}
+.pilules{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0;padding:0;list-style:none}
+.pilules li{font-family:var(--display);font-size:16px;padding:8px 16px;border-radius:999px;background:var(--base2)}
+.tiers{margin-top:44px;background:var(--surface);border-radius:22px;padding:34px 36px;box-shadow:var(--ombre)}
+.tiers h3{font-size:26px;line-height:1.15;margin-bottom:12px}
+.tiers p{font-size:17px}
+.tiers a{color:var(--ink);font-weight:500;text-underline-offset:3px}
+.ferme .photo{position:sticky;top:110px}
+.ferme figure{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:3/4}
+.ferme figure img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);font-family:var(--display);font-size:15px;line-height:1.3;padding:9px 15px;border-radius:999px;max-width:calc(100% - 32px);box-shadow:0 10px 24px -14px rgba(35,48,30,.6)}
+
+/* Comment acheter */
+.acheter{background:var(--surface);padding:120px 0}
+.acheter .entete{max-width:760px}
+.acheter .entete p{color:var(--ink2);margin-top:18px}
+.acheter .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;margin-top:64px;align-items:start}
+.acheter figure{margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre-l);aspect-ratio:4/3}
+.acheter figure img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.facons{list-style:none;margin:0;padding:0}
+.facons li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 32px;padding:28px 0;border-top:1px solid rgba(35,48,30,.18)}
+.facons li:last-child{border-bottom:1px solid rgba(35,48,30,.18)}
+.facons h3{font-size:28px;line-height:1.1}
+.facons .slogan{font-family:var(--display);font-size:17px;color:var(--accent-f);margin-top:6px}
+.facons p{font-size:17px;color:var(--ink2)}
+.facons .jours{font-size:17px;line-height:1.7}
+.facons .jours b{font-family:var(--display);font-weight:500;color:var(--ink)}
+.facons .action{margin-top:12px}
+.facons .action a{font-family:var(--display);font-weight:500;color:var(--ink);text-underline-offset:4px}
+
+/* Cueillette, fond sombre */
+.cueillette{background:var(--dark);color:var(--clair);padding:120px 0;overflow:clip}
+.cueillette .grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.cueillette blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(38px, 5vw, 72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+.cueillette .suite{font-size:20px;color:var(--clair2);margin-top:26px;font-style:italic}
+.cueillette .jours{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;padding:0;list-style:none}
+.cueillette .jours li{border:1px solid rgba(252,250,240,.3);border-radius:999px;padding:9px 18px;font-family:var(--display);font-size:17px}
+.polas{position:relative;min-height:400px}
+.pola{position:absolute;margin:0;width:min(230px, 62%);background:var(--clair);padding:10px 10px 14px;border-radius:6px;box-shadow:0 34px 60px -30px rgba(0,0,0,.7)}
+.pola img{aspect-ratio:1/1;object-fit:cover;width:100%;border-radius:3px}
+.pola figcaption{font-family:var(--display);font-size:14px;color:var(--ink);margin-top:9px;line-height:1.3}
+.pola.p1{top:0;left:6%;transform:rotate(-5deg)}
+.pola.p2{top:150px;right:4%;transform:rotate(4deg)}
+
+/* Production */
+.production .mots{display:flex;flex-wrap:wrap;gap:4px 28px;font-family:var(--display);font-size:clamp(32px, 4.2vw, 58px);line-height:1.1;letter-spacing:-.03em;margin:0;padding:0;list-style:none}
+.production .mots li:not(:last-child)::after{content:"·";color:var(--accent);margin-left:28px}
+.production .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:56px}
+.production .cols h3{font-size:22px;margin-bottom:8px}
+.production .cols p{font-size:17px;color:var(--ink2)}
+.production .cols a{font-family:var(--display);font-weight:500;color:var(--ink);text-underline-offset:4px}
+.production .intro{font-size:19px;color:var(--ink2);margin-bottom:34px;max-width:60ch}
+
+/* Contact */
+.contact{background:var(--base2);padding:120px 0}
+.contact .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.contact .texte p{color:var(--ink2);margin-top:20px;max-width:42ch}
+.coord{background:var(--surface);border-radius:24px;padding:46px;box-shadow:var(--ombre-l)}
+.coord dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 32px}
+.coord dt{font-family:var(--display);font-size:15px;color:var(--accent-f);margin-bottom:4px}
+.coord dd{margin:0;font-size:18px;line-height:1.5}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(35,48,30,.3)}
+.coord .tel{font-family:var(--display);font-size:30px;font-weight:500;border-bottom:none !important;letter-spacing:-.01em}
+.coord .large{grid-column:1 / -1}
+.coord .boutons{margin-top:30px}
+
+/* Pied */
+.pied{background:var(--dark);color:var(--clair2);padding:84px 0 40px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom-pied{font-family:var(--display);font-size:30px;font-weight:500;color:var(--clair);line-height:1.1;letter-spacing:-.02em}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied h4{margin:0 0 12px;font-family:var(--display);font-size:15px;font-weight:500;color:#F2A27F}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{color:var(--clair);text-decoration:none;border-bottom:1px solid rgba(252,250,240,.25)}
+.pied a:hover{border-color:var(--clair)}
+.pied .bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(252,250,240,.12);font-size:14px}
+.signature{background:var(--dark);color:#9DAA94;text-align:center;font-size:13px;padding:0 20px 26px;margin:0}
+
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1100px){
+  .nav a.lien-nav{display:none}
+}
+@media (max-width:960px){
+  .heros .grille,.ferme .grille,.acheter .grille,.cueillette .grille,.contact .grille{grid-template-columns:minmax(0,1fr);gap:48px}
+  .horaires{left:20px}
+  .ferme .photo{position:static;max-width:520px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .production .cols{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pied .grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sect,.acheter,.cueillette,.contact{padding:96px 0}
+}
+@media (max-width:720px){
+  .nav{display:none}
+  .tete .appel{display:inline-flex}
+  .tete .wrap{min-height:64px}
+  .heros{padding:30px 0 80px}
+  .heros .grille{display:flex;flex-direction:column;gap:0}
+  .heros .texte{display:contents}
+  .lieu{order:1}
+  h1{order:2}
+  .visuel{order:3;margin-top:28px;padding-bottom:0}
+  .chapo{order:4}
+  .heros .boutons{order:5}
+  .forme{border-radius:90px 20px 90px 20px;aspect-ratio:4/3.4}
+  .horaires{position:relative;left:auto;bottom:auto;margin:-48px 0 0 16px;width:calc(100% - 16px);padding:22px 22px}
+  .facons li{grid-template-columns:minmax(0,1fr)}
+  .polas{min-height:0;display:flex;gap:14px;align-items:flex-start}
+  .pola{position:relative;top:auto !important;left:auto !important;right:auto !important;width:min(200px, 48%)}
+  .pola.p2{margin-top:44px}
+  .coord{padding:30px 24px}
+  .coord dl{grid-template-columns:minmax(0,1fr)}
+  .tiers{padding:28px 24px}
+  .sect,.acheter,.cueillette,.contact{padding:80px 0}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .boutons .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .marque small{display:none}
+  .tete .appel{padding:10px 16px}
+  .horaires dl{font-size:16px;gap:6px 12px}
+  .production .mots{gap:0 16px}
+  .production .mots li:not(:last-child)::after{margin-left:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Ferme de la Motte</b><small>Bio et local · Saint-Bérain-sous-Sanvignes</small></a>
+    <nav class="nav" aria-label="Menu">
+      <a class="lien-nav" href="#ferme">La ferme</a>
+      <a class="lien-nav" href="#acheter">Acheter nos produits</a>
+      <a class="lien-nav" href="#production">Notre production</a>
+      <a class="lien-nav" href="#contact">Contact</a>
+      <a class="btn plein petit" href="https://commande.kuupanda.com/producteur/3883/part/boutique/particuliers">Passez votre commande</a>
+    </nav>
+    <a class="btn plein petit appel" href="tel:+33601922709">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap grille">
+      <div class="texte">
+        <div class="lieu">Ferme de la Motte · Saint-Bérain-sous-Sanvignes</div>
+        <h1>Des produits fermiers bio et locaux</h1>
+        <p class="chapo">Plants potagers, légumes, fruits et œufs, tous issus de l'agriculture biologique&nbsp;: sans produits chimiques, selon les saisons, dans un sol vivant. Toute notre production est en libre service à la boutique de la ferme, et vous pouvez cueillir vous-même vos légumes.</p>
+        <div class="boutons">
+          <a class="btn plein" href="https://commande.kuupanda.com/producteur/3883/part/boutique/particuliers">Passez votre commande</a>
+          <a class="btn contour" href="tel:+33601922709">06 01 92 27 09</a>
+        </div>
+      </div>
+      <div class="visuel">
+        <figure class="forme rv"><img src="assets/ferme-de-la-motte-saint-berain/poulailler-mobile-poules-plein-air.webp" alt="Poulailler mobile en bois, porte ouverte, poules rousses en plein air dans l'herbe, serres et village au fond" width="1600" height="1200"></figure>
+        <div class="horaires">
+          <h2>Boutique de la ferme</h2>
+          <p class="sous">En libre service</p>
+          <dl>
+            <dt><span class="point"></span>Mercredi</dt><dd>9h à 12h</dd>
+            <dt><span class="point"></span>Vendredi</dt><dd>16h à 18h</dd>
+            <dt><span class="point"></span>Samedi</dt><dd>9h à 12h</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="La ferme en bref">
+    <div class="wrap">
+      <ul>
+        <li><b>Agriculture biologique</b><span>tous nos produits, sans produits chimiques</span></li>
+        <li><b>Libre service</b><span>à la boutique, trois jours par semaine</span></li>
+        <li><b>Libre cueillette</b><span>dans le jardin, aux mêmes heures</span></li>
+        <li><b>Click and collect</b><span>commande en ligne, retrait à la ferme</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sect ferme" id="ferme">
+    <div class="wrap grille">
+      <div class="texte">
+        <h2>La ferme</h2>
+        <p>La Ferme de la Motte est installée au domaine agricole de la motte Loisy, à Saint-Bérain-sous-Sanvignes. Aux Jardins de la Motte, les légumes sont cultivés en agriculture biologique, avec une part d'agroforesterie, et les poules vivent en plein air autour de leur poulailler mobile.</p>
+        <p>Plants potagers, légumes, fruits et œufs&nbsp;: tout ce que nous produisons se vend ici, à la boutique en libre service, en libre cueillette dans le jardin, en click and collect, ou livré sur votre lieu de travail.</p>
+        <ul class="pilules">
+          <li>Sans produits chimiques</li>
+          <li>Selon les saisons</li>
+          <li>Dans un sol vivant</li>
+        </ul>
+        <div class="tiers">
+          <h3>Un tiers lieu nourricier à la motte</h3>
+          <p>L'association Locaux mott'IV est née en novembre 2022, d'un collectif de citoyens consommateurs, de producteurs locaux et de propriétaires de foncier agricole. Son projet&nbsp;: un lieu qui regroupe sur le domaine de la motte Loisy maraîchage, arboriculture, production laitière, boulangerie paysanne, poulets de chair, poules pondeuses, plantes aromatiques et médicinales, et qui appartienne aux personnes qui y travaillent et à celles qui en bénéficient. <a href="mailto:locauxmottiv@gmail.com">Écrire à l'association</a></p>
+        </div>
+      </div>
+      <div class="photo">
+        <figure class="rv"><img src="assets/ferme-de-la-motte-saint-berain/carottes-fenouil-oignons-ail-recolte.webp" alt="Botte de carottes, bulbes de fenouil, oignons rouges et ail posés sur de la mousse" width="1200" height="1600" loading="lazy"><span class="etiquette">Carottes, fenouil, oignons et ail du jardin</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="acheter" id="acheter">
+    <div class="wrap">
+      <div class="entete">
+        <h2>Comment acheter nos produits&nbsp;?</h2>
+        <p>Quatre façons de remplir votre panier, à la ferme ou depuis chez vous.</p>
+      </div>
+      <div class="grille">
+        <figure class="rv"><img src="assets/ferme-de-la-motte-saint-berain/boutique-ferme-etals-legumes.webp" alt="La boutique de la ferme vue d'en haut : cagettes de légumes sur des étals et table de courges" width="1600" height="1199" loading="lazy"><span class="etiquette">La boutique, en libre service</span></figure>
+        <ul class="facons">
+          <li>
+            <div><h3>Magasin à la ferme</h3><p class="slogan">Choisissez vos produits&nbsp;!</p></div>
+            <div><p>Toute notre production en libre service à la boutique de la ferme.</p><p class="jours"><b>Mercredi</b> 9h à 12h<br><b>Vendredi</b> 16h à 18h<br><b>Samedi</b> 9h à 12h</p></div>
+          </li>
+          <li>
+            <div><h3>Libre cueillette</h3><p class="slogan">Cueillez vous-même vos légumes&nbsp;!</p></div>
+            <div><p>Prenez le temps de flâner dans le jardin, aux mêmes heures que la boutique.</p></div>
+          </li>
+          <li>
+            <div><h3>Click and collect</h3><p class="slogan">La rapidité et la simplicité</p></div>
+            <div><p>Commandez de chez vous, retirez à la ferme&nbsp;:</p><p class="jours"><b>Mardi</b> 16h à 20h<br><b>Mercredi</b> 9h à 20h<br><b>Vendredi</b> 16h à 20h<br><b>Samedi</b> 9h à 13h</p><p class="action"><a href="https://commande.kuupanda.com/producteur/3883/part/boutique/particuliers">Passer votre commande</a></p></div>
+          </li>
+          <li>
+            <div><h3>Livraison en entreprise</h3><p class="slogan">Jouez collectif&nbsp;!</p></div>
+            <div><p>Nous pouvons livrer les produits de la ferme sur votre lieu de travail, pour vous et vos collègues.</p><p class="action"><a href="mailto:ferme.motte@gmail.com">Contactez-nous</a></p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cueillette">
+    <div class="wrap grille">
+      <div>
+        <blockquote>Cueillez vous‑même vos légumes.</blockquote>
+        <p class="suite">Prenez le temps de flâner dans le jardin.</p>
+        <ul class="jours">
+          <li>Mercredi 9h à 12h</li>
+          <li>Vendredi 16h à 18h</li>
+          <li>Samedi 9h à 12h</li>
+        </ul>
+      </div>
+      <div class="polas">
+        <figure class="pola p1"><img src="assets/ferme-de-la-motte-saint-berain/cagette-legumes-sur-herbe.webp" alt="Cagette de chou frisé, tomates anciennes, salade, courgettes jaunes et poireaux" width="1600" height="1153" loading="lazy"><figcaption>Une cagette du jardin</figcaption></figure>
+        <figure class="pola p2"><img src="assets/ferme-de-la-motte-saint-berain/champ-maraicher-recolte-jsl.webp" alt="Récolte dans une parcelle de courgettes, bâtiments de ferme au fond" width="1600" height="1123" loading="lazy"><figcaption>Dans les rangs de courgettes</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect production" id="production">
+    <div class="wrap">
+      <h2 class="intro-titre" style="margin-bottom:22px">Notre production</h2>
+      <p class="intro">Tous nos produits sont issus de l'agriculture biologique, en respectant les saisons.</p>
+      <ul class="mots">
+        <li>Plants potagers</li>
+        <li>Légumes</li>
+        <li>Fruits</li>
+        <li>Œufs</li>
+      </ul>
+      <div class="cols">
+        <div><h3>Les plants potagers</h3><p>Pour votre propre potager, sur notre boutique en ligne. <a href="https://commande.kuupanda.com/producteur/3883/part/boutique/plants_potager">Voir les plants</a></p></div>
+        <div><h3>Légumes et fruits</h3><p>Les produits du jardin, au fil des saisons, en boutique ou en cueillette, et des fruits d'autres producteurs bio français, selon livraison.</p></div>
+        <div><h3>Les œufs</h3><p>Ceux de nos poules, élevées en plein air autour du poulailler mobile.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grille">
+      <div class="texte">
+        <h2>Venir à la ferme</h2>
+        <p>Une question, une commande pour votre entreprise&nbsp;: appelez-nous ou écrivez à la ferme.</p>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="tel nw" href="tel:+33601922709">06 01 92 27 09</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:ferme.motte@gmail.com">ferme.motte@gmail.com</a></dd></div>
+          <div><dt>Adresse</dt><dd>La motte Loisy<br>71300 Saint-Bérain-sous-Sanvignes</dd></div>
+          <div><dt>Boutique et cueillette</dt><dd>Mercredi 9h à 12h<br>Vendredi 16h à 18h<br>Samedi 9h à 12h</dd></div>
+        </dl>
+        <div class="boutons">
+          <a class="btn plein" href="tel:+33601922709">Appeler la ferme</a>
+          <a class="btn contour" href="mailto:ferme.motte@gmail.com">Écrire à la ferme</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <p class="nom-pied">Ferme de la Motte</p>
+        <p style="margin-top:12px">Produits fermiers bio et locaux&nbsp;: plants potagers, légumes, fruits, œufs.</p>
+      </div>
+      <div>
+        <h4>Adresse</h4>
+        <p>La motte Loisy<br>71300 Saint-Bérain-sous-Sanvignes</p>
+      </div>
+      <div>
+        <h4>Boutique et cueillette</h4>
+        <p>Mercredi 9h à 12h<br>Vendredi 16h à 18h<br>Samedi 9h à 12h</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33601922709">06 01 92 27 09</a></li>
+          <li><a href="mailto:ferme.motte@gmail.com">ferme.motte@gmail.com</a></li>
+          <li><a href="https://commande.kuupanda.com/producteur/3883/part/boutique/particuliers">Passez votre commande</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bas">© Ferme de la Motte</p>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour la Ferme de la Motte</p>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

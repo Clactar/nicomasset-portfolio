@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cadres &amp; Toiles · Atelier d'encadrement à Marseille</title>
+<meta name="description" content="Cadres & Toiles, atelier d'encadrement au 26 boulevard Notre-Dame, Marseille : cadres sur mesure, dorure, restauration.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230F3B3A'/%3E%3Crect x='7' y='7' width='50' height='50' rx='3' fill='none' stroke='%23C9A24A' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' text-anchor='middle' fill='%23F7F8F5'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;1,400&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#ECEFEA; --base-2:#E0E5DE; --surface:#F7F8F5; --encre:#102A2A; --encre-2:#46595A;
+  --dore:#C9A24A; --dore-fonce:#8F6E22; --canard:#0F3B3A; --canard-2:#164947; --clair:#E9EEEA;
+  --g:clamp(20px,4vw,48px);
+  --ombre:0 30px 60px -34px rgba(16,42,42,.55);
+  --ombre-longue:0 50px 90px -46px rgba(16,42,42,.7),0 20px 40px -28px rgba(16,42,42,.4);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Be Vietnam Pro",Georgia,sans-serif;font-size:18px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:#C9A24A;color:#102A2A}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Noto Serif Display",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 2*var(--g)));margin-inline:auto}
+.nb{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,239,234,.95);border-bottom:1px solid rgba(16,42,42,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:"Noto Serif Display",Georgia,serif;font-weight:500;font-size:25px;letter-spacing:-.01em}
+.marque span{font-size:13px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav .lien{text-decoration:none;font-size:15px;color:var(--encre-2);transition:color .2s}
+.nav .lien:hover{color:var(--encre)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:15px 28px;font-size:16px;font-weight:500;text-decoration:none;text-align:center;line-height:1.3;transition:background .25s,color .25s,transform .25s,box-shadow .25s,border-color .25s}
+.btn-plein{background:var(--canard);color:var(--surface)}
+.btn-plein:hover{background:var(--encre);transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(15,59,58,.9)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.entete .btn{padding:10px 20px;font-size:15px}
+.court{display:none}
+
+/* Héros */
+.heros{padding:clamp(48px,7vw,104px) 0 clamp(72px,8vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,10fr);gap:clamp(40px,6vw,96px);align-items:center}
+.heros h1{font-size:clamp(40px,6vw,86px);line-height:1.04}
+.heros h1 em{font-style:italic;color:var(--canard)}
+.chapo{margin-top:28px;font-size:clamp(17px,1.35vw,19px);color:var(--encre-2);max-width:32em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note{display:inline-flex;gap:10px;align-items:center;margin-top:28px;font-size:15px;color:var(--encre-2);text-decoration:none;border-bottom:1px solid rgba(16,42,42,.2);padding-bottom:3px}
+.note:hover{color:var(--encre)}
+.etoiles{color:var(--dore-fonce);letter-spacing:2px}
+
+/* Le cadre encadré */
+.encadre{position:relative}
+.baguette{padding:clamp(14px,1.9vw,26px);border-radius:3px;
+  background:linear-gradient(135deg,#3B2A1A 0%,#5C4329 18%,#2A1D11 42%,#4A3520 64%,#1E150C 100%);
+  box-shadow:inset 0 0 0 2px #6E5434,inset 0 0 0 5px #20170E,inset 0 0 0 7px #8C6B3E,inset 0 0 0 9px #2A1E12,inset 0 0 18px 6px rgba(0,0,0,.35),var(--ombre-longue)}
+.passe{background:#F5F2E9;padding:clamp(16px,2.6vw,38px);box-shadow:inset 3px 4px 10px rgba(16,12,6,.35)}
+.vue{position:relative;aspect-ratio:1/1;overflow:hidden;box-shadow:0 0 0 3px #FBF9F2,0 0 0 4px rgba(16,42,42,.12)}
+.vue img{position:absolute;left:0;top:-28.57%;width:134.45%;max-width:none;height:auto}
+.cartel{position:absolute;left:clamp(-40px,-3vw,-12px);bottom:clamp(-28px,-2vw,-14px);background:var(--surface);color:var(--encre);border-radius:12px;padding:14px 18px;font-size:14px;line-height:1.4;box-shadow:0 20px 40px -20px rgba(16,42,42,.55);max-width:min(260px,80%)}
+.cartel b{display:block;font-family:"Noto Serif Display",Georgia,serif;font-weight:500;font-size:17px;margin-bottom:2px}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{font-size:16px;line-height:1.4;padding-left:18px;position:relative;color:var(--encre-2)}
+.faits li::before{content:"";position:absolute;left:0;top:5px;width:9px;height:9px;border:1.5px solid var(--dore-fonce)}
+.faits b{display:block;font-weight:500;color:var(--encre)}
+
+/* Sections */
+.section{padding:clamp(80px,9vw,128px) 0}
+h2{font-size:clamp(34px,4.4vw,60px);line-height:1.08}
+.intro{margin-top:20px;color:var(--encre-2);max-width:34em}
+
+/* Fiche technique */
+.technique .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.angle{position:sticky;top:112px;border-radius:16px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre);margin:0}
+.angle img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.legende{position:absolute;left:14px;bottom:14px;background:rgba(247,248,245,.96);color:var(--encre);border-radius:999px;padding:8px 15px;font-size:14px;line-height:1.3;max-width:calc(100% - 28px)}
+.fiche{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(16,42,42,.2)}
+.fiche li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr);gap:12px 32px;padding:26px 0;border-bottom:1px solid rgba(16,42,42,.2)}
+.fiche h3{font-size:clamp(22px,2vw,27px);line-height:1.2}
+.fiche p{color:var(--encre-2);font-size:16px}
+
+/* L'atelier, fond canard */
+.canard{background:var(--canard);color:var(--clair)}
+.canard .intro{color:#B9CCC8}
+.atelier .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:center}
+.compo{position:relative;padding-bottom:80px}
+.compo .large{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 40px 80px -40px rgba(4,16,16,.9);width:88%;position:relative}
+.compo .large img,.compo .haute img{width:100%;height:100%;object-fit:cover}
+.compo .haute{position:absolute;right:0;bottom:0;width:min(36%,240px);aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:6px solid var(--canard);box-shadow:0 30px 60px -30px rgba(4,16,16,.95)}
+.compo .haute img{object-position:50% 30%}
+.atelier .points{list-style:none;margin:32px 0 0;padding:0}
+.atelier .points li{padding:14px 0;border-bottom:1px solid rgba(233,238,234,.14);display:flex;gap:14px;align-items:baseline}
+.atelier .points li::before{content:"";flex:none;width:8px;height:8px;border:1.5px solid var(--dore);transform:translateY(-2px)}
+
+/* Accrochage */
+.accrochage{background:var(--surface)}
+.accrochage .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:end}
+.mur{position:relative;margin-top:64px;padding-top:40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:start}
+.mur::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:rgba(16,42,42,.14)}
+.oeuvre{margin:0}
+.oeuvre .img{overflow:hidden;border-radius:4px;box-shadow:0 26px 44px -26px rgba(16,42,42,.6)}
+.oeuvre img{width:100%;height:100%;object-fit:cover}
+.oeuvre figcaption{margin-top:12px;font-size:14px;line-height:1.4;color:var(--encre-2);max-width:22em}
+.o1{grid-column:1/4}
+.o1 .img{aspect-ratio:1/1}
+.o2{grid-column:4/8;margin-top:56px}
+.o2 .img{aspect-ratio:4/3}
+.o2 img{object-position:50% 40%}
+.o3{grid-column:8/10;margin-top:12px}
+.o3 .img{aspect-ratio:3/4}
+.o4{grid-column:10/13;margin-top:84px}
+.o4 .img{aspect-ratio:1/1}
+.oeuvre .img{max-width:300px}
+
+/* Venir */
+.venir .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.enseigne{position:relative;margin:40px 0 0;border-radius:16px;overflow:hidden;aspect-ratio:16/5;box-shadow:var(--ombre)}
+.enseigne img{position:absolute;left:0;top:-4%;width:100%;max-width:none;height:auto}
+.venir .rdv{margin-top:28px;color:var(--encre-2)}
+.coord{background:var(--surface);border-radius:22px;padding:clamp(26px,3.4vw,44px);box-shadow:var(--ombre-longue)}
+.coord dl{margin:0;display:grid;gap:22px}
+.coord dt{font-size:13px;color:var(--encre-2);margin-bottom:4px}
+.coord dd{margin:0;font-size:18px;line-height:1.45;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(16,42,42,.25)}
+.coord dd a:hover{border-color:var(--dore-fonce)}
+.coord .gros{font-family:"Noto Serif Display",Georgia,serif;font-size:32px;line-height:1.1}
+.coord .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.coord .liens .btn{padding:12px 20px;font-size:15px}
+
+/* Pied */
+.pied{background:var(--encre);color:#C3D0CD;padding:72px 0 28px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:"Noto Serif Display",Georgia,serif;font-size:34px;line-height:1.1;color:var(--clair)}
+.pied h3{font-family:"Be Vietnam Pro",Georgia,sans-serif;font-size:13px;font-weight:500;color:#8DA3A0;margin-bottom:12px;letter-spacing:.01em}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li,.pied p{font-size:16px;line-height:1.65}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(195,208,205,.3)}
+.pied a:hover{border-color:var(--dore)}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(195,208,205,.12);font-size:13px;color:#7E9592}
+
+/* Apparition */
+html.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+html.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1000px){
+  .nav .lien{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .heros .wrap,.technique .wrap,.atelier .wrap,.accrochage .tete,.venir .wrap{grid-template-columns:minmax(0,1fr)}
+  .angle{position:relative;top:auto;aspect-ratio:5/4}
+  .mur{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+  .o1,.o2,.o3,.o4{grid-column:auto;margin-top:0}
+  .o2,.o4{margin-top:36px}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+  .encadre{margin-bottom:20px}
+  .enseigne{aspect-ratio:16/6}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px}
+  .fiche li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .actions .btn,.coord .liens .btn{width:100%}
+  .cartel{left:-8px;padding:12px 14px}
+  .compo{padding-bottom:60px}
+}
+@media (max-width:420px){
+  .long{display:none}
+  .court{display:inline}
+  .marque b{font-size:22px}
+  .marque span{font-size:12px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Cadres &amp; Toiles</b><span>Atelier d'encadrement · Marseille</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#savoir-faire">Savoir-faire</a>
+      <a class="lien" href="#atelier">L'atelier</a>
+      <a class="lien" href="#encadrements">Encadrements</a>
+      <a class="lien" href="#venir">Venir</a>
+      <a class="btn btn-contour" href="tel:+33491540865"><span class="long nb">04&nbsp;91&nbsp;54&nbsp;08&nbsp;65</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Cadres <em>sur mesure</em>, dorure et restauration.</h1>
+        <p class="chapo">Cadres &amp; Toiles est un atelier d'encadrement du boulevard <span class="nb">Notre-Dame</span>, à Marseille. Aquarelles, dessins, photographies, affiches grand format&nbsp;: chaque pièce reçoit son cadre, pour les particuliers comme pour les artistes et les galeries.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#venir">Passer à l'atelier</a>
+          <a class="btn btn-contour" href="tel:+33491540865"><span class="nb">04&nbsp;91&nbsp;54&nbsp;08&nbsp;65</span></a>
+        </div>
+        <a class="note" href="https://www.google.com/maps/search/Cadres+%26+Toiles+Atelier+d%27encadrement+Marseille" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><span>5,0 sur&nbsp;5 · 74&nbsp;avis Google</span></a>
+      </div>
+      <div class="encadre">
+        <div class="baguette">
+          <div class="passe">
+            <div class="vue">
+              <img src="assets/cadres-et-toiles/devanture-atelier-encadrement.webp" alt="La devanture vert canard de l'atelier Cadres & Toiles, porte ouverte, un petit chien sur le seuil et des coins de baguettes posés au sol" width="1600" height="1600" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+        <p class="cartel"><b>La devanture</b>26 boulevard <span class="nb">Notre-Dame</span>, Marseille</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>Atelier d'encadrement</b>Marseille, 13006</li>
+      <li><b>Cadres sur mesure</b>Dorure, restauration</li>
+      <li><b>Petits et grands formats</b>Dont des affiches de 100&nbsp;×&nbsp;140&nbsp;cm</li>
+      <li><b>Particuliers</b>Artistes et galeries</li>
+    </ul>
+  </section>
+
+  <section class="section technique" id="savoir-faire">
+    <div class="wrap">
+      <figure class="angle apparait">
+        <img src="assets/cadres-et-toiles/moulures-dorees-anciennes.webp" alt="Empilement de moulures anciennes dorées et argentées, sculptées" width="900" height="1600" loading="lazy">
+        <figcaption class="legende">Moulures anciennes, dorées et argentées</figcaption>
+      </figure>
+      <div>
+        <h2>Le bon cadre, jusqu'au dos du tableau.</h2>
+        <p class="intro">Le choix de la baguette, du verre, du montage et de l'accrochage dépend de ce que l'on encadre. Quelques réalisations récentes de l'atelier, telles qu'il les décrit.</p>
+        <ul class="fiche">
+          <li><h3>Boîtes en noyer</h3><p>Pour une série d'aquarelles&nbsp;: boîtes en noyer, verre antireflet UV70.</p></li>
+          <li><h3>Montage boîte en chêne massif</h3><p>Pour une série de photographies&nbsp;: montage boîte direct, chêne massif 20&nbsp;×&nbsp;30, lattes 7&nbsp;×&nbsp;10, plexiglas, attache rail.</p></li>
+          <li><h3>Grand format</h3><p>Une affiche de 100&nbsp;×&nbsp;140&nbsp;cm&nbsp;: baguette noire 20&nbsp;×&nbsp;30&nbsp;mm, dos en polypropylène alvéolé, châssis à pente pour un accrochage à taquet français.</p></li>
+          <li><h3>Caisse américaine</h3><p>Pour une marine&nbsp;: caisse américaine en bois clair.</p></li>
+          <li><h3>Dorure et restauration</h3><p>Des moulures anciennes, dorées et argentées, et le savoir-faire de la dorure et de la restauration.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section canard atelier" id="atelier">
+    <div class="wrap">
+      <div class="compo">
+        <figure class="large apparait" style="margin:0">
+          <img src="assets/cadres-et-toiles/atelier-interieur-table-de-coupe.webp" alt="L'intérieur de l'atelier : grande table de coupe, meubles à plans, établi, murs couverts de cadres et d'affiches" width="1600" height="1200" loading="lazy">
+          <figcaption class="legende">La table de coupe</figcaption>
+        </figure>
+        <div class="haute"><img src="assets/cadres-et-toiles/mur-de-baguettes-et-chien.webp" alt="Le mur d'échantillons de baguettes en chevrons, une banquette jaune où dort un petit chien" width="900" height="1600" loading="lazy"></div>
+      </div>
+      <div>
+        <h2>Un atelier ouvert sur la rue.</h2>
+        <p class="intro">Derrière la devanture vert canard, tout est sous les yeux&nbsp;: les échantillons de baguettes, la table de coupe, les meubles à plans et les cadres aux murs.</p>
+        <ul class="points">
+          <li>Un mur de baguettes pour choisir sur pièce</li>
+          <li>Des moulures anciennes dorées et argentées</li>
+          <li>Verres antireflets, plexiglas, passe-partout</li>
+          <li>Livraison possible</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section accrochage" id="encadrements">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Pour vos œuvres, et pour celles des artistes.</h2>
+        <p class="intro" style="margin:0">Des séries pour des artistes et des galeries, et des pièces uniques pour les particuliers. Quelques encadrements sortis de l'atelier.</p>
+      </div>
+      <div class="mur">
+        <figure class="oeuvre o1 apparait">
+          <div class="img"><img src="assets/cadres-et-toiles/aquarelle-becasse-cadre-noyer.webp" alt="Petite aquarelle sur papier déchiré, flottante dans un cadre en noyer avec passe-partout crème" width="1600" height="1600" loading="lazy"></div>
+          <figcaption>Aquarelle flottante, cadre en noyer et passe-partout</figcaption>
+        </figure>
+        <figure class="oeuvre o2 apparait">
+          <div class="img"><img src="assets/cadres-et-toiles/serie-aquarelles-encadrees.webp" alt="Série d'aquarelles encadrées en noyer, alignées au sol de l'atelier" width="1200" height="1600" loading="lazy"></div>
+          <figcaption>Série d'aquarelles, boîtes en noyer</figcaption>
+        </figure>
+        <figure class="oeuvre o3 apparait">
+          <div class="img"><img src="assets/cadres-et-toiles/cathedral-cars-boite-chene.webp" alt="Grande photographie en montage boîte chêne massif, appuyée contre le mur de baguettes" width="1200" height="1600" loading="lazy"></div>
+          <figcaption>Photographie, boîte en chêne massif</figcaption>
+        </figure>
+        <figure class="oeuvre o4 apparait">
+          <div class="img"><img src="assets/cadres-et-toiles/marine-caisse-americaine.webp" alt="Marine dans une caisse américaine en bois clair, règle posée devant" width="1600" height="1600" loading="lazy"></div>
+          <figcaption>Toile en caisse américaine</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section venir" id="venir">
+    <div class="wrap">
+      <div>
+        <h2>Passer à l'atelier.</h2>
+        <p class="intro">Apportez votre pièce au 26 boulevard Notre-Dame, dans le 6<sup>e</sup>, pour choisir le cadre, le verre et le montage. L'atelier reçoit aussi sur rendez-vous.</p>
+        <figure class="enseigne apparait">
+          <img src="assets/cadres-et-toiles/devanture-atelier-encadrement.webp" alt="L'enseigne peinte : Atelier d'encadrement Cadres & Toiles, sur la façade vert canard" width="1600" height="1600" loading="lazy">
+          <figcaption class="legende">Sous l'enseigne vert canard</figcaption>
+        </figure>
+        <p class="rdv">Les horaires d'ouverture sont à jour sur la fiche Google de l'atelier.</p>
+      </div>
+      <aside class="coord" aria-label="Coordonnées">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="gros nb" href="tel:+33491540865">04&nbsp;91&nbsp;54&nbsp;08&nbsp;65</a></dd></div>
+          <div><dt>Adresse</dt><dd>26 boulevard Notre-Dame<br>13006 Marseille</dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:info@cadres-toiles.fr">info@cadres-toiles.fr</a></dd></div>
+          <div><dt>Horaires</dt><dd>Sur la fiche Google, et sur rendez-vous</dd></div>
+          <div><dt>Note Google</dt><dd>5,0 sur&nbsp;5, 74&nbsp;avis</dd></div>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/Cadres+%26+Toiles+Atelier+d%27encadrement+Marseille" target="_blank" rel="noopener">Horaires et avis sur Google</a>
+          <a class="btn btn-contour" href="https://www.instagram.com/cadres_toiles/" target="_blank" rel="noopener">L'atelier sur Instagram</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <p class="nom">Cadres &amp; Toiles</p>
+        <p style="margin-top:14px;max-width:26em">Atelier d'encadrement à Marseille. Cadres sur mesure, dorure, restauration.</p>
+      </div>
+      <div>
+        <h3>Atelier</h3>
+        <ul>
+          <li>26 boulevard Notre-Dame, 13006 Marseille</li>
+          <li><a class="nb" href="tel:+33491540865">04&nbsp;91&nbsp;54&nbsp;08&nbsp;65</a></li>
+          <li><a href="mailto:info@cadres-toiles.fr">info@cadres-toiles.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Sur la <a href="https://www.google.com/maps/search/Cadres+%26+Toiles+Atelier+d%27encadrement+Marseille" target="_blank" rel="noopener">fiche Google</a>, et sur rendez-vous</li>
+          <li style="margin-top:12px"><a href="https://www.instagram.com/cadres_toiles/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour Cadres &amp; Toiles</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

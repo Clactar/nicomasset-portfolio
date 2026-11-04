@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ô Bons Vivres · Légumes bio à Chapelle-Voland (Jura)</title>
+<meta name="description" content="Production et vente de légumes en agriculture biologique à Chapelle-Voland : vente à la ferme chaque mercredi de 17 h à 18 h 30, le samedi à Chaussin et Commenailles.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231F3440'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23E4EAEE'%3E%C3%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:wght@300..600&family=Schibsted+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E4EAEE; --base-2:#D6DFE5; --surface:#F3F6F8; --encre:#18262E; --encre-2:#4A5A63;
+  --accent:#D4772C; --accent-fonce:#B5601C; --accent-pale:#F1DCC6; --sombre:#1F3440; --clair:#EDF2F5;
+  --ombre:0 30px 60px -34px rgba(20,38,50,.55);
+  --ombre-forte:0 46px 84px -42px rgba(20,38,50,.62);
+  --display:"Petrona", Georgia, serif;
+  --texte:"Schibsted Grotesk", "Helvetica Neue", sans-serif;
+  --large:min(1240px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.conteneur{width:var(--large);margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(228,234,238,.95);border-bottom:1px solid rgba(24,38,46,.08)}
+.entete .conteneur{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:74px}
+.marque{text-decoration:none;line-height:1.1;display:flex;flex-direction:column}
+.marque b{font-family:var(--display);font-weight:500;font-size:25px}
+.marque span{font-size:13.5px;color:var(--encre-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.lien{text-decoration:none;font-size:16px;color:var(--encre-2);transition:color .2s}
+.nav a.lien:hover{color:var(--accent-fonce)}
+.pilule{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:15px 28px;font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease,background-color .25s ease,border-color .25s ease,color .25s ease;text-align:center}
+.pilule:hover{transform:translateY(-2px)}
+.pilule-pleine{background:var(--accent);color:#1A1208;box-shadow:0 18px 30px -20px rgba(181,96,28,.8)}
+.pilule-pleine:hover{background:#E08A43}
+.pilule-contour{border-color:rgba(24,38,46,.35);color:var(--encre)}
+.pilule-contour:hover{border-color:var(--encre);background:var(--surface)}
+.pilule-claire{border-color:rgba(237,242,245,.7);color:var(--clair)}
+.pilule-claire:hover{background:rgba(237,242,245,.14);border-color:var(--clair)}
+.pilule-sombre{background:var(--sombre);color:var(--clair)}
+.pilule-sombre:hover{background:#2A4554}
+.pilule-petite{padding:10px 20px;font-size:16px}
+.court{display:none}
+
+/* Héros pleine largeur */
+.heros{padding:20px 0 0}
+.heros .conteneur{width:min(1320px, 100% - 32px)}
+.heros-cadre{position:relative}
+.heros-photo-zone{position:relative;border-radius:24px;overflow:hidden;min-height:clamp(560px, calc(100vh - 150px), 700px);display:grid;align-items:end;box-shadow:var(--ombre-forte)}
+.heros-photo-zone > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.heros-photo-zone::after{content:"";position:absolute;inset:0;background:linear-gradient(20deg,rgba(14,26,34,.86) 0%,rgba(14,26,34,.62) 34%,rgba(14,26,34,.08) 70%)}
+.heros-texte{position:relative;z-index:1;padding:clamp(28px,5vw,64px);max-width:780px;color:var(--clair)}
+.heros h1{font-size:clamp(38px,5.4vw,78px);line-height:1.02;font-weight:500}
+.heros .chapo{margin-top:20px;font-size:clamp(17px,1.4vw,20px);color:rgba(237,242,245,.9);max-width:32em}
+.heros .chapo b{color:var(--clair);font-weight:600}
+.heros .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.carte-tel{position:absolute;z-index:2;right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,40px);background:var(--surface);border-radius:20px;padding:22px 26px;box-shadow:var(--ombre-forte);width:min(330px,100%)}
+.carte-tel .titre{font-family:var(--display);font-size:22px;font-weight:500;line-height:1.2}
+.carte-tel ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.carte-tel li{display:flex;flex-direction:column}
+.carte-tel span{font-size:14.5px;color:var(--encre-2)}
+.carte-tel a{font-size:22px;font-weight:600;text-decoration:none;white-space:nowrap;letter-spacing:.01em;transition:color .2s}
+.carte-tel a:hover{color:var(--accent-fonce)}
+
+/* Faits */
+.faits ul{list-style:none;margin:0 auto;padding:44px 0 8px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.faits li{border-top:2px solid var(--encre);padding-top:14px;font-size:15.5px;color:var(--encre-2);line-height:1.4}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:22px;color:var(--encre);line-height:1.2;margin-bottom:4px}
+
+section{scroll-margin-top:84px}
+.section{padding:clamp(80px,9vw,128px) 0}
+.titre-section{font-size:clamp(34px,3.8vw,54px);line-height:1.05}
+.intro{margin-top:18px;color:var(--encre-2);font-size:clamp(17px,1.3vw,19px);max-width:36em}
+
+/* Rendez-vous */
+.rdv .conteneur{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:start}
+.rdv-tete{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:end}
+.rdv-tete .intro{margin-top:0}
+.rdv-visuel{position:relative;padding-bottom:150px}
+.rdv-serre{margin:34px 0 0;border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.rdv-serre img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:60% 55%}
+.rdv-visuel figure{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.rdv-visuel figure img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%}
+.rdv-visuel figcaption{position:absolute;left:16px;top:16px;background:var(--surface);border-radius:11px;padding:7px 13px;font-size:15px;font-weight:500}
+.mercredi{position:absolute;right:-28px;bottom:0;width:min(470px,88%);background:var(--surface);border-radius:22px;padding:28px 30px 30px;box-shadow:var(--ombre-forte)}
+.mercredi .jour{font-family:var(--display);font-size:40px;line-height:1;font-weight:500}
+.mercredi .heure{font-size:20px;font-weight:600;color:var(--accent-fonce);margin-top:8px}
+.mercredi p{margin-top:10px;font-size:16.5px;color:var(--encre-2)}
+.mercredi .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.samedis{list-style:none;margin:0;padding:0;border-top:1px solid rgba(24,38,46,.2)}
+.samedis li{padding:26px 0;border-bottom:1px solid rgba(24,38,46,.2)}
+.samedis .ligne{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
+.samedis h3{font-size:28px;line-height:1.15}
+.samedis .heure{font-weight:600;color:var(--accent-fonce);white-space:nowrap}
+.samedis p{margin-top:8px;font-size:16.5px;color:var(--encre-2)}
+.samedis a.lien{color:var(--encre);text-decoration:none;border-bottom:1px solid rgba(212,119,44,.6)}
+.samedis a.lien:hover{color:var(--accent-fonce)}
+.rdv .ponctuel{margin-top:26px;font-size:17px;color:var(--encre-2)}
+.rdv .ponctuel a{color:var(--encre);text-decoration:none;border-bottom:1px solid rgba(212,119,44,.6)}
+
+/* Nouvelles */
+.nouvelles{background:var(--surface)}
+.nouvelles-tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.nouvelles-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;margin-top:52px;align-items:stretch}
+.une{background:var(--base);border-radius:24px;padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.date{font-size:15px;font-weight:600;color:var(--accent-fonce);letter-spacing:.01em}
+.une h3{font-size:clamp(30px,3vw,42px);line-height:1.08;margin-top:10px}
+.une p{margin-top:16px;color:var(--encre-2);font-size:17.5px;max-width:34em}
+.tarifs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:26px}
+.tarifs div{background:var(--surface);border-radius:16px;padding:16px 18px;box-shadow:0 18px 32px -26px rgba(20,38,50,.6)}
+.tarifs b{display:block;font-family:var(--display);font-weight:500;font-size:28px;line-height:1.1;white-space:nowrap}
+.tarifs span{font-size:15px;color:var(--encre-2);line-height:1.4;display:block;margin-top:4px}
+.une .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.seconde{display:flex;flex-direction:column}
+.seconde figure{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.seconde img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%}
+.seconde figcaption{position:absolute;left:14px;bottom:14px;background:var(--surface);border-radius:10px;padding:6px 12px;font-size:14.5px;font-weight:500}
+.seconde h3{font-size:30px;line-height:1.1;margin-top:24px}
+.seconde .date{margin-top:20px;display:block}
+.seconde p{margin-top:12px;color:var(--encre-2);font-size:17px}
+
+.merci{margin-top:32px;background:var(--accent-pale);border-radius:24px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(24px,4vw,56px);align-items:center}
+.merci .chiffres{display:grid;gap:14px}
+.merci .chiffres b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(46px,5vw,72px);line-height:1;color:var(--encre)}
+.merci .chiffres span{font-size:15.5px;color:#5A4634}
+.merci blockquote{margin:0}
+.merci blockquote p{font-family:var(--display);font-size:clamp(26px,2.8vw,40px);line-height:1.18;font-weight:400}
+.merci .date{display:block;margin-top:18px;color:#8A4A15}
+
+/* Sombre : la ferme */
+.ferme{background:var(--sombre);color:var(--clair)}
+.ferme .conteneur{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,7vw,104px);align-items:center}
+.ferme .intro{color:rgba(237,242,245,.82)}
+.ferme p.suite{margin-top:16px;color:rgba(237,242,245,.78);font-size:17px;max-width:36em}
+.reperes{list-style:none;margin:34px 0 0;padding:0}
+.reperes li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid rgba(237,242,245,.15);font-size:16.5px;color:rgba(237,242,245,.86)}
+.reperes li b{font-family:var(--display);font-weight:500;font-size:19px;color:#F0B57F}
+.trio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.trio figure{margin:0}
+.trio img{width:100%;object-fit:cover;border-radius:18px;box-shadow:0 40px 70px -36px rgba(0,0,0,.6)}
+.trio figcaption{font-size:15px;color:rgba(237,242,245,.75);margin-top:10px}
+.trio .haute{grid-row:span 2}
+.trio .haute img{aspect-ratio:3/4.6;object-position:40% 50%}
+.trio .b img{aspect-ratio:4/3;object-position:50% 50%}
+.trio .c img{aspect-ratio:4/3;object-position:50% 40%}
+.trio .b{margin-top:56px}
+
+/* Gamme */
+.gamme .conteneur{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:start}
+.etal{margin-top:30px;background:var(--surface);border-radius:20px;padding:24px 28px;box-shadow:var(--ombre)}
+.etal h3{font-size:24px}
+.etal p{margin-top:8px;color:var(--encre-2);font-size:17px}
+.legumes{columns:3 180px;column-gap:32px;list-style:none;margin:34px 0 0;padding:0}
+.legumes li{break-inside:avoid;padding:8px 0;border-bottom:1px solid rgba(24,38,46,.14);font-size:16.5px}
+.gamme .note{margin-top:26px;color:var(--encre-2);font-size:17px}
+.gamme .note a{color:var(--encre);text-decoration:none;border-bottom:1px solid rgba(212,119,44,.6)}
+.gamme-photos{position:relative;padding-bottom:120px;position:sticky;top:110px}
+.gamme-photos .a{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);width:80%}
+.gamme-photos .a img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gamme-photos .b{position:absolute;right:0;bottom:0;width:min(280px,58%);margin:0;background:var(--surface);padding:10px;border-radius:18px;box-shadow:var(--ombre-forte);transform:rotate(2.5deg)}
+.gamme-photos .b img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:35% 60%;border-radius:12px}
+
+/* Contact */
+.contact{background:var(--base-2)}
+.contact .conteneur{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:center}
+.contact-visuel{margin:0;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);position:relative}
+.contact-visuel img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:60% 50%}
+.contact-visuel figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);border-radius:11px;padding:7px 13px;font-size:15px;font-weight:500}
+.carte-contact{background:var(--surface);border-radius:22px;padding:clamp(28px,3.4vw,44px);box-shadow:var(--ombre-forte)}
+.carte-contact h2{font-size:clamp(30px,3vw,38px);line-height:1.1}
+.carte-contact dl{margin:22px 0 0;display:grid;gap:16px}
+.carte-contact dt{font-size:14px;color:var(--encre-2)}
+.carte-contact dd{margin:2px 0 0;font-size:18px}
+.carte-contact dd a{text-decoration:none;border-bottom:1px solid rgba(212,119,44,.55);transition:color .2s}
+.carte-contact dd a:hover{color:var(--accent-fonce)}
+.carte-contact .ligne{display:flex;flex-wrap:wrap;gap:2px 14px}
+.carte-contact .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mail{overflow-wrap:anywhere}
+
+.pied{background:var(--sombre);color:var(--clair);padding:72px 0 36px}
+.pied .conteneur{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,3fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:32px;line-height:1.1;font-weight:500}
+.pied p,.pied li{font-size:16px;color:rgba(237,242,245,.8)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(237,242,245,.25)}
+.pied a:hover{border-color:var(--clair)}
+.pied h4{margin:0 0 12px;font-weight:600;font-size:15px;color:var(--clair)}
+.proposition{background:var(--sombre);color:rgba(237,242,245,.55);font-size:14px;text-align:center;padding:18px 24px 28px;margin:0;border-top:1px solid rgba(237,242,245,.1)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .pilule{transition:none}
+}
+
+@media (max-width:1080px){
+  .nav a.lien{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mercredi{right:0}
+}
+@media (max-width:860px){
+  .heros-photo-zone{border-radius:22px;min-height:520px}
+  .heros-photo-zone::after{background:linear-gradient(180deg,rgba(14,26,34,.05) 0%,rgba(14,26,34,.55) 38%,rgba(14,26,34,.88) 100%)}
+  .carte-tel{position:relative;right:auto;bottom:auto;margin:-28px 14px 0 auto;width:min(330px, calc(100% - 28px))}
+  .rdv .conteneur,.nouvelles-grille,.ferme .conteneur,.gamme .conteneur,.contact .conteneur,.merci{grid-template-columns:minmax(0,1fr)}
+  .rdv-visuel{padding-bottom:0}
+  .rdv-tete{grid-template-columns:minmax(0,1fr);gap:18px}
+  .mercredi{position:relative;right:auto;margin:-60px 12px 0 auto;width:auto}
+  .gamme-photos{position:relative;top:0;max-width:520px}
+  .pied .conteneur{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  :root{--large:min(1240px, 100% - 40px)}
+  .heros .conteneur{width:min(1320px, 100% - 24px)}
+  .entete .conteneur{min-height:64px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .heros-photo-zone{min-height:560px}
+  .heros .actions .pilule-claire{display:none}
+  .legumes{columns:2}
+  .heros-texte{padding:24px 22px 46px}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 18px;padding-top:36px}
+  .faits b{font-size:19px}
+  .tarifs{grid-template-columns:minmax(0,1fr)}
+  .reperes li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+  .mercredi{margin:-40px 0 0 0}
+  .mercredi .jour{font-size:34px}
+}
+@media (max-width:420px){
+  .heros .actions .pilule,.mercredi .actions .pilule,.une .actions .pilule,.carte-contact .actions .pilule{width:100%}
+  .entete .pilule-petite{padding:9px 16px;font-size:15px}
+  .long{display:none}.court{display:inline}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#haut"><b>Ô Bons Vivres</b><span>Légumes bio à Chapelle-Voland</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#rendez-vous">Nos rendez-vous</a>
+      <a class="lien" href="#nouvelles">Les nouvelles</a>
+      <a class="lien" href="#la-ferme">La ferme</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="pilule pilule-contour pilule-petite nowrap" href="tel:+33680578154"><span class="long">06 80 57 81 54</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="conteneur">
+      <div class="heros-cadre">
+        <div class="heros-photo-zone">
+          <img src="assets/o-bons-vivres-chapelle-voland/rangs-de-salades-sur-paillage.webp" alt="Rangs de laitues vertes et rouges plantées sur paillage, haie au fond" width="1600" height="1200" fetchpriority="high">
+          <div class="heros-texte">
+            <h1>Des légumes bio cultivés et vendus à Chapelle-Voland</h1>
+            <p class="chapo">Légumes de saison certifiés AB, en vente à la ferme <b>chaque mercredi de 17&nbsp;h à 18&nbsp;h&nbsp;30</b>, et le samedi à Chaussin et à Commenailles.</p>
+            <div class="actions">
+              <a class="pilule pilule-pleine" href="https://app.cagette.net/group/19063">Commander pour mercredi</a>
+              <a class="pilule pilule-claire" href="#rendez-vous">Nos rendez-vous</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-tel">
+          <p class="titre">Appelez-nous</p>
+          <ul>
+            <li><span>Maraîchage</span><a href="tel:+33680578154">06 80 57 81 54</a></li>
+            <li><span>Contact général</span><a href="tel:+33624697545">06 24 69 75 45</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="La ferme en bref">
+    <ul class="conteneur">
+      <li><b>Certifiés AB</b>des légumes frais de saison</li>
+      <li><b>Le mercredi</b>vente à la ferme, 17&nbsp;h à 18&nbsp;h&nbsp;30</li>
+      <li><b>Le samedi</b>à Chaussin et à Commenailles</li>
+      <li><b>Natura&nbsp;2000</b>une zone riche en faune et en flore</li>
+      <li><b>600 arbres</b>plantés en janvier 2024</li>
+    </ul>
+  </div>
+
+  <section class="section rdv" id="rendez-vous">
+    <div class="conteneur">
+      <div class="rdv-tete">
+        <h2 class="titre-section">Nos rendez-vous de la semaine</h2>
+        <p class="intro">Les légumes produits sur la ferme, certifiés AB, vendus au détail. La commande en ligne est souhaitable.</p>
+      </div>
+      <div>
+        <div class="rdv-visuel">
+          <figure class="apparait"><img src="assets/o-bons-vivres-chapelle-voland/corps-de-ferme-et-botte-de-foin.webp" alt="Longue maison de ferme au toit de tuiles, puits et botte de foin sur la pelouse" width="1600" height="1200" loading="lazy"><figcaption>La ferme, à 6 minutes de Bletterans</figcaption></figure>
+          <div class="mercredi">
+            <div class="jour">Mercredi</div>
+            <div class="heure">de 17&nbsp;h à 18&nbsp;h&nbsp;30, à la ferme</div>
+            <p>336 rue des Montarlots, 39140 Chapelle-Voland</p>
+            <div class="actions">
+              <a class="pilule pilule-pleine" href="https://app.cagette.net/group/19063">Commander sur Cagette</a>
+              <a class="pilule pilule-contour" href="https://goo.gl/maps/nu1EY5taqdBN3ttN6">Itinéraire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul class="samedis">
+          <li>
+            <div class="ligne"><h3>Samedi à Chaussin</h3><span class="heure">9&nbsp;h à 11&nbsp;h</span></div>
+            <p>Devant les Vins d'Aurélien B, 3 route du Deschaux.</p>
+          </li>
+          <li>
+            <div class="ligne"><h3>Samedi à Commenailles</h3><span class="heure">8&nbsp;h&nbsp;30 à 10&nbsp;h</span></div>
+            <p>Retrait de commande sur le parking des commerces, place Bruno Guichard. Commande en ligne sur <a class="lien" href="https://app.cagette.net/group/19056">notre page Cagette de Commenailles</a>.</p>
+          </li>
+        </ul>
+        <figure class="rdv-serre apparait"><img src="assets/o-bons-vivres-chapelle-voland/tunnel-dans-les-champs.webp" alt="Petite serre tunnel ouverte, rangs de légumes paillés et prairie fauchée autour" width="1600" height="900" loading="lazy"></figure>
+        <p class="ponctuel">En plus de ces rendez-vous réguliers, retrouvez-nous sur des événements ponctuels&nbsp;: ils sont annoncés dans <a href="#nouvelles">les nouvelles de la ferme</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section nouvelles" id="nouvelles">
+    <div class="conteneur">
+      <div class="nouvelles-tete">
+        <h2 class="titre-section">Les nouvelles de la ferme</h2>
+        <a class="pilule pilule-contour" href="https://www.facebook.com/profile.php?id=100093188629543">Nous suivre sur Facebook</a>
+      </div>
+      <div class="nouvelles-grille">
+        <article class="une">
+          <span class="date">31 octobre 2026</span>
+          <h3>Des vitamines pour l'hiver&nbsp;: des kiwis de la Drôme</h3>
+          <p>Nous vous proposons de bons kiwis drômois, en direct de Diane, leur productrice, à La Ferme Ravit. Nous connaissons bien ses pratiques et son exploitation&nbsp;: Luna l'a eue comme enseignante en BTS, dans la Drôme, et elle est devenue une amie.</p>
+          <div class="tarifs">
+            <div><b>0,90&nbsp;€</b><span>le kiwi à la pièce, environ 100&nbsp;g</span></div>
+            <div><b>28&nbsp;€</b><span>le plateau de 5&nbsp;kg, soit 5,60&nbsp;€/kg (calibre irrégulier)</span></div>
+          </div>
+          <p>Commande avant le 25 novembre par mail, pour des kiwis disponibles à partir du 5 décembre.</p>
+          <div class="actions">
+            <a class="pilule pilule-pleine" href="mailto:maraichage@obonsvivres.com?subject=Commande%20de%20kiwis">Commander par mail</a>
+            <a class="pilule pilule-contour" href="https://www.obonsvivres.com/2026/10/31/des-vitamines-pour-lhiver/">Lire la nouvelle</a>
+          </div>
+        </article>
+        <article class="seconde">
+          <figure class="apparait"><img src="assets/o-bons-vivres-chapelle-voland/tunnels-et-rhubarbe.webp" alt="Rhubarbe au premier plan et alignement de serres tunnels sous un ciel bleu" width="1600" height="1200" loading="lazy"><figcaption>Les serres, avril 2026</figcaption></figure>
+          <span class="date">6 avril 2026</span>
+          <h3>L'aventure continue</h3>
+          <p>Après les dégâts de la tempête du 20 juillet, les serres abîmées au niveau de leurs ouvertures ont été réparées&nbsp;: il fallait limiter l'entrée de froid humide pour les cultures d'hiver.</p>
+        </article>
+      </div>
+      <div class="merci">
+        <div class="chiffres">
+          <div><b>123</b><span>contributeur·ice·s</span></div>
+          <div><b class="nowrap">7&nbsp;800&nbsp;€</b><span>réunis pour la ferme</span></div>
+        </div>
+        <blockquote>
+          <p>Suite aux dégâts causés par la tempête du 20 juillet, nous avons lancé une campagne participative solidaire. Alors un énorme, un gigantesque merci&nbsp;!</p>
+          <span class="date">12 février 2026</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ferme" id="la-ferme">
+    <div class="conteneur">
+      <div>
+        <h2 class="titre-section">Notre ferme</h2>
+        <p class="intro">Ferme maraîchère, nous produisons des légumes frais de saison certifiés AB. L'agroécologie est le pilier de notre façon de travailler.</p>
+        <p class="suite">La ferme est située en zone Natura&nbsp;2000. Maraîchage sur sol vivant, paillage, irrigation raisonnée au goutte-à-goutte et en micro-aspersion&nbsp;: nous préservons la biodiversité et la ressource en eau. Haies champêtres, mares et fauche tardive font vivre la prairie autour.</p>
+        <ul class="reperes">
+          <li><b>Octobre 2022</b>Nous arrivons à la ferme, un lieu plein d'histoire à qui redonner vie.</li>
+          <li><b>2023</b>Trois petites serres montées, et fin mai, nos premiers légumes.</li>
+          <li><b>Janvier 2024</b>600 arbres plantés grâce à un chantier participatif.</li>
+          <li><b>2025</b>Nos premières fraises, puis la tempête du 20 juillet.</li>
+        </ul>
+      </div>
+      <div class="trio">
+        <figure class="haute apparait"><img src="assets/o-bons-vivres-chapelle-voland/chenille-de-machaon-sur-carotte.webp" alt="Chenille de machaon sur un feuillage de carotte" width="1200" height="1600" loading="lazy"><figcaption>Chenille de machaon sur les fanes de carottes</figcaption></figure>
+        <figure class="b apparait"><img src="assets/o-bons-vivres-chapelle-voland/cour-de-ferme-matin-de-brume.webp" alt="Cour de la ferme un matin de brume, vieux puits et grange" width="1600" height="1200" loading="lazy"><figcaption>La cour, un matin de brume</figcaption></figure>
+        <figure class="c apparait"><img src="assets/o-bons-vivres-chapelle-voland/plantation-d-arbres-devant-la-ferme.webp" alt="Petit groupe plantant des arbres devant la grange" width="1600" height="1200" loading="lazy"><figcaption>Plantation d'arbres devant la ferme</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gamme">
+    <div class="conteneur">
+      <div>
+        <h2 class="titre-section">Notre gamme de légumes pour la saison 2026</h2>
+        <div class="etal">
+          <h3>En ce moment sur l'étal</h3>
+          <p>Mâche, épinard, choux, chicorée pain de sucre, poireaux, verdures asiatiques, carottes, blette, oignons blancs frais, pommes de terre, oignons jaunes, échalote, ail, courges délicata, spaghetti et butternut.</p>
+        </div>
+        <ul class="legumes">
+          <li>Ail</li><li>Aubergine</li><li>Basilic</li><li>Blette</li><li>Betterave</li><li>Carotte</li><li>Chicorées chioggia, scarole, pain de sucre</li><li>Chou cabus blanc et rouge</li><li>Chou de Bruxelles</li><li>Chou-fleur</li><li>Chou milan frisé</li><li>Chou-rave</li><li>Concombre</li><li>Courges&nbsp;: butternut, potimarron, spaghetti, délicata</li><li>Courgette</li><li>Échalote</li><li>Épinard</li><li>Fenouil</li><li>Fraise</li><li>Haricot vert</li><li>Salades&nbsp;: batavia, feuille de chêne…</li><li>Mâche</li><li>Menthe</li><li>Melon</li><li>Noix</li><li>Oignon blanc, rouge et jaune</li><li>Pastèque</li><li>Petit pois</li><li>Persil</li><li>Poireau</li><li>Poivron vert et de couleur</li><li>Pomme de terre primeur et de garde</li><li>Radis rose</li><li>Tomates anciennes, rondes et cerises</li>
+        </ul>
+        <p class="note">La production varie&nbsp;: pour connaître la gamme de la semaine, appelez-nous au <a class="nowrap" href="tel:+33680578154">06 80 57 81 54</a> ou commandez sur <a href="https://app.cagette.net/group/19063">Cagette</a>.</p>
+      </div>
+      <div class="gamme-photos">
+        <figure class="a apparait"><img src="assets/o-bons-vivres-chapelle-voland/epinards-gouttes-de-pluie.webp" alt="Feuilles d'épinard couvertes de gouttes de pluie" width="1200" height="1600" loading="lazy"></figure>
+        <figure class="b apparait"><img src="assets/o-bons-vivres-chapelle-voland/potiron-et-mais-contre-jour.webp" alt="Potiron côtelé et pieds de maïs à contre-jour" width="1600" height="1200" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="conteneur">
+      <figure class="contact-visuel apparait"><img src="assets/o-bons-vivres-chapelle-voland/journee-a-la-ferme-visiteurs.webp" alt="Visiteurs dans l'allée entre les bâtiments de la ferme, épouvantail au premier plan" width="1600" height="1200" loading="lazy"><figcaption>Une journée à la ferme</figcaption></figure>
+      <div class="carte-contact">
+        <h2>Nous contacter</h2>
+        <dl>
+          <div><dt>Maraîchage</dt><dd class="ligne"><a class="nowrap" href="tel:+33680578154">06 80 57 81 54</a><a class="mail" href="mailto:maraichage@obonsvivres.com">maraichage@obonsvivres.com</a></dd></div>
+          <div><dt>Contact général</dt><dd class="ligne"><a class="nowrap" href="tel:+33624697545">06 24 69 75 45</a><a class="mail" href="mailto:contact@obonsvivres.com">contact@obonsvivres.com</a></dd></div>
+          <div><dt>Adresse</dt><dd>336 rue des Montarlots, 39140 Chapelle-Voland</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="pilule pilule-sombre" href="https://goo.gl/maps/nu1EY5taqdBN3ttN6">Itinéraire</a>
+          <a class="pilule pilule-contour" href="https://www.facebook.com/profile.php?id=100093188629543">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div>
+      <p class="nom" style="color:var(--clair)">Ô Bons Vivres</p>
+      <p style="margin-top:12px">Production et vente de légumes en agriculture biologique.<br>336 rue des Montarlots, 39140 Chapelle-Voland</p>
+    </div>
+    <div>
+      <h4>Vente des légumes</h4>
+      <ul>
+        <li>Mercredi, 17&nbsp;h à 18&nbsp;h&nbsp;30&nbsp;: à la ferme</li>
+        <li>Samedi, 9&nbsp;h à 11&nbsp;h&nbsp;: Chaussin</li>
+        <li>Samedi, 8&nbsp;h&nbsp;30 à 10&nbsp;h&nbsp;: Commenailles</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Liens</h4>
+      <ul>
+        <li><a href="https://app.cagette.net/group/19063">Commander pour mercredi</a></li>
+        <li><a href="https://app.cagette.net/group/19056">Commander pour Commenailles</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100093188629543">Facebook</a></li>
+        <li><a href="https://goo.gl/maps/nu1EY5taqdBN3ttN6">Itinéraire</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour Ô Bons Vivres</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(entrees){entrees.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

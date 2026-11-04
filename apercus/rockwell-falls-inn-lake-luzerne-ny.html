@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rockwell Falls Inn &amp; Wine Bar · 1890 Victorian bed and breakfast in Lake Luzerne, NY</title>
+<meta name="description" content="A year-round romantic bed and breakfast in Lake Luzerne, New York: an 1890 Victorian inn with 12 rooms and suites, the Mahogany Wine Bar, weddings and special events.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232F5E5B'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='36' fill='%23F8F3F4' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EEE6E8; --base-2:#E4D9DC; --surface:#F8F3F4; --ink:#251A1F; --ink-soft:#5A4B52;
+  --accent:#2F5E5B; --accent-soft:#D7E2E0; --dark:#2A1B22; --on-dark:#EEE6E8; --on-dark-soft:#C2B1B8;
+  --shadow:0 30px 60px -34px rgba(42,27,34,.5);
+  --shadow-lg:0 48px 84px -42px rgba(42,27,34,.6);
+  --display:"Prata", Georgia, serif;
+  --text:"Sora", "Trebuchet MS", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--text);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{text-wrap:pretty;margin:0 0 1em}
+strong,b{font-weight:500}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:-.01em}
+.wrap{width:min(1200px,100% - 2*clamp(20px,5vw,48px));margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--text);font-weight:500;font-size:16px;line-height:1.2;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+.btn-fill{background:var(--accent);color:var(--surface)}
+.btn-fill:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(238,230,232,.95);border-bottom:1px solid rgba(37,26,31,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{text-decoration:none;line-height:1.1}
+.brand-name{font-family:var(--display);font-size:22px;display:block}
+.brand small{display:block;font-size:12px;letter-spacing:.04em;color:var(--ink-soft);margin-top:3px}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a.l{text-decoration:none;font-size:15px;font-weight:400;color:var(--ink-soft);transition:color .2s}
+.nav a.l:hover{color:var(--accent)}
+.nav .tel{text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap}
+.book-top{min-height:46px;padding:10px 22px;font-size:15px}
+.call-mini{display:none}
+
+/* hero */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(72px,9vw,112px)}
+.hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center}
+.frame{grid-column:1 / span 8;grid-row:1;position:relative;margin:0;border-radius:16px;box-shadow:var(--shadow-lg)}
+.frame .ph{border-radius:16px;overflow:hidden;aspect-ratio:5/4;background:var(--base-2)}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.frame::after{content:"";position:absolute;inset:10px;border:1.5px solid rgba(248,243,244,.85);border-radius:9px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(47,94,91,.35)}
+.tag{position:absolute;left:24px;bottom:24px;display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:500;line-height:1.25;box-shadow:0 12px 24px -16px rgba(42,27,34,.6);z-index:2}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.hero-card{grid-column:8 / span 5;grid-row:1;position:relative;z-index:3;background:var(--surface);border-radius:20px;padding:clamp(32px,3.6vw,52px);box-shadow:var(--shadow-lg)}
+.hero h1{font-size:clamp(36px,4.3vw,60px);line-height:1.1}
+.place{display:block;margin-top:14px;font-size:15px;font-weight:500;color:var(--accent)}
+.lead{color:var(--ink-soft);margin:22px 0 0;font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* facts */
+.facts{background:var(--base-2);padding:34px 0}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2;margin-bottom:4px}
+.facts span{font-size:15px;color:var(--ink-soft);line-height:1.5;display:block}
+
+/* rooms */
+.rooms{padding:clamp(84px,10vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:end;margin-bottom:56px}
+.h2{font-size:clamp(32px,3.6vw,50px);line-height:1.1}
+.sec-head p{color:var(--ink-soft);margin:0}
+.rooms-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,80px);align-items:start}
+.room{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;padding:28px 0;border-top:1px solid rgba(37,26,31,.15);align-items:start}
+.room:last-child{border-bottom:1px solid rgba(37,26,31,.15)}
+.room figure{margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);width:min(220px,100%)}
+.room img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.room h3{font-size:clamp(23px,2vw,28px);line-height:1.15}
+.room .where{display:block;font-size:14px;color:var(--accent);font-weight:500;margin:6px 0 10px}
+.room p{color:var(--ink-soft);margin-bottom:12px}
+.more{text-decoration:none;font-weight:500;font-size:15px;border-bottom:1.5px solid var(--accent);padding-bottom:2px;transition:color .2s}
+.more:hover{color:var(--accent)}
+.all-rooms{position:sticky;top:104px;background:var(--surface);border-radius:20px;padding:clamp(28px,3vw,40px);box-shadow:var(--shadow)}
+.all-rooms h3{font-size:24px;line-height:1.2}
+.all-rooms h4{font-family:var(--text);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:24px 0 8px}
+.all-rooms ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px}
+.all-rooms li a{text-decoration:none;font-size:15px;font-weight:400;transition:color .2s}
+.all-rooms li a:hover{color:var(--accent)}
+.amen{margin-top:26px;padding-top:20px;border-top:1px solid rgba(37,26,31,.12);font-size:15px;color:var(--ink-soft);line-height:1.6}
+.all-rooms .actions{margin-top:24px}
+
+/* weddings (dark) */
+.weddings{background:var(--dark);color:var(--on-dark);padding:clamp(84px,10vw,128px) 0;overflow:clip}
+.wed-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(48px,7vw,96px);align-items:center}
+.weddings .h2{color:var(--surface)}
+.weddings p{color:var(--on-dark-soft)}
+.weddings .intro{font-size:18px;margin-top:22px}
+.ev-list{list-style:none;margin:32px 0 0;padding:0}
+.ev-list li{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:6px 28px;padding:20px 0;border-top:1px solid rgba(238,230,232,.15)}
+.ev-list b{font-family:var(--display);font-weight:400;font-size:21px;color:var(--surface);line-height:1.3}
+.ev-list span{color:var(--on-dark-soft);font-size:16px;line-height:1.6}
+.weddings .actions{margin-top:34px}
+.weddings .btn-fill{background:var(--surface);color:var(--ink)}
+.weddings .btn-fill:hover{background:var(--accent-soft)}
+.weddings .btn-line{border-color:rgba(238,230,232,.5);color:var(--on-dark)}
+.weddings .btn-line:hover{background:var(--on-dark);color:var(--ink)}
+.wed-photos{position:relative;padding:0 0 120px 0}
+.wed-main{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 44px 80px -40px rgba(0,0,0,.75);aspect-ratio:4/5;position:relative}
+.wed-main .tag{top:24px;bottom:auto}
+.wed-main img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.wed-small{position:absolute;left:-48px;bottom:0;width:min(300px,58%);margin:0;padding:10px;background:var(--surface);border-radius:16px;box-shadow:0 40px 70px -36px rgba(0,0,0,.75);transform:rotate(-2.5deg)}
+.wed-small img{border-radius:10px;aspect-ratio:4/3;object-fit:cover}
+.wed-small figcaption{color:var(--ink);font-size:14px;padding:10px 4px 2px;line-height:1.4}
+
+/* bar & breakfast */
+.bar{padding:clamp(84px,10vw,128px) 0}
+.bar-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(48px,7vw,96px);align-items:start}
+.bar-photos{position:sticky;top:104px;padding-bottom:110px}
+.bar-main{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:1/1;position:relative}
+.bar-main img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.bar-small{position:absolute;right:-36px;bottom:0;width:min(260px,50%);margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border:8px solid var(--base)}
+.bar-small img{aspect-ratio:3/4;object-fit:cover;object-position:55% 50%}
+.menu{margin-top:36px}
+.menu-item{padding:26px 0;border-top:1px solid rgba(37,26,31,.15)}
+.menu-item:last-child{border-bottom:1px solid rgba(37,26,31,.15)}
+.menu-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:baseline}
+.menu-item h3{font-size:clamp(22px,2vw,26px);line-height:1.2}
+.menu-item .val{font-family:var(--text);font-weight:500;font-size:19px;white-space:nowrap;color:var(--accent)}
+.menu-item p{color:var(--ink-soft);margin:10px 0 0;max-width:56ch}
+.hours{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.hours li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;font-size:16px}
+.hours li span:last-child{font-weight:500;white-space:nowrap}
+
+/* review */
+.review{background:var(--accent);color:var(--surface);padding:clamp(80px,10vw,124px) 0}
+.review blockquote{margin:0;max-width:960px}
+.review .q{font-family:var(--display);font-size:clamp(26px,3.3vw,44px);line-height:1.3;margin:0}
+.review cite{display:block;margin-top:28px;font-style:normal;font-size:16px;color:#CFE0DD}
+
+/* happenings */
+.happen{padding:clamp(84px,10vw,128px) 0}
+.happen-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(48px,7vw,96px);align-items:start}
+.happen p{color:var(--ink-soft)}
+.happen .actions{margin-top:28px}
+.near{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.near li{background:var(--surface);border-radius:18px;padding:24px;box-shadow:0 20px 40px -34px rgba(42,27,34,.55)}
+.near b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.25;margin-bottom:6px}
+.near span{color:var(--ink-soft);font-size:15px;line-height:1.6;display:block}
+.year{margin-top:48px}
+.year h3{font-size:22px;line-height:1.25}
+.year ol{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative}
+.year ol::before{content:"";position:absolute;left:0;right:0;top:8px;height:1.5px;background:rgba(37,26,31,.2)}
+.year li{position:relative;padding:34px 16px 0 0}
+.year li::before{content:"";position:absolute;left:0;top:0;width:17px;height:17px;border-radius:50%;background:var(--base);border:2px solid var(--accent)}
+.year li b{display:block;font-weight:500;font-size:14px;color:var(--accent);letter-spacing:.02em}
+.year li span{display:block;font-family:var(--display);font-size:20px;line-height:1.3;margin-top:4px}
+
+/* history */
+.history{background:var(--surface);padding:clamp(84px,10vw,128px) 0}
+.hist-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(48px,7vw,96px);align-items:center}
+.hist-photo{margin:0;position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/2}
+.hist-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.history p{color:var(--ink-soft)}
+.history .pull{font-family:var(--display);font-size:clamp(22px,2.2vw,29px);line-height:1.35;color:var(--ink);margin:24px 0}
+
+/* contact */
+.contact{padding:clamp(84px,10vw,120px) 0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center}
+.c-photo{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/2;position:relative}
+.c-photo img{width:100%;height:100%;object-fit:cover}
+.c-card{background:var(--surface);border-radius:20px;padding:clamp(28px,3.4vw,46px);box-shadow:var(--shadow-lg);margin-left:-120px;position:relative;z-index:2}
+.c-card .h2{font-size:clamp(28px,2.8vw,38px)}
+.c-card > p{color:var(--ink-soft);margin:14px 0 6px}
+.line{display:flex;flex-direction:column;padding:13px 0;border-top:1px solid rgba(37,26,31,.1)}
+.line span{font-size:13px;color:var(--ink-soft)}
+.line a,.line b{font-weight:500;font-size:17px;text-decoration:none;overflow-wrap:anywhere}
+.line a:hover{color:var(--accent)}
+.line .phone{font-family:var(--text);font-weight:500;font-size:22px;letter-spacing:.01em;white-space:nowrap}
+.c-card .actions{margin-top:22px}
+
+/* footer */
+footer{background:var(--dark);color:var(--on-dark);padding:72px 0 0}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+footer .brand-name{color:var(--surface);font-size:26px}
+footer p{color:var(--on-dark-soft);font-size:15px;margin-top:14px;max-width:34ch}
+footer h3{font-family:var(--text);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--surface);margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer li,footer address{font-style:normal;color:var(--on-dark-soft);font-size:15px;line-height:1.6}
+footer a{text-decoration:none;color:var(--on-dark)}
+footer a:hover{color:#BFD8D4}
+.f-base{margin-top:56px;padding:22px 0;border-top:1px solid rgba(238,230,232,.12);font-size:13px;color:var(--on-dark-soft)}
+.proposal{background:#1F1419;color:#9A8890;font-size:13px;text-align:center;padding:12px 20px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+@media (max-width:1180px){
+  .nav a.l{display:none}
+}
+@media (max-width:1080px){
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .f-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .hero-grid{display:block}
+  .hero-card{margin:-64px 16px 0}
+  .sec-head,.rooms-grid,.wed-grid,.bar-grid,.happen-grid,.hist-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .all-rooms{position:relative;top:auto}
+  .wed-photos{max-width:560px}
+  .wed-small{left:0}
+  .bar-photos{max-width:560px;position:relative;top:auto}
+  .bar-small{right:0}
+  .c-card{margin:-72px 16px 0}
+  .c-photo .tag{top:18px;bottom:auto;left:18px}
+}
+@media (max-width:620px){
+  body{font-size:16.5px}
+  .top .wrap{min-height:62px}
+  .brand-name{font-size:19px}
+  .brand small{display:none}
+  .nav .tel,.book-top{display:none}
+  .call-mini{display:inline-flex;min-height:42px;padding:8px 16px;font-size:15px;white-space:nowrap}
+  .hero{padding-top:16px}
+  .frame .ph{aspect-ratio:4/3}
+  .frame::after{inset:7px}
+  .tag{left:16px;top:16px;bottom:auto;font-size:13px}
+  .hero-card{margin:-40px 10px 0;padding:26px 22px}
+  .lead{margin-top:16px}
+  .actions{flex-direction:column;align-items:stretch;margin-top:22px}
+  .actions .btn{width:100%}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}
+  .facts li:last-child{grid-column:1/-1}
+  .facts b{font-size:21px}
+  .sec-head{margin-bottom:32px}
+  .room{grid-template-columns:minmax(0,1fr);gap:16px}
+  .room figure{width:min(220px,100%)}
+  .all-rooms ul{grid-template-columns:minmax(0,1fr)}
+  .ev-list li{grid-template-columns:minmax(0,1fr)}
+  .menu-row{grid-template-columns:minmax(0,1fr)}
+  .near{grid-template-columns:minmax(0,1fr)}
+  .year ol{grid-template-columns:minmax(0,1fr);row-gap:22px}
+  .year ol::before{display:none}
+  .year li{padding:0 0 0 32px}
+  .year li::before{top:3px}
+  .c-card{margin:-56px 10px 0}
+  .f-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  .call-mini .num{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-name">Rockwell Falls Inn</span><small>&amp; Wine Bar · Lake Luzerne, NY</small></a>
+    <nav class="nav" aria-label="Main">
+      <a class="l" href="#rooms">Rooms &amp; Suites</a>
+      <a class="l" href="#weddings">Weddings &amp; Events</a>
+      <a class="l" href="#wine-bar">Wine Bar</a>
+      <a class="l" href="#happenings">Local Happenings</a>
+      <a class="tel" href="tel:+15186965294">518-696-5294</a>
+      <a class="btn btn-fill book-top" href="https://secure.thinkreservations.com/rockwellfallsinn/reservations">Book now</a>
+      <a class="btn btn-line call-mini" href="tel:+15186965294"><span>Call<span class="num">&nbsp;518-696-5294</span></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <figure class="frame">
+        <div class="ph"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/facade-victorienne-porche-fleuri.webp" alt="The yellow 1890 Victorian inn with its wraparound porch and hanging pink flowers, under tall pines" width="1600" height="1068" loading="eager" fetchpriority="high"></div>
+        <figcaption class="tag">Built in 1890</figcaption>
+      </figure>
+      <div class="hero-card">
+        <h1>A year-round romantic bed and breakfast</h1>
+        <span class="place">Lake Luzerne, New York</span>
+        <p class="lead">A charming Victorian inn in the Southern Adirondacks, minutes from Lake George Village and Saratoga Springs: 12 unique rooms and suites, the Mahogany Wine Bar and a wraparound porch.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://secure.thinkreservations.com/rockwellfallsinn/reservations">Book now</a>
+          <a class="btn btn-line" href="tel:+15186965294">Call&nbsp;518-696-5294</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="The inn in brief">
+    <div class="wrap">
+      <ul>
+        <li><b>1890</b><span>Built as a summer home, recently renovated</span></li>
+        <li><b>Twelve rooms</b><span>Main Building and Carriage House</span></li>
+        <li><b>40-foot porch</b><span>Wraparound, hanging flowers, wicker</span></li>
+        <li><b>Breakfast</b><span>Gourmet, complimentary, daily 8–11&nbsp;am</span></li>
+        <li><b>Fri &amp; Sat</b><span>Wine Bar open to the public, 5–9&nbsp;pm</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rooms" id="rooms">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2">Twelve rooms and suites, each one designed on its own</h2>
+        <p>Step back in time with the comforts of today: original architectural details, antique charm and thoughtfully updated amenities, across the Main Building and the Carriage House.</p>
+      </div>
+      <div class="rooms-grid">
+        <div>
+          <article class="room">
+            <figure><img src="assets/rockwell-falls-inn-lake-luzerne-ny/chambre-lilac-suite.webp" alt="Lilac Suite: wrought iron bed, lilac toile wallpaper and a chandelier" width="1600" height="1092" loading="lazy"></figure>
+            <div>
+              <h3>Lilac Suite</h3>
+              <span class="where">Main Building · king</span>
+              <p>A luxurious king-size wrought iron bed, elegant lilac-inspired wallpaper and a cozy gas fireplace. Unwind in the double soaking tub, or relax on the signature velvet chaise lounge or the leather loveseat.</p>
+              <a class="more" href="https://rockwellfallsinn.com/lilac-suite/">Lilac Suite details</a>
+            </div>
+          </article>
+          <article class="room">
+            <figure><img src="assets/rockwell-falls-inn-lake-luzerne-ny/chambre-northern-exposure-suite.webp" alt="Northern Exposure Suite: log bed, gas fireplace, wingback chairs and snowshoes on the wall" width="1600" height="1092" loading="lazy"></figure>
+            <div>
+              <h3>Northern Exposure Suite</h3>
+              <span class="where">Carriage House · king · ramped deck</span>
+              <p>A handcrafted log king-size bed and a cozy gas fireplace with an oak mantel, with a ramped deck for accessibility.</p>
+              <a class="more" href="https://rockwellfallsinn.com/northern-exposure/">Northern Exposure details</a>
+            </div>
+          </article>
+          <article class="room">
+            <figure><img src="assets/rockwell-falls-inn-lake-luzerne-ny/chambre-rose-room.webp" alt="Rose Room: queen bed, dark rosebud wallpaper and an oak mantel fireplace" width="1600" height="1092" loading="lazy"></figure>
+            <div>
+              <h3>Rose Room</h3>
+              <span class="where">Main Building · queen</span>
+              <p>A comfortable queen-size bed with elegant rosebud wallpaper that pays tribute to the home's historic charm.</p>
+              <a class="more" href="https://rockwellfallsinn.com/rose-room/">Rose Room details</a>
+            </div>
+          </article>
+        </div>
+        <aside class="all-rooms" aria-label="All rooms and suites">
+          <h3>All twelve rooms and suites</h3>
+          <h4>Main Building</h4>
+          <ul>
+            <li><a href="https://rockwellfallsinn.com/sunrise-suite/">Sunrise Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/starlight-suite/">Starlight Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/lilac-suite/">Lilac Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/mountain-view-room/">Mountain View Room</a></li>
+            <li><a href="https://rockwellfallsinn.com/victoria-room/">Victoria Room</a></li>
+            <li><a href="https://rockwellfallsinn.com/evergreen-room/">Evergreen Room</a></li>
+            <li><a href="https://rockwellfallsinn.com/rose-room/">Rose Room</a></li>
+          </ul>
+          <h4>Carriage House</h4>
+          <ul>
+            <li><a href="https://rockwellfallsinn.com/saratoga-suite/">Saratoga Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/french-mountain-suite/">French Mountain Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/woodside-romance/">Woodside Romance Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/northern-exposure/">Northern Exposure Suite</a></li>
+            <li><a href="https://rockwellfallsinn.com/white-birch-suite/">White Birch Suite</a></li>
+          </ul>
+          <p class="amen">Every room has a private en-suite bathroom, free high-speed Wi-Fi, a flat-screen TV, central air with its own climate control, luxury bath amenities and a hair dryer. Many add a gas fireplace, a jetted tub and original hardwood floors.</p>
+          <div class="actions">
+            <a class="btn btn-fill" href="https://secure.thinkreservations.com/rockwellfallsinn/reservations">Check availability</a>
+            <a class="btn btn-line" href="https://rockwellfallsinn.com/rooms-suites/">View all rooms</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="weddings" id="weddings">
+    <div class="wrap wed-grid">
+      <div>
+        <h2 class="h2">Weddings &amp; Events</h2>
+        <p class="intro">The Inn has been an excellent wedding venue for micro weddings and intimate courtyard weddings. The grounds give room for an elegant or boutique-style wedding, and twelve bedrooms between two buildings can keep everyone on-site together.</p>
+        <ul class="ev-list">
+          <li><b>Weddings</b><span>Micro weddings and intimate courtyard weddings, with rooms for out-of-town guests.</span></li>
+          <li><b>Showers &amp; parties</b><span>Bridal and baby showers, tea parties, birthdays and anniversary parties, in the parlor and the sunroom dining area.</span></li>
+          <li><b>Rehearsal dinners</b><span>And a private evening at the Wine Bar, which can be reserved for your event, with catering specific to your needs.</span></li>
+          <li><b>Groups</b><span>Corporate events, team building and fundraisers.</span></li>
+        </ul>
+        <p style="margin-top:26px">Looking for a wedding venue or a place for your event? Contact the Inn directly for details on what it offers.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="mailto:info@rockwellfallsinn.com?subject=Wedding%20or%20event%20at%20Rockwell%20Falls%20Inn">Email about your date</a>
+          <a class="btn btn-line" href="tel:+15186965294">Call&nbsp;518-696-5294</a>
+        </div>
+      </div>
+      <div class="wed-photos">
+        <figure class="wed-main reveal"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/auberge-vue-depuis-la-pelouse.webp" alt="The inn seen from the lawn between tall pines" width="1600" height="1067" loading="lazy"><figcaption class="tag">The grounds</figcaption></figure>
+        <figure class="wed-small"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/salon-cheminee-et-bar.webp" alt="The parlor with its white fireplace, camel leather sofas and teal armchairs, the wine bar through the arch" width="1600" height="1068" loading="lazy"><figcaption>The parlor, with the Wine Bar through the arch</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bar" id="wine-bar">
+    <div class="wrap bar-grid">
+      <div class="bar-photos">
+        <figure class="bar-main reveal"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/bar-a-vin-acajou.webp" alt="The Mahogany Wine Bar: dark wood counter and stools, hanging glasses, a coffered teal ceiling" width="1600" height="1068" loading="lazy"><figcaption class="tag">The Mahogany Wine Bar</figcaption></figure>
+        <figure class="bar-small"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/table-petit-dejeuner-fenetre.webp" alt="A round breakfast table with green napkins by the big windows of the sun porch" width="1600" height="1068" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2 class="h2">Gourmet breakfast, wine bar and a glass on the porch</h2>
+        <div class="menu">
+          <div class="menu-item">
+            <div class="menu-row"><h3>Mahogany Wine Bar</h3></div>
+            <ul class="hours">
+              <li><span>Overnight guests, daily</span><span>5–9&nbsp;pm</span></li>
+              <li><span>Open to the public, Fridays and Saturdays</span><span>5–9&nbsp;pm</span></li>
+            </ul>
+            <p>Relax with a glass of wine and come experience a truly memorable evening at the Inn.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-row"><h3>Sun porch breakfast</h3><span class="val">8–11&nbsp;am</span></div>
+            <p>Served daily in the sunporch dining room, with a view of the lawns and the Adirondack mountains in the distance, and complimentary for every overnight guest. Start with organic homemade granola, fresh fruit and Greek yogurt, or the homemade pastry of the day. Most offerings are organic; gluten-free options on request.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-row"><h3>Wine &amp; Cheese</h3><span class="val">$95</span></div>
+            <p>Seasonal fresh fruit, traditional cheeses and assorted crackers, with a bottle of red or white from the Wine Bar.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-row"><h3>The Decadent Duo</h3><span class="val">$95</span></div>
+            <p>Fresh strawberries hand dipped in Callebaut Belgian chocolate and a bottle of Maschio Prosecco.</p>
+            <a class="more" href="https://rockwellfallsinn.com/inndulgence-packages/">All INNdulgence packages</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="review" aria-label="A guest review">
+    <div class="wrap">
+      <blockquote>
+        <p class="q">“The building and rooms have clearly been lovingly remodeled not too long ago, with a wonderful attention to detail and an eye to alluding to the time period when the house was built.”</p>
+        <cite>Jesse Kerman, on Google, after an anniversary stay</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="happen" id="happenings">
+    <div class="wrap happen-grid">
+      <div>
+        <h2 class="h2">Local Happenings</h2>
+        <p style="margin-top:22px">The Lake George and Saratoga Springs areas are filled with activities and special events all year round. Let us guide you with the perfect itinerary, so your time here is memorable.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="mailto:info@rockwellfallsinn.com?subject=Itinerary%20for%20our%20stay">Ask for an itinerary</a>
+          <a class="btn btn-line" href="https://rockwellfallsinn.com/contact-us/">Contact the Inn</a>
+        </div>
+      </div>
+      <div>
+        <ul class="near">
+          <li><b>Across the street</b><span>Pavilion Park and Lake Luzerne Public Beach, for swimming and kayaking.</span></li>
+          <li><b>A block away</b><span>The Hudson River, just a block from the Inn.</span></li>
+          <li><b>Minutes away</b><span>Lake George Village and Saratoga Springs.</span></li>
+          <li><b>Around the Adirondacks</b><span>Hiking, boating, skiing and other local attractions.</span></li>
+        </ul>
+        <div class="year">
+          <h3>Through the year</h3>
+          <ol>
+            <li><b>February</b><span>Winter Carnival</span></li>
+            <li><b>March</b><span>Maple Days</span></li>
+            <li><b>September</b><span>Hot Air Balloon Festival</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="history" id="about">
+    <div class="wrap hist-grid">
+      <figure class="hist-photo reveal"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/porche-panoramique-fleurs.webp" alt="The 40-foot wraparound porch with a wicker chair, hanging pink flowers and the lawn beyond" width="1600" height="1067" loading="lazy"><figcaption class="tag">The 40-foot wraparound porch</figcaption></figure>
+      <div>
+        <h2 class="h2">The summer home of Howard Conkling</h2>
+        <p class="pull">Built in 1890 for a wealthy bachelor, where no expense was spared.</p>
+        <p>A 12-foot beamed ceiling, chestnut wainscoting and keyhole staircases still frame the Great Room, now the guest sitting area. The 1890 building, with its back-to-back fireplaces, is the center for gathering; the Carriage House has its own personality.</p>
+        <p>After 40 years of the Merlinos running the Inn, George and Mary Haleem took it on as Rockwell Falls Inn and Wine Bar, preserving its charm while adding new amenities to enjoy year round. Outside, the original garden steps lead to the perennial garden and its turn-of-the-century arbors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <figure class="c-photo reveal"><img src="assets/rockwell-falls-inn-lake-luzerne-ny/annexe-porche-et-feu-de-camp-soir.webp" alt="At dusk, a lit porch, string lights and Adirondack chairs around a fire pit under tall pines" width="1600" height="1068" loading="lazy"><figcaption class="tag">Evenings by the fire</figcaption></figure>
+      <div class="c-card">
+        <h2 class="h2">Plan your stay</h2>
+        <p>231 Lake Ave, Lake Luzerne, New York 12846, in the Southern Adirondacks.</p>
+        <div class="line"><span>Local phone</span><a class="phone" href="tel:+15186965294">518-696-5294</a></div>
+        <div class="line"><span>Toll free</span><a href="tel:+18002624668">800-262-4668</a></div>
+        <div class="line"><span>Email</span><a href="mailto:info@rockwellfallsinn.com">info@rockwellfallsinn.com</a></div>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://secure.thinkreservations.com/rockwellfallsinn/reservations">Book now</a>
+          <a class="btn btn-line" href="mailto:info@rockwellfallsinn.com">Email the Inn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <span class="brand-name">Rockwell Falls Inn &amp; Wine Bar</span>
+        <p>A year-round romantic bed and breakfast in an 1890 Victorian inn, Lake Luzerne, New York.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <address>231 Lake Ave<br>Lake Luzerne, New York 12846</address>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+15186965294">518-696-5294</a></li>
+          <li><a href="tel:+18002624668">800-262-4668 (toll free)</a></li>
+          <li><a href="mailto:info@rockwellfallsinn.com" style="overflow-wrap:anywhere">info@rockwellfallsinn.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Wine Bar</h3>
+        <ul>
+          <li>Guests: daily, 5–9&nbsp;pm</li>
+          <li>Public: Fri &amp; Sat, 5–9&nbsp;pm</li>
+          <li><a href="https://rockwellfallsinn.com/rooms-suites/">Rooms &amp; Suites</a></li>
+          <li><a href="https://rockwellfallsinn.com/inndulgence-packages/">Packages &amp; Events</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-base">Rockwell Falls Inn &amp; Wine Bar · Lake Luzerne, New York</div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Rockwell Falls Inn &amp; Wine Bar</div>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

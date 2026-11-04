@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lavalier's Berry Patch and Orchard · U-pick berries and apples in Grand Rapids, MN</title>
+<meta name="description" content="Lavalier's Berry Patch and Orchard in Grand Rapids, Minnesota: pick your own strawberries, blueberries and apples, or order them pre-picked.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%233E4FA0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F6F7FB'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E8EBF2; --base-deep:#DCE0EB; --surface:#F6F7FB;
+  --ink:#1C2233; --soft:#4A5168; --rule:#C9CEDD;
+  --blue:#3E4FA0; --blue-deep:#323F84; --dark:#1C2440; --on-dark:#ECEEF6; --on-dark-soft:#B4B9CF;
+  --shadow:0 30px 60px -34px rgba(28,36,64,.55);
+  --shadow-s:0 18px 36px -22px rgba(28,36,64,.5);
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font:400 18px/1.65 "Work Sans",Georgia,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--blue);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.3vw,58px)}
+h3{font-size:26px;line-height:1.12}
+p{margin:0;text-wrap:pretty}
+.nowrap{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 28px;border-radius:999px;font:600 16px/1.2 "Work Sans",Georgia,sans-serif;text-decoration:none;border:1.5px solid var(--blue);transition:background .25s,color .25s,transform .25s,box-shadow .25s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-s)}
+.btn-full{background:var(--blue);color:var(--surface)}
+.btn-full:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+.btn-line{color:var(--blue);background:transparent}
+.btn-line:hover{background:var(--surface)}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(232,235,242,.95);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{text-decoration:none;line-height:1.05}
+.brand b{display:block;font:400 25px/1 "DM Serif Display",Georgia,serif}
+.brand small{display:block;font-size:13px;color:var(--soft);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--blue)}
+.nav .btn{min-height:44px;padding:8px 20px;font-size:15px}
+
+/* hero */
+.hero{padding:64px 0 112px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+.hero h1{font-size:clamp(42px,6vw,88px);line-height:1.0}
+.lede{margin-top:26px;font-size:19px;color:var(--soft);max-width:28em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-art{position:relative;padding-left:150px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;max-height:640px;object-fit:cover;object-position:50% 58%;border-radius:24px;box-shadow:var(--shadow)}
+.tag{position:absolute;background:var(--surface);color:var(--ink);font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px;box-shadow:var(--shadow-s);line-height:1.2}
+.hero-photo .tag{right:20px;top:20px}
+.season{position:absolute;left:0;top:50%;transform:translateY(-50%);width:min(300px,52%);background:var(--surface);border-radius:20px;padding:28px 28px 24px;box-shadow:var(--shadow)}
+.season h2{font-size:28px}
+.season ul{list-style:none;margin:16px 0 0;padding:0}
+.season li{display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid var(--rule);font-size:16px}
+.season li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--blue);flex:none;opacity:.85}
+.season p{margin-top:16px;font-size:14px;color:var(--soft);line-height:1.5}
+.season p a{color:var(--blue);font-weight:600}
+
+/* facts */
+.facts{background:var(--base-deep);padding:30px 0}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.facts li{font-size:15px;color:var(--soft);line-height:1.4}
+.facts strong{display:block;font:400 25px/1.12 "DM Serif Display",Georgia,serif;color:var(--ink);margin-bottom:4px}
+
+/* pre-picked */
+.prepick{background:var(--surface);padding:120px 0}
+.prepick .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.duo{position:relative;padding:0 90px 90px 0}
+.duo .one{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 70%;border-radius:20px;box-shadow:var(--shadow)}
+.duo .two-wrap{position:absolute;right:0;bottom:0;width:min(250px,42%)}
+.duo .two{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;box-shadow:var(--shadow);border:8px solid var(--surface)}
+.duo .tag{left:18px;top:18px}
+.prepick-copy p{margin-top:20px;color:var(--soft)}
+.steps{list-style:none;margin:24px 0 0;padding:0}
+.steps li{padding:16px 0;border-top:1px solid var(--rule)}
+.steps li:last-child{border-bottom:1px solid var(--rule)}
+.steps li div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 24px}
+.steps b{font-size:14px;font-weight:600;color:var(--soft)}
+.steps span{font:400 24px/1.25 "DM Serif Display",Georgia,serif;overflow-wrap:anywhere}
+.steps a{text-decoration:none;color:var(--blue)}
+.steps a:hover{text-decoration:underline}
+
+/* staff */
+.staff{padding:120px 0}
+.staff .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.staff-copy p{margin-top:20px;color:var(--soft)}
+.family{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap}
+.family figure{margin:0;width:min(200px,46%)}
+.family img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;box-shadow:var(--shadow-s)}
+.family figure:nth-child(2){transform:translateY(24px)}
+.staff-photo{position:relative}
+.staff-photo .frame{background:var(--surface);padding:12px;border-radius:24px;box-shadow:var(--shadow);transform:rotate(1.5deg)}
+.staff-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%;border-radius:14px}
+.staff-photo .tag{left:28px;bottom:28px}
+
+/* quote */
+.quote{background:var(--base-deep);padding:104px 0}
+.quote blockquote{margin:0;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:48px;align-items:center}
+.quote img{width:min(220px,100%);aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:var(--shadow)}
+.quote blockquote p{font:400 clamp(30px,3.8vw,50px)/1.15 "DM Serif Display",Georgia,serif;text-wrap:balance}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-weight:600;color:var(--blue)}
+
+/* story (dark) */
+.story{background:var(--dark);color:var(--on-dark);padding:120px 0}
+.story h2{color:var(--on-dark)}
+.story-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.story-top .pull{font:400 clamp(28px,3.2vw,42px)/1.2 "DM Serif Display",Georgia,serif;color:var(--on-dark);margin-top:28px}
+.story-photo{position:relative}
+.story-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.65)}
+.story-photo .tag{left:16px;bottom:16px}
+.story-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:72px;padding-top:44px;border-top:1px solid rgba(236,238,246,.18)}
+.story-cols b{display:block;font:400 34px/1 "DM Serif Display",Georgia,serif;color:var(--on-dark);margin-bottom:12px}
+.story-cols p{color:var(--on-dark-soft);font-size:17px}
+.story-sign{margin-top:48px;color:var(--on-dark-soft)}
+.story-sign b{color:var(--on-dark);font-weight:600}
+
+/* contact */
+.contact{padding:120px 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact-copy p{margin-top:20px;color:var(--soft);max-width:30em}
+.contact-photo{position:relative;margin-top:40px;width:min(480px,100%)}
+.contact-photo img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 45%;border-radius:18px;box-shadow:var(--shadow)}
+.contact-photo .tag{right:16px;top:16px}
+.card{background:var(--surface);border-radius:22px;padding:40px;box-shadow:var(--shadow)}
+.card h3{font-size:32px}
+.card dl{margin:18px 0 0}
+.card dt{font-size:13px;font-weight:600;color:var(--blue);margin-top:18px}
+.card dd{margin:3px 0 0;font-size:17px;overflow-wrap:anywhere}
+.card dd a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.card dd a:hover{border-color:var(--blue)}
+.card .actions{margin-top:28px}
+
+/* footer */
+.foot{background:var(--dark);color:var(--on-dark);padding:80px 0 40px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.foot b{font:400 32px/1.05 "DM Serif Display",Georgia,serif;display:block}
+.foot p,.foot li{color:var(--on-dark-soft);font-size:16px}
+.foot p{margin-top:14px}
+.foot h4{margin:0 0 14px;font-size:14px;font-weight:600;color:var(--on-dark)}
+.foot ul{margin:0;padding:0;list-style:none}
+.foot li{padding:4px 0}
+.foot a{text-decoration:none;overflow-wrap:anywhere}
+.foot a:hover{color:var(--on-dark)}
+.foot-copy{margin-top:56px;padding-top:24px;border-top:1px solid rgba(236,238,246,.15);font-size:14px;color:var(--on-dark-soft)}
+.proposal{background:var(--dark);color:#8A90A8;text-align:center;font-size:13px;padding:0 0 22px;margin:0}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1040px){
+  .nav .hide-m{display:none}
+  .hero .wrap,.prepick .wrap,.staff .wrap,.story-top,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:44px}
+  .hero-art{padding-left:0;max-width:640px}
+  .hero-photo img{aspect-ratio:4/3;max-height:none}
+  .season{position:relative;left:auto;top:auto;transform:none;width:auto;margin:-64px 20px 0}
+  .story-cols{grid-template-columns:minmax(0,1fr);gap:28px}
+  .story-photo{max-width:520px}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .foot-grid > div:first-child{grid-column:1 / -1}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .wrap{width:min(var(--wrap),100% - 36px)}
+  .top .wrap{min-height:64px}
+  .brand b{font-size:21px}
+  .brand small{display:none}
+  .hero{padding:24px 0 72px}
+  .hero .wrap{gap:28px}
+  .hero h1{font-size:clamp(38px,11vw,48px)}
+  .lede{margin-top:14px;font-size:17px}
+  .actions{margin-top:20px}
+  .hero-photo img{border-radius:18px}
+  .hero-photo .tag{right:12px;top:12px;font-size:13px;padding:7px 12px}
+  .season{margin:-48px 12px 0;padding:24px 22px 20px}
+  .facts ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .facts strong{font-size:21px}
+  .prepick,.staff,.story,.contact{padding:80px 0}
+  .quote{padding:80px 0}
+  .duo{padding:0 40px 70px 0}
+  .duo .two-wrap{width:min(160px,42%)}
+  .duo .two{border-width:6px}
+  .family figure{width:min(150px,46%)}
+  .staff-photo .frame{padding:8px;border-radius:18px}
+  .staff-photo .tag{left:20px;bottom:20px}
+  .quote blockquote{grid-template-columns:minmax(0,1fr);gap:28px}
+  .quote img{width:min(140px,100%)}
+  .card{padding:30px 22px}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .nav .btn{padding:8px 14px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Lavalier's Berry Patch</b><small>and Orchard · Grand Rapids, Minnesota</small></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-m" href="#pre-picked">Order pre-picked</a>
+      <a class="hide-m" href="#staff">Meet the staff</a>
+      <a class="hide-m" href="#story">Our farm's story</a>
+      <a class="hide-m" href="#contact">Contact</a>
+      <a class="btn btn-line" href="tel:+12183279199">(218) 327-9199</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>The best berries, and beyond</h1>
+        <p class="lede">Come pick your own strawberries, blueberries and apples in Grand Rapids, Minnesota, or we will pick them for you. Farm fresh, for you.</p>
+        <div class="actions">
+          <a class="btn btn-full" href="#pre-picked">Order pre-picked</a>
+          <a class="btn btn-line" href="tel:+12183279199">Call (218) 327-9199</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-photo">
+          <img src="assets/lavaliers-berry-patch-grand-rapids-mn/cueilleur-paniers-entre-rangs-fraisiers.webp" alt="A picker walking between strawberry rows with a basket of berries in each hand" width="1200" height="1600" loading="eager">
+          <span class="tag">Pick your own</span>
+        </div>
+        <aside class="season" aria-label="What we grow">
+          <h2>From the patch and the orchard</h2>
+          <ul>
+            <li>Strawberries</li>
+            <li>Sour cherries</li>
+            <li>Blueberries</li>
+            <li>Apples</li>
+            <li>Pumpkins</li>
+            <li>Jams</li>
+          </ul>
+          <p>Our 2026 season is now over. We will keep <a href="https://www.lavaliersberrypatch.com/today">Today At The Patch</a> updated as strawberries are ripening.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li><strong>Pick your own</strong>Or we pick for you</li>
+        <li><strong>Berries and apples</strong>Plus a few lingonberries and haskaps</li>
+        <li><strong>10-foot deer fence</strong>All the way around the farm</li>
+        <li><strong>Grand Rapids, MN</strong>28056 County Road 91</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="prepick" id="pre-picked">
+    <div class="wrap">
+      <div class="duo">
+        <img class="one reveal" src="assets/lavaliers-berry-patch-grand-rapids-mn/cagette-fraises-au-pied-des-fraisiers.webp" alt="A flat of fresh strawberries on the straw at the foot of the plants" width="1600" height="1280" loading="lazy">
+        <span class="tag">Picked for you</span>
+        <div class="two-wrap reveal">
+          <img class="two" src="assets/lavaliers-berry-patch-grand-rapids-mn/cagette-fraises-gros-plan.webp" alt="Close-up of a box full of large strawberries" width="1200" height="1600" loading="lazy">
+        </div>
+      </div>
+      <div class="prepick-copy">
+        <h2>Come pick your own, or we will for you</h2>
+        <p>We understand your life is busy. If you don't have time to stop by the patch and check out all the freshness we have to offer, we will pick our strawberries, blueberries and apples for you.</p>
+        <p>Ask us about a pre-picked order by phone or by email.</p>
+        <ul class="steps">
+          <li><div><b>Phone</b><span><a class="nowrap" href="tel:+12183279199">(218) 327-9199</a></span></div></li>
+          <li><div><b>Email</b><span><a href="mailto:lavaliersberrypatch@gmail.com?subject=Pre-picked%20order">lavaliersberrypatch@gmail.com</a></span></div></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-full" href="tel:+12183279199">Call to order</a>
+          <a class="btn btn-line" href="mailto:lavaliersberrypatch@gmail.com?subject=Pre-picked%20order">Email your order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="staff" id="staff">
+    <div class="wrap">
+      <div class="staff-copy">
+        <h2>Fun, friendly berry picking staff</h2>
+        <p>We are passionate about fresh, local produce. Our staff provides friendly insight on berry picking technique, storage for optimal freshness, and where the bathrooms are.</p>
+        <p>The farm has always been a family effort: Loran and Margaret Lavalier spent countless hours weeding, helping customers and picking berries, and Carol, Emily, Andy and Joseph have all put in many hours to make the farm what it is today.</p>
+        <div class="family">
+          <figure><img src="assets/lavaliers-berry-patch-grand-rapids-mn/deux-cueilleuses-cagettes-fruits-rouges.webp" alt="Two smiling women holding boxes of red berries" width="1600" height="1600" loading="lazy"></figure>
+          <figure><img src="assets/lavaliers-berry-patch-grand-rapids-mn/enfants-planteuse-tracteur-champ.webp" alt="Two children on a planter behind a green tractor, a teenager standing beside them" width="1600" height="1600" loading="lazy"></figure>
+        </div>
+      </div>
+      <div class="staff-photo reveal">
+        <div class="frame">
+          <img src="assets/lavaliers-berry-patch-grand-rapids-mn/cueilleur-poignee-fraises.webp" alt="A smiling young man crouching in the strawberry field, a handful of berries held out to the camera" width="1200" height="1600" loading="lazy">
+        </div>
+        <span class="tag">In the strawberry patch</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <blockquote>
+        <img src="assets/lavaliers-berry-patch-grand-rapids-mn/fraises-gros-plan-carre.webp" alt="Fresh strawberries, close up" width="1600" height="1583" loading="lazy">
+        <div>
+          <p>“We picked strawberries and they are delicious. Great for a family fun day!”</p>
+          <cite>Kallie Q.</cite>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap">
+      <div class="story-top">
+        <div>
+          <h2>Our farm's story</h2>
+          <p class="pull">“Our first planting of strawberries was done by hand, one plant at a time, watering each one as we planted them.”</p>
+          <p class="story-sign"><b>Stuart Lavalier.</b> We now have a planter, which makes that job a lot easier.</p>
+        </div>
+        <div class="story-photo reveal">
+          <img src="assets/lavaliers-berry-patch-grand-rapids-mn/stuart-lavalier-cueille-pommes.webp" alt="Stuart Lavalier picking red apples in the orchard" width="1200" height="1600" loading="lazy">
+          <span class="tag">Stuart in the orchard</span>
+        </div>
+      </div>
+      <div class="story-cols">
+        <div>
+          <b>Small seedy berries</b>
+          <p>Growing up just south of Grand Rapids, we always had a large garden. Taking horticulture classes at the University, I discovered the problem behind my family's small seedy strawberries. The berry patch was a goal I envisioned after completing my horticulture degree from the University of Minnesota.</p>
+        </div>
+        <div>
+          <b>32&nbsp;years</b>
+          <p>The farm started during my second year of teaching in Elk River. For 32&nbsp;years I taught elementary students for nine months of the year and farmed for the other three in Grand Rapids. In 2010 I retired from teaching.</p>
+        </div>
+        <div>
+          <b>Then came the apples</b>
+          <p>A 10-foot high deer fence built around the farm to keep the deer out was the impetus for growing apples. We started with just strawberries, and over the years added blueberries, apples, sour cherries and even a few lingonberries and haskaps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-copy">
+        <h2>Hope to see you at the farm</h2>
+        <p>At the end of the season we usually are a little exhausted, but somehow over a mostly restful winter, the excitement of another year comes back like the first warm day of spring.</p>
+        <div class="contact-photo reveal">
+          <img src="assets/lavaliers-berry-patch-grand-rapids-mn/grappe-myrtilles-sur-branche.webp" alt="A cluster of blueberries ripening on the branch, blue, pink and green" width="1200" height="1600" loading="lazy">
+          <span class="tag">Blueberries on the branch</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Lavalier's Berry Patch and Orchard</h3>
+        <dl>
+          <dt>Address</dt>
+          <dd>28056 County Road 91<br>Grand Rapids, MN 55744</dd>
+          <dt>Phone</dt>
+          <dd><a class="nowrap" href="tel:+12183279199">(218) 327-9199</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:lavaliersberrypatch@gmail.com">lavaliersberrypatch@gmail.com</a></dd>
+          <dt>Picking dates, pricing and times</dt>
+          <dd><a href="https://www.lavaliersberrypatch.com/today">Today At The Patch</a></dd>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-full" href="tel:+12183279199">Call (218) 327-9199</a>
+          <a class="btn btn-line" href="mailto:lavaliersberrypatch@gmail.com">Write to us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <b>Lavalier's Berry Patch and Orchard</b>
+        <p>Farm fresh, for you.<br>28056 County Road 91, Grand Rapids, MN 55744</p>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+12183279199">(218) 327-9199</a></li>
+          <li><a href="mailto:lavaliersberrypatch@gmail.com">lavaliersberrypatch@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>At the patch</h4>
+        <ul>
+          <li><a href="https://www.lavaliersberrypatch.com/today">Today At The Patch</a></li>
+          <li><a href="#pre-picked">Order pre-picked</a></li>
+          <li><a href="https://www.lavaliersberrypatch.com/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-copy">The Lavalier Family</p>
+  </div>
+</footer>
+<p class="proposal">Proposal by Nicolas Masset for Lavalier's Berry Patch and Orchard</p>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

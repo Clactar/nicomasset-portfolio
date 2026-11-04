@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Weston Red Barn Farm · Weston, Missouri</title>
+<meta name="description" content="A turn-of-the-century working farm in Weston, Missouri: barnyard animals, country store, U-pick apples, pumpkins and flowers, two wedding barns and school tours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233A1F17'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='38' fill='%23D2691E'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#F4E9DC; --band:#EBDBC7; --surface:#FCF6EE; --ink:#2A1A12; --muted:#5E4637;
+  --accent:#D2691E; --accent-deep:#A8501A; --dark:#3A1F17; --dark-2:#4A2A1F; --on-dark:#F4E9DC;
+  --shadow:0 30px 60px -34px rgba(58,31,23,.5);
+  --shadow-soft:0 22px 44px -30px rgba(58,31,23,.45);
+  --wrap:1200px;
+  --display:"Zilla Slab", Georgia, serif;
+  --text:"Hanken Grotesk", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font:600 17px/1.2 var(--text);text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease;border:1.5px solid transparent;text-align:center}
+.btn-fill{background:var(--dark);color:var(--on-dark)}
+.btn-fill:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+.tel{white-space:nowrap}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(244,233,220,.94);border-bottom:1px solid rgba(58,31,23,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.brand b{font:600 23px/1.05 var(--display)}
+.brand span{font-size:14px;color:var(--muted);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.nav .call{background:var(--surface);color:var(--ink);padding:11px 20px;border-radius:999px;font-weight:600;box-shadow:var(--shadow-soft);transition:transform .2s,background-color .2s}
+.nav .call:hover{transform:translateY(-1px);background:#fff8ef}
+.call-short{display:none}
+
+/* hero */
+.hero{padding:72px 0 104px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center}
+.panel{position:relative;z-index:2;margin-right:-60px;background:var(--surface);border-radius:20px;padding:52px 52px 44px;box-shadow:var(--shadow)}
+.hero h1{font-size:clamp(40px,5.1vw,72px);line-height:1.03;font-weight:500}
+.lede{margin-top:24px;font-size:19px;color:var(--muted);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.note{margin-top:26px;padding-top:20px;border-top:1px solid rgba(58,31,23,.12);font-size:16px;color:var(--muted)}
+.note strong{color:var(--ink);font-weight:600}
+.hero-photo{position:relative;margin:0}
+.hero-photo img{width:100%;aspect-ratio:1/1.02;object-fit:cover;object-position:38% 62%;border-radius:20px;box-shadow:var(--shadow)}
+.plank{position:absolute;right:28px;top:30px;transform:rotate(-2.5deg);filter:drop-shadow(0 18px 22px rgba(42,26,18,.35))}
+.plank div{background:var(--accent);color:var(--surface);clip-path:polygon(14px 0,calc(100% - 14px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 14px) 100%,14px 100%,0 calc(100% - 14px),0 14px);padding:16px 24px 15px;text-align:center;position:relative}
+.plank div::before{content:"";position:absolute;inset:6px;border:1.5px solid rgba(252,246,238,.55);clip-path:inherit;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,0 calc(100% - 10px),0 10px)}
+.plank small{display:block;font:500 14px/1.2 var(--text);letter-spacing:.02em;opacity:.95}
+.plank b{display:block;font:600 24px/1.12 var(--display);margin-top:4px}
+.tag-r{left:auto!important;right:20px}
+.tag{position:absolute;left:20px;bottom:20px;background:var(--surface);color:var(--ink);font-size:15px;font-weight:500;padding:9px 16px;border-radius:12px;box-shadow:var(--shadow-soft)}
+
+/* facts */
+.facts{background:var(--band)}
+.facts ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.facts li{display:flex;flex-direction:column;gap:2px}
+.facts b{font:500 28px/1.1 var(--display)}
+.facts span{font-size:15.5px;color:var(--muted);line-height:1.4}
+
+section{padding:120px 0}
+
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.stack{position:relative;padding-bottom:90px}
+.stack .big{width:88%;aspect-ratio:4/3.1;object-fit:cover;object-position:45% 55%;border-radius:18px;box-shadow:var(--shadow)}
+.polaroid{position:absolute;right:0;bottom:0;width:min(250px,44%);background:var(--surface);padding:10px 10px 14px;border-radius:6px;box-shadow:var(--shadow)}
+.polaroid-in{transform:rotate(4deg)}
+.polaroid img{aspect-ratio:1/1;object-fit:cover;object-position:40% 35%;border-radius:3px}
+.polaroid p{font:400 italic 17px/1.2 var(--display);text-align:center;margin-top:10px;color:var(--muted)}
+.story h2,.flowers h2,.wed-text h2,.tours h2,.visit h2{font-size:clamp(34px,3.6vw,52px)}
+.story .copy p{margin-top:20px;max-width:34em}
+.story .copy p:first-of-type{margin-top:26px}
+.animals{margin-top:30px;padding:22px 26px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow-soft)}
+.animals h3{font-size:22px}
+.animals p{margin-top:8px!important;font-size:17px;color:var(--muted)}
+
+/* seasons */
+.seasons{background:linear-gradient(var(--base) 0 140px,var(--surface) 140px);padding-top:0}
+.banner{position:relative;margin:0 auto;transform:translateY(-1px)}
+.banner img{width:100%;aspect-ratio:2.7/1;object-fit:cover;object-position:50% 58%;border-radius:24px;box-shadow:var(--shadow)}
+.seasons .wrap.banner-wrap{padding-top:0}
+.seasons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:end;margin-top:88px}
+.seasons-head h2{font-size:clamp(34px,3.6vw,52px)}
+.seasons-head p{color:var(--muted)}
+.frieze{list-style:none;padding:0;margin:64px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;position:relative}
+.frieze::before{content:"";position:absolute;left:0;right:0;top:9px;height:1.5px;background:rgba(58,31,23,.18)}
+.frieze li{position:relative;padding-top:40px}
+.frieze li::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--surface);border:2px solid var(--dark)}
+.frieze li.fall::before{background:var(--accent);border-color:var(--accent)}
+.frieze .when{font-size:15px;color:var(--muted);font-weight:500}
+.frieze h3{font-size:27px;margin-top:6px}
+.frieze p{margin-top:12px;font-size:17px;color:var(--muted)}
+
+/* flowers */
+.flowers{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+.flowers .copy p{margin-top:22px;max-width:32em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding:0;list-style:none}
+.chips li{padding:8px 16px;border-radius:999px;background:var(--surface);font-size:16px;font-weight:500;box-shadow:var(--shadow-soft)}
+.duo{position:relative;padding:0 0 60px 0}
+.duo .wide{width:100%;aspect-ratio:3/2.15;object-fit:cover;object-position:60% 50%;border-radius:22px;box-shadow:var(--shadow)}
+.duo .tall{position:absolute;left:-48px;bottom:0;width:min(220px,40%);aspect-ratio:3/4;object-fit:cover;object-position:50% 40%;border-radius:14px;border:7px solid var(--surface);box-shadow:var(--shadow)}
+.duo .tag{left:auto;right:20px;bottom:80px}
+
+/* beef */
+.beef{background:var(--dark);color:var(--on-dark)}
+.beef-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:center}
+.beef h2{font-size:clamp(36px,4.2vw,60px)}
+.beef .copy p{margin-top:24px;color:rgba(244,233,220,.82);max-width:32em}
+.beef .big-line{font:400 italic clamp(24px,2.3vw,32px)/1.25 var(--display);color:var(--on-dark)!important;margin-top:28px!important}
+.beef .actions .btn-fill{background:var(--accent);color:var(--dark)}
+.beef .actions .btn-fill:hover{background:#E07A2E}
+.beef .actions .btn-line{border-color:rgba(244,233,220,.6);color:var(--on-dark)}
+.beef .actions .btn-line:hover{background:var(--on-dark);color:var(--dark)}
+.beef figure{margin:0;position:relative}
+.beef figure img{width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:46% 50%;border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.store-card{position:absolute;left:-40px;bottom:-36px;background:var(--surface);color:var(--ink);padding:20px 24px;border-radius:16px;box-shadow:var(--shadow);max-width:min(300px,80%)}
+.store-card b{font:600 20px/1.2 var(--display);display:block}
+.store-card span{font-size:15.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.45}
+
+/* weddings */
+.wed{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.wed-photos{position:relative;padding-bottom:120px}
+.wed-photos .main{width:100%;aspect-ratio:3/2.1;object-fit:cover;object-position:50% 60%;border-radius:22px;box-shadow:var(--shadow)}
+.wed-photos .second{position:absolute;right:-24px;bottom:0;width:min(340px,52%);aspect-ratio:3/2;object-fit:cover;object-position:50% 55%;border-radius:16px;border:8px solid var(--base);box-shadow:var(--shadow)}
+.wed-photos .tag{bottom:142px}
+.wed-text p{margin-top:22px;color:var(--muted)}
+.barns{margin-top:30px;border-top:1px solid rgba(58,31,23,.16)}
+.barn{padding:22px 0;border-bottom:1px solid rgba(58,31,23,.16);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;align-items:baseline}
+.barn h3{font-size:26px}
+.barn p{grid-column:1/-1;margin:0!important;font-size:17px}
+.barn a{font-size:16px;font-weight:600;color:var(--accent-deep);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px;transition:color .2s}
+.barn a:hover{color:var(--ink)}
+.included{margin-top:24px;font-size:17px;color:var(--muted)}
+.wed-text .actions{margin-top:28px}
+
+/* quote */
+.quote{padding:40px 0 120px}
+.quote blockquote{margin:0 auto;max-width:980px;text-align:center}
+.quote p{font:400 clamp(30px,3.6vw,50px)/1.15 var(--display);text-wrap:balance}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-size:16px;color:var(--muted)}
+
+/* tours */
+.tours-wrap{background:var(--band)}
+.tours{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+.tours .copy p{margin-top:22px;max-width:32em;color:var(--muted)}
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.terms div{background:var(--surface);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow-soft)}
+.terms b{font:500 22px/1.2 var(--display);display:block}
+.terms span{font-size:15.5px;color:var(--muted)}
+.tour-photo{position:relative;margin:0}
+.tour-photo img.main{width:100%;aspect-ratio:3/2.2;object-fit:cover;object-position:50% 55%;border-radius:22px;box-shadow:var(--shadow)}
+.tour-photo .thumb{position:absolute;right:-20px;top:-44px;width:min(200px,36%)}
+.thumb-in{transform:rotate(-3deg);background:var(--surface);padding:8px;border-radius:12px;box-shadow:var(--shadow)}
+.thumb-in img{aspect-ratio:4/3;object-fit:cover;object-position:45% 50%;border-radius:7px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.hours{margin-top:30px;border-top:1px solid rgba(58,31,23,.16)}
+.hours div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;padding:18px 0;border-bottom:1px solid rgba(58,31,23,.16)}
+.hours dt{font:500 21px/1.3 var(--display)}
+.hours dd{margin:0;color:var(--muted)}
+.hours .now dt{color:var(--accent-deep)}
+.hours .now dd{color:var(--ink);font-weight:500}
+.visit .intro{margin-top:20px;color:var(--muted);max-width:34em}
+.visit-side{position:relative;padding-top:20px}
+.visit-side img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:30% 70%;border-radius:20px;box-shadow:var(--shadow)}
+.card{position:relative;margin:-90px 28px 0;background:var(--surface);border-radius:18px;padding:30px 32px;box-shadow:var(--shadow)}
+.card dl{margin:0;display:grid;gap:16px}
+.card dt{font-size:14px;color:var(--muted);font-weight:500}
+.card dd{margin:2px 0 0;font:500 20px/1.35 var(--display)}
+.card dd a{text-decoration:none;border-bottom:1.5px solid rgba(210,105,30,.55);transition:border-color .2s}
+.card dd a:hover{border-color:var(--ink)}
+.card .mail{overflow-wrap:anywhere}
+
+/* footer */
+footer{background:var(--dark);color:var(--on-dark);padding:88px 0 40px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.foot h2{font-size:34px}
+.foot p,.foot li{color:rgba(244,233,220,.78);font-size:16.5px}
+.foot h3{font:600 15px/1.3 var(--text);color:rgba(244,233,220,.6);margin-bottom:12px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(244,233,220,.3);transition:border-color .2s}
+.foot a:hover{border-color:var(--on-dark)}
+.foot .big{font:500 22px/1.4 var(--display);color:var(--on-dark);margin-top:16px}
+.proposal{background:var(--dark);border-top:1px solid rgba(244,233,220,.12);text-align:center;padding:18px 24px;font-size:13.5px;color:rgba(244,233,220,.55)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.nav .call{transition:none}}
+
+/* tablet */
+@media (max-width:1080px){
+  .nav a:not(.call){display:none}
+  .facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .story,.flowers,.beef-grid,.wed,.tours,.visit{gap:56px}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .hero{padding:32px 0 72px}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .panel{display:contents}
+  .hero h1{order:1}
+  .hero-photo{order:2;margin-top:24px}
+  .lede{order:3}
+  .actions{order:4}
+  .note{order:5}
+  .hero-photo img{aspect-ratio:4/3.2}
+  .story,.flowers,.beef-grid,.wed,.tours,.visit,.seasons-head{grid-template-columns:minmax(0,1fr)}
+  .story .stack{order:2}
+  .frieze{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 28px}
+  .frieze::before{display:none}
+  .duo .tall{left:16px}
+  .wed-photos .second{right:12px}
+  .tour-photo .thumb{right:12px}
+  .store-card{left:16px}
+  .foot{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .foot > div:first-child{grid-column:1/-1}
+  .seasons-head{margin-top:64px;gap:20px}
+  .quote{padding:16px 0 88px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{width:min(var(--wrap),100% - 40px)}
+  .top .wrap{min-height:64px}
+  .brand b{font-size:20px}
+  .brand span{display:none}
+  .nav .call{padding:10px 16px;font-size:15.5px}
+  .hero h1{font-size:clamp(38px,11vw,48px)}
+  .lede{margin-top:22px;font-size:17.5px}
+  .plank{right:14px;top:14px}
+  .plank div{padding:11px 16px}
+  .plank b{font-size:18px}
+  .plank small{font-size:12.5px}
+  .tag{font-size:14px;left:12px;bottom:12px}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr));padding:30px 0;gap:22px 18px}
+  .facts b{font-size:24px}
+  .facts li:last-child{grid-column:1/-1}
+  .banner img{aspect-ratio:4/3;border-radius:18px}
+  .frieze{grid-template-columns:minmax(0,1fr)}
+  .frieze li{padding:0 0 0 38px}
+  .frieze li::before{top:6px}
+  .duo{padding-bottom:40px}
+  .duo .tall{width:min(150px,42%);bottom:0}
+  .duo .tag{bottom:auto;top:14px;right:14px}
+  .wed-photos{padding-bottom:90px}
+  .wed-photos .second{width:56%}
+  .wed-photos .tag{bottom:auto;top:12px}
+  .terms{grid-template-columns:minmax(0,1fr)}
+  .tour-photo{margin-top:40px}
+  .tour-photo .thumb{width:min(140px,40%);top:-36px}
+  .card{margin:-60px 12px 0;padding:24px 22px}
+  .store-card{left:12px;right:12px;bottom:-28px;max-width:none}
+  .beef figure{margin-bottom:28px}
+  .foot{grid-template-columns:minmax(0,1fr)}
+  footer{padding:64px 0 32px}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .call-long{display:none}
+  .call-short{display:inline}
+  .barn{grid-template-columns:minmax(0,1fr)}
+  .hours div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Weston Red Barn Farm, back to top"><b>Weston Red Barn Farm</b><span>Weston, Missouri</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#seasons">The seasons</a>
+      <a href="#beef">Beef</a>
+      <a href="#weddings">Weddings</a>
+      <a href="#tours">School tours</a>
+      <a href="#visit">Visit</a>
+      <a class="call" href="tel:+18163865437"><span class="call-long tel">(816) 386-5437</span><span class="call-short">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Welcome">
+    <div class="wrap hero-grid">
+      <div class="panel">
+        <h1>See the country, full of charm.</h1>
+        <p class="lede">A trip to Weston Red Barn Farm is like visiting a turn-of-the-century working farm: traditional animals and crops, a country store with fresh produce, U-pick pumpkins, apples and flowers, and two wedding barns.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="#visit">Plan your visit</a>
+          <a class="btn btn-line" href="tel:+18163865437"><span class="tel">(816) 386-5437</span></a>
+        </div>
+        <p class="note"><strong>November hours:</strong> open through Nov&nbsp;9, Tues–Sun, <span class="tel">10&nbsp;am–4&nbsp;pm</span>. December to April, call for an appointment.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/weston-red-barn-farm-weston-mo/grange-rouge-coucher-soleil-citrouilles.webp" width="1600" height="1200" alt="The old barn with its tin roof at sunset, rows of orange and white pumpkins in front" loading="eager" fetchpriority="high">
+        <div class="plank" aria-hidden="false"><div><small>Rated the</small><b>Best Pumpkin Patch<br>in Missouri</b></div></div>
+        <span class="tag tag-r">16300 Wilkerson Road, Weston</span>
+      </figure>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul class="wrap">
+      <li><b>1990</b><span>Opened by Steve and Cindy Frey</span></li>
+      <li><b>Free entry</b><span>No general admission or parking fee</span></li>
+      <li><b>25+&nbsp;years</b><span>Of weddings in two barns</span></li>
+      <li><b>30+&nbsp;years</b><span>Of school tours on the farm</span></li>
+      <li><b>U-pick</b><span>Pumpkins, apples and flowers</span></li>
+    </ul>
+  </div>
+
+  <section aria-labelledby="story-title">
+    <div class="wrap story">
+      <div class="stack">
+        <img class="big reveal" src="assets/weston-red-barn-farm-weston-mo/ane-cour-de-ferme-grange.webp" width="1600" height="1059" alt="A donkey grazing in front of an old wooden barn in the barnyard" loading="lazy">
+        <figure class="polaroid reveal"><div class="polaroid-in"><img src="assets/weston-red-barn-farm-weston-mo/chevre-curieuse-cloture.webp" width="1600" height="1184" alt="A brown goat with long ears looking over the wooden fence" loading="lazy"><p>Say hello at the fence</p></div></figure>
+      </div>
+      <div class="copy">
+        <h2 id="story-title">The views speak for themselves.</h2>
+        <p>Steve and Cindy Frey founded the farm in 1990. Steve had vivid childhood memories of visits to his uncle’s farm in Missouri and wanted to recreate the experience of the family farm for everyone to visit.</p>
+        <p>The mission hasn’t changed: an educational experience for children and a place for families to enjoy an authentic farm setting, safe, peaceful and noncommercial. The next generation is bringing new ideas while holding true to it.</p>
+        <div class="animals">
+          <h3>The barnyard</h3>
+          <p>A typical barnyard at the turn of the century: chickens, ducks, geese, turkeys, goats, sheep, pigs, alpacas, ponies, horses, donkeys and cows. Our Belted Galloways birth their calves in the late summer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seasons" id="seasons" aria-labelledby="seasons-title">
+    <div class="wrap">
+      <figure class="banner">
+        <img class="reveal" src="assets/weston-red-barn-farm-weston-mo/allee-citrouilles-coucher-soleil.webp" width="1600" height="1200" alt="A wood-chip path lined with pumpkins and mums leading to the barns at sunset" loading="lazy">
+        <span class="tag">The main pumpkin yard</span>
+      </figure>
+      <div class="seasons-head">
+        <h2 id="seasons-title">A working farmstead, all year long.</h2>
+        <p>The farm is open to the public from Memorial Day weekend through November. In spring and summer, the barnyard and the country store are the focal points; in the fall, the farm comes alive as we celebrate the harvest.</p>
+      </div>
+      <ol class="frieze">
+        <li>
+          <span class="when">April and May</span>
+          <h3>Spring</h3>
+          <p>A quiet time on the farm, with educational tours and baby farm animals: think baby goats, lambs and the occasional foal.</p>
+        </li>
+        <li>
+          <span class="when">From Memorial Day weekend</span>
+          <h3>Summer</h3>
+          <p>The annual opening to the public. Peaches, sweet corn, tomatoes, melons and cucumbers in the country store.</p>
+        </li>
+        <li class="fall">
+          <span class="when">From Labor Day weekend</span>
+          <h3>Fall</h3>
+          <p>U-pick apples, then Fall Festival weekends: hayrides, pumpkins, ponies, caramel apples, BBQ and apple cider. The Pumpkin Barn sits in a 150-year-old mule barn.</p>
+        </li>
+        <li>
+          <span class="when">December to April</span>
+          <h3>Winter</h3>
+          <p>Call for an appointment, with questions or to set up a wedding tour.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="flowers-title">
+    <div class="wrap flowers">
+      <div class="copy">
+        <h2 id="flowers-title">Pick your own bouquet.</h2>
+        <p>The u-pick flower garden opens in mid-June and lasts until the first frost of the season. Stop into the store for your vase and cutters, then head out and pick.</p>
+        <ul class="chips" aria-label="Flowers in the garden">
+          <li>Zinnias</li><li>Sunflowers</li><li>Cosmos</li><li>Celosia</li><li>and more</li>
+        </ul>
+      </div>
+      <div class="duo">
+        <img class="wide reveal" src="assets/weston-red-barn-farm-weston-mo/cueillette-zinnias-jardin-fleurs.webp" width="1500" height="1038" alt="Two hands picking colorful zinnias in the u-pick flower garden" loading="lazy">
+        <img class="tall reveal" src="assets/weston-red-barn-farm-weston-mo/bouquet-tournesols-zinnias.webp" width="1200" height="1600" alt="A jar of sunflowers, zinnias and celosia on a tree stump" loading="lazy">
+        <span class="tag">Mid-June to the first frost</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="beef" id="beef" aria-labelledby="beef-title">
+    <div class="wrap beef-grid">
+      <div class="copy">
+        <h2 id="beef-title">Farm-fresh beef for sale.</h2>
+        <p>MidAmerican Beef is dedicated to helping families eat more wholesome, farm-fresh food by offering unparalleled beef products.</p>
+        <p class="big-line">Find your favorite cuts in the Country Store.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="tel:+18163865437">Call the farm</a>
+          <a class="btn btn-line" href="mailto:info@westonredbarnfarm.com?subject=Farm-fresh%20beef">Email about beef</a>
+        </div>
+      </div>
+      <figure>
+        <img class="reveal" src="assets/weston-red-barn-farm-weston-mo/comptoir-pommes-apple-barn.webp" width="1600" height="1200" alt="The Apple Barn counter loaded with bags of red and green apples" loading="lazy">
+        <div class="store-card"><b>The Country Store</b><span>Fresh produce and MidAmerican Beef, open with the barnyard.</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="weddings" aria-labelledby="wed-title">
+    <div class="wrap wed">
+      <div class="wed-photos">
+        <img class="main reveal" src="assets/weston-red-barn-farm-weston-mo/maries-table-dans-la-grange.webp" width="1600" height="1067" alt="A bride and groom at a table seen through the open sliding doors of a wooden barn" loading="lazy">
+        <img class="second reveal" src="assets/weston-red-barn-farm-weston-mo/grange-timber-mariage-exterieur.webp" width="1400" height="933" alt="Guests outside the Timber Barn at dusk" loading="lazy">
+        <span class="tag">Weddings for over 25 years</span>
+      </div>
+      <div class="wed-text">
+        <h2 id="wed-title">Two wedding barns on the hill.</h2>
+        <p>Two distinct, budget-friendly venues with commanding views of the Missouri countryside. You choose your vendor team; we’re happy to recommend wedding professionals we trust.</p>
+        <div class="barns">
+          <div class="barn">
+            <h3>The Red Barn</h3>
+            <a href="https://www.westonredbarnfarm.com/red-barn">See the Red Barn</a>
+            <p>A converted tobacco barn, famous for being the first wedding barn in the KC-Metro area.</p>
+          </div>
+          <div class="barn">
+            <h3>The Timber Barn</h3>
+            <a href="https://www.westonredbarnfarm.com/timber-barn">See the Timber Barn</a>
+            <p>A traditionally built timber frame barn.</p>
+          </div>
+        </div>
+        <p class="included">Both barns include tables and chairs, climate-controlled changing rooms, catering space, ample parking and oodles of charm.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="https://www.westonredbarnfarm.com/weddings">Ask about your date</a>
+          <a class="btn btn-line" href="https://cdn.prod.website-files.com/5d97a105fecfcd682a3a01a7/5eb8251c0743561005fb4952_Weston%20Red%20Barn%20Farm%20Wedding%20Information.pdf">Wedding information</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    <blockquote class="wrap">
+      <p>“Wedding trends come and go, but nature is always in style.”</p>
+      <cite>Weston Red Barn Farm</cite>
+    </blockquote>
+  </div>
+
+  <div class="tours-wrap" id="tours">
+    <section aria-labelledby="tours-title">
+      <div class="wrap tours">
+        <div class="copy">
+          <h2 id="tours-title">Nature is the ultimate classroom.</h2>
+          <p>For over thirty years, we’ve hosted hundreds of thousands of school children. Every child gets an authentic, up-close visit with the animals that live on the farm; spring groups take a private tour with one of our farmers. Activities vary by season and can include a hayride, a visit to the pumpkin patch and more.</p>
+          <div class="terms">
+            <div><b>Spring</b><span>April and May</span></div>
+            <div><b>Fall</b><span>September and October</span></div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-fill" href="https://www.westonredbarnfarm.com/schooltours">Request a tour</a>
+            <a class="btn btn-line" href="tel:+18163865437"><span class="tel">(816) 386-5437</span></a>
+          </div>
+        </div>
+        <figure class="tour-photo">
+          <img class="main reveal" src="assets/weston-red-barn-farm-weston-mo/sortie-scolaire-enfants-vers-grange.webp" width="1600" height="1066" alt="A class of children walking on a gravel path toward a big wooden barn" loading="lazy">
+          <div class="thumb"><div class="thumb-in"><img src="assets/weston-red-barn-farm-weston-mo/tracteur-promenade-charrette.webp" width="1600" height="1200" alt="A green tractor pulling a wagon of visitors" loading="lazy"></div></div>
+          <span class="tag">Education is always in season</span>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <section id="visit" aria-labelledby="visit-title">
+    <div class="wrap visit">
+      <div>
+        <h2 id="visit-title">Come see the farm.</h2>
+        <p class="intro">There is no general admission or parking fee. On fall weekends, tickets for hayrides, the Grain Train, the maze and pony rides are at the InFARMation booth, at the front of the farm.</p>
+        <dl class="hours">
+          <div class="now"><dt>November</dt><dd>Open through Nov&nbsp;9<br>Tues–Sun, <span class="tel">10&nbsp;am–4&nbsp;pm</span></dd></div>
+          <div><dt>Winter, Dec–Apr</dt><dd>Call for an appointment</dd></div>
+          <div><dt>Spring and summer</dt><dd>Open from Memorial Day weekend<br>Tues–Sun, <span class="tel">10&nbsp;am–4&nbsp;pm</span></dd></div>
+          <div><dt>Fall</dt><dd>Mon–Sun, <span class="tel">9&nbsp;am–5&nbsp;pm</span></dd></div>
+        </dl>
+      </div>
+      <div class="visit-side">
+        <img class="reveal" src="assets/weston-red-barn-farm-weston-mo/presentoir-citrouilles-caisse-weston-red-barn-farm.webp" width="1400" height="1050" alt="Pumpkins, a white pumpkin and yellow mums on a painted Weston Red Barn Farm crate" loading="lazy">
+        <div class="card">
+          <dl>
+            <div><dt>Address</dt><dd>16300 Wilkerson Road<br>Weston, Missouri 64098</dd></div>
+            <div><dt>Phone</dt><dd><a class="tel" href="tel:+18163865437">(816) 386-5437</a></dd></div>
+            <div><dt>Email</dt><dd><a class="mail" href="mailto:info@westonredbarnfarm.com">info@westonredbarnfarm.com</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h2>Weston Red Barn Farm</h2>
+      <p class="big">16300 Wilkerson Road<br>Weston, Missouri 64098</p>
+      <p style="margin-top:14px"><a class="tel" href="tel:+18163865437">(816) 386-5437</a> · <a href="mailto:info@westonredbarnfarm.com">info@westonredbarnfarm.com</a></p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <ul>
+        <li>November: open through Nov&nbsp;9, Tues–Sun, <span class="tel">10&nbsp;am–4&nbsp;pm</span></li>
+        <li>Dec–Apr: call for an appointment</li>
+        <li>From Memorial Day weekend: Tues–Sun, <span class="tel">10&nbsp;am–4&nbsp;pm</span></li>
+        <li>Fall: Mon–Sun, <span class="tel">9&nbsp;am–5&nbsp;pm</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>On the farm</h3>
+      <ul>
+        <li><a href="https://www.westonredbarnfarm.com/weddings">Weddings</a></li>
+        <li><a href="https://www.westonredbarnfarm.com/schooltours">School tours</a></li>
+        <li><a href="https://www.facebook.com/pages/category/Farm/Weston-Red-Barn-Farm-68112905420/">Facebook</a></li>
+        <li><a href="https://www.instagram.com/westonredbarnfarm/">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposal">Proposal by Nicolas Masset for Weston Red Barn Farm</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

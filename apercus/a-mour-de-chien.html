@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>A’mour de Chien · Salon de toilettage canin à L’Hermitage</title>
+<meta name="description" content="A’mour de Chien, salon de toilettage canin au 5 rue de Rennes à L’Hermitage : toutes races, bains, coupes, coupes concours, épilations. Sur rendez-vous, du lundi au vendredi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23D64F7A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23F4F9F6'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E6F0EA; --surface:#F4F9F6; --encre:#1C2B2A; --framboise:#D64F7A; --sombre:#1C2B2A;
+  --doux:#4C5E5B; --menthe-soutenue:#D3E5DA; --clair:#EEF5F1; --clair-doux:#B7C9C2;
+  --ombre:0 30px 60px -34px rgba(28,43,42,.55);
+  --w:1200px; --pad:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Outfit",ui-sans-serif,sans-serif;font-weight:300;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--framboise);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;font-variation-settings:"opsz" 96}
+p{margin:0;text-wrap:pretty}
+b,strong{font-weight:500}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--pad)}
+.tel{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 "Outfit",sans-serif;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--framboise);color:var(--surface);box-shadow:0 14px 28px -16px rgba(214,79,122,.8)}
+.btn-plein:hover{background:#C2416B}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(230,240,234,.96);border-bottom:1px solid rgba(28,43,42,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:14px;white-space:nowrap}
+.marque b{font:500 25px/1 "Fraunces",Georgia,serif}
+.marque small{font-size:15px;color:var(--doux)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:400}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--framboise)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:16px}
+.num-court{display:none}
+
+/* Héros */
+.heros{padding:56px 0 96px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center}
+.photo-heros{position:relative;margin:0;grid-column:1;grid-row:1}
+.photo-heros img{width:100%;aspect-ratio:6/5.2;object-fit:cover;object-position:50% 18%;border-radius:24px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:20px;bottom:20px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 28px -14px rgba(28,43,42,.55)}
+.carte-heros{grid-column:2;grid-row:1;position:relative;z-index:2;margin-left:-110px;background:var(--surface);border-radius:24px;padding:48px 44px;box-shadow:0 40px 80px -40px rgba(28,43,42,.6)}
+.carte-heros h1{font-size:clamp(36px,4.3vw,60px);line-height:1.06;font-weight:400}
+.carte-heros .chapo{margin-top:22px;color:var(--doux);font-size:18px}
+.note{display:flex;align-items:center;gap:12px;margin-top:24px;text-decoration:none;font-size:16px;color:var(--doux)}
+.note .etoiles{color:var(--framboise);letter-spacing:2px;font-size:17px}
+.note b{color:var(--encre);font-size:19px}
+.note:hover u{text-decoration-color:var(--framboise)}
+.note u{text-underline-offset:3px;text-decoration-color:rgba(28,43,42,.3)}
+.carte-heros .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.carte-heros .ligne-tel{margin-top:18px;font-size:16px;color:var(--doux)}
+.carte-heros .ligne-tel a{color:var(--encre);font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--framboise)}
+
+/* Bandeau de faits */
+.faits{background:var(--menthe-soutenue)}
+.faits ul{list-style:none;margin:0 auto;padding:30px var(--pad);max-width:var(--w);display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px;font-size:17px;font-weight:400}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--framboise);flex:none}
+
+section{padding:112px 0}
+.titre-section{font-size:clamp(32px,3.6vw,50px);line-height:1.1}
+.texte{color:var(--doux);font-size:18px}
+
+/* Soins */
+.soins .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.soins .photos{position:relative;padding-bottom:70px}
+.soins .grande{margin:0}
+.soins .grande img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--ombre)}
+.soins .petite{position:absolute;right:-36px;bottom:0;width:min(200px,46%);margin:0}
+.soins .petite img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 30%;border-radius:18px;border:7px solid var(--surface);box-shadow:var(--ombre)}
+.liste-soins{list-style:none;margin:36px 0 0;padding:0}
+.liste-soins li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 0;border-top:1px solid rgba(28,43,42,.15)}
+.liste-soins li:last-child{border-bottom:1px solid rgba(28,43,42,.15)}
+.liste-soins h3{font-size:clamp(25px,2.4vw,32px);line-height:1.15}
+.liste-soins span{color:var(--doux);font-size:16px;text-align:right}
+.soins .pied-liste{margin-top:24px;color:var(--doux);font-size:17px}
+
+/* Galerie sombre */
+.galerie{background:var(--sombre);color:var(--clair)}
+.galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:64px}
+.galerie .tete p{color:var(--clair-doux);max-width:30em}
+.mosaique{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,.85fr);gap:32px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.mosaique img{width:100%;object-fit:cover;border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.mosaique figcaption{font-size:15px;color:var(--clair-doux);margin-top:14px}
+.m1 img{aspect-ratio:1;object-position:50% 25%}
+.m2{margin-top:96px!important}
+.m2 img{aspect-ratio:3/4;object-position:50% 40%}
+.m3 .polaroid{background:var(--surface);padding:12px 12px 48px;border-radius:10px;transform:rotate(3deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.75)}
+.m3 .polaroid img{aspect-ratio:4/5;border-radius:4px;box-shadow:none;object-position:50% 35%}
+.m3 .polaroid span{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:var(--encre);font:400 18px/1 "Fraunces",Georgia,serif}
+.m3 .petite{width:min(200px,70%);margin:44px 0 0 auto}
+.m3 .petite img{aspect-ratio:1;border-radius:16px;object-position:50% 40%}
+.galerie .etiquette{left:16px;bottom:16px}
+
+/* Boutique */
+.boutique .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:center}
+.boutique .photo{position:relative;margin:0;max-width:460px;justify-self:end;width:100%}
+.boutique .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:200px 200px 22px 22px;box-shadow:var(--ombre)}
+.boutique .texte{margin-top:22px}
+.boutique .pastille{position:absolute;left:-28px;top:42%;width:132px;height:132px;border-radius:50%;background:var(--framboise);color:var(--surface);display:grid;place-items:center;text-align:center;font:400 18px/1.15 "Fraunces",Georgia,serif;padding:14px;box-shadow:0 20px 40px -20px rgba(214,79,122,.9);transform:rotate(-8deg)}
+
+/* Contact */
+.contact{background:var(--menthe-soutenue)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0;align-items:center}
+.contact .vitrine{position:relative;margin:0}
+.contact .vitrine img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 0%;border-radius:24px;box-shadow:var(--ombre)}
+.carte-coord{position:relative;z-index:2;margin-left:-80px;background:var(--surface);border-radius:24px;padding:40px;box-shadow:0 40px 80px -40px rgba(28,43,42,.6)}
+.carte-coord h2{font-size:clamp(30px,3vw,40px);line-height:1.1;margin-bottom:24px}
+.carte-coord dl{margin:0;display:grid;gap:18px}
+.carte-coord dt{font-size:14px;color:var(--doux);font-weight:400}
+.carte-coord dd{margin:2px 0 0;font-size:18px;font-weight:400}
+.carte-coord dd a{text-decoration:none;border-bottom:1.5px solid rgba(214,79,122,.5)}
+.carte-coord .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.horaires{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 18px}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:80px 0 36px;font-size:16px}
+.pied .grille{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied h2{font-size:34px;color:var(--clair);margin-bottom:12px}
+.pied h3{font:500 15px/1.4 "Outfit",sans-serif;color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair)}
+.signature{margin-top:64px;padding-top:24px;border-top:1px solid rgba(238,245,241,.12);font-size:13px;color:#7E928C}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+@media (max-width:980px){
+  .nav a:not(.btn){display:none}
+  .marque small{display:none}
+  .heros{padding:32px 0 72px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr)}
+  .photo-heros{grid-column:1;grid-row:2}
+  .carte-heros{grid-column:1;grid-row:1;margin:0;background:none;box-shadow:none;padding:0 0 28px}
+  .soins .wrap,.boutique .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .soins .photos{max-width:480px}
+  .soins .petite{right:0}
+  .mosaique{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .m3{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end}
+  .m3 .petite{margin:0}
+  .boutique .photo{justify-self:start}
+  .carte-coord{margin:-60px 16px 0}
+  .pied .grille{grid-template-columns:minmax(0,1fr)}
+  section{padding:88px 0}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:22px}
+  .heros .wrap{display:flex;flex-direction:column}
+  .carte-heros{display:contents}
+  .carte-heros h1{order:1}
+  .photo-heros{order:2;margin-top:24px}
+  .carte-heros .chapo{order:3;margin-top:24px}
+  .note{order:4}
+  .carte-heros .actions{order:5}
+  .carte-heros .ligne-tel{order:6}
+  .photo-heros img{aspect-ratio:1}
+  .faits ul{flex-direction:column;gap:10px}
+  .liste-soins li{flex-direction:column;gap:2px}
+  .liste-soins span{text-align:left}
+  .mosaique{grid-template-columns:minmax(0,1fr);gap:40px}
+  .m2{margin-top:0!important;width:84%;margin-left:auto!important}
+  .m3{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .boutique .pastille{left:auto;right:12px;top:auto;bottom:-30px;width:116px;height:116px;font-size:16px}
+  .carte-coord{margin:-40px 10px 0;padding:28px 22px}
+  section{padding:72px 0}
+}
+@media (max-width:420px){
+  .btn{width:100%}
+  .entete .btn{width:auto;padding:10px 18px}
+  .num-long{display:none}
+  .num-court{display:inline}
+}
+@media (max-width:350px){
+  .marque b{font-size:20px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>A’mour de Chien</b><small>Toilettage canin · L’Hermitage</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#soins">Les soins</a>
+      <a href="#salon">Le salon</a>
+      <a href="#venir">Venir</a>
+      <a class="btn btn-contour tel" href="tel:+33778673316"><span class="num-long">07 78 67 33 16</span><span class="num-court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-label="Présentation" style="padding-top:56px">
+    <div class="wrap">
+      <figure class="photo-heros">
+        <img src="assets/a-mour-de-chien/caniche-blanc-toilette-sur-table.webp" alt="Un caniche blanc fraîchement toiletté, debout de profil sur la table de toilettage du salon" width="1200" height="1600" fetchpriority="high">
+        <span class="etiquette">Toutes races, sur rendez-vous</span>
+      </figure>
+      <div class="carte-heros">
+        <h1>Le salon de toilettage canin de L’Hermitage.</h1>
+        <p class="chapo">Bains, coupes, coupes concours pour les caniches, épilations et conseils&nbsp;: 20 ans d’expérience au service de votre chien, quelle que soit sa race.</p>
+        <a class="note" href="https://www.google.com/maps/search/A%27mour+de+Chien+L%27Hermitage"><span class="etoiles" aria-hidden="true">★★★★★</span><span><b>5,0</b> sur Google · <u>16 avis</u></span></a>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33778673316">Prendre rendez-vous</a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/search/A%27mour+de+Chien+L%27Hermitage">Voir les avis</a>
+        </div>
+        <p class="ligne-tel">Du lundi au vendredi, au <a class="tel" href="tel:+33778673316">07 78 67 33 16</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits" aria-label="En bref">
+    <ul>
+      <li>20 ans d’expérience</li>
+      <li>Toutes races</li>
+      <li>Lundi au vendredi, 9h – 18h30</li>
+      <li>Sur rendez-vous</li>
+      <li>5 rue de Rennes, L’Hermitage</li>
+    </ul>
+  </div>
+
+  <section class="soins" id="soins">
+    <div class="wrap">
+      <div class="photos">
+        <figure class="grande apparait">
+          <img src="assets/a-mour-de-chien/westie-blanc-debout-table.webp" alt="Un petit chien blanc toiletté, debout de face sur la table violette" width="1200" height="1600" loading="lazy">
+        </figure>
+        <figure class="petite apparait">
+          <img src="assets/a-mour-de-chien/chien-abricot-assis-table-violette.webp" alt="Un chiot à poil bouclé abricot, coupe ronde fraîche" width="1217" height="1600" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2 class="titre-section">Les soins du salon</h2>
+        <p class="texte" style="margin-top:18px">Toutes les races sont les bienvenues. Chaque toilettage se prend sur rendez-vous, du lundi au vendredi.</p>
+        <ul class="liste-soins">
+          <li><h3>Bains</h3></li>
+          <li><h3>Coupes</h3></li>
+          <li><h3>Coupes concours</h3><span>pour les caniches</span></li>
+          <li><h3>Épilations</h3></li>
+          <li><h3>Conseils</h3></li>
+        </ul>
+        <p class="pied-liste">Pour un tarif ou un créneau, le plus simple est d’appeler le <a class="tel" href="tel:+33778673316">07 78 67 33 16</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="galerie" id="salon">
+    <div class="wrap">
+      <div class="tete">
+        <h2 class="titre-section">Sortis de la table</h2>
+        <p>Quelques clients du salon, juste après leur toilettage. D’autres passages sont sur la page Facebook du salon.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="m1 apparait">
+          <img src="assets/a-mour-de-chien/caniche-blanc-assis-salon.webp" alt="Le caniche blanc assis de face, tête bien taillée, devant le mur carrelé du salon" width="1600" height="1600" loading="lazy">
+          <span class="etiquette">Une coupe de caniche</span>
+        </figure>
+        <figure class="m2 apparait">
+          <img src="assets/a-mour-de-chien/lhassa-apso-debout-table.webp" alt="Un petit chien à poil beige et oreilles longues, debout de profil sur la table, langue sortie" width="1200" height="1600" loading="lazy">
+          <figcaption>Sur la table du salon</figcaption>
+        </figure>
+        <div class="m3 apparait">
+          <figure class="polaroid">
+            <img src="assets/a-mour-de-chien/shih-tzu-toilette-table-violette.webp" alt="Un petit chien à poil beige après son toilettage, assis sur la table violette" width="1200" height="1600" loading="lazy">
+            <span>Avant de rentrer</span>
+          </figure>
+          <figure class="petite">
+            <img src="assets/a-mour-de-chien/loulou-pomeranie-gros-plan.webp" alt="Gros plan sur un jeune loulou de Poméranie au poil gonflé" width="1200" height="1600" loading="lazy">
+            <figcaption>Un jeune loulou</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutique">
+    <div class="wrap">
+      <div>
+        <h2 class="titre-section">Un coin boutique, pour les chiens et les chats</h2>
+        <p class="texte">Au salon, des étagères de friandises en bocaux et en sachets, et des gourmandises pour votre chien et votre chat.</p>
+        <p class="texte" style="margin-top:16px">Le salon se trouve au 5 rue de Rennes, à L’Hermitage.</p>
+      </div>
+      <figure class="photo apparait">
+        <img src="assets/a-mour-de-chien/coin-boutique-friandises-fleurs.webp" alt="Étagère d’angle en bois garnie de bocaux et sachets de friandises, à côté d’un mur fleuri" width="1200" height="1600" loading="lazy">
+        <span class="pastille">Friandises pour chiens et chats</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="venir">
+    <div class="wrap">
+      <figure class="vitrine apparait">
+        <img src="assets/a-mour-de-chien/devanture-enseigne-hiver.webp" alt="La devanture du salon, enseigne A’Mour de chien, salon de toilettage canin" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">5 rue de Rennes, L’Hermitage</span>
+      </figure>
+      <div class="carte-coord">
+        <h2>Prendre rendez-vous</h2>
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33778673316">07 78 67 33 16</a></dd></div>
+          <div><dt>Adresse</dt><dd>5 rue de Rennes<br>35590&nbsp;L’Hermitage</dd></div>
+          <div><dt>Horaires</dt><dd class="horaires"><span>Lundi au vendredi</span><span>9h – 18h30</span><span>Samedi, dimanche</span><span>fermé</span></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:laetitia.amira@hotmail.fr">laetitia.amira@hotmail.fr</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein tel" href="tel:+33778673316">Appeler le salon</a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/search/A%27mour+de+Chien+L%27Hermitage">Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div>
+        <h2>A’mour de Chien</h2>
+        <p>Salon de toilettage canin<br>5 rue de Rennes, 35590&nbsp;L’Hermitage<br><a class="tel" href="tel:+33778673316">07 78 67 33 16</a></p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul><li>Lundi au vendredi, 9h – 18h30</li><li>Samedi et dimanche, fermé</li><li>Sur rendez-vous</li></ul>
+      </div>
+      <div>
+        <h3>Suivre le salon</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/A%27mour+de+Chien+L%27Hermitage">Avis Google (5,0, 16 avis)</a></li>
+          <li><a href="https://www.facebook.com/people/A-mour-de-chien/61566397954582/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour A’mour de Chien</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
