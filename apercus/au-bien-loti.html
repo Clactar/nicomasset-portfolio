@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Au Bien Loti · boucherie, charcuterie, traiteur à Saint-Nazaire</title>
+<meta name="description" content="Au Bien Loti, boucherie familiale, charcuterie maison et traiteur au 197 rue de Trignac, quartier Méan, à Saint-Nazaire. Du mardi au samedi. 02 51 16 94 62.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231E2E40'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Impact,sans-serif' font-size='40' fill='%23F8F4EE'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Cantarell:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EDE6DB; --base-2:#E1D7C8; --surface:#F8F4EE; --encre:#1F1D1B; --doux:#57524B;
+  --marine:#2B4C6F; --marine-f:#223D5A; --sombre:#1E2E40; --sombre-2:#283A4F;
+  --ombre:0 30px 60px -34px rgba(30,46,64,.55);
+  --ombre-l:0 54px 96px -46px rgba(30,46,64,.66);
+  --display:'Fjalla One','Arial Narrow',sans-serif; --sans:'Cantarell','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-size:18px;line-height:1.66;-webkit-font-smoothing:antialiased}
+::selection{background:var(--marine);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;text-wrap:balance;margin:0;letter-spacing:.005em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(237,230,219,.95);border-bottom:1px solid rgba(31,29,27,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:26px;text-transform:uppercase;letter-spacing:.04em}
+.marque span{font-size:13px;color:var(--doux);letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.nav .appel{color:var(--surface);background:var(--marine);font-weight:700;padding:11px 22px;border-radius:999px;transition:background-color .2s,transform .2s}
+.nav .appel:hover{background:var(--marine-f);transform:translateY(-2px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s,color .25s}
+.btn-plein{background:var(--marine);color:var(--surface);box-shadow:0 18px 34px -20px rgba(43,76,111,.9)}
+.btn-plein:hover{background:var(--marine-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn.appel-court{display:none}
+
+/* Héros : titre au-dessus, plateau très large qui descend sur le bandeau */
+.heros{padding:72px 0 0;position:relative;z-index:2}
+.heros-haut{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.heros h1{font-size:clamp(42px,6.4vw,92px);line-height:.98}
+.heros .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros-cote p{font-size:19px;color:var(--doux);max-width:42ch}
+.heros-cote .note{display:flex;align-items:center;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(31,29,27,.15)}
+.heros-cote .note b{font-family:var(--display);font-weight:400;font-size:48px;line-height:1;color:var(--marine)}
+.heros-cote .note span{font-size:16px;color:var(--doux);line-height:1.35}
+.plateau{position:relative;margin:56px 0 -150px}
+.plateau img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 62%;border-radius:24px;box-shadow:var(--ombre-l)}
+.plateau .etiquette{left:24px;bottom:24px}
+.etiquette{position:absolute;padding:9px 16px;border-radius:999px;background:var(--surface);font-weight:700;font-size:14px;line-height:1.2;box-shadow:0 12px 26px -16px rgba(30,46,64,.8)}
+
+/* Bandeau qui passe sous la photo */
+.faits{background:var(--base-2);padding:186px 0 40px;position:relative;z-index:1}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{font-size:15px;color:var(--doux);line-height:1.35;padding-left:16px;border-left:1px solid rgba(31,29,27,.2)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits strong{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--encre);letter-spacing:.01em}
+
+/* Au comptoir */
+.comptoir{padding:128px 0}
+.comptoir .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.comptoir h2{font-size:clamp(36px,4.4vw,60px)}
+.comptoir .intro{margin-top:22px;color:var(--doux);max-width:46ch}
+.points{list-style:none;padding:0;margin:36px 0 0}
+.points li{padding:16px 0;border-top:1px solid rgba(31,29,27,.14)}
+.points li:last-child{border-bottom:1px solid rgba(31,29,27,.14)}
+.points b{display:block;font-family:var(--display);font-weight:400;font-size:22px}
+.points span{color:var(--doux);font-size:17px}
+.etal{position:relative;padding-bottom:200px}
+.etal .a{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:var(--ombre-l)}
+.etal .b{position:absolute;left:-40px;bottom:0;width:40%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;box-shadow:var(--ombre-l);outline:8px solid var(--base)}
+.etal .c{position:absolute;left:36%;bottom:30px;width:30%;aspect-ratio:3/4;object-fit:cover;object-position:50% 70%;border-radius:16px;box-shadow:var(--ombre);outline:8px solid var(--base)}
+.etal .etiquette{right:20px;top:20px}
+.colis{position:absolute;right:0;bottom:24px;width:min(320px,46%);background:var(--surface);border-radius:18px;padding:24px 24px 22px;box-shadow:var(--ombre-l)}
+.colis h3{font-size:24px}
+.colis .prix{font-family:var(--display);font-size:40px;line-height:1;color:var(--marine);margin-top:8px;white-space:nowrap}
+.colis ul{list-style:none;margin:14px 0 0;padding:0;font-size:15px;color:var(--doux)}
+.colis li{padding:5px 0;border-top:1px dashed rgba(31,29,27,.2)}
+
+/* Plat du jour */
+.plat{background:var(--surface);padding:120px 0 136px}
+.plat-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:end;margin-bottom:64px}
+.plat-tete h2{font-size:clamp(36px,4.4vw,60px)}
+.plat-tete p{color:var(--doux)}
+.plat-tete a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--marine)}
+.barquettes{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) minmax(0,1fr) minmax(0,.9fr);gap:28px;align-items:start}
+.barquette{position:relative;margin:0}
+.barquette img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.barquette .etiquette{left:12px;bottom:12px;font-size:13px}
+.barquette:nth-child(2){margin-top:64px}
+.barquette:nth-child(3){margin-top:20px}
+.barquette:nth-child(4){margin-top:88px}
+
+/* Traiteur, fond sombre */
+.traiteur{background:var(--sombre);color:var(--surface);padding:128px 0}
+.traiteur .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:96px;align-items:center}
+.plateaux{position:relative;padding-right:90px;padding-bottom:40px}
+.plateaux .a{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 45%;border-radius:22px;box-shadow:0 46px 84px -40px rgba(0,0,0,.7)}
+.plateaux .b{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;outline:8px solid var(--sombre);transform:rotate(4deg);box-shadow:0 34px 64px -30px rgba(0,0,0,.7)}
+.plateaux .etiquette{left:18px;top:18px;color:var(--encre)}
+.traiteur h2{font-size:clamp(36px,4.4vw,60px)}
+.traiteur .intro{margin-top:22px;color:rgba(248,244,238,.78);max-width:50ch}
+.carte-t{list-style:none;margin:40px 0 0;padding:0}
+.carte-t li{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-top:1px solid rgba(248,244,238,.16)}
+.carte-t li:last-child{border-bottom:1px solid rgba(248,244,238,.16)}
+.carte-t b{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:.01em}
+.carte-t span{color:rgba(248,244,238,.7);font-size:16px;text-align:right}
+.carte-t .px{white-space:nowrap;color:var(--surface);font-weight:700}
+.traiteur .btn{margin-top:40px}
+.traiteur .btn-plein{background:var(--surface);color:var(--sombre);box-shadow:none}
+.traiteur .btn-plein:hover{background:var(--base)}
+
+/* Horaires */
+.horaires{padding:128px 0}
+.horaires .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.horaires h2{font-size:clamp(36px,4.4vw,60px)}
+.horaires .intro{margin-top:18px;color:var(--doux)}
+.semaine{list-style:none;margin:40px 0 0;padding:0}
+.semaine li{display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:24px;padding:16px 0;border-top:1px solid rgba(31,29,27,.14);font-size:18px}
+.semaine li:last-child{border-bottom:1px solid rgba(31,29,27,.14)}
+.semaine b{font-family:var(--display);font-weight:400;font-size:21px}
+.semaine .ferme{color:var(--doux)}
+.venir{background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre-l)}
+.venir h3{font-size:30px}
+.venir dl{margin:20px 0 0}
+.venir dt{font-size:14px;color:var(--doux);margin-top:16px}
+.venir dd{margin:2px 0 0}
+.venir dd a{text-decoration:none;border-bottom:1px solid rgba(31,29,27,.25);overflow-wrap:anywhere}
+.venir .tel{font-family:var(--display);font-size:32px;border:0;white-space:nowrap}
+.venir .liens{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.venir .liens .btn{width:100%}
+
+/* Pied */
+.pied{background:var(--sombre);color:rgba(248,244,238,.8);padding:80px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .nom{font-family:var(--display);font-size:30px;color:var(--surface);text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;font-weight:700;color:rgba(248,244,238,.55);letter-spacing:.04em}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(248,244,238,.25)}
+.pied a:hover{border-color:var(--surface)}
+.signature{margin-top:64px;padding:22px 0 26px;border-top:1px solid rgba(248,244,238,.1);text-align:center;font-size:13px;color:rgba(248,244,238,.5)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .heros-haut,.comptoir .wrap,.plat-tete,.traiteur .wrap,.horaires .wrap{grid-template-columns:minmax(0,1fr);gap:40px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li{border-left:0;padding-left:0}
+  .barquettes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .barquette:nth-child(3){margin-top:-40px}
+  .barquette:nth-child(4){margin-top:24px}
+  .etal .b{left:0}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 36px)}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .btn.appel-court{display:inline-flex;min-height:44px;padding:10px 18px;font-size:15px}
+  .marque b{font-size:22px}
+  .marque span{display:none}
+  .heros{padding-top:32px}
+  .heros .wrap{display:flex;flex-direction:column}
+  .heros-haut,.heros-haut > div:first-child{display:contents}
+  .heros h1{order:1}
+  .plateau{order:2}
+  .heros-cote{order:3}
+  .heros .actions{order:4;margin-top:28px}
+  .heros .actions{flex-direction:column}
+  .heros .actions .btn{width:100%}
+  .heros-cote{margin-top:28px}
+  .heros-cote p{font-size:17px}
+  .plateau{margin:28px 0 0}
+  .plateau img{aspect-ratio:4/3.2;border-radius:18px}
+  .plateau .etiquette{left:12px;bottom:12px;font-size:13px}
+  .faits{padding:36px 0 32px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:14px}
+  .comptoir,.plat,.traiteur,.horaires{padding:88px 0}
+  .etal{padding-bottom:0}
+  .etal .b{position:static;width:100%;outline:0;margin-top:20px;aspect-ratio:4/3}
+  .colis{position:relative;width:100%;margin-top:20px;right:auto;bottom:auto}
+  .plateaux{padding-right:48px}
+  .carte-t li{flex-direction:column;gap:2px}
+  .carte-t span{text-align:left}
+  .traiteur .btn{width:100%}
+  .semaine li{grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:12px;font-size:16px}
+  .venir{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Au Bien Loti</b><span>Boucherie · Charcuterie · Traiteur</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#comptoir">Au comptoir</a>
+      <a href="#plat">Plat du jour</a>
+      <a href="#traiteur">Traiteur</a>
+      <a href="#horaires">Horaires</a>
+      <a class="appel nowrap" href="tel:+33251169462">02 51 16 94 62</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33251169462">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-haut">
+        <div>
+          <h1>La boucherie familiale du quartier Méan</h1>
+          <div class="actions">
+            <a class="btn btn-plein" href="#traiteur">Le traiteur</a>
+            <a class="btn btn-contour nowrap" href="tel:+33251169462">02 51 16 94 62</a>
+          </div>
+        </div>
+        <div class="heros-cote">
+          <p>Nous travaillons les viandes avec soin. Une charcuterie de qualité avec ses spécialités faites maison, et des repas froids ou des menus chauds pour tous vos événements.</p>
+          <div class="note"><b>5,0</b><span>sur 5 sur Google<br>39 avis</span></div>
+        </div>
+      </div>
+      <figure class="plateau">
+        <img src="assets/au-bien-loti/plateau-charcuterie-pates.webp" alt="Plateau de charcuterie : pâté, saucissons, jambon cru, mousse de foie et rosette, devant la vitrine" width="1600" height="1200" fetchpriority="high">
+        <span class="etiquette">Plateau de charcuterie maison</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><strong>197 rue de Trignac</strong>Saint-Nazaire</li>
+        <li><strong>Du mardi au samedi</strong>dès 8&nbsp;h 30</li>
+        <li><strong>5,0 sur Google</strong>39 avis</li>
+        <li><strong>Pâtés maison</strong>faits dans notre atelier</li>
+        <li><strong>Plat du jour</strong>à réserver par téléphone</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="comptoir" id="comptoir">
+    <div class="wrap">
+      <div>
+        <h2>Au comptoir</h2>
+        <p class="intro">Viandes, charcuterie, pâtés : ce qui sort de notre atelier, préparé avec notre savoir-faire et beaucoup de cœur.</p>
+        <ul class="points">
+          <li><b>Les viandes</b><span>Travaillées avec soin, comme ces côtes de bœuf de race Limousine du 44.</span></li>
+          <li><b>La charcuterie</b><span>De qualité, avec des spécialités faites maison.</span></li>
+          <li><b>Les pâtés</b><span>Réalisés de A à Z dans notre atelier, de la préparation à la cuisson.</span></li>
+          <li><b>Le colis du mois</b><span>Un colis de viandes à réserver en boutique.</span></li>
+        </ul>
+      </div>
+      <div class="etal apparait">
+        <img class="a" src="assets/au-bien-loti/cotes-de-boeuf-sur-planche.webp" alt="Trois côtes de bœuf épaisses et persillées sur une planche" width="1600" height="1200" loading="lazy">
+        <span class="etiquette">Côtes de bœuf, race Limousine</span>
+        <img class="b" src="assets/au-bien-loti/roti-ficele-papier-maison.webp" alt="Rôti de bœuf ficelé posé sur le papier de la boucherie Au Bien Loti" width="1200" height="1600" loading="lazy">
+        <div class="colis">
+          <h3>Le colis de novembre</h3>
+          <p class="prix">65&nbsp;€</p>
+          <ul>
+            <li>1&nbsp;kg de viande hachée de bœuf</li>
+            <li>1&nbsp;kg de filets de poulet</li>
+            <li>800&nbsp;g de blanquette de veau</li>
+            <li>4 côtes de porc, et le reste à découvrir en boutique</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plat" id="plat">
+    <div class="wrap">
+      <div class="plat-tete">
+        <h2>Le midi, le plat du jour en barquette</h2>
+        <p>Fait maison, à emporter. Les quantités sont limitées : pensez à réserver votre barquette au <a class="nowrap" href="tel:+33251169462">02 51 16 94 62</a>.</p>
+      </div>
+      <div class="barquettes">
+        <figure class="barquette apparait">
+          <img src="assets/au-bien-loti/tartiflettes-en-barquettes.webp" alt="Six barquettes de tartiflette gratinée" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Tartiflette</span>
+        </figure>
+        <figure class="barquette apparait">
+          <img src="assets/au-bien-loti/barquettes-rougail-saucisses-riz.webp" alt="Barquettes de rougail saucisses et riz blanc persillé" width="1280" height="1600" loading="lazy">
+          <span class="etiquette">Rougail saucisses</span>
+        </figure>
+        <figure class="barquette apparait">
+          <img src="assets/au-bien-loti/brochettes-et-nouilles.webp" alt="Barquettes de nouilles sautées, brochettes de porc et courgettes" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Nouilles, brochette de porc</span>
+        </figure>
+        <figure class="barquette apparait">
+          <img src="assets/au-bien-loti/poulet-basquaise-en-bac.webp" alt="Bac de cuisses de poulet marinées sur poivrons et courgettes" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Poulet basquaise</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="traiteur" id="traiteur">
+    <div class="wrap">
+      <div class="plateaux apparait">
+        <img class="a" src="assets/au-bien-loti/plateau-charcuterie-fromages.webp" alt="Grand plateau apéritif : charcuteries, terrine en croûte, fromages en bâtonnets et en dés" width="1200" height="1600" loading="lazy">
+        <img class="b" src="assets/au-bien-loti/plateau-raclette.webp" alt="Plateau raclette : couronne de fromages, jambons et rose de rosette" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Plateau apéritif</span>
+      </div>
+      <div>
+        <h2>Traiteur et buffets froids</h2>
+        <p class="intro">Anniversaire, repas de famille, association, entreprise, fête entre amis : nos menus traiteur et buffets froids sont préparés avec de bons produits et notre savoir-faire.</p>
+        <ul class="carte-t">
+          <li><b>Plateaux apéritifs</b><span>charcuterie, fromages</span></li>
+          <li><b>Entrées</b></li>
+          <li><b>Plats chauds</b></li>
+          <li><b>Buffet froid</b></li>
+          <li><b>Plateau raclette</b><span>la saison est ouverte</span></li>
+        </ul>
+        <a class="btn btn-plein" href="tel:+33251169462">Composer votre menu au <span class="nowrap">02 51 16 94 62</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="horaires" id="horaires">
+    <div class="wrap">
+      <div>
+        <h2>Horaires de la boutique</h2>
+        <p class="intro">197 rue de Trignac, quartier Méan, à Saint-Nazaire. Retrait en boutique et réservations par téléphone.</p>
+        <ul class="semaine">
+          <li><b>Lundi</b><span class="ferme">Fermé</span></li>
+          <li><b>Mardi</b><span>8&nbsp;h 30 – 13&nbsp;h, 15&nbsp;h 30 – 19&nbsp;h</span></li>
+          <li><b>Mercredi</b><span>8&nbsp;h 30 – 13&nbsp;h, 15&nbsp;h 30 – 19&nbsp;h</span></li>
+          <li><b>Jeudi</b><span>8&nbsp;h 30 – 13&nbsp;h, 15&nbsp;h 30 – 19&nbsp;h</span></li>
+          <li><b>Vendredi</b><span>8&nbsp;h 30 – 13&nbsp;h, 15&nbsp;h 30 – 19&nbsp;h</span></li>
+          <li><b>Samedi</b><span>8&nbsp;h 30 – 13&nbsp;h 30</span></li>
+          <li><b>Dimanche</b><span class="ferme">Fermé</span></li>
+        </ul>
+      </div>
+      <aside class="venir" aria-label="Coordonnées">
+        <h3>Au Bien Loti</h3>
+        <dl>
+          <dt>Adresse</dt><dd>197 rue de Trignac<br>44600 Saint-Nazaire</dd>
+          <dt>Téléphone</dt><dd><a class="tel" href="tel:+33251169462">02 51 16 94 62</a></dd>
+          <dt>Mail</dt><dd><a href="mailto:aubienloti.sarl@gmail.com">aubienloti.sarl@gmail.com</a></dd>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Au%20Bien%20Loti&amp;query_place_id=ChIJl5uBOlRlBUgRcwGl1dqF9Pw">Voir les avis sur Google</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/people/Au-bien-Loti/61566465502241/">Page Facebook</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <p class="nom">Au Bien Loti</p>
+      <p style="margin-top:12px">Boucherie, charcuterie, traiteur. 197 rue de Trignac, quartier Méan, 44600 Saint-Nazaire.</p>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul>
+        <li>Mardi au vendredi : 8&nbsp;h 30 – 13&nbsp;h, 15&nbsp;h 30 – 19&nbsp;h</li>
+        <li>Samedi : 8&nbsp;h 30 – 13&nbsp;h 30</li>
+        <li>Dimanche et lundi : fermé</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nous joindre</h4>
+      <ul>
+        <li><a class="nowrap" href="tel:+33251169462">02 51 16 94 62</a></li>
+        <li><a href="mailto:aubienloti.sarl@gmail.com" style="overflow-wrap:anywhere">aubienloti.sarl@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/people/Au-bien-Loti/61566465502241/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Au Bien Loti</p>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

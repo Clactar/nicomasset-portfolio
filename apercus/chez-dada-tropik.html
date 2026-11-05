@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Chez Dada Tropik · Traiteur créole créatif à Quimper</title>
+<meta name="description" content="Chez Dada Tropik, traiteur créole créatif à Quimper : repas de famille et mariages, cocktails dînatoires, festivals, associations et comités d'entreprise dans tout le Finistère. Devis au 06 68 88 18 05.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23E2572B'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-weight='700' font-size='38' text-anchor='middle' fill='%23FDF6ED'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F6EADB; --base-2:#EFDDC8; --surface:#FDF6ED; --ink:#2A1A12; --ink-2:#6A5246;
+  --accent:#E2572B; --accent-d:#C2441C; --braise:#2A1A12; --braise-2:#3A2519; --piment:#8C3216; --clair:#F8EBDD;
+  --ombre:0 30px 60px -34px rgba(42,26,18,.55);
+  --display:'Shrikhand',Georgia,serif; --texte:'Heebo',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-weight:300;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:500 clamp(32px,3.8vw,52px)/1.08 var(--texte);letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+strong{font-weight:500}
+.wrap{width:min(1200px,100%);margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+.nowrap{white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font:500 17px/1.2 var(--texte);text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-plein{background:var(--accent);color:var(--surface)}
+.btn-plein:hover{background:var(--accent-d);transform:translateY(-2px);box-shadow:0 18px 30px -16px rgba(226,87,43,.7)}
+.btn-contour{border:1.5px solid currentColor}
+.btn-contour:hover{background:var(--ink);color:var(--surface);border-color:var(--ink);transform:translateY(-2px)}
+.sombre .btn-contour{color:var(--clair)}
+.sombre .btn-contour:hover{background:var(--clair);color:var(--braise);border-color:var(--clair)}
+
+/* En-tête et héros braise */
+.sombre{background:var(--braise);color:var(--clair)}
+.entete{position:sticky;top:0;z-index:20;background:var(--braise);color:var(--clair);box-shadow:0 1px 0 rgba(248,235,221,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;font:400 24px/1 var(--display);letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;color:#D8C3B3;font-weight:400}
+.nav a:hover{color:var(--clair)}
+.nav .tel{background:var(--accent);color:var(--surface);padding:11px 20px;border-radius:999px;font-weight:500}
+.nav .tel:hover{background:var(--accent-d);color:var(--surface)}
+.heros{padding:clamp(48px,6vw,88px) 0 clamp(88px,9vw,128px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:'t v' 'x v';column-gap:clamp(40px,6vw,88px);align-items:center}
+.heros .t{grid-area:t;align-self:end}.heros .x{grid-area:x;align-self:start}.heros .photo{grid-area:v}
+.heros h1{font:400 clamp(38px,5vw,72px)/1.1 var(--display);letter-spacing:.005em}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros .chapo{margin-top:28px;color:#DCC8B8;max-width:31em;font-size:clamp(17px,1.4vw,19px)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note-g{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-size:16px;color:#CDB6A4;text-decoration:none}
+.note-g b{font:500 21px/1 var(--texte);color:var(--clair)}
+.note-g i{font-style:normal;color:#F3A07E;letter-spacing:2px;font-size:14px}
+.note-g:hover .u{text-decoration:underline}
+.photo{position:relative;margin:0}
+.photo .ph{border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 44px 80px -36px rgba(226,87,43,.55),0 20px 40px -30px rgba(0,0,0,.6)}
+.photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.14);transform-origin:72% 18%}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--ink);font-size:15.5px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 24px -14px rgba(0,0,0,.6)}
+.photo .etiquette{left:auto;right:22px;bottom:auto;top:22px;background:var(--accent);color:var(--surface)}
+
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding-block:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 26px}
+.faits li{font-size:16.5px;font-weight:400;display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:8px;height:8px;border-radius:2px;transform:rotate(45deg);background:var(--accent)}
+
+.section{padding:clamp(80px,9vw,128px) 0}
+.intro{margin-top:20px;color:var(--ink-2);max-width:34em}
+
+/* La carte */
+.carte-s .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:center}
+.menu{position:relative;background:var(--surface);border-radius:24px;padding:clamp(28px,4vw,52px);box-shadow:var(--ombre)}
+.menu h3{font:500 14px/1.2 var(--texte);letter-spacing:.08em;color:var(--accent-d);margin-top:32px}
+.menu h3:first-of-type{margin-top:28px}
+.menu ul{list-style:none;margin:10px 0 0;padding:0}
+.menu li{font:400 clamp(22px,2.2vw,27px)/1.25 var(--texte);padding:11px 0;border-bottom:1px dashed rgba(42,26,18,.2);letter-spacing:-.01em}
+.menu .maison{margin-top:28px;font:400 22px/1.2 var(--display);color:var(--accent)}
+.plats{position:relative;padding-bottom:64px}
+.plats .a{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre);width:90%}
+.plats .a img{width:100%;height:100%;object-fit:cover;object-position:22% 70%;transform:scale(1.3);transform-origin:22% 80%}
+.plats .b{position:absolute;right:0;bottom:0;width:min(200px,40%);background:var(--surface);padding:8px 8px 30px;border-radius:6px;transform:rotate(4deg);box-shadow:0 26px 44px -24px rgba(42,26,18,.6)}
+.plats .b img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.plats .b figcaption{position:absolute;left:10px;bottom:7px;font-size:13px;color:var(--ink-2)}
+.plats .etiquette{left:16px;top:16px;bottom:auto}
+
+/* Événements */
+.evenements{background:var(--surface)}
+.evenements .haut{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
+.evenements .haut .intro{margin-top:0;justify-self:end}
+.grande{position:relative;margin:56px 0 0;border-radius:24px;overflow:hidden;aspect-ratio:21/9;box-shadow:var(--ombre)}
+.grande img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.occasions{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin-top:56px}
+.occasions li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding:22px 0;border-top:1px solid rgba(42,26,18,.14);align-items:start}
+.occasions svg{width:34px;height:34px;color:var(--accent)}
+.occasions b{display:block;font:500 22px/1.25 var(--texte);letter-spacing:-.01em}
+.occasions span{display:block;color:var(--ink-2);margin-top:4px;font-size:16.5px}
+
+/* Festivals : fond piment soutenu */
+.festivals{background:var(--piment);color:var(--clair)}
+.festivals .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.festivals .intro{color:#F2D4C2}
+.festivals blockquote{margin:32px 0 0;padding:22px 26px;background:rgba(253,246,237,.08);border-radius:18px;font:400 21px/1.4 var(--texte);color:var(--clair)}
+.festivals blockquote small{display:block;font-size:14px;color:#E9B9A2;margin-top:8px}
+.tirage{position:relative;min-height:520px}
+.tirage figure{position:absolute;margin:0;background:var(--surface);padding:10px 10px 14px;border-radius:6px;box-shadow:0 36px 60px -30px rgba(0,0,0,.6)}
+.tirage figure .ph{overflow:hidden;border-radius:3px;aspect-ratio:4/3}
+.tirage img{width:100%;height:100%;object-fit:cover}
+.tirage figcaption{display:block;margin:10px 4px 0;font-size:15px;line-height:1.35;color:var(--ink-2)}
+.tirage .f1{left:0;top:0;width:66%;transform:rotate(-3deg)}
+.tirage .f1 img{object-position:50% 60%}
+.tirage .f2{right:0;bottom:0;width:60%;transform:rotate(3deg)}
+
+/* Secteur et devis */
+.devis .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.communes{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.communes span{background:var(--surface);border-radius:999px;padding:8px 18px;font-size:16.5px;font-weight:400;box-shadow:0 10px 24px -20px rgba(42,26,18,.6)}
+.communes span.q{background:var(--ink);color:var(--surface)}
+.communes span.f{background:transparent;box-shadow:none;border:1.5px dashed rgba(42,26,18,.35)}
+.fiche{background:var(--surface);border-radius:24px;padding:clamp(28px,4vw,48px);box-shadow:var(--ombre)}
+.fiche h2{font:400 clamp(30px,3vw,40px)/1.15 var(--display)}
+.fiche .tel-grand{display:block;margin-top:24px;font:500 clamp(30px,3.2vw,40px)/1.1 var(--texte);letter-spacing:-.01em;text-decoration:none;color:var(--accent-d)}
+.fiche .tel-grand:hover{color:var(--ink)}
+.fiche .mail{display:inline-block;margin-top:10px;font-size:17px;text-decoration:none;border-bottom:1px solid rgba(42,26,18,.3)}
+.horaires{margin:28px 0 0;padding:0;list-style:none;font-size:16.5px}
+.horaires li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid rgba(42,26,18,.1)}
+.horaires li span:last-child{white-space:nowrap}
+.horaires .ferme{color:var(--ink-2)}
+.fiche .liens{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:26px}
+.fiche .liens a{color:var(--accent-d);font-weight:500;text-decoration:none;border-bottom:1.5px solid currentColor}
+.fiche .liens a:hover{color:var(--ink)}
+.note-carte{display:flex;align-items:center;gap:18px;margin-top:40px;background:var(--base-2);border-radius:18px;padding:20px 24px}
+.note-carte b{font:400 46px/1 var(--display);color:var(--accent-d)}
+.note-carte p{font-size:16.5px;color:var(--ink-2)}
+
+.pied{background:var(--braise);color:#CDB6A4;padding:72px 0 28px;font-size:16.5px}
+.pied .cols{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .nom{font:400 28px/1.1 var(--display);color:var(--clair)}
+.pied p{margin-top:10px}
+.pied h3{font:500 14px/1.3 var(--texte);letter-spacing:.06em;color:#F3A07E;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline}
+.signature{margin-top:56px;padding-top:22px;border-top:1px solid rgba(248,235,221,.12);font-size:13.5px;color:#9C8577}
+
+.js .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+@media (max-width:960px){
+  .nav a:not(.tel){display:none}
+  .heros .wrap,.carte-s .wrap,.festivals .wrap,.devis .wrap,.evenements .haut{grid-template-columns:minmax(0,1fr)}
+  .heros .wrap{grid-template-areas:'t' 'v' 'x';row-gap:32px}
+  .evenements .haut .intro{justify-self:start}
+  .plats{max-width:560px}
+  .tirage{min-height:0;display:grid;gap:24px}
+  .tirage figure{position:relative;width:88%}
+  .tirage .f2{justify-self:end;margin-top:-40px}
+  .pied .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .grande{aspect-ratio:4/3;margin-top:40px}
+  .occasions{grid-template-columns:minmax(0,1fr);margin-top:40px}
+  .occasions li{grid-template-columns:36px minmax(0,1fr);gap:12px}
+  .pied .cols{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .marque{font-size:19px}
+  .nav .tel{padding:10px 14px;font-size:15px}
+  .photo .etiquette{right:12px;top:12px;font-size:14px;padding:7px 12px}
+  .note-carte{flex-direction:column;align-items:flex-start;gap:8px}
+  .tirage figure{width:94%}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Chez Dada Tropik</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#carte">La cuisine</a>
+      <a href="#evenements">Vos événements</a>
+      <a href="#devis">Devis</a>
+      <a class="tel nowrap" href="tel:+33668881805">06 68 88 18 05</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros sombre">
+    <div class="wrap">
+      <div class="t">
+        <h1>Le <em>soleil</em> s'invite à votre table.</h1>
+      </div>
+      <div class="x">
+        <p class="chapo">Traiteur créole créatif à Quimper. Particuliers, entreprises, festivals ou associations : je vous accompagne pour des prestations sur mesure dans tout le Finistère, avec une cuisine faite maison.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#devis">Demander un devis</a>
+          <a class="btn btn-contour nowrap" href="tel:+33668881805">06 68 88 18 05</a>
+        </div>
+        <a class="note-g" href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Dada%20Tropik%20-%20Traiteur%20Cr%C3%A9ole%20Cr%C3%A9atif%20Quimper"><b>4,9</b><i aria-hidden="true">★★★★★</i><span class="u">53 avis sur Google</span></a>
+      </div>
+      <figure class="photo">
+        <div class="ph"><img src="assets/chez-dada-tropik/poulets-grilles-au-barbecue.webp" alt="Grand barbecue couvert de cuisses de poulet grillées et dorées, flammes et fumée" width="1600" height="1200"></div>
+        <figcaption class="etiquette">Traiteur créole créatif</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Cuisine créole maison</li>
+      <li>Quimper et tout le Finistère</li>
+      <li>4,9 sur Google, 53 avis</li>
+      <li>Prestations sur mesure</li>
+      <li>Devis sur demande</li>
+    </ul>
+  </div>
+
+  <section class="section carte-s" id="carte">
+    <div class="wrap">
+      <div class="menu">
+        <h2>Ce qui mijote dans les marmites</h2>
+        <p class="intro">Des plats créoles faits maison, servis aux repas de famille comme aux festivals.</p>
+        <h3>LES PLATS</h3>
+        <ul>
+          <li>Rougail saucisses</li>
+          <li>Poulet curry coco</li>
+          <li>Lotte à la créole</li>
+          <li>Hachis créole</li>
+          <li>Salade antillaise</li>
+        </ul>
+        <h3>À PICORER</h3>
+        <ul>
+          <li>Accras de morue croustillants</li>
+          <li>Samoussas dorés</li>
+        </ul>
+        <p class="maison">Tout est fait maison, avec amour.</p>
+      </div>
+      <div class="plats">
+        <figure class="a apparait" style="margin:0;position:relative"><img src="assets/chez-dada-tropik/buffet-nappe-madras-jus-et-samoussas.webp" alt="Saladier de samoussas sur une nappe madras rouge et jaune, bonbonnes de jus derrière" width="1600" height="1200" loading="lazy"><figcaption class="etiquette">Samoussas sur nappe madras</figcaption></figure>
+        <figure class="b apparait" style="margin:0"><img src="assets/chez-dada-tropik/panneau-menu-cuisine-creole-maison.webp" alt="Panneau Cuisine créole maison sur un marché" width="1177" height="1600" loading="lazy"><figcaption>Sur un marché</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section evenements" id="evenements">
+    <div class="wrap">
+      <div class="haut">
+        <h2>Pour vos événements</h2>
+        <p class="intro">Particuliers, entreprises, festivals ou associations : donnez une touche tropicale à vos événements. Contactez-moi pour un devis.</p>
+      </div>
+      <figure class="grande apparait">
+        <img src="assets/chez-dada-tropik/salle-sous-chapiteau-camion-en-fond.webp" alt="Espace de réception sous toile tendue, tables rondes, guirlande lumineuse et le camion Chez Dada Tropik au fond" width="1600" height="1200" loading="lazy">
+        <figcaption class="etiquette">Une réception sous chapiteau, le camion au fond</figcaption>
+      </figure>
+      <ul class="occasions">
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="20" r="7"/><circle cx="22" cy="20" r="7"/><path d="M14 7l3-4 3 4"/></svg><div><b>Repas de famille et mariages</b><span>Mariages, anniversaires, repas de famille.</span></div></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 6h18l-9 12z"/><path d="M17 18v10M11 29h12"/></svg><div><b>Cocktails dînatoires</b><span>Pour recevoir autour d'accras et de samoussas.</span></div></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 28h26M7 28V14l10-8 10 8v14"/><path d="M14 28v-7h6v7"/></svg><div><b>Associations et comités d'entreprise</b><span>Kermesses, clubs sportifs, tournois, repas d'entreprise.</span></div></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M17 4v4M17 26v4M4 17h4M26 17h4M8 8l3 3M23 23l3 3M8 26l3-3M23 11l3-3"/><circle cx="17" cy="17" r="5"/></svg><div><b>Festivals et événementiel</b><span>La restauration des équipes, des bénévoles et du public.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section festivals">
+    <div class="wrap">
+      <div>
+        <h2>Sur les festivals et les marchés</h2>
+        <p class="intro">Le stand Chez Dada Tropik se pose aussi sur les festivals du Finistère et sur les marchés.</p>
+        <blockquote>« Traiteur à domicile pour vos événements, repas d'entreprise, association, famille. »<small>Sur la bâche du stand</small></blockquote>
+      </div>
+      <div class="tirage">
+        <figure class="f1 apparait"><div class="ph"><img src="assets/chez-dada-tropik/stand-traiteur-sur-pelouse-festival.webp" alt="Le stand Chez Dada Tropik sur une pelouse de festival, vitrine et bâche" width="1600" height="1200" loading="lazy"></div><figcaption>Le stand, en festival</figcaption></figure>
+        <figure class="f2 apparait"><div class="ph"><img src="assets/chez-dada-tropik/chalet-marche-de-noel-fouesnant.webp" alt="Chalet en bois du marché de Noël, bouteilles de punch maison, bocaux et guirlandes" width="1600" height="1200" loading="lazy"></div><figcaption>Le chalet du marché de Noël de Fouesnant</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section devis" id="devis">
+    <div class="wrap">
+      <div>
+        <h2>Quimper et tout le Finistère</h2>
+        <p class="intro">Basé à Quimper, Chez Dada Tropik se déplace pour vos événements dans tout le département.</p>
+        <div class="communes">
+          <span class="q">Quimper</span><span>Plomelin</span><span>Pont-l'Abbé</span><span>Fouesnant</span><span>Plogonnec</span><span>Ergué-Gabéric</span><span>Pluguffan</span><span>Bénodet</span><span>Guengat</span><span>Plonéis</span><span class="f">et tout le Finistère</span>
+        </div>
+        <div class="note-carte">
+          <b>4,9</b>
+          <p>sur 5 sur Google, d'après 53 avis.<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Dada%20Tropik%20-%20Traiteur%20Cr%C3%A9ole%20Cr%C3%A9atif%20Quimper">Voir les avis sur la fiche Google</a></p>
+        </div>
+      </div>
+      <div class="fiche apparait">
+        <h2>Infos et devis</h2>
+        <a class="tel-grand nowrap" href="tel:+33668881805">06 68 88 18 05</a>
+        <a class="mail" href="mailto:chezdadatropik@gmail.com">chezdadatropik@gmail.com</a>
+        <ul class="horaires" aria-label="Horaires">
+          <li><span>Du lundi au jeudi</span><span>9&nbsp;h 30 – 18&nbsp;h</span></li>
+          <li><span>Vendredi</span><span>9&nbsp;h 30 – 18&nbsp;h 30</span></li>
+          <li><span>Samedi</span><span>10&nbsp;h – 17&nbsp;h</span></li>
+          <li class="ferme"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+        <div class="liens">
+          <a href="https://www.facebook.com/profile.php?id=100089725135340">Page Facebook</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Dada%20Tropik%20-%20Traiteur%20Cr%C3%A9ole%20Cr%C3%A9atif%20Quimper">Fiche Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="nom">Chez Dada Tropik</p>
+        <p>Traiteur créole créatif, Quimper.<br>Prestations sur mesure dans tout le Finistère.</p>
+      </div>
+      <div>
+        <h3>Infos et devis</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33668881805">06 68 88 18 05</a></li>
+          <li><a href="mailto:chezdadatropik@gmail.com">chezdadatropik@gmail.com</a></li>
+          <li>Du lundi au samedi, dimanche fermé</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ailleurs</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100089725135340">Page Facebook</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Dada%20Tropik%20-%20Traiteur%20Cr%C3%A9ole%20Cr%C3%A9atif%20Quimper">Fiche Google et avis</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour Chez Dada Tropik</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

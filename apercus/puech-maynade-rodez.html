@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Puech Maynade · Gîte de caractère et équitation western, aux portes de Rodez</title>
+<meta name="description" content="Puech Maynade : gîte de caractère de 310 m² dans des bâtiments en pierre du 16e siècle, et école d'équitation western, aux portes de Rodez.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23A4532B'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F8F2EA'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Rokkitt:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EDE3D6; --base-2:#E4D6C4; --surface:#F8F2EA; --encre:#2A1E16; --encre-2:#5C4A3C;
+  --fauve:#A4532B; --fauve-clair:#E9C9AE; --sombre:#2A1E16; --sombre-2:#3A2A1F;
+  --ombre:0 30px 60px -34px rgba(42,30,22,.55);
+  --ombre-forte:0 44px 80px -40px rgba(42,30,22,.62);
+  --display:'Rokkitt',Georgia,serif; --texte:'Asap','Trebuchet MS',sans-serif;
+  --gouttiere:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.62}
+::selection{background:var(--fauve);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+sup{font-size:.62em;line-height:0}
+.cadre{width:min(1200px,100% - 2*var(--gouttiere));margin-inline:auto}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 var(--texte);text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-plein{background:var(--fauve);color:var(--surface);box-shadow:0 18px 30px -18px rgba(164,83,43,.8)}
+.btn-plein:hover{background:#8E4623;transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(248,242,234,.55);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--encre);transform:translateY(-2px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(237,227,214,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(42,30,22,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:600 26px/1 var(--display);letter-spacing:-.01em}
+.marque span{font-size:13px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:16px;color:var(--encre-2)}
+.nav a:hover{color:var(--fauve)}
+.nav .btn{min-height:44px;padding:10px 22px;font-size:16px}
+.nav .btn-plein{color:var(--surface)}
+.nav .btn-plein:hover{color:var(--surface)}
+
+/* héros : photo collée au bord gauche */
+.heros{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr auto auto auto 1fr;column-gap:clamp(40px,6vw,88px);min-height:min(calc(100svh - 77px),860px);padding-block:40px 56px}
+.h-photo{grid-column:1;grid-row:1 / -1;position:relative;margin:0;min-height:560px}
+.h-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%;border-radius:0 28px 28px 0;box-shadow:var(--ombre-forte)}
+.pastille{position:absolute;left:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);background:var(--surface);color:var(--encre);border-radius:14px;padding:10px 16px;font-size:15px;font-weight:500;box-shadow:0 16px 30px -18px rgba(42,30,22,.6);max-width:calc(100% - 32px)}
+.pastille small{display:block;font-size:13px;font-weight:400;color:var(--encre-2)}
+.h-titre{grid-column:2;grid-row:2;font-size:clamp(38px,4.7vw,68px);line-height:1.04;max-width:none;padding-right:var(--gouttiere)}
+.h-lede{grid-column:2;grid-row:3;margin-top:28px;max-width:34em;font-size:19px;color:var(--encre-2);font-weight:300;padding-right:var(--gouttiere)}
+.h-lede strong{font-weight:500;color:var(--encre)}
+.h-btns{grid-column:2;grid-row:4;display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;padding-right:var(--gouttiere)}
+@media (min-width:1300px){.h-titre,.h-lede,.h-btns{padding-right:calc((100vw - 1200px)/2)}}
+
+/* bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px;color:var(--encre)}
+.faits li::before{content:"";width:7px;height:7px;background:var(--fauve);transform:rotate(45deg);flex:none}
+
+/* sections */
+section{padding-block:clamp(80px,10vw,128px)}
+.titre-s{font-size:clamp(34px,4vw,54px);max-width:16ch}
+.intro{margin-top:20px;max-width:36em;color:var(--encre-2);font-weight:300;font-size:19px}
+
+/* le gîte */
+.gite{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.compo{position:sticky;top:112px;padding-bottom:120px}
+.compo .grande{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:55% 60%;border-radius:22px;box-shadow:var(--ombre)}
+.compo .posee{position:absolute;right:-24px;bottom:0;width:min(58%,360px);aspect-ratio:4/3;object-fit:cover;object-position:50% 45%;border-radius:16px;border:8px solid var(--surface);box-shadow:var(--ombre-forte)}
+.compo .etiq{position:absolute;left:20px;top:20px;background:var(--surface);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500;box-shadow:0 12px 24px -16px rgba(42,30,22,.6)}
+.couchage{margin-top:40px;background:var(--surface);border-radius:20px;padding:clamp(24px,3vw,36px);box-shadow:var(--ombre)}
+.couchage h3{font-size:26px;margin-bottom:8px}
+.rang{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:4px 20px;padding:16px 0;border-top:1px solid rgba(42,30,22,.12);font-size:16px}
+.rang:first-of-type{border-top:0}
+.rang b{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.3}
+.rang span{color:var(--encre-2)}
+.pieces{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 32px;margin-top:40px}
+.pieces h3{font-size:22px;margin-bottom:8px}
+.pieces p{font-size:16px;color:var(--encre-2)}
+.compris{margin:32px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.compris li{background:rgba(164,83,43,.1);color:var(--encre);border-radius:999px;padding:6px 14px;font-size:15px}
+
+/* citation sur photo */
+.citation{padding-block:0 clamp(80px,10vw,128px)}
+.cit-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-forte);min-height:520px;display:flex;align-items:flex-end}
+.cit-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.cit-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,30,22,.05) 20%,rgba(42,30,22,.86) 100%)}
+.cit-photo blockquote{position:relative;z-index:1;margin:0;padding:clamp(28px,5vw,64px);color:var(--surface);max-width:860px}
+.cit-photo blockquote p{font:400 clamp(28px,3.4vw,46px)/1.12 var(--display);text-wrap:balance}
+.cit-photo cite{display:block;margin-top:18px;font-style:normal;font-size:16px;opacity:.85}
+
+/* réserver : frise */
+.reserver{background:var(--surface)}
+.res-tete{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end}
+.res-tete .ouvert{font-size:18px;color:var(--encre-2);font-weight:300}
+.res-tete .ouvert strong{color:var(--encre);font-weight:500}
+.frise{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:rgba(42,30,22,.25)}
+.frise li{position:relative;padding-top:40px}
+.frise li::before{content:"";position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:var(--surface);border:2px solid var(--fauve)}
+.frise li:first-child::before{background:var(--fauve)}
+.frise h3{font-size:24px;margin-bottom:10px}
+.frise p{font-size:16px;color:var(--encre-2)}
+.formules{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;margin-top:72px;align-items:stretch}
+.formule h3 + p + h3{margin-top:24px;padding-top:24px;border-top:1px solid rgba(42,30,22,.14)}
+.formule{background:var(--base);border-radius:20px;padding:28px}
+.formule h3{font-size:24px;margin-bottom:8px}
+.formule p{font-size:16px;color:var(--encre-2)}
+.formule-photo{position:relative;margin:0}
+.formule-photo img{width:100%;height:100%;min-height:260px;aspect-ratio:16/8;object-fit:cover;object-position:50% 55%;border-radius:20px;box-shadow:var(--ombre)}
+.res-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px;align-items:center}
+.res-btns .note{font-size:15px;color:var(--encre-2);margin-left:8px}
+
+/* école : section sombre */
+.ecole{background:var(--sombre);color:var(--surface)}
+.ecole .intro{color:rgba(248,242,234,.78)}
+.ecole-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);margin-top:56px;align-items:start}
+.chevaux{position:relative;margin:0}
+.chevaux img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:60% 100%;border-radius:22px;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.chevaux figcaption{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);border-radius:12px;padding:8px 14px;font-size:14px;font-weight:500}
+.points{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:18px}
+.points li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;font-size:17px;color:rgba(248,242,234,.86)}
+.points li::before{content:"";width:9px;height:9px;margin:9px 0 0 4px;background:var(--fauve-clair);transform:rotate(45deg)}
+.tarifs h3{font-size:28px;color:var(--surface)}
+.tarifs .sous{font-size:16px;color:rgba(248,242,234,.7);margin-top:6px}
+.ligne-prix{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(248,242,234,.16);font-size:18px}
+.ligne-prix:first-of-type{margin-top:20px;border-top:1px solid rgba(248,242,234,.16)}
+.ligne-prix b{font:500 26px/1 var(--display);color:var(--fauve-clair);white-space:nowrap}
+.stages{margin-top:48px;background:var(--sombre-2);border-radius:20px;padding:clamp(24px,3vw,36px)}
+.stages h3{font-size:28px}
+.stages p{margin-top:12px;font-size:17px;color:rgba(248,242,234,.8)}
+.stages ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.stages li{border:1px solid rgba(248,242,234,.3);border-radius:999px;padding:6px 14px;font-size:15px}
+
+/* le domaine */
+.domaine{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,96px);align-items:center}
+.tirage{margin:0;background:var(--surface);padding:16px 16px 56px;border-radius:6px;transform:rotate(-2deg);box-shadow:var(--ombre-forte);position:relative}
+.tirage img{width:100%;aspect-ratio:2/1.15;object-fit:cover;border-radius:2px}
+.tirage figcaption{position:absolute;left:20px;right:20px;bottom:16px;font:400 19px/1.2 var(--display);color:var(--encre-2)}
+.equip{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.equip div{padding:18px 0;border-top:1px solid rgba(42,30,22,.14)}
+.equip b{display:block;font:500 30px/1.05 var(--display);color:var(--encre)}
+.equip span{display:block;margin-top:6px;font-size:16px;color:var(--encre-2)}
+.vente{margin-top:40px;padding:24px 28px;background:var(--surface);border-radius:18px;box-shadow:var(--ombre);font-size:17px;color:var(--encre-2)}
+.vente strong{color:var(--encre);font-weight:500}
+
+/* contact */
+.contact{background:var(--base-2)}
+.contact-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.alentours{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
+.alentours li{background:var(--surface);border-radius:999px;padding:7px 15px;font-size:15px}
+.cour{position:relative;margin:40px 0 0}
+.cour img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 60%;border-radius:20px;box-shadow:var(--ombre)}
+.carte{background:var(--surface);border-radius:24px;padding:clamp(28px,4vw,48px);box-shadow:var(--ombre-forte)}
+.carte h3{font-size:32px}
+.carte dl{margin:24px 0 0}
+.carte dt{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--fauve);margin-top:22px;font-weight:600}
+.carte dd{margin:6px 0 0;font-size:17px}
+.carte dd a{text-decoration-color:rgba(164,83,43,.5);text-underline-offset:3px;overflow-wrap:anywhere}
+.carte .btn{margin-top:32px;width:100%}
+.carte .btn + .btn{margin-top:12px}
+
+/* pied */
+.pied{background:var(--sombre);color:rgba(248,242,234,.82);padding:72px 0 32px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied b{display:block;font:500 30px/1 var(--display);color:var(--surface)}
+.pied p,.pied li{font-size:16px}
+.pied h4{margin:0 0 12px;font:500 18px/1.2 var(--display);color:var(--surface)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{color:var(--surface);text-underline-offset:3px;overflow-wrap:anywhere}
+.propo{margin-top:56px;padding-top:24px;border-top:1px solid rgba(248,242,234,.12);font-size:13px;color:rgba(248,242,234,.55)}
+
+/* apparition */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;transform:none}
+.js .tirage.rv{transform:rotate(-2deg) translateY(28px)}
+.js .tirage.rv.vu{transform:rotate(-2deg)}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .tirage.rv{opacity:1;transform:none;transition:none}.js .tirage.rv{transform:rotate(-2deg)}}
+
+/* tablette et téléphone */
+@media (max-width:1000px){
+  .nav a:not(.btn){display:none}
+  .gite,.ecole-grille,.domaine,.contact-grille,.res-tete{grid-template-columns:minmax(0,1fr)}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .frise::before{display:none}
+  .formules{grid-template-columns:minmax(0,1fr)}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:820px){
+  .heros{grid-template-columns:minmax(0,1fr);grid-template-rows:none;min-height:0;padding-block:28px 64px}
+  .h-titre{grid-column:1;grid-row:auto;padding-inline:var(--gouttiere);max-width:none}
+  .h-titre{order:-1}
+  .h-photo{grid-column:1;grid-row:auto;margin:28px var(--gouttiere) 0 0;min-height:0;aspect-ratio:4/3.4}
+  .h-lede,.h-btns{grid-column:1;grid-row:auto;padding-inline:var(--gouttiere)}
+  .h-lede{margin-top:28px}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .compo{position:relative;top:auto}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:22px}
+  .marque span{display:none}
+  .frise,.formules,.pieces,.equip,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .frise{row-gap:28px;margin-top:48px}
+  .frise::before{display:block;left:9px;right:auto;top:10px;bottom:10px;width:1px;height:auto}
+  .frise li{padding:0 0 0 44px}
+  .frise h3{font-size:22px;margin-bottom:6px}
+  .rang{grid-template-columns:minmax(0,1fr)}
+  .compo{padding-bottom:90px}
+  .compo .posee{right:-8px;width:62%}
+  .faits ul{flex-direction:column;gap:12px}
+  .cit-photo{min-height:440px}
+  .tirage{padding:10px 10px 48px}
+}
+@media (max-width:420px){
+  .h-btns .btn,.res-btns .btn{width:100%}
+  .res-btns .note{margin-left:0}
+  .nav .btn{padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Puech Maynade</b><span>Gîte et équitation western · Onet-le-Château</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#gite">Le gîte</a>
+      <a href="#reserver">Réserver</a>
+      <a href="#ecole">L'école</a>
+      <a href="#domaine">Le domaine</a>
+      <a class="btn btn-plein" href="mailto:contact@puech-maynade.com">Nous écrire</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <figure class="h-photo">
+      <img src="assets/puech-maynade-rodez/grande-salle-voutee-table-16.webp" alt="La grande salle voûtée du gîte, blanchie à la chaux, avec ses tables nappées de rouge en enfilade" width="1600" height="1066" fetchpriority="high">
+      <figcaption class="pastille">La grande salle voûtée<small>110&nbsp;m², table de 16&nbsp;places</small></figcaption>
+    </figure>
+    <h1 class="h-titre">Un gîte de pierre et une école western, aux portes de Rodez</h1>
+    <p class="h-lede">Un domaine agricole familial aux bâtiments en pierre du 16<sup>e</sup>&nbsp;siècle : <strong>un gîte de caractère de 310&nbsp;m²</strong> pour les vacances en famille ou entre amis, et une école d'équitation western sur chevaux Appaloosa et Quarter Horse.</p>
+    <div class="h-btns">
+      <a class="btn btn-plein" href="#reserver">Réserver le gîte</a>
+      <a class="btn btn-contour" href="#ecole">Monter à cheval</a>
+    </div>
+  </div>
+
+  <div class="faits">
+    <ul class="cadre">
+      <li>Gîte de 310&nbsp;m²</li>
+      <li>5 pièces voûtées de plain-pied</li>
+      <li>Table de 16&nbsp;places</li>
+      <li>École western affiliée à la FFE</li>
+      <li>Appaloosa et Quarter Horse</li>
+    </ul>
+  </div>
+
+  <section id="gite">
+    <div class="cadre gite">
+      <div class="compo rv">
+        <img class="grande" src="assets/puech-maynade-rodez/coin-salon-voute-canapes.webp" alt="Le coin salon sous la voûte : canapé turquoise, fauteuils rouges et lampes" width="1600" height="1066" loading="lazy">
+        <span class="etiq">Le salon, sous la même voûte</span>
+        <img class="posee" src="assets/puech-maynade-rodez/chambre-lambris-lit-double.webp" alt="Chambre au mur lambrissé de pin, lit double et lampes de chevet" width="1600" height="1200" loading="lazy">
+      </div>
+      <div>
+        <h2 class="titre-s">Un gîte de caractère de 310&nbsp;m²</h2>
+        <p class="intro">Un séjour pleine nature au sein d'un domaine agricole familial, avec un grand parc ombragé à votre disposition. Cinq pièces voûtées de plain-pied, desservies par une galerie couverte.</p>
+        <div class="couchage">
+          <h3>Les chambres</h3>
+          <div class="rang"><b>Module 1</b><span>2 chambres, salle de bains et WC indépendants. Chambre 1 : 2 lits en 90. Chambre 2 : 1 lit double en 160 et 1 lit simple en 90.</span></div>
+          <div class="rang"><b>Module 2</b><span>1 chambre, salle de bains et WC indépendants : 1 lit double en 160 et 1 lit simple en 90.</span></div>
+          <div class="rang"><b>Module 3</b><span>1 chambre à 4 lits en 90, salle de bains et WC indépendants, attenants à l'extérieur.</span></div>
+          <div class="rang"><b>En plus</b><span>1 chambre avec 1 lit double et 1 canapé-lit.</span></div>
+        </div>
+        <div class="pieces">
+          <div><h3>La grande salle</h3><p>110&nbsp;m² : salle à manger de 16&nbsp;places, bar aménagé avec frigidaire, coin salon avec 4 canapés, télévision écran plat et wifi.</p></div>
+          <div><h3>La cuisine</h3><p>Plaques à induction, four, micro-ondes, 2 lave-vaisselle dont un professionnel, grand frigidaire, plans de travail et hotte en inox.</p></div>
+          <div><h3>Les murs</h3><p>Enduits et badigeons à la chaux, sol en béton ciré : fraîcheur naturelle l'été, chauffage par le sol l'hiver.</p></div>
+          <div><h3>Dehors</h3><p>Une grande terrasse aménagée et un parc arboré, au calme, en pleine nature.</p></div>
+        </div>
+        <ul class="compris">
+          <li>Draps et tapis de bain fournis, lits préparés</li>
+          <li>Accès pour personnes à mobilité réduite</li>
+          <li>Wifi et télévision</li>
+          <li>Gîte non-fumeur</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="citation">
+    <div class="cadre">
+      <div class="cit-photo rv">
+        <img src="assets/puech-maynade-rodez/facade-batiment-pierre-portes.webp" alt="Long bâtiment de pierre ocre aux portes en arc, pelouse fleurie de bleuets" width="1600" height="1200" loading="lazy">
+        <blockquote>
+          <p>Marie et Pierre sauront vous faire partager leur passion pour ce lieu de vie et les espaces naturels environnants.</p>
+          <cite>Les bâtiments du domaine, en pierre du 16<sup>e</sup>&nbsp;siècle</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <section class="reserver" id="reserver">
+    <div class="cadre">
+      <div class="res-tete">
+        <h2 class="titre-s">Réserver le gîte, en direct avec la famille</h2>
+        <p class="ouvert"><strong>Juillet, août et vacances scolaires :</strong> à la semaine, du samedi fin d'après-midi au samedi matin suivant. <strong>Hors vacances :</strong> formule week-end, 3&nbsp;nuits minimum.</p>
+      </div>
+      <ol class="frise">
+        <li><h3>Vos dates</h3><p>Écrivez au domaine avec vos dates et le nombre de personnes.</p></li>
+        <li><h3>L'acompte</h3><p>30&nbsp;% à la réservation, par chèque ou virement bancaire.</p></li>
+        <li><h3>Le solde</h3><p>Réglé 15&nbsp;jours avant l'arrivée.</p></li>
+        <li><h3>L'arrivée</h3><p>De 17&nbsp;h à 19&nbsp;h. Une caution de 1&nbsp;000&nbsp;euros vous est demandée, restituée à votre départ, à 10&nbsp;h.</p></li>
+      </ol>
+      <div class="formules">
+        <div class="formule"><h3>Fourni</h3><p>Draps de lit et tapis de bain, lits préparés à votre arrivée.</p><h3>À apporter</h3><p>Le linge de toilette et le linge de maison.</p></div>
+        <figure class="formule-photo rv">
+          <img src="assets/puech-maynade-rodez/terrasse-couverte-table-bois.webp" alt="La terrasse sous pergola : grande table en bois et barbecue maçonné" width="1600" height="1066" loading="lazy">
+        </figure>
+      </div>
+      <div class="res-btns">
+        <a class="btn btn-plein" href="mailto:contact@puech-maynade.com?subject=R%C3%A9servation%20du%20g%C3%AEte">Demander vos dates</a>
+        <a class="btn btn-contour" href="https://puech-maynade.com/contactez-nous/">Formulaire de contact</a>
+        <span class="note">Hébergement attesté par l'Office de Tourisme de Rodez.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ecole" id="ecole">
+    <div class="cadre">
+      <h2 class="titre-s">L'école d'équitation western</h2>
+      <p class="intro">Des cours d'une heure et demie toute l'année, de l'initiation au perfectionnement : vous pouvez gravir tous les échelons fédéraux, jusqu'au galop 7.</p>
+      <div class="ecole-grille">
+        <div>
+          <figure class="chevaux rv">
+            <img src="assets/puech-maynade-rodez/trois-chevaux-appaloosa.webp" alt="Trois chevaux Appaloosa sellés, côte à côte devant l'eau" width="1600" height="1200" loading="lazy">
+            <figcaption>Appaloosa et Quarter Horse, pas de poneys</figcaption>
+          </figure>
+          <ul class="points">
+            <li>Reprises de 4 cavaliers au maximum, données par Pierre Maupas, diplômé d'État.</li>
+            <li>Une école affiliée à la FFE, créée en 1998.</li>
+            <li>Des chevaux pour tous les niveaux. Âge minimum : 14&nbsp;ans.</li>
+            <li>Des demi-journées et des journées pour les licenciés à l'année.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="tarifs">
+            <h3>Les tarifs</h3>
+            <p class="sous">Un cours régulier d'une heure et demie chaque semaine.</p>
+            <div class="ligne-prix"><span>Cours simple, 1&nbsp;h&nbsp;30</span><b>28&nbsp;€</b></div>
+            <div class="ligne-prix"><span>Carte de 10&nbsp;cours</span><b>250&nbsp;€</b></div>
+            <div class="ligne-prix"><span>Demi-journée</span><b>65&nbsp;€</b></div>
+            <div class="ligne-prix"><span>Journée, de 9&nbsp;h à 18&nbsp;h</span><b>96&nbsp;€</b></div>
+          </div>
+          <div class="stages">
+            <h3>Des stages composés par vous</h3>
+            <p>Pas de formule toute faite : des stages à la demande, en demi-journées ou en journées, limités à 7&nbsp;cavaliers.</p>
+            <ul><li>Randonnées</li><li>Bivouacs et technique du bât</li><li>Stage d'équitation western</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="domaine">
+    <div class="cadre domaine">
+      <figure class="tirage rv">
+        <img src="assets/puech-maynade-rodez/domaine-vue-aerienne.webp" alt="Le domaine vu du ciel : bâtiments en pierre, manège couvert, carrières et prés" width="1600" height="800" loading="lazy">
+        <figcaption>Puech Maynade vu du ciel</figcaption>
+      </figure>
+      <div>
+        <h2 class="titre-s">Un grand domaine agricole tourné vers le cheval</h2>
+        <p class="intro">L'architecture du grand domaine agricole d'antan, et des installations pensées pour la passion du cheval. Pierre Maupas y élève des chevaux Appaloosa et Quarter Horse et des vaches Black Angus, selon les méthodes de l'agrobiologie. L'écurie ne compte que des Appaloosa et des Quarter Horse plein papiers.</p>
+        <div class="equip">
+          <div><b>42 × 27&nbsp;m</b><span>Carrière extérieure fermée</span></div>
+          <div><b>50 × 25&nbsp;m</b><span>Carrière close de 2&nbsp;m de haut, pour le travail du bétail</span></div>
+          <div><b>35 × 15&nbsp;m</b><span>Manège couvert, adapté au travail du bétail</span></div>
+          <div><b>18&nbsp;m</b><span>Round-pen de diamètre, clos sur 2,30&nbsp;m</span></div>
+          <div><b>21 boxes</b><span>15 paddocks, 2 selleries et un club house</span></div>
+          <div><b>Trail</b><span>Un parcours permanent</span></div>
+        </div>
+        <p class="vente"><strong>Chevaux et matériel à la vente.</strong> Le domaine vend des chevaux, et aussi du matériel : bâts, mors… Tout n'est pas en ligne : écrivez-nous.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre contact-grille">
+      <div>
+        <h2 class="titre-s">Venir à Puech Maynade</h2>
+        <p class="intro">Depuis Rodez : au giratoire de Saint-Éloi, suivez la direction de Conques par la D901, puis 2&nbsp;km après le golf, tournez à droite à Puech Maynade.</p>
+        <ul class="alentours">
+          <li>Chemins balisés au départ du gîte</li>
+          <li>Causse Comtal</li>
+          <li>Golf 18 trous et tennis à 2&nbsp;km</li>
+          <li>Location de VAE à 3&nbsp;km</li>
+          <li>Piscine Aquavallon à 5&nbsp;km</li>
+          <li>Lacs du Lévézou</li>
+          <li>Plateau de l'Aubrac</li>
+          <li>Vallée du Lot</li>
+          <li>Abbaye de Conques</li>
+          <li>Vallon de Marcillac</li>
+          <li>Musée Soulages</li>
+        </ul>
+        <figure class="cour rv">
+          <img src="assets/puech-maynade-rodez/cour-batiments-allee.webp" alt="Allée de gravier vers les bâtiments en pierre, sous les grands arbres" width="1600" height="1200" loading="lazy">
+        </figure>
+      </div>
+      <div class="carte">
+        <h3>Nous contacter</h3>
+        <dl>
+          <dt>Mail</dt>
+          <dd><a href="mailto:contact@puech-maynade.com">contact@puech-maynade.com</a></dd>
+          <dt>Adresse</dt>
+          <dd>Domaine de Puech Maynade<br>Onet-le-Château, Aveyron</dd>
+          <dt>Pour le gîte</dt>
+          <dd>Arrivées de 17&nbsp;h à 19&nbsp;h, départs à 10&nbsp;h</dd>
+          <dt>Ailleurs</dt>
+          <dd><a href="https://www.facebook.com/profile.php?id=100057509527738">Puech Maynade sur Facebook</a></dd>
+        </dl>
+        <a class="btn btn-plein" href="mailto:contact@puech-maynade.com">Écrire au domaine</a>
+        <a class="btn btn-contour" href="https://puech-maynade.com/contactez-nous/">Formulaire de contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <b>Puech Maynade</b>
+        <p style="margin-top:14px">Gîte de caractère et école d'équitation western, dans un domaine agricole familial aux portes de Rodez.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@puech-maynade.com">contact@puech-maynade.com</a></li>
+          <li>Domaine de Puech Maynade, Onet-le-Château</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="https://puech-maynade.com/contactez-nous/">Formulaire de contact</a></li>
+          <li><a href="https://www.rodez-tourisme.fr/offres/gite-de-puech-maynade-onet-le-chateau-fr-3823432/">Le gîte sur Rodez Tourisme</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100057509527738">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de Nicolas Masset pour Puech Maynade</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

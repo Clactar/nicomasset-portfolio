@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cap Kreol · traiteur créole sur commande, secteur de Saint-Nazaire</title>
+<meta name="description" content="Cap Kreol, traiteur créole sur commande dans le secteur de Saint-Nazaire : tapas, plats, desserts et punchs créoles pour vos anniversaires, mariages, baptêmes et séminaires. 07 81 49 68 40.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231F8A5B'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23FCF8EE'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F6F0E0; --base-2:#EFE5CC; --surface:#FCF8EE; --encre:#23201A; --doux:#5A5346;
+  --vert:#1F8A5B; --vert-f:#17714A; --sombre:#3A1F1A; --sombre-2:#4A2A23;
+  --jaune:#E2B128; --rouge:#C43A2A;
+  --ombre:0 30px 60px -34px rgba(58,31,26,.55);
+  --ombre-l:0 50px 90px -42px rgba(58,31,26,.62);
+  --display:'Bree Serif',Georgia,serif; --sans:'Lato','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-weight:400;font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased}
+::selection{background:var(--vert);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(246,240,224,.95);border-bottom:1px solid rgba(35,32,26,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{display:flex;align-items:baseline;gap:14px;text-decoration:none}
+.marque b{font-family:var(--display);font-weight:400;font-size:28px;line-height:1}
+.marque span{font-size:14px;color:var(--doux)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.nav .appel{color:var(--surface);background:var(--vert);font-weight:700;padding:11px 22px;border-radius:999px;transition:background-color .2s,transform .2s}
+.nav .appel:hover{background:var(--vert-f);transform:translateY(-2px)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--vert);color:var(--surface);box-shadow:0 18px 34px -20px rgba(31,138,91,.9)}
+.btn-plein:hover{background:var(--vert-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn.appel-court{display:none}
+
+/* Héros : marmite dans un cadre madras, à gauche */
+.heros{padding:64px 0 112px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);grid-template-areas:"photo titre" "photo texte" "photo actions";column-gap:80px;align-items:start}
+.madras{grid-area:photo;position:relative;margin:0;padding:14px;border-radius:18px;
+  background:
+    repeating-linear-gradient(90deg,rgba(226,177,40,.55) 0 9px,transparent 9px 17px,rgba(196,58,42,.42) 17px 21px,transparent 21px 31px,rgba(31,138,91,.45) 31px 36px,transparent 36px 48px),
+    repeating-linear-gradient(0deg,rgba(226,177,40,.5) 0 9px,transparent 9px 17px,rgba(196,58,42,.38) 17px 21px,transparent 21px 31px,rgba(31,138,91,.4) 31px 36px,transparent 36px 48px),
+    #F4E3B8;
+  box-shadow:var(--ombre-l)}
+.madras img{width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:55% 40%;border-radius:8px}
+.madras .etiquette{left:34px;bottom:34px}
+.etiquette{position:absolute;padding:9px 16px;border-radius:999px;background:var(--surface);font-weight:700;font-size:14px;line-height:1.2;box-shadow:0 12px 26px -16px rgba(58,31,26,.8)}
+.note-ronde{position:absolute;right:-30px;top:-30px;width:122px;height:122px;border-radius:50%;background:var(--vert);color:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.1;box-shadow:0 22px 40px -22px rgba(31,138,91,.9);transform:rotate(-8deg)}
+.note-ronde b{font-family:var(--display);font-weight:400;font-size:36px}
+.note-ronde span{font-size:13px;margin-top:4px}
+.heros h1{grid-area:titre;font-size:clamp(38px,5vw,68px);line-height:1.06;padding-top:56px}
+.heros h1 span{color:var(--vert)}
+.heros .chapo{grid-area:texte;margin-top:28px;font-size:19px;color:var(--doux);max-width:44ch}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+
+/* Bandeau */
+.faits{background:var(--base-2);padding:28px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 36px}
+.faits li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700}
+.faits li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--vert);flex:none}
+.faits li:nth-child(3n+2)::before{background:var(--jaune)}
+.faits li:nth-child(3n)::before{background:var(--rouge)}
+
+/* La carte */
+.carte{padding:128px 0 120px}
+.carte .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.carte h2{font-size:clamp(34px,4vw,54px)}
+.carte .intro p{margin-top:22px;color:var(--doux);max-width:46ch}
+.assiettes{position:relative;margin-top:56px;padding-bottom:90px}
+.assiettes .a{width:82%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:var(--ombre-l)}
+.assiettes .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;object-fit:cover;object-position:50% 70%;border-radius:16px;box-shadow:var(--ombre);outline:8px solid var(--base);transform:rotate(3deg)}
+.assiettes .etiquette{right:14px;bottom:22px;z-index:2;transform:rotate(3deg)}
+.menu{background:var(--surface);border-radius:26px;padding:56px 52px;box-shadow:var(--ombre-l)}
+.menu-tete{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;padding-bottom:26px;border-bottom:2px solid var(--encre)}
+.menu-tete h3{font-size:34px}
+.menu-tete span{color:var(--doux);font-size:16px}
+.menu-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:34px}
+.menu-cols h4{margin:0 0 14px;font-family:var(--display);font-weight:400;font-size:22px;color:var(--vert-f)}
+.menu-cols ul{list-style:none;margin:0;padding:0}
+.menu-cols li{padding:9px 0;border-bottom:1px dashed rgba(35,32,26,.2);font-size:17px;line-height:1.4}
+.menu-cols li small{display:block;color:var(--doux);font-size:15px}
+.menu-pied{margin-top:30px;font-size:16px;color:var(--doux)}
+
+/* Événements, fond sombre */
+.evenements{background:var(--sombre);color:var(--surface);padding:120px 0 128px}
+.evenements .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.evenements h2{font-size:clamp(34px,4vw,54px)}
+.evenements .intro{margin-top:20px;color:rgba(252,248,238,.78);max-width:48ch}
+.liste-ev{list-style:none;margin:44px 0 0;padding:0}
+.liste-ev li{font-family:var(--display);font-size:clamp(26px,3vw,40px);line-height:1.15;padding:16px 0;border-top:1px solid rgba(252,248,238,.16);display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.liste-ev li:last-child{border-bottom:1px solid rgba(252,248,238,.16)}
+.liste-ev li small{font-family:var(--sans);font-size:15px;color:rgba(252,248,238,.6)}
+.avis-conge{margin-top:40px;display:flex;gap:18px;align-items:flex-start;background:var(--sombre-2);border-radius:18px;padding:22px 26px;font-size:16px;color:rgba(252,248,238,.86)}
+.avis-conge b{color:var(--jaune);font-weight:700}
+.verrines{position:relative;margin:0}
+.verrines .a{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;box-shadow:0 44px 80px -40px rgba(0,0,0,.7)}
+.verrines .b{position:absolute;left:-64px;bottom:-48px;width:46%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;outline:8px solid var(--sombre);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.verrines .etiquette{right:18px;top:18px;color:var(--encre)}
+
+/* Douceurs */
+.douceurs{padding:128px 0}
+.douceurs-tete{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:60px}
+.douceurs-tete h2{font-size:clamp(34px,4vw,54px)}
+.douceurs-tete p{color:var(--doux);max-width:44ch}
+.table-douceurs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:36px 48px;align-items:start}
+.douceur{position:relative;margin:0}
+.douceur img{width:100%;object-fit:cover;box-shadow:var(--ombre-l)}
+.douceur .etiquette{left:16px;bottom:16px}
+.d1{grid-row:1/3}
+.d1 img{aspect-ratio:4/3.4;border-radius:24px;object-position:50% 50%}
+.d2{background:var(--surface);padding:14px 14px 16px;border-radius:14px;box-shadow:var(--ombre-l);transform:rotate(2.5deg);width:min(380px,100%);justify-self:center}
+.d2 img{aspect-ratio:1/1;border-radius:8px;box-shadow:none;object-position:50% 45%}
+.d2 figcaption{font-size:15px;color:var(--doux);padding:10px 4px 0}
+.d3 img{aspect-ratio:2.17/1;border-radius:18px;object-position:50% 50%}
+
+/* Commander */
+.commander{background:var(--base-2);padding:120px 0}
+.commander .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.commander h2{font-size:clamp(34px,4vw,54px)}
+.commander .intro{margin-top:20px;color:var(--doux);max-width:50ch}
+.gros-tel{display:inline-block;margin-top:34px;font-family:var(--display);font-size:clamp(36px,5.4vw,74px);line-height:1;text-decoration:none;color:var(--vert-f);white-space:nowrap;transition:color .2s}
+.gros-tel:hover{color:var(--encre)}
+.commander .mail{margin-top:18px;font-size:19px}
+.commander .mail a{overflow-wrap:anywhere;text-decoration:none;border-bottom:1px solid rgba(35,32,26,.3)}
+.fiche-contact{background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre-l)}
+.fiche-contact h3{font-size:26px}
+.fiche-contact .note{display:flex;align-items:baseline;gap:12px;margin-top:18px}
+.fiche-contact .note b{font-family:var(--display);font-weight:400;font-size:54px;line-height:1;color:var(--vert)}
+.fiche-contact .note span{color:var(--doux);font-size:16px}
+.fiche-contact dl{margin:26px 0 0}
+.fiche-contact dt{font-size:14px;color:var(--doux);margin-top:16px}
+.fiche-contact dd{margin:2px 0 0}
+.fiche-contact .liens{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.fiche-contact .liens .btn{width:100%}
+
+/* Pied */
+.pied{background:var(--sombre);color:rgba(252,248,238,.8);padding:80px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .nom{font-family:var(--display);font-size:32px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;color:var(--jaune);font-weight:700;letter-spacing:.03em}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(252,248,238,.25)}
+.pied a:hover{border-color:var(--jaune)}
+.signature{margin-top:64px;padding:22px 0 26px;border-top:1px solid rgba(252,248,238,.1);text-align:center;font-size:13px;color:rgba(252,248,238,.5)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .d2.apparait.vu{transform:rotate(2.5deg)}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.js .d2.apparait{transform:rotate(2.5deg)}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions"}
+  .heros h1{padding-top:0;margin-bottom:36px}
+  .note-ronde{right:-8px;top:-24px}
+  .carte .wrap,.evenements .wrap,.commander .wrap{grid-template-columns:minmax(0,1fr);gap:56px}
+  .menu-cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .verrines .b{left:-12px}
+  .table-douceurs{grid-template-columns:minmax(0,1fr)}
+  .d1{grid-row:auto}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 36px)}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .btn.appel-court{display:inline-flex;min-height:44px;padding:10px 18px;font-size:15px}
+  .marque b{font-size:24px}
+  .marque span{display:none}
+  .heros{padding:32px 0 80px}
+  .heros h1{margin-bottom:30px}
+  .madras{padding:10px}
+  .madras .etiquette{left:20px;bottom:20px;font-size:13px}
+  .note-ronde{width:92px;height:92px;right:-4px;top:-20px}
+  .note-ronde b{font-size:28px}
+  .note-ronde span{font-size:11px}
+  .heros .chapo{font-size:17px}
+  .heros .actions{flex-direction:column}
+  .heros .actions .btn{width:100%}
+  .faits ul{flex-direction:column;gap:10px}
+  .carte,.evenements,.douceurs,.commander{padding:88px 0}
+  .menu{padding:34px 22px}
+  .menu-cols{grid-template-columns:minmax(0,1fr);gap:26px}
+  .liste-ev li{flex-direction:column;gap:2px}
+  .verrines .b{width:42%;bottom:-36px}
+  .fiche-contact{padding:28px 22px}
+  .d2{transform:rotate(1.5deg)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Cap Kreol</b><span>Traiteur créole, secteur de Saint-Nazaire</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#carte">La carte</a>
+      <a href="#evenements">Événements</a>
+      <a href="#commander">Commander</a>
+      <a class="appel nowrap" href="tel:+33781496840">07 81 49 68 40</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33781496840">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <figure class="madras">
+        <img src="assets/cap-kreol/crevettes-en-sauce-en-marmite.webp" alt="Grande marmite de crevettes en sauce tomatée épicée" width="1600" height="1294" fetchpriority="high">
+        <span class="etiquette">Le carry crevettes</span>
+        <div class="note-ronde" aria-label="Note Google 5,0 sur 5, 54 avis"><b>5,0</b><span>sur Google<br>54 avis</span></div>
+      </figure>
+      <h1>La cuisine <span>créole</span> sur commande, pour vos événements</h1>
+      <p class="chapo">Anniversaires, mariages, baptêmes, séminaires d'entreprise : Cap Kreol prépare vos tapas, plats, desserts et punchs créoles, aux saveurs de La Réunion et des Antilles.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="#commander">Passer commande</a>
+        <a class="btn btn-contour nowrap" href="tel:+33781496840">07 81 49 68 40</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li>Note Google 5,0 sur 5, 54 avis</li>
+        <li>Sur commande</li>
+        <li>Secteur de Saint-Nazaire</li>
+        <li>Tapas, plats, desserts, punchs</li>
+        <li>La Réunion et les Antilles</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="carte" id="carte">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Ce qui mijote chez Cap Kreol</h2>
+        <p>Des plats créoles en sauce, des tapas à grignoter et des desserts des îles. Les piments farcis sont faits maison : une farce généreuse, un mélange d'épices, et juste ce qu'il faut de piquant pour relever vos apéros.</p>
+        <div class="assiettes apparait">
+          <img class="a" src="assets/cap-kreol/assiette-crevettes-riz-dauphin.webp" alt="Assiette créole : crevettes en sauce, riz moulé en forme de dauphin, samoussas et bouchons" width="1600" height="1600" loading="lazy">
+          <img class="b" src="assets/cap-kreol/piments-farcis-maison.webp" alt="Piments farcis en beignets dorés dans un panier en osier" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Piments farcis faits maison</span>
+        </div>
+      </div>
+      <div class="menu apparait">
+        <div class="menu-tete">
+          <h3>La carte du traiteur</h3>
+          <span>Saveurs de La Réunion et des Antilles</span>
+        </div>
+        <div class="menu-cols">
+          <div>
+            <h4>Plats créoles</h4>
+            <ul>
+              <li>Rougail<small>saucisses, morue</small></li>
+              <li>Carry<small>poulet, crevettes</small></li>
+              <li>Curry coco</li>
+              <li>Massalé<small>porc, poulet, cabri si disponible</small></li>
+              <li>Couscous<small>poulet merguez, végétarien</small></li>
+              <li>Colombo</li>
+              <li>Chop suey</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tapas créoles</h4>
+            <ul>
+              <li>Acras</li>
+              <li>Samoussas</li>
+              <li>Bouchons</li>
+              <li>Bonbons piments</li>
+              <li>Petits pâtés</li>
+              <li>Piments farcis</li>
+              <li>Boudin antillais</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Desserts et punchs</h4>
+            <ul>
+              <li>Gâteau à l'ananas</li>
+              <li>Flan coco des îles</li>
+              <li>Blanc-manger coco</li>
+              <li>Beignets de banane</li>
+              <li>Tourment d'amour</li>
+              <li>Salade de fruits</li>
+              <li>Punch planteur, punch coco</li>
+            </ul>
+          </div>
+        </div>
+        <p class="menu-pied">Tout se prépare sur commande, par téléphone ou par mail.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="evenements" id="evenements">
+    <div class="wrap">
+      <div>
+        <h2>Pour vos événements</h2>
+        <p class="intro">Réceptions familiales ou repas d'entreprise, pour les groupes à partir de 6 personnes.</p>
+        <ul class="liste-ev">
+          <li>Anniversaires</li>
+          <li>Mariages</li>
+          <li>Baptêmes</li>
+          <li>Séminaires d'entreprise</li>
+        </ul>
+        <div class="avis-conge"><p><b>À noter :</b> Cap Kreol ne sera pas disponible pour vos événements du 19 décembre 2026 au 10 janvier 2027 inclus, et aucune livraison ne sera assurée durant cette période.</p></div>
+      </div>
+      <figure class="verrines apparait">
+        <img class="a" src="assets/cap-kreol/verrines-crevettes-avocat-mangue.webp" alt="Verrines à pied avocat, mangue et crevettes sautées sur un plateau en bois" width="1600" height="1476" loading="lazy">
+        <img class="b" src="assets/cap-kreol/verrines-pamplemousse.webp" alt="Verrines en couches avocat, saumon, pamplemousse rose et tomate cerise" width="1600" height="1425" loading="lazy">
+        <span class="etiquette">Verrines avocat, mangue, crevettes</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="douceurs" id="douceurs">
+    <div class="wrap">
+      <div class="douceurs-tete">
+        <h2>Et pour finir, des douceurs</h2>
+        <p>Gâteaux, salade de fruits découpés en étoiles, beignets bien dorés : de quoi terminer le repas sur une note des îles.</p>
+      </div>
+      <div class="table-douceurs">
+        <figure class="douceur d1 apparait">
+          <img src="assets/cap-kreol/gateau-de-patate-douce.webp" alt="Gâteau de patate douce entier décoré de rondelles confites" width="1600" height="1190" loading="lazy">
+          <span class="etiquette">Gâteau de patate douce</span>
+        </figure>
+        <figure class="douceur d2 apparait">
+          <img src="assets/cap-kreol/salade-de-fruits-exotiques.webp" alt="Saladier de fruits exotiques découpés en étoiles, gousses de vanille" width="1344" height="1600" loading="lazy">
+          <figcaption>Salade de fruits exotiques</figcaption>
+        </figure>
+        <figure class="douceur d3 apparait">
+          <img src="assets/cap-kreol/gateau-chocolat-ananas.webp" alt="Gâteau au chocolat décoré d'une rose d'ananas caramélisé" width="1600" height="737" loading="lazy">
+          <span class="etiquette">Chocolat et rose d'ananas</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="commander" id="commander">
+    <div class="wrap">
+      <div>
+        <h2>Une commande, un événement ?</h2>
+        <p class="intro">Tapas, plats, desserts ou punchs créoles : tout se prépare sur commande. Un appel ou un mail suffit pour en parler.</p>
+        <a class="gros-tel" href="tel:+33781496840">07 81 49 68 40</a>
+        <p class="mail">ou par mail : <a href="mailto:capkreol.traiteur@gmail.com">capkreol.traiteur@gmail.com</a></p>
+      </div>
+      <aside class="fiche-contact" aria-label="Coordonnées">
+        <h3>Cap Kreol</h3>
+        <div class="note"><b>5,0</b><span>sur 5 sur Google,<br>54 avis</span></div>
+        <dl>
+          <dt>Métier</dt><dd>Traiteur créole, sur commande</dd>
+          <dt>Secteur</dt><dd>Saint-Nazaire (44600)</dd>
+          <dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33781496840">07 81 49 68 40</a></dd>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Cap%20Kreol&amp;query_place_id=ChIJ00Itv0rCkKMRaOcySfyweuk">Voir les avis sur Google</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/CapKreol">Page Facebook</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <p class="nom">Cap Kreol</p>
+      <p style="margin-top:12px">Traiteur créole sur commande pour vos événements, secteur de Saint-Nazaire.</p>
+    </div>
+    <div>
+      <h4>Commander</h4>
+      <ul>
+        <li><a class="nowrap" href="tel:+33781496840">07 81 49 68 40</a></li>
+        <li><a href="mailto:capkreol.traiteur@gmail.com" style="overflow-wrap:anywhere">capkreol.traiteur@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ailleurs</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Cap%20Kreol&amp;query_place_id=ChIJ00Itv0rCkKMRaOcySfyweuk">Fiche Google</a></li>
+        <li><a href="https://www.facebook.com/CapKreol">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Cap Kreol</p>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

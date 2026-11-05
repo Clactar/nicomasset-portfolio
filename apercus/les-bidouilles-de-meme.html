@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Les Bidouilles de Mémé Traiteur · Bourgneuf-en-Retz</title>
+<meta name="description" content="Les Bidouilles de Mémé, traiteur à Bourgneuf-en-Retz : mariages, buffets, assiettes et desserts de fête. 07 60 85 18 06.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='32' rx='27' ry='30' fill='%23C8444F'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23FCF8F2'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&family=Varela+Round&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F5EEE4; --base-2:#EEE3D4; --surface:#FCF8F2; --encre:#2D2420; --encre-2:#5E4F47;
+  --accent:#C8444F; --accent-fonce:#A8333E; --sombre:#3B2A26; --sombre-2:#4A3631; --or:#B9945C;
+  --ombre:0 30px 60px -34px rgba(59,42,38,.55);
+  --display:'Radley', Georgia, serif; --texte:'Varela Round', 'Trebuchet MS', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:17px;line-height:1.65}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1200px,100% - 40px);margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(245,238,228,.94);border-bottom:1px solid rgba(45,36,32,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:23px}
+.marque small{font-size:13px;color:var(--encre-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 26px;font-size:16px;text-decoration:none;border:1.5px solid var(--encre);transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface);box-shadow:0 14px 30px -18px rgba(168,51,62,.9)}
+.btn-plein:hover{background:var(--accent-fonce);border-color:var(--accent-fonce)}
+.btn-contour{color:var(--encre);background:transparent}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-tel{padding:10px 18px;font-size:15px;border-color:rgba(45,36,32,.25);white-space:nowrap}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-tel .court{display:none}
+
+/* Héros */
+.heros{padding:72px 0 112px}
+.heros .env{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);grid-template-areas:"titre cadre" "texte cadre";column-gap:64px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(38px,5.6vw,80px);align-self:end}
+.heros h1 em{color:var(--accent);font-style:italic}
+.heros-texte{grid-area:texte;align-self:start;margin-top:28px}
+.heros-texte p{font-size:18px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.cadre-zone{grid-area:cadre;position:relative;padding:20px 8px}
+.cadre{position:relative;aspect-ratio:5/4;border-radius:50%;background:var(--surface);padding:clamp(14px,2vw,26px);box-shadow:var(--ombre),0 2px 0 rgba(185,148,92,.25);transform:rotate(2deg)}
+.cadre::before,.cadre::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.cadre::before{inset:6px;border:1px solid var(--or)}
+.cadre::after{inset:10px;border:1px solid var(--or);opacity:.7}
+.cadre img{width:100%;height:100%;object-fit:cover;object-position:64% 62%;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(185,148,92,.5)}
+.cadre .anneau{position:absolute;inset:clamp(14px,2vw,26px);border-radius:50%;border:1.5px solid var(--or);pointer-events:none}
+.etiquette{position:absolute;left:4%;bottom:6%;background:var(--surface);border-radius:999px;padding:9px 16px;font-size:14px;box-shadow:0 14px 30px -16px rgba(59,42,38,.6);transform:rotate(-1.5deg)}
+.sceau{position:absolute;right:0;top:0;width:118px;aspect-ratio:1;border-radius:50%;background:var(--accent);color:var(--surface);display:grid;place-content:center;text-align:center;box-shadow:0 18px 34px -18px rgba(168,51,62,.9);transform:rotate(8deg)}
+.sceau b{font-family:var(--display);font-weight:400;font-size:36px;line-height:1}
+.sceau span{font-size:12.5px;line-height:1.3;margin-top:4px}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2);border-block:1px solid rgba(45,36,32,.07)}
+.faits ul{list-style:none;margin:0 auto;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:15.5px;color:var(--encre-2)}
+.faits li{display:flex;align-items:center;gap:12px}
+.faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.faits strong{font-weight:400;color:var(--encre)}
+
+/* La cuisine : photos + liste à filets */
+.cuisine{padding:120px 0}
+.cuisine .env{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:80px;align-items:start}
+.montage{position:relative;padding-bottom:120px}
+.montage .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);position:relative;aspect-ratio:4/5}
+.montage .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.montage .petite{position:absolute;right:-28px;bottom:0;width:58%;border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);aspect-ratio:4/3;transform:rotate(-2.5deg)}
+.montage .petite img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.pastille{position:absolute;left:16px;bottom:16px;background:var(--surface);border-radius:999px;padding:8px 15px;font-size:14px;box-shadow:0 10px 24px -14px rgba(59,42,38,.7)}
+.cuisine h2{font-size:clamp(32px,3.6vw,50px);max-width:13em}
+.chapo{margin-top:20px;font-size:18px;color:var(--encre-2);max-width:34em}
+.carte{list-style:none;margin:44px 0 0;padding:0;border-top:1px solid rgba(45,36,32,.18)}
+.carte li{padding:20px 0;border-bottom:1px solid rgba(45,36,32,.18);display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:6px 28px}
+.carte h3{font-size:23px;line-height:1.2}
+.carte p{color:var(--encre-2);font-size:16.5px}
+.note-carte{margin-top:26px;font-size:16.5px;color:var(--encre-2)}
+.note-carte a{color:var(--accent);text-underline-offset:3px}
+
+/* Citation */
+.citation{padding:40px 0 128px}
+.citation figure{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,240px);gap:56px;align-items:center}
+.citation blockquote{margin:0;font-family:var(--display);font-size:clamp(30px,3.9vw,56px);line-height:1.14;text-wrap:balance}
+.citation blockquote::before{content:"«\00a0";color:var(--accent)}
+.citation blockquote::after{content:"\00a0»";color:var(--accent)}
+.citation figcaption{margin-top:22px;font-size:15.5px;color:var(--encre-2)}
+.vignette-ronde{width:min(240px,100%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);justify-self:end}
+.vignette-ronde img{width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+
+/* Réceptions, fond sombre */
+.receptions{background:var(--sombre);color:var(--surface);padding:120px 0 128px}
+.receptions .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end;margin-bottom:64px}
+.receptions h2{font-size:clamp(32px,3.6vw,52px)}
+.receptions .tete p{color:rgba(252,248,242,.78);font-size:18px;max-width:30em}
+.trio{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.9fr);gap:32px;align-items:start}
+.trio figure{margin:0}
+.trio .ph{border-radius:18px;overflow:hidden;box-shadow:0 34px 60px -30px rgba(0,0,0,.7)}
+.trio .ph img{width:100%;height:100%;object-fit:cover}
+.trio figcaption{margin-top:14px;font-size:15px;color:rgba(252,248,242,.72)}
+.trio .a .ph{aspect-ratio:4/5}
+.trio .a img{object-position:50% 60%}
+.trio .b{margin-top:96px}
+.trio .b .ph{aspect-ratio:4/3}
+.trio .c{margin-top:32px}
+.trio .c .ph{aspect-ratio:3/4}
+.trio .c img{object-position:50% 70%}
+
+/* Contact */
+.contact{padding:128px 0}
+.contact .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(32px,3.8vw,54px);max-width:11em}
+.contact .intro{margin-top:22px;font-size:18px;color:var(--encre-2);max-width:30em}
+.tel-grand{display:inline-block;margin-top:30px;font-family:var(--display);font-size:clamp(34px,4vw,52px);color:var(--accent);text-decoration:none;white-space:nowrap;line-height:1}
+.tel-grand:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.pose{position:relative;padding:0}
+.polaroid{position:absolute;left:0;top:-70px;width:min(184px,36%);background:var(--surface);padding:10px 10px 12px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-5deg);z-index:2}
+.polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 55%;border-radius:3px}
+.polaroid span{display:block;font-size:13.5px;color:var(--encre-2);margin-top:9px;line-height:1.35}
+.fiche{position:relative;background:var(--surface);border-radius:22px;box-shadow:0 40px 80px -46px rgba(59,42,38,.6);padding:40px 40px 34px 116px;margin-left:96px}
+.fiche dl{margin:0;display:grid;gap:18px}
+.fiche dt{font-size:13px;color:var(--encre-2);letter-spacing:.02em}
+.fiche dd{margin:3px 0 0;font-size:17px}
+.fiche dd a{text-decoration:none;border-bottom:1px solid rgba(45,36,32,.25)}
+.fiche dd a:hover{color:var(--accent);border-color:var(--accent)}
+.fiche .nowrap{white-space:nowrap}
+.fiche .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.fiche .liens .btn{padding:11px 18px;font-size:15px}
+
+/* Pied */
+.pied{background:var(--sombre);color:rgba(252,248,242,.8);padding:72px 0 40px;font-size:15.5px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied b{display:block;font-family:var(--display);font-weight:400;font-size:26px;color:var(--surface);margin-bottom:8px}
+.pied h3{font-family:var(--texte);font-size:13px;color:rgba(252,248,242,.6);margin-bottom:12px;letter-spacing:.03em}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(252,248,242,.25)}
+.pied a:hover{color:var(--surface);border-color:var(--surface)}
+.pied p+p{margin-top:6px}
+.proposition{background:#30221F;color:rgba(252,248,242,.5);font-size:13px;text-align:center;padding:16px 20px}
+
+/* Apparition */
+.js:not(.calme) .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js:not(.calme) .apparait.vu{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros{padding:40px 0 80px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "cadre" "texte";row-gap:8px}
+  .cadre-zone{max-width:560px;width:100%;justify-self:center;margin-top:18px}
+  .cuisine .env,.contact .env,.receptions .tete{grid-template-columns:minmax(0,1fr);gap:48px}
+  .montage{max-width:560px}
+  .montage .petite{right:0}
+  .citation figure{grid-template-columns:minmax(0,1fr);gap:36px}
+  .vignette-ronde{justify-self:start;width:min(200px,60%)}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .trio .a{grid-column:1 / -1}
+  .trio .a .ph{aspect-ratio:4/3}
+  .trio .b{margin-top:0}
+  .trio .c{margin-top:40px}
+  .pied .env{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pose{padding:0}
+  .fiche{margin-left:0;margin-top:0;padding-left:40px}
+  .polaroid{position:relative;top:auto;left:auto;margin:0 0 -40px 12px;width:min(200px,52%)}
+}
+@media (max-width:620px){
+  body{font-size:16.5px}
+  .entete .env{min-height:62px}
+  .marque b{font-size:19px}
+  .marque small{display:none}
+  .btn-tel .num{display:none}
+  .btn-tel .court{display:inline}
+  .heros h1{font-size:clamp(36px,10.4vw,46px)}
+  .cadre-zone{padding:14px 4px}
+  .sceau{width:92px;top:-6px;right:-2px}
+  .sceau b{font-size:28px}
+  .sceau span{font-size:11px}
+  .etiquette{font-size:13px;padding:7px 13px}
+  .faits ul{flex-direction:column;padding:22px 0}
+  .cuisine,.contact{padding:88px 0}
+  .receptions{padding:88px 0}
+  .carte li{grid-template-columns:minmax(0,1fr)}
+  .montage{padding-bottom:90px}
+  .montage .petite{width:62%;border-width:6px}
+  .montage .pastille{top:14px;bottom:auto;left:14px}
+  .trio{grid-template-columns:minmax(0,1fr);gap:28px}
+  .trio .c{margin-top:0}
+  .citation{padding:24px 0 88px}
+  .fiche{padding:30px 22px 26px}
+  .pied .env{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .fiche .liens .btn{width:100%}
+  .tel-grand{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#haut"><b>Les Bidouilles de Mémé</b><small>Traiteur · Bourgneuf-en-Retz</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#cuisine">La cuisine</a>
+      <a class="lien" href="#receptions">Les réceptions</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33760851806" aria-label="Appeler le 07 60 85 18 06"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="num">07 60 85 18 06</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <h1>Cuisine de fête, du salé au <em>sucré</em>.</h1>
+      <div class="cadre-zone apparait">
+        <div class="cadre">
+          <img src="assets/les-bidouilles-de-meme/pavlova-fruits-rouges.webp" alt="Pavlova couronnée de chantilly, framboises, mûres et myrtilles" width="1600" height="967">
+          <span class="anneau" aria-hidden="true"></span>
+          <span class="etiquette">Pavlova aux fruits rouges</span>
+        </div>
+        <div class="sceau"><b>4,9</b><span>sur 5<br>21 avis Google</span></div>
+      </div>
+      <div class="heros-texte">
+        <p>Mariages, buffets, assiettes dressées et gâteaux de fête&nbsp;: Les Bidouilles de Mémé, c'est un traiteur de Bourgneuf-en-Retz, joignable tous les jours au téléphone.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33760851806">Appeler le 07 60 85 18 06</a>
+          <a class="btn btn-contour" href="mailto:lbmtraiteur44@gmail.com">Écrire un mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env">
+      <li><span><strong>Traiteur</strong> à Bourgneuf-en-Retz</span></li>
+      <li><span><strong>4,9 sur 5</strong>, 21 avis Google</span></li>
+      <li><span>Tous les jours, <strong>8&nbsp;h 30 à 19&nbsp;h</strong></span></li>
+      <li><span>Livraison de <strong>8&nbsp;h 30 à 18&nbsp;h 30</strong></span></li>
+    </ul>
+  </div>
+
+  <section class="cuisine" id="cuisine">
+    <div class="env">
+      <div class="montage apparait">
+        <div class="grande">
+          <img src="assets/les-bidouilles-de-meme/assiettes-foie-gras-tomates.webp" alt="Assiettes de foie gras sur pain d'épices, tomates cerises, framboises et mesclun" width="1200" height="1600" loading="lazy">
+          <span class="pastille">Foie gras sur pain d'épices</span>
+        </div>
+        <div class="petite">
+          <img src="assets/les-bidouilles-de-meme/assiette-poulpe-grille-legumes.webp" alt="Poulpe grillé persillé, légumes rôtis et mâche" width="1600" height="1208" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <h2>Des entrées aux desserts, tout passe par la cuisine.</h2>
+        <p class="chapo">Quelques assiettes sorties de chez Les Bidouilles de Mémé, du cocktail au plat végétal.</p>
+        <ul class="carte">
+          <li><h3>Assiettes d'entrée</h3><p>Crevettes et citron, rillettes de poisson, flan de légumes, toasts et salade.</p></li>
+          <li><h3>Foie gras</h3><p>Sur pain d'épices, avec tomates cerises, framboises, mesclun et pensée.</p></li>
+          <li><h3>Poulpe grillé</h3><p>Persillé, servi avec légumes rôtis et mâche.</p></li>
+          <li><h3>Nutroast</h3><p>Pain de noix, couche de tomates confites, feuilles de sauge.</p></li>
+          <li><h3>Wraps roulés</h3><p>Saumon, fromage frais, concombre ou asperge verte, tranchés sur plateau.</p></li>
+          <li><h3>Desserts</h3><p>Pavlova, entremets aux fraises, gâteaux-chiffres et macarons.</p></li>
+        </ul>
+        <p class="note-carte">Pour composer votre menu, le plus simple est d'appeler&nbsp;: <a href="tel:+33760851806">07 60 85 18 06</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="env">
+      <figure>
+        <div>
+          <blockquote>Les Bidouilles de Mémé Traiteur, c'est tout simplement une équipe passionnée de cuisine pour tous.</blockquote>
+          <figcaption>Les Bidouilles de Mémé, à Bourgneuf-en-Retz</figcaption>
+        </div>
+        <div class="vignette-ronde apparait"><img src="assets/les-bidouilles-de-meme/nutroast-tomates-sauge.webp" alt="Nutroast aux tomates confites et à la sauge" width="1600" height="800" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="receptions" id="receptions">
+    <div class="env">
+      <div class="tete">
+        <h2>Pour les grands jours.</h2>
+        <p>Repas de mariage, buffet de desserts, brunch&nbsp;: quelques tables dressées par l'équipe, du salé jusqu'aux gâteaux.</p>
+      </div>
+      <div class="trio">
+        <figure class="a apparait">
+          <div class="ph"><img src="assets/les-bidouilles-de-meme/buffet-desserts-et-champagne.webp" alt="Longue table de gâteaux-chiffres devant des bouteilles de champagne" width="1262" height="1600" loading="lazy"></div>
+          <figcaption>Gâteaux-chiffres alignés et champagne</figcaption>
+        </figure>
+        <figure class="b apparait">
+          <div class="ph"><img src="assets/les-bidouilles-de-meme/gateau-chiffre-creme-pistache.webp" alt="Gâteau en forme de chiffre couvert de crème pistache" width="1600" height="1200" loading="lazy"></div>
+          <figcaption>Gâteau-chiffre, crème pistache</figcaption>
+        </figure>
+        <figure class="c apparait">
+          <div class="ph"><img src="assets/les-bidouilles-de-meme/tarte-fraises-fleurs.webp" alt="Entremets couverts de fraises, framboises, menthe et fleurs" width="1200" height="1600" loading="lazy"></div>
+          <figcaption>Entremets aux fraises et fleurs</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div>
+        <h2>Le plus rapide, c'est le téléphone.</h2>
+        <p class="intro">Pour être certain d'avoir une réponse rapide, appelez directement. Le mail marche aussi pour envoyer une date et un nombre de convives.</p>
+        <a class="tel-grand" href="tel:+33760851806">07 60 85 18 06</a>
+      </div>
+      <div class="pose">
+        <figure class="polaroid apparait" style="margin:0">
+          <img src="assets/les-bidouilles-de-meme/buffet-salle-baie-vitree.webp" alt="Buffet de brunch devant une grande baie vitrée" width="1089" height="1600" loading="lazy">
+          <span>Brunch, ardoises sans gluten et sans lactose</span>
+        </figure>
+        <div class="fiche">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33760851806">07 60 85 18 06</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:lbmtraiteur44@gmail.com">lbmtraiteur44@gmail.com</a></dd></div>
+            <div><dt>Secteur</dt><dd>Bourgneuf-en-Retz (44580)</dd></div>
+            <div><dt>Horaires</dt><dd>Tous les jours, de 8&nbsp;h 30 à 19&nbsp;h<br>Livraison de 8&nbsp;h 30 à 18&nbsp;h 30</dd></div>
+            <div><dt>Note Google</dt><dd>4,9 sur 5, 21 avis</dd></div>
+          </dl>
+          <div class="liens">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Bidouilles%20de%20M%C3%A9m%C3%A9%20Traiteur&amp;query_place_id=ChIJv1stPFeYJ6IR0V-pkghqj1Q" target="_blank" rel="noopener">Voir les avis Google</a>
+            <a class="btn btn-contour" href="https://www.facebook.com/lbmtraiteur44/" target="_blank" rel="noopener">Suivre sur Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b>Les Bidouilles de Mémé</b>
+      <p>Traiteur à Bourgneuf-en-Retz. Mariages, buffets, assiettes et desserts.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:+33760851806">07 60 85 18 06</a></p>
+      <p><a href="mailto:lbmtraiteur44@gmail.com">lbmtraiteur44@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Tous les jours, 8&nbsp;h 30 à 19&nbsp;h</p>
+      <p>Livraison, 8&nbsp;h 30 à 18&nbsp;h 30</p>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Bidouilles%20de%20M%C3%A9m%C3%A9%20Traiteur&amp;query_place_id=ChIJv1stPFeYJ6IR0V-pkghqj1Q" target="_blank" rel="noopener">Fiche Google</a></p>
+      <p><a href="https://www.facebook.com/lbmtraiteur44/" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Les Bidouilles de Mémé Traiteur</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier des Cuivres et C° · luthier et magasin d'instruments à vent, Brest</title>
+<meta name="description" content="L'Atelier des Cuivres et C°, à Brest : vente d'instruments à vent neufs et d'occasion, entretien, réparation, expertise et cours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2314262E'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='38' fill='%23B8862B'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;1,400&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EEE8DC; --surface:#F8F4EC; --soutenu:#E3D9C6; --encre:#1D1A16; --doux:#5B5348;
+  --laiton:#B8862B; --laiton-fonce:#8A6418; --sombre:#14262E; --sombre-2:#1C333D;
+  --ombre:0 30px 60px -34px rgba(20,38,46,.55);
+  --ombre-l:0 46px 84px -40px rgba(20,38,46,.62);
+  --serif:'Libre Bodoni',Didot,Georgia,serif; --sans:'Fira Sans','Helvetica Neue',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--laiton);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(238,232,220,.95);border-bottom:1px solid rgba(29,26,22,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{font-family:var(--serif);font-size:25px;text-decoration:none;line-height:1.1}
+.marque i{color:var(--laiton-fonce)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.tel-pill{padding:11px 20px;border-radius:999px;border:1.5px solid var(--encre);color:var(--encre)!important;font-weight:500;white-space:nowrap;transition:background .25s,color .25s}
+.tel-pill:hover{background:var(--encre);color:var(--surface)!important}
+
+/* Héros */
+.heros{padding:56px 0 112px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(40px,5.6vw,80px);line-height:1.04}
+.heros h1 em{font-style:italic;color:var(--laiton-fonce)}
+.chapo{font-size:19px;color:var(--doux);margin-top:28px;max-width:50ch}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;font-weight:500;font-size:16px;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--sombre);color:var(--surface)}
+.btn-plein:hover{background:#0c1a20;transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(20,38,46,.8)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.adresse-courte{margin-top:22px;font-size:15px;color:var(--doux)}
+.heros-visuel{position:relative;padding-left:56px}
+.etabli{position:relative}
+.etabli img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 72%;border-radius:20px;box-shadow:var(--ombre-l)}
+.detail{position:absolute;left:0;top:54%;width:min(196px,38%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:7px solid var(--base);box-shadow:0 26px 50px -24px rgba(20,38,46,.7)}
+.detail img{width:100%;height:100%;object-fit:cover;object-position:38% 62%}
+.etiquette{position:absolute;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:9px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:12px;box-shadow:0 12px 26px -16px rgba(20,38,46,.7)}
+.etiquette::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--laiton)}
+
+/* Bandeau de faits */
+.faits{background:var(--soutenu)}
+.faits ul{list-style:none;margin:0;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:16px}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:14px;height:1.5px;background:var(--laiton-fonce);flex:none}
+
+/* Entretien */
+.entretien{padding:120px 0}
+.ent-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:start}
+.ent-photos{position:relative;padding-bottom:120px}
+.ent-photos .cles img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.ent-photos .brosse{position:absolute;right:-12px;bottom:0;width:50%;margin:0;border:8px solid var(--base);border-radius:24px}
+.ent-photos .brosse img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 60%;border-radius:16px;box-shadow:var(--ombre-l)}
+.ent-photos figcaption{position:absolute;left:14px;bottom:14px;background:var(--surface);font-size:14px;font-weight:500;padding:6px 12px;border-radius:9px}
+.entretien h2{font-size:clamp(34px,4.2vw,56px)}
+.entretien .intro{color:var(--doux);margin-top:22px}
+.liste-filets{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid rgba(29,26,22,.2)}
+.liste-filets li{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:24px;padding:16px 0;border-bottom:1px solid rgba(29,26,22,.2);font-size:17px}
+.liste-filets b{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.3}
+.liste-filets span{color:var(--doux)}
+.apres{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:36px}
+.apres div{background:var(--surface);border-radius:16px;padding:24px 24px 22px;box-shadow:0 20px 40px -30px rgba(20,38,46,.5)}
+.apres h3{font-size:23px;margin-bottom:8px}
+.apres p{font-size:16px;color:var(--doux)}
+
+/* Expertise, fond sombre */
+.expertise{background:var(--sombre);color:var(--surface);padding:120px 0}
+.exp-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:end}
+.expertise h2{font-size:clamp(34px,4.4vw,60px)}
+.expertise .intro{color:#C5CDCF;max-width:48ch}
+.etapes{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;position:relative}
+.etapes::before{content:"";position:absolute;left:0;right:0;top:23px;height:1px;background:rgba(184,134,43,.5)}
+.etapes li{position:relative}
+.etapes .num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--sombre);border:1.5px solid var(--laiton);color:var(--laiton);font-family:var(--serif);font-size:20px;position:relative}
+.etapes h3{font-size:26px;margin:22px 0 10px;color:var(--surface)}
+.etapes p{color:#C5CDCF;font-size:17px}
+.etapes a{color:#E6C887;text-underline-offset:4px}
+.outils{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,5fr);gap:28px;margin-top:88px;align-items:end}
+.outil{position:relative;margin:0}
+.outil img{width:100%;object-fit:cover;border-radius:16px;box-shadow:0 36px 64px -32px rgba(0,0,0,.75)}
+.outil-1 img{aspect-ratio:3/4;object-position:50% 55%}
+.outil-2{margin-bottom:56px}
+.outil-2 img{aspect-ratio:3/4;object-position:50% 40%}
+.outil figcaption{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:6px 12px;border-radius:9px}
+.outils-texte{padding-bottom:12px}
+.outils-texte p{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);line-height:1.3;color:var(--surface)}
+.outils-texte span{display:block;margin-top:16px;font-size:16px;color:#9FB0B5}
+
+/* Cours */
+.cours{padding:120px 0}
+.cours-carte{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);background:var(--surface);border-radius:24px;box-shadow:var(--ombre-l);overflow:hidden}
+.cours-prix{background:var(--soutenu);padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.cours-prix h2{font-size:clamp(32px,3.6vw,46px)}
+.cours-prix .montant{font-family:var(--serif);font-size:clamp(56px,6vw,84px);line-height:1;white-space:nowrap}
+.cours-prix .montant small{display:block;white-space:normal;font-family:var(--sans);font-size:16px;color:var(--doux);margin-top:10px}
+.cours-detail{padding:48px 52px}
+.cours-detail p{color:var(--doux)}
+.cours-detail p + p{margin-top:14px}
+.disciplines{list-style:none;margin:28px 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.disciplines li{padding:8px 16px;border-radius:999px;border:1px solid rgba(29,26,22,.22);font-size:16px}
+
+/* Magasin */
+.magasin{padding:0 0 120px}
+.mag-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.couloir{position:relative}
+.couloir img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:22px;box-shadow:var(--ombre-l)}
+.couloir .etiquette{right:auto;left:18px}
+.citation{font-family:var(--serif);font-size:clamp(30px,3.6vw,50px);line-height:1.14;margin:0;text-wrap:balance}
+.citation-note{margin-top:22px;color:var(--doux);max-width:52ch}
+.forts{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;border-top:1px solid rgba(29,26,22,.2)}
+.forts li{padding:15px 0;border-bottom:1px solid rgba(29,26,22,.2);font-size:17px}
+.forts b{display:block;font-weight:500}
+.forts span{color:var(--doux);font-size:16px}
+.mag-lien{margin-top:32px}
+
+/* Contact */
+.contact{background:var(--surface);padding:120px 0}
+.contact-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(34px,4.4vw,58px)}
+.contact .intro{color:var(--doux);margin-top:18px;max-width:46ch}
+.cabine{position:relative;margin-top:44px}
+.cabine img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px;box-shadow:var(--ombre)}
+.cabine .etiquette{right:auto;left:18px}
+.coord{background:var(--base);border-radius:20px;padding:40px 40px 36px;box-shadow:var(--ombre-l)}
+.coord dl{margin:0}
+.coord dt{font-size:14px;color:var(--laiton-fonce);font-weight:500;margin-top:20px}
+.coord dt:first-child{margin-top:0}
+.coord dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(29,26,22,.3)}
+.coord dd a:hover{border-color:var(--encre)}
+.coord .petit{font-size:15px;color:var(--doux)}
+
+/* Pied */
+.pied{background:var(--sombre);color:#C5CDCF;padding:80px 0 32px;font-size:16px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied .nom{font-family:var(--serif);font-size:32px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;color:var(--laiton);font-weight:500}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin:6px 0}
+.pied a{color:#E4E8E8;text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:4px}
+.mentions{margin-top:14px;font-size:14px;color:#8FA0A5}
+.proposition{margin-top:64px;padding-top:24px;border-top:1px solid rgba(248,244,236,.12);font-size:13px;color:#7F9095}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.tel-pill){display:none}
+  .heros-grille,.ent-grille,.exp-tete,.mag-grille,.contact-grille{grid-template-columns:minmax(0,1fr);gap:48px}
+  .heros-visuel{max-width:560px}
+  .outils{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .outils-texte{grid-column:1 / -1}
+  .cours-carte{grid-template-columns:minmax(0,1fr)}
+  .etapes{grid-template-columns:minmax(0,1fr);gap:36px}
+  .etapes::before{left:23px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .etapes li{padding-left:72px}
+  .etapes .num{position:absolute;left:0;top:0}
+  .etapes h3{margin-top:6px}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque{font-size:21px}
+  .heros{padding:28px 0 72px}
+  .heros-grille{display:flex;flex-direction:column;gap:0}
+  .heros-grille > div:first-child{display:contents}
+  .heros h1{order:0;margin-bottom:28px}
+  .heros-visuel{order:1;margin-bottom:8px}
+  .chapo,.heros .boutons,.adresse-courte{order:2}
+  .heros-visuel{padding-left:28px}
+  .etabli img{aspect-ratio:4/5}
+  .detail{width:min(120px,34%);border-width:5px}
+  .entretien,.expertise,.cours,.contact{padding:80px 0}
+  .magasin{padding-bottom:80px}
+  .liste-filets li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .apres{grid-template-columns:minmax(0,1fr)}
+  .ent-photos{padding-bottom:90px}
+  .forts{grid-template-columns:minmax(0,1fr)}
+  .cours-prix,.cours-detail{padding:32px 26px}
+  .coord{padding:30px 24px}
+  .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+  .outils{gap:16px}
+  .outil-2{margin-bottom:32px}
+}
+@media (max-width:420px){
+  .wrap{width:calc(100% - 36px)}
+  .boutons .btn{width:100%}
+  .tel-pill{padding:9px 14px;font-size:15px}
+  .marque{font-size:19px}
+  .coord dd{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Atelier des Cuivres <i>et C°</i></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#entretien">Entretien</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#cours">Cours</a>
+      <a href="#magasin">Le magasin</a>
+      <a class="tel-pill" href="tel:+33298258067">02 98 25 80 67</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap heros-grille">
+      <div>
+        <h1>Votre luthier des <em>vents</em>, au cœur de Brest.</h1>
+        <p class="chapo">Trompettes, trombones, tubas, saxophones, clarinettes, flûtes&nbsp;: des instruments neufs et d'occasion, l'entretien et la réparation des cuivres et des bois, et trois cabines insonorisées pour tout essayer sur place.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#expertise">Demander un premier avis</a>
+          <a class="btn btn-contour" href="tel:+33298258067">02 98 25 80 67</a>
+        </div>
+        <p class="adresse-courte">2, rue Paul Fort, Brest · parking gratuit, accès facile</p>
+      </div>
+      <div class="heros-visuel">
+        <div class="etabli">
+          <img src="assets/atelier-des-cuivres-brest/etabli-reparation-saxophone-outils-mur.webp" alt="L'établi de réparation&nbsp;: un saxophone sur son support, la lampe allumée, le mur d'outils de débosselage" width="1127" height="1600">
+          <span class="etiquette">Atelier de réparation</span>
+        </div>
+        <div class="detail">
+          <img src="assets/atelier-des-cuivres-brest/cor-harmonie-et-pieces.webp" alt="Pavillon d'un cor d'harmonie doré" width="1492" height="1600">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="wrap">
+      <ul>
+        <li>Instruments neufs et d'occasion</li>
+        <li>3 cabines d'essai insonorisées</li>
+        <li>Garanties de 2 à 5 ans</li>
+        <li>Location dès 25&nbsp;€</li>
+        <li>Parking gratuit</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="entretien" id="entretien">
+    <div class="wrap ent-grille">
+      <div class="ent-photos">
+        <div class="cles apparait">
+          <img src="assets/atelier-des-cuivres-brest/cles-saxophone-demontees.webp" alt="Les clés d'un saxophone démontées et étalées sur une table vernie avant retamponnage" width="1600" height="900" loading="lazy">
+        </div>
+        <figure class="brosse apparait">
+          <img src="assets/atelier-des-cuivres-brest/trompette-bach-brossee.webp" alt="Trompette au laiton brossé mat posée sur un plateau noir" width="1200" height="1600" loading="lazy">
+          <figcaption>Brossage maison</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>L'entretien, une fois par an.</h2>
+        <p class="intro">Pistons, cylindres, mécaniques, coulisses et visserie s'encrassent&nbsp;: le jeu devient plus dur, les blocages fréquents. Cuivres, clarinettes et saxophones sont les bienvenus à l'atelier pour un nettoyage complet et les réglages nécessaires, faits avec le plus grand soin.</p>
+        <ul class="liste-filets">
+          <li><b>Les bains</b><span>Des bains spécifiques, pour instruments vernis ou argentés.</span></li>
+          <li><b>La désoxydation</b><span>Tubes, pistons, branches, valves, coulisses, axes, leviers.</span></li>
+          <li><b>L'huilage</b><span>Des mécaniques et des instruments en bois, clarinettes et flûtes.</span></li>
+          <li><b>Les pièces</b><span>Si nécessaire&nbsp;: feutres, lièges, tampons de saxophones, flûtes et clarinettes, ressorts.</span></li>
+        </ul>
+        <div class="apres">
+          <div>
+            <h3>Après un choc</h3>
+            <p>Quand une chute ou un choc demande plus qu'un entretien&nbsp;: réparation, rééquilibrage et restauration de l'instrument.</p>
+          </div>
+          <div>
+            <h3>Relooking</h3>
+            <p>Brossage, patines et personnalisation de vos instruments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise" id="expertise">
+    <div class="wrap">
+      <div class="exp-tete">
+        <h2>Conseil et expertise&nbsp;: un premier avis avant même de venir.</h2>
+        <p class="intro">Avant de vous déplacer jusqu'à Brest, contactez l'atelier par téléphone ou par mail et envoyez quelques photos de votre instrument.</p>
+      </div>
+      <ol class="etapes">
+        <li>
+          <span class="num">1</span>
+          <h3>Quelques photos</h3>
+          <p>Par mail à <a href="mailto:contact@atelier-des-cuivres.com">contact@atelier-des-cuivres.com</a>, ou par téléphone au <a href="tel:+33607564252">06 07 56 42 52</a>&nbsp;: un premier avis sur l'état de l'instrument.</p>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <h3>Un devis gratuit</h3>
+          <p>Lors de votre venue à l'atelier, un devis gratuit et adapté à votre instrument vous est proposé.</p>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <h3>À l'établi</h3>
+          <p>Entretien, réparation, rééquilibrage ou restauration&nbsp;: l'instrument est pris en main à l'atelier, à Brest.</p>
+        </li>
+      </ol>
+      <div class="outils">
+        <figure class="outil outil-1 apparait">
+          <img src="assets/atelier-des-cuivres-brest/olives-de-debosselage.webp" alt="Planche d'olives de débosselage en acier rangées par taille" width="969" height="1600" loading="lazy">
+          <figcaption>Olives de débosselage</figcaption>
+        </figure>
+        <figure class="outil outil-2 apparait">
+          <img src="assets/atelier-des-cuivres-brest/serpes-de-debosselage-mur-bois.webp" alt="Serpes de débosselage en acier accrochées au mur en lambris" width="1200" height="1600" loading="lazy">
+          <figcaption>Serpes de débosselage</figcaption>
+        </figure>
+        <div class="outils-texte">
+          <p>«&nbsp;Votre instrument de musique a besoin de soins réguliers pour conserver toutes ses qualités.&nbsp;»</p>
+          <span>Garanties de 2 à 5 ans sans supplément sur les instruments vendus, et un SAV assuré à l'atelier, ce qui n'est pas toujours possible avec les boutiques en ligne.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="wrap">
+      <div class="cours-carte">
+        <div class="cours-prix">
+          <h2>Les cours de la Brass Academy</h2>
+          <div class="montant">20&nbsp;€<small>la séance, cuivres, individuel ou collectif</small></div>
+        </div>
+        <div class="cours-detail">
+          <p>Des cours particuliers de trompette, trombone, tuba et jazz, pour tous les niveaux et tous les publics, avec des professeurs diplômés d'État et certifiés. Débutants, intermédiaires ou avancés&nbsp;: les séances, entièrement personnalisées pour l'enfant comme pour l'adulte, tiennent compte du projet du musicien, avec ou sans solfège.</p>
+          <ul class="disciplines">
+            <li>Trompette, cornet, bugle</li>
+            <li>Trombone</li>
+            <li>Euphonium, saxhorn</li>
+            <li>Tuba</li>
+            <li>Improvisation</li>
+            <li>Orchestration et arrangements</li>
+            <li>Jazz, du New Orleans au Be Bop</li>
+          </ul>
+          <p>30 ans d'expérience pédagogique et scénique.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="tel:+33607564252">Se renseigner au 06 07 56 42 52</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="magasin" id="magasin">
+    <div class="wrap mag-grille">
+      <div class="couloir apparait">
+        <img src="assets/atelier-des-cuivres-brest/couloir-instruments-anciens.webp" alt="Le couloir d'accueil aux murs noirs, trombones et trompettes anciennes accrochés, tuba au sol, banquette ancienne" width="1118" height="1600" loading="lazy">
+        <span class="etiquette">L'accueil et ses instruments anciens</span>
+      </div>
+      <div>
+        <p class="citation">«&nbsp;Le magasin de musique le plus atypique de l'ouest.&nbsp;»</p>
+        <p class="citation-note">Ainsi a été baptisé l'atelier&nbsp;: un accueil avec une exposition d'instruments anciens, du mobilier, un showroom. On y trouve un large choix d'instruments à vent neufs et d'occasion, de nombreuses marques, et les accessoires&nbsp;: becs, embouchures, ligatures.</p>
+        <ul class="forts">
+          <li><b>Essai sur place</b><span>Stock permanent, tous les instruments s'essaient en cabine.</span></li>
+          <li><b>Garanties de 2 à 5 ans</b><span>Sans supplément.</span></li>
+          <li><b>Paiement en plusieurs fois</b><span>Sans frais.</span></li>
+          <li><b>Location dès 25&nbsp;€</b><span>Clarinette, flûte, saxophone, trompette, trombone…</span></li>
+          <li><b>Location-vente</b><span>Vous choisissez vous-même la durée des loyers.</span></li>
+          <li><b>SAV garanti</b><span>Assuré par l'atelier.</span></li>
+        </ul>
+        <div class="boutons mag-lien">
+          <a class="btn btn-plein" href="https://www.atelierdescuivres.fr/boutique/">Voir la boutique en ligne</a>
+          <a class="btn btn-contour" href="#contact">Venir au magasin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grille">
+      <div>
+        <h2>Bienvenue à l'atelier.</h2>
+        <p class="intro">Les horaires d'ouverture sont tenus à jour sur Google. Sinon, n'hésitez pas à prendre rendez-vous.</p>
+        <div class="cabine apparait">
+          <img src="assets/atelier-des-cuivres-brest/cabine-essai-piano-pupitre.webp" alt="Une cabine d'essai&nbsp;: lambris, piano demi-queue avec un saxophone alto posé dessus, pupitre" width="1600" height="1071" loading="lazy">
+          <span class="etiquette">Une des trois cabines d'essai</span>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <dt>Adresse</dt>
+          <dd>2, rue Paul Fort<br>29200 Brest<br><span class="petit">Parking gratuit, accès facile.</span></dd>
+          <dt>Téléphones</dt>
+          <dd><a href="tel:+33298258067">02 98 25 80 67</a><br><a href="tel:+33607564252">06 07 56 42 52</a></dd>
+          <dt>Mail</dt>
+          <dd><a href="mailto:contact@atelier-des-cuivres.com">contact@atelier-des-cuivres.com</a></dd>
+          <dt>Ailleurs</dt>
+          <dd><a href="https://www.atelier-des-cuivres.com/contact/">Formulaire de contact</a> · <a href="https://www.facebook.com/L-atelier-des-cuivres-223209598179748/">Facebook</a> · <a href="https://www.youtube.com/channel/UC_7e3W2LYu98QW-3sq-Kraw">YouTube</a></dd>
+        </dl>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33298258067">Appeler l'atelier</a>
+          <a class="btn btn-contour" href="mailto:contact@atelier-des-cuivres.com">Écrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <div class="nom">L'Atelier des Cuivres et C°</div>
+        <p style="margin-top:14px">Vente et réparation d'instruments à vent et accessoires de musique. 2, rue Paul Fort, 29200 Brest.</p>
+        <p class="mentions">RCS 524&nbsp;325&nbsp;438 · Photos réalisées à l'atelier par JP Le Coz</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33298258067">02 98 25 80 67</a></li>
+          <li><a href="tel:+33607564252">06 07 56 42 52</a></li>
+          <li><a href="mailto:contact@atelier-des-cuivres.com">contact@atelier-des-cuivres.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre l'atelier</h4>
+        <ul>
+          <li><a href="https://www.atelierdescuivres.fr/boutique/">Boutique en ligne</a></li>
+          <li><a href="https://www.facebook.com/L-atelier-des-cuivres-223209598179748/">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UC_7e3W2LYu98QW-3sq-Kraw">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour L'Atelier des Cuivres et C°</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

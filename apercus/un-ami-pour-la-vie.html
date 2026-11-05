@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Un Ami pour la vie · Salon de toilettage à Étival-lès-le-Mans</title>
+<meta name="description" content="Un Ami pour la vie, salon de toilettage au 12 place de l'Église à Étival-lès-le-Mans : un moment de détente pour votre compagnon. Horaires, téléphone, avis Google.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232F6B4F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23FCF8F2'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F5EDE3; --base-2:#EDE1D2; --surface:#FCF8F2; --encre:#2A2019; --doux:#5E5148;
+  --sapin:#2F6B4F; --sapin-fonce:#245540; --sapin-clair:#9CC5AE; --sombre:#23302A; --clair:#F4EEE6; --clair-doux:#B9C2BB;
+  --roux:#B4652E;
+  --filet:rgba(42,32,25,.13);
+  --ombre:0 30px 60px -34px rgba(52,34,22,.55);
+  --ombre-forte:0 44px 84px -40px rgba(52,34,22,.65);
+  --w:1200px; --pad:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Rubik",ui-sans-serif,sans-serif;font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--sapin);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Arvo",Georgia,serif;font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--pad)}
+.nw{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 "Rubik",sans-serif;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--sapin);color:var(--surface)}
+.btn-plein:hover{background:var(--sapin-fonce)}
+.btn-contour{border:1.5px solid rgba(42,32,25,.5);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);border-color:var(--encre);color:var(--surface)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+.ph{position:relative;overflow:hidden;border-radius:18px;box-shadow:var(--ombre);background:var(--base-2);margin:0}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.etiquette{position:absolute;left:16px;bottom:16px;z-index:2;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;line-height:1.3;padding:8px 14px;border-radius:999px;box-shadow:0 12px 24px -16px rgba(52,34,22,.6);max-width:calc(100% - 32px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(245,237,227,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:400 24px/1.1 "Arvo",Georgia,serif}
+.marque small{font-size:14px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--sapin)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:16px}
+.appel-court{display:none}
+
+/* héros : pile de deux photos */
+.heros{padding:72px 0 120px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:72px;align-items:center}
+.heros .lieu{font-size:16px;font-weight:500;color:var(--sapin);margin-bottom:20px}
+.heros h1{font-size:clamp(38px,4.9vw,68px);line-height:1.08}
+.heros .chapo{margin-top:26px;font-size:19px;color:var(--doux);max-width:30em}
+.heros .actions{margin-top:34px}
+.note-g{display:inline-flex;align-items:center;gap:16px;margin-top:30px;padding:14px 22px 14px 16px;background:var(--surface);border-radius:16px;box-shadow:var(--ombre);text-decoration:none}
+.note-g .chiffre{font:700 30px/1 "Arvo",Georgia,serif;color:var(--sapin)}
+.note-g .etoiles{display:block;color:var(--roux);letter-spacing:3px;font-size:15px;line-height:1}
+.note-g small{display:block;font-size:15px;color:var(--doux);margin-top:4px}
+.pile{position:relative;padding:44px 56px 48px 0}
+.pile .dessous{position:absolute;inset:0 0 34px 70px;border-radius:18px;transform:rotate(4deg);transform-origin:50% 50%;box-shadow:var(--ombre)}
+.pile .dessous img{object-position:70% 30%}
+.pile .dessus{aspect-ratio:4/3.3;border-radius:18px;box-shadow:var(--ombre-forte)}
+.pile .dessus img{object-position:58% 46%}
+.pile .prenom{position:absolute;right:-14px;top:16px;z-index:3;background:var(--sombre);color:var(--clair);font:400 17px/1 "Arvo",Georgia,serif;padding:10px 16px;border-radius:999px;transform:rotate(4deg)}
+
+/* faits */
+.faits{background:var(--base-2);padding:30px 0}
+.faits ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+.faits li{font-size:16px;color:var(--doux)}
+.faits b{font:400 21px/1.3 "Arvo",Georgia,serif;color:var(--encre)}
+
+/* habitués : polaroïds */
+.habitues{padding:124px 0 112px}
+.habitues .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+.habitues h2,.soins h2{font-size:clamp(32px,3.6vw,50px);line-height:1.1}
+.habitues .tete p{font-size:19px;color:var(--doux)}
+.polas{display:flex;flex-wrap:wrap;justify-content:center;gap:28px 22px;margin-top:64px}
+.pola{width:min(206px,44%);background:var(--surface);padding:12px 12px 0;border-radius:6px;box-shadow:var(--ombre);margin:0}
+.pola .ph{aspect-ratio:1/1;border-radius:3px;box-shadow:none}
+.pola figcaption{font:400 21px/1 "Arvo",Georgia,serif;padding:14px 4px 16px}
+.pola:nth-child(1){transform:rotate(-3deg);margin-top:30px}
+.pola:nth-child(2){transform:rotate(2deg)}
+.pola:nth-child(3){transform:rotate(-1.5deg);margin-top:46px}
+.pola:nth-child(4){transform:rotate(3deg);margin-top:8px}
+.pola:nth-child(5){transform:rotate(-2deg);margin-top:36px}
+
+/* soins */
+.soins{padding:16px 0 128px}
+.soins .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.soins .grand{aspect-ratio:3/3.7;border-radius:22px 22px 22px 120px;box-shadow:var(--ombre-forte)}
+.soins .grand img{object-position:55% 50%}
+.soins .intro{margin-top:20px;font-size:19px;color:var(--doux);max-width:30em}
+.gestes{margin-top:34px;counter-reset:g}
+.gestes li{display:flex;align-items:baseline;gap:22px;padding:18px 0;border-top:1px solid var(--filet);font:400 clamp(24px,2.6vw,34px)/1.2 "Arvo",Georgia,serif}
+.gestes li:last-child{border-bottom:1px solid var(--filet)}
+.gestes li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--roux);translate:0 -4px}
+.soins .rappel{margin-top:26px;font-size:17px;color:var(--doux)}
+
+/* salon (fond sombre) */
+.salon{background:var(--sombre);color:var(--clair);padding:120px 0 128px}
+.salon .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.salon .ph{aspect-ratio:3/3.9;border-radius:22px;box-shadow:0 44px 84px -40px rgba(0,0,0,.75)}
+.salon .ph img{object-position:50% 40%}
+.salon h2{font-size:clamp(32px,3.6vw,50px);line-height:1.1;color:var(--clair)}
+.salon .adresse{margin-top:18px;font-size:19px;color:var(--clair-doux)}
+.horaires{margin-top:34px;background:rgba(244,238,230,.06);border-radius:20px;padding:10px 30px}
+.jour{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:16px 0;border-top:1px solid rgba(244,238,230,.12);align-items:baseline}
+.jour:first-child{border-top:0}
+.jour b{font:400 21px/1.3 "Arvo",Georgia,serif}
+.jour span{text-align:right;color:var(--sapin-clair);font-size:18px}
+.jour.calme b,.jour.calme span{color:var(--clair-doux);font-size:17px;font-family:"Rubik",sans-serif}
+.salon .actions{margin-top:30px}
+.salon .btn-plein{background:var(--clair);color:var(--sombre)}
+.salon .btn-plein:hover{background:var(--sapin-clair)}
+.salon .btn-contour{border-color:rgba(244,238,230,.5);color:var(--clair)}
+.salon .btn-contour:hover{background:var(--clair);color:var(--sombre)}
+
+/* carte de visite */
+.visite{padding:128px 0}
+.carte{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3.4fr);gap:48px;align-items:center;background:var(--surface);border-radius:28px;padding:52px 56px;box-shadow:var(--ombre-forte)}
+.carte .note b{display:block;font:400 clamp(72px,7vw,104px)/.9 "Arvo",Georgia,serif;color:var(--sapin)}
+.carte .note .etoiles{display:block;margin-top:12px;color:var(--roux);letter-spacing:4px;font-size:18px}
+.carte .note p{margin-top:8px;color:var(--doux);font-size:17px}
+.carte .note a{display:inline-block;margin-top:14px;font-weight:500;text-decoration-color:var(--sapin);text-underline-offset:5px}
+.carte dl{margin:0}
+.carte .ligne{padding:14px 0;border-top:1px solid var(--filet)}
+.carte .ligne:first-child{border-top:0;padding-top:0}
+.carte dt{font-size:14px;color:var(--doux);margin-bottom:2px}
+.carte dd{margin:0;font:400 21px/1.35 "Arvo",Georgia,serif}
+.carte dd.mail{font:400 17px/1.4 "Rubik",sans-serif;overflow-wrap:anywhere}
+.carte dd a{text-decoration-color:rgba(47,107,79,.6);text-underline-offset:4px}
+.carte .boutons{display:flex;flex-direction:column;gap:12px}
+.carte .boutons .btn{width:100%}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 40px;font-size:16px}
+.pied .haut{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:40px}
+.pied b{display:block;font:400 25px/1.1 "Arvo",Georgia,serif;color:var(--clair);margin-bottom:10px}
+.pied h3{font:500 15px/1.3 "Rubik",sans-serif;color:var(--clair);margin-bottom:12px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--sapin-clair)}
+.pied li{padding:3px 0}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(244,238,230,.12);font-size:14px;color:rgba(185,194,187,.8)}
+
+.js .rv{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:0 0;transition:none}}
+
+@media (max-width:1060px){
+  .soins .wrap,.salon .wrap,.habitues .tete{grid-template-columns:minmax(0,1fr);gap:40px}
+  .soins .grand,.salon .ph{max-width:520px}
+  .carte{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .carte .boutons{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+  .carte .boutons .btn{width:auto}
+}
+@media (max-width:900px){.nav a:not(.btn){display:none}}
+@media (max-width:760px){
+  .heros .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .heros .txt{display:contents}
+  .heros .lieu{order:1}.heros h1{order:2}.pile{order:3;margin-top:24px}.heros .chapo{order:4}.heros .actions{order:5}.note-g{order:6;align-self:flex-start}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:20px}
+  .marque small{font-size:13px}
+  .appel-long{display:none}.appel-court{display:inline}
+  .heros{padding:32px 0 72px}
+  .heros .lieu{font-size:15px;margin-bottom:12px}
+  .heros .chapo{font-size:17px}
+  .pile{padding:26px 30px 30px 0}
+  .pile .dessous{inset:0 0 20px 40px}
+  .pile .prenom{right:-4px;top:6px;font-size:15px;padding:8px 13px}
+  .faits{padding:22px 0}
+  .faits ul{flex-direction:column;gap:6px}
+  .habitues{padding:84px 0}
+  .habitues .tete p{font-size:17px}
+  .polas{gap:20px 14px;margin-top:40px}
+  .pola{padding:8px 8px 0}
+  .pola figcaption{font-size:18px;padding:10px 2px 12px}
+  .pola:nth-child(n){margin-top:0}
+  .pola:nth-child(even){margin-top:24px}
+  .pola:nth-child(5){display:none}
+  .soins{padding-bottom:84px}
+  .soins .intro{font-size:17px}
+  .salon{padding:84px 0}
+  .horaires{padding:6px 18px}
+  .jour{grid-template-columns:minmax(0,1fr)}
+  .jour span{text-align:left}
+  .visite{padding:84px 0}
+  .carte{grid-template-columns:minmax(0,1fr);padding:30px 22px;gap:30px;border-radius:22px}
+  .carte .boutons{flex-direction:column}
+  .carte .boutons .btn{width:100%}
+  .pied .haut{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .marque small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Un Ami pour la vie</b><small>Salon de toilettage · Étival-lès-le-Mans</small></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#soins">Le toilettage</a>
+      <a href="#salon">Horaires</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-plein" href="tel:+33243245958"><span class="appel-long">02 43 24 59 58</span><span class="appel-court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="txt">
+        <p class="lieu">Salon de toilettage à Étival-lès-le-Mans</p>
+        <h1>Un moment de détente pour votre compagnon.</h1>
+        <p class="chapo">Le salon vous accueille place de l'Église, à Étival-lès-le-Mans. Shampooing, démêlage, coiffage, coupe des griffes : plusieurs prestations.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33243245958">02 43 24 59 58</a>
+          <a class="btn btn-contour" href="#salon">Horaires et adresse</a>
+        </div>
+        <a class="note-g" href="https://www.google.com/maps/search/?api=1&amp;query=Un%20Ami%20pour%20la%20vie%20-%20salon%20de%20toilettage%20%C3%89tival-l%C3%A8s-le-Mans"><span class="chiffre">5,0</span><span><span class="etoiles" aria-hidden="true">★★★★★</span><small>sur 5, 47 avis Google</small></span></a>
+      </div>
+      <div class="pile">
+        <div class="ph dessous"><img src="assets/un-ami-pour-la-vie/chien-roux-et-blanc-sur-table.webp" alt="" width="1600" height="1200"></div>
+        <figure class="ph dessus">
+          <img src="assets/un-ami-pour-la-vie/shiba-inu-roux-sur-table.webp" alt="Aiko, shiba inu roux, debout sur la table de toilettage, langue sortie" width="1600" height="1200" fetchpriority="high">
+          <figcaption class="etiquette">Aiko, sur la table bleue du salon</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><b>Salon de toilettage</b></li>
+        <li><b>12 place de l'Église</b> Étival-lès-le-Mans</li>
+        <li><b>5,0 sur 5</b> 47 avis Google</li>
+        <li><b>Le samedi matin</b> aussi</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="habitues">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Les habitués de la table bleue.</h2>
+        <p>Koda, Oscar, Ulco, Asko, Uzo : quelques-uns des chiens passés au salon, photographiés sur la table bleue.</p>
+      </div>
+      <div class="polas">
+        <figure class="pola rv"><div class="ph"><img src="assets/un-ami-pour-la-vie/border-collie-noir-et-blanc.webp" alt="Koda, border collie noir et blanc" width="1600" height="1200" loading="lazy" style="object-position:62% 40%"></div><figcaption>Koda</figcaption></figure>
+        <figure class="pola rv"><div class="ph"><img src="assets/un-ami-pour-la-vie/golden-retriever-sur-table.webp" alt="Oscar, golden retriever" width="1600" height="1200" loading="lazy" style="object-position:58% 50%"></div><figcaption>Oscar</figcaption></figure>
+        <figure class="pola rv"><div class="ph"><img src="assets/un-ami-pour-la-vie/berger-australien-merle-rouge.webp" alt="Ulco, berger australien merle rouge" width="1600" height="1200" loading="lazy" style="object-position:58% 40%"></div><figcaption>Ulco</figcaption></figure>
+        <figure class="pola rv"><div class="ph"><img src="assets/un-ami-pour-la-vie/chien-blanc-aux-yeux-bleus.webp" alt="Asko, chien blanc aux yeux bleus" width="1600" height="1200" loading="lazy" style="object-position:52% 40%"></div><figcaption>Asko</figcaption></figure>
+        <figure class="pola rv"><div class="ph"><img src="assets/un-ami-pour-la-vie/colley-tricolore-sur-table.webp" alt="Uzo, petit chien tricolore à poil long" width="1600" height="1200" loading="lazy" style="object-position:62% 45%"></div><figcaption>Uzo</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="soins" id="soins">
+    <div class="wrap">
+      <figure class="ph grand rv">
+        <img src="assets/un-ami-pour-la-vie/samoyede-blanc-sur-table.webp" alt="Samoyède blanc au poil gonflé, debout sur la table bleue" width="1200" height="1600" loading="lazy">
+      </figure>
+      <div>
+        <h2>Du shampooing jusqu'aux griffes.</h2>
+        <p class="intro">Plusieurs prestations, pour offrir à votre compagnon un vrai moment de détente.</p>
+        <ul class="gestes">
+          <li>Shampooing</li>
+          <li>Démêlage</li>
+          <li>Coiffage</li>
+          <li>Coupe des griffes</li>
+        </ul>
+        <p class="rappel">Pour savoir ce qui convient à votre chien, le plus simple est d'appeler le salon au <a href="tel:+33243245958" class="nw">02 43 24 59 58</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="salon" id="salon">
+    <div class="wrap">
+      <figure class="ph rv">
+        <img src="assets/un-ami-pour-la-vie/vitrine-du-salon-a-noel.webp" alt="La vitrine du salon Un Ami pour la vie, décorée de flocons" width="1200" height="1600" loading="lazy">
+        <figcaption class="etiquette">La vitrine, place de l'Église</figcaption>
+      </figure>
+      <div>
+        <h2>Le salon, place de l'Église.</h2>
+        <p class="adresse">12 place de l'Église, 72700 Étival-lès-le-Mans</p>
+        <div class="horaires">
+          <div class="jour"><b>Lundi et mardi</b><span>9&nbsp;h – 12&nbsp;h 30 · 14&nbsp;h – 18&nbsp;h 30</span></div>
+          <div class="jour calme"><b>Mercredi</b><span>Se renseigner au salon</span></div>
+          <div class="jour"><b>Jeudi et vendredi</b><span>9&nbsp;h – 12&nbsp;h 30 · 14&nbsp;h – 18&nbsp;h 30</span></div>
+          <div class="jour"><b>Samedi</b><span>9&nbsp;h – 12&nbsp;h 30</span></div>
+          <div class="jour calme"><b>Dimanche</b><span>Fermé</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33243245958">02 43 24 59 58</a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/search/?api=1&amp;query=Un%20Ami%20pour%20la%20vie%20-%20salon%20de%20toilettage%20%C3%89tival-l%C3%A8s-le-Mans">Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="contact">
+    <div class="wrap">
+      <div class="carte">
+        <div class="note">
+          <b>5,0</b>
+          <span class="etoiles" aria-hidden="true">★★★★★</span>
+          <p>sur 5, d'après 47 avis Google</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Un%20Ami%20pour%20la%20vie%20-%20salon%20de%20toilettage%20%C3%89tival-l%C3%A8s-le-Mans">Voir les avis</a>
+        </div>
+        <dl>
+          <div class="ligne"><dt>Téléphone</dt><dd><a href="tel:+33243245958" class="nw">02 43 24 59 58</a></dd></div>
+          <div class="ligne"><dt>Adresse</dt><dd>12 place de l'Église<br>72700 Étival-lès-le-Mans</dd></div>
+          <div class="ligne"><dt>E-mail</dt><dd class="mail"><a href="mailto:unamipourlavie72@gmail.com">unamipourlavie72@gmail.com</a></dd></div>
+        </dl>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33243245958">Appeler le salon</a>
+          <a class="btn btn-contour" href="mailto:unamipourlavie72@gmail.com">Écrire un mail</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/unamipourlavie72etivalleslemanssarthe/">Les photos sur Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="haut">
+      <div>
+        <b>Un Ami pour la vie</b>
+        <p>Salon de toilettage à Étival-lès-le-Mans. Un moment de détente pour votre compagnon.</p>
+      </div>
+      <div>
+        <h3>Coordonnées</h3>
+        <ul>
+          <li>12 place de l'Église, 72700 Étival-lès-le-Mans</li>
+          <li><a href="tel:+33243245958" class="nw">02 43 24 59 58</a></li>
+          <li><a href="mailto:unamipourlavie72@gmail.com">unamipourlavie72@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Lundi, mardi, jeudi, vendredi : 9&nbsp;h – 12&nbsp;h 30 et 14&nbsp;h – 18&nbsp;h 30</li>
+          <li>Samedi : 9&nbsp;h – 12&nbsp;h 30</li>
+          <li>Dimanche : fermé</li>
+          <li><a href="https://www.facebook.com/unamipourlavie72etivalleslemanssarthe/">Facebook</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Un%20Ami%20pour%20la%20vie%20-%20salon%20de%20toilettage%20%C3%89tival-l%C3%A8s-le-Mans">Fiche Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour Un Ami pour la vie</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

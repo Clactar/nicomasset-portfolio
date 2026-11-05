@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Chaize O'Poils · salon de toilettage à La Chaize-Giraud</title>
+<meta name="description" content="La Chaize O'Poils, salon de toilettage à La Chaize-Giraud : toiletteuse depuis 24 ans, shampooings naturels fabriqués en France. Du lundi au vendredi, 9 h à 18 h.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232F6E8F'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23FBF8F1'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Merriweather+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F2EDE2; --surface:#FBF8F1; --sable:#E6DCC8; --encre:#26231D; --doux:#5C564A;
+  --ocean:#2F6E8F; --ocean-fonce:#245975; --sombre:#1E3442; --sombre-2:#264252;
+  --ombre:0 30px 60px -34px rgba(30,52,66,.55);
+  --ombre-l:0 46px 84px -40px rgba(30,52,66,.6);
+  --serif:'Sorts Mill Goudy',Georgia,serif; --sans:'Merriweather Sans','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ocean);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+b,strong{font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.06;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(242,237,226,.95);border-bottom:1px solid rgba(38,35,29,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{font-family:var(--serif);font-size:28px;text-decoration:none;line-height:1.1}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.tel-pill{padding:11px 20px;border-radius:999px;background:var(--ocean);color:var(--surface)!important;font-weight:600;white-space:nowrap;transition:background .25s,transform .25s}
+.tel-pill:hover{background:var(--ocean-fonce);transform:translateY(-2px)}
+
+/* Héros : grand cercle qui sort de l'écran */
+.heros{position:relative;overflow:hidden;padding:104px 0 136px}
+.heros .wrap{position:relative;z-index:2}
+.heros-texte{max-width:560px}
+.heros h1{font-size:clamp(40px,5.6vw,80px);letter-spacing:-.005em}
+.chapo{font-size:19px;color:var(--doux);margin-top:28px;max-width:44ch}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--ocean);color:var(--surface)}
+.btn-plein:hover{background:var(--ocean-fonce);transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(47,110,143,.85)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(251,248,241,.7);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--sombre);transform:translateY(-2px)}
+.note-ligne{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-size:15px;color:var(--doux);text-decoration:none}
+.note-ligne b{font-family:var(--serif);font-weight:400;font-size:30px;color:var(--encre);line-height:1}
+.note-ligne span{border-bottom:1px solid rgba(38,35,29,.3)}
+.cercle-zone{position:absolute;top:50%;left:calc(50% + 140px);width:min(640px,50vw);aspect-ratio:1;transform:translateY(-50%);z-index:1}
+.dune{position:absolute;inset:0;border-radius:50%;background:var(--sable);transform:translate(-44px,40px)}
+.cercle{position:absolute;inset:0;border-radius:50%;overflow:hidden;box-shadow:var(--ombre-l)}
+.cercle img{width:100%;height:100%;object-fit:cover;object-position:88% 50%}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:9px 16px;border-radius:12px;box-shadow:0 12px 26px -16px rgba(30,52,66,.7);white-space:nowrap}
+.cercle-zone .etiquette{left:14%;bottom:16%}
+
+/* Bandeau de faits */
+.faits{background:var(--sable)}
+.faits ul{list-style:none;margin:0;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:15px;font-weight:400}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:9px;height:9px;border-radius:50%;border:2px solid var(--ocean);flex:none}
+
+/* Galerie en laisse de mer */
+.passages{padding:120px 0 104px}
+.passages-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+.passages h2{font-size:clamp(34px,4.4vw,60px)}
+.passages .intro{color:var(--doux)}
+.laisse{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;margin-top:72px;align-items:start}
+.chien{position:relative;margin:0}
+.chien img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.chien figcaption{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);background:var(--surface);font-size:13px;font-weight:400;line-height:1.35;padding:7px 12px;border-radius:10px}
+.chien figcaption b{font-family:var(--serif);font-weight:400;font-size:18px;display:block}
+.c1{grid-column:1 / span 5}
+.c1 img{aspect-ratio:1/1;border-radius:24px;object-position:50% 40%}
+.c2{grid-column:6 / span 3;margin-top:120px}
+.c2 img{aspect-ratio:1/1;border-radius:50%;object-position:50% 45%}
+.c2 figcaption{left:50%;transform:translateX(-50%);bottom:-8px;text-align:center;white-space:nowrap}
+.c3{grid-column:9 / span 4;margin-top:36px}
+.c3 img{aspect-ratio:4/5;border-radius:18px;object-position:62% 50%}
+.c4{grid-column:2 / span 4;margin-top:-40px}
+.c4 img{aspect-ratio:4/3;border-radius:18px;object-position:55% 60%}
+.c5{grid-column:6 / span 4;margin-top:40px}
+.c5 img{aspect-ratio:5/4;border-radius:22px;object-position:50% 50%}
+.c6{grid-column:10 / span 3;margin-top:-10px}
+.c6 img{aspect-ratio:1/1;border-radius:50%;object-position:50% 45%}
+.c6 figcaption{left:50%;transform:translateX(-50%);bottom:-8px;text-align:center;white-space:nowrap}
+
+/* Le salon */
+.salon{background:var(--surface);padding:120px 0}
+.salon-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.salon h2{font-size:clamp(34px,4.4vw,58px)}
+.salon .intro{color:var(--doux);margin-top:22px}
+.produits{margin-top:36px;background:var(--base);border-radius:20px;padding:30px 32px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center}
+.produits .rond{width:62px;height:62px;border-radius:50%;background:var(--ocean);display:grid;place-items:center}
+.produits .rond svg{width:30px;height:30px}
+.produits h3{font-size:25px;margin-bottom:4px}
+.produits p{color:var(--doux);font-size:16px}
+.salon-photos{position:relative;padding:0 0 70px 0}
+.salon-photos .grande img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:60% 50%;border-radius:22px;box-shadow:var(--ombre-l)}
+.salon-photos .grande .etiquette{right:18px;top:18px}
+.salon-photos .petite{position:absolute;left:-48px;bottom:0;width:min(230px,40%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre)}
+.salon-photos .petite img{width:100%;height:100%;object-fit:cover;object-position:45% 55%}
+
+/* Venir, fond sombre */
+.venir{background:var(--sombre);color:#D7E0E4;padding:120px 0}
+.venir-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:start}
+.venir h2{font-size:clamp(34px,4.4vw,58px);color:var(--surface)}
+.venir .intro{margin-top:16px;color:#AFC1CA}
+.semaine{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.semaine li{border-radius:16px;padding:18px 8px 16px;text-align:center;background:var(--sombre-2)}
+.semaine li.ouvert{background:var(--ocean)}
+.semaine .j{display:block;font-family:var(--serif);font-size:22px;color:var(--surface)}
+.semaine .h{display:block;font-size:13px;margin-top:6px;color:#D7E0E4;line-height:1.4}
+.semaine li:not(.ouvert) .h{color:#8EA3AE}
+.semaine .a{display:none}
+.note-bloc{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(251,248,241,.14)}
+.note-bloc .chiffre{font-family:var(--serif);font-size:76px;line-height:.9;color:var(--surface)}
+.note-bloc .chiffre small{font-size:28px;color:#AFC1CA}
+.note-bloc p{color:#AFC1CA;font-size:16px}
+.note-bloc .boutons{margin-top:0}
+.coord{position:relative;background:var(--surface);color:var(--encre);border-radius:22px;padding:56px 40px 40px;box-shadow:0 40px 70px -40px rgba(0,0,0,.8);margin-top:64px}
+.coord .medaillon{position:absolute;top:-70px;right:28px;width:132px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--surface);box-shadow:var(--ombre)}
+.coord .medaillon img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.coord dl{margin:0}
+.coord dt{font-size:13px;color:var(--ocean);font-weight:600;margin-top:20px}
+.coord dt:first-child{margin-top:0}
+.coord dd{margin:4px 0 0;font-size:17px;font-weight:400;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(38,35,29,.3)}
+.coord dd a:hover{border-color:var(--encre)}
+
+/* Pied */
+.pied{background:#172833;color:#AFC1CA;padding:80px 0 32px;font-size:15px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied .nom{font-family:var(--serif);font-size:32px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:13px;color:#8FC0D8;font-weight:600}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin:6px 0}
+.pied a{color:#E6EEF1;text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:4px}
+.proposition{margin-top:64px;padding-top:24px;border-top:1px solid rgba(251,248,241,.12);font-size:13px;color:#7890A0}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.tel-pill){display:none}
+  .heros{padding:48px 0 96px}
+  .heros .wrap{display:flex;flex-direction:column}
+  .heros-texte{display:contents}
+  .heros h1{order:0}
+  .cercle-zone{order:1;position:relative;top:auto;left:auto;transform:none;width:min(560px,96vw);margin:36px calc(-1 * min(150px,20vw)) 28px auto}
+  .chapo,.heros .boutons,.note-ligne{order:2}
+  .chapo{margin-top:8px}
+  .passages-tete,.salon-grille,.venir-grille{grid-template-columns:minmax(0,1fr);gap:40px}
+  .laisse{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .c1,.c2,.c3,.c4,.c5,.c6{grid-column:auto;margin-top:0}
+  .c1{grid-column:1 / -1}
+  .c2,.c6{margin-top:40px}
+  .c3 img,.c5 img{aspect-ratio:4/5}
+  .c4{grid-column:1 / -1}
+  .c4 img{aspect-ratio:16/10}
+  .salon-photos{margin-left:24px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .entete .wrap{min-height:64px}
+  .marque{font-size:23px}
+  .passages,.salon,.venir{padding:80px 0}
+  .semaine{grid-template-columns:minmax(0,1fr);gap:6px}
+  .semaine li{display:flex;justify-content:space-between;align-items:center;text-align:left;padding:11px 18px;border-radius:12px}
+  .semaine .j{font-size:20px}
+  .semaine .h{margin-top:0;font-size:14px}
+  .semaine .h br{display:none}
+  .semaine .a{display:inline}
+  .coord{padding:48px 24px 30px}
+  .coord .medaillon{width:104px;top:-56px}
+  .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+  .produits{grid-template-columns:minmax(0,1fr);padding:26px 22px}
+  .salon-photos .petite{left:-20px;width:min(150px,40%)}
+  .chien figcaption,.c2 figcaption,.c6 figcaption{position:static;transform:none;max-width:none;background:none;padding:10px 2px 0;border-radius:0;font-size:13px;text-align:left;white-space:normal;color:var(--doux)}
+  .c1 figcaption,.c4 figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:var(--surface);padding:7px 12px;border-radius:10px;color:var(--encre)}
+  .chien figcaption b{font-size:18px;color:var(--encre)}
+  .note-bloc .chiffre{font-size:60px}
+}
+@media (max-width:420px){
+  .wrap{width:calc(100% - 36px)}
+  .boutons .btn{width:100%}
+  .tel-pill{padding:10px 14px;font-size:14px}
+  .marque{font-size:21px}
+  .laisse{gap:14px}
+  .c2 figcaption,.c6 figcaption{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">La Chaize O'Poils</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#passages">Les toilettages</a>
+      <a href="#salon">Le salon</a>
+      <a href="#venir">Horaires et accès</a>
+      <a class="tel-pill" href="tel:+33251228793">02 51 22 87 93</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-texte">
+        <h1>Le salon de toilettage de La Chaize-Giraud.</h1>
+        <p class="chapo">Toiletteuse depuis 24 ans, je mets mon expérience au service de vos compagnons à quatre pattes.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#venir">Horaires et adresse</a>
+          <a class="btn btn-contour" href="tel:+33251228793">02 51 22 87 93</a>
+        </div>
+        <a class="note-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=La%20Chaize%20O'Poils&amp;query_place_id=ChIJ5c9u9oZbBEgRmXkFIvp3yEI"><b>4,8</b><span>sur 5, 49 avis Google</span></a>
+      </div>
+      <div class="cercle-zone">
+        <div class="dune" aria-hidden="true"></div>
+        <div class="cercle">
+          <img src="assets/la-chaize-o-poils/saint-bernard-sur-table-du-salon.webp" alt="Un saint-bernard tout juste toiletté, debout sur la table du salon devant le mur turquoise" width="1600" height="1197">
+        </div>
+        <span class="etiquette">Sur la table du salon</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="wrap">
+      <ul>
+        <li>Toiletteuse depuis 24 ans</li>
+        <li>Salon à La Chaize-Giraud</li>
+        <li>Du lundi au vendredi, 9&nbsp;h à 18&nbsp;h</li>
+        <li>Shampooings naturels</li>
+        <li>4,8 sur 5 sur Google</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="passages" id="passages">
+    <div class="wrap">
+      <div class="passages-tete">
+        <h2>Ils sont passés sur la table.</h2>
+        <p class="intro">Coupe aux ciseaux, premier toilettage d'un chiot ou d'un grand chien&nbsp;: au salon, du petit biewer au saint-bernard.</p>
+      </div>
+      <div class="laisse">
+        <figure class="chien c1 apparait">
+          <img src="assets/la-chaize-o-poils/berger-australien-bleu-merle.webp" alt="Newton, berger australien bleu merle aux yeux vairons, sur la table de toilettage" width="1600" height="1546" loading="lazy">
+          <figcaption><b>Newton</b>berger australien</figcaption>
+        </figure>
+        <figure class="chien c2 apparait">
+          <img src="assets/la-chaize-o-poils/spitz-blanc-et-feu-yeux-bleus.webp" alt="Pepsi, petit spitz blanc aux oreilles feu et aux yeux bleus" width="1600" height="1339" loading="lazy">
+          <figcaption><b>Pepsi</b>et son regard</figcaption>
+        </figure>
+        <figure class="chien c3 apparait">
+          <img src="assets/la-chaize-o-poils/cocker-anglais-bleu-rouan.webp" alt="Rey, jeune cocker anglais bleu rouan, debout sur la table" width="1600" height="1195" loading="lazy">
+          <figcaption><b>Rey</b>cocker anglais de 7 mois</figcaption>
+        </figure>
+        <figure class="chien c4 apparait">
+          <img src="assets/la-chaize-o-poils/lhassa-apso-coupe-courte.webp" alt="Louky, lhassa apso en coupe courte aux ciseaux" width="1600" height="1046" loading="lazy">
+          <figcaption><b>Louky</b>lhassa apso, coupe ciseaux</figcaption>
+        </figure>
+        <figure class="chien c5 apparait">
+          <img src="assets/la-chaize-o-poils/flat-coated-retriever-oslo.webp" alt="Oslo, flat-coated retriever brun au poil lissé, de profil sur la table" width="1600" height="1282" loading="lazy">
+          <figcaption><b>Oslo</b>flat-coated retriever, son 1er toilettage</figcaption>
+        </figure>
+        <figure class="chien c6 apparait">
+          <img src="assets/la-chaize-o-poils/doberman-sora-4-mois.webp" alt="Sora, chiot doberman marron et feu assis sur le carrelage du salon" width="1407" height="1600" loading="lazy">
+          <figcaption><b>Sora</b>doberman de 4 mois</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="salon" id="salon">
+    <div class="wrap salon-grille">
+      <div class="salon-photos apparait">
+        <div class="grande" style="position:relative">
+          <img src="assets/la-chaize-o-poils/cocker-roux-sur-table.webp" alt="Cocker roux de profil sur la table du salon, tableau coloré au mur" width="1600" height="1439" loading="lazy">
+          <span class="etiquette">Au salon</span>
+        </div>
+        <div class="petite">
+          <img src="assets/la-chaize-o-poils/biewer-yorkshire.webp" alt="Petit biewer yorkshire tricolore sur la table, baignoire en fond" width="1600" height="1460" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <h2>Un salon au cœur du bourg.</h2>
+        <p class="intro">Le salon de toilettage se trouve place Émille Clément Amelineau, à La Chaize-Giraud. Baignoire, séchoir et table de toilettage&nbsp;: des plus petits aux plus grands, chaque chien y passe.</p>
+        <div class="produits">
+          <span class="rond" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#FBF8F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c5 6 8 10 8 14a8 8 0 0 1-16 0c0-4 3-8 8-14z"/><path d="M12.5 19.5a3.5 3.5 0 0 0 3.5 3.5"/></svg></span>
+          <div>
+            <h3>Des shampooings naturels</h3>
+            <p>Le salon propose une gamme de shampooings naturels, aux extraits de plantes, hypoallergéniques et fabriqués en France.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap venir-grille">
+      <div>
+        <h2>Horaires et accès</h2>
+        <p class="intro">Le salon est ouvert du lundi au vendredi. Un coup de fil pour convenir du toilettage.</p>
+        <ul class="semaine">
+          <li class="ouvert"><span class="j">Lun</span><span class="h">9&nbsp;h<br><span class="a"> à </span>18&nbsp;h</span></li>
+          <li class="ouvert"><span class="j">Mar</span><span class="h">9&nbsp;h<br><span class="a"> à </span>18&nbsp;h</span></li>
+          <li class="ouvert"><span class="j">Mer</span><span class="h">9&nbsp;h<br><span class="a"> à </span>18&nbsp;h</span></li>
+          <li class="ouvert"><span class="j">Jeu</span><span class="h">9&nbsp;h<br><span class="a"> à </span>18&nbsp;h</span></li>
+          <li class="ouvert"><span class="j">Ven</span><span class="h">9&nbsp;h<br><span class="a"> à </span>18&nbsp;h</span></li>
+          <li><span class="j">Sam</span><span class="h">fermé</span></li>
+          <li><span class="j">Dim</span><span class="h">fermé</span></li>
+        </ul>
+        <div class="note-bloc">
+          <div class="chiffre">4,8 <small>/ 5</small></div>
+          <p>Note Google,<br>49 avis.</p>
+          <div class="boutons">
+            <a class="btn btn-clair" href="https://www.google.com/maps/search/?api=1&amp;query=La%20Chaize%20O'Poils&amp;query_place_id=ChIJ5c9u9oZbBEgRmXkFIvp3yEI">Voir les avis</a>
+          </div>
+        </div>
+      </div>
+      <div class="coord">
+        <div class="medaillon"><img src="assets/la-chaize-o-poils/bichon-maltais-souriant.webp" alt="Bichon maltais blanc souriant" width="1600" height="1161" loading="lazy"></div>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>10, place Émille Clément Amelineau<br>85220 La Chaize-Giraud</dd>
+          <dt>Téléphone</dt>
+          <dd><a href="tel:+33251228793">02 51 22 87 93</a></dd>
+          <dt>Mail</dt>
+          <dd><a href="mailto:tigrou4@hotmail.com">tigrou4@hotmail.com</a></dd>
+          <dt>Ailleurs</dt>
+          <dd><a href="https://www.facebook.com/profile.php?id=100064095282935">Facebook</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Chaize%20O'Poils&amp;query_place_id=ChIJ5c9u9oZbBEgRmXkFIvp3yEI">Fiche Google</a></dd>
+        </dl>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33251228793">Appeler le salon</a>
+          <a class="btn btn-contour" href="mailto:tigrou4@hotmail.com">Écrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <div class="nom">La Chaize O'Poils</div>
+        <p style="margin-top:14px">Salon de toilettage. 10, place Émille Clément Amelineau, 85220 La Chaize-Giraud.</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33251228793">02 51 22 87 93</a></li>
+          <li><a href="mailto:tigrou4@hotmail.com">tigrou4@hotmail.com</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100064095282935">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Lundi au vendredi, 9&nbsp;h à 18&nbsp;h</li>
+          <li>Samedi et dimanche, fermé</li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour La Chaize O'Poils</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

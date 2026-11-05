@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Maison Oh ! Crêp · Traiteur crêpier événementiel à Ploemeur</title>
+<meta name="description" content="Maison Oh ! Crêp, traiteur crêpier événementiel à Ploemeur, près de Lorient : repas crêpes à volonté, cocktails apéritifs et dînatoires au blé noir, coffrets fleuris.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23D98E04'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23FEF9F4'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F7EEE6; --base-2:#F0E2D4; --surface:#FEF9F4; --encre:#2E2120; --encre-2:#5C4B47;
+  --accent:#D98E04; --accent-f:#A86C00; --sombre:#2B2A3D; --sombre-2:#363549; --clair:#F7EEE6;
+  --ombre:0 30px 60px -34px rgba(46,33,32,.55);
+  --display:'Playfair Display', Georgia, serif; --texte:'Quattrocento Sans', 'Trebuchet MS', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px, 100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+.nowrap{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--texte);font-weight:700;font-size:16.5px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn-plein{background:var(--encre);color:var(--surface);box-shadow:0 14px 30px -18px rgba(46,33,32,.9)}
+.btn-plein:hover{background:var(--accent-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--accent);border-color:var(--accent);color:var(--surface);transform:translateY(-2px)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(247,238,230,.95);border-bottom:1px solid rgba(46,33,32,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:500;font-size:24px}
+.marque span{font-size:14px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2)}
+.nav a:hover{color:var(--encre)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15.5px;color:var(--surface)}
+.appel{display:none}
+
+/* Héros */
+.heros{padding:40px 0 96px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:40px;align-items:center}
+.heros h1 .nowrap-l{white-space:nowrap}
+.heros h1{font-size:clamp(34px, 4.1vw, 58px);line-height:1.06;letter-spacing:-.01em}
+.heros .intro{margin-top:26px;font-size:19px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.heros .zone{margin-top:24px;font-size:15.5px;color:var(--encre-2)}
+.napperon{position:relative;width:min(660px, 100%);justify-self:end;aspect-ratio:1}
+.napperon svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 28px 34px rgba(46,33,32,.16))}
+.napperon .photo{position:absolute;left:12%;top:12%;width:76%;transform:rotate(-3deg);border-radius:14px;box-shadow:0 34px 60px -30px rgba(46,33,32,.65)}
+.napperon .photo img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 40%;border-radius:14px}
+.napperon .pastille{position:absolute;left:16px;bottom:16px;background:var(--surface);font-size:15px;font-weight:700;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(46,33,32,.6)}
+.note{position:absolute;right:2%;bottom:6%;background:var(--sombre);color:var(--clair);border-radius:18px;padding:16px 20px;box-shadow:var(--ombre);display:flex;align-items:center;gap:14px;transform:rotate(2deg)}
+.note b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;color:#F6C766}
+.note span{font-size:14.5px;line-height:1.35;white-space:nowrap}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px}
+.faits li{display:flex;flex-direction:column;font-size:15px;color:var(--encre-2);line-height:1.35}
+.faits strong{font-family:var(--display);font-weight:400;font-size:25px;color:var(--encre);margin-bottom:4px}
+
+section{padding:120px 0}
+h2{font-size:clamp(32px, 3.8vw, 52px)}
+.chapo{margin-top:20px;font-size:19px;color:var(--encre-2);max-width:34em}
+
+/* Formules */
+.formules .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:end}
+.duo{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:36px;margin-top:64px;align-items:start}
+.formule{background:var(--surface);border-radius:24px;padding:18px 18px 34px;box-shadow:0 30px 60px -40px rgba(46,33,32,.5)}
+.formule img{width:100%;object-fit:cover;border-radius:16px}
+.formule .corps{padding:26px 16px 0}
+.formule h3{font-size:30px}
+.formule p{margin-top:12px;font-size:17px;color:var(--encre-2)}
+.formule ul{list-style:none;margin:20px 0 0;padding:0}
+.formule li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:13px 0;border-top:1px solid rgba(46,33,32,.12);font-size:16.5px}
+.formule li span:last-child{font-family:var(--display);font-size:19px;white-space:nowrap;color:var(--accent-f)}
+.f1 img{aspect-ratio:4/3.4;object-position:50% 45%}
+.f2{margin-top:96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:8px;padding:18px}
+.f2 img{height:100%;min-height:360px;object-position:60% 50%}
+.f2 .corps{padding:18px 16px 10px 22px}
+
+/* Bandeau événements */
+.evenements{padding:96px 0;background:var(--accent);color:var(--encre)}
+.evenements .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:center}
+.evenements p.grand{font-family:var(--display);font-size:clamp(30px, 3.8vw, 52px);line-height:1.12;text-wrap:balance}
+.villes{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.villes li{font-family:var(--display);font-size:24px;padding:8px 0;border-bottom:1px solid rgba(46,33,32,.22)}
+.villes li:last-child{border:0;font-family:var(--texte);font-size:16px;padding-top:12px}
+
+/* Plateaux sombre */
+.plateaux{background:var(--sombre);color:var(--clair)}
+.plateaux .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.plateaux h2{color:#FBF1E6}
+.plateaux .chapo{color:#D9D2D0}
+.bouchees{list-style:none;margin:34px 0 0;padding:0}
+.bouchees li{padding:16px 0;border-top:1px solid rgba(247,238,230,.14)}
+.bouchees b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:#FBF1E6}
+.bouchees span{font-size:16px;color:#C9C1BF}
+.plateaux .gf{display:inline-block;margin-top:26px;font-weight:700;font-size:15px;padding:8px 16px;border-radius:999px;background:var(--accent);color:var(--encre)}
+.mosaique{position:relative;padding:0 0 120px 0}
+.mosaique .grande{width:78%;margin-left:auto;position:relative}
+.mosaique .grande img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.mosaique .grande .pastille{position:absolute;right:16px;top:16px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:700;padding:8px 15px;border-radius:999px}
+.mosaique .petite{position:absolute;width:40%;border:8px solid var(--sombre);border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.mosaique .petite img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}
+.mosaique .p1{left:0;bottom:40px}
+.mosaique .p2{right:6%;bottom:0;width:30%}
+.mosaique figcaption{font-size:14px;color:#D9D2D0;margin-top:8px;padding-left:4px}
+
+/* Bilig */
+.bilig{padding:120px 0 0}
+.bilig .bande{position:relative}
+.bilig .bande img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 18%;border-radius:24px;box-shadow:var(--ombre)}
+.bilig .bande .pastille{position:absolute;left:20px;top:20px;background:var(--surface);font-size:15px;font-weight:700;padding:9px 16px;border-radius:999px}
+.bilig blockquote{position:relative;margin:-110px 0 0 auto;width:min(560px, 100% - 40px);margin-right:48px;background:var(--surface);border-radius:22px;padding:36px 40px;box-shadow:0 34px 70px -40px rgba(46,33,32,.6)}
+.bilig blockquote p{font-family:var(--display);font-style:italic;font-size:clamp(24px, 2.4vw, 32px);line-height:1.25}
+.bilig blockquote footer{margin-top:14px;font-size:15px;color:var(--encre-2)}
+
+/* Infos */
+.infos h2{max-width:14em}
+.carte-visite{margin-top:56px;background:var(--surface);border-radius:26px;box-shadow:var(--ombre);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.9fr)}
+.carte-visite > div{padding:40px 40px 44px}
+.carte-visite > div + div{border-left:1px dashed rgba(46,33,32,.2)}
+.carte-visite h3{font-size:24px;margin-bottom:18px}
+.carte-visite dl{margin:0;display:grid;gap:16px}
+.carte-visite dt{font-size:13.5px;font-weight:700;color:var(--accent-f);margin-bottom:2px}
+.carte-visite dd{margin:0;font-size:17.5px;line-height:1.5}
+.carte-visite dd a{text-decoration:none;border-bottom:1px solid rgba(46,33,32,.25)}
+.carte-visite .tel{font-family:var(--display);font-size:28px;border:0}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(46,33,32,.1);font-size:16.5px}
+.horaires li:last-child{border:0}
+.horaires .ferme{color:var(--encre-2)}
+.avis{background:var(--base-2);border-radius:0 26px 26px 0}
+.avis .chiffre{font-family:var(--display);font-size:72px;line-height:1}
+.avis .chiffre small{font-size:24px;color:var(--encre-2)}
+.avis .etoiles{color:var(--accent);font-size:22px;letter-spacing:3px;margin-top:6px}
+.avis p{margin-top:8px;font-size:16.5px;color:var(--encre-2)}
+.avis .liens{display:grid;gap:10px;margin-top:24px}
+.avis .liens a{font-weight:700;text-underline-offset:4px}
+
+/* Pied */
+.pied{background:var(--sombre);color:#D9D2D0;padding:84px 0 40px;font-size:16px}
+.pied .cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:28px;color:#FBF1E6;margin-bottom:12px}
+.pied h3{font-family:var(--texte);font-weight:700;font-size:15px;color:#FBF1E6;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#F6C766}
+.signature{margin-top:56px;padding-top:24px;border-top:1px solid rgba(247,238,230,.12);font-size:13.5px;color:#A8A2A6}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien-nav{display:none}
+  .carte-visite{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .carte-visite .avis{grid-column:1/-1;border-radius:0 0 26px 26px;border-left:0;border-top:1px dashed rgba(46,33,32,.2)}
+  .pied .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .heros{padding:32px 0 72px}
+  .heros .wrap,.formules .tete,.duo,.evenements .wrap,.plateaux .wrap{grid-template-columns:minmax(0,1fr);gap:40px}
+  .napperon{justify-self:center}
+  .f2{margin-top:0}
+  .bilig{padding-top:88px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .appel{display:inline-flex;min-height:42px;padding:0 16px;font-size:15px}
+  .marque b{font-size:20px}
+  .marque span{display:none}
+  .heros h1 .nowrap-l{white-space:normal}
+  .heros{padding:24px 0 64px}
+  .heros .wrap{gap:26px}
+  .heros .intro{font-size:17.5px;margin-top:18px}
+  .actions{margin-top:24px}
+  .napperon .pastille{font-size:13px;padding:7px 12px;left:10px;bottom:10px}
+  .note{padding:10px 14px;gap:10px;right:0;bottom:auto;top:2%}
+  .note b{font-size:30px}
+  .note span{font-size:13px}
+  .faits strong{font-size:22px}
+  .f2{grid-template-columns:minmax(0,1fr)}
+  .f2 img{min-height:0;aspect-ratio:4/3}
+  .formule h3{font-size:26px}
+  .villes li{font-size:21px}
+  .mosaique{padding-bottom:90px}
+  .mosaique .petite{border-width:5px}
+  .bilig .bande img{aspect-ratio:4/3}
+  .bilig blockquote{margin:-60px auto 0;width:calc(100% - 24px);padding:26px 22px}
+  .carte-visite{grid-template-columns:minmax(0,1fr)}
+  .carte-visite > div{padding:30px 24px}
+  .carte-visite > div + div{border-left:0;border-top:1px dashed rgba(46,33,32,.2)}
+  .carte-visite .avis{border-radius:0 0 26px 26px}
+  .pied .cols{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .wrap{width:min(1200px, 100% - 36px)}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">
+      <b>Maison Oh&nbsp;! Crêp</b>
+      <span>Traiteur crêpier événementiel, Ploemeur</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a class="lien-nav" href="#formules">Formules</a>
+      <a class="lien-nav" href="#plateaux">Plateaux</a>
+      <a class="lien-nav" href="#infos">Horaires et contact</a>
+      <a class="btn btn-plein nowrap" href="tel:+33666770275">06 66 77 02 75</a>
+    </nav>
+    <a class="btn btn-plein appel nowrap" href="tel:+33666770275">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-label="Présentation">
+    <div class="wrap">
+      <div>
+        <h1>Un traiteur crêpier qui ne fait pas que des <span class="nowrap-l">galettes-saucisses</span></h1>
+        <p class="intro">Maison Oh&nbsp;! Crêp, traiteur crêpier événementiel à Ploemeur, près de Lorient&nbsp;: repas crêpes à volonté, cocktails apéritifs ou dînatoires, coffrets généreux, colorés et fleuris.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:traiteurohcrep@gmail.com">Parler de votre événement</a>
+          <a class="btn btn-contour nowrap" href="tel:+33666770275">06 66 77 02 75</a>
+        </div>
+        <p class="zone">Repas d'entreprise, particuliers, festivités&nbsp;: en Bretagne et plus encore.</p>
+      </div>
+      <div class="napperon">
+        <svg viewBox="0 0 600 600" aria-hidden="true">
+          <g fill="#FEF9F4"><circle cx="300" cy="300" r="278"/><circle cx="578.0" cy="300.0" r="19"/><circle cx="575.6" cy="336.3" r="19"/><circle cx="568.5" cy="372.0" r="19"/><circle cx="556.8" cy="406.4" r="19"/><circle cx="540.8" cy="439.0" r="19"/><circle cx="520.6" cy="469.2" r="19"/><circle cx="496.6" cy="496.6" r="19"/><circle cx="469.2" cy="520.6" r="19"/><circle cx="439.0" cy="540.8" r="19"/><circle cx="406.4" cy="556.8" r="19"/><circle cx="372.0" cy="568.5" r="19"/><circle cx="336.3" cy="575.6" r="19"/><circle cx="300.0" cy="578.0" r="19"/><circle cx="263.7" cy="575.6" r="19"/><circle cx="228.0" cy="568.5" r="19"/><circle cx="193.6" cy="556.8" r="19"/><circle cx="161.0" cy="540.8" r="19"/><circle cx="130.8" cy="520.6" r="19"/><circle cx="103.4" cy="496.6" r="19"/><circle cx="79.4" cy="469.2" r="19"/><circle cx="59.2" cy="439.0" r="19"/><circle cx="43.2" cy="406.4" r="19"/><circle cx="31.5" cy="372.0" r="19"/><circle cx="24.4" cy="336.3" r="19"/><circle cx="22.0" cy="300.0" r="19"/><circle cx="24.4" cy="263.7" r="19"/><circle cx="31.5" cy="228.0" r="19"/><circle cx="43.2" cy="193.6" r="19"/><circle cx="59.2" cy="161.0" r="19"/><circle cx="79.4" cy="130.8" r="19"/><circle cx="103.4" cy="103.4" r="19"/><circle cx="130.8" cy="79.4" r="19"/><circle cx="161.0" cy="59.2" r="19"/><circle cx="193.6" cy="43.2" r="19"/><circle cx="228.0" cy="31.5" r="19"/><circle cx="263.7" cy="24.4" r="19"/><circle cx="300.0" cy="22.0" r="19"/><circle cx="336.3" cy="24.4" r="19"/><circle cx="372.0" cy="31.5" r="19"/><circle cx="406.4" cy="43.2" r="19"/><circle cx="439.0" cy="59.2" r="19"/><circle cx="469.2" cy="79.4" r="19"/><circle cx="496.6" cy="103.4" r="19"/><circle cx="520.6" cy="130.8" r="19"/><circle cx="540.8" cy="161.0" r="19"/><circle cx="556.8" cy="193.6" r="19"/><circle cx="568.5" cy="228.0" r="19"/><circle cx="575.6" cy="263.7" r="19"/></g>
+          <g fill="#F7EEE6"><circle cx="562.0" cy="300.0" r="5"/><circle cx="539.5" cy="315.7" r="3.2"/><circle cx="559.8" cy="334.2" r="5"/><circle cx="535.4" cy="346.8" r="3.2"/><circle cx="553.1" cy="367.8" r="5"/><circle cx="527.3" cy="377.1" r="3.2"/><circle cx="542.1" cy="400.3" r="5"/><circle cx="515.2" cy="406.1" r="3.2"/><circle cx="526.9" cy="431.0" r="5"/><circle cx="499.6" cy="433.3" r="3.2"/><circle cx="507.9" cy="459.5" r="5"/><circle cx="480.4" cy="458.2" r="3.2"/><circle cx="485.3" cy="485.3" r="5"/><circle cx="458.2" cy="480.4" r="3.2"/><circle cx="459.5" cy="507.9" r="5"/><circle cx="433.3" cy="499.6" r="3.2"/><circle cx="431.0" cy="526.9" r="5"/><circle cx="406.1" cy="515.2" r="3.2"/><circle cx="400.3" cy="542.1" r="5"/><circle cx="377.1" cy="527.3" r="3.2"/><circle cx="367.8" cy="553.1" r="5"/><circle cx="346.8" cy="535.4" r="3.2"/><circle cx="334.2" cy="559.8" r="5"/><circle cx="315.7" cy="539.5" r="3.2"/><circle cx="300.0" cy="562.0" r="5"/><circle cx="284.3" cy="539.5" r="3.2"/><circle cx="265.8" cy="559.8" r="5"/><circle cx="253.2" cy="535.4" r="3.2"/><circle cx="232.2" cy="553.1" r="5"/><circle cx="222.9" cy="527.3" r="3.2"/><circle cx="199.7" cy="542.1" r="5"/><circle cx="193.9" cy="515.2" r="3.2"/><circle cx="169.0" cy="526.9" r="5"/><circle cx="166.7" cy="499.6" r="3.2"/><circle cx="140.5" cy="507.9" r="5"/><circle cx="141.8" cy="480.4" r="3.2"/><circle cx="114.7" cy="485.3" r="5"/><circle cx="119.6" cy="458.2" r="3.2"/><circle cx="92.1" cy="459.5" r="5"/><circle cx="100.4" cy="433.3" r="3.2"/><circle cx="73.1" cy="431.0" r="5"/><circle cx="84.8" cy="406.1" r="3.2"/><circle cx="57.9" cy="400.3" r="5"/><circle cx="72.7" cy="377.1" r="3.2"/><circle cx="46.9" cy="367.8" r="5"/><circle cx="64.6" cy="346.8" r="3.2"/><circle cx="40.2" cy="334.2" r="5"/><circle cx="60.5" cy="315.7" r="3.2"/><circle cx="38.0" cy="300.0" r="5"/><circle cx="60.5" cy="284.3" r="3.2"/><circle cx="40.2" cy="265.8" r="5"/><circle cx="64.6" cy="253.2" r="3.2"/><circle cx="46.9" cy="232.2" r="5"/><circle cx="72.7" cy="222.9" r="3.2"/><circle cx="57.9" cy="199.7" r="5"/><circle cx="84.8" cy="193.9" r="3.2"/><circle cx="73.1" cy="169.0" r="5"/><circle cx="100.4" cy="166.7" r="3.2"/><circle cx="92.1" cy="140.5" r="5"/><circle cx="119.6" cy="141.8" r="3.2"/><circle cx="114.7" cy="114.7" r="5"/><circle cx="141.8" cy="119.6" r="3.2"/><circle cx="140.5" cy="92.1" r="5"/><circle cx="166.7" cy="100.4" r="3.2"/><circle cx="169.0" cy="73.1" r="5"/><circle cx="193.9" cy="84.8" r="3.2"/><circle cx="199.7" cy="57.9" r="5"/><circle cx="222.9" cy="72.7" r="3.2"/><circle cx="232.2" cy="46.9" r="5"/><circle cx="253.2" cy="64.6" r="3.2"/><circle cx="265.8" cy="40.2" r="5"/><circle cx="284.3" cy="60.5" r="3.2"/><circle cx="300.0" cy="38.0" r="5"/><circle cx="315.7" cy="60.5" r="3.2"/><circle cx="334.2" cy="40.2" r="5"/><circle cx="346.8" cy="64.6" r="3.2"/><circle cx="367.8" cy="46.9" r="5"/><circle cx="377.1" cy="72.7" r="3.2"/><circle cx="400.3" cy="57.9" r="5"/><circle cx="406.1" cy="84.8" r="3.2"/><circle cx="431.0" cy="73.1" r="5"/><circle cx="433.3" cy="100.4" r="3.2"/><circle cx="459.5" cy="92.1" r="5"/><circle cx="458.2" cy="119.6" r="3.2"/><circle cx="485.3" cy="114.7" r="5"/><circle cx="480.4" cy="141.8" r="3.2"/><circle cx="507.9" cy="140.5" r="5"/><circle cx="499.6" cy="166.7" r="3.2"/><circle cx="526.9" cy="169.0" r="5"/><circle cx="515.2" cy="193.9" r="3.2"/><circle cx="542.1" cy="199.7" r="5"/><circle cx="527.3" cy="222.9" r="3.2"/><circle cx="553.1" cy="232.2" r="5"/><circle cx="535.4" cy="253.2" r="3.2"/><circle cx="559.8" cy="265.8" r="5"/><circle cx="539.5" cy="284.3" r="3.2"/></g>
+          <circle cx="300" cy="300" r="214" fill="none" stroke="#EBDCCB" stroke-width="1.5" stroke-dasharray="2 7"/>
+        </svg>
+        <div class="photo">
+          <img src="assets/maison-oh-crep-traiteur/coffret-mignardises-crepes-fleurs.webp" alt="Coffret de mignardises : roses de crêpe au sucre glace, mini pancakes, moelleux à la crème, framboises, myrtilles et pensées comestibles" width="1600" height="1600">
+          <span class="pastille">Coffrets généreux, colorés et fleuris</span>
+        </div>
+        <p class="note"><b>4,8</b><span>sur 5 sur Google<br>116 avis</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><strong>Crêpier traiteur</strong>pour vos événements</li>
+      <li><strong>Dès 6 pièces</strong>par personne en cocktail</li>
+      <li><strong>Dès 13,50&nbsp;€ TTC</strong>par personne, plateaux apéritifs</li>
+      <li><strong>Blé noir</strong>sans gluten, 100&nbsp;% breizhfood</li>
+      <li><strong>4,8 sur 5</strong>116 avis sur Google</li>
+    </ul>
+  </div>
+
+  <section class="formules" id="formules" aria-labelledby="t-formules">
+    <div class="wrap">
+      <div class="tete">
+        <h2 id="t-formules">Des crêpes à volonté, ou un cocktail qui surprend</h2>
+        <p class="chapo">Rapide et élégant, pour une réponse fluide à votre événement. Le blé noir reste à l'honneur, sucré comme salé.</p>
+      </div>
+      <div class="duo">
+        <article class="formule f1 apparait">
+          <img src="assets/maison-oh-crep-traiteur/crepe-kinder-bueno-gros-plan.webp" alt="Crêpe garnie de chantilly, morceaux de Kinder Bueno, amandes caramélisées et filet de chocolat" width="1600" height="1600" loading="lazy">
+          <div class="corps">
+            <h3>Le repas crêpier</h3>
+            <p>Traiteur crêpier, repas à volonté&nbsp;: pour vos repas d'entreprise, entre particuliers ou pour vos festivités.</p>
+          </div>
+        </article>
+        <article class="formule f2 apparait">
+          <img src="assets/maison-oh-crep-traiteur/cocktail-fleuri-plateau.webp" alt="Buffet cocktail fleuri : bouchées au blé noir sur piques en bambou, citron vert, pensées et graminées" width="1600" height="1600" loading="lazy">
+          <div class="corps">
+            <h3>Le cocktail</h3>
+            <p>Apéritif ou dînatoire&nbsp;: composez vos plateaux selon vos envies, avec charcuterie et pièces créations maison, sucrées et salées.</p>
+            <ul>
+              <li><span>Cocktail</span><span>dès 6 pièces / pers.</span></li>
+              <li><span>Plateaux apéritifs</span><span>dès 13,50&nbsp;€ TTC / pers.</span></li>
+              <li><span>Le gros plus</span><span>sans gluten</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="evenements" aria-label="Pour quels événements">
+    <div class="wrap">
+      <p class="grand">Repas d'entreprise, particuliers, festivités… en Bretagne et plus encore.</p>
+      <ul class="villes">
+        <li>Lorient</li><li>Quimper</li><li>Brest</li><li>Rennes</li><li>Nantes</li>
+        <li>Au départ de Ploemeur</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="plateaux" id="plateaux" aria-labelledby="t-plateaux">
+    <div class="wrap">
+      <div>
+        <h2 id="t-plateaux">Le goût des couleurs</h2>
+        <p class="chapo">Des pièces créations maison, apéritives ou dînatoires, au format généreux.</p>
+        <ul class="bouchees">
+          <li><b>Gougères au cheddar</b><span>100&nbsp;% blé noir, garnies d'une crème de thon au citron vert.</span></li>
+          <li><b>Coupelles de blé noir</b><span>Crème d'avocat, volaille et fleurs comestibles.</span></li>
+          <li><b>Roses de crêpe</b><span>Sucre glace, framboise et myrtille au cœur.</span></li>
+          <li><b>Mini pancakes en brochettes</b><span>Avec fraises, banane et amandes.</span></li>
+        </ul>
+        <span class="gf">Blé noir&nbsp;: sans gluten</span>
+      </div>
+      <div class="mosaique apparait">
+        <figure class="grande" style="margin:0 0 0 auto">
+          <img src="assets/maison-oh-crep-traiteur/coupelles-ble-noir-fleurs-comestibles.webp" alt="Coupelles croustillantes de blé noir garnies de crème d'avocat et de volaille, fleurs comestibles, sur un plateau en bois" width="1600" height="1600" loading="lazy">
+          <span class="pastille">Coupelles de blé noir</span>
+        </figure>
+        <figure class="petite p1" style="margin:0">
+          <img src="assets/maison-oh-crep-traiteur/gougeres-ble-noir-creme-de-thon.webp" alt="Gougères au blé noir garnies de crème de thon" width="1600" height="1600" loading="lazy">
+        </figure>
+        <figure class="petite p2" style="margin:0">
+          <img src="assets/maison-oh-crep-traiteur/rose-de-crepe-framboise.webp" alt="Rose de crêpe au sucre glace, framboise au cœur" width="1600" height="1600" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bilig" aria-label="Sur la bilig">
+    <div class="wrap">
+      <div class="bande apparait">
+        <img src="assets/maison-oh-crep-traiteur/mini-galettes-sur-la-bilig.webp" alt="Des dizaines de mini galettes en cuisson sur la bilig" width="1600" height="1600" loading="lazy">
+        <span class="pastille">Sur la bilig</span>
+      </div>
+      <blockquote>
+        <p>«&nbsp;Envie d'un apéritif différent, 100&nbsp;% breizhfood.&nbsp;»</p>
+        <footer>Maison Oh&nbsp;! Crêp</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="infos" id="infos" aria-labelledby="t-infos">
+    <div class="wrap">
+      <h2 id="t-infos">Votre événement commence par un appel</h2>
+      <p class="chapo">Repas crêpier ou cocktail, pour les infos, un appel ou un mail suffit.</p>
+      <div class="carte-visite">
+        <div>
+          <h3>Nous joindre</h3>
+          <dl>
+            <div><dt>Téléphone</dt><dd><a class="tel nowrap" href="tel:+33666770275">06 66 77 02 75</a></dd></div>
+            <div><dt>Mail</dt><dd><a href="mailto:traiteurohcrep@gmail.com">traiteurohcrep@gmail.com</a></dd></div>
+            <div><dt>Adresse</dt><dd>3 ZAC de la Vraie Croix, rue de Larmor<br>56270 Ploemeur</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>Horaires</h3>
+          <ul class="horaires">
+            <li><span>Mardi</span><span class="nowrap">9h – 18h</span></li>
+            <li><span>Mercredi</span><span class="nowrap">9h – 18h</span></li>
+            <li><span>Jeudi</span><span class="nowrap">9h – 18h</span></li>
+            <li><span>Vendredi</span><span class="nowrap">9h – 18h</span></li>
+            <li><span>Samedi</span><span class="nowrap">9h – 18h</span></li>
+            <li class="ferme"><span>Dimanche et lundi</span><span>Fermé</span></li>
+          </ul>
+        </div>
+        <div class="avis">
+          <h3>Ils en parlent</h3>
+          <p class="chiffre">4,8 <small>/ 5</small></p>
+          <p class="etoiles" aria-hidden="true">★★★★★</p>
+          <p>116 avis sur Google</p>
+          <div class="liens">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Oh%20%21%20Cr%C3%AAp%20Traiteur%20cr%C3%AApier%20%C3%A9v%C3%A9nementiel%20Ploemeur%20%28Lorient%29">Voir les avis sur Google</a>
+            <a href="https://www.facebook.com/ohcrep/">Suivre Oh Crêp' sur Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="nom">Maison Oh&nbsp;! Crêp</p>
+        <p>Traiteur crêpier événementiel à Ploemeur. Repas d'entreprise, particuliers, festivités&nbsp;: en Bretagne et plus encore.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33666770275">06 66 77 02 75</a></li>
+          <li><a href="mailto:traiteurohcrep@gmail.com">traiteurohcrep@gmail.com</a></li>
+          <li>3 ZAC de la Vraie Croix, rue de Larmor, 56270 Ploemeur</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Du mardi au samedi</li>
+          <li>9h – 18h</li>
+          <li>Fermé dimanche et lundi</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ailleurs</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/ohcrep/">Page Facebook</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Oh%20%21%20Cr%C3%AAp%20Traiteur%20cr%C3%AApier%20%C3%A9v%C3%A9nementiel%20Ploemeur%20%28Lorient%29">Fiche Google et avis</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour Maison Oh&nbsp;! Crêp</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

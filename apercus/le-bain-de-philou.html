@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Bain de Philou · toilettage pour chiens à Aytré, près de La Rochelle</title>
+<meta name="description" content="Le Bain de Philou, toiletteur pour chiens de moins de 60 kg à Aytré, près de La Rochelle : lavage, coupe, épilation, cosmétiques bio. Du lundi au samedi, 9 h à 18 h. 07 64 56 27 53.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E8643C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23F3F8F7'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Signika:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E5EEEC; --base-2:#D7E5E2; --surface:#F3F8F7; --encre:#17302C; --doux:#4A5F5B;
+  --corail:#E8643C; --corail-f:#C94F2A; --sombre:#17302C; --sombre-2:#21403B;
+  --eau-1:#B6D8D3; --eau-2:#A4CEC8; --joint:#EEF6F4;
+  --ombre:0 30px 60px -34px rgba(23,48,44,.55);
+  --ombre-l:0 50px 92px -44px rgba(23,48,44,.66);
+  --display:'Patua One',Georgia,serif; --sans:'Signika','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-weight:300;font-size:18px;line-height:1.66;-webkit-font-smoothing:antialiased}
+::selection{background:var(--corail);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+b,strong{font-weight:600}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(229,238,236,.95);border-bottom:1px solid rgba(23,48,44,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;font-family:var(--display);font-size:26px;line-height:1}
+.marque span{color:var(--corail)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:400}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.nav .appel{color:var(--encre);background:var(--surface);font-weight:600;padding:11px 22px;border-radius:999px;box-shadow:0 10px 24px -16px rgba(23,48,44,.6);transition:transform .2s}
+.nav .appel:hover{transform:translateY(-2px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s,color .25s}
+.btn-plein{background:var(--corail);color:var(--surface);box-shadow:0 18px 34px -20px rgba(232,100,60,.9)}
+.btn-plein:hover{background:var(--corail-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn.appel-court{display:none}
+
+/* Héros : photo posée sur un bloc de carrelage */
+.heros{padding:72px 0 120px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-areas:"titre photo" "texte photo" "actions photo";column-gap:72px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(38px,5vw,70px);line-height:1.04;padding-top:48px}
+.heros .chapo{grid-area:texte;margin-top:28px;font-size:19px;color:var(--doux);max-width:44ch}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.salle{grid-area:photo;position:relative;margin:0;padding:0 72px 72px 0}
+.carrelage{position:absolute;right:0;bottom:0;width:86%;height:84%;border-radius:16px;
+  background-color:var(--eau-1);
+  background-image:
+    linear-gradient(var(--joint) 3px,transparent 3px),
+    linear-gradient(90deg,var(--joint) 3px,transparent 3px),
+    conic-gradient(var(--eau-1) 25%,var(--eau-2) 0 50%,var(--eau-1) 0 75%,var(--eau-2) 0);
+  background-size:34px 34px,34px 34px,68px 68px;
+  background-position:-2px -2px,-2px -2px,-2px -2px}
+.salle img{position:relative;width:100%;aspect-ratio:1/1.02;object-fit:cover;object-position:50% 45%;border-radius:18px;box-shadow:var(--ombre-l)}
+.etiquette{position:absolute;padding:9px 16px;border-radius:999px;background:var(--surface);font-weight:600;font-size:14px;line-height:1.2;box-shadow:0 12px 26px -16px rgba(23,48,44,.8)}
+.salle .etiquette{left:18px;bottom:90px}
+.salle .pastille{position:absolute;right:16px;bottom:14px;background:var(--corail);color:var(--surface);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;line-height:1.2}
+
+/* Bandeau */
+.faits{background:var(--base-2);padding:30px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{font-size:15px;color:var(--doux);line-height:1.35}
+.faits strong{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--encre)}
+
+/* Trois mots, pleine largeur */
+.mots{padding:120px 0 40px}
+.mots p.grand{font-family:var(--display);font-size:clamp(34px,5.4vw,80px);line-height:1.08;text-wrap:balance}
+.mots p.grand span{color:var(--corail)}
+.mots p.legende{margin-top:24px;color:var(--doux);font-size:17px}
+
+/* Les soins */
+.soins{padding:80px 0 128px}
+.soins .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.soins-photos{position:relative;padding:0 0 110px 0}
+.soins-photos .a{width:88%;aspect-ratio:5/4;object-fit:cover;object-position:50% 40%;border-radius:24px;box-shadow:var(--ombre-l)}
+.soins-photos .b{position:absolute;right:0;bottom:0;width:36%;aspect-ratio:3/4;object-fit:cover;object-position:50% 50%;border-radius:14px;box-shadow:var(--ombre);outline:8px solid var(--base)}
+.soins-photos .etiquette{left:18px;top:18px}
+.soins h2{font-size:clamp(34px,4vw,54px)}
+.soins .intro{margin-top:20px;color:var(--doux);max-width:46ch}
+.liste-soins{list-style:none;padding:0;margin:36px 0 0}
+.liste-soins li{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-top:1px solid rgba(23,48,44,.15)}
+.liste-soins li:last-child{border-bottom:1px solid rgba(23,48,44,.15)}
+.liste-soins b{font-family:var(--display);font-weight:400;font-size:24px}
+.liste-soins span{color:var(--doux);font-size:16px;text-align:right}
+
+/* Sur la table, fond sombre */
+.table{background:var(--sombre);color:var(--surface);padding:120px 0 128px}
+.table-tete{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:64px}
+.table-tete h2{font-size:clamp(34px,4vw,54px)}
+.table-tete p{color:rgba(243,248,247,.74);max-width:42ch}
+.mur{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:start}
+.mur figure{position:relative;margin:0}
+.mur img{width:100%;object-fit:cover;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.mur .etiquette{left:14px;bottom:14px;color:var(--encre)}
+.m1{grid-column:1/6;grid-row:1/3}
+.m1 img{aspect-ratio:4/5;border-radius:22px;object-position:50% 40%}
+.m2{grid-column:6/10;margin-top:72px}
+.m2 img{aspect-ratio:1/1;border-radius:16px;object-position:45% 50%}
+.m3{grid-column:10/13;margin-top:24px}
+.m3 img{aspect-ratio:3/4;border-radius:14px;object-position:50% 40%}
+.m4{grid-column:6/9;margin-top:0}
+.m4 img{aspect-ratio:1/1;border-radius:14px;object-position:40% 45%}
+.m5{grid-column:9/13;margin-top:-56px}
+.m5 img{aspect-ratio:4/3;border-radius:18px;object-position:50% 50%}
+
+/* Venir */
+.venir{padding:136px 0 128px}
+.venir h2{font-size:clamp(34px,4vw,54px)}
+.venir .intro{margin-top:18px;color:var(--doux);max-width:52ch}
+.plaque{position:relative;margin-top:56px;background:var(--surface);border-radius:28px;padding:48px;box-shadow:var(--ombre-l);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:48px}
+.plaque h3{font-size:22px;margin-bottom:14px;color:var(--corail-f)}
+.plaque p,.plaque li{font-size:17px}
+.plaque ul{list-style:none;margin:0;padding:0}
+.plaque li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(23,48,44,.18)}
+.plaque li span:first-child{font-weight:400}
+.plaque .tel{display:inline-block;font-family:var(--display);font-size:32px;text-decoration:none;white-space:nowrap;line-height:1.1}
+.plaque .mail{display:inline-block;margin-top:8px;text-decoration:none;border-bottom:1px solid rgba(23,48,44,.3);overflow-wrap:anywhere}
+.plaque .liens{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.plaque .liens .btn{width:100%}
+.plaque .note{display:flex;align-items:baseline;gap:12px;margin-top:22px}
+.plaque .note b{font-family:var(--display);font-weight:400;font-size:46px;line-height:1;color:var(--corail)}
+.plaque .note span{color:var(--doux);font-size:15px;line-height:1.35}
+.coucou{position:absolute;right:40px;top:-120px;width:min(200px,30%);margin:0;background:var(--surface);padding:10px;border-radius:16px;box-shadow:var(--ombre);transform:rotate(4deg)}
+.coucou img{border-radius:10px;aspect-ratio:1/1;object-fit:cover;object-position:40% 30%}
+
+/* Pied */
+.pied{background:var(--sombre);color:rgba(243,248,247,.8);padding:80px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .nom{font-family:var(--display);font-size:30px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;font-weight:600;color:var(--corail);letter-spacing:.03em}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(243,248,247,.25)}
+.pied a:hover{border-color:var(--corail)}
+.signature{margin-top:64px;padding:22px 0 26px;border-top:1px solid rgba(243,248,247,.1);text-align:center;font-size:13px;color:rgba(243,248,247,.5)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions"}
+  .heros h1{padding-top:0;margin-bottom:32px}
+  .soins .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mur{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .m1,.m2,.m3,.m4,.m5{grid-column:auto;margin-top:0}
+  .m1{grid-column:1/3;grid-row:auto}
+  .m2{margin-top:0}
+  .m4{margin-top:0}
+  .m5{grid-column:1/3}
+  .plaque{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 36px)}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .btn.appel-court{display:inline-flex;min-height:44px;padding:10px 18px;font-size:15px}
+  .marque{font-size:22px}
+  .heros{padding:32px 0 80px}
+  .heros h1{margin-bottom:26px}
+  .salle{padding:0 22px 26px 0}
+  .salle .etiquette{left:12px;bottom:40px;font-size:13px}
+  .salle .pastille{right:8px;bottom:8px;font-size:13px}
+  .heros .chapo{font-size:17px}
+  .heros .actions{flex-direction:column}
+  .heros .actions .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:14px}
+  .mots{padding:88px 0 24px}
+  .soins,.table,.venir{padding:80px 0}
+  .soins-photos{padding-bottom:70px}
+  .liste-soins li{flex-direction:column;gap:2px}
+  .liste-soins span{text-align:left}
+  .plaque{grid-template-columns:minmax(0,1fr);padding:30px 22px;gap:32px;margin-top:120px}
+  .coucou{top:-96px;right:16px;width:140px}
+  .plaque .tel{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Le Bain <span>de</span> Philou</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#soins">Les soins</a>
+      <a href="#table">Sur la table</a>
+      <a href="#venir">Horaires et adresse</a>
+      <a class="appel nowrap" href="tel:+33764562753">07 64 56 27 53</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33764562753">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Le toilettage de votre chien à Aytré, près de La Rochelle</h1>
+      <figure class="salle">
+        <div class="carrelage" aria-hidden="true"></div>
+        <img src="assets/le-bain-de-philou/schnauzer-nain-sur-table.webp" alt="Schnauzer nain poivre et sel tout juste coupé, debout sur la table de toilettage" width="1600" height="1523" fetchpriority="high">
+        <span class="etiquette">Schnauzer nain, tout juste coupé</span>
+        <span class="pastille">Cosmétiques bio</span>
+      </figure>
+      <p class="chapo">Lavage, coupe et épilation pour les chiens de moins de 60&nbsp;kg, avec des cosmétiques bio. Le salon vous accueille du lundi au samedi, de 9&nbsp;h à 18&nbsp;h.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="#venir">Horaires et adresse</a>
+        <a class="btn btn-contour nowrap" href="tel:+33764562753">07 64 56 27 53</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><strong>4,8 sur Google</strong>39 avis</li>
+        <li><strong>Lundi au samedi</strong>de 9&nbsp;h à 18&nbsp;h</li>
+        <li><strong>Jusqu'à 60&nbsp;kg</strong>petits et grands chiens</li>
+        <li><strong>Cosmétiques bio</strong>lavage, coupe, épilation</li>
+        <li><strong>Aytré</strong>près de La Rochelle</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mots" aria-label="Le salon">
+    <div class="wrap">
+      <p class="grand">Lavage canin<span>.</span> Cosmétiques bio<span>.</span> Coupe et épilation<span>.</span></p>
+      <p class="legende">Le Bain de Philou, toiletteur pour chiens au 9 avenue du Général de Gaulle, à Aytré.</p>
+    </div>
+  </section>
+
+  <section class="soins" id="soins">
+    <div class="wrap">
+      <div class="soins-photos apparait">
+        <img class="a" src="assets/le-bain-de-philou/shih-tzu-chignon-tresse.webp" alt="Shih tzu à poil long démêlé, mèches du dessus de tête nouées en petites couettes" width="1600" height="1274" loading="lazy">
+        <img class="b" src="assets/le-bain-de-philou/salon-pekinois-sur-table.webp" alt="Le salon : petit chien sur la table bleue, potence, souffleur et miroir" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Poil long démêlé, couettes nouées</span>
+      </div>
+      <div>
+        <h2>Les soins du salon</h2>
+        <p class="intro">Sur la table bleue du salon, sous la potence : lavage, coupe et épilation pour les chiens de moins de 60&nbsp;kg.</p>
+        <ul class="liste-soins">
+          <li><b>Lavage canin</b><span>avec des cosmétiques bio</span></li>
+          <li><b>Coupe</b><span>petits et grands chiens</span></li>
+          <li><b>Épilation</b><span>jusqu'à 60&nbsp;kg</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="table" id="table">
+    <div class="wrap">
+      <div class="table-tete">
+        <h2>Ils sont passés sur la table</h2>
+        <p>Petits et grands, poil court ou poil long : quelques-uns des chiens toilettés au salon.</p>
+      </div>
+      <div class="mur">
+        <figure class="m1 apparait">
+          <img src="assets/le-bain-de-philou/samoyede-allonge-sur-table.webp" alt="Samoyède blanc allongé sur la table après le brossage" width="1600" height="1199" loading="lazy">
+          <span class="etiquette">Samoyède</span>
+        </figure>
+        <figure class="m2 apparait">
+          <img src="assets/le-bain-de-philou/berger-shetland-de-face.webp" alt="Berger des Shetland tricolore brossé, debout sur la table" width="1600" height="1200" loading="lazy">
+          <span class="etiquette">Berger des Shetland</span>
+        </figure>
+        <figure class="m3 apparait">
+          <img src="assets/le-bain-de-philou/shih-tzu-coupe-courte-debout.webp" alt="Shih tzu fauve et blanc en coupe courte, oreilles longues gardées" width="1551" height="1600" loading="lazy">
+          <span class="etiquette">Shih tzu</span>
+        </figure>
+        <figure class="m4 apparait">
+          <img src="assets/le-bain-de-philou/cairn-terrier-sur-table.webp" alt="Petit terrier bringé debout sur la table, poils coupés au pied" width="1600" height="1190" loading="lazy">
+        </figure>
+        <figure class="m5 apparait">
+          <img src="assets/le-bain-de-philou/petit-chien-roux-assis.webp" alt="Petit chien blanc aux oreilles rousses coupé court, assis sur la table" width="1600" height="1199" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <h2>Horaires et adresse</h2>
+      <p class="intro">Le salon est à Aytré, à côté de La Rochelle. Un coup de fil suffit pour prévoir le toilettage de votre chien.</p>
+      <div class="plaque">
+        <figure class="coucou">
+          <img src="assets/le-bain-de-philou/bichon-creme-sur-table.webp" alt="Petit chien crème en coupe courte sur la table du salon" width="1600" height="1261" loading="lazy">
+        </figure>
+        <div>
+          <h3>Le salon</h3>
+          <p>9 avenue du Général de Gaulle<br>17440 Aytré</p>
+          <div class="note"><b>4,8</b><span>sur 5 sur Google<br>39 avis</span></div>
+        </div>
+        <div>
+          <h3>Horaires</h3>
+          <ul>
+            <li><span>Lundi au samedi</span><span>9&nbsp;h – 18&nbsp;h</span></li>
+            <li><span>Dimanche</span><span>Fermé</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a class="tel" href="tel:+33764562753">07 64 56 27 53</a><br>
+          <a class="mail" href="mailto:zarakazemi91@gmail.com">zarakazemi91@gmail.com</a>
+          <div class="liens">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Le%20bain%20de%20Philou&amp;query_place_id=ChIJ11bXtNNTAUgRr51DvkFaXXo">Voir les avis sur Google</a>
+            <a class="btn btn-contour" href="https://www.facebook.com/people/Le-bain-de-philou/100083232075763/">Page Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <p class="nom">Le Bain de Philou</p>
+      <p style="margin-top:12px">Toiletteur pour chiens de moins de 60&nbsp;kg. 9 avenue du Général de Gaulle, 17440 Aytré.</p>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul>
+        <li>Lundi au samedi : 9&nbsp;h – 18&nbsp;h</li>
+        <li>Dimanche : fermé</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nous joindre</h4>
+      <ul>
+        <li><a class="nowrap" href="tel:+33764562753">07 64 56 27 53</a></li>
+        <li><a href="mailto:zarakazemi91@gmail.com" style="overflow-wrap:anywhere">zarakazemi91@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/people/Le-bain-de-philou/100083232075763/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Le Bain de Philou</p>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

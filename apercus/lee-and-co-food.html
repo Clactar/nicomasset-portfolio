@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lee&amp;Co Food · cuisine asiatique faite maison à Poitiers</title>
+<meta name="description" content="Lee&Co Food, cuisine asiatique faite maison à Poitiers, spécialité khmère : nems, samoussas, bao, soy kiv, poke bowl. 07 88 46 49 70.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2372C'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='700' font-size='36' text-anchor='middle' fill='%23FBF7F0'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F4EDE4; --surface:#FBF7F0; --encre:#221C1A; --accent:#C2372C; --sombre:#1F1A18;
+  --doux:#6B5F58; --filet:rgba(34,28,26,.15); --base-2:#ECE2D5; --laque-fonce:#9E2A21;
+  --ombre:0 30px 60px -34px rgba(31,26,24,.6);
+  --display:"Kanit", "Trebuchet MS", sans-serif;
+  --texte:"Sarabun", "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+.nowrap{white-space:nowrap}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(244,237,228,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.marque{font-family:var(--display);font-weight:500;font-size:26px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.marque i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--surface);font-style:normal;font-size:17px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux)}
+.nav a:hover{color:var(--encre)}
+.tel-pilule{padding:10px 18px;border-radius:999px;background:var(--accent);color:var(--surface)!important;font-weight:600;white-space:nowrap;transition:background .2s ease}
+.tel-pilule:hover{background:var(--laque-fonce)}
+
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.btn-plein{background:var(--encre);color:var(--surface)}
+.btn-plein:hover{transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(31,26,24,.7)}
+.btn-contour{border:1.5px solid var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros */
+.heros{padding:48px 0 104px}
+.heros h1{font-size:clamp(40px,5.6vw,80px);max-width:20ch}
+.scene{display:grid;grid-template-columns:minmax(0,13fr) minmax(0,6fr) minmax(0,7fr);gap:0 40px;align-items:start;margin-top:40px}
+.photo-heros{margin:0;position:relative}
+.photo-heros img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 52%;border-radius:20px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:8px 14px;border-radius:10px;box-shadow:0 12px 24px -14px rgba(0,0,0,.6)}
+.ticket-ombre{filter:drop-shadow(0 24px 30px rgba(31,26,24,.22));margin-left:-72px;margin-top:40px;transform:rotate(1.5deg);position:relative;z-index:2}
+.ticket{background:var(--surface);padding:26px 24px 20px;border-radius:6px 6px 0 0;position:relative}
+.ticket::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:radial-gradient(circle at 8px 0, var(--surface) 0 7.5px, transparent 8px) 0 0/16px 10px repeat-x}
+.ticket .tete{text-align:center;border-bottom:1.5px dashed var(--filet);padding-bottom:14px;margin-bottom:10px}
+.ticket .tete b{display:block;font-family:var(--display);font-weight:500;font-size:24px;line-height:1.1}
+.ticket .tete span{font-size:14px;color:var(--doux)}
+.ticket ul{list-style:none;margin:0;padding:0;font-size:16px}
+.ticket li{display:flex;align-items:baseline;gap:8px;padding:6px 0}
+.ticket li::after{content:"";flex:1;order:2;border-bottom:1.5px dotted rgba(34,28,26,.28);transform:translateY(-4px);min-width:12px}
+.ticket li span{order:1}
+.ticket li em{order:3;font-style:normal;font-weight:600;white-space:nowrap}
+.ticket li em.coche{color:var(--accent)}
+.ticket .pied-ticket{border-top:1.5px dashed var(--filet);margin-top:12px;padding-top:14px;text-align:center;font-family:var(--display);font-size:18px;color:var(--accent);letter-spacing:.02em}
+.cote-texte{padding-top:8px}
+.cote-texte p{color:var(--doux);font-size:18px}
+.cote-texte .note{display:flex;align-items:center;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--filet);font-size:16px;color:var(--doux)}
+.cote-texte .note b{font-family:var(--display);font-weight:500;font-size:34px;color:var(--encre);line-height:1}
+.etoiles{color:var(--accent);letter-spacing:2px;font-size:15px}
+
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:16px;font-weight:500}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:8px;height:8px;background:var(--accent);transform:rotate(45deg)}
+
+/* Vitrine sombre */
+.vitrine{background:var(--sombre);color:#EFE6DB;padding:120px 0 128px}
+.vitrine .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:72px;align-items:start}
+.vitrine h2{font-size:clamp(34px,4.2vw,56px);color:#FBF7F0}
+.vitrine p{color:#C9BDB2;margin-top:20px;font-size:17px}
+.vitrine .source{font-size:14px;color:#9A8E84}
+.bao{margin:40px 0 0;width:min(220px,100%);background:#FBF7F0;padding:10px 10px 12px;border-radius:6px;transform:rotate(-3deg);box-shadow:0 30px 50px -24px rgba(0,0,0,.7)}
+.bao img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px}
+.bao figcaption{color:#5d524b;font-size:14px;margin-top:8px;padding-inline:2px}
+.etal{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4fr);gap:24px;align-items:start}
+.etal figure{margin:0;position:relative}
+.etal img{width:100%;object-fit:cover;box-shadow:0 36px 60px -30px rgba(0,0,0,.8)}
+.etal .e1 img{aspect-ratio:3/4.4;border-radius:22px;object-position:50% 50%}
+.etal .e2{margin-top:120px}
+.etal .e2 img{aspect-ratio:3/4;border-radius:16px;object-position:50% 40%}
+.etal .e3{margin-top:48px}
+.etal .e3 img{aspect-ratio:3/5;border-radius:16px;object-position:50% 50%}
+
+/* Citation */
+.citation{padding:120px 0}
+.citation blockquote{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,54px);line-height:1.14;max-width:26ch;text-wrap:balance}
+.citation blockquote::before{content:"«";display:block;font-size:1.8em;line-height:.6;color:var(--accent);margin-bottom:18px}
+.citation cite{display:block;margin-top:24px;font-style:normal;font-size:16px;color:var(--doux)}
+
+/* Où trouver */
+.trouver{padding:0 0 120px}
+.trouver .tete{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
+.trouver h2{font-size:clamp(34px,4.2vw,56px)}
+.trouver .tete p{color:var(--doux);margin:0;max-width:44ch}
+.lieux{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:stretch}
+.marches{background:var(--accent);color:#FCEFEA;border-radius:24px;padding:48px;position:relative;overflow:clip}
+.marches::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(255,255,255,.08)}
+.marches h3{font-size:22px;color:#FCEFEA;font-weight:400;margin-bottom:28px}
+.marche{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;padding:20px 0;border-top:1px solid rgba(252,239,234,.3)}
+.marche b{font-family:var(--display);font-weight:500;font-size:28px;line-height:1.1;color:#fff8f2}
+.marche span{font-size:18px}
+.adresse{background:var(--surface);border-radius:24px;padding:48px;box-shadow:0 30px 70px -44px rgba(31,26,24,.5);display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.adresse h3{font-size:22px;font-weight:400;color:var(--doux)}
+.adresse .rue{font-family:var(--display);font-size:32px;line-height:1.15;margin-top:12px}
+.adresse p{color:var(--doux);font-size:16px;margin:12px 0 0}
+.mini{display:flex;gap:16px;align-items:center}
+.mini figure{margin:0;width:min(200px,100%);flex:0 0 auto}
+.mini img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;box-shadow:var(--ombre)}
+.mini span{font-size:14px;color:var(--doux)}
+
+/* Contact */
+.contact{background:var(--base-2);padding:112px 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.tampon{width:min(320px,100%);aspect-ratio:1/1;border-radius:50%;border:2px solid var(--accent);display:grid;place-items:center;text-align:center;position:relative;margin-inline:auto;background:var(--surface);box-shadow:0 30px 60px -34px rgba(31,26,24,.5)}
+.tampon::before{content:"";position:absolute;inset:12px;border-radius:50%;border:1px dashed rgba(194,55,44,.5)}
+.tampon b{display:block;font-family:var(--display);font-weight:500;font-size:96px;line-height:.9}
+.tampon span{display:block;font-size:16px;color:var(--doux);margin-top:6px}
+.tampon a{display:inline-block;margin-top:14px;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1.5px solid var(--accent)}
+.carte h2{font-size:clamp(32px,3.8vw,50px)}
+.carte p{color:var(--doux);margin-top:16px}
+.coord{margin:28px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 32px}
+.coord div{border-top:1px solid var(--filet);padding-top:12px}
+.coord dt{font-size:14px;font-weight:600;color:var(--accent)}
+.coord dd{margin:4px 0 0;font-size:17px}
+.coord a{text-decoration:none;font-weight:600}
+.coord a:hover{color:var(--accent)}
+.coord .gros{font-family:var(--display);font-weight:500;font-size:32px}
+.coord .large{grid-column:1 / -1}
+
+.pied{background:var(--sombre);color:#BFB3A9;padding:72px 0 36px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque{color:#FBF7F0}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:600;color:#FBF7F0;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#F08A80}
+.pied p{margin-top:16px;font-size:15px}
+.signature{background:var(--sombre);color:#857970;text-align:center;font-size:13px;padding:20px 24px 28px;border-top:1px solid rgba(239,230,219,.08)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+@media (max-width:1060px){
+  .nav a:not(.tel-pilule){display:none}
+  .scene{grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px}
+  .cote-texte{grid-column:1 / -1}
+  .vitrine .wrap,.contact .wrap,.lieux{grid-template-columns:minmax(0,1fr);gap:48px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .entete .wrap{min-height:62px}
+  .marque{font-size:21px}
+  .marque i{width:30px;height:30px;font-size:15px}
+  .tel-pilule{padding:9px 14px;font-size:15px}
+  .heros{padding:32px 0 72px}
+  .heros h1{font-size:clamp(34px,10.4vw,48px)}
+  .scene{grid-template-columns:minmax(0,1fr);margin-top:28px;gap:0}
+  .ticket-ombre{margin:-40px 16px 0;transform:rotate(1deg)}
+  .photo-heros .etiquette{top:14px;bottom:auto}
+  .cote-texte{padding-top:44px}
+  .boutons{flex-direction:column}
+  .btn{width:100%}
+  .faits ul{flex-direction:column;gap:8px}
+  .vitrine{padding:80px 0}
+  .etal{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+  .etal .e1{grid-column:1 / -1}
+  .etal .e1 img{aspect-ratio:4/3}
+  .etal .e2{margin-top:0}
+  .etal .e3{margin-top:40px}
+  .citation{padding:80px 0}
+  .trouver{padding-bottom:80px}
+  .marches,.adresse{padding:30px 22px}
+  .marche{grid-template-columns:minmax(0,1fr);gap:4px}
+  .mini{flex-direction:column;align-items:flex-start}
+  .contact{padding:80px 0}
+  .coord{grid-template-columns:minmax(0,1fr)}
+  .tampon b{font-size:80px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><i aria-hidden="true">L</i>Lee&amp;Co Food</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#plateau">La cuisine</a>
+      <a href="#trouver">Nous trouver</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-pilule" href="tel:+33788464970">07 88 46 49 70</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Cuisine asiatique faite maison, à Poitiers</h1>
+      <div class="scene">
+        <figure class="photo-heros">
+          <img src="assets/lee-and-co-food/samoussas-maison.webp" alt="Une douzaine de samoussas maison dorés sur un plateau noir" width="1200" height="1600">
+          <figcaption class="etiquette">Samoussas maison, porc ou poulet</figcaption>
+        </figure>
+        <div class="ticket-ombre">
+          <div class="ticket" aria-label="Ce que Lee&Co Food cuisine">
+            <div class="tete"><b>Lee&amp;Co Food</b><span>Spécialité khmère</span></div>
+            <ul>
+              <li><span>Nems au porc</span><em class="coche">✓</em></li>
+              <li><span>Nems au poulet</span><em class="coche">✓</em></li>
+              <li><span>Nems aux légumes</span><em class="coche">✓</em></li>
+              <li><span>Samoussas</span><em class="coche">✓</em></li>
+              <li><span>Beignets de crevette</span><em class="coche">✓</em></li>
+              <li><span>Raviolis croustillants</span><em class="coche">✓</em></li>
+              <li><span>Bao au porc</span><em class="coche">✓</em></li>
+              <li><span>Soy kiv au porc</span><em>2,80&nbsp;€</em></li>
+              <li><span>Poke bowl</span><em class="coche">✓</em></li>
+            </ul>
+            <div class="pied-ticket">100&nbsp;% fait maison</div>
+          </div>
+        </div>
+        <div class="cote-texte">
+          <p>Nems et samoussas croustillants, bao, brioches vapeur farcies au porc, poke bowl et plein d'autres pépites, préparés maison par Lee&amp;Co Food.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="tel:+33788464970">Appeler le <span class="nowrap">&nbsp;07 88 46 49 70</span></a>
+            <a class="btn btn-contour" href="#trouver">Où nous trouver</a>
+          </div>
+          <div class="note"><b>5,0</b><div><span class="etoiles" aria-hidden="true">★★★★★</span><br>28 avis sur Google</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Cuisine asiatique faite maison</li>
+      <li>Spécialité khmère</li>
+      <li>Poitiers (86)</li>
+      <li>Note Google 5,0 sur 5, 28 avis</li>
+    </ul>
+  </div>
+
+  <section class="vitrine" id="plateau">
+    <div class="wrap">
+      <div>
+        <h2>Tout part de la cuisine</h2>
+        <p>«&nbsp;Une brioche vapeur hyper moelleuse, légère comme un nuage, et une garniture savoureuse bien juteuse à l'intérieur.&nbsp;»</p>
+        <p class="source">Lee&amp;Co Food, à propos de ses bao</p>
+        <p>Et sur le même plateau&nbsp;: des nems au porc, au poulet ou aux légumes, des raviolis croustillants porc et crevettes, des soy kiv au bord torsadé.</p>
+        <figure class="bao apparait">
+          <img src="assets/lee-and-co-food/bao-brioches-vapeur.webp" alt="Bao, brioches vapeur, dans un panier en bambou" width="1600" height="1600" loading="lazy">
+          <figcaption>Bao, brioches vapeur</figcaption>
+        </figure>
+      </div>
+      <div class="etal">
+        <figure class="e1 apparait">
+          <img src="assets/lee-and-co-food/beignets-de-crevette.webp" alt="Beignets de crevette alignés sur un plateau noir" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Beignets de crevette</figcaption>
+        </figure>
+        <figure class="e2 apparait">
+          <img src="assets/lee-and-co-food/soy-kiv-chaussons-au-porc.webp" alt="Trois soy kiv, chaussons au porc à bord torsadé" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Soy kiv au porc</figcaption>
+        </figure>
+        <figure class="e3 apparait">
+          <img src="assets/lee-and-co-food/raviolis-croustillants-porc-crevettes.webp" alt="Raviolis croustillants porc et crevettes en éventail" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Raviolis croustillants</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="wrap">
+      <blockquote>On aime prendre le temps de tout faire maison pour vous régaler le jour J.</blockquote>
+      <cite>Lee&amp;Co Food, en pleins préparatifs</cite>
+    </div>
+  </section>
+
+  <section class="trouver" id="trouver">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Où nous trouver</h2>
+        <p>Avant de venir, un coup de fil au <a class="nowrap" href="tel:+33788464970">07 88 46 49 70</a> ou un œil sur la <a href="https://www.google.com/maps/search/?api=1&amp;query=Lee%20%26%20Co%20Food%20Poitiers">fiche Google</a> pour les horaires du jour.</p>
+      </div>
+      <div class="lieux">
+        <div class="marches">
+          <h3>Le stand Lee&amp;Co Food, sur les marchés de Poitiers</h3>
+          <div class="marche"><b>Le samedi matin</b><span>Marché Notre-Dame</span></div>
+          <div class="marche"><b>Le dimanche matin</b><span>Marché des Couronneries</span></div>
+        </div>
+        <div class="adresse">
+          <div>
+            <h3>L'adresse</h3>
+            <div class="rue">42 rue du Rondy<br>86000 Poitiers</div>
+          </div>
+          <div class="mini">
+            <figure>
+              <img src="assets/lee-and-co-food/planche-des-plats.webp" alt="Planche de plats de Lee&Co Food" width="1600" height="1131" loading="lazy">
+            </figure>
+            <span>Quelques autres plats de Lee&amp;Co Food.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="tampon">
+        <div>
+          <b>5,0</b>
+          <span class="etoiles" aria-hidden="true">★★★★★</span>
+          <span>sur 5, 28 avis Google</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Lee%20%26%20Co%20Food%20Poitiers">Voir les avis</a>
+        </div>
+      </div>
+      <div class="carte">
+        <h2>Appeler, écrire, suivre le stand</h2>
+        <p>Une question, un plat à mettre de côté&nbsp;: un appel suffit. Les nouvelles du stand passent sur la page Facebook.</p>
+        <dl class="coord">
+          <div class="large"><dt>Téléphone</dt><dd><a class="gros nowrap" href="tel:+33788464970">07 88 46 49 70</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:leeco86poitiers@gmail.com">leeco86poitiers@gmail.com</a></dd></div>
+          <div><dt>Adresse</dt><dd>42 rue du Rondy, 86000 Poitiers</dd></div>
+          <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/leeandcofood86">leeandcofood86</a></dd></div>
+          <div><dt>Avis</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Lee%20%26%20Co%20Food%20Poitiers">Fiche Google</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="marque"><i aria-hidden="true">L</i>Lee&amp;Co Food</span>
+      <p>Cuisine asiatique faite maison, spécialité khmère, à Poitiers.</p>
+    </div>
+    <div>
+      <h3>Nous trouver</h3>
+      <ul>
+        <li>Marché Notre-Dame, le samedi matin</li>
+        <li>Marché des Couronneries, le dimanche matin</li>
+        <li>42 rue du Rondy, 86000 Poitiers</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33788464970">07 88 46 49 70</a></li>
+        <li><a href="mailto:leeco86poitiers@gmail.com">leeco86poitiers@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/leeandcofood86">Facebook</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Lee%20%26%20Co%20Food%20Poitiers">Avis Google</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Lee&amp;Co Food</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

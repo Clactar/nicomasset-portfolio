@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Ferme du Treuil Charré · Maraîchage agro-écologique bio à Saint-Christophe</title>
+<meta name="description" content="Fruits et légumes bio cultivés à Saint-Christophe, entre La Rochelle et Surgères : paniers, vente à la ferme le vendredi et le samedi, marchés de l'Aunis.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234E8B3A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23FBF8F0'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3EDE0; --base-2:#EAE2D0; --surface:#FBF8F0; --encre:#24301F; --encre-2:#4A5444;
+  --accent:#4E8B3A; --accent-f:#3E7230; --sombre:#2B3A22; --sombre-2:#354629; --kraft:#C9A877;
+  --ombre:0 30px 60px -34px rgba(36,48,31,.55);
+  --display:'Corben', Georgia, serif; --texte:'Source Sans 3', 'Trebuchet MS', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px, 100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+.nowrap{white-space:nowrap}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--texte);font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 14px 30px -18px rgba(62,114,48,.9)}
+.btn-plein:hover{background:var(--accent-f);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(243,237,224,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(36,48,31,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:21px}
+.marque span{font-size:13.5px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2)}
+.nav a:hover{color:var(--encre)}
+.nav .tel{font-weight:600;color:var(--encre)}
+.nav .btn-plein{color:var(--surface)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15.5px}
+.appel{display:none}
+
+/* Héros */
+.heros{padding:72px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.2fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(38px, 5.6vw, 76px);letter-spacing:-.015em}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros .intro{margin-top:26px;font-size:19.5px;color:var(--encre-2);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.heros .petit{margin-top:22px;font-size:16px;color:var(--encre-2)}
+.etal{position:relative;padding:22px 10px 30px}
+.etal-photo{transform:rotate(-1.5deg);border-radius:12px;box-shadow:var(--ombre), 0 2px 0 rgba(36,48,31,.04)}
+.etal-photo img{width:100%;aspect-ratio:1.42;object-fit:cover;object-position:50% 18%;border-radius:12px}
+.scotch{position:absolute;top:6px;width:120px;height:36px;background:rgba(201,168,119,.78);box-shadow:0 2px 6px -3px rgba(36,48,31,.35);clip-path:polygon(3% 0,97% 4%,100% 22%,97% 48%,100% 74%,96% 100%,4% 96%,0 74%,3% 50%,0 24%);z-index:2}
+.scotch.g{left:-8px;transform:rotate(-24deg)}
+.scotch.d{right:-6px;transform:rotate(19deg);top:-2px}
+.ardoise{position:absolute;left:-14px;bottom:4px;z-index:3;background:#2F3631;color:#F3EDE0;font-family:var(--display);font-size:20px;line-height:1.2;padding:14px 22px 15px;border-radius:8px;border:5px solid #9B7A4E;box-shadow:0 22px 40px -22px rgba(36,48,31,.8);transform:rotate(2deg)}
+.ardoise small{display:block;font-family:var(--texte);font-size:14px;color:#CFD6C6;margin-top:3px;letter-spacing:.01em}
+
+/* Faits */
+.faits{background:var(--base-2);border-block:1px solid rgba(36,48,31,.06)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 32px}
+.faits li{display:flex;flex-direction:column;font-size:15.5px;color:var(--encre-2);line-height:1.35}
+.faits strong{font-family:var(--display);font-weight:400;font-size:24px;color:var(--encre);margin-bottom:4px}
+
+section{padding:112px 0}
+
+/* Histoire */
+.histoire .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:center}
+.histoire h2{font-size:clamp(30px, 3.4vw, 46px);max-width:15em}
+.histoire .chapo{margin-top:22px;font-size:19px;color:var(--encre-2);max-width:36em}
+.croissance{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:24px;margin-top:48px;padding:34px 36px;background:var(--surface);border-radius:20px;box-shadow:0 24px 50px -36px rgba(36,48,31,.5)}
+.croissance div{display:flex;flex-direction:column}
+.croissance b{font-family:var(--display);font-weight:400;font-size:clamp(34px, 4vw, 54px);line-height:1;color:var(--encre)}
+.croissance .exp{font-size:.5em;vertical-align:.8em;margin-left:2px}
+.croissance b.vert{color:var(--accent)}
+.croissance span{font-size:16px;color:var(--encre-2);margin-top:10px}
+.croissance svg{width:64px;height:24px;margin-bottom:34px;color:var(--encre-2)}
+.piliers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px}
+.piliers h3{font-size:22px;margin-bottom:8px}
+.piliers p{font-size:16.5px;color:var(--encre-2);line-height:1.55}
+.polaroid{background:var(--surface);padding:14px 14px 58px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(2.5deg);position:relative}
+.polaroid img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:40% 50%;border-radius:3px}
+.polaroid p{position:absolute;left:18px;right:18px;bottom:16px;font-family:var(--display);font-size:17px;color:var(--encre-2)}
+
+/* Paniers */
+.paniers{background:var(--surface)}
+.paniers .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:start}
+.paniers figure{margin:0;position:relative}
+.paniers figure img{width:100%;aspect-ratio:4/4.7;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--ombre)}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(36,48,31,.6)}
+.livraison{position:absolute;right:-28px;top:44px;max-width:250px;background:var(--sombre);color:var(--base);padding:20px 22px;border-radius:16px;box-shadow:var(--ombre);font-size:16px;line-height:1.45}
+.livraison b{display:block;font-family:var(--display);font-weight:400;font-size:19px;margin-bottom:6px;color:#fff8e8}
+.paniers h2{font-size:clamp(30px, 3.4vw, 46px)}
+.paniers .chapo{margin-top:20px;font-size:19px;color:var(--encre-2);max-width:34em}
+.tarifs{list-style:none;margin:40px 0 0;padding:0}
+.tarifs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:22px 0;border-top:1px solid rgba(36,48,31,.16)}
+.tarifs li:last-child{border-bottom:1px solid rgba(36,48,31,.16)}
+.tarifs h3{font-size:22px}
+.tarifs .prix{font-family:var(--display);font-size:22px;white-space:nowrap;color:var(--accent-f)}
+.tarifs p{grid-column:1/-1;font-size:16.5px;color:var(--encre-2);max-width:40em}
+.paniers .actions{margin-top:32px}
+
+/* Citation */
+.citation{padding:120px 0 112px}
+.citation blockquote{margin:0 auto;max-width:980px;text-align:center}
+.citation p{font-family:var(--display);font-size:clamp(28px, 3.6vw, 50px);line-height:1.16;text-wrap:balance}
+.citation cite{display:block;margin-top:24px;font-style:normal;font-size:16px;color:var(--encre-2)}
+.citation svg{display:block;margin:0 auto 28px;width:54px;height:54px;color:var(--accent)}
+
+/* Semaine */
+.semaine{background:var(--sombre);color:var(--base)}
+.semaine .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:end}
+.semaine h2{font-size:clamp(30px, 3.6vw, 48px);color:#fbf5e6}
+.semaine .tete p{font-size:18px;color:#cfd6c6}
+.jours{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:56px}
+.jour{background:var(--sombre-2);border-radius:18px;padding:24px 22px 26px;display:flex;flex-direction:column;gap:16px}
+.jour h3{font-size:22px;color:#fbf5e6;padding-bottom:14px;border-bottom:1px solid rgba(243,237,224,.16)}
+.rdv{display:flex;flex-direction:column;gap:2px;font-size:16px;line-height:1.45;color:#dfe4d6}
+.rdv .h{font-weight:600;color:#fbf5e6}
+.rdv .type{align-self:flex-start;font-size:13px;font-weight:600;letter-spacing:.02em;padding:3px 10px;border-radius:999px;background:rgba(243,237,224,.12);color:#e7ecdd;margin-bottom:6px}
+.rdv.ferme .type{background:var(--accent);color:#fbf8f0}
+.saison{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;font-size:17px;color:#dfe4d6}
+.saison b{font-family:var(--display);font-weight:400;color:#fbf5e6;font-size:19px}
+
+/* Méthodes */
+.methodes .grande{position:relative}
+.methodes .grande img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 62%;border-radius:24px;box-shadow:var(--ombre)}
+.methodes .etiquette{position:absolute;left:22px;top:22px;background:var(--surface);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px}
+.methodes .carte{position:relative;margin:-150px 0 0 auto;width:min(620px, 100%);background:var(--surface);border-radius:22px;padding:42px 44px;box-shadow:0 34px 70px -40px rgba(36,48,31,.6)}
+.methodes h2{font-size:clamp(28px, 3vw, 40px)}
+.methodes .carte p{margin-top:16px;font-size:17.5px;color:var(--encre-2)}
+.purins{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 4px;padding:0;list-style:none}
+.purins li{font-size:15px;padding:6px 14px;border-radius:999px;background:var(--base);color:var(--encre)}
+.methodes .lien{display:inline-block;margin-top:22px;font-weight:600;color:var(--accent-f);text-underline-offset:4px}
+.methodes .bas{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:60px;align-items:start}
+.methodes .bas .gauche{padding-top:64px}
+.methodes .bas .gauche b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(40px, 4.4vw, 60px);line-height:1;color:var(--accent)}
+.methodes .bas .gauche span{display:block;margin-top:10px;font-size:17px;color:var(--encre-2);max-width:22em}
+.methodes .bas .gauche div + div{margin-top:36px}
+.methodes .bas .carte{margin-top:-150px}
+
+/* Contact */
+.contact{background:var(--base-2)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(30px, 3.6vw, 48px)}
+.contact .chapo{margin-top:20px;font-size:19px;color:var(--encre-2);max-width:32em}
+.contact .actions{margin-top:30px}
+.coord{background:var(--surface);border-radius:22px;padding:38px 40px;box-shadow:var(--ombre)}
+.coord dl{margin:0;display:grid;gap:22px}
+.coord dt{font-size:14px;font-weight:600;color:var(--accent-f);margin-bottom:4px}
+.coord dd{margin:0;font-size:18px;line-height:1.5}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(36,48,31,.25)}
+.coord dd a:hover{border-color:var(--accent)}
+.coord .tels a{font-family:var(--display);font-size:22px;border:0}
+.coord .tels{display:flex;flex-wrap:wrap;gap:4px 22px}
+
+/* Pied */
+.pied{background:var(--sombre);color:#dfe4d6;padding:80px 0 40px;font-size:16.5px}
+.pied .cols{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:24px;color:#fbf5e6;margin-bottom:12px}
+.pied h3{font-family:var(--texte);font-weight:600;font-size:15px;color:#fbf5e6;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#fbf5e6;text-decoration:underline;text-underline-offset:3px}
+.signature{margin-top:56px;padding-top:24px;border-top:1px solid rgba(243,237,224,.14);font-size:14px;color:#a9b4a0}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+/* Tablette */
+@media (max-width:1080px){
+  .nav .lien-nav{display:none}
+  .jours{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pied .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .livraison{right:12px}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .heros{padding:40px 0 72px}
+  .heros .wrap,.histoire .wrap,.paniers .wrap,.contact .wrap,.semaine .tete,.methodes .bas{grid-template-columns:minmax(0,1fr);gap:44px}
+  .histoire .polaroid{max-width:420px;margin-inline:auto}
+  .methodes .bas .gauche{padding-top:0;order:2}
+  .methodes .bas .carte{margin-top:-60px}
+}
+/* Téléphone */
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .appel{display:inline-flex;min-height:42px;padding:0 16px;font-size:15px}
+  .marque b{font-size:18px}
+  .marque span{display:none}
+  .heros{padding:28px 0 64px}
+  .heros .wrap{gap:30px}
+  .heros .intro{font-size:17.5px;margin-top:18px}
+  .actions{margin-top:24px}
+  .etal{padding:14px 4px 26px}
+  .scotch{width:84px;height:28px}
+  .ardoise{left:-4px;font-size:17px;padding:10px 16px 11px;border-width:4px}
+  .ardoise small{font-size:13px}
+  .faits strong{font-size:21px}
+  .croissance{grid-template-columns:minmax(0,1fr);padding:26px 24px;gap:6px}
+  .croissance svg{transform:rotate(90deg);margin:8px 0 8px 6px;width:40px}
+  .piliers{grid-template-columns:minmax(0,1fr);gap:22px}
+  .livraison{position:relative;right:auto;top:auto;max-width:none;margin:-40px 16px 0}
+  .jours{grid-template-columns:minmax(0,1fr)}
+  .methodes .grande img{aspect-ratio:4/3.4}
+  .methodes .carte{padding:30px 24px}
+  .coord{padding:28px 24px}
+  .pied .cols{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .wrap{width:min(1200px, 100% - 36px)}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">
+      <b>La Ferme du Treuil Charré</b>
+      <span>Maraîchage agro-écologique, Saint-Christophe</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a class="lien-nav" href="#paniers">Paniers</a>
+      <a class="lien-nav" href="#semaine">Ferme et marchés</a>
+      <a class="lien-nav" href="#methodes">Nos méthodes</a>
+      <a class="tel nowrap" href="tel:+33679535695">06 79 53 56 95</a>
+      <a class="btn btn-plein" href="https://laferme-dutreuilcharre.fr/boutique/">Boutique en ligne</a>
+    </nav>
+    <a class="btn btn-plein appel nowrap" href="tel:+33679535695">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros" aria-label="Présentation">
+    <div class="wrap">
+      <div>
+        <h1>De la graine à votre assiette</h1>
+        <p class="intro">À Saint-Christophe, entre La Rochelle et Surgères, nous cultivons fruits et légumes en maraîchage agro-écologique depuis 2008, certifiés bio. Paniers de saison, vente à la ferme et marchés de l'Aunis.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://laferme-dutreuilcharre.fr/boutique/">Voir la boutique</a>
+          <a class="btn btn-contour nowrap" href="tel:+33679535695">06 79 53 56 95</a>
+        </div>
+        <p class="petit">À la ferme le vendredi et le samedi matin, lieu-dit «&nbsp;Treuil Charré&nbsp;».</p>
+      </div>
+      <div class="etal">
+        <span class="scotch g" aria-hidden="true"></span>
+        <span class="scotch d" aria-hidden="true"></span>
+        <div class="etal-photo">
+          <img src="assets/ferme-treuil-charre-saint-christophe/etal-marche-sous-auvent-rouge.webp" alt="L'étal de la ferme sous son auvent rouge : cagettes de légumes, poireaux, courges et ardoises de prix" width="1600" height="1067">
+        </div>
+        <p class="ardoise">Paniers et marchés<small>Fruits et légumes frais, conserves</small></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><strong>Depuis 2008</strong>en maraîchage agro-écologique</li>
+      <li><strong>4,5 hectares</strong>de parcelles autour de Saint-Christophe</li>
+      <li><strong>Bio depuis 2019</strong>certifiés AB par Certipaq</li>
+      <li><strong>90&nbsp;% des plants</strong>produits à la ferme</li>
+      <li><strong>Aunis</strong>entre La Rochelle et Surgères</li>
+    </ul>
+  </div>
+
+  <section class="histoire" aria-labelledby="t-histoire">
+    <div class="wrap">
+      <div>
+        <h2 id="t-histoire">Tout a commencé avec un jardin</h2>
+        <p class="chapo">Très vite, la clientèle nous a fait comprendre qu'il fallait trouver d'autres terres à jardiner. En 12 ans, nous sommes passés à 4,5 hectares pour proposer une offre plus diversifiée. Nous avons entamé notre conversion à l'agriculture biologique en février 2017, sans changer nos méthodes&nbsp;: elles étaient déjà autorisées en bio.</p>
+        <div class="croissance">
+          <div><b>4&nbsp;000&nbsp;m<span class="exp">2</span></b><span>de jardin en 2008</span></div>
+          <svg viewBox="0 0 64 24" fill="none" aria-hidden="true"><path d="M2 12h56M48 3l10 9-10 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b class="vert">4,5 ha</b><span>12 ans plus tard</span></div>
+        </div>
+        <div class="piliers">
+          <div><h3>Bio</h3><p>Certifiés AB depuis février 2019 par l'organisme Certipaq.</p></div>
+          <div><h3>Patience</h3><p>Nous laissons aux plantes le temps de pousser, pour toutes les saveurs du terroir de nos parcelles.</p></div>
+          <div><h3>Nos choix</h3><p>Nous produisons 90&nbsp;% de nos plants&nbsp;: des variétés pleines de saveur et d'originalité.</p></div>
+        </div>
+      </div>
+      <figure class="polaroid apparait" style="margin:0">
+        <img src="assets/ferme-treuil-charre-saint-christophe/carottes-multicolores-fanes.webp" alt="Carottes nouvelles orange, jaunes et violettes avec leurs fanes, sur une table en bois" width="1600" height="1200" loading="lazy">
+        <p>Carottes nouvelles, avec leurs fanes</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="paniers" id="paniers" aria-labelledby="t-paniers">
+    <div class="wrap">
+      <figure class="apparait">
+        <img src="assets/ferme-treuil-charre-saint-christophe/cagettes-courges-oignons-blancs.webp" alt="Cagettes de potimarrons, pâtissons, butternuts, patates douces et botte d'oignons blancs" width="1067" height="1600" loading="lazy">
+        <span class="pastille">Légumes de saison</span>
+        <p class="livraison"><b>Livraison à domicile</b>Le mercredi et le jeudi, à partir de 20h.</p>
+      </figure>
+      <div>
+        <h2 id="t-paniers">Nos paniers de saison</h2>
+        <p class="chapo">Laissez-vous surprendre par une sélection de légumes bio fraîchement récoltés à la ferme. Chaque panier est composé selon les récoltes du moment, pour cuisiner sainement toute la semaine.</p>
+        <ul class="tarifs">
+          <li><h3>Panier «&nbsp;Grand Festin Familial&nbsp;»</h3><span class="prix">40,00&nbsp;€</span><p>Légumes bio de saison, composés selon les récoltes du moment.</p></li>
+          <li><h3>Panier «&nbsp;Saveurs d'Automne&nbsp;»</h3><span class="prix">20,00&nbsp;€</span><p>Une composition variée, fraîche et 100&nbsp;% de saison.</p></li>
+          <li><h3>Panier «&nbsp;Douceur Fruitée&nbsp;»</h3><span class="prix">18,50&nbsp;€</span><p>Les fruits de saison, frais et récoltés à point pour des saveurs intenses.</p></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://laferme-dutreuilcharre.fr/product-category/panier/">Commander un panier</a>
+          <a class="btn btn-contour" href="https://laferme-dutreuilcharre.fr/product-category/legumes/">Fruits et légumes au détail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Notre devise">
+    <div class="wrap">
+      <blockquote>
+        <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><path d="M27 50V22M27 22c0-9 6-16 16-17-1 10-7 16-16 17ZM27 30c0-8-5-13-14-14 1 8 6 13 14 14Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>«&nbsp;Refaire découvrir le véritable goût des fruits et légumes est notre devise.&nbsp;»</p>
+        <cite>La Ferme du Treuil Charré</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="semaine" id="semaine" aria-labelledby="t-semaine">
+    <div class="wrap">
+      <div class="tete">
+        <h2 id="t-semaine">Où nous trouver dans la semaine</h2>
+        <p>À la ferme le vendredi et le samedi, sur les marchés toute l'année. Fermé à la ferme du lundi au jeudi et le dimanche.</p>
+      </div>
+      <div class="jours">
+        <div class="jour">
+          <h3>Mercredi</h3>
+          <p class="rdv"><span class="type">Marché</span><span class="h nowrap">15h – 19h</span>Marché local et bio de Laleu, La Rochelle</p>
+        </div>
+        <div class="jour">
+          <h3>Jeudi</h3>
+          <p class="rdv"><span class="type">Marché</span><span class="h nowrap">16h – 19h</span>Marché bio de Salles-sur-Mer</p>
+        </div>
+        <div class="jour">
+          <h3>Vendredi</h3>
+          <p class="rdv ferme"><span class="type">À la ferme</span><span class="h">10h – 12h et 15h – 18h</span>Lieu-dit «&nbsp;Treuil Charré&nbsp;»</p>
+          <p class="rdv"><span class="type">1er vendredi du mois</span><span class="h nowrap">8h – 13h</span>Marché de Saint-Jean-de-Liversay</p>
+        </div>
+        <div class="jour">
+          <h3>Samedi</h3>
+          <p class="rdv ferme"><span class="type">À la ferme</span><span class="h nowrap">9h30 – 12h30</span>Lieu-dit «&nbsp;Treuil Charré&nbsp;»</p>
+          <p class="rdv"><span class="type">Marché</span><span class="h nowrap">8h – 13h</span>Marché de Mauzé-sur-le-Mignon</p>
+        </div>
+        <div class="jour">
+          <h3>Dimanche</h3>
+          <p class="rdv"><span class="type">Marché</span><span class="h nowrap">8h – 13h</span>Marché de Saint-Hilaire-la-Palud</p>
+        </div>
+      </div>
+      <p class="saison"><b>En saison, de juin à septembre</b>le dimanche matin, marché des Boucholeurs à Châtelaillon.</p>
+    </div>
+  </section>
+
+  <section class="methodes" id="methodes" aria-labelledby="t-methodes">
+    <div class="wrap">
+      <div class="grande apparait">
+        <img src="assets/ferme-treuil-charre-saint-christophe/serre-rangs-de-salades.webp" alt="Sous un tunnel de serre, un long rang de jeunes salades" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Sous la serre, les salades</span>
+      </div>
+      <div class="bas">
+        <div class="gauche">
+          <div><b>2 litres</b><span>d'eau par jour et par plant, en goutte-à-goutte, pour les tomates, poivrons, courgettes, aubergines et concombres.</span></div>
+          <div><b>6&nbsp;km</b><span>à la ronde&nbsp;: nos parcelles, autour de La Jarrie et de Saint-Médard-d'Aunis.</span></div>
+        </div>
+        <div class="carte">
+          <h2 id="t-methodes">Nos méthodes de culture</h2>
+          <p>Nous produisons fruits et légumes en agriculture biologique, par respect du végétal et de l'environnement qui nous entoure. Nous réalisons nos propres semences, et nous traitons avec des purins de plantes oubliées ou sauvages, trouvées autour de Saint-Christophe et dans les marais&nbsp;:</p>
+          <ul class="purins">
+            <li>consoude</li><li>prêle</li><li>ortie</li><li>rhubarbe</li><li>feuilles de tomates</li><li>ail</li><li>oignon</li><li>lavande</li><li>savon noir</li>
+          </ul>
+          <a class="lien" href="https://laferme-dutreuilcharre.fr/nos-methodes-de-culture/">Lire nos méthodes en détail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap">
+      <div>
+        <h2 id="t-contact">Une question, une commande&nbsp;?</h2>
+        <p class="chapo">Appelez-nous ou écrivez-nous&nbsp;: nous vous répondrons dans les plus brefs délais. Sur la boutique en ligne&nbsp;: fruits, légumes, conserves et paniers.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://laferme-dutreuilcharre.fr/boutique/">Voir la boutique</a>
+          <a class="btn btn-contour" href="mailto:leslegumesdecharre@club-internet.fr">Nous écrire</a>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Téléphone</dt><dd class="tels"><a class="nowrap" href="tel:+33679535695">06 79 53 56 95</a><a class="nowrap" href="tel:+33630824107">06 30 82 41 07</a></dd></div>
+          <div><dt>La ferme</dt><dd>Lieu-dit «&nbsp;Treuil Charré&nbsp;»<br>17220 Saint-Christophe</dd></div>
+          <div><dt>Vente à la ferme</dt><dd>Vendredi 10h – 12h et 15h – 18h<br>Samedi 9h30 – 12h30</dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:leslegumesdecharre@club-internet.fr">leslegumesdecharre@club-internet.fr</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="nom">La Ferme du Treuil Charré</p>
+        <p>Maraîchage agro-écologique depuis 2008, entre La Rochelle et Surgères, en Charente-Maritime.</p>
+      </div>
+      <div>
+        <h3>Nous trouver</h3>
+        <ul>
+          <li>Lieu-dit «&nbsp;Treuil Charré&nbsp;»</li>
+          <li>17220 Saint-Christophe</li>
+          <li><a class="nowrap" href="tel:+33679535695">06 79 53 56 95</a></li>
+          <li><a class="nowrap" href="tel:+33630824107">06 30 82 41 07</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>À la ferme</h3>
+        <ul>
+          <li>Vendredi 10h – 12h et 15h – 18h</li>
+          <li>Samedi 9h30 – 12h30</li>
+          <li>Lundi au jeudi et dimanche&nbsp;: fermé</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Boutique</h3>
+        <ul>
+          <li><a href="https://laferme-dutreuilcharre.fr/product-category/panier/">Paniers</a></li>
+          <li><a href="https://laferme-dutreuilcharre.fr/product-category/legumes/">Légumes</a></li>
+          <li><a href="https://laferme-dutreuilcharre.fr/product-category/fruits/">Fruits</a></li>
+          <li><a href="https://laferme-dutreuilcharre.fr/ou-nous-trouver/">Où nous trouver</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour La Ferme du Treuil Charré</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

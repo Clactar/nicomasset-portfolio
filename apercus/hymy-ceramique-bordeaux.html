@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HYMY Céramique · Porcelaine artisanale fabriquée à Bordeaux</title>
+<meta name="description" content="HYMY Céramique : porcelaine de Limoges tournée à la main à Bordeaux par Sophie Faiola. Vaisselle et décoration en petites séries et sur mesure, cours de céramique à l'atelier de Saint-Seurin.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232747A3'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23FAFBFB'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#EEF0F1; --base-2:#E3E7EA; --surface:#FAFBFB; --ink:#1E2529; --ink-2:#4E5A61;
+  --accent:#2747A3; --accent-d:#1D3884; --raye:#C9D3EE; --dark:#1A2238; --dark-2:#232D48; --dark-ink:#E6E9F0;
+  --ombre:0 30px 60px -34px rgba(26,34,56,.55);
+  --display:'Castoro',Georgia,serif; --texte:'Golos Text',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.2vw,52px);line-height:1.08}
+p{margin:0;text-wrap:pretty}
+.nowrap{white-space:nowrap}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn-plein:hover{background:var(--accent-d);border-color:var(--accent-d);transform:translateY(-2px);box-shadow:0 18px 30px -18px rgba(39,71,163,.7)}
+.btn-contour{background:transparent;color:var(--ink)}
+.btn-contour:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+.lien{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;transition:color .2s}
+.lien:hover{color:var(--accent-d)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(238,240,241,.94);border-bottom:1px solid rgba(30,37,41,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:.01em}
+.marque small{font-size:13px;color:var(--ink-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a:not(.tel){text-decoration:none;color:var(--ink-2);transition:color .2s}
+.nav a:not(.tel):hover{color:var(--accent)}
+.tel{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;background:var(--surface);text-decoration:none;font-weight:500;white-space:nowrap;box-shadow:0 10px 24px -18px rgba(26,34,56,.6);transition:background .2s,color .2s}
+.tel:hover{background:var(--accent);color:var(--surface)}
+
+/* héros */
+.heros{padding:clamp(48px,7vw,104px) 0 clamp(64px,8vw,120px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.heros h1{font-size:clamp(40px,5.4vw,78px);line-height:1.04}
+.heros h1 em{font-style:italic;color:var(--accent)}
+.heros .chapo{font-size:clamp(18px,1.4vw,20px);color:var(--ink-2);max-width:34em;margin-top:28px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.sourire{margin-top:26px;font-size:16px;color:var(--ink-2)}
+.sourire b{font-family:var(--display);font-weight:400;font-size:19px;color:var(--ink)}
+.visuel{position:relative;margin:0 22px 22px 0}
+.visuel{margin-left:0;margin-top:0}
+.visuel::before{content:"";position:absolute;inset:22px -22px -22px 22px;border-radius:22px;background:repeating-linear-gradient(90deg,var(--raye) 0 11px,var(--surface) 11px 22px)}
+.visuel .cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:1.42}
+.visuel img{width:100%;height:100%;object-fit:cover;object-position:50% 64%}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--ink);font-size:15px;font-weight:500;padding:9px 15px;border-radius:12px;box-shadow:0 10px 24px -14px rgba(26,34,56,.55)}
+
+/* bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:16px;color:var(--ink-2)}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+
+/* démarche */
+.demarche{padding:clamp(80px,10vw,128px) 0}
+.demarche .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.matiere{position:relative;padding-bottom:110px}
+.matiere .grande{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/4.2}
+.matiere .grande img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.matiere .petite{position:absolute;right:-8px;bottom:0;width:min(220px,44%);border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);aspect-ratio:3/4;background:var(--surface)}
+.matiere .petite img{width:100%;height:100%;object-fit:cover;object-position:50% 52%}
+.demarche h2{margin-top:6px}
+.demarche .chapo{font-size:19px;color:var(--ink-2);margin-top:22px;max-width:32em}
+.engagements{list-style:none;margin:36px 0 0;padding:0}
+.engagements li{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:8px 24px;padding:18px 0;border-top:1px solid rgba(30,37,41,.14)}
+.engagements li:last-child{border-bottom:1px solid rgba(30,37,41,.14)}
+.engagements b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.3}
+.engagements span{color:var(--ink-2);font-size:17px}
+
+/* collections */
+.collections{background:var(--surface);padding:clamp(80px,10vw,128px) 0}
+.collections .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.collections .texte p{color:var(--ink-2);margin-top:22px;max-width:30em}
+.pastilles{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pastilles a{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid rgba(30,37,41,.22);text-decoration:none;font-size:16px;font-weight:500;transition:border-color .2s,background .2s,color .2s}
+.pastilles a:hover{border-color:var(--accent);background:var(--accent);color:var(--surface)}
+.envoi{font-size:16px;color:var(--ink-2);margin-top:26px;padding-top:20px;border-top:1px solid rgba(30,37,41,.12)}
+.vase{margin-top:44px;width:min(300px,78%);border-radius:18px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:1}
+.vase img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.vitrine{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:0;align-items:start}
+.vitrine .saladier{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.vitrine .saladier img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.vitrine .planche{position:relative;margin:150px 0 0 -48px;border-radius:16px;overflow:hidden;border:10px solid var(--surface);box-shadow:var(--ombre);aspect-ratio:3/4;transform:rotate(2.5deg);z-index:2;background:var(--surface)}
+.vitrine .planche img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.collab{grid-column:1 / -1;margin:36px 0 0 12%;background:var(--base);border-radius:20px;padding:28px 30px;box-shadow:0 24px 50px -38px rgba(26,34,56,.6)}
+.collab h3{font-size:24px;line-height:1.2}
+.collab p{font-size:17px;color:var(--ink-2);margin-top:10px}
+.collab .lien{display:inline-block;margin-top:14px;font-size:16px;font-weight:500}
+
+/* cours, section sombre */
+.cours{background:var(--dark);color:var(--dark-ink);padding:clamp(80px,10vw,128px) 0}
+.cours .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,7vw,104px);align-items:start}
+.geste{position:sticky;top:110px;border-radius:22px;overflow:hidden;box-shadow:0 34px 70px -36px rgba(0,0,0,.7);aspect-ratio:4/5}
+.geste img{width:100%;height:100%;object-fit:cover;object-position:60% 60%}
+.cours h2{color:#F3F5F9}
+.cours .chapo{color:#C3C9D8;margin-top:22px;max-width:34em}
+.formules{margin-top:44px;display:grid;gap:18px}
+.formule{background:var(--dark-2);border-radius:20px;padding:28px 30px}
+.formule .tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px}
+.formule h3{font-size:26px;color:#F3F5F9;line-height:1.2}
+.prix{font-family:var(--display);font-size:26px;color:#AFC0F2;white-space:nowrap}
+.prix small{font-family:var(--texte);font-size:15px;color:#C3C9D8}
+.formule p{color:#C3C9D8;font-size:17px;margin-top:12px}
+.creneaux{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding:0;list-style:none}
+.creneaux li{font-size:15px;padding:6px 13px;border-radius:999px;background:rgba(175,192,242,.12);color:#DCE3F7}
+.formule .lien{color:#AFC0F2;display:inline-block;margin-top:16px;font-size:16px;font-weight:500}
+.formule .lien:hover{color:#fafbfb}
+
+/* citation */
+.citation{padding:clamp(88px,11vw,136px) 0;background:var(--base)}
+.citation blockquote{margin:0 auto;max-width:980px;text-align:center}
+.citation p{font-family:var(--display);font-size:clamp(34px,5vw,68px);line-height:1.08;text-wrap:balance}
+.citation footer{margin-top:28px;font-size:17px;color:var(--ink-2)}
+
+/* sur mesure */
+.mesure{padding:0 0 clamp(80px,10vw,128px)}
+.mesure .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(40px,7vw,104px);align-items:center;background:var(--surface);border-radius:28px;padding:clamp(28px,5vw,64px)}
+.polaroid{padding:12px 12px 46px;border-radius:12px;background:var(--base);box-shadow:var(--ombre);transform:rotate(-3deg);position:relative}
+.polaroid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:6px}
+.polaroid span{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--display);font-size:17px;color:var(--ink-2)}
+.mesure .chapo{color:var(--ink-2);margin-top:20px;max-width:36em}
+.references{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.references li{padding:15px 0;border-top:1px solid rgba(30,37,41,.14);font-size:17px;color:var(--ink-2)}
+.references b{display:block;font-family:var(--display);font-weight:400;font-size:20px;color:var(--ink)}
+.mesure .actions{margin-top:30px}
+
+/* contact */
+.contact{background:var(--base-2);padding:clamp(80px,10vw,128px) 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.contact .chapo{color:var(--ink-2);margin-top:22px;max-width:30em}
+.contact .actions{margin-top:32px}
+.carte{background:var(--surface);border-radius:24px;padding:clamp(26px,4vw,44px);box-shadow:var(--ombre)}
+.carte dl{margin:0;display:grid;gap:0}
+.carte .ligne{padding:16px 0;border-top:1px solid rgba(30,37,41,.12)}
+.carte .ligne:first-child{border-top:0;padding-top:0}
+.carte dt{font-size:14px;color:var(--ink-2);margin-bottom:4px}
+.carte dd{margin:0;font-size:18px}
+.carte dd a{text-decoration:none}
+.carte dd a:hover{color:var(--accent)}
+.carte .grand{font-family:var(--display);font-size:28px}
+
+/* pied */
+.pied{background:var(--dark);color:#C3C9D8;padding:72px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:#F3F5F9}
+.pied .marque small{color:#9AA3BA}
+.pied p{margin-top:16px;max-width:24em}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:500;color:#9AA3BA;margin-bottom:12px;letter-spacing:.02em}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;color:#E6E9F0}
+.pied a:hover{color:#AFC0F2}
+.pied .signature{max-width:none;margin-top:64px;padding:22px 0;border-top:1px solid rgba(230,233,240,.12);font-size:14px;color:#8E97AE;text-align:center}
+
+/* apparition */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .planche.apparait{transform:translateY(26px) rotate(2.5deg)}
+.js .planche.apparait.vu{transform:rotate(2.5deg)}
+.js .polaroid.apparait{transform:translateY(26px) rotate(-3deg)}
+.js .polaroid.apparait.vu{transform:rotate(-3deg)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .apparait{opacity:1;transform:none;transition:none}.js .planche.apparait{transform:rotate(2.5deg)}.js .polaroid.apparait{transform:rotate(-3deg)}.btn,.tel,.pastilles a{transition:none}}
+
+/* tablette */
+@media (max-width:1000px){
+  .nav a:not(.tel){display:none}
+  .heros .wrap,.demarche .wrap,.collections .wrap,.cours .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .geste{position:relative;top:0;aspect-ratio:4/3.4}
+  .mesure .wrap{grid-template-columns:minmax(0,1fr)}
+  .polaroid{width:min(280px,80%)}
+  .pied .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* téléphone */
+@media (max-width:620px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:21px}
+  .marque small{display:none}
+  .tel{min-height:42px;padding:0 15px;font-size:15px}
+  .heros{padding-top:36px}
+  .heros .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .heros .texte-heros{display:contents}
+  .heros h1{order:1}
+  .heros .visuel{order:2;margin-top:28px}
+  .heros .chapo{order:3;margin-top:36px}
+  .heros .actions{order:4}
+  .heros .sourire{order:5}
+  .heros .chapo{margin-top:20px}
+  .visuel{margin:0 12px 12px 0}
+  .visuel::before{inset:12px -12px -12px 12px}
+  .visuel .cadre{aspect-ratio:1.2}
+  .visuel img{object-position:50% 42%}
+  .faits ul{flex-direction:column;align-items:flex-start;gap:10px}
+  .engagements li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .matiere{padding-bottom:80px}
+  .matiere .petite{right:0;width:min(150px,42%);border-width:6px}
+  .vitrine .planche{margin:90px 0 0 -30px;border-width:7px}
+  .vase{width:min(220px,62%)}
+  .collab{margin-left:0;padding:24px}
+  .references{grid-template-columns:minmax(0,1fr)}
+  .formule{padding:24px 22px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .heros h1{font-size:clamp(36px,10.5vw,44px)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>HYMY Céramique</b><small>Porcelaine artisanale, Bordeaux</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#demarche">Démarche</a>
+      <a href="#collections">Collections</a>
+      <a href="#cours">Cours</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33661174445">06 61 17 44 45</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="texte-heros">
+        <h1>Porcelaine tournée <em>main</em>, à Bordeaux.</h1>
+        <p class="chapo">Sophie Faiola tourne la porcelaine de Limoges dans son atelier du quartier Saint-Seurin&nbsp;: vaisselle et objets de décoration en petites séries ou sur mesure, et cours de céramique pour adultes et enfants.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://hymy-ceramique.com/categorie-produit/cours-de-ceramique/">Réserver un atelier</a>
+          <a class="btn btn-contour" href="tel:+33661174445">06 61 17 44 45</a>
+        </div>
+        <p class="sourire"><b>Hymy</b> signifie «&nbsp;le sourire&nbsp;» en finnois, la langue de ses origines.</p>
+      </div>
+      <figure class="visuel">
+        <div class="cadre">
+          <img src="assets/hymy-ceramique-bordeaux/atelier-cours-six-tours-murs-rayes.webp" alt="L'atelier HYMY : six tours de potier, tabourets colorés et murs rayés de rose" width="1280" height="1118" fetchpriority="high">
+        </div>
+        <figcaption class="etiquette">L'atelier, quartier Saint-Seurin</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Porcelaine de Limoges</li>
+      <li>Céramiste à Bordeaux depuis 2020</li>
+      <li>Atelier de 55&nbsp;m², 6 tours</li>
+      <li>Petites séries et sur mesure</li>
+      <li>Filière Métiers d'Art Nouvelle-Aquitaine</li>
+    </ul>
+  </div>
+
+  <section class="demarche" id="demarche">
+    <div class="wrap">
+      <div class="matiere">
+        <div class="grande apparait">
+          <img src="assets/hymy-ceramique-bordeaux/boules-porcelaine-crue.webp" alt="Trois boules de porcelaine crue sur une toile de lin" loading="lazy" width="1600" height="1066">
+        </div>
+        <div class="petite apparait">
+          <img src="assets/hymy-ceramique-bordeaux/sechage-oiseaux-porcelaine-claie.webp" alt="Oiseaux et bol en porcelaine crue qui sèchent sur une claie" loading="lazy" width="852" height="1280">
+        </div>
+      </div>
+      <div>
+        <h2>Une porcelaine fabriquée en France, de manière responsable.</h2>
+        <p class="chapo">Ces céramiques sont faites pour durer, pour s'offrir et pour vivre vos aventures au quotidien.</p>
+        <ul class="engagements">
+          <li><b>Porcelaine de Limoges</b><span>La matière première est produite à Limoges.</span></li>
+          <li><b>Faite main à Bordeaux</b><span>Chaque pièce est tournée par Sophie dans son atelier, en petites séries ou sur mesure.</span></li>
+          <li><b>Circuits courts</b><span>Circuits courts et recyclage de la terre à l'atelier.</span></li>
+          <li><b>Pour tous les jours</b><span>Les pièces passent au lave-vaisselle et sont compatibles avec un usage alimentaire.</span></li>
+          <li><b>Métier d'art</b><span>Artisane référencée métier d'art, inscrite à la Chambre des Métiers et de l'Artisanat Nouvelle-Aquitaine.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections" id="collections">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Art de la table et objets de décoration.</h2>
+        <p>Plats, assiettes, bols, tasses, mugs, plats de service, décorations murales, vases, soliflores, bougeoirs&nbsp;: des pièces en porcelaine imaginées et fabriquées à Bordeaux.</p>
+        <div class="pastilles">
+          <a href="https://hymy-ceramique.com/categorie-produit/vaisselle-en-ceramique/">Vaisselle</a>
+          <a href="https://hymy-ceramique.com/categorie-produit/decoration-en-porcelaine-artisanale">Décoration</a>
+          <a href="https://hymy-ceramique.com/boutique/">Toute la boutique</a>
+        </div>
+        <p class="envoi">Click &amp; Collect ou livraison à domicile à Bordeaux et au Bouscat, envoi Colissimo ou Mondial Relay ailleurs.</p>
+        <div class="vase apparait">
+          <img src="assets/hymy-ceramique-bordeaux/vase-porcelaine-feminity-project.webp" alt="Vase en porcelaine blanche au col ondulé" loading="lazy" width="2000" height="2000">
+        </div>
+      </div>
+      <div class="vitrine">
+        <figure class="saladier apparait" style="margin:0">
+          <img src="assets/hymy-ceramique-bordeaux/saladier-mange-ris-aime-spaghetti.webp" alt="Bol à festons bleus et jaunes de la collection Mange Ris Aime, avec des spaghetti" loading="lazy" width="1920" height="2560">
+          <figcaption class="etiquette">Collection Mange Ris Aime</figcaption>
+        </figure>
+        <div class="planche apparait">
+          <img src="assets/hymy-ceramique-bordeaux/planche-a-decouper-tomates-cerises.webp" alt="Planche à découper en céramique à festons rouges et tomates cerises" loading="lazy" width="1491" height="1988">
+        </div>
+        <div class="collab">
+          <h3>Mange Ris Aime × HYMY Céramique</h3>
+          <p>Une collection de vaisselle en porcelaine co-imaginée avec Fiona, du blog Mange Ris Aime, et pensée pour les moments gourmands et vivants du quotidien.</p>
+          <a class="lien" href="https://hymy-ceramique.com/categorie-produit/collaborations-hymy-ceramique/mange-ris-aime-x-hymy-ceramique/">Voir la collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="wrap">
+      <figure class="geste apparait" style="margin:0">
+        <img src="assets/hymy-ceramique-bordeaux/mains-modelage-bol-pince.webp" alt="Une main pince la paroi d'un bol en terre crue posé sur une girelle" loading="lazy" width="2571" height="3311">
+      </figure>
+      <div>
+        <h2>Venez faire.</h2>
+        <p class="chapo">Sophie vous accueille dans un espace de 55&nbsp;m² tout équipé, dans une atmosphère chaleureuse et bienveillante&nbsp;: 6 tours de potier, une crouteuse, un grand four de 130 litres et plusieurs tables de travail. L'atelier est sécurisé et ventilé.</p>
+        <div class="formules">
+          <article class="formule">
+            <div class="tete"><h3>Atelier hebdomadaire adulte</h3><span class="prix">520&nbsp;€ <small>la période</small></span></div>
+            <p>13 séances de 2 heures, hors vacances scolaires, soit 40&nbsp;€ la séance, terre et cuisson comprises (supplément pour la porcelaine). 8 élèves par cours, tout niveau&nbsp;: chacun avance à son rythme sur ses propres pièces. Règlement en 3 fois possible en appelant Sophie.</p>
+            <ul class="creneaux">
+              <li>Lundi 18&nbsp;h – 20&nbsp;h</li>
+              <li>Mardi 16&nbsp;h – 18&nbsp;h</li>
+              <li>Mardi 18&nbsp;h 30 – 20&nbsp;h 30</li>
+              <li>Vendredi 12&nbsp;h – 14&nbsp;h</li>
+            </ul>
+            <a class="lien" href="https://hymy-ceramique.com/produit/atelier-hebdomadaire-de-ceramique-a-bordeaux/">Réserver sa place</a>
+          </article>
+          <article class="formule">
+            <div class="tete"><h3>Initiation au tour en groupe</h3><span class="prix">60&nbsp;€</span></div>
+            <p>Deux heures pour découvrir le tour de potier, 6 élèves par cours. Vous façonnez 2 pièces, qui sèchent, sont émaillées et cuites avant de vous être rendues un mois plus tard. Sur rendez-vous, au <a class="nowrap" href="tel:+33661174445">06 61 17 44 45</a>.</p>
+          </article>
+          <article class="formule">
+            <div class="tete"><h3>Enfants, parents, cartes cadeaux</h3></div>
+            <p>Ateliers de modelage et de tournage en groupe pour les enfants de 5 à 12 ans, atelier parent-enfant, et carte cadeau pour offrir un cours.</p>
+            <a class="lien" href="https://hymy-ceramique.com/categorie-produit/cours-de-ceramique/">Tous les cours</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="La philosophie de Sophie">
+    <blockquote class="wrap">
+      <p>«&nbsp;Faire. Plaisir. Ma philosophie dans ces deux mots.&nbsp;»</p>
+      <footer>Sophie Faiola, influencée par la Finlande et le design scandinave</footer>
+    </blockquote>
+  </section>
+
+  <section class="mesure" id="sur-mesure">
+    <div class="wrap">
+      <figure class="polaroid apparait" style="margin:0">
+        <img src="assets/hymy-ceramique-bordeaux/pots-pigments-pinceaux-atelier.webp" alt="Pots de pigments bleu et jaune, pinceaux et découpes d'oiseaux sur la table de l'atelier" loading="lazy" width="852" height="1280">
+        <span>Pigments et engobes</span>
+      </figure>
+      <div>
+        <h2>Pour les boutiques, restaurants et entreprises.</h2>
+        <p class="chapo">Vaisselle, cadeaux d'entreprise, décoration d'intérieur&nbsp;: Sophie accompagne les professionnels dans le développement de porcelaines uniques et personnalisées, au service de leur image.</p>
+        <ul class="references">
+          <li><b>Domaine de Rabba</b>Production de vaisselle</li>
+          <li><b>Restaurant Soukka</b>Décorations murales</li>
+          <li><b>Cabinet du Hâ</b>Logo sur mesure en porcelaine</li>
+          <li><b>Alcôve Edition</b>Produits exclusifs pour la boutique</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://hymy-ceramique.com/ceramique-artisanale-sur-mesure-pour-les-professionnels/">Les projets sur mesure</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Un projet, une question, une envie de vaisselle&nbsp;?</h2>
+        <p class="chapo">Pour une pièce sur mesure, un cours, une privatisation de l'atelier ou une visite du showroom, Sophie répond au téléphone et par mail.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33661174445">Appeler Sophie</a>
+          <a class="btn btn-contour" href="mailto:sophie@hymy-ceramique.com">Lui écrire</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <div class="ligne"><dt>Téléphone</dt><dd><a class="grand nowrap" href="tel:+33661174445">06 61 17 44 45</a></dd></div>
+          <div class="ligne"><dt>E-mail</dt><dd><a href="mailto:sophie@hymy-ceramique.com">sophie@hymy-ceramique.com</a></dd></div>
+          <div class="ligne"><dt>Adresse des cours</dt><dd>1, place Gabriel Delaunay, Bordeaux<br><span style="color:var(--ink-2);font-size:16px">Quartier Saint-Seurin, Croix-Blanche</span></dd></div>
+          <div class="ligne"><dt>Retrait de vos pièces, hors vacances scolaires</dt><dd>Mardi 16&nbsp;h – 21&nbsp;h<br>Mercredi 18&nbsp;h 30 – 20&nbsp;h 30</dd></div>
+          <div class="ligne"><dt>Showroom et privatisation</dt><dd>Sur rendez-vous · <a class="lien" href="https://hymy-ceramique.com/contact/">formulaire de contact</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><b>HYMY Céramique</b><small>Porcelaine artisanale fabriquée à Bordeaux</small></a>
+      <p>Artisane céramiste, membre de la filière Métiers d'Art Nouvelle-Aquitaine.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33661174445">06 61 17 44 45</a></li>
+        <li><a href="mailto:sophie@hymy-ceramique.com">sophie@hymy-ceramique.com</a></li>
+        <li>Place Gabriel Delaunay, Bordeaux</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Retrait des pièces</h3>
+      <ul>
+        <li>Mardi 16&nbsp;h – 21&nbsp;h</li>
+        <li>Mercredi 18&nbsp;h 30 – 20&nbsp;h 30</li>
+        <li>Hors vacances scolaires</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Boutique et cours</h3>
+      <ul>
+        <li><a href="https://hymy-ceramique.com/boutique/">Boutique</a></li>
+        <li><a href="https://hymy-ceramique.com/categorie-produit/cours-de-ceramique/">Cours de céramique</a></li>
+        <li><a href="https://hymy-ceramique.com/ceramique-artisanale-sur-mesure-pour-les-professionnels/">Sur mesure</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour HYMY Céramique</p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

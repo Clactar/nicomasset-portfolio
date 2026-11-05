@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gîte La Planquette · Gîte 10 à 12 personnes dans les Gorges du Tarn</title>
+<meta name="description" content="Gîte La Planquette à Rivière-sur-Tarn : maison indépendante de 10 à 12 personnes, terrain privé de 2 000 m², au cœur des Gorges du Tarn. Tarifs, logement, disponibilités.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232E3A2F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23C98B2E'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400&family=Kumbh+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F0EBE0; --base-2:#E6DECE; --surface:#FAF7F0; --encre:#26302B; --doux:#56605A;
+  --ocre:#C98B2E; --ocre-fonce:#9A6618; --sombre:#2E3A2F; --clair:#F3EEE3; --clair-doux:#C9CDBF;
+  --filet:rgba(38,48,43,.14);
+  --ombre:0 30px 60px -34px rgba(31,40,33,.55);
+  --ombre-forte:0 40px 80px -40px rgba(31,40,33,.65);
+  --w:1200px; --pad:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Kumbh Sans",ui-sans-serif,sans-serif;font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ocre);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Vollkorn",Georgia,serif;font-weight:500;margin:0;font-variant-numeric:lining-nums;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--pad)}
+.nw{white-space:nowrap}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 "Kumbh Sans",sans-serif;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--sombre);color:var(--clair)}
+.btn-plein:hover{background:var(--ocre-fonce)}
+.btn-contour{border:1.5px solid rgba(38,48,43,.55);color:var(--encre)}
+.btn-contour:hover{border-color:var(--encre);background:var(--encre);color:var(--clair)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* photos : liseré noir d'origine rogné par le cadre */
+.ph{position:relative;overflow:hidden;border-radius:18px;box-shadow:var(--ombre);background:var(--base-2)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.07)}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;line-height:1.3;padding:9px 14px;border-radius:10px;box-shadow:0 12px 24px -16px rgba(31,40,33,.6);max-width:calc(100% - 32px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(240,235,224,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:500 25px/1.05 "Vollkorn",Georgia,serif}
+.marque small{font-size:14px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--ocre-fonce)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:16px}
+.appel-court{display:none}
+
+/* héros */
+.heros{padding:72px 0 112px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5.2fr) minmax(0,6.8fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(38px,5vw,70px);line-height:1.05;font-weight:400}
+.heros .lieu{font-size:16px;color:var(--ocre-fonce);font-weight:500;margin-bottom:22px}
+.heros .chapo{margin-top:26px;font-size:19px;color:var(--doux);max-width:31em}
+.heros .actions{margin-top:34px}
+.heros .signe{margin-top:22px;font-size:16px;color:var(--doux)}
+.mosaique{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.44fr);align-items:start;padding-bottom:40px}
+.mosaique .grand{border-radius:24px;aspect-ratio:5/4.6;box-shadow:var(--ombre-forte);grid-row:1/3}
+.mosaique .grand img{object-position:36% 60%}
+.mosaique .petits{display:flex;flex-direction:column;gap:18px;margin-top:96px;margin-left:-56px;position:relative;z-index:2}
+.mosaique .petit{border-radius:14px;aspect-ratio:4/3;border:6px solid var(--surface)}
+.mosaique .petit:nth-child(2){margin-left:40px;margin-right:0}
+.mosaique .petit img{object-position:50% 55%}
+
+/* bandeau de faits */
+.faits{background:var(--base-2);padding:30px 0}
+.faits ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 34px}
+.faits li{display:flex;align-items:baseline;gap:10px;font-size:16px;color:var(--doux)}
+.faits li b{font:500 22px/1.2 "Vollkorn",Georgia,serif;color:var(--encre);font-variant-numeric:lining-nums}
+
+/* maison */
+.maison{padding:120px 0}
+.tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:end;margin-bottom:64px}
+.tete h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.tete p{font-size:19px;color:var(--doux);max-width:34em}
+.maison-corps{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:72px;align-items:start}
+.duo{position:relative;padding-bottom:110px}
+.duo .a{aspect-ratio:4/3.6;border-radius:22px}
+.duo .a img{object-position:50% 50%}
+.duo .b{position:absolute;right:-28px;bottom:0;width:58%;aspect-ratio:4/3;border-radius:14px;border:7px solid var(--surface);transform:rotate(1.5deg)}
+.duo .b img{object-position:60% 50%}
+.plan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px 48px}
+.plan h3{font-size:24px;margin-bottom:12px}
+.plan li{padding:11px 0;border-top:1px solid var(--filet);font-size:17px;line-height:1.5}
+.plan li:last-child{border-bottom:1px solid var(--filet)}
+.plan .large{grid-column:1/-1}
+.plan .large ul{columns:2;column-gap:48px}
+.plan .large li{break-inside:avoid}
+
+/* tarifs */
+.tarifs{background:var(--base-2);padding:120px 0}
+.tarifs .tete{margin-bottom:56px}
+.grille-tarifs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:start}
+.carte{background:var(--surface);border-radius:22px;padding:44px 48px;box-shadow:var(--ombre)}
+.carte h3{font-size:26px;margin-bottom:8px}
+.carte .sous{font-size:16px;color:var(--doux);margin-bottom:18px}
+.prix{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:15px 0;border-top:1px solid var(--filet);font-size:18px}
+.prix:last-of-type{border-bottom:1px solid var(--filet)}
+.prix b{font:500 22px/1.2 "Vollkorn",Georgia,serif;white-space:nowrap;font-variant-numeric:lining-nums}
+.prix span{min-width:0}
+.bloc + .bloc{margin-top:40px}
+.deux-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 40px;margin-top:40px}
+.deux-col .bloc + .bloc{margin-top:0}
+.carte-sombre{background:var(--sombre);color:var(--clair);border-radius:22px;padding:40px 40px 44px;box-shadow:var(--ombre-forte)}
+.carte-sombre h3{font-size:24px;margin-bottom:14px;color:var(--clair)}
+.carte-sombre li{padding:9px 0;border-top:1px solid rgba(243,238,227,.16);font-size:16px;line-height:1.5;color:var(--clair-doux)}
+.carte-sombre .bloc + .bloc{margin-top:30px}
+.carte-sombre .btn{margin-top:28px;background:var(--ocre);color:var(--sombre);width:100%}
+.carte-sombre .btn:hover{background:var(--clair)}
+.mention{margin-top:22px;font-size:16px;color:var(--doux)}
+
+/* autour */
+.autour{background:var(--sombre);color:var(--clair);padding:128px 0 136px}
+.autour .wrap{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,5.6fr);gap:80px;align-items:center}
+.riviere{position:relative;padding:0 0 120px}
+.riviere .a{aspect-ratio:16/11;border-radius:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.riviere .a img{transform:none;object-position:40% 50%}
+.riviere .b{position:absolute;right:-20px;bottom:0;width:54%;background:var(--surface);padding:10px 10px 0;border-radius:6px;transform:rotate(-3deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.75)}
+.riviere .b .ph{border-radius:3px;box-shadow:none;aspect-ratio:4/3}
+.riviere .b .ph img{transform:scale(1.03);transform-origin:left center}
+.riviere .b p{font:italic 400 18px/1.2 "Vollkorn",Georgia,serif;color:var(--encre);padding:12px 6px 14px}
+.autour h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08;color:var(--clair)}
+.autour .texte p{margin-top:22px;color:var(--clair-doux);font-size:18px}
+.commerces{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.commerces li{font-size:15px;padding:7px 14px;border-radius:999px;background:rgba(243,238,227,.08);color:var(--clair)}
+.autour .btn{margin-top:34px;border:1.5px solid rgba(243,238,227,.55);color:var(--clair)}
+.autour .btn:hover{background:var(--ocre);border-color:var(--ocre);color:var(--sombre)}
+
+/* citation */
+.citation{padding:128px 0 120px}
+.citation blockquote{margin:0;max-width:980px}
+.citation blockquote p{font:italic 400 clamp(28px,3.4vw,46px)/1.22 "Vollkorn",Georgia,serif;text-wrap:balance}
+.citation cite{display:block;margin-top:24px;font-style:normal;font-size:17px;color:var(--doux)}
+.citation .large{margin-top:64px;aspect-ratio:21/8;border-radius:24px}
+.citation .large img{object-position:50% 62%}
+
+/* contact */
+.contact{padding:24px 0 128px}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.contact .texte p{margin-top:20px;font-size:18px;color:var(--doux);max-width:30em}
+.contact .actions{margin-top:30px}
+.coord{background:var(--surface);border-radius:24px;padding:44px 48px;box-shadow:var(--ombre-forte)}
+.coord dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.coord .ligne{padding:18px 0;border-top:1px solid var(--filet)}
+.coord .ligne:first-child{border-top:0;padding-top:0}
+.coord dt{font-size:14px;color:var(--doux);margin-bottom:4px}
+.coord dd{margin:0;font:400 22px/1.35 "Vollkorn",Georgia,serif;font-variant-numeric:lining-nums}
+.coord dd a{text-decoration-color:rgba(201,139,46,.6);text-underline-offset:4px}
+.coord dd a:hover{color:var(--ocre-fonce)}
+.coord .liens{display:flex;flex-wrap:wrap;gap:8px 18px;font:400 16px/1.5 "Kumbh Sans",sans-serif}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 40px;font-size:16px}
+.pied .haut{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:40px}
+.pied b{display:block;font:500 26px/1.1 "Vollkorn",Georgia,serif;color:var(--clair);margin-bottom:10px}
+.pied h3{font:500 15px/1.3 "Kumbh Sans",sans-serif;color:var(--clair);margin-bottom:12px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--ocre)}
+.pied li{padding:3px 0}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(243,238,227,.12);font-size:14px;color:rgba(201,205,191,.75)}
+
+/* apparition */
+.js .rv{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:0 0;transition:none}}
+
+/* tablette */
+@media (max-width:1060px){
+  .heros .wrap,.maison-corps,.grille-tarifs,.autour .wrap,.contact .wrap,.tete{grid-template-columns:minmax(0,1fr);gap:48px}
+  .tete{gap:20px}
+  .mosaique{max-width:720px}
+  .duo{max-width:640px}
+  .riviere{max-width:640px}
+}
+@media (max-width:860px){
+  .nav a:not(.btn){display:none}
+}
+/* téléphone */
+@media (max-width:600px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:21px}
+  .marque small{font-size:13px}
+  .appel-long{display:none}.appel-court{display:inline}
+  .heros{padding:36px 0 72px}
+  .heros .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .heros .txt{display:contents}
+  .heros .lieu{order:1}.heros h1{order:2}.mosaique{order:3;margin-top:26px}.heros .chapo{order:4}.heros .actions{order:5}.heros .signe{order:6}
+  .heros .lieu{margin-bottom:14px;font-size:15px}
+  .heros .chapo{font-size:17px;margin-top:18px}
+  .mosaique{grid-template-columns:minmax(0,1fr);padding-bottom:0}
+  .mosaique .grand{aspect-ratio:4/3.1;border-radius:20px;grid-row:auto}
+  .mosaique .grand .etiquette{top:12px;bottom:auto;left:12px;font-size:14px;padding:7px 11px}
+  .mosaique .petits{flex-direction:row;margin:-34px 10px 0;gap:12px}
+  .mosaique .petit{flex:1;min-width:0;border-width:4px}
+  .mosaique .petit:nth-child(2){margin-left:0;margin-top:18px}
+  .faits{padding:24px 0}
+  .faits ul{flex-direction:column;gap:8px}
+  .maison,.tarifs{padding:80px 0}
+  .tete{margin-bottom:40px}
+  .tete p{font-size:17px}
+  .duo{padding-bottom:80px}
+  .duo .b{right:-8px}
+  .plan{grid-template-columns:minmax(0,1fr);gap:32px}
+  .plan .large ul{columns:1}
+  .carte{padding:28px 22px}
+  .carte-sombre{padding:30px 22px}
+  .deux-col{grid-template-columns:minmax(0,1fr)}
+  .prix{font-size:17px}
+  .autour{padding:84px 0 90px}
+  .riviere{padding-bottom:90px}
+  .riviere .b{right:-6px;width:60%}
+  .citation{padding:84px 0 80px}
+  .citation .large{aspect-ratio:4/3;margin-top:40px}
+  .contact{padding:8px 0 88px}
+  .coord{padding:28px 22px}
+  .coord dd{font-size:20px}
+  .pied .haut{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>La Planquette</b><small>Gîte · Gorges du Tarn</small></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#maison">La maison</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#autour">Autour du gîte</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-plein" href="tel:+33672068127"><span class="appel-long">06 72 06 81 27</span><span class="appel-court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="txt">
+        <p class="lieu">Rivière-sur-Tarn, entre Millau et Sainte-Enimie</p>
+        <h1>Toute une maison pour 10 à 12, dans les Gorges du Tarn.</h1>
+        <p class="chapo">Une maison indépendante et son grand terrain privé, au cœur du village : la rivière, les commerces, les sites à visiter et les activités de pleine nature sont tout près.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#tarifs">Voir les tarifs</a>
+          <a class="btn btn-contour" href="tel:+33672068127">06 72 06 81 27</a>
+        </div>
+        <p class="signe">Marité et Alain vous accueillent.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="ph grand" style="margin:0">
+          <img src="assets/gite-la-planquette-riviere-sur-tarn/terrasse-couverte-vue-vallee.webp" alt="La grande terrasse couverte, sa table pour une dizaine et la vue sur les falaises" width="1600" height="756" fetchpriority="high">
+          <figcaption class="etiquette">La grande terrasse, au-dessus du jardin</figcaption>
+        </figure>
+        <div class="petits">
+          <div class="ph petit rv"><img src="assets/gite-la-planquette-riviere-sur-tarn/salle-a-manger-fenetre-montagne.webp" alt="La salle à manger, fenêtre ouverte sur la montagne" width="1600" height="756" loading="lazy"></div>
+          <div class="ph petit rv"><img src="assets/gite-la-planquette-riviere-sur-tarn/chambre-armoire-miroir.webp" alt="Une chambre double, fenêtre sur la montagne" width="1600" height="756" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><b>10 à 12</b> personnes</li>
+        <li><b>4</b> chambres et 2 canapés convertibles</li>
+        <li><b>100&nbsp;m²</b> sur 2 niveaux</li>
+        <li><b>2 000&nbsp;m²</b> de terrain privé</li>
+        <li><b>Gîte ★★★</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="maison" id="maison">
+    <div class="wrap">
+      <div class="tete">
+        <h2>De la place pour tout le monde, dedans comme dehors.</h2>
+        <p>Une maison individuelle de 100&nbsp;m² sur deux niveaux, avec quatre chambres séparées, deux grands canapés convertibles et de grands espaces communs. Les draps sont fournis et les lits faits à votre arrivée.</p>
+      </div>
+      <div class="maison-corps">
+        <div class="duo">
+          <div class="ph a rv"><img src="assets/gite-la-planquette-riviere-sur-tarn/piece-a-vivre-charpente-bois.webp" alt="La pièce à vivre sous charpente en bois, grande table dressée" width="1600" height="756" loading="lazy"></div>
+          <div class="ph b rv"><img src="assets/gite-la-planquette-riviere-sur-tarn/chambre-papier-peint-bleu.webp" alt="Une chambre double au papier peint bleu canard" width="1600" height="756" loading="lazy"><span class="etiquette">Une des 4 chambres</span></div>
+        </div>
+        <div class="plan">
+          <div>
+            <h3>Au rez-de-chaussée</h3>
+            <ul>
+              <li>Grande pièce à vivre de 35&nbsp;m², ouverte sur la terrasse</li>
+              <li>Salle à manger</li>
+              <li>Salon avec 2 grands canapés convertibles</li>
+              <li>Cuisine intégrée entièrement équipée, sur une petite terrasse côté rue</li>
+              <li>Chambre pour 2 (lit de 140), côté jardin</li>
+              <li>Salle de bains et WC indépendant</li>
+            </ul>
+          </div>
+          <div>
+            <h3>À l'étage</h3>
+            <ul>
+              <li>3 chambres (lits de 140), dont une avec un couchage d'appoint (90)</li>
+              <li>Salle d'eau et WC</li>
+            </ul>
+            <h3 style="margin-top:34px">Pour les petits</h3>
+            <ul>
+              <li>Lit bébé pliant et surmatelas, chaise haute</li>
+              <li>Baignoire 0 à 6 mois, matelas à langer, tapis de jeux</li>
+            </ul>
+          </div>
+          <div class="large">
+            <h3>Dehors</h3>
+            <ul>
+              <li>Grande terrasse avec salon de jardin, chaises longues et barbecue à gaz</li>
+              <li>Espace boulodrome couvert</li>
+              <li>Terrain arboré de 2 000&nbsp;m² avec parking et aire de jeux</li>
+              <li>Local sécurisé pour vélos et motos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tarifs" id="tarifs">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Les tarifs, toutes charges comprises.</h2>
+        <p>Les prix varient selon la saison et la durée du séjour. Eau, électricité et chauffage sont compris, hors taxe de séjour. Pour une demande particulière, Marité et Alain restent à votre disposition.</p>
+      </div>
+      <div class="grille-tarifs">
+        <div class="carte">
+          <div class="bloc">
+            <h3>À la semaine</h3>
+            <p class="sous">Selon la saison</p>
+            <div class="prix"><span>Très basse saison</span><b>590&nbsp;€</b></div>
+            <div class="prix"><span>Basse saison</span><b>690&nbsp;€</b></div>
+            <div class="prix"><span>Moyenne saison</span><b>790&nbsp;€</b></div>
+            <div class="prix"><span>Haute saison</span><b>890&nbsp;€</b></div>
+            <div class="prix"><span>Très haute saison</span><b>1 290&nbsp;€</b></div>
+          </div>
+          <div class="deux-col">
+            <div class="bloc">
+              <h3>Le week-end</h3>
+              <div class="prix"><span>2 nuitées</span><b>480&nbsp;€</b></div>
+              <div class="prix"><span>Week-end prolongé</span><b>Sur demande</b></div>
+            </div>
+            <div class="bloc">
+              <h3>En option</h3>
+              <div class="prix"><span>Ménage de sortie</span><b>100&nbsp;€</b></div>
+              <div class="prix"><span>Kit de toilette, le kit</span><b>5&nbsp;€</b></div>
+            </div>
+          </div>
+        </div>
+        <aside class="carte-sombre">
+          <div class="bloc">
+            <h3>Compris dans le prix</h3>
+            <ul>
+              <li>Draps fournis et lits faits à l'arrivée</li>
+              <li>Wifi gratuit</li>
+              <li>Équipement de puériculture</li>
+              <li>Terrain de 2 000&nbsp;m² et parking privé</li>
+              <li>Local sécurisé pour vélos et motos</li>
+            </ul>
+          </div>
+          <div class="bloc">
+            <h3>Pour réserver</h3>
+            <ul>
+              <li>Acompte à la réservation</li>
+              <li>Solde un mois avant la remise des clés, ou sur place en espèces</li>
+              <li>Caution à l'arrivée</li>
+              <li>Chèque, virement ou espèces</li>
+              <li>Animaux non admis</li>
+            </ul>
+          </div>
+          <a class="btn" href="https://gitelaplanquette.fr/disponibilites-tarifs-gite-gorges-du-tarn-10-personnes/">Voir les disponibilités</a>
+        </aside>
+      </div>
+      <p class="mention">Conditions d'annulation précisées lors de la réservation.</p>
+    </div>
+  </section>
+
+  <section class="autour" id="autour">
+    <div class="wrap">
+      <div class="riviere">
+        <div class="ph a rv"><img src="assets/gite-la-planquette-riviere-sur-tarn/plage-galets-gorges-du-tarn.webp" alt="Plage de galets et eau claire du Tarn, au pied des falaises" width="1600" height="900" loading="lazy"></div>
+        <figure class="b rv" style="margin:0">
+          <div class="ph"><img src="assets/gite-la-planquette-riviere-sur-tarn/riviere-tarn-chateau-arbres.webp" alt="Le Tarn, calme et vert, et la tour d'un château dans les arbres" width="1600" height="789" loading="lazy"></div>
+          <figcaption><p>Le Tarn</p></figcaption>
+        </figure>
+      </div>
+      <div class="texte">
+        <h2>La rivière à la sortie du village.</h2>
+        <p>Au cœur des Grands Causses, dans les Gorges du Tarn classées au patrimoine mondial de l'UNESCO. À la sortie du village, de jolies petites plages de galets, idéales pour la baignade en famille ou entre amis.</p>
+        <p>Et dans le village, tout est à proximité :</p>
+        <ul class="commerces">
+          <li>Boulangerie</li><li>Boucherie</li><li>Épicerie</li><li>Restaurants</li><li>Office de tourisme</li><li>Coopérative fruitière</li><li>Produits locaux</li><li>Distributeur de billets</li>
+        </ul>
+        <a class="btn" href="https://gitelaplanquette.fr/activites-gorges-du-tarn/">Les activités autour du gîte</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="wrap">
+      <blockquote>
+        <p>« Revenez à l'essentiel… vivez de merveilleux moments en famille, entre amis, entre sportifs. Un espace de bien-être pour les adultes, un petit paradis pour les enfants. »</p>
+        <cite>Marité et Alain</cite>
+      </blockquote>
+      <figure class="ph large rv" style="margin-block:64px 0;margin-inline:0">
+        <img src="assets/gite-la-planquette-riviere-sur-tarn/jardin-maisonnette-enfants.webp" alt="Le jardin arboré, la maisonnette des enfants et la table ronde sous le parasol" width="1600" height="756" loading="lazy">
+        <figcaption class="etiquette">La maisonnette, dans le terrain de 2 000&nbsp;m²</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Une date, une question ?</h2>
+        <p>Pas de réservation en ligne : la demande se fait par téléphone, par mail ou par le formulaire de contact. Au plaisir de vous accueillir.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33672068127">Appeler le 06 72 06 81 27</a>
+          <a class="btn btn-contour" href="mailto:negri.alain@orange.fr">Écrire un mail</a>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <div class="ligne"><dt>Téléphone</dt><dd><a href="tel:+33672068127" class="nw">06 72 06 81 27</a></dd></div>
+          <div class="ligne"><dt>E-mail</dt><dd><a href="mailto:negri.alain@orange.fr">negri.alain@orange.fr</a></dd></div>
+          <div class="ligne"><dt>Adresse</dt><dd>4 route des Gorges du Tarn<br>12640 Rivière-sur-Tarn</dd></div>
+          <div class="ligne"><dt>En savoir plus</dt><dd class="liens">
+            <a href="https://gitelaplanquette.fr/disponibilites-tarifs-gite-gorges-du-tarn-10-personnes/">Disponibilités</a>
+            <a href="https://gitelaplanquette.fr/contact/">Formulaire de contact</a>
+            <a href="https://gitelaplanquette.fr/avis/">Avis des voyageurs</a>
+          </dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="haut">
+      <div>
+        <b>La Planquette</b>
+        <p>Gîte de 10 à 12 personnes dans les Gorges du Tarn. Au plaisir de vous accueillir.</p>
+      </div>
+      <div>
+        <h3>Coordonnées</h3>
+        <ul>
+          <li><a href="tel:+33672068127" class="nw">06 72 06 81 27</a></li>
+          <li><a href="mailto:negri.alain@orange.fr">negri.alain@orange.fr</a></li>
+          <li>4 route des Gorges du Tarn, 12640 Rivière-sur-Tarn</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Le gîte</h3>
+        <ul>
+          <li><a href="https://gitelaplanquette.fr/logement-et-equipements-gite-gorges-du-tarn/">Logement et équipements</a></li>
+          <li><a href="https://gitelaplanquette.fr/activites-gorges-du-tarn/">Activités dans les Gorges du Tarn</a></li>
+          <li><a href="https://gitelaplanquette.fr/disponibilites-tarifs-gite-gorges-du-tarn-10-personnes/">Disponibilités et tarifs</a></li>
+          <li><a href="https://gitelaplanquette.fr/avis/">Avis</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour le Gîte La Planquette</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

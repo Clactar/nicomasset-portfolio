@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>L'Artisan Décorateur · Maître artisan tapissier à Nantes</title>
+<meta name="description" content="L'Artisan Décorateur, Nathanaëlle, maître artisan tapissier : réfection de sièges, confection de rideaux, tissus d'ameublement d'éditeurs. 2 rue Yves Bodiguel, Nantes. 02 40 12 12 44.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F4E8C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='38' fill='%23F7F5F1'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Afacad:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EBE7E1; --base-2:#E1DCD3; --surface:#F7F5F1; --encre:#22242B; --encre-2:#565862;
+  --accent:#2F4E8C; --accent-fonce:#243E72; --pale:#DCE3EF; --pale-2:#C9D3E5; --sombre:#22242B; --laiton:#B08A55;
+  --ombre:0 30px 60px -34px rgba(34,36,43,.6);
+  --display:'Italiana', 'Didot', Georgia, serif; --texte:'Afacad', 'Gill Sans', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:19px;line-height:1.6}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.06;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1200px,100% - 40px);margin-inline:auto}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(235,231,225,.95);border-bottom:1px solid rgba(34,36,43,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:27px}
+.marque small{font-size:14px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16.5px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 28px;font-size:17.5px;font-weight:500;text-decoration:none;border:1.5px solid var(--encre);line-height:1.2;text-align:center;transition:transform .25s ease, background .25s ease, color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface);box-shadow:0 16px 30px -18px rgba(47,78,140,.95)}
+.btn-plein:hover{background:var(--accent-fonce);border-color:var(--accent-fonce)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-tel{padding:10px 18px;font-size:16px;white-space:nowrap;border-color:rgba(34,36,43,.3)}
+.btn-tel .court{display:none}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* Capiton dessiné */
+.capiton{
+  background-color:var(--pale);
+  background-image:
+    radial-gradient(circle,#8B9DC2 0 3.4px,rgba(139,157,194,.35) 4.4px,transparent 6px),
+    radial-gradient(circle,#8B9DC2 0 3.4px,rgba(139,157,194,.35) 4.4px,transparent 6px),
+    radial-gradient(ellipse 46% 46% at 50% 50%,rgba(247,245,241,.75),transparent 72%),
+    radial-gradient(ellipse 46% 46% at 50% 50%,rgba(247,245,241,.75),transparent 72%),
+    linear-gradient(45deg,transparent calc(50% - 1px),rgba(47,78,140,.22) 50%,transparent calc(50% + 1px)),
+    linear-gradient(-45deg,transparent calc(50% - 1px),rgba(47,78,140,.22) 50%,transparent calc(50% + 1px));
+  background-size:64px 64px;
+  background-position:0 0,32px 32px,32px 0,0 32px,0 0,0 0;
+}
+
+/* Héros */
+.heros{padding:72px 0 128px}
+.heros .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"titre visuel" "texte visuel";column-gap:72px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(44px,6.2vw,92px);line-height:1.02;align-self:end;letter-spacing:.005em}
+.heros .texte{grid-area:texte;align-self:start;margin-top:28px}
+.heros .texte p{font-size:20px;color:var(--encre-2);max-width:28em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.visuel{grid-area:visuel;position:relative;padding:56px 0 0 0}
+.visuel .capiton{position:absolute;top:0;right:0;width:86%;height:88%;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(47,78,140,.12),0 30px 60px -40px rgba(34,36,43,.4)}
+.visuel .photo{position:relative;width:min(520px,82%);border-radius:18px;overflow:hidden;box-shadow:0 46px 80px -40px rgba(34,36,43,.75)}
+.visuel .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);border-radius:999px;padding:8px 16px;font-size:15px;line-height:1.3;box-shadow:0 12px 28px -14px rgba(34,36,43,.75)}
+.visuel .bouton-capiton{position:absolute;right:7%;bottom:20%;width:min(150px,30%);aspect-ratio:1;border-radius:50%;background:var(--surface);display:grid;place-content:center;text-align:center;box-shadow:var(--ombre);padding:10px}
+.bouton-capiton b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;color:var(--accent)}
+.bouton-capiton span{font-size:13.5px;line-height:1.3;color:var(--encre-2);margin-top:4px}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:17px}
+.faits li{display:flex;align-items:center;gap:14px}
+.faits li+li::before{content:"";width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#B4C1DB,var(--accent));box-shadow:0 1px 2px rgba(34,36,43,.35);flex:none}
+
+/* Avant / après */
+.reprise{padding:128px 0}
+.reprise .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:80px;align-items:center}
+.reprise h2{font-size:clamp(36px,4.4vw,64px)}
+.reprise .txt p{margin-top:22px;color:var(--encre-2);max-width:28em}
+.reprise .citation{margin-top:30px;padding-top:24px;border-top:1px solid rgba(34,36,43,.16);font-family:var(--display);font-size:28px;line-height:1.25;color:var(--encre)}
+.reprise .citation small{display:block;font-family:var(--texte);font-size:15.5px;color:var(--encre-2);margin-top:10px}
+.paire{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);align-items:end}
+.paire figure{margin:0;position:relative}
+.paire .avant{z-index:1;transform:rotate(-3deg) translateX(34px);margin-bottom:56px}
+.paire .avant .ph{border-radius:14px;overflow:hidden;border:9px solid var(--surface);box-shadow:var(--ombre)}
+.paire .avant img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:100% 100%;transform:scale(1.13);transform-origin:100% 100%;filter:saturate(.85)}
+.paire .apres .ph{border-radius:20px;overflow:hidden;box-shadow:0 46px 80px -40px rgba(34,36,43,.75)}
+.paire .apres img{width:100%;aspect-ratio:4/5.4;object-fit:cover;object-position:50% 40%}
+.paire .marque-ph{position:absolute;top:18px;left:18px;background:var(--surface);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:500;box-shadow:0 10px 24px -14px rgba(34,36,43,.7);z-index:2}
+.paire .apres .marque-ph{background:var(--accent);color:var(--surface);left:auto;right:18px}
+
+/* Nuancier des savoir-faire */
+.nuancier{padding:24px 0 136px}
+.nuancier .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end}
+.nuancier h2{font-size:clamp(36px,4.4vw,62px)}
+.nuancier .tete p{color:var(--encre-2);max-width:30em}
+.echantillons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:64px;align-items:start}
+.ech{position:relative}
+.ech::after{content:"";position:absolute;left:8%;right:8%;bottom:-6px;height:40px;border-radius:50%;background:rgba(34,36,43,.16);filter:blur(18px);z-index:-1}
+.tissu{background:var(--surface);padding:12px 12px 36px;border-radius:10px 10px 0 0;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 9px) no-repeat,conic-gradient(from -45deg at 50% 100%,#000 90deg,#0000 0) bottom/18px 9px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 9px) no-repeat,conic-gradient(from -45deg at 50% 100%,#000 90deg,#0000 0) bottom/18px 9px repeat-x}
+.ech:nth-child(2){margin-top:56px}
+.ech:nth-child(3){margin-top:18px}
+.ech:nth-child(4){margin-top:76px}
+.ech .ph{border-radius:8px;overflow:hidden}
+.ech img{width:100%;aspect-ratio:1/1.12;object-fit:cover}
+.ech h3{font-size:27px;margin-top:18px;padding-inline:6px}
+.ech p{font-size:16.5px;color:var(--encre-2);margin-top:8px;padding-inline:6px;line-height:1.45}
+.ech .attache{position:absolute;z-index:1;top:-1px;left:50%;width:44px;height:14px;transform:translateX(-50%);background:var(--accent);border-radius:0 0 6px 6px;opacity:.85}
+
+/* Citation, fond sombre */
+.parole{background:var(--sombre);color:var(--surface);padding:128px 0}
+.parole .env{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:88px;align-items:center}
+.parole blockquote{margin:0;font-family:var(--display);font-size:clamp(40px,5.6vw,84px);line-height:1.04}
+.parole .suite{margin-top:34px;font-size:20px;color:rgba(247,245,241,.75);max-width:30em}
+.parole .suite b{display:block;font-weight:500;color:var(--surface);margin-top:14px;font-size:17px}
+.parole .ph{border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -36px rgba(0,0,0,.8);position:relative}
+.parole .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 70%}
+.parole .ph .etiquette{left:16px;bottom:16px}
+
+/* Boutique */
+.boutique{padding:128px 0}
+.boutique .scene{position:relative}
+.boutique .vitrine{border-radius:24px;overflow:hidden;box-shadow:0 46px 90px -50px rgba(34,36,43,.7);width:72%}
+.boutique .vitrine img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.boutique .vitrine .etiquette{left:20px;bottom:20px}
+.boutique .fiche{position:absolute;right:0;top:50%;transform:translateY(-50%);width:min(500px,46%);background:var(--surface);border-radius:22px;padding:44px;box-shadow:0 46px 90px -44px rgba(34,36,43,.65)}
+.boutique h2{font-size:clamp(34px,3.6vw,50px)}
+.fiche dl{margin:24px 0 0;display:grid;gap:16px}
+.fiche dt{font-size:14px;color:var(--encre-2)}
+.fiche dd{margin:2px 0 0;font-size:18.5px}
+.fiche dd a{text-decoration:none;border-bottom:1px solid rgba(34,36,43,.25)}
+.fiche dd a:hover{color:var(--accent);border-color:var(--accent)}
+.fiche table{border-collapse:collapse;width:100%;font-size:17px}
+.fiche td{padding:5px 0;border-bottom:1px solid rgba(34,36,43,.1);vertical-align:top}
+.fiche td:first-child{padding-right:16px;color:var(--encre-2);width:6.5em}
+.fiche .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fiche .liens .btn{padding:11px 20px;font-size:16px}
+
+.pied{background:var(--sombre);color:rgba(247,245,241,.75);padding:72px 0 44px;font-size:17px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied b{display:block;font-family:var(--display);font-weight:400;font-size:32px;color:var(--surface);margin-bottom:10px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:500;color:rgba(247,245,241,.55);margin-bottom:12px;letter-spacing:.02em}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(247,245,241,.25)}
+.pied a:hover{color:var(--surface);border-color:var(--surface)}
+.pied p+p{margin-top:4px}
+.proposition{background:#1A1B21;color:rgba(247,245,241,.5);font-size:13.5px;text-align:center;padding:16px 20px}
+
+.js:not(.calme) .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js:not(.calme) .apparait.vu{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros{padding:40px 0 88px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "texte"}
+  .visuel{margin-top:28px;max-width:600px;width:100%;padding-top:36px}
+  .reprise .env,.parole .env,.nuancier .tete{grid-template-columns:minmax(0,1fr);gap:56px}
+  .paire{max-width:640px}
+  .echantillons{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ech:nth-child(n){margin-top:0}
+  .ech:nth-child(even){margin-top:40px}
+  .boutique .vitrine{width:100%}
+  .boutique .fiche{position:relative;top:auto;right:auto;transform:none;width:auto;margin:-80px 16px 0}
+  .pied .env{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:18px}
+  .entete .env{min-height:64px}
+  .marque b{font-size:22px}
+  .marque small{display:none}
+  .btn-tel .num{display:none}
+  .btn-tel .court{display:inline}
+  .heros h1{font-size:clamp(40px,11.4vw,50px)}
+  .heros .texte p{font-size:18.5px}
+  .visuel{padding-top:26px}
+  .visuel .photo{width:84%}
+  .visuel .capiton{width:80%;height:86%}
+  .visuel .bouton-capiton{width:min(112px,32%);right:2%;bottom:14%}
+  .bouton-capiton b{font-size:32px}
+  .bouton-capiton span{font-size:11.5px}
+  .faits ul{flex-direction:column;align-items:flex-start;padding:22px 0}
+  .faits li::before,.faits li+li::before{content:"";display:block;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#B4C1DB,var(--accent));flex:none}
+  .reprise,.boutique{padding:88px 0}
+  .paire .avant{transform:rotate(-3deg) translateX(18px);margin-bottom:36px}
+  .paire .avant .ph{border-width:6px}
+  .paire .marque-ph{top:10px;left:10px;font-size:13.5px;padding:5px 11px}
+  .paire .apres .marque-ph{right:10px}
+  .nuancier{padding:0 0 96px}
+  .echantillons{gap:16px;margin-top:44px}
+  .tissu{padding:8px 8px 30px}
+  .ech h3{font-size:22px;padding-inline:2px}
+  .ech p{font-size:15.5px;padding-inline:2px}
+  .parole{padding:88px 0}
+  .boutique .fiche{margin:-48px 0 0;padding:30px 22px}
+  .pied .env{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn,.fiche .liens .btn{width:100%}
+  .echantillons{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#haut"><b>L'Artisan Décorateur</b><small>Nathanaëlle, tapissier à Nantes</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#reprise">Réfection</a>
+      <a class="lien" href="#savoir-faire">Rideaux et tissus</a>
+      <a class="lien" href="#boutique">La boutique</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33240121244" aria-label="Appeler le 02 40 12 12 44"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="num">02 40 12 12 44</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <h1>Maître artisan tapissier, à Nantes.</h1>
+      <div class="visuel apparait">
+        <div class="capiton" aria-hidden="true"></div>
+        <figure class="photo" style="margin:0">
+          <img src="assets/artisan-decorateur-nantes/bergere-bleue-de-face.webp" alt="Bergère Louis XV refaite en tissu bleu canard, bois sculpté et clous dorés, devant les rouleaux de tissus de la boutique" width="1280" height="1600">
+          <figcaption class="etiquette">Bergère, tissu Amara de Casal</figcaption>
+        </figure>
+        <div class="bouton-capiton"><b>4,6</b><span>sur 5<br>19 avis Google</span></div>
+      </div>
+      <div class="texte">
+        <p>Nathanaëlle refait vos sièges, confectionne rideaux et voilages, et vous reçoit dans sa boutique de tissus d'ameublement d'éditeurs, 2 rue Yves Bodiguel.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33240121244">Appeler le 02 40 12 12 44</a>
+          <a class="btn btn-contour" href="#boutique">Venir à la boutique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="env">
+      <li>Maître artisan tapissier</li>
+      <li>Réfection de sièges</li>
+      <li>Confection de rideaux</li>
+      <li>Tissus d'ameublement d'éditeurs</li>
+      <li>Nantes, 2 rue Yves Bodiguel</li>
+    </ul>
+  </div>
+
+  <section class="reprise" id="reprise">
+    <div class="env">
+      <div class="txt">
+        <h2>Réfection totale.</h2>
+        <p>Garnissage refait, tissu neuf, rang de clous le long du bois sculpté&nbsp;: la même bergère, avant et après son passage à l'atelier.</p>
+        <p class="citation">«&nbsp;Réfection totale d'une bergère, elle en avait bien besoin.&nbsp;»<small>Nathanaëlle, à propos de cette bergère</small></p>
+      </div>
+      <div class="paire apparait">
+        <figure class="avant">
+          <span class="marque-ph">Avant</span>
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/bergere-avant-refection.webp" alt="La même bergère avant réfection : velours gris usé, garnissage éventré" width="1280" height="1600" loading="lazy"></div>
+        </figure>
+        <figure class="apres">
+          <span class="marque-ph">Après</span>
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/bergere-bleue-detail-clous.webp" alt="Accotoir sculpté de la bergère refaite, rang de clous dorés le long du tissu bleu" width="1280" height="1600" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="nuancier" id="savoir-faire">
+    <div class="env">
+      <div class="tete">
+        <h2>Des sièges aux fenêtres.</h2>
+        <p>Rideaux, voilages, sièges, accessoires. Les tissus d'ameublement d'éditeurs, comme Casal ou Camengo, se voient en rouleaux à la boutique.</p>
+      </div>
+      <div class="echantillons">
+        <article class="ech apparait">
+          <span class="attache" aria-hidden="true"></span>
+          <div class="tissu">
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/crapaud-rose-devant-les-tissus.webp" alt="Fauteuil crapaud refait en tissu bouclé rose saumon" width="1200" height="1600" loading="lazy" style="object-position:50% 60%"></div>
+          <h3>Réfection de sièges</h3>
+          <p>Fauteuil crapaud, tissu Orsay de Camengo.</p>
+          </div>
+        </article>
+        <article class="ech apparait">
+          <span class="attache" aria-hidden="true"></span>
+          <div class="tissu">
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/rideaux-a-plis-lin.webp" alt="Tête de rideaux à plis pincés en lin chiné gris" width="1600" height="1600" loading="lazy"></div>
+          <h3>Confection de rideaux</h3>
+          <p>Plis pincés, lin chiné, posés sur tringle.</p>
+          </div>
+        </article>
+        <article class="ech apparait">
+          <span class="attache" aria-hidden="true"></span>
+          <div class="tissu">
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/voilages-motif-branches.webp" alt="Voilages en lin écru brodés de branches" width="1600" height="1600" loading="lazy"></div>
+          <h3>Voilages</h3>
+          <p>Lin écru brodé de branches, à la fenêtre.</p>
+          </div>
+        </article>
+        <article class="ech apparait">
+          <span class="attache" aria-hidden="true"></span>
+          <div class="tissu">
+          <div class="ph"><img src="assets/artisan-decorateur-nantes/fauteuil-louis-xv-tissu-colore.webp" alt="Fauteuil Louis XV en bois foncé refait en velours imprimé bleu, vert et rose" width="1600" height="1600" loading="lazy" style="object-position:55% 50%"></div>
+          <h3>Tissus d'éditeurs</h3>
+          <p>Fauteuil Louis XV refait en velours imprimé.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="parole">
+    <div class="env">
+      <div>
+        <blockquote>«&nbsp;Être professionnel est une valeur sûre.&nbsp;»</blockquote>
+        <p class="suite">Ces deux fauteuils avaient été malmenés&nbsp;: entièrement refaits, en tissu Nymphéa de Casal, pour être à nouveau choyés.<b>Nathanaëlle</b></p>
+      </div>
+      <figure class="ph apparait" style="margin:0">
+        <img src="assets/artisan-decorateur-nantes/paire-fauteuils-medaillon-blancs.webp" alt="Paire de fauteuils médaillon refaits en tissu blanc texturé, devant la boutique" width="1600" height="1200" loading="lazy">
+        <figcaption class="etiquette">Fauteuils médaillon, tissu Nymphéa</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="boutique" id="boutique">
+    <div class="env">
+      <div class="scene">
+        <figure class="vitrine apparait" style="margin:0;position:relative">
+          <img src="assets/artisan-decorateur-nantes/devanture-boutique.webp" alt="Devanture de la boutique L'Artisan Décorateur, 2 rue Yves Bodiguel à Nantes" width="1600" height="1200" loading="lazy">
+          <figcaption class="etiquette">2 rue Yves Bodiguel, Nantes</figcaption>
+        </figure>
+        <div class="fiche">
+          <h2>La boutique</h2>
+          <dl>
+            <div><dt>Adresse</dt><dd>2 rue Yves Bodiguel, 44000 Nantes</dd></div>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33240121244" style="white-space:nowrap">02 40 12 12 44</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:artisandecorateur44@gmail.com">artisandecorateur44@gmail.com</a></dd></div>
+            <div><dt>Horaires</dt><dd>
+              <table>
+                <tr><td>Mar., jeu., ven., sam.</td><td>9&nbsp;h 30 – 12&nbsp;h 30<br>14&nbsp;h – 18&nbsp;h</td></tr>
+                <tr><td>Mercredi</td><td>voir la fiche Google</td></tr>
+                <tr><td>Lun. et dim.</td><td>Fermé</td></tr>
+              </table>
+            </dd></div>
+          </dl>
+          <div class="liens">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=L'Artisan%20D%C3%A9corateur&amp;query_place_id=ChIJxbitFKDuBUgRcVsGW-4YcAc" target="_blank" rel="noopener">Itinéraire et avis Google</a>
+            <a class="btn btn-contour" href="https://www.facebook.com/artisandecorateur" target="_blank" rel="noopener">Suivre sur Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b>L'Artisan Décorateur</b>
+      <p>Maître artisan tapissier. Réfection de sièges, confection de rideaux, tissus d'ameublement d'éditeurs.</p>
+    </div>
+    <div>
+      <h3>Boutique</h3>
+      <p>2 rue Yves Bodiguel</p>
+      <p>44000 Nantes</p>
+      <p><a href="tel:+33240121244">02 40 12 12 44</a></p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Mar., jeu., ven., sam.</p>
+      <p>9&nbsp;h 30 – 12&nbsp;h 30, 14&nbsp;h – 18&nbsp;h</p>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <p><a href="mailto:artisandecorateur44@gmail.com">E-mail</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=L'Artisan%20D%C3%A9corateur&amp;query_place_id=ChIJxbitFKDuBUgRcVsGW-4YcAc" target="_blank" rel="noopener">Fiche Google</a></p>
+      <p><a href="https://www.facebook.com/artisandecorateur" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour L'Artisan Décorateur</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

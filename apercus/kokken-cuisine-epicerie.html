@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Køkken cuisine et épicerie · Cantine nordique à Poitiers</title>
+<meta name="description" content="Køkken, cantine du midi et salon de thé à Poitiers : nouvelle cuisine nordique, tout fait maison, 24-26 rue de la Regratterie, du mardi au samedi de 9 h à 18 h.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C8102E'/%3E%3Ctext x='32' y='45' font-family='Arial Narrow,sans-serif' font-weight='700' font-size='36' text-anchor='middle' fill='%23F7F8F6'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600&family=Sofia+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#ECEEEA; --base-2:#E1E4DE; --surface:#F7F8F6; --ink:#1E2422; --ink-2:#4F5753;
+  --accent:#C8102E; --accent-d:#A50D26; --dark:#1E2B2A; --dark-2:#26383A; --dark-ink:#E4EAE7;
+  --filet:rgba(30,36,34,.16);
+  --ombre:0 30px 60px -34px rgba(30,43,42,.55);
+  --display:'Sofia Sans Condensed',sans-serif; --texte:'Sofia Sans',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-weight:400;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(36px,4.6vw,60px);line-height:1}
+p{margin:0;text-wrap:pretty}
+.nowrap{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .25s ease,background-color .25s,color .25s,border-color .25s}
+.btn-plein{background:var(--ink);color:var(--surface)}
+.btn-plein:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.btn-contour{background:transparent}
+.btn-contour:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,238,234,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px}
+.marque b{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:.08em;line-height:1}
+.marque small{font-size:15px;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:500}
+.nav a:not(.tel){text-decoration:none;color:var(--ink-2);transition:color .2s}
+.nav a:not(.tel):hover{color:var(--accent)}
+.tel{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600;white-space:nowrap;transition:background .2s,color .2s}
+.tel:hover{background:var(--ink);color:var(--surface)}
+
+/* héros : grille stricte */
+.heros{padding:clamp(32px,4vw,52px) 0 clamp(72px,9vw,120px)}
+.heros .haut{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:end}
+.heros h1{grid-column:1 / span 7;font-size:clamp(46px,6vw,86px);line-height:.96;text-transform:uppercase;letter-spacing:.005em}
+.heros .cote{grid-column:8 / span 5;padding-bottom:6px}
+.heros .chapo{color:var(--ink-2);font-size:19px;max-width:28em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.heros .bas{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;margin-top:clamp(32px,3.4vw,44px);align-items:end}
+.repere{grid-column:1 / span 2;list-style:none;margin:0;padding:0;font-size:16px;color:var(--ink-2)}
+.repere li{padding:14px 0;border-top:1px solid var(--filet)}
+.repere li:last-child{border-bottom:1px solid var(--filet)}
+.repere b{display:block;font-family:var(--display);font-weight:600;font-size:21px;color:var(--ink);line-height:1.15}
+.duo{grid-column:3 / span 10;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:8px;box-shadow:var(--ombre)}
+.note{background:var(--accent);color:var(--surface);border-radius:8px 0 0 8px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1;min-width:0}
+.note .k{font-family:var(--display);font-size:17px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.note .valeur{font-family:var(--display);font-weight:600;font-size:clamp(110px,15vw,220px);line-height:.82;letter-spacing:-.02em}
+.note .valeur small{font-size:.24em;letter-spacing:0;font-weight:500;margin-left:6px}
+.note p{font-size:18px;line-height:1.4}
+.note a{color:var(--surface);font-weight:600;text-underline-offset:4px}
+.carre{border-radius:0 8px 8px 0;overflow:hidden;aspect-ratio:1;min-width:0}
+.carre img{width:100%;height:100%;object-fit:cover;object-position:50% 72%}
+
+/* bandeau */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:24px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:16px;font-weight:500;color:var(--ink-2)}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:12px;height:2px;background:var(--accent);flex:none}
+
+/* le menu */
+.menu{padding:clamp(88px,11vw,136px) 0}
+.menu .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.menu .grande{grid-column:1 / span 6;grid-row:1 / span 2;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1;box-shadow:var(--ombre);align-self:start}
+.menu .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.menu .texte{grid-column:8 / span 5;align-self:start}
+.menu .texte p{color:var(--ink-2);margin-top:22px}
+.plats{list-style:none;margin:28px 0 0;padding:0}
+.plats li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--filet);font-size:17px}
+.plats li:last-child{border-bottom:1px solid var(--filet)}
+.plats span:last-child{color:var(--ink-2)}
+.menu .paire{grid-column:8 / span 5;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-self:end}
+.menu .paire figure{margin:0;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--ombre)}
+.menu .paire img{width:100%;height:100%;object-fit:cover}
+.menu .paire figure:first-child img{object-position:62% 50%;transform:scale(1.32);transform-origin:55% 100%}
+.menu .paire figure:last-child{margin-top:48px}
+.menu .paire figure:last-child img{object-position:50% 100%}
+.etiquette{position:absolute;left:12px;bottom:12px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:600;padding:7px 12px;border-radius:6px;box-shadow:0 10px 22px -14px rgba(30,43,42,.6)}
+
+/* sombre : la cuisine et le jardin */
+.jardin{background:var(--dark);color:var(--dark-ink);padding:clamp(88px,11vw,136px) 0}
+.jardin .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.jardin figure{grid-column:1 / span 5;margin:0;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 70px -36px rgba(0,0,0,.75)}
+.jardin figure img{width:100%;height:100%;object-fit:cover;object-position:60% 45%}
+.jardin .texte{grid-column:7 / span 6}
+.jardin h2{color:#F3F6F4;text-transform:uppercase;font-size:clamp(38px,5vw,68px)}
+.jardin p{color:#BFCBC7;margin-top:26px;max-width:30em}
+.duos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.duos div{border-top:2px solid var(--accent);padding-top:16px}
+.duos b{display:block;font-family:var(--display);font-size:28px;font-weight:600;color:#F3F6F4;line-height:1.1}
+.duos span{display:block;color:#BFCBC7;font-size:17px;margin-top:6px}
+
+/* salon de thé */
+.the{padding:clamp(88px,11vw,136px) 0 clamp(64px,8vw,104px)}
+.the .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.the .texte{grid-column:1 / span 4;align-self:start}
+.the .texte p{color:var(--ink-2);margin-top:22px}
+.the figure{margin:0;position:relative;border-radius:8px;overflow:hidden;box-shadow:var(--ombre)}
+.the figure img{width:100%;height:100%;object-fit:cover}
+.the .t1{grid-column:5 / span 3;aspect-ratio:3/4}
+.the .t1 img{object-position:50% 70%}
+.the .t2{grid-column:8 / span 3;aspect-ratio:3/4.6;margin-bottom:64px}
+.the .t2 img{object-position:50% 55%}
+.the .t3{grid-column:11 / span 2;aspect-ratio:3/4}
+.the .t3 img{object-position:50% 50%;transform:scale(1.4);transform-origin:50% 100%}
+
+/* horaires et venir */
+.venir{background:var(--surface);padding:clamp(88px,11vw,136px) 0}
+.venir .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.venir .gauche{grid-column:1 / span 5}
+.venir .droite{grid-column:7 / span 6}
+.horaires{width:100%;border-collapse:collapse;margin-top:30px;font-size:18px}
+.horaires th,.horaires td{padding:13px 0;border-top:1px solid var(--filet);text-align:left;font-weight:400}
+.horaires tr:last-child th,.horaires tr:last-child td{border-bottom:1px solid var(--filet)}
+.horaires th{font-family:var(--display);font-weight:600;font-size:21px;text-transform:uppercase;letter-spacing:.04em}
+.horaires td{text-align:right;white-space:nowrap}
+.horaires .ferme td{color:var(--ink-2)}
+.venir .remarque{color:var(--ink-2);font-size:16px;margin-top:16px}
+.fiche{background:var(--base);border-radius:8px;padding:clamp(26px,4vw,44px);box-shadow:var(--ombre)}
+.fiche .tel-grand{font-family:var(--display);font-weight:600;font-size:clamp(40px,4.6vw,60px);line-height:1;text-decoration:none;white-space:nowrap;transition:color .2s}
+.fiche .tel-grand:hover{color:var(--accent)}
+.fiche dl{margin:28px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px}
+.fiche dl div{min-width:0}
+.fiche dt{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:4px}
+.fiche dd{margin:0;font-size:18px;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none}
+.fiche dd a:hover{color:var(--accent)}
+.fiche .actions{margin-top:30px}
+
+/* pied */
+.pied{background:var(--dark);color:#BFCBC7;padding:72px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:#F3F6F4}
+.pied .accroche{margin-top:16px;max-width:22em}
+.pied h3{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#93A39E;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;color:#F3F6F4}
+.pied a:hover{color:#F28B9C}
+.signature{margin-top:64px;padding:22px 0;border-top:1px solid rgba(243,246,244,.12);font-size:14px;color:#8E9E99;text-align:center}
+
+.js .apparait{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .apparait{opacity:1;translate:none;transition:none}.btn,.tel{transition:none}}
+
+@media (max-width:1000px){
+  .nav a:not(.tel){display:none}
+  .heros h1{grid-column:1 / -1}
+  .heros .cote{grid-column:1 / -1;margin-top:24px}
+  .repere{grid-column:1 / -1;order:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px;margin-top:28px}
+  .repere li:last-child{border-bottom:0}
+  .duo{grid-column:1 / -1}
+  .menu .grande,.menu .texte,.menu .paire{grid-column:1 / -1;grid-row:auto}
+  .jardin figure,.jardin .texte{grid-column:1 / -1}
+  .jardin figure{aspect-ratio:4/3.4}
+  .the .texte{grid-column:1 / -1}
+  .the .t1{grid-column:1 / span 4}
+  .the .t2{grid-column:5 / span 4}
+  .the .t3{grid-column:9 / span 4}
+  .venir .gauche,.venir .droite{grid-column:1 / -1}
+  .pied .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:25px}
+  .marque small{display:none}
+  .tel{min-height:42px;padding:0 15px;font-size:15px}
+  .heros{padding-top:28px}
+  .heros h1{font-size:clamp(40px,12.5vw,52px)}
+  .heros .bas{margin-top:24px}
+  .heros .wrap{display:flex;flex-direction:column}
+  .heros .haut{display:contents}
+  .heros h1{order:1}
+  .heros .bas{order:2}
+  .heros .cote{order:3;margin-top:28px}
+  .duo{grid-template-columns:minmax(0,1fr)}
+  .carre{border-radius:8px 8px 0 0;order:1}
+  .note{order:2;aspect-ratio:auto;border-radius:0 0 8px 8px;flex-direction:row;flex-wrap:wrap;align-items:flex-end;gap:10px 20px}
+  .note .k{flex-basis:100%}
+  .note .valeur{font-size:96px}
+  .note p{flex:1 1 140px}
+  .repere{grid-template-columns:minmax(0,1fr)}
+  .repere li:last-child{border-bottom:1px solid var(--filet)}
+  .faits ul{flex-direction:column;align-items:flex-start;gap:10px}
+  .menu .paire figure:last-child{margin-top:32px}
+  .duos{grid-template-columns:minmax(0,1fr)}
+  .the .t1{grid-column:1 / span 6}
+  .the .t2{grid-column:7 / span 6;margin-bottom:40px}
+  .the .t3{display:none}
+  .fiche dl{grid-template-columns:minmax(0,1fr)}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .fiche .tel-grand{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>KØKKEN</b><small>cuisine &amp; épicerie, Poitiers</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu">Au menu</a>
+      <a href="#cuisine">En cuisine</a>
+      <a href="#salon-de-the">Salon de thé</a>
+      <a href="#venir">Horaires</a>
+      <a class="tel" href="tel:+33695264325">06 95 26 43 25</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="haut">
+        <h1>Nouvelle cuisine nordique, tout fait maison.</h1>
+        <div class="cote">
+          <p class="chapo">Cantine du midi et salon de thé, rue de la Regratterie à Poitiers. Des assiettes de saison, faites maison, dans une ambiance chaleureuse.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#venir">Venir à la cantine</a>
+            <a class="btn btn-contour" href="tel:+33695264325">06 95 26 43 25</a>
+          </div>
+        </div>
+      </div>
+      <div class="bas">
+        <ul class="repere">
+          <li><b>Mardi → samedi</b>9&nbsp;h – 18&nbsp;h</li>
+          <li><b>24-26 rue de la Regratterie</b>86000 Poitiers</li>
+          <li><b>Tout fait maison</b>Simon en cuisine</li>
+        </ul>
+        <div class="duo">
+          <div class="note">
+            <span class="k">Note Google</span>
+            <span class="valeur">4,9<small>/ 5</small></span>
+            <p>sur 163 avis. <a href="https://www.google.com/maps/search/?api=1&amp;query=K%C3%B8kken%20cuisine%20et%20%C3%A9picerie%20Poitiers">Voir les avis</a></p>
+          </div>
+          <figure class="carre" style="margin:0">
+            <img src="assets/kokken-cuisine-epicerie/smorrebrod-asperges-et-veloute-fleurs.webp" alt="Assiette d'asperges blanches aux fraises, velouté aux herbes et fleurs, smørrebrød au fenouil sur planche de bois" width="1279" height="1600" fetchpriority="high">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Cantine du midi et salon de thé</li>
+      <li>Nouvelle cuisine nordique</li>
+      <li>Produits de saison, locaux et/ou bio</li>
+      <li>Tout est fait maison</li>
+      <li>Fermé dimanche et lundi</li>
+    </ul>
+  </div>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <figure class="grande apparait" style="margin:0">
+        <img src="assets/kokken-cuisine-epicerie/veloute-salade-et-smorrebrod-vitrine-kokken.webp" alt="Plateau du midi devant la vitrine Køkken : velouté à la pensée, salade à la burrata et tartine à l'œuf" loading="lazy" width="1600" height="1600">
+        <figcaption class="etiquette">Le plateau du midi, devant la vitrine</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Le menu de la semaine.</h2>
+        <p>Smørrebrød sur pain noir, veloutés, salades et assiettes du jour&nbsp;: une cuisine nordique de saison, avec des produits locaux et/ou bio, des fleurs comestibles, et tout est fait maison.</p>
+        <ul class="plats">
+          <li><span>Smørrebrød</span><span>tartines de pain noir</span></li>
+          <li><span>Planche nørdik</span><span>soupe, assiette, tartine</span></li>
+          <li><span>Desserts</span><span>tartes et gâteaux de saison</span></li>
+        </ul>
+      </div>
+      <div class="paire">
+        <figure class="apparait">
+          <img src="assets/kokken-cuisine-epicerie/planche-nordik-soupe-et-salade.webp" alt="Planche nørdik : soupe froide aux fleurs, part de cake aux herbes et tartine aux tomates" loading="lazy" width="1600" height="1600">
+          <figcaption class="etiquette">Planche nørdik</figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/kokken-cuisine-epicerie/tartines-smorrebrod-concombre-fleurs.webp" alt="Rangée de smørrebrød au concombre, fenouil et pensées" loading="lazy" width="1279" height="1600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="jardin" id="cuisine">
+    <div class="wrap">
+      <figure class="apparait">
+        <img src="assets/kokken-cuisine-epicerie/planche-fleurs-comestibles-du-jardin.webp" alt="Planche de fleurs comestibles : bourrache, capucine, souci, pensées" loading="lazy" width="1200" height="1600">
+        <figcaption class="etiquette">Bourrache, souci, pensées</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Simon en cuisine, Céline au jardin.</h2>
+        <p>Chez Køkken, Simon est en cuisine, Céline au jardin et en cueillette. Tout est fait maison, avec des produits de saison, locaux et/ou bio.</p>
+        <div class="duos">
+          <div><b>Le midi</b><span>La cantine, autour du menu de la semaine.</span></div>
+          <div><b>Le salon de thé</b><span>Une pause sucrée, du mardi au samedi.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="the" id="salon-de-the">
+    <div class="wrap">
+      <div class="texte">
+        <h2>Salon de thé.</h2>
+        <p>Tartelettes aux fraises, gâteaux à la chantilly, tartes rustiques&nbsp;: des desserts de saison, faits maison et souvent fleuris.</p>
+      </div>
+      <figure class="t1 apparait">
+        <img src="assets/kokken-cuisine-epicerie/tartelette-fraises-fleurs-comestibles.webp" alt="Tartelette à la crème, fraises et fleurs comestibles" loading="lazy" width="1279" height="1600">
+      </figure>
+      <figure class="t2 apparait">
+        <img src="assets/kokken-cuisine-epicerie/gateau-fraises-chantilly-fleurs.webp" alt="Gâteau à la chantilly, fraises, menthe et fleurs bleues" loading="lazy" width="1200" height="1600">
+        <figcaption class="etiquette">Gâteau aux fraises</figcaption>
+      </figure>
+      <figure class="t3 apparait">
+        <img src="assets/kokken-cuisine-epicerie/tarte-rustique-prunes.webp" alt="Tarte rustique aux prunes et reines-claudes" loading="lazy" width="1600" height="1600">
+      </figure>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <div class="gauche">
+        <h2>Horaires.</h2>
+        <table class="horaires">
+          <tbody>
+            <tr class="ferme"><th scope="row">Lundi</th><td>Fermé</td></tr>
+            <tr><th scope="row">Mardi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+            <tr><th scope="row">Mercredi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+            <tr><th scope="row">Jeudi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+            <tr><th scope="row">Vendredi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+            <tr><th scope="row">Samedi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+            <tr class="ferme"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="remarque">Les jours fériés, les horaires peuvent changer&nbsp;: un coup de fil avant de venir.</p>
+      </div>
+      <div class="droite">
+        <h2>Venir chez Køkken.</h2>
+        <div class="fiche" style="margin-top:30px">
+          <a class="tel-grand" href="tel:+33695264325">06 95 26 43 25</a>
+          <dl>
+            <div><dt>Adresse</dt><dd>24-26 rue de la Regratterie<br>86000 Poitiers</dd></div>
+            <div><dt>Note Google</dt><dd>4,9 sur 5, 163 avis</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:smorrebrod86@ecomail.fr">smorrebrod86@ecomail.fr</a></dd></div>
+            <div><dt>Ouvert</dt><dd>Du mardi au samedi, <span class="nowrap">9&nbsp;h – 18&nbsp;h</span></dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=K%C3%B8kken%20cuisine%20et%20%C3%A9picerie%20Poitiers">Voir les avis Google</a>
+            <a class="btn btn-contour" href="https://www.facebook.com/people/K%C3%B8kken-cuisine-et-%C3%A9picerie/100083331761297/">Page Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><b>KØKKEN</b></a>
+      <p class="accroche">Cuisine et épicerie. Cantine du midi et salon de thé, nouvelle cuisine nordique à Poitiers.</p>
+    </div>
+    <div>
+      <h3>Adresse</h3>
+      <ul>
+        <li>24-26 rue de la Regratterie</li>
+        <li>86000 Poitiers</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Mardi au samedi</li>
+        <li>9&nbsp;h – 18&nbsp;h</li>
+        <li>Fermé dimanche et lundi</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33695264325">06 95 26 43 25</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=K%C3%B8kken%20cuisine%20et%20%C3%A9picerie%20Poitiers">Fiche Google</a></li>
+        <li><a href="https://www.facebook.com/people/K%C3%B8kken-cuisine-et-%C3%A9picerie/100083331761297/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Køkken cuisine et épicerie</p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

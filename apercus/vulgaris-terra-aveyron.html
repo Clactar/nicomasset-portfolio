@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Vulgaris Terra · Anthony Vieillard, animations nature en Aveyron et dans le Lot</title>
+<meta name="description" content="Animations nature et ateliers pédagogiques en Aveyron et dans le Lot : oiseaux, petites bêtes, arbres, plantes sauvages, traces de mammifères. Anthony Vieillard, 07 70 48 79 53.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232D3A2A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23EDEAD9'%3EV%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Pontano+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EDEAD9; --base-2:#E4E0CB; --surface:#F7F5EA; --encre:#252A1D; --encre-2:#4A5040;
+  --rouille:#B5562C; --rouille-pale:#E7C7A9; --sombre:#2D3A2A; --sombre-2:#3A4936; --creme:#F3F0E1;
+  --w:min(1200px, calc(100% - 48px));
+  --ombre:0 30px 60px -34px rgba(31,40,28,.55);
+  --display:"Crimson Pro", Georgia, serif; --texte:"Pontano Sans", "Trebuchet MS", sans-serif; --main:"Caveat", cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rouille);color:var(--creme)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:var(--w);margin-inline:auto}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn-plein{background:var(--sombre);color:var(--creme);box-shadow:0 14px 30px -18px rgba(31,40,28,.7)}
+.btn-plein:hover{background:var(--rouille);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--creme);transform:translateY(-2px)}
+.tel{white-space:nowrap}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(237,234,217,.94);border-bottom:1px solid rgba(37,42,29,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:-.01em}
+.marque span{font-size:13.5px;color:var(--encre-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--rouille)}
+.nav .btn{min-height:46px;padding:10px 22px;font-size:16px;color:var(--encre);background:var(--base-2)}
+.nav .btn:hover{background:var(--sombre);color:var(--creme)}
+.appel-court{display:none}
+
+/* héros */
+.heros{padding:72px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:48px;align-items:center;grid-template-areas:"texte visuel"}
+.heros-texte{grid-area:texte;display:grid;gap:0}
+.qui{font-size:16px;color:var(--encre-2);margin-bottom:22px}
+.qui b{color:var(--encre);font-weight:600}
+.heros h1{font-size:clamp(40px,5vw,72px);line-height:1.02;font-weight:400}
+.heros h1 em{font-style:italic;color:var(--rouille)}
+.chapo{margin-top:28px;max-width:34em;font-size:19px;color:var(--encre-2)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.carnet{grid-area:visuel;position:relative;justify-self:end;width:min(664px,100%);padding:34px 118px 92px 34px;border-radius:6px;
+  background-color:#FBFAF2;
+  background-image:linear-gradient(rgba(45,58,42,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(45,58,42,.075) 1px,transparent 1px);
+  background-size:22px 22px;box-shadow:0 40px 70px -40px rgba(31,40,28,.6), 0 2px 0 rgba(31,40,28,.05);transform:rotate(1.2deg)}
+.carnet::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:rgba(181,86,44,.35)}
+.carnet .collee{position:relative;transform:rotate(-1.6deg)}
+.carnet .collee img{width:100%;aspect-ratio:9/10;object-fit:cover;object-position:50% 46%;border-radius:10px;box-shadow:var(--ombre)}
+.scotch{position:absolute;width:96px;height:28px;background:rgba(231,199,169,.78);top:-12px;left:50%;transform:translateX(-50%) rotate(-4deg);border-radius:2px}
+.note{position:absolute;font-family:var(--main);font-weight:600;color:var(--rouille);line-height:1.05;font-size:28px}
+.note-1{right:12px;top:92px;width:94px;font-size:26px;transform:rotate(5deg)}
+.note-2{left:42px;bottom:24px;transform:rotate(-2deg)}
+.fleche{position:absolute;pointer-events:none}
+.fleche-1{right:52px;top:174px;width:92px;height:84px}
+.fleche-2{left:262px;bottom:30px;width:74px;height:62px}
+
+/* bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits li{font-size:16px;line-height:1.45;color:var(--encre-2);padding-left:18px;position:relative}
+.faits li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--rouille)}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:23px;color:var(--encre);line-height:1.15;margin-bottom:2px}
+
+/* ateliers */
+.ateliers{padding:120px 0}
+.ateliers .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.ateliers-tete{position:sticky;top:110px}
+.ateliers h2{font-size:clamp(34px,4vw,54px)}
+.ateliers-tete p{margin-top:20px;color:var(--encre-2);max-width:30em}
+.polaroid{margin-top:44px;background:var(--surface);padding:12px 12px 16px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-2.5deg);width:min(330px,100%);position:relative}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:40% 40%;border-radius:4px}
+.polaroid figcaption{font-size:15px;color:var(--encre-2);padding:12px 4px 0}
+.mondes{list-style:none;margin:0;padding:0;border-top:1px solid rgba(37,42,29,.18)}
+.mondes li{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:28px;padding:26px 0;border-bottom:1px solid rgba(37,42,29,.18)}
+.mondes h3{font-size:27px;line-height:1.15}
+.mondes p{font-size:17px;color:var(--encre-2)}
+.mondes .autres h3{color:var(--rouille)}
+
+/* aménagements, fond sombre */
+.amenagements{background:var(--sombre);color:var(--creme);padding:120px 0;border-radius:0}
+.amenagements .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+.amenagements h2{font-size:clamp(34px,4vw,54px)}
+.amenagements .intro{margin-top:20px;color:#CFD2BF;max-width:30em}
+.chantiers{list-style:none;margin:40px 0 0;padding:0}
+.chantiers li{display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid rgba(243,240,225,.16);font-family:var(--display);font-size:clamp(23px,2.3vw,30px);line-height:1.2}
+.chantiers li:last-child{border-bottom:1px solid rgba(243,240,225,.16)}
+.chantiers li span{font-family:var(--texte);font-size:14px;color:var(--rouille-pale);min-width:5.5em}
+.photo-nichoirs{position:relative}
+.photo-nichoirs img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 70%;border-radius:20px;box-shadow:0 34px 70px -30px rgba(0,0,0,.6)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+
+/* pour qui */
+.publics{padding:120px 0 104px}
+.publics-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end;margin-bottom:56px}
+.publics h2{font-size:clamp(34px,4vw,54px)}
+.publics-tete p{color:var(--encre-2)}
+.tableau{background:var(--surface);border-radius:22px;padding:12px 44px;box-shadow:0 30px 60px -44px rgba(31,40,28,.5)}
+.ligne{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:28px;padding:28px 0;border-bottom:1px solid rgba(37,42,29,.12);align-items:center}
+.ligne:last-child{border-bottom:0}
+.ligne h3{font-size:26px}
+.puces{display:flex;flex-wrap:wrap;gap:10px}
+.puces span{background:var(--base);border-radius:999px;padding:8px 16px;font-size:16px}
+.publics .suite{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;color:var(--encre-2)}
+.lien{color:var(--rouille);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.lien:hover{color:var(--encre)}
+
+/* galerie */
+.galerie{padding:24px 0 128px}
+.galerie h2{font-size:clamp(34px,4vw,54px);max-width:14em}
+.galerie .sous{margin-top:16px;color:var(--encre-2);max-width:34em}
+.planche{margin-top:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:start}
+.g-viaur{grid-column:1 / span 8;position:relative}
+.g-viaur img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.g-mare{grid-column:9 / span 4;margin-top:96px;position:relative}
+.g-mare img{width:100%;aspect-ratio:3/4.4;object-fit:cover;object-position:50% 60%;border-radius:14px;box-shadow:var(--ombre)}
+.avis{grid-column:2 / span 6;margin-top:-72px;position:relative;z-index:2;background:var(--surface);border-radius:16px;padding:28px 32px;box-shadow:0 30px 60px -36px rgba(31,40,28,.55)}
+.avis p{font-family:var(--display);font-size:23px;line-height:1.35;font-style:italic}
+.avis small{display:block;margin-top:12px;font-size:15px;color:var(--encre-2)}
+.vignettes{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:30px;justify-content:flex-end;margin-top:8px}
+.vignette{background:var(--surface);padding:9px 9px 12px;border-radius:5px;box-shadow:0 22px 40px -26px rgba(31,40,28,.6);width:min(214px,100%)}
+.vignette img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.vignette.large img{aspect-ratio:4/5;object-position:72% 50%}
+.vignette figcaption{font-size:14px;color:var(--encre-2);padding:8px 2px 0;line-height:1.35}
+.vignette:nth-child(1){transform:rotate(-3deg)}
+.vignette:nth-child(2){transform:rotate(2deg) translateY(18px)}
+.vignette:nth-child(3){transform:rotate(-1deg)}
+
+/* portrait + citation */
+.portrait{background:var(--surface);padding:120px 0 0}
+.portrait .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px}
+.portrait h2{font-size:clamp(34px,4vw,54px)}
+.portrait .nom{margin-top:18px;color:var(--encre-2)}
+.portrait .corps{display:grid;gap:20px;color:var(--encre-2);max-width:36em}
+.portrait .corps strong{color:var(--encre);font-weight:600}
+.citation{padding:104px 0 120px;background:var(--surface)}
+.citation blockquote{margin:0 auto;width:var(--w);border-top:1px solid rgba(37,42,29,.18);padding-top:64px}
+.citation p{font-family:var(--display);font-style:italic;font-size:clamp(32px,4.4vw,62px);line-height:1.12;max-width:20em;text-wrap:balance}
+.citation footer{margin-top:24px;font-size:16px;color:var(--encre-2)}
+
+/* contact */
+.contact{padding:120px 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(34px,4vw,54px)}
+.contact .texte{margin-top:20px;color:var(--encre-2);max-width:32em}
+.contact .actions{margin-top:32px}
+.fiche{background:var(--surface);border-radius:22px;padding:40px;box-shadow:0 36px 70px -40px rgba(31,40,28,.6);transform:rotate(-.6deg)}
+.fiche dl{margin:0;display:grid;gap:22px}
+.fiche dt{font-size:14px;color:var(--encre-2)}
+.fiche dd{margin:4px 0 0;font-family:var(--display);font-size:25px;line-height:1.25;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none}
+.fiche dd a:hover{color:var(--rouille)}
+.fiche .petit{font-family:var(--texte);font-size:16px}
+
+/* pied */
+.pied{background:var(--sombre);color:#D7D9C6;padding:80px 0 36px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b{display:block;font-family:var(--display);font-weight:400;font-size:32px;color:var(--creme);margin-bottom:10px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--rouille-pale);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--creme);text-decoration:underline}
+.pied .bas{grid-column:1 / -1;border-top:1px solid rgba(243,240,225,.14);padding-top:24px;margin-top:24px;font-size:14px;color:#A9AE98}
+.proposition{background:#232D21;color:#9DA38D;text-align:center;font-size:13px;padding:14px 20px}
+
+/* apparition douce */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .nav a:not(.btn){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  :root{--w:calc(100% - 40px)}
+  .heros{padding:32px 0 72px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr);gap:0;grid-template-areas:none}
+  .heros-texte{display:contents}
+  .qui{grid-area:auto;order:1}
+  .heros h1{order:2}
+  .carnet{grid-area:auto;order:3;justify-self:stretch;margin:30px 0 4px;width:100%}
+  .chapo{order:4}
+  .actions{order:5}
+  .ateliers,.amenagements,.publics,.portrait,.contact{padding:88px 0}
+  .galerie{padding:8px 0 88px}
+  .portrait{padding-bottom:0}
+  .citation{padding:72px 0 88px}
+  .ateliers .wrap,.amenagements .wrap,.publics-tete,.portrait .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:40px}
+  .ateliers-tete{position:static}
+  .planche{grid-template-columns:minmax(0,1fr);gap:24px}
+  .g-viaur,.g-mare,.avis,.vignettes{grid-column:1}
+  .g-mare{margin-top:0;width:min(78%,360px);justify-self:end}
+  .avis{margin-top:-120px;width:min(88%,460px)}
+  .vignettes{justify-content:center}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .nav .btn{display:none}
+  .appel-court{display:inline-flex;min-height:44px;padding:9px 18px;font-size:15px}
+  .marque b{font-size:23px}
+  .marque span{display:none}
+  .entete .wrap{min-height:64px}
+  .carnet{padding:18px 18px 74px;transform:rotate(.8deg)}
+  .note-1{display:none}.fleche-1{display:none}
+  .note-2{font-size:24px;left:22px;bottom:20px}
+  .fleche-2{left:auto;right:26px;bottom:26px;width:62px;height:52px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding:28px 0}
+  .mondes li,.ligne{grid-template-columns:minmax(0,1fr);gap:6px}
+  .tableau{padding:4px 22px}
+  .fiche{padding:28px 24px;transform:none}
+  .fiche dd{font-size:22px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .vignettes{gap:18px;padding-inline:8px}
+  .vignette{width:min(150px,42%)}
+  .vignette figcaption{font-size:13px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Vulgaris Terra</b><span>Animations nature · Aveyron et Lot</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#ateliers">Ateliers</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#portrait">Qui suis-je</a>
+      <a href="#contact">Contact</a>
+      <a class="btn tel" href="tel:+33770487953">07 70 48 79 53</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33770487953">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-texte">
+        <p class="qui"><b>Anthony Vieillard</b>, animateur, éducateur et formateur en environnement</p>
+        <h1>Explorer et comprendre, c'est <em>protéger</em> la nature.</h1>
+        <p class="chapo">Des ateliers pour reconnaître les oiseaux, les petites bêtes, les arbres et les plantes sauvages, suivre les traces des mammifères, et des relevés taxonomiques. Pour les scolaires, les collectivités et les entreprises, surtout en Aveyron et dans le Lot.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#contact">Organiser une animation</a>
+          <a class="btn btn-contour tel" href="tel:+33770487953">07 70 48 79 53</a>
+        </div>
+      </div>
+      <figure class="carnet" aria-label="Page de carnet : cartes d'empreintes au-dessus d'une trace de chevreuil">
+        <div class="collee">
+          <span class="scotch" aria-hidden="true"></span>
+          <img src="assets/vulgaris-terra-aveyron/cartes-empreintes-sur-trace.webp" alt="Une main tient un éventail de cartes d'empreintes au-dessus d'une empreinte de chevreuil, dans la terre d'un chemin herbeux" width="1200" height="1600">
+        </div>
+        <span class="note note-1">empreinte de chevreuil</span>
+        <svg class="fleche fleche-1" viewBox="0 0 92 84" aria-hidden="true"><path d="M78 4 C 70 34, 52 52, 10 60" fill="none" stroke="#B5562C" stroke-width="2.4" stroke-linecap="round"/><path d="M22 50 L 9 60 L 24 70" fill="none" stroke="#B5562C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="note note-2">clé de détermination</span>
+        <svg class="fleche fleche-2" viewBox="0 0 74 62" aria-hidden="true"><path d="M6 54 C 30 54, 52 40, 60 8" fill="none" stroke="#B5562C" stroke-width="2.4" stroke-linecap="round"/><path d="M50 16 L 60 6 L 68 19" fill="none" stroke="#B5562C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>Aveyron et Lot</b>en région Occitanie, autour de votre lieu d'activité</li>
+      <li><b>Tous les publics</b>scolaires, tourisme et vacances, entreprises et associations</li>
+      <li><b>Sept « mondes »</b>des oiseaux aux champignons, en passant par les haies</li>
+      <li><b>« Terre commune »</b>c'est ce que veut dire Vulgaris Terra, en latin</li>
+    </ul>
+  </section>
+
+  <section class="ateliers" id="ateliers">
+    <div class="wrap">
+      <div class="ateliers-tete">
+        <h2>Ateliers nature</h2>
+        <p>Une expérience immersive au cœur de la biodiversité, grâce à des ateliers vivants et interactifs. Et bien plus encore, selon vos envies et vos besoins.</p>
+        <figure class="polaroid rv">
+          <img src="assets/vulgaris-terra-aveyron/hotels-a-insectes-sur-table.webp" alt="Sept petits hôtels à insectes en bois alignés sur une table" width="1200" height="1600" loading="lazy">
+          <figcaption>Gîtes et hôtels à insectes, construits en atelier</figcaption>
+        </figure>
+      </div>
+      <ul class="mondes">
+        <li><h3>Le monde des oiseaux</h3><p>Observer et reconnaître les oiseaux : sortie avec fiches d'observation, apprentissage des jumelles, fabrication de nichoirs et mise en place d'un suivi. Aide au label Refuge LPO.</p></li>
+        <li><h3>Le monde des petites bêtes</h3><p>Construire des gîtes et des hôtels à insectes, fabriquer ses outils d'observation (aspirateur à insectes, parapluie japonais), découvrir une mare proche de votre structure.</p></li>
+        <li><h3>Le monde des mammifères</h3><p>Les traces et indices de présence animale : une clé de détermination pour les restes de repas, les habitats, les empreintes. Empreintoscope, et moulage d'empreintes si la météo le permet.</p></li>
+        <li><h3>Le monde des arbres</h3><p>Apprendre à les identifier et confectionner un arbrier, en papier recyclé sur plusieurs interventions.</p></li>
+        <li><h3>Le monde des plantes sauvages</h3><p>Les reconnaître et réaliser un herbier, possible en papier recyclé.</p></li>
+        <li><h3>Le monde des haies</h3><p>Comprendre leur rôle dans l'écosystème, puis créer et planter une haie champêtre ou bocagère près de votre structure.</p></li>
+        <li><h3>Le monde des champignons</h3><p>Créer une champignonnière, sur plusieurs interventions, si un emplacement s'y prête.</p></li>
+        <li class="autres"><h3>Et d'autres ateliers</h3><p>De 3 à 4&nbsp;heures au plus : les chauves-souris, avec fabrication de nichoirs à chiroptères, ou le biomimétisme, ces innovations inspirées par l'observation du vivant.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="amenagements">
+    <div class="wrap">
+      <div>
+        <h2>Aménagements d'espaces naturels</h2>
+        <p class="intro">La conception et la mise en place de projets qui favorisent la biodiversité, sur votre terrain.</p>
+        <ul class="chantiers">
+          <li><span>Nichoirs</span>Pour les passereaux et les rapaces</li>
+          <li><span>Mares</span>Création de mares</li>
+          <li><span>Plantations</span>Haies champêtres et arbres</li>
+        </ul>
+      </div>
+      <figure class="photo-nichoirs rv" style="margin:0">
+        <img src="assets/vulgaris-terra-aveyron/nichoirs-en-bois-atelier.webp" alt="Nichoirs et mangeoire en bois clair posés sur des tables, dont un gravé Vulgaris Terra" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Nichoirs fabriqués en atelier</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="publics">
+    <div class="wrap">
+      <div class="publics-tete">
+        <h2>Des interventions adaptées à chaque public</h2>
+        <p>Pour favoriser la découverte active de la biodiversité, le lien au vivant et l'engagement écologique, chaque intervention se conçoit pour ceux qui la suivent.</p>
+      </div>
+      <div class="tableau">
+        <div class="ligne"><h3>Scolaires</h3><div class="puces"><span>Maternelles</span><span>Élémentaires</span><span>Collèges et lycées</span><span>Centres de formation</span></div></div>
+        <div class="ligne"><h3>Tourisme et vacances</h3><div class="puces"><span>Centres de loisirs et ACM</span><span>Offices de tourisme et municipalités</span></div></div>
+        <div class="ligne"><h3>Entreprises et associations</h3><div class="puces"><span>Centres sociaux</span><span>Entreprises</span><span>Associations</span></div></div>
+      </div>
+      <p class="suite">Pour un renseignement ou un tarif, il suffit de me contacter. <a class="lien" href="https://vulgaristerra.fr/thematiques-dintervention/">Le détail des thématiques</a></p>
+    </div>
+  </section>
+
+  <section class="galerie" id="galerie">
+    <div class="wrap">
+      <h2>Sur le terrain</h2>
+      <p class="sous">Sentiers de rivière, bords de mare, chemins creux : quelques images des sorties.</p>
+      <div class="planche">
+        <figure class="g-viaur rv" style="margin:0">
+          <img src="assets/vulgaris-terra-aveyron/sentier-bord-du-viaur.webp" alt="Sentier de terre ombragé le long de la rivière Viaur, grands arbres et rocher" width="1600" height="1066" loading="lazy">
+          <span class="etiquette">Balade le long du Viaur</span>
+        </figure>
+        <figure class="g-mare rv" style="margin:0">
+          <img src="assets/vulgaris-terra-aveyron/observation-de-la-mare-de-dos.webp" alt="Vus de dos, l'animateur et une famille observent une mare couverte de nénuphars" width="900" height="1600" loading="lazy">
+          <span class="etiquette">Observation de la mare</span>
+        </figure>
+        <aside class="avis">
+          <p>« Très pédagogue et passionné, il partage avec enthousiasme ses connaissances sur le milieu naturel local. »</p>
+          <small>Eric, après une balade le long du Viaur</small>
+        </aside>
+        <div class="vignettes">
+          <figure class="vignette" style="margin:0"><img src="assets/vulgaris-terra-aveyron/papillon-demi-deuil-chardon.webp" alt="Papillon noir et blanc à damier posé sur une fleur de chardon" width="690" height="920" loading="lazy"><figcaption>Sur une fleur de chardon</figcaption></figure>
+          <figure class="vignette" style="margin:0"><img src="assets/vulgaris-terra-aveyron/balade-chemin-creux-groupe-de-dos.webp" alt="Groupe de promeneurs de dos sur un chemin creux bordé de chênes" width="690" height="920" loading="lazy"><figcaption>Balade en chemin creux</figcaption></figure>
+          <figure class="vignette large" style="margin:0"><img src="assets/vulgaris-terra-aveyron/brume-vallee-promeneur-de-dos.webp" alt="Mer de nuages dans les vallées au crépuscule, un promeneur de dos accoudé à une barrière" width="1600" height="784" loading="lazy"><figcaption>Mer de nuages au crépuscule</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portrait" id="portrait">
+    <div class="wrap">
+      <div>
+        <h2>Qui suis-je ?</h2>
+        <p class="nom">Anthony Vieillard, animateur, éducateur et formateur en environnement.</p>
+      </div>
+      <div class="corps">
+        <p>J'interviens en région Occitanie, essentiellement dans les départements de l'Aveyron et du Lot. J'ai créé <strong>Vulgaris Terra</strong> pour venir vous rencontrer et, peut-être, vous faire redécouvrir la nature autour de votre lieu d'activité.</p>
+        <p><strong>« Vulgaris Terra », en latin, signifie « Terre commune »</strong>, et c'est exactement le message que je souhaite transmettre à travers mes interventions d'animation, d'éducation et de formation sur la nature et l'environnement.</p>
+      </div>
+    </div>
+  </section>
+  <section class="citation" aria-label="Citation">
+    <blockquote>
+      <p>Nous n'avons qu'une seule Terre, alors autant s'en soucier et la protéger. Le meilleur moyen de le faire est d'apprendre à connaître ses recoins, ses habitants et ses écosystèmes.</p>
+      <footer>Anthony Vieillard</footer>
+    </blockquote>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Organiser une animation</h2>
+        <p class="texte">Enseignant, responsable associatif, entreprise engagée ou promeneur curieux : une animation à organiser, une question sur mes interventions, ou simplement un projet dont parler ? Donnez-moi quelques détails, chaque demande est traitée avec attention.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:vulgaris.terra@gmail.com">Écrire un mail</a>
+          <a class="btn btn-contour tel" href="tel:+33770487953">07 70 48 79 53</a>
+        </div>
+      </div>
+      <div class="fiche rv">
+        <dl>
+          <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33770487953">07 70 48 79 53</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:vulgaris.terra@gmail.com">vulgaris.terra@gmail.com</a></dd></div>
+          <div><dt>Secteur</dt><dd>Aveyron et Lot, en Occitanie</dd></div>
+          <div><dt>En ligne</dt><dd class="petit"><a class="lien" href="https://vulgaristerra.fr/contact/">Le formulaire de contact</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Vulgaris Terra</b>
+      <p>Animations nature et ateliers pédagogiques par Anthony Vieillard, en Aveyron et dans le Lot.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li><a class="tel" href="tel:+33770487953">07 70 48 79 53</a></li>
+        <li><a href="mailto:vulgaris.terra@gmail.com">vulgaris.terra@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Pour aller plus loin</h3>
+      <ul>
+        <li><a href="https://vulgaristerra.fr/interventions/">Mes interventions</a></li>
+        <li><a href="https://vulgaristerra.fr/thematiques-dintervention/">Thématiques d'intervention</a></li>
+        <li><a href="https://vulgaristerra.fr/contact/">Formulaire de contact</a></li>
+      </ul>
+    </div>
+    <p class="bas">Vulgaris Terra · SIRET 931&nbsp;026&nbsp;223&nbsp;00012</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Vulgaris Terra</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

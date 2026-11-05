@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kaori Constructions · constructeur bois à Isle, près de Limoges</title>
+<meta name="description" content="Kaori Constructions, constructeur bois à Isle, près de Limoges : ossatures bois, charpentes, extensions, couvertures, terrasses et fondations spéciales.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232A2620'/%3E%3Ctext x='32' y='47' font-family='Arial Narrow,sans-serif' font-weight='700' font-size='42' text-anchor='middle' fill='%23E07B24'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Encode+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#ECE6DC; --surface:#F7F3EC; --encre:#1F1C18; --accent:#E07B24; --sombre:#2A2620;
+  --doux:#5C544A; --filet:rgba(31,28,24,.16); --base-2:#E3DBCD;
+  --ombre:0 30px 60px -34px rgba(42,38,32,.55);
+  --display:"Big Shoulders Display", "Arial Narrow", sans-serif;
+  --texte:"Encode Sans", "Trebuchet MS", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,230,220,.94);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marque b{font-family:var(--display);font-size:26px;letter-spacing:.04em;text-transform:uppercase}
+.marque span{font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px}
+.nav a{text-decoration:none;color:var(--doux)}
+.nav a:hover{color:var(--encre)}
+.tel-pilule{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--encre);color:var(--surface)!important;font-weight:600;white-space:nowrap;text-decoration:none;transition:transform .2s ease, background .2s ease}
+.tel-pilule:hover{background:#3a342c;transform:translateY(-1px)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, box-shadow .25s ease, background .25s ease}
+.btn-plein{background:var(--accent);color:var(--encre)}
+.btn-plein:hover{transform:translateY(-2px);box-shadow:0 14px 28px -16px rgba(160,80,10,.7)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.nowrap{white-space:nowrap}
+
+/* Héros */
+.heros{padding:72px 0 96px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(46px,7.4vw,104px);text-transform:uppercase;line-height:.94;letter-spacing:.01em}
+.heros .chapo{font-size:19px;color:var(--doux);margin-top:28px;max-width:46ch}
+.epure{position:relative;padding:44px 52px 0 0}
+.epure figure{margin:0;position:relative}
+.epure img{width:100%;aspect-ratio:6/5;object-fit:cover;object-position:56% 50%;border-radius:16px;box-shadow:var(--ombre)}
+.cote-h{position:absolute;left:0;right:52px;top:0;height:28px}
+.cote-h::before{content:"";position:absolute;left:0;right:0;top:14px;border-top:1px solid var(--encre)}
+.cote-h i,.cote-v i{position:absolute;width:0;height:0}
+.cote-h i:first-child{left:0;top:10px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:9px solid var(--encre)}
+.cote-h i:nth-child(2){right:0;top:10px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:9px solid var(--encre)}
+.cote-h::after{content:"";position:absolute;left:0;right:0;top:4px;height:40px;border-left:1px solid var(--encre);border-right:1px solid var(--encre);opacity:.55}
+.cote-h b,.cote-v b{position:absolute;font-family:var(--texte);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--base);padding:0 10px;color:var(--encre)}
+.cote-h b{left:50%;top:4px;transform:translateX(-50%)}
+.cote-v{position:absolute;right:0;top:44px;bottom:0;width:52px}
+.cote-v::before{content:"";position:absolute;top:0;bottom:0;left:30px;border-left:1px solid var(--encre)}
+.cote-v::after{content:"";position:absolute;top:0;bottom:0;left:0;width:44px;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre);opacity:.55}
+.cote-v i:first-child{left:26px;top:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:9px solid var(--encre)}
+.cote-v i:nth-child(2){left:26px;bottom:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:9px solid var(--encre)}
+.cote-v b{left:30px;top:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:8px 14px;border-radius:10px;box-shadow:0 10px 24px -14px rgba(42,38,32,.6)}
+.point{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:1px}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2);border-block:1px solid var(--filet)}
+.faits ul{list-style:none;margin:0 auto;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:15px;font-weight:500}
+.faits li{display:flex;align-items:center}
+.faits li::before{content:"";width:14px;height:1px;background:var(--encre);margin-right:12px}
+
+/* Métiers */
+.metiers{padding:120px 0}
+.metiers .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.metiers h2,.realisations h2,.fondations h2,.contact h2{font-size:clamp(36px,4.6vw,62px);text-transform:uppercase}
+.metiers .intro{color:var(--doux);margin-top:20px}
+.collage{position:relative;margin-top:44px;padding-bottom:72px}
+.collage .g img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;border-radius:14px;box-shadow:var(--ombre)}
+.collage .p{position:absolute;right:-24px;bottom:0;width:min(46%,240px)}
+.collage .p img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:12px;border:6px solid var(--surface);box-shadow:var(--ombre)}
+.collage .g{position:relative}
+.liste{border-top:1px solid var(--encre)}
+.liste article{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:32px;padding:30px 0;border-bottom:1px solid var(--filet)}
+.liste h3{font-size:34px;text-transform:uppercase}
+.liste p{color:var(--doux);margin:0 0 10px;font-size:17px}
+.liste a.lien{font-size:15px;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--accent);padding-bottom:2px}
+.liste a.lien:hover{color:#9a4d0f}
+.liens-doubles{display:flex;flex-wrap:wrap;gap:8px 22px}
+
+/* Étapes (fond sombre) */
+.etapes{background:var(--sombre);color:#EFE8DC;padding:120px 0;position:relative}
+.etapes::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(239,232,220,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,232,220,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.etapes .wrap{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:center}
+.etapes h2{font-size:clamp(36px,4.6vw,62px);text-transform:uppercase;color:#F7F3EC}
+.etapes .sous{color:#BFB4A4;margin-top:16px}
+.frise{list-style:none;margin:48px 0 0;padding:0;position:relative}
+.frise::before{content:"";position:absolute;left:31px;top:12px;bottom:12px;border-left:1px dashed rgba(239,232,220,.35)}
+.frise li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:0 0 36px;position:relative}
+.frise li:last-child{padding-bottom:0}
+.frise .n{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--accent);display:grid;place-items:center;font-family:var(--display);font-size:30px;color:var(--accent);background:var(--sombre)}
+.frise h3{font-size:30px;text-transform:uppercase;color:#F7F3EC;margin-top:8px}
+.frise p{color:#CFC5B6;margin:8px 0 0;font-size:17px}
+.etapes figure{margin:0;position:relative}
+.etapes figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:40% 40%;border-radius:20px;box-shadow:0 40px 70px -30px rgba(0,0,0,.7)}
+.etapes .etiquette{background:#F7F3EC}
+
+/* Réalisations */
+.realisations{padding:128px 0 120px}
+.real-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:end}
+.real-tete p{color:var(--doux);margin-top:20px}
+.etiquettes{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.etiquettes li{padding:8px 16px;border-radius:999px;background:var(--surface);font-size:15px;font-weight:500;box-shadow:0 8px 20px -16px rgba(42,38,32,.6)}
+.mosaique{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:28px;margin-top:64px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.mosaique img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.mosaique .m1 img{aspect-ratio:4/5;border-radius:20px;object-position:50% 50%}
+.mosaique .m2{margin-top:112px}
+.mosaique .m2 img{aspect-ratio:3/4;border-radius:16px;object-position:40% 60%}
+.mosaique .m3{margin-top:40px}
+.mosaique .m3 img{aspect-ratio:3/5;border-radius:14px;object-position:50% 40%}
+.mosaique .m3 .bas{margin-top:28px}
+.mosaique .m3 .bas img{aspect-ratio:1/1;object-position:50% 45%;border-radius:12px}
+.real-pied{display:flex;justify-content:flex-end;margin-top:40px}
+
+/* Fondations */
+.fondations{background:var(--surface);padding:120px 0}
+.citation{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.6vw,52px);line-height:1.08;max-width:34ch;margin:0 0 96px;text-wrap:balance;padding-left:40px;position:relative}
+.citation::before{content:"";position:absolute;left:0;top:10px;width:18px;height:18px;border:2px solid var(--accent);transform:rotate(45deg)}
+.citation small{display:block;margin-top:20px;font-family:var(--texte);text-transform:none;font-size:16px;font-weight:500;color:var(--doux);letter-spacing:0}
+.fond-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:88px;align-items:center}
+.paire{position:relative;padding:0 64px 64px 0}
+.paire .a img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 55%;border-radius:18px;box-shadow:var(--ombre)}
+.paire .b{position:absolute;right:0;bottom:0;width:min(42%,230px);transform:rotate(3deg);background:#fffdf8;padding:10px 10px 34px;border-radius:6px;box-shadow:var(--ombre)}
+.paire .b img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%;border-radius:3px}
+.paire .b span{position:absolute;left:12px;bottom:8px;font-size:13px;color:var(--doux)}
+.paire figure{margin:0}
+.puces{list-style:none;padding:0;margin:28px 0 0}
+.puces li{padding:16px 0;border-top:1px solid var(--filet);display:flex;gap:14px;align-items:baseline}
+.puces li:last-child{border-bottom:1px solid var(--filet)}
+.puces li::before{content:"";flex:0 0 10px;height:10px;border:2px solid var(--accent);border-radius:2px;transform:rotate(45deg) translateY(-2px)}
+
+/* Contact */
+.contact{padding:128px 0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0;align-items:center}
+.contact .photo img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 60%;border-radius:20px;box-shadow:var(--ombre)}
+.contact .photo{position:relative}
+.carte{background:var(--surface);border-radius:20px;padding:44px;margin-left:-96px;position:relative;box-shadow:0 40px 80px -40px rgba(42,38,32,.55)}
+.carte h2{font-size:clamp(32px,3.4vw,48px)}
+.carte p{color:var(--doux);margin-top:16px;font-size:17px}
+.coord{display:grid;gap:18px;margin:28px 0 0}
+.coord div{border-top:1px solid var(--filet);padding-top:14px}
+.coord dt{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--doux)}
+.coord dd{margin:4px 0 0;font-size:18px}
+.coord a{text-decoration:none;font-weight:600}
+.coord a:hover{color:#9a4d0f}
+.coord .gros{font-family:var(--display);font-size:38px;font-weight:700;letter-spacing:.02em}
+
+/* Pied */
+.pied{background:var(--sombre);color:#D9D0C2;padding:80px 0 40px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque b{color:#F7F3EC;font-size:30px}
+.pied .marque span{color:#B5AA99}
+.pied h3{font-family:var(--texte);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#B5AA99;margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--accent)}
+.pied p{color:#B5AA99;margin-top:16px;font-size:15px}
+.signature{background:var(--sombre);color:#8E8475;text-align:center;font-size:13px;padding:20px 24px 28px;border-top:1px solid rgba(239,232,220,.08)}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .btn,.tel-pilule{transition:none}
+}
+
+/* Tablette */
+@media (max-width:1020px){
+  .nav a:not(.tel-pilule){display:none}
+  .heros .wrap,.metiers .wrap,.etapes .wrap,.real-tete,.fond-grille,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .heros{padding-top:40px}
+  .carte{margin:-64px 20px 0}
+  .pied .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* Téléphone */
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .entete .wrap{min-height:62px}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .tel-pilule{padding:9px 14px;font-size:15px}
+  .heros{padding:32px 0 64px}
+  .heros h1{font-size:clamp(40px,12.4vw,60px)}
+  .heros .chapo{font-size:17px;margin-top:20px}
+  .boutons{flex-direction:column}
+  .btn{width:100%}
+  .epure{padding:34px 40px 0 0}
+  .cote-h{right:40px}
+  .cote-v{width:40px;top:34px}
+  .cote-v::before{left:24px}
+  .cote-v::after{width:34px}
+  .cote-v i:first-child,.cote-v i:nth-child(2){left:20px}
+  .cote-v b{left:24px}
+  .cote-h b,.cote-v b{font-size:11px}
+  .epure .etiquette{top:14px;bottom:auto;right:14px;left:14px;font-size:13px}
+  .citation{padding-left:32px}
+  .faits ul{flex-direction:column;gap:10px}
+  .metiers,.etapes,.realisations,.fondations,.contact{padding:80px 0}
+  .liste article{grid-template-columns:minmax(0,1fr);gap:8px}
+  .liste h3{font-size:30px}
+  .collage .p{right:-8px}
+  .mosaique{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .mosaique .m1{grid-column:1 / -1}
+  .mosaique .m2{margin-top:0}
+  .mosaique .m3{margin-top:48px}
+  .mosaique .m3 .bas{display:none}
+  .citation{margin-bottom:64px}
+  .paire{padding:0 32px 56px 0}
+  .carte{margin:-48px 0 0;padding:28px 22px}
+  .coord .gros{font-size:32px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+  .real-pied{justify-content:stretch}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Kaori Constructions</b><span>Constructeur bois · Isle (87)</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#metiers">Nos métiers</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#fondations">Fondations spéciales</a>
+      <a href="#contact">Contact</a>
+      <a class="tel-pilule" href="tel:+33649288416">06 49 28 84 16</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Construire en bois, près de Limoges</h1>
+        <p class="chapo">Ossatures bois, charpentes, extensions, couvertures, terrasses et fondations spéciales&nbsp;: Kaori Constructions accompagne particuliers et professionnels de l'étude jusqu'à la pose, depuis Isle, en Haute-Vienne.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#contact">Parler de votre projet</a>
+          <a class="btn btn-contour" href="tel:+33649288416"><span class="nowrap">06 49 28 84 16</span></a>
+        </div>
+      </div>
+      <div class="epure">
+        <div class="cote-h" aria-hidden="true"><i></i><i></i><b>Ossature</b></div>
+        <div class="cote-v" aria-hidden="true"><i></i><i></i><b>Bardage</b></div>
+        <figure>
+          <img src="assets/kaori-constructions-isle/maison-ossature-bois-bardage-sur-vis.webp" alt="Maison en ossature bois à bardage vertical, posée sur vis de fondation, sous un ciel d'hiver" width="1600" height="1200">
+          <figcaption class="etiquette"><span class="point"></span>Maison ossature bois sur vis de fondation</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Isle, près de Limoges (87)</li>
+      <li>Particuliers et professionnels</li>
+      <li>Épicéa, douglas, mélèze</li>
+      <li>Ossature bois livrée en 4 à 6 mois</li>
+      <li>Devis gratuit</li>
+    </ul>
+  </div>
+
+  <section class="metiers" id="metiers">
+    <div class="wrap">
+      <div>
+        <h2>Une expertise complète pour tous vos projets</h2>
+        <p class="intro">Une équipe qualifiée, capable d'intervenir sur chaque étape de votre projet, de l'étude jusqu'à la réalisation. Des matériaux de qualité et une approche respectueuse de l'environnement, pour des ouvrages durables, esthétiques et adaptés à vos besoins.</p>
+        <div class="collage">
+          <figure class="g apparait" style="margin:0">
+            <img src="assets/kaori-constructions-isle/chantier-maison-bois-pare-pluie-tuiles.webp" alt="Maison bois en chantier, pare-pluie et tasseaux, toit de tuiles et parement pierre" width="1600" height="1200" loading="lazy">
+            <figcaption class="etiquette">Ossature et pare-pluie, avant bardage</figcaption>
+          </figure>
+          <figure class="p apparait" style="margin:0">
+            <img src="assets/kaori-constructions-isle/solin-zinc-cheminee-tuiles.webp" alt="Solin en zinc soudé autour d'une souche de cheminée, sur un toit de tuiles" width="1200" height="1600" loading="lazy">
+          </figure>
+        </div>
+      </div>
+      <div class="liste">
+        <article>
+          <h3>Ossature bois</h3>
+          <div>
+            <p>Maisons, extensions, garages, ateliers, appentis&nbsp;: une technique performante et esthétique, qui sait s'adapter à votre budget et à vos envies. Ossature en épicéa, bardage en douglas ou en mélèze, parfois complété d'un parement en pierre.</p>
+            <a class="lien" href="https://kaori-constructions.fr/portfolio/constructions-ossature-bois/">Maisons et extensions</a>
+          </div>
+        </article>
+        <article>
+          <h3>Charpente</h3>
+          <div>
+            <p>Traditionnelle ou en lamellé-collé, de la taille jusqu'au levage. Avec un équipement adapté, l'équipe prend en charge le levage et le montage, même pour les projets les plus complexes.</p>
+            <a class="lien" href="https://kaori-constructions.fr/portfolio/charpentes/">Les charpentes</a>
+          </div>
+        </article>
+        <article>
+          <h3>Couverture et étanchéité</h3>
+          <div>
+            <p>Tuile céramique ou béton, bac acier ou aluminium, zinc ou cuivre, bardeaux de bois ou de bitume. Réfection de toiture et isolation sous toiture.</p>
+            <span class="liens-doubles"><a class="lien" href="https://kaori-constructions.fr/portfolio/couvertures/">Couvertures</a><a class="lien" href="https://kaori-constructions.fr/portfolio/etancheite/">Étanchéité</a></span>
+          </div>
+        </article>
+        <article>
+          <h3>Terrasses et passerelles</h3>
+          <div>
+            <p>Des structures robustes et esthétiques, en bois de douglas ou de mélèze, alliées à des structures métalliques ou mixtes pour durer.</p>
+            <a class="lien" href="https://kaori-constructions.fr/portfolio/terrasses/">Les terrasses</a>
+          </div>
+        </article>
+        <article>
+          <h3>Fondations spéciales</h3>
+          <div>
+            <p>La vis de fondation, une alternative aux fondations traditionnelles en béton, posée sans excavation importante.</p>
+            <a class="lien" href="#fondations">Comment ça marche</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="etapes">
+    <div class="wrap">
+      <div>
+        <h2>De l'étude à la réception</h2>
+        <p class="sous">Chaque chantier bénéficie d'un accompagnement personnalisé, pour un résultat fiable, durable et conforme à vos attentes.</p>
+        <ol class="frise">
+          <li><span class="n">1</span><div><h3>Le devis, l'étude</h3><p>Nous définissons ensemble l'avant-projet&nbsp;: conseil, prescription, devis, permis de construire, jusqu'à la mise en fabrication.</p></div></li>
+          <li><span class="n">2</span><div><h3>La fabrication</h3><p>Nous réalisons en atelier toutes les pièces spécifiques, comme les charpentes et l'ossature.</p></div></li>
+          <li><span class="n">3</span><div><h3>Le chantier, la pose</h3><p>Notre équipe assemble votre projet chez vous, jusqu'à la réception finale.</p></div></li>
+        </ol>
+      </div>
+      <figure class="apparait">
+        <img src="assets/kaori-constructions-isle/grue-levage-chantier-toiture.webp" alt="Mini-grue sur chenilles levant une charge vers une toiture en chantier" width="1200" height="1600" loading="lazy">
+        <figcaption class="etiquette">Levage sur chantier</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="realisations" id="realisations">
+    <div class="wrap">
+      <div class="real-tete">
+        <div>
+          <h2>Nos réalisations bois</h2>
+          <p>Maisons et extensions en ossature bois, bardages, terrasses, pergolas&nbsp;: quelques chantiers de l'équipe.</p>
+        </div>
+        <ul class="etiquettes" aria-label="Ce que nous réalisons aussi">
+          <li>Voiles d'ombrage</li>
+          <li>Structure de passerelle</li>
+          <li>Ponton</li>
+          <li>Extension ossature bois</li>
+          <li>Terrasse bois</li>
+          <li>Escaliers bois</li>
+          <li>Abris de jardin</li>
+        </ul>
+      </div>
+      <div class="mosaique">
+        <figure class="m1 apparait">
+          <img src="assets/kaori-constructions-isle/pergola-bois-bardage-baie-vitree.webp" alt="Extension en bardage bois sous une pergola à lames, grande baie coulissante" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Pergola et bardage bois</figcaption>
+        </figure>
+        <figure class="m2 apparait">
+          <img src="assets/kaori-constructions-isle/extension-ossature-terrasse-bois-maison-ancienne.webp" alt="Extension cubique en ossature bois accolée à une maison ancienne, sur une terrasse bois neuve" width="1200" height="1600" loading="lazy">
+          <figcaption class="etiquette">Extension sur maison ancienne</figcaption>
+        </figure>
+        <div class="m3">
+          <figure class="apparait" style="margin:0;position:relative">
+            <img src="assets/kaori-constructions-isle/bardage-bois-terrasse-olivier.webp" alt="Façade en bardage bois clair et terrasse en lames bois, branches d'olivier" width="1200" height="1600" loading="lazy">
+            <figcaption class="etiquette">Terrasse bois</figcaption>
+          </figure>
+          <figure class="bas" style="position:relative">
+            <img src="assets/kaori-constructions-isle/bardage-bois-zinc-porte-entree.webp" alt="Bardage bois vertical, étage en zinc à joints debout et porte d'entrée en bois" width="1200" height="1600" loading="lazy">
+          </figure>
+        </div>
+      </div>
+      <div class="real-pied">
+        <a class="btn btn-contour" href="https://kaori-constructions.fr/portfolio-category/realisations/">Toutes nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fondations" id="fondations">
+    <div class="wrap">
+      <p class="citation">«&nbsp;Utiliser des matériaux respectueux de l'environnement, mettre en œuvre des procédés constructifs efficaces, prendre en compte les facteurs bioclimatiques.&nbsp;»<small>Pour Kaori Constructions, des paramètres aujourd'hui incontournables.</small></p>
+      <div class="fond-grille">
+        <div class="paire">
+          <figure class="a apparait">
+            <img src="assets/kaori-constructions-isle/longrines-bois-sur-vis-de-fondation.webp" alt="Cadre de longrines en bois massif posé sur vis de fondation, au-dessus d'un lit de gravier" width="1600" height="1200" loading="lazy">
+          </figure>
+          <figure class="b">
+            <img src="assets/kaori-constructions-isle/vis-de-fondation-bord-riviere.webp" alt="Vis de fondation galvanisée posée sur une berge, rivière en fond" width="1200" height="1600" loading="lazy">
+            <span>La vis de fondation</span>
+          </figure>
+        </div>
+        <div>
+          <h2>Fondations spéciales&nbsp;: la vis plutôt que le béton</h2>
+          <p style="color:var(--doux);margin-top:20px">À Isle, près de Limoges, Kaori Constructions pose des vis de fondation, une alternative écologique et efficace aux fondations traditionnelles en béton, adaptée à chaque projet de construction.</p>
+          <ul class="puces">
+            <li>Installation rapide et précise, sans excavation importante.</li>
+            <li>Adaptation à une large variété de sols, même les plus difficiles.</li>
+          </ul>
+          <div class="boutons"><a class="btn btn-contour" href="https://kaori-constructions.fr/portfolio/fondations-speciales/">Les fondations spéciales</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <figure class="photo apparait" style="margin:0">
+        <img src="assets/kaori-constructions-isle/vissage-pieu-pelle-krinner.webp" alt="Vissage d'une vis de fondation par une pelle, vis galvanisées en palettes" width="1200" height="1600" loading="lazy">
+        <figcaption class="etiquette">Vissage d'une vis de fondation</figcaption>
+      </figure>
+      <div class="carte">
+        <h2>Confiez votre projet à Kaori Constructions</h2>
+        <p>Une maison en bois, une extension, une charpente, une toiture à rénover ou une terrasse sur mesure près de Limoges&nbsp;? Contactez l'équipe pour un accompagnement personnalisé et un devis gratuit.</p>
+        <dl class="coord">
+          <div><dt>Téléphone</dt><dd><a class="gros nowrap" href="tel:+33649288416">06 49 28 84 16</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:contact@kaori-constructions.fr">contact@kaori-constructions.fr</a></dd></div>
+          <div><dt>Secteur</dt><dd>Limoges, Isle et tout le département (87)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><b>Kaori Constructions</b><span>Spécialistes des métiers du bois</span></a>
+      <p>Maison ossature bois, extension, charpente, couverture, escaliers, vis de fondation. SARL, LD le Caillaud, 87170 Isle.</p>
+    </div>
+    <div>
+      <h3>Nos métiers</h3>
+      <ul>
+        <li><a href="https://kaori-constructions.fr/portfolio/constructions-ossature-bois/">Constructions ossature bois</a></li>
+        <li><a href="https://kaori-constructions.fr/portfolio/charpentes/">Charpentes</a></li>
+        <li><a href="https://kaori-constructions.fr/portfolio/couvertures/">Couvertures</a></li>
+        <li><a href="https://kaori-constructions.fr/portfolio/terrasses/">Terrasses</a></li>
+        <li><a href="https://kaori-constructions.fr/portfolio/fondations-speciales/">Fondations spéciales</a></li>
+        <li><a href="https://kaori-constructions.fr/lentreprise-kaori-constructions/">L'entreprise</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33649288416">06 49 28 84 16</a></li>
+        <li><a href="mailto:contact@kaori-constructions.fr">contact@kaori-constructions.fr</a></li>
+        <li>Isle, près de Limoges (87)</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour Kaori Constructions</div>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  d.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Décore-moi Café Céramique · Peinture sur céramique à Labenne</title>
+<meta name="description" content="Décore-moi, café céramique à Labenne, à 5 minutes d'Hossegor et Capbreton : peinture sur céramique, café et brunch, coworking, anniversaires, EVJF et ateliers ponctuels.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E0607E'/%3E%3Ctext x='32' y='44' font-family='Arial Rounded MT Bold,sans-serif' font-size='34' text-anchor='middle' fill='%23FFF8F2'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#FBEFE6; --base-2:#F6E1D3; --surface:#FFF8F2; --ink:#2E2430; --ink-2:#5E5160;
+  --accent:#E0607E; --accent-d:#C94767; --rose:#F8D3D6; --sauge:#DCE6D6; --dark:#2E2430; --dark-2:#3B303D;
+  --ombre:0 30px 60px -34px rgba(46,36,48,.5);
+  --display:'Fredoka',sans-serif; --texte:'Nunito',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--ink);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4vw,50px);line-height:1.1}
+p{margin:0;text-wrap:pretty}
+.nowrap{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font-family:var(--display);font-weight:500;font-size:18px;text-decoration:none;border:2px solid var(--ink);transition:transform .25s ease,background-color .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn-plein:hover{background:var(--accent-d);border-color:var(--accent-d);transform:translateY(-2px) rotate(-1deg);box-shadow:0 18px 30px -16px rgba(224,96,126,.7)}
+.btn-contour{color:var(--ink);background:transparent}
+.btn-contour:hover{background:var(--ink);color:var(--surface);transform:translateY(-2px)}
+.lien{color:var(--accent-d);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.lien:hover{color:var(--ink)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(251,239,230,.95);border-bottom:1px solid rgba(46,36,48,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.marque b{font-family:var(--display);font-weight:600;font-size:27px;letter-spacing:-.01em}
+.marque small{font-size:14px;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px;font-weight:600}
+.nav a:not(.tel){text-decoration:none;color:var(--ink-2);transition:color .2s}
+.nav a:not(.tel):hover{color:var(--accent-d)}
+.tel{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:700;white-space:nowrap;transition:background .2s}
+.tel:hover{background:var(--accent)}
+
+/* héros */
+.heros{padding:clamp(44px,6vw,88px) 0 clamp(64px,8vw,112px)}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.heros h1{font-size:clamp(42px,5.6vw,80px);line-height:1.02}
+.heros .chapo{font-size:clamp(18px,1.4vw,20px);color:var(--ink-2);margin-top:26px;max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.offres{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 0;padding:0;list-style:none}
+.offres li{font-size:15px;font-weight:600;padding:7px 14px;border-radius:999px;background:var(--surface);color:var(--ink-2)}
+.eventail{position:relative;width:100%;aspect-ratio:1.08}
+.eventail .carte-photo{position:absolute;left:26%;bottom:3%;width:48%;aspect-ratio:3/4;border-radius:16px;overflow:hidden;box-shadow:var(--ombre);transform-origin:50% 100%;background:var(--surface);border:6px solid var(--surface)}
+.eventail .carte-photo img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.eventail .gauche{transform:translateX(-46%) rotate(-7deg)}
+.eventail .droite{transform:translateX(46%) rotate(6deg)}
+.eventail .centre{z-index:2;transform:translateY(-6%)}
+.eventail .centre img{object-position:62% 46%}
+.eventail .droite img{object-position:50% 40%}
+.recadre{overflow:hidden}
+.eventail .gauche img{object-position:50% 100%;transform:scale(2.1);transform-origin:21.5% 62%}
+.etiquette{position:absolute;left:12px;bottom:12px;background:var(--surface);color:var(--ink);font-weight:700;font-size:14px;padding:8px 13px;border-radius:12px;box-shadow:0 10px 22px -14px rgba(46,36,48,.6)}
+.bulle{position:absolute;right:2%;top:4%;z-index:3;width:min(132px,28%);aspect-ratio:1;border-radius:50%;background:var(--accent);color:var(--surface);display:grid;place-content:center;text-align:center;font-family:var(--display);line-height:1.05;transform:rotate(8deg);box-shadow:0 18px 30px -18px rgba(201,71,103,.8)}
+.bulle b{font-size:clamp(24px,2.6vw,36px);font-weight:600}
+.bulle span{font-size:clamp(12px,1vw,14px);margin-top:4px}
+
+/* bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-weight:600;font-size:16px;color:var(--ink-2)}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sauge);box-shadow:inset 0 0 0 2px #9DB394;flex:none}
+
+/* frise */
+.fonctionne{padding:clamp(80px,10vw,124px) 0}
+.fonctionne .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 72px;align-items:end}
+.fonctionne .intro p{color:var(--ink-2)}
+.frise{position:relative;list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.frise::before{content:"";position:absolute;left:44px;right:12%;top:44px;border-top:3px dashed rgba(224,96,126,.45)}
+.frise li{position:relative}
+.frise .num{width:88px;height:88px;border-radius:50%;display:grid;place-content:center;font-family:var(--display);font-size:38px;font-weight:600;background:var(--surface);box-shadow:0 18px 34px -24px rgba(46,36,48,.6);position:relative}
+.frise li:nth-child(1) .num{background:var(--rose)}
+.frise li:nth-child(2) .num{background:var(--sauge)}
+.frise li:nth-child(3) .num{background:#F7E3B8}
+.frise h3{font-size:26px;margin-top:26px;line-height:1.2}
+.frise p{color:var(--ink-2);margin-top:10px;max-width:22em}
+.tarif{margin-top:64px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px 48px;align-items:center;background:var(--surface);border-radius:26px;padding:clamp(26px,4vw,44px);box-shadow:var(--ombre)}
+.tarif p{color:var(--ink-2)}
+.tarif strong{color:var(--ink)}
+.tarif .actions{margin-top:0;justify-content:flex-end}
+
+/* événements */
+.evenements{background:var(--surface);padding:clamp(80px,10vw,124px) 0}
+.evenements .tete{max-width:720px}
+.evenements .tete p{color:var(--ink-2);margin-top:18px}
+.grille-evt{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,56px);margin-top:56px;align-items:start}
+.anniv{position:relative;background:var(--rose);border-radius:28px;padding:clamp(28px,4vw,48px);overflow:hidden}
+.anniv::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,248,242,.45)}
+.anniv h3{font-size:clamp(28px,3vw,38px);line-height:1.1;position:relative}
+.anniv .prix{display:inline-block;margin-top:18px;font-family:var(--display);font-size:clamp(44px,5vw,64px);font-weight:600;line-height:1;color:var(--ink);white-space:nowrap}
+.anniv .prix small{font-size:20px;font-weight:500}
+.anniv p{margin-top:18px;max-width:32em;position:relative}
+.anniv ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;position:relative}
+.anniv li{display:flex;gap:12px;align-items:baseline;font-weight:600}
+.anniv li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-2px)}
+.anniv .actions{position:relative;margin-top:30px}
+.formules{list-style:none;margin:0;padding:0}
+.formules li{padding:24px 0;border-top:1.5px solid rgba(46,36,48,.14)}
+.formules li:first-child{border-top:0;padding-top:4px}
+.formules .ligne{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.formules h3{font-size:24px;line-height:1.2}
+.formules .p{font-family:var(--display);font-size:22px;font-weight:500;white-space:nowrap}
+.formules p{color:var(--ink-2);margin-top:6px;font-size:17px}
+.programme{margin-top:12px;background:var(--base);border-radius:22px;padding:24px 26px}
+.programme h3{font-size:22px}
+.programme p{color:var(--ink-2);font-size:17px;margin-top:8px}
+.programme .lien{display:inline-block;margin-top:12px}
+
+/* pause gourmande, sombre */
+.gourmand{background:var(--dark);color:#F2E6E8;padding:clamp(80px,10vw,124px) 0}
+.gourmand .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.gourmand h2{color:#FFF1EC}
+.gourmand p{color:#D9C8CC;margin-top:20px;max-width:32em}
+.gourmand ul{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:14px}
+.gourmand li{display:grid;grid-template-columns:minmax(0,7.2em) minmax(0,1fr);gap:14px;align-items:baseline;color:#F2E6E8}
+.gourmand li b{font-family:var(--display);font-weight:500;color:#F7A9BA}
+.pluie{margin-top:34px;padding:20px 24px;border-radius:20px;background:var(--dark-2);font-family:var(--display);font-size:20px;line-height:1.35;color:#FFF1EC}
+.brunch{position:relative}
+.brunch .photo{border-radius:24px;overflow:hidden;aspect-ratio:4/4.6;box-shadow:0 34px 70px -36px rgba(0,0,0,.75);transform:rotate(1.5deg)}
+.brunch img{width:100%;height:100%;object-fit:cover;object-position:40% 72%}
+.brunch .etiquette{left:20px;bottom:20px}
+
+/* Aurore */
+.aurore{padding:clamp(88px,11vw,136px) 0}
+.aurore .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.aurore .chapo{color:var(--ink-2);margin-top:22px}
+.aurore .chapo + .chapo{margin-top:14px}
+.avis{position:relative;background:var(--surface);border-radius:26px;padding:clamp(30px,4vw,48px);box-shadow:var(--ombre);transform:rotate(-1.5deg)}
+.avis::before{content:"\201C";position:absolute;top:-38px;left:28px;font-family:var(--display);font-size:120px;line-height:1;color:var(--accent)}
+.avis p{font-family:var(--display);font-size:clamp(22px,2.2vw,28px);line-height:1.35;font-weight:400}
+.avis footer{margin-top:20px;color:var(--ink-2);font-size:16px;font-weight:600}
+
+/* carte cadeau */
+.cadeau{background:var(--base-2);padding:clamp(80px,10vw,124px) 0}
+.cadeau .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.duo{position:relative;padding:0 0 70px 0}
+.duo .grande{border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--ombre)}
+.duo .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.duo .enveloppe{position:absolute;right:-10px;bottom:0;width:min(200px,40%);aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:7px solid var(--surface);box-shadow:var(--ombre);transform:rotate(5deg);background:var(--surface)}
+.duo .enveloppe img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.duo .etiquette{left:16px;bottom:86px}
+.cadeau .chapo{color:var(--ink-2);margin-top:18px}
+.tarifs{list-style:none;padding:0;margin:30px 0 0}
+.tarifs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;padding:16px 0;border-top:1.5px solid rgba(46,36,48,.14)}
+.tarifs li:last-child{border-bottom:1.5px solid rgba(46,36,48,.14)}
+.tarifs b{font-family:var(--display);font-weight:500;font-size:21px}
+.tarifs .p{font-family:var(--display);font-size:21px;white-space:nowrap;text-align:right}
+.tarifs span.d{grid-column:1 / -1;color:var(--ink-2);font-size:16px}
+.cadeau .actions{margin-top:30px}
+
+/* infos */
+.infos{padding:clamp(80px,10vw,124px) 0}
+.infos .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.infos .chapo{color:var(--ink-2);margin-top:20px;max-width:30em}
+.fiche{background:var(--surface);border-radius:28px;padding:clamp(26px,4vw,44px);box-shadow:var(--ombre);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 32px}
+.fiche div{min-width:0}
+.fiche .large{grid-column:1 / -1}
+.fiche dt{font-size:14px;font-weight:700;color:var(--accent-d);margin-bottom:4px}
+.fiche dd{margin:0;font-size:17px;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none}
+.fiche dd a:hover{color:var(--accent-d)}
+.fiche .grand{font-family:var(--display);font-size:30px;font-weight:500}
+
+/* pied */
+.pied{background:var(--dark);color:#D9C8CC;padding:72px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:#FFF1EC}
+.pied .marque small{color:#B8A6AB}
+.pied .accroche{margin-top:14px;max-width:22em}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:700;color:#B8A6AB;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;color:#FFF1EC}
+.pied a:hover{color:#F7A9BA}
+.signature{margin-top:64px;padding:22px 0;border-top:1px solid rgba(255,241,236,.12);font-size:14px;color:#A8969B;text-align:center}
+
+/* apparition */
+.js .apparait{opacity:0;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1);translate:0 26px}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .apparait{opacity:1;translate:none;transition:none}.btn,.tel{transition:none}}
+
+@media (max-width:1000px){
+  .nav a:not(.tel){display:none}
+  .heros .wrap,.gourmand .wrap,.aurore .wrap,.cadeau .wrap,.infos .wrap,.grille-evt,.fonctionne .intro{grid-template-columns:minmax(0,1fr)}
+  .tarif{grid-template-columns:minmax(0,1fr)}
+  .tarif .actions{justify-content:flex-start}
+  .pied .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:23px}
+  .marque small{display:none}
+  .tel{min-height:42px;padding:0 15px;font-size:15px}
+  .heros{padding-top:32px}
+  .heros .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .heros .texte-heros{display:contents}
+  .heros h1{order:1}
+  .eventail{order:2;margin-top:18px}
+  .heros .chapo{order:3}
+  .heros .actions{order:4}
+  .heros .offres{order:5}
+  .eventail .carte-photo{border-width:4px;border-radius:12px}
+  .faits ul{flex-direction:column;align-items:flex-start;gap:10px}
+  .frise{grid-template-columns:minmax(0,1fr);gap:30px;margin-top:44px}
+  .frise::before{left:34px;right:auto;top:20px;bottom:20px;border-top:0;border-left:3px dashed rgba(224,96,126,.45)}
+  .frise li{display:grid;grid-template-columns:68px minmax(0,1fr);gap:0 18px}
+  .frise .num{width:68px;height:68px;font-size:30px;grid-row:span 2}
+  .frise h3{margin-top:4px;font-size:23px}
+  .duo .enveloppe{right:0;width:min(140px,38%)}
+  .duo{padding-bottom:56px}
+  .duo .etiquette{bottom:68px}
+  .fiche{grid-template-columns:minmax(0,1fr)}
+  .gourmand li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .formules .ligne{flex-wrap:wrap;gap:2px 12px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .heros h1{font-size:clamp(38px,11vw,46px)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Décore-moi</b><small>Café céramique à Labenne</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#concept">Le concept</a>
+      <a href="#evenements">Anniversaires et événements</a>
+      <a href="#carte-cadeau">Carte cadeau</a>
+      <a href="#infos">Infos pratiques</a>
+      <a class="tel" href="tel:+33984689200">09 84 68 92 00</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="texte-heros">
+        <h1>Offrez-vous un moment hors du temps.</h1>
+        <p class="chapo">Un café céramique à Labenne, à 5 minutes d'Hossegor et de Capbreton. On choisit sa pièce, on la peint librement, à son rythme, et l'on savoure l'instant autour d'un bon latte.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://bookings.zenchef.com/results?rid=380956&amp;pid=1001">Réserver mon atelier</a>
+          <a class="btn btn-contour" href="tel:+33984689200">09 84 68 92 00</a>
+        </div>
+        <ul class="offres">
+          <li>Peinture sur céramique</li>
+          <li>Café, brunch</li>
+          <li>Coworking</li>
+          <li>Anniversaires, EVJF</li>
+          <li>Ateliers ponctuels</li>
+        </ul>
+      </div>
+      <div class="eventail" aria-label="Le café Décore-moi en photos">
+        <figure class="carte-photo gauche recadre" style="margin:0">
+          <img src="assets/decore-moi-labenne/peinture-flacon-sur-lapin-ceramique.webp" alt="Une main presse un flacon de peinture sur une palette, pinceaux et flacons pastel" width="1066" height="1600">
+        </figure>
+        <figure class="carte-photo droite" style="margin:0">
+          <img src="assets/decore-moi-labenne/tartelettes-fraises-framboises.webp" alt="Tartelettes aux fraises et aux framboises vues de dessus" width="1066" height="1600">
+        </figure>
+        <figure class="carte-photo centre" style="margin:0">
+          <img src="assets/decore-moi-labenne/salle-etageres-ceramiques-a-peindre.webp" alt="La salle du café, tables claires et mur vert couvert de céramiques blanches à peindre" width="1066" height="1600" fetchpriority="high">
+          <figcaption class="etiquette">Plus de 70 modèles à peindre</figcaption>
+        </figure>
+        <div class="bulle"><b>+500</b><span>clients l'ont<br>déjà adopté</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Plus de 70 modèles de céramiques</li>
+      <li>Pièces de 14 à 75&nbsp;€</li>
+      <li>Un atelier dure 2 heures</li>
+      <li>Déjà adopté par plus de 500 clients</li>
+      <li>1 avenue de l'Océan, Labenne</li>
+    </ul>
+  </div>
+
+  <section class="fonctionne" id="concept">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Comment fonctionne un café céramique&nbsp;?</h2>
+        <p>Que vous soyez débutant ou créatif confirmé, les ateliers sont conçus pour vous offrir un moment de détente et de plaisir. Une activité créative, relaxante et accessible à tous, idéale quand il pleut sur la côte landaise.</p>
+      </div>
+      <ol class="frise">
+        <li><span class="num">1</span><h3>Choisissez votre pièce</h3><p>Tasse, assiette, bol… les céramiques blanches attendent sur les étagères du mur vert.</p></li>
+        <li><span class="num">2</span><h3>Peignez librement</h3><p>À votre rythme, avec les couleurs et les pinceaux du café. Un atelier dure 2 heures.</p></li>
+        <li><span class="num">3</span><h3>Aurore cuit votre création</h3><p>Votre pièce est émaillée et cuite à environ 1000&nbsp;°C, puis vous revenez la chercher.</p></li>
+      </ol>
+      <div class="tarif">
+        <p>Le prix dépend de la pièce choisie, de 14 à 75&nbsp;€&nbsp;: la céramique, le matériel, l'émaillage et la cuisson sont compris. <strong>Comptez en moyenne 35&nbsp;€ la pièce.</strong> Les places sont limitées&nbsp;: une empreinte bancaire de 30&nbsp;€ par personne bloque la réservation, annulation gratuite jusqu'à 12 heures avant.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://bookings.zenchef.com/results?rid=380956&amp;pid=1001">Voir les disponibilités</a>
+          <a class="btn btn-contour" href="https://www.decoremoi.fr/reservation">Questions fréquentes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="evenements" id="evenements">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Anniversaires, EVJF et soirées au café.</h2>
+        <p>Pour une fête d'enfants, un anniversaire entre amis, un enterrement de vie de jeune fille ou un moment d'équipe, Décore-moi accueille aussi les groupes, sur réservation.</p>
+      </div>
+      <div class="grille-evt">
+        <article class="anniv apparait">
+          <h3>L'anniversaire des enfants</h3>
+          <span class="prix">20&nbsp;€ <small>par enfant</small></span>
+          <p>Un anniversaire original et créatif dans un cadre cosy&nbsp;: chaque enfant personnalise une céramique unique, dont il pourra fièrement récupérer le résultat après la cuisson.</p>
+          <ul>
+            <li>Une céramique au choix, jusqu'à 20&nbsp;€</li>
+            <li>Bonbons et boissons offerts</li>
+            <li>2 heures de fête</li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-contour" href="https://www.decoremoi.fr/groupes">Organiser un anniversaire</a>
+          </div>
+        </article>
+        <div>
+          <ul class="formules">
+            <li>
+              <div class="ligne"><h3>L'Anniv' «&nbsp;Creative Party&nbsp;»</h3><span class="p">30&nbsp;€ / pers.</span></div>
+              <p>Votre anniversaire entre amis ou en famille, autour d'un concept «&nbsp;Peinture et Bulles&nbsp;».</p>
+            </li>
+            <li>
+              <div class="ligne"><h3>Instants partagés</h3><span class="p">30&nbsp;€ / pers.</span></div>
+              <p>EVJF, teambuilding, occasion spéciale&nbsp;: un atelier rien que pour votre groupe.</p>
+            </li>
+          </ul>
+          <div class="programme">
+            <h3>Le programme du mois</h3>
+            <p>Soirées, apéro-céramique entre copines, brunchs du dimanche, cercle de réseautage, ateliers ponctuels et rencontres&nbsp;: chaque mois a son programme, sur réservation.</p>
+            <a class="lien" href="https://www.decoremoi.fr/vnements">Voir les dates du mois</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gourmand" id="gourmand">
+    <div class="wrap">
+      <div>
+        <h2>Pause gourmande&nbsp;: vous êtes les bienvenus, même sans peindre.</h2>
+        <p>Profitez d'un simple moment de détente à Labenne. En famille, entre amis, en solo ou pour vos rendez-vous professionnels, installez-vous pour partager ou travailler.</p>
+        <ul>
+          <li><b>Au comptoir</b><span>Votre boisson favorite et une pâtisserie de la Boulangerie Léo.</span></li>
+          <li><b>Le dimanche</b><span>Les box brunch de Huella Traiteur, les dimanches des semaines impaires.</span></li>
+          <li><b>Coworking</b><span>Une table pour travailler, seul ou en rendez-vous professionnel.</span></li>
+        </ul>
+        <p class="pluie">Une journée grise à Hossegor, Capbreton ou Biarritz&nbsp;? Le café est à 5 minutes.</p>
+      </div>
+      <figure class="brunch apparait" style="margin:0">
+        <div class="photo">
+          <img src="assets/decore-moi-labenne/box-brunch-et-bulles-en-terrasse.webp" alt="Box brunch : sandwich aux légumes, tartine aux tomates confites, cake glacé et pudding de chia, près de la baie vitrée" loading="lazy" width="1205" height="1600">
+        </div>
+        <figcaption class="etiquette">Box brunch de Huella Traiteur</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="aurore" id="aurore">
+    <div class="wrap">
+      <div>
+        <h2>Façonner l'instant, un thé à la main.</h2>
+        <p class="chapo">Originaire de Bourgogne, Aurore a grandi à la campagne, initiée dès l'enfance aux activités créatives. Après un parcours dans le tourisme et des voyages en Angleterre, en Allemagne, en Amérique et en Asie, elle s'est installée dans le Sud-Ouest.</p>
+        <p class="chapo">Formée au modelage et à la décoration auprès de Sandra Léon à Capbreton et de Wirginia Guilleminot à Biarritz, elle vous invite dans un lieu où la céramique devient source de détente, de partage et de reconnexion à l'essentiel.</p>
+      </div>
+      <blockquote class="avis apparait" style="margin:0">
+        <p>Tout est pensé, beau, bon, local… le choix des céramiques, les couleurs de peinture, les accessoires, les gourmandises, les boissons, l'ambiance, la décoration… Bravo Aurore&nbsp;!</p>
+        <footer>Emilie Montané, venue avec sa fille</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="cadeau" id="carte-cadeau">
+    <div class="wrap">
+      <figure class="duo" style="margin:0">
+        <div class="grande apparait">
+          <img src="assets/decore-moi-labenne/carte-cadeau-tenue-a-deux-mains.webp" alt="La carte cadeau Décore-moi tenue à deux mains" loading="lazy" width="1600" height="1204">
+        </div>
+        <div class="enveloppe apparait">
+          <img src="assets/decore-moi-labenne/carte-cadeau-enveloppe-verte.webp" alt="L'enveloppe vert sauge de la carte cadeau" loading="lazy" width="1205" height="1600">
+        </div>
+        <figcaption class="etiquette">Valable 1 an</figcaption>
+      </figure>
+      <div>
+        <h2>Offrez du bonheur à vos proches.</h2>
+        <p class="chapo">Un cadeau original, qui allie plaisir et détente, valable un an à partir de la date d'achat.</p>
+        <ul class="tarifs">
+          <li><b>Carte Liberté</b><span class="p">au choix</span><span class="d">Le montant de votre choix, utilisable en plusieurs fois. Conseillé&nbsp;: 40&nbsp;€ pour une expérience complète, pièce, boisson et pâtisserie.</span></li>
+          <li><b>Abonnement Junior</b><span class="p">125&nbsp;€</span><span class="d">5 escales créatives pour les artistes en herbe.</span></li>
+          <li><b>Abonnement Évasion</b><span class="p">150&nbsp;€</span><span class="d">5 parenthèses slow life pour prendre le temps.</span></li>
+          <li><b>Abonnement Premium</b><span class="p">250&nbsp;€</span><span class="d">5 expériences d'exception, avec les plus belles pièces de collection jusqu'à 55&nbsp;€.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://shop.zenchef.com/?active-collection=vouchers&amp;collections=vouchers&amp;shop-id=sh_657bb095-1bb8-4911-b84d-e2a88f75377d&amp;language=fr&amp;primary-color=d1ec9f">Offrir une carte cadeau</a>
+          <a class="btn btn-contour" href="https://www.decoremoi.fr/carte-cadeau">Tous les détails</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="infos" id="infos">
+    <div class="wrap">
+      <div>
+        <h2>Venir au café.</h2>
+        <p class="chapo">Situé à Labenne, Décore-moi est facilement accessible depuis toute la côte basque et les Landes. Les créneaux ouverts se consultent sur la réservation en ligne.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://bookings.zenchef.com/results?rid=380956&amp;pid=1001">Réserver</a>
+          <a class="btn btn-contour" href="tel:+33984689200">Appeler le café</a>
+        </div>
+      </div>
+      <dl class="fiche">
+        <div><dt>Téléphone</dt><dd><a class="grand nowrap" href="tel:+33984689200">09 84 68 92 00</a></dd></div>
+        <div><dt>Adresse</dt><dd>1 avenue de l'Océan<br>40530 Labenne</dd></div>
+        <div class="large"><dt>Se garer</dt><dd>Places 3 et 9 attenantes au café, et parking à 300 m au 91 avenue Charles de Gaulle, à 4 minutes à pied.</dd></div>
+        <div class="large"><dt>E-mail</dt><dd><a href="mailto:cafeceramiquedecoremoi@gmail.com">cafeceramiquedecoremoi@gmail.com</a></dd></div>
+        <div class="large"><dt>Instagram</dt><dd>@decore_moi_cafe_ceramique</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <a class="marque" href="#haut"><b>Décore-moi</b><small>Café céramique</small></a>
+      <p class="accroche">Peinture sur céramique, café, brunch et ateliers à Labenne, à 5 minutes d'Hossegor et de Capbreton.</p>
+    </div>
+    <div>
+      <h3>Nous trouver</h3>
+      <ul>
+        <li>1 avenue de l'Océan, 40530 Labenne</li>
+        <li><a class="nowrap" href="tel:+33984689200">09 84 68 92 00</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Réserver</h3>
+      <ul>
+        <li><a href="https://bookings.zenchef.com/results?rid=380956&amp;pid=1001">Un atelier</a></li>
+        <li><a href="https://www.decoremoi.fr/groupes">Un anniversaire, un groupe</a></li>
+        <li><a href="https://www.decoremoi.fr/vnements">Le programme du mois</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Offrir</h3>
+      <ul>
+        <li><a href="https://www.decoremoi.fr/carte-cadeau">Carte cadeau</a></li>
+        <li><a href="https://www.decoremoi.fr/reservation">Questions fréquentes</a></li>
+        <li><a href="https://www.decoremoi.fr/s/CGV-et-reglement-interieur.pdf">CGV</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Décore-moi Café Céramique</p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

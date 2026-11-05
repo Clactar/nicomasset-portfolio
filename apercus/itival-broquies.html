@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ITIVAL · Hébergement et transport de bagages sur le GR 736, vallée du Tarn</title>
+<meta name="description" content="ITIVAL à La Jourdanie, Broquiès : appartement de deux chambres pour 4 à 5 personnes et services d'itinérance sur le GR 736, entre Millau et Albi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2324352B'/%3E%3Crect x='14' y='14' width='36' height='8' fill='%23F5F7F1'/%3E%3Crect x='14' y='24' width='36' height='8' fill='%23D2452E'/%3E%3Ctext x='32' y='56' font-family='Georgia,serif' font-size='22' font-weight='700' text-anchor='middle' fill='%23F5F7F1'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600&family=Overpass:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#E8ECE4; --base-2:#DCE3D6; --surface:#F5F7F1; --encre:#1F2A22; --encre-2:#4A5A4E;
+  --rouge:#D2452E; --rouge-fonce:#B5371F; --sombre:#24352B; --sombre-2:#2E4337; --clair-sombre:rgba(245,247,241,.8);
+  --ombre:0 30px 60px -34px rgba(31,42,34,.55);
+  --ombre-forte:0 44px 80px -40px rgba(31,42,34,.6);
+  --display:'Hepta Slab',Georgia,serif; --texte:'Overpass','Trebuchet MS',sans-serif;
+  --gouttiere:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.6}
+::selection{background:var(--rouge);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 2*var(--gouttiere));margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font:500 17px/1.2 var(--texte);text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.btn-plein{background:var(--rouge);color:var(--surface);box-shadow:0 18px 30px -18px rgba(210,69,46,.75)}
+.btn-plein:hover{background:var(--rouge-fonce);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(245,247,241,.5);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--encre);transform:translateY(-2px)}
+.tel{white-space:nowrap}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(232,236,228,.95);border-bottom:1px solid rgba(31,42,34,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.balise-mini{display:grid;gap:3px;flex:none}
+.balise-mini i{display:block;width:26px;height:7px;background:var(--surface);box-shadow:0 0 0 1px rgba(31,42,34,.12)}
+.balise-mini i+i{background:var(--rouge);box-shadow:none}
+.marque b{display:block;font:600 24px/1 var(--display);letter-spacing:.06em}
+.marque small{display:block;font-size:13px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:16px;color:var(--encre-2)}
+.nav a:hover{color:var(--rouge)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:16px;color:var(--encre)}
+.nav .btn:hover{color:var(--surface)}
+
+/* héros */
+.heros{padding-block:clamp(40px,7vw,96px) clamp(64px,8vw,112px)}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(40px,6vw,88px);align-items:center}
+.h-titre{font-size:clamp(36px,4.6vw,66px);font-weight:400;line-height:1.05}
+.h-lede{margin-top:28px;font-size:19px;font-weight:300;color:var(--encre-2);max-width:32em}
+.h-lede strong{font-weight:500;color:var(--encre)}
+.h-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.h-visuel{position:relative;margin:0 0 56px}
+.h-visuel img{width:100%;aspect-ratio:1.18;object-fit:cover;object-position:62% 40%;border-radius:18px;box-shadow:var(--ombre-forte)}
+.balise{position:absolute;left:-26px;top:30px;transform:rotate(-14deg);display:grid;filter:drop-shadow(0 10px 14px rgba(31,42,34,.28))}
+.balise i{display:block;width:118px;height:24px;background:#F7F8F3;border-radius:2px}
+.balise i+i{background:var(--rouge);margin-top:6px}
+.bagages{position:absolute;right:28px;bottom:-56px;width:min(330px,calc(100% - 40px));background:var(--surface);border-radius:16px;padding:20px 22px;box-shadow:var(--ombre-forte)}
+.bagages b{display:block;font:500 20px/1.2 var(--display)}
+.bagages p{margin-top:6px;font-size:15px;color:var(--encre-2);line-height:1.5}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:24px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px}
+.faits li{font-size:16px;display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:14px;height:8px;background:linear-gradient(var(--surface) 0 50%,var(--rouge) 50% 100%);flex:none;box-shadow:0 0 0 1px rgba(31,42,34,.1)}
+
+section{padding-block:clamp(80px,10vw,128px)}
+.titre-s{font-size:clamp(32px,3.8vw,50px);max-width:18ch}
+.intro{margin-top:20px;max-width:34em;font-size:19px;font-weight:300;color:var(--encre-2)}
+
+/* l'appartement */
+.appart-grille{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start;margin-top:56px}
+.mosaique{position:relative;padding-bottom:180px}
+.mosaique .m1{width:86%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%;border-radius:20px;box-shadow:var(--ombre)}
+.mosaique .m2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:3/3.6;object-fit:cover;object-position:60% 50%;border-radius:16px;border:8px solid var(--surface);box-shadow:var(--ombre-forte)}
+.mosaique .etiq{position:absolute;left:16px;top:16px;background:var(--surface);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:500;box-shadow:0 10px 22px -14px rgba(31,42,34,.6)}
+.vignettes{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap}
+.vignettes figure{margin:0;width:min(220px,46%)}
+.vignettes img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;box-shadow:0 18px 30px -22px rgba(31,42,34,.6)}
+.vignettes figcaption{font-size:14px;color:var(--encre-2);margin-top:8px}
+.partage{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.bloc{background:var(--surface);border-radius:18px;padding:26px 28px;box-shadow:var(--ombre)}
+.bloc h3{font-size:22px}
+.bloc ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.bloc li{position:relative;padding-left:22px;font-size:17px;color:var(--encre-2)}
+.bloc li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--rouge)}
+.precision{margin-top:8px;font-size:16px;color:var(--encre-2);padding:0 4px}
+
+/* itinérance : section sombre, tracé */
+.itin{background:var(--sombre);color:var(--surface)}
+.itin .intro{color:var(--clair-sombre)}
+.itin-grille{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.hameau{position:relative;margin:48px 0 0}
+.hameau img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;border-radius:20px;box-shadow:0 40px 70px -36px rgba(0,0,0,.7)}
+.hameau figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);border-radius:10px;padding:7px 13px;font-size:14px;font-weight:500}
+.trace{list-style:none;margin:0;padding:0 0 0 52px;position:relative}
+.trace::before{content:"";position:absolute;left:16px;top:12px;bottom:12px;border-left:2px dashed rgba(245,247,241,.32)}
+.trace li{position:relative;padding:0 0 30px}
+.trace li:last-child{padding-bottom:0}
+.trace li::before{content:"";position:absolute;left:-46px;top:6px;width:24px;height:6px;background:#F7F8F3;box-shadow:0 7px 0 var(--rouge)}
+.trace h3{font-size:22px;color:var(--surface)}
+.trace p{margin-top:6px;font-size:17px;color:var(--clair-sombre)}
+.trace .prix{white-space:nowrap;color:#F2B4A6}
+.partenaire{margin-top:40px;padding:22px 24px;border-radius:16px;background:var(--sombre-2);font-size:16px;color:var(--clair-sombre)}
+
+/* tarifs : panneaux */
+.tarifs-grille{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,96px);align-items:center}
+.poteau{position:relative;padding-left:22px;margin-top:48px}
+.poteau::before{content:"";position:absolute;left:0;top:-24px;bottom:-40px;width:12px;border-radius:6px;background:#C9CFC2}
+.panneau{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 20px;background:var(--surface);padding:20px 64px 20px 26px;margin-bottom:14px;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 50%,calc(100% - 34px) 100%,0 100%);filter:drop-shadow(0 20px 22px rgba(31,42,34,.16))}
+.panneau:nth-child(2){margin-left:18px}
+.panneau:nth-child(3){margin-left:6px}
+.panneau b{display:block;font:500 21px/1.2 var(--display)}
+.panneau span{display:block;font-size:15px;color:var(--encre-2);margin-top:2px}
+.panneau .p{font:500 30px/1 var(--display);color:var(--rouge);white-space:nowrap}
+.panneau .p small{font:400 14px var(--texte);color:var(--encre-2)}
+.conditions{margin:40px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.conditions li{background:var(--surface);border-radius:999px;padding:7px 15px;font-size:15px}
+.liens-tarifs{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.jardin{position:relative;margin:0}
+.jardin img{width:100%;aspect-ratio:3/3.7;object-fit:cover;object-position:52% 50%;border-radius:22px;box-shadow:var(--ombre-forte)}
+.jardin figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);border-radius:10px;padding:7px 13px;font-size:14px;font-weight:500}
+
+/* la vallée */
+.vallee{padding-top:0}
+.cinema{position:relative;margin:0}
+.cinema img{width:100%;aspect-ratio:21/8.5;object-fit:cover;object-position:50% 30%;border-radius:24px;box-shadow:var(--ombre-forte)}
+.cinema figcaption{position:absolute;left:clamp(16px,3vw,32px);top:clamp(16px,3vw,32px);background:var(--surface);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:500}
+.vallee-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);margin-top:64px;align-items:start}
+.acces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;margin-top:48px}
+.acces div{border-top:2px solid var(--encre);padding-top:18px}
+.acces h3{font-size:21px}
+.acces p{margin-top:8px;font-size:16px;color:var(--encre-2)}
+.tarn{position:relative;margin:0}
+.tarn img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:var(--ombre);transform:rotate(1.5deg)}
+.tarn figcaption{position:absolute;right:14px;bottom:14px;background:var(--surface);border-radius:10px;padding:7px 13px;font-size:14px;font-weight:500}
+
+/* réserver */
+.reserver{background:var(--surface)}
+.res-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.cas{margin-top:40px;display:grid;gap:16px}
+.cas > div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start;background:var(--base);border-radius:18px;padding:22px 24px}
+.cas b{font:500 34px/1 var(--display);color:var(--rouge);min-width:2.2ch}
+.cas h3{font-size:21px}
+.cas p{margin-top:4px;font-size:16px;color:var(--encre-2)}
+.carte{background:var(--sombre);color:var(--surface);border-radius:24px;padding:clamp(28px,4vw,44px);box-shadow:var(--ombre-forte)}
+.carte h3{font-size:30px}
+.carte dl{margin:20px 0 0}
+.carte dt{margin-top:20px;font-size:14px;color:#F2B4A6;font-weight:600;letter-spacing:.02em}
+.carte dd{margin:4px 0 0;font-size:17px;color:var(--clair-sombre)}
+.carte dd a{color:var(--surface);text-underline-offset:3px;overflow-wrap:anywhere}
+.carte .btns{display:grid;gap:12px;margin-top:32px}
+
+/* pied */
+.pied{background:#1B2820;color:var(--clair-sombre);padding:72px 0 32px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied b{display:block;font:600 26px/1 var(--display);letter-spacing:.06em;color:var(--surface)}
+.pied p,.pied li{font-size:16px}
+.pied h4{margin:0 0 12px;font:500 18px/1.2 var(--display);color:var(--surface)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{color:var(--surface);text-underline-offset:3px;overflow-wrap:anywhere}
+.propo{margin-top:56px;padding-top:24px;border-top:1px solid rgba(245,247,241,.12);font-size:13px;color:rgba(245,247,241,.5)}
+
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:1000px){
+  .nav a:not(.btn){display:none}
+  .heros .cadre,.appart-grille,.itin-grille,.tarifs-grille,.vallee-tete,.res-grille{grid-template-columns:minmax(0,1fr)}
+  .h-visuel{margin-left:20px}
+  .jardin{max-width:480px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .entete .cadre{min-height:64px}
+  .marque small{display:none}
+  .heros .cadre{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .h-texte{display:contents}
+  .h-titre{order:1}
+  .h-visuel{order:2;margin:32px 0 0 12px}
+  .h-lede{order:3;margin-top:88px}
+  .h-btns{order:4}
+  .balise{left:-14px;top:18px}
+  .balise i{width:84px;height:18px}
+  .bagages{right:12px;bottom:-60px;padding:16px 18px}
+  .faits ul{flex-direction:column}
+  .mosaique{padding-bottom:120px}
+  .acces{grid-template-columns:minmax(0,1fr);gap:24px}
+  .cinema img{aspect-ratio:4/3}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .panneau{padding:18px 48px 18px 20px;grid-template-columns:minmax(0,1fr)}
+  .panneau:nth-child(2),.panneau:nth-child(3){margin-left:0}
+  .trace{padding-left:44px}
+  .trace li::before{left:-42px;width:20px}
+}
+@media (max-width:420px){
+  .h-btns .btn,.liens-tarifs .btn{width:100%}
+  .nav .btn{padding:10px 14px;font-size:15px}
+  .cas > div{grid-template-columns:minmax(0,1fr);gap:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><span class="balise-mini" aria-hidden="true"><i></i><i></i></span><span><b>ITIVAL</b><small>La Jourdanie, Broquiès</small></span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#appartement">L'appartement</a>
+      <a href="#itinerance">Itinérance</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#reserver">Réserver</a>
+      <a class="btn btn-contour tel" href="tel:+33674926314">06 74 92 63 14</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <div class="cadre">
+      <div class="h-texte">
+        <h1 class="h-titre">Repos, calme et vue imprenable sur la vallée du Tarn</h1>
+        <p class="h-lede">À La Jourdanie, Broquiès, dans les gorges des Raspes du Tarn, sur le GR 736 : <strong>un appartement de deux chambres pour 4 à 5 personnes</strong>, et des services d'itinérance pour vos randonnées entre Millau et Albi.</p>
+        <div class="h-btns">
+          <a class="btn btn-plein" href="#reserver">Réserver</a>
+          <a class="btn btn-contour tel" href="tel:+33674926314">06 74 92 63 14</a>
+        </div>
+      </div>
+      <figure class="h-visuel">
+        <img src="assets/itival-broquies/maison-de-jardin-terrasse-vue-vallee.webp" alt="La maison de jardin ouverte sous sa charpente, tables dressées et vue sur la vallée" width="1600" height="1200" fetchpriority="high">
+        <span class="balise" aria-hidden="true"><i></i><i></i></span>
+        <figcaption class="bagages"><b>Transport de bagages</b><p>Sur le GR 736 et ses variantes, dans un rayon de 50&nbsp;km autour de Broquiès.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="faits">
+    <ul class="cadre">
+      <li>Appartement de 2 chambres</li>
+      <li>4 à 5 personnes</li>
+      <li>Sur le GR 736, entre Millau et Albi</li>
+      <li>Ouvert toute l'année</li>
+      <li>Français, English, Nederlands</li>
+    </ul>
+  </div>
+
+  <section id="appartement">
+    <div class="cadre">
+      <h2 class="titre-s">Un hébergement chaleureux, au cœur de la vallée</h2>
+      <p class="intro">Entre Brousse-le-Château et Le Truel. Au niveau du jardin, deux chambres indépendantes, une salle de bain, une petite cuisine tout équipée et une salle à manger, uniquement pour vous.</p>
+      <div class="appart-grille">
+        <div>
+          <div class="mosaique rv">
+            <img class="m1" src="assets/itival-broquies/chambre-cote-vallee-tapis-rouge.webp" alt="La chambre côté vallée : lit double, grand tapis berbère rouge, armoire ancienne" width="1600" height="1200" loading="lazy">
+            <span class="etiq">Chambre côté vallée</span>
+            <img class="m2" src="assets/itival-broquies/salle-a-manger-escalier-pierre.webp" alt="La salle à manger au sol de tomettes, table ronde dressée et escalier de pierre" width="1600" height="1200" loading="lazy">
+          </div>
+          <div class="vignettes">
+            <figure><img src="assets/itival-broquies/chambre-cote-jardin.webp" alt="La chambre côté jardin, couvre-lit bordeaux et tapis kilim" width="1200" height="900" loading="lazy"><figcaption>Chambre côté jardin</figcaption></figure>
+            <figure><img src="assets/itival-broquies/salle-de-bain-douche.webp" alt="La salle de bain avec douche à l'italienne" width="1600" height="1200" loading="lazy"><figcaption>La salle de bain</figcaption></figure>
+          </div>
+        </div>
+        <div class="partage">
+          <div class="bloc">
+            <h3>Pour vous seuls</h3>
+            <ul>
+              <li>Deux chambres indépendantes</li>
+              <li>Une salle de bain</li>
+              <li>Une petite cuisine tout équipée</li>
+              <li>Une salle à manger</li>
+            </ul>
+          </div>
+          <div class="bloc">
+            <h3>À partager avec le propriétaire</h3>
+            <ul>
+              <li>Le jardin</li>
+              <li>La maison de jardin, avec vue sur la vallée du Tarn</li>
+              <li>La terrasse avec barbecue</li>
+            </ul>
+          </div>
+          <p class="precision">Les deux chambres sont louées ensemble. Parking à 20&nbsp;m. Chambres confortables, parfaites pour les randonneurs et les familles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="itin" id="itinerance">
+    <div class="cadre itin-grille">
+      <div>
+        <h2 class="titre-s">Les services d'itinérance</h2>
+        <p class="intro">François Bevort vous accompagne dans vos projets de vacances, dans la vallée du Tarn, à mi-chemin entre Millau et Albi.</p>
+        <figure class="hameau rv">
+          <img src="assets/itival-broquies/hameau-la-jourdanie-printemps.webp" alt="Le hameau de La Jourdanie au printemps, maisons de pierre et arbres en fleurs" width="1600" height="1200" loading="lazy">
+          <figcaption>La Jourdanie au printemps</figcaption>
+        </figure>
+      </div>
+      <div>
+        <ol class="trace">
+          <li><h3>Transport de bagages</h3><p>Sur le GR 736 et ses variantes entre Millau et Albi, dans un rayon de 50&nbsp;km autour de Broquiès, bagages de 15&nbsp;kg au plus.</p></li>
+          <li><h3>Transfert de vélos</h3><p>Vers et depuis La Jourdanie. L'appartement est à 2&nbsp;km par la route de la véloroute Vallée du Tarn, la V85.</p></li>
+          <li><h3>Conseils et fichiers GPX</h3><p>Pour vos randonnées sur le GR 736 et au départ de la maison, avec la cartographie IGN.</p></li>
+          <li><h3>Réservation de vos étapes</h3><p>Chambres d'hôtes et hôtels entre Millau et Albi.</p></li>
+          <li><h3>Vos courses à l'arrivée</h3><p>Pour le dîner ou le petit-déjeuner, le jour de votre arrivée : <span class="prix">coût des achats + 25&nbsp;€</span>. Appelez au moins 12&nbsp;h avant.</p></li>
+          <li><h3>Et aussi</h3><p>Dépannage de vélo, garde de voiture ou de caravane, pension de cheval et d'âne à la nuit.</p></li>
+        </ol>
+        <p class="partenaire">François accompagne aussi les clients anglophones, flamands et néerlandais d'un tour-opérateur européen, La Ligne Verte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="cadre tarifs-grille">
+      <div>
+        <h2 class="titre-s">Tarifs 2026</h2>
+        <p class="intro">Le prix d'une nuit dans l'appartement, pour 4&nbsp;personnes, selon la saison. Réduction de 10&nbsp;% à la semaine.</p>
+        <div class="poteau">
+          <div class="panneau"><div><b>Haute saison</b><span>Juillet et août</span></div><div class="p">140&nbsp;€ <small>/ nuit</small></div></div>
+          <div class="panneau"><div><b>Moyenne saison</b><span>Mai, juin et septembre</span></div><div class="p">132&nbsp;€ <small>/ nuit</small></div></div>
+          <div class="panneau"><div><b>Basse saison</b><span>Avril, et d'octobre à décembre</span></div><div class="p">120&nbsp;€ <small>/ nuit</small></div></div>
+        </div>
+        <ul class="conditions">
+          <li>Frais de ménage inclus</li>
+          <li>Séjour minimum : 1 nuit</li>
+          <li>Réductions de 2 à 8&nbsp;% pour 2 à 6&nbsp;nuits</li>
+          <li>Animaux non acceptés</li>
+        </ul>
+        <div class="liens-tarifs">
+          <a class="btn btn-plein" href="https://www.itival.fr/dispo.html">Voir les disponibilités</a>
+          <a class="btn btn-contour" href="https://www.itival.fr/tarifs.html">Tarifs selon le nombre de personnes</a>
+        </div>
+      </div>
+      <figure class="jardin rv">
+        <img src="assets/itival-broquies/maison-de-jardin-et-massifs.webp" alt="La maison de jardin en pierre au toit de lauzes, salon de jardin et massifs" width="1600" height="1200" loading="lazy">
+        <figcaption>La maison de jardin</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="vallee" id="vallee">
+    <div class="cadre">
+      <figure class="cinema rv">
+        <img src="assets/itival-broquies/vue-depuis-la-chambre-vallee.webp" alt="Vue depuis la chambre : le Tarn au pied du versant boisé" width="1600" height="1131" loading="lazy">
+        <figcaption>La vue depuis la chambre</figcaption>
+      </figure>
+      <div class="vallee-tete">
+        <div>
+          <h2 class="titre-s">La vallée du Tarn, d'Albi à Millau</h2>
+          <p class="intro">Envie de vert ? De déjeuner en terrasse avec la vallée du Tarn et sa rivière émeraude comme décor ? Balade et pêche le long de la rivière, canoé, baignade dans le Tarn, VTT, et de belles randonnées au départ de la maison.</p>
+          <p class="intro">Supérette, boucherie et boulanger à Broquiès, avec un distributeur de billets.</p>
+        </div>
+        <figure class="tarn rv">
+          <img src="assets/itival-broquies/le-tarn-a-500-m.webp" alt="Le Tarn vert émeraude et transparent sous les arbres" width="1600" height="1200" loading="lazy">
+          <figcaption>Le Tarn, tout près</figcaption>
+        </figure>
+      </div>
+      <div class="acces">
+        <div><h3>En voiture</h3><p>Albi à 64&nbsp;km, environ 1&nbsp;h&nbsp;05. Toulouse à 144&nbsp;km, environ 1&nbsp;h&nbsp;53.</p></div>
+        <div><h3>En train</h3><p>Gare de Saint-Rome-de-Cernon à 30&nbsp;km, ou de Tournemire-Roquefort à 35&nbsp;km.</p></div>
+        <div><h3>En avion</h3><p>Rodez-Aveyron à 68&nbsp;km, Toulouse-Blagnac à 144&nbsp;km, Montpellier à 148&nbsp;km.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserver" id="reserver">
+    <div class="cadre res-grille">
+      <div>
+        <h2 class="titre-s">Réserver chez ITIVAL</h2>
+        <p class="intro">L'appartement est disponible toute l'année. Écrivez ou appelez François selon la date de votre arrivée.</p>
+        <div class="cas">
+          <div><b>J</b><div><h3>Pour aujourd'hui ou demain</h3><p>Par téléphone seulement, au 06 74 92 63 14.</p></div></div>
+          <div><b>J-2</b><div><h3>À partir de deux jours avant</h3><p>De préférence par mail : votre demande est traitée dans les 12&nbsp;heures.</p></div></div>
+        </div>
+      </div>
+      <div class="carte">
+        <h3>François Bevort, ITIVAL</h3>
+        <dl>
+          <dt>Téléphone</dt>
+          <dd><a class="tel" href="tel:+33674926314">06 74 92 63 14</a></dd>
+          <dt>Mail</dt>
+          <dd><a href="mailto:bevort.francois@orange.fr">bevort.francois@orange.fr</a></dd>
+          <dt>Adresse</dt>
+          <dd>59, chemin de Rieugros, La Jourdanie<br>12480 Broquiès, Aveyron</dd>
+          <dt>Coordonnées GPS</dt>
+          <dd>N 44° 1' 9", E 2° 42' 45"</dd>
+          <dt>Langues parlées</dt>
+          <dd>Français, anglais, néerlandais</dd>
+        </dl>
+        <div class="btns">
+          <a class="btn btn-plein" href="mailto:bevort.francois@orange.fr?subject=Demande%20de%20r%C3%A9servation">Envoyer vos dates par mail</a>
+          <a class="btn btn-clair" href="https://www.itival.fr/contact.php">Formulaire de demande</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <b>ITIVAL</b>
+        <p style="margin-top:14px">Hébergement et services d'itinérance en vallée du Tarn, à La Jourdanie, Broquiès.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a class="tel" href="tel:+33674926314">06 74 92 63 14</a></li>
+          <li><a href="mailto:bevort.francois@orange.fr">bevort.francois@orange.fr</a></li>
+          <li>59, chemin de Rieugros, 12480 Broquiès</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pratique</h4>
+        <ul>
+          <li><a href="https://www.itival.fr/dispo.html">Disponibilités</a></li>
+          <li><a href="https://www.itival.fr/tarifs.html">Tarifs</a></li>
+          <li><a href="https://www.itival.fr/services-itinerance.html">Services d'itinérance</a></li>
+          <li><a href="https://www.itival.fr/contact.php">Formulaire de demande</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de Nicolas Masset pour ITIVAL</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

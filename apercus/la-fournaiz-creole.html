@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Fournaiz' Créole · Food truck et traiteur réunionnais, La Plaine-sur-Mer</title>
+<meta name="description" content="La Fournaiz' Créole : food truck, traiteur événementiel et épicerie fine, spécialités de l'île de La Réunion. La Plaine-sur-Mer, 06 01 14 74 44.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231C8FA6'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='36' fill='%23FDF9F1'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F5EFE3; --base-2:#ECE3D1; --surface:#FDF9F1; --encre:#1E2A2E; --encre-2:#4C5A5E;
+  --accent:#1C8FA6; --accent-fonce:#13697B; --accent-pale:#CFE6EA; --sombre:#12333B; --ardoise:#183F48;
+  --ombre:0 30px 60px -34px rgba(18,51,59,.6);
+  --display:'Titan One', 'Arial Black', sans-serif; --texte:'Ubuntu', 'Trebuchet MS', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:300;font-size:18px;line-height:1.62}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--display);line-height:1.02;letter-spacing:.003em}
+p{margin:0;text-wrap:pretty}
+strong{font-weight:500}
+.env{width:min(1200px,100% - 40px);margin-inline:auto}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(245,239,227,.95);border-bottom:1px solid rgba(30,42,46,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;font-family:var(--display);font-size:22px;line-height:1.1;color:var(--encre)}
+.marque span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:400}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent-fonce)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 28px;font-size:17px;font-weight:500;text-decoration:none;border:2px solid var(--encre);line-height:1.2;text-align:center;transition:transform .25s ease, background .25s ease, color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent-fonce);border-color:var(--accent-fonce);color:var(--surface);box-shadow:0 16px 30px -18px rgba(19,105,123,.95)}
+.btn-plein:hover{background:var(--sombre);border-color:var(--sombre)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-tel{padding:10px 18px;font-size:15.5px;white-space:nowrap;border-color:rgba(30,42,46,.3)}
+.btn-tel .court{display:none}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Héros : titre très grand, photo cinéma dessous */
+.heros{padding:64px 0 0}
+.heros .haut{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "cote" "photo"}
+.heros h1{grid-area:titre;font-size:clamp(40px,6.9vw,100px)}
+.heros h1 span{display:block}
+.heros .cote{grid-area:cote;display:flex;align-items:center;justify-content:space-between;gap:32px 48px;margin-top:30px}
+.heros .cote p{color:var(--encre-2);font-size:18.5px;max-width:34em}
+.heros .cote .actions{margin-top:0;flex:none}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.cinema{grid-area:photo;position:relative;margin:44px 0 0;border-radius:20px;overflow:hidden;aspect-ratio:21/9;box-shadow:0 46px 80px -44px rgba(18,51,59,.75)}
+.cinema img{width:100%;height:100%;object-fit:cover;object-position:50% 31%}
+.cinema .etiquette{position:absolute;left:24px;bottom:24px;background:var(--surface);border-radius:14px;padding:12px 18px;font-size:15.5px;font-weight:400;line-height:1.35;box-shadow:0 16px 34px -18px rgba(18,51,59,.8)}
+.cinema .etiquette b{display:block;font-family:var(--display);font-weight:400;font-size:18px;color:var(--accent-fonce)}
+
+/* Bandeau de faits : la note en grand */
+.faits{background:var(--base-2);margin-top:-72px;padding:120px 0 40px}
+.faits .env{display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:0;align-items:center}
+.faits .note{display:flex;align-items:center;gap:16px;padding-right:40px}
+.faits .note b{font-family:var(--display);font-weight:400;font-size:56px;line-height:1;color:var(--accent-fonce)}
+.faits .note span{font-size:15.5px;line-height:1.35;color:var(--encre-2)}
+.faits .fait{padding:6px 32px;border-left:1px solid rgba(30,42,46,.18);font-size:16px;line-height:1.4;color:var(--encre-2)}
+.faits .fait strong{display:block;color:var(--encre);font-size:17px}
+
+/* Spécialités : texte + duo de photos */
+.specialites{padding:128px 0 120px}
+.specialites .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:80px;align-items:center}
+.specialites h2{font-size:clamp(32px,3.8vw,54px)}
+.specialites .txt p{margin-top:22px;color:var(--encre-2);max-width:31em}
+.specialites .txt p.mot{font-size:22px;color:var(--encre);font-weight:400;margin-top:28px}
+.duo{position:relative;min-height:540px}
+.duo .rond{position:absolute;right:0;top:0;width:min(440px,78%);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--ombre);border:10px solid var(--surface)}
+.duo .rond img{width:100%;height:100%;object-fit:cover}
+.duo .carre{position:absolute;left:0;bottom:0;width:min(300px,52%);aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:var(--ombre);transform:rotate(-3deg)}
+.duo .carre img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.duo .pastille{position:absolute;right:8%;bottom:9%;background:var(--accent-fonce);color:var(--surface);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:400;box-shadow:0 14px 30px -16px rgba(18,51,59,.9)}
+
+/* Ardoise, fond sombre */
+.ardoise-zone{background:var(--sombre);padding:128px 0;color:var(--surface)}
+.ardoise{position:relative;background:var(--ardoise);border-radius:26px;padding:64px 64px 56px;box-shadow:inset 0 0 0 10px #0F2C33, 0 40px 80px -40px rgba(0,0,0,.6)}
+.ardoise::before{content:"";position:absolute;inset:22px;border-radius:16px;border:1.5px dashed rgba(253,249,241,.16);pointer-events:none}
+.ardoise .tete{max-width:620px}
+.ardoise h2{font-size:clamp(32px,4vw,56px);color:var(--surface)}
+.ardoise .tete p{margin-top:16px;color:rgba(253,249,241,.75)}
+.plats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 48px;margin-top:48px}
+.plats h3{font-family:var(--display);font-size:21px;color:#8FD0DC;margin-bottom:12px}
+.plats ul{list-style:none;margin:0;padding:0}
+.plats li{padding:10px 0;border-bottom:1px dashed rgba(253,249,241,.2);font-size:18.5px;font-weight:400}
+.ardoise .barquette{position:absolute;right:-28px;top:-76px;width:min(280px,30%);border-radius:20px;overflow:hidden;transform:rotate(4deg);box-shadow:0 34px 60px -26px rgba(0,0,0,.75);border:8px solid var(--surface)}
+.ardoise .barquette img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 50%}
+
+/* Événements */
+.evenements{padding:128px 0}
+.evenements .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:center}
+.evenements h2{font-size:clamp(32px,3.8vw,54px)}
+.evenements .txt p{margin-top:22px;color:var(--encre-2);max-width:30em}
+.liste-ev{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:12px}
+.liste-ev li{display:flex;gap:14px;align-items:baseline;font-weight:400}
+.liste-ev li::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--accent);transform:rotate(45deg);flex:none;position:relative;top:-2px}
+.photos-ev{position:relative;padding-left:70px}
+.photos-ev .haute{border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/4}
+.photos-ev .haute img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.photos-ev .wok{position:absolute;left:0;bottom:-40px;width:min(250px,46%);aspect-ratio:1;border-radius:50%;overflow:hidden;border:9px solid var(--base);box-shadow:var(--ombre)}
+.photos-ev .wok img{width:100%;height:100%;object-fit:cover}
+
+/* Mot créole, bande lagon */
+.mot-creole{background:var(--accent-fonce);color:var(--surface);padding:104px 0}
+.mot-creole .env{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:end}
+.mot-creole blockquote{margin:0;font-family:var(--display);font-size:clamp(46px,8vw,120px);line-height:.98}
+.mot-creole p{font-size:19px;color:rgba(253,249,241,.86);max-width:24em}
+
+/* Contact */
+.contact{padding:128px 0}
+.carte-contact{background:var(--surface);border-radius:28px;box-shadow:0 46px 90px -50px rgba(18,51,59,.6);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden}
+.carte-contact .appel{padding:56px;background:var(--accent-pale)}
+.carte-contact h2{font-size:clamp(30px,3.4vw,46px)}
+.carte-contact .appel p{margin-top:16px;color:var(--encre-2)}
+.tel-grand{display:inline-block;margin-top:28px;font-family:var(--display);font-size:clamp(32px,3.6vw,48px);color:var(--accent-fonce);text-decoration:none;white-space:nowrap;line-height:1}
+.tel-grand:hover{text-decoration:underline;text-underline-offset:6px}
+.carte-contact .infos{padding:56px}
+.infos dl{margin:0;display:grid;gap:20px}
+.infos dt{font-size:14px;color:var(--encre-2)}
+.infos dd{margin:3px 0 0;font-size:18px;font-weight:400}
+.infos dd a{text-decoration:none;border-bottom:1px solid rgba(30,42,46,.25)}
+.infos dd a:hover{color:var(--accent-fonce);border-color:var(--accent-fonce)}
+.infos .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.infos .liens .btn{padding:12px 20px;font-size:15.5px}
+
+.pied{background:var(--sombre);color:rgba(253,249,241,.78);padding:72px 0 44px;font-size:16px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied b{display:block;font-family:var(--display);font-weight:400;font-size:26px;color:var(--surface);margin-bottom:10px}
+.pied h3{font-size:14px;color:rgba(253,249,241,.55);margin-bottom:12px;font-weight:400}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(253,249,241,.25)}
+.pied a:hover{color:var(--surface);border-color:var(--surface)}
+.pied p+p{margin-top:6px}
+.proposition{background:#0E2930;color:rgba(253,249,241,.5);font-size:13px;text-align:center;padding:16px 20px}
+
+.js:not(.calme) .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js:not(.calme) .apparait.vu{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros .haut{grid-template-areas:"titre" "photo" "cote"}
+  .heros .cote{flex-direction:column;align-items:flex-start;margin-top:28px}
+  .heros .cote .actions{flex:initial}
+  .cinema{aspect-ratio:16/10}
+  .faits{margin-top:72px;padding:44px 0 38px}
+  .faits .env{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 0}
+  .faits .note{grid-column:1 / -1}
+  .faits .fait:nth-of-type(2){border-left:0;padding-left:0}
+  .specialites .env,.evenements .env,.mot-creole .env,.carte-contact{grid-template-columns:minmax(0,1fr)}
+  .specialites .env,.evenements .env{gap:56px}
+  .duo{max-width:560px;min-height:0;aspect-ratio:1/0.95;width:100%}
+  .plats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .photos-ev{max-width:560px}
+  .pied .env{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .entete .env{min-height:62px}
+  .marque{font-size:18px}
+  .btn-tel .num{display:none}
+  .btn-tel .court{display:inline}
+  .heros{padding-top:36px}
+  .heros h1{font-size:clamp(36px,11vw,48px)}
+  .cinema{margin-top:26px;aspect-ratio:4/3.6;border-radius:18px}
+  .cinema img{object-position:40% 34%}
+  .cinema .etiquette{left:12px;bottom:12px;right:12px;font-size:14px;padding:10px 14px}
+  .faits{margin-top:72px;padding:40px 0 34px}
+  .faits .env{grid-template-columns:minmax(0,1fr)}
+  .faits .fait,.faits .fait:nth-of-type(2){border-left:0;padding:12px 0 0;border-top:1px solid rgba(30,42,46,.15)}
+  .specialites,.evenements,.contact{padding:88px 0}
+  .ardoise-zone{padding:112px 0 88px}
+  .ardoise{padding:118px 24px 36px}
+  .ardoise::before{inset:12px}
+  .ardoise .barquette{width:42%;right:-6px;top:-70px}
+  .plats{grid-template-columns:minmax(0,1fr);margin-top:32px}
+  .photos-ev{padding-left:0}
+  .photos-ev .wok{left:-6px;bottom:-34px;width:42%}
+  .mot-creole{padding:80px 0}
+  .carte-contact .appel,.carte-contact .infos{padding:36px 22px}
+  .pied .env{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn,.infos .liens .btn{width:100%}
+  .tel-grand{font-size:31px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#haut">La Fournaiz' <span>Créole</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#ardoise">L'ardoise</a>
+      <a class="lien" href="#evenements">Événements</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33601147444" aria-label="Appeler le 06 01 14 74 44"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="num">06 01 14 74 44</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="haut">
+        <h1><span>Les saveurs de l'île</span> <span>de La Réunion</span></h1>
+        <div class="cote">
+          <p>Food truck, traiteur événementiel et épicerie fine, basés à La Plaine-sur-Mer. Rougail saucisse, massalé, carry, samoussas et bonbons piment.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33601147444">Commander au 06 01 14 74 44</a>
+            <a class="btn btn-contour" href="#evenements">Pour un événement</a>
+          </div>
+        </div>
+      <figure class="cinema apparait">
+        <img src="assets/la-fournaiz-creole/food-truck-parking-eglise.webp" alt="Le food truck rouge de La Fournaiz' Créole ouvert, bandeau « Les saveurs de l'île de La Réunion » et ardoise du menu" width="1276" height="1600">
+        <figcaption class="etiquette"><b>Le camion</b>Food truck · traiteur · épicerie fine</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="env">
+      <div class="note"><b>4,9</b><span>sur 5<br>57 avis Google</span></div>
+      <div class="fait"><strong>Cuisine réunionnaise</strong>spécialités de l'île</div>
+      <div class="fait"><strong>La Plaine-sur-Mer</strong>Loire-Atlantique, 44770</div>
+      <div class="fait"><strong>Laboratoire de plus de 60&nbsp;m²</strong>pour la cuisine</div>
+    </div>
+  </div>
+
+  <section class="specialites">
+    <div class="env">
+      <div class="txt">
+        <h2>Venez déguster.</h2>
+        <p>Des plats mijotés en sauce, du riz blanc, des grains, de l'achard et du piment à part&nbsp;: les spécialités gastronomiques de l'île de La Réunion, servies en barquette au camion.</p>
+        <div class="actions"><a class="btn btn-contour" href="#ardoise">Voir ce qui passe à l'ardoise</a></div>
+      </div>
+      <div class="duo apparait">
+        <div class="rond"><img src="assets/la-fournaiz-creole/rougail-saucisses-cives.webp" alt="Rougail saucisses en sauce tomate, cive émincée, vu de dessus" width="1436" height="1600" loading="lazy"></div>
+        <div class="carre"><img src="assets/la-fournaiz-creole/samoussas-bonbons-piment-nems.webp" alt="Samoussas, bonbons piment et nems sur une assiette blanche" width="1600" height="1600" loading="lazy"></div>
+        <span class="pastille">Rougail saucisse</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ardoise-zone" id="ardoise">
+    <div class="env">
+      <div class="ardoise">
+        <figure class="barquette apparait" style="margin:0"><img src="assets/la-fournaiz-creole/barquette-carry-biere-bourbon.webp" alt="Barquette de carry, riz, haricots et chou rouge, avec une bière Bourbon" width="1510" height="1600" loading="lazy"></figure>
+        <div class="tete">
+          <h2>Ce qui passe à l'ardoise.</h2>
+          <p>La carte change d'un jour à l'autre. Voici des plats déjà écrits au menu du camion.</p>
+        </div>
+        <div class="plats">
+          <div>
+            <h3>Les mijotés</h3>
+            <ul><li>Rougail saucisse</li><li>Coq massalé</li><li>Poulet massalé</li><li>Canard à la vanille</li></ul>
+          </div>
+          <div>
+            <h3>Et aussi</h3>
+            <ul><li>Carry poisson requin</li><li>Civet canard</li><li>Poulet à la chinoise</li><li>Ti jacques, saucisse fumée</li></ul>
+          </div>
+          <div>
+            <h3>À côté</h3>
+            <ul><li>Achard de légumes</li><li>Samoussas</li><li>Bonbons piment</li><li>Nems</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="evenements" id="evenements">
+    <div class="env">
+      <div class="txt">
+        <h2>Le camion vient à votre événement.</h2>
+        <p>La Fournaiz' Créole est aussi traiteur événementiel. Pour réserver le camion ou une commande, le plus simple est d'appeler.</p>
+        <ul class="liste-ev">
+          <li>Food truck sur place</li>
+          <li>Traiteur pour vos événements</li>
+          <li>Épicerie fine</li>
+        </ul>
+        <div class="actions"><a class="btn btn-plein" href="tel:+33601147444">Réserver au 06 01 14 74 44</a></div>
+      </div>
+      <div class="photos-ev apparait">
+        <div class="haute"><img src="assets/la-fournaiz-creole/food-truck-devant-eglise-portrait.webp" alt="Le food truck devant la façade sculptée d'une église, tables hautes en terrasse" width="889" height="1600" loading="lazy"></div>
+        <div class="wok"><img src="assets/la-fournaiz-creole/poulet-saute-poivrons-champignons.webp" alt="Sauté de poulet aux poivrons, oignons et champignons" width="1530" height="1600" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mot-creole">
+    <div class="env">
+      <blockquote>Mi atann a&nbsp;zot.</blockquote>
+      <p>«&nbsp;On vous attend&nbsp;», en créole réunionnais. Signé La Fournaiz' Créole, au bas d'un de ses menus.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div class="carte-contact">
+        <div class="appel">
+          <h2>Pour vos commandes, un numéro.</h2>
+          <p>Les jours et les lieux de passage du camion changent&nbsp;: un appel ou un coup d'œil à la fiche Google, et vous savez où le trouver.</p>
+          <a class="tel-grand" href="tel:+33601147444">06 01 14 74 44</a>
+        </div>
+        <div class="infos">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33601147444" style="white-space:nowrap">06 01 14 74 44</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:lafournaizcreole@gmail.com">lafournaizcreole@gmail.com</a></dd></div>
+            <div><dt>Basés à</dt><dd>La Plaine-sur-Mer (44770)</dd></div>
+            <div><dt>Note Google</dt><dd>4,9 sur 5, 57 avis</dd></div>
+          </dl>
+          <div class="liens">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=La%20Fournaiz'%20Cr%C3%A9ole&amp;query_place_id=ChIJcQVbFW5MQ6URJ1dHGCRes9c" target="_blank" rel="noopener">Avis et horaires sur Google</a>
+            <a class="btn btn-contour" href="https://www.facebook.com/Lafournaizcreole" target="_blank" rel="noopener">Suivre sur Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b>La Fournaiz' Créole</b>
+      <p>Food truck, traiteur événementiel et épicerie fine. Les spécialités de l'île de La Réunion, à La Plaine-sur-Mer.</p>
+    </div>
+    <div>
+      <h3>Commandes</h3>
+      <p><a href="tel:+33601147444">06 01 14 74 44</a></p>
+      <p><a href="mailto:lafournaizcreole@gmail.com">lafournaizcreole@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Où trouver le camion</h3>
+      <p>Basés à La Plaine-sur-Mer</p>
+      <p>Passages&nbsp;: par téléphone ou sur la fiche Google</p>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Fournaiz'%20Cr%C3%A9ole&amp;query_place_id=ChIJcQVbFW5MQ6URJ1dHGCRes9c" target="_blank" rel="noopener">Fiche Google</a></p>
+      <p><a href="https://www.facebook.com/Lafournaizcreole" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour La Fournaiz' Créole</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

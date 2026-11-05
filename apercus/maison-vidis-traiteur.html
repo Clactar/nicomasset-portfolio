@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Maison Vidis · artisan charcutier traiteur au Mans</title>
+<meta name="description" content="Maison Vidis, artisan charcutier traiteur au Mans : charcuterie artisanale, plats cuisinés, traiteur pour particuliers et entreprises. Boulevard Curie et rue de Sablé.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238E1F2B'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23FAF5F2'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F1E9E4; --surface:#FAF5F2; --soutenu:#E8DAD1; --encre:#2A1B1B; --doux:#5E4B48;
+  --rouge:#8E1F2B; --rouge-fonce:#741823; --creme:#F6ECE2; --sombre:#1F2A24; --sombre-2:#27352D;
+  --ombre:0 30px 60px -34px rgba(42,27,27,.55);
+  --ombre-l:0 46px 84px -40px rgba(42,27,27,.6);
+  --serif:'Old Standard TT',Georgia,serif; --sans:'PT Sans','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rouge);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(241,233,228,.95);border-bottom:1px solid rgba(42,27,27,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.marque b{font-family:var(--serif);font-weight:400;font-size:27px}
+.marque span{font-size:14px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.tel-pill{padding:11px 20px;border-radius:999px;background:var(--rouge);color:var(--surface)!important;font-weight:700;white-space:nowrap;transition:background .25s,transform .25s}
+.tel-pill:hover{background:var(--rouge-fonce);transform:translateY(-2px)}
+
+/* Héros */
+.heros{padding:64px 0 112px}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.heros h1{font-size:clamp(40px,5.4vw,76px);line-height:1.04;letter-spacing:-.01em}
+.chapo{font-size:19px;color:var(--doux);margin-top:28px;max-width:46ch}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--rouge);color:var(--surface)}
+.btn-plein:hover{background:var(--rouge-fonce);transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(142,31,43,.8)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(250,245,242,.7);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--sombre);transform:translateY(-2px)}
+
+.boutique{position:relative;padding-top:4px}
+.store{position:relative;margin:0 -22px;z-index:2;filter:drop-shadow(0 16px 14px rgba(42,27,27,.22))}
+.store .barre{height:12px;border-radius:6px;background:var(--sombre)}
+.store .toile{height:64px;background:linear-gradient(180deg,rgba(0,0,0,.14),rgba(0,0,0,0) 40%,rgba(0,0,0,.06)),repeating-linear-gradient(90deg,var(--rouge) 0 36px,var(--creme) 36px 72px)}
+.store .feston{height:18px;background:radial-gradient(circle at 18px 0,var(--rouge) 17.5px,transparent 18px) 0 0/72px 18px repeat-x,radial-gradient(circle at 54px 0,var(--creme) 17.5px,transparent 18px) 0 0/72px 18px repeat-x}
+.vitrine{position:relative;margin-top:-6px}
+.vitrine img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:50% 30%;border-radius:0 0 16px 16px;box-shadow:var(--ombre-l)}
+.etiquette{position:absolute;right:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:700;padding:9px 16px;border-radius:12px;box-shadow:0 12px 26px -16px rgba(42,27,27,.7)}
+.note-carte{position:absolute;left:-28px;bottom:-34px;background:var(--surface);border-radius:16px;padding:16px 20px;box-shadow:var(--ombre);display:flex;align-items:center;gap:14px;text-decoration:none}
+.note-carte .chiffre{font-family:var(--serif);font-size:38px;line-height:1}
+.note-carte .txt{font-size:14px;line-height:1.35;color:var(--doux)}
+.note-carte .txt b{display:block;color:var(--encre);font-size:15px}
+
+/* Bandeau */
+.faits{background:var(--soutenu)}
+.faits ul{list-style:none;margin:0;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:16px}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:8px;height:8px;background:var(--rouge);transform:rotate(45deg);flex:none}
+
+/* Fait maison : ardoise */
+.maison{padding:120px 0}
+.maison-tete{max-width:760px}
+.maison h2{font-size:clamp(34px,4.4vw,58px)}
+.maison .intro{color:var(--doux);margin-top:20px;max-width:56ch}
+.maison-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;margin-top:64px}
+.pate{position:relative;z-index:1}
+.pate img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;border-radius:18px;box-shadow:var(--ombre-l)}
+.pate .etiquette{right:auto;left:18px}
+.ardoise{background:var(--sombre);color:var(--creme);border-radius:22px;padding:56px 56px 132px 104px;margin-left:-56px;box-shadow:var(--ombre)}
+.ardoise h3{font-size:32px;color:var(--surface);margin-bottom:24px}
+.ardoise ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px}
+.ardoise li{font-family:var(--serif);font-size:21px;padding:11px 0;border-bottom:1px dashed rgba(246,236,226,.25)}
+.ardoise .bas{margin-top:26px;font-size:16px;color:#B9C2BB}
+.terrine{position:relative;width:min(220px,46%);margin:-104px 28px 0 auto;transform:rotate(3deg);background:var(--surface);padding:10px 10px 14px;border-radius:6px;box-shadow:var(--ombre)}
+.terrine img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px}
+.terrine span{display:block;font-size:14px;color:var(--doux);margin-top:8px;text-align:center}
+
+/* Médaille */
+.prix{background:var(--surface);padding:104px 0}
+.prix-grille{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,340px);gap:64px;align-items:center}
+.salades img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:20px;box-shadow:var(--ombre-l);transform:rotate(2deg)}
+.medaille{position:relative;z-index:0;width:min(260px,64vw);aspect-ratio:1;margin-bottom:40px}
+.medaille .disque{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#a8323f,var(--rouge) 60%,var(--rouge-fonce));display:grid;place-items:center;text-align:center;color:var(--surface);box-shadow:0 30px 50px -26px rgba(116,24,35,.8),inset 0 0 0 10px rgba(250,245,242,.12),inset 0 0 0 12px rgba(250,245,242,.35)}
+.medaille .disque b{font-family:var(--serif);font-weight:400;font-size:64px;line-height:.9;display:block}
+.medaille .disque span{font-size:14px;letter-spacing:.02em;display:block;margin-top:6px;line-height:1.3}
+.medaille::before,.medaille::after{content:"";position:absolute;bottom:-46px;width:46px;height:90px;background:var(--sombre);z-index:-1;clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%)}
+.medaille::before{left:30%;transform:rotate(12deg)}
+.medaille::after{right:30%;transform:rotate(-12deg)}
+.prix h2{font-size:clamp(32px,4vw,52px)}
+.prix .intro{color:var(--doux);margin-top:16px;max-width:52ch}
+.prix blockquote{margin:28px 0 0;padding:0 0 0 24px;border-left:2px solid var(--rouge);font-family:var(--serif);font-size:24px;line-height:1.35;max-width:42ch}
+.prix cite{display:block;font-family:var(--sans);font-style:normal;font-size:15px;color:var(--doux);margin-top:10px}
+
+/* Plats du week-end */
+.plats{padding:120px 0}
+.plats-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.plats-photos{position:relative;padding-bottom:80px}
+.plats-photos .p1 img{width:82%;aspect-ratio:4/5;object-fit:cover;object-position:50% 70%;border-radius:20px;box-shadow:var(--ombre)}
+.plats-photos .p2{position:absolute;right:0;bottom:0;width:52%}
+.plats-photos .p2 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:8px solid var(--base);box-shadow:var(--ombre-l)}
+.menu{background:var(--surface);border-radius:8px;padding:48px 44px;box-shadow:var(--ombre);outline:1px solid rgba(42,27,27,.18);outline-offset:-12px}
+.menu h2{font-size:clamp(30px,3.4vw,44px);text-align:center}
+.menu .sous{text-align:center;color:var(--doux);margin-top:10px;font-size:16px}
+.menu ul{list-style:none;margin:28px 0 0;padding:0}
+.menu li{font-family:var(--serif);font-size:22px;text-align:center;padding:10px 0;border-bottom:1px solid rgba(42,27,27,.12)}
+.menu li:last-child{border-bottom:0}
+.menu .bas{text-align:center;margin-top:20px;font-size:15px;color:var(--doux)}
+
+/* Traiteur */
+.traiteur{background:var(--soutenu);padding:120px 0}
+.traiteur-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:start}
+.traiteur h2{font-size:clamp(34px,4.4vw,58px)}
+.traiteur .intro{color:var(--doux);margin-top:20px}
+.occasions{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;border-top:1px solid rgba(42,27,27,.2)}
+.occasions li{padding:13px 0;border-bottom:1px solid rgba(42,27,27,.2);font-size:17px}
+.plateau{position:relative}
+.plateau img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:var(--ombre-l)}
+.chiffre-carte{position:relative;width:min(380px,88%);margin:-90px 0 0 -40px;background:var(--rouge);color:var(--surface);border-radius:18px;padding:30px 32px;box-shadow:var(--ombre)}
+.chiffre-carte b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(56px,6vw,84px);line-height:1}
+.chiffre-carte p{margin-top:10px;font-size:17px;color:#F4DCDD}
+.feuilletes{position:absolute;right:-24px;bottom:-60px;width:min(220px,40%);transform:rotate(-3deg);background:var(--surface);padding:9px 9px 12px;border-radius:6px;box-shadow:var(--ombre)}
+.feuilletes img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;box-shadow:none}
+
+/* Deux boutiques : fond sombre */
+.boutiques{background:var(--sombre);color:var(--creme);padding:120px 0}
+.boutiques h2{font-size:clamp(34px,4.4vw,58px);color:var(--surface)}
+.boutiques .intro{color:#B9C2BB;margin-top:16px}
+.bt-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;margin-top:56px;align-items:start}
+.bt-carte{background:var(--surface);color:var(--encre);border-radius:22px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.bt-carte .photo{position:relative}
+.bt-carte .photo img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 40%}
+.bt-carte .corps{padding:36px 40px 40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.bt-carte h3{font-size:30px;margin-bottom:10px}
+.bt-carte p{color:var(--doux)}
+.bt-carte p a{text-decoration:none;font-weight:700;color:var(--encre);border-bottom:1px solid rgba(42,27,27,.3)}
+.horaires{width:100%;border-collapse:collapse;font-size:16px}
+.horaires th{text-align:left;font-weight:400;color:var(--doux);padding:7px 0;border-bottom:1px solid rgba(42,27,27,.12)}
+.horaires td{text-align:right;padding:7px 0;border-bottom:1px solid rgba(42,27,27,.12);white-space:nowrap;font-weight:700}
+.horaires tr:last-child th,.horaires tr:last-child td{border-bottom:0}
+.bt-cote{display:flex;flex-direction:column;gap:24px}
+.bt-seconde{border:1.5px solid rgba(246,236,226,.3);border-radius:22px;padding:36px 36px 34px}
+.bt-seconde h3{font-size:28px;color:var(--surface);margin-bottom:10px}
+.bt-seconde p{color:#C9D0CA}
+.bt-seconde a{color:var(--surface);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(246,236,226,.4)}
+.bt-note{background:var(--sombre-2);border-radius:22px;padding:32px 36px}
+.bt-note .chiffre{font-family:var(--serif);font-size:64px;line-height:1;color:var(--surface)}
+.bt-note .chiffre small{font-size:24px;color:#B9C2BB}
+.bt-note p{color:#C9D0CA;margin-top:8px}
+.bt-note .boutons{margin-top:20px}
+
+/* Pied */
+.pied{background:#17201B;color:#B9C2BB;padding:80px 0 32px;font-size:16px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied .nom{font-family:var(--serif);font-size:32px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;color:#D9A9AE;font-weight:700}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin:6px 0}
+.pied a{color:#E9ECE8;text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:4px}
+.proposition{margin-top:64px;padding-top:24px;border-top:1px solid rgba(246,236,226,.12);font-size:13px;color:#7E8A83}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.tel-pill){display:none}
+  .heros-grille,.plats-grille,.traiteur-grille,.bt-grille{grid-template-columns:minmax(0,1fr);gap:56px}
+  .maison-grille{grid-template-columns:minmax(0,1fr)}
+  .pate{max-width:520px}
+  .ardoise{margin:-64px 0 0;padding:88px 32px 40px}
+  .plats-grille .menu{order:-1}
+  .prix-grille{grid-template-columns:minmax(0,1fr);gap:72px}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:23px}
+  .marque span{display:none}
+  .heros{padding:28px 0 96px}
+  .heros-grille{display:flex;flex-direction:column;gap:0}
+  .heros-grille > div:first-child{display:contents}
+  .heros h1{order:0;margin-bottom:28px}
+  .boutique{order:1;margin:0 8px 56px}
+  .chapo,.heros .boutons{order:2}
+  .chapo{margin-top:0}
+  .store{margin:0 -12px}
+  .store .toile{height:44px}
+  .note-carte{left:-6px;bottom:-30px;padding:12px 16px}
+  .note-carte .chiffre{font-size:30px}
+  .maison,.plats,.traiteur,.boutiques{padding:80px 0}
+  .prix{padding:80px 0}
+  .ardoise ul{column-gap:16px}
+  .ardoise li{font-size:17px;line-height:1.3}
+  .salades{max-width:300px}
+  .terrine{margin-top:-60px;margin-right:12px}
+  .ardoise{padding-bottom:96px}
+  .occasions{grid-template-columns:minmax(0,1fr)}
+  .chiffre-carte{margin:-56px 0 0 12px;padding:24px 24px}
+  .feuilletes{display:none}
+  .menu{padding:40px 24px}
+  .bt-carte .corps{grid-template-columns:minmax(0,1fr);padding:28px 24px 30px;gap:24px}
+  .bt-seconde,.bt-note{padding:28px 24px}
+  .bt-carte .photo img{aspect-ratio:4/3}
+  .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+  .prix blockquote{font-size:21px}
+}
+@media (max-width:420px){
+  .wrap{width:calc(100% - 36px)}
+  .boutons .btn{width:100%}
+  .tel-pill{padding:10px 14px;font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Maison Vidis</b><span>Artisan charcutier traiteur · Le Mans</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#maison">La charcuterie</a>
+      <a href="#traiteur">Le traiteur</a>
+      <a href="#boutiques">Horaires</a>
+      <a class="tel-pill" href="tel:+33243241046">02 43 24 10 46</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap heros-grille">
+      <div>
+        <h1>Charcutier traiteur de tradition, au Mans.</h1>
+        <p class="chapo">Fabrication artisanale de la charcuterie, plats cuisinés à emporter et traiteur pour particuliers et entreprises&nbsp;: Edouard Vidis et son équipe vous accueillent boulevard Curie et rue de Sablé.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#traiteur">Préparer un événement</a>
+          <a class="btn btn-contour" href="tel:+33243241046">02 43 24 10 46</a>
+        </div>
+      </div>
+      <div class="boutique">
+        <div class="store" aria-hidden="true"><div class="barre"></div><div class="toile"></div><div class="feston"></div></div>
+        <div class="vitrine">
+          <img src="assets/maison-vidis-traiteur/boutique-comptoir-vitrines.webp" alt="La boutique&nbsp;: longue vitrine réfrigérée garnie de terrines, pâtés, salades et viandes, jambon et quiches sur le comptoir" width="1600" height="1008">
+          <span class="etiquette">8, boulevard Curie</span>
+        </div>
+        <a class="note-carte" href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Vidis%20-%20artisan%20charcutier%20traiteur%20Le%20Mans">
+          <span class="chiffre">4,2</span>
+          <span class="txt"><b>sur 5 sur Google</b>47 avis · les lire</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="wrap">
+      <ul>
+        <li>Charcuterie artisanale</li>
+        <li>2 boutiques au Mans</li>
+        <li>Rillettes primées aux 4 Jours du Mans</li>
+        <li>Traiteur pour particuliers et entreprises</li>
+        <li>Ouvert le dimanche matin</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="maison" id="maison">
+    <div class="wrap">
+      <div class="maison-tete">
+        <h2>La charcuterie, fabriquée à la maison.</h2>
+        <p class="intro">Charcutier traiteur de tradition, boucher aussi&nbsp;: la charcuterie est fabriquée de façon artisanale, et la vitrine en montre toute la gamme.</p>
+      </div>
+      <div class="maison-grille">
+        <div class="pate apparait">
+          <img src="assets/maison-vidis-traiteur/pate-en-croute-tranche-oeuf.webp" alt="Grand pâté en croûte à la pâte décorée, tranché sur une planche, œuf dur au centre" width="1255" height="1600" loading="lazy">
+          <span class="etiquette">Pâté en croûte à l'œuf</span>
+        </div>
+        <div>
+          <div class="ardoise">
+            <h3>Dans la vitrine</h3>
+            <ul>
+              <li>Pâtés en croûte</li>
+              <li>Terrines</li>
+              <li>Rillettes</li>
+              <li>Charcuterie artisanale</li>
+              <li>Salades composées</li>
+              <li>Pâtisserie salée</li>
+              <li>Saucisses, chipolatas</li>
+              <li>Cordons bleus</li>
+              <li>Viandes et volailles</li>
+              <li>Poulet rôti</li>
+              <li>Viande à barbecue</li>
+              <li>Plats cuisinés</li>
+            </ul>
+          </div>
+          <figure class="terrine apparait">
+            <img src="assets/maison-vidis-traiteur/terrine-volaille-legumes.webp" alt="Terrine de volaille et légumes en gelée, coupée" width="1423" height="1600" loading="lazy">
+            <span>Terrine de volaille</span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prix" aria-label="Concours des rillettes">
+    <div class="wrap prix-grille">
+      <div class="medaille" aria-hidden="true">
+        <div class="disque"><div><b>1<sup style="font-size:.45em">er</sup></b><span>Grand Prix<br>d'honneur</span></div></div>
+      </div>
+      <div>
+        <h2>Les rillettes, 1er Grand Prix d'honneur.</h2>
+        <p class="intro">Catégorie charcutier, au concours des meilleures rillettes des 4 Jours du Mans.</p>
+        <blockquote>«&nbsp;Merci à la fidélité de nos clients. Bravo à mon équipe. On lâche rien.&nbsp;»<cite>Edouard Vidis</cite></blockquote>
+      </div>
+      <div class="salades apparait"><img src="assets/maison-vidis-traiteur/vitrine-traiteur-salades.webp" alt="Bacs de salades composées et plats traiteur dans la vitrine" width="1200" height="1600" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="plats" id="plats">
+    <div class="wrap plats-grille">
+      <div class="plats-photos">
+        <div class="p1 apparait">
+          <img src="assets/maison-vidis-traiteur/barquettes-poisson-crevettes-traiteur.webp" alt="Barquettes de choucroute de la mer&nbsp;: crevette, moules, saumon et aneth" width="1200" height="1600" loading="lazy">
+        </div>
+        <div class="p2 apparait">
+          <img src="assets/maison-vidis-traiteur/pate-en-croute-dore-quadrille.webp" alt="Feuilleté doré à la pâte quadrillée" width="1200" height="1600" loading="lazy">
+        </div>
+      </div>
+      <div class="menu">
+        <h2>Les plats du week-end</h2>
+        <p class="sous">Quelques plats déjà proposés le week-end&nbsp;:</p>
+        <ul>
+          <li>Marmite sarthoise</li>
+          <li>Couscous</li>
+          <li>Cassoulet</li>
+          <li>Choucroute de la mer</li>
+          <li>Feuilleté au jambon maison</li>
+          <li>Tagliatelles au jambon de Bayonne</li>
+          <li>Paupiette savoyarde</li>
+          <li>Crépinette à la normande</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="traiteur" id="traiteur">
+    <div class="wrap traiteur-grille">
+      <div>
+        <h2>Traiteur, pour vos événements.</h2>
+        <p class="intro">Pour les particuliers comme pour les entreprises, la Maison Vidis prépare vos réceptions, du cocktail au repas chaud.</p>
+        <ul class="occasions">
+          <li>Anniversaire</li>
+          <li>Mariage</li>
+          <li>Repas de famille</li>
+          <li>Association</li>
+          <li>Cocktail dînatoire</li>
+          <li>Plateaux repas</li>
+          <li>Buffet froid</li>
+          <li>Ardoise de charcuterie</li>
+          <li>Repas chaud</li>
+        </ul>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33243241046">Appeler la boutique</a>
+          <a class="btn btn-contour" href="mailto:edouard.vidis13@gmail.com">Écrire à Edouard</a>
+        </div>
+      </div>
+      <div class="plateau">
+        <div class="apparait"><img src="assets/maison-vidis-traiteur/plateau-canapes-et-brochettes-traiteur.webp" alt="Plateau traiteur de bouchées&nbsp;: choux colorés au sésame, bouchées de charcuterie, cubes de terrine" width="1600" height="1200" loading="lazy"></div>
+        <figure class="feuilletes apparait"><img src="assets/maison-vidis-traiteur/feuilletes-jambon-drapeaux.webp" alt="Feuilletés au jambon piqués de petits drapeaux français" width="1600" height="1200" loading="lazy"></figure>
+        <div class="chiffre-carte">
+          <b>250</b>
+          <p>mini-burgers et un couscous pour 200 personnes, préparés pour Queru Distribution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boutiques" id="boutiques">
+    <div class="wrap">
+      <h2>Deux boutiques au Mans</h2>
+      <p class="intro">Boulevard Curie et rue de Sablé.</p>
+      <div class="bt-grille">
+        <article class="bt-carte">
+          <div class="photo apparait">
+            <img src="assets/maison-vidis-traiteur/devanture-boucherie-charcuterie-boulevard-curie.webp" alt="La devanture rouge et anthracite, enseignes Artisan boucher et Artisan charcutier, store Maison Vidis" width="1600" height="1200" loading="lazy">
+          </div>
+          <div class="corps">
+            <div>
+              <h3>Boulevard Curie</h3>
+              <p>8, boulevard Curie<br>72000 Le Mans</p>
+              <p style="margin-top:14px"><a href="tel:+33243241046">02 43 24 10 46</a></p>
+              <p style="margin-top:6px"><a href="mailto:edouard.vidis13@gmail.com">edouard.vidis13@gmail.com</a></p>
+            </div>
+            <table class="horaires">
+              <caption style="text-align:left;font-family:var(--serif);font-size:22px;padding-bottom:6px">Horaires</caption>
+              <tr><th>Lundi</th><td>Fermé</td></tr>
+              <tr><th>Mardi</th><td>8&nbsp;h 15 à 19&nbsp;h</td></tr>
+              <tr><th>Mercredi</th><td>8&nbsp;h 15 à 19&nbsp;h</td></tr>
+              <tr><th>Jeudi</th><td>8&nbsp;h 15 à 19&nbsp;h</td></tr>
+              <tr><th>Vendredi</th><td>8&nbsp;h 15 à 19&nbsp;h</td></tr>
+              <tr><th>Samedi</th><td>8&nbsp;h 15 à 19&nbsp;h</td></tr>
+              <tr><th>Dimanche</th><td>le matin, dès 9&nbsp;h</td></tr>
+            </table>
+          </div>
+        </article>
+        <div class="bt-cote">
+          <div class="bt-seconde">
+            <h3>Rue de Sablé</h3>
+            <p>La boutique du Petit St Georges<br>183, rue de Sablé, 72000 Le Mans</p>
+            <p style="margin-top:14px"><a href="tel:+33272165086">02 72 16 50 86</a></p>
+          </div>
+          <div class="bt-note">
+            <div class="chiffre">4,2 <small>/ 5</small></div>
+            <p>Note Google, 47 avis.</p>
+            <div class="boutons">
+              <a class="btn btn-clair" href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Vidis%20-%20artisan%20charcutier%20traiteur%20Le%20Mans">Voir les avis</a>
+              <a class="btn btn-clair" href="https://www.facebook.com/profile.php?id=100057169493238">Suivre sur Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <div class="nom">Maison Vidis</div>
+        <p style="margin-top:14px">Artisan charcutier traiteur. 8, boulevard Curie et 183, rue de Sablé, 72000 Le Mans.</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33243241046">02 43 24 10 46</a> · boulevard Curie</li>
+          <li><a href="tel:+33272165086">02 72 16 50 86</a> · rue de Sablé</li>
+          <li><a href="mailto:edouard.vidis13@gmail.com">edouard.vidis13@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Boulevard Curie</h4>
+        <ul>
+          <li>Mardi au samedi, 8&nbsp;h 15 à 19&nbsp;h</li>
+          <li>Dimanche, le matin dès 9&nbsp;h</li>
+          <li>Lundi, fermé</li>
+          <li><a href="https://www.facebook.com/profile.php?id=100057169493238">Facebook</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Vidis%20-%20artisan%20charcutier%20traiteur%20Le%20Mans">Fiche Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour Maison Vidis</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

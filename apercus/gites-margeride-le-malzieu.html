@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gîtes en Margeride · quatre gîtes meublés au hameau des Ducs, en Lozère</title>
+<meta name="description" content="Gîtes en Margeride : quatre gîtes meublés de 2 à 13 personnes au hameau des Ducs, à 1 186 m, à deux pas du Malzieu. À la semaine ou au week-end, toute l'année.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E3133'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23D9A21B'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E8E6E2; --base-2:#DEDBD5; --surface:#F4F3F0; --encre:#23221F; --doux:#55534D;
+  --genet:#D9A21B; --genet-f:#B98610; --sombre:#2E3133; --sombre-2:#383C3E;
+  --ombre:0 30px 60px -34px rgba(35,34,31,.55);
+  --ombre-l:0 48px 90px -42px rgba(35,34,31,.62);
+  --serif:'Domine',Georgia,serif; --sans:'Urbanist','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--genet);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(232,230,226,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(35,34,31,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+.marque b{font-family:var(--serif);font-weight:500;font-size:22px}
+.marque span{font-size:13px;color:var(--doux);letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.nav .appel{color:var(--encre);font-weight:600;padding:11px 20px;border-radius:999px;background:var(--surface);box-shadow:0 10px 24px -18px rgba(35,34,31,.6);transition:transform .2s,box-shadow .2s}
+.nav .appel:hover{transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(35,34,31,.7)}
+.btn.appel-court{display:none}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease,background-color .25s,box-shadow .25s,color .25s;text-align:center}
+.btn-plein{background:var(--encre);color:var(--surface);box-shadow:0 18px 34px -20px rgba(35,34,31,.8)}
+.btn-plein:hover{background:var(--sombre-2);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.nowrap{white-space:nowrap}
+
+/* Héros : escalier de trois gîtes */
+.heros{padding:72px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"titre escalier" "texte escalier" "actions escalier";column-gap:56px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(38px,5.2vw,72px);line-height:1.04;padding-top:40px}
+.heros .chapo{grid-area:texte;margin-top:28px;font-size:19px;color:var(--doux);max-width:46ch}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.escalier{grid-area:escalier;position:relative;aspect-ratio:720/650;width:100%}
+.marche{position:absolute;margin:0}
+.marche img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;box-shadow:var(--ombre-l)}
+.marche-1{right:0;top:0;width:78%}
+.marche-1 img{object-position:50% 38%}
+.marche-2{right:33%;top:34%;width:50%;z-index:2}
+.marche-2 img{object-position:50% 60%;outline:6px solid var(--base)}
+.marche-3{left:0;top:62%;width:40%;z-index:3}
+.marche-3 img{object-position:40% 55%;outline:6px solid var(--base)}
+.etiquette{position:absolute;left:14px;bottom:14px;display:inline-flex;gap:8px;align-items:baseline;padding:8px 14px;border-radius:999px;background:var(--surface);font-size:14px;font-weight:600;line-height:1.2;box-shadow:0 12px 24px -16px rgba(35,34,31,.7)}
+.etiquette i{font-style:normal;font-weight:400;color:var(--doux)}
+.marche-1 .etiquette{left:auto;right:14px;top:14px;bottom:auto}
+.marche-2 .etiquette{top:14px;bottom:auto}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2);padding:30px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column;gap:2px;font-size:15px;color:var(--doux);line-height:1.35}
+.faits strong{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--encre)}
+
+/* Le hameau */
+.hameau{padding:120px 0}
+.hameau .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.hameau-photos{position:relative;padding-bottom:70px}
+.hameau-photos .grande img{border-radius:22px;box-shadow:var(--ombre-l);aspect-ratio:4/3.1;object-fit:cover;object-position:30% 50%;width:100%}
+.vignette{position:absolute;right:-28px;bottom:0;width:min(220px,46%);margin:0;padding:10px 10px 12px;background:var(--surface);border-radius:14px;box-shadow:var(--ombre);transform:rotate(2deg)}
+.vignette img{border-radius:8px;aspect-ratio:4/3;object-fit:cover}
+.vignette figcaption{font-size:14px;color:var(--doux);margin-top:8px;line-height:1.3}
+.hameau h2{font-size:clamp(32px,3.6vw,50px)}
+.hameau .texte p{margin-top:22px;color:var(--doux);max-width:60ch}
+.hameau .texte p.lead{color:var(--encre);font-size:20px}
+.altitude{display:flex;align-items:baseline;gap:14px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(35,34,31,.14)}
+.altitude b{white-space:nowrap;flex-shrink:0;font-family:var(--serif);font-weight:500;font-size:46px;line-height:1;color:var(--genet-f)}
+.altitude span{color:var(--doux);font-size:16px;line-height:1.35}
+
+/* Les gîtes */
+.gites{background:var(--surface);padding:120px 0 128px}
+.gites-tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:end;margin-bottom:72px}
+.gites-tete h2{font-size:clamp(34px,4.2vw,58px)}
+.gites-tete p{color:var(--doux)}
+.gite-une{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+.duo{position:relative}
+.duo .a{width:84%;border-radius:20px;box-shadow:var(--ombre-l);aspect-ratio:3/2;object-fit:cover}
+.duo .b{position:absolute;right:0;bottom:-56px;width:44%;border-radius:14px;box-shadow:var(--ombre);aspect-ratio:1/1;object-fit:cover;object-position:60% 50%;outline:8px solid var(--surface)}
+.fiche h3{font-size:clamp(28px,2.8vw,38px)}
+.fiche .capa{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.fiche .capa span{padding:6px 14px;border-radius:999px;background:var(--base);font-size:15px;font-weight:500}
+.fiche p{color:var(--doux)}
+.fiche ul{list-style:none;padding:0;margin:22px 0 0}
+.fiche li{padding:11px 0;border-top:1px solid rgba(35,34,31,.12);font-size:17px}
+.fiche li:last-child{border-bottom:1px solid rgba(35,34,31,.12)}
+.lien-fiche{display:inline-block;margin-top:22px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--genet);padding-bottom:2px;transition:color .2s}
+.lien-fiche:hover{color:var(--genet-f)}
+.gites-paire{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;margin-top:150px;align-items:start}
+.carte-gite{background:var(--base);border-radius:24px;padding:18px 18px 36px}
+.carte-gite img{border-radius:16px;aspect-ratio:16/10;object-fit:cover;width:100%;box-shadow:var(--ombre)}
+.carte-gite .fiche{padding:30px 16px 0}
+.carte-gite.decale{margin-top:96px}
+.cabane{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center;margin-top:120px}
+.polaroid{margin:0;background:var(--base);padding:14px 14px 18px;border-radius:12px;box-shadow:var(--ombre-l);transform:rotate(-2.2deg);max-width:520px;justify-self:end;width:100%}
+.polaroid img{border-radius:6px;aspect-ratio:4/3;object-fit:cover}
+.polaroid figcaption{font-size:15px;color:var(--doux);padding:12px 4px 0}
+.cabane .fiche{order:-1}
+
+/* Autour des Ducs */
+.autour{background:var(--sombre);color:var(--surface);padding:120px 0}
+.autour .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.autour h2{font-size:clamp(32px,3.8vw,52px)}
+.autour .intro{color:rgba(244,243,240,.76);margin-top:22px;max-width:52ch}
+.autour dl{margin:40px 0 0}
+.autour dt{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--genet);padding-top:22px;border-top:1px solid rgba(244,243,240,.16)}
+.autour dd{margin:6px 0 22px;color:rgba(244,243,240,.8);font-size:17px}
+.autour-photo{position:relative;margin:0}
+.autour-photo img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;object-position:28% 50%;width:100%;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.autour-photo .etiquette{color:var(--encre);left:18px;bottom:18px}
+
+/* Réserver */
+.reserver{padding:128px 0}
+.reserver .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.reserver h2{font-size:clamp(34px,4.2vw,58px)}
+.reserver .chapo{margin-top:22px;color:var(--doux);max-width:54ch}
+.etapes{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:0}
+.etapes li{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid rgba(35,34,31,.14)}
+.etapes li:last-child{border-bottom:1px solid rgba(35,34,31,.14)}
+.etapes b{font-family:var(--serif);font-weight:500;font-size:19px}
+.etapes span{color:var(--doux)}
+.photo-terrasse{margin:56px 0 0;position:relative}
+.photo-terrasse img{border-radius:20px;aspect-ratio:16/9;object-fit:cover;object-position:50% 60%;box-shadow:var(--ombre-l);width:100%}
+.coord{position:sticky;top:110px;background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre-l)}
+.coord h3{font-size:28px}
+.coord .sous{color:var(--doux);margin-top:8px;font-size:16px}
+.coord dl{margin:28px 0 0}
+.coord dt{font-size:14px;color:var(--doux);margin-top:20px}
+.coord dd{margin:2px 0 0;font-size:18px;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(35,34,31,.25)}
+.coord dd a:hover{border-color:var(--genet)}
+.coord .tel{font-family:var(--serif);font-size:30px;font-weight:500;border:0}
+.coord .btn{width:100%;margin-top:30px}
+
+/* Pied */
+.pied{background:var(--sombre);color:rgba(244,243,240,.82);padding:80px 0 0;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:48px}
+.pied .nom{font-family:var(--serif);font-size:28px;color:var(--surface);line-height:1.15}
+.pied h4{margin:0 0 12px;font-size:14px;font-weight:600;color:var(--genet);letter-spacing:.04em}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(244,243,240,.25)}
+.pied a:hover{border-color:var(--genet)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.signature{margin-top:64px;padding:22px 0 26px;border-top:1px solid rgba(244,243,240,.1);text-align:center;font-size:13px;color:rgba(244,243,240,.5)}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Tablette */
+@media (max-width:980px){
+  .heros .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "escalier" "texte" "actions"}
+  .heros h1{padding-top:0}
+  .escalier{margin-top:32px}
+  .hameau .wrap,.autour .wrap,.reserver .wrap,.gites-tete,.gite-une,.cabane{grid-template-columns:minmax(0,1fr);gap:48px}
+  .gites-paire{grid-template-columns:minmax(0,1fr);margin-top:110px}
+  .carte-gite.decale{margin-top:0}
+  .cabane .fiche{order:0}
+  .polaroid{justify-self:start}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .coord{position:static}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+  .vignette{right:0}
+}
+/* Téléphone */
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 36px)}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .btn.appel-court{display:inline-flex;min-height:44px;padding:10px 18px;font-size:15px}
+  .marque b{font-size:19px}
+  .marque span{display:none}
+  .heros{padding:32px 0 72px}
+  .heros .chapo{font-size:17px}
+  .heros .actions{flex-direction:column}
+  .heros .actions .btn{width:100%}
+  .etiquette{font-size:12px;padding:6px 10px;left:8px;bottom:8px}
+  .marche-1 .etiquette{right:8px;top:8px}
+  .marche-2 .etiquette{top:8px;left:8px}
+  .etiquette i{display:none}
+  .marche-2 img,.marche-3 img{outline-width:4px}
+  .hameau,.gites,.autour,.reserver{padding:88px 0}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits strong{font-size:20px}
+  .etapes li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .coord{padding:28px 22px}
+  .coord .tel{font-size:26px}
+  .duo .b{bottom:-40px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Gîtes en Margeride</b><span>Vos vacances en Lozère</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#hameau">Le hameau</a>
+      <a href="#gites">Les gîtes</a>
+      <a href="#autour">Autour des Ducs</a>
+      <a href="#reserver">Réserver</a>
+      <a class="appel nowrap" href="tel:+33608342536">06 08 34 25 36</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33608342536">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <h1>Quatre gîtes de granit au hameau des Ducs</h1>
+      <div class="escalier">
+        <figure class="marche marche-1">
+          <img src="assets/gites-margeride-le-malzieu/maison-de-granit-volets-et-jardin.webp" alt="Maison de granit aux volets de bois, jardin clos avec transats et parasol" width="1600" height="1067" fetchpriority="high">
+          <span class="etiquette">La Margeride <i>13 personnes</i></span>
+        </figure>
+        <figure class="marche marche-2">
+          <img src="assets/gites-margeride-le-malzieu/terrasse-pierre-parasol-transats.webp" alt="Terrasse pavée contre un mur de granit, table de pique-nique, parasol et transats" width="1600" height="1067">
+          <span class="etiquette">Les Ducs <i>8 personnes</i></span>
+        </figure>
+        <figure class="marche marche-3">
+          <img src="assets/gites-margeride-le-malzieu/la-cabane-chalet-bois.webp" alt="Le petit chalet en bois de la Cabane, vu à travers les branches" width="1600" height="1067">
+          <span class="etiquette">La Cabane <i>2 personnes</i></span>
+        </figure>
+      </div>
+      <p class="chapo">Dans un ancien corps de ferme entièrement rénové, à deux pas du Malzieu, nous louons quatre gîtes meublés de 2 à 13 personnes, à la semaine ou au week-end, toute l'année.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="#reserver">Réserver votre séjour</a>
+        <a class="btn btn-contour nowrap" href="tel:+33608342536">06 08 34 25 36</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><strong>1&nbsp;186 m</strong>d'altitude, en nord Lozère</li>
+        <li><strong>4&nbsp;gîtes</strong>de 2 à 13 personnes</li>
+        <li><strong>À la semaine</strong>du samedi au samedi</li>
+        <li><strong>Au week-end</strong>2 nuitées minimum</li>
+        <li><strong>Toute l'année</strong>en location directe</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hameau" id="hameau">
+    <div class="wrap">
+      <div class="hameau-photos">
+        <div class="grande apparait"><img src="assets/gites-margeride-le-malzieu/fenetre-ouverte-livre-et-pivoines.webp" alt="Pivoines et magazine sur le rebord en granit d'une fenêtre ouverte sur les maisons du hameau" width="1600" height="1067" loading="lazy"></div>
+        <figure class="vignette">
+          <img src="assets/gites-margeride-le-malzieu/hameau-des-ducs-entre-pres-et-foret.webp" alt="Le hameau des Ducs au pied de sa montagne boisée, prés au premier plan" width="400" height="300" loading="lazy">
+          <figcaption>Le hameau, entre forêts et pâturages</figcaption>
+        </figure>
+      </div>
+      <div class="texte">
+        <h2>Bienvenue en Margeride</h2>
+        <p class="lead">C'est dans un petit village de Margeride que nous vous accueillons, pour un séjour au calme en nord Lozère.</p>
+        <p>Le hameau des Ducs est niché au pied de sa montagne, entre forêts et pâturages. Ses maisons en granit, la pierre locale par excellence, son four à pain et son métier à ferrer restaurés, et sa tour, sans doute un ancien donjon du 12<sup>e</sup> ou du 13<sup>e</sup> siècle, valent le détour.</p>
+        <p>Le Gévaudan cache bien des trésors, à commencer par sa célèbre Bête. Pas de risque : elle a quitté les lieux depuis longtemps, et les chemins se parcourent sans crainte, à pied, à vélo ou à cheval.</p>
+        <div class="altitude"><b>1&nbsp;186 m</b><span>d'altitude, dans un petit coin de moyenne montagne lozérien</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gites" id="gites">
+    <div class="wrap">
+      <div class="gites-tete">
+        <h2>Un ancien corps de ferme, quatre gîtes</h2>
+        <p>La maison d'habitation, l'écurie et la bergerie de la ferme, entièrement rénovées, et tout près, une cabane en bois. Chacun a sa cour ou son espace vert fermé.</p>
+      </div>
+
+      <article class="gite-une">
+        <div class="duo apparait">
+          <img class="a" src="assets/gites-margeride-le-malzieu/la-margeride-grande-table-et-cheminee.webp" alt="Grande pièce à vivre aux murs de granit, longue table dressée et insert allumé dans l'ancienne cheminée" width="1600" height="1067" loading="lazy">
+          <img class="b" src="assets/gites-margeride-le-malzieu/la-margeride-cuisine-en-bois.webp" alt="Cuisine en chêne avec îlot carrelé et bouquet de pivoines" width="1600" height="1067" loading="lazy">
+        </div>
+        <div class="fiche">
+          <h3>Gîte « la Margeride »</h3>
+          <div class="capa"><span>13 personnes</span><span>140&nbsp;m²</span><span>Animaux acceptés</span></div>
+          <p>L'ancienne maison d'habitation de la ferme, pour les groupes jusqu'à 13 personnes. Au rez-de-chaussée, une grande pièce à vivre où chacun évolue sans encombre, et une cuisine toute équipée.</p>
+          <ul>
+            <li>Cheminée, le bois vous est fourni gratuitement</li>
+            <li>Grande terrasse, salon de jardin, transats et barbecue</li>
+            <li>Pelouse fermée et sécurisée</li>
+          </ul>
+          <a class="lien-fiche" href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-margeride/">Toutes les photos du gîte</a>
+        </div>
+      </article>
+
+      <div class="gites-paire">
+        <article class="carte-gite apparait">
+          <img src="assets/gites-margeride-le-malzieu/les-ducs-escalier-et-insert.webp" alt="Table, escalier en bois et insert à granulés dans un habillage de granit" width="1600" height="1067" loading="lazy">
+          <div class="fiche">
+            <h3>Le Gîte « les Ducs »</h3>
+            <div class="capa"><span>8 personnes</span><span>110&nbsp;m²</span></div>
+            <p>L'ancienne écurie, entièrement rénovée et agrandie d'une pièce : le charme des vieilles pierres avec tout le confort moderne. Cheminée à granulés dans la pièce principale, terrasse dans une cour fermée avec salon de jardin, transats et barbecue.</p>
+            <a class="lien-fiche" href="https://www.gitemargeride.fr/nos-gites-meubles/le-gite-les-ducs/">Toutes les photos du gîte</a>
+          </div>
+        </article>
+        <article class="carte-gite decale apparait">
+          <img src="assets/gites-margeride-le-malzieu/la-bergerie-sejour-et-insert.webp" alt="Séjour en lambris et poutres, table et cheminée à granulés sur socle de pierre" width="1600" height="1067" loading="lazy">
+          <div class="fiche">
+            <h3>Gîte « la Bergerie »</h3>
+            <div class="capa"><span>72&nbsp;m²</span><span>De plain-pied</span></div>
+            <p>L'ancienne bergerie de la ferme, rénovée dans son bâtiment en pierre. Aménagée sur un seul niveau, elle se prête à l'accueil des personnes handicapées. Dans la cour, un grand espace fermé en pelouse, une table de jardin, des transats et un joli barbecue en granit.</p>
+            <a class="lien-fiche" href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-bergerie/">Toutes les photos du gîte</a>
+          </div>
+        </article>
+      </div>
+
+      <article class="cabane">
+        <figure class="polaroid apparait">
+          <img src="assets/gites-margeride-le-malzieu/la-cabane-poele-a-bois.webp" alt="Poêle à bois allumé, rideaux rouges et couvre-lit fleuri dans la Cabane" width="1600" height="1067" loading="lazy">
+          <figcaption>Le poêle à bois de la Cabane</figcaption>
+        </figure>
+        <div class="fiche">
+          <h3>Gîte « la Cabane »</h3>
+          <div class="capa"><span>2 personnes</span><span>24&nbsp;m²</span></div>
+          <p>Tout près de l'ancien corps de ferme, un petit nid douillet pour deux, au cœur du village des Ducs : un lit pour deux personnes, tout le confort nécessaire, et une porte ouverte sur un espace vert fermé.</p>
+          <a class="lien-fiche" href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-cabane/">Toutes les photos du gîte</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="autour" id="autour">
+    <div class="wrap">
+      <figure class="autour-photo apparait">
+        <img src="assets/gites-margeride-le-malzieu/fenetre-fleurie-et-tour-des-ducs.webp" alt="Pivoines devant une fenêtre ouverte, la tour en ruine du hameau dans les arbres" width="1600" height="1067" loading="lazy">
+        <span class="etiquette">La tour des Ducs, depuis la fenêtre</span>
+      </figure>
+      <div>
+        <h2>Autour des Ducs</h2>
+        <p class="intro">Les grands espaces et le calme du village, avec une multitude de visites et d'activités à portée de main.</p>
+        <dl>
+          <dt>La tour et le village</dt>
+          <dd>Un ancien donjon du 12<sup>e</sup> ou du 13<sup>e</sup> siècle, parent de la tour d'Apcher, et les maisons typiques en granit, le four et le métier à ferrer rénovés.</dd>
+          <dt>Les sommets</dt>
+          <dd>La montagne qui surplombe les Ducs offre une vue sensationnelle : le Truc du Chapelat (1&nbsp;448 m), les Gardilles, le Truc de la Garde (1&nbsp;486 m).</dd>
+          <dt>Avec votre cheval</dt>
+          <dd>Vous souhaitez parcourir le secteur à cheval ? Prenez contact avec nous : nous pourrons peut-être accueillir votre équidé.</dd>
+          <dt>L'hiver</dt>
+          <dd>Si l'enneigement est suffisant, le village de Lajo est à 4&nbsp;km : son foyer de ski loue skis de fond, raquettes et luges.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserver" id="reserver">
+    <div class="wrap">
+      <div>
+        <h2>Réserver votre séjour en Lozère</h2>
+        <p class="chapo">Pas de formulaire ni de commission : vous réservez directement avec nous, par téléphone ou par mail. Contactez-nous pour connaître les disponibilités et les tarifs du gîte qui vous intéresse.</p>
+        <ul class="etapes">
+          <li><b>À la semaine</b><span>Du samedi au samedi.</span></li>
+          <li><b>Au week-end</b><span>À partir de 2 nuitées.</span></li>
+          <li><b>Toute l'année</b><span>Quatre gîtes, de 2 à 13 personnes.</span></li>
+          <li><b>En direct</b><span>Les tarifs sur Booking et Abritel comprennent une commission, pas la location directe.</span></li>
+        </ul>
+        <figure class="photo-terrasse apparait">
+          <img src="assets/gites-margeride-le-malzieu/porte-fenetre-ouverte-sur-le-hameau.webp" alt="Porte-fenêtre ouverte sur une cour avec deux transats, le hameau au fond" width="1600" height="1067" loading="lazy">
+          <span class="etiquette">Les transats vous attendent</span>
+        </figure>
+      </div>
+      <aside class="coord" aria-label="Coordonnées">
+        <h3>M. et Mme Vidal</h3>
+        <p class="sous">Gîtes en Margeride</p>
+        <dl>
+          <dt>Téléphone</dt>
+          <dd><a class="tel nowrap" href="tel:+33608342536">06 08 34 25 36</a></dd>
+          <dt>Mail</dt>
+          <dd><a href="mailto:jean-claude.vidal316@orange.fr">jean-claude.vidal316@orange.fr</a></dd>
+          <dt>Les gîtes</dt>
+          <dd>Lieu-dit les Ducs, à deux pas du Malzieu, en nord Lozère (48)</dd>
+          <dt>Coordonnées GPS</dt>
+          <dd>44.871736, 3.403066</dd>
+        </dl>
+        <a class="btn btn-plein" href="tel:+33608342536">Appeler pour réserver</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <p class="nom">Gîtes en Margeride</p>
+      <p style="margin-top:12px">Quatre gîtes meublés au hameau des Ducs, à 1&nbsp;186 m, à la semaine ou au week-end, toute l'année.</p>
+    </div>
+    <div>
+      <h4>Les gîtes</h4>
+      <ul>
+        <li><a href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-margeride/">La Margeride</a></li>
+        <li><a href="https://www.gitemargeride.fr/nos-gites-meubles/le-gite-les-ducs/">Les Ducs</a></li>
+        <li><a href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-bergerie/">La Bergerie</a></li>
+        <li><a href="https://www.gitemargeride.fr/nos-gites-meubles/gite-la-cabane/">La Cabane</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nous joindre</h4>
+      <ul>
+        <li><a class="nowrap" href="tel:+33608342536">06 08 34 25 36</a></li>
+        <li><a href="mailto:jean-claude.vidal316@orange.fr" style="overflow-wrap:anywhere">jean-claude.vidal316@orange.fr</a></li>
+        <li>Lieu-dit les Ducs, nord Lozère</li>
+      </ul>
+    </div>
+  </div>
+  <p class="signature">Proposition de Nicolas Masset pour Gîtes en Margeride</p>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

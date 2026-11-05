@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Studio Canin · Toilettage chiens et chats, près de La Rochelle</title>
+<meta name="description" content="Le Studio Canin, le salon d'Alexandra : toilettage chiens et chats depuis 2019, 28 rue de l'Aurore, 17220. 05 16 85 35 37.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C1C1E'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Futura,Arial,sans-serif' font-weight='700' font-size='34' fill='%23D2553B'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EDEAE6; --base-2:#E3DFD9; --surface:#F8F6F4; --encre:#1C1C1E; --encre-2:#55524F;
+  --accent:#D2553B; --accent-fonce:#B5432C; --sombre:#1C1C1E; --sombre-2:#2A2A2D;
+  --ombre:0 30px 60px -34px rgba(28,28,30,.6);
+  --display:'League Spartan', 'Futura', sans-serif; --texte:'Crimson Text', Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:20px;line-height:1.55}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1200px,100% - 40px);margin-inline:auto}
+.sans{font-family:var(--display)}
+
+/* Recadrage qui sort le logo incrusté du champ */
+.cadrage{overflow:hidden;position:relative}
+.cadrage img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,100% 0%);transform:scale(var(--z,1.3));transform-origin:var(--o,100% 0%)}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(237,234,230,.95);border-bottom:1px solid rgba(28,28,30,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:10px;font-family:var(--display)}
+.marque b{font-weight:600;font-size:22px;letter-spacing:-.01em}
+.marque small{font-size:15px;color:var(--encre-2);font-weight:400}
+.nav{display:flex;align-items:center;gap:30px;font-family:var(--display);font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent-fonce)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 28px 14px;font-family:var(--display);font-size:17px;font-weight:500;text-decoration:none;border:1.5px solid var(--encre);line-height:1.2;text-align:center;transition:transform .25s ease, background .25s ease, color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent-fonce);border-color:var(--accent-fonce);color:var(--surface);box-shadow:0 16px 30px -18px rgba(181,67,44,.95)}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-tel{padding:10px 18px 9px;font-size:15.5px;white-space:nowrap;border-color:rgba(28,28,30,.3)}
+.btn-tel .court{display:none}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* Héros */
+.heros{padding:72px 0 120px}
+.heros .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"titre photo" "texte photo";column-gap:72px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(38px,5.4vw,78px);align-self:end}
+.heros h1 span{color:var(--encre-2);font-weight:500}
+.heros .texte{grid-area:texte;align-self:start;margin-top:26px}
+.heros .texte p{font-size:21px;color:var(--encre-2);max-width:27em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.scene{grid-area:photo;position:relative;padding-bottom:86px}
+.grande{border-radius:14px;aspect-ratio:1/1.02;box-shadow:0 44px 80px -42px rgba(28,28,30,.7)}
+.grande{--z:1.38;--pos:100% 0%;--o:100% 2%}
+.scene .etiquette{position:absolute;right:16px;top:16px;background:var(--surface);border-radius:999px;padding:8px 15px 6px;font-family:var(--display);font-size:14.5px;box-shadow:0 12px 26px -14px rgba(28,28,30,.7)}
+.film{position:absolute;left:-56px;bottom:0;display:flex;gap:10px;background:var(--sombre);padding:24px 14px;border-radius:6px;transform:rotate(-2.5deg);box-shadow:0 30px 50px -26px rgba(28,28,30,.85);max-width:calc(100% + 56px)}
+.film::before,.film::after{content:"";position:absolute;left:10px;right:10px;height:8px;background:repeating-linear-gradient(90deg,rgba(248,246,244,.82) 0 9px,transparent 9px 21px);border-radius:2px}
+.film::before{top:8px}
+.film::after{bottom:8px}
+.film .case{width:min(150px,28vw);aspect-ratio:4/3;border-radius:3px;flex:none}
+.film .case.a{--z:1.3;--pos:100% 0%;--o:100% 0%}
+
+/* Bandeau de faits : chiffres */
+.faits{background:var(--base-2)}
+.faits .env{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.faits .f{padding:34px 28px 30px;border-left:1px solid rgba(28,28,30,.14)}
+.faits .f:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:600;font-size:38px;line-height:1;letter-spacing:-.02em}
+.faits span{display:block;margin-top:8px;font-size:18px;color:var(--encre-2);line-height:1.3}
+
+/* Les chats aussi */
+.chats{padding:128px 0}
+.chats .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:center}
+.chats .photo{position:relative}
+.chats .carre{aspect-ratio:1;border-radius:18px;box-shadow:var(--ombre);--z:1;--pos:100% 40%}
+.chats .pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);border-radius:999px;padding:8px 15px 6px;font-family:var(--display);font-size:14.5px;box-shadow:0 12px 26px -14px rgba(28,28,30,.7)}
+.chats .rond{position:absolute;right:-30px;top:-34px;width:min(170px,34%);aspect-ratio:1;border-radius:50%;border:7px solid var(--surface);box-shadow:var(--ombre);--z:1.32;--pos:100% 0%;--o:96% 4%}
+.chats h2{font-size:clamp(32px,3.6vw,52px)}
+.chats p{margin-top:22px;color:var(--encre-2);max-width:28em}
+.chats p.bapteme{font-size:23px;color:var(--encre);font-style:italic;margin-top:28px;padding-top:24px;border-top:1px solid rgba(28,28,30,.15)}
+
+/* Planche contact, fond sombre */
+.planche{background:var(--sombre);color:var(--surface);padding:120px 0 136px}
+.planche .tete{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:end}
+.planche blockquote{margin:0;font-family:var(--texte);font-style:italic;font-size:clamp(30px,3.8vw,52px);line-height:1.15}
+.planche blockquote::before{content:"«\00a0"}
+.planche blockquote::after{content:"\00a0»"}
+.planche .tete p{color:rgba(248,246,244,.72);font-size:20px}
+.planche .tete p b{display:block;font-family:var(--display);font-weight:500;font-size:16px;color:rgba(248,246,244,.55);margin-bottom:8px}
+.bandes{margin-top:72px;display:grid;gap:40px}
+.bande{position:relative;display:flex;gap:12px;background:#0F0F11;padding:30px 16px;border-radius:6px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.bande::before,.bande::after{content:"";position:absolute;left:12px;right:12px;height:10px;background:repeating-linear-gradient(90deg,rgba(248,246,244,.7) 0 11px,transparent 11px 25px);border-radius:2px}
+.bande::before{top:10px}
+.bande::after{bottom:10px}
+.bande.un{transform:rotate(-1.4deg);margin-right:40px}
+.bande.deux{transform:rotate(1.2deg);margin-left:72px}
+.bande figure{margin:0;flex:1 1 0;min-width:0}
+.bande .case{aspect-ratio:4/3;border-radius:4px}
+.bande figcaption{margin-top:10px;font-family:var(--display);font-size:14px;color:rgba(248,246,244,.7);line-height:1.3}
+.bande .entoure{position:relative}
+.bande .entoure svg{position:absolute;inset:-14px -16px;width:calc(100% + 32px);height:calc(100% + 28px);pointer-events:none;overflow:visible}
+.annotation{position:absolute;right:-6px;top:-62px;font-family:var(--texte);font-style:italic;font-size:24px;color:var(--accent);transform:rotate(-4deg);white-space:nowrap}
+
+/* Horaires et coordonnées */
+.venir{padding:128px 0}
+.venir .env{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:stretch}
+.horaires{background:var(--surface);border-radius:22px;padding:48px;box-shadow:0 40px 80px -48px rgba(28,28,30,.55)}
+.venir h2{font-size:clamp(30px,3.2vw,44px)}
+.horaires .sous{margin-top:10px;color:var(--encre-2);font-size:18px}
+.semaine{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:12px}
+.semaine li{display:grid;grid-template-columns:minmax(0,6.5em) minmax(0,1fr) minmax(0,7.2em);gap:16px;align-items:center;font-family:var(--display);font-size:16px}
+.semaine .jour{font-weight:500}
+.semaine .piste{position:relative;height:12px;border-radius:999px;background:var(--base-2)}
+.semaine .plage{position:absolute;top:0;bottom:0;left:0;border-radius:999px;background:var(--accent)}
+.semaine .h{color:var(--encre-2);text-align:right;white-space:nowrap}
+.semaine li.ferme .jour,.semaine li.ferme .h{color:rgba(85,82,79,.65)}
+.echelle{display:grid;grid-template-columns:minmax(0,6.5em) minmax(0,1fr) minmax(0,7.2em);gap:16px;margin-top:10px;font-family:var(--display);font-size:13px;color:var(--encre-2)}
+.echelle span:nth-child(2){display:flex;justify-content:space-between}
+.horaires .ferie{margin-top:22px;font-size:17px;color:var(--encre-2)}
+.coord{background:var(--sombre);color:var(--surface);border-radius:22px;padding:48px;display:flex;flex-direction:column;box-shadow:0 40px 80px -48px rgba(28,28,30,.8)}
+.coord h2{color:var(--surface)}
+.coord dl{margin:28px 0 0;display:grid;gap:20px}
+.coord dt{font-family:var(--display);font-size:14px;color:rgba(248,246,244,.6)}
+.coord dd{margin:3px 0 0;font-size:20px}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(248,246,244,.3)}
+.coord dd a:hover{border-color:var(--surface)}
+.coord .liens{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:32px}
+.coord .btn{padding:12px 20px 10px;font-size:15.5px}
+.coord .btn-contour{color:var(--surface);border-color:rgba(248,246,244,.5)}
+.coord .btn-contour:hover{background:var(--surface);color:var(--encre)}
+
+.pied{background:var(--sombre);color:rgba(248,246,244,.75);padding:72px 0 44px;font-size:18px;border-top:1px solid rgba(248,246,244,.08)}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied b{display:block;font-family:var(--display);font-weight:600;font-size:26px;color:var(--surface);margin-bottom:10px}
+.pied h3{font-size:14px;font-weight:500;color:rgba(248,246,244,.55);margin-bottom:12px;letter-spacing:.02em}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(248,246,244,.25)}
+.pied a:hover{color:var(--surface);border-color:var(--surface)}
+.pied p+p{margin-top:4px}
+.proposition{background:#141416;color:rgba(248,246,244,.5);font-family:var(--display);font-size:13px;text-align:center;padding:16px 20px}
+
+.js:not(.calme) .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js:not(.calme) .apparait.vu{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros{padding:40px 0 88px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .scene{margin-top:28px;max-width:600px;width:100%}
+  .film{left:-6px}
+  .faits .env{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits .f:nth-child(3){border-left:0;padding-left:0}
+  .faits .f:nth-child(n+3){border-top:1px solid rgba(28,28,30,.14)}
+  .chats .env,.venir .env,.planche .tete{grid-template-columns:minmax(0,1fr);gap:48px}
+  .chats .photo{max-width:560px}
+  .chats .rond{right:-8px}
+  .bande.un{margin-right:0}
+  .bande.deux{margin-left:0}
+  .pied .env{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:19px}
+  .entete .env{min-height:62px}
+  .marque small{display:none}
+  .marque b{font-size:20px}
+  .btn-tel .num{display:none}
+  .btn-tel .court{display:inline}
+  .heros h1{font-size:clamp(36px,10.6vw,46px)}
+  .heros .texte p{font-size:19px}
+  .scene{padding-bottom:64px}
+  .film{left:0;padding:18px 9px;gap:7px;max-width:100%}
+  .film::before,.film::after{left:7px;right:7px;height:6px}
+  .film::before{top:6px}
+  .film::after{bottom:6px}
+  .film .case{width:min(96px,26vw)}
+  .faits .f{padding:24px 14px 22px}
+  .faits .f:nth-child(odd){padding-left:0}
+  .faits b{font-size:30px}
+  .faits span{font-size:16.5px}
+  .chats,.venir{padding:88px 0}
+  .planche{padding:88px 0 96px}
+  .bandes{margin-top:56px;gap:28px}
+  .bande{flex-wrap:wrap;padding:26px 12px}
+  .bande figure{flex:1 1 calc(50% - 6px)}
+  .bande figure.c5{display:none}
+  .annotation{font-size:20px;top:-36px}
+  .horaires,.coord{padding:32px 22px}
+  .semaine li,.echelle{grid-template-columns:minmax(0,4.6em) minmax(0,1fr) minmax(0,6.4em);gap:10px;font-size:15px}
+  .echelle{font-size:12px}
+  .pied .env{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn,.coord .liens .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#haut"><b>Le Studio Canin</b><small>Alexandra</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#chats">Chiens et chats</a>
+      <a class="lien" href="#planche">Les loulous</a>
+      <a class="lien" href="#venir">Horaires</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33516853537" aria-label="Appeler le 05 16 85 35 37"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="num">05 16 85 35 37</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <h1>Toilettage chiens et chats, <span>près de La Rochelle.</span></h1>
+      <div class="scene apparait">
+        <div class="grande cadrage">
+          <img src="assets/le-studio-canin/berger-australien-rouge-merle.webp" alt="Berger australien rouge merle aux yeux clairs, poil brossé, debout sur la table de toilettage" width="1431" height="1600">
+        </div>
+        <span class="etiquette">Berger australien, poil brossé</span>
+        <div class="film" aria-hidden="true">
+          <div class="case cadrage a"><img src="assets/le-studio-canin/spitz-roux-de-profil.webp" alt="" width="1600" height="1415"></div>
+          <div class="case cadrage a"><img src="assets/le-studio-canin/bichon-blanc-coupe-courte.webp" alt="" width="1600" height="1176"></div>
+          <div class="case cadrage a"><img src="assets/le-studio-canin/jeune-berger-australien-sur-table.webp" alt="" width="1600" height="1497"></div>
+        </div>
+      </div>
+      <div class="texte">
+        <p>Le Studio Canin, c'est le salon d'Alexandra depuis 2019&nbsp;: brossage, séchage et coupe, du petit bichon au grand berger, et les chats aussi.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33516853537">Appeler le 05 16 85 35 37</a>
+          <a class="btn btn-contour" href="mailto:lestudiocanin17@gmail.com">Écrire un mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="env">
+      <div class="f"><b>2019</b><span>salon ouvert depuis</span></div>
+      <div class="f"><b>4,9 sur 5</b><span>note Google</span></div>
+      <div class="f"><b>85 avis</b><span>sur la fiche Google</span></div>
+      <div class="f"><b>Lun.–ven.</b><span>samedi et dimanche fermés</span></div>
+    </div>
+  </div>
+
+  <section class="chats" id="chats">
+    <div class="env">
+      <div class="photo apparait">
+        <div class="carre cadrage"><img src="assets/le-studio-canin/maine-coon-couche-sur-table.webp" alt="Maine coon tigré gris couché sur la table, collerette et queue brossées" width="1600" height="1127" loading="lazy"></div>
+        <span class="pastille">Maine coon, collerette brossée</span>
+        <div class="rond cadrage"><img src="assets/le-studio-canin/berger-australien-bleu-merle-profil.webp" alt="Berger australien bleu merle aux yeux vairons" width="1600" height="1516" loading="lazy"></div>
+      </div>
+      <div>
+        <h2>Les chats aussi passent sur la table.</h2>
+        <p>Toilettage chiens et chats&nbsp;: au Studio Canin, un grand Maine Coon a sa place comme un spitz ou un berger australien. Des petits, des grands, des géants&nbsp;: tout le monde passe sur la table.</p>
+        <p class="bapteme">Et pour les plus jeunes, le tout premier passage au salon a un nom&nbsp;: le baptême de toilettage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="planche" id="planche">
+    <div class="env">
+      <div class="tete">
+        <blockquote>Voilà pourquoi j'aime mon métier… les photos parlent d'elles-mêmes.</blockquote>
+        <p><b>Alexandra</b>Les loulous du jour, sur la table du salon, à la sortie du toilettage.</p>
+      </div>
+      <div class="bandes apparait">
+        <div class="bande un">
+          <figure><div class="case cadrage" style="--z:1.3"><img src="assets/le-studio-canin/chien-tricolore-type-husky.webp" alt="Chien tricolore à poil long type husky, langue sortie" width="1600" height="1424" loading="lazy"></div><figcaption>Type husky, poil gonflé</figcaption></figure>
+          <figure><div class="case cadrage"><img src="assets/le-studio-canin/spitz-loup-langue-sortie.webp" alt="Spitz loup fauve et noir, langue sortie" width="1600" height="1518" loading="lazy"></div><figcaption>Spitz loup</figcaption></figure>
+          <figure class="entoure"><div class="case cadrage"><img src="assets/le-studio-canin/berger-australien-bleu-merle-de-face.webp" alt="Berger australien bleu merle tricolore, de face" width="1600" height="1600" loading="lazy"></div><figcaption>Berger australien bleu merle</figcaption>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M8 52 C 6 18, 40 4, 70 7 C 96 10, 99 44, 94 70 C 88 96, 40 99, 16 88 C 2 80, 3 60, 10 42" fill="none" stroke="#D2553B" stroke-width="1.6" vector-effect="non-scaling-stroke" style="stroke-width:3px" stroke-linecap="round"/></svg>
+            <span class="annotation">le paradis</span></figure>
+          <figure class="c5"><div class="case cadrage"><img src="assets/le-studio-canin/shih-tzu-coupe-courte-sur-table.webp" alt="Shih tzu fauve et blanc en coupe courte" width="1600" height="1384" loading="lazy"></div><figcaption>Shih tzu, coupe courte</figcaption></figure>
+        </div>
+        <div class="bande deux">
+          <figure><div class="case cadrage"><img src="assets/le-studio-canin/chien-fauve-type-eurasier.webp" alt="Chien fauve type eurasier, gueule ouverte" width="1600" height="1415" loading="lazy"></div><figcaption>Type eurasier</figcaption></figure>
+          <figure><div class="case cadrage" style="--z:1.36;--pos:0% 0%;--o:100% 0%"><img src="assets/le-studio-canin/cavalier-king-charles-rubis-blanc.webp" alt="Cavalier King Charles blanc et roux, de profil" width="1600" height="1197" loading="lazy"></div><figcaption>Cavalier King Charles</figcaption></figure>
+          <figure><div class="case cadrage"><img src="assets/le-studio-canin/spitz-roux-de-profil.webp" alt="Spitz roux de profil, poil gonflé après séchage" width="1600" height="1415" loading="lazy"></div><figcaption>Spitz roux, après séchage</figcaption></figure>
+          <figure class="c5"><div class="case cadrage"><img src="assets/le-studio-canin/bichon-blanc-coupe-courte.webp" alt="Petit chien blanc type bichon en coupe courte arrondie" width="1600" height="1176" loading="lazy"></div><figcaption>Coupe courte, tête en boule</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="env">
+      <div class="horaires">
+        <h2>Les horaires du salon</h2>
+        <p class="sous">Du lundi au vendredi, à partir de 9&nbsp;h.</p>
+        <ul class="semaine">
+          <li><span class="jour">Lundi</span><span class="piste"><span class="plage" style="width:88.9%"></span></span><span class="h">9&nbsp;h – 17&nbsp;h</span></li>
+          <li><span class="jour">Mardi</span><span class="piste"><span class="plage" style="width:100%"></span></span><span class="h">9&nbsp;h – 18&nbsp;h</span></li>
+          <li><span class="jour">Mercredi</span><span class="piste"><span class="plage" style="width:33.3%"></span></span><span class="h">9&nbsp;h – 12&nbsp;h</span></li>
+          <li><span class="jour">Jeudi</span><span class="piste"><span class="plage" style="width:100%"></span></span><span class="h">9&nbsp;h – 18&nbsp;h</span></li>
+          <li><span class="jour">Vendredi</span><span class="piste"><span class="plage" style="width:100%"></span></span><span class="h">9&nbsp;h – 18&nbsp;h</span></li>
+          <li class="ferme"><span class="jour">Samedi</span><span class="piste"></span><span class="h">Fermé</span></li>
+          <li class="ferme"><span class="jour">Dimanche</span><span class="piste"></span><span class="h">Fermé</span></li>
+        </ul>
+        <div class="echelle" aria-hidden="true"><span></span><span><span>9&nbsp;h</span><span>12&nbsp;h</span><span>15&nbsp;h</span><span>18&nbsp;h</span></span><span></span></div>
+        <p class="ferie">Jours fériés&nbsp;: les horaires peuvent changer, un appel suffit pour vérifier.</p>
+      </div>
+      <div class="coord">
+        <h2>Le salon</h2>
+        <dl>
+          <div><dt>Adresse</dt><dd>28 rue de l'Aurore, 17220</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33516853537" style="white-space:nowrap">05 16 85 35 37</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:lestudiocanin17@gmail.com">lestudiocanin17@gmail.com</a></dd></div>
+          <div><dt>Note Google</dt><dd>4,9 sur 5, 85 avis</dd></div>
+        </dl>
+        <div class="liens">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Studio%20Canin&amp;query_place_id=ChIJowJoZmBLAUgRw-F_iHrgprU" target="_blank" rel="noopener">Itinéraire et avis Google</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/people/Le-Studio-Canin-Alexandra/61576363851294/" target="_blank" rel="noopener">Les loulous sur Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b>Le Studio Canin</b>
+      <p>Toilettage chiens et chats, le salon d'Alexandra depuis 2019. 28 rue de l'Aurore, 17220, près de La Rochelle.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:+33516853537">05 16 85 35 37</a></p>
+      <p><a href="mailto:lestudiocanin17@gmail.com">lestudiocanin17@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Lun. 9&nbsp;h – 17&nbsp;h</p>
+      <p>Mar., jeu., ven. 9&nbsp;h – 18&nbsp;h</p>
+      <p>Mer. 9&nbsp;h – 12&nbsp;h</p>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Studio%20Canin&amp;query_place_id=ChIJowJoZmBLAUgRw-F_iHrgprU" target="_blank" rel="noopener">Fiche Google</a></p>
+      <p><a href="https://www.facebook.com/people/Le-Studio-Canin-Alexandra/61576363851294/" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Le Studio Canin</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

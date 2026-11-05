@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>C'ouaf tout ch'a · Gaëlle Viel, toilettage d'animaux à domicile en Vendée</title>
+<meta name="description" content="C'ouaf tout ch'a : Gaëlle Viel, toiletteuse à domicile autour des Sables-d'Olonne. Sur rendez-vous au 06 42 46 85 59.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%238A63B8'/%3E%3Ctext x='32' y='44' font-family='Arial Rounded MT Bold,Verdana,sans-serif' font-size='34' text-anchor='middle' fill='%23FDF9F3'%3EC%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Assistant:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F6EFE4; --base-2:#EEE4D5; --surface:#FDF9F3; --encre:#2B2622; --encre-2:#5A524B;
+  --lavande:#8A63B8; --lavande-pale:#E9E0F3; --lavande-clair:#CDB9E6; --sombre:#2C2440; --sombre-2:#3A3052; --clair:#FBF6EE;
+  --w:min(1200px, calc(100% - 48px));
+  --ombre:0 30px 60px -34px rgba(44,36,64,.55);
+  --display:"Baloo 2", "Trebuchet MS", sans-serif; --texte:"Assistant", "Trebuchet MS", sans-serif;
+  --bulle:58% 42% 50% 50% / 52% 48% 52% 48%;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--lavande);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:var(--w);margin-inline:auto}
+.tel{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:18px;text-decoration:none;transition:transform .3s cubic-bezier(.3,1.6,.5,1), background-color .25s ease, color .25s ease}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.btn-plein{background:var(--lavande);color:var(--clair);box-shadow:0 16px 30px -16px rgba(138,99,184,.9)}
+.btn-plein:hover{background:var(--sombre)}
+.btn-contour{border:2px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair)}
+.btn-contour-clair{border:2px solid rgba(251,246,238,.8);color:var(--clair)}
+.btn-contour-clair:hover{background:var(--clair);color:var(--sombre)}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(246,239,228,.94);border-bottom:1px solid rgba(43,38,34,.07)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px}
+.marque{text-decoration:none;font-family:var(--display);font-weight:600;font-size:28px;line-height:1}
+.marque small{display:block;font-family:var(--texte);font-weight:500;font-size:14.5px;color:var(--encre-2);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;font-size:17px;font-weight:500}
+.nav a{text-decoration:none;color:var(--encre-2)}
+.nav a:hover{color:var(--lavande)}
+.nav .btn{min-height:48px;padding:10px 22px;font-size:17px;background:var(--sombre);color:var(--clair)}
+.nav .btn:hover{background:var(--lavande)}
+.appel-court{display:none}
+
+/* héros bulle */
+.heros{padding:56px 0 104px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.qui{font-size:17px;color:var(--encre-2);margin-bottom:20px}
+.qui b{color:var(--lavande);font-weight:600}
+.heros h1{font-size:clamp(40px,5.4vw,78px);line-height:.98}
+.chapo{margin-top:26px;font-size:20px;color:var(--encre-2);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.bain{position:relative;padding:34px 30px 40px 20px}
+.bain .photo{position:relative;border-radius:var(--bulle);overflow:hidden;box-shadow:0 40px 70px -36px rgba(44,36,64,.6);aspect-ratio:1.1/1}
+.bain .photo img{width:100%;height:100%;object-fit:cover;object-position:68% 50%}
+.bain .etiquette{left:24%;bottom:6%}
+.b{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 30%, rgba(253,249,243,.95) 0 9%, rgba(233,224,243,.85) 22%, rgba(205,185,230,.55) 100%);border:2px solid rgba(253,249,243,.9);box-shadow:0 14px 30px -18px rgba(44,36,64,.45)}
+.b1{width:92px;height:92px;left:-4px;top:4%}
+.b2{width:48px;height:48px;right:2%;top:0}
+.b3{width:66px;height:66px;right:-4px;bottom:16%}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);font-size:16px;font-weight:600;padding:9px 18px;border-radius:999px;box-shadow:0 12px 26px -14px rgba(44,36,64,.55)}
+
+/* faits en pastilles */
+.faits{padding:0 0 24px}
+.faits ul{list-style:none;margin:0 auto;padding:26px 40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 28px;background:var(--base-2);border-radius:999px}
+.faits li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;align-items:center;font-size:16.5px;line-height:1.35;color:var(--encre-2)}
+.faits li span{grid-column:2}
+.faits b{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.2;color:var(--encre)}
+.faits li::before{content:"";grid-row:1 / span 2;width:14px;height:14px;border-radius:50%;background:var(--lavande-clair);border:2px solid var(--surface);flex:none}
+
+/* chez vous */
+.chez{padding:120px 0}
+.chez .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:center}
+.duo{position:relative;padding-right:18%}
+.duo .grande img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 45%;border-radius:40px 40px 40px 140px;box-shadow:var(--ombre)}
+.duo .ronde{position:absolute;right:0;bottom:-34px;width:min(220px,46%)}
+.duo .ronde img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;border-radius:50%;border:8px solid var(--surface);box-shadow:var(--ombre)}
+.duo .etiquette{left:18px;top:18px}
+.chez h2{font-size:clamp(34px,4.4vw,58px)}
+.chez .intro{margin-top:22px;color:var(--encre-2);max-width:32em}
+.lieux{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.lieux span{background:var(--surface);border-radius:999px;padding:8px 18px;font-weight:500;font-size:17px;box-shadow:0 10px 24px -18px rgba(44,36,64,.5)}
+.contact-direct{margin-top:34px;padding-top:26px;border-top:1px solid rgba(43,38,34,.14);color:var(--encre-2)}
+.contact-direct a{color:var(--lavande);font-weight:600}
+
+/* galerie en vague */
+.galerie{background:var(--surface);padding:120px 0 136px;border-radius:56px 56px 0 0}
+.galerie-tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 60px}
+.galerie h2{font-size:clamp(34px,4.4vw,58px)}
+.galerie-tete p{color:var(--encre-2);max-width:26em}
+.vague{margin-top:64px;display:grid;grid-template-columns:1.5fr 1fr 1.2fr .95fr;gap:26px;align-items:start}
+.chien{position:relative}
+.chien img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.chien .etiquette{left:14px;bottom:14px;font-size:15px;padding:7px 15px}
+.c1 img{aspect-ratio:1/1;border-radius:34px;object-position:55% 40%}
+.c2{margin-top:90px}
+.c2 img{aspect-ratio:3/4.2;border-radius:999px 999px 28px 28px;object-position:50% 30%}
+.c3{margin-top:24px}
+.c3 img{aspect-ratio:3/3.7;border-radius:28px;object-position:50% 35%}
+.c4{margin-top:130px}
+.c4 img{aspect-ratio:3/4;border-radius:28px 28px 999px 999px;object-position:50% 30%}
+
+/* Gaëlle, fond sombre */
+.gaelle{background:var(--sombre);color:var(--clair);padding:120px 0}
+.gaelle .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:80px;align-items:center}
+.bulle-photo{position:relative;justify-self:center;width:min(440px,100%)}
+.bulle-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 35%;border-radius:var(--bulle);box-shadow:0 36px 70px -30px rgba(0,0,0,.7)}
+.bulle-photo .etiquette{right:8%;bottom:8%}
+.bulle-photo .b{background:radial-gradient(circle at 32% 30%, rgba(253,249,243,.7) 0 9%, rgba(138,99,184,.45) 40%, rgba(138,99,184,.2) 100%);border-color:rgba(205,185,230,.6);box-shadow:none}
+.gaelle h2{font-size:clamp(34px,4.4vw,58px)}
+.gaelle .intro{margin-top:22px;color:#DCD3E8;max-width:32em}
+.formations{list-style:none;margin:32px 0 0;padding:0}
+.formations li{padding:18px 0;border-top:1px solid rgba(251,246,238,.16);font-size:18px}
+.formations li b{display:block;font-family:var(--display);font-weight:600;font-size:23px;line-height:1.2}
+.soin{margin-top:34px;display:flex;align-items:center;gap:24px;background:var(--sombre-2);border-radius:28px;padding:24px 28px}
+.soin .prix{flex:none;width:96px;height:96px;border-radius:50%;background:var(--lavande);display:grid;place-content:center;font-family:var(--display);font-weight:600;font-size:30px;white-space:nowrap}
+.soin p{color:#DCD3E8;font-size:17.5px}
+.soin b{color:var(--clair);display:block;font-size:19px}
+
+/* rendez-vous */
+.rdv{padding:120px 0}
+.rdv .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.rdv h2{font-size:clamp(34px,4.4vw,58px)}
+.rdv .intro{margin-top:20px;color:var(--encre-2);max-width:30em}
+.coord{margin-top:34px;display:grid;gap:20px}
+.coord div{display:grid;gap:2px}
+.coord span{font-size:15px;color:var(--encre-2)}
+.coord a{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.2;text-decoration:none;overflow-wrap:anywhere}
+.coord a:hover{color:var(--lavande)}
+.rdv .actions{margin-top:34px}
+.note-google{display:inline-flex;align-items:center;gap:16px;margin-top:34px;background:var(--surface);border-radius:999px;padding:10px 26px 10px 10px;text-decoration:none;box-shadow:0 18px 36px -24px rgba(44,36,64,.6);transition:transform .3s ease}
+.note-google:hover{transform:translateY(-2px)}
+.note-google b{width:64px;height:64px;border-radius:50%;background:var(--lavande-pale);display:grid;place-content:center;font-family:var(--display);font-size:25px;color:var(--sombre)}
+.note-google span{font-size:16px;line-height:1.35;color:var(--encre-2)}
+.note-google u{color:var(--lavande);font-weight:600;text-underline-offset:3px}
+.horaires{background:var(--surface);border-radius:36px;padding:38px 42px 32px;box-shadow:0 36px 70px -42px rgba(44,36,64,.6)}
+.horaires h3{font-size:30px;margin-bottom:10px}
+.horaires table{width:100%;border-collapse:collapse;font-size:18px}
+.horaires td{padding:12px 0;border-bottom:1px dashed rgba(43,38,34,.16);vertical-align:top}
+.horaires tr:last-child td{border-bottom:0}
+.horaires td:first-child{font-weight:600;padding-right:16px}
+.horaires td+td{text-align:right}
+.horaires td+td span{display:block;white-space:nowrap}
+.horaires .ferme{color:var(--encre-2)}
+.horaires small{display:block;margin-top:14px;font-size:15.5px;color:var(--encre-2)}
+
+.pied{background:var(--sombre);color:#D3CADF;padding:80px 0 36px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b{display:block;font-family:var(--display);font-weight:600;font-size:32px;color:var(--clair);margin-bottom:8px}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:600;color:var(--lavande-clair);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:17px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline}
+.pied .bas{grid-column:1 / -1;border-top:1px solid rgba(251,246,238,.14);padding-top:24px;margin-top:24px;font-size:15px;color:#A79DB8}
+.proposition{background:#241D35;color:#9C92AD;text-align:center;font-size:13px;padding:14px 20px}
+
+.js .rv{opacity:0;transform:translateY(26px) scale(.98);transition:opacity .9s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.note-google{transition:none}}
+
+@media (max-width:1080px){
+  .nav a:not(.btn){display:none}
+  .faits ul{border-radius:32px;grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  :root{--w:calc(100% - 40px)}
+  .heros{padding:28px 0 64px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros-texte{display:contents}
+  .qui{order:1}.heros h1{order:2}.bain{order:3;margin:14px 0 6px}.chapo{order:4}.actions{order:5}
+  .chez,.gaelle,.rdv{padding:88px 0}
+  .galerie{padding:88px 0 96px;border-radius:36px 36px 0 0}
+  .chez .wrap,.gaelle .wrap,.rdv .wrap{grid-template-columns:minmax(0,1fr);gap:56px}
+  .vague{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .c2{margin-top:56px}.c3{margin-top:-30px}.c4{margin-top:26px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:18px}
+  .entete .wrap{min-height:64px}
+  .marque{font-size:24px}
+  .marque small{display:none}
+  .nav{display:none}
+  .appel-court{display:inline-flex;min-height:44px;padding:9px 18px;font-size:16px}
+  .bain{padding:22px 10px 26px 4px}
+  .b1{width:62px;height:62px}
+  .b3{width:46px;height:46px;right:0}
+  .bain .etiquette{left:16%;font-size:14.5px}
+  .faits ul{border-radius:28px;grid-template-columns:minmax(0,1fr);padding:22px 24px}
+  .duo{padding-right:12%}
+  .chien .etiquette{font-size:14px;padding:6px 12px;left:10px;bottom:10px}
+  .soin{flex-direction:column;align-items:flex-start;border-radius:24px}
+  .horaires{padding:28px 22px 24px;border-radius:28px}
+  .horaires table{font-size:17px}
+  .coord a{font-size:23px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .note-google{padding-right:18px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">C'ouaf tout ch'a<small>Toilettage d'animaux à domicile</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#chez-vous">À domicile</a>
+      <a href="#galerie">Les toilettés</a>
+      <a href="#rdv">Horaires</a>
+      <a class="btn tel" href="tel:+33642468559">06 42 46 85 59</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33642468559">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-texte">
+        <p class="qui"><b>Gaëlle Viel</b>, toiletteuse à domicile en Vendée</p>
+        <h1>Le toilettage de votre animal, à domicile.</h1>
+        <p class="chapo">C'ouaf tout ch'a vient chez vous, autour des Sables-d'Olonne, avec sa table de toilettage. Sur rendez-vous, par téléphone, par mail ou sur Messenger.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#rdv">Prendre rendez-vous</a>
+          <a class="btn btn-contour tel" href="tel:+33642468559">06 42 46 85 59</a>
+        </div>
+      </div>
+      <div class="bain">
+        <span class="b b1" aria-hidden="true"></span>
+        <span class="b b2" aria-hidden="true"></span>
+        <div class="photo">
+          <img src="assets/couaf-tout-cha/alyah-apres-toilettage-veranda.webp" alt="Alyah, petite chienne bouclée crème et marron, juste toilettée sur la table installée dans une véranda" width="1600" height="1204" fetchpriority="high">
+        </div>
+        <span class="etiquette">Alyah, tout juste toilettée</span>
+        <span class="b b3" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>À domicile</b><span>en Vendée</span></li>
+      <li><b>5,0 sur 5</b><span>sur Google, 12&nbsp;avis</span></li>
+      <li><b>Sur rendez-vous</b><span>du lundi au samedi</span></li>
+      <li><b>Fermé</b><span>le vendredi et le dimanche</span></li>
+    </ul>
+  </section>
+
+  <section class="chez" id="chez-vous">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="grande rv">
+          <img src="assets/couaf-tout-cha/alyah-de-face-sur-table.webp" alt="Alyah de face sur la table de toilettage, véranda et jardin en fond" width="1204" height="1600" loading="lazy">
+        </figure>
+        <span class="etiquette">La table, dans la véranda</span>
+        <figure class="ronde rv">
+          <img src="assets/couaf-tout-cha/cairn-terrier-bringe.webp" alt="Cairn terrier bringé assis sur la table de toilettage, dans une cuisine" width="1200" height="1600" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2>La séance se passe chez vous</h2>
+        <p class="intro">Gaëlle installe sa table de toilettage là où il y a de la place : la véranda, la cuisine, le garage ou la salle de bain. Votre compagnon reste à la maison, sans trajet.</p>
+        <div class="lieux" aria-label="Communes desservies">
+          <span>Les Sables-d'Olonne</span><span>Olonne-sur-Mer</span><span>Grosbreuil</span><span>Venansault</span><span>Le Girouard</span><span>Brétignolles-sur-Mer</span><span>Talmont</span>
+        </div>
+        <p class="contact-direct">Pour un renseignement ou un rendez-vous : <a class="tel" href="tel:+33642468559">06 42 46 85 59</a>, ou <a href="mailto:gv.couaftoutcha@gmail.com">gv.couaftoutcha@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="galerie" id="galerie">
+    <div class="wrap">
+      <div class="galerie-tete">
+        <h2>Ils sont passés sur la table</h2>
+        <p>Petits et grands, à poil court ou à poil long : quelques-uns des loulous toilettés par Gaëlle.</p>
+      </div>
+      <div class="vague">
+        <figure class="chien c1 rv"><img src="assets/couaf-tout-cha/berger-australien-maya.webp" alt="Maya, berger australien tricolore, langue sortie sur la table" width="1600" height="1498" loading="lazy"><span class="etiquette">Maya</span></figure>
+        <figure class="chien c2 rv"><img src="assets/couaf-tout-cha/yorkshire-ulysse.webp" alt="Ulysse, yorkshire debout sur la table" width="1200" height="1600" loading="lazy"><span class="etiquette">Ulysse</span></figure>
+        <figure class="chien c3 rv"><img src="assets/couaf-tout-cha/leonberg-apache.webp" alt="Apache, grand chien type leonberg assis sur le carrelage" width="1200" height="1600" loading="lazy"><span class="etiquette">Apache</span></figure>
+        <figure class="chien c4 rv"><img src="assets/couaf-tout-cha/bichon-maltais-sur-table.webp" alt="Plume, petit bichon blanc debout sur la table" width="1200" height="1600" loading="lazy"><span class="etiquette">Plume</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="gaelle">
+    <div class="wrap">
+      <div class="bulle-photo rv">
+        <span class="b b1" aria-hidden="true"></span>
+        <img src="assets/couaf-tout-cha/teckel-poil-long-apres.webp" alt="Teckel à poil long noir et feu, après son toilettage" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Après</span>
+        <span class="b b3" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h2>Gaëlle, toiletteuse à domicile</h2>
+        <p class="intro">Gaëlle Viel se forme pour bien s'occuper de vos animaux : une semaine de stage de perfectionnement, et les gestes de premiers secours.</p>
+        <ul class="formations">
+          <li><b>Stage de perfectionnement</b>chez Toilettage La Gent Canine</li>
+          <li><b>Gestes de premiers secours</b>formée aux premiers secours sur nos amis félins</li>
+        </ul>
+        <div class="soin">
+          <span class="prix">12&nbsp;€</span>
+          <p><b>Le soin des coussinets et de la truffe</b>Avec le froid, coussinets et truffe ont tendance à s'assécher et à se fragiliser : Gaëlle propose un soin spécifique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rdv" id="rdv">
+    <div class="wrap">
+      <div>
+        <h2>Prendre rendez-vous</h2>
+        <p class="intro">Pour toute demande de renseignements ou de rendez-vous, Gaëlle répond par téléphone, par mail ou en message privé sur Messenger.</p>
+        <div class="coord">
+          <div><span>Téléphone</span><a class="tel" href="tel:+33642468559">06 42 46 85 59</a></div>
+          <div><span>Mail</span><a href="mailto:gv.couaftoutcha@gmail.com">gv.couaftoutcha@gmail.com</a></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-plein tel" href="tel:+33642468559">Appeler Gaëlle</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/Gaelle85150">Écrire sur Messenger</a>
+        </div>
+        <a class="note-google" href="https://www.google.com/maps/search/?api=1&amp;query=C'ouaf%20tout%20ch'a&amp;query_place_id=ChIJSwlxCfL5c0YRtHiIC8NvO7k"><b>5,0</b><span>sur 5, 12&nbsp;avis Google<br><u>Voir les avis</u></span></a>
+      </div>
+      <div class="horaires rv">
+        <h3>Horaires</h3>
+        <table>
+          <tr><td>Lundi</td><td><span>13&nbsp;h&nbsp;30 – 19&nbsp;h</span></td></tr>
+          <tr><td>Mardi</td><td><span>14&nbsp;h – 19&nbsp;h</span></td></tr>
+          <tr><td>Mercredi</td><td><span>8&nbsp;h – 12&nbsp;h</span> <span>13&nbsp;h&nbsp;30 – 19&nbsp;h</span></td></tr>
+          <tr><td>Jeudi</td><td><span>13&nbsp;h&nbsp;30 – 16&nbsp;h&nbsp;30</span></td></tr>
+          <tr><td>Vendredi</td><td class="ferme">fermé</td></tr>
+          <tr><td>Samedi</td><td><span>8&nbsp;h – 12&nbsp;h&nbsp;30</span> <span>13&nbsp;h&nbsp;30 – 19&nbsp;h</span></td></tr>
+          <tr><td>Dimanche</td><td class="ferme">fermé</td></tr>
+        </table>
+        <small>Sur rendez-vous. Un jour férié, les horaires peuvent changer.</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>C'ouaf tout ch'a</b>
+      <p>Toilettage d'animaux à domicile par Gaëlle Viel, en Vendée, autour des Sables-d'Olonne.</p>
+    </div>
+    <div>
+      <h3>Rendez-vous</h3>
+      <ul>
+        <li><a class="tel" href="tel:+33642468559">06 42 46 85 59</a></li>
+        <li><a href="mailto:gv.couaftoutcha@gmail.com">gv.couaftoutcha@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=C'ouaf%20tout%20ch'a&amp;query_place_id=ChIJSwlxCfL5c0YRtHiIC8NvO7k">Fiche Google et avis</a></li>
+        <li><a href="https://www.facebook.com/Gaelle85150">Page Facebook</a></li>
+      </ul>
+    </div>
+    <p class="bas">Du lundi au samedi sur rendez-vous ; fermé le vendredi et le dimanche.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour C'ouaf tout ch'a</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>L'Auberg'IN · chambres d'hôtes, gîte et table au bord du Viaur</title>
+<meta name="description" content="L'Auberg'IN au Port de la Besse, La Salvetat-Peyralès : chambres d'hôtes, gîte, bar-restaurant fait maison et école de violoncelle, au bord du Viaur.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A2B2E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F1E8DC'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:ital,wght@0,400;0,700&family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F1E8DC; --surface:#FAF5EE; --encre:#2B1F1A; --accent:#8C2F39; --ardoise:#2A2B2E;
+  --vin:#3F1B21; --doux:#6A5A50; --filet:rgba(43,31,26,.15); --base-2:#E9DCCB;
+  --clair:#F1E8DC; --clair-doux:#BDB6AE; --rose:#E3A9AF;
+  --ombre:0 30px 60px -34px rgba(43,31,26,.55);
+  --display:"Rufina", Georgia, serif;
+  --texte:"Cabin", "Gill Sans", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(42,43,46,.96);color:var(--clair);border-bottom:1px solid rgba(241,232,220,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{font-family:var(--display);font-size:26px;text-decoration:none;color:var(--clair);line-height:1.1}
+.marque small{display:block;font-family:var(--texte);font-size:13px;color:var(--clair-doux);letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px}
+.nav a{text-decoration:none;color:var(--clair-doux)}
+.nav a:hover{color:var(--clair)}
+.tel-pilule{padding:10px 18px;border-radius:999px;border:1.5px solid rgba(241,232,220,.5);color:var(--clair)!important;font-weight:600;white-space:nowrap;transition:background .2s ease}
+.tel-pilule:hover{background:rgba(241,232,220,.1)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.btn-plein{background:var(--accent);color:var(--surface)}
+.btn-plein:hover{transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(140,47,57,.8)}
+.btn-contour{border:1.5px solid currentColor}
+.btn-contour:hover{background:var(--encre);color:var(--surface);border-color:var(--encre)}
+.heros .btn-contour{color:var(--clair)}
+.heros .btn-contour:hover{background:var(--clair);color:var(--ardoise);border-color:var(--clair)}
+
+/* Héros ardoise */
+.heros{background:var(--ardoise);color:var(--clair);padding:72px 0 112px;overflow:clip}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.heros h1{font-size:clamp(42px,6.2vw,86px);line-height:1.02}
+.heros h1 em{font-style:italic;color:var(--rose)}
+.heros .chapo{color:var(--clair-doux);font-size:19px;margin-top:28px;max-width:44ch}
+.heros .lieu{display:block;font-size:15px;color:var(--clair-doux);margin-top:28px}
+.assiettes{position:relative;width:100%;aspect-ratio:1/.92}
+.assiette{position:absolute;aspect-ratio:1/1;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%, #FBF7F1 0 60%, #E7DCCB 60.6% 61.6%, #F6EFE4 62.4% 88%, #E9DECF 92% 100%);
+  box-shadow:0 40px 60px -30px rgba(0,0,0,.65), inset 0 -10px 22px rgba(120,95,70,.18)}
+.assiette img{position:absolute;inset:15%;width:70%;height:70%;object-fit:cover;border-radius:50%}
+.a1{left:8%;top:13%;width:72%;z-index:2}
+.a1 img{object-position:21% 50%}
+.a2{right:0;top:0;width:40%;z-index:1}
+.a2 img{object-position:50% 55%}
+.a3{left:0;bottom:0;width:34%;z-index:3}
+.a3 img{object-position:22% 70%}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);font-size:14px;font-weight:600;padding:8px 14px;border-radius:10px;box-shadow:0 12px 24px -14px rgba(0,0,0,.6);z-index:4}
+.assiettes .etiquette{right:6%;bottom:12%}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:15px;font-weight:500;color:var(--encre)}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* Chambres */
+.chambres{padding:120px 0 104px}
+.chambres .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+h2{font-size:clamp(34px,4.2vw,56px)}
+.chambres .intro{color:var(--doux);margin-top:20px}
+.polaroid{margin:40px 0 0;background:#FFFCF7;padding:10px 10px 14px;border-radius:6px;width:min(240px,100%);transform:rotate(-2.5deg);box-shadow:var(--ombre)}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.polaroid figcaption{font-size:14px;color:var(--doux);margin-top:10px;padding-inline:4px}
+.tarifs{background:var(--surface);border-radius:20px;padding:12px 40px;box-shadow:0 30px 70px -40px rgba(43,31,26,.45)}
+.tarif{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:18px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--filet)}
+.tarif:last-child{border-bottom:0}
+.pastille{width:18px;height:18px;border-radius:50%;transform:translateY(3px);box-shadow:inset 0 0 0 1px rgba(43,31,26,.18)}
+.tarif h3{font-size:26px}
+.tarif p{margin:4px 0 0;color:var(--doux);font-size:16px}
+.prix{font-family:var(--display);font-size:28px;white-space:nowrap}
+.prix small{font-family:var(--texte);font-size:14px;color:var(--doux);display:block;text-align:right}
+.inclus{margin-top:20px;font-size:15px;color:var(--doux)}
+
+.chambres .wrap.wrap-gite{display:block}
+.gite{margin-top:96px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center;background:var(--base-2);border-radius:24px;padding:56px}
+.gite ul{list-style:none;margin:20px 0 0;padding:0;columns:2;column-gap:32px;font-size:16px}
+.gite li{break-inside:avoid;padding:8px 0;border-top:1px solid var(--filet)}
+.gite .prix-gite{display:flex;align-items:baseline;gap:12px;margin-top:28px;flex-wrap:wrap}
+.gite .prix-gite b{font-family:var(--display);font-weight:400;font-size:44px;white-space:nowrap}
+.gite .prix-gite span{color:var(--doux);font-size:15px}
+.gite-photos{position:relative;display:flex;justify-content:center;gap:16px}
+.vignette{margin:0;width:min(220px,100%);position:relative}
+.vignette img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;box-shadow:var(--ombre)}
+.vignette.decale{margin-top:56px}
+.vignette .etiquette{left:10px;bottom:10px;font-size:13px;padding:6px 10px}
+
+/* Table */
+.table{background:var(--surface);padding:120px 0}
+.table .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.plat{position:relative;padding:0 0 80px 0}
+.plat .grand img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.plat .grand{margin:0;position:relative}
+.plat .petit{position:absolute;right:-28px;bottom:0;width:min(46%,280px);margin:0;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle, #FBF7F1 0 60%, #E7DCCB 60.6% 61.6%, #F6EFE4 62.4% 100%);box-shadow:0 30px 50px -26px rgba(43,31,26,.55)}
+.plat .petit img{position:absolute;inset:14%;width:72%;height:72%;object-fit:cover;object-position:35% 60%;border-radius:50%}
+.plat .grand .etiquette{left:16px;top:16px}
+.carte-mets{list-style:none;padding:0;margin:24px 0 0}
+.carte-mets li{padding:12px 0;border-top:1px solid var(--filet);font-size:17px}
+.menus{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:28px}
+.menu{background:var(--base);border-radius:16px;padding:20px 22px}
+.menu b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;white-space:nowrap}
+.menu span{display:block;font-size:15px;color:var(--doux);margin-top:8px}
+.table .note{font-size:15px;color:var(--doux);margin-top:20px}
+
+/* École (fond vin) */
+.ecole{background:var(--vin);color:var(--clair);padding:128px 0}
+.ecole .citation{font-family:var(--display);font-style:italic;font-size:clamp(32px,4.4vw,60px);line-height:1.12;max-width:20ch;margin:0;text-wrap:balance}
+.ecole .citation small{display:block;font-family:var(--texte);font-style:normal;font-size:16px;color:#D6B9BC;margin-top:20px}
+.ecole-haut{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:64px;align-items:center}
+.ecole .polaroid{transform:rotate(3deg);margin:0 0 0 auto;background:#FBF6EE}
+.ecole .polaroid figcaption{color:#6A5A50}
+.ecole-bas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;margin-top:88px;padding-top:48px;border-top:1px solid rgba(241,232,220,.2)}
+.ecole h2{font-size:clamp(28px,3vw,38px);color:#FBF6EE}
+.ecole p{color:#E2D2CF;margin-top:16px;font-size:17px}
+.ecole a.lien{color:#FBF6EE;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--rose);padding-bottom:2px}
+.ecole a.lien:hover{color:var(--rose)}
+
+/* Histoire */
+.histoire{padding:128px 0 112px}
+.histoire .tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:end}
+.histoire .tete p{color:var(--doux);margin:0}
+.frise{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:9px;border-top:1px solid var(--encre);opacity:.35}
+.frise li{position:relative;padding-top:40px}
+.frise li::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--base);border:2px solid var(--accent)}
+.frise .quand{font-family:var(--display);font-size:24px}
+.frise p{color:var(--doux);font-size:16px;margin-top:8px}
+.frise .vignette{margin-top:20px;width:min(200px,100%)}
+.frise .vignette img{aspect-ratio:4/3;border-radius:12px}
+.frise li:nth-child(2) .vignette{transform:rotate(-2deg)}
+.frise li:nth-child(3) .vignette{transform:rotate(1.5deg)}
+
+/* Contact */
+.contact{padding:0 0 128px}
+.contact .boite{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:0;align-items:stretch;border-radius:28px;overflow:clip;box-shadow:0 40px 90px -50px rgba(43,31,26,.6)}
+.contact .gauche{background:var(--ardoise);color:var(--clair);padding:56px}
+.contact .gauche h2{color:#FBF6EE}
+.contact .gauche p{color:var(--clair-doux);margin-top:18px}
+.contact .gauche .boutons .btn-contour{color:var(--clair)}
+.contact .gauche .boutons .btn-contour:hover{background:var(--clair);color:var(--ardoise);border-color:var(--clair)}
+.contact .droite{background:var(--surface);padding:56px}
+.coord{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 32px}
+.coord div{border-top:1px solid var(--filet);padding-top:14px}
+.coord dt{font-size:14px;font-weight:600;color:var(--accent)}
+.coord dd{margin:6px 0 0;font-size:17px}
+.coord a{text-decoration:none;font-weight:600}
+.coord a:hover{color:var(--accent)}
+.coord .large{grid-column:1 / -1}
+.coord .gros{font-family:var(--display);font-size:34px;font-weight:400}
+
+/* Pied */
+.pied{background:var(--ardoise);color:var(--clair-doux);padding:80px 0 36px;font-size:16px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque{font-size:30px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:600;color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--rose)}
+.pied p{margin-top:16px;font-size:15px}
+.signature{background:var(--ardoise);color:#8E8A85;text-align:center;font-size:13px;padding:20px 24px 28px;border-top:1px solid rgba(241,232,220,.08)}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .polaroid.apparait.vu{transform:rotate(-2.5deg)}
+.js .ecole .polaroid.apparait.vu{transform:rotate(3deg)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transition:none}
+  .btn{transition:none}
+}
+
+@media (max-width:1020px){
+  .nav a:not(.tel-pilule){display:none}
+  .heros .wrap,.chambres .wrap,.table .wrap,.ecole-haut,.histoire .tete,.contact .boite,.gite{grid-template-columns:minmax(0,1fr);gap:48px}
+  .assiettes{max-width:620px}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .frise::before{display:none}
+  .pied .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ecole .polaroid{margin:0}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{width:min(1200px,100% - 40px)}
+  .entete .wrap{min-height:62px}
+  .marque{font-size:22px}
+  .marque small{display:none}
+  .tel-pilule{padding:9px 14px;font-size:15px}
+  .heros{padding:32px 0 72px}
+  .heros h1{font-size:clamp(38px,11vw,52px)}
+  .heros .chapo{font-size:17px;margin-top:20px}
+  .heros .wrap{gap:36px}
+  .heros .lieu{display:none}
+  .boutons{flex-direction:column}
+  .btn{width:100%}
+  .assiettes .etiquette{right:2%;bottom:6%;font-size:13px}
+  .faits ul{flex-direction:column;gap:8px}
+  .chambres,.table,.ecole,.histoire{padding:80px 0}
+  .tarifs{padding:4px 20px}
+  .tarif{grid-template-columns:20px minmax(0,1fr);gap:12px}
+  .tarif .prix{grid-column:2}
+  .prix small{text-align:left;display:inline;margin-left:8px}
+  .gite{padding:28px 20px;margin-top:64px}
+  .gite ul{columns:1}
+  .gite-photos{gap:12px}
+  .vignette.decale{margin-top:32px}
+  .plat{padding-bottom:64px}
+  .plat .petit{right:-6px}
+  .menus{grid-template-columns:minmax(0,1fr)}
+  .ecole-bas{grid-template-columns:minmax(0,1fr);gap:48px;margin-top:56px}
+  .frise{grid-template-columns:minmax(0,1fr);row-gap:40px}
+  .contact{padding-bottom:80px}
+  .contact .gauche,.contact .droite{padding:32px 22px}
+  .coord{grid-template-columns:minmax(0,1fr)}
+  .coord .gros{font-size:30px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">L'Auberg'IN<small>Port de la Besse · La Salvetat-Peyralès</small></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#chambres">Chambres et gîte</a>
+      <a href="#table">La table</a>
+      <a href="#ecole">Violoncelle</a>
+      <a href="#contact">Nous joindre</a>
+      <a class="tel-pilule" href="tel:+33565818043">05 65 81 80 43</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div>
+        <h1>Une auberge au bord du <em>Viaur</em></h1>
+        <p class="chapo">Naïs et Vincent vous accueillent dans un lieu magnifique en bordure de rivière, en plein cœur de la nature&nbsp;: chambres d'hôtes, gîte, bar-restaurant fait maison et école de violoncelle.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#contact">Réserver une chambre</a>
+          <a class="btn btn-contour" href="tel:+33565818043"><span class="nowrap">05 65 81 80 43</span></a>
+        </div>
+        <span class="lieu">Le Port de la Besse, 12440 La Salvetat-Peyralès, sur la D905</span>
+      </div>
+      <div class="assiettes" aria-label="Trois assiettes de l'auberge">
+        <figure class="assiette a2" style="margin:0"><img src="assets/auberg-in-la-salvetat-peyrales/assiette-charcuterie-vin-gaillac.webp" alt="Assiette de charcuterie sur ardoise et pain" width="1281" height="1024"></figure>
+        <figure class="assiette a1" style="margin:0"><img src="assets/auberg-in-la-salvetat-peyrales/magret-frites-maison-pain-legumes.webp" alt="Magret tranché sur ardoise, frites maison et légumes du jardin" width="1600" height="767"></figure>
+        <figure class="assiette a3" style="margin:0"><img src="assets/auberg-in-la-salvetat-peyrales/creme-caramel-et-the.webp" alt="Crème caramel dans une cocotte et tasse de thé" width="1536" height="1024"></figure>
+        <span class="etiquette">Fait maison, produits locaux et bio</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li>Au bord du Viaur, en Aveyron</li>
+      <li>4 chambres d'hôtes</li>
+      <li>Un gîte jusqu'à 6 personnes</li>
+      <li>Cuisine maison, locale et bio</li>
+      <li>Violoncelle chaque semaine</li>
+    </ul>
+  </div>
+
+  <section class="chambres" id="chambres">
+    <div class="wrap">
+      <div>
+        <h2>Dormir à l'auberge</h2>
+        <p class="intro">Nos quatre chambres sont au premier étage, chacune avec sa salle de bain et ses WC privés. Le petit déjeuner est inclus.</p>
+        <figure class="polaroid apparait">
+          <img src="assets/auberg-in-la-salvetat-peyrales/chambre-bleue-lit-bureau-fenetre.webp" alt="La chambre bleue, lit double et bureau, fenêtre ouverte sur la vallée" width="1024" height="768" loading="lazy">
+          <figcaption>La chambre bleue, fenêtre sur la vallée</figcaption>
+        </figure>
+      </div>
+      <div>
+        <div class="tarifs">
+          <div class="tarif"><span class="pastille" style="background:#7FA6CF"></span><div><h3>Chambre bleue</h3><p>2 personnes. Lit double, salle de bain privative avec douche et toilettes, bureau.</p></div><span class="prix">65&nbsp;€<small>la nuit</small></span></div>
+          <div class="tarif"><span class="pastille" style="background:#FBF7F1"></span><div><h3>Chambre blanche</h3><p>2 personnes, salle de bain et WC privés.</p></div><span class="prix">65&nbsp;€<small>la nuit</small></span></div>
+          <div class="tarif"><span class="pastille" style="background:#8FAF86"></span><div><h3>Chambre verte</h3><p>3 personnes. Lit double et lit tiroir, salle de bain privative avec douche et toilettes, bureau.</p></div><span class="prix">80&nbsp;€<small>la nuit</small></span></div>
+          <div class="tarif"><span class="pastille" style="background:#A88BB8"></span><div><h3>Chambre mauve</h3><p>4 personnes. Lit double et deux lits simples gigognes, salle de bain privative avec douche et toilettes.</p></div><span class="prix">95&nbsp;€<small>la nuit</small></span></div>
+        </div>
+        <p class="inclus">Tarif pour une nuit, petit déjeuner inclus.</p>
+      </div>
+    </div>
+    <div class="wrap wrap-gite">
+      <div class="gite">
+        <div>
+          <h2>Le gîte, une ancienne grange</h2>
+          <p style="color:var(--doux);margin-top:18px">Magnifiquement rénovée au cœur de l'Aveyron, cette maison pleine de charme accueille jusqu'à six personnes. De nombreux chemins de randonnée partent directement du gîte.</p>
+          <ul>
+            <li>Une chambre au rez-de-chaussée, salle de bain attenante</li>
+            <li>Une chambre en mezzanine, lit double</li>
+            <li>Grand salon, poêle à bois, canapé convertible</li>
+            <li>Cuisine équipée</li>
+            <li>Terrasse et accès privé à la rivière</li>
+            <li>Parking privé sur place</li>
+          </ul>
+          <div class="prix-gite"><b>100&nbsp;€</b><span>la nuit&nbsp;; 3 nuits minimum du 1er avril au 25 mai, 5 nuits du 25 mai au 15 septembre</span></div>
+        </div>
+        <div class="gite-photos">
+          <figure class="vignette apparait">
+            <img src="assets/auberg-in-la-salvetat-peyrales/vue-riviere-viaur-vieux-pont.webp" alt="Vue depuis le gîte sur la rivière et une arche du vieux pont" width="1024" height="768" loading="lazy">
+            <span class="etiquette">Vue depuis le gîte</span>
+          </figure>
+          <figure class="vignette decale apparait">
+            <img src="assets/auberg-in-la-salvetat-peyrales/terrasse-table-bistrot-vue-riviere.webp" alt="Terrasse dallée avec table et chaises bistrot rouges au-dessus de la rivière" width="1024" height="768" loading="lazy">
+            <span class="etiquette">La terrasse</span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="table" id="table">
+    <div class="wrap">
+      <div class="plat">
+        <figure class="grand apparait">
+          <img src="assets/auberg-in-la-salvetat-peyrales/plateau-fromages-braucol.webp" alt="Plateau de fromages, pain et bouteille de Braucol" width="1369" height="1024" loading="lazy">
+          <figcaption class="etiquette">Fromages et Braucol</figcaption>
+        </figure>
+        <figure class="petit">
+          <img src="assets/auberg-in-la-salvetat-peyrales/salade-fraicheur-legumes-du-jardin.webp" alt="Salade composée de légumes du jardin et tomates anciennes" width="1600" height="906" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2>À table, chez Vincent</h2>
+        <p style="color:var(--doux);margin-top:18px">Au restaurant et en table d'hôtes, le chef Vincent prépare des repas maison à base de produits locaux et bio, auprès de petits producteurs du coin. Ici, tout est fait maison, sauf les glaces.</p>
+        <ul class="carte-mets">
+          <li>Tartes salées et salades composées</li>
+          <li>Pièces du boucher, frites maison et salade</li>
+          <li>Assiettes de charcuterie ou de fromage</li>
+          <li>Desserts</li>
+        </ul>
+        <div class="menus">
+          <div class="menu"><b>25&nbsp;€</b><span>Menu entrée, plat, dessert</span></div>
+          <div class="menu"><b>35&nbsp;€</b><span>Menu aux produits plus nobles</span></div>
+        </div>
+        <p class="note">Pour une table, un groupe ou un dîner, appelez le <a class="nowrap" href="tel:+33565818043">05 65 81 80 43</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ecole" id="ecole">
+    <div class="wrap">
+      <div class="ecole-haut">
+        <p class="citation">Faire passer le plaisir de la musique avant toute chose.<small>L'esprit de l'école de violoncelle de Naïs Rivarel</small></p>
+        <figure class="polaroid apparait">
+          <img src="assets/auberg-in-la-salvetat-peyrales/violoncelle-au-pied-du-pont.webp" alt="Un violoncelle appuyé contre un arbre au bord de la rivière, sous les arches du pont" width="1000" height="750" loading="lazy">
+          <figcaption>Au pied du pont, au bord du Viaur</figcaption>
+        </figure>
+      </div>
+      <div class="ecole-bas">
+        <div>
+          <h2>L'école de violoncelle</h2>
+          <p>L'école accueille les enfants dès cinq ans et les adultes de tous âges, pour des cours chaque semaine. Naïs enseigne à tous les niveaux et à tous les âges, en s'adaptant aux souhaits de chacun.</p>
+          <p>L'association intervient aussi en milieu scolaire pour faire découvrir la musique autour de La Salvetat-Peyralès et de Mirandol-Bourgnounac.</p>
+          <a class="lien" href="https://www.auberg-in.com/spectacles-du-viaur/stages-violoncelle-sur-mesure.html">Des stages sur mesure</a>
+        </div>
+        <div>
+          <h2>Les Spectacles du Viaur</h2>
+          <p>L'association organise régulièrement à l'Auberg'IN des concerts, des spectacles, des lectures, des scènes ouvertes aux artistes amateurs, des expositions de photos et de peintures, et accueille des résidences d'artistes.</p>
+          <p>Pour être tenu au courant des prochains rendez-vous, inscrivez-vous à la lettre d'information.</p>
+          <a class="lien" href="https://www.auberg-in.com/infos-pratiques/contact.html">Recevoir la lettre d'information</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="histoire">
+    <div class="wrap">
+      <div class="tete">
+        <h2>Une auberge née d'un pont</h2>
+        <p>L'histoire de l'auberge est indissociable de celle du pont du Port de la Besse. Naïs, violoncelliste passionnée d'art et de nature, et Vincent, passionné de cuisine et de rencontres, en ont repris le fil.</p>
+      </div>
+      <ol class="frise">
+        <li>
+          <span class="quand">Le Port de la Cadenne</span>
+          <p>Avant le pont, on traversait la rivière sur un bac tracté par une chaîne, la cadenne en occitan.</p>
+        </li>
+        <li>
+          <span class="quand">Le pont</span>
+          <p>Le pont de pierre à trois arches enjambe le Viaur, l'auberge juste derrière.</p>
+          <figure class="vignette apparait"><img src="assets/auberg-in-la-salvetat-peyrales/pont-du-viaur-et-auberge.webp" alt="Le pont de pierre à trois arches sur le Viaur, l'auberge derrière" width="800" height="600" loading="lazy"></figure>
+        </li>
+        <li>
+          <span class="quand">Autour de 1895</span>
+          <p>La famille Fabre se tourne vers l'auberge et l'hôtellerie.</p>
+          <figure class="vignette apparait"><img src="assets/auberg-in-la-salvetat-peyrales/auberge-vigne-vierge-automne.webp" alt="L'auberge couverte de vigne vierge rouge en automne" width="1024" height="768" loading="lazy"></figure>
+        </li>
+        <li>
+          <span class="quand">Le 3 juillet 2021</span>
+          <p>Naïs et Vincent vous accueillent à l'Auberg'IN.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="boite">
+        <div class="gauche">
+          <h2>Réserver, venir, nous écrire</h2>
+          <p>Chambres, gîte et repas se réservent par téléphone ou par mail. À bientôt chez nous&nbsp;!</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="tel:+33565818043"><span class="nowrap">05 65 81 80 43</span></a>
+            <a class="btn btn-contour" href="mailto:reservation@auberg-in.com">Écrire un mail</a>
+          </div>
+        </div>
+        <div class="droite">
+          <dl class="coord">
+            <div class="large"><dt>Téléphone</dt><dd><a class="gros nowrap" href="tel:+33565818043">05 65 81 80 43</a></dd></div>
+            <div><dt>Mail</dt><dd><a href="mailto:reservation@auberg-in.com">reservation@auberg-in.com</a></dd></div>
+            <div><dt>Adresse</dt><dd>L'Auberg'IN, Le Port de la Besse<br>12440 La Salvetat-Peyralès</dd></div>
+            <div><dt>Venir</dt><dd>Sur la D905. <a href="https://www.auberg-in.com/infos-pratiques/acces.html">Comment venir</a></dd></div>
+            <div><dt>Nous suivre</dt><dd><a href="https://www.facebook.com/lauberg.in.artistique/">Page Facebook</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <span class="marque">L'Auberg'IN</span>
+      <p>Chambres d'hôtes, gîte, bar-restaurant et école de violoncelle, au bord du Viaur. Le Port de la Besse, 12440 La Salvetat-Peyralès.</p>
+    </div>
+    <div>
+      <h3>L'auberge</h3>
+      <ul>
+        <li><a href="https://www.auberg-in.com/auberge/chambres-d-hotes.html">Les chambres d'hôtes</a></li>
+        <li><a href="https://www.auberg-in.com/auberge/gite.html">Le gîte</a></li>
+        <li><a href="https://www.auberg-in.com/auberge/restaurant.html">Le restaurant</a></li>
+        <li><a href="https://www.auberg-in.com/spectacles-du-viaur/stages-violoncelle-sur-mesure.html">Stages sur mesure</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Nous joindre</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33565818043">05 65 81 80 43</a></li>
+        <li><a href="mailto:reservation@auberg-in.com">reservation@auberg-in.com</a></li>
+        <li><a href="https://www.auberg-in.com/infos-pratiques/acces.html">Comment venir</a></li>
+        <li><a href="https://www.facebook.com/lauberg.in.artistique/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="signature">Proposition de Nicolas Masset pour L'Auberg'IN</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

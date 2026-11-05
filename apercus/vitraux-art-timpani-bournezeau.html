@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Verres & Lumières · Cléa Timpani, vitrailliste à Bournezeau</title>
+<meta name="description" content="Cléa Timpani, artiste vitrailliste depuis 2004 à Bournezeau (Vendée) : vitraux Tiffany sur mesure, lampes, objets décoratifs et stages de vitrail d'une journée.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 60V30a24 24 0 0 1 48 0v30z' fill='%231D1B26' stroke='%23D9932B' stroke-width='4'/%3E%3Ctext x='32' y='50' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23D9932B'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Proza+Libre:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EAE8EF; --base-2:#DFDCE7; --surface:#F6F5F9; --encre:#1D1B26; --encre-2:#4D4A5C;
+  --accent:#D9932B; --accent-f:#B87818; --sombre:#1D1B26; --sombre-2:#2A2736; --clair:#F3F1F7;
+  --ombre:0 30px 60px -34px rgba(29,27,38,.6);
+  --display:'Forum', Georgia, serif; --texte:'Proza Libre', 'Trebuchet MS', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1200px, 100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+.nowrap{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-family:var(--texte);font-weight:500;font-size:16.5px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+.btn-plein{background:var(--accent);color:var(--encre)}
+.btn-plein:hover{background:#E6A445;transform:translateY(-2px)}
+.btn-contour{border:1.5px solid currentColor}
+.btn-contour:hover{transform:translateY(-2px);background:var(--encre);color:var(--clair);border-color:var(--encre)}
+.sur-sombre .btn-contour{color:var(--clair);border-color:rgba(243,241,247,.55)}
+.sur-sombre .btn-contour:hover{background:var(--clair);color:var(--encre);border-color:var(--clair)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(29,27,38,.96);color:var(--clair);border-bottom:1px solid rgba(243,241,247,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.01em}
+.marque span{font-size:13.5px;color:#BDB8CC;margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px;font-size:15.5px}
+.nav a{text-decoration:none;color:#CFCBDB}
+.nav a:hover{color:var(--clair)}
+.nav .tel{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid var(--accent);color:var(--clair);font-weight:500}
+.nav .tel:hover{background:var(--accent);color:var(--encre)}
+.appel{display:none}
+
+/* Héros sombre */
+.heros{background:var(--sombre);color:var(--clair);padding:64px 0 112px;position:relative}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.heros h1{font-size:clamp(42px, 6.4vw, 92px);line-height:1;letter-spacing:-.005em}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros .intro{margin-top:28px;font-size:19px;color:#CFCBDB;max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.heros .note{margin-top:26px;font-size:15px;color:#A9A4BA}
+.baie{position:relative;justify-self:end;width:min(520px, 100%)}
+.baie-cadre{border-radius:999px 999px 20px 20px;padding:10px;border:3px solid var(--accent);box-shadow:0 50px 100px -48px rgba(217,147,43,.75), 0 30px 60px -34px rgba(0,0,0,.6);background:#26232F}
+.baie-cadre .vue{border-radius:999px 999px 12px 12px;overflow:hidden}
+.baie-cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:86% 46%;transform:scale(1.14);transform-origin:62% 78%}
+.baie .pastille{position:absolute;left:-26px;bottom:44px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:10px 18px;border-radius:999px;box-shadow:0 16px 30px -16px rgba(0,0,0,.55)}
+.sceau{position:absolute;right:-18px;top:34%;width:112px;height:112px;border-radius:50%;background:var(--accent);color:var(--encre);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.05;box-shadow:0 18px 36px -18px rgba(0,0,0,.6);transform:rotate(-8deg)}
+.sceau b{font-family:var(--display);font-weight:400;font-size:30px}
+.sceau span{font-size:12.5px;font-weight:500;margin-top:3px}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:32px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 32px}
+.faits li{display:flex;flex-direction:column;font-size:15px;color:var(--encre-2);line-height:1.35}
+.faits strong{font-family:var(--display);font-weight:400;font-size:30px;color:var(--encre);margin-bottom:4px}
+
+section{padding:120px 0}
+.chapo{font-size:19px;color:var(--encre-2);max-width:34em;margin-top:22px}
+h2{font-size:clamp(34px, 4vw, 56px)}
+
+/* Stage */
+.stage .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:start}
+.journee{list-style:none;margin:52px 0 0;padding:0;position:relative}
+.journee::before{content:"";position:absolute;left:84px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--accent), rgba(217,147,43,.25))}
+.journee li{display:grid;grid-template-columns:70px minmax(0,1fr);gap:40px;padding:0 0 30px;position:relative}
+.journee li::after{content:"";position:absolute;left:79px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--base);border:2px solid var(--accent)}
+.journee .h{font-family:var(--display);font-size:24px;line-height:1.1;text-align:right;color:var(--encre)}
+.journee h3{font-family:var(--texte);font-weight:600;font-size:17.5px;margin-bottom:4px}
+.journee p{font-size:16.5px;color:var(--encre-2)}
+.tarif{position:sticky;top:110px;background:var(--surface);border-radius:24px;padding:40px 38px;box-shadow:var(--ombre)}
+.tarif .prix{font-family:var(--display);font-size:68px;line-height:1;white-space:nowrap}
+.tarif .prix small{font-family:var(--texte);font-size:16px;color:var(--encre-2);margin-left:6px}
+.tarif h3{font-family:var(--texte);font-weight:600;font-size:17px;margin-bottom:10px}
+.tarif ul{list-style:none;margin:24px 0 0;padding:0}
+.tarif li{padding:14px 0;border-top:1px solid rgba(29,27,38,.12);font-size:16px;color:var(--encre-2)}
+.tarif li b{display:block;color:var(--encre);font-weight:600}
+.tarif .actions{margin-top:26px}
+.tarif .actions .btn{flex:1 1 220px}
+.tarif .code{margin-top:18px;font-size:14.5px;color:var(--encre-2)}
+.tarif .code b{font-weight:600;color:var(--encre);letter-spacing:.04em}
+
+/* Sur mesure */
+.mesure{background:var(--surface)}
+.mesure .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:88px;align-items:center}
+.duo{position:relative;padding-bottom:90px}
+.duo .a{width:82%;aspect-ratio:1;object-fit:cover;object-position:50% 45%;border-radius:20px;box-shadow:var(--ombre)}
+.duo .b-wrap{position:absolute;right:0;bottom:0;width:54%;padding:10px;background:var(--surface);border-radius:18px;box-shadow:0 34px 60px -30px rgba(29,27,38,.6)}
+.duo .b-wrap img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:40% 30%;border-radius:12px}
+.duo .etiquette{position:absolute;left:18px;top:18px;background:var(--surface);font-size:14.5px;font-weight:500;padding:8px 15px;border-radius:999px}
+.mesure .liste{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.mesure .liste li{font-size:15px;padding:7px 15px;border-radius:999px;background:var(--base);color:var(--encre)}
+.technique{margin-top:32px;padding-left:22px;border-left:2px solid var(--accent);font-size:17px;color:var(--encre-2)}
+.mesure .actions .btn-contour{color:var(--encre)}
+
+/* Forêt enchantée */
+.foret{background:var(--base-2)}
+.foret .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:80px;align-items:center}
+.foret h2 .sous{display:block;margin-top:14px;font-size:.5em;line-height:1.2;color:var(--encre-2)}
+.foret .cote{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:40px}
+.foret .cote b{font-family:var(--display);font-weight:400;font-size:clamp(46px, 5.6vw, 80px);line-height:1;white-space:nowrap}
+.foret .cote span{font-size:16px;color:var(--encre-2);max-width:16em}
+.foret blockquote{margin:40px 0 0;font-family:var(--display);font-size:clamp(23px, 2.2vw, 30px);line-height:1.3;max-width:28em}
+.foret blockquote footer{margin-top:14px;font-family:var(--texte);font-size:15px;color:var(--encre-2)}
+.foret figure{margin:0;position:relative;max-width:380px;justify-self:center;width:100%}
+.foret figure img{width:100%;aspect-ratio:9/16;object-fit:cover;object-position:40% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.foret figure .pastille{position:absolute;left:16px;bottom:16px;right:16px;background:var(--surface);font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:14px;line-height:1.4}
+
+/* Galerie sombre */
+.objets{background:var(--sombre);color:var(--clair)}
+.objets .tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:end}
+.objets .tete p{font-size:18px;color:#CFCBDB}
+.vitrine{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr);gap:32px;margin-top:64px;align-items:start}
+.piece{margin:0}
+.piece .fond{background:var(--surface);border-radius:22px;padding:22px;box-shadow:0 40px 80px -46px rgba(217,147,43,.55)}
+.piece img{width:100%;aspect-ratio:1;object-fit:contain;mix-blend-mode:multiply}
+.piece figcaption{margin-top:16px;font-size:16px;color:#CFCBDB}
+.piece figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:24px;color:var(--clair)}
+.piece:nth-child(2){margin-top:72px}
+.piece:nth-child(3){margin-top:24px}
+.objets .bas{margin-top:56px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid rgba(243,241,247,.12)}
+.objets .bas p{font-size:17px;color:#CFCBDB;max-width:40em}
+
+/* Cléa */
+.clea .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:88px;align-items:center}
+.clea figure{margin:0;position:relative}
+.clea figure img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:62% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.clea .pastille{position:absolute;right:18px;bottom:18px;background:var(--surface);font-size:14.5px;font-weight:500;padding:8px 15px;border-radius:999px}
+.clea .texte p + p{margin-top:16px}
+.clea .texte p{font-size:17.5px;color:var(--encre-2)}
+.distinctions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:34px}
+.distinctions div{background:var(--surface);border-radius:16px;padding:20px 22px}
+.distinctions b{display:block;font-family:var(--display);font-weight:400;font-size:24px;line-height:1.15}
+.distinctions span{display:block;font-size:15px;color:var(--encre-2);margin-top:6px}
+.clea .mot{margin-top:36px;font-family:var(--display);font-size:clamp(24px, 2.4vw, 32px);line-height:1.25;color:var(--encre)}
+
+/* Contact */
+.contact{background:var(--base-2)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact .actions .btn-contour{color:var(--encre)}
+.coord{background:var(--surface);border-radius:24px;padding:38px 40px;box-shadow:var(--ombre)}
+.coord dl{margin:0;display:grid;gap:22px}
+.coord dt{font-size:13.5px;font-weight:600;color:var(--accent-f);margin-bottom:4px}
+.coord dd{margin:0;font-size:17.5px;line-height:1.5}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(29,27,38,.25)}
+.coord .tels{display:flex;flex-wrap:wrap;gap:4px 24px}
+.coord .tels a{font-family:var(--display);font-size:26px;border:0}
+
+/* Pied */
+.pied{background:var(--sombre);color:#CFCBDB;padding:84px 0 40px;font-size:16px}
+.pied .cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied .nom{font-family:var(--display);font-size:30px;color:var(--clair);margin-bottom:12px}
+.pied h3{font-family:var(--texte);font-weight:600;font-size:14.5px;color:var(--clair);margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--accent)}
+.signature{margin-top:56px;padding-top:24px;border-top:1px solid rgba(243,241,247,.12);font-size:13.5px;color:#9C97AE}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .apparait{opacity:1;transform:none;transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien-nav{display:none}
+  .pied .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .sceau{right:0}
+}
+@media (max-width:900px){
+  section{padding:88px 0}
+  .heros{padding:36px 0 80px}
+  .heros .wrap,.stage .wrap,.mesure .wrap,.foret .wrap,.objets .tete,.clea .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .baie{justify-self:center;width:min(440px, 100%)}
+  .tarif{position:relative;top:auto}
+  .vitrine{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .piece:nth-child(2){margin-top:48px}
+  .piece:nth-child(3){margin-top:0}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .nav{display:none}
+  .appel{display:inline-flex;min-height:42px;padding:0 16px;font-size:15px}
+  .marque b{font-size:22px}
+  .marque span{display:none}
+  .heros{padding:26px 0 68px}
+  .heros .wrap{gap:30px}
+  .heros h1{font-size:44px}
+  .heros .intro{font-size:17.5px;margin-top:18px}
+  .actions{margin-top:26px}
+  .baie{width:min(340px, 100% - 30px)}
+  .baie .pastille{left:-14px;bottom:28px;font-size:14px}
+  .sceau{width:88px;height:88px;right:-14px}
+  .sceau b{font-size:24px}
+  .sceau span{font-size:11.5px}
+  .faits strong{font-size:25px}
+  .journee::before{left:58px}
+  .journee li{grid-template-columns:46px minmax(0,1fr);gap:30px}
+  .journee li::after{left:53px}
+  .journee .h{font-size:19px}
+  .tarif{padding:30px 24px}
+  .tarif .prix{font-size:54px}
+  .duo{padding-bottom:70px}
+  .duo .a{width:88%}
+  .duo .b-wrap{width:62%}
+  .foret figure{max-width:300px}
+  .vitrine{grid-template-columns:minmax(0,1fr)}
+  .piece{max-width:340px;width:100%;justify-self:center}
+  .piece:nth-child(2){margin-top:0}
+  .distinctions{grid-template-columns:minmax(0,1fr)}
+  .coord{padding:28px 24px}
+  .pied .cols{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .wrap{width:min(1200px, 100% - 36px)}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">
+      <b>Verres &amp; Lumières</b>
+      <span>Cléa Timpani, vitrailliste à Bournezeau</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a class="lien-nav" href="#stage">Le stage</a>
+      <a class="lien-nav" href="#sur-mesure">Sur mesure</a>
+      <a class="lien-nav" href="#creations">Créations</a>
+      <a class="lien-nav" href="#contact">L'atelier</a>
+      <a class="tel nowrap" href="tel:+33673052488">06 73 05 24 88</a>
+    </nav>
+    <a class="btn btn-plein appel nowrap" href="tel:+33673052488">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros sur-sombre" aria-label="Présentation">
+    <div class="wrap">
+      <div>
+        <h1>Sculpter la <em>lumière</em> en vitrail Tiffany</h1>
+        <p class="intro">Cléa Timpani est artiste vitrailliste depuis 2004 à Bournezeau, en Vendée. Vitraux sur mesure, lampes, objets en verre Tiffany, et stages d'une journée à l'atelier, ouverts à tous.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#stage">Découvrir le stage</a>
+          <a class="btn btn-contour nowrap" href="tel:+33673052488">06 73 05 24 88</a>
+        </div>
+        <p class="note">Atelier au 2 impasse du Pailler, à 20&nbsp;min de La Roche-sur-Yon.</p>
+      </div>
+      <div class="baie">
+        <div class="baie-cadre"><div class="vue">
+          <img src="assets/vitraux-art-timpani-bournezeau/baie-cintree-hirondelle-branches.webp" alt="Baie cintrée en vitrail Tiffany : branches fleuries et hirondelle bleue sur fond clair" width="1600" height="1066">
+        </div></div>
+        <p class="pastille">Baie cintrée, création sur mesure</p>
+        <p class="sceau" aria-label="Depuis 2004"><b>2004</b><span>à Bournezeau</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul class="wrap">
+      <li><strong>Depuis 2004</strong>atelier à Bournezeau</li>
+      <li><strong>+ de 1000</strong>créations en verre Tiffany</li>
+      <li><strong>+ de 600</strong>stages organisés</li>
+      <li><strong>Main d'or</strong>Journées européennes des Métiers d'art</li>
+      <li><strong>Sur mesure</strong>envoi partout en France</li>
+    </ul>
+  </div>
+
+  <section class="stage" id="stage" aria-labelledby="t-stage">
+    <div class="wrap">
+      <div>
+        <h2 id="t-stage">Le stage vitrail&nbsp;: une journée, une œuvre à vous</h2>
+        <p class="chapo">Dans l'atelier Verres &amp; Lumières, vous découvrez chaque étape de la création d'un vitrail Tiffany et vous repartez avec votre pièce. Accessible à tous, sans prérequis&nbsp;: débutants, passionnés d'art ou simples curieux. Projet commun en famille possible (lampe, tableau, coffret…).</p>
+        <ol class="journee">
+          <li><span class="h">10h</span><div><h3>Accueil autour d'un café</h3><p>Présentation du matériel, puis initiation à la découpe du verre.</p></div></li>
+          <li><span class="h">Matin</span><div><h3>Votre modèle, vos couleurs</h3><p>Choix du modèle et des verres de couleur, parmi plusieurs modèles à disposition.</p></div></li>
+          <li><span class="h">12h30</span><div><h3>Pause déjeuner</h3><p>Pique-nique possible à l'atelier, restaurants et boulangerie à proximité.</p></div></li>
+          <li><span class="h">14h</span><div><h3>La fabrication</h3><p>Carton et calibres en papier, taille et meulage des pièces, sertissage au cuivre, soudure à l'étain, patine et finitions.</p></div></li>
+          <li><span class="h">18h</span><div><h3>Vous repartez avec votre vitrail</h3><p>Fin de la journée, votre œuvre sous le bras.</p></div></li>
+        </ol>
+      </div>
+      <aside class="tarif" aria-label="Tarif du stage">
+        <h3>Stage d'une journée</h3>
+        <p class="prix">170&nbsp;€<small>par personne</small></p>
+        <ul>
+          <li><b>Tout est fourni</b>Le verre, les outils (coupe-verre, pinces, meuleuse, fer à souder…) et le matériel.</li>
+          <li><b>Groupe ou famille</b>Tarif préférentiel sur demande.</li>
+          <li><b>Bon cadeau</b>Valable 1 an, pour une personne ou plus.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://booking.wecandoo.com/artisans/e7532d8e-b9ee-4995-a44c-e74aee8406dd/workshops/9ca2498e-4d3f-4a6e-af3c-f1aad3386eff/book">Réserver une date</a>
+          <a class="btn btn-contour" href="https://vitrail-vitraux.com/atelier-creatif-vendee-vitrail-traditionnel">Offrir un bon</a>
+        </div>
+        <p class="code">Réservation sur Wecandoo, 10&nbsp;% de réduction avec le code <b>TIMP6381</b>. Ou directement par téléphone au <a class="nowrap" href="tel:+33673052488">06 73 05 24 88</a>.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="mesure" id="sur-mesure" aria-labelledby="t-mesure">
+    <div class="wrap">
+      <div class="duo apparait">
+        <img class="a" src="assets/vitraux-art-timpani-bournezeau/fenetres-vitraux-geometriques-mur-vert.webp" alt="Deux fenêtres et deux impostes en vitrail géométrique jaune, bleu et vert sur un mur vert sapin" width="1600" height="1600" loading="lazy">
+        <span class="etiquette">Fenêtres et impostes</span>
+        <div class="b-wrap">
+          <img src="assets/vitraux-art-timpani-bournezeau/imposte-glycine.webp" alt="Imposte en vitrail Tiffany au-dessus d'une porte : glycine bleue et feuillage sur fond nacré" width="1600" height="1339" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <h2 id="t-mesure">Un vitrail pensé pour votre maison</h2>
+        <p class="chapo">Intégrer un vitrail dans une porte, un meuble, un lustre, ou transformer un vitrail existant&nbsp;: les possibilités sont infinies. Chaque pièce est unique, créée pour vos espaces intérieurs et extérieurs.</p>
+        <ul class="liste">
+          <li>Portes</li><li>Fenêtres</li><li>Baies vitrées</li><li>Panneaux muraux</li><li>Miroirs</li><li>Luminaires</li><li>Objets de décoration</li>
+        </ul>
+        <p class="technique">Le vitrail Tiffany sertit chaque pièce de verre d'une bande de cuivre, là où le vitrail classique utilise des baguettes de plomb&nbsp;: des formes plus fines, des détails plus délicats. Les verres, fabriqués aux États-Unis, sont colorés dans la masse, aux reflets changeants selon l'heure du jour.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://vitrail-vitraux.com/creation-sur-mesure-en-vitrail">Parler de votre projet</a>
+          <a class="btn btn-contour nowrap" href="tel:+33228150976">02 28 15 09 76</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="foret" aria-labelledby="t-foret">
+    <div class="wrap">
+      <div>
+        <h2 id="t-foret">La Forêt Enchantée<span class="sous">un vitrail pour l'entrée de la mairie de Bournezeau</span></h2>
+        <div class="cote"><b>2,60 m × 80&nbsp;cm</b><span>le plus grand vitrail réalisé à l'atelier à ce jour</span></div>
+        <blockquote>
+          «&nbsp;Lors d'une promenade en forêt, l'inspiration m'est venue. Une œuvre pensée pour apporter une touche colorée et joyeuse aux visiteurs qui franchissent le seuil de la mairie.&nbsp;»
+          <footer>Cléa Timpani</footer>
+        </blockquote>
+      </div>
+      <figure class="apparait">
+        <img src="assets/vitraux-art-timpani-bournezeau/vitrail-foret-enchantee-mairie-bournezeau.webp" alt="Le grand vitrail vertical La Forêt Enchantée, troncs multicolores sur verre clair, dans la baie de la mairie de Bournezeau" width="720" height="1600" loading="lazy">
+        <figcaption class="pastille">Mairie de Bournezeau</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="objets sur-sombre" id="creations" aria-labelledby="t-objets">
+    <div class="wrap">
+      <div class="tete">
+        <h2 id="t-objets">Lampes, chouettes et plumes de verre</h2>
+        <p>Des créations uniques en verre Tiffany coloré, aux reflets changeants, envoyées chez vous partout en France.</p>
+      </div>
+      <div class="vitrine">
+        <figure class="piece apparait">
+          <div class="fond"><img src="assets/vitraux-art-timpani-bournezeau/lampe-garconne-turquoise.webp" alt="Lampe en vitrail : silhouette de femme au chapeau bleu, allumée, sur un socle en bois" width="1599" height="1600" loading="lazy"></div>
+          <figcaption><b>Garçonne turquoise</b>Lampe en vitrail Tiffany</figcaption>
+        </figure>
+        <figure class="piece apparait">
+          <div class="fond"><img src="assets/vitraux-art-timpani-bournezeau/chouette-anaclete.webp" alt="Chouette en vitrail Tiffany bleu turquoise et blanc" width="1419" height="1600" loading="lazy"></div>
+          <figcaption><b>Anaclète la chouette</b>Vitrail Tiffany</figcaption>
+        </figure>
+        <figure class="piece apparait">
+          <div class="fond"><img src="assets/vitraux-art-timpani-bournezeau/plumes-porte-bonheur-rouges.webp" alt="Dix plumes porte-bonheur en vitrail rouge, orange et jaune disposées en éventail" width="1600" height="1402" loading="lazy" style="mix-blend-mode:normal;border-radius:12px;object-fit:cover"></div>
+          <figcaption><b>Plumes porte-bonheur</b>Vitrail rouge, orange et jaune</figcaption>
+        </figure>
+      </div>
+      <div class="bas">
+        <p>Tableaux, lampes, éléments de décoration, art sacré, chats, œuvres nature&nbsp;: toute la galerie est en ligne.</p>
+        <a class="btn btn-contour" href="https://vitrail-vitraux.com/atelier-verres-and-lumieres">Voir la galerie</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="clea" aria-labelledby="t-clea">
+    <div class="wrap">
+      <figure class="apparait">
+        <img src="assets/vitraux-art-timpani-bournezeau/fenetre-art-deco-gris-ambre.webp" alt="Fenêtre en vitrail géométrique Art déco bleu, gris et ambre dans un mur crépi" width="1600" height="1200" loading="lazy">
+        <figcaption class="pastille">Fenêtre Art déco, posée chez un client</figcaption>
+      </figure>
+      <div class="texte">
+        <h2 id="t-clea">De la place Vendôme à Bournezeau</h2>
+        <p class="chapo">Originaire de Rome, Cléa Timpani a débuté dans la haute joaillerie, chez Verney Créations, place Vendôme, en 1990. Éblouie par les vitraux de la Sainte-Chapelle, elle s'est formée au Centre international du vitrail de Chartres, en particulier à la méthode Tiffany.</p>
+        <p style="margin-top:16px">Installée à Bournezeau depuis 2004, elle y crée des pièces uniques et explore aussi des sculptures lumineuses qui mêlent le verre et le métal.</p>
+        <div class="distinctions">
+          <div><b>Main d'or</b><span>Journées européennes des Métiers d'art, 2012</span></div>
+          <div><b>3e prix du public</b><span>Sculpture, Salon des artistes du Loroux-Bottereau, 2015</span></div>
+        </div>
+        <p class="mot">«&nbsp;Sublimer les espaces intérieurs en sculptant la lumière, c'est l'art du vitrail de l'atelier Verres &amp; Lumières.&nbsp;»</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap">
+      <div>
+        <h2 id="t-contact">Passer à l'atelier</h2>
+        <p class="chapo">Cléa vous ouvre les portes de son atelier de création, de 10h à 18h30, sur rendez-vous. Un appel avant de passer est toujours le bienvenu.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://vitrail-vitraux.com/contact-verres-et-lumieres-clea-timpani">Écrire à Cléa</a>
+          <a class="btn btn-contour nowrap" href="tel:+33673052488">06 73 05 24 88</a>
+        </div>
+      </div>
+      <div class="coord">
+        <dl>
+          <div><dt>Téléphone</dt><dd class="tels"><a class="nowrap" href="tel:+33673052488">06 73 05 24 88</a><a class="nowrap" href="tel:+33228150976">02 28 15 09 76</a></dd></div>
+          <div><dt>Atelier</dt><dd>2 impasse du Pailler<br>85480 Bournezeau</dd></div>
+          <div><dt>Horaires</dt><dd>10h à 18h30, visites sur rendez-vous</dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:clea.timpani@wanadoo.fr">clea.timpani@wanadoo.fr</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="nom">Verres &amp; Lumières</p>
+        <p>Création sur mesure de rénovations et décorations en vitrail. Cléa Timpani, artiste vitrailliste depuis 2004 à Bournezeau (Vendée).</p>
+      </div>
+      <div>
+        <h3>L'atelier</h3>
+        <ul>
+          <li>2 impasse du Pailler</li>
+          <li>85480 Bournezeau</li>
+          <li>10h à 18h30, sur rendez-vous</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33673052488">06 73 05 24 88</a></li>
+          <li><a class="nowrap" href="tel:+33228150976">02 28 15 09 76</a></li>
+          <li><a href="mailto:clea.timpani@wanadoo.fr">clea.timpani@wanadoo.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre l'atelier</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/verres_et_lumieres/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/p/Verres-et-Lumi%C3%A8res-Latelier-de-Cl%C3%A9a-100042992360420/">Facebook</a></li>
+          <li><a href="https://vitrail-vitraux.com/atelier-verres-and-lumieres">La galerie</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="signature">Proposition de Nicolas Masset pour Verres &amp; Lumières, l'atelier de Cléa Timpani</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Ti' Maraichin · Traiteur aux Halles de Niort</title>
+<meta name="description" content="Le Ti' Maraichin, traiteur local aux Halles de Niort le jeudi, le samedi et le dimanche matin : plats régionaux faits maison, à emporter, livrés ou cuisinés chez vous.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2317291F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23C9D68A'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;1,400&family=Catamaran:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E6EBDF; --base-2:#D9E0CF; --surface:#F4F6EF; --encre:#1D2A1E; --doux:#4C5A4D;
+  --vert:#7A8F2B; --vert-fonce:#5A6B1A; --vert-clair:#C9D68A; --sombre:#17291F; --clair:#EEF2E6; --clair-doux:#AFBBA9;
+  --filet:rgba(29,42,30,.14);
+  --ombre:0 30px 60px -34px rgba(16,33,22,.55);
+  --ombre-forte:0 44px 84px -40px rgba(16,33,22,.7);
+  --w:1200px; --pad:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Catamaran",ui-sans-serif,sans-serif;font-weight:400;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--vert);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Bitter",Georgia,serif;font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--pad)}
+.nw{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font:600 18px/1.2 "Catamaran",sans-serif;text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--sombre);color:var(--clair)}
+.btn-plein:hover{background:var(--vert-fonce)}
+.btn-contour{border:1.5px solid rgba(29,42,30,.5);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);border-color:var(--encre);color:var(--clair)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+.ph{position:relative;overflow:hidden;border-radius:18px;box-shadow:var(--ombre);background:var(--base-2)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* photos prises couchées au téléphone : redressées ici */
+.rot{container-type:size}
+.rot img{inset:auto;top:50%;left:50%;width:100cqh;height:100cqw;max-width:none;transform:translate(-50%,-50%) rotate(90deg)}
+.rot.gauche img{transform:translate(-50%,-50%) rotate(-90deg)}
+.etiquette{position:absolute;left:16px;bottom:16px;z-index:2;background:var(--surface);color:var(--encre);font-size:16px;font-weight:600;line-height:1.3;padding:8px 14px;border-radius:10px;box-shadow:0 12px 24px -16px rgba(16,33,22,.6);max-width:calc(100% - 32px)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:30;background:rgba(230,235,223,.95);border-bottom:1px solid var(--filet)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font:600 24px/1.05 "Bitter",Georgia,serif}
+.marque small{font-size:15px;color:var(--doux);margin-top:2px}
+.nav{display:flex;align-items:center;gap:30px;font-size:17px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--vert-fonce)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:17px}
+.appel-court{display:none}
+
+/* héros : la photo file jusqu'au bord droit de l'écran */
+.heros{padding:64px 0 104px}
+.heros .grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+.heros .txt{padding-left:max(var(--pad),calc((100vw - var(--w)) / 2 + var(--pad)))}
+.heros .lieu{font-size:17px;font-weight:600;color:var(--vert-fonce);margin-bottom:18px}
+.heros h1{font-size:clamp(38px,4.8vw,68px);line-height:1.06}
+.heros h1 em{font-style:italic;font-weight:400;color:var(--vert-fonce)}
+.heros .chapo{margin-top:26px;font-size:20px;color:var(--doux);max-width:30em}
+.heros .actions{margin-top:34px}
+.plat{margin:0;height:clamp(380px,35vw,520px);border-radius:28px 0 0 28px;box-shadow:var(--ombre-forte)}
+.plat img{object-position:42% 50%}
+.plat .note-g{position:absolute;right:28px;top:28px;background:var(--sombre);color:var(--clair);border-radius:14px;padding:12px 18px;line-height:1.2;box-shadow:0 20px 40px -24px rgba(0,0,0,.7)}
+.plat .note-g b{display:block;font:500 30px/1 "Bitter",Georgia,serif;color:var(--vert-clair)}
+.plat .note-g span{font-size:15px}
+
+/* faits */
+.faits{background:var(--base-2);padding:28px 0}
+.faits ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+.faits li{font-size:17px;color:var(--doux)}
+.faits b{font:500 20px/1.3 "Bitter",Georgia,serif;color:var(--encre)}
+
+/* vitrine */
+.vitrine{padding:124px 0 120px}
+.vitrine .wrap{display:grid;grid-template-columns:minmax(0,4.6fr) minmax(0,7.4fr);gap:56px;align-items:center}
+.ardoise{background:var(--sombre);color:var(--clair);border-radius:22px;padding:46px 44px 48px;box-shadow:var(--ombre-forte)}
+.ardoise h2{font-size:clamp(30px,3.2vw,42px);line-height:1.1;color:var(--clair)}
+.ardoise .sous{margin-top:12px;font-size:17px;color:var(--clair-doux)}
+.ardoise ul{margin-top:26px}
+.ardoise li{display:flex;align-items:baseline;gap:14px;padding:10px 0;border-top:1px dashed rgba(238,242,230,.2);font:400 20px/1.35 "Bitter",Georgia,serif}
+.ardoise li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--vert-clair);translate:0 -3px}
+.etal{position:relative;padding-bottom:150px}
+.etal .a{aspect-ratio:16/10.5;border-radius:22px;box-shadow:var(--ombre-forte)}
+.etal .a .etiquette{top:16px;bottom:auto;left:auto;right:16px}
+.etal .b{position:absolute;left:6%;bottom:0;width:40%;aspect-ratio:4/3.1;border-radius:14px;border:7px solid var(--surface);transform:rotate(-2deg)}
+.etal .c{position:absolute;right:4%;bottom:26px;width:44%;aspect-ratio:4/3;border-radius:14px;border:7px solid var(--surface);transform:rotate(1.5deg)}
+
+/* façons */
+.facons{padding:0 0 124px}
+.facons .wrap{display:grid;grid-template-columns:minmax(0,6.6fr) minmax(0,5.4fr);gap:72px;align-items:center}
+.facons h2{font-size:clamp(32px,3.6vw,50px);line-height:1.1}
+.facons .intro{margin-top:18px;font-size:19px;color:var(--doux);max-width:30em}
+.trois{margin-top:36px;border-top:1px solid var(--filet)}
+.trois li{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--filet)}
+.trois b{font:400 clamp(28px,3vw,40px)/1.1 "Bitter",Georgia,serif}
+.trois span{font-size:16px;color:var(--doux);text-align:right}
+.facons .ph{aspect-ratio:4/4.6;border-radius:24px 24px 120px 24px}
+
+/* halles */
+.halles{background:var(--sombre);color:var(--clair);padding:120px 0 128px}
+.halles .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:start}
+.halles h2{font-size:clamp(32px,3.6vw,50px);line-height:1.1;color:var(--clair)}
+.halles .intro{margin-top:20px;font-size:19px;color:var(--clair-doux);max-width:28em}
+.halles .adresse{margin-top:32px;font:400 24px/1.35 "Bitter",Georgia,serif}
+.halles .actions{margin-top:30px}
+.halles .btn-contour{border-color:rgba(238,242,230,.5);color:var(--clair)}
+.halles .btn-contour:hover{background:var(--clair);color:var(--encre)}
+.halles .btn-plein{background:var(--vert-clair);color:var(--sombre)}
+.halles .btn-plein:hover{background:var(--clair)}
+.jours{background:rgba(238,242,230,.06);border-radius:22px;padding:30px 36px}
+.jour{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid rgba(238,242,230,.12)}
+.jour:first-child{border-top:0}
+.jour b{font:500 26px/1.2 "Bitter",Georgia,serif}
+.jour span{font:400 24px/1.2 "Bitter",Georgia,serif;color:var(--vert-clair);white-space:nowrap}
+.jour.ferme b,.jour.ferme span{font-size:18px;color:var(--clair-doux);font-family:"Catamaran",sans-serif}
+
+/* avis et contact */
+.contact{padding:124px 0 128px}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.note-grande{display:flex;align-items:flex-end;gap:18px}
+.note-grande b{font:400 clamp(96px,11vw,150px)/.85 "Bitter",Georgia,serif;letter-spacing:-.03em}
+.note-grande span{font-size:18px;color:var(--doux);padding-bottom:10px;line-height:1.35}
+.contact .txt p{margin-top:24px;font-size:19px;color:var(--doux);max-width:26em}
+.contact .liens{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px}
+.lien{font-weight:600;text-decoration:underline;text-decoration-color:var(--vert);text-decoration-thickness:2px;text-underline-offset:6px}
+.lien:hover{color:var(--vert-fonce)}
+.carte{background:var(--surface);border-radius:24px;padding:44px 48px;box-shadow:var(--ombre-forte);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px}
+.carte .ligne{padding:18px 0;border-top:1px solid var(--filet)}
+.carte .ligne.large{grid-column:1/-1}
+.carte .ligne:nth-child(-n+2){border-top:0;padding-top:0}
+.carte dt{font-size:15px;color:var(--doux);margin-bottom:4px}
+.carte dd{margin:0;font:400 23px/1.35 "Bitter",Georgia,serif}
+.carte dd.mail{font:500 18px/1.4 "Catamaran",sans-serif;overflow-wrap:anywhere}
+.carte dd a{text-decoration-color:rgba(122,143,43,.7);text-underline-offset:4px}
+.carte .actions{grid-column:1/-1;margin-top:26px}
+
+/* pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 40px;font-size:17px}
+.pied .haut{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:40px}
+.pied b{display:block;font:500 26px/1.1 "Bitter",Georgia,serif;color:var(--clair);margin-bottom:10px}
+.pied h3{font:600 16px/1.3 "Catamaran",sans-serif;color:var(--clair);margin-bottom:10px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--vert-clair)}
+.pied li{padding:2px 0}
+.proposition{margin-top:56px;padding-top:22px;border-top:1px solid rgba(238,242,230,.12);font-size:14px;color:rgba(175,187,169,.8)}
+
+.js .rv{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:0 0;transition:none}}
+
+@media (max-width:1060px){
+  .vitrine .wrap,.facons .wrap,.halles .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .etal{max-width:720px}
+  .facons .ph{max-width:520px}
+}
+@media (max-width:900px){.nav a:not(.btn){display:none}}
+@media (max-width:760px){
+  .heros{padding:32px 0 64px}
+  .heros .grille{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros .txt{display:contents}
+  .heros .grille > *,.heros .txt > *{padding-inline:var(--pad)}
+  .heros .lieu{order:1}.heros h1{order:2}
+  .plat{order:3;margin:26px 0 0 var(--pad);padding:0 !important;height:auto;aspect-ratio:4/3.2;border-radius:24px 0 0 24px}
+  .heros .chapo{order:4}.heros .actions{order:5}
+  .plat .note-g{right:14px;top:14px;padding:9px 13px}
+  .plat .note-g b{font-size:24px}
+}
+@media (max-width:600px){
+  body{font-size:18px}
+  .entete .wrap{min-height:62px}
+  .marque b{font-size:21px}
+  .marque small{font-size:14px}
+  .appel-long{display:none}.appel-court{display:inline}
+  .heros .lieu{font-size:16px;margin-bottom:12px}
+  .heros .chapo{font-size:18px}
+  .faits{padding:22px 0}
+  .faits ul{flex-direction:column;gap:6px}
+  .vitrine{padding:80px 0}
+  .ardoise{padding:30px 22px 32px}
+  .ardoise li{font-size:18px}
+  .etal{padding-bottom:110px}
+  .etal .b{left:0;width:48%;border-width:5px}
+  .etal .c{right:0;width:50%;bottom:18px;border-width:5px}
+  .facons{padding-bottom:84px}
+  .trois span{display:none}
+  .halles{padding:84px 0}
+  .jours{padding:20px 20px}
+  .jour b{font-size:22px}
+  .jour span{font-size:20px}
+  .contact{padding:84px 0}
+  .carte{grid-template-columns:minmax(0,1fr);padding:28px 22px}
+  .carte .ligne:nth-child(2){border-top:1px solid var(--filet);padding-top:18px}
+  .carte dd{font-size:21px}
+  .pied .haut{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .marque small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Le Ti' Maraichin</b><small>Traiteur · Halles de Niort</small></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#vitrine">La vitrine</a>
+      <a href="#halles">Horaires</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-plein" href="tel:+33628633018"><span class="appel-long">06 28 63 30 18</span><span class="appel-court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="grille">
+      <div class="txt">
+        <p class="lieu">Traiteur local aux Halles de Niort</p>
+        <h1>Des plats régionaux faits <em>maison</em>, frais et savoureux.</h1>
+        <p class="chapo">Le jeudi, le samedi et le dimanche matin, place des Halles. À emporter, livrés ou cuisinés chez vous.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#halles">Horaires des Halles</a>
+          <a class="btn btn-contour" href="tel:+33628633018">06 28 63 30 18</a>
+        </div>
+      </div>
+      <figure class="ph plat">
+        <img src="assets/le-ti-maraichin-traiteur/anguilles-persillade-a-la-poele.webp" alt="Tronçons d'anguilles dorés à la poêle, ail haché et persil plat" width="1600" height="738" fetchpriority="high">
+        <figcaption class="etiquette">Anguilles en persillade</figcaption>
+        <a class="note-g" href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Ti%27%20Maraichin%20Traiteur%20Niort" style="text-decoration:none"><b>5,0 sur 5</b><span>9 avis Google</span></a>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="wrap">
+      <ul>
+        <li><b>Halles de Niort</b></li>
+        <li><b>Jeudi, samedi, dimanche</b> le matin</li>
+        <li><b>Fait maison</b> frais et local</li>
+        <li><b>5,0 sur 5</b> 9 avis Google</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="vitrine" id="vitrine">
+    <div class="wrap">
+      <div class="ardoise">
+        <h2>Vu dans la vitrine</h2>
+        <p class="sous">Quelques plats du Ti' Maraichin.</p>
+        <ul>
+          <li>Anguilles en persillade</li>
+          <li>Saumon gravlax à l'aneth</li>
+          <li>Souris d'agneau confites</li>
+          <li>Parmentier de canard</li>
+          <li>Filet mignon sauce pineau</li>
+          <li>Tajine d'agneau</li>
+          <li>Civet d'escargots</li>
+          <li>Flans de poisson aux écrevisses</li>
+          <li>Tartelettes boudin-pomme</li>
+        </ul>
+      </div>
+      <div class="etal">
+        <div class="ph rot a rv"><img src="assets/le-ti-maraichin-traiteur/saumon-gravlax-aneth.webp" alt="Filet de saumon gravlax couvert d'aneth, tranches posées sur un plat" width="738" height="1600" loading="lazy"><span class="etiquette">Saumon gravlax</span></div>
+        <div class="ph rot gauche b rv"><img src="assets/le-ti-maraichin-traiteur/parmentiers-de-canard-en-vitrine.webp" alt="Parmentiers de canard effiloché en barquette, tomate cerise et persil" width="1200" height="1600" loading="lazy"></div>
+        <div class="ph rot c rv"><img src="assets/le-ti-maraichin-traiteur/souris-d-agneau-confites.webp" alt="Souris d'agneau confites sur leur sauce" width="738" height="1600" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facons">
+    <div class="wrap">
+      <div>
+        <h2>Pour votre table comme pour vos invités.</h2>
+        <p class="intro">Des plats régionaux faits maison, frais, local et savoureux. Un appel suffit pour en parler.</p>
+        <ul class="trois">
+          <li><b>À emporter</b><span>aux Halles de Niort</span></li>
+          <li><b>Livrés</b></li>
+          <li><b>Cuisinés chez vous</b></li>
+        </ul>
+        <div class="actions" style="margin-top:32px">
+          <a class="btn btn-plein" href="tel:+33628633018">Appeler le 06 28 63 30 18</a>
+        </div>
+      </div>
+      <div class="ph rot rv"><img src="assets/le-ti-maraichin-traiteur/tartelettes-boudin-pomme.webp" alt="Vitrine de tartelettes salées, dont les tartelettes boudin-pomme" width="736" height="1600" loading="lazy"><span class="etiquette">Tartelettes boudin-pomme</span></div>
+    </div>
+  </section>
+
+  <section class="halles" id="halles">
+    <div class="wrap">
+      <div>
+        <h2>Aux Halles de Niort, trois matins par semaine.</h2>
+        <p class="intro">Le stand vous attend sous les Halles, le jeudi, le samedi et le dimanche, dès 7&nbsp;h.</p>
+        <p class="adresse">Place des Halles<br>79000 Niort</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Ti%27%20Maraichin%20Traiteur%20Niort">Itinéraire</a>
+          <a class="btn btn-contour" href="tel:+33628633018">06 28 63 30 18</a>
+        </div>
+      </div>
+      <div class="jours">
+        <div class="jour"><b>Jeudi</b><span>7&nbsp;h – 13&nbsp;h</span></div>
+        <div class="jour"><b>Samedi</b><span>7&nbsp;h – 13&nbsp;h 30</span></div>
+        <div class="jour"><b>Dimanche</b><span>7&nbsp;h – 13&nbsp;h</span></div>
+        <div class="jour ferme"><b>Lundi, mardi, mercredi, vendredi</b><span>Fermé</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="txt">
+        <div class="note-grande"><b>5,0</b><span>sur 5<br>9 avis Google</span></div>
+        <p>La note et les avis des clients se lisent sur la fiche Google.</p>
+        <div class="liens">
+          <a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Ti%27%20Maraichin%20Traiteur%20Niort">Voir les avis sur Google</a>
+          <a class="lien" href="https://www.facebook.com/tireauolivier/">La page Facebook</a>
+        </div>
+      </div>
+      <dl class="carte">
+        <div class="ligne"><dt>Téléphone</dt><dd><a href="tel:+33628633018" class="nw">06 28 63 30 18</a></dd></div>
+        <div class="ligne"><dt>Adresse</dt><dd>Place des Halles<br>79000 Niort</dd></div>
+        <div class="ligne large"><dt>E-mail</dt><dd class="mail"><a href="mailto:tireauolivier@gmail.com">tireauolivier@gmail.com</a></dd></div>
+        <div class="ligne large"><dt>Aux Halles</dt><dd>Jeudi et dimanche 7&nbsp;h – 13&nbsp;h, samedi 7&nbsp;h – 13&nbsp;h 30</dd></div>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33628633018">Appeler</a>
+          <a class="btn btn-contour" href="mailto:tireauolivier@gmail.com">Écrire un mail</a>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="haut">
+      <div>
+        <b>Le Ti' Maraichin</b>
+        <p>Traiteur local aux Halles de Niort. Plats régionaux faits maison.</p>
+      </div>
+      <div>
+        <h3>Coordonnées</h3>
+        <ul>
+          <li>Place des Halles, 79000 Niort</li>
+          <li><a href="tel:+33628633018" class="nw">06 28 63 30 18</a></li>
+          <li><a href="mailto:tireauolivier@gmail.com">tireauolivier@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Jeudi : 7&nbsp;h – 13&nbsp;h</li>
+          <li>Samedi : 7&nbsp;h – 13&nbsp;h 30</li>
+          <li>Dimanche : 7&nbsp;h – 13&nbsp;h</li>
+          <li><a href="https://www.facebook.com/tireauolivier/">Facebook</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Ti%27%20Maraichin%20Traiteur%20Niort">Fiche Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour Le Ti' Maraichin Traiteur</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

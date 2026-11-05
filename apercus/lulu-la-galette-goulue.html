@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lulu La Galette Goulue · Food truck de crêpes et galettes bretonnes au Mans</title>
+<meta name="description" content="Lulu La Galette Goulue, food truck de crêpes et galettes bretonnes au Mans, à La Bazoge et à Yvré-l'Évêque. Disponible aussi pour vos événements.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232F5D8A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23FBF5EA'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gantari:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --base:#F3E7D3; --base-2:#EADAC0; --surface:#FBF5EA; --encre:#2B1D12; --encre-2:#5E4B3A;
+  --bleu:#2F5D8A; --bleu-fonce:#244A70; --bleu-pale:#C9D8E8; --sombre:#1F2E40; --sombre-2:#293B50;
+  --ombre:0 30px 60px -34px rgba(43,29,18,.55);
+  --ombre-forte:0 50px 90px -42px rgba(43,29,18,.62);
+  --display:'Alfa Slab One',Georgia,serif; --texte:'Gantari','Trebuchet MS',sans-serif;
+  --gouttiere:clamp(20px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:19px;line-height:1.6}
+::selection{background:var(--bleu);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 2*var(--gouttiere));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 30px;border-radius:999px;font:600 18px/1.2 var(--texte);text-decoration:none;text-align:center;transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.btn-plein{background:var(--bleu);color:var(--surface);box-shadow:0 18px 30px -18px rgba(47,93,138,.85)}
+.btn-plein:hover{background:var(--bleu-fonce);transform:translateY(-2px)}
+.btn-contour{border:2px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.btn-clair{border:2px solid rgba(251,245,234,.55);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--sombre);transform:translateY(-2px)}
+.tel{white-space:nowrap}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(243,231,211,.95);border-bottom:1px solid rgba(43,29,18,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;font:400 21px/1.05 var(--display);color:var(--encre)}
+.marque span{color:var(--bleu)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:17px;color:var(--encre-2)}
+.nav a:hover{color:var(--bleu)}
+.nav .btn{min-height:44px;padding:9px 20px;font-size:17px;color:var(--surface)}
+.nav .btn:hover{color:var(--surface)}
+
+/* héros */
+.heros{padding-block:clamp(32px,5vw,72px) clamp(72px,8vw,112px)}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,80px);align-items:center}
+.h-titre{font-size:clamp(38px,5vw,70px);line-height:1.04;color:var(--encre)}
+.h-lede{margin-top:26px;font-size:20px;font-weight:300;color:var(--encre-2);max-width:30em}
+.h-lede strong{font-weight:500;color:var(--encre)}
+.h-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.bilig{position:relative;margin:0;width:min(560px,100%);justify-self:end;aspect-ratio:1}
+.bilig .anneau{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bilig .anneau text{font-family:var(--display);font-size:31px;letter-spacing:3px;fill:var(--bleu)}
+.bilig .anneau .bas{font-size:24px;letter-spacing:4px;fill:var(--encre-2)}
+.bilig .disque{position:absolute;inset:11%;border-radius:50%;overflow:hidden;box-shadow:var(--ombre-forte),0 0 0 10px var(--surface)}
+.bilig .disque img{width:100%;height:100%;object-fit:cover;object-position:53% 52%;transform:scale(1.28)}
+.bilig figcaption{position:absolute;left:0;top:47%;background:var(--surface);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:600;box-shadow:0 14px 28px -16px rgba(43,29,18,.6)}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:24px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px}
+.faits li{font-size:17px;font-weight:500;display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:12px;height:12px;border-radius:50%;border:3px solid var(--bleu);flex:none}
+
+section{padding-block:clamp(80px,10vw,128px)}
+.titre-s{font-size:clamp(32px,3.8vw,50px);max-width:16ch}
+.intro{margin-top:20px;max-width:32em;font-size:20px;font-weight:300;color:var(--encre-2)}
+
+/* carte : section sombre */
+.carte-s{background:var(--sombre);color:var(--surface)}
+.carte-s .intro{color:rgba(251,245,234,.78)}
+.carte-grille{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,6vw,96px);align-items:start;margin-top:56px}
+.menu{margin:0;padding:0;list-style:none}
+.menu li{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:20px 0;border-bottom:1px dashed rgba(251,245,234,.22)}
+.menu li:first-child{border-top:1px dashed rgba(251,245,234,.22)}
+.menu h3{font-size:24px;color:var(--surface)}
+.menu p{font-size:17px;color:rgba(251,245,234,.72)}
+.ronds{position:relative;min-height:620px}
+.ronds figure{position:absolute;margin:0;border-radius:50%;overflow:hidden;box-shadow:0 40px 70px -34px rgba(0,0,0,.75),0 0 0 8px var(--sombre-2)}
+.ronds img{width:100%;height:100%;object-fit:cover;transform:scale(1.25)}
+.ronds .r1{width:min(400px,78%);aspect-ratio:1;right:0;top:0}
+.ronds .r2{width:min(250px,50%);aspect-ratio:1;left:0;top:300px}
+.ronds .r3{width:min(200px,40%);aspect-ratio:1;right:6%;top:440px}
+.ronds .nom{position:absolute;background:var(--surface);color:var(--encre);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:600;z-index:2}
+.ronds .n1{right:4%;top:350px}
+.ronds .n2{left:4%;top:560px}
+
+/* le camion */
+.camion-grille{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,96px);align-items:center}
+.polaroid{margin:0;background:var(--surface);padding:14px 14px 64px;border-radius:8px;box-shadow:var(--ombre-forte);rotate:-2.5deg;position:relative}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 93%;border-radius:4px}
+.polaroid figcaption{position:absolute;left:22px;bottom:18px;font:400 22px/1 var(--display);color:var(--bleu)}
+.lieux{margin:36px 0 0;padding:0;list-style:none}
+.lieux li{font:400 clamp(30px,3.6vw,48px)/1.14 var(--display);color:rgba(43,29,18,.42)}
+.lieux li:first-child{color:var(--encre)}
+.horaire-note{margin-top:32px;background:var(--surface);border-radius:18px;padding:22px 24px;box-shadow:var(--ombre);font-size:18px;color:var(--encre-2)}
+.horaire-note strong{color:var(--encre);font-weight:600}
+.camion-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* événements */
+.evt{padding-top:0}
+.evt-carte{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:stretch;background:var(--bleu);color:var(--surface);border-radius:28px;overflow:hidden;box-shadow:var(--ombre-forte)}
+.evt-texte{padding:clamp(32px,5vw,72px)}
+.evt-texte .titre-s{max-width:14ch}
+.evt-texte p{margin-top:20px;font-size:20px;font-weight:300;color:rgba(251,245,234,.88);max-width:28em}
+.evt-texte .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.evt-texte .btn-plein{background:var(--surface);color:var(--bleu);box-shadow:none}
+.evt-texte .btn-plein:hover{background:#fff8ee;color:var(--bleu-fonce)}
+.demi{position:relative;margin:0;min-height:360px}
+.demi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;border-radius:999px 0 0 999px}
+
+/* contact */
+.contact-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(40px,6vw,80px);align-items:start}
+.note-g{background:var(--surface);border-radius:24px;padding:clamp(28px,4vw,44px);box-shadow:var(--ombre);display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;margin-top:40px;text-decoration:none;transition:transform .25s ease}
+.note-g:hover{transform:translateY(-2px)}
+.note-g .chiffre{font:400 76px/1 var(--display);color:var(--bleu)}
+.note-g b{display:block;font-size:20px;font-weight:600}
+.note-g span{display:block;font-size:17px;color:var(--encre-2)}
+.note-g u{display:inline-block;margin-top:8px;font-weight:600;color:var(--bleu);text-underline-offset:3px}
+.coord{background:var(--sombre);color:var(--surface);border-radius:24px;padding:clamp(28px,4vw,44px);box-shadow:var(--ombre-forte)}
+.coord h3{font-size:30px}
+.coord dl{margin:20px 0 0}
+.coord dt{margin-top:20px;font-size:14px;font-weight:600;letter-spacing:.03em;color:var(--bleu-pale)}
+.coord dd{margin:4px 0 0;font-size:18px;color:rgba(251,245,234,.86)}
+.coord dd a{color:var(--surface);text-underline-offset:3px;overflow-wrap:anywhere}
+.coord .btns{display:grid;gap:12px;margin-top:32px}
+.coord .btn-plein{background:var(--surface);color:var(--sombre);box-shadow:none}
+.coord .btn-plein:hover{background:#fff8ee;color:var(--sombre)}
+
+/* pied */
+.pied{background:#162231;color:rgba(251,245,234,.8);padding:72px 0 32px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.pied b{display:block;font:400 26px/1.1 var(--display);color:var(--surface)}
+.pied p,.pied li{font-size:17px}
+.pied h4{margin:0 0 12px;font:400 19px/1.2 var(--display);color:var(--surface)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{color:var(--surface);text-underline-offset:3px;overflow-wrap:anywhere}
+.propo{margin-top:56px;padding-top:24px;border-top:1px solid rgba(251,245,234,.12);font-size:14px;color:rgba(251,245,234,.5)}
+
+.js .rv{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:none;transition:none}}
+
+@media (max-width:1000px){
+  .nav a:not(.btn){display:none}
+  .heros .cadre,.carte-grille,.camion-grille,.contact-grille{grid-template-columns:minmax(0,1fr)}
+  .bilig{justify-self:center}
+  .ronds{min-height:0;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center}
+  .ronds figure,.ronds .nom{position:relative;inset:auto}
+  .ronds .r1{width:min(300px,62%)}
+  .ronds .r2{width:min(200px,40%)}
+  .ronds .r1,.ronds .r2{top:auto;left:auto;right:auto}
+  .ronds .r3{display:none}
+  .ronds .nom{display:none}
+  .evt-carte{grid-template-columns:minmax(0,1fr)}
+  .demi{min-height:280px;order:-1}
+  .demi img{border-radius:0 0 50% 50% / 0 0 30% 30%}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:620px){
+  body{font-size:18px}
+  .entete .cadre{min-height:64px}
+  .marque{font-size:17px}
+  .heros .cadre{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .h-texte{display:contents}
+  .h-titre{order:1}
+  .bilig{order:2;margin:24px auto 0;width:min(360px,100%)}
+  .bilig .anneau text{font-size:34px}
+  .bilig .anneau .bas{font-size:27px}
+  .h-lede{order:3;margin-top:24px}
+  .h-btns{order:4}
+  .faits ul{flex-direction:column}
+  .note-g{grid-template-columns:minmax(0,1fr);gap:8px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .h-btns .btn,.camion-btns .btn,.evt-texte .btn{width:100%}
+  .nav .btn{padding:9px 14px;font-size:16px}
+  .bilig figcaption{font-size:14px;padding:6px 12px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut">Lulu <span>La Galette</span> Goulue</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#carte">Les galettes</a>
+      <a href="#camion">Le camion</a>
+      <a href="#evenements">Événements</a>
+      <a class="btn btn-plein tel" href="tel:+33651218314">06 51 21 83 14</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <div class="cadre">
+      <div class="h-texte">
+        <h1 class="h-titre">Crêpes et galettes bretonnes, au Mans</h1>
+        <p class="h-lede">Le food truck de <strong>Lulu La Galette Goulue</strong> sert ses crêpes et ses galettes au Mans, à La Bazoge et à Yvré-l'Évêque. Il est disponible aussi pour vos événements.</p>
+        <div class="h-btns">
+          <a class="btn btn-plein tel" href="tel:+33651218314">Appeler le 06 51 21 83 14</a>
+          <a class="btn btn-contour" href="#camion">Où trouver le camion</a>
+        </div>
+      </div>
+      <figure class="bilig">
+        <svg class="anneau" viewBox="0 0 600 600" aria-hidden="true">
+          <defs>
+            <path id="arc-haut" d="M 38,300 A 262,262 0 1 1 562,300 A 262,262 0 1 1 38,300"/>
+            <path id="arc-bas" d="M 12,300 A 288,288 0 0 0 588,300"/>
+          </defs>
+          <text><textPath href="#arc-haut" startOffset="25%" text-anchor="middle">LULU LA GALETTE GOULUE</textPath></text>
+          <text class="bas"><textPath href="#arc-bas" startOffset="50%" text-anchor="middle">CRÊPES · GALETTES · LE MANS</textPath></text>
+        </svg>
+        <div class="disque">
+          <img src="assets/lulu-la-galette-goulue/galette-italienne-roquette-tomates-sechees.webp" alt="Galette de sarrasin à l'œuf coulant, coppa, tomates séchées et roquette, vue de dessus" width="1200" height="1600" fetchpriority="high">
+        </div>
+        <figcaption>L'italienne</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="faits">
+    <ul class="cadre">
+      <li>Crêpes et galettes bretonnes</li>
+      <li>Food truck au Mans</li>
+      <li>4,9 sur 5 sur Google, 14 avis</li>
+      <li>Disponible pour vos événements</li>
+    </ul>
+  </div>
+
+  <section class="carte-s" id="carte">
+    <div class="cadre">
+      <h2 class="titre-s">Des galettes pour tous les goûts</h2>
+      <p class="intro">La carte change avec les saisons. De ceux qui aiment la douceur à ceux qui aiment le piquant, il y en a pour tous les goûts. Quelques galettes passées par le camion :</p>
+      <div class="carte-grille">
+        <ul class="menu">
+          <li><h3>La Paysanne</h3><p>Une base croustillante, un œuf coulant, de l'emmental fondant, le confit d'oignons maison, de la saucisse fumée grillée et une sauce moutarde à l'ancienne.</p></li>
+          <li><h3>L'Auvergnate</h3><p>Œuf, emmental, pommes de terre sautées, tranches de jambon cru d'Auvergne et saint-nectaire AOP.</p></li>
+          <li><h3>L'italienne</h3><p>Œuf coulant, mozzarella, coppa, pesto, tomates séchées et roquette.</p></li>
+          <li><h3>La Montagnarde Ibérique</h3><p>Fromage à raclette, pommes de terre et chorizo snacké.</p></li>
+          <li><h3>La sarthoise</h3><p>Œuf, jambon, champignons et fromage Refrain fondu.</p></li>
+          <li><h3>La complète</h3><p>L'incontournable : œuf, jambon et emmental.</p></li>
+        </ul>
+        <div class="ronds">
+          <figure class="r1 rv"><img src="assets/lulu-la-galette-goulue/galette-paysanne-saucisse-moutarde.webp" alt="La Paysanne : œuf coulant, saucisse fumée grillée, confit d'oignons et sauce moutarde" width="1280" height="1600" loading="lazy"></figure>
+          <span class="nom n1">La Paysanne</span>
+          <figure class="r2 rv"><img src="assets/lulu-la-galette-goulue/galette-auvergnate-jambon-cru-oeuf.webp" alt="L'Auvergnate : jaune d'œuf, pommes de terre sautées et jambon cru" width="1200" height="1600" loading="lazy"></figure>
+          <span class="nom n2">L'Auvergnate</span>
+          <figure class="r3 rv"><img src="assets/lulu-la-galette-goulue/galette-montagnarde-iberique-chorizo.webp" alt="La Montagnarde Ibérique : raclette, pommes de terre et chorizo" width="1279" height="1600" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="camion">
+    <div class="cadre camion-grille">
+      <figure class="polaroid rv">
+        <img src="assets/lulu-la-galette-goulue/camion-food-truck-bleu-circuit.webp" alt="Le camion bleu de Lulu La Galette Goulue, décoré d'une galette à l'œuf" width="1200" height="1600" loading="lazy">
+        <figcaption>Le camion bleu</figcaption>
+      </figure>
+      <div>
+        <h2 class="titre-s">Où trouver le camion</h2>
+        <ul class="lieux">
+          <li>Le Mans</li>
+          <li>La Bazoge</li>
+          <li>Yvré-l'Évêque</li>
+        </ul>
+        <p class="horaire-note"><strong>Les jours et les emplacements changent avec les saisons.</strong> Pour savoir où se trouve le camion, appelez Lucile, ou regardez les horaires du moment sur la fiche Google.</p>
+        <div class="camion-btns">
+          <a class="btn btn-plein tel" href="tel:+33651218314">06 51 21 83 14</a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/search/?api=1&amp;query=Lulu%20La%20Galette%20Goulue%20Le%20Mans">Horaires sur Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="evt" id="evenements">
+    <div class="cadre">
+      <div class="evt-carte rv">
+        <div class="evt-texte">
+          <h2 class="titre-s">Le camion vient aussi à vos événements</h2>
+          <p>Crêpes et galettes bretonnes pour vos invités : parlez de votre événement à Lucile, par téléphone ou par mail.</p>
+          <div class="btns">
+            <a class="btn btn-plein tel" href="tel:+33651218314">Appeler Lucile</a>
+            <a class="btn btn-clair" href="mailto:luciledufeil@outlook.fr?subject=Un%20%C3%A9v%C3%A9nement%20avec%20Lulu%20La%20Galette%20Goulue">Écrire un mail</a>
+          </div>
+        </div>
+        <figure class="demi">
+          <img src="assets/lulu-la-galette-goulue/galette-complete-jambon-oeuf.webp" alt="Gros plan sur une galette complète : œuf au plat, jambon et emmental fondu" width="1279" height="1600" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="cadre contact-grille">
+      <div>
+        <h2 class="titre-s">Noté 4,9 sur 5 par les clients</h2>
+        <p class="intro">Ce que les clients disent du camion se lit sur la fiche Google de Lulu La Galette Goulue.</p>
+        <a class="note-g" href="https://www.google.com/maps/search/?api=1&amp;query=Lulu%20La%20Galette%20Goulue%20Le%20Mans">
+          <span class="chiffre">4,9</span>
+          <span><b>sur 5 sur Google</b><span>14 avis</span><u>Voir les avis</u></span>
+        </a>
+      </div>
+      <div class="coord">
+        <h3>Lulu La Galette Goulue</h3>
+        <dl>
+          <dt>Téléphone</dt>
+          <dd><a class="tel" href="tel:+33651218314">06 51 21 83 14</a></dd>
+          <dt>Mail</dt>
+          <dd><a href="mailto:luciledufeil@outlook.fr">luciledufeil@outlook.fr</a></dd>
+          <dt>Adresse</dt>
+          <dd>80 boulevard Carnot, 72100 Le Mans</dd>
+          <dt>Secteur du camion</dt>
+          <dd>Le Mans, La Bazoge, Yvré-l'Évêque</dd>
+        </dl>
+        <div class="btns">
+          <a class="btn btn-plein tel" href="tel:+33651218314">Appeler le 06 51 21 83 14</a>
+          <a class="btn btn-clair" href="https://www.facebook.com/lululagalettegoulue/">La page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <b>Lulu La Galette Goulue</b>
+        <p style="margin-top:14px">Food truck de crêpes et galettes bretonnes au Mans. Disponible aussi pour vos événements.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a class="tel" href="tel:+33651218314">06 51 21 83 14</a></li>
+          <li><a href="mailto:luciledufeil@outlook.fr">luciledufeil@outlook.fr</a></li>
+          <li>80 boulevard Carnot, 72100 Le Mans</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre le camion</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Lulu%20La%20Galette%20Goulue%20Le%20Mans">Fiche Google et horaires</a></li>
+          <li><a href="https://www.facebook.com/lululagalettegoulue/">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="propo">Proposition de Nicolas Masset pour Lulu La Galette Goulue</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

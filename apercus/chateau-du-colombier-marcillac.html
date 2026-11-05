@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Château du Colombier · parc, jardin médiéval, pêche et escape game, Mondalazac</title>
+<meta name="description" content="Le Château du Colombier, à Mondalazac aux portes du vignoble de Marcillac : jardin médiéval, labyrinthe, pêche no kill et escape game Auto-Psy. 05 65 74 99 79.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23233024'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23E9EDE6'%3EC%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Radio+Canada:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E9EDE6; --base-2:#DDE3D8; --surface:#F5F7F3; --encre:#1E261F; --encre-2:#4A554B;
+  --ardoise:#4A6378; --ardoise-pale:#B9C8D4; --sombre:#233024; --sombre-2:#2E3D2F; --clair:#F2F4EF;
+  --w:min(1200px, calc(100% - 48px));
+  --ombre:0 30px 60px -34px rgba(24,34,25,.6);
+  --display:"Gilda Display", Georgia, serif; --texte:"Radio Canada", "Trebuchet MS", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:400;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ardoise);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:var(--w);margin-inline:auto}
+.tel{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--sombre);color:var(--clair)}
+.btn-plein:hover{background:var(--ardoise)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair)}
+.btn-clair{background:var(--clair);color:var(--encre)}
+.btn-clair:hover{background:#fff8;background:var(--ardoise-pale)}
+.btn-contour-clair{border:1.5px solid rgba(242,244,239,.85);color:var(--clair)}
+.btn-contour-clair:hover{background:var(--clair);color:var(--encre)}
+
+/* en-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(233,237,230,.94);border-bottom:1px solid rgba(30,38,31,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;font-family:var(--display);font-size:27px;line-height:1.1}
+.marque small{display:block;font-family:var(--texte);font-size:13.5px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--ardoise)}
+.nav .btn{min-height:46px;padding:10px 22px;font-size:16px;background:var(--sombre);color:var(--clair)}
+.nav .btn:hover{background:var(--ardoise);color:var(--clair)}
+.appel-court{display:none}
+
+/* héros spectaculaire */
+.heros{padding:28px 0 0}
+.scene{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:2/1;box-shadow:0 40px 80px -46px rgba(24,34,25,.75);background:var(--sombre)}
+.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:scale(1.24);transform-origin:100% 100%}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(17,26,18,.88) 0%, rgba(17,26,18,.62) 30%, rgba(17,26,18,0) 58%)}
+.surimpression{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 52px 46px;color:var(--clair);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 48px;align-items:end}
+.surimpression .ou{grid-column:1 / -1;font-size:16px;color:#D5DCD3}
+.surimpression h1{grid-column:1 / -1;font-size:clamp(40px,6.4vw,88px);line-height:1}
+.surimpression .chapo{font-size:18.5px;color:#E3E8E1;max-width:36em}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.pastille{position:absolute;z-index:2;top:26px;right:26px;background:var(--surface);color:var(--encre);border-radius:999px;padding:10px 18px;font-size:15px;font-weight:500;box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
+
+/* faits */
+.faits{margin-top:-1px;padding:64px 0 0}
+.faits ul{list-style:none;margin:0 auto;padding:30px 40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px;background:var(--base-2);border-radius:20px}
+.faits li{font-size:16px;line-height:1.45;color:var(--encre-2)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:27px;line-height:1.1;color:var(--encre);margin-bottom:4px}
+
+/* histoire */
+.histoire{padding:120px 0}
+.histoire .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.histoire h2,.jardin h2,.peche h2,.visite h2{font-size:clamp(34px,4.2vw,56px)}
+.histoire .corps{margin-top:26px;display:grid;gap:18px;color:var(--encre-2)}
+.histoire .corps strong{color:var(--encre);font-weight:500}
+.duo{position:relative;padding-bottom:84px}
+.duo .grande img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:78% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.duo .petite{position:absolute;left:-44px;bottom:0;width:min(300px,46%);border:8px solid var(--surface);border-radius:18px;box-shadow:var(--ombre);transform:rotate(-2deg)}
+.duo .petite img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;border-radius:10px;filter:saturate(.72)}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(0,0,0,.55)}
+.duo .etiquette{right:18px;top:18px}
+.colombiers{margin-top:34px;padding:22px 0 0;border-top:1px solid rgba(30,38,31,.16);font-family:var(--display);font-size:24px;line-height:1.3;color:var(--encre)}
+
+/* jardin */
+.jardin{background:var(--surface);padding:120px 0}
+.jardin-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end}
+.jardin-tete p{color:var(--encre-2)}
+.mosaique{margin-top:60px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:start}
+.m-potager{grid-column:1 / span 7;position:relative}
+.m-potager img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:var(--ombre)}
+.m-potager .etiquette{left:18px;bottom:18px}
+.m-cote{grid-column:8 / span 5;display:grid;gap:30px}
+.fleurs{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;align-items:end}
+.fleurs img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.fleurs .pivoine img{aspect-ratio:3/4;border-radius:999px 999px 18px 18px;object-position:40% 50%}
+.fleurs .geranium{margin-bottom:-28px}
+.fleurs .geranium img{aspect-ratio:1/1;border-radius:50%;object-position:62% 40%}
+.sur-place{list-style:none;margin:20px 0 0;padding:0}
+.sur-place li{padding:15px 0;border-bottom:1px solid rgba(30,38,31,.14);font-size:17.5px;line-height:1.45}
+.sur-place li:first-child{border-top:1px solid rgba(30,38,31,.14)}
+.sur-place b{font-weight:500}
+.labyrinthe{margin-top:72px;position:relative}
+.labyrinthe img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 58%;border-radius:24px;box-shadow:var(--ombre)}
+.labyrinthe figcaption{position:absolute;left:28px;bottom:28px;max-width:min(430px,calc(100% - 56px));background:var(--surface);border-radius:16px;padding:20px 24px;box-shadow:0 20px 40px -24px rgba(0,0,0,.55)}
+.labyrinthe figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15}
+.labyrinthe figcaption span{font-size:16px;color:var(--encre-2)}
+
+/* escape game, fond sombre */
+.escape{background:var(--sombre);color:var(--clair);padding:120px 0}
+.escape .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:80px;align-items:center}
+.escape h2{font-size:clamp(36px,4.8vw,64px)}
+.escape .lead{margin-top:24px;font-size:20px;color:#DCE2D9;max-width:28em}
+.escape .infos{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0}
+.escape .infos li{display:flex;gap:20px;padding:16px 0;border-top:1px solid rgba(242,244,239,.15);font-size:17.5px}
+.escape .infos li:last-child{border-bottom:1px solid rgba(242,244,239,.15)}
+.escape .infos span{min-width:7.5em;color:var(--ardoise-pale)}
+.reservation{position:relative;padding-bottom:150px}
+.reservation img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%;border-radius:20px;box-shadow:0 36px 70px -34px rgba(0,0,0,.75)}
+.reservation .etiquette{right:18px;top:18px}
+.carte-resa{position:absolute;left:-40px;bottom:0;width:min(400px,92%);background:var(--surface);color:var(--encre);border-radius:20px;padding:28px 30px;box-shadow:0 30px 60px -28px rgba(0,0,0,.7)}
+.carte-resa h3{font-size:28px}
+.carte-resa p{margin-top:6px;font-size:16px;color:var(--encre-2)}
+.carte-resa .actions{margin-top:20px;flex-direction:column}
+.carte-resa .btn{width:100%}
+
+/* pêche */
+.peche{padding:128px 0 120px}
+.peche .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.etang{position:relative}
+.etang img{width:100%;aspect-ratio:3/2.1;object-fit:cover;object-position:60% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.etang .etiquette{left:18px;bottom:18px}
+.peche p{margin-top:22px;color:var(--encre-2)}
+.ticket{margin-top:34px;display:flex;align-items:center;gap:22px;background:var(--surface);border-radius:18px;padding:22px 26px;box-shadow:0 26px 50px -34px rgba(24,34,25,.55)}
+.ticket .prix{font-family:var(--display);font-size:52px;line-height:1;color:var(--ardoise);white-space:nowrap}
+.ticket span{font-size:16px;line-height:1.45;color:var(--encre-2)}
+.ticket b{display:block;color:var(--encre);font-weight:500;font-size:17px}
+
+/* préparer sa visite */
+.visite{background:var(--base-2);padding:120px 0}
+.visite-tete{max-width:40em}
+.visite-tete p{margin-top:18px;color:var(--encre-2)}
+.visite-grille{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.tarifs{background:var(--surface);border-radius:22px;padding:34px 38px;box-shadow:var(--ombre)}
+.tarifs h3,.bon h3{font-size:28px;margin-bottom:14px}
+.tarifs ul{list-style:none;margin:0;padding:0}
+.tarifs li{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(30,38,31,.12);font-size:17px}
+.tarifs li:last-child{border-bottom:0}
+.tarifs li small{display:block;color:var(--encre-2);font-size:14.5px}
+.tarifs .p{font-family:var(--display);font-size:25px;white-space:nowrap;color:var(--encre)}
+.bon{display:grid;gap:30px;padding-top:10px}
+.bon p{font-size:17px;color:var(--encre-2)}
+.bon p+p{margin-top:8px}
+.acces{list-style:none;margin:0;padding:0;font-size:17px;color:var(--encre-2)}
+.acces li{padding:6px 0}
+.acces b{color:var(--encre);font-weight:500}
+
+/* coordonnées */
+.coord{padding:120px 0}
+.coord .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.coord h2{font-size:clamp(34px,4.2vw,56px)}
+.coord .texte{margin-top:18px;color:var(--encre-2);max-width:30em}
+.coord .actions{margin-top:30px}
+.fiche{background:var(--surface);border-radius:22px;padding:40px;box-shadow:0 36px 70px -40px rgba(24,34,25,.6)}
+.fiche dl{margin:0;display:grid;gap:22px}
+.fiche dt{font-size:14px;color:var(--encre-2)}
+.fiche dd{margin:4px 0 0;font-family:var(--display);font-size:25px;line-height:1.25;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none}
+.fiche dd a:hover{color:var(--ardoise)}
+
+.pied{background:var(--sombre);color:#CFD6CC;padding:80px 0 36px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b{display:block;font-family:var(--display);font-weight:400;font-size:32px;color:var(--clair);margin-bottom:10px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--ardoise-pale);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline}
+.pied .bas{grid-column:1 / -1;border-top:1px solid rgba(242,244,239,.14);padding-top:24px;margin-top:24px;font-size:14px;color:#9EA89D}
+.proposition{background:#1C271D;color:#97A196;text-align:center;font-size:13px;padding:14px 20px}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1100px){
+  .nav a:not(.btn){display:none}
+  .surimpression{grid-template-columns:minmax(0,1fr)}
+  .scene{aspect-ratio:16/10}
+}
+@media (max-width:900px){
+  :root{--w:calc(100% - 40px)}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .histoire,.jardin,.escape,.peche,.visite,.coord{padding:88px 0}
+  .histoire .wrap,.jardin-tete,.escape .wrap,.peche .wrap,.visite-grille,.coord .wrap{grid-template-columns:minmax(0,1fr);gap:44px}
+  .duo .petite{left:-8px}
+  .mosaique{grid-template-columns:minmax(0,1fr)}
+  .m-potager,.m-cote{grid-column:1}
+  .carte-resa{left:16px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque{font-size:22px}
+  .marque small{display:none}
+  .nav{display:none}
+  .appel-court{display:inline-flex;min-height:44px;padding:9px 18px;font-size:15px}
+  .heros{padding:16px 0 0}
+  .scene{aspect-ratio:4/5}
+  .scene img{transform:none;object-position:31% 50%}
+  .scene::after{background:linear-gradient(to top, rgba(17,26,18,.86) 0%, rgba(17,26,18,.5) 30%, rgba(17,26,18,0) 55%)}
+  .surimpression{padding:0 22px 24px}
+  .surimpression .chapo,.surimpression .actions,.surimpression .ou{display:none}
+  .pastille{top:14px;right:14px;font-size:13.5px;padding:7px 13px}
+  .heros .apres-scene{display:block}
+  .faits{padding-top:40px}
+  .faits ul{grid-template-columns:minmax(0,1fr);padding:24px 24px;gap:18px}
+  .faits b{font-size:24px}
+  .duo{padding-bottom:64px}
+  .duo .petite{width:52%}
+  .labyrinthe img{aspect-ratio:4/3}
+  .labyrinthe figcaption{position:static;max-width:none;margin:-36px 14px 0;position:relative}
+  .reservation{padding-bottom:0}
+  .carte-resa{position:relative;left:auto;width:auto;margin:-60px 14px 0}
+  .ticket{flex-direction:column;align-items:flex-start;gap:8px}
+  .tarifs{padding:26px 22px}
+  .fiche{padding:28px 24px}
+  .fiche dd{font-size:22px}
+  .fiche dd.mail{font-size:18px}
+}
+.apres-scene{display:none;padding-top:26px}
+.apres-scene .chapo{color:var(--encre-2);font-size:17px}
+.apres-scene .actions{margin-top:22px}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut">Château du Colombier<small>Parc et jardins · Mondalazac, Aveyron</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#histoire">Histoire</a>
+      <a href="#jardin">Le jardin</a>
+      <a href="#escape">Escape game</a>
+      <a href="#peche">Pêche</a>
+      <a href="#visite">Préparer ma visite</a>
+      <a class="btn tel" href="tel:+33565749979">05 65 74 99 79</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33565749979">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="scene">
+        <img src="assets/chateau-du-colombier-marcillac/chateau-dans-le-vallon-vue-aerienne.webp" alt="Vue aérienne du Château du Colombier, de ses jardins médiévaux et de son labyrinthe dans le vallon boisé" width="1600" height="900" fetchpriority="high">
+        <span class="pastille">Depuis trente et une générations</span>
+        <div class="surimpression">
+          <p class="ou">Aux portes du vignoble de Marcillac, au cœur de l'Aveyron</p>
+          <h1>Le Château du Colombier</h1>
+          <p class="chapo">Paul et Edmond de La Panouse ouvrent leur domaine : jardin médiéval, labyrinthe, pêche au pied du château et escape game Auto-Psy.</p>
+          <div class="actions">
+            <a class="btn btn-clair" href="#visite">Préparer ma visite</a>
+            <a class="btn btn-contour-clair tel" href="tel:+33565749979">05 65 74 99 79</a>
+          </div>
+        </div>
+      </div>
+      <div class="apres-scene">
+        <p class="chapo">Paul et Edmond de La Panouse ouvrent leur domaine : jardin médiéval, labyrinthe, pêche au pied du château et escape game Auto-Psy.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#visite">Préparer ma visite</a>
+          <a class="btn btn-contour tel" href="tel:+33565749979">05 65 74 99 79</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>31&nbsp;générations</b>de la famille de La Panouse au Colombier</li>
+      <li><b>350&nbsp;espèces</b>végétales dans le jardin médiéval rénové</li>
+      <li><b>Escape game</b>une heure, de 2 à 8&nbsp;joueurs, dès 8&nbsp;ans</li>
+      <li><b>Mondalazac</b>à 10&nbsp;minutes de Marcillac-Vallon, 20 de Rodez</li>
+    </ul>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="wrap">
+      <div>
+        <h2>L'histoire du Château du Colombier</h2>
+        <div class="corps">
+          <p>Aux portes du vignoble millénaire de Marcillac, et proche du village de Conques, le Château du Colombier participe à la richesse patrimoniale du Vallon de Marcillac. Il appartient à <strong>la famille de La Panouse depuis trente et une générations</strong>.</p>
+          <p>Édifice militaire ou château de complaisance, le Colombier a très souvent été modifié au cours des siècles. Aujourd'hui, Paul et Edmond de La Panouse ouvrent leurs domaines au public, pour faire partager leur histoire et transmettre le savoir de coutumes ancestrales.</p>
+        </div>
+        <p class="colombiers">Il porte ce nom grâce à ses deux colombiers, qui servaient à l'élevage des pigeons de l'époque.</p>
+      </div>
+      <div class="duo">
+        <figure class="grande rv">
+          <img src="assets/chateau-du-colombier-marcillac/facade-du-chateau-ciel-bleu.webp" alt="Façade du château derrière son mur de pierres sèches : tour carrée, logis et tourelle ronde" width="1600" height="767" loading="lazy">
+        </figure>
+        <span class="etiquette">Le logis et sa tourelle</span>
+        <figure class="petite rv">
+          <img src="assets/chateau-du-colombier-marcillac/tour-et-jardin-en-terrasses.webp" alt="La haute tour carrée et le logis vus depuis les marches du jardin" width="1600" height="1066" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="jardin" id="jardin">
+    <div class="wrap">
+      <div class="jardin-tete">
+        <h2>Un jardin médiéval pour une journée en famille</h2>
+        <p>Un espace bucolique aux 350&nbsp;espèces végétales, qui invite à voyager dans le temps et à se ressourcer dans la nature. On y pique-nique, on profite des coins d'ombre et de la buvette, et les enfants déambulent dans la zone de jeux.</p>
+      </div>
+      <div class="mosaique">
+        <figure class="m-potager rv">
+          <img src="assets/chateau-du-colombier-marcillac/potager-et-gloriette.webp" alt="Le jardin médiéval au printemps, massifs fleuris, treille et petite gloriette en bois" width="1600" height="1066" loading="lazy">
+          <span class="etiquette">Le jardin médiéval rénové</span>
+        </figure>
+        <div class="m-cote">
+          <div class="fleurs">
+            <figure class="pivoine rv"><img src="assets/chateau-du-colombier-marcillac/pivoine-du-jardin.webp" alt="Pivoine rose fuchsia du jardin" width="1600" height="1066" loading="lazy"></figure>
+            <figure class="geranium rv"><img src="assets/chateau-du-colombier-marcillac/geranium-rose-du-jardin.webp" alt="Fleurs mauves à cœur rose du jardin" width="1600" height="1066" loading="lazy"></figure>
+          </div>
+          <ul class="sur-place">
+            <li><b>Le jeu de piste</b> dans le labyrinthe</li>
+            <li><b>La buvette</b> et les espaces ombragés</li>
+            <li><b>La zone de jeux</b> : tourniquets, échiquier et jeu de l'oie géants</li>
+            <li><b>Le pique-nique</b> sur les pelouses, devant le château</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="labyrinthe rv">
+        <img src="assets/chateau-du-colombier-marcillac/labyrinthe-vegetal-vu-du-ciel.webp" alt="Le labyrinthe de haies vu à la verticale, un angle du château en haut à droite" width="1600" height="900" loading="lazy">
+        <figcaption><b>Le labyrinthe, vu du ciel</b><span>Un jeu de piste à parcourir en famille, au pied du château.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="escape" id="escape">
+    <div class="wrap">
+      <div>
+        <h2>Escape game Auto-Psy</h2>
+        <p class="lead">Une aventure d'une heure au Château du Colombier, à vivre entre amis ou en famille.</p>
+        <ul class="infos">
+          <li><span>Durée</span>Une heure</li>
+          <li><span>Joueurs</span>De 2 à 8, à partir de 8&nbsp;ans</li>
+          <li><span>Horaires</span>De 10&nbsp;h à 20&nbsp;h</li>
+          <li><span>Réservation</span>Sur réservation, ou sur place selon les disponibilités</li>
+        </ul>
+      </div>
+      <div class="reservation">
+        <figure class="rv"><img src="assets/chateau-du-colombier-marcillac/coucher-de-soleil-sur-le-domaine.webp" alt="Le domaine du Colombier au coucher du soleil, vu de drone" width="1600" height="905" loading="lazy"></figure>
+        <span class="etiquette">Le domaine au soleil couchant</span>
+        <div class="carte-resa">
+          <h3>Réserver une partie</h3>
+          <p>Par téléphone ou par mail : dites le jour, l'heure et le nombre de joueurs.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="tel:+33565749979"><span>Appeler le <span class="tel">05 65 74 99 79</span></span></a>
+            <a class="btn btn-contour" href="mailto:contact@chateauducolombier.fr?subject=R%C3%A9servation%20escape%20game%20Auto-Psy">Réserver par mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="peche" id="peche">
+    <div class="wrap">
+      <figure class="etang rv">
+        <img src="assets/chateau-du-colombier-marcillac/chateau-et-etang-vue-aerienne.webp" alt="Vue plongeante sur le château, sa cour carrée et l'étang de pêche" width="1600" height="900" loading="lazy">
+        <span class="etiquette">L'étang, en contrebas du château</span>
+      </figure>
+      <div>
+        <h2>Une journée de pêche au bord de l'eau</h2>
+        <p>Passez une journée au bord de l'eau en contrebas du château, entre amis ou en famille. On pêche selon le principe du no kill : les carpes et les perches sont remises à l'eau.</p>
+        <div class="ticket">
+          <span class="prix">10&nbsp;€</span>
+          <span><b>La carte pêche</b>Entrée du domaine incluse</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite">
+    <div class="wrap">
+      <div class="visite-tete">
+        <h2>Préparer ma visite</h2>
+        <p>Quelques infos pour gagner du temps. Des conditions climatiques particulières peuvent amener à fermer certaines parties du château et des jardins, pour des raisons de sécurité.</p>
+      </div>
+      <div class="visite-grille">
+        <div class="tarifs rv">
+          <h3>Tarifs</h3>
+          <ul>
+            <li><span>Adulte <small>plus de 12&nbsp;ans</small></span><span class="p">7&nbsp;€</span></li>
+            <li><span>Enfant <small>de 3 à 12&nbsp;ans</small></span><span class="p">5&nbsp;€</span></li>
+            <li><span>Moins de 3&nbsp;ans</span><span class="p">gratuit</span></li>
+            <li><span>Groupe <small>à partir de 10&nbsp;personnes</small></span><span class="p">5&nbsp;€</span></li>
+            <li><span>Tarif PMR</span><span class="p">5&nbsp;€</span></li>
+            <li><span>Carte pêche <small>entrée incluse</small></span><span class="p">10&nbsp;€</span></li>
+          </ul>
+        </div>
+        <div class="bon">
+          <div>
+            <h3>Horaires</h3>
+            <p>Pendant la saison d'ouverture, les jardins et l'espace pique-nique ouvrent du mercredi au dimanche, de 14&nbsp;h à 18&nbsp;h (fermeture des portes à 17&nbsp;h&nbsp;30). Le site est fermé le lundi et le mardi.</p>
+            <p>Les dates d'ouverture se confirment au <a class="tel" href="tel:+33565749979">05 65 74 99 79</a>.</p>
+          </div>
+          <div>
+            <h3>Venir en voiture</h3>
+            <ul class="acces">
+              <li><b>Rodez</b>, à 20&nbsp;minutes par la D901</li>
+              <li><b>Marcillac-Vallon</b>, à 10&nbsp;minutes par la D227</li>
+              <li><b>Salles-la-Source</b>, à 15&nbsp;minutes par la D27</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Les animaux</h3>
+            <p>Aucun animal n'est accepté dans l'enceinte du château ni dans les jardins médiévaux, sauf pour les personnes en situation de handicap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coord" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Nous contacter</h2>
+        <p class="texte">Une question sur la visite, la pêche ou l'escape game : le plus simple est d'appeler, ou d'écrire.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:contact@chateauducolombier.fr">Écrire un mail</a>
+          <a class="btn btn-contour tel" href="tel:+33565749979">05 65 74 99 79</a>
+        </div>
+      </div>
+      <div class="fiche rv">
+        <dl>
+          <div><dt>Adresse</dt><dd>Château du Colombier<br>Mondalazac, 12330&nbsp;Salles-la-Source</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33565749979">05 65 74 99 79</a></dd></div>
+          <div><dt>Mail</dt><dd class="mail"><a href="mailto:contact@chateauducolombier.fr">contact@chateauducolombier.fr</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Château du Colombier</b>
+      <p>Mondalazac, 12330&nbsp;Salles-la-Source. Aux portes du vignoble de Marcillac, proche de Conques.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li><a class="tel" href="tel:+33565749979">05 65 74 99 79</a></li>
+        <li><a href="mailto:contact@chateauducolombier.fr">contact@chateauducolombier.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Le domaine</h3>
+      <ul>
+        <li><a href="https://chateauducolombier.fr/le-jardin/">Le jardin</a></li>
+        <li><a href="https://chateauducolombier.fr/preparer-ma-visite/">Préparer ma visite</a></li>
+        <li><a href="https://chateauducolombier.fr/nous-contacter/">Nous contacter</a></li>
+      </ul>
+    </div>
+    <p class="bas">Jardins et espace pique-nique : du mercredi au dimanche, de 14&nbsp;h à 18&nbsp;h, pendant la saison d'ouverture.</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour le Château du Colombier</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

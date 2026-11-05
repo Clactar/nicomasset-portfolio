@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Les Communs · collectif de céramistes à Cormatin</title>
+<meta name="description" content="Les Communs, collectif de dix céramistes : boutique et galerie d'expositions dans un corps de ferme bourguignon à Cormatin, près de Cluny.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236B7F3A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F3F1EC'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Reddit+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E6E2DA; --surface:#F3F1EC; --soutenu:#DCD6CA; --encre:#22201C; --doux:#5A554C;
+  --olive:#6B7F3A; --olive-pale:#C9D0AE; --sombre:#22201C;
+  --ombre:0 30px 60px -34px rgba(34,32,28,.55);
+  --ombre-l:0 44px 80px -40px rgba(34,32,28,.6);
+  --serif:'Cardo',Georgia,serif; --sans:'Reddit Sans','Helvetica Neue',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--olive);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(230,226,218,.94);border-bottom:1px solid rgba(34,32,28,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.marque b{font-family:var(--serif);font-weight:400;font-size:27px;letter-spacing:-.01em}
+.marque span{font-size:13px;color:var(--doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--encre)}
+.tel-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--surface);color:var(--encre)!important;font-weight:600;white-space:nowrap;box-shadow:0 10px 24px -18px rgba(34,32,28,.6);transition:transform .25s,box-shadow .25s}
+.tel-pill:hover{transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(34,32,28,.7)}
+
+/* Héros */
+.heros{padding:28px 0 104px}
+.pano{position:relative;aspect-ratio:2.6/1;border-radius:24px;overflow:hidden;box-shadow:var(--ombre-l);background:#b9a27f}
+.pano img{position:absolute;left:0;top:-60%;width:117.6%;max-width:none;height:auto}
+.pano .entree{position:absolute;left:55.6%;top:78.5%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:7px 14px 7px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 12px 26px -14px rgba(34,32,28,.7)}
+.pano .entree::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 4px rgba(107,127,58,.22)}
+.etiquette{position:absolute;left:20px;bottom:20px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:12px;box-shadow:0 12px 26px -16px rgba(34,32,28,.6)}
+.heros-texte{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,5fr);gap:64px;align-items:end;margin-top:52px}
+.heros h1{font-size:clamp(38px,5.4vw,76px);letter-spacing:-.015em;line-height:1.02}
+.heros .chapo{font-size:19px;color:var(--doux);max-width:46ch}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-plein{background:var(--olive);color:var(--surface)}
+.btn-plein:hover{background:#5a6c30;transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(66,80,30,.9)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.saison{margin-top:20px;font-size:15px;color:var(--doux)}
+
+/* Bandeau de faits */
+.faits{background:var(--soutenu)}
+.faits ul{list-style:none;margin:0;padding:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px;font-size:16px}
+.faits li{display:flex;align-items:center;gap:10px}
+.faits li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--olive);flex:none}
+
+/* Le lieu : coupe des deux étages */
+.lieu{padding:120px 0 112px}
+.lieu-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end;margin-bottom:72px}
+.lieu-tete h2{font-size:clamp(34px,4.4vw,58px)}
+.lieu-tete p{color:var(--doux);max-width:52ch}
+.niveau{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center;padding:56px 0}
+.niveau + .niveau{border-top:2px solid var(--encre)}
+.niveau.inverse{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.niveau.inverse .niveau-photo{order:-1}
+.niveau-label{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--olive);font-weight:600;margin-bottom:14px}
+.niveau-label::before{content:"";width:28px;height:2px;background:var(--olive)}
+.niveau h3{font-size:clamp(28px,3vw,40px);margin-bottom:18px}
+.niveau p + p{margin-top:14px}
+.niveau p{color:var(--doux)}
+.niveau-photo{position:relative}
+.niveau-photo img{width:100%;border-radius:20px;box-shadow:var(--ombre);object-fit:cover}
+.ph-galerie{aspect-ratio:6/5;object-position:100% 50%;max-width:min(520px,100%);margin-left:auto}
+.ph-boutique{aspect-ratio:16/10;object-position:50% 50%}
+.niveau-photo .etiquette{left:20px;bottom:20px}
+
+/* Céramistes, fond sombre */
+.collectif{background:var(--sombre);color:var(--surface);padding:120px 0}
+.collectif-grille{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:start}
+.collectif h2{font-size:clamp(34px,4.4vw,58px);color:var(--surface)}
+.collectif .intro{color:#CFCabd;color:#CFCABD;margin-top:24px;max-width:54ch}
+.noms{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px}
+.noms li{font-family:var(--serif);font-size:clamp(22px,2.1vw,28px);padding:12px 0;border-bottom:1px solid rgba(243,241,236,.16)}
+.lien-clair{display:inline-block;margin-top:36px;color:var(--olive-pale);font-weight:600;text-underline-offset:5px}
+.lien-clair:hover{color:var(--surface)}
+.pieces{position:relative;padding-top:24px}
+.piece{position:relative;margin:0}
+.piece img{width:100%;border-radius:18px;object-fit:cover;box-shadow:0 34px 60px -30px rgba(0,0,0,.7)}
+.piece figcaption{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:7px 14px;border-radius:10px}
+.piece-1 img{aspect-ratio:4/3;object-position:50% 50%}
+.piece-2{width:72%;margin:-64px 0 0 auto;border:8px solid var(--sombre);border-radius:26px}
+.piece-2 img{aspect-ratio:1/1;object-position:50% 55%}
+.pieces-note{margin-top:22px;font-size:15px;color:#A9A396}
+
+/* Vocation : citation pleine largeur */
+.vocation{padding:120px 0 0}
+.voc-photo{position:relative}
+.voc-photo img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 62%;border-radius:24px;box-shadow:var(--ombre-l)}
+.voc-carte{position:relative;width:min(760px,calc(100% - 32px));margin:-120px auto 0;background:var(--surface);border-radius:20px;padding:48px 56px;box-shadow:var(--ombre)}
+.voc-carte blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.28;text-wrap:balance}
+.voc-carte cite{display:block;margin-top:18px;font-style:normal;font-size:15px;color:var(--doux)}
+
+/* Librairie et catalogues */
+.librairie{padding:120px 0}
+.lib-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:start}
+.lib-photo{position:sticky;top:110px}
+.lib-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:38% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.librairie h2{font-size:clamp(32px,4vw,52px)}
+.librairie .intro{color:var(--doux);margin-top:20px}
+.catalogues{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid rgba(34,32,28,.22)}
+.catalogues li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:15px 0;border-bottom:1px solid rgba(34,32,28,.22)}
+.catalogues .titre{font-family:var(--serif);font-size:22px;line-height:1.25}
+.catalogues .titre em{font-style:italic;color:var(--doux)}
+.catalogues .prix{font-weight:600;white-space:nowrap;font-size:17px}
+.note{font-size:15px;color:var(--doux);margin-top:14px}
+.cadeau{margin-top:48px;background:var(--surface);border-radius:20px;padding:36px 40px;box-shadow:var(--ombre)}
+.cadeau h3{font-size:30px;margin-bottom:12px}
+.cadeau p{color:var(--doux)}
+
+/* Venir : frise des saisons + coordonnées */
+.venir{background:var(--surface);padding:120px 0}
+.venir h2{font-size:clamp(34px,4.4vw,58px)}
+.venir .intro{color:var(--doux);margin-top:18px;max-width:56ch}
+.frise{display:grid;grid-template-columns:3fr 2fr 2fr 1fr 1fr;gap:6px;margin-top:56px}
+.seg{background:var(--base);border-radius:14px;padding:20px 20px 22px;border-top:5px solid var(--olive)}
+.seg.ferme{border-top-color:var(--soutenu);background:transparent;border:1.5px dashed rgba(34,32,28,.25);border-top-width:5px;border-top-style:solid;border-top-color:var(--soutenu)}
+.seg .mois{font-family:var(--serif);font-size:24px;line-height:1.15}
+.seg .jours{font-size:15px;color:var(--doux);margin-top:8px}
+.seg .heures{font-weight:600;font-size:16px;margin-top:2px}
+.venir-bas{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center;margin-top:80px}
+.etal{position:relative}
+.etal img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--ombre-l)}
+.coord{background:var(--base);border-radius:20px;padding:36px 36px 32px;box-shadow:var(--ombre)}
+.coord dl{margin:0}
+.coord dt{font-size:14px;color:var(--olive);font-weight:600;margin-top:20px}
+.coord dt:first-child{margin-top:0}
+.coord dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
+.coord dd a{text-decoration:none;border-bottom:1px solid rgba(34,32,28,.3)}
+.coord dd a:hover{border-color:var(--encre)}
+.coord .boutons{margin-top:28px}
+
+/* Pied */
+.pied{background:var(--sombre);color:#CFCABD;padding:80px 0 32px;font-size:16px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied .nom{font-family:var(--serif);font-size:32px;color:var(--surface);line-height:1.1}
+.pied h4{margin:0 0 12px;font-size:14px;color:var(--olive-pale);font-weight:600}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin:6px 0}
+.pied a{color:#E8E4DA;text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:4px}
+.proposition{margin-top:64px;padding-top:24px;border-top:1px solid rgba(243,241,236,.12);font-size:13px;color:#8F897C}
+
+/* Apparition douce des photos */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .nav a:not(.tel-pill){display:none}
+  .heros-texte,.lieu-tete,.niveau,.niveau.inverse,.collectif-grille,.lib-grille,.venir-bas{grid-template-columns:minmax(0,1fr);gap:36px}
+  .niveau.inverse .niveau-photo{order:0}
+  .lib-photo{position:relative;top:0}
+  .lib-photo img{aspect-ratio:3/2}
+  .ph-galerie{margin-left:0}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque b{font-size:23px}
+  .marque span{display:none}
+  .heros{padding:20px 0 72px;display:flex;flex-direction:column}
+  .heros .wrap{display:flex;flex-direction:column}
+  .heros-texte{display:contents}
+  .heros h1{order:-1;margin-bottom:24px}
+  .pano{aspect-ratio:5/4;border-radius:20px}
+  .pano .entree{position:absolute;left:55.6%;top:78.5%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:7px 14px 7px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 12px 26px -14px rgba(34,32,28,.7)}
+.pano .entree::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 4px rgba(107,127,58,.22)}
+  .pano img{position:static;width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+  .heros-texte > div:last-child{margin-top:28px}
+  .lieu,.librairie,.venir,.collectif{padding:80px 0}
+  .vocation{padding-top:80px}
+  .voc-photo img{aspect-ratio:4/3}
+  .voc-carte{margin-top:-60px;padding:30px 26px}
+  .noms{grid-template-columns:minmax(0,1fr)}
+  .piece-2{width:80%;margin-top:-48px}
+  .cadeau{padding:28px 24px}
+  .coord{padding:28px 24px}
+  .faits ul{flex-direction:column;gap:10px;padding:24px 0}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:420px){
+  .wrap{width:calc(100% - 36px)}
+  .boutons .btn{width:100%}
+  .frise{grid-template-columns:minmax(0,1fr)}
+  .catalogues li{flex-wrap:wrap;gap:4px 16px}
+  .catalogues .titre{font-size:20px}
+  .tel-pill{padding:10px 14px;font-size:15px}
+  .coord dd{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Les Communs</b><span>Collectif de céramistes · Cormatin</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#lieu">Le lieu</a>
+      <a href="#ceramistes">Les céramistes</a>
+      <a href="#librairie">Librairie</a>
+      <a href="#venir">Horaires</a>
+      <a class="tel-pill" href="tel:+33385329894">03 85 32 98 94</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="pano">
+        <img src="assets/les-communs-ceramique-cormatin/facade-corps-de-ferme-en-pierre.webp" alt="Le corps de ferme en pierre dorée des Communs, volets lie-de-vin, étal de céramiques au pied du mur" width="1600" height="951">
+        <span class="etiquette">Le Bois Dernier, Cormatin</span>
+        <span class="entree">Entrée de la boutique</span>
+      </div>
+      <div class="heros-texte">
+        <h1>Un corps de ferme bourguignon dédié à la céramique, près de Cluny.</h1>
+        <div>
+          <p class="chapo">Dix céramistes réunis en collectif y présentent leur travail&nbsp;: la boutique dans l'ancienne écurie, une galerie d'expositions temporaires à l'étage.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="#venir">Horaires et accès</a>
+            <a class="btn btn-contour" href="tel:+33385329894">03 85 32 98 94</a>
+          </div>
+          <p class="saison">Ouvert d'avril à décembre, fermé en novembre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="wrap">
+      <ul>
+        <li>200&nbsp;m² sur deux étages</li>
+        <li>10 céramistes associés</li>
+        <li>Boutique ouverte en 2015</li>
+        <li>Lieu autogéré et autofinancé</li>
+        <li>Cormatin, près de Cluny</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="lieu" id="lieu">
+    <div class="wrap">
+      <div class="lieu-tete">
+        <h2>Un lieu, un collectif.</h2>
+        <p>Sur deux étages, le corps de ferme accueille à la fois une boutique qui propose les œuvres des dix céramistes de l'association et une galerie qui présente des expositions temporaires. Le lieu est géré et financé par ses membres.</p>
+      </div>
+
+      <div class="niveau">
+        <div>
+          <span class="niveau-label">À l'étage</span>
+          <h3>La galerie d'expositions</h3>
+          <p>Collectives ou personnelles, les expositions mettent en avant une approche, une démarche, un univers affirmé qui touche le collectif et qu'il veut partager.</p>
+          <p>Elles peuvent surprendre par leur contenu ou leur présentation, émouvoir, questionner. Les vernissages sont de grands moments de convivialité.</p>
+        </div>
+        <div class="niveau-photo apparait">
+          <img class="ph-galerie" src="assets/les-communs-ceramique-cormatin/galerie-etage-exposition.webp" alt="La galerie de l'étage, longue salle sous la charpente, pièces posées au sol" width="1600" height="993" loading="lazy">
+        </div>
+      </div>
+
+      <div class="niveau inverse">
+        <div>
+          <span class="niveau-label">Au rez-de-chaussée</span>
+          <h3>La boutique, dans l'ancienne écurie</h3>
+          <p>Ouverte en 2015, la boutique associative occupe 100&nbsp;m² et présente une sélection des dernières créations des dix céramistes&nbsp;: pièces utilitaires et sculpturales, grès, porcelaine, terre vernissée, dans une scénographie régulièrement renouvelée.</p>
+          <p>Les permanences sont assurées à tour de rôle par l'un des céramistes&nbsp;: l'occasion de les rencontrer et d'échanger avec eux. En décembre, la boutique s'enrichit d'œuvres de céramistes invités, le temps de «&nbsp;Noël aux Communs&nbsp;».</p>
+        </div>
+        <div class="niveau-photo apparait">
+          <img class="ph-boutique" src="assets/les-communs-ceramique-cormatin/boutique-ancienne-ecurie-poutres.webp" alt="La boutique sous les poutres&nbsp;: bols, vases et pièces sculpturales sur des socles blancs" width="1600" height="976" loading="lazy">
+          <span class="etiquette">L'ancienne écurie, 100&nbsp;m²</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collectif" id="ceramistes">
+    <div class="wrap collectif-grille">
+      <div>
+        <h2>Dix céramistes, un projet commun.</h2>
+        <p class="intro">Promouvoir la céramique contemporaine, partager un certain regard sur le métier, mettre en avant des approches singulières. Le collectif fonctionne de façon collégiale&nbsp;: chacun donne forme au projet selon ses connaissances et ses savoir-faire, et tous tiennent le lieu à tour de rôle.</p>
+        <ul class="noms">
+          <li>Quentin Baumlin</li>
+          <li>Corinne Betton</li>
+          <li>Gaëlle Buchaudon</li>
+          <li>Myriam Chemla</li>
+          <li>Françoise Chole</li>
+          <li>Valéry Maillot</li>
+          <li>Estelle Robert</li>
+          <li>Lucie Sangoy</li>
+          <li>Thierry Sivet</li>
+          <li>Maud Thiéfaine</li>
+        </ul>
+        <a class="lien-clair" href="https://lescommuns-ceramique.fr/ceramistes/">Découvrir le travail de chacun</a>
+      </div>
+      <div class="pieces">
+        <figure class="piece piece-1 apparait">
+          <img src="assets/les-communs-ceramique-cormatin/bols-porcelaine-en-arc.webp" alt="Petits bols de porcelaine blanche à traits bleus et bruns, empilés en arc de cercle" width="1600" height="1053" loading="lazy">
+          <figcaption>Corinne Betton</figcaption>
+        </figure>
+        <figure class="piece piece-2 apparait">
+          <img src="assets/les-communs-ceramique-cormatin/trois-bols-fleurs-empiles.webp" alt="Trois bols blancs empilés, décor peint de fleurs bleu nuit et rouges" width="1600" height="1046" loading="lazy">
+          <figcaption>Gaëlle Buchaudon</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="vocation" aria-label="Vocation du collectif">
+    <div class="wrap">
+      <div class="voc-photo apparait">
+        <img src="assets/les-communs-ceramique-cormatin/bols-alignes-route-de-campagne.webp" alt="Huit bols de styles différents alignés au bord d'une petite route de campagne" width="1600" height="907" loading="lazy">
+      </div>
+      <div class="voc-carte">
+        <blockquote>«&nbsp;Promouvoir le travail de la terre, proposer un large spectre céramique, faire découvrir aux néophytes les multiples facettes de ce médium et nourrir plus encore les amateurs.&nbsp;»</blockquote>
+        <cite>La vocation du collectif</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="librairie" id="librairie">
+    <div class="wrap lib-grille">
+      <div class="lib-photo apparait">
+        <img src="assets/les-communs-ceramique-cormatin/librairie-livres-ceramique.webp" alt="Pile de livres de céramique aux dos colorés, dont Le Livre du potier et Jacqueline Lerat" width="1600" height="845" loading="lazy">
+      </div>
+      <div>
+        <h2>La librairie et les catalogues</h2>
+        <p class="intro">Installée dans la boutique, la librairie vend les catalogues des expositions présentées aux Communs, des ouvrages spécialisés (monographies, livres techniques, historiques ou poétiques) et des DVD, édités par le collectif ou ses partenaires&nbsp;: La revue de la céramique, les éditions Argile, APCP.</p>
+        <ul class="catalogues">
+          <li><span class="titre">Pablo Castillo</span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Françoise Cholé</span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Nicolas Rousseau</span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Ingrid Van Munster</span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Myriam Chemla</span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Philippe Godderidge, <em>Manière d'être</em></span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre">Thierry Sivet, <em>Traces de passage</em></span><span class="prix">15&nbsp;€</span></li>
+          <li><span class="titre"><em>Cuire au bois</em></span><span class="prix">15&nbsp;€</span></li>
+        </ul>
+        <p class="note">Le catalogue de la dernière exposition, comme les plus anciens, peut aussi se commander par courrier.</p>
+
+        <div class="cadeau">
+          <h3>Offrir un bon cadeau</h3>
+          <p>Vous voulez offrir une céramique sans savoir laquelle plairait&nbsp;? Le collectif propose des bons cadeaux du montant de votre choix, à demander sur place ou par mail&nbsp;: commandés par mail, ils arrivent directement dans la boîte aux lettres.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="https://lescommuns-ceramique.fr/wp-content/uploads/2023/10/Formulaire-achat-papier_v2bis.pdf">Bon de commande</a>
+            <a class="btn btn-contour" href="mailto:lescommuns.ceramique@gmail.com">Écrire au collectif</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <h2>Venir aux Communs</h2>
+      <p class="intro">La galerie-boutique vous accueille d'avril à décembre, au lieu-dit du Bois Dernier à Cormatin.</p>
+
+      <div class="frise" role="list">
+        <div class="seg" role="listitem"><div class="mois">Avril, mai, juin</div><div class="jours">du jeudi au dimanche</div><div class="heures">10&nbsp;h à 19&nbsp;h</div></div>
+        <div class="seg" role="listitem"><div class="mois">Juillet, août</div><div class="jours">du mardi au dimanche</div><div class="heures">10&nbsp;h à 19&nbsp;h</div></div>
+        <div class="seg" role="listitem"><div class="mois">Septembre, octobre</div><div class="jours">du jeudi au dimanche</div><div class="heures">10&nbsp;h à 18&nbsp;h</div></div>
+        <div class="seg ferme" role="listitem"><div class="mois">Novembre</div><div class="jours">fermeture</div></div>
+        <div class="seg" role="listitem"><div class="mois">Décembre</div><div class="jours">du mardi au dimanche</div><div class="heures">10&nbsp;h à 18&nbsp;h</div></div>
+      </div>
+
+      <div class="venir-bas">
+        <div class="etal apparait">
+          <img src="assets/les-communs-ceramique-cormatin/etal-poteries-devant-mur-de-pierre.webp" alt="Étagères de pots et jarres en terre devant le mur de pierre, panneau Les Communs" width="1600" height="1066" loading="lazy">
+          <span class="etiquette">Devant la boutique</span>
+        </div>
+        <div class="coord">
+          <dl>
+            <dt>Adresse</dt>
+            <dd>Le Bois Dernier<br>71460 Cormatin</dd>
+            <dt>Téléphone</dt>
+            <dd><a href="tel:+33385329894">03 85 32 98 94</a></dd>
+            <dt>Mail</dt>
+            <dd><a href="mailto:lescommuns.ceramique@gmail.com">lescommuns.ceramique@gmail.com</a></dd>
+            <dt>Les suivre</dt>
+            <dd><a href="https://www.instagram.com/lescommunsceramique/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61567887023729">Facebook</a></dd>
+          </dl>
+          <div class="boutons">
+            <a class="btn btn-plein" href="tel:+33385329894">Appeler</a>
+            <a class="btn btn-contour" href="mailto:lescommuns.ceramique@gmail.com">Écrire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <div class="nom">Les Communs</div>
+        <p style="margin-top:14px">Collectif de céramistes. Boutique et galerie d'expositions dans un corps de ferme, Le Bois Dernier, 71460 Cormatin.</p>
+      </div>
+      <div>
+        <h4>Nous joindre</h4>
+        <ul>
+          <li><a href="tel:+33385329894">03 85 32 98 94</a></li>
+          <li><a href="mailto:lescommuns.ceramique@gmail.com">lescommuns.ceramique@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/lescommunsceramique/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61567887023729">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Avril à juin&nbsp;: jeudi au dimanche, 10&nbsp;h à 19&nbsp;h</li>
+          <li>Juillet, août&nbsp;: mardi au dimanche, 10&nbsp;h à 19&nbsp;h</li>
+          <li>Septembre, octobre&nbsp;: jeudi au dimanche, 10&nbsp;h à 18&nbsp;h</li>
+          <li>Novembre&nbsp;: fermé</li>
+          <li>Décembre&nbsp;: mardi au dimanche, 10&nbsp;h à 18&nbsp;h</li>
+        </ul>
+      </div>
+    </div>
+    <p class="proposition">Proposition de Nicolas Masset pour Les Communs</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

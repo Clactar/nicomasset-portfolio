@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cuisinez-Moi · traiteur et restauration rapide, 45 rue Lamartine à Tours</title>
+<meta name="description" content="Cuisinez-Moi, traiteur et restauration rapide au 45 rue Lamartine à Tours : burgers, plat du jour, frites maison, amuse-bouches pour vos réceptions. 02 47 74 75 01.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236B3E75'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23F9F7F2'%3EC%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,400..600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EFEBE3; --base-2:#E5DFD3; --surface:#F9F7F2; --encre:#262320; --encre-2:#57514B;
+  --prune:#6B3E75; --prune-pale:#E8DEE7; --prune-clair:#D9C6DC; --sombre:#2B2230; --sombre-2:#382D3E; --clair:#F6F2EC;
+  --w:min(1200px, calc(100% - 48px));
+  --ombre:0 30px 60px -34px rgba(38,26,40,.6);
+  --display:"Montagu Slab", Georgia, serif; --texte:"Plus Jakarta Sans", "Trebuchet MS", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--prune);color:var(--clair)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+.wrap{width:var(--w);margin-inline:auto}
+.tel{white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16.5px;text-decoration:none;transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--prune);color:var(--clair);box-shadow:0 16px 30px -18px rgba(107,62,117,.8)}
+.btn-plein:hover{background:var(--sombre)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair)}
+.btn-contour-clair{border:1.5px solid rgba(246,242,236,.8);color:var(--clair)}
+.btn-contour-clair:hover{background:var(--clair);color:var(--sombre)}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(239,235,227,.94);border-bottom:1px solid rgba(38,35,32,.08)}
+.entete .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px}
+.marque b{font-family:var(--display);font-weight:600;font-size:26px;letter-spacing:-.02em}
+.marque span{font-size:14px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2)}
+.nav a:hover{color:var(--prune)}
+.nav .btn{min-height:46px;padding:10px 22px;font-size:16px;background:var(--sombre);color:var(--clair)}
+.nav .btn:hover{background:var(--prune)}
+.appel-court{display:none}
+
+/* héros : le plateau */
+.heros{padding:64px 0 112px}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.ou{font-size:16px;color:var(--encre-2);margin-bottom:22px}
+.ou b{color:var(--prune);font-weight:600}
+.heros h1{font-size:clamp(40px,5vw,72px);line-height:1.03;font-weight:450}
+.chapo{margin-top:26px;font-size:19px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.horaire-court{margin-top:22px;font-size:15.5px;color:var(--encre-2)}
+.plateau{position:relative;aspect-ratio:1.08/1;width:100%}
+.plateau::before{content:"";position:absolute;left:0;right:0;top:9%;bottom:7%;border-radius:50%;background:#E4D6E3;box-shadow:inset 0 0 0 14px rgba(249,247,242,.55), inset 0 0 0 15px rgba(107,62,117,.12), 0 40px 70px -40px rgba(38,26,40,.55)}
+.plateau .p1{position:absolute;left:5%;top:16%;width:78%;transform:rotate(-5deg)}
+.plateau .p1 img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:62% 50%;border-radius:22px;box-shadow:var(--ombre)}
+.plateau .p2{position:absolute;right:3%;bottom:5%;width:36%;transform:rotate(6deg)}
+.plateau .p2 img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:18px;border:6px solid var(--surface);box-shadow:var(--ombre)}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(0,0,0,.55)}
+.plateau .p1 .etiquette{left:18px;bottom:18px}
+
+/* faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:28px 0;display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr;gap:28px}
+.faits li{font-size:16px;line-height:1.45;color:var(--encre-2);border-left:1px solid rgba(38,35,32,.18);padding-left:20px}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:22px;color:var(--encre);line-height:1.2;margin-bottom:2px}
+
+/* la carte, fond sombre façon ardoise */
+.carte{background:var(--sombre);color:var(--clair);padding:120px 0}
+.carte .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+.carte h2{font-size:clamp(34px,4.4vw,58px)}
+.carte .intro{margin-top:20px;color:#D8CFDA;max-width:30em}
+.menu{list-style:none;margin:40px 0 0;padding:0}
+.menu li{display:grid;grid-template-columns:minmax(0,1fr);padding:20px 0;border-top:1px dashed rgba(246,242,236,.25)}
+.menu li:last-child{border-bottom:1px dashed rgba(246,242,236,.25)}
+.menu b{font-family:var(--display);font-weight:500;font-size:26px;line-height:1.2}
+.menu span{font-size:16.5px;color:#CDC3CF}
+.assiettes{position:relative;padding:0 0 70px 40px}
+.assiettes .grande img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 60%;border-radius:22px;box-shadow:0 36px 70px -30px rgba(0,0,0,.8)}
+.assiettes .grande .etiquette{right:18px;top:18px}
+.vign{position:absolute;width:min(210px,40%);background:var(--surface);padding:8px 8px 10px;border-radius:12px;box-shadow:0 24px 44px -24px rgba(0,0,0,.85)}
+.vign img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:7px}
+.vign figcaption{color:var(--encre);font-size:14px;font-weight:500;padding:8px 4px 0;line-height:1.3}
+.vign.v1{left:0;bottom:0;transform:rotate(-5deg)}
+.vign.v2{right:-18px;bottom:22px;transform:rotate(4deg)}
+
+/* traiteur */
+.traiteur{padding:128px 0 120px}
+.traiteur .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:center}
+.pique{position:relative}
+.pique img{width:100%;aspect-ratio:5/4.4;object-fit:cover;object-position:50% 50%;border-radius:999px 999px 24px 24px;box-shadow:var(--ombre)}
+.pique .etiquette{left:22px;bottom:22px}
+.traiteur h2{font-size:clamp(34px,4.4vw,58px)}
+.traiteur .intro{margin-top:20px;color:var(--encre-2);max-width:30em}
+.bouchees{list-style:none;margin:32px 0 0;padding:0;columns:2;column-gap:36px}
+.bouchees li{break-inside:avoid;padding:13px 0;border-bottom:1px solid rgba(38,35,32,.14);font-family:var(--display);font-size:22px;line-height:1.25}
+.traiteur .actions{margin-top:34px}
+
+/* infos pratiques */
+.infos{background:var(--surface);padding:120px 0}
+.infos .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.infos h2{font-size:clamp(34px,4.4vw,58px)}
+.adresse{margin-top:22px;font-family:var(--display);font-size:28px;line-height:1.3}
+.infos .detail{margin-top:18px;color:var(--encre-2)}
+.infos .actions{margin-top:30px}
+.liens{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 26px}
+.lien{color:var(--prune);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.lien:hover{color:var(--encre)}
+.horaires-bloc{position:relative;padding-top:56px}
+.horaires{background:var(--base);border-radius:24px;padding:36px 40px 30px;box-shadow:0 34px 64px -42px rgba(38,26,40,.6)}
+.horaires h3{font-size:28px;margin-bottom:12px}
+.horaires table{width:100%;border-collapse:collapse;font-size:17px}
+.horaires td{padding:12px 0;border-bottom:1px solid rgba(38,35,32,.12)}
+.horaires tr:last-child td{border-bottom:0}
+.horaires td+td{text-align:right;white-space:nowrap}
+.horaires .ferme{color:var(--encre-2)}
+.horaires small{display:block;margin-top:14px;font-size:14.5px;color:var(--encre-2)}
+.note{position:absolute;right:-30px;top:-22px;width:148px;height:148px;border-radius:50%;background:var(--prune);color:var(--clair);display:grid;place-content:center;text-align:center;box-shadow:0 24px 44px -22px rgba(107,62,117,.9);transform:rotate(8deg);text-decoration:none;transition:transform .3s ease}
+.note:hover{transform:rotate(0deg) scale(1.03)}
+.note b{font-family:var(--display);font-weight:500;font-size:46px;line-height:1}
+.note span{font-size:13px;line-height:1.3;margin-top:4px}
+
+.pied{background:var(--sombre);color:#D3CAD5;padding:80px 0 36px}
+.pied .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b{display:block;font-family:var(--display);font-weight:500;font-size:32px;color:var(--clair);margin-bottom:10px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--prune-clair);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--clair);text-decoration:underline}
+.pied .bas{grid-column:1 / -1;border-top:1px solid rgba(246,242,236,.14);padding-top:24px;margin-top:24px;font-size:14px;color:#A398A6}
+.proposition{background:#231C28;color:#9A90A0;text-align:center;font-size:13px;padding:14px 20px}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .nav a:not(.btn){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:900px){
+  :root{--w:calc(100% - 40px)}
+  .heros{padding:28px 0 72px}
+  .heros .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros-texte{display:contents}
+  .ou{order:1}.heros h1{order:2}.plateau{order:3;margin:22px 0 8px}.chapo{order:4}.actions{order:5}.horaire-court{order:6}
+  .carte,.traiteur,.infos{padding:88px 0}
+  .carte .wrap,.traiteur .wrap,.infos .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+  .assiettes{padding-left:0}
+  .note{right:4px}
+  .pied .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .entete .wrap{min-height:64px}
+  .marque span{display:none}
+  .marque b{font-size:23px}
+  .nav{display:none}
+  .appel-court{display:inline-flex;min-height:44px;padding:9px 18px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:14px}
+  .faits li{border-left:0;padding-left:0}
+  .assiettes{padding-bottom:110px}
+  .vign{width:min(170px,46%)}
+  .vign.v2{right:0}
+  .bouchees{columns:1}
+  .horaires{padding:28px 22px 24px}
+  .note{width:118px;height:118px;right:2px;top:-14px}
+  .note b{font-size:36px}
+  .note span{font-size:12px}
+  .adresse{font-size:24px}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="wrap">
+    <a class="marque" href="#haut"><b>Cuisinez-Moi</b><span>Traiteur et restauration rapide, Tours</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#carte">La carte</a>
+      <a href="#traiteur">Traiteur</a>
+      <a href="#infos">Horaires et adresse</a>
+      <a class="btn tel" href="tel:+33247747501">02 47 74 75 01</a>
+    </nav>
+    <a class="btn btn-plein appel-court" href="tel:+33247747501">Appeler</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="wrap">
+      <div class="heros-texte">
+        <p class="ou"><b>Cuisinez-Moi</b> · 45 rue Lamartine, Tours</p>
+        <h1>Traiteur et restauration rapide, frais et local.</h1>
+        <p class="chapo">Des burgers en brioche, un plat du jour, des frites maison, et des amuse-bouches pour vos réceptions. Sur place ou à emporter, le midi.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#carte">Voir ce qu'on y mange</a>
+          <a class="btn btn-contour tel" href="tel:+33247747501">02 47 74 75 01</a>
+        </div>
+        <p class="horaire-court">Du lundi au vendredi, de 11&nbsp;h&nbsp;30 à 14&nbsp;h&nbsp;30.</p>
+      </div>
+      <div class="plateau" aria-label="Plateau de mini-burgers et tartelettes">
+        <figure class="p1">
+          <img src="assets/cuisinez-moi-tours/mini-burgers-cheddar.webp" alt="Mini-burgers en brioche dorée piqués de bâtonnets, cheddar et roquette, sur un plateau" width="1600" height="1200" fetchpriority="high">
+          <span class="etiquette">Fait maison</span>
+        </figure>
+        <figure class="p2">
+          <img src="assets/cuisinez-moi-tours/tartelettes-citron-meringuees.webp" alt="Tartelettes au citron couronnées de meringue, vues du dessus" width="1200" height="1600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="wrap">
+      <li><b>45 rue Lamartine</b>à Tours, 37000</li>
+      <li><b>Lundi au vendredi</b>le midi, de 11&nbsp;h&nbsp;30 à 14&nbsp;h&nbsp;30</li>
+      <li><b>4,8 sur 5</b>sur Google, 75&nbsp;avis</li>
+      <li><b>Sur place</b>ou à emporter</li>
+    </ul>
+  </section>
+
+  <section class="carte" id="carte">
+    <div class="wrap">
+      <div>
+        <h2>Burgers, plat du jour et frites maison</h2>
+        <p class="intro">Une cuisine faite maison avec des produits frais, à manger sur place ou à emporter.</p>
+        <ul class="menu">
+          <li><b>Les burgers</b><span>Le cheese, le bacon-cheese, le fried chicken et le végé, en brioche aux graines</span></li>
+          <li><b>Le plat du jour</b><span>Annoncé à la craie, sur l'ardoise</span></li>
+          <li><b>Les frites maison</b><span>Avec les burgers</span></li>
+          <li><b>Les desserts</b><span>Sur l'ardoise, avec la carte du jour</span></li>
+        </ul>
+      </div>
+      <div class="assiettes">
+        <figure class="grande rv" style="position:relative">
+          <img src="assets/cuisinez-moi-tours/buns-en-cagette-au-soleil.webp" alt="Cagette de buns dorés éclairés par un rayon de soleil" width="1600" height="1600" loading="lazy">
+          <span class="etiquette">Les buns, tout frais</span>
+        </figure>
+        <figure class="vign v1"><img src="assets/cuisinez-moi-tours/bacon-cheeseburger.webp" alt="Bacon cheeseburger en brioche au sésame, frites maison" width="1600" height="1066" loading="lazy"><figcaption>Le bacon-cheese</figcaption></figure>
+        <figure class="vign v2"><img src="assets/cuisinez-moi-tours/fish-and-chips.webp" alt="Fish and chips en barquette, frites maison et sauce aux herbes" width="1600" height="1600" loading="lazy"><figcaption>Le fish and chips</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="traiteur" id="traiteur">
+    <div class="wrap">
+      <figure class="pique rv">
+        <img src="assets/cuisinez-moi-tours/mini-burgers-en-piques.webp" alt="Plateau de mini-burgers garnis piqués de bâtonnets" width="1600" height="1600" loading="lazy">
+        <span class="etiquette">Mini burgers à partager</span>
+      </figure>
+      <div>
+        <h2>Le traiteur, pour vos réceptions</h2>
+        <p class="intro">Cuisinez-Moi prépare aussi des amuse-bouches à partager et des menus de fête, sur réservation. Pour en parler, un appel ou un mail suffit.</p>
+        <ul class="bouchees">
+          <li>Mini burgers</li>
+          <li>Mini croques</li>
+          <li>Croquetas</li>
+          <li>Samossas</li>
+          <li>Falafels</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein tel" href="tel:+33247747501">02 47 74 75 01</a>
+          <a class="btn btn-contour" href="mailto:cuisinezmoi@yahoo.fr">Écrire un mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="infos" id="infos">
+    <div class="wrap">
+      <div>
+        <h2>Passer nous voir</h2>
+        <p class="adresse">45 rue Lamartine<br>37000&nbsp;Tours</p>
+        <p class="detail">Repas sur place ou vente à emporter. Pour une commande traiteur, appelez ou écrivez à <a class="lien" href="mailto:cuisinezmoi@yahoo.fr">cuisinezmoi@yahoo.fr</a>.</p>
+        <div class="actions">
+          <a class="btn btn-plein tel" href="tel:+33247747501">02 47 74 75 01</a>
+          <a class="btn btn-contour" href="https://www.google.com/maps/search/?api=1&amp;query=Cuisinez-moi%20Tours">Itinéraire</a>
+        </div>
+        <div class="liens">
+          <a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Cuisinez-moi%20Tours">Voir les avis sur Google</a>
+          <a class="lien" href="https://www.facebook.com/people/Cuisinez-Moi/100057308657163/">Cuisinez-Moi sur Facebook</a>
+        </div>
+      </div>
+      <div class="horaires-bloc rv">
+        <div class="horaires">
+          <h3>Horaires</h3>
+          <table>
+            <tr><td>Lundi</td><td>11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</td></tr>
+            <tr><td>Mardi</td><td>11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</td></tr>
+            <tr><td>Mercredi</td><td>11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</td></tr>
+            <tr><td>Jeudi</td><td>11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</td></tr>
+            <tr><td>Vendredi</td><td>11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</td></tr>
+            <tr><td>Samedi</td><td class="ferme"><a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Cuisinez-moi%20Tours">voir sur Google</a></td></tr>
+            <tr><td>Dimanche</td><td class="ferme">fermé</td></tr>
+          </table>
+          <small>Un jour férié, mieux vaut appeler avant de passer.</small>
+        </div>
+        <a class="note" href="https://www.google.com/maps/search/?api=1&amp;query=Cuisinez-moi%20Tours" aria-label="Note Google 4,8 sur 5, 75 avis : voir les avis"><b>4,8</b><span>sur 5 · 75&nbsp;avis<br>Google</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div>
+      <b>Cuisinez-Moi</b>
+      <p>Traiteur et restauration rapide, frais et local. 45 rue Lamartine, 37000&nbsp;Tours.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li><a class="tel" href="tel:+33247747501">02 47 74 75 01</a></li>
+        <li><a href="mailto:cuisinezmoi@yahoo.fr">cuisinezmoi@yahoo.fr</a></li>
+        <li>Du lundi au vendredi, 11&nbsp;h&nbsp;30 – 14&nbsp;h&nbsp;30</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Cuisinez-moi%20Tours">Fiche Google et avis</a></li>
+        <li><a href="https://www.facebook.com/people/Cuisinez-Moi/100057308657163/">Page Facebook</a></li>
+      </ul>
+    </div>
+    <p class="bas">Cuisinez-Moi · Tours</p>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Cuisinez-Moi</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
