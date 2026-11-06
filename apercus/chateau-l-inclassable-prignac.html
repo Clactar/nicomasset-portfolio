@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Château L'Inclassable, vins du Médoc à Blaignan-Prignac</title>
+<meta name="description" content="Château L'Inclassable, propriété de la famille Fauchey à Blaignan-Prignac : vins en AOC Médoc, Haute Valeur Environnementale depuis 2013, bio et végan. Visites et dégustation toute l'année.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C2B23'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='42' fill='%23C2436A'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Familjen+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E5ECE4; --surface:#F3F7F2; --encre:#1B2A22; --geranium:#C2436A; --sombre:#1C2B23;
+  --bande:#D6E1D4; --doux:#4E6056; --filet:#C6D3C4; --clair:#E7EFE6; --clair-doux:#A9BBAE; --rose-pale:#F2D9E0; --geranium-fonce:#A23456;
+  --ombre:0 30px 60px -34px rgba(28,43,35,.55);
+  --display:"Instrument Serif", "Didot", Georgia, serif;
+  --texte:"Familjen Grotesk", "Avenir Next", sans-serif;
+  --large:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--geranium);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0 0 1em;text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(40px,5vw,66px)}
+h3{font-size:30px;line-height:1.1}
+.cadre{width:min(var(--large),100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+:focus-visible{outline:2px solid var(--geranium);outline-offset:3px;border-radius:6px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(229,236,228,.95)}
+@supports (backdrop-filter:blur(2px)){.entete{background:rgba(229,236,228,.84);backdrop-filter:blur(12px)}}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.marque{text-decoration:none;font-family:var(--display);font-size:29px;line-height:1}
+.marque small{display:block;font-family:var(--texte);font-size:13px;color:var(--doux);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px;font-size:15.5px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--geranium-fonce)}
+.nav .appel{background:var(--surface);color:var(--encre);padding:11px 20px;border-radius:999px;font-weight:500;box-shadow:0 14px 30px -22px rgba(28,43,35,.6);transition:background .25s,color .25s}
+.nav .appel:hover{background:var(--geranium);color:var(--surface)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 26px;border-radius:999px;font-family:var(--texte);font-size:16px;font-weight:500;text-decoration:none;border:1.5px solid transparent;text-align:center;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--geranium);color:var(--surface)}
+.btn-plein:hover{background:var(--geranium-fonce)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-contour-clair{border-color:rgba(231,239,230,.55);color:var(--surface)}
+.btn-contour-clair:hover{background:var(--surface);color:var(--encre)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.lien{color:var(--geranium-fonce);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;font-weight:500}
+.lien:hover{text-decoration-thickness:2px}
+
+/* Héros */
+.heros{--fs:clamp(42px,7.4vw,108px);--pad:20px;padding:40px 0 0}
+.heros h1{font-size:var(--fs);line-height:1;letter-spacing:-.015em;position:relative;z-index:2;text-wrap:initial}
+.heros h1 .ligne{display:block}
+.heros h1 .onglet{display:inline-block;position:relative;background:var(--base);padding:0 34px var(--pad) 0;border-bottom-right-radius:28px;font-style:italic;color:var(--geranium-fonce)}
+.heros h1 .onglet::before,.heros h1 .onglet::after{content:"";position:absolute;width:28px;height:28px;background:radial-gradient(circle at 100% 100%,transparent 27.5px,var(--base) 28px)}
+.heros h1 .onglet::before{right:-28px;top:0;transform:none}
+.heros h1 .onglet::after{left:0;bottom:-28px}
+.pano{position:relative;margin:calc(-1 * (var(--fs) + var(--pad))) 0 0;z-index:1}
+.pano img{width:100%;aspect-ratio:1200/540;object-fit:cover;object-position:40% 78%;border-radius:24px;box-shadow:0 44px 80px -40px rgba(28,43,35,.6)}
+.posee{position:absolute;right:28px;bottom:28px;width:min(400px,100% - 56px);background:var(--surface);border-radius:20px;padding:26px 28px;box-shadow:0 30px 50px -28px rgba(28,43,35,.6)}
+.posee p{font-size:16.5px;line-height:1.55;color:var(--doux);margin-bottom:18px}
+.posee .btn{padding:12px 22px;min-height:48px;font-size:15.5px}
+.pano .legende{position:absolute;left:24px;bottom:24px;background:rgba(243,247,242,.95);font-size:14px;padding:8px 14px;border-radius:999px}
+
+/* Faits */
+.faits{padding:72px 0 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.faits li{padding:6px 22px 6px 0;margin-right:22px;border-right:1px solid var(--filet)}
+.faits li:last-child{border-right:0;margin-right:0}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;color:var(--encre)}
+.faits span{display:block;font-size:14.5px;line-height:1.45;color:var(--doux);margin-top:8px}
+
+/* Manifeste */
+.manifeste{padding:128px 0}
+.manifeste .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.manifeste .avant{font-size:18px;color:var(--doux);border-top:1.5px solid var(--encre);padding-top:22px;margin:0}
+.manifeste .apres{font-family:var(--display);font-size:clamp(32px,3.8vw,52px);line-height:1.12;margin:0;text-wrap:balance}
+
+/* Histoire */
+.histoire{background:var(--bande);padding:120px 0}
+.histoire-haut{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:end;margin-bottom:56px}
+.histoire-haut p{color:var(--doux);margin:0;max-width:54ch}
+.histoire-photo{position:relative}
+.histoire-photo img{border-radius:22px;aspect-ratio:1600/666;object-fit:cover;box-shadow:var(--ombre)}
+.histoire-photo span{position:absolute;left:20px;bottom:20px;background:var(--surface);font-size:14px;padding:8px 14px;border-radius:999px}
+.jalons{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.jalons li{border-top:1.5px solid var(--encre);padding-top:20px}
+.jalons b{display:block;font-family:var(--display);font-weight:400;font-size:48px;line-height:1;margin-bottom:12px}
+.jalons p{font-size:16px;color:var(--doux);margin:0}
+.nom{margin-top:72px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0;background:var(--surface);border-radius:26px;overflow:hidden;box-shadow:var(--ombre)}
+.nom-texte{padding:52px 56px}
+.nom-texte p{color:var(--doux);max-width:58ch}
+.nom-texte h3{font-size:40px;margin-bottom:20px}
+.nom blockquote{margin:0;background:var(--geranium);color:var(--surface);padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+.nom blockquote p{font-family:var(--display);font-style:italic;font-size:clamp(30px,3vw,40px);line-height:1.15;margin:0 0 20px}
+.nom blockquote footer{font-size:15px;opacity:.85}
+
+/* Biodiversité, fond sombre */
+.bio{background:var(--sombre);color:var(--clair);padding:128px 0}
+.bio .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:center}
+.bio h2{color:var(--surface)}
+.bio .lead{font-size:21px;color:var(--surface);margin:26px 0 20px;max-width:46ch}
+.bio p{color:var(--clair-doux);max-width:52ch}
+.pratiques{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:0}
+.pratiques li{padding:16px 0;border-top:1px solid rgba(231,239,230,.14);display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:20px;font-size:16px;color:var(--clair-doux)}
+.pratiques b{font-weight:500;color:var(--surface)}
+.bio-photos{position:relative;padding:0 0 120px 0}
+.bio-photos .nid{width:78%;border-radius:22px;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;box-shadow:0 30px 60px -28px rgba(0,0,0,.75)}
+.bio-photos .sauterelle{position:absolute;right:0;bottom:0;width:62%;border-radius:18px;aspect-ratio:16/10;object-fit:cover;object-position:40% 50%;border:8px solid var(--sombre);box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}
+.bio-photos span{position:absolute;left:18px;top:18px;background:var(--surface);color:var(--encre);font-size:14px;padding:8px 14px;border-radius:999px}
+.citation-bio{margin-top:32px;font-family:var(--display);font-style:italic;font-size:30px;line-height:1.2;color:var(--rose-pale)}
+
+/* Vins */
+.vins{padding:128px 0 112px}
+.vins-haut{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:end;margin-bottom:56px}
+.vins-haut p{color:var(--doux);margin:0;max-width:52ch}
+.cuvees{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+.cuvee{background:var(--surface);border-radius:20px;padding:30px 26px 28px;box-shadow:0 24px 44px -34px rgba(28,43,35,.5);display:flex;flex-direction:column}
+.cuvee:nth-child(2){margin-top:44px}
+.cuvee:nth-child(3){margin-top:16px}
+.cuvee:nth-child(4){margin-top:60px}
+.cuvee .famille{font-family:var(--display);font-style:italic;font-size:22px;color:var(--geranium-fonce)}
+.cuvee h3{font-size:30px;margin:14px 0 14px;padding-bottom:16px;border-bottom:1px solid var(--filet)}
+.cuvee p{font-size:15.5px;color:var(--doux);margin:0}
+.chai{margin:72px 0 0;position:relative}
+.chai img{border-radius:24px;aspect-ratio:1600/560;object-fit:cover;object-position:50% 55%;box-shadow:var(--ombre)}
+.chai .bouchons{position:absolute;right:40px;top:-48px;width:min(240px,32%);aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:8px solid var(--base);box-shadow:var(--ombre)}
+.chai-bas{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;margin-top:28px}
+.chai-bas p{margin:0;color:var(--doux);max-width:60ch}
+
+/* Rencontrer */
+.rencontre{padding:0 0 128px}
+.rencontre .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;align-items:stretch}
+.visite{background:var(--surface);border-radius:26px;padding:48px 44px;box-shadow:var(--ombre)}
+.visite h2{font-size:clamp(36px,3.8vw,50px);margin-bottom:20px}
+.visite dl{margin:28px 0 30px;display:grid;gap:16px}
+.visite dt{font-size:14px;color:var(--doux)}
+.visite dd{margin:2px 0 0;font-size:17px}
+.visite .tel{font-family:var(--display);font-size:34px;color:var(--geranium-fonce);text-decoration:none}
+.logement{position:relative;border-radius:26px;overflow:hidden;min-height:540px;color:var(--surface);display:flex;align-items:flex-end;box-shadow:var(--ombre)}
+.logement img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.logement::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,35,0) 30%,rgba(28,43,35,.85) 100%)}
+.logement-texte{position:relative;z-index:1;padding:44px}
+.logement h3{font-size:40px;margin-bottom:12px;color:var(--surface)}
+.logement p{color:var(--clair);max-width:46ch;font-size:17px}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair);padding:88px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque{font-size:34px;color:var(--surface)}
+.pied .marque small{color:var(--clair-doux);font-size:14px}
+.pied h3{font-family:var(--texte);font-size:14px;color:var(--clair-doux);margin-bottom:12px}
+.pied p,.pied li{font-size:16px;line-height:1.65;margin:0}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{text-decoration:none}
+.pied a:hover{text-decoration:underline;color:var(--rose-pale)}
+.devise{font-family:var(--display);font-style:italic;font-size:26px;color:var(--rose-pale);margin-top:18px!important}
+.pied-bas{margin-top:64px;padding-top:26px;border-top:1px solid rgba(231,239,230,.14);font-size:14px;color:var(--clair-doux)}
+.proposition{background:var(--sombre);color:#83978A;text-align:center;font-size:13px;padding:0 24px 28px}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu,.js.calme .apparait{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .nav a:not(.appel){display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}
+  .faits li:nth-child(3){border-right:0;margin-right:0}
+  .manifeste .cadre,.histoire-haut,.bio .cadre,.vins-haut,.rencontre .cadre{grid-template-columns:minmax(0,1fr);gap:40px}
+  .jalons{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nom{grid-template-columns:minmax(0,1fr)}
+  .cuvees{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cuvee:nth-child(n){margin-top:0}
+  .pied-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .cadre{width:min(var(--large),100% - 32px)}
+  .entete .cadre{min-height:64px}
+  .marque{font-size:24px}
+  .marque small{display:none}
+  .nav .appel{padding:10px 15px;font-size:15px}
+  .heros{--fs:clamp(40px,12.4vw,56px);--pad:12px;padding-top:28px}
+  .heros h1 .onglet{padding-right:18px;border-bottom-right-radius:20px}
+  .heros h1 .onglet::before,.heros h1 .onglet::after{width:20px;height:20px;background:radial-gradient(circle at 100% 100%,transparent 19.5px,var(--base) 20px)}
+  .heros h1 .onglet::before{right:-20px}
+  .heros h1 .onglet::after{bottom:-20px}
+  .pano img{aspect-ratio:4/4.2;object-position:22% 80%;border-radius:20px}
+  .posee{position:static;width:auto;margin-top:22px;padding:0;background:none;box-shadow:none}
+  .posee p{font-size:17px}
+  .pano .legende{bottom:auto;top:auto}
+  .legende{display:none}
+  .actions .btn{flex:1 1 100%}
+  .faits{padding-top:56px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}
+  .faits li{border-right:0!important;margin-right:0;padding-right:0}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:32px}
+  .manifeste,.histoire,.bio,.vins{padding:88px 0}
+  .jalons{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}
+  .nom-texte{padding:34px 24px}
+  .nom-texte h3{font-size:34px}
+  .nom blockquote{padding:36px 24px}
+  .pratiques li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .bio-photos{padding-bottom:90px}
+  .bio-photos .nid{width:86%}
+  .bio-photos .sauterelle{width:66%}
+  .cuvees{grid-template-columns:minmax(0,1fr)}
+  .chai{margin:88px 0 0}
+  .chai img{aspect-ratio:4/3}
+  .chai .bouchons{right:16px;top:-56px;width:min(140px,40%)}
+  .rencontre{padding-bottom:88px}
+  .visite{padding:34px 24px}
+  .logement{min-height:460px}
+  .logement-texte{padding:30px 24px}
+  .logement h3{font-size:34px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .nav .appel{padding:9px 12px;font-size:14px}
+  .marque{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut">Château L'Inclassable<small>Vignobles Rémy Fauchey, Médoc</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#histoire">Le château</a>
+      <a href="#biodiversite">Biodiversité</a>
+      <a href="#vins">Nos vins</a>
+      <a href="#rencontre">Nous rencontrer</a>
+      <a class="appel nowrap" href="tel:+33556090217">05 56 09 02 17</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1><span class="ligne">Un Médoc authentique,</span> <span class="ligne">la biodiversité</span> <span class="onglet">en bouteille</span></h1>
+      <div class="pano">
+        <img src="assets/chateau-l-inclassable-prignac/rangs-de-vigne-et-geraniums-pelouse.webp" alt="Massif de géraniums rose vif au premier plan, pelouse tondue puis rangs de vigne réguliers du château" width="1600" height="1017" fetchpriority="high">
+        <span class="legende">Les rangs du château</span>
+        <div class="posee">
+          <p>Depuis cinq générations, la famille Fauchey cultive le Château L'Inclassable, entre océan Atlantique et estuaire de la Gironde. Haute Valeur Environnementale depuis 2013, végan et bio.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#rencontre">Venir déguster</a>
+            <a class="btn btn-contour nowrap" href="tel:+33556090217">05 56 09 02 17</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le château en bref">
+    <div class="cadre">
+      <ul>
+        <li><b>1796</b><span>premier acte qui mentionne le domaine</span></li>
+        <li><b>1900</b><span>le cru entre dans la famille Fauchey</span></li>
+        <li><b>HVE</b><span>niveau le plus élevé, depuis 2013</span></li>
+        <li><b>Bio et végan</b><span>certifié en agriculture biologique depuis 2020</span></li>
+        <li><b>2022</b><span>nominé aux Trophées Bordeaux Vignoble Engagé, catégorie Faune et Flore</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="manifeste" aria-label="Notre façon de faire le vin">
+    <div class="cadre">
+      <p class="avant">Si vous recherchez un vin standardisé, cloné, sans personnalité, industriel, où l'Homme prend le dessus sur la Nature au lieu de l'accompagner… arrêtez-vous là.</p>
+      <p class="apres">Si vous cherchez un Médoc authentique, qui reflète sa biodiversité et son histoire à travers le plaisir qu'il donne, entrez dans le monde de l'Inclassable.</p>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="cadre">
+      <div class="histoire-haut">
+        <h2>Histoire d'un château</h2>
+        <p>Au XIX<sup>e</sup>&nbsp;siècle, le Château L'Inclassable, alors appelé Lafon, était l'un des plus importants domaines de Prignac-en-Médoc. Cinq générations de la famille Fauchey s'y sont succédé, avec la même idée du métier : « Toujours mieux et non toujours plus ».</p>
+      </div>
+      <figure class="histoire-photo apparait" style="margin:0">
+        <img src="assets/chateau-l-inclassable-prignac/chateau-et-bassin-aux-cygnes.webp" alt="Bâtiments du château aux toits de tuiles derrière un bassin où nagent des cygnes, cyprès et jardin" width="1600" height="666" loading="lazy">
+        <span>Le château et son bassin</span>
+      </figure>
+      <ol class="jalons">
+        <li><b>1796</b><p>Le domaine est déjà mentionné dans un acte du 26 messidor an IV.</p></li>
+        <li><b>1868</b><p>Dans « Bordeaux et ses vins », Édouard Féret le cite en tête de sa commune : « Un cru corsé et coloré, qui se distingue particulièrement par ces 2 qualités et une bonne sève ».</p></li>
+        <li><b>1900</b><p>Le cru entre dans la famille Fauchey. Il lui appartient toujours.</p></li>
+        <li><b>1990</b><p>La famille signe la Charte du Vigneron Indépendant, et fait tout elle-même, de la vigne à la vente.</p></li>
+      </ol>
+      <div class="nom apparait">
+        <div class="nom-texte">
+          <h3>Pourquoi L'Inclassable</h3>
+          <p>Durant plus de deux siècles, le château s'est appelé Lafon. En 2003, un homonyme lui interdit de porter son nom, en prétextant un retard de 14&nbsp;jours sur le renouvellement de la marque à l'INPI.</p>
+          <p style="margin:0">Ironie du sort : au classement des Crus Bourgeois du Médoc, le château est conforté dans son rang, sans plus pouvoir dire son nom. Par respect pour les ancêtres, c'est désormais « L'Inclassable » qui signe les vins.</p>
+        </div>
+        <blockquote>
+          <p>« Lafon ne puis, Paysan Viticulteur reste, L'Inclassable suis. »</p>
+          <footer>Château L'Inclassable</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="bio" id="biodiversite">
+    <div class="cadre">
+      <div class="bio-photos apparait">
+        <img class="nid" src="assets/chateau-l-inclassable-prignac/nid-et-oeufs-dans-le-pied-de-vigne.webp" alt="Nid d'oiseau avec quatre œufs bleu pâle niché dans le feuillage d'un pied de vigne" width="1200" height="1600" loading="lazy">
+        <img class="sauterelle" src="assets/chateau-l-inclassable-prignac/sauterelle-verte-sur-le-doigt.webp" alt="Grande sauterelle verte posée sur un doigt" width="1600" height="739" loading="lazy">
+        <span>Un nid dans un pied de vigne</span>
+      </div>
+      <div>
+        <h2>La biodiversité, dans les vignes et dans le verre</h2>
+        <p class="lead">Le château cultive depuis des décennies sans herbicides ni insecticides, pour laisser la vigne s'appuyer sur ses défenses naturelles.</p>
+        <p>Les petits partenaires naturels de la vigne assurent plus de 70&nbsp;% du travail contre ses prédateurs. Quatre années de suite, le château a été nominé aux Trophées Bordeaux Vignoble Engagé pour la protection de la faune et de la flore.</p>
+        <ul class="pratiques">
+          <li><b>Levures indigènes</b><span>sans sulfite ajouté pendant les vendanges et la fermentation</span></li>
+          <li><b>Rien d'ajouté</b><span>pas de copeaux, pas de sucre, que du degré naturel</span></li>
+          <li><b>Élevage</b><span>en barriques de 400&nbsp;litres et en jarres d'argile de 500&nbsp;litres</span></li>
+        </ul>
+        <p class="citation-bio">« On a toujours besoin d'un plus petit que soi. »</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre">
+      <div class="vins-haut">
+        <h2>Nos vins inclassables</h2>
+        <p>Des vins en AOC Médoc, issus d'une propriété certifiée Haute Valeur Environnementale depuis 2013, labellisée végan et certifiée en agriculture biologique depuis 2020.</p>
+      </div>
+      <div class="cuvees">
+        <article class="cuvee apparait"><span class="famille">Terroir</span><h3>Château L'Inclassable</h3><p>Un assemblage unique en Médoc, qui met en avant les cépages ancestraux, cabernet sauvignon et petit verdot, élevé en barriques de 400&nbsp;litres.</p></article>
+        <article class="cuvee apparait"><span class="famille">Nature</span><h3>L'Inclassable bio et végan</h3><p>La cuvée de tous les petits partenaires naturels du vignoble, élevée en jarres de 500&nbsp;litres d'argile italienne.</p></article>
+        <article class="cuvee apparait"><span class="famille">Histoire</span><h3>L'Inclassable de Rémy Fauchey</h3><p>La cuvée des ancêtres, pour redécouvrir les grands Médocs d'autrefois dans de vieux millésimes.</p></article>
+        <article class="cuvee apparait"><span class="famille">Plaisir</span><h3>Château Fontaine de l'Aubier</h3><p>Pour se faire plaisir plus simplement, dans une gamme au rapport prix et plaisir très intéressant.</p></article>
+      </div>
+      <figure class="chai apparait">
+        <img src="assets/chateau-l-inclassable-prignac/chai-a-barriques-et-lustres.webp" alt="Chai voûté blanc rempli de rangées de barriques marquées L'Inclassable, lustres de cristal au plafond" width="1600" height="666" loading="lazy">
+        <img class="bouchons" src="assets/chateau-l-inclassable-prignac/bouchons-biodiversite-en-bouteille.webp" alt="Bouchons de liège imprimés La biodiversité en bouteille et d'un papillon" width="1600" height="666" loading="lazy">
+      </figure>
+      <div class="chai-bas">
+        <p>Les fiches de chaque millésime sont sur la page des vins du château.</p>
+        <a class="btn btn-contour" href="https://linclassable.com/vins-inclassable-vegan-bio-hve/" target="_blank" rel="noopener">Voir les fiches des vins</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rencontre" id="rencontre">
+    <div class="cadre">
+      <div class="visite apparait">
+        <h2>Visites et dégustation</h2>
+        <p style="color:var(--doux);margin:0">Nous vous accueillons avec plaisir toute l'année, de passage, en groupe ou en famille.</p>
+        <dl>
+          <div><dt>Horaires</dt><dd>Toute l'année, de 9&nbsp;h à 18&nbsp;h</dd></div>
+          <div><dt>Adresse</dt><dd>4 chemin des Vignes, 33340 Blaignan-Prignac<br>À 3&nbsp;km de Lesparre-Médoc, à 60&nbsp;km au nord de Bordeaux</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="tel nowrap" href="tel:+33556090217">05 56 09 02 17</a></dd></div>
+          <div><dt>Courriel</dt><dd><a class="lien" href="mailto:remy.fauchey@orange.fr">remy.fauchey@orange.fr</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein nowrap" href="tel:+33556090217">Appeler le château</a>
+          <a class="btn btn-contour" href="mailto:remy.fauchey@orange.fr">Écrire un courriel</a>
+        </div>
+      </div>
+      <div class="logement apparait">
+        <img src="assets/chateau-l-inclassable-prignac/chateau-eclaire-la-nuit-reflet-bassin.webp" alt="Le château et ses arbres éclairés de nuit, reflet dans le bassin, ciel bleu nuit" width="1600" height="699" loading="lazy">
+        <div class="logement-texte">
+          <h3>Dormir près du vignoble</h3>
+          <p>Des appartements saisonniers tout équipés à Lesparre-en-Médoc, au cœur du parc naturel régional du Médoc, près des commerces et à quelques kilomètres de la propriété.</p>
+          <a class="btn btn-contour-clair" href="https://linclassable.com/location-chateau-linclassable-appartement-lesparre/" target="_blank" rel="noopener">Voir les appartements</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="#haut">Château L'Inclassable<small>Vignobles Rémy Fauchey</small></a>
+        <p class="devise">Cultivons ensemble la différence</p>
+      </div>
+      <div>
+        <h3>Propriété</h3>
+        <p>4 chemin des Vignes<br>33340 Blaignan-Prignac</p>
+      </div>
+      <div>
+        <h3>Visites</h3>
+        <p>Toute l'année, de 9&nbsp;h à 18&nbsp;h</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33556090217">05 56 09 02 17</a></li>
+          <li><a href="mailto:remy.fauchey@orange.fr">remy.fauchey@orange.fr</a></li>
+          <li><a href="https://www.facebook.com/chateaulinclassable" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/chateaulinclassable/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Château L'Inclassable</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

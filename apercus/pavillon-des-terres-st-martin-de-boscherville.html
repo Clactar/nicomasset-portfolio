@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Christèle Cadoret · Le Pavillon des Terres, céramique à Saint-Martin-de-Boscherville</title>
+<meta name="description" content="Christèle Cadoret, céramiste Artisan d'Art : pièces uniques en porcelaine et grès, atelier-boutique Le Pavillon des Terres à Saint-Martin-de-Boscherville.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1C1A'/%3E%3Crect x='6' y='6' width='52' height='52' fill='none' stroke='%238C7A4E' stroke-width='1.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23F8F8F6'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Archivo:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#ECECEA; --base-2:#E1E0DC; --surface:#F8F8F6; --encre:#1C1C1A; --encre-2:#55554F;
+  --accent:#8C7A4E; --sombre:#1C1C1A; --clair:#E9E8E3;
+  --ombre:0 30px 60px -34px rgba(28,28,26,.5);
+  --douce:0 40px 80px -50px rgba(28,28,26,.45), 0 2px 6px -3px rgba(28,28,26,.12);
+  --display:'Bellefair', 'Didot', Georgia, serif; --texte:'Archivo', 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:300;font-size:18px;line-height:1.66}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+strong{font-weight:500}
+.contenu{width:min(1200px,100% - 2*clamp(20px,5vw,40px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+.court{display:none}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,236,234,.95);border-bottom:1px solid rgba(28,28,26,.08)}
+.entete .contenu{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:15px}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:.01em}
+.marque small{display:block;font-size:13px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:400}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:999px;font:400 16px/1.2 var(--texte);text-decoration:none;border:1px solid var(--encre);transition:background .25s ease,color .25s ease,transform .25s ease,border-color .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--encre);color:var(--surface)}
+.btn-plein:hover{background:var(--accent);border-color:var(--accent)}
+.btn-contour{color:var(--encre)}
+.btn-contour:hover{background:var(--surface)}
+.btn-petit{min-height:42px;padding:9px 20px;font-size:15px}
+
+/* Héros : la cimaise */
+.heros{padding:clamp(40px,6vw,88px) 0 clamp(72px,8vw,120px)}
+.heros .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"titre oeuvre" "texte oeuvre";column-gap:clamp(40px,7vw,112px);align-items:center}
+.heros .bloc-titre{grid-area:titre;align-self:end}
+.heros .qui{font-size:16px;color:var(--accent);font-weight:400;margin-bottom:22px}
+.heros h1{font-size:clamp(42px,6.6vw,92px);line-height:1;letter-spacing:-.005em}
+.heros .texte{grid-area:texte;align-self:start;padding-top:28px}
+.heros .texte p{font-size:19px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.oeuvre{grid-area:oeuvre;margin:0;position:relative;padding-bottom:40px}
+.passe{background:var(--surface);padding:28px;box-shadow:var(--douce);border-radius:4px}
+.passe img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 70%;filter:grayscale(1) contrast(1.05);border-radius:2px}
+.cartel{position:absolute;left:-28px;bottom:0;background:var(--surface);padding:16px 20px 15px;width:min(260px,80%);box-shadow:0 18px 40px -24px rgba(28,28,26,.5);border-radius:3px;font-size:13.5px;line-height:1.45;color:var(--encre-2)}
+.cartel b{display:block;font-family:var(--display);font-weight:400;font-size:20px;color:var(--encre);line-height:1.15;margin-bottom:4px}
+.cartel i{display:block;font-style:normal;color:var(--accent);margin-top:6px}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.faits li{padding:32px 26px 32px 0;font-size:15px;line-height:1.45;color:var(--encre-2)}
+.faits li+li{padding-left:26px;border-left:1px solid rgba(28,28,26,.12)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:27px;color:var(--encre);line-height:1.1;margin-bottom:6px}
+
+section{padding:clamp(80px,9vw,128px) 0}
+.titre-section{font-size:clamp(36px,4.6vw,60px);margin-bottom:24px}
+
+/* Démarche */
+.demarche .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,7vw,112px);align-items:start}
+.demarche .intro p{color:var(--encre-2)}
+.matieres{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:40px}
+.matieres h3{font-size:28px;margin-bottom:6px}
+.matieres p{font-size:16.5px;color:var(--encre-2);margin:0}
+.matieres .gres{padding-top:14px;border-top:1px solid var(--accent)}
+.matieres .porcelaine{padding-top:14px;border-top:1px solid var(--encre)}
+.diptyque{position:relative;padding-bottom:120px}
+.diptyque figure{margin:0;position:relative}
+.diptyque .p1{width:68%}
+.diptyque .p1 img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:18px;box-shadow:var(--ombre)}
+.diptyque .p2{position:absolute;right:0;bottom:0;width:50%}
+.diptyque .p2 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;box-shadow:var(--ombre);outline:10px solid var(--base);}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);font-size:13.5px;font-weight:400;padding:7px 14px;border-radius:999px;color:var(--encre)}
+
+/* Pièces d'exception */
+.exception{background:var(--surface)}
+.exception .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end;margin-bottom:48px}
+.exception .tete p{color:var(--encre-2);margin:0}
+.registre{list-style:none;margin:0;padding:0;border-top:1px solid rgba(28,28,26,.2)}
+.registre li{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr) minmax(0,.7fr);gap:16px 40px;padding:30px 0;border-bottom:1px solid rgba(28,28,26,.2);align-items:baseline}
+.registre h3{font-size:clamp(26px,2.6vw,34px)}
+.registre p{margin:0;color:var(--encre-2);font-size:17px}
+.registre .lieu{font-size:15px;color:var(--accent);font-weight:400;text-align:right}
+.exception .lien{margin-top:36px}
+
+/* En ce moment (sombre) */
+.moment{background:var(--sombre);color:var(--clair)}
+.moment .contenu{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.moment figure{margin:0;position:relative}
+.moment img{width:100%;aspect-ratio:4/3.4;object-fit:cover;object-position:50% 45%;border-radius:22px;box-shadow:0 34px 70px -34px rgba(0,0,0,.9)}
+.moment .titre-section{color:#F8F8F6}
+.moment p{color:#C9C8C1}
+.affiche{border:1px solid rgba(233,232,227,.22);border-radius:16px;padding:26px 28px;margin:28px 0}
+.affiche small{display:block;color:#B5A77F;font-size:14px;margin-bottom:6px}
+.affiche b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1.15;color:#F8F8F6}
+.affiche span{display:block;color:#C9C8C1;font-size:16px;margin-top:6px}
+.moment .btn-contour{border-color:#E9E8E3;color:#E9E8E3}
+.moment .btn-contour:hover{background:#E9E8E3;color:var(--sombre)}
+
+/* Galerie */
+.galerie .contenu{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);align-items:start}
+.galerie figure{margin:0}
+.galerie .grande img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;border-radius:22px;box-shadow:var(--ombre)}
+.galerie .colonne{display:grid;gap:clamp(24px,3vw,40px);padding-top:72px}
+.galerie .colonne img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;box-shadow:var(--ombre)}
+.galerie figcaption{font-size:14px;color:var(--encre-2);margin-top:12px;padding-left:14px;border-left:1px solid var(--accent);line-height:1.4}
+.galerie figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:19px;color:var(--encre)}
+.galerie .titre-section{grid-column:1/-1;margin-bottom:8px}
+
+/* Visite */
+.visite{background:var(--base-2)}
+.visite .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.visite figure{margin:0;position:relative}
+.visite figure img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:40% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.visite .apres-photo{margin-top:36px;color:var(--encre-2);font-size:16.5px}
+.ventes{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px;font-size:16px}
+.ventes li{padding-left:16px;border-left:1px solid rgba(28,28,26,.25)}
+.ventes b{font-weight:400;color:var(--encre)}
+.cartel-horaires{background:var(--surface);padding:clamp(26px,4vw,40px);border-radius:6px;box-shadow:var(--douce)}
+.cartel-horaires h3{font-size:30px;margin-bottom:18px}
+.cartel-horaires dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 24px;font-size:16.5px}
+.cartel-horaires dt{color:var(--encre-2)}
+.cartel-horaires dd{margin:0}
+.cartel-horaires .note{font-size:15px;color:var(--encre-2);margin:18px 0 0;padding-top:16px;border-top:1px solid rgba(28,28,26,.12)}
+.coord{margin-top:24px;display:grid;gap:4px;font-family:var(--display);font-size:22px;line-height:1.3}
+.coord a{text-decoration:none;border-bottom:1px solid rgba(140,122,78,.5);overflow-wrap:anywhere}
+.coord a:hover{color:var(--accent)}
+
+.pied{background:var(--sombre);color:#CFCEC7;padding:64px 0 40px;font-size:15.5px}
+.pied .contenu{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:36px}
+.pied b{font-family:var(--display);font-weight:400;font-size:27px;color:#F8F8F6;display:block;margin-bottom:8px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:400;color:#B5A77F;margin-bottom:10px}
+.pied p{margin:0}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#F8F8F6;text-decoration:underline}
+.proposition{background:var(--sombre);color:#8A8983;text-align:center;font-size:13.5px;padding:18px 20px 28px;border-top:1px solid rgba(233,232,227,.08)}
+
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1!important;transform:none!important}
+
+@media (max-width:1100px){.cartel{left:-12px}}
+@media (max-width:980px){
+  .nav a:not(.btn){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li{border-top:1px solid rgba(28,28,26,.08)}
+  .demarche .contenu,.moment .contenu,.visite .contenu,.exception .tete{grid-template-columns:minmax(0,1fr)}
+  .registre li{grid-template-columns:minmax(0,1fr)}
+  .registre .lieu{text-align:left}
+  .pied .contenu{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .contenu>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros .contenu{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "oeuvre" "texte"}
+  .oeuvre{margin-top:28px}
+  .passe{padding:14px}
+  .cartel{left:0;width:min(230px,72%);padding:12px 14px 12px;font-size:13px}
+  .cartel b{font-size:18px}
+  .oeuvre{padding-bottom:64px}
+  .galerie .contenu{grid-template-columns:minmax(0,1fr)}
+  .galerie .colonne{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-top:0}
+  .matieres{grid-template-columns:minmax(0,1fr)}
+  .marque small{display:none}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .entete .long{display:none}.entete .court{display:inline}
+  .marque b{font-size:22px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li,.faits li+li{padding:20px 0;border-left:0}
+  .galerie .colonne{grid-template-columns:minmax(0,1fr)}
+  .diptyque{padding-bottom:90px}
+  .cartel-horaires dl{grid-template-columns:minmax(0,1fr);gap:0}
+  .cartel-horaires dd{margin-bottom:12px}
+  .pied .contenu{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="contenu">
+    <a class="marque" href="#haut"><b>Christèle Cadoret</b><small>Le Pavillon des Terres, atelier-boutique</small></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#demarche">Démarche</a>
+      <a href="#moment">À l'atelier</a>
+      <a href="#visite">Visite</a>
+      <a class="btn btn-plein btn-petit nowrap" href="tel:+33640465530"><span class="long">06 40 46 55 30</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <div class="contenu">
+      <div class="bloc-titre">
+        <p class="qui">Céramiste Artisan d'Art, Saint-Martin-de-Boscherville</p>
+        <h1>Pièces uniques inspirées de la nature</h1>
+      </div>
+      <figure class="oeuvre">
+        <div class="passe"><img src="assets/pavillon-des-terres-st-martin-de-boscherville/amas-pieces-noir-et-blanc.webp" width="1938" height="1938" alt="Amoncellement de pièces en porcelaine blanche et grès noir : corolles, tubes et roses" fetchpriority="high"></div>
+        <figcaption class="cartel"><b>Corolles, tubes et roses</b>Porcelaine blanche et grès noir assemblés<i>Christèle Cadoret, pièces uniques</i></figcaption>
+      </figure>
+      <div class="texte">
+        <p>Je façonne et j'assemble porcelaine et grès au Pavillon des Terres, mon atelier-boutique au cœur du village, contigu aux jardins remarquables de l'abbaye Saint-Georges. Mes pièces s'inspirent de la nature, mais aussi des collections muséales.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#visite">Venir à l'atelier</a>
+          <a class="btn btn-contour nowrap" href="tel:+33640465530">06 40 46 55 30</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faits">
+    <ul class="contenu">
+      <li><b>Lauréate Normandie</b>Ateliers d'Art de France 2025, sculpture «&nbsp;Coque Marine&nbsp;»</li>
+      <li><b>3,05 m de haut</b>Un totem de 5&nbsp;cm de diamètre, Biennale Révélation</li>
+      <li><b>Musées de France</b>Des œuvres acquises, Château de Martainville</li>
+      <li><b>Mercredi au dimanche</b>Atelier ouvert, 10&nbsp;h – 12&nbsp;h et 14&nbsp;h – 18&nbsp;h 30</li>
+    </ul>
+  </div>
+
+  <section class="demarche" id="demarche">
+    <div class="contenu">
+      <div class="diptyque">
+        <figure class="p1 apparait">
+          <img src="assets/pavillon-des-terres-st-martin-de-boscherville/porcelaine-tubes-et-corolles.webp" width="2560" height="2560" alt="Sculpture en porcelaine blanche : tubes évasés dressés au-dessus de corolles, sur fond noir" loading="lazy">
+          <figcaption class="etiquette">Porcelaine, tubes et corolles</figcaption>
+        </figure>
+        <figure class="p2 apparait">
+          <img src="assets/pavillon-des-terres-st-martin-de-boscherville/gres-ocre-porcelaine-corolles.webp" width="1280" height="1280" alt="Base en grès ocre alvéolé d'où sortent des corolles et des filaments de porcelaine blanche" loading="lazy">
+        </figure>
+      </div>
+      <div class="intro">
+        <h2 class="titre-section">Ma démarche</h2>
+        <p>J'expérimente chaque jour de nouvelles techniques, notamment l'assemblage des grès et des porcelaines. Je suis attachée aux formes organiques&nbsp;; toutes mes sculptures sont des pièces uniques. La nature et les paysages qui m'accompagnent nourrissent mes rêveries dans des voyages imaginaires.</p>
+        <div class="matieres">
+          <div class="porcelaine">
+            <h3>La porcelaine</h3>
+            <p>Pour sa blancheur, sa douceur, sa pureté et sa capacité à être travaillée tout en finesse.</p>
+          </div>
+          <div class="gres">
+            <h3>Le grès</h3>
+            <p>Pour son côté brut, ses teintes chaudes et naturelles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exception">
+    <div class="contenu">
+      <div class="tete">
+        <h2 class="titre-section" style="margin:0">Concours et pièces de musée</h2>
+        <p>Des distinctions, des œuvres entrées dans les collections publiques et des commandes d'exception.</p>
+      </div>
+      <ol class="registre">
+        <li><h3>Coque Marine</h3><p>Lauréate Normandie du concours Ateliers d'Art de France 2025.</p><span class="lieu">Ateliers d'Art de France</span></li>
+        <li><h3>Le totem</h3><p>3,05 m de hauteur pour 5&nbsp;cm de diamètre, présenté à la Biennale internationale des métiers d'art et création.</p><span class="lieu">Révélation</span></li>
+        <li><h3>Musées de France</h3><p>Des œuvres acquises par les Musées de France pour le Musée des Traditions et des Arts Normands, «&nbsp;Le beau Geste&nbsp;».</p><span class="lieu">Château de Martainville</span></li>
+        <li><h3>L'éventail</h3><p>Un éventail ajouré en porcelaine, commandé par la présidente des amis du musée de l'éventail.</p><span class="lieu">Commande</span></li>
+      </ol>
+      <div class="lien"><a class="btn btn-contour" href="https://www.lepavillondesterres.fr/expositions/" target="_blank" rel="noopener">Toutes les expositions</a></div>
+    </div>
+  </section>
+
+  <section class="moment" id="moment">
+    <div class="contenu">
+      <figure class="apparait">
+        <img src="assets/pavillon-des-terres-st-martin-de-boscherville/atelier-boutique-fenetre-cintree.webp" width="4032" height="3024" alt="Intérieur de l'atelier-boutique : fenêtre cintrée, meuble à tiroirs couvert de pièces, four, pièces murales" loading="lazy">
+        <figcaption class="etiquette">L'atelier-boutique</figcaption>
+      </figure>
+      <div>
+        <h2 class="titre-section">À l'atelier en ce moment</h2>
+        <p>Le Pavillon des Terres est mon atelier, ouvert au public&nbsp;: on peut m'y voir travailler. C'est aussi une boutique et un espace culturel qui accueille deux expositions par an, où graveurs, peintres et plasticiens investissent les murs.</p>
+        <div class="affiche">
+          <small>Exposition en cours, jusqu'au 10 janvier 2027</small>
+          <b>Sophie Drouot, gravures et dessins</b>
+        </div>
+        <div class="affiche">
+          <small>Prochain grand rendez-vous, du 19 au 23 mai 2027</small>
+          <b>Biennale internationale des métiers d'art et création</b>
+          <span>Grand Palais, Paris</span>
+        </div>
+        <p>Au printemps, un marché potier réunit des céramistes dans la cour.</p>
+        <div class="actions"><a class="btn btn-contour" href="https://www.lepavillondesterres.fr/le-lieu/" target="_blank" rel="noopener">Découvrir le lieu</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galerie">
+    <div class="contenu">
+      <h2 class="titre-section">Porcelaine, grès, et le jardin</h2>
+      <figure class="grande apparait">
+        <img src="assets/pavillon-des-terres-st-martin-de-boscherville/champignons-porcelaine-jardin.webp" width="4032" height="3024" alt="Trois grandes sculptures en forme de champignons, chapeaux en porcelaine plissée, plantées dans un massif de pâquerettes" loading="lazy">
+        <figcaption><b>Champignons</b>Porcelaine plissée, dans un massif fleuri</figcaption>
+      </figure>
+      <div class="colonne">
+        <figure class="apparait">
+          <img src="assets/pavillon-des-terres-st-martin-de-boscherville/sphere-fleurs-noires.webp" width="3024" height="3024" alt="Sphère en porcelaine noire couverte de fleurs à cœur alvéolé" loading="lazy">
+          <figcaption><b>Sphère aux fleurs noires</b>Porcelaine noire</figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/pavillon-des-terres-st-martin-de-boscherville/spheres-grises-porcelaine.webp" width="3024" height="3024" alt="Cinq sphères en grès gris couvertes de petites rondelles de porcelaine blanche" loading="lazy">
+          <figcaption><b>Sphères</b>Grès gris et rondelles de porcelaine</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite">
+    <div class="contenu">
+      <div>
+        <figure class="apparait">
+          <img src="assets/pavillon-des-terres-st-martin-de-boscherville/facade-atelier-boutique.webp" width="4032" height="3024" alt="Façade en bardage rouge avec l'enseigne Céramique, le pavillon des terres, atelier, boutique ; clocher derrière" loading="lazy">
+          <figcaption class="etiquette">22, route de l'abbaye</figcaption>
+        </figure>
+        <div class="apres-photo">
+          <p>Mes pièces sont aussi présentées dans ces boutiques&nbsp;:</p>
+          <ul class="ventes">
+            <li><b>Musée des Impressionnismes</b>, boutique du musée, Giverny</li>
+            <li><b>GVRNY, la Maison des Métiers d'Art</b>, Douains</li>
+            <li><b>Boutique des Métiers d'Art</b>, Aître Saint-Maclou, Rouen</li>
+            <li><b>Musée de la céramique</b>, boutique du musée, Ger</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 class="titre-section">Me rendre visite</h2>
+        <div class="cartel-horaires">
+          <h3>Horaires de l'atelier</h3>
+          <dl>
+            <dt>Mercredi au dimanche</dt><dd>10&nbsp;h – 12&nbsp;h et 14&nbsp;h – 18&nbsp;h&nbsp;30</dd>
+            <dt>Lundi et mardi</dt><dd>Sur appel téléphonique</dd>
+          </dl>
+          <p class="note">Salons, expositions, livraisons&nbsp;: assurez-vous de ma présence d'un simple appel ou d'un SMS.</p>
+          <div class="coord">
+            <span>22, route de l'abbaye<br>76840 Saint-Martin-de-Boscherville</span>
+            <a class="nowrap" href="tel:+33640465530">06 40 46 55 30</a>
+            <a href="mailto:lepavillondesterres@gmail.com">lepavillondesterres@gmail.com</a>
+          </div>
+        </div>
+        <p style="margin-top:28px;color:var(--encre-2);font-size:16.5px">En bus, ligne 530 du réseau Astuce depuis Rouen ou Caudebec-en-Caux. L'atelier est dans le Parc naturel régional des Boucles de la Seine normande et porte la marque Valeurs Parc&nbsp;: vous y trouverez les guides du parc et les bonnes adresses de producteurs et d'artisans.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="https://www.lepavillondesterres.fr/contact-us/" target="_blank" rel="noopener">Écrire à l'atelier</a>
+          <a class="btn btn-contour" href="https://www.lepavillondesterres.fr/points-de-vente/" target="_blank" rel="noopener">Points de vente</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="contenu">
+    <div>
+      <b>Le Pavillon des Terres</b>
+      <p>Christèle Cadoret, céramiste Artisan d'Art. Pièces uniques en porcelaine et grès.</p>
+    </div>
+    <div>
+      <h3>Atelier-boutique</h3>
+      <p>22, route de l'abbaye<br>76840 Saint-Martin-de-Boscherville</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Mercredi au dimanche<br>10&nbsp;h – 12&nbsp;h, 14&nbsp;h – 18&nbsp;h&nbsp;30<br>Lundi et mardi sur appel</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33640465530">06 40 46 55 30</a></li>
+        <li><a href="mailto:lepavillondesterres@gmail.com">Écrire un e-mail</a></li>
+        <li><a href="https://www.instagram.com/lepavillondesterres/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61568675967037" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://ateliersdart.com/repertoire-des-ateliers/cadoret-christele/" target="_blank" rel="noopener">Ateliers d'Art de France</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Le Pavillon des Terres</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

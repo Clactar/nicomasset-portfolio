@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atelier La Terre Tourne · Cours et stages de céramique à Pleyben</title>
+<meta name="description" content="Cours hebdomadaires et stages d'une semaine de tournage et de modelage avec Jeanne-Sarah, céramiste, à Pont Coblant, Pleyben.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232F6F9F'/%3E%3Ccircle cx='32' cy='32' r='27' fill='none' stroke='%23F2F1EF' stroke-width='1.5' opacity='.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F2F1EF'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;1,400&family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E4E2DF; --base-2:#D8D5D0; --surface:#F2F1EF; --encre:#232120; --encre-2:#55514D;
+  --accent:#2F6F9F; --accent-pale:#D3DEE8; --sombre:#2B2A28; --clair:#ECEAE6;
+  --ombre:0 30px 60px -34px rgba(43,42,40,.6);
+  --display:'Besley', Georgia, serif; --texte:'Inclusive Sans', 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+.contenu{width:min(1200px,100% - 2*clamp(20px,5vw,40px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+.court{display:none}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(228,226,223,.95);border-bottom:1px solid rgba(35,33,32,.08)}
+.entete .contenu{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marque i{width:34px;height:34px;border-radius:50%;flex:none;background:radial-gradient(circle,var(--surface) 0 6px,transparent 7px),repeating-radial-gradient(circle,var(--accent) 0 1.5px,transparent 2px 6px)}
+.marque b{font-family:var(--display);font-weight:500;font-size:21px;line-height:1.1;display:block}
+.marque small{display:block;font-size:13px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:15.5px}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:999px;font:500 16.5px/1.2 var(--display);text-decoration:none;border:1.5px solid var(--encre);transition:background .25s ease,color .25s ease,transform .25s ease,border-color .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre)}
+.btn-contour{color:var(--encre)}
+.btn-contour:hover{background:var(--surface)}
+.btn-petit{min-height:42px;padding:9px 20px;font-size:15px}
+
+/* Héros : la girelle */
+.heros{padding:clamp(40px,6vw,88px) 0 clamp(64px,8vw,112px)}
+.heros .contenu{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-areas:"titre roue" "texte roue";column-gap:clamp(40px,6vw,96px);align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(38px,6vw,80px);line-height:1.04;letter-spacing:-.015em;align-self:end}
+.heros .texte{grid-area:texte;align-self:start;padding-top:26px}
+.heros .texte p{font-size:19px;color:var(--encre-2);max-width:33em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.reseau{font-size:15px;color:var(--encre-2);margin-top:18px}
+.roue{grid-area:roue;margin:0;position:relative;width:min(520px,100%);justify-self:center;aspect-ratio:1;display:grid;place-items:center}
+.roue::before,.roue::after,.roue .anneau{content:"";position:absolute;border-radius:50%;border:1px solid rgba(47,111,159,.45);pointer-events:none}
+.roue::before{inset:0}
+.roue::after{inset:5.5%;border-color:rgba(47,111,159,.6)}
+.roue .anneau{inset:11%;border-color:rgba(35,33,32,.25)}
+.roue img{position:relative;width:78%;aspect-ratio:1;object-fit:cover;object-position:52% 62%;border-radius:50%;box-shadow:0 40px 70px -36px rgba(43,42,40,.7)}
+.roue figcaption{position:absolute;left:4%;bottom:13%;background:var(--surface);font-size:14.5px;padding:8px 16px;border-radius:999px;box-shadow:0 14px 30px -16px rgba(43,42,40,.6)}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.faits li{padding:30px 24px 30px 0;font-size:15.5px;color:var(--encre-2);line-height:1.45}
+.faits li+li{padding-left:24px;border-left:1px solid rgba(35,33,32,.14)}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:23px;color:var(--encre);margin-bottom:4px;line-height:1.15}
+
+section{padding:clamp(72px,9vw,128px) 0}
+.titre-section{font-size:clamp(32px,4vw,52px);margin-bottom:22px}
+.chapo{font-size:19px;color:var(--encre-2);max-width:40em}
+
+/* Cours et stages */
+.formules{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;margin-top:48px;align-items:stretch}
+.formule{border-radius:22px;padding:clamp(28px,4vw,44px);position:relative}
+.formule h3{font-size:clamp(26px,2.6vw,34px);margin-bottom:10px}
+.formule .accroche{font-size:17px;margin-bottom:24px}
+.cours{background:var(--surface);box-shadow:var(--ombre)}
+.stage{background:var(--accent);color:#EEF3F7}
+.stage .accroche{color:#D3E1EC}
+.lignes{margin:0;padding:0;list-style:none;border-top:1px solid currentColor;border-color:rgba(35,33,32,.15)}
+.stage .lignes{border-color:rgba(238,243,247,.3)}
+.lignes li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid rgba(35,33,32,.15);font-size:16.5px}
+.stage .lignes li{border-color:rgba(238,243,247,.3)}
+.lignes li span:first-child{color:var(--encre-2)}
+.stage .lignes li span:first-child{color:#C7D8E6}
+.lignes li span:last-child{text-align:right}
+.prix{font-family:var(--display);font-size:22px;white-space:nowrap}
+.formule .liens{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.stage .btn-contour{border-color:#EEF3F7;color:#EEF3F7}
+.stage .btn-contour:hover{background:#EEF3F7;color:var(--accent)}
+.cours .btn-contour{border-color:var(--encre)}
+
+.semaine{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);margin-top:clamp(56px,7vw,88px);align-items:start}
+.semaine h3{font-size:clamp(24px,2.4vw,30px);margin-bottom:12px}
+.semaine p{color:var(--encre-2);font-size:17px}
+.frise{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative}
+.frise::before{content:"";position:absolute;left:8px;right:8px;top:8px;height:1px;background:rgba(35,33,32,.3)}
+.frise li{position:relative;padding:34px 16px 0 0;font-size:16px;line-height:1.45}
+.frise li::before{content:"";position:absolute;left:0;top:0;width:17px;height:17px;border-radius:50%;background:var(--base);border:1.5px solid var(--accent)}
+.frise li.ete::before{background:var(--accent)}
+.frise b{display:block;font-family:var(--display);font-weight:500;font-size:20px;margin-bottom:4px}
+.frise span{color:var(--encre-2)}
+.horaires{background:var(--surface);border-radius:18px;padding:22px 26px;margin-top:30px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 22px;font-size:16px}
+.horaires dt{font-family:var(--display);font-weight:500}
+.horaires dd{margin:0;color:var(--encre-2)}
+
+/* Deux gestes */
+.gestes{background:var(--surface)}
+.geste{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.geste+.geste{margin-top:clamp(64px,8vw,104px)}
+.geste.inverse{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}
+.geste.inverse figure{order:2}
+.geste figure{margin:0;position:relative}
+.geste img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:var(--ombre)}
+.geste .tournage img{object-position:50% 60%}
+.geste .modelage img{object-position:45% 50%}
+.geste figure::after{content:"";position:absolute;inset:auto auto -22px -22px;width:46%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(47,111,159,.5);z-index:-1}
+.geste.inverse figure::after{inset:-22px -22px auto auto}
+.geste h3{font-size:clamp(30px,3.4vw,44px);margin-bottom:16px}
+.geste p{color:var(--encre-2)}
+.citation{margin:clamp(72px,9vw,120px) auto 0;max-width:960px;text-align:left;font-family:var(--display);font-size:clamp(26px,3.2vw,40px);line-height:1.28;font-style:italic;color:var(--encre)}
+.citation footer{font-family:var(--texte);font-style:normal;font-size:16px;color:var(--encre-2);margin-top:18px}
+
+/* La céramiste (sombre) */
+.ceramiste{background:var(--sombre);color:var(--clair)}
+.ceramiste .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.ceramiste figure{margin:0;position:relative}
+.ceramiste img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 60%;border-radius:24px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.ceramiste .etiquette{background:var(--surface);color:var(--encre)}
+.ceramiste p{color:#CFCBC5}
+.ceramiste .titre-section{color:#F2F1EF}
+.ceramiste .btn-contour{border-color:#ECEAE6;color:#ECEAE6}
+.ceramiste .btn-contour:hover{background:#ECEAE6;color:var(--sombre)}
+.etiquette{position:absolute;left:18px;bottom:18px;font-size:14.5px;padding:8px 15px;border-radius:999px;background:var(--surface)}
+
+/* L'endroit */
+.endroit .contenu{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.photos-lieu{position:relative;padding-bottom:22%}
+.photos-lieu figure{margin:0}
+.photos-lieu .facade img{width:86%;aspect-ratio:3/2;object-fit:cover;object-position:50% 55%;border-radius:20px;box-shadow:var(--ombre)}
+.photos-lieu .interieur{position:absolute;right:0;bottom:0;width:54%}
+.photos-lieu .interieur img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;border:8px solid var(--surface);box-shadow:var(--ombre)}
+.carte{background:var(--surface);border-radius:22px;padding:clamp(26px,3.6vw,38px);box-shadow:var(--ombre);margin-top:30px}
+.carte dl{margin:0;display:grid;gap:16px}
+.carte dt{font-size:14px;color:var(--encre-2)}
+.carte dd{margin:0;font-family:var(--display);font-size:20px;line-height:1.35;overflow-wrap:anywhere}
+.carte dd a{text-decoration:none;border-bottom:1px solid rgba(47,111,159,.45)}
+.carte dd a:hover{color:var(--accent)}
+.carte .note{font-family:var(--texte);font-size:15px;color:var(--encre-2);margin-top:4px}
+
+.pied{background:var(--sombre);color:#D2CEC8;padding:64px 0 40px;font-size:15.5px}
+.pied .contenu{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:36px}
+.pied b{font-family:var(--display);font-weight:500;font-size:24px;color:#F2F1EF;display:block;margin-bottom:8px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:400;color:#A39E97;margin-bottom:10px}
+.pied p{margin:0}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#F2F1EF;text-decoration:underline}
+.proposition{background:var(--sombre);color:#8D8882;text-align:center;font-size:13.5px;padding:18px 20px 28px;border-top:1px solid rgba(236,234,230,.08)}
+
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1!important;transform:none!important}
+
+@media (max-width:980px){
+  .nav a:not(.btn){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li{border-top:1px solid rgba(35,33,32,.1)}
+  .formules,.semaine,.ceramiste .contenu,.endroit .contenu,.geste,.geste.inverse{grid-template-columns:minmax(0,1fr)}
+  .geste.inverse figure{order:0}
+  .geste.inverse figure::after{inset:auto auto -22px -22px}
+  .geste img{aspect-ratio:5/4}
+  .pied .contenu{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .contenu>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros .contenu{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "roue" "texte"}
+  .roue{margin-top:24px;width:min(400px,100%)}
+  .frise{grid-template-columns:minmax(0,1fr);row-gap:24px}
+  .frise::before{left:8px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
+  .frise li{padding:0 0 0 34px}
+  .marque small{display:none}
+}
+@media (max-width:420px){
+  .actions .btn,.formule .liens .btn{width:100%}
+  .entete .long{display:none}.entete .court{display:inline}
+  .marque b{font-size:19px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li,.faits li+li{padding:20px 0;border-left:0}
+  .lignes li{flex-direction:column;gap:2px}
+  .lignes li span:last-child{text-align:left}
+  .horaires{grid-template-columns:minmax(0,1fr);gap:2px}
+  .horaires dd{margin-bottom:10px}
+  .roue figcaption{left:0;font-size:13.5px}
+  .pied .contenu{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="contenu">
+    <a class="marque" href="#haut"><i aria-hidden="true"></i><span><b>La Terre Tourne</b><small>Atelier de céramique, Pleyben</small></span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#cours">Cours et stages</a>
+      <a href="#ceramiste">La céramiste</a>
+      <a href="#endroit">L'atelier</a>
+      <a class="btn btn-plein btn-petit nowrap" href="tel:+33618783955"><span class="long">06 18 78 39 55</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <div class="contenu">
+      <h1>Tourner et modeler la terre à Pont Coblant</h1>
+      <figure class="roue">
+        <span class="anneau" aria-hidden="true"></span>
+        <img src="assets/la-terre-tourne-pleyben/mains-tournage-terre-grise.webp" width="2332" height="2137" alt="Deux mains couvertes de barbotine centrent une motte de grès gris sur le tour" fetchpriority="high">
+        <figcaption>Grès gris, sur le tour</figcaption>
+      </figure>
+      <div class="texte">
+        <p>Des cours de quelques heures chaque semaine ou des stages d'une semaine, pour adultes, animés par Jeanne-Sarah, céramiste professionnelle depuis 2010, dans son atelier de Pleyben, non loin du canal de Nantes à Brest.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#cours">Voir les cours et les stages</a>
+          <a class="btn btn-contour nowrap" href="tel:+33618783955">06 18 78 39 55</a>
+        </div>
+        <p class="reseau">Le réseau passe mal à Pont Coblant&nbsp;: le mail ou le SMS restent le plus sûr.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faits">
+    <ul class="contenu">
+      <li><b>Depuis 2010</b>Céramiste professionnelle</li>
+      <li><b>10 ans d'enseignement</b>Arts appliqués, design et modelage</li>
+      <li><b>Tournage et modelage</b>Pour débutants et confirmés</li>
+      <li><b>Pont Coblant</b>Pleyben, Finistère</li>
+    </ul>
+  </div>
+
+  <section class="formules-section" id="cours">
+    <div class="contenu">
+      <h2 class="titre-section">Les cours et les stages</h2>
+      <p class="chapo">Deux façons d'apprendre le tour de potier ou le modelage de l'argile, en petit groupe, avec une professionnelle de la céramique qui adapte son approche à chacun.</p>
+
+      <div class="formules">
+        <article class="formule cours">
+          <h3>Les cours hebdomadaires</h3>
+          <p class="accroche">Quelques heures chaque samedi matin, au fil d'une session.</p>
+          <ul class="lignes">
+            <li><span>Jour et horaire</span><span>Samedi, 9&nbsp;h – 13&nbsp;h</span></li>
+            <li><span>Session</span><span>6 séances de 4&nbsp;h</span></li>
+            <li><span>Compris</span><span>Terres, émaux et cuissons</span></li>
+            <li><span>Tarif de la session</span><span class="prix">336&nbsp;€</span></li>
+          </ul>
+          <p style="font-size:15px;color:var(--encre-2);margin:12px 0 0">Paiement possible en trois fois.</p>
+          <div class="liens">
+            <a class="btn btn-contour" href="https://www.laterretourne.com/les-cours-et-stages/les-cours-hebdomadaires/s-inscrire/" target="_blank" rel="noopener">S'inscrire aux cours</a>
+            <a class="btn btn-contour" href="https://www.laterretourne.com/les-cours-et-stages/les-cours-hebdomadaires/" target="_blank" rel="noopener">Le calendrier</a>
+          </div>
+        </article>
+
+        <article class="formule stage">
+          <h3>Les stages d'une semaine</h3>
+          <p class="accroche">Cinq jours pour s'immerger dans le tournage ou le modelage.</p>
+          <ul class="lignes">
+            <li><span>Durée</span><span>20&nbsp;h sur 5 jours</span></li>
+            <li><span>Places</span><span>4 à 5 en tournage, 4 en modelage</span></li>
+            <li><span>Public</span><span>Adultes et adolescents dès 15 ans</span></li>
+            <li><span>Compris</span><span>Terre, matériel, cuissons, émaillage éventuel</span></li>
+            <li><span>Tarif du stage</span><span class="prix">360&nbsp;€</span></li>
+          </ul>
+          <p style="font-size:15px;color:#C7D8E6;margin:12px 0 0">Expédition de vos pièces après le stage possible, avec un supplément de 25&nbsp;€.</p>
+          <div class="liens">
+            <a class="btn btn-contour" href="mailto:jeannesarahbellaiche@gmail.com">Écrire à Jeanne-Sarah</a>
+            <a class="btn btn-contour" href="https://www.laterretourne.com/les-cours-et-stages/le-modelage-ou-le-tournage-en-stages/tarifs/" target="_blank" rel="noopener">Tarifs des stages</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="semaine">
+        <div>
+          <h3>Le rythme de l'année</h3>
+          <p>En général, quatre stages par an, calés sur les vacances scolaires. Les dates sont annoncées dès qu'elles sont programmées&nbsp;: il n'y a pas de pré-réservation avant, ni de stage à la carte.</p>
+        </div>
+        <div>
+          <ol class="frise">
+            <li><b>Hiver</b><span>Vacances d'hiver bretonnes</span></li>
+            <li><b>Printemps</b><span>Vacances de printemps</span></li>
+            <li class="ete"><b>Été</b><span>Deux stages, dans la deuxième quinzaine de juillet</span></li>
+          </ol>
+          <dl class="horaires">
+            <dt>Lundi</dt><dd>Tournage de 10&nbsp;h à 12&nbsp;h puis de 13&nbsp;h&nbsp;30 à 15&nbsp;h&nbsp;30 (repas sur place à prévoir). Modelage de 13&nbsp;h&nbsp;30 à 17&nbsp;h&nbsp;30.</dd>
+            <dt>Mardi au vendredi</dt><dd>Tout le monde ensemble, de 9&nbsp;h à 13&nbsp;h.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gestes">
+    <div class="contenu">
+      <div class="geste">
+        <figure class="tournage apparait">
+          <img src="assets/la-terre-tourne-pleyben/tournage-bol-sur-tour.webp" width="1181" height="1775" alt="Une personne penchée sur le tour monte un bol en terre claire" loading="lazy">
+          <figcaption class="etiquette">Un bol qui monte</figcaption>
+        </figure>
+        <div>
+          <h3>Le tournage</h3>
+          <p>Gardez à l'esprit que l'apprentissage du tour de potier est un exercice de longue haleine&nbsp;: il demande patience, concentration et ténacité.</p>
+          <p>Une professionnelle de la céramique, pédagogue, vous guide dans vos premiers pas ou vous aide à vous perfectionner.</p>
+        </div>
+      </div>
+      <div class="geste inverse">
+        <figure class="modelage apparait">
+          <img src="assets/la-terre-tourne-pleyben/sculpture-spirale-en-cours.webp" width="1310" height="1968" alt="Grande sculpture spiralée en terre crue frappée à la batte de bois sur une sellette" loading="lazy">
+          <figcaption class="etiquette">Terre crue, frappée à la batte</figcaption>
+        </figure>
+        <div>
+          <h3>Le modelage</h3>
+          <p>Un espace de liberté pour laisser libre cours à votre imagination. L'atelier est ouvert à tous, débutants compris, avec une approche adaptée à chacun pour développer sa créativité avec plaisir, dans un contexte convivial.</p>
+        </div>
+      </div>
+      <blockquote class="citation">«&nbsp;Venez apprendre une technique ancestrale qui, comme un art martial, vous aidera à maîtriser souffle, geste et concentration.&nbsp;»
+        <footer>Jeanne-Sarah, à propos du tournage</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="ceramiste" id="ceramiste">
+    <div class="contenu">
+      <figure class="apparait">
+        <img src="assets/la-terre-tourne-pleyben/exposition-sculptures-vagues.webp" width="2067" height="1969" alt="Sculptures en céramique en forme de vagues, noires et dorées, sur des socles blancs dans une salle en pierre" loading="lazy">
+        <figcaption class="etiquette">Céramiques en vague</figcaption>
+      </figure>
+      <div>
+        <h2 class="titre-section">Jeanne-Sarah, céramiste</h2>
+        <p>Trente-cinq ans d'expérience du modelage, trente dans la céramique, et dix ans comme enseignante titulaire en arts appliqués, design et modelage, en lycée professionnel des métiers du volume et en atelier pour enfants.</p>
+        <p>Passionnée de pédagogie, je cherche pour chacun, quels que soient son niveau et son ambition, la façon de progresser et d'accéder à ce qu'il ne connaît pas, en y prenant plaisir.</p>
+        <p>Je reste avant tout céramiste, modeleuse, tourneuse&nbsp;: je crée des céramiques en grès, tournées, modelées, émaillées, que je vends à l'atelier, sur les salons, en boutiques et en galeries, en France et à l'international.</p>
+        <div class="actions">
+          <a class="btn btn-contour" href="https://www.jeannesarah.com/" target="_blank" rel="noopener">Voir ses créations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="endroit" id="endroit">
+    <div class="contenu">
+      <div class="photos-lieu">
+        <figure class="facade apparait">
+          <img src="assets/la-terre-tourne-pleyben/facade-atelier-bois.webp" width="4592" height="3056" alt="Façade en bardage bois de l'atelier, grande baie vitrée et pots de fleurs rouges" loading="lazy">
+        </figure>
+        <figure class="interieur apparait">
+          <img src="assets/la-terre-tourne-pleyben/atelier-tours-etageres.webp" width="2592" height="1936" alt="L'atelier : tours de potier, établi en bois et étagères de pièces crues" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2 class="titre-section">L'atelier, à Stéréon</h2>
+        <p>L'atelier est au lieu-dit Stéréon, à Pont Coblant, commune de Pleyben, non loin du canal de Nantes à Brest. Garez-vous derrière la grange en pierre, sur votre droite.</p>
+        <p>C'est aussi un lieu d'exposition, ouvert sur rendez-vous toute l'année&nbsp;: de préférence par mail ou par SMS.</p>
+        <div class="carte">
+          <dl>
+            <div><dt>Adresse</dt><dd>410 Stéréon, Pont Coblant<br>29190 Pleyben</dd></div>
+            <div><dt>Téléphone et SMS</dt><dd><a class="nowrap" href="tel:+33618783955">06 18 78 39 55</a> · <a href="sms:+33618783955">SMS</a></dd><dd class="note">Le réseau est capricieux à Pont Coblant&nbsp;: préférez le mail ou le texto.</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:jeannesarahbellaiche@gmail.com">jeannesarahbellaiche@gmail.com</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="contenu">
+    <div>
+      <b>Atelier La Terre Tourne</b>
+      <p>Jeanne-Sarah Bellaiche, céramiste. Cours de tournage et de modelage, stages d'une semaine pour adultes.</p>
+    </div>
+    <div>
+      <h3>Atelier</h3>
+      <p>410 Stéréon, Pont Coblant<br>29190 Pleyben<br>Cours le samedi, 9&nbsp;h – 13&nbsp;h<br>Exposition sur rendez-vous</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33618783955">06 18 78 39 55</a></li>
+        <li><a href="mailto:jeannesarahbellaiche@gmail.com">Écrire un e-mail</a></li>
+        <li><a href="https://www.laterretourne.com/contact/" target="_blank" rel="noopener">Formulaire de contact</a></li>
+        <li><a href="https://www.facebook.com/jeannesarahceramiste/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour l'Atelier La Terre Tourne</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

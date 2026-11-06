@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Carde à Chiens · Toiletteur chien et chat à Mondeville</title>
+<meta name="description" content="La Carde à Chiens, salon de toilettage chiens, chats et NAC à Mondeville, près de Caen : produits bio, sur rendez-vous. 14 rue des Merisiers, 06 78 62 72 20.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232B2433'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23EDE9F1'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EDE9F1; --base-2:#E2DCE8; --surface:#F8F6FA; --encre:#261F2E; --encre-2:#564D60;
+  --accent:#6A8F3C; --accent-fonce:#557531; --sombre:#2B2433; --sombre-2:#3A3144; --lavande:#C9B8DA;
+  --ombre:0 30px 60px -34px rgba(43,36,51,.6);
+  --display:'Gloock', Georgia, serif; --texte:'Figtree', 'Helvetica Neue', sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.06;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1200px,100% - 48px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(237,233,241,.95);border-bottom:1px solid rgba(38,31,46,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marque img{width:44px;height:44px;border-radius:50%}
+.marque span{display:flex;flex-direction:column;line-height:1.15}
+.marque b{font-family:var(--display);font-weight:400;font-size:23px}
+.marque small{font-size:14px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a.lien{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a.lien:hover{color:var(--accent-fonce)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 28px;font-family:var(--texte);font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid var(--encre);line-height:1.2;text-align:center;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent-fonce);border-color:var(--accent-fonce);color:var(--surface);box-shadow:0 18px 30px -18px rgba(85,117,49,.9)}
+.btn-plein:hover{background:var(--sombre);border-color:var(--sombre)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-clair{border-color:rgba(248,246,250,.5);color:var(--surface)}
+.btn-clair:hover{background:var(--surface);color:var(--encre)}
+.btn-tel{padding:10px 20px;font-size:16px;white-space:nowrap;border-color:rgba(38,31,46,.35)}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* Héros */
+.heros{padding:80px 0 120px}
+.heros .env{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"titre visuel" "texte visuel";column-gap:80px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(36px,5.3vw,74px);align-self:end}
+.heros .texte{grid-area:texte;align-self:start;margin-top:28px}
+.heros .texte p{font-size:20px;color:var(--encre-2);max-width:29em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.visuel{grid-area:visuel;position:relative;padding:0 0 70px 40px}
+.passe{margin:0;background:var(--surface);padding:16px;border-radius:22px;box-shadow:0 40px 80px -40px rgba(43,36,51,.7),0 12px 24px -16px rgba(43,36,51,.25)}
+.passe img{width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:50% 40%;border-radius:10px}
+.tampon{position:absolute;left:0;bottom:0;width:168px;height:168px;transform:rotate(-9deg);filter:drop-shadow(0 16px 20px rgba(43,36,51,.28))}
+.tampon svg{width:100%;height:100%;display:block}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0;padding:34px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px}
+.faits li{font-family:var(--display);font-size:24px;line-height:1.2;display:flex;align-items:center;gap:14px}
+.faits li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none}
+
+/* Démarche */
+.demarche{background:var(--sombre);color:var(--surface);padding:136px 0 128px;position:relative}
+.demarche .env{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:80px;align-items:center}
+.demarche .qui{font-size:17px;color:var(--lavande)}
+.demarche blockquote{margin:18px 0 0;font-family:var(--display);font-size:clamp(40px,6.6vw,96px);line-height:1;letter-spacing:-.015em;text-wrap:balance}
+.valeurs{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px}
+.valeurs span{border:1.5px solid rgba(201,184,218,.45);border-radius:999px;padding:10px 22px;font-size:17px}
+.demarche .chapo{margin-top:36px;color:#CFC6DA;max-width:34em}
+.demarche figure{margin:0;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -34px rgba(0,0,0,.75);transform:rotate(-3deg);aspect-ratio:1/1}
+.demarche figure img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:600;padding:8px 14px;border-radius:999px;line-height:1.25;max-width:calc(100% - 28px)}
+
+/* Planche avant/après */
+.planche{padding:128px 0 120px}
+.planche .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end}
+.planche h2{font-size:clamp(34px,4vw,56px)}
+.planche .tete p{color:var(--encre-2);max-width:31em}
+.vignettes{list-style:none;margin:64px 0 0;padding:44px 32px 36px;background:var(--surface);border-radius:28px;box-shadow:var(--ombre);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.vignettes li{display:flex;flex-direction:column;align-items:center;text-align:center}
+.vignettes figure{margin:0;width:min(200px,100%);padding:8px 8px 10px;border-radius:8px;background:var(--base);box-shadow:0 18px 30px -20px rgba(43,36,51,.6)}
+.vignettes li:nth-child(odd) figure{transform:rotate(-2deg)}
+.vignettes li:nth-child(even) figure{transform:rotate(2deg);margin-top:18px}
+.vignettes img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 0;border-radius:4px}
+.vignettes b{font-family:var(--display);font-weight:400;font-size:22px;margin-top:18px;display:block}
+.vignettes p{font-size:15.5px;color:var(--encre-2);margin-top:4px;line-height:1.45}
+.planche .suite{margin-top:28px;font-size:16px;color:var(--encre-2)}
+.planche .suite a{font-weight:600;text-underline-offset:4px;text-decoration-color:rgba(106,143,60,.6)}
+
+/* Venir */
+.venir{padding:120px 0 136px;background:var(--base-2)}
+.venir .env{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:88px;align-items:center}
+.photos{position:relative;padding:0 0 90px 0}
+.photos .porte{margin:0;width:74%;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/4;position:relative}
+.photos .porte img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.photos .york{margin:0;position:absolute;right:0;bottom:0;width:48%;border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:3/4;border:8px solid var(--surface);box-shadow:0 30px 50px -26px rgba(43,36,51,.65)}
+.photos .york img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.venir h2{font-size:clamp(34px,4vw,56px)}
+.venir .intro{color:var(--encre-2);margin-top:18px;max-width:30em}
+.carte{margin-top:36px;background:var(--surface);border-radius:20px;padding:34px 36px;box-shadow:var(--ombre)}
+.horaires{list-style:none;margin:0;padding:0 0 18px;border-bottom:1px solid rgba(38,31,46,.12)}
+.horaires li{display:flex;justify-content:space-between;gap:16px;padding:6px 0}
+.horaires li span:last-child{font-weight:600;white-space:nowrap}
+.horaires li.ferme span:last-child{font-weight:400;color:var(--encre-2)}
+.rdv{font-size:15.5px;color:var(--accent-fonce);font-weight:600;margin-top:14px}
+.coord{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 28px;padding-top:20px}
+.coord span{display:block;font-size:14.5px;color:var(--encre-2)}
+.coord a,.coord p{font-weight:600;text-underline-offset:4px;text-decoration-color:rgba(106,143,60,.6)}
+.tel{white-space:nowrap}
+.liens{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:22px}
+.liens a{font-weight:600;text-underline-offset:4px;text-decoration-color:rgba(106,143,60,.6)}
+
+/* Pied */
+.pied{background:var(--sombre);color:#D8D0E2;padding:72px 0 40px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-weight:400;font-size:30px;color:var(--surface);display:block;line-height:1.1}
+.pied p,.pied li{font-size:16px;color:#BDB3C9}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:var(--lavande);margin-bottom:12px}
+.pied a{text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.3)}
+.signature{background:var(--sombre);color:#8F849C;font-size:14px;text-align:center;padding:22px 24px 30px;border-top:1px solid rgba(255,255,255,.08)}
+
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.demarche figure.apparait.vu{transform:rotate(-3deg)}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.demarche figure.apparait{transform:rotate(-3deg)}.btn{transition:none}}
+
+@media (max-width:1060px){
+  .nav a.lien{display:none}
+  .heros .env{column-gap:48px}
+  .vignettes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .demarche .env,.venir .env{gap:56px}
+}
+@media (max-width:780px){
+  .env{width:min(1200px,100% - 40px)}
+  .heros{padding:40px 0 72px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "texte"}
+  .visuel{margin-top:28px;padding:0 0 64px 0}
+  .passe{padding:10px;border-radius:20px}
+  .tampon{width:132px;height:132px;left:-4px}
+  .faits li{font-size:21px}
+  .demarche .env,.venir .env,.planche .tete{grid-template-columns:minmax(0,1fr)}
+  .planche .tete{gap:18px}
+  .demarche{padding:96px 0 88px}
+  .demarche figure{max-width:340px}
+  .planche,.venir{padding:88px 0}
+  .vignettes{grid-template-columns:repeat(2,minmax(0,1fr));padding:28px 18px;gap:24px 14px;margin-top:40px}
+  .pied .env{grid-template-columns:minmax(0,1fr);gap:32px}
+  .carte{padding:26px 22px}
+}
+@media (max-width:420px){
+  body{font-size:17px}
+  .heros .texte p{font-size:18px}
+  .actions .btn{width:100%}
+  .faits ul{flex-direction:column}
+  .coord{grid-template-columns:minmax(0,1fr)}
+  .btn-tel .long{display:none}
+  .marque small{display:none}
+  .marque b{font-size:20px}
+  .marque img{width:38px;height:38px}
+  .vignettes b{font-size:19px}
+  .vignettes p{font-size:15px}
+}
+@media (min-width:421px){.btn-tel .court{display:none}}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#"><img src="assets/la-carde-a-chiens-mondeville/logo-la-carde-a-chiens.webp" alt="" width="800" height="800"><span><b>La Carde à Chiens</b><small>Toiletteur chien et chat, Mondeville</small></span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#demarche">La démarche</a>
+      <a class="lien" href="#venir">Horaires</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33678627220"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">06 78 62 72 20</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="heros">
+  <div class="env">
+    <h1>Toilettage chien et chat à Mondeville, avec des produits bio</h1>
+    <div class="visuel">
+      <figure class="passe"><img src="assets/la-carde-a-chiens-mondeville/salon-table-violette-et-baignoire.webp" alt="Le salon : table de toilettage violette sous sa potence, baignoire grise, serviettes violettes, papier peint à motifs de chiens" width="1600" height="1200"></figure>
+      <div class="tampon" role="img" aria-label="Note Google : 4,9 sur 5, 179 avis">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="cercle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <circle cx="100" cy="100" r="98" fill="#F8F6FA"/>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#6A8F3C" stroke-width="2.5"/>
+          <circle cx="100" cy="100" r="54" fill="none" stroke="#6A8F3C" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text font-family="Figtree, sans-serif" font-size="17" font-weight="600" letter-spacing="2.2" fill="#557531"><textPath href="#cercle">note Google ★ 179 avis ★ note Google ★ 179 avis ★</textPath></text>
+          <text x="100" y="108" text-anchor="middle" font-family="Gloock, Georgia, serif" font-size="44" fill="#261F2E">4,9</text>
+          <text x="100" y="132" text-anchor="middle" font-family="Figtree, sans-serif" font-size="15" fill="#564D60">sur 5</text>
+        </svg>
+      </div>
+    </div>
+    <div class="texte">
+      <p>Respect, écoute et bien-être sont les maîtres mots du salon. Chiens, chats et NAC y sont accueillis sur rendez-vous, avec des horaires et des jours flexibles.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33678627220">Appeler pour un rendez-vous</a>
+        <a class="btn btn-contour" href="mailto:lacardeachiens@gmail.com">Écrire au salon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faits" aria-label="En bref">
+  <div class="env">
+    <ul>
+      <li>Chiens, chats et NAC</li>
+      <li>Produits bio</li>
+      <li>Horaires et jours flexibles</li>
+      <li>Sur rendez-vous uniquement</li>
+    </ul>
+  </div>
+</section>
+
+<section class="demarche" id="demarche">
+  <div class="env">
+    <div>
+      <p class="qui">La devise du salon</p>
+      <blockquote>«&nbsp;C'est bio la vie, même pour nos animaux&nbsp;!&nbsp;»</blockquote>
+      <div class="valeurs" aria-label="Les maîtres mots"><span>Respect</span><span>Douceur</span><span>Écoute</span><span>Bien-être animal</span></div>
+      <p class="chapo">Au salon, les soins se font avec des produits bio, et chaque animal est pris dans le respect, la douceur et l'écoute de son bien-être.</p>
+    </div>
+    <figure class="apparait"><img src="assets/la-carde-a-chiens-mondeville/cartes-de-visite-du-salon.webp" alt="Deux cartes de visite violettes du salon : respect, écoute et bien-être, produits bio, sur rendez-vous uniquement" width="1600" height="1200" loading="lazy"><span class="pastille">Les cartes du salon</span></figure>
+  </div>
+</section>
+
+<section class="planche">
+  <div class="env">
+    <div class="tete">
+      <h2>Avant, après, sur la table violette</h2>
+      <p>Sur la page du salon, chaque photo se lit en avant, après&nbsp;: le poil retiré d'un côté, l'animal tout beau de l'autre.</p>
+    </div>
+    <ul class="vignettes">
+      <li><figure><img src="assets/la-carde-a-chiens-mondeville/avant-apres-samoyede.webp" alt="Avant et après d'un samoyède blanc sur la table violette" width="1342" height="1600" loading="lazy"></figure><b>Twinky</b><p>Un bon débourrage et brossage, sans bain.</p></li>
+      <li><figure><img src="assets/la-carde-a-chiens-mondeville/avant-apres-spitz.webp" alt="Avant et après d'un spitz fauve et noir sur la table violette" width="1374" height="1600" loading="lazy"></figure><b>Winnie</b><p>Retrouve une robe toute soyeuse.</p></li>
+      <li><figure><img src="assets/la-carde-a-chiens-mondeville/avant-apres-bouvier-bernois.webp" alt="Avant et après d'un bouvier bernois sur la table violette" width="1317" height="1600" loading="lazy"></figure><b>Uryelle</b><p>Montée d'elle-même sur la table.</p></li>
+      <li><figure><img src="assets/la-carde-a-chiens-mondeville/avant-apres-cocker.webp" alt="Avant et après d'un cocker blanc et marron sur la table violette" width="1370" height="1600" loading="lazy"></figure><b>Bob</b><p>Épilation, coupe, brossage, bain, séchage et câlinous.</p></li>
+      <li><figure><img src="assets/la-carde-a-chiens-mondeville/avant-apres-maine-coon.webp" alt="Avant et après d'un chat maine coon gris sur la table violette" width="1438" height="1600" loading="lazy"></figure><b>Stardust</b><p>Le majestueux, débarrassé de ses nœuds.</p></li>
+    </ul>
+    <p class="suite">Tous les avant, après sont sur la <a href="https://www.facebook.com/lacardeachiens" rel="noopener">page Facebook du salon</a>.</p>
+  </div>
+</section>
+
+<section class="venir" id="venir">
+  <div class="env">
+    <div class="photos">
+      <figure class="porte apparait"><img src="assets/la-carde-a-chiens-mondeville/entree-du-salon-porte-vitree.webp" alt="Entrée du salon : porte vitrée blanche avec le logo, sous un avant-toit de tuiles" width="1200" height="1600" loading="lazy"><span class="pastille">14 rue des Merisiers</span></figure>
+      <figure class="york apparait"><img src="assets/la-carde-a-chiens-mondeville/yorkshire-sur-table-violette.webp" alt="Yorkshire assis sur la table violette, face à l'objectif" width="1200" height="1600" loading="lazy"></figure>
+    </div>
+    <div>
+      <h2>Venir au salon</h2>
+      <p class="intro">Le salon est à Mondeville, près de Caen. On y vient sur rendez-vous&nbsp;: appelez ou écrivez pour fixer le vôtre.</p>
+      <div class="carte">
+        <ul class="horaires">
+          <li><span>Lundi et mardi</span><span>9&nbsp;h – 19&nbsp;h</span></li>
+          <li><span>Mercredi</span><span>9&nbsp;h – 12&nbsp;h</span></li>
+          <li><span>Jeudi et vendredi</span><span>9&nbsp;h – 19&nbsp;h</span></li>
+          <li class="ferme"><span>Samedi et dimanche</span><span>Fermé</span></li>
+        </ul>
+        <p class="rdv">Sur rendez-vous uniquement</p>
+        <div class="coord">
+          <div><span>Téléphone</span><a class="tel" href="tel:+33678627220">06 78 62 72 20</a></div>
+          <div><span>E-mail</span><a href="mailto:lacardeachiens@gmail.com">lacardeachiens@gmail.com</a></div>
+          <div><span>Adresse</span><p>14 rue des Merisiers, 14120 Mondeville</p></div>
+          <div><span>Note Google</span><p>4,9 sur 5, 179 avis</p></div>
+        </div>
+        <div class="liens">
+          <a href="https://www.google.com/maps/place/La+Carde+%C3%A0+Chiens+-+toiletteur+chien+et+chat+-+Caen+Mondeville/data=!4m7!3m6!1s0x480a6942ee35c183:0x155fa0d4b18e23b7" rel="noopener">Voir les avis et l'itinéraire</a>
+          <a href="https://www.facebook.com/lacardeachiens" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b class="nom">La Carde à Chiens</b>
+      <p style="margin-top:12px">Salon de toilettage chiens, chats et NAC à Mondeville. Produits bio, sur rendez-vous uniquement.</p>
+    </div>
+    <div>
+      <h3>Le salon</h3>
+      <ul>
+        <li>14 rue des Merisiers, 14120 Mondeville</li>
+        <li><a class="tel" href="tel:+33678627220">06 78 62 72 20</a></li>
+        <li><a href="mailto:lacardeachiens@gmail.com">lacardeachiens@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi, mardi, jeudi, vendredi&nbsp;: 9&nbsp;h – 19&nbsp;h</li>
+        <li>Mercredi&nbsp;: 9&nbsp;h – 12&nbsp;h</li>
+        <li>Fermé samedi et dimanche</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour La Carde à Chiens</p>
+
+<script>
+(function(){
+  var r=document.documentElement; if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  r.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

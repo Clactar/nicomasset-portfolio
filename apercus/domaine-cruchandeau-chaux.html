@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine Cruchandeau, vins de Bourgogne à Chaux</title>
+<meta name="description" content="Domaine Cruchandeau, vigneron à Chaux dans les Hautes Côtes de Nuits : Nuits-Saint-Georges, Savigny-lès-Beaune, Ladoix, Puligny-Montrachet 1er cru, Bouzeron. Dégustation sur rendez-vous.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237A1F3D'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F4F2EE'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E7E4DE; --surface:#F4F2EE; --encre:#221C1D; --pinot:#7A1F3D; --sombre:#241A1D;
+  --bande:#DCD7CE; --doux:#5C5153; --filet:#CFC8BE; --clair:#EFE8E4; --clair-doux:#BFB0B3; --pinot-pale:#E6D3D7;
+  --ombre:0 30px 60px -34px rgba(36,26,29,.55);
+  --ombre-longue:0 44px 80px -40px rgba(36,26,29,.6);
+  --display:"Cormorant Garamond", "Garamond", Georgia, serif;
+  --texte:"Epilogue", "Avenir Next", sans-serif;
+  --large:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+::selection{background:var(--pinot);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0 0 1em;text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(36px,4.4vw,58px);font-weight:500}
+h3{font-size:26px;font-weight:600}
+.cadre{width:min(var(--large),100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+:focus-visible{outline:2px solid var(--pinot);outline-offset:3px;border-radius:6px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(231,228,222,.94);border-bottom:1px solid rgba(34,28,29,.08)}
+@supports (backdrop-filter:blur(2px)){.entete{background:rgba(231,228,222,.86);backdrop-filter:saturate(1.2) blur(10px)}}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.05}
+.marque b{font-family:var(--display);font-weight:600;font-size:27px;letter-spacing:.01em}
+.marque small{font-size:13px;color:var(--doux);letter-spacing:.02em;margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px}
+.nav a{text-decoration:none;color:var(--doux);transition:color .2s}
+.nav a:hover{color:var(--pinot)}
+.nav .appel{color:var(--encre);background:var(--surface);padding:11px 20px;border-radius:999px;font-weight:500;box-shadow:0 14px 30px -22px rgba(36,26,29,.6);transition:background .25s,color .25s}
+.nav .appel:hover{background:var(--pinot);color:var(--surface)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--texte);font-size:16px;font-weight:500;text-decoration:none;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;border:1.5px solid transparent;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--pinot);color:var(--surface)}
+.btn-plein:hover{background:#5F1730}
+.btn-contour{border-color:currentColor;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);border-color:var(--encre)}
+.btn-clair{background:var(--surface);color:var(--encre)}
+.btn-clair:hover{background:var(--pinot-pale)}
+.btn-contour-clair{border-color:rgba(244,242,238,.7);color:var(--surface)}
+.btn-contour-clair:hover{background:var(--surface);color:var(--encre);border-color:var(--surface)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Héros */
+.heros{padding:28px 0 0}
+.heros-cadre{position:relative;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);border-radius:24px;overflow:hidden;box-shadow:var(--ombre-longue);background:var(--sombre)}
+.heros-photo{grid-area:1/1/2/3;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 64%}
+.voile{grid-area:1/1/2/3;background:linear-gradient(180deg,rgba(36,26,29,0) 22%,rgba(36,26,29,.5) 52%,rgba(36,26,29,.9) 100%),linear-gradient(90deg,rgba(36,26,29,.45) 0%,rgba(36,26,29,0) 55%)}
+.heros-titre{grid-area:1/1/2/2;align-self:end;padding:0 0 52px 56px;color:var(--surface);font-size:clamp(40px,5.2vw,74px);font-weight:500;line-height:1.02;max-width:none}
+.heros-texte{grid-area:1/2/2/3;align-self:end;padding:0 52px 56px 12px;color:var(--clair)}
+.heros-texte p{font-size:17px;line-height:1.6;max-width:34ch;text-shadow:0 1px 12px rgba(36,26,29,.5)}
+.pastille{position:absolute;top:24px;right:24px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:10px 16px;border-radius:999px;box-shadow:0 16px 32px -20px rgba(36,26,29,.7)}
+
+/* Bandeau de faits */
+.faits{margin-top:-1px;padding:64px 0 56px}
+.faits ul{list-style:none;margin:0;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.faits li{display:flex;flex-direction:column;gap:4px}
+.faits b{font-family:var(--display);font-size:34px;font-weight:600;line-height:1;color:var(--pinot)}
+.faits span{font-size:15px;line-height:1.45;color:var(--doux)}
+
+/* Vins */
+.vins{padding:72px 0 120px}
+.vins .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.vins-photo{position:sticky;top:110px}
+.vins-photo figure{margin:0;position:relative}
+.vins-photo img{border-radius:20px;aspect-ratio:4/5;object-fit:cover;object-position:72% 50%;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:14px;line-height:1.35;padding:10px 14px;border-radius:12px;max-width:calc(100% - 36px)}
+.vins-intro{max-width:56ch;color:var(--doux);margin-top:18px}
+.carte{margin-top:44px}
+.groupe{margin-bottom:38px}
+.groupe h3{font-size:22px;color:var(--pinot);padding-bottom:12px;border-bottom:1.5px solid var(--encre)}
+.groupe ul{list-style:none;margin:0;padding:0}
+.groupe li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--filet)}
+.groupe .nom{font-family:var(--display);font-size:24px;font-weight:600;line-height:1.2}
+.groupe .nom i{font-weight:500;color:var(--doux)}
+.groupe .cote{font-size:14px;color:var(--doux);white-space:nowrap}
+.fiche{margin-top:20px;background:var(--surface);border-radius:20px;padding:36px 40px;box-shadow:var(--ombre)}
+.fiche h3{font-size:28px}
+.fiche > p{color:var(--doux);margin:8px 0 22px;font-size:16px}
+.fiche dl{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);gap:10px 24px;margin:0;font-size:16px}
+.fiche dt{color:var(--doux)}
+.fiche dd{margin:0}
+.tarifs{margin-top:28px;font-size:16px;color:var(--doux)}
+
+/* Domaine */
+.domaine{background:var(--bande);padding:120px 0}
+.domaine-haut{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:72px;align-items:center}
+.domaine-haut p{max-width:54ch}
+.domaine-haut .lead{font-size:20px;color:var(--encre)}
+.domaine-photo{position:relative}
+.domaine-photo img{border-radius:22px;aspect-ratio:5/4;object-fit:cover;object-position:50% 70%;box-shadow:var(--ombre)}
+.vignette{position:absolute;left:-48px;bottom:-40px;width:min(220px,46%);padding:10px 10px 12px;background:var(--surface);border-radius:8px;transform:rotate(-3deg);box-shadow:0 26px 40px -24px rgba(36,26,29,.6)}
+.vignette img{border-radius:4px;aspect-ratio:1/1;object-fit:cover;object-position:40% 40%;box-shadow:none}
+.frise{list-style:none;margin:110px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:9px;height:1.5px;background:var(--encre);opacity:.25}
+.frise li{position:relative;padding-top:40px}
+.frise li::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--base);border:2px solid var(--pinot)}
+.frise b{display:block;font-family:var(--display);font-size:40px;font-weight:600;line-height:1;color:var(--pinot);margin-bottom:12px}
+.frise p{font-size:16px;color:var(--doux);margin:0}
+
+/* Citation */
+.citation{padding:128px 0}
+.citation blockquote{margin:0 auto;max-width:980px;text-align:center}
+.citation p{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(30px,3.9vw,52px);line-height:1.18;text-wrap:balance;margin:0}
+.citation footer{margin-top:28px;font-size:15px;color:var(--doux)}
+
+/* Démarche, fond sombre */
+.demarche{background:var(--sombre);color:var(--clair);padding:120px 0;border-radius:32px;width:min(1320px,100% - 24px);margin-inline:auto}
+.demarche-haut{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:end;margin-bottom:64px}
+.demarche h2{color:var(--surface)}
+.demarche-haut p{color:var(--clair-doux);margin:0;max-width:52ch}
+.trio{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.trio figure{margin:0}
+.trio img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.trio figure:nth-child(1) img{aspect-ratio:5/6}
+.trio figure:nth-child(2){margin-top:72px}
+.trio figure:nth-child(3){margin-top:24px}
+.trio figcaption{margin-top:18px}
+.trio figcaption b{display:block;font-family:var(--display);font-size:24px;font-weight:600;color:var(--surface);line-height:1.2;margin-bottom:6px}
+.trio figcaption span{display:block;font-size:16px;color:var(--clair-doux);line-height:1.55}
+
+/* Où trouver */
+.trouver{padding:128px 0 120px}
+.trouver-titre{max-width:760px;margin-bottom:56px}
+.trouver-titre p{color:var(--doux);margin-top:16px;max-width:56ch}
+.trouver-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:stretch}
+.carte-rdv{background:var(--surface);border-radius:24px;padding:48px;box-shadow:var(--ombre-longue);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 40px}
+.carte-rdv h3{grid-column:1/-1;font-size:34px}
+.carte-rdv .bloc span{display:block;font-size:14px;color:var(--doux);margin-bottom:6px}
+.carte-rdv .bloc p{margin:0;font-size:17px}
+.carte-rdv .tel{font-family:var(--display);font-size:30px;font-weight:600;text-decoration:none;color:var(--pinot)}
+.carte-rdv .actions{grid-column:1/-1;margin-top:6px}
+.ailleurs{display:flex;flex-direction:column;gap:24px}
+.ailleurs > div{border-radius:20px;padding:32px 34px;border:1.5px solid var(--filet)}
+.ailleurs h3{font-size:26px;margin-bottom:12px}
+.ailleurs ul{list-style:none;padding:0;margin:0 0 16px;font-size:16px}
+.ailleurs li{padding:8px 0;border-bottom:1px solid var(--filet)}
+.ailleurs li small{display:block;color:var(--doux);font-size:14px}
+.ailleurs p{font-size:16px;color:var(--doux)}
+.lien{font-weight:500;color:var(--pinot);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.lien:hover{text-decoration-thickness:2px}
+.pro{background:var(--pinot-pale);border-color:transparent!important}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair);padding:88px 0 40px;margin-top:0}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:var(--surface);font-size:32px}
+.pied .marque small{color:var(--clair-doux)}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:500;color:var(--clair-doux);margin-bottom:12px;letter-spacing:.01em}
+.pied p,.pied li{font-size:16px;line-height:1.6;margin:0}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--pinot-pale);text-decoration:underline}
+.pied-bas{margin-top:64px;padding-top:28px;border-top:1px solid rgba(239,232,228,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:14px;color:var(--clair-doux)}
+.proposition{background:var(--sombre);color:#8E7F82;text-align:center;font-size:13px;padding:0 24px 28px}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu,.js.calme .apparait{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+/* Tablette */
+@media (max-width:1080px){
+  .nav a:not(.appel){display:none}
+  .heros-titre{padding:0 0 40px 40px}
+  .heros-texte{padding:0 36px 40px 8px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .vins .cadre,.domaine-haut,.demarche-haut,.trouver-grille{grid-template-columns:minmax(0,1fr);gap:48px}
+  .vins-photo{position:static;max-width:560px}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}
+  .frise::before{display:none}
+  .pied-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vignette{left:-12px}
+}
+/* Téléphone */
+@media (max-width:720px){
+  body{font-size:17px}
+  .cadre{width:min(var(--large),100% - 32px)}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:22px}
+  .marque small{display:none}
+  .nav .appel{padding:10px 16px;font-size:15px}
+  .heros{padding-top:16px}
+  .heros-cadre{grid-template-columns:minmax(0,1fr);border-radius:0;overflow:visible;box-shadow:none;background:none}
+  .heros-photo{grid-area:1/1/2/2;aspect-ratio:4/5;border-radius:20px;object-position:58% 60%;box-shadow:var(--ombre)}
+  .voile{grid-area:1/1/2/2;border-radius:20px}
+  .heros-titre{grid-area:1/1/2/2;padding:0 22px 26px;font-size:clamp(36px,10.4vw,48px)}
+  .heros-texte{grid-area:2/1/3/2;padding:24px 0 0;color:var(--encre)}
+  .heros-texte p{color:var(--doux);max-width:none}
+  .heros-texte .btn-clair{background:var(--pinot);color:var(--surface)}
+  .heros-texte .btn-contour-clair{border-color:var(--encre);color:var(--encre)}
+  .pastille{top:14px;right:14px;font-size:13px;padding:8px 13px}
+  .actions .btn{flex:1 1 100%}
+  .faits{padding:48px 0 32px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+  .faits b{font-size:30px}
+  .vins{padding:48px 0 88px}
+  .groupe .nom{font-size:21px}
+  .groupe li{grid-template-columns:minmax(0,1fr)}
+  .groupe .cote{white-space:normal}
+  .fiche{padding:28px 22px}
+  .fiche dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .fiche dd{margin-bottom:10px}
+  .domaine,.trouver{padding:88px 0}
+  .vignette{position:relative;left:auto;bottom:auto;margin:-56px 0 0 auto;margin-right:12px}
+  .frise{margin-top:64px;grid-template-columns:minmax(0,1fr);gap:32px}
+  .frise li{padding:0 0 0 34px}
+  .frise li::before{top:12px}
+  .citation{padding:88px 0}
+  .demarche{padding:88px 0;border-radius:24px;width:min(1320px,100% - 16px)}
+  .trio{grid-template-columns:minmax(0,1fr);gap:40px}
+  .trio figure:nth-child(2),.trio figure:nth-child(3){margin-top:0}
+  .trio img,.trio figure:nth-child(1) img{aspect-ratio:4/3}
+  .carte-rdv{grid-template-columns:minmax(0,1fr);padding:32px 24px}
+  .carte-rdv h3{font-size:30px}
+  .ailleurs > div{padding:28px 22px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .nav .appel{padding:9px 13px;font-size:14px}
+  .marque b{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Domaine Cruchandeau</b><small>Vigneron à Chaux, Hautes Côtes de Nuits</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#vins">Les vins</a>
+      <a href="#domaine">Le domaine</a>
+      <a href="#trouver">Où les trouver</a>
+      <a class="appel nowrap" href="tel:+33674857962">06 74 85 79 62</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre heros-cadre">
+      <img class="heros-photo" src="assets/domaine-cruchandeau-chaux/mains-gantees-cheval-de-trait-vigne.webp" alt="Deux mains gantées tiennent les guides d'un cheval de trait noir dans un rang de vigne, collines boisées au fond" width="1600" height="1064" fetchpriority="high">
+      <div class="voile" aria-hidden="true"></div>
+      <h1 class="heros-titre">Vins de Bourgogne, <br>de la Côte de Nuits à Bouzeron</h1>
+      <div class="heros-texte">
+        <p>Le domaine de Julien Cruchandeau, créé en 2003, a sa cave et sa cuverie à Chaux. Dégustation sur rendez-vous, du lundi au vendredi.</p>
+        <div class="actions">
+          <a class="btn btn-clair" href="#trouver">Prendre rendez-vous</a>
+          <a class="btn btn-contour-clair nowrap" href="tel:+33674857962">06 74 85 79 62</a>
+        </div>
+      </div>
+      <span class="pastille">Le cheval de trait, entre les rangs</span>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le domaine en bref">
+    <div class="cadre">
+      <ul>
+        <li><b>2003</b><span>création du domaine par Julien Cruchandeau</span></li>
+        <li><b>Chaux</b><span>cave et cuverie dans les Hautes Côtes de Nuits</span></li>
+        <li><b>11 vins</b><span>rouges, blancs et crémants</span></li>
+        <li><b>À la main</b><span>toutes les vendanges</span></li>
+        <li><b>8 à 18 mois</b><span>d'élevage en cuve ou en fûts, selon les cuvées</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre">
+      <div class="vins-photo">
+        <figure class="apparait">
+          <img src="assets/domaine-cruchandeau-chaux/cheval-de-trait-vignes-automne-vallee.webp" alt="Cheval de trait bai harnaché, de profil, à côté de vignes aux feuilles jaunies, vallée et village au loin" width="1600" height="1064" loading="lazy">
+          <figcaption class="etiquette">Le cheval du domaine, à l'automne</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Les vins du domaine</h2>
+        <p class="vins-intro">Onze vins, de la Côte de Nuits à la Côte Chalonnaise, en passant par la Côte de Beaune. Vinifiés et élevés en fûts de chêne et en cuve, à Chaux.</p>
+        <div class="carte">
+          <div class="groupe">
+            <h3>Rouges</h3>
+            <ul>
+              <li><span class="nom">Nuits-Saint-Georges <i>«&nbsp;Aux Saints Jacques&nbsp;»</i></span><span class="cote">Côte de Nuits</span></li>
+              <li><span class="nom">Savigny-lès-Beaune <i>«&nbsp;Les Petits Picotins&nbsp;»</i></span><span class="cote">Côte de Beaune</span></li>
+              <li><span class="nom">Ladoix <i>«&nbsp;Les Ranches&nbsp;»</i></span><span class="cote">Côte de Beaune</span></li>
+              <li><span class="nom">Hautes Côtes de Nuits <i>«&nbsp;Les Valançons&nbsp;»</i></span><span class="cote">Hautes Côtes</span></li>
+              <li><span class="nom">Hautes Côtes de Nuits <i>«&nbsp;Les Cabottes&nbsp;»</i></span><span class="cote">Hautes Côtes</span></li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>Blancs</h3>
+            <ul>
+              <li><span class="nom">Puligny-Montrachet 1<sup>er</sup> cru <i>«&nbsp;Hameau de Blagny&nbsp;»</i></span><span class="cote">Côte de Beaune</span></li>
+              <li><span class="nom">Bouzeron <i>«&nbsp;Vieilles Vignes&nbsp;»</i></span><span class="cote">Côte Chalonnaise</span></li>
+              <li><span class="nom">Hautes Côtes de Nuits</span><span class="cote">Hautes Côtes</span></li>
+              <li><span class="nom">Bourgogne Aligoté</span><span class="cote">Bourgogne</span></li>
+            </ul>
+          </div>
+          <div class="groupe">
+            <h3>Crémants de Bourgogne</h3>
+            <ul>
+              <li><span class="nom">Crémant blanc</span><span class="cote">Bourgogne</span></li>
+              <li><span class="nom">Crémant rosé</span><span class="cote">Bourgogne</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <article class="fiche apparait">
+          <h3>Nuits-Saint-Georges «&nbsp;Aux Saints Jacques&nbsp;»</h3>
+          <p>Sélectionné par le Guide Hachette pour le millésime 2010.</p>
+          <dl>
+            <dt>Cépage</dt><dd>Pinot noir</dd>
+            <dt>Vigne</dt><dd>Plantée en 1947</dd>
+            <dt>Terroir</dt><dd>Au pied du coteau, à la limite de Vosne-Romanée et sous les premiers crus. Exposition plein est, à 240&nbsp;mètres, sol calcaire sur une terre assez profonde.</dd>
+            <dt>Vendanges</dt><dd>Manuelles, en caisses perforées, triées à la main</dd>
+          </dl>
+        </article>
+        <p class="tarifs">Particuliers et professionnels : les tarifs se demandent au domaine, au <a class="lien nowrap" href="tel:+33674857962">06 74 85 79 62</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="domaine" id="domaine">
+    <div class="cadre">
+      <div class="domaine-haut">
+        <div>
+          <h2>Le vigneron, Julien Cruchandeau</h2>
+          <p class="lead" style="margin-top:22px">Né en 1978 à Chenôve, Julien Cruchandeau a passé sa jeunesse en Bourgogne, sans être issu d'une famille de vignerons de la Côte.</p>
+          <p>Il a d'abord voulu être cuisinier. Il a aussi été artiste des musiques électroniques, avec environ 200 concerts entre 2004 et 2010, dans la région et ailleurs.</p>
+        </div>
+        <div class="domaine-photo apparait">
+          <img src="assets/domaine-cruchandeau-chaux/vignes-en-terrasses-cheval-au-loin.webp" alt="Coteau de vignes en pente, rangs et bandes d'herbe, le cheval et deux vendangeurs tout petits au loin" width="1600" height="1064" loading="lazy">
+          <div class="vignette"><img src="assets/domaine-cruchandeau-chaux/tete-de-cheval-chemin-des-vignes.webp" alt="Tête d'un cheval de trait noir sur un chemin entre les vignes" width="1600" height="1064" loading="lazy"></div>
+        </div>
+      </div>
+      <ol class="frise">
+        <li><b>2003</b><p>Il crée le Domaine Cruchandeau, achète ses premières vignes à Bouzeron et son premier matériel : pressoir, cuves, pompes.</p></li>
+        <li><b>2007</b><p>Il achète une maison à Chaux, dans les Hautes Côtes de Nuits, avec une grande cave et une belle cuverie.</p></li>
+        <li><b>2009</b><p>Avec des investisseurs, il monte le groupement foncier agricole «&nbsp;Aux Saints Jacques&nbsp;», qui étend l'exploitation de Nuits-Saint-Georges à Savigny-lès-Beaune.</p></li>
+        <li><b>2010</b><p>Il met fin à sa carrière musicale pour se consacrer entièrement à la viticulture.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Citation">
+    <div class="cadre">
+      <blockquote>
+        <p>Travailler la matière, les arômes, les associations de goûts.</p>
+        <footer>Ce que Julien Cruchandeau cherchait en cuisine, avant de faire du vin</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="demarche" aria-labelledby="demarche-titre">
+    <div class="cadre">
+      <div class="demarche-haut">
+        <h2 id="demarche-titre">De la vigne à la cave</h2>
+        <p>Les vignes sont cultivées dans le respect des sols et des terroirs. La vinification se fait le plus naturellement possible, dans le respect des méthodes traditionnelles, avec quelques techniques modernes comme le contrôle des températures.</p>
+      </div>
+      <div class="trio">
+        <figure class="apparait">
+          <img src="assets/domaine-cruchandeau-chaux/cep-givre-gros-plan.webp" alt="Gros plan d'un vieux cep tordu couvert de givre" width="1600" height="1064" loading="lazy" style="object-position:38% 50%">
+          <figcaption><b>Des rendements modérés</b><span>Pour obtenir des raisins sains et de qualité.</span></figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/domaine-cruchandeau-chaux/cheval-et-chariot-a-caisses-vendanges.webp" alt="Cheval de trait noir attelé à un chariot à caisses de vendange, feuilles de vigne dorées" width="1600" height="1064" loading="lazy" style="object-position:40% 50%">
+          <figcaption><b>Des vendanges manuelles</b><span>En caisses perforées, avec un tri à la main.</span></figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/domaine-cruchandeau-chaux/rangs-givres-brume.webp" alt="Rangs de vigne blanchis par le givre dans la brume" width="1600" height="1064" loading="lazy" style="object-position:50% 50%">
+          <figcaption><b>Un élevage patient</b><span>De 8 à 18 mois en cuve ou en fûts, avec un travail des lies pour les blancs.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="trouver" id="trouver">
+    <div class="cadre">
+      <div class="trouver-titre">
+        <h2>Déguster et trouver nos vins</h2>
+        <p>Au domaine sur rendez-vous, chez les cavistes ou en ligne chez un revendeur.</p>
+      </div>
+      <div class="trouver-grille">
+        <div class="carte-rdv apparait">
+          <h3>Au domaine, sur rendez-vous</h3>
+          <div class="bloc"><span>Adresse</span><p>Domaine Cruchandeau<br>4 rue Robert<br>21700 Chaux</p></div>
+          <div class="bloc"><span>Horaires</span><p>Du lundi au vendredi<br>8&nbsp;h à 12&nbsp;h et 13&nbsp;h&nbsp;30 à 18&nbsp;h</p></div>
+          <div class="bloc"><span>Téléphone</span><a class="tel nowrap" href="tel:+33674857962">06 74 85 79 62</a></div>
+          <div class="bloc"><span>Par écrit</span><p>Le formulaire du domaine, pour demander un rendez-vous de dégustation.</p></div>
+          <div class="actions">
+            <a class="btn btn-plein nowrap" href="tel:+33674857962">Appeler le domaine</a>
+            <a class="btn btn-contour" href="http://www.domaine-cruchandeau.com/contact/" target="_blank" rel="noopener">Écrire au domaine</a>
+          </div>
+        </div>
+        <div class="ailleurs">
+          <div>
+            <h3>Chez les cavistes</h3>
+            <ul>
+              <li>L'As du Vin<small>100 avenue du Drapeau, Dijon</small></li>
+              <li>Dingovino<small>9 rue Vauban, Dijon</small></li>
+              <li>Le Comptoir de Fred<small>29 rue de Notre-Dame-des-Marais, Montluel</small></li>
+            </ul>
+            <p>Et bien d'autres, de l'Ain à Paris. <a class="lien" href="http://www.domaine-cruchandeau.com/ou-nous-trouver/" target="_blank" rel="noopener">Toute la liste des cavistes</a></p>
+          </div>
+          <div class="pro">
+            <h3>En ligne</h3>
+            <p style="margin:0">Chez Petites Caves, revendeur des vins du domaine. <a class="lien" href="https://www.petitescaves.com/collections/domaine-cruchandeau" target="_blank" rel="noopener">Voir les vins chez Petites Caves</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="#haut"><b>Domaine Cruchandeau</b><small>Julien Cruchandeau, vigneron</small></a>
+      </div>
+      <div>
+        <h3>Le domaine</h3>
+        <p>4 rue Robert<br>21700 Chaux</p>
+      </div>
+      <div>
+        <h3>Dégustation</h3>
+        <p>Sur rendez-vous, du lundi au vendredi, 8&nbsp;h à 12&nbsp;h et 13&nbsp;h&nbsp;30 à 18&nbsp;h</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33674857962">06 74 85 79 62</a></li>
+          <li><a href="http://www.domaine-cruchandeau.com/contact/" target="_blank" rel="noopener">Formulaire de contact</a></li>
+          <li><a href="http://www.domaine-cruchandeau.com/ou-nous-trouver/" target="_blank" rel="noopener">Où trouver nos vins</a></li>
+          <li><a href="https://www.facebook.com/julien.domainecruchandeau" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span>
+      <span>Crédits photos : Johann Michalczak</span>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Domaine Cruchandeau</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

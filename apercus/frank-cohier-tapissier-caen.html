@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Frank Cohier, tapissier décorateur à Caen</title>
+<meta name="description" content="Frank Cohier, tapissier décorateur à Caen : réfection de sièges tous styles, canapés et fauteuils, décor de la fenêtre, tapisserie d'ameublement. 90 rue Eugène Boudin.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2233'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Didot,Georgia,serif' font-size='40' fill='%23E3B04B'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E7E9EC; --surface:#F6F7F8; --encre:#1B2233; --or:#E3B04B; --nuit:#1B2233;
+  --nuit-2:#242D42; --bande:#D9DDE4; --doux:#4B5367; --clair:#F2EFE7; --clair-doux:#C3C7D2;
+  --ombre:0 30px 60px -34px rgba(16,21,34,.55);
+  --display:"Bodoni Moda", "Didot", Georgia, serif;
+  --texte:"Jost", "Futura", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--or);color:var(--nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:var(--nuit);color:var(--clair);border-bottom:1px solid rgba(242,239,231,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:.01em}
+.marque span{font-size:15px;color:var(--clair-doux);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--clair-doux);transition:color .2s}
+.nav a:hover{color:var(--clair)}
+.nav .tel{color:var(--nuit);background:var(--or);padding:10px 20px;border-radius:999px;font-weight:500;white-space:nowrap;transition:background .2s, transform .2s}
+.nav .tel:hover{background:#EDC266;color:var(--nuit);transform:translateY(-1px)}
+
+/* Héros sombre */
+.heros{background:var(--nuit);color:var(--clair);padding:88px 0 120px;position:relative}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"titre photo" "texte photo" "actions photo";grid-template-rows:auto auto 1fr;column-gap:72px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.6vw,80px);line-height:1.04;font-weight:400;padding-top:24px}
+.heros h1 em{font-style:italic;color:var(--or)}
+.heros .intro{grid-area:texte;margin-top:28px;max-width:30em;color:var(--clair-doux);font-weight:300;font-size:19px}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;border:1.5px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--or);color:var(--nuit)}
+.btn-or:hover{background:#EDC266}
+.btn-clair{border-color:rgba(242,239,231,.45);color:var(--clair)}
+.btn-clair:hover{border-color:var(--or);color:var(--or)}
+.btn-nuit{background:var(--nuit);color:var(--clair)}
+.btn-nuit:hover{background:#2B3550}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair)}
+.nowrap{white-space:nowrap}
+.vitrine{grid-area:photo;position:relative;margin:0}
+.vitrine::before{content:"";position:absolute;inset:8% 6% -4% 10%;border-radius:40%;background:radial-gradient(closest-side,rgba(227,176,75,.42),rgba(227,176,75,0));filter:blur(30px);z-index:0}
+.vitrine img{position:relative;z-index:1;width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:50% 30%;border-radius:18px;box-shadow:0 0 0 1px rgba(227,176,75,.18),0 0 110px -24px rgba(227,176,75,.45),0 40px 90px -40px rgba(227,176,75,.55),0 30px 60px -30px rgba(6,9,16,.7)}
+.pastille{position:absolute;z-index:2;left:20px;bottom:20px;background:var(--surface);color:var(--encre);border-radius:12px;padding:10px 16px;font-size:16px;line-height:1.35;box-shadow:0 14px 30px -18px rgba(6,9,16,.6)}
+.pastille b{font-weight:500}
+.vitrine figcaption{position:relative;z-index:1;margin-top:18px;font-size:16px;color:var(--clair-doux)}
+
+/* Bandeau de faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.faits li{padding:4px 24px;border-left:1px solid rgba(27,34,51,.14)}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:24px;line-height:1.15}
+.faits span{display:block;font-size:16px;color:var(--doux);margin-top:6px;line-height:1.4}
+
+/* Savoir-faire */
+.savoir{padding:128px 0 112px}
+.savoir .cadre{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:96px;align-items:start}
+.atelier-photos{position:relative;padding-bottom:72px}
+.atelier-photos .grande{position:relative;margin:0}
+.atelier-photos .grande img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:20px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:18px;top:18px;background:var(--surface);border-radius:999px;padding:7px 16px;font-size:16px;box-shadow:0 12px 26px -16px rgba(16,21,34,.6)}
+.atelier-photos .petite{position:absolute;right:-28px;bottom:0;width:min(220px,46%);margin:0;padding:8px;background:var(--surface);border-radius:16px;box-shadow:var(--ombre);transform:rotate(2.5deg)}
+.atelier-photos .petite img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+.savoir h2{font-size:clamp(34px,3.6vw,52px);max-width:14em}
+.savoir .chapo{margin-top:22px;color:var(--doux);max-width:34em}
+.prestations{margin:44px 0 0;padding:0}
+.prestations div{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:24px;padding:22px 0;border-top:1px solid rgba(27,34,51,.16)}
+.prestations div:last-child{border-bottom:1px solid rgba(27,34,51,.16)}
+.prestations dt{font-family:var(--display);font-size:23px;line-height:1.2;font-weight:500}
+.prestations dd{margin:0;color:var(--doux)}
+
+/* Réalisations */
+.realisations{padding:112px 0 128px;background:var(--surface)}
+.real-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:56px;align-items:start}
+.real-titre{grid-column:1 / span 5;grid-row:1}
+.real-titre h2{font-size:clamp(34px,3.6vw,52px)}
+.real-titre p{margin-top:20px;color:var(--doux);max-width:28em}
+.photo{margin:0;position:relative}
+.photo img{width:100%;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.photo .etiquette{top:auto;bottom:16px;left:16px}
+.r-bergeres{grid-column:6 / span 7;grid-row:1 / span 2}
+.r-bergeres img{aspect-ratio:1/1;object-position:50% 82%}
+.r-polaroid{grid-column:2 / span 4;grid-row:2;background:var(--base);padding:12px 12px 16px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-3deg);margin-top:8px}
+.r-polaroid img{aspect-ratio:4/5;object-position:50% 40%;border-radius:3px;box-shadow:none}
+.r-polaroid figcaption{font-family:var(--display);font-style:italic;font-size:18px;line-height:1.3;margin-top:12px;padding-inline:4px}
+.r-duo{grid-column:1 / span 7;grid-row:3;position:relative;padding:0 0 64px 0;min-height:0}
+.r-duo .avant{width:58%;margin:0}
+.r-duo .avant img{aspect-ratio:3/4;object-position:50% 60%}
+.r-duo .apres{position:absolute;right:0;bottom:0;width:52%;margin:0;padding:10px;background:var(--surface);border-radius:22px;box-shadow:var(--ombre)}
+.r-duo .apres img{aspect-ratio:3/4;object-position:50% 35%;box-shadow:none;border-radius:14px}
+.r-duo .apres .etiquette{left:24px;bottom:24px}
+.r-tonneau{grid-column:9 / span 4;grid-row:3;margin-top:120px}
+.r-tonneau img{aspect-ratio:4/5;object-position:50% 30%}
+.r-tonneau figcaption,.r-duo .legende{font-size:16px;color:var(--doux);margin-top:14px}
+.r-duo .legende{max-width:40%}
+
+/* Citation */
+.citation{padding:120px 0}
+.citation blockquote{margin-inline:auto;max-width:980px;text-align:center}
+.citation .gq{color:var(--or);font-style:normal}
+.citation .filet{display:block;width:64px;height:2px;background:var(--or);margin:0 auto 36px}
+.citation p{font-family:var(--display);font-style:italic;font-size:clamp(32px,4.4vw,64px);line-height:1.1;font-weight:400;text-wrap:balance}
+.citation footer{margin-top:26px;font-size:16px;color:var(--doux)}
+
+/* Fenêtres, section sombre */
+.fenetres{background:var(--nuit);color:var(--clair);padding:128px 0;border-radius:32px 32px 0 0}
+.fenetres .cadre{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:88px;align-items:center}
+.fenetres h2{font-size:clamp(34px,3.6vw,52px)}
+.fenetres p{margin-top:22px;color:var(--clair-doux);font-weight:300;max-width:30em}
+.fenetres ul{list-style:none;padding:0;margin:34px 0 0}
+.fenetres li{padding:14px 0;border-top:1px solid rgba(242,239,231,.14);font-family:var(--display);font-size:22px}
+.fenetres li:last-child{border-bottom:1px solid rgba(242,239,231,.14)}
+.salons{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.salons .photo img{aspect-ratio:3/4;box-shadow:0 34px 70px -36px rgba(4,6,12,.9)}
+.salons .photo:nth-child(2){margin-top:96px}
+.salons .etiquette{color:var(--encre)}
+
+/* Contact */
+.contact{padding:128px 0;background:var(--base)}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:88px;align-items:start}
+.contact h2{font-size:clamp(34px,3.6vw,52px)}
+.contact .chapo{margin-top:20px;color:var(--doux);max-width:30em}
+.horaires{margin:40px 0 0;padding:0;max-width:440px}
+.horaires div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid rgba(27,34,51,.14)}
+.horaires div:last-child{border-bottom:1px solid rgba(27,34,51,.14)}
+.horaires dt{font-weight:500}
+.horaires dd{margin:0;color:var(--doux);white-space:nowrap}
+.note-horaires{margin-top:14px;font-size:16px;color:var(--doux)}
+.carte{background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre)}
+.carte h3{font-size:30px}
+.carte .ligne{padding:18px 0;border-top:1px solid rgba(27,34,51,.12)}
+.carte .ligne:first-of-type{margin-top:22px}
+.carte .ligne span{display:block;font-size:16px;color:var(--doux)}
+.carte .ligne a,.carte .ligne strong{font-size:20px;font-weight:500;text-decoration:none;overflow-wrap:anywhere}
+.carte .ligne a:hover{color:#9A7322}
+.carte .note{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.carte .note b{font-family:var(--display);font-size:40px;font-weight:500;line-height:1}
+.carte .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* Pied */
+.pied{background:var(--nuit);color:var(--clair-doux);padding:80px 0 40px;font-size:16px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:var(--clair);font-size:30px}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:500;color:var(--clair);margin-bottom:12px}
+.pied p,.pied li{line-height:1.7}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(242,239,231,.25)}
+.pied a:hover{color:var(--or);border-color:var(--or)}
+.proposition{background:var(--nuit);color:#8A90A0;text-align:center;font-size:14px;padding:22px 24px 30px;border-top:1px solid rgba(242,239,231,.08)}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .r-polaroid.apparait.vu{transform:rotate(-3deg)}
+.js .petite.apparait.vu{transform:rotate(2.5deg)}
+.calme .apparait{opacity:1 !important;transform:none !important}
+.calme .r-polaroid{transform:rotate(-3deg) !important}
+.calme .petite{transform:rotate(2.5deg) !important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien{display:none}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .faits li:nth-child(4){border-left:0;padding-left:0}
+  .savoir .cadre,.fenetres .cadre,.contact .cadre{gap:56px}
+}
+@media (max-width:860px){
+  .heros{padding:40px 0 72px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions"}
+  .heros h1{padding-top:0}
+  .vitrine{margin-top:28px}
+  .heros .intro{margin-top:28px}
+  .savoir,.realisations,.contact,.fenetres{padding:88px 0}
+  .citation{padding:88px 0}
+  .savoir .cadre,.fenetres .cadre,.contact .cadre{grid-template-columns:minmax(0,1fr)}
+  .atelier-photos{padding-bottom:56px;margin-right:12px}
+  .atelier-photos .petite{right:-12px}
+  .real-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr);row-gap:40px}
+  .real-titre,.r-bergeres,.r-duo{grid-column:1 / -1;grid-row:auto}
+  .r-polaroid{grid-column:1;grid-row:auto}
+  .r-tonneau{grid-column:2;grid-row:auto;margin-top:40px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .cadre{width:min(1200px,100% - 40px)}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:20px}
+  .marque span{font-size:14px}
+  .nav .tel{padding:9px 15px;font-size:15px}
+  .heros .actions{flex-direction:column}
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faits li,.faits li:nth-child(4){border-left:0;padding:0 8px 0 0}
+  .faits b{font-size:21px}
+  .prestations div{grid-template-columns:minmax(0,1fr);gap:6px}
+  .r-polaroid,.r-tonneau{grid-column:1 / -1}
+  .r-polaroid{width:78%;margin-inline:auto}
+  .r-tonneau{margin-top:0}
+  .r-duo{padding-bottom:48px}
+  .r-duo .avant{width:70%}
+  .r-duo .apres{width:58%}
+  .salons{gap:16px}
+  .salons .photo:nth-child(2){margin-top:56px}
+  .carte{padding:28px 22px}
+  .carte .actions .btn{width:100%}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .marque span{display:none}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Frank Cohier</b><span>Tapissier décorateur</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#savoir-faire">Savoir-faire</a>
+      <a class="lien" href="#realisations">Réalisations</a>
+      <a class="lien" href="#atelier">L'atelier</a>
+      <a class="tel" href="tel:+33231089585">02 31 08 95 85</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>Vos sièges regarnis, vos fenêtres <em>habillées</em>.</h1>
+      <figure class="vitrine">
+        <img src="assets/frank-cohier-tapissier-caen/devanture-frank-cohier-au-crepuscule.webp" alt="La devanture de l'atelier Frank Cohier à la tombée du jour, enseigne allumée et vitrines éclairées garnies de fauteuils et de rideaux" width="1600" height="1200" fetchpriority="high">
+        <p class="pastille"><b class="nowrap">90 rue Eugène Boudin</b><br>Caen</p>
+      </figure>
+      <p class="intro">Frank Cohier, tapissier décorateur à Caen&nbsp;: réfection de sièges tous styles, canapés et fauteuils, décor de la fenêtre, tapisserie d'ameublement et réparation de mobilier.</p>
+      <div class="actions">
+        <a class="btn btn-or" href="#atelier">Venir à l'atelier</a>
+        <a class="btn btn-clair" href="tel:+33231089585"><span class="nowrap">02 31 08 95 85</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>Tapissier décorateur</b><span>atelier-boutique à Caen</span></li>
+      <li><b>Sièges tous styles</b><span>canapés et fauteuils</span></li>
+      <li><b>Décor de la fenêtre</b><span>tringlerie et voilages</span></li>
+      <li><b>4,9 sur 5</b><span>8 avis sur Google</span></li>
+      <li><b>14&nbsp;h à 18&nbsp;h</b><span>du lundi au vendredi</span></li>
+    </ul>
+  </section>
+
+  <section class="savoir" id="savoir-faire">
+    <div class="cadre">
+      <div class="atelier-photos">
+        <figure class="grande apparait">
+          <img src="assets/frank-cohier-tapissier-caen/voltaire-bleu-en-cours-a-l-atelier.webp" alt="Un fauteuil Voltaire en cours de garniture, tissu bleu à motifs de plumes et de feuilles, sur l'établi de l'atelier" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Voltaire en cours, à l'atelier</span>
+        </figure>
+        <figure class="petite apparait">
+          <img src="assets/frank-cohier-tapissier-caen/carcasse-sur-l-etabli-et-outils.webp" alt="Carcasse de siège retournée sur l'établi, marteau de tapissier, ciseaux et arrache-clou" width="1280" height="1600" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <h2>De la carcasse au dernier clou, le siège entier.</h2>
+        <p class="chapo">L'atelier reprend le siège depuis sa structure, puis le regarnit et le couvre du tissu choisi, uni ou à grand motif. Il habille aussi les fenêtres.</p>
+        <dl class="prestations">
+          <div><dt>Sièges tous styles</dt><dd>Bergères, cabriolets, voltaires, fauteuils Empire ou Art déco.</dd></div>
+          <div><dt>Canapés et fauteuils</dt><dd>Réfection complète, garniture et tissu.</dd></div>
+          <div><dt>Décor de la fenêtre</dt><dd>Tringlerie, voilages et rideaux.</dd></div>
+          <div><dt>Ameublement</dt><dd>Tapisserie d'ameublement et réparation de mobilier.</dd></div>
+          <div><dt>Cours de tapisserie</dt><dd>À l'atelier, des élèves regarnissent leur propre siège, jusqu'au petit fauteuil Empire.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="realisations" id="realisations">
+    <div class="cadre real-grille">
+      <div class="real-titre">
+        <h2>Quelques sièges passés par l'atelier.</h2>
+        <p>Des bois clairs, dorés ou noircis, et des tissus qui vont du gris uni aux coquelicots.</p>
+      </div>
+      <figure class="photo r-bergeres apparait">
+        <img src="assets/frank-cohier-tapissier-caen/paire-bergeres-art-deco-coquelicots.webp" alt="Deux bergères Art déco garnies d'un tissu à grands coquelicots rouges et roses" width="1200" height="1600" loading="lazy">
+        <span class="etiquette">Bergères Art déco</span>
+      </figure>
+      <figure class="r-polaroid apparait">
+        <img src="assets/frank-cohier-tapissier-caen/voltaire-noir-et-blanc.webp" alt="Fauteuil Voltaire en bois noir garni d'un tissu graphique noir et blanc" width="1280" height="1600" loading="lazy">
+        <figcaption>Relooking complet d'un voltaire</figcaption>
+      </figure>
+      <div class="r-duo">
+        <figure class="photo avant apparait">
+          <img src="assets/frank-cohier-tapissier-caen/tissu-abstrait-drape-sur-fauteuil.webp" alt="Tissu abstrait rouge et vert drapé sur l'assise d'un fauteuil avant la pose" width="1200" height="1600" loading="lazy">
+        </figure>
+        <figure class="photo apres apparait">
+          <img src="assets/frank-cohier-tapissier-caen/fauteuil-tissu-abstrait-rouge-et-vert.webp" alt="Le même fauteuil cabriolet terminé, tissu abstrait rouge, bordeaux et vert, clous dorés" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Le tissu posé</span>
+        </figure>
+        <p class="legende">Un cabriolet en bois clair&nbsp;: le tissu drapé avant la pose, puis le fauteuil fini.</p>
+      </div>
+      <figure class="photo r-tonneau apparait">
+        <img src="assets/frank-cohier-tapissier-caen/fauteuil-tonneau-tissu-palmes.webp" alt="Fauteuil tonneau en bois doré garni d'un tissu à palmes gris et blanc" width="1280" height="1600" loading="lazy">
+        <figcaption>Fauteuil tonneau, tissu Orangery.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="Dans la presse">
+    <blockquote class="cadre">
+      <span class="filet" aria-hidden="true"></span>
+      <p><span class="gq">«&nbsp;</span>Le tapissier-décorateur aux 46&nbsp;ans de passion<span class="gq">&nbsp;»</span></p>
+      <footer>Titre d'un article de presse consacré à Frank Cohier, avril 2026</footer>
+    </blockquote>
+  </section>
+
+  <section class="fenetres">
+    <div class="cadre">
+      <div>
+        <h2>Le décor de la fenêtre.</h2>
+        <p>Tringlerie, voilages, rideaux&nbsp;: Sabine et Frank ont habillé les fenêtres de trois salons de la Préfecture du Calvados.</p>
+        <ul>
+          <li>Salon Bleu</li>
+          <li>Salon des Abeilles</li>
+          <li>Salon Rose</li>
+        </ul>
+      </div>
+      <div class="salons">
+        <figure class="photo apparait">
+          <img src="assets/frank-cohier-tapissier-caen/rideaux-salon-bleu-prefecture.webp" alt="Salon d'apparat de la Préfecture du Calvados, rideaux bleu-vert posés à la fenêtre" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Salon Bleu</span>
+        </figure>
+        <figure class="photo apparait">
+          <img src="assets/frank-cohier-tapissier-caen/rideaux-salon-rose-prefecture.webp" alt="Salon Rose de la Préfecture du Calvados, rideaux gris posés, canapé et fauteuils roses" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Salon Rose</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="atelier">
+    <div class="cadre">
+      <div>
+        <h2>Passer à l'atelier.</h2>
+        <p class="chapo">L'atelier-boutique est au 90 rue Eugène Boudin, à Caen. Un siège à refaire, des rideaux à poser&nbsp;: appelez ou passez l'après-midi.</p>
+        <dl class="horaires">
+          <div><dt>Lundi</dt><dd>14&nbsp;h – 18&nbsp;h</dd></div>
+          <div><dt>Mardi</dt><dd>14&nbsp;h – 18&nbsp;h</dd></div>
+          <div><dt>Mercredi</dt><dd>14&nbsp;h – 18&nbsp;h</dd></div>
+          <div><dt>Jeudi</dt><dd>14&nbsp;h – 18&nbsp;h</dd></div>
+          <div><dt>Vendredi</dt><dd>14&nbsp;h – 18&nbsp;h</dd></div>
+          <div><dt>Samedi et dimanche</dt><dd>Fermé</dd></div>
+        </dl>
+        <p class="note-horaires">Jours fériés&nbsp;: horaires à vérifier sur la <a href="https://www.google.com/maps/place/Frank+Cohier+Tapissier+D%C3%A9corateur/data=!4m7!3m6!1s0x480a42d0cf59ba6f:0xfc0e7d4f2874acf8" target="_blank" rel="noopener">fiche Google</a>.</p>
+      </div>
+      <div class="carte">
+        <h3>Frank Cohier Tapissier Décorateur</h3>
+        <div class="ligne"><span>Téléphone</span><a href="tel:+33231089585" class="nowrap">02 31 08 95 85</a></div>
+        <div class="ligne"><span>Adresse</span><strong>90 rue Eugène Boudin, 14000 Caen</strong></div>
+        <div class="ligne"><span>Mail</span><a href="mailto:frankcohier@orange.fr">frankcohier@orange.fr</a></div>
+        <div class="ligne"><span>Note Google</span><div class="note"><b>4,9</b><span>sur 5, 8 avis</span></div></div>
+        <div class="actions">
+          <a class="btn btn-nuit" href="https://www.google.com/maps/place/Frank+Cohier+Tapissier+D%C3%A9corateur/data=!4m7!3m6!1s0x480a42d0cf59ba6f:0xfc0e7d4f2874acf8" target="_blank" rel="noopener">Voir les avis</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/frankcohier.tapissier/" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut"><b>Frank Cohier</b></a>
+      <p style="margin-top:10px">Tapissier décorateur à Caen. Sièges tous styles, canapés et fauteuils, décor de la fenêtre.</p>
+    </div>
+    <div>
+      <h3>Atelier</h3>
+      <p>90 rue Eugène Boudin<br>14000 Caen</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Du lundi au vendredi<br>de 14&nbsp;h à 18&nbsp;h</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33231089585" class="nowrap">02 31 08 95 85</a></li>
+        <li><a href="mailto:frankcohier@orange.fr">frankcohier@orange.fr</a></li>
+        <li><a href="https://www.facebook.com/frankcohier.tapissier/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Frank Cohier Tapissier Décorateur</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

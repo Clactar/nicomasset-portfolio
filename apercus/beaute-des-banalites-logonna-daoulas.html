@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La beauté des banalités · Potière à Logonna-Daoulas</title>
+<meta name="description" content="Vaisselle et vases tournés en grès brut par Marie, potière, dans son atelier du port de Moulin-Mer à Logonna-Daoulas. Cours d'initiation au tour et au modelage.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%233B5B7A'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F7F3EE'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#ECE6DF; --base-2:#E0D8CE; --surface:#F7F3EE; --encre:#2A2420; --encre-2:#5C534C;
+  --accent:#3B5B7A; --accent-pale:#D5DEE7; --sombre:#26303A; --clair:#E8E4DE;
+  --ombre:0 30px 60px -34px rgba(42,36,32,.55);
+  --display:'Petrona', Georgia, serif; --texte:'Libre Franklin', 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-weight:300;font-size:18px;line-height:1.66}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
+strong{font-weight:500}
+.contenu{width:min(1200px,100% - 2*clamp(20px,5vw,40px));margin-inline:auto}
+.nowrap{white-space:nowrap}
+.court{display:none}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(236,230,223,.95);border-bottom:1px solid rgba(42,36,32,.08)}
+.entete .contenu{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.marque{text-decoration:none;line-height:1.12}
+.marque b{display:block;font-family:var(--display);font-weight:500;font-size:22px}
+.marque small{display:block;font-size:13px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:400}
+.nav a{text-decoration:none}
+.nav a:not(.btn):hover{color:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:999px;font:400 16px/1.2 var(--texte);text-decoration:none;border:1.5px solid var(--encre);transition:background .25s ease,color .25s ease,transform .25s ease,border-color .25s ease;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre)}
+.btn-contour{color:var(--encre)}
+.btn-contour:hover{background:var(--surface)}
+.btn-petit{min-height:42px;padding:9px 20px;font-size:15px}
+
+/* Héros : la grande photo qui descend sur le bandeau */
+.heros{padding:clamp(40px,6vw,80px) 0 0;position:relative;z-index:2}
+.heros .contenu{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"titre photo" "texte photo";column-gap:clamp(40px,7vw,104px)}
+.heros h1{grid-area:titre;font-size:clamp(38px,5.6vw,78px);line-height:1.05;align-self:end;padding-top:40px}
+.heros .texte{grid-area:texte;padding:28px 0 clamp(64px,7vw,104px)}
+.heros .texte p{font-size:19px;color:var(--encre-2);max-width:32em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.heros figure{grid-area:photo;margin:0 0 -150px;position:relative;align-self:end}
+.heros figure img{width:100%;aspect-ratio:4/6.1;object-fit:cover;object-position:50% 62%;border-radius:22px;box-shadow:var(--ombre),0 60px 100px -70px rgba(59,91,122,.6)}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:400;padding:8px 15px;border-radius:999px;box-shadow:0 12px 30px -16px rgba(42,36,32,.6)}
+
+.faits{background:var(--base-2);position:relative;z-index:1}
+.faits .contenu{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);column-gap:clamp(40px,7vw,104px)}
+.faits ul{list-style:none;margin:0;padding:38px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 36px}
+.faits li{font-size:15.5px;line-height:1.45;color:var(--encre-2)}
+.faits b{display:block;font-family:var(--display);font-weight:500;font-size:24px;color:var(--encre);margin-bottom:2px;line-height:1.15}
+
+section{padding:clamp(80px,9vw,128px) 0}
+.titre-section{font-size:clamp(32px,4.2vw,54px);margin-bottom:22px}
+
+/* Le grès brut */
+.gres{padding-top:clamp(96px,10vw,150px)}
+.bandeau{position:relative}
+.bandeau img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 45%;border-radius:24px;box-shadow:var(--ombre)}
+.posee{position:relative;margin:-110px 0 0 clamp(16px,5vw,64px);width:min(560px,calc(100% - 32px));background:var(--surface);border-radius:20px;padding:clamp(26px,4vw,40px);box-shadow:var(--ombre)}
+.posee p{color:var(--encre-2);margin:0}
+.gres .apres{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:end}
+.gres .apres .cote{font-family:var(--display);font-size:clamp(22px,2.2vw,28px);line-height:1.35;color:var(--encre);padding-bottom:12px}
+.gres .apres .cote p{margin:0}
+
+/* De la boule à la tasse */
+.etapes{padding-top:0}
+.etapes .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:end;margin-bottom:48px}
+.etapes .tete p{color:var(--encre-2);margin:0}
+.frise{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:-24px;height:1px;background:rgba(42,36,32,.25)}
+.frise li{position:relative}
+.frise li::before{content:"";position:absolute;left:0;top:-30px;width:13px;height:13px;border-radius:50%;background:var(--accent)}
+.frise li:nth-child(2){margin-top:56px}
+.frise li:nth-child(3){margin-top:112px}
+.frise figure{margin:0 0 20px}
+.frise img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.frise .vignette img{width:min(240px,100%);aspect-ratio:1;border-radius:14px}
+.frise h3{font-size:28px;margin-bottom:6px}
+.frise p{font-size:16.5px;color:var(--encre-2);margin:0}
+
+/* Cours (sombre) */
+.cours{background:var(--sombre);color:var(--clair)}
+.cours .contenu{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,104px);align-items:start}
+.cours .titre-section{color:#F7F3EE}
+.cours p{color:#C7CBD0}
+.cours .photo{margin:36px 0 0;position:relative;width:min(300px,100%)}
+.cours .photo img{width:100%;aspect-ratio:9/13;object-fit:cover;border-radius:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8);transform:rotate(-2deg)}
+.tarifs{list-style:none;margin:0;padding:0;border-top:1px solid rgba(232,228,222,.2)}
+.tarifs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 28px;padding:24px 0;border-bottom:1px solid rgba(232,228,222,.2);align-items:baseline}
+.tarifs h3{font-size:clamp(22px,2.2vw,27px);color:#F7F3EE}
+.tarifs p{grid-column:1/2;margin:0;font-size:16px}
+.tarifs .prix{font-family:var(--display);font-size:24px;color:#F7F3EE;white-space:nowrap;text-align:right}
+.tarifs a.reserver{grid-column:2;grid-row:2;justify-self:end;font-size:15px;color:#BFD0E0;text-decoration:none;border-bottom:1px solid rgba(191,208,224,.5);white-space:nowrap}
+.tarifs a.reserver:hover{color:#F7F3EE}
+.cours .note{font-size:15px;margin-top:22px}
+
+/* Les pièces */
+.pieces .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,104px);align-items:center}
+.paire{position:relative;padding-bottom:60px}
+.paire figure{margin:0}
+.paire .t1{width:58%}
+.paire .t1 img,.paire .t2 img{width:100%;aspect-ratio:9/14;object-fit:cover;border-radius:18px;box-shadow:var(--ombre)}
+.paire .t2{position:absolute;right:0;bottom:0;width:50%}
+.paire .t2 img{border:8px solid var(--surface);border-radius:20px}
+.pieces .liste{font-family:var(--display);font-size:clamp(22px,2.3vw,28px);line-height:1.35;margin:0 0 22px}
+.pieces p{color:var(--encre-2)}
+
+/* Marie */
+.marie{background:var(--surface)}
+.citation{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.22;max-width:22em;margin:0 0 clamp(48px,6vw,72px);text-wrap:balance}
+.bio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);border-top:1px solid rgba(42,36,32,.18);padding-top:32px}
+.bio h3{font-size:24px;margin-bottom:8px}
+.bio p{font-size:16.5px;color:var(--encre-2);margin:0}
+
+/* Venir */
+.venir .contenu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(40px,6vw,88px);align-items:start}
+.ou{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:20px}
+.ou li{padding-left:22px;position:relative}
+.ou li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--accent)}
+.ou b{display:block;font-family:var(--display);font-weight:500;font-size:22px;line-height:1.25}
+.ou span{color:var(--encre-2);font-size:16.5px}
+.carte{background:var(--surface);border-radius:22px;padding:clamp(26px,4vw,40px);box-shadow:var(--ombre)}
+.carte dl{margin:0;display:grid;gap:18px}
+.carte dt{font-size:14px;color:var(--encre-2)}
+.carte dd{margin:0;font-family:var(--display);font-size:21px;line-height:1.3;overflow-wrap:anywhere}
+.carte dd a{text-decoration:none;border-bottom:1px solid rgba(59,91,122,.45)}
+.carte dd a:hover{color:var(--accent)}
+
+.pied{background:var(--sombre);color:#CDD0D3;padding:64px 0 40px;font-size:15.5px}
+.pied .contenu{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:36px}
+.pied b{font-family:var(--display);font-weight:500;font-size:25px;color:#F7F3EE;display:block;margin-bottom:8px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:400;color:#9BB0C4;margin-bottom:10px}
+.pied p{margin:0}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:#F7F3EE;text-decoration:underline}
+.proposition{background:var(--sombre);color:#8C949C;text-align:center;font-size:13.5px;padding:18px 20px 28px;border-top:1px solid rgba(232,228,222,.08)}
+
+.js .apparait{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1!important;transform:none!important}
+
+@media (max-width:980px){
+  .nav a:not(.btn){display:none}
+  .cours .contenu,.pieces .contenu,.venir .contenu,.etapes .tete,.gres .apres{grid-template-columns:minmax(0,1fr)}
+  .bio{grid-template-columns:minmax(0,1fr)}
+  .pied .contenu{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .contenu>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .heros .contenu{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .heros h1{padding-top:0}
+  .heros figure{margin:28px 0 0}
+  .heros figure img{aspect-ratio:4/4.4}
+  .heros .texte{padding-bottom:56px}
+  .faits .contenu{grid-template-columns:minmax(0,1fr)}
+  .gres{padding-top:80px}
+  .bandeau img{aspect-ratio:4/3}
+  .posee{margin:-56px auto 0;width:calc(100% - 24px)}
+  .frise{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .frise li:nth-child(n){margin-top:0}
+  .frise::before,.frise li::before{display:none}
+  .marque small{display:none}
+}
+@media (max-width:420px){
+  .actions .btn{width:100%}
+  .entete .long{display:none}.entete .court{display:inline}
+  .marque b{font-size:20px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:18px}
+  .frise{grid-template-columns:minmax(0,1fr)}
+  .tarifs li{grid-template-columns:minmax(0,1fr)}
+  .tarifs .prix{text-align:left}
+  .tarifs a.reserver{grid-column:1;grid-row:auto;justify-self:start}
+  .pied .contenu{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="contenu">
+    <a class="marque" href="#haut"><b>La beauté des banalités</b><small>Potière, Logonna-Daoulas</small></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#gres">Le grès</a>
+      <a href="#cours">Les cours</a>
+      <a href="#marie">Marie</a>
+      <a href="#venir">Venir</a>
+      <a class="btn btn-plein btn-petit nowrap" href="tel:+33624650235"><span class="long">06 24 65 02 35</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="heros">
+    <div class="contenu">
+      <h1>Rendre beau le quotidien, surprenante la tasse banale</h1>
+      <figure>
+        <img src="assets/beaute-des-banalites-logonna-daoulas/vases-gres-rainures-fleurs-sechees.webp" width="3240" height="4050" alt="Vases et gobelets en grès gris et beige à rainures, avec des fleurs et des branches séchées" fetchpriority="high">
+        <figcaption class="pastille">Grès brut et émail transparent</figcaption>
+      </figure>
+      <div class="texte">
+        <p>Marie tourne une collection de vaisselle et des vases pièces uniques en grès brut, dans son atelier face à l'océan, au port de Moulin-Mer, à Logonna-Daoulas.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="#cours">Réserver un cours</a>
+          <a class="btn btn-contour nowrap" href="tel:+33624650235">06 24 65 02 35</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faits">
+    <div class="contenu">
+      <ul>
+        <li><b>Port de Moulin-Mer</b>Logonna-Daoulas, Finistère</li>
+        <li><b>Grès tourné</b>Vaisselle et vases pièces uniques</li>
+        <li><b>3 ventes éphémères</b>En ligne, chaque année</li>
+        <li><b>Artisan Valeurs Parc</b>Atelier labellisé</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="gres" id="gres">
+    <div class="contenu">
+      <figure class="bandeau apparait" style="margin:0">
+        <img src="assets/beaute-des-banalites-logonna-daoulas/pichets-gres-vus-du-dessus.webp" width="3240" height="4050" alt="Pichets, tasses et gobelets en grès émaillé blanc à intérieur brut, vus d'en haut" loading="lazy">
+      </figure>
+      <div class="apres">
+        <div class="posee">
+          <h2 class="titre-section">Le grès brut, au centre du dessin</h2>
+          <p>Sur les parois se côtoient la terre nue en partie basse et le grès souligné d'un émail transparent en partie haute. Il en découle une ligne épurée et minimaliste, pour des pièces intemporelles.</p>
+        </div>
+        <div class="cote"><p>Vases, mugs, tasses à café, lampes, table basse&nbsp;: la collection de l'atelier, véritable hommage à la terre.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="etapes">
+    <div class="contenu">
+      <div class="tete">
+        <h2 class="titre-section" style="margin:0">Deux mois, de la boule de grès à la tasse</h2>
+        <p>À l'atelier, je vous fais parcourir les étapes des deux mois de production qui donnent vie à chaque poterie.</p>
+      </div>
+      <ol class="frise">
+        <li>
+          <figure class="apparait"><img src="assets/beaute-des-banalites-logonna-daoulas/main-couverte-de-barbotine.webp" width="800" height="1422" alt="Main couverte de barbotine grise devant le tour et les étagères de l'atelier" loading="lazy"></figure>
+          <h3>Le tournage</h3>
+          <p>Une boule de grès brut prend forme sur le tour.</p>
+        </li>
+        <li>
+          <figure class="apparait"><img src="assets/beaute-des-banalites-logonna-daoulas/tasses-crues-et-plaque-striee.webp" width="800" height="1422" alt="Tasses en grès cru, plaque d'argile striée et outils de tournassage sur une planche" loading="lazy"></figure>
+          <h3>Le tournassage</h3>
+          <p>Les pièces crues sont reprises à l'outil.</p>
+        </li>
+        <li>
+          <figure class="apparait vignette"><img src="assets/beaute-des-banalites-logonna-daoulas/bols-oreilles-noir-et-blanc.webp" width="800" height="800" alt="Bols à oreilles en grès noir et en grès beige" loading="lazy"></figure>
+          <h3>L'émaillage</h3>
+          <p>L'émail transparent souligne le haut, la terre reste nue en bas.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cours" id="cours">
+    <div class="contenu">
+      <div>
+        <h2 class="titre-section">Les cours à l'atelier</h2>
+        <p>Une parenthèse créative face à l'océan, au port de Moulin-Mer&nbsp;: modelage d'un vase ou découverte du tour de potier, guidés par moi-même, artisane potière.</p>
+        <figure class="photo apparait">
+          <img src="assets/beaute-des-banalites-logonna-daoulas/mug-gres-cru-en-main.webp" width="800" height="1422" alt="Une main tient un mug en grès noir cru, rainures et anse en cours de pose" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <ul class="tarifs">
+          <li>
+            <h3>Découverte du tour de potier</h3>
+            <span class="prix">85&nbsp;€</span>
+            <p>Explorez les secrets du tournage.</p>
+            <a class="reserver" href="https://labeautedesbanalites.com/produit/atelier-ceramique-a-crozon/" target="_blank" rel="noopener">Réserver</a>
+          </li>
+          <li>
+            <h3>Modelage&nbsp;: créez votre vase</h3>
+            <span class="prix">65&nbsp;€</span>
+            <p>Les techniques fondamentales du modelage de l'argile, pour un vase personnalisé.</p>
+            <a class="reserver" href="https://labeautedesbanalites.com/produit/atelier-poterie/" target="_blank" rel="noopener">Réserver</a>
+          </li>
+          <li>
+            <h3>Carte cadeau, tour et modelage</h3>
+            <span class="prix">65 à 135&nbsp;€</span>
+            <p>Un cours de poterie à offrir.</p>
+            <a class="reserver" href="https://labeautedesbanalites.com/produit/carte-cadeau-cours-de-poterie-finistere/" target="_blank" rel="noopener">Offrir</a>
+          </li>
+          <li>
+            <h3>Journée Yoga et Poterie à Brest</h3>
+            <span class="prix"></span>
+            <p>Yoga en musique le matin, brunch chez Welli Chéri, initiation au modelage l'après-midi.</p>
+            <a class="reserver" href="https://labeautedesbanalites.com/produit/journee-yoga-poterie-finistere/" target="_blank" rel="noopener">Prochaine journée</a>
+          </li>
+          <li>
+            <h3>Retraite Yoga et Poterie</h3>
+            <span class="prix">420&nbsp;€</span>
+            <p>Trois jours d'immersion face à l'océan, sur la presqu'île de Crozon.</p>
+            <a class="reserver" href="https://labeautedesbanalites.com/produit/retraite-yoga-poterie-en-bretagne/" target="_blank" rel="noopener">Réserver</a>
+          </li>
+        </ul>
+        <p class="note">Les journées et retraites Yoga et Poterie sont accessibles aux débutants, tout le matériel compris.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pieces">
+    <div class="contenu">
+      <div class="paire">
+        <figure class="t1 apparait"><img src="assets/beaute-des-banalites-logonna-daoulas/table-bois-brule-pieds-gres-noir.webp" width="800" height="1423" alt="Table basse en bois brûlé sur trois pieds en grès noir texturé, vase et deux petites coupes" loading="lazy"></figure>
+        <figure class="t2 apparait"><img src="assets/beaute-des-banalites-logonna-daoulas/table-bois-brule-pieds-gres-blanc.webp" width="800" height="1422" alt="Table en bois brûlé sur pieds en grès blanc texturé, soliflore et tige d'ombellifère" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2 class="titre-section">Les pièces de l'atelier</h2>
+        <p class="liste">De la vaisselle aux pièces uniques, jusqu'à la table basse en bois brûlé sur pieds de grès.</p>
+        <p>Chaque céramique est réalisée à l'atelier de Logonna-Daoulas. On les trouve en direct à l'atelier, et sur la boutique en ligne lors des trois ventes éphémères de l'année.</p>
+        <div class="actions"><a class="btn btn-contour" href="https://labeautedesbanalites.com/les-pieces-de-latelier/" target="_blank" rel="noopener">Voir les pièces</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marie" id="marie">
+    <div class="contenu">
+      <blockquote class="citation" style="margin-inline:0">«&nbsp;J'aime l'idée que l'on puisse insuffler de la beauté dans ces indispensables compagnons.&nbsp;»</blockquote>
+      <div class="bio">
+        <div><h3>Le dessin</h3><p>Marie se forme au stylisme et au modélisme à ESMOD, où le dessin prend une place centrale.</p></div>
+        <div><h3>L'entreprise</h3><p>Elle crée une première marque de vêtements, bio et engagée, puis fait ses armes en développement produit chez Caravane.</p></div>
+        <div><h3>Le tour</h3><p>Retour à ses premières amours, fabriquer de ses mains&nbsp;: elle touche un jour un tour de potier, et le coup de foudre est immédiat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="contenu">
+      <div>
+        <h2 class="titre-section">Où trouver les pièces</h2>
+        <ul class="ou">
+          <li><b>À l'atelier, sur rendez-vous</b><span>Moulin-Mer, 29460 Logonna-Daoulas</span></li>
+          <li><b>Sur la boutique en ligne</b><span>Lors des trois ventes éphémères de l'année</span></li>
+          <li><b>Chez Empreintes</b><span>5 rue de Picardie, 75003 Paris</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein nowrap" href="tel:+33624650235">Prendre rendez-vous</a>
+          <a class="btn btn-contour" href="mailto:labeautedesbanalites@gmail.com">Écrire un e-mail</a>
+        </div>
+      </div>
+      <div class="carte">
+        <dl>
+          <div><dt>L'atelier</dt><dd>Moulin-Mer<br>29460 Logonna-Daoulas</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="nowrap" href="tel:+33624650235">06 24 65 02 35</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:labeautedesbanalites@gmail.com">labeautedesbanalites@gmail.com</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/labeautedesbanalites/" target="_blank" rel="noopener">@labeautedesbanalites</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="contenu">
+    <div>
+      <b>La beauté des banalités</b>
+      <p>Marie, potière. Vaisselle et vases en grès brut, cours de poterie à Logonna-Daoulas.</p>
+    </div>
+    <div>
+      <h3>Atelier</h3>
+      <p>Moulin-Mer<br>29460 Logonna-Daoulas<br>Visite sur rendez-vous</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a class="nowrap" href="tel:+33624650235">06 24 65 02 35</a></li>
+        <li><a href="mailto:labeautedesbanalites@gmail.com">Écrire un e-mail</a></li>
+        <li><a href="https://labeautedesbanalites.com/contact/" target="_blank" rel="noopener">Page contact</a></li>
+        <li><a href="https://www.instagram.com/labeautedesbanalites/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour La beauté des banalités</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

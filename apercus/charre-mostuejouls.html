@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Christian Charre, potier céramiste à Mostuéjouls</title>
+<meta name="description" content="Christian Charre, potier céramiste à Mostuéjouls, à l'entrée des gorges du Tarn : grès, émaux haute température et stages de poterie de 3 à 5 jours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A8C8C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23F5F2EC'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E8E3DA; --base-2:#DED7CB; --surface:#F5F2EC; --encre:#262019; --encre-2:#5A5047;
+  --turquoise:#2A8C8C; --turquoise-fonce:#1F6C6C; --sombre:#2E2620; --sombre-2:#3B312A; --sur-sombre:#EFE9DF; --sur-sombre-2:#BDB2A3;
+  --display:'Caudex', Georgia, serif; --texte:'Hanken Grotesk', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(46,38,32,.6);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--turquoise);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--turquoise-fonce);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+
+.entete{position:sticky;top:0;z-index:20;background:rgba(232,227,218,.95);border-bottom:1px solid rgba(38,32,25,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{text-decoration:none;font-family:var(--display);font-size:24px;line-height:1.1}
+.marque small{font-family:var(--texte);font-size:14px;color:var(--encre-2);margin-left:10px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2)}
+.nav a:not(.appel):hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;border:1.5px solid var(--encre);text-decoration:none;font-weight:500;font-size:16px;white-space:nowrap;transition:background .25s ease,color .25s ease}
+.appel:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros : photo à gauche */
+.heros{padding:64px 0 96px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-areas:"photo titre" "photo texte" "photo emaux" "photo actions";column-gap:72px;align-items:start}
+.photo-heros{grid-area:photo;margin:0;position:relative;align-self:center}
+.photo-heros img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 82%;border-radius:18px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:18px;bottom:18px;background:var(--surface);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 30px -16px rgba(46,38,32,.6)}
+.heros h1{grid-area:titre;font-size:clamp(36px, 5vw, 66px);line-height:1.04;letter-spacing:-.01em;margin-top:8px}
+.heros .chapo{grid-area:texte;margin-top:24px;color:var(--encre-2);max-width:30em}
+.emaux{grid-area:emaux;margin-top:30px;display:flex;flex-wrap:wrap;gap:22px 26px;align-items:center}
+.email{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:500}
+.email i{flex:none;width:52px;height:52px;border-radius:50%;box-shadow:inset 0 -6px 10px rgba(38,32,25,.18), inset 0 6px 10px rgba(255,250,240,.35), 0 10px 20px -12px rgba(46,38,32,.7)}
+.email.shino i{background:radial-gradient(circle at 30% 34%, #6d4a2c 0 3px, transparent 4px),radial-gradient(circle at 64% 60%, #7b5434 0 4px, transparent 5px),radial-gradient(circle at 46% 74%, #9a7046 0 2px, transparent 3px),radial-gradient(circle at 70% 28%, #8d6440 0 2px, transparent 3px),radial-gradient(circle at 40% 40%, #ECE4D2, #D2C6AE)}
+.email.miel i{background:repeating-linear-gradient(115deg, rgba(110,66,24,.35) 0 3px, transparent 3px 9px),radial-gradient(circle at 38% 36%, #D6A35E, #A06A2E)}
+.email.turquoise i{background:repeating-linear-gradient(90deg, rgba(20,80,90,.28) 0 2px, transparent 2px 8px),radial-gradient(circle at 38% 36%, #5CB8C4, #2B8296)}
+.emaux p{flex-basis:100%;font-size:15px;color:var(--encre-2);margin-top:-6px}
+.actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;transition:transform .25s ease,background .25s ease,color .25s ease}
+.bouton.plein{background:var(--turquoise-fonce);color:var(--surface)}
+.bouton.plein:hover{background:var(--encre);transform:translateY(-2px)}
+.bouton.contour{border:1.5px solid var(--encre);white-space:nowrap}
+.bouton.contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.faits li{padding:0 28px;border-left:1px solid rgba(38,32,25,.18);font-size:16px;color:var(--encre-2);line-height:1.45}
+.faits li:first-child{border-left:0;padding-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:34px;line-height:1.1;color:var(--encre);margin-bottom:6px;white-space:nowrap}
+
+/* Stages */
+.stages{padding:120px 0}
+.stages .cadre{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:start}
+.stages h2{font-size:clamp(34px, 4.4vw, 58px);line-height:1.06}
+.stages .gauche > p{margin-top:22px;color:var(--encre-2);max-width:30em}
+.pratique{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px;font-size:17px}
+.pratique li{padding-left:26px;position:relative}
+.pratique li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:12px;border-radius:50%;background:var(--turquoise)}
+.atelier-photo{margin:44px 0 0;position:relative}
+.atelier-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.tarifs{background:var(--surface);border-radius:24px;padding:16px 40px 36px;box-shadow:0 40px 80px -46px rgba(46,38,32,.55)}
+.tarif{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:24px 0;border-bottom:1px solid rgba(38,32,25,.12)}
+.tarif h3{font-size:25px;line-height:1.2}
+.tarif .duree{font-family:var(--texte);font-size:15px;color:var(--turquoise-fonce);font-weight:600;display:block;margin-top:2px}
+.tarif .prix{font-family:var(--display);font-size:28px;white-space:nowrap;align-self:start}
+.tarif p{grid-column:1 / -1;font-size:16px;color:var(--encre-2);max-width:36em}
+.autres{margin-top:28px}
+.autres h3{font-family:var(--texte);font-size:16px;font-weight:600}
+.autres ul{list-style:none;margin:10px 0 0;padding:0}
+.autres li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px dashed rgba(38,32,25,.2);font-size:17px}
+.autres li span{white-space:nowrap;font-weight:500}
+.tarifs .note{margin-top:20px;font-size:15px;color:var(--encre-2)}
+.tarifs .actions{margin-top:28px}
+
+/* Émaux : section sombre */
+.recherche{background:var(--sombre);color:var(--sur-sombre);padding:128px 0}
+.recherche .tete{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:end}
+.recherche blockquote{margin:0;font-family:var(--display);font-size:clamp(28px, 3.4vw, 44px);line-height:1.2}
+.recherche blockquote footer{font-family:var(--texte);font-size:16px;color:var(--sur-sombre-2);margin-top:20px}
+.recherche .tete p{color:var(--sur-sombre-2);font-size:17px}
+.recherche .tete p + p{margin-top:16px}
+.trio{margin-top:72px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,.85fr);gap:28px;align-items:start}
+.trio figure{margin:0;position:relative}
+.trio img{width:100%;object-fit:cover;border-radius:20px;box-shadow:0 30px 60px -30px rgba(10,6,4,.85)}
+.trio figure:nth-child(1) img{aspect-ratio:1/1}
+.trio figure:nth-child(2){margin-top:96px}
+.trio figure:nth-child(2) img{aspect-ratio:4/3;object-position:50% 60%}
+.trio figure:nth-child(3){margin-top:36px}
+.trio figure:nth-child(3) img{aspect-ratio:3/4;object-position:50% 50%}
+.trio figcaption{margin-top:14px;font-size:15px;color:var(--sur-sombre-2)}
+
+/* Voyages */
+.voyages{padding:128px 0 96px}
+.voyages .intro{font-family:var(--texte);font-size:17px;font-weight:500;color:var(--encre);max-width:36em}
+.pays{font-family:var(--display);font-size:clamp(38px, 6.6vw, 92px);line-height:1.04;margin-top:28px;letter-spacing:-.01em}
+.voyages .suite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;margin-top:48px;color:var(--encre-2)}
+
+/* Lieu */
+.lieu{padding:24px 0 128px}
+.lieu .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:start}
+.lieu h2{font-size:clamp(32px, 3.8vw, 48px);line-height:1.1}
+.lieu .bloc > p{margin-top:18px;color:var(--encre-2)}
+.polaroid{margin:44px 0 0;background:var(--surface);padding:14px 14px 18px;border-radius:14px;box-shadow:var(--ombre);transform:rotate(-2deg);width:min(330px, 100%)}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
+.polaroid figcaption{font-family:var(--display);font-style:italic;font-size:18px;margin-top:10px;text-align:center}
+.lieux{list-style:none;margin:28px 0 0;padding:0}
+.lieux li{padding:22px 0;border-top:1px solid rgba(38,32,25,.15)}
+.lieux li:last-child{border-bottom:1px solid rgba(38,32,25,.15)}
+.lieux b{font-family:var(--display);font-weight:400;font-size:24px;display:block;line-height:1.25}
+.lieux span{display:block;font-size:16px;color:var(--encre-2);margin-top:4px}
+
+/* Contact */
+.contact{padding:0 0 128px}
+.carte{background:var(--surface);border-radius:28px;box-shadow:0 40px 90px -50px rgba(46,38,32,.6);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);overflow:hidden}
+.carte .gauche{padding:64px}
+.carte h2{font-size:clamp(32px, 4vw, 52px);line-height:1.08}
+.carte .gauche p{margin-top:18px;color:var(--encre-2);max-width:28em}
+.carte .actions{margin-top:30px}
+.carte .droite{background:#DCEAE7;padding:64px 56px}
+.carte dl{margin:0;display:grid;gap:22px}
+.carte dt{font-size:15px;color:var(--encre-2)}
+.carte dd{margin:4px 0 0;font-family:var(--display);font-size:23px;line-height:1.3}
+.carte dd a{text-decoration-color:var(--turquoise);text-underline-offset:5px;text-decoration-thickness:2px;overflow-wrap:anywhere}
+
+.pied{background:var(--sombre);color:var(--sur-sombre);padding:80px 0 56px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:44px}
+.pied .nom{font-family:var(--display);font-size:30px;line-height:1.15;display:block}
+.pied p,.pied li{font-size:16px;color:var(--sur-sombre-2)}
+.pied p{margin-top:10px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;margin-bottom:10px;color:var(--sur-sombre)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(42,140,140,.8)}
+.pied a:hover{color:var(--sur-sombre)}
+.proposition{background:var(--sombre);color:var(--sur-sombre-2);font-size:13px;text-align:center;padding:18px 16px 26px;border-top:1px solid rgba(239,233,223,.1)}
+
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .polaroid.apparait.vu{transform:rotate(-2deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .js .polaroid.apparait{transform:rotate(-2deg)}
+  .bouton,.appel{transition:none}
+}
+
+@media (max-width: 1040px){
+  .nav a:not(.appel){display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
+  .faits li:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width: 860px){
+  .heros{padding:28px 0 80px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "emaux" "actions"}
+  .photo-heros{margin-top:28px}
+  .stages .cadre,.recherche .tete,.voyages .suite,.lieu .cadre,.carte,.pied .cadre{grid-template-columns:minmax(0,1fr);gap:44px}
+  .stages,.recherche{padding:88px 0}
+  .voyages{padding:88px 0 72px}
+  .lieu{padding:8px 0 88px}
+  .contact{padding-bottom:88px}
+  .trio{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .trio figure:nth-child(1){grid-column:1 / -1}
+  .trio figure:nth-child(2){margin-top:0}
+  .trio figure:nth-child(3){margin-top:48px}
+  .trio figure:nth-child(2) img,.trio figure:nth-child(3) img{aspect-ratio:3/4}
+  .carte .gauche,.carte .droite{padding:44px 32px}
+  .carte{gap:0}
+}
+@media (max-width: 560px){
+  body{font-size:17px}
+  .cadre{width:min(1200px, 100% - 36px)}
+  .marque{font-size:21px}
+  .marque small{display:none}
+  .appel{padding:9px 14px;font-size:15px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
+  .faits li{border-left:0;padding:0}
+  .faits b{font-size:27px}
+  .emaux{gap:14px 16px}
+  .email{gap:8px;font-size:15px}
+  .email i{width:40px;height:40px}
+  .tarifs{padding:8px 22px 28px}
+  .tarif h3{font-size:22px}
+  .tarif .prix{font-size:24px}
+  .autres li{flex-wrap:wrap;gap:2px 12px}
+  .carte .gauche,.carte .droite{padding:36px 22px}
+  .carte dd{font-size:20px}
+  .trio{grid-template-columns:minmax(0,1fr)}
+  .trio figure:nth-child(3){margin-top:0}
+}
+@media (max-width: 420px){
+  .actions .bouton{width:100%}
+  .tarif{grid-template-columns:minmax(0,1fr)}
+  .tarif h3{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut">Christian Charre<small>potier céramiste</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#stages">Stages</a>
+      <a href="#emaux">Émaux</a>
+      <a href="#lieu">L’atelier</a>
+      <a href="#contact">Contact</a>
+      <a class="appel" href="tel:+33684422179">06 84 42 21 79</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <figure class="photo-heros">
+        <img src="assets/charre-mostuejouls/quatre-theieres-anses-bambou.webp" width="1600" height="900" alt="Quatre théières en grès à anses de bambou ligaturées, émaux crème, shino tacheté, miel strié et turquoise">
+        <span class="etiquette">Théières en grès, anses en bambou</span>
+      </figure>
+      <h1>Potier des gorges du Tarn, chercheur d’émaux.</h1>
+      <p class="chapo">Installé dans l’Aveyron depuis 1984, Christian Charre tourne le grès à Mostuéjouls, calcule ses propres émaux et cuit à 1300&nbsp;°C. Il partage ce savoir en stages de 3 à 5 jours, à l’atelier.</p>
+      <div class="emaux" aria-label="Émaux des théières">
+        <span class="email shino"><i aria-hidden="true"></i>Shino</span>
+        <span class="email miel"><i aria-hidden="true"></i>Miel</span>
+        <span class="email turquoise"><i aria-hidden="true"></i>Turquoise</span>
+      </div>
+      <div class="actions">
+        <a class="bouton plein" href="http://www.charre-christian.fr/formulaire%20inscription%20stage.html">S’inscrire à un stage</a>
+        <a class="bouton contour" href="tel:+33684422179">06 84 42 21 79</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>1984</b>installé dans l’Aveyron</li>
+      <li><b>1300&nbsp;°C</b>cuissons haute température</li>
+      <li><b>CNIFOP</b>formé à Saint-Amand-en-Puisaye</li>
+      <li><b>3 à 4</b>stagiaires par stage</li>
+    </ul>
+  </section>
+
+  <section class="stages" id="stages">
+    <div class="cadre">
+      <div class="gauche">
+        <h2>Stages de poterie à l’atelier</h2>
+        <p>Du tour aux émaux, des stages en petit groupe pour apprendre les gestes et comprendre la matière.</p>
+        <ul class="pratique">
+          <li>3 stagiaires au minimum, 4 au maximum</li>
+          <li>Du lundi au vendredi, de 9&nbsp;h à 12&nbsp;h et de 14&nbsp;h à 17&nbsp;h</li>
+          <li>L’argile et les pièces réalisées sont comprises</li>
+          <li>Cuissons, biscuit et émaillage en plus, selon la taille des pièces</li>
+        </ul>
+        <figure class="atelier-photo apparait">
+          <img src="assets/charre-mostuejouls/atelier-etageres-de-pieces-crues.webp" width="1600" height="1200" loading="lazy" alt="L’atelier&nbsp;: étagères chargées de bols et de pots crus, grandes jarres et pichets au premier plan, fenêtres">
+          <span class="etiquette">L’atelier, à Mostuéjouls</span>
+        </figure>
+      </div>
+      <div class="tarifs">
+        <div class="tarif">
+          <h3>Tournage<span class="duree">5 jours</span></h3>
+          <span class="prix">380&nbsp;€</span>
+          <p>Maîtrise du centrage et des étapes du tournage.</p>
+        </div>
+        <div class="tarif">
+          <h3>Tournage initiation<span class="duree">3 jours</span></h3>
+          <span class="prix">250&nbsp;€</span>
+          <p>Pour les débutants&nbsp;: les gestes essentiels pour aborder le tournage.</p>
+        </div>
+        <div class="tarif">
+          <h3>Tournage perfectionnement<span class="duree">3 jours</span></h3>
+          <span class="prix">280&nbsp;€</span>
+        </div>
+        <div class="tarif">
+          <h3>Émaillage et cuissons haute température<span class="duree">5 jours, cuissons à 1300&nbsp;°C</span></h3>
+          <span class="prix">400&nbsp;€</span>
+          <p>Calcul molaire de l’émail, essais de glaçure et cuissons.</p>
+        </div>
+        <div class="tarif">
+          <h3>Stage découverte<span class="duree">3 jours</span></h3>
+          <span class="prix">250&nbsp;€</span>
+          <p>Tournage, travail à la plaque, colombins, modelage.</p>
+        </div>
+        <div class="autres">
+          <h3>À l’heure ou à la journée</h3>
+          <ul>
+            <li>Cours particulier <span>25&nbsp;€ de l’heure</span></li>
+            <li>Carnet de 10 cours <span>300&nbsp;€</span></li>
+            <li>Journée d’initiation, de 2 à 4 personnes <span>90&nbsp;€</span></li>
+          </ul>
+          <p class="note">Pour les cours, les jours et les horaires se voient directement avec Christian.</p>
+        </div>
+        <div class="actions">
+          <a class="bouton plein" href="http://www.charre-christian.fr/formulaire%20inscription%20stage.html">S’inscrire par le formulaire</a>
+          <a class="bouton contour" href="tel:+33684422179">06 84 42 21 79</a>
+        </div>
+        <p class="note">Indiquez le stage qui vous intéresse&nbsp;: Christian valide votre inscription par retour de mail.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recherche" id="emaux">
+    <div class="cadre">
+      <div class="tete">
+        <blockquote>«&nbsp;Un travail acharné et un goût pour la recherche me permettent aujourd’hui une production personnalisée.&nbsp;»<footer>Christian Charre</footer></blockquote>
+        <div>
+          <p>Une première formation scientifique à l’INSA de Lyon, puis un DUT de génie climatique en 1983, lui donnent les bases pour aborder le calcul de l’émail.</p>
+          <p>Autodidacte, il se forme ensuite au CNIFOP, avec deux stages, émail et tournage de grosses pièces, et auprès de potiers confirmés. Depuis 2004, il poursuit ses recherches sur les émaux de haute température.</p>
+        </div>
+      </div>
+      <div class="trio">
+        <figure class="apparait">
+          <img src="assets/charre-mostuejouls/grand-plat-shino-sur-presentoir.webp" width="1600" height="1600" loading="lazy" alt="Grand plat en grès à aile cloutée, centre shino blanc et brun au décor gestuel, sur un présentoir">
+          <figcaption>Grand plat, émail shino au décor gestuel.</figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/charre-mostuejouls/trois-pichets-stries-turquoise-et-miel.webp" width="1600" height="1200" loading="lazy" alt="Trois pichets striés en spirale, émaux turquoise, bleu-vert et miel">
+          <figcaption>Pichets striés, turquoise et miel.</figcaption>
+        </figure>
+        <figure class="apparait">
+          <img src="assets/charre-mostuejouls/service-a-the-vert-brillant.webp" width="1600" height="1200" loading="lazy" alt="Théière striée vert céladon brillant à anse de bambou et quatre bols à thé assortis">
+          <figcaption>Service à thé, vert brillant.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="voyages" aria-labelledby="titre-voyages">
+    <div class="cadre">
+      <h2 id="titre-voyages" class="intro">Des voyages qui ont tous laissé des traces dans son travail</h2>
+      <p class="pays">Mali, Burkina Faso, Maroc, Tunisie et l’Asie du Sud-Est.</p>
+      <div class="suite">
+        <p>Très tôt, une rencontre avec l’argile, des voyages au Maghreb et une attirance pour les formes et la couleur l’ont conduit au métier de potier. Il est membre de l’association Teranga depuis 1990.</p>
+        <p>Le goût de la pédagogie l’a conduit à partager ce qu’il a appris, en stages à l’atelier. Passionné de musique, il donne aussi des cours de percussions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lieu" id="lieu">
+    <div class="cadre">
+      <div class="bloc">
+        <h2>Un atelier au bord du Tarn</h2>
+        <p>À Mostuéjouls, à l’entrée des gorges du Tarn, tout près de la rivière et des campings. L’atelier occupe un bâtiment neuf dans un grand parc ombragé&nbsp;: plusieurs tours, un four à gaz, un four électrique.</p>
+        <p>Pour dormir sur place pendant un stage, les nombreux hébergements des environs sont recensés par l’office de tourisme de Rivière-sur-Tarn. Le Tarn, tout proche, offre d’agréables baignades.</p>
+        <figure class="polaroid apparait">
+          <img src="assets/charre-mostuejouls/theiere-shino-anse-bambou.webp" width="1600" height="1600" loading="lazy" alt="Théière en grès, émail shino crème et brun au décor de pinceau, anse en bambou">
+          <figcaption>Théière shino, anse en bambou</figcaption>
+        </figure>
+      </div>
+      <div class="bloc">
+        <h2>Où trouver ses pièces</h2>
+        <ul class="lieux">
+          <li><b>La yourte, à Mostuéjouls</b><span>Lieu de vente et d’exposition près de l’atelier, ouvert d’avril à octobre, sur rendez-vous.</span></li>
+          <li><b>La boutique du Rozier (48)</b><span>Ouverte tous les jours en juillet et en août.</span></li>
+          <li><b>Espace Métiers d’art, Millau</b><span>Boutique associative&nbsp;: ses pièces y sont toute l’année.</span></li>
+          <li><b>Marchés de potiers</b><span>Tout au long de l’année, partout en France.</span></li>
+          <li><b>Salons d’artisanat d’art</b><span>En fin d’année, quelques salons régionaux.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="carte">
+        <div class="gauche">
+          <h2>Un stage, une pièce, une visite de la yourte&nbsp;?</h2>
+          <p>Le plus simple est d’appeler Christian ou de lui écrire par le formulaire de contact.</p>
+          <div class="actions">
+            <a class="bouton plein" href="http://www.charre-christian.fr/formulaire%20de%20contact.html">Lui écrire</a>
+            <a class="bouton contour" href="tel:+33684422179">06 84 42 21 79</a>
+          </div>
+        </div>
+        <div class="droite">
+          <dl>
+            <div><dt>Atelier</dt><dd>99 route de Therondel<br>12720 Mostuéjouls</dd></div>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33684422179">06 84 42 21 79</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:christian.charre@orange.fr">christian.charre@orange.fr</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <span class="nom">Christian Charre</span>
+      <p>Potier céramiste à Mostuéjouls, à l’entrée des gorges du Tarn.</p>
+    </div>
+    <div>
+      <h3>L’atelier</h3>
+      <ul>
+        <li>99 route de Therondel</li>
+        <li>12720 Mostuéjouls</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Yourte&nbsp;: d’avril à octobre, sur rendez-vous</li>
+        <li>Stages&nbsp;: du lundi au vendredi, 9&nbsp;h à 12&nbsp;h et 14&nbsp;h à 17&nbsp;h</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33684422179">06 84 42 21 79</a></li>
+        <li><a href="mailto:christian.charre@orange.fr">christian.charre@orange.fr</a></li>
+        <li><a href="http://www.charre-christian.fr/formulaire%20inscription%20stage.html">Inscription aux stages</a></li>
+        <li><a href="http://www.charre-christian.fr/formulaire%20de%20contact.html">Formulaire de contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Christian Charre</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

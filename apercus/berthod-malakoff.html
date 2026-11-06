@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Marjolaine Berthod, céramiste à Malakoff</title>
+<meta name="description" content="Marjolaine Berthod, céramiste à Malakoff depuis 2002 : grès noirs engobés de porcelaine et porcelaines au décor gravé, en petites séries de pièces uniques.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231D2B4A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23E2B517'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EFEEEB; --base-2:#E6E4DF; --surface:#FAFAF8; --encre:#1A1B22; --encre-2:#4A4B55;
+  --jaune:#E2B517; --jaune-pale:#F3E3A6; --nuit:#1D2B4A; --nuit-2:#2A3A5E; --sur-nuit:#E9ECF3; --sur-nuit-2:#B5BED2;
+  --display:'Rosarivo', Georgia, serif; --texte:'Schibsted Grotesk', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(29,43,74,.55);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6;font-weight:400}
+::selection{background:var(--jaune);color:var(--nuit)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--nuit);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(239,238,235,.94);border-bottom:1px solid rgba(26,27,34,.07)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.marque b{font-family:var(--display);font-weight:400;font-size:23px}
+.marque span{font-size:14px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2)}
+.nav a:not(.appel):hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--nuit);color:var(--sur-nuit);text-decoration:none;font-weight:500;font-size:16px;white-space:nowrap;transition:background .25s ease, transform .25s ease}
+.appel:hover{background:var(--nuit-2);transform:translateY(-1px)}
+
+/* Héros */
+.heros{padding:64px 0 104px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-areas:"titre photo" "texte photo" "actions photo";column-gap:80px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(38px, 6.4vw, 80px);line-height:1.04;margin-top:28px}
+.heros .chapo{grid-area:texte;font-size:19px;color:var(--encre-2);max-width:34em;margin-top:28px}
+.actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease}
+.bouton.plein{background:var(--nuit);color:var(--sur-nuit)}
+.bouton.plein:hover{background:var(--nuit-2);transform:translateY(-2px)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre);white-space:nowrap}
+.bouton.contour:hover{background:var(--encre);color:var(--base);transform:translateY(-2px)}
+.photo-heros{grid-area:photo;position:relative;margin:0 32px 32px 0;align-self:center}
+.photo-heros::before{content:"";position:absolute;inset:32px -32px -32px 32px;background:var(--jaune);border-radius:16px}
+.photo-heros img{position:relative;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 62%;border-radius:16px;box-shadow:var(--ombre)}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 12px 30px -16px rgba(29,43,74,.6)}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{font-size:16px;line-height:1.45;color:var(--encre-2);padding-left:22px;position:relative}
+.faits li::before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;border-radius:50%;background:var(--nuit);box-shadow:inset 0 -4px 0 var(--jaune)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:21px;color:var(--encre);line-height:1.25}
+
+/* Démarche */
+.demarche{padding:120px 0 112px}
+.demarche .cadre{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:88px;align-items:start}
+.citation{font-family:var(--display);font-size:clamp(28px, 3.3vw, 42px);line-height:1.22;margin:0}
+.citation em{font-style:italic}
+.demarche .apres{margin-top:36px;font-size:18px;color:var(--encre-2);max-width:36em}
+.lignes{margin-top:44px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ligne{background:var(--surface);border-radius:14px;padding:18px 18px 20px;box-shadow:0 18px 40px -30px rgba(29,43,74,.45)}
+.echantillon{height:70px;border-radius:9px;margin-bottom:14px}
+.echantillon.noire{background:repeating-linear-gradient(98deg, transparent 0 13px, var(--encre) 13px 15px), linear-gradient(var(--surface),var(--surface));border:1px solid rgba(26,27,34,.12)}
+.echantillon.blanche{background:repeating-linear-gradient(98deg, transparent 0 13px, var(--surface) 13px 15px), linear-gradient(#26272c,#26272c)}
+.ligne b{display:block;font-weight:600;font-size:16px}
+.ligne p{font-size:16px;color:var(--encre-2);line-height:1.5;margin-top:4px}
+.detail{position:relative;margin:0}
+.detail img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 58%;border-radius:20px;box-shadow:var(--ombre)}
+.detail figcaption{margin-top:14px;font-size:15px;color:var(--encre-2)}
+
+/* Pièces : fond bleu nuit */
+.pieces{background:var(--nuit);color:var(--sur-nuit);padding:120px 0 128px}
+.pieces h2{font-size:clamp(34px, 4.4vw, 56px);line-height:1.08;max-width:14em}
+.pieces .intro{color:var(--sur-nuit-2);margin-top:20px;max-width:38em}
+.familles{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:72px;margin-top:64px;align-items:start}
+.famille:nth-child(2){margin-top:120px}
+.famille figure{margin:0;position:relative}
+.famille img{width:100%;border-radius:18px;object-fit:cover;box-shadow:0 30px 60px -30px rgba(5,10,22,.8)}
+.famille:nth-child(1) img{aspect-ratio:3/2;object-position:30% 70%}
+.famille:nth-child(2) img{aspect-ratio:4/5;object-position:50% 55%}
+.famille h3{font-size:34px;margin-top:32px}
+.famille > p{color:var(--sur-nuit-2);margin-top:10px;font-size:17px}
+.mesures{list-style:none;margin:22px 0 0;padding:0}
+.mesures li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid rgba(233,236,243,.18);font-size:17px}
+.mesures li:last-child{border-bottom:1px solid rgba(233,236,243,.18)}
+.mesures span{color:var(--sur-nuit-2);text-align:right}
+.pieces .note{margin-top:18px;font-size:15px;color:var(--sur-nuit-2)}
+
+/* Couleurs : composition */
+.couleurs{padding:128px 0 120px}
+.couleurs .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end}
+.couleurs h2{font-size:clamp(32px, 4vw, 52px);line-height:1.1}
+.couleurs .tete p{color:var(--encre-2);max-width:32em}
+.compo{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:64px}
+.compo figure{margin:0;position:relative;align-self:start}
+.c-large{grid-column:1 / 8}
+.c-large img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%;border-radius:22px;box-shadow:var(--ombre)}
+.compo .c-rond{position:absolute;z-index:3;width:min(230px, 34%);right:-118px;bottom:-96px}
+.c-rond img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%;border-radius:50%;border:8px solid var(--base);box-shadow:var(--ombre)}
+.compo .c-haut{grid-column:8 / 13;margin-top:72px}
+.c-haut img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 60%;border-radius:18px;box-shadow:var(--ombre)}
+.c-bas{grid-column:2 / 8;margin-top:72px}
+.c-bas-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:center}
+.c-bas img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:16px;box-shadow:var(--ombre)}
+.c-bas p{font-family:var(--display);font-size:24px;line-height:1.35}
+.compo .pastille{left:16px;bottom:16px}
+
+/* Parcours : frise */
+.parcours{background:var(--surface);padding:120px 0}
+.parcours h2{font-size:clamp(32px, 4vw, 52px);line-height:1.1}
+.parcours .intro{margin-top:16px;color:var(--encre-2);max-width:40em}
+.frise{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:linear-gradient(90deg,var(--nuit),var(--nuit) 70%,var(--jaune))}
+.frise li{position:relative;padding-top:42px}
+.frise li::before{content:"";position:absolute;top:2px;left:0;width:20px;height:20px;border-radius:50%;background:var(--surface);border:2px solid var(--nuit)}
+.frise li.cle::before{background:var(--jaune);border-color:var(--jaune)}
+.frise b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15}
+.frise p{font-size:16px;color:var(--encre-2);margin-top:10px;line-height:1.5}
+
+/* Contact */
+.contact{padding:128px 0;background:linear-gradient(180deg,var(--base) 0 55%, var(--jaune-pale) 55% 100%)}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:72px;align-items:center}
+.contact h2{font-size:clamp(34px, 4.6vw, 60px);line-height:1.06}
+.contact .texte p{margin-top:22px;color:var(--encre-2);max-width:30em}
+.contact .actions{margin-top:32px}
+.fiche{background:var(--surface);border-radius:24px;padding:40px;box-shadow:0 40px 80px -40px rgba(29,43,74,.55)}
+.fiche dl{margin:0;display:grid;gap:22px}
+.fiche dt{font-size:15px;color:var(--encre-2)}
+.fiche dd{margin:4px 0 0;font-family:var(--display);font-size:24px;line-height:1.3}
+.fiche dd a{text-decoration-color:var(--jaune);text-decoration-thickness:2px;text-underline-offset:5px;overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:var(--nuit);color:var(--sur-nuit);padding:80px 0 56px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b.nom{font-family:var(--display);font-weight:400;font-size:30px;display:block;line-height:1.2}
+.pied p{color:var(--sur-nuit-2);font-size:16px;margin-top:10px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:500;color:var(--sur-nuit-2);margin-bottom:10px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(226,181,23,.6)}
+.pied a:hover{color:var(--jaune)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:17px}
+.proposition{background:var(--nuit);color:var(--sur-nuit-2);font-size:13px;text-align:center;padding:18px 16px 26px;border-top:1px solid rgba(233,236,243,.1)}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .bouton,.appel{transition:none}
+}
+
+@media (max-width: 1000px){
+  .nav a:not(.appel){display:none}
+  .heros .cadre{column-gap:48px}
+  .frise{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:48px}
+  .frise::before{display:none}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 820px){
+  .heros{padding:32px 0 88px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions"}
+  .heros h1{margin-top:8px}
+  .photo-heros{margin:32px 20px 40px 0}
+  .photo-heros::before{inset:20px -20px -20px 20px}
+  .demarche{padding:88px 0}
+  .demarche .cadre,.familles,.couleurs .tete,.contact .cadre,.pied .cadre{grid-template-columns:minmax(0,1fr);gap:48px}
+  .famille:nth-child(2){margin-top:0}
+  .pieces,.couleurs,.parcours,.contact{padding:88px 0}
+  .compo{grid-template-columns:minmax(0,1fr);gap:28px}
+  .c-large,.compo .c-haut,.c-bas{grid-column:auto;margin-top:0}
+  .compo .c-rond{right:-6px;bottom:-56px;width:min(170px, 36%)}
+  .compo .c-haut{margin-top:44px}
+  .c-bas{margin-top:56px}
+  .contact{background:var(--base)}
+}
+@media (max-width: 560px){
+  body{font-size:17px}
+  .cadre{width:min(1200px, 100% - 36px)}
+  .marque span{display:none}
+  .marque b{font-size:20px}
+  .appel{padding:9px 14px;font-size:15px}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px;padding:26px 0}
+  .lignes{grid-template-columns:minmax(0,1fr)}
+  .frise{grid-template-columns:minmax(0,1fr);row-gap:30px}
+  .frise li{padding:0 0 0 38px}
+  .frise li::before{top:4px}
+  .c-bas-inner{grid-template-columns:minmax(0,1fr)}
+  .fiche{padding:28px 24px}
+  .fiche dd{font-size:21px}
+  .mesures li{flex-wrap:wrap;gap:2px 12px}
+  .mesures span{text-align:left}
+}
+@media (max-width: 420px){
+  .actions .bouton{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Marjolaine Berthod</b><span>céramiste à Malakoff</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#demarche">Démarche</a>
+      <a href="#pieces">Pièces</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+      <a class="appel" href="tel:+33630963550">06 30 96 35 50</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>Objets du quotidien autant qu’objets d’art.</h1>
+      <p class="chapo">Dans son atelier de Malakoff, ouvert en 2002, Marjolaine Berthod tourne des petites séries de pièces uniques&nbsp;: grès noir engobé de porcelaine blanche, et porcelaines aux décors gravés.</p>
+      <div class="actions">
+        <a class="bouton plein" href="mailto:marjoberthod@yahoo.fr">Écrire à Marjolaine</a>
+        <a class="bouton contour" href="tel:+33630963550">06 30 96 35 50</a>
+      </div>
+      <figure class="photo-heros">
+        <img src="assets/berthod-malakoff/deux-vases-jaune-et-bleu-nuit.webp" width="1200" height="1600" alt="Deux vases en porcelaine aux flancs cabossés, bases engobées jaune et bleu nuit gravées de traits blancs, sur une planche de bois clair">
+        <span class="pastille">Porcelaine, décor mishima</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>Malakoff</b>Son atelier depuis 2002</li>
+      <li><b>Mulhouse</b>Formée à la Maison de la Céramique</li>
+      <li><b>Grès et porcelaine</b>Grès noir, porcelaine, et depuis peu un grès roux</li>
+      <li><b>Pièces uniques</b>En petites séries, aux formes simples</li>
+    </ul>
+  </section>
+
+  <section class="demarche" id="demarche">
+    <div class="cadre">
+      <div>
+        <h2 class="citation">«&nbsp;Je recherche l’harmonie de matières et de couleurs contrastées&nbsp;: noir et blanc, grès et porcelaine, matité de l’argile et brillant de l’émail.&nbsp;»</h2>
+        <p class="apres">Des formes simples, qui laissent la place à un décor de lignes horizontales ou verticales. Selon l’endroit où elle grave, la ligne sort noire ou blanche.</p>
+        <div class="lignes">
+          <div class="ligne">
+            <div class="echantillon noire" aria-hidden="true"></div>
+            <b>La ligne noire</b>
+            <p>Gravée dans l’engobe de porcelaine, elle fait réapparaître le grès noir.</p>
+          </div>
+          <div class="ligne">
+            <div class="echantillon blanche" aria-hidden="true"></div>
+            <b>La ligne blanche</b>
+            <p>Gravée dans la terre, puis comblée de porcelaine&nbsp;: c’est la technique mishima.</p>
+          </div>
+        </div>
+        <p class="apres">Dans chaque pièce, elle cherche à réunir deux valeurs trop souvent tenues à l’écart l’une de l’autre&nbsp;: le quotidien et l’expression artistique.</p>
+      </div>
+      <figure class="detail apparait">
+        <img src="assets/berthod-malakoff/plat-creux-bleu-canard-mishima.webp" width="1227" height="1600" loading="lazy" alt="Plat creux en porcelaine au flanc bleu canard gravé de traits blancs obliques">
+        <figcaption>Plat creux en porcelaine, flanc bleu canard gravé de traits blancs.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="pieces" id="pieces">
+    <div class="cadre">
+      <h2>Deux familles de pièces, la même main.</h2>
+      <p class="intro">Plats, coupes, saladiers, vases, boîtes, tasses, pichets et théières&nbsp;: des pièces faites pour servir, chacune unique.</p>
+      <div class="familles">
+        <article class="famille">
+          <figure class="apparait">
+            <img src="assets/berthod-malakoff/stand-gres-noir-et-porcelaine.webp" width="1600" height="1153" loading="lazy" alt="Mur d’exposition&nbsp;: grès noirs et porcelaines sur des tables, étagères rondes accrochées au mur">
+            <span class="pastille">Grès noirs et porcelaines exposés</span>
+          </figure>
+          <h3>Grès noirs</h3>
+          <p>Grès noir engobé de porcelaine blanche, lignes gravées.</p>
+          <ul class="mesures">
+            <li>Plat <span>diamètre 26&nbsp;cm, hauteur 8&nbsp;cm</span></li>
+            <li>Coupe <span>diamètre 24&nbsp;cm, hauteur 8&nbsp;cm</span></li>
+            <li>Saladier <span>diamètre 24&nbsp;cm, hauteur 11&nbsp;cm</span></li>
+            <li>Deux boîtes <span>hauteurs 8 et 14&nbsp;cm</span></li>
+            <li>Vase <span>hauteur 28&nbsp;cm</span></li>
+          </ul>
+        </article>
+        <article class="famille">
+          <figure class="apparait">
+            <img src="assets/berthod-malakoff/pichets-cabosses-empiles.webp" width="1200" height="1600" loading="lazy" alt="Une dizaine de pichets en porcelaine cabossés, bandes orange, jaune, bleu et rouge, serrés sur une planche">
+          </figure>
+          <h3>Porcelaines</h3>
+          <p>Noir et blanc, ou en couleur.</p>
+          <ul class="mesures">
+            <li>Tasses noir et blanc <span>hauteur 7&nbsp;cm</span></li>
+            <li>Pichets couleur <span>hauteurs 21 et 20&nbsp;cm</span></li>
+            <li>Théière couleur <span>hauteur 12&nbsp;cm</span></li>
+            <li>Saladier couleur <span>diamètre 23&nbsp;cm</span></li>
+          </ul>
+          <p class="note">Quelques pièces et leurs mesures, pour donner l’échelle.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="couleurs" aria-labelledby="titre-couleurs">
+    <div class="cadre">
+      <div class="tete">
+        <h2 id="titre-couleurs">Une bande de couleur, gravée comme des herbes.</h2>
+        <p>Sur la porcelaine, la base de chaque pièce reçoit un engobe de couleur, puis des traits fins gravés en herbes. Les flancs, eux, sont cabossés au tour.</p>
+      </div>
+      <div class="compo">
+        <figure class="c-large apparait">
+          <img src="assets/berthod-malakoff/six-gobelets-porcelaine-couleurs.webp" width="1600" height="1200" loading="lazy" alt="Six gobelets en porcelaine aux bandes bleu, rouge, jaune, turquoise, rose et kaki, alignés sur une planche">
+          <span class="pastille">Six gobelets, six couleurs</span>
+        <div class="c-rond">
+          <img src="assets/berthod-malakoff/gobelets-dans-tamis-mural.webp" width="1600" height="1200" loading="lazy" alt="Gobelets rangés dans un ancien tamis rond accroché au mur et transformé en étagère">
+        </div>
+        </figure>
+        <figure class="c-haut apparait">
+          <img src="assets/berthod-malakoff/vases-orange-et-turquoise.webp" width="1200" height="1600" loading="lazy" alt="Deux vases évasés en porcelaine, bases orange et turquoise gravées de traits blancs">
+        </figure>
+        <div class="c-bas">
+          <div class="c-bas-inner">
+            <figure class="apparait" style="margin:0">
+              <img src="assets/berthod-malakoff/etagere-vases-rouges-et-bols.webp" width="1280" height="1600" loading="lazy" alt="Tablettes murales&nbsp;: deux vases à bande rouge, trois bols, branches de fleurs séchées">
+            </figure>
+            <p>Gobelets, bols, vases&nbsp;: rangés sur les tablettes et les tamis du mur de l’atelier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="parcours" id="parcours">
+    <div class="cadre">
+      <h2>Un parcours tout entier dans la terre.</h2>
+      <p class="intro">Après ses études secondaires, Marjolaine Berthod se consacre entièrement à la céramique.</p>
+      <ol class="frise">
+        <li><b>À sept ans</b><p>Elle découvre la terre auprès d’une céramiste professionnelle.</p></li>
+        <li><b>Le tournage</b><p>Un an d’apprentissage à l’atelier d’A.&nbsp;Tozzola et auprès du céramiste de grès Jean-Luc Jourdain.</p></li>
+        <li><b>Mulhouse</b><p>Formation professionnelle de la Maison de la Céramique, aujourd’hui l’IEAC.</p></li>
+        <li><b>Chez d’autres céramistes</b><p>Elle poursuit son parcours en travaillant notamment chez Thiébaut Chagué.</p></li>
+        <li class="cle"><b>2002</b><p>Elle ouvre son propre atelier. Jusqu’en 2014, elle enseigne aussi la poterie à Paris Ateliers (ADAC), dans le 14<sup>e</sup>.</p></li>
+        <li><b>2007</b><p>Création de l’association Terramicales et première édition du Festival de céramique de Paris 11<sup>e</sup>.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="texte">
+        <h2>Une pièce vous a plu&nbsp;?</h2>
+        <p>Pour une question sur une pièce, une forme ou une couleur, écrivez à Marjolaine ou appelez-la directement.</p>
+        <div class="actions">
+          <a class="bouton plein" href="http://marjolaineberthod.com/contact/">Lui écrire par le formulaire</a>
+          <a class="bouton contour" href="tel:+33630963550">06 30 96 35 50</a>
+        </div>
+      </div>
+      <div class="fiche">
+        <dl>
+          <div><dt>Atelier</dt><dd>20 avenue Augustin Dumont<br>92240 Malakoff</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33630963550">06 30 96 35 50</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:marjoberthod@yahoo.fr">marjoberthod@yahoo.fr</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <b class="nom">Marjolaine Berthod</b>
+      <p>Céramiste à Malakoff. Grès noirs et porcelaines, petites séries de pièces uniques.</p>
+    </div>
+    <div>
+      <h3>L’atelier</h3>
+      <ul>
+        <li>20 avenue Augustin Dumont</li>
+        <li>92240 Malakoff</li>
+      </ul>
+    </div>
+    <div>
+      <h3>La joindre</h3>
+      <ul>
+        <li><a href="tel:+33630963550">06 30 96 35 50</a></li>
+        <li><a href="mailto:marjoberthod@yahoo.fr">marjoberthod@yahoo.fr</a></li>
+        <li><a href="http://marjolaineberthod.com/contact/">Formulaire de contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Marjolaine Berthod</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

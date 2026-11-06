@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rose Cambouis, réparateur de vélos à Caen</title>
+<meta name="description" content="Rose Cambouis, atelier de réparation de vélos à Caen : entretien, montage à la carte, restauration de vélos anciens, vente de vélos d'occasion et neufs. 60 ter rue de Bayeux.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23D9487A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='36' fill='%23232120'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Literata:ital,opsz,wght@0,7..72,300..500;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F2E9E7; --surface:#FBF6F5; --encre:#232120; --rose:#D9487A; --sombre:#232120;
+  --bande:#E9D9D5; --doux:#5E5653; --rose-pale:#F4D3DE; --clair:#F6EEEC; --clair-doux:#C9BFBC;
+  --ombre:0 30px 60px -34px rgba(35,20,24,.55);
+  --display:"Bricolage Grotesque", "Avenir Next Condensed", sans-serif;
+  --texte:"Literata", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rose);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(35,33,32,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marque i{width:14px;height:14px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px var(--rose-pale);flex:none}
+.marque b{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.02em}
+.nav{display:flex;align-items:center;gap:28px;font-family:var(--display);font-size:16px;font-weight:500}
+.nav a{text-decoration:none}
+.nav .lien:hover{color:#B02F5E}
+.nav .tel{background:var(--encre);color:var(--clair);padding:10px 20px;border-radius:999px;white-space:nowrap;transition:background .2s, transform .2s}
+.nav .tel:hover{background:#3A3634;transform:translateY(-1px)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-family:var(--display);font-size:17px;font-weight:600;text-decoration:none;border:2px solid transparent;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-rose{background:var(--rose);color:var(--encre)}
+.btn-rose:hover{background:#E46792}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--clair)}
+.btn-clair{border-color:rgba(246,238,236,.5);color:var(--clair)}
+.btn-clair:hover{border-color:var(--rose);color:var(--rose)}
+
+/* Héros */
+.heros{padding:72px 0 112px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1fr);grid-template-areas:"photo titre" "photo texte" "photo actions";grid-template-rows:auto auto 1fr;column-gap:120px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.5vw,78px);padding-top:56px}
+.heros .intro{grid-area:texte;margin-top:28px;max-width:31em;color:var(--doux)}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.entree{grid-area:photo;position:relative;margin:0}
+.entree img{width:100%;aspect-ratio:9/10;object-fit:cover;object-position:50% 100%;border-radius:20px;box-shadow:var(--ombre)}
+.ticket{position:absolute;right:-76px;top:30%;width:min(250px,62%);background:var(--surface);border-radius:12px;padding:46px 22px 20px;box-shadow:0 26px 50px -24px rgba(35,20,24,.55);transform:rotate(4deg);transform-origin:50% 0;font-family:var(--display)}
+.ticket::before{content:"";position:absolute;left:50%;top:16px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--base);box-shadow:inset 0 0 0 3px #CDBDB8, 0 0 0 3px var(--surface)}
+.ticket::after{content:"";position:absolute;left:50%;bottom:calc(100% - 26px);width:70px;height:110px;border-left:2px solid #8A6C64;border-top:2px solid #8A6C64;border-radius:60px 0 0 0;transform:translateX(-1px) rotate(-12deg);transform-origin:0 100%}
+.ticket h2{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.ticket ul{list-style:none;padding:0;margin:14px 0 0;font-family:var(--texte);font-size:16px;line-height:1.4}
+.ticket li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px dashed rgba(35,33,32,.22)}
+.ticket li::before{content:"";flex:none;width:15px;height:15px;margin-top:3px;border-radius:4px;border:2px solid var(--rose);background:linear-gradient(135deg,transparent 45%,var(--rose) 45%,var(--rose) 58%,transparent 58%)}
+.ticket p{margin-top:12px;padding-top:12px;border-top:2px dotted rgba(35,33,32,.35);font-size:16px;color:var(--doux);font-family:var(--texte)}
+
+/* Faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 36px}
+.faits li{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.25}
+.faits li span{display:block;font-family:var(--texte);font-weight:400;font-size:16px;color:var(--doux);margin-top:4px}
+
+/* Services */
+.services{padding:128px 0 104px}
+.services-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end;margin-bottom:56px}
+.services h2{font-size:clamp(34px,4vw,58px)}
+.services-tete p{color:var(--doux);max-width:30em}
+.ligne-service{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:baseline;padding:30px 0;border-top:2px solid var(--encre)}
+.ligne-service:last-child{border-bottom:2px solid var(--encre)}
+.ligne-service h3{font-size:clamp(28px,3.4vw,46px);font-weight:600}
+.ligne-service p{color:var(--doux);max-width:28em}
+
+/* Sortis de l'atelier, section sombre */
+.sortis{background:var(--sombre);color:var(--clair);padding:120px 0 136px}
+.sortis-tete{display:flex;justify-content:space-between;align-items:end;gap:48px;flex-wrap:wrap}
+.sortis h2{font-size:clamp(34px,4vw,58px);max-width:11em}
+.sortis-tete p{color:var(--clair-doux);max-width:26em}
+.rangee{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:64px;align-items:start}
+.velo{margin:0;position:relative}
+.velo img{width:100%;aspect-ratio:3/4.3;object-fit:cover;border-radius:16px;box-shadow:0 34px 70px -38px rgba(0,0,0,.9)}
+.velo:nth-child(2){margin-top:72px}
+.velo:nth-child(3){margin-top:24px}
+.velo:nth-child(4){margin-top:104px}
+.etiquette{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-family:var(--display);font-weight:600;font-size:16px;line-height:1.2;border-radius:999px;padding:8px 14px;box-shadow:0 12px 26px -16px rgba(35,20,24,.7)}
+.etiquette.rose{background:var(--rose);color:var(--encre)}
+
+/* Vente */
+.vente{padding:128px 0}
+.vente .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:96px;align-items:center}
+.vente h2{font-size:clamp(34px,4vw,58px)}
+.vente .texte p{margin-top:22px;color:var(--doux);max-width:30em}
+.omnium{margin-top:36px;background:var(--surface);border-radius:20px;padding:26px 28px;box-shadow:var(--ombre)}
+.omnium h3{font-size:24px}
+.omnium p{margin-top:8px !important}
+.vente-photos{position:relative;padding:0 0 80px 0}
+.vente-photos .grande{margin:0 0 0 auto;width:82%;position:relative}
+.vente-photos .grande img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 70%;border-radius:22px;box-shadow:var(--ombre)}
+.vente-photos .grande .etiquette{left:auto;right:14px;bottom:auto;top:14px}
+.vente-photos .detail{position:absolute;margin:0;width:min(220px,40%);padding:8px;background:var(--surface);border-radius:16px;box-shadow:var(--ombre)}
+.vente-photos .detail img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.vente-photos .d1{left:0;bottom:0;transform:rotate(-4deg)}
+.vente-photos .d2{left:6%;top:12%;transform:rotate(3deg);width:min(180px,32%)}
+
+/* Horaires et contact */
+.passer{padding:0 0 128px}
+.passer .cadre{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:start}
+.semaine{background:var(--surface);border-radius:28px;padding:44px 44px 36px;box-shadow:var(--ombre)}
+.semaine h2{font-size:clamp(30px,3.2vw,44px)}
+.semaine .sous{color:var(--doux);margin-top:10px}
+.echelle,.jour{display:grid;grid-template-columns:6.5rem minmax(0,1fr) 12.5rem;gap:18px;align-items:center}
+.echelle{margin-top:30px;font-family:var(--display);font-size:14px;color:var(--doux)}
+.echelle div{display:flex;justify-content:space-between}
+.jour{padding:12px 0;border-top:1px solid rgba(35,33,32,.1)}
+.jour b{font-family:var(--display);font-weight:600;font-size:17px}
+.piste{position:relative;height:14px;border-radius:999px;background:repeating-linear-gradient(90deg,rgba(35,33,32,.08) 0 1px,transparent 1px 10%) , #F1E6E3}
+.piste i{position:absolute;top:0;bottom:0;border-radius:999px;background:var(--rose)}
+.jour .heures{grid-column:3;font-size:16px;color:var(--doux);line-height:1.4}
+.jour.ferme .heures{color:#8A817E}
+.semaine .renvoi{margin-top:18px;font-size:16px;color:var(--doux)}
+.coord{background:var(--encre);color:var(--clair);border-radius:28px;padding:44px 40px;display:flex;flex-direction:column;gap:22px}
+.coord h2{font-size:clamp(30px,3.2vw,44px)}
+.coord .champ span{display:block;font-size:16px;color:var(--clair-doux)}
+.coord .champ a,.coord .champ strong{font-family:var(--display);font-size:21px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.coord .champ a:hover{color:var(--rose)}
+.coord .note{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.coord .note b{font-family:var(--display);font-size:46px;line-height:1;color:var(--rose)}
+.coord .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.coord .btn-rose{color:var(--encre)}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 36px;font-size:16px;border-top:1px solid rgba(246,238,236,.08)}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:var(--clair);font-size:28px}
+.pied h3{font-size:17px;color:var(--clair);margin-bottom:10px;letter-spacing:0}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(246,238,236,.25)}
+.pied a:hover{color:var(--rose);border-color:var(--rose)}
+.proposition{background:var(--sombre);color:#958B88;text-align:center;font-size:14px;padding:20px 24px 30px;border-top:1px solid rgba(246,238,236,.08)}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1 !important;transform:none !important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien{display:none}
+  .heros .cadre{column-gap:96px}
+  .rangee{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .velo:nth-child(n){margin-top:0}
+  .velo:nth-child(2n){margin-top:56px}
+  .passer .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .heros{padding:36px 0 80px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros h1{padding-top:0}
+  .entree{margin:28px 64px 0 0}
+  .ticket{right:-58px;top:auto;bottom:-28px;width:min(220px,58%);padding:40px 16px 16px}
+  .ticket::after{display:none}
+  .heros .intro{margin-top:56px}
+  .services,.vente{padding:88px 0}
+  .sortis{padding:88px 0 96px}
+  .services-tete,.vente .cadre{grid-template-columns:minmax(0,1fr);gap:24px}
+  .vente .cadre{gap:56px}
+  .ligne-service{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 0}
+  .passer{padding-bottom:88px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .cadre{width:min(1200px,100% - 40px)}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:20px}
+  .nav .tel{padding:9px 14px;font-size:15px}
+  .entree{margin-right:44px}
+  .ticket{right:-44px;width:min(196px,62%)}
+  .ticket h2{font-size:19px}
+  .ticket ul{font-size:16px}
+  .heros .actions{flex-direction:column}
+  .btn{width:100%}
+  .faits ul{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .rangee{gap:14px}
+  .velo:nth-child(2n){margin-top:40px}
+  .etiquette{left:10px;bottom:10px;font-size:15px;padding:6px 11px}
+  .vente-photos .grande{width:88%}
+  .semaine,.coord{padding:30px 22px;border-radius:22px}
+  .echelle,.jour{grid-template-columns:minmax(0,1fr)}
+  .echelle > span{display:none}
+  .jour{gap:8px}
+  .jour .heures{grid-column:1;margin-top:0}
+  .ticket p{display:none}
+  .ticket li{padding:5px 0}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .marque i{display:none}
+  .ticket{width:min(178px,64%)}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><i aria-hidden="true"></i><b>Rose Cambouis</b></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#atelier">L'atelier</a>
+      <a class="lien" href="#velos">Les vélos</a>
+      <a class="lien" href="#horaires">Horaires</a>
+      <a class="tel" href="tel:+33651202096">06 51 20 20 96</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>Réparer, entretenir, rendre votre vélo comme neuf.</h1>
+      <figure class="entree">
+        <img src="assets/rose-cambouis-caen/entree-atelier-rose-cambouis.webp" alt="L'entrée de l'atelier Rose Cambouis, porte grande ouverte sur la charpente blanche et les vélos suspendus, chevalet de l'atelier sur le trottoir et trois vélos neufs devant" width="1200" height="1600" fetchpriority="high">
+        <div class="ticket" aria-label="Ce que fait l'atelier">
+          <h2>Ticket d'atelier</h2>
+          <ul>
+            <li>Réparation et entretien</li>
+            <li>Montage à la carte</li>
+            <li>Vélos anciens restaurés</li>
+            <li>Pièces neuves</li>
+          </ul>
+          <p>60 ter rue de Bayeux, Caen</p>
+        </div>
+      </figure>
+      <p class="intro">Rose Cambouis est un atelier de réparation de vélos à Caen. On y entretient votre vélo, on y monte des vélos à la carte, on y restaure les anciens, et on y vend des vélos d'occasion et neufs.</p>
+      <div class="actions">
+        <a class="btn btn-rose" href="#horaires">Voir les horaires</a>
+        <a class="btn btn-contour" href="tel:+33651202096"><span class="nowrap">06 51 20 20 96</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li>Atelier vélo<span>60 ter rue de Bayeux, Caen</span></li>
+      <li>Occasion et neuf<span>vélos et pièces</span></li>
+      <li>Revendeur Omnium<span>cargos et vélos de ville</span></li>
+      <li>4,9 sur 5<span>35 avis sur Google</span></li>
+      <li>Du mardi au samedi<span>fermé lundi et dimanche</span></li>
+    </ul>
+  </section>
+
+  <section class="services" id="atelier">
+    <div class="cadre">
+      <div class="services-tete">
+        <h2>Ce qui passe sur le pied d'atelier.</h2>
+        <p>Du vélo de tous les jours au gravel, du cargo au petit vélo rétro&nbsp;: l'équipe répare, règle et remet en route.</p>
+      </div>
+      <div class="ligne-service"><h3>Réparation et entretien</h3><p>Votre vélo réparé, entretenu, et rendu comme neuf.</p></div>
+      <div class="ligne-service"><h3>Montage à la carte</h3><p>Des vélos montés à la carte, pièce par pièce.</p></div>
+      <div class="ligne-service"><h3>Restauration</h3><p>Les vélos anciens remis en état.</p></div>
+      <div class="ligne-service"><h3>Vente</h3><p>Vélos d'occasion et neufs, pièces neuves.</p></div>
+    </div>
+  </section>
+
+  <section class="sortis" id="velos">
+    <div class="cadre">
+      <div class="sortis-tete">
+        <h2>Devant le rideau de l'atelier.</h2>
+        <p>Quelques vélos passés entre les mains de l'équipe, photographiés contre le rideau métallique, rue de Bayeux.</p>
+      </div>
+      <div class="rangee">
+        <figure class="velo apparait">
+          <img src="assets/rose-cambouis-caen/gravel-orange-devant-rideau.webp" alt="Gravel orange à pneus à flancs marron, de profil devant le rideau métallique gris" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Gravel orange</span>
+        </figure>
+        <figure class="velo apparait">
+          <img src="assets/rose-cambouis-caen/velo-ville-rose-panier.webp" alt="Vélo de ville rose fuchsia avec panier avant noir et garde-boue" width="1200" height="1600" loading="lazy">
+          <span class="etiquette rose">Vélo de ville</span>
+        </figure>
+        <figure class="velo apparait">
+          <img src="assets/rose-cambouis-caen/velo-retro-orange-selle-banane.webp" alt="Petit vélo rétro orange restauré, selle banane violette et haut guidon" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Rétro restauré</span>
+        </figure>
+        <figure class="velo apparait">
+          <img src="assets/rose-cambouis-caen/gravel-guidoline-cuir-et-violette.webp" alt="Gravel bleu nuit appuyé au mur, guidoline marron et sacoche de cintre violette" width="1201" height="1600" loading="lazy">
+          <span class="etiquette">Gravel bleu nuit</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="vente">
+    <div class="cadre">
+      <div class="texte">
+        <h2>Des vélos d'occasion et des neufs.</h2>
+        <p>L'atelier vend des vélos d'occasion et neufs, ainsi que des pièces neuves pour l'entretien. Le mieux est de passer les voir rue de Bayeux, ou d'appeler avant.</p>
+        <div class="omnium">
+          <h3>Revendeur Omnium</h3>
+          <p>Des vélos cargo et des vélos de ville, de la marque Omnium.</p>
+        </div>
+      </div>
+      <div class="vente-photos">
+        <figure class="grande apparait">
+          <img src="assets/rose-cambouis-caen/velo-bikepacking-sacoches-fluo.webp" alt="Vélo de voyage en acier crème chargé de sacoches rose et jaune fluo, contre le rideau métallique" width="1200" height="1600" loading="lazy">
+          <span class="etiquette rose">Chargé pour le voyage</span>
+        </figure>
+        <figure class="detail d1">
+          <img src="assets/rose-cambouis-caen/transmission-et-pedalier-violet.webp" alt="Gros plan d'une transmission : dérailleur, cassette, plateau et pédale violette" width="1600" height="1200" loading="lazy">
+        </figure>
+        <figure class="detail d2">
+          <img src="assets/rose-cambouis-caen/etrier-de-frein-rouge-detail.webp" alt="Étrier de frein à disque rouge anodisé sur une fourche blanche" width="1280" height="1600" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="passer" id="horaires">
+    <div class="cadre">
+      <div class="semaine">
+        <h2>Quand passer à l'atelier.</h2>
+        <p class="sous">Fermé le lundi et le dimanche, ouvert tard le mardi.</p>
+        <div class="echelle" aria-hidden="true"><span></span><div><span>10&nbsp;h</span><span>12&nbsp;h</span><span>14&nbsp;h</span><span>16&nbsp;h</span><span>18&nbsp;h</span><span>20&nbsp;h</span></div><span></span></div>
+        <div class="jour ferme"><b>Lundi</b><div class="piste"></div><p class="heures">Fermé</p></div>
+        <div class="jour"><b>Mardi</b><div class="piste"><i style="left:35%;width:65%"></i></div><p class="heures">13&nbsp;h 30 – 20&nbsp;h</p></div>
+        <div class="jour"><b>Mercredi</b><div class="piste"><i style="left:0;width:25%"></i><i style="left:35%;width:45%"></i></div><p class="heures">10&nbsp;h – 12&nbsp;h 30, 13&nbsp;h 30 – 18&nbsp;h</p></div>
+        <div class="jour"><b>Jeudi</b><div class="piste"><i style="left:0;width:25%"></i><i style="left:35%;width:45%"></i></div><p class="heures">10&nbsp;h – 12&nbsp;h 30, 13&nbsp;h 30 – 18&nbsp;h</p></div>
+        <div class="jour"><b>Vendredi</b><div class="piste"><i style="left:0;width:25%"></i><i style="left:35%;width:55%"></i></div><p class="heures">10&nbsp;h – 12&nbsp;h 30, 13&nbsp;h 30 – 19&nbsp;h</p></div>
+        <div class="jour"><b>Samedi</b><div class="piste"><i style="left:0;width:25%"></i><i style="left:35%;width:45%"></i></div><p class="heures">10&nbsp;h – 12&nbsp;h 30, 13&nbsp;h 30 – 18&nbsp;h</p></div>
+        <div class="jour ferme"><b>Dimanche</b><div class="piste"></div><p class="heures">Fermé</p></div>
+        <p class="renvoi">Jours fériés&nbsp;: horaires à vérifier sur la <a href="https://www.google.com/maps/place/Rose+Cambouis/data=!4m7!3m6!1s0x480a4348e15ac539:0x8590d8c9cf2ac4df" target="_blank" rel="noopener">fiche Google</a>.</p>
+      </div>
+      <div class="coord">
+        <h2>Rose Cambouis</h2>
+        <div class="champ"><span>Téléphone</span><a href="tel:+33651202096" class="nowrap">06 51 20 20 96</a></div>
+        <div class="champ"><span>Adresse</span><strong>60 ter rue de Bayeux, 14000 Caen</strong></div>
+        <div class="champ"><span>Mail</span><a href="mailto:rosecambouis14@gmail.com">rosecambouis14@gmail.com</a></div>
+        <div class="champ"><span>Note Google</span><div class="note"><b>4,9</b><span>sur 5, 35 avis</span></div></div>
+        <div class="actions">
+          <a class="btn btn-rose" href="https://www.google.com/maps/place/Rose+Cambouis/data=!4m7!3m6!1s0x480a4348e15ac539:0x8590d8c9cf2ac4df" target="_blank" rel="noopener">Voir les avis</a>
+          <a class="btn btn-clair" href="https://www.facebook.com/Rose-Cambouis-101226421706983" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut"><i aria-hidden="true"></i><b>Rose Cambouis</b></a>
+      <p style="margin-top:12px">Réparateur de vélos à Caen. Entretien, montage à la carte, restauration, vélos d'occasion et neufs.</p>
+    </div>
+    <div>
+      <h3>Atelier</h3>
+      <p>60 ter rue de Bayeux<br>14000 Caen</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Mardi 13&nbsp;h 30 – 20&nbsp;h<br>Mercredi au samedi, matin et après-midi<br>Fermé lundi et dimanche</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33651202096" class="nowrap">06 51 20 20 96</a></li>
+        <li><a href="mailto:rosecambouis14@gmail.com">rosecambouis14@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/Rose-Cambouis-101226421706983" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Rose Cambouis</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

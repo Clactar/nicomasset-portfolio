@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Pastoune · foodtruck de pâtes fraîches et légumes maraîchers, Bordeaux</title>
+<meta name="description" content="La Pastoune, foodtruck maraîcher à Bordeaux : pâtes artisanales, locales et maraîchères, faites maison avec les légumes qu'ils font pousser. Événements privés. 06 66 49 51 35.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23E0A526'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='36' font-weight='700' fill='%232C3320' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EEF0E2; --base-2:#E2E6CF; --surface:#F8F9F1; --encre:#24281A; --encre-2:#525842; --accent:#E0A526; --accent-fonce:#B9811A; --vert:#5E7A3E; --sombre:#2C3320;
+  --ombre:0 30px 60px -34px rgba(44,51,32,.6);
+  --vichy:linear-gradient(90deg,rgba(94,122,62,.5) 50%,transparent 0) 0 0/40px 40px,linear-gradient(rgba(94,122,62,.5) 50%,transparent 0) 0 0/40px 40px,#F8F9F1;
+  --largeur:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:"Schibsted Grotesk",Georgia,serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--vert);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:"Bagel Fat One",Georgia,serif;letter-spacing:-.005em}
+h3{font-family:"Schibsted Grotesk",Georgia,serif;font-weight:600;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.env{max-width:var(--largeur);margin:0 auto;padding-inline:clamp(20px,5vw,40px)}
+
+/* En-tête */
+.tete{position:sticky;top:0;z-index:20;background:rgba(238,240,226,.95);border-bottom:1px solid rgba(36,40,26,.08)}
+.tete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{display:flex;align-items:baseline;gap:14px;text-decoration:none}
+.marque b{font-family:"Bagel Fat One",Georgia,serif;font-weight:400;font-size:26px;line-height:1}
+.marque span{font-size:15px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.lien{font-size:16px;text-decoration:none;color:var(--encre-2)}
+.nav a.lien:hover{color:var(--encre)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-plein{background:var(--accent);color:var(--encre);box-shadow:0 16px 30px -18px rgba(185,129,26,.9)}
+.btn-plein:hover{background:#EBB43C;transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.tete .btn{min-height:44px;padding:0 20px;font-size:16px}
+.tel{white-space:nowrap}
+
+/* Héros */
+.heros{padding:88px 0 120px}
+.heros .env{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(40px,5.4vw,78px);line-height:1.02}
+.heros .chapo{margin-top:30px;font-size:19px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note{margin-top:30px;font-size:16px;color:var(--encre-2)}
+.note b{color:var(--encre);font-weight:600}
+.assiette{position:relative;width:min(520px,100%);margin-inline:auto;aspect-ratio:1/1}
+.assiette .torchon{position:absolute;inset:6% -4% -4% 6%;border-radius:14px;background:var(--vichy);transform:rotate(-4deg);box-shadow:var(--ombre)}
+.assiette figure{margin:0;position:absolute;inset:0 8% 8% 0}
+.assiette .rond{width:100%;height:100%;border-radius:50%;overflow:hidden;border:10px solid var(--surface);box-shadow:0 34px 60px -30px rgba(44,51,32,.75)}
+.assiette img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.assiette .etiquette{left:4%;bottom:12%}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:600;line-height:1.3;box-shadow:0 12px 24px -14px rgba(44,51,32,.7)}
+
+/* Faits */
+.faits{background:var(--base-2);padding:48px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.faits li{font-size:16px;line-height:1.4;color:var(--encre-2)}
+.faits b{display:block;font-family:"Bagel Fat One",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1;color:var(--encre);margin-bottom:6px}
+
+/* Potager */
+.potager{padding:128px 0}
+.potager .env{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.potager h2,.evenements h2,.contact h2{font-size:clamp(32px,3.8vw,52px);line-height:1.06}
+.potager .intro{margin-top:24px;color:var(--encre-2);max-width:30em}
+.plats{margin-top:40px;display:grid;gap:18px}
+.plat{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:center;background:var(--surface);border-radius:18px;padding:12px 20px 12px 12px;box-shadow:0 18px 36px -28px rgba(44,51,32,.6)}
+.plat img{width:96px;height:96px;border-radius:12px;object-fit:cover}
+.plat b{display:block;font-weight:600;font-size:18px;line-height:1.3}
+.plat span{font-size:15px;color:var(--encre-2)}
+.duo{position:relative;padding:0 0 80px 0;min-height:560px}
+.duo figure{margin:0;position:absolute}
+.duo .p1{right:0;top:0;width:62%}
+.duo .p2{left:0;bottom:0;width:48%;transform:rotate(-3deg)}
+.duo .ph{border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.duo .p2 .ph{border:8px solid var(--surface);border-radius:18px}
+.duo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.duo .p1 img{object-position:50% 60%}
+.duo .etiquette{right:16px;top:16px}
+
+/* Événements (sombre) */
+.evenements{background:var(--sombre);color:#E4E7D6;padding:128px 0}
+.evenements h2{color:var(--surface)}
+.evenements .env{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:center}
+.evenements .intro{margin-top:24px;color:#B8BEA6;max-width:30em}
+.chiffres{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:40px}
+.chiffres div{border-top:2px solid var(--accent);padding-top:16px}
+.chiffres b{display:block;font-family:"Bagel Fat One",Georgia,serif;font-weight:400;font-size:44px;line-height:1;color:var(--accent)}
+.chiffres span{display:block;margin-top:8px;font-size:16px;color:#B8BEA6}
+.occasions{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.occasions li{border:1px solid rgba(228,231,214,.3);border-radius:999px;padding:8px 16px;font-size:16px}
+.table-ev{position:relative;padding-bottom:64px}
+.table-ev figure{margin:0}
+.table-ev .grand{border-radius:24px;overflow:hidden;box-shadow:0 34px 70px -34px rgba(0,0,0,.8);position:relative}
+.table-ev .grand img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.table-ev .petit{position:absolute;right:-24px;bottom:0;width:min(230px,42%);transform:rotate(4deg);border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:0 26px 50px -24px rgba(0,0,0,.8)}
+.table-ev .petit img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.table-ev .etiquette{left:18px;top:18px}
+
+/* Contact */
+.contact{padding:128px 0}
+.contact .env{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.contact .intro{margin-top:20px;color:var(--encre-2);max-width:28em}
+.contact .salade{margin:40px 0 0;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);max-width:400px}
+.contact .salade img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:50% 45%}
+.carte{background:var(--surface);border-radius:24px;overflow:hidden;box-shadow:var(--ombre)}
+.carte .liseré{height:28px;background:var(--vichy)}
+.carte .corps{padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.carte dl{margin:0;display:grid;gap:22px}
+.carte dt{font-size:15px;color:var(--encre-2)}
+.carte dd{margin:4px 0 0;font-size:18px;font-weight:500;line-height:1.5}
+.carte dd a{text-underline-offset:4px;text-decoration-thickness:1px}
+.carte h3{font-size:20px;margin-bottom:12px}
+.horaires{width:100%;border-collapse:collapse;font-size:17px}
+.horaires th,.horaires td{padding:10px 0;border-bottom:1px solid rgba(36,40,26,.12);text-align:left;font-weight:400}
+.horaires th{font-weight:500}
+.horaires td{text-align:right;white-space:nowrap;color:var(--encre-2)}
+.horaires .ferme td{color:#878C76}
+.carte .src{margin-top:12px;font-size:15px;color:var(--encre-2)}
+.carte .bas{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border-top:1px solid rgba(36,40,26,.12);padding-top:28px}
+.carte .bas p{font-size:16px;color:var(--encre-2)}
+.carte .bas p b{color:var(--encre);font-weight:600}
+.carte .bas .actions{margin-top:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Pied */
+.pied{background:var(--sombre);color:#B8BEA6;padding:80px 0 40px}
+.pied .env{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .nom{font-family:"Bagel Fat One",Georgia,serif;font-size:34px;color:var(--accent);line-height:1;margin-bottom:14px;display:block}
+.pied h3{font-size:16px;color:var(--surface);margin-bottom:12px}
+.pied p,.pied li{font-size:16px;line-height:1.7}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{color:#E4E7D6;text-underline-offset:4px}
+.mention{background:var(--sombre);border-top:1px solid rgba(228,231,214,.1);color:#8A907A;font-size:14px;padding:18px 0 22px}
+
+/* Apparition */
+.js .apparait{opacity:0;translate:0 22px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;translate:0 0;transition:none}}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros{padding:40px 0 88px}
+  .heros .env{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros .texte{display:contents}
+  .heros h1{order:1}
+  .assiette{order:2;margin:36px auto 8px;width:min(440px,92%)}
+  .heros .chapo{order:3}
+  .heros .actions{order:4}
+  .heros .note{order:5}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
+  .potager .env,.evenements .env,.contact .env{grid-template-columns:minmax(0,1fr);gap:56px}
+  .duo{min-height:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:end}
+  .duo figure{position:relative;width:auto}
+  .duo .p1{order:2;top:auto;right:auto;width:auto}
+  .duo .p2{width:auto}
+  .duo .p2{order:1;bottom:-20px}
+  .table-ev .petit{right:-6px}
+  .pied .env{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .marque span{display:none}
+  .heros h1{font-size:clamp(34px,10.4vw,46px);line-height:1.06}
+  .heros .chapo{font-size:17px;margin-top:22px}
+  .assiette .rond{border-width:7px}
+  .assiette .etiquette{font-size:14px;padding:7px 14px}
+  .faits b{font-size:26px}
+  .potager,.evenements,.contact{padding:88px 0}
+  .chiffres b{font-size:36px}
+  .duo .etiquette{font-size:13px;right:8px;top:8px;padding:5px 10px}
+  .carte .corps{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:32px}
+  .plat{grid-template-columns:72px minmax(0,1fr);gap:14px}
+  .plat img{width:72px;height:72px}
+}
+@media (max-width:420px){
+  .tete .env{min-height:64px}
+  .marque b{font-size:22px}
+  .tete .btn{padding:0 14px;font-size:15px;min-height:42px}
+  .actions .btn{width:100%}
+  .faits ul{gap:24px 14px}
+  .faits b{font-size:23px}
+  .faits li{font-size:15px}
+  .carte dd{overflow-wrap:anywhere}
+}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut"><b>La Pastoune</b><span>Foodtruck maraîcher, Bordeaux</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#potager">Nos pâtes</a>
+      <a class="lien" href="#evenements">Événements</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn btn-plein tel" href="tel:+33666495135">06 66 49 51 35</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="env">
+      <div class="texte">
+        <h1>Des pâtes artisanales, locales et maraîchères</h1>
+        <p class="chapo">La Pastoune est un foodtruck de pâtes fraîches, à Bordeaux. On fait tout nous-mêmes, des pâtes aux légumes qu'on fait pousser : une alternative à la malbouffe, autant pour vous que pour la planète.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:lapastoune@gmail.com">Écrire à La Pastoune</a>
+          <a class="btn btn-contour" href="tel:+33666495135"><span class="tel">06 66 49 51 35</span></a>
+        </div>
+        <p class="note"><b>5,0 sur 5</b> sur Google, 61 avis</p>
+      </div>
+      <div class="assiette apparait">
+        <span class="torchon" aria-hidden="true"></span>
+        <figure>
+          <div class="rond"><img src="assets/la-pastoune-bordeaux/pates-fraiches-au-parmesan.webp" alt="Assiette de pâtes fraîches couvertes de parmesan râpé et d'herbes" width="1600" height="1200" fetchpriority="high"></div>
+          <figcaption class="etiquette">Pâtes fraîches au parmesan</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="env">
+      <ul>
+        <li><b>Fait maison</b>Pâtes artisanales et locales</li>
+        <li><b>Du potager</b>Les légumes qu'on fait pousser</li>
+        <li><b>68</b>Événements privés pendant la saison 2025</li>
+        <li><b>1&nbsp;480</b>Repas servis en 15 jours, à l'été 2025</li>
+        <li><b>5,0 sur 5</b>61 avis Google</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="potager" id="potager">
+    <div class="env">
+      <div>
+        <h2>Du potager à la pâte fraîche</h2>
+        <p class="intro">La pâte fraîche, on la fait nous-mêmes. Les légumes, on les fait pousser : ici, les jeunes framboisiers du potager de la Pastoune.</p>
+        <div class="plats">
+          <div class="plat"><img src="assets/la-pastoune-bordeaux/tagliatelles-shiitakes-persillade.webp" alt="Tagliatelles aux shiitakés et persil" width="1600" height="1565" loading="lazy"><div><b>Tagliatelles aux shiitakés et persillade</b><span>Pâtes fraîches, champignons, persil</span></div></div>
+          <div class="plat"><img src="assets/la-pastoune-bordeaux/raviolis-maison.webp" alt="Raviolis maison nappés de sauce, basilic et noisettes" width="1600" height="1600" loading="lazy"><div><b>Raviolis maison</b><span>Sauce, basilic et noisettes</span></div></div>
+        </div>
+      </div>
+      <div class="duo">
+        <figure class="p1 apparait">
+          <div class="ph"><img src="assets/la-pastoune-bordeaux/framboisiers-du-potager.webp" alt="Jeunes framboisiers plantés sur toile de paillage dans le potager" width="1200" height="1600" loading="lazy"></div>
+          <figcaption class="etiquette">Les framboisiers de la Pastoune</figcaption>
+        </figure>
+        <figure class="p2 apparait">
+          <div class="ph"><img src="assets/la-pastoune-bordeaux/boules-de-pate-fraiche.webp" alt="Trois boules de pâte fraîche sur un plan de travail en bois fariné" width="1200" height="1600" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="evenements" id="evenements">
+    <div class="env">
+      <div class="table-ev">
+        <figure class="grand apparait">
+          <img src="assets/la-pastoune-bordeaux/plateau-de-jambon-et-cornichons.webp" alt="Grand plateau en bois de jambon cru tranché et pot de cornichons, verres en fond" width="1600" height="1600" loading="lazy">
+          <figcaption class="etiquette">Pour les événements privés</figcaption>
+        </figure>
+        <figure class="petit apparait"><img src="assets/la-pastoune-bordeaux/burrata-tomates-basilic.webp" alt="Mozzarella sur tranches de tomate, basilic et balsamique" width="1200" height="1600" loading="lazy"></figure>
+      </div>
+      <div>
+        <h2>Le foodtruck à vos événements</h2>
+        <p class="intro">Pour les événements privés, La Pastoune diversifie son offre : plateaux à partager, salades, pâtes fraîches. Le camion se déplace avec sa cuisine.</p>
+        <div class="chiffres">
+          <div><b>68</b><span>événements privés pendant la saison 2025</span></div>
+          <div><b>1&nbsp;480</b><span>repas servis en 15 jours pour une ligue sportive, été 2025</span></div>
+        </div>
+        <ul class="occasions">
+          <li>Mariages</li>
+          <li>Privatisations</li>
+          <li>Repas de chantier</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div>
+        <h2>Réserver le foodtruck</h2>
+        <p class="intro">Une date, un lieu, un nombre de convives : appelez ou écrivez à l'équipe.</p>
+        <figure class="salade apparait"><img src="assets/la-pastoune-bordeaux/salade-roquette-et-burrata.webp" alt="Salade de roquette, tomates séchées, noisettes et mozzarella au vinaigre balsamique" width="1200" height="1600" loading="lazy"></figure>
+      </div>
+      <div class="carte">
+        <div class="liseré" aria-hidden="true"></div>
+        <div class="corps">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33666495135">06 66 49 51 35</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:lapastoune@gmail.com">lapastoune@gmail.com</a></dd></div>
+            <div><dt>Adresse</dt><dd>1 rue Buchou<br>33800 Bordeaux</dd></div>
+          </dl>
+          <div>
+            <h3>Horaires</h3>
+            <table class="horaires">
+              <caption class="sr">Horaires indiqués sur la fiche Google</caption>
+              <tbody>
+                <tr><th scope="row">Lundi</th><td>8&nbsp;h – 20&nbsp;h</td></tr>
+                <tr><th scope="row">Mardi</th><td>8&nbsp;h – 20&nbsp;h</td></tr>
+                <tr><th scope="row">Mercredi</th><td>8&nbsp;h – 20&nbsp;h</td></tr>
+                <tr><th scope="row">Jeudi</th><td>8&nbsp;h – 20&nbsp;h</td></tr>
+                <tr class="ferme"><th scope="row">Vendredi au dimanche</th><td>Fermé</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bas">
+            <p><b>5,0 sur 5</b>, 61 avis Google</p>
+            <div class="actions">
+              <a class="btn btn-plein" href="tel:+33666495135">Appeler</a>
+              <a class="btn btn-contour" href="https://www.google.com/maps/place/La+Pastoune/@44.8224157,-0.5640953,17z/data=!4m6!3m5!1s0xd5527340c39eadd:0xb0726902ec4e9190" target="_blank" rel="noopener">Voir les avis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <span class="nom">La Pastoune</span>
+      <p>Foodtruck maraîcher à Bordeaux : pâtes artisanales, locales et maraîchères.</p>
+    </div>
+    <div>
+      <h3>Nous joindre</h3>
+      <ul>
+        <li>1 rue Buchou, 33800 Bordeaux</li>
+        <li><a class="tel" href="tel:+33666495135">06 66 49 51 35</a></li>
+        <li><a href="mailto:lapastoune@gmail.com">lapastoune@gmail.com</a></li>
+        <li>Lundi au jeudi, 8&nbsp;h – 20&nbsp;h</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/place/La+Pastoune/@44.8224157,-0.5640953,17z/data=!4m6!3m5!1s0xd5527340c39eadd:0xb0726902ec4e9190" target="_blank" rel="noopener">Fiche Google et avis</a></li>
+        <li><a href="https://www.facebook.com/Lapastoune/" target="_blank" rel="noopener">Page Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="mention"><div class="env">Proposition de Nicolas Masset pour La Pastoune</div></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

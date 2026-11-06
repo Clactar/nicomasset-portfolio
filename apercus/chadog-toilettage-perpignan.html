@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Chadog Toilettage, toiletteur à Perpignan</title>
+<meta name="description" content="Chadog Toilettage, salon de toilettage pour chiens et chats au 15 rue Camille Pelletan, à Perpignan. Du lundi au vendredi, de 8 h à 17 h.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231E6F8C'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23FBF4EC'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Albert+Sans:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F1E4D3; --surface:#FBF4EC; --encre:#2B1B14; --bleu:#1E6F8C; --sombre:#1D2F3A;
+  --bleu-pale:#CFE3EA; --bande:#E8D6BF; --doux:#5F4C42; --clair:#F6EEE4; --clair-doux:#BCC8CF;
+  --ombre:0 30px 60px -34px rgba(43,27,20,.55);
+  --display:"Marcellus", "Trajan Pro", Georgia, serif;
+  --texte:"Albert Sans", "Avenir Next", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--bleu);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bleu);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+.entete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(43,27,20,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:26px}
+.marque span{font-size:15px;color:var(--doux);margin-top:2px}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:500}
+.nav a{text-decoration:none}
+.nav .lien:hover{color:var(--bleu)}
+.nav .tel{border:1.5px solid var(--bleu);color:var(--bleu);padding:9px 20px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
+.nav .tel:hover{background:var(--bleu);color:var(--surface)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 30px;border-radius:999px;font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-bleu{background:var(--bleu);color:var(--surface)}
+.btn-bleu:hover{background:#185C75}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{border-color:var(--bleu);color:var(--bleu)}
+
+/* Héros */
+.heros{padding:80px 0 120px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"titre photo" "texte photo" "actions photo";grid-template-rows:auto auto 1fr;column-gap:104px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(38px,5.3vw,74px);line-height:1.06;padding-top:64px}
+.heros .intro{grid-area:texte;margin-top:28px;max-width:31em;color:var(--doux);font-size:19px}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.chow{grid-area:photo;position:relative;margin:0;padding:28px 28px 0 0}
+.chow::before{content:"";position:absolute;top:0;right:0;width:calc(100% - 28px);height:calc(100% - 28px + 0px);border-radius:32px;background:var(--bleu-pale)}
+.chow img{position:relative;width:100%;aspect-ratio:4/4.8;object-fit:cover;object-position:50% 40%;border-radius:24px;box-shadow:var(--ombre)}
+.chow .etiquette{left:20px;bottom:20px}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);border-radius:999px;padding:9px 18px;font-size:16px;font-weight:500;line-height:1.25;box-shadow:0 14px 28px -16px rgba(43,27,20,.6)}
+.etiquette.bleue{background:var(--bleu);color:var(--surface)}
+
+/* Faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:34px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:var(--display);font-weight:400;font-size:27px;line-height:1.15}
+.faits span{font-size:16px;color:var(--doux);margin-top:4px}
+
+/* Sur la table */
+.table{padding:128px 0 120px}
+.table .cadre{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;align-items:start}
+.table-texte{grid-column:1 / span 5;position:sticky;top:120px}
+.table h2{font-size:clamp(34px,3.8vw,54px)}
+.table-texte p{margin-top:22px;color:var(--doux);max-width:28em}
+.table-texte .btn{margin-top:32px}
+.planche{grid-column:7 / span 6;position:relative;padding-bottom:40px}
+.photo{margin:0;position:relative}
+.photo img{width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--ombre)}
+.photo .etiquette{left:16px;bottom:16px}
+.sheltie img{aspect-ratio:4/4.2;object-position:50% 50%}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:32px;padding-left:16%;position:relative}
+.sheltie .etiquette{left:auto;right:16px;bottom:auto;top:16px}
+.duo .photo:first-child{margin-top:72px}
+.duo .photo img{aspect-ratio:3/4}
+.duo .cadre-clair{padding:10px;background:var(--surface);border-radius:26px;box-shadow:var(--ombre)}
+.duo .cadre-clair img{box-shadow:none;border-radius:18px}
+.polaroid{position:absolute;left:-16%;top:52%;width:min(220px,38%);background:var(--surface);padding:10px 10px 14px;border-radius:6px;box-shadow:var(--ombre);transform:rotate(-4deg);margin:0}
+.polaroid img{aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:3px}
+.polaroid figcaption{font-family:var(--display);font-size:18px;text-align:center;margin-top:8px}
+
+/* Frise sombre */
+.frise{background:var(--sombre);color:var(--clair);padding:128px 0}
+.frise-tete{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.frise h2{font-size:clamp(34px,3.8vw,54px)}
+.frise-tete p{color:var(--clair-doux);max-width:24em}
+.etapes{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;position:relative}
+.etapes::before{content:"";position:absolute;left:4%;right:4%;top:22px;border-top:1.5px dashed rgba(207,227,234,.45)}
+.etape{position:relative}
+.etape .rond{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--bleu);color:var(--surface);font-family:var(--display);font-size:22px;box-shadow:0 0 0 8px var(--sombre)}
+.etape figure{margin:28px 0 0}
+.etape img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:0 34px 70px -36px rgba(0,0,0,.85)}
+.etape h3{margin-top:22px;font-size:28px}
+.etape p{margin-top:6px;color:var(--clair-doux)}
+.etape:nth-child(2) figure{margin-top:64px}
+
+/* Races */
+.races{background:var(--surface);padding:120px 0}
+.races .cadre{max-width:1040px}
+.races h2{font-size:clamp(28px,2.6vw,36px);color:var(--bleu)}
+.races .liste{margin-top:26px;font-family:var(--display);font-size:clamp(28px,3.6vw,50px);line-height:1.28;text-wrap:balance}
+.races .liste span{color:var(--bleu)}
+.races .chats{margin-top:30px;color:var(--doux);font-size:19px;max-width:36em}
+
+/* Contact */
+.contact{padding:128px 0}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:start}
+.salon{position:relative;padding-bottom:120px}
+.salon .photo img{aspect-ratio:4/4.6;object-position:50% 35%}
+.salon .photo .etiquette{top:16px;bottom:auto}
+.salon .carte{position:absolute;right:-48px;bottom:0;width:min(330px,84%)}
+.carte{background:var(--surface);border-radius:22px;padding:28px 30px;box-shadow:var(--ombre)}
+.carte .note{display:flex;align-items:baseline;gap:12px}
+.carte .note b{font-family:var(--display);font-size:52px;line-height:1;color:var(--bleu)}
+.carte p{color:var(--doux);margin-top:6px}
+.carte a{display:inline-block;margin-top:14px;font-weight:600;color:var(--bleu);text-underline-offset:4px}
+.contact h2{font-size:clamp(34px,3.8vw,54px)}
+.contact .chapo{margin-top:20px;color:var(--doux);max-width:30em}
+.horaires{margin:36px 0 0;padding:0}
+.horaires div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid rgba(43,27,20,.14)}
+.horaires div:last-child{border-bottom:1px solid rgba(43,27,20,.14)}
+.horaires dt{font-weight:500}
+.horaires dd{margin:0;color:var(--doux);white-space:nowrap}
+.coord{margin-top:36px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 28px}
+.coord span{display:block;font-size:16px;color:var(--doux)}
+.coord a,.coord strong{font-size:19px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.coord a:hover{color:var(--bleu)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.note-feries{margin-top:14px;font-size:16px;color:var(--doux)}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:76px 0 36px;font-size:16px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque b{color:var(--clair);font-size:30px}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:600;color:var(--clair);margin-bottom:10px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(246,238,228,.25)}
+.pied a:hover{color:var(--bleu-pale);border-color:var(--bleu-pale)}
+.proposition{background:var(--sombre);color:#8C9AA3;text-align:center;font-size:14px;padding:20px 24px 30px;border-top:1px solid rgba(246,238,228,.08)}
+
+.js .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1 !important;transform:none !important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien{display:none}
+  .heros .cadre{column-gap:72px}
+  .contact .cadre{gap:72px}
+}
+@media (max-width:860px){
+  .heros{padding:36px 0 80px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros h1{padding-top:0}
+  .chow{margin-top:24px;padding:20px 20px 0 0}
+  .chow::before{width:calc(100% - 20px);height:calc(100% - 20px)}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
+  .table,.frise,.races,.contact{padding:88px 0}
+  .table .cadre{grid-template-columns:minmax(0,1fr);column-gap:0}
+  .table-texte{grid-column:1 / -1;position:static}
+  .planche{grid-column:1 / -1;position:relative}
+  .planche{margin-top:48px}
+  .polaroid{left:-4px;top:28px;width:min(150px,36%)}
+  .sheltie{margin-left:20%}
+  .etapes{grid-template-columns:minmax(0,1fr);gap:48px}
+  .etapes::before{left:22px;right:auto;top:0;bottom:0;border-top:0;border-left:1.5px dashed rgba(207,227,234,.45)}
+  .etape{padding-left:72px}
+  .etape .rond{position:absolute;left:0;top:0}
+  .etape figure,.etape:nth-child(2) figure{margin-top:0}
+  .contact .cadre{grid-template-columns:minmax(0,1fr)}
+  .salon .carte{right:-8px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .cadre{width:min(1200px,100% - 40px)}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:22px}
+  .marque span{font-size:14px}
+  .nav .tel{padding:8px 14px;font-size:15px}
+  .heros .actions{flex-direction:column}
+  .btn{width:100%}
+  .faits b{font-size:23px}
+  .duo{padding-left:0;gap:14px;margin-top:24px}
+  .duo .photo:first-child{margin-top:48px}
+  .etape{padding-left:64px}
+  .coord{grid-template-columns:minmax(0,1fr)}
+  .salon{padding-bottom:150px}
+  .salon .carte{right:0;width:88%;padding:22px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .marque span{display:none}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Chadog</b><span>Toilettage à Perpignan</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#table">Le travail</a>
+      <a class="lien" href="#salon">Le salon</a>
+      <a class="lien" href="#contact">Horaires</a>
+      <a class="tel" href="tel:+33634668259">06 34 66 82 59</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>Le toilettage de vos chiens et de vos chats, à Perpignan.</h1>
+      <figure class="chow">
+        <img src="assets/chadog-toilettage-perpignan/chow-chow-sur-table.webp" alt="Un chow-chow crème fraîchement brossé, assis sur la table de toilettage, langue bleue sortie" width="1200" height="1600" fetchpriority="high">
+        <span class="etiquette">Toilettage à Perpignan</span>
+      </figure>
+      <p class="intro">Chadog Toilettage est un salon dédié au toilettage des chiens et des chats, au 15 rue Camille Pelletan. Ouvert du lundi au vendredi, de 8&nbsp;h à 17&nbsp;h.</p>
+      <div class="actions">
+        <a class="btn btn-bleu" href="#contact">Prendre rendez-vous</a>
+        <a class="btn btn-contour" href="tel:+33634668259"><span class="nowrap">06 34 66 82 59</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>Chiens et chats</b><span>toilettage en salon</span></li>
+      <li><b>4,8 sur 5</b><span>88 avis sur Google</span></li>
+      <li><b>8&nbsp;h à 17&nbsp;h</b><span>du lundi au vendredi</span></li>
+      <li><b>Rue Camille Pelletan</b><span>Perpignan</span></li>
+    </ul>
+  </section>
+
+  <section class="table" id="table">
+    <div class="cadre">
+      <div class="table-texte">
+        <h2>Petits, grands, poils longs ou poils ras.</h2>
+        <p>Du westie au terre-neuve, du bouledogue au berger des Shetland&nbsp;: chaque chien passe sur la table du salon, et repart brossé.</p>
+        <a class="btn btn-contour" href="tel:+33634668259">Appeler le salon</a>
+      </div>
+      <div class="planche">
+        <figure class="photo sheltie apparait">
+          <img src="assets/chadog-toilettage-perpignan/sheltie-couche-sur-table.webp" alt="Un berger des Shetland fauve et blanc couché sur la table, poil brossé" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Berger des Shetland</span>
+        </figure>
+        <figure class="polaroid">
+          <img src="assets/chadog-toilettage-perpignan/westie-sur-table-2018.webp" alt="Un westie blanc debout sur la table de toilettage" width="904" height="1600" loading="lazy">
+          <figcaption>Westie</figcaption>
+        </figure>
+        <div class="duo">
+          <figure class="photo apparait">
+            <img src="assets/chadog-toilettage-perpignan/cocker-americain-noir-et-blanc.webp" alt="Un cocker américain noir et blanc assis sur la table" width="1200" height="1600" loading="lazy">
+            <span class="etiquette">Cocker américain</span>
+          </figure>
+          <figure class="photo cadre-clair apparait">
+            <img src="assets/chadog-toilettage-perpignan/cocker-anglais-blanc-orange.webp" alt="Un cocker anglais blanc et orange debout sur la table" width="1200" height="1600" loading="lazy">
+            <span class="etiquette bleue">Cocker anglais</span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="frise">
+    <div class="cadre">
+      <div class="frise-tete">
+        <h2>Du bain à la table.</h2>
+        <p>Le toilettage se fait au salon, de la baignoire jusqu'au dernier coup de brosse.</p>
+      </div>
+      <ol class="etapes">
+        <li class="etape">
+          <span class="rond" aria-hidden="true">1</span>
+          <figure class="apparait"><img src="assets/chadog-toilettage-perpignan/chien-dans-la-baignoire.webp" alt="Un chien noir et feu, la tête posée sur le rebord de la baignoire du salon" width="904" height="1600" loading="lazy"></figure>
+          <h3>Le bain</h3>
+          <p>Dans la baignoire du salon.</p>
+        </li>
+        <li class="etape">
+          <span class="rond" aria-hidden="true">2</span>
+          <figure class="apparait"><img src="assets/chadog-toilettage-perpignan/berger-allemand-assis-sur-table.webp" alt="Un berger allemand assis sur la table de toilettage, salon lumineux derrière" width="1200" height="1600" loading="lazy"></figure>
+          <h3>Sur la table</h3>
+          <p>Sous la potence, le chien est brossé et soigné.</p>
+        </li>
+        <li class="etape">
+          <span class="rond" aria-hidden="true">3</span>
+          <figure class="apparait"><img src="assets/chadog-toilettage-perpignan/terrier-roux-sur-table-salon.webp" alt="Un terrier roux assis sur la table, le salon en fond avec étagère et plantes" width="1200" height="1600" loading="lazy"></figure>
+          <h3>Prêt à rentrer</h3>
+          <p>Toiletté, il peut rentrer à la maison.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="races" aria-label="Les chiens du salon">
+    <div class="cadre">
+      <h2>Ils sont passés sur la table</h2>
+      <p class="liste">Berger allemand<span>,</span> bouledogue anglais<span>,</span> chow-chow<span>,</span> cocker américain<span>,</span> cocker anglais<span>,</span> berger des Shetland<span>,</span> terre-neuve<span>,</span> terrier<span>,</span> westie<span>.</span></p>
+      <p class="chats">Et les chats aussi&nbsp;: Chadog Toilettage s'occupe des chiens comme des chats.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="salon" id="salon">
+        <figure class="photo apparait">
+          <img src="assets/chadog-toilettage-perpignan/cocker-anglais-marron-salon.webp" alt="Un cocker anglais marron assis sur la table, avec le salon et la vitrine en fond" width="1200" height="1600" loading="lazy">
+          <span class="etiquette">Le salon, rue Camille Pelletan</span>
+        </figure>
+        <div class="carte">
+          <div class="note"><b>4,8</b><span>sur 5</span></div>
+          <p>88 avis sur la fiche Google du salon.</p>
+          <a href="https://www.google.com/maps/place/Chadog+Toilettage/@42.6994192,2.889398,17z/data=!4m8!3m7!1s0x12b06e4fc783b331:0x6ccba6c329765ba0" target="_blank" rel="noopener">Voir les avis</a>
+        </div>
+      </div>
+      <div>
+        <h2>Prendre rendez-vous.</h2>
+        <p class="chapo">Appelez le salon pour le toilettage de votre chien ou de votre chat.</p>
+        <dl class="horaires">
+          <div><dt>Lundi</dt><dd>8&nbsp;h – 17&nbsp;h</dd></div>
+          <div><dt>Mardi</dt><dd>8&nbsp;h – 17&nbsp;h</dd></div>
+          <div><dt>Mercredi</dt><dd>8&nbsp;h – 17&nbsp;h</dd></div>
+          <div><dt>Jeudi</dt><dd>8&nbsp;h – 17&nbsp;h</dd></div>
+          <div><dt>Vendredi</dt><dd>8&nbsp;h – 17&nbsp;h</dd></div>
+          <div><dt>Samedi et dimanche</dt><dd>Fermé</dd></div>
+        </dl>
+        <p class="note-feries">Jours fériés&nbsp;: horaires à vérifier sur la fiche Google.</p>
+        <div class="coord">
+          <div><span>Téléphone</span><a href="tel:+33634668259" class="nowrap">06 34 66 82 59</a></div>
+          <div><span>Mail</span><a href="mailto:mami66@hotmail.fr">mami66@hotmail.fr</a></div>
+          <div><span>Adresse</span><strong>15 rue Camille Pelletan, 66000 Perpignan</strong></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-bleu" href="tel:+33634668259">Appeler le salon</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/people/Chadog-Toilettage/100089722911087/" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut"><b>Chadog Toilettage</b></a>
+      <p style="margin-top:12px">Toilettage des chiens et des chats à Perpignan.</p>
+    </div>
+    <div>
+      <h3>Salon</h3>
+      <p>15 rue Camille Pelletan<br>66000 Perpignan</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Du lundi au vendredi<br>de 8&nbsp;h à 17&nbsp;h</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33634668259" class="nowrap">06 34 66 82 59</a></li>
+        <li><a href="mailto:mami66@hotmail.fr">mami66@hotmail.fr</a></li>
+        <li><a href="https://www.facebook.com/people/Chadog-Toilettage/100089722911087/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Chadog Toilettage</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Domaine de la Jaufrette, vins bio à Orange</title>
+<meta name="description" content="Domaine de la Jaufrette, vigneron indépendant à Orange : Châteauneuf-du-Pape, Gigondas, Vacqueyras et Côtes du Rhône en agriculture biologique, récoltés à la main. Dégustation au domaine sur rendez-vous.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%239C2F2A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-weight='bold' font-size='36' fill='%23F5F6EE'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E8E9DD; --surface:#F5F6EE; --encre:#262619; --rouge:#9C2F2A; --sombre:#2D2618;
+  --bande:#DCDECB; --doux:#5A5A46; --filet:#C9CBB6; --clair:#EEEBE0; --clair-doux:#BDB59F; --rouge-pale:#EBD3CD; --rouge-fonce:#7E2420;
+  --ombre:0 30px 60px -34px rgba(45,38,24,.55);
+  --display:"Spectral", "Iowan Old Style", Georgia, serif;
+  --texte:"Public Sans", "Avenir Next", sans-serif;
+  --large:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rouge);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0 0 1em;text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h2{font-size:clamp(36px,4.4vw,58px)}
+h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
+.cadre{width:min(var(--large),100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+:focus-visible{outline:2px solid var(--rouge);outline-offset:3px;border-radius:6px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(232,233,221,.95)}
+@supports (backdrop-filter:blur(2px)){.entete{background:rgba(232,233,221,.85);backdrop-filter:blur(12px)}}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.marque{text-decoration:none;font-family:var(--display);font-weight:600;font-size:23px;line-height:1.05;letter-spacing:-.01em}
+.marque small{display:block;font-family:var(--texte);font-weight:400;font-size:13px;color:var(--doux);letter-spacing:0;margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px}
+.nav a{text-decoration:none;color:var(--doux);font-weight:400;transition:color .2s}
+.nav a:hover{color:var(--rouge)}
+.nav .appel{background:var(--rouge);color:var(--surface);padding:11px 20px;border-radius:999px;font-weight:500;transition:background .25s}
+.nav .appel:hover{background:var(--rouge-fonce);color:var(--surface)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-family:var(--texte);font-size:16px;font-weight:500;text-decoration:none;border:1.5px solid transparent;text-align:center;transition:transform .25s ease,background .25s ease,color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--encre);color:var(--surface)}
+.btn-plein:hover{background:var(--rouge)}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.lien{color:var(--rouge);font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.lien:hover{text-decoration-thickness:2px}
+
+/* Héros */
+.heros{padding:24px 0 0}
+.bandeau{position:relative;margin:0}
+.bandeau img{width:100%;aspect-ratio:1200/380;object-fit:cover;object-position:42% 50%;border-radius:22px;box-shadow:0 44px 80px -42px rgba(45,38,24,.6)}
+.bandeau figcaption{position:absolute;left:22px;bottom:22px;background:var(--surface);font-size:14px;font-weight:400;padding:9px 15px;border-radius:999px}
+.heros-bas{display:grid;grid-template-columns:minmax(0,7.6fr) minmax(0,4.4fr);gap:48px;align-items:end;padding:44px 0 0}
+.heros h1{font-size:clamp(40px,5.3vw,78px);line-height:1;letter-spacing:-.03em}
+.heros-texte p{font-size:17px;color:var(--doux);max-width:44ch;margin-bottom:22px}
+
+/* Faits */
+.faits{padding:88px 0 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--bande);border-radius:22px;overflow:hidden}
+.faits li{padding:30px 26px 28px;border-left:1px solid rgba(38,38,25,.1)}
+.faits li:first-child{border-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:600;font-size:36px;line-height:1;color:var(--rouge);letter-spacing:-.02em}
+.faits span{display:block;font-size:14.5px;line-height:1.45;color:var(--doux);margin-top:10px}
+
+/* Vins */
+.vins{padding:128px 0 120px}
+.vins-haut{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:end;margin-bottom:48px}
+.vins-haut p{color:var(--doux);margin:0;max-width:56ch}
+.appellations{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--encre)}
+.appellations > li{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:32px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--filet)}
+.appellations .aoc{font-family:var(--display);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.1;letter-spacing:-.02em}
+.cuvees{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 12px}
+.cuvees li{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border-radius:999px;padding:8px 16px;font-size:15.5px}
+.cuvees i{width:11px;height:11px;border-radius:50%;flex:none}
+.r{background:var(--rouge)} .b{background:#D5C27A} .ro{background:#E39A93}
+.legende{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:var(--doux)}
+.legende span{display:inline-flex;align-items:center;gap:8px}
+.legende i{width:10px;height:10px;border-radius:50%}
+.vins-bas{margin-top:56px;display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:28px;align-items:stretch}
+.ecusson{position:relative;margin:0}
+.ecusson img{width:100%;height:100%;min-height:300px;object-fit:cover;object-position:30% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.ecusson figcaption{position:absolute;left:18px;bottom:18px;background:var(--surface);font-size:14px;padding:8px 14px;border-radius:999px}
+.carte-vins{background:var(--surface);border-radius:20px;padding:30px 28px;box-shadow:var(--ombre);display:flex;flex-direction:column;gap:18px}
+.carte-vins img{width:min(110px,40%);border-radius:10px;aspect-ratio:2/3;object-fit:cover}
+.carte-vins p{font-size:16px;color:var(--doux);margin:0}
+
+/* Histoire */
+.histoire{background:var(--bande);padding:120px 0}
+.histoire-haut{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start;margin-bottom:64px}
+.histoire-haut p{color:var(--doux);max-width:52ch}
+.histoire-haut .lead{font-size:21px;color:var(--encre);margin-top:24px}
+.histoire-haut figure{margin:0;justify-self:end;width:min(220px,100%);transform:rotate(2.5deg);background:var(--surface);padding:10px 10px 14px;border-radius:8px;box-shadow:0 26px 40px -24px rgba(45,38,24,.6)}
+.histoire-haut figure img{border-radius:4px;aspect-ratio:1/1;object-fit:cover}
+.histoire-haut figcaption{font-size:13.5px;color:var(--doux);margin-top:10px;line-height:1.35}
+.generations{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+.generations li{background:var(--surface);border-radius:18px;padding:28px 26px;box-shadow:0 22px 40px -32px rgba(45,38,24,.55)}
+.generations li:nth-child(2){margin-top:48px}
+.generations li:nth-child(3){margin-top:96px}
+.generations li:nth-child(4){margin-top:144px;background:var(--rouge);color:var(--surface)}
+.generations .quand{display:block;font-family:var(--display);font-weight:600;font-size:30px;line-height:1;color:var(--rouge);letter-spacing:-.02em}
+.generations li:nth-child(4) .quand{color:var(--rouge-pale)}
+.generations h3{font-size:23px;margin:14px 0 10px}
+.generations p{font-size:15.5px;color:var(--doux);margin:0}
+.generations li:nth-child(4) p{color:var(--rouge-pale)}
+
+/* Éthique, fond sombre */
+.ethique{background:var(--sombre);color:var(--clair);padding:128px 0}
+.devise{margin:0 0 80px;max-width:1040px}
+.devise p{font-family:var(--display);font-weight:400;font-style:italic;font-size:clamp(30px,3.9vw,54px);line-height:1.15;color:var(--surface);text-wrap:balance;margin:0}
+.devise footer{margin-top:22px;font-size:15px;color:var(--clair-doux)}
+.ethique-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.engagements{list-style:none;margin:0;padding:0}
+.engagements li{padding:22px 0;border-top:1px solid rgba(238,235,224,.16)}
+.engagements h3{color:var(--surface);font-size:24px;margin-bottom:6px}
+.engagements p{color:var(--clair-doux);font-size:16px;margin:0}
+.foudres{display:flex;gap:18px;align-items:center;margin-top:30px;padding-top:24px;border-top:1px solid rgba(238,235,224,.16)}
+.foudres img{width:min(150px,40%);border-radius:12px;aspect-ratio:1/1;object-fit:cover}
+.foudres p{font-size:15px;color:var(--clair-doux);margin:0}
+.nature{position:relative;padding-bottom:140px}
+.nature .coccinelle{border-radius:22px;aspect-ratio:16/10;object-fit:cover;object-position:60% 40%;box-shadow:0 30px 60px -28px rgba(0,0,0,.75)}
+.nature .moutons{position:absolute;left:-40px;bottom:0;width:66%;border-radius:18px;aspect-ratio:16/7;object-fit:cover;border:8px solid var(--sombre);box-shadow:0 30px 60px -26px rgba(0,0,0,.8)}
+.nature span{position:absolute;right:18px;top:18px;background:var(--surface);color:var(--encre);font-size:14px;padding:8px 14px;border-radius:999px}
+
+/* Salons */
+.salons{padding:128px 0 64px}
+.salons-haut{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 48px;margin-bottom:44px}
+.salons-haut p{color:var(--doux);margin:0;max-width:44ch}
+.dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.date{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;background:var(--surface);border-radius:24px;padding:30px 34px;box-shadow:var(--ombre)}
+.jour{display:flex;flex-direction:column;align-items:center;justify-content:center;width:112px;height:112px;border-radius:50%;background:var(--rouge-pale);color:var(--rouge-fonce);text-align:center;line-height:1}
+.jour b{font-family:var(--display);font-weight:600;font-size:32px;letter-spacing:-.02em}
+.jour span{font-size:14px;margin-top:6px}
+.date h3{font-size:25px;margin-bottom:6px}
+.date p{margin:0;font-size:15.5px;color:var(--doux)}
+.salons-bas{margin-top:26px;font-size:15.5px;color:var(--doux)}
+
+/* Visite */
+.visite{padding:64px 0 128px}
+.visite .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:32px;align-items:stretch}
+.visite-texte{padding:48px 24px 48px 0}
+.visite-texte p{color:var(--doux);max-width:50ch}
+.visite-texte .lead{color:var(--encre);font-size:20px;margin-top:22px}
+.coord{background:var(--surface);border-radius:26px;padding:44px;box-shadow:0 44px 80px -42px rgba(45,38,24,.6);position:relative}
+.coord h3{font-size:32px;font-weight:600;margin-bottom:24px;padding-right:110px}
+.coord dl{margin:0;display:grid;gap:16px}
+.coord dt{font-size:14px;color:var(--doux)}
+.coord dd{margin:2px 0 0;font-size:17px}
+.coord .tel{font-family:var(--display);font-weight:600;font-size:28px;color:var(--rouge);text-decoration:none;letter-spacing:-.01em}
+.coord .bouchons{position:absolute;right:28px;top:-34px;width:min(100px,26%);border-radius:10px;aspect-ratio:2/3;object-fit:cover;transform:rotate(4deg);box-shadow:0 20px 34px -18px rgba(45,38,24,.6);border:5px solid var(--surface)}
+.coord .actions{margin-top:28px}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair);padding:88px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque{font-size:28px;color:var(--surface)}
+.pied .marque small{color:var(--clair-doux)}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:400;color:var(--clair-doux);margin-bottom:12px;letter-spacing:0}
+.pied p,.pied li{font-size:16px;line-height:1.65;margin:0}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied a{text-decoration:none}
+.pied a:hover{text-decoration:underline;color:var(--rouge-pale)}
+.pied-bas{margin-top:64px;padding-top:26px;border-top:1px solid rgba(238,235,224,.14);font-size:14px;color:var(--clair-doux)}
+.proposition{background:var(--sombre);color:#8E866F;text-align:center;font-size:13px;padding:0 24px 28px}
+
+.js .apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu,.js.calme .apparait{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .nav a:not(.appel){display:none}
+  .heros-bas,.vins-haut,.histoire-haut,.ethique-grille,.visite .cadre{grid-template-columns:minmax(0,1fr);gap:36px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faits li:nth-child(4){border-left:0}
+  .faits li:nth-child(n+4){border-top:1px solid rgba(38,38,25,.1)}
+  .appellations > li{grid-template-columns:minmax(0,1fr);gap:14px}
+  .generations{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .generations li:nth-child(n){margin-top:0}
+  .dates{grid-template-columns:minmax(0,1fr)}
+  .histoire-haut figure{justify-self:start}
+  .nature .moutons{left:-12px}
+  .pied-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .cadre{width:min(var(--large),100% - 32px)}
+  .entete .cadre{min-height:64px}
+  .marque{font-size:19px}
+  .marque small{display:none}
+  .nav .appel{padding:10px 15px;font-size:14.5px}
+  .heros{padding-top:14px}
+  .bandeau img{aspect-ratio:4/3;object-position:45% 50%;border-radius:20px}
+  .heros-bas{padding-top:30px;gap:22px}
+  .heros h1{font-size:clamp(38px,11.4vw,52px)}
+  .heros-texte p{font-size:17px}
+  .actions .btn{flex:1 1 100%}
+  .faits{padding-top:56px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li{border-left:0!important;border-top:1px solid rgba(38,38,25,.1);padding:22px 18px}
+  .faits li:nth-child(-n+2){border-top:0}
+  .faits li:nth-child(even){border-left:1px solid rgba(38,38,25,.1)!important}
+  .faits li:last-child{grid-column:1/-1}
+  .faits b{font-size:30px}
+  .vins,.histoire,.ethique{padding:88px 0}
+  .vins-bas{grid-template-columns:minmax(0,1fr)}
+  .ecusson img{min-height:0;aspect-ratio:16/9}
+  .generations{grid-template-columns:minmax(0,1fr)}
+  .devise{margin-bottom:56px}
+  .nature{padding-bottom:100px}
+  .nature .moutons{width:78%}
+  .salons{padding:88px 0 40px}
+  .date{grid-template-columns:minmax(0,1fr);gap:18px;padding:26px 22px}
+  .jour{width:96px;height:96px}
+  .jour b{font-size:28px}
+  .visite{padding:40px 0 88px}
+  .visite-texte{padding:0}
+  .coord{padding:34px 22px}
+  .coord h3{font-size:28px;padding-right:90px}
+  .coord .bouchons{right:16px;width:min(84px,26%)}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .nav .appel{padding:9px 12px;font-size:14px}
+  .marque{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut">Domaine de la Jaufrette<small>Vignerons indépendants à Orange</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#vins">Nos vins</a>
+      <a href="#histoire">Histoire</a>
+      <a href="#ethique">Éthique</a>
+      <a href="#salons">Salons</a>
+      <a class="appel nowrap" href="tel:+33490343534">04 90 34 35 34</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <figure class="bandeau">
+        <img src="assets/domaine-de-la-jaufrette-orange/vigne-en-fleur-gros-plan.webp" alt="Gros plan d'une grappe de vigne en fleur, petits boutons verts et étamines blanches devant une feuille" width="1600" height="640" fetchpriority="high">
+        <figcaption>La vigne en fleur</figcaption>
+      </figure>
+      <div class="heros-bas">
+        <h1>Vins bio d’Orange, <br>récoltés à la main</h1>
+        <div class="heros-texte">
+          <p>Vignerons indépendants depuis plusieurs générations, la famille Chastan cultive la vigne en agriculture biologique à Orange, aux portes d'Avignon, près de Châteauneuf-du-Pape, Gigondas et Vacqueyras.</p>
+          <div class="actions">
+            <a class="btn btn-plein" href="#visite">Venir déguster</a>
+            <a class="btn btn-contour nowrap" href="tel:+33490343534">04 90 34 35 34</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="Le domaine en bref">
+    <div class="cadre">
+      <ul>
+        <li><b>1870</b><span>la famille Chastan se tourne vers la vigne</span></li>
+        <li><b>1976</b><span>première bouteille du domaine</span></li>
+        <li><b>4</b><span>appellations de la Vallée du Rhône</span></li>
+        <li><b>Bio</b><span>conversion engagée en 2011</span></li>
+        <li><b>100&nbsp;%</b><span>des raisins récoltés à la main</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="vins" id="vins">
+    <div class="cadre">
+      <div class="vins-haut">
+        <h2>Nos vins</h2>
+        <p>Rouges, blancs et rosés issus de cépages choisis avec soin, récoltés à la main puis élevés avec patience, pour révéler la complexité des appellations du domaine.</p>
+      </div>
+      <ul class="appellations">
+        <li><span class="aoc">Châteauneuf-du-Pape</span><ul class="cuvees"><li><i class="r"></i>Châteauneuf-du-Pape 2013</li></ul></li>
+        <li><span class="aoc">Gigondas</span><ul class="cuvees"><li><i class="r"></i>Gigondas 2013</li></ul></li>
+        <li><span class="aoc">Vacqueyras</span><ul class="cuvees"><li><i class="r"></i>Vacqueyras 2019</li><li><i class="r"></i>Vacqueyras 2013</li></ul></li>
+        <li><span class="aoc">Côtes du Rhône</span><ul class="cuvees"><li><i class="r"></i>Rouge Harmonie 2023</li><li><i class="r"></i>Côtes du Rhône 2021</li><li><i class="b"></i>Blanc à la Cale 2024</li><li><i class="ro"></i>Rosé de saignée 2024</li></ul></li>
+      </ul>
+      <div class="legende" aria-hidden="true"><span><i class="r"></i>rouge</span><span><i class="b"></i>blanc</span><span><i class="ro"></i>rosé</span></div>
+      <div class="vins-bas">
+        <figure class="ecusson apparait">
+          <img src="assets/domaine-de-la-jaufrette-orange/ecusson-chateauneuf-en-relief-sur-bouteille.webp" alt="Verre sombre d'une bouteille de Châteauneuf-du-Pape avec l'écusson et le nom en relief" width="1600" height="640" loading="lazy">
+          <figcaption>L'écusson de Châteauneuf-du-Pape</figcaption>
+        </figure>
+        <div class="carte-vins">
+          <img src="assets/domaine-de-la-jaufrette-orange/bouteilles-gravees-empilees.webp" alt="Bouteilles couchées en pile, appellation gravée dans le verre" width="1066" height="1600" loading="lazy">
+          <p>Le catalogue du domaine présente chaque vin, par gamme et par couleur, avec les exclusivités et les hors-séries.</p>
+          <a class="lien" href="https://www.lajaufrette.com/nos-vins.html" target="_blank" rel="noopener">Voir les fiches des vins</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="cadre">
+      <div class="histoire-haut">
+        <div>
+          <h2>Une histoire de vigne et de famille depuis 1870</h2>
+          <p class="lead">La famille Chastan cultive la terre depuis le XVIII<sup>e</sup>&nbsp;siècle, et la vigne depuis les années 1870.</p>
+          <p>De génération en génération, le domaine s'est forgé une identité forte, entre tradition viticole et agriculture respectueuse. Il s'étend aujourd'hui sur quatre appellations : Châteauneuf-du-Pape, Gigondas, Vacqueyras et Côtes du Rhône.</p>
+        </div>
+        <figure>
+          <img src="assets/domaine-de-la-jaufrette-orange/jeunes-feuilles-de-vigne-sur-le-sarment.webp" alt="Jeunes feuilles de vigne et vrilles au bout d'un sarment" width="1600" height="883" loading="lazy">
+          <figcaption>Au printemps, les premières feuilles</figcaption>
+        </figure>
+      </div>
+      <ol class="generations">
+        <li><span class="quand">Années 1950</span><h3>André et Paulette</h3><p>Vignerons originaires de Gigondas et de Vacqueyras, ils s'installent à Orange pour développer un vignoble en Côtes du Rhône.</p></li>
+        <li><span class="quand">Années 1970</span><h3>Alain et Andrée</h3><p>Ils fondent le Domaine de la Jaufrette, acquièrent des vignes en Châteauneuf-du-Pape et vendent leur première bouteille en 1976.</p></li>
+        <li><span class="quand">Années 1990</span><h3>Frédéric rejoint le domaine</h3><p>Il a grandi au milieu des vignes, et en reprend la direction en 2010.</p></li>
+        <li><span class="quand">2011</span><h3>Le choix du bio</h3><p>Frédéric Chastan engage la conversion du domaine à l'agriculture biologique.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ethique" id="ethique">
+    <div class="cadre">
+      <blockquote class="devise">
+        <p>« Sublimez la nature pour en extraire la quintessence, dans le respect du terroir et en osmose avec les éléments. »</p>
+        <footer>La devise du Domaine de la Jaufrette</footer>
+      </blockquote>
+      <div class="ethique-grille">
+        <div>
+          <ul class="engagements">
+            <li><h3>Vendanges à la main</h3><p>Au moment juste, pour préserver l'intégrité du raisin.</p></li>
+            <li><h3>Des rendements faibles</h3><p>Inférieurs aux seuils des appellations, pour la concentration et la qualité du fruit.</p></li>
+            <li><h3>Le temps de l'élevage</h3><p>Les vins sont élevés en fût de chêne, puis affinés en cave pendant plusieurs années avant leur mise en vente.</p></li>
+          </ul>
+          <div class="foudres">
+            <img src="assets/domaine-de-la-jaufrette-orange/foudres-en-bois-sur-socles.webp" alt="Deux grands foudres en bois sur des socles dans la cave" width="1600" height="1150" loading="lazy">
+            <p>Les foudres de la cave, à Orange.</p>
+          </div>
+        </div>
+        <div class="nature apparait">
+          <img class="coccinelle" src="assets/domaine-de-la-jaufrette-orange/coccinelle-sur-fleur-de-sainfoin.webp" alt="Coccinelle à sept points sur un épi de fleurs roses" width="1600" height="900" loading="lazy">
+          <img class="moutons" src="assets/domaine-de-la-jaufrette-orange/troupeau-de-moutons-derriere-le-filet.webp" alt="Troupeau de moutons dans l'herbe sèche derrière un filet de clôture" width="1600" height="587" loading="lazy">
+          <span>Une coccinelle sur le sainfoin</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salons" id="salons">
+    <div class="cadre">
+      <div class="salons-haut">
+        <h2>Où nous rencontrer en novembre</h2>
+        <p>Le domaine présente ses vins sur les salons. Les prochaines dates :</p>
+      </div>
+      <div class="dates">
+        <article class="date apparait">
+          <div class="jour"><b>6-9</b><span>novembre</span></div>
+          <div><h3>Salon Mer et Vigne</h3><p>Lyon, La Palmeraie, du 6 au 9&nbsp;novembre 2026</p></div>
+        </article>
+        <article class="date apparait">
+          <div class="jour"><b>10-11</b><span>novembre</span></div>
+          <div><h3>Marché des Vins et du Terroir</h3><p>Villefranche-sur-Saône, les 10 et 11&nbsp;novembre 2026</p></div>
+        </article>
+      </div>
+      <p class="salons-bas">Les autres rendez-vous du domaine : <a class="lien" href="https://www.lajaufrette.com/blog.html" target="_blank" rel="noopener">toute l'actualité</a></p>
+    </div>
+  </section>
+
+  <section class="visite" id="visite">
+    <div class="cadre">
+      <div class="visite-texte">
+        <h2>Venez déguster au domaine</h2>
+        <p class="lead">Une dégustation commentée de nos cuvées bio, pour comprendre notre démarche et goûter l'âme de nos appellations.</p>
+        <p>Particuliers, groupes jusqu'à 20&nbsp;personnes et professionnels sont reçus sur rendez-vous. Le domaine accueille aussi les visiteurs venus d'Avignon, de Carpentras et de Pernes-les-Fontaines.</p>
+        <p style="margin:0">Pensez à appeler avant de venir : le métier de vigneron nous conduit aussi dans les vignes et sur les salons.</p>
+      </div>
+      <div class="coord apparait">
+        <img class="bouchons" src="assets/domaine-de-la-jaufrette-orange/bouchons-domaine-de-la-jaufrette.webp" alt="Bouchons de liège marqués Domaine de la Jaufrette" width="1066" height="1600" loading="lazy">
+        <h3>Domaine de la Jaufrette</h3>
+        <dl>
+          <div><dt>Adresse</dt><dd>1394 chemin de la Gironde, 84100 Orange</dd></div>
+          <div><dt>Horaires</dt><dd>Du lundi au vendredi, de 8&nbsp;h à 12&nbsp;h et de 14&nbsp;h à 18&nbsp;h, de préférence sur rendez-vous<br>Le samedi sur rendez-vous</dd></div>
+          <div><dt>Téléphones</dt><dd><a class="tel nowrap" href="tel:+33490343534">04 90 34 35 34</a><br><a class="tel nowrap" href="tel:+33621781085">06 21 78 10 85</a></dd></div>
+          <div><dt>Courriel</dt><dd><a class="lien" href="mailto:domaine.jaufrette@hotmail.fr">domaine.jaufrette@hotmail.fr</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-plein nowrap" href="tel:+33490343534">Appeler le domaine</a>
+          <a class="btn btn-contour" href="https://www.lajaufrette.com/contact.html" target="_blank" rel="noopener">Écrire au domaine</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div><a class="marque" href="#haut">Domaine de la Jaufrette<small>Frédéric Chastan, vigneron indépendant</small></a></div>
+      <div>
+        <h3>Domaine</h3>
+        <p>1394 chemin de la Gironde<br>84100 Orange</p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <p>Du lundi au vendredi, 8&nbsp;h à 12&nbsp;h et 14&nbsp;h à 18&nbsp;h, de préférence sur rendez-vous. Le samedi sur rendez-vous.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a class="nowrap" href="tel:+33490343534">04 90 34 35 34</a></li>
+          <li><a class="nowrap" href="tel:+33621781085">06 21 78 10 85</a></li>
+          <li><a href="mailto:domaine.jaufrette@hotmail.fr">domaine.jaufrette@hotmail.fr</a></li>
+          <li><a href="https://www.lajaufrette.com/nos-vins.html" target="_blank" rel="noopener">Nos vins</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Domaine de la Jaufrette</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

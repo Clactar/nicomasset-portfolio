@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rustine et Compagnie, atelier vélo à domicile, Caen</title>
+<meta name="description" content="Rustine et Compagnie, atelier vélo qui se déplace à domicile autour de Caen : entretien et réparation, gravel, route, montages sur mesure.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313302C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='36' fill='%23F0A202'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E4ECEA; --surface:#F3F7F6; --encre:#142321; --jaune:#F0A202; --sombre:#13302C;
+  --bande:#D3E0DD; --doux:#4A5C59; --clair:#EEF4F2; --clair-doux:#B7C9C5;
+  --ombre:0 30px 60px -34px rgba(10,32,28,.55);
+  --display:"Chivo", "Helvetica Neue", sans-serif;
+  --texte:"Newsreader", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:19px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+::selection{background:var(--jaune);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--jaune);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.025em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+.nowrap{white-space:nowrap}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid rgba(20,35,33,.09)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.marque{text-decoration:none;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.marque svg{flex:none}
+.nav{display:flex;align-items:center;gap:28px;font-family:var(--display);font-size:16px}
+.nav a{text-decoration:none}
+.nav .lien:hover{text-decoration:underline;text-decoration-color:var(--jaune);text-decoration-thickness:2px;text-underline-offset:6px}
+.nav .tel{background:var(--jaune);color:var(--encre);font-weight:700;padding:10px 20px;border-radius:999px;white-space:nowrap;transition:background .2s, transform .2s}
+.nav .tel:hover{background:#FFB524;transform:translateY(-1px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-family:var(--display);font-size:17px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--sombre);color:var(--clair)}
+.btn-plein:hover{background:#1D4540}
+.btn-contour{border-color:var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--jaune);border-color:var(--jaune)}
+.btn-jaune{background:var(--jaune);color:var(--encre)}
+.btn-jaune:hover{background:#FFB524}
+
+/* Héros */
+.heros{padding:80px 0 120px}
+.heros .cadre{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.82fr);grid-template-areas:"titre photo" "texte photo" "actions photo";grid-template-rows:auto auto 1fr;column-gap:120px;align-items:start}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.4vw,76px);padding-top:40px}
+.heros .intro{grid-area:texte;margin-top:28px;max-width:30em;color:var(--doux)}
+.heros .actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;position:relative;z-index:2}
+.trace{position:absolute;left:39%;top:63%;width:22%;height:22%;z-index:1;overflow:visible;pointer-events:none}
+.trace path{fill:none;stroke:var(--jaune);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 11;vector-effect:non-scaling-stroke}
+.garage{grid-area:photo;position:relative;margin:0;z-index:2}
+.garage img{width:100%;aspect-ratio:4/4.7;object-fit:cover;object-position:50% 80%;border-radius:22px;box-shadow:var(--ombre)}
+.domicile-pastille{position:absolute;left:-26px;top:47%;background:var(--jaune);color:var(--encre);font-family:var(--display);font-weight:700;font-size:18px;padding:12px 20px;border-radius:999px;box-shadow:0 16px 30px -16px rgba(10,32,28,.6);display:flex;align-items:center;gap:10px}
+.domicile-pastille::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--encre)}
+
+/* Faits */
+.faits{background:var(--bande)}
+.faits ul{list-style:none;margin:0 auto;padding:32px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.faits b{display:block;font-family:var(--display);font-size:20px;line-height:1.2;letter-spacing:-.01em}
+.faits span{display:block;font-size:17px;color:var(--doux);margin-top:4px;line-height:1.35}
+
+/* À domicile */
+.domicile{padding:128px 0 120px}
+.domicile-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end}
+.domicile h2{font-size:clamp(34px,4vw,58px)}
+.domicile-tete p{color:var(--doux);max-width:31em}
+.domicile-photos{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:32px;margin-top:64px;align-items:start}
+.photo{margin:0;position:relative}
+.photo img{width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--ombre)}
+.etiquette{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--encre);font-family:var(--display);font-size:16px;font-weight:700;line-height:1.2;padding:8px 15px;border-radius:999px;box-shadow:0 12px 26px -16px rgba(10,32,28,.6)}
+.abri img{aspect-ratio:4/3;object-position:50% 60%}
+.famille{margin-top:96px}
+.famille img{aspect-ratio:4/5;object-position:50% 70%}
+.famille figcaption{margin-top:16px;font-size:17px;color:var(--doux)}
+.mot{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:40px;border-top:2px solid var(--encre);padding-top:28px}
+.mot h3{font-size:22px;letter-spacing:-.01em}
+.mot p{margin-top:8px;color:var(--doux);font-size:18px}
+
+/* Carnet */
+.carnet{background:var(--surface);padding:120px 0}
+.carnet .cadre{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:88px;align-items:start}
+.carnet h2{font-size:clamp(34px,4vw,58px)}
+.carnet .chapo{margin-top:20px;color:var(--doux)}
+.carnet ol{list-style:none;margin:0;padding:0}
+.carnet li{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:32px;align-items:center;padding:24px 0;border-top:1px solid rgba(20,35,33,.14)}
+.carnet li:last-child{border-bottom:1px solid rgba(20,35,33,.14)}
+.carnet li img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;box-shadow:0 18px 36px -24px rgba(10,32,28,.6)}
+.carnet h3{font-size:24px;letter-spacing:-.015em}
+.carnet li p{margin-top:6px;color:var(--doux)}
+
+/* Gamme, section sombre */
+.gamme{background:var(--sombre);color:var(--clair);padding:128px 0}
+.gamme .cadre{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:88px;align-items:center}
+.gamme h2{font-size:clamp(34px,4vw,58px)}
+.gamme p{margin-top:22px;color:var(--clair-doux);max-width:28em}
+.gamme ul{list-style:none;padding:0;margin:34px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.gamme li{font-family:var(--display);font-weight:700;font-size:17px;border:2px solid rgba(240,162,2,.75);color:var(--jaune);border-radius:999px;padding:8px 18px}
+.trio{position:relative;padding:0 0 120px 0}
+.trio .p1{width:62%}
+.trio .p1 img{aspect-ratio:3/4;object-position:50% 40%;box-shadow:0 34px 70px -36px rgba(0,0,0,.85)}
+.trio .p1 .etiquette{top:16px;bottom:auto}
+.trio .p2{position:absolute;right:0;top:48px;width:44%}
+.trio .p2 img{aspect-ratio:4/5;object-position:50% 70%;box-shadow:0 34px 70px -36px rgba(0,0,0,.85)}
+.trio .p3{position:absolute;right:6%;bottom:0;width:52%;padding:10px;background:var(--surface);border-radius:20px;box-shadow:0 34px 70px -36px rgba(0,0,0,.85)}
+.trio .p3 img{aspect-ratio:4/3;border-radius:12px;box-shadow:none}
+
+/* Rentrée */
+.rentree{padding:128px 0}
+.rentree .cadre{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:96px;align-items:center}
+.rentree .photo{transform:rotate(-2deg)}
+.rentree .photo img{aspect-ratio:4/5;object-position:50% 60%}
+.rentree blockquote{margin:0}
+.rentree blockquote p{font-family:var(--texte);font-style:italic;font-weight:400;font-size:clamp(30px,3.6vw,50px);line-height:1.18;text-wrap:balance}
+.rentree blockquote footer{margin-top:24px;font-family:var(--display);font-size:17px;color:var(--doux)}
+.rentree blockquote footer::before{content:"";display:inline-block;vertical-align:middle;width:40px;height:3px;border-radius:2px;background:var(--jaune);margin-right:14px}
+
+/* Contact */
+.contact{padding:0 0 128px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;background:var(--surface);border-radius:32px;box-shadow:var(--ombre);overflow:clip}
+.contact .gauche{padding:56px}
+.contact h2{font-size:clamp(32px,3.6vw,50px)}
+.contact .gauche > p{margin-top:18px;color:var(--doux);max-width:28em}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.horaire{margin-top:40px;padding-top:24px;border-top:1px solid rgba(20,35,33,.14)}
+.horaire h3{font-size:19px}
+.horaire p{margin-top:6px;color:var(--doux)}
+.contact .droite{background:var(--sombre);color:var(--clair);padding:56px;display:flex;flex-direction:column;gap:22px}
+.champ span{display:block;font-size:17px;color:var(--clair-doux)}
+.champ a,.champ strong{font-family:var(--display);font-size:21px;font-weight:700;text-decoration:none;overflow-wrap:anywhere;letter-spacing:-.01em}
+.champ a:hover{color:var(--jaune)}
+.note{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.note b{font-family:var(--display);font-size:46px;line-height:1;color:var(--jaune)}
+.liens{display:flex;flex-wrap:wrap;gap:12px}
+.btn-clair{border-color:rgba(238,244,242,.5);color:var(--clair)}
+.btn-clair:hover{border-color:var(--jaune);color:var(--jaune)}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--clair-doux);padding:72px 0 36px;font-size:17px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pied .marque{color:var(--clair);font-size:24px}
+.pied h3{font-size:17px;color:var(--clair);margin-bottom:10px;letter-spacing:0}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(238,244,242,.25)}
+.pied a:hover{color:var(--jaune);border-color:var(--jaune)}
+.proposition{background:var(--sombre);color:#8FA6A1;text-align:center;font-size:14px;padding:20px 24px 30px;border-top:1px solid rgba(238,244,242,.08)}
+
+.js .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.calme .apparait{opacity:1 !important;transform:none !important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+@media (max-width:1080px){
+  .nav .lien{display:none}
+  .heros .cadre{column-gap:80px}
+  .faits ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .carnet .cadre,.gamme .cadre,.rentree .cadre{gap:56px}
+}
+@media (max-width:960px){
+  .trace{display:none}
+}
+@media (max-width:860px){
+  .heros{padding:36px 0 80px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte" "actions";grid-template-rows:auto}
+  .heros h1{padding-top:0}
+  .garage{margin:28px 0 0 22px}
+  .domicile-pastille{left:-22px}
+  .domicile,.rentree,.gamme,.carnet{padding:88px 0}
+  .domicile-tete,.carnet .cadre,.gamme .cadre,.rentree .cadre,.contact .cadre{grid-template-columns:minmax(0,1fr)}
+  .domicile-tete{gap:20px}
+  .mot{grid-template-columns:minmax(0,1fr);gap:24px}
+  .rentree .photo{width:min(360px,80%)}
+  .contact{padding-bottom:88px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  .cadre{width:min(1200px,100% - 40px)}
+  .entete .cadre{min-height:64px}
+  .marque{font-size:18px}
+  .marque svg{display:none}
+  .nav .tel{padding:9px 14px;font-size:15px}
+  .heros .actions{flex-direction:column}
+  .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .domicile-photos{grid-template-columns:minmax(0,1fr);gap:24px}
+  .famille{margin-top:0;width:78%;margin-left:auto}
+  .carnet li{grid-template-columns:minmax(0,1fr);gap:16px}
+  .carnet li img{width:min(240px,100%)}
+  .trio{padding-bottom:90px}
+  .trio .p2{top:28px}
+  .contact .gauche,.contact .droite{padding:32px 22px}
+  .contact .cadre{border-radius:24px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){
+  .marque{font-size:17px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10.5" fill="none" stroke="#F0A202" stroke-width="3"/><circle cx="13" cy="13" r="3" fill="#142321"/></svg>Rustine et Compagnie</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#domicile">À domicile</a>
+      <a class="lien" href="#carnet">Interventions</a>
+      <a class="lien" href="#contact">Rendez-vous</a>
+      <a class="tel" href="tel:+33661801293">06 61 80 12 93</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>L'atelier vélo vient jusqu'à votre garage.</h1>
+      <figure class="garage">
+        <img src="assets/rustine-et-compagnie-caen/atelier-mobile-devant-un-garage.webp" alt="L'atelier installé devant le garage d'un client : vélo de route jaune sur le pied d'atelier bleu, caisses d'outils ouvertes et vélo-cargo Rustine et Compagnie" width="1280" height="1600" fetchpriority="high">
+        <span class="domicile-pastille">À domicile</span>
+      </figure>
+      <p class="intro">Rustine et Compagnie entretient et répare les vélos de route, gravel et de tous les jours, et monte des vélos sur mesure. Le pied d'atelier et les caisses d'outils s'installent chez vous, à Caen et en Normandie.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="#contact">Prendre rendez-vous</a>
+        <a class="btn btn-contour" href="tel:+33661801293"><span class="nowrap">06 61 80 12 93</span></a>
+      </div>
+      <svg class="trace" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M2 296 C 120 300, 150 150, 250 170 S 360 40, 398 4"/></svg>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><b>À domicile</b><span>l'atelier se déplace</span></li>
+      <li><b>Gravel et route</b><span>et vélos de tous les jours</span></li>
+      <li><b>Sur mesure</b><span>montages de vélos</span></li>
+      <li><b>5,0 sur 5</b><span>25 avis sur Google</span></li>
+      <li><b>Fleury-sur-Orne</b><span>Caen et Normandie</span></li>
+    </ul>
+  </section>
+
+  <section class="domicile" id="domicile">
+    <div class="cadre">
+      <div class="domicile-tete">
+        <h2>Le pied d'atelier s'installe chez vous.</h2>
+        <p>Devant le garage, dans l'allée ou sous l'abri à vélos&nbsp;: l'atelier arrive avec ses outils, et vos vélos sont révisés sur place. Pas besoin de les transporter.</p>
+      </div>
+      <div class="domicile-photos">
+        <figure class="photo abri apparait">
+          <img src="assets/rustine-et-compagnie-caen/pied-d-atelier-sous-abri-velos.webp" alt="Pied d'atelier et caisses d'outils installés sous un abri à vélos, vélos électriques en attente" width="1600" height="1200" loading="lazy">
+          <span class="etiquette">Sous l'abri à vélos</span>
+        </figure>
+        <figure class="photo famille apparait">
+          <img src="assets/rustine-et-compagnie-caen/cinq-velos-d-une-famille.webp" alt="Cinq vélos d'une même famille alignés contre un muret après leur entretien" width="1280" height="1600" loading="lazy">
+          <span class="etiquette">Cinq vélos, une famille</span>
+        </figure>
+      </div>
+      <div class="mot">
+        <div><h3>Toute la famille d'un coup</h3><p>Entretiens et réparations sur les cinq vélos d'une famille, dont deux prêts pour le Caen Triathlon.</p></div>
+        <div><h3>Tous les formats</h3><p>Vélo vintage, roues de 24 et 26 pouces, vélo de travail en 700&nbsp;: quatre vélos révisés dans la même visite.</p></div>
+        <div><h3>Prêt pour l'hiver</h3><p>Un vélo d'entraînement du Caen Triathlon&nbsp;: câbles et gaines de transmission remplacés avant les sorties d'hiver.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carnet" id="carnet">
+    <div class="cadre">
+      <div>
+        <h2>Le carnet d'atelier.</h2>
+        <p class="chapo">Quelques interventions, telles que l'atelier les a racontées.</p>
+      </div>
+      <ol>
+        <li>
+          <img src="assets/rustine-et-compagnie-caen/cervelo-s5-violet-purge-frein.webp" alt="Vélo de route Cervélo S5 violet-bleu à jantes hautes posé sur un muret" width="1600" height="1200" loading="lazy">
+          <div><h3>Cervélo S5, Shimano Dura-Ace</h3><p>Purge de frein.</p></div>
+        </li>
+        <li>
+          <img src="assets/rustine-et-compagnie-caen/vtt-cube-sur-bequille.webp" alt="VTT Cube blanc, bleu et rouge sur béquille devant une haie" width="1600" height="1200" loading="lazy">
+          <div><h3>Cube C68</h3><p>Purges des freins et changement des plaquettes.</p></div>
+        </li>
+        <li>
+          <img src="assets/rustine-et-compagnie-caen/velo-electrique-gorille-selle-cuir.webp" alt="Vélo électrique Gorille Cycles à selle en cuir marron et gros pneus, devant un mur en pierre" width="1280" height="1600" loading="lazy">
+          <div><h3>Gorille Cycles</h3><p>Plaquettes avant et arrière, entretien de la transmission.</p></div>
+        </li>
+        <li>
+          <img src="assets/rustine-et-compagnie-caen/peugeot-vintage-vert-d-eau.webp" alt="Vélo de ville Peugeot vintage vert d'eau avec porte-bagages et phare" width="1600" height="1200" loading="lazy">
+          <div><h3>Peugeot vintage</h3><p>Réfection complète des freins&nbsp;: câbles, gaines et patins neufs.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gamme">
+    <div class="cadre">
+      <div>
+        <h2>Gravel, route, montages sur mesure.</h2>
+        <p>Un atelier vélo premium pour les vélos de route et de gravel&nbsp;: freins, transmission, réglages, et des vélos montés sur mesure.</p>
+        <ul>
+          <li>Gravel</li>
+          <li>Route</li>
+          <li>Montages sur mesure</li>
+        </ul>
+      </div>
+      <div class="trio">
+        <figure class="photo p1 apparait">
+          <img src="assets/rustine-et-compagnie-caen/velo-sur-pied-sacs-campagnolo.webp" alt="Vélo de route sur un pied d'atelier en intérieur, sacs de roues Campagnolo en fond" width="1207" height="1600" loading="lazy">
+          <span class="etiquette">Sur le pied d'atelier</span>
+        </figure>
+        <figure class="photo p2 apparait">
+          <img src="assets/rustine-et-compagnie-caen/velo-route-lapierre-contre-un-mur.webp" alt="Vélo de route Lapierre blanc cassé et noir posé contre un muret blanc" width="1280" height="1600" loading="lazy">
+        </figure>
+        <figure class="photo p3">
+          <img src="assets/rustine-et-compagnie-caen/velo-route-noir-roues-dt-swiss.webp" alt="Vélo de route noir à roues DT Swiss sur béquille dans un jardin" width="1600" height="1200" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="rentree">
+    <div class="cadre">
+      <figure class="photo apparait">
+        <img src="assets/rustine-et-compagnie-caen/boitier-de-pedalier-encrasse.webp" alt="Boîtier de pédalier démonté et encrassé, tenu à la main sous un cadre gris" width="1280" height="1600" loading="lazy">
+        <span class="etiquette">Boîtier de pédalier encrassé</span>
+      </figure>
+      <blockquote>
+        <p>C'est la rentrée, pensez à entretenir votre vélo pour repartir sereinement sur les routes&nbsp;!</p>
+        <footer>Rustine et Compagnie</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="gauche">
+        <h2>Prendre rendez-vous.</h2>
+        <p>Pour une révision chez vous, une réparation ou un devis de montage, appelez ou écrivez à l'atelier.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33661801293"><span class="nowrap">Appeler le 06 61 80 12 93</span></a>
+          <a class="btn btn-contour" href="mailto:rustineetcie@gmail.com">Écrire un mail</a>
+        </div>
+        <div class="horaire">
+          <h3>Horaires affichés sur Google</h3>
+          <p>Mardi et jeudi, de 9&nbsp;h 30 à 16&nbsp;h. Les horaires à jour, jours fériés compris, sont sur la <a href="https://www.google.com/maps/place/Rustine+et+Compagnie/data=!4m7!3m6!1s0x480a43d31039d263:0x15b2d5606c972936" target="_blank" rel="noopener">fiche Google</a>.</p>
+        </div>
+      </div>
+      <div class="droite">
+        <div class="champ"><span>Téléphone</span><a href="tel:+33661801293" class="nowrap">06 61 80 12 93</a></div>
+        <div class="champ"><span>Mail</span><a href="mailto:rustineetcie@gmail.com">rustineetcie@gmail.com</a></div>
+        <div class="champ"><span>Adresse</span><strong>Rue du Régiment de Maisonneuve, <span class="nowrap">14123 Fleury-sur-Orne</span></strong></div>
+        <div class="champ"><span>Note Google</span><div class="note"><b>5,0</b><span>sur 5, 25 avis</span></div></div>
+        <div class="liens">
+          <a class="btn btn-jaune" href="https://www.google.com/maps/place/Rustine+et+Compagnie/data=!4m7!3m6!1s0x480a43d31039d263:0x15b2d5606c972936" target="_blank" rel="noopener">Voir les avis</a>
+          <a class="btn btn-clair" href="https://www.facebook.com/people/Rustine-et-Compagnie/100086920960350/" target="_blank" rel="noopener">Page Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#haut">Rustine et Compagnie</a>
+      <p style="margin-top:12px">Atelier vélo à domicile. Gravel, route, montages sur mesure.</p>
+    </div>
+    <div>
+      <h3>Adresse</h3>
+      <p>Rue du Régiment de Maisonneuve<br>14123 Fleury-sur-Orne</p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Mardi et jeudi<br>de 9&nbsp;h 30 à 16&nbsp;h</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33661801293" class="nowrap">06 61 80 12 93</a></li>
+        <li><a href="mailto:rustineetcie@gmail.com">rustineetcie@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/people/Rustine-et-Compagnie/100086920960350/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="proposition">Proposition de Nicolas Masset pour Rustine et Compagnie</div>
+
+<script>
+document.documentElement.classList.add('js');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  document.documentElement.classList.add('calme');
+} else {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.apparait').forEach((el) => io.observe(el));
+}
+</script>
+</body>
+</html>

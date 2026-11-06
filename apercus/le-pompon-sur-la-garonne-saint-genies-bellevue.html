@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Pompon sur la Garonne · food truck vintage et traiteur, Saint-Geniès-Bellevue</title>
+<meta name="description" content="Le Pompon sur la Garonne (Aly'J Food) : food truck vintage et traiteur événementiel à Saint-Geniès-Bellevue, Toulouse Nord. Cuisine traditionnelle française salée et sucrée, tout fait maison. 07 82 82 34 47.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232F7D6D'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' font-weight='700' fill='%23FCF5F3' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F4E7E4; --base-2:#ECD8D3; --surface:#FCF5F3; --encre:#2B1F22; --encre-2:#5A4A4D; --accent:#2F7D6D; --accent-pale:#CFE5DF; --rose:#E3A9A0; --sombre:#2A2A3A;
+  --ombre:0 30px 60px -34px rgba(43,31,34,.55);
+  --largeur:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:Onest,Georgia,serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:"Abril Fatface",Georgia,serif;letter-spacing:.005em}
+h3{font-family:Onest,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.env{max-width:var(--largeur);margin:0 auto;padding-inline:clamp(20px,5vw,40px)}
+
+/* En-tête */
+.tete{position:sticky;top:0;z-index:20;background:rgba(244,231,228,.95);border-bottom:1px solid rgba(43,31,34,.08)}
+.tete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;font-family:"Abril Fatface",Georgia,serif;font-size:23px;line-height:1.1}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.lien{font-size:16px;text-decoration:none;color:var(--encre-2)}
+.nav a.lien:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease,background-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-plein{background:var(--accent);color:var(--surface);box-shadow:0 16px 30px -18px rgba(47,125,109,.9)}
+.btn-plein:hover{background:#256959;transform:translateY(-2px) rotate(-1deg)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px) rotate(1deg)}
+.tete .btn{min-height:44px;padding:0 20px;font-size:16px}
+.tel{white-space:nowrap}
+
+/* Héros */
+.heros{position:relative;padding:150px 0 112px}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:150px;pointer-events:none}
+.heros .env{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:center}
+.heros h1{font-size:clamp(46px,6.4vw,94px);line-height:1.0;letter-spacing:-.005em}
+.heros .chapo{margin-top:30px;font-size:19px;color:var(--encre-2);max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note{display:inline-flex;align-items:center;gap:12px;margin-top:32px;font-size:16px;color:var(--encre-2)}
+.note b{font-family:"Abril Fatface",Georgia,serif;font-weight:400;font-size:30px;color:var(--encre);line-height:1}
+.photo-heros{position:relative;margin:0}
+.photo-heros .ph{border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.photo-heros img{width:100%;aspect-ratio:4/3.3;object-fit:cover;object-position:30% 30%}
+.etiquette{position:absolute;background:var(--surface);color:var(--encre);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:500;line-height:1.3;box-shadow:0 12px 24px -14px rgba(43,31,34,.7)}
+.photo-heros .etiquette{left:22px;bottom:22px}
+.photo-heros .tampon{position:absolute;right:-18px;top:-26px;width:118px;height:118px;border-radius:50%;background:var(--accent);color:var(--surface);display:grid;place-items:center;text-align:center;font-size:14px;font-weight:600;line-height:1.25;transform:rotate(8deg);box-shadow:0 20px 34px -18px rgba(47,125,109,.9)}
+.tampon span{display:block;max-width:86px}
+
+/* Faits */
+.faits{background:var(--base-2);padding:40px 0}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,auto));gap:16px 28px;justify-content:space-between}
+.faits li{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:500;line-height:1.35}
+@media (max-width:1180px){.faits ul{grid-template-columns:repeat(3,minmax(0,auto))}}
+.faits li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--base-2),0 0 0 4.5px rgba(47,125,109,.35)}
+.faits li:nth-child(even)::before{background:#C9645B;box-shadow:0 0 0 3px var(--base-2),0 0 0 4.5px rgba(201,100,91,.35)}
+
+/* Traiteur */
+.traiteur{padding:128px 0 120px}
+.traiteur .env{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:start}
+.traiteur h2,.buffet h2,.camion h2,.contact h2{font-size:clamp(34px,4vw,56px);line-height:1.06}
+.traiteur .intro{margin-top:22px;color:var(--encre-2);max-width:31em}
+.prestations{list-style:none;margin:36px 0 0;padding:0}
+.prestations li{display:grid;grid-template-columns:minmax(0,1fr);padding:18px 0;border-top:1px solid rgba(43,31,34,.16)}
+.prestations li:last-child{border-bottom:1px solid rgba(43,31,34,.16)}
+.prestations b{font-size:19px;font-weight:600}
+.prestations span{font-size:16px;color:var(--encre-2)}
+.traiteur .photos{position:relative;padding-bottom:120px}
+.traiteur figure{margin:0}
+.t1{border-radius:20px;overflow:hidden;box-shadow:var(--ombre)}
+.t1 img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:40% 50%}
+.t2{position:absolute;left:-48px;bottom:0;width:min(250px,48%);border-radius:16px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--ombre);transform:rotate(-3deg)}
+.t2 img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.t1-wrap{position:relative}
+.t1-wrap .etiquette{right:20px;top:20px}
+
+/* Citation */
+.citation{padding:0 0 128px}
+.citation blockquote{margin:0;background:var(--accent);color:var(--surface);border-radius:32px;padding:clamp(40px,6vw,88px);position:relative;overflow:hidden}
+.citation blockquote::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:2px dashed rgba(252,245,243,.35)}
+.citation p{font-family:"Abril Fatface",Georgia,serif;font-size:clamp(26px,3.1vw,42px);line-height:1.22;max-width:24em;position:relative;z-index:1}
+.citation cite{display:block;margin-top:28px;font-style:normal;font-size:16px;color:#CFE5DF;position:relative;z-index:1}
+
+/* Buffet (sombre) */
+.buffet{background:var(--sombre);color:#E4DDE0;padding:128px 0;border-radius:44px 44px 0 0}
+.buffet h2{color:var(--surface)}
+.buffet .env{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center}
+.buffet .intro{margin-top:22px;color:#B7AFB4;max-width:28em}
+.carte-menu{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:0}
+.carte-menu li{padding:14px 0;border-bottom:1px dashed rgba(228,221,224,.22);font-size:18px}
+.carte-menu li:first-child{border-top:1px dashed rgba(228,221,224,.22)}
+.carte-menu small{display:block;font-size:15px;color:#A39AA0}
+.collage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto;gap:22px;align-items:start}
+.collage figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.75)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.c-burgers{grid-column:1/3;grid-row:1}
+.c-burgers img{aspect-ratio:4/3;object-position:50% 40%}
+.c-chevre{grid-column:3;grid-row:1/3;align-self:stretch}
+.c-chevre img{object-position:30% 60%}
+.c-blinis{grid-column:1;grid-row:2}
+.c-blinis img{aspect-ratio:1/1}
+.c-fromages{grid-column:2;grid-row:2;transform:translateY(28px)}
+.c-fromages img{aspect-ratio:1/1;object-position:50% 50%}
+.collage .etiquette{left:12px;bottom:12px;font-size:14px;padding:6px 12px}
+
+/* Camion */
+.camion{background:var(--sombre);color:#E4DDE0;padding:0 0 128px}
+.camion .boite{background:var(--surface);color:var(--encre);border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.camion .intro{margin-top:20px;color:var(--encre-2)}
+.arrets{list-style:none;margin:0;padding:0;position:relative}
+.arrets::before{content:"";position:absolute;left:15px;top:22px;bottom:22px;border-left:2px dashed rgba(47,125,109,.5)}
+.arrets li{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr);gap:20px;padding:16px 0}
+.arrets .pt{width:32px;height:32px;border-radius:50%;background:var(--accent-pale);display:grid;place-items:center}
+.arrets .pt::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.arrets b{display:block;font-size:20px;font-weight:600;line-height:1.3}
+.arrets span{font-size:16px;color:var(--encre-2)}
+
+/* Contact */
+.contact{padding:128px 0}
+.contact .env{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.contact .intro{margin-top:20px;color:var(--encre-2);max-width:30em}
+.carte{margin-top:36px;background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre)}
+.carte dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 32px}
+.carte dt{font-size:15px;color:var(--encre-2)}
+.carte dd{margin:4px 0 0;font-size:18px;font-weight:500;line-height:1.5}
+.carte dd a{text-underline-offset:4px;text-decoration-thickness:1px}
+.carte .plein{grid-column:1/-1}
+.contact .vignette{margin:0;position:relative;transform:rotate(2.5deg)}
+.contact .vignette .ph{border-radius:20px;overflow:hidden;box-shadow:var(--ombre);border:10px solid var(--surface)}
+.contact .vignette .etiquette{left:22px;bottom:22px}
+.contact .vignette img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* Pied */
+.pied{background:var(--sombre);color:#B7AFB4;padding:80px 0 40px}
+.pied .env{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:48px}
+.pied .nom{font-family:"Abril Fatface",Georgia,serif;font-size:30px;color:var(--surface);line-height:1.1;margin-bottom:12px;display:block}
+.pied h3{font-size:16px;color:var(--surface);margin-bottom:12px}
+.pied p,.pied li{font-size:16px;line-height:1.7}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{color:#E4DDE0;text-underline-offset:4px}
+.mention{background:var(--sombre);border-top:1px solid rgba(228,221,224,.1);color:#8C8389;font-size:14px;padding:18px 0 22px}
+
+/* Apparition */
+.js .apparait{opacity:0;translate:0 22px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;translate:0 0;transition:none}}
+
+@media (max-width:980px){
+  .nav a.lien{display:none}
+  .heros{padding:110px 0 80px}
+  .guirlande{height:110px}
+  .heros .env{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros .texte{display:contents}
+  .heros h1{order:1}
+  .photo-heros{order:2;margin-top:32px}
+  .heros .chapo{order:3}
+  .heros .actions{order:4}
+  .heros .note{order:5}
+  .traiteur .env,.buffet .env,.contact .env,.camion .boite{grid-template-columns:minmax(0,1fr);gap:48px}
+  .t2{left:-8px}
+  .contact .vignette{max-width:340px}
+  .pied .env{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .heros{padding-top:96px}
+  .guirlande{height:96px}
+  .heros h1{font-size:clamp(40px,12vw,56px)}
+  .heros .chapo{font-size:17px;margin-top:24px}
+  .photo-heros .tampon{width:92px;height:92px;font-size:12px;right:-6px;top:-22px}
+  .tampon span{max-width:70px}
+  .faits ul{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .faits li{font-size:15px;align-items:flex-start}
+  .faits li::before{margin-top:6px}
+  .traiteur,.contact{padding:88px 0}
+  .citation{padding-bottom:88px}
+  .buffet{padding:88px 0;border-radius:28px 28px 0 0}
+  .camion{padding-bottom:88px}
+  .collage{gap:12px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .c-burgers{grid-column:1/3;grid-row:1}
+  .c-chevre{grid-column:1;grid-row:2;align-self:start}
+  .c-chevre img{aspect-ratio:3/4}
+  .c-blinis{grid-column:2;grid-row:2;margin-top:28px}
+  .c-blinis img{aspect-ratio:3/4}
+  .c-fromages{display:none}
+  .collage .etiquette{font-size:12px;left:8px;bottom:8px;padding:5px 9px}
+  .carte{padding:28px 22px}
+  .carte dl{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .tete .env{min-height:64px}
+  .marque{font-size:18px}
+  .tete .btn{padding:0 14px;font-size:15px;min-height:42px}
+  .actions .btn{width:100%}
+  .carte dd{overflow-wrap:anywhere}
+}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="env">
+    <a class="marque" href="#haut">Le Pompon sur la Garonne</a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#traiteur">Traiteur</a>
+      <a class="lien" href="#buffet">Le buffet</a>
+      <a class="lien" href="#camion">Le food truck</a>
+      <a class="btn btn-plein tel" href="tel:+33782823447">07 82 82 34 47</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <svg class="guirlande" viewBox="0 0 1440 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><path d="M-20 18Q340 120 720 26Q1100 120 1460 18" fill="none" stroke="#2A2A3A" stroke-width="1.5"/><g stroke="#2A2A3A" stroke-width="1.2"><line x1="70" y1="40" x2="70" y2="49"/><line x1="161" y1="57" x2="161" y2="66"/><line x1="253" y1="67" x2="253" y2="76"/><line x1="345" y1="71" x2="345" y2="80"/><line x1="438" y1="69" x2="438" y2="78"/><line x1="531" y1="61" x2="531" y2="70"/><line x1="625" y1="46" x2="625" y2="55"/><line x1="815" y1="46" x2="815" y2="55"/><line x1="909" y1="61" x2="909" y2="70"/><line x1="1002" y1="69" x2="1002" y2="78"/><line x1="1095" y1="71" x2="1095" y2="80"/><line x1="1187" y1="67" x2="1187" y2="76"/><line x1="1279" y1="57" x2="1279" y2="66"/><line x1="1370" y1="40" x2="1370" y2="49"/></g><circle cx="70" cy="61" r="12" fill="#2F7D6D" stroke="#2F7D6D" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="161" cy="79" r="13" fill="#E3A9A0" stroke="#E3A9A0" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="253" cy="87" r="11" fill="#2A2A3A" stroke="#2A2A3A" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="345" cy="94" r="14" fill="#9ECFC2" stroke="#9ECFC2" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="438" cy="92" r="14" fill="#C9645B" stroke="#C9645B" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="531" cy="82" r="12" fill="#2F7D6D" stroke="#2F7D6D" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="625" cy="66" r="11" fill="#E3A9A0" stroke="#E3A9A0" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="815" cy="66" r="11" fill="#F0C9C1" stroke="#F0C9C1" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="909" cy="81" r="11" fill="#2F7D6D" stroke="#2F7D6D" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="1002" cy="92" r="14" fill="#E3A9A0" stroke="#E3A9A0" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="1095" cy="93" r="13" fill="#2A2A3A" stroke="#2A2A3A" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="1187" cy="87" r="11" fill="#9ECFC2" stroke="#9ECFC2" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="1279" cy="78" r="12" fill="#C9645B" stroke="#C9645B" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/><circle cx="1370" cy="62" r="13" fill="#2F7D6D" stroke="#2F7D6D" stroke-width="4" stroke-dasharray="1.2 2.4" stroke-linecap="round"/></svg>
+    <div class="env">
+      <div class="texte">
+        <h1>Le Pompon sur la Garonne</h1>
+        <p class="chapo">Food truck vintage et traiteur événementiel à Saint-Geniès-Bellevue, au nord de Toulouse. Une cuisine traditionnelle française, salée et sucrée, pour tout type d'événements. Tout est fait maison.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:alyjfood@gmail.com?subject=Un%20%C3%A9v%C3%A9nement%20avec%20Le%20Pompon">Parler de votre événement</a>
+          <a class="btn btn-contour" href="tel:+33782823447"><span class="tel">07 82 82 34 47</span></a>
+        </div>
+        <p class="note"><b>4,9</b><span>sur 5, 39 avis Google</span></p>
+      </div>
+      <figure class="photo-heros apparait">
+        <div class="ph"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/buffet-charcuterie-et-pancarte-le-pompon.webp" alt="Buffet de charcuteries, pains, tomates cerises, tartinades et cornichons, avec la pancarte illustrée du food truck Le Pompon sur la Garonne" width="1600" height="1200" fetchpriority="high"></div>
+        <figcaption class="etiquette">Le buffet, et la pancarte du camion</figcaption>
+        <p class="tampon" aria-hidden="true"><span>Tout est fait maison</span></p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="env">
+      <ul>
+        <li>Food truck vintage</li>
+        <li>Traiteur événementiel</li>
+        <li>Salé et sucré, fait maison</li>
+        <li>4,9 sur 5, 39 avis Google</li>
+        <li>Saint-Geniès-Bellevue, Toulouse Nord</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="traiteur" id="traiteur">
+    <div class="env">
+      <div>
+        <h2>Le traiteur, pour tout type d'événements</h2>
+        <p class="intro">Pour tout type d'événements, comme cet anniversaire de mariage de fin août : Le Pompon dresse le buffet et nourrit les convives toute la soirée, en cuisine traditionnelle française.</p>
+        <ul class="prestations">
+          <li><b>Des buffets à plusieurs postes</b><span>Pensés pour nourrir tous les convives.</span></li>
+          <li><b>De l'apéro au fromage</b><span>Le buffet suit la soirée du début à la fin.</span></li>
+          <li><b>Un bar à tartinades</b><span>En plus du buffet.</span></li>
+          <li><b>Salé et sucré</b><span>Des bouchées aux plateaux de fruits et aux verrines.</span></li>
+        </ul>
+      </div>
+      <div class="photos">
+        <figure class="t1-wrap apparait">
+          <div class="t1"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/buffet-en-plein-air-vue-sur-la-campagne.webp" alt="Long buffet dressé en extérieur, nappe blanche et herbes de la pampa, vue sur la campagne en fin de journée" width="1600" height="1200" loading="lazy"></div>
+          <figcaption class="etiquette">Un buffet en plein air, fin d'été</figcaption>
+        </figure>
+        <figure class="t2 apparait"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/plateau-de-fruits-rouges-et-mangue.webp" alt="Plateau de mangue, framboises, mûres, fraises et pain d'épices" width="1200" height="1600" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="env">
+      <blockquote>
+        <p>Un anniversaire de mariage avec un gros buffet à trois postes pour nourrir les 80 convives sur toute la soirée, de l'apéro au fromage, avec un bar à tartinades en plus.</p>
+        <cite>Le Pompon sur la Garonne, le dernier événement d'août</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="buffet" id="buffet">
+    <div class="env">
+      <div>
+        <h2>Sur le buffet</h2>
+        <p class="intro">Quelques plats servis cette saison, en photo sur les buffets du Pompon.</p>
+        <ul class="carte-menu">
+          <li>Blinis au saumon fumé, avocat et ciboulette</li>
+          <li>Mini-burgers dorés</li>
+          <li>Mousse crémeuse chèvre, citron, huile d'olive</li>
+          <li>Charcuteries, pains et tartinades</li>
+          <li>Plateaux de fromages et raisins</li>
+          <li>Fruits frais et verrines aux fruits rouges</li>
+        </ul>
+      </div>
+      <div class="collage">
+        <figure class="c-burgers apparait"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/mini-burgers-sur-plateau.webp" alt="Mini-burgers dorés piqués de pics en bambou sur un plateau en bois" width="1200" height="1600" loading="lazy"><figcaption class="etiquette">Mini-burgers</figcaption></figure>
+        <figure class="c-chevre apparait"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/mousse-chevre-et-ardoise.webp" alt="Bol de mousse crémeuse au chèvre et son ardoise manuscrite" width="1200" height="1600" loading="lazy"><figcaption class="etiquette">Mousse de chèvre</figcaption></figure>
+        <figure class="c-blinis apparait"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/blinis-saumon-avocat.webp" alt="Blinis au saumon fumé, avocat, crème et ciboulette en barquettes de bois" width="1600" height="1387" loading="lazy"><figcaption class="etiquette">Blinis</figcaption></figure>
+        <figure class="c-fromages apparait"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/plateau-fromages-et-raisins.webp" alt="Plateau de fromages, raisins blancs et noirs, fruits rouges et crackers" width="1200" height="1600" loading="lazy"><figcaption class="etiquette">Fromages</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="camion" id="camion">
+    <div class="env">
+      <div class="boite">
+        <div>
+          <h2>Le food truck, en semaine</h2>
+          <p class="intro">Entre deux événements, le camion vintage sort sur les places du nord toulousain. Le menu de la semaine et les rendez-vous sont publiés sur leur page Facebook.</p>
+        </div>
+        <ul class="arrets">
+          <li><span class="pt" aria-hidden="true"></span><div><b>Place de la Mairie, Saint-Geniès-Bellevue</b><span>Les jours de marché, annoncés sur Facebook</span></div></li>
+          <li><span class="pt" aria-hidden="true"></span><div><b>Saint-Martin-du-Touch</b><span>Certains midis</span></div></li>
+          <li><span class="pt" aria-hidden="true"></span><div><b>Chez vous</b><span>Pour une fête ou un événement privé</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="env">
+      <div>
+        <h2>Parlons de votre événement</h2>
+        <p class="intro">Date, nombre d'invités, salé ou sucré : un appel ou un message suffit pour commencer.</p>
+        <div class="carte">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a class="tel" href="tel:+33782823447">07 82 82 34 47</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:alyjfood@gmail.com">alyjfood@gmail.com</a></dd></div>
+            <div><dt>Adresse</dt><dd>Chemin de l'Enguille<br>31180 Saint-Geniès-Bellevue</dd></div>
+            <div><dt>Horaires</dt><dd>Selon les marchés et les événements : à jour sur la fiche Google</dd></div>
+            <div class="plein actions">
+              <a class="btn btn-plein" href="tel:+33782823447">Appeler</a>
+              <a class="btn btn-contour" href="https://www.google.com/maps/place/Food+Truck+-+Le+Pompon+sur+la+Garonne+-+Aly%E2%80%99J+Food+Toulouse+Nord+-/@43.6869962,1.4823489,17z/data=!4m6!3m5!1s0x675f92e74eb41955:0xbc36a1b9dc981142" target="_blank" rel="noopener">Voir les avis sur Google</a>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <figure class="vignette apparait"><div class="ph"><img src="assets/le-pompon-sur-la-garonne-saint-genies-bellevue/verrine-dessert-fruits-rouges.webp" alt="Verrine dessert : crème, fruits rouges et biscuit" width="1200" height="1600" loading="lazy"></div><figcaption class="etiquette">Verrine aux fruits rouges</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <span class="nom">Le Pompon sur la Garonne</span>
+      <p>Aly'J Food. Food truck vintage et traiteur événementiel, cuisine traditionnelle française salée et sucrée, tout fait maison.</p>
+    </div>
+    <div>
+      <h3>Nous joindre</h3>
+      <ul>
+        <li>Chemin de l'Enguille, 31180 Saint-Geniès-Bellevue</li>
+        <li><a class="tel" href="tel:+33782823447">07 82 82 34 47</a></li>
+        <li><a href="mailto:alyjfood@gmail.com">alyjfood@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Food+Truck+-+Le+Pompon+sur+la+Garonne+-+Aly%E2%80%99J+Food+Toulouse+Nord+-/@43.6869962,1.4823489,17z/data=!4m6!3m5!1s0x675f92e74eb41955:0xbc36a1b9dc981142" target="_blank" rel="noopener">Fiche Google, horaires et avis</a></li>
+        <li><a href="https://www.facebook.com/AlyJFood" target="_blank" rel="noopener">Page Facebook, menu de la semaine</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="mention"><div class="env">Proposition de Nicolas Masset pour Le Pompon sur la Garonne</div></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.apparait'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>À la patte de Lou, salon de toilettage à Metz-Sablon</title>
+<meta name="description" content="À la patte de Lou, salon de toilettage canin, félin et NAC à Metz-Sablon, 1 rue Saint-Bernard. Du mardi au samedi. 07 72 35 63 52.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='26' fill='%23C04E6B'/%3E%3Ccircle cx='32' cy='7' r='5' fill='none' stroke='%23C04E6B' stroke-width='3'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23F8F9F3'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#EEEFE6; --base-2:#E3E5D7; --surface:#F8F9F3; --encre:#262A1E; --encre-2:#545947;
+  --accent:#C04E6B; --accent-fonce:#9E3753; --accent-pale:#F3DCE2; --sombre:#2E2A2B; --sombre-2:#3A3536;
+  --ombre:0 30px 60px -34px rgba(46,42,43,.55);
+  --display:'Libre Caslon Display', 'Didot', Georgia, serif; --texte:'Mulish', 'Avenir Next', sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;font-weight:400}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.06;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1220px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+.entete{position:sticky;top:0;z-index:30;background:rgba(238,239,230,.95);border-bottom:1px solid rgba(38,42,30,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marque i{width:30px;height:34px;flex:none;display:block}
+.marque b{font-family:var(--display);font-weight:400;font-size:27px;line-height:1}
+.nav{display:flex;align-items:center;gap:30px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a:hover{color:var(--accent-fonce)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 30px;font-family:var(--texte);font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent-fonce);transition:transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent-fonce);color:var(--surface);box-shadow:0 18px 30px -18px rgba(158,55,83,.85)}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre)}
+.btn-contour{background:transparent;color:var(--encre);border-color:rgba(38,42,30,.35)}
+.btn-contour:hover{border-color:var(--encre);background:var(--surface)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-tel{padding:11px 20px;font-size:16px;white-space:nowrap}
+.btn-tel .court{display:none}
+
+/* Héros */
+.heros{padding:96px 0 120px}
+.heros .env{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-areas:"titre photo" "texte photo";column-gap:64px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(40px,5.4vw,78px);line-height:1.04;align-self:end}
+.heros .texte{grid-area:texte;align-self:start;margin-top:28px}
+.heros .texte p{font-size:19.5px;color:var(--encre-2);max-width:28em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.scene{grid-area:photo;position:relative;padding-top:64px}
+.scene .ph{border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -44px rgba(46,42,43,.7);aspect-ratio:4/3.1}
+.scene .ph img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.medaille{position:absolute;top:0;left:9%;width:clamp(120px,13vw,172px);transform:rotate(-7deg);transform-origin:50% 0;filter:drop-shadow(0 18px 22px rgba(46,42,43,.38));z-index:2}
+.medaille .anneau{display:block;width:34%;aspect-ratio:1;margin:0 auto -8%;border-radius:50%;border:5px solid #B9B4A6;background:transparent;position:relative;z-index:1}
+.medaille .disque{display:grid;place-items:center;aspect-ratio:1;border-radius:50%;background:var(--accent);color:var(--surface);text-align:center;padding:14%;box-shadow:inset 0 0 0 5px rgba(248,249,243,.25), inset 0 0 0 8px var(--accent), inset 0 0 0 9px rgba(248,249,243,.5)}
+.medaille .disque span{font-family:var(--display);font-size:clamp(17px,1.75vw,23px);line-height:1.08}
+.fil{position:absolute;right:20px;bottom:20px;background:var(--surface);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:500;box-shadow:0 12px 24px -14px rgba(46,42,43,.8)}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits .env{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits .f{padding:34px 0 30px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 14px;align-items:start}
+.faits .f::before{content:"";width:10px;height:10px;border-radius:50%;margin-top:12px;border:2px solid var(--accent);grid-row:span 2}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:29px;line-height:1.15}
+.faits span{display:block;margin-top:4px;font-size:16px;color:var(--encre-2);line-height:1.35}
+
+/* Habitués */
+.habitues{padding:128px 0 120px}
+.habitues .tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end}
+.habitues h2{font-size:clamp(34px,4.2vw,60px)}
+.habitues .tete p{color:var(--encre-2);max-width:30em}
+.galerie{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 28px;margin-top:72px;align-items:start}
+.galerie figure{margin:0;position:relative}
+.galerie .ph{border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.galerie img{width:100%;height:100%;object-fit:cover}
+.g1{grid-column:1 / 8}
+.g1 .ph{aspect-ratio:4/3}
+.g1 img{object-position:60% 50%}
+.g2{grid-column:8 / 13;margin-top:80px}
+.g2 .ph{aspect-ratio:4/5}
+.g2 img{object-position:50% 40%}
+.g3{grid-column:2 / 7;margin-top:-40px}
+.g3 .ph{aspect-ratio:4/3}
+.g3 img{object-position:45% 50%}
+.g4{grid-column:7 / 11}
+.g4 .ph{aspect-ratio:1/1}
+.g4 img{object-position:48% 55%}
+.tag{position:absolute;top:-22px;left:22px;display:flex;flex-direction:column;align-items:center;transform:rotate(-6deg);z-index:2}
+.tag::before{content:"";width:16px;height:16px;border-radius:50%;border:3px solid #B9B4A6;margin-bottom:-5px}
+.tag span{display:grid;place-items:center;min-width:82px;min-height:82px;padding:10px;border-radius:50%;background:var(--surface);font-family:var(--display);font-size:21px;line-height:1;box-shadow:inset 0 0 0 2px var(--accent-pale), 0 14px 22px -12px rgba(46,42,43,.6)}
+.galerie figcaption{margin-top:16px;font-size:16px;color:var(--encre-2)}
+
+/* Section sombre : sécurité */
+.securite{background:var(--sombre);color:#D9D5CF;padding:120px 0 128px}
+.securite .env{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:88px;align-items:center}
+.securite .photos{position:relative;padding-bottom:110px}
+.securite .eros{border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 40px 70px -34px rgba(0,0,0,.7);width:88%}
+.securite .eros img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.securite .feutre{position:absolute;right:0;bottom:0;width:52%;border-radius:16px;overflow:hidden;aspect-ratio:4/3;border:8px solid var(--sombre);box-shadow:0 30px 50px -26px rgba(0,0,0,.8)}
+.securite .feutre img{width:100%;height:100%;object-fit:cover;object-position:45% 60%}
+.securite .feutre figcaption{position:absolute;left:12px;bottom:12px;background:var(--surface);color:var(--encre);border-radius:999px;padding:6px 13px;font-size:14px;max-width:calc(100% - 24px)}
+.securite figure{margin:0}
+.securite h2{font-size:clamp(32px,3.8vw,54px);color:var(--surface)}
+.securite blockquote{margin:32px 0 0;padding:0;font-family:var(--display);font-size:clamp(23px,2.2vw,30px);line-height:1.3;color:var(--surface)}
+.securite .source{margin-top:14px;font-size:16px;color:#A9A39C}
+.securite .texte > p.plus{margin-top:28px;max-width:30em}
+
+/* Le salon */
+.salon{padding:128px 0}
+.salon .env{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.porte{position:relative}
+.porte .ph{border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 46px 80px -40px rgba(46,42,43,.65);border:10px solid var(--surface)}
+.porte img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.porte .fil{right:auto;left:22px;bottom:26px}
+.salon h2{font-size:clamp(34px,4vw,56px)}
+.salon .intro{margin-top:18px;color:var(--encre-2);max-width:32em}
+.plaque{margin-top:40px;background:var(--surface);border-radius:20px;padding:36px 40px;box-shadow:0 40px 70px -46px rgba(46,42,43,.6);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.plaque h3{font-size:25px;margin-bottom:14px}
+.horaires{margin:0}
+.horaires div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(38,42,30,.18);font-size:16.5px}
+.horaires div:last-child{border-bottom:0}
+.horaires dt,.horaires dd{margin:0}
+.horaires dd{white-space:nowrap}
+.horaires .ferme dd{color:var(--encre-2)}
+.coord p{font-size:16.5px;margin-bottom:14px}
+.coord .lab{display:block;font-size:14.5px;color:var(--encre-2)}
+.coord .tel{font-family:var(--display);font-size:28px;text-decoration:none;white-space:nowrap}
+.coord .tel:hover{color:var(--accent-fonce)}
+.salon .actions{margin-top:30px}
+.ferie{margin-top:14px;font-size:15px;color:var(--encre-2)}
+
+.pied{background:var(--sombre);color:#D9D5CF;padding:84px 0 40px;font-size:16.5px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px}
+.pied .nom{font-family:var(--display);font-size:32px;color:var(--surface)}
+.pied p{margin-top:12px;max-width:24em}
+.pied h3{font-family:var(--texte);font-weight:600;font-size:16px;color:var(--surface);margin-bottom:12px}
+.pied a{text-decoration:none;color:#ECE8E2}
+.pied a:hover{color:var(--accent-pale)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.mention{background:var(--sombre);color:#8F8984;font-size:14px;padding:22px 0 30px;border-top:1px solid rgba(248,249,243,.08)}
+
+.js .apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .nav a:not(.btn){display:none}
+  .heros{padding:44px 0 72px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte"}
+  .heros h1{font-size:clamp(38px,9.5vw,60px)}
+  .scene{margin-top:12px;padding-top:56px}
+  .medaille{width:112px;left:16px}
+  .medaille .disque span{font-size:16px}
+  .faits .env{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+  .faits .f{padding:24px 0 20px}
+  .habitues{padding:96px 0 88px}
+  .habitues .tete{grid-template-columns:minmax(0,1fr);gap:18px}
+  .galerie{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 16px;margin-top:56px}
+  .g1{grid-column:1 / -1}
+  .g2{grid-column:1 / 2;margin-top:0}
+  .g3{grid-column:2 / 3;margin-top:40px}
+  .g3 .ph{aspect-ratio:4/5}
+  .g4{grid-column:1 / -1}
+  .g4 .ph{aspect-ratio:4/3}
+  .tag span{min-width:66px;min-height:66px;font-size:17px}
+  .securite{padding:88px 0 96px}
+  .securite .env{grid-template-columns:minmax(0,1fr);gap:48px}
+  .salon{padding:96px 0}
+  .salon .env{grid-template-columns:minmax(0,1fr);gap:48px}
+  .porte{max-width:420px}
+  .plaque{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pied .env{grid-template-columns:minmax(0,1fr);gap:36px}
+}
+@media (max-width:520px){
+  body{font-size:17px}
+  .env{width:min(1220px,100% - 32px)}
+  .entete .env{min-height:64px}
+  .marque b{font-size:23px}
+  .marque i{width:24px;height:28px}
+  .btn-tel .long{display:none}
+  .btn-tel .court{display:inline}
+  .heros .texte p{font-size:18px}
+  .actions .btn{width:100%}
+  .medaille{width:96px}
+  .medaille .disque span{font-size:14px}
+  .scene .ph{aspect-ratio:1/1}
+  .faits .env{grid-template-columns:minmax(0,1fr)}
+  .faits .f{padding:18px 0 14px}
+  .faits b{font-size:25px}
+  .galerie{grid-template-columns:minmax(0,1fr)}
+  .g2,.g3{grid-column:1 / -1;margin-top:0}
+  .g2 .ph,.g3 .ph{aspect-ratio:4/3}
+  .plaque{padding:28px 22px}
+  .securite .photos{padding-bottom:80px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#haut"><i aria-hidden="true"><svg viewBox="0 0 30 34" width="100%" height="100%"><circle cx="15" cy="5" r="3.6" fill="none" stroke="#B9B4A6" stroke-width="2.4"/><circle cx="15" cy="21" r="12.5" fill="#C04E6B"/></svg></i><b>À la patte de Lou</b></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#habitues">Les habitués</a>
+      <a href="#salon">Le salon</a>
+      <a href="#salon">Horaires</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33772356352"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">07 72 35 63 52</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+<section class="heros">
+  <div class="env">
+    <h1>Le salon de toilettage du Sablon, à Metz</h1>
+    <div class="scene">
+      <div class="medaille" aria-hidden="true"><span class="anneau"></span><div class="disque"><span>À la patte<br>de Lou</span></div></div>
+      <div class="ph"><img src="assets/patte-de-lou-metz/cavalier-king-charles-apres-toilettage.webp" alt="Cavalier King Charles blenheim fraîchement toiletté, debout sur la table turquoise du salon" width="1600" height="1200" fetchpriority="high"></div>
+      <span class="fil">Cavalier King Charles, après toilettage</span>
+    </div>
+    <div class="texte">
+      <p>Chiens, chats et NAC&nbsp;: chaque animal monte sur la table turquoise du salon, au 1 rue Saint-Bernard. Du toilettage complet au petit rafraîchissement, du mardi au samedi.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33772356352">Prendre rendez-vous</a>
+        <a class="btn btn-contour" href="tel:+33772356352"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07 72 35 63 52</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faits" aria-label="En bref">
+  <div class="env">
+    <div class="f"><b>Canin, félin, NAC</b><span>comme l’annonce la vitrine</span></div>
+    <div class="f"><b>Metz-Sablon</b><span>1 rue Saint-Bernard</span></div>
+    <div class="f"><b>Mardi au samedi</b><span>samedi jusqu’à 13&nbsp;h 30</span></div>
+    <div class="f"><b>4,7 sur 5</b><span>60 avis sur Google</span></div>
+  </div>
+</section>
+
+<section class="habitues" id="habitues">
+  <div class="env">
+    <div class="tete">
+      <h2>Les habitués de la table turquoise</h2>
+      <p>Sur la page du salon, chaque passage se signe d’un prénom. Quelques habitués de ces dernières semaines.</p>
+    </div>
+    <div class="galerie">
+      <figure class="g1 apparait">
+        <span class="tag" aria-hidden="true"><span>Spleen</span></span>
+        <div class="ph"><img src="assets/patte-de-lou-metz/golden-retriever-sur-la-table.webp" alt="Spleen, golden retriever crème, debout sur la table, langue sortie" width="1600" height="1200" loading="lazy"></div>
+        <figcaption>Le beau Spleen, golden retriever.</figcaption>
+      </figure>
+      <figure class="g2 apparait">
+        <span class="tag" aria-hidden="true"><span>Muffin</span></span>
+        <div class="ph"><img src="assets/patte-de-lou-metz/chat-gris-oreilles-pliees.webp" alt="Muffin, chat gris et blanc aux oreilles pliées, couché au bord de la table turquoise" width="1200" height="1600" loading="lazy"></div>
+        <figcaption>Mon beau Muffin&nbsp;: les chats aussi.</figcaption>
+      </figure>
+      <figure class="g3 apparait">
+        <span class="tag" aria-hidden="true"><span>Jelly</span></span>
+        <div class="ph"><img src="assets/patte-de-lou-metz/berger-australien-sur-la-table.webp" alt="Jelly, berger australien rouge merle aux yeux clairs, sur la table" width="1600" height="1200" loading="lazy"></div>
+        <figcaption>La toute belle Jelly, berger australien.</figcaption>
+      </figure>
+      <figure class="g4 apparait">
+        <span class="tag" aria-hidden="true"><span>Pompom</span></span>
+        <div class="ph"><img src="assets/patte-de-lou-metz/bichon-blanc-sur-la-table.webp" alt="Pompom, petit chien blanc à la coupe ronde, de profil sur la table" width="1600" height="1200" loading="lazy"></div>
+        <figcaption>Mon beau Pompom.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="securite">
+  <div class="env">
+    <div class="photos">
+      <figure class="eros apparait"><img src="assets/patte-de-lou-metz/chien-noir-avec-sangles-de-securite.webp" alt="Éros, chien noir au museau gris, tenu sur la table par les sangles du salon" width="1600" height="1200" loading="lazy"></figure>
+      <figure class="feutre apparait"><img src="assets/patte-de-lou-metz/chat-poil-feutre-retire.webp" alt="Tas de poil feutré retiré d'un chat, posé sur la table turquoise" width="1600" height="1200" loading="lazy"><figcaption>Le poil feutré d’un chat, retiré</figcaption></figure>
+    </div>
+    <div class="texte">
+      <h2>Confort et sécurité sur la table</h2>
+      <blockquote>« Mon tout beau Éros avec nos nouvelles sangles, pour plus de confort tout en restant en sécurité. »</blockquote>
+      <p class="source">Publié par le salon, septembre 2026</p>
+      <p class="plus">Sur la table, chaque animal est attaché à la potence par un harnais et une laisse. Les chats passent aussi au salon, jusqu’au poil feutré qu’il faut retirer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="salon" id="salon">
+  <div class="env">
+    <div class="porte apparait">
+      <div class="ph"><img src="assets/patte-de-lou-metz/devanture-a-la-patte-de-lou.webp" alt="Devanture du salon : vitrine et porte en bois, bandeau orangé À la Patte de Lou, vitre Toilettage canin, félin, NAC" width="1200" height="1600" loading="lazy"></div>
+      <span class="fil">La vitrine, rue Saint-Bernard</span>
+    </div>
+    <div>
+      <h2>Venir au salon</h2>
+      <p class="intro">Le salon est au Sablon, derrière la vitrine orangée « Toilettage canin, félin, NAC ». Appelez pour réserver le passage de votre animal.</p>
+      <div class="plaque">
+        <div>
+          <h3>Horaires</h3>
+          <dl class="horaires">
+            <div class="ferme"><dt>Lundi</dt><dd>Fermé</dd></div>
+            <div><dt>Mardi</dt><dd>9&nbsp;h 30 – 17&nbsp;h 30</dd></div>
+            <div><dt>Mercredi</dt><dd>9&nbsp;h 30 – 17&nbsp;h 30</dd></div>
+            <div><dt>Jeudi</dt><dd>9&nbsp;h 30 – 17&nbsp;h 30</dd></div>
+            <div><dt>Vendredi</dt><dd>9&nbsp;h 30 – 17&nbsp;h 30</dd></div>
+            <div><dt>Samedi</dt><dd>9&nbsp;h – 13&nbsp;h 30</dd></div>
+            <div class="ferme"><dt>Dimanche</dt><dd>Fermé</dd></div>
+          </dl>
+          <p class="ferie">Les jours fériés, les horaires peuvent changer.</p>
+        </div>
+        <div class="coord">
+          <h3>Coordonnées</h3>
+          <p><span class="lab">Téléphone</span><a class="tel" href="tel:+33772356352">07 72 35 63 52</a></p>
+          <p><span class="lab">Adresse</span>Entrée au 1 rue Saint-Bernard, rue Saint-Livier, 57000 Metz</p>
+          <p><span class="lab">Note Google</span><strong>4,7 sur 5</strong>, 60 avis</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33772356352">Appeler le salon</a>
+        <a class="btn btn-contour" href="https://www.google.com/maps/place/%C3%80+La+Patte+de+Lou/@49.1001391,6.1710411,17z/data=!3m1!4b1!4m6!3m5!1s0x4794dd974e5fb4ed:0x8832a176b8ca870d" rel="noopener">Voir les avis Google</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <div class="nom">À la patte de Lou</div>
+      <p>Salon de toilettage canin, félin et NAC à Metz-Sablon.</p>
+    </div>
+    <div>
+      <h3>Le salon</h3>
+      <ul>
+        <li>1 rue Saint-Bernard, 57000 Metz</li>
+        <li><a href="tel:+33772356352">07 72 35 63 52</a></li>
+        <li>Mardi au vendredi, 9&nbsp;h 30 – 17&nbsp;h 30</li>
+        <li>Samedi, 9&nbsp;h – 13&nbsp;h 30</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ailleurs</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/people/%C3%80-la-patte-de-Lou/61552586691267/" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.google.com/maps/place/%C3%80+La+Patte+de+Lou/@49.1001391,6.1710411,17z/data=!3m1!4b1!4m6!3m5!1s0x4794dd974e5fb4ed:0x8832a176b8ca870d" rel="noopener">Fiche Google et avis</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="mention"><div class="env">Proposition de Nicolas Masset pour À la patte de Lou</div></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.apparait');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

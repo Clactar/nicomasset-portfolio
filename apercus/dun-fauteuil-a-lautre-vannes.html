@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>D'un fauteuil à l'autre · Couture et tapisserie d'ameublement à Vannes</title>
+<meta name="description" content="D'un fauteuil à l'autre, tapissier décorateur à Vannes : couture et tapisserie d'ameublement, 25 allée de Kerpayen. 06 34 16 16 82.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E6E73'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23F3F4F1'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E4E6E1; --base-2:#D9DDD6; --surface:#F3F4F1; --encre:#23262A; --encre-2:#4F5458;
+  --accent:#2E6E73; --accent-pale:#C6D6D4; --sombre:#22302F; --sombre-2:#2C3D3C;
+  --ombre:0 30px 60px -34px rgba(34,48,47,.55);
+  --display:'Young Serif', Georgia, serif; --texte:'Instrument Sans', 'Helvetica Neue', sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6}
+::selection{background:var(--accent);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.env{width:min(1200px,100% - 48px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(228,230,225,.94);-webkit-backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(35,38,42,.08)}
+.entete .env{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.marque b{font-family:var(--display);font-weight:400;font-size:22px}
+.marque small{font-size:14px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a.lien{text-decoration:none;color:var(--encre-2);transition:color .2s}
+.nav a.lien:hover{color:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 28px;font-family:var(--texte);font-size:17px;font-weight:500;text-decoration:none;border:1.5px solid var(--encre);line-height:1.2;text-align:center;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--accent);border-color:var(--accent);color:var(--surface);box-shadow:0 18px 30px -20px rgba(46,110,115,.9)}
+.btn-plein:hover{background:var(--sombre);border-color:var(--sombre)}
+.btn-contour{background:transparent;color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn-tel{padding:10px 20px;font-size:16px;white-space:nowrap;border-color:rgba(35,38,42,.35)}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* Héros */
+.heros{padding:80px 0 112px}
+.heros .env{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-areas:"titre visuel" "texte visuel";column-gap:88px;align-items:center}
+.heros h1{grid-area:titre;font-size:clamp(33px,5.2vw,72px);align-self:end}
+.heros .texte{grid-area:texte;align-self:start;margin-top:28px}
+.heros .texte p{font-size:20px;color:var(--encre-2);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.visuel{grid-area:visuel;position:relative;padding:0 0 56px 56px;max-width:520px;justify-self:end;width:100%}
+.chevrons{position:absolute;left:0;bottom:0;width:86%;height:84%;border-radius:22px;background-color:#D6E1DF;
+  background-image:
+   linear-gradient(135deg,var(--accent-pale) 25%,transparent 25%),
+   linear-gradient(225deg,var(--accent-pale) 25%,transparent 25%),
+   linear-gradient(315deg,var(--accent-pale) 25%,transparent 25%),
+   linear-gradient(45deg,var(--accent-pale) 25%,transparent 25%);
+  background-size:36px 36px;background-position:-18px 0,-18px 0,0 0,0 0}
+.photo-heros{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--ombre),0 50px 90px -50px rgba(34,48,47,.5);aspect-ratio:4/5}
+.photo-heros img{width:100%;height:100%;object-fit:cover;object-position:50% 78%}
+.etiquette{position:absolute;right:-18px;bottom:96px;background:var(--surface);padding:16px 22px 15px;border-radius:4px;outline:1.5px dashed var(--accent);outline-offset:-5px;transform:rotate(-3deg);box-shadow:0 18px 30px -18px rgba(34,48,47,.6);max-width:calc(100% - 24px)}
+.etiquette b{display:block;font-family:var(--display);font-weight:400;font-size:19px;line-height:1.2}
+.etiquette span{display:block;font-size:14px;color:var(--encre-2)}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0;padding:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.faits li{font-size:16px;line-height:1.45;color:var(--encre-2);padding-left:18px;position:relative}
+.faits li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;border:1.5px solid var(--accent)}
+.faits li b{display:block;color:var(--encre);font-weight:500;font-size:17px}
+
+/* Frise */
+.frise{padding:120px 0 128px}
+.tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end;margin-bottom:72px}
+.tete h2{font-size:clamp(32px,3.6vw,50px)}
+.tete p{color:var(--encre-2);max-width:32em}
+.etapes{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.etapes::before{content:"";position:absolute;left:0;right:0;top:46%;height:9px;border-radius:9px;
+  background:repeating-linear-gradient(115deg,var(--accent) 0 4px,#4E8C90 4px 8px,transparent 8px 9px);opacity:.55}
+.etape{position:relative}
+.etape:nth-child(2){margin-top:64px}
+.etape:nth-child(3){margin-top:20px}
+.etape:nth-child(4){margin-top:84px}
+.etape figure{margin:0;border-radius:14px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/4;background:var(--surface)}
+.etape img{width:100%;height:100%;object-fit:cover}
+.etape h3{font-size:22px;margin-top:22px}
+.etape p{font-size:16px;color:var(--encre-2);margin-top:8px}
+.etape .rang{font-family:var(--display);color:var(--accent);font-size:16px;display:block;margin-top:20px}
+.etape .rang + h3{margin-top:4px}
+
+/* Section sombre */
+.bois{background:var(--sombre);color:var(--surface);padding:128px 0}
+.bois .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:96px;align-items:center}
+.bois h2{font-size:20px;font-family:var(--texte);font-weight:500;color:#9FC3C2;letter-spacing:0}
+.bois blockquote{margin:24px 0 0;font-family:var(--display);font-size:clamp(26px,2.9vw,40px);line-height:1.22;text-wrap:balance}
+.bois .signe{margin-top:28px;color:#B9C4C2;font-size:16px}
+.duo{position:relative;min-height:560px}
+.duo figure{margin:0;position:absolute;border-radius:16px;overflow:hidden;box-shadow:0 34px 70px -30px rgba(0,0,0,.7)}
+.duo .haut{right:0;top:0;width:58%;aspect-ratio:3/4}
+.duo .bas{left:0;bottom:0;width:62%;aspect-ratio:4/3;border:8px solid var(--sombre)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .haut img{object-position:50% 78%}
+.duo .haut .pastille{left:auto;right:14px;bottom:auto;top:14px}
+.pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;line-height:1.25}
+
+/* Chez le client */
+.client{padding:128px 0 120px}
+.client .env{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:96px;align-items:center}
+.client .photos{position:relative;padding-bottom:80px}
+.client .grande{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/4;width:82%}
+.client .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.client .petite{margin:0;position:absolute;right:0;bottom:0;width:42%;border-radius:12px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 26px 50px -26px rgba(34,48,47,.6);border:6px solid var(--surface);transform:rotate(2deg)}
+.client .petite img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.client h2{font-size:clamp(32px,3.6vw,50px)}
+.client .texte > p{color:var(--encre-2);margin-top:22px;max-width:32em}
+.fiche{margin:36px 0 0;padding:0;background:var(--surface);border-radius:14px;box-shadow:0 22px 44px -30px rgba(34,48,47,.5)}
+.fiche div{display:grid;grid-template-columns:minmax(0,7em) minmax(0,1fr);gap:16px;padding:18px 24px;border-top:1px solid rgba(35,38,42,.1)}
+.fiche div:first-child{border-top:0}
+.fiche dt{color:var(--encre-2);font-size:16px}
+.fiche dd{margin:0;font-weight:500}
+.client blockquote{margin:32px 0 0;font-family:var(--display);font-size:22px;line-height:1.35;color:var(--accent);max-width:24em}
+
+/* Contact */
+.contact{padding:120px 0 128px;background:var(--base-2)}
+.contact .env{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:88px;align-items:start}
+.contact h2{font-size:clamp(34px,4vw,56px)}
+.contact .intro p{color:var(--encre-2);margin-top:22px;max-width:28em}
+.contact .actions{margin-top:32px}
+.carte{background:var(--surface);border-radius:20px;padding:40px 44px;box-shadow:var(--ombre)}
+.carte .ligne{display:grid;grid-template-columns:minmax(0,8em) minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid rgba(35,38,42,.1)}
+.carte .ligne:first-child{border-top:0;padding-top:0}
+.carte .ligne span{color:var(--encre-2);font-size:16px}
+.carte .ligne a{text-decoration-color:rgba(46,110,115,.45);text-underline-offset:4px}
+.carte .ligne a:hover{color:var(--accent)}
+.tel{white-space:nowrap;font-weight:500}
+.horaires{margin:0;padding:0;list-style:none}
+.horaires li{display:flex;justify-content:space-between;gap:16px}
+.horaires small{display:block;color:var(--encre-2);font-size:15px;margin-top:6px}
+.liens{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:26px}
+.liens a{font-weight:500;text-underline-offset:4px;text-decoration-color:rgba(46,110,115,.45)}
+
+/* Pied */
+.pied{background:var(--sombre);color:#D7DEDC;padding:72px 0 40px}
+.pied .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.pied b.nom{font-family:var(--display);font-weight:400;font-size:26px;color:var(--surface);display:block}
+.pied p,.pied li{font-size:16px;color:#B9C4C2}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:500;color:#9FC3C2;margin-bottom:12px}
+.pied a{text-decoration-color:rgba(255,255,255,.3);text-underline-offset:4px}
+.signature{background:var(--sombre);color:#8A9997;font-size:14px;text-align:center;padding:22px 24px 30px;border-top:1px solid rgba(255,255,255,.08)}
+
+/* Apparition */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+@media (max-width:1020px){
+  .nav a.lien{display:none}
+  .heros .env{column-gap:48px}
+  .etapes{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .etapes::before{display:none}
+  .etape:nth-child(n){margin-top:0}
+  .etape:nth-child(2n){margin-top:48px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bois .env,.client .env,.contact .env{gap:56px}
+}
+@media (max-width:780px){
+  .env{width:min(1200px,100% - 40px)}
+  .heros{padding:40px 0 72px}
+  .heros .env{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "texte"}
+  .visuel{justify-self:stretch;max-width:none;padding:0 0 34px 30px;margin-top:30px}
+  .etiquette{right:-6px;bottom:64px}
+  .tete,.bois .env,.client .env,.contact .env{grid-template-columns:minmax(0,1fr)}
+  .tete{gap:18px;margin-bottom:48px}
+  .frise,.client,.contact{padding:88px 0}
+  .bois{padding:88px 0}
+  .duo{min-height:0;display:grid;gap:16px}
+  .duo figure{position:relative;inset:auto}
+  .duo .haut{width:78%;justify-self:end}
+  .duo .bas{width:84%;margin-top:-90px}
+  .client .photos{padding-bottom:56px}
+  .pied .env{grid-template-columns:minmax(0,1fr);gap:32px}
+  .carte{padding:28px 24px}
+}
+@media (max-width:420px){
+  body{font-size:17px}
+  .heros .texte p{font-size:18px}
+  .actions .btn{width:100%}
+  .btn-tel .long{display:none}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:16px}
+  .carte .ligne{grid-template-columns:minmax(0,1fr);gap:4px}
+  .fiche div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .marque small{display:none}
+  .marque b{font-size:19px}
+  .btn-tel{padding:9px 15px;font-size:15px}
+}
+@media (min-width:421px){.btn-tel .court{display:none}}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="env">
+    <a class="marque" href="#"><b>D'un fauteuil à l'autre</b><small>Tapissier décorateur à Vannes</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a class="lien" href="#atelier">L'atelier</a>
+      <a class="lien" href="#contact">Venir</a>
+      <a class="btn btn-contour btn-tel" href="tel:+33634161682"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="long">06 34 16 16 82</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="heros">
+  <div class="env">
+    <h1>Couture et tapisserie d'ameublement, à Vannes</h1>
+    <div class="visuel">
+      <div class="chevrons" aria-hidden="true"></div>
+      <figure class="photo-heros" style="margin:0">
+        <img src="assets/dun-fauteuil-a-lautre-vannes/paire-fauteuils-gris-au-jardin.webp" alt="Deux fauteuils à accoudoirs en bois clair regarnis d'un tissu gris à branches blanches, posés sur la pelouse" width="1200" height="1600">
+      </figure>
+      <div class="etiquette"><b>Tapissier décorateur</b><span>Allée de Kerpayen, Vannes</span></div>
+    </div>
+    <div class="texte">
+      <p>Fauteuils, bergères, sièges de style&nbsp;: l'atelier remet à nu la carcasse, coud la toile de jute, tend et épingle le tissu le long du bois, jusqu'au siège qui rentre chez vous.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="mailto:bayoudsylvie@orange.fr">Écrire à l'atelier</a>
+        <a class="btn btn-contour" href="tel:+33634161682">06 34 16 16 82</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faits" aria-label="En bref">
+  <div class="env">
+    <ul>
+      <li><b>Tapissier décorateur</b>Couture et tapisserie d'ameublement</li>
+      <li><b>Fauteuils et bergères</b>Du siège de style au fauteuil de salon</li>
+      <li><b>Ouvert lundi et mardi</b>À partir de 9&nbsp;h 30</li>
+      <li><b>25 allée de Kerpayen</b>56000 Vannes</li>
+    </ul>
+  </div>
+</section>
+
+<section class="frise" id="atelier">
+  <div class="env">
+    <div class="tete">
+      <h2>Sous le tissu, un fauteuil se reprend couche par couche</h2>
+      <p>Des sièges passés par l'atelier, de la carcasse sculptée au dossier fini&nbsp;: chaque étape se lit sur les photos prises à l'établi.</p>
+    </div>
+    <ol class="etapes">
+      <li class="etape">
+        <figure class="apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/carcasse-bois-sculpte-avant-garniture.webp" alt="Pied et ceinture en bois sculpté de feuillages d'une carcasse mise à nu" width="1200" height="1600" loading="lazy" style="object-position:50% 70%"></figure>
+        <span class="rang">Premier temps</span>
+        <h3>La carcasse mise à nu</h3>
+        <p>Garniture retirée, le bois sculpté se nettoie et se révèle.</p>
+      </li>
+      <li class="etape">
+        <figure class="apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/toile-de-jute-et-epingle.webp" alt="Toile de jute cousue à la ficelle au-dessus d'une toile blanche, une épingle à tête jaune" width="1200" height="1600" loading="lazy"></figure>
+        <span class="rang">Deuxième temps</span>
+        <h3>La toile de jute cousue</h3>
+        <p>Jute et ficelle d'abord, la toile blanche vient par-dessus.</p>
+      </li>
+      <li class="etape">
+        <figure class="apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/passepoil-epingle-sur-bois-sculpte.webp" alt="Tissu écru tendu sur l'assise, épingles à tête jaune le long du bois sculpté" width="1200" height="1600" loading="lazy" style="object-position:40% 50%"></figure>
+        <span class="rang">Troisième temps</span>
+        <h3>Le tissu tendu</h3>
+        <p>Il se tend sur l'assise, épinglé au ras du bois sculpté.</p>
+      </li>
+      <li class="etape">
+        <figure class="apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/dossier-blanc-bois-sculpte-detail.webp" alt="Haut du dossier blanc capitonné et accoudoir en bois sculpté" width="1200" height="1600" loading="lazy"></figure>
+        <span class="rang">Dernier temps</span>
+        <h3>Le siège fini</h3>
+        <p>Dossier blanc, bois sculpté&nbsp;: le siège est prêt à repartir.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="bois">
+  <div class="env">
+    <div>
+      <h2>Ce que le bois raconte</h2>
+      <blockquote>«&nbsp;Après un gros nettoyage sur cette ancienne carcasse de fauteuil, je découvre un numéro de série. Ce n'est pas grand-chose mais ça me touche à chaque fois.&nbsp;»</blockquote>
+      <p class="signe">Noté à l'atelier, carcasse numéro 2479</p>
+    </div>
+    <div class="duo">
+      <figure class="haut apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/numero-de-serie-sur-carcasse.webp" alt="Montant de carcasse de fauteuil frappé du numéro 2479" width="1200" height="1600" loading="lazy"><span class="pastille">N° 2479</span></figure>
+      <figure class="bas apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/inscription-1898-sous-la-traverse.webp" alt="Traverse de bois portant l'inscription 1898 au crayon" width="1600" height="1200" loading="lazy"><span class="pastille">1898, au crayon sous la traverse</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="client">
+  <div class="env">
+    <div class="photos">
+      <figure class="grande apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/fauteuil-restauration-in-situ.webp" alt="Fauteuil de style Restauration à crosses, garni d'un tissu bleu-vert à losanges, chez le client" width="800" height="1600" loading="lazy"></figure>
+      <figure class="petite apparait"><img src="assets/dun-fauteuil-a-lautre-vannes/bergere-blanche-sur-pelouse.webp" alt="Bergère en bois foncé regarnie d'un tissu blanc, posée sur l'herbe" width="1200" height="1600" loading="lazy"></figure>
+    </div>
+    <div class="texte">
+      <h2>De retour dans son intérieur</h2>
+      <p>Ce fauteuil de style Restauration a retrouvé sa place, regarni d'un tissu bleu-vert à losanges et souligné d'un galon.</p>
+      <dl class="fiche">
+        <div><dt>Style</dt><dd>Restauration, accoudoirs à crosses</dd></div>
+        <div><dt>Tissu</dt><dd>Quintana, édition JAB</dd></div>
+        <div><dt>Galon</dt><dd>Double corde, Houlès</dd></div>
+      </dl>
+      <blockquote>«&nbsp;J'aime quand mes clients me font partager le résultat final in situ.&nbsp;»</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="env">
+    <div class="intro">
+      <h2>Un siège à reprendre&nbsp;?</h2>
+      <p>Appelez l'atelier ou écrivez, avec une photo du fauteuil si vous l'avez sous la main. L'atelier est allée de Kerpayen, à Vannes.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33634161682">Appeler l'atelier</a>
+        <a class="btn btn-contour" href="mailto:bayoudsylvie@orange.fr">Écrire un e-mail</a>
+      </div>
+    </div>
+    <div class="carte">
+      <div class="ligne"><span>Téléphone</span><a class="tel" href="tel:+33634161682">06 34 16 16 82</a></div>
+      <div class="ligne"><span>E-mail</span><a href="mailto:bayoudsylvie@orange.fr">bayoudsylvie@orange.fr</a></div>
+      <div class="ligne"><span>Adresse</span><p>25 allée de Kerpayen<br>56000 Vannes</p></div>
+      <div class="ligne"><span>Horaires</span><div><ul class="horaires"><li><span style="color:inherit">Lundi</span><b style="font-weight:500">9&nbsp;h 30 – 18&nbsp;h</b></li><li><span style="color:inherit">Mardi</span><b style="font-weight:500">9&nbsp;h 30 – 18&nbsp;h 30</b></li></ul><small>Les autres jours, horaires à jour sur la fiche Google.</small></div></div>
+      <div class="liens">
+        <a href="https://www.google.com/maps/place/D%27un+fauteuil+%C3%A0+l%27autre/data=!4m7!3m6!1s0x480fe1c920ab306d:0xd9c1aae3c105b417" rel="noopener">Itinéraire et fiche Google</a>
+        <a href="https://www.facebook.com/DunFauteuilALautre/" rel="noopener">Page Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="env">
+    <div>
+      <b class="nom">D'un fauteuil à l'autre</b>
+      <p style="margin-top:10px">Couture et tapisserie d'ameublement, tapissier décorateur à Vannes.</p>
+    </div>
+    <div>
+      <h3>Atelier</h3>
+      <ul>
+        <li>25 allée de Kerpayen, 56000 Vannes</li>
+        <li><a class="tel" href="tel:+33634161682">06 34 16 16 82</a></li>
+        <li><a href="mailto:bayoudsylvie@orange.fr">bayoudsylvie@orange.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi, 9&nbsp;h 30 – 18&nbsp;h</li>
+        <li>Mardi, 9&nbsp;h 30 – 18&nbsp;h 30</li>
+        <li><a href="https://www.facebook.com/DunFauteuilALautre/" rel="noopener">Page Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<p class="signature">Proposition de Nicolas Masset pour D'un fauteuil à l'autre</p>
+
+<script>
+(function(){
+  var r=document.documentElement; if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  r.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
