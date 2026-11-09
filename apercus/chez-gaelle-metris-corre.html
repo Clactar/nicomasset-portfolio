@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Chez Gaëlle Métris, gîtes et chambres d'hôtes à Corre</title>
+<meta name="description" content="Chez Gaëlle Métris, à Corre (Haute-Saône) : gîte, studio et chambres d'hôtes dans une ancienne ferme du XVIIIe restaurée, entre le Coney et le canal de l'Est, table d'hôtes sur réservation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2324332A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23D09A2C'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lustria&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#E6EBE2; --base-2:#DAE1D4; --base-3:#C9D3C2; --surface:#F4F7F2;
+  --encre:#1E2A22; --encre-2:#4C5A4F; --jaune:#D09A2C; --jaune-clair:#E3B24A; --jaune-fonce:#8A6214;
+  --sombre:#24332A; --sombre-2:#2F4135; --sur-sombre:#EEF1E8; --sur-sombre-2:#B9C4B4;
+  --display:'Lustria', Georgia, serif; --texte:'Nunito Sans', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(20,34,26,.5);
+  --ombre-haute:0 44px 80px -40px rgba(20,34,26,.6);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--jaune);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--jaune-fonce);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px, 4.2vw, 54px);line-height:1.08;letter-spacing:-.01em}
+h3{font-size:clamp(24px, 2.4vw, 30px);line-height:1.15}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(230,235,226,.95);border-bottom:1px solid rgba(30,42,34,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:24px}
+.marque span{display:block;font-size:14px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:not(.appel):hover{color:var(--encre)}
+.nav a.appel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;border:1.5px solid var(--encre);color:var(--encre);text-decoration:none;font-weight:700;white-space:nowrap;transition:background .25s ease,color .25s ease}
+.nav a.appel:hover{background:var(--encre);color:var(--surface)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease}
+.bouton:hover{transform:translateY(-2px)}
+.bouton.plein{background:var(--jaune);color:var(--encre);box-shadow:0 16px 30px -18px rgba(138,98,20,.8)}
+.bouton.plein:hover{background:var(--jaune-clair)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros */
+.heros{padding:72px 0 112px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:72px;align-items:center}
+.heros h1{font-size:clamp(38px, 5.6vw, 76px);line-height:1.06;letter-spacing:-.015em}
+.heros .intro{margin-top:28px;max-width:31em;font-size:19px;color:var(--encre-2)}
+.heros .boutons{margin-top:36px}
+.vitrine{position:relative;margin:30px 0 40px}
+.vitrine .photo{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 70%;border-radius:20px;box-shadow:var(--ombre-haute)}
+.cadre-photo{position:relative}
+.medaillon{position:absolute;left:-44px;bottom:-40px;width:clamp(120px, 15vw, 188px);aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:60% 55%;border:6px solid var(--surface);box-shadow:0 24px 44px -24px rgba(20,34,26,.6)}
+.sejour{position:absolute;top:-30px;right:-28px;width:min(300px, 72%);background:var(--surface);border-radius:16px;padding:20px 22px 16px;box-shadow:0 30px 56px -30px rgba(20,34,26,.55);rotate:1.5deg}
+.sejour p.titre{font-family:var(--display);font-size:20px;line-height:1.2;margin-bottom:8px}
+.sejour li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-top:1px dashed var(--base-3);font-size:15px;line-height:1.35;color:var(--encre-2)}
+.sejour li b{color:var(--encre);font-weight:700;white-space:nowrap}
+.sejour .velo{position:absolute;top:-13px;left:22px;padding:3px 12px;border-radius:999px;background:var(--jaune);font-size:13px;font-weight:700;color:var(--encre)}
+
+/* Bandeau de faits */
+.faits{background:var(--base-2)}
+.faits ul{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:32px;padding:34px 0}
+.faits li{font-size:15px;line-height:1.45;color:var(--encre-2)}
+.faits strong{display:block;font-family:var(--display);font-weight:400;font-size:25px;line-height:1.15;color:var(--encre);margin-bottom:4px}
+
+/* Hébergements : le gîte */
+.gite{padding:124px 0 96px}
+.gite .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:start}
+.collage{position:relative;padding:0 64px 120px 0}
+.collage .grand{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:40% 55%;border-radius:20px;box-shadow:var(--ombre)}
+.collage .petit{position:absolute;right:0;bottom:0;width:min(330px, 52%);margin:0}
+.collage .petit img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:60% 60%;border-radius:14px;border:8px solid var(--surface);box-shadow:var(--ombre-haute)}
+.etiquette{position:absolute;left:16px;bottom:16px;padding:8px 15px;border-radius:999px;background:rgba(244,247,242,.95);font-size:14px;font-weight:700;line-height:1.3;color:var(--encre);max-width:calc(100% - 32px)}
+.collage .grand-fig{position:relative;margin:0}
+.gite-texte .classement{display:inline-block;margin-bottom:18px;padding:6px 14px;border-radius:999px;background:var(--surface);font-size:14px;font-weight:700;color:var(--encre-2)}
+.gite-texte h2{margin-bottom:22px}
+.gite-texte p{color:var(--encre-2);max-width:32em}
+.gite-texte p+p{margin-top:14px}
+.equipements{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.equipements li{padding:7px 14px;border-radius:999px;border:1px solid var(--base-3);font-size:15px;color:var(--encre)}
+.prix-ligne{margin-top:30px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:22px;border-top:1px solid rgba(30,42,34,.14)}
+.prix-ligne b{font-family:var(--display);font-weight:400;font-size:34px;white-space:nowrap}
+.prix-ligne span{color:var(--encre-2);font-size:16px}
+
+/* Studio et chambres */
+.chambres{padding:0 0 112px}
+.chambres .cadre{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:end}
+.hebergement figure{position:relative;margin:0 0 26px}
+.hebergement img{width:100%;object-fit:cover;box-shadow:var(--ombre)}
+.studio img{aspect-ratio:4/5;object-position:50% 60%;border-radius:18px}
+.ch img{aspect-ratio:16/10;object-position:50% 62%;border-radius:18px}
+.hebergement h3{margin-bottom:10px}
+.hebergement p{color:var(--encre-2);font-size:17px;max-width:34em}
+.hebergement .tarif{margin-top:14px;font-weight:700;color:var(--encre)}
+.hebergement .tarif b{white-space:nowrap}
+.hebergement .tarif span{font-weight:400;color:var(--encre-2)}
+.ch ul{margin-top:12px;display:grid;gap:8px}
+.ch ul li{position:relative;padding-left:20px;font-size:17px;color:var(--encre-2)}
+.ch ul li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--jaune)}
+.bon-a-savoir{margin-top:56px;grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;background:var(--surface);border-radius:20px;padding:30px 36px;box-shadow:0 24px 50px -40px rgba(20,34,26,.5)}
+.bon-a-savoir p{font-size:16px;color:var(--encre-2)}
+.bon-a-savoir b{display:block;font-family:var(--display);font-weight:400;font-size:21px;color:var(--encre);margin-bottom:4px}
+
+/* Bandeau jardin */
+.jardin{padding:0 0 120px}
+.jardin figure{position:relative;margin:0 auto;max-width:1200px}
+.jardin img{width:100%;aspect-ratio:1200/470;object-fit:cover;object-position:50% 60%;border-radius:24px;box-shadow:var(--ombre-haute)}
+.jardin blockquote{position:absolute;left:40px;bottom:40px;margin:0;max-width:min(460px, calc(100% - 80px));background:var(--surface);border-radius:18px;padding:26px 30px;box-shadow:0 30px 56px -30px rgba(20,34,26,.55)}
+.jardin blockquote p{font-family:var(--display);font-size:clamp(24px, 2.6vw, 32px);line-height:1.2}
+.jardin blockquote small{display:block;margin-top:10px;font-size:15px;color:var(--encre-2)}
+
+/* Ferme et table, section sombre */
+.ferme{background:var(--sombre);color:var(--sur-sombre);padding:128px 0}
+.ferme .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:center}
+.ferme h2{color:var(--sur-sombre)}
+.ferme p{color:var(--sur-sombre-2);max-width:32em}
+.ferme h2+p{margin-top:24px}
+.ferme p+p{margin-top:14px}
+.table-hotes{margin-top:40px;border-top:1px solid rgba(238,241,232,.18);padding-top:28px}
+.table-hotes h3{color:var(--sur-sombre);margin-bottom:12px}
+.table-hotes ul{margin-top:22px;display:grid;gap:0}
+.table-hotes li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(238,241,232,.14);font-size:17px;color:var(--sur-sombre-2)}
+.table-hotes li b{color:var(--jaune-clair);font-weight:700;white-space:nowrap}
+.ferme-photos{position:relative;padding:0 0 90px 0}
+.ferme-photos .cour{width:min(400px, 74%);margin:0 0 0 auto;position:relative}
+.ferme-photos .cour .etiquette{top:16px;bottom:auto}
+sup{font-size:.62em;line-height:0;vertical-align:.5em}
+.ferme-photos .cour img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:55% 60%;border-radius:22px;box-shadow:0 40px 70px -34px rgba(4,10,6,.8)}
+.ferme-photos .grange{position:absolute;left:0;bottom:0;width:min(340px, 62%);margin:0}
+.ferme-photos .grange img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:70% 60%;border-radius:16px;border:7px solid var(--sombre-2);box-shadow:0 34px 60px -30px rgba(4,10,6,.85)}
+
+/* À proximité */
+.proximite{padding:124px 0 112px}
+.prox-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end;margin-bottom:56px}
+.prox-tete p{color:var(--encre-2);max-width:32em}
+.prox-grille{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:start}
+.port{position:relative;margin:0}
+.port img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:40% 60%;border-radius:22px;box-shadow:var(--ombre)}
+.envies{display:grid;gap:0;border-top:1px solid rgba(30,42,34,.14)}
+.envies li{padding:22px 0;border-bottom:1px solid rgba(30,42,34,.14)}
+.envies h3{font-size:24px;margin-bottom:6px}
+.envies p{font-size:17px;color:var(--encre-2)}
+.envies a{color:var(--jaune-fonce);font-weight:700;text-underline-offset:3px}
+.sur-place{margin-top:56px;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:24px}
+.sur-place div{background:var(--surface);border-radius:18px;padding:28px 30px;box-shadow:0 24px 50px -40px rgba(20,34,26,.5)}
+.sur-place div:nth-child(2){background:var(--base-2);box-shadow:none}
+.sur-place h3{font-size:24px;margin-bottom:8px}
+.sur-place p{font-size:17px;color:var(--encre-2)}
+
+/* Tarifs et contact */
+.tarifs{background:var(--base-2);padding:120px 0}
+.tarifs .cadre{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:start}
+.tarifs h2{margin-bottom:32px}
+.grille-prix{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:20px 48px}
+.bloc-prix h3{font-size:22px;padding-bottom:10px;border-bottom:1.5px solid var(--encre)}
+.bloc-prix li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid rgba(30,42,34,.13);font-size:16px;color:var(--encre-2)}
+.bloc-prix li b{color:var(--encre);font-weight:700;white-space:nowrap}
+.bloc-prix + .bloc-prix{margin-top:0}
+.paiement{margin-top:28px;font-size:16px;color:var(--encre-2)}
+.carte-contact{background:var(--surface);border-radius:22px;padding:36px 34px;box-shadow:var(--ombre-haute);position:sticky;top:100px}
+.carte-contact h3{margin-bottom:20px}
+.carte-contact dl{margin:0;display:grid;gap:16px}
+.carte-contact dt{font-size:14px;font-weight:700;color:var(--encre-2)}
+.carte-contact dd{margin:2px 0 0;font-size:18px}
+.carte-contact dd a{text-decoration:none;border-bottom:1px solid var(--base-3)}
+.carte-contact .boutons{margin-top:28px}
+.carte-contact .bouton{width:100%}
+
+/* Pied */
+.pied{background:var(--sombre);color:var(--sur-sombre);padding:84px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-size:28px;line-height:1.15}
+.pied .devise{margin-top:12px;color:var(--sur-sombre-2);font-size:16px;max-width:20em}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:700;color:var(--sur-sombre-2);margin-bottom:14px}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied li+li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(238,241,232,.3);transition:border-color .2s ease}
+.pied a:hover{border-color:var(--jaune)}
+.pied-bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(238,241,232,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--sur-sombre-2)}
+.proposition{background:#1B2820;color:#9EAA99;text-align:center;font-size:13px;padding:14px 20px;margin:0}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .bouton{transition:none}
+}
+
+/* Tablette */
+@media (max-width:1080px){
+  .nav a:not(.appel){display:none}
+  .heros .cadre{gap:56px}
+  .gite .cadre,.ferme .cadre,.prox-grille,.tarifs .cadre{grid-template-columns:minmax(0,1fr);gap:56px}
+  .collage{max-width:720px}
+  .chambres .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .prox-tete{grid-template-columns:minmax(0,1fr);gap:20px}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .carte-contact{position:relative;top:auto;max-width:520px}
+  .pied-grille{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .ferme-photos{max-width:600px}
+}
+/* Téléphone */
+@media (max-width:760px){
+  body{font-size:17px}
+  :root{--large:min(1200px, 100% - 40px)}
+  .marque b{font-size:21px}
+  .marque span{display:none}
+  .nav a.appel{padding:9px 14px;font-size:15px}
+  .heros{padding:30px 0 80px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);gap:8px}
+  .heros h1{font-size:clamp(34px, 9.6vw, 52px)}
+  .heros .intro{margin-top:18px;font-size:17px}
+  .heros .boutons{margin-top:26px}
+  .vitrine{margin:30px 0 0}
+  .vitrine .photo{aspect-ratio:4/3.2}
+  .medaillon{left:-8px;bottom:-34px;width:112px;border-width:5px}
+  .sejour{position:relative;top:auto;right:auto;width:100%;margin-top:52px;rotate:none}
+  .faits ul{grid-template-columns:minmax(0,1fr);gap:20px;padding:28px 0}
+  .faits strong{font-size:22px}
+  .gite{padding:88px 0 72px}
+  .collage{padding:0 24px 90px 0}
+  .collage .petit{width:min(220px, 58%)}
+  .collage .petit img{border-width:6px}
+  .collage .grand-fig .etiquette{top:12px;bottom:auto}
+  .chambres{padding-bottom:80px}
+  .chambres .cadre{grid-template-columns:minmax(0,1fr);gap:48px}
+  .studio img{aspect-ratio:4/4.2}
+  .bon-a-savoir{grid-template-columns:minmax(0,1fr);gap:20px;padding:26px 22px;margin-top:8px}
+  .jardin{padding-bottom:88px}
+  .jardin img{aspect-ratio:4/3;object-position:30% 60%}
+  .jardin blockquote{position:relative;left:auto;bottom:auto;margin:-60px 16px 0;max-width:none;padding:22px 22px}
+  .ferme,.tarifs{padding:88px 0}
+  .ferme-photos{padding-bottom:70px}
+  .proximite{padding:88px 0 80px}
+  .prox-tete{margin-bottom:36px}
+  .sur-place{grid-template-columns:minmax(0,1fr);margin-top:40px}
+  .sur-place div{padding:24px 22px}
+  .grille-prix{grid-template-columns:minmax(0,1fr);gap:28px}
+  .carte-contact{padding:28px 22px}
+  .pied{padding-top:64px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:420px){
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+  .etiquette{font-size:13px;padding:7px 12px;left:12px;bottom:12px}
+  .sejour{padding:18px 16px 12px}
+  .sejour li{font-size:14px;gap:8px}
+  .table-hotes li,.bloc-prix li{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Chez Gaëlle Métris, retour en haut"><b>Chez Gaëlle Métris</b><span>Gîtes et chambres d'hôtes en Haute-Saône</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#hebergements">Hébergements</a>
+      <a href="#la-ferme">La ferme</a>
+      <a href="#a-proximite">À proximité</a>
+      <a href="#tarifs">Tarifs</a>
+      <a class="appel" href="tel:+33688334689">06 88 33 46 89</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div>
+        <h1>Envie de nature, d'animaux et de tranquillité ?</h1>
+        <p class="intro">À Corre, en Haute-Saône, Gaëlle vous accueille dans une ancienne ferme du XVIII<sup>e</sup> restaurée, entre le Coney et le canal de l'Est, avec vue sur une propriété de 14 hectares. Moutons, vaches, volailles, le tout dans un paysage « coréen ».</p>
+        <div class="boutons">
+          <a class="bouton plein" href="https://www.chez-gaelle-metris.fr/reserver/">Demander une réservation</a>
+          <a class="bouton contour" href="tel:+33688334689">06 88 33 46 89</a>
+        </div>
+      </div>
+      <div class="vitrine">
+        <div class="cadre-photo"><img class="photo" src="assets/chez-gaelle-metris-corre/terrasse-gite-facade-bois.webp" width="1200" height="800" alt="La grande terrasse dallée du gîte, table et chaises rouges, porte-fenêtre ouverte sur le séjour">
+        <img class="medaillon" src="assets/chez-gaelle-metris-corre/bergerie-brebis-agneaux.webp" width="1600" height="1200" alt="Brebis et agneaux sur la paille dans la bergerie"></div>
+        <div class="sejour">
+          <span class="velo">Accueil Vélo</span>
+          <p class="titre">Votre séjour à la ferme</p>
+          <ul>
+            <li>Chambre d'hôtes <b>45 à 65&nbsp;€ la nuit</b></li>
+            <li>Gîte, jusqu'à 6 <b>360&nbsp;€ la semaine</b></li>
+            <li>Table d'hôtes <b>25&nbsp;€</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <ul class="cadre">
+      <li><strong>Ferme du XVIII<sup>e</sup></strong>restaurée, à Corre (70)</li>
+      <li><strong>14 hectares</strong>moutons, vaches et volailles</li>
+      <li><strong>Gîte et chambres</strong>un studio, et des emplacements de tente</li>
+      <li><strong>Arrivées dès 17&nbsp;h</strong>Qualité Tourisme et Accueil Vélo</li>
+    </ul>
+  </section>
+
+  <section class="gite" id="hebergements">
+    <div class="cadre">
+      <div class="collage">
+        <figure class="grand-fig apparait" style="margin:0">
+          <img class="grand" src="assets/chez-gaelle-metris-corre/sejour-gite-poele-a-bois.webp" width="1200" height="800" loading="lazy" alt="Le séjour lumineux du gîte : table de ferme, canapés en cuir, poêle devant un mur de pierre, baies vitrées sur la terrasse">
+          <figcaption class="etiquette">Le séjour du gîte, ouvert sur la terrasse</figcaption>
+        </figure>
+        <figure class="petit apparait">
+          <img src="assets/chez-gaelle-metris-corre/cuisine-sejour-gite-poutres.webp" width="1200" height="800" loading="lazy" alt="La pièce de vie du gîte avec ses poutres d'origine et sa cuisine équipée">
+        </figure>
+      </div>
+      <div class="gite-texte">
+        <span class="classement">Gîte 3 épis, 3 étoiles</span>
+        <h2>Le gîte «&nbsp;Les&nbsp;4&nbsp;saisons&nbsp;»</h2>
+        <p>Passé l'entrée de la ferme, dans un bâtiment autonome avec vue sur la rivière Le Coney, un gîte prévu pour 6 personnes. Quelques poutres de la charpente d'origine ont été gardées : elles donnent beaucoup de cachet au lieu.</p>
+        <p>À l'étage, le coin repas avec cuisine équipée et un séjour avec poêle et télévision. 3 chambres, dont 2 avec un lit double et une avec 2 lits simples, une salle d'eau et un WC. Une grande terrasse donne sur la rivière et la nature.</p>
+        <ul class="equipements">
+          <li>Jusqu'à 6 personnes</li>
+          <li>3 chambres</li>
+          <li>Cuisine équipée</li>
+          <li>Équipements bébé</li>
+          <li>Grande terrasse</li>
+        </ul>
+        <p class="prix-ligne"><b>360&nbsp;€ la semaine</b><span>jusqu'à 6 personnes</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chambres" aria-label="Le studio et les chambres d'hôtes">
+    <div class="cadre">
+      <article class="hebergement studio">
+        <figure class="apparait">
+          <img src="assets/chez-gaelle-metris-corre/studio-petites-fleurs-chambre.webp" width="1200" height="1600" loading="lazy" alt="La chambre du studio Les petites fleurs : lit double, grand tableau de pavot, lampe en osier">
+          <figcaption class="etiquette">Idéal pour un couple</figcaption>
+        </figure>
+        <h3>Le studio « Les petites fleurs »</h3>
+        <p>Studio meublé classé : un lit de 140&nbsp;cm, une salle d'eau et un WC, un coin kitchenette avec réfrigérateur et micro-ondes pour un café ou un thé quand l'envie vous en dit. Wifi inclus.</p>
+        <p class="tarif"><b>55 à 85&nbsp;€</b> <span>la nuit</span></p>
+      </article>
+      <article class="hebergement ch">
+        <figure class="apparait">
+          <img src="assets/chez-gaelle-metris-corre/chambre-lit-double-lampes.webp" width="1600" height="1200" loading="lazy" alt="Une chambre d'hôtes : lit double, couvre-lit à fleurs, deux lampes de chevet allumées">
+          <figcaption class="etiquette">Douche à l'italienne, serviettes fournies</figcaption>
+        </figure>
+        <h3>Les 2 chambres d'hôtes</h3>
+        <ul>
+          <li>une chambre classée 3 épis avec lit double, canapé, télévision et salle d'eau avec WC</li>
+          <li>une chambre non classée avec lit double, kitchenette, télévision et salle d'eau avec WC</li>
+        </ul>
+        <p style="margin-top:14px">Pour des vacances ou des week-ends en famille, et pour les professionnels qui sillonnent les routes. Wifi, sèche-cheveux et garage à vélo.</p>
+        <p class="tarif"><b>45 à 65&nbsp;€</b> <span>la nuit, selon 1 ou 2 personnes</span></p>
+      </article>
+      <div class="bon-a-savoir">
+        <p><b>Planter sa tente</b>Vous pouvez aussi tout simplement planter votre tente sur les terres de la ferme, avec sanitaires à disposition (douche, WC, vasque) : 6&nbsp;€ la nuit.</p>
+        <p><b>Bon à savoir</b>Les arrivées se font à partir de 17&nbsp;h. Les hébergements ne sont pas accessibles aux personnes avec un handicap moteur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="jardin" aria-label="Le jardin">
+    <div class="cadre">
+      <figure class="apparait">
+        <img src="assets/chez-gaelle-metris-corre/jardin-balancoire-pelouse.webp" width="1600" height="739" loading="lazy" alt="Le grand jardin en pelouse sous les arbres, avec balançoires, auge en pierre fleurie et pompe ancienne">
+        <blockquote>
+          <p>Environnement calme et bucolique. Reposez-vous à la campagne : juste profiter.</p>
+          <small>Le grand jardin, ses balançoires et son auge en pierre</small>
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <section class="ferme" id="la-ferme">
+    <div class="cadre">
+      <div>
+        <h2>Il se passe toujours quelque chose à la ferme</h2>
+        <p>Votre séjour pourra être l'occasion d'assister à l'alimentation des vaches suivant la saison, à la naissance d'un agneau, ou peut-être même de leur donner le biberon.</p>
+        <div class="table-hotes">
+          <h3>La table d'hôtes</h3>
+          <p>« Je vous préparerai des petits plats avec des produits frais de ma production. » Petits déjeuners, déjeuners et dîners. Il y a 3 restaurants au village de Corre, et il arrive qu'ils soient fermés en même temps : la table d'hôtes prend alors le relais, sur réservation.</p>
+          <ul>
+            <li>Table d'hôtes, sur réservation <b>25&nbsp;€</b></li>
+            <li>Petit-déjeuner <b>8,50&nbsp;€</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ferme-photos">
+        <figure class="cour apparait">
+          <img src="assets/chez-gaelle-metris-corre/cour-salon-de-jardin-parasol.webp" width="1200" height="1600" loading="lazy" alt="La cour ensoleillée de la ferme : table et chaises en fer forgé bleues sous un parasol, lauriers-roses en pots">
+          <figcaption class="etiquette">La cour de la ferme</figcaption>
+        </figure>
+        <figure class="grange apparait">
+          <img src="assets/chez-gaelle-metris-corre/grange-bardage-bois-cour.webp" width="1200" height="800" loading="lazy" alt="Le bâtiment à bardage de bois sur soubassement de pierre, au bord de la rivière bordée d'arbres">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="proximite" id="a-proximite">
+    <div class="cadre">
+      <div class="prox-tete">
+        <h2>À voir, à faire à proximité</h2>
+        <p>À 13&nbsp;km du bourg de Jussey, 24&nbsp;km de Bourbonne-les-Bains, 40 minutes de l'autoroute et environ 1&nbsp;h 15 de Belfort, dans la destination Vesoul-Val de Saône, non loin des Vosges. Que vous arriviez en voiture, à vélo ou en bateau.</p>
+      </div>
+      <div class="prox-grille">
+        <figure class="port apparait">
+          <img src="assets/chez-gaelle-metris-corre/port-fluvial-corre.webp" width="1600" height="900" loading="lazy" alt="Le port de plaisance de Corre, bateaux de croisière fluviale amarrés le long du chemin de halage">
+          <figcaption class="etiquette">Le port de Corre, pour arriver en bateau</figcaption>
+        </figure>
+        <ul class="envies">
+          <li><h3>Vous aimez pédaler ?</h3><p>La véloroute La Voie Bleue (V50 Moselle-Saône) longe la Saône sur 140&nbsp;km en Haute-Saône. Itinéraires <a href="https://www.lavoiebleue.com/itineraire/corre-port-sur-saone">Corre, Port-sur-Saône</a> et <a href="https://www.lavoiebleue.com/itineraire/bains-les-bains-corre">Bains-les-Bains, Corre</a>.</p></li>
+          <li><h3>Vous aimez le patrimoine ?</h3><p>Dans la vallée de la Saône : châteaux, clochers comtois aux tuiles vernissées, retables, lavoirs, et 7 Cités de Caractère Bourgogne-Franche-Comté.</p></li>
+          <li><h3>Vous aimez la nature et la faune ?</h3><p>Les rives de Saône, les pelouses sèches, la réserve naturelle du Sabot de Frotey et la vallée du Coney.</p></li>
+          <li><h3>Vous aimez vous régaler ?</h3><p>Les fermes et exploitations ouvrent leurs portes et font déguster leurs productions, sans oublier les restaurants et les marchés locaux.</p></li>
+        </ul>
+      </div>
+      <div class="sur-place">
+        <div>
+          <h3>Le canoë de Gaëlle</h3>
+          <p>Gaëlle met gratuitement son canoë à votre disposition pour découvrir le Coney et la Saône.</p>
+        </div>
+        <div>
+          <h3>Une salle pour vos réceptions</h3>
+          <p>Une fête de famille, un séminaire ou autre : une salle a été aménagée pour vos réceptions. Parlez-en à Gaëlle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tarifs" id="tarifs">
+    <div class="cadre">
+      <div>
+        <h2>Les tarifs</h2>
+        <div class="grille-prix">
+          <div class="bloc-prix">
+            <h3>Chambres d'hôtes</h3>
+            <ul>
+              <li>1 personne, lit simple ou double <b>45 à 55&nbsp;€</b></li>
+              <li>2 personnes, lit double <b>55 à 65&nbsp;€</b></li>
+              <li>Lit d'appoint <b>15&nbsp;€</b></li>
+              <li>Petit-déjeuner <b>8,50&nbsp;€</b></li>
+              <li>Table d'hôtes, sur réservation <b>25&nbsp;€</b></li>
+            </ul>
+          </div>
+          <div class="bloc-prix">
+            <h3>Gîte et studio</h3>
+            <ul>
+              <li>Gîte, jusqu'à 6 personnes <b>360&nbsp;€ la semaine</b></li>
+              <li>Studio meublé, la nuit <b>55 à 85&nbsp;€</b></li>
+              <li>Linge de toilette, par personne <b>6&nbsp;€</b></li>
+              <li>Draps, par lit <b>10&nbsp;€</b></li>
+              <li>Forfait ménage <b>50&nbsp;€</b></li>
+              <li>Ménage court séjour, 2 ou 3 nuits <b>25&nbsp;€</b></li>
+              <li>Garde d'animal, la semaine <b>25&nbsp;€</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="paiement">Paiement en espèces, par carte bancaire, par chèque ou par PayPal. Emplacement de tente à la ferme : 6&nbsp;€ la nuit.</p>
+      </div>
+      <aside class="carte-contact" aria-label="Coordonnées">
+        <h3>Réserver chez Gaëlle</h3>
+        <dl>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33688334689">06 88 33 46 89</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@chez-gaelle-metris.fr">info@chez-gaelle-metris.fr</a></dd></div>
+          <div><dt>Adresse</dt><dd>2 faubourg Louis Boulanger<br>70500 Corre</dd></div>
+          <div><dt>Arrivées</dt><dd>à partir de 17&nbsp;h</dd></div>
+        </dl>
+        <div class="boutons">
+          <a class="bouton plein" href="https://www.chez-gaelle-metris.fr/reserver/">Demander une réservation</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Chez Gaëlle Métris</p>
+        <p class="devise">Gîtes et chambres d'hôtes dans une ancienne ferme du XVIII<sup>e</sup>, à Corre, destination Vesoul-Val de Saône.</p>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p>2 faubourg Louis Boulanger<br>70500 Corre</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33688334689">06 88 33 46 89</a></li>
+          <li><a href="mailto:info@chez-gaelle-metris.fr">info@chez-gaelle-metris.fr</a></li>
+          <li><a href="https://www.chez-gaelle-metris.fr/reserver/">Demande de réservation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Labels</h3>
+        <ul>
+          <li>Qualité Tourisme</li>
+          <li><a href="https://www.destination70.com/itinerance/velo/accueil-velo.html">Accueil Vélo</a></li>
+          <li>Bienvenue à la ferme</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>Chez Gaëlle Métris, Corre (Haute-Saône)</span>
+      <span>Photos du gîte, de la terrasse, de la cour et de la grange : Pro.imagera.fr</span>
+    </div>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour Chez Gaëlle Métris</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

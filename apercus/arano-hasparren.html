@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Arano, atelier cuir et maroquinerie à Hasparren</title>
+<meta name="description" content="Arano, atelier-boutique de maroquinerie à Hasparren : sacs à main en cuir fabriqués sur place, petite maroquinerie et créations sur mesure, cuirs des tanneries du Pays basque.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23B5281E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-weight='700' font-size='38' text-anchor='middle' fill='%23FBF6F2'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F2E7E1; --base-2:#EADBD2; --surface:#FBF6F2; --encre:#2B1A17; --encre-2:#5E4943;
+  --rouge:#B5281E; --rouge-2:#93201A; --vert:#134232; --vert-2:#1C5541; --clair:#F1EAE3; --clair-2:#B8C9BF;
+  --cognac:#A65F2C; --cognac-2:#8A4C22; --creme:#F4E4CF;
+  --ombre:0 30px 60px -34px rgba(43,26,23,.55);
+  --ombre-forte:0 46px 80px -40px rgba(43,26,23,.7);
+  --display:"Rufina", Georgia, serif;
+  --texte:"Instrument Sans", "Segoe UI", sans-serif;
+  --page:min(1200px, calc(100% - 48px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--base);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rouge);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rouge);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:var(--page);margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(242,231,225,.94);border-bottom:1px solid rgba(43,26,23,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:12px;line-height:1}
+.marque b{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:.14em}
+.marque span{font-size:14px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a.lien{text-decoration:none;font-size:15.5px;color:var(--encre-2);transition:color .2s}
+.nav a.lien:hover{color:var(--rouge)}
+.nav a.appel{text-decoration:none;font-weight:600;font-size:15.5px;background:var(--vert);color:var(--surface);padding:11px 20px;border-radius:999px;transition:background .25s}
+.nav a.appel:hover{background:var(--vert-2)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:600;font-size:16.5px;padding:16px 28px;border-radius:999px;transition:transform .25s ease,background .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plein{background:var(--rouge);color:var(--surface);box-shadow:0 18px 30px -18px rgba(147,32,26,.9)}
+.btn-plein:hover{background:var(--rouge-2)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Héros */
+.heros{padding:76px 0 112px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,5.2fr) minmax(0,6.8fr);grid-template-areas:"titre photo" "texte photo";column-gap:72px;align-items:center}
+.heros h1{grid-area:titre;align-self:end;font-size:clamp(42px,6.6vw,96px);line-height:1.02;letter-spacing:-.025em}
+.texte-heros{grid-area:texte;align-self:start}
+.heros .chapo{font-size:19px;color:var(--encre-2);max-width:31em;margin-top:28px}
+.heros .chapo strong{color:var(--encre);font-weight:600}
+.photo-heros{grid-area:photo;position:relative;margin:0;padding:26px 0 0 26px}
+.photo-heros>img{width:100%;aspect-ratio:4/3.5;object-fit:cover;object-position:22% 60%;border-radius:18px;box-shadow:var(--ombre-forte)}
+.etiquette{position:absolute;left:-18px;top:0;width:min(200px,46%);rotate:-9deg;transform-origin:50% 0;filter:drop-shadow(0 18px 18px rgba(43,26,23,.35))}
+.etiquette svg.cordon{display:block;width:100%;height:auto;margin-bottom:-14px;position:relative;z-index:1}
+.cartouche{position:relative;background:linear-gradient(160deg,#B86D36 0%,var(--cognac) 45%,var(--cognac-2) 100%);color:var(--creme);border-radius:16px;padding:34px 18px 18px;text-align:center}
+.cartouche::before{content:"";position:absolute;left:50%;top:12px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle,#3a2418 0 3px,#d9c7a6 4px 5px,#9a8668 6px 8px)}
+.cartouche::after{content:"";position:absolute;inset:5px;border:1.5px dashed rgba(244,228,207,.85);border-radius:11px;pointer-events:none}
+.cartouche b{display:block;font-family:var(--display);font-weight:700;font-size:23px;line-height:1.1;margin-top:4px}
+.cartouche span{display:block;font-size:12.5px;letter-spacing:.04em;opacity:.9;margin-top:6px}
+
+/* Faits */
+.faits{background:var(--base-2)}
+.faits ul{list-style:none;margin:0 auto;padding:32px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.faits b{display:block;font-family:var(--display);font-size:30px;line-height:1.05;color:var(--rouge-2)}
+.faits span{display:block;font-size:15.5px;color:var(--encre-2);line-height:1.45;margin-top:6px}
+
+.section{padding:124px 0}
+
+/* Parcours, frise */
+.parcours .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.parcours h2{font-size:clamp(34px,4.6vw,62px)}
+.parcours .tete p{color:var(--encre-2);font-size:19px}
+.frise{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;position:relative}
+.frise::before{content:"";position:absolute;left:0;right:0;top:9px;border-top:1.5px dashed rgba(181,40,30,.55)}
+.frise li{position:relative;padding-top:38px}
+.frise li::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--base);border:2px solid var(--rouge)}
+.frise li:last-child::before{background:var(--rouge)}
+.frise .quand{font-size:15px;font-weight:600;color:var(--rouge-2)}
+.frise h3{font-size:25px;line-height:1.15;margin-top:6px}
+.frise p{font-size:16.5px;color:var(--encre-2);margin-top:10px}
+.mains{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:40px;margin-top:88px;align-items:end}
+.mains figure{margin:0;position:relative}
+.mains .geste img{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:50% 45%;border-radius:22px;box-shadow:var(--ombre)}
+.mains .portrait{justify-self:start;width:min(220px,100%);background:var(--surface);padding:10px 10px 0;border-radius:6px;box-shadow:var(--ombre);rotate:2deg;margin-bottom:40px}
+.mains .portrait img{width:100%;aspect-ratio:3/4.6;object-fit:cover;object-position:50% 40%;border-radius:3px}
+.mains .portrait figcaption{font-family:var(--display);font-size:16px;color:var(--encre-2);padding:9px 4px 11px;line-height:1.2}
+.pastille{position:absolute;left:18px;bottom:18px;background:var(--surface);color:var(--encre);font-size:14.5px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:0 12px 24px -14px rgba(43,26,23,.6);max-width:calc(100% - 36px)}
+
+/* Citation */
+.citation{background:var(--surface);padding:112px 0}
+.citation blockquote{margin:0 auto;max-width:1000px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px}
+.citation .guillemet{font-family:var(--display);font-weight:700;font-size:140px;line-height:.8;color:var(--rouge)}
+.citation p{font-family:var(--display);font-size:clamp(26px,3.3vw,42px);line-height:1.22;text-wrap:balance}
+.citation cite{display:block;font-style:normal;margin-top:26px;font-size:16px;color:var(--encre-2)}
+
+/* Sacs */
+.sacs .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:88px;align-items:start}
+.bihotza{margin:0;position:relative;position:sticky;top:110px}
+.bihotza img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 55%;border-radius:22px;box-shadow:var(--ombre-forte)}
+.bihotza .fiche{position:absolute;right:-40px;bottom:36px;background:var(--surface);border-radius:16px;padding:18px 22px;box-shadow:var(--ombre);max-width:min(250px,80%)}
+.bihotza .fiche b{display:block;font-family:var(--display);font-size:24px}
+.bihotza .fiche span{display:block;font-size:14.5px;color:var(--encre-2);margin-top:4px}
+.bihotza .fiche .prix{font-family:var(--display);font-weight:700;font-size:26px;color:var(--rouge-2);margin-top:10px;white-space:nowrap}
+.sacs h2{font-size:clamp(34px,4.6vw,62px)}
+.sacs .intro{font-size:19px;margin-top:24px}
+.sacs .suite{margin-top:16px;color:var(--encre-2)}
+.modeles{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(43,26,23,.16)}
+.modeles li{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:24px;padding:16px 0;border-bottom:1px solid rgba(43,26,23,.16);align-items:baseline}
+.modeles b{font-family:var(--display);font-size:24px;line-height:1.2}
+.modeles span{font-size:16.5px;color:var(--encre-2)}
+.autres{margin-top:26px;font-size:16.5px;color:var(--encre-2)}
+.quatre{margin:56px 0 0;position:relative}
+.quatre img{width:100%;aspect-ratio:16/9.4;object-fit:cover;object-position:50% 50%;border-radius:20px;box-shadow:var(--ombre)}
+
+/* Sur mesure */
+.mesure{background:var(--base-2)}
+.mesure .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:center}
+.mesure h2{font-size:clamp(34px,4.6vw,62px)}
+.mesure .intro{font-size:19px;margin-top:24px}
+.possibles{list-style:none;margin:30px 0 0;padding:0}
+.possibles li{position:relative;padding:12px 0 12px 34px;border-bottom:1px dashed rgba(43,26,23,.25);font-size:17px}
+.possibles li::before{content:"";position:absolute;left:4px;top:22px;width:14px;height:2px;background:var(--rouge);box-shadow:0 -5px 0 -0px transparent}
+.commande{margin-top:30px;background:var(--surface);border-radius:18px;padding:24px 28px;box-shadow:var(--ombre);font-size:16.5px;color:var(--encre-2)}
+.commande b{color:var(--encre);font-weight:600}
+.atelier-duo{position:relative;padding:0 0 110px 0}
+.atelier-duo .machine{margin:0;width:82%;margin-left:auto}
+.atelier-duo .machine img{width:100%;aspect-ratio:1/1.08;object-fit:cover;object-position:40% 50%;border-radius:20px;box-shadow:var(--ombre)}
+.atelier-duo .etabli{position:absolute;left:0;bottom:0;width:62%;margin:0;border:8px solid var(--surface);border-radius:18px;overflow:hidden;box-shadow:var(--ombre-forte)}
+.atelier-duo .etabli img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:35% 60%}
+.avis-client{margin-top:30px;font-family:var(--display);font-size:22px;line-height:1.35}
+.avis-client span{display:block;font-family:var(--texte);font-size:15px;color:var(--encre-2);margin-top:8px}
+
+/* Cuirs, fond vert basque */
+.cuirs{background:var(--vert);color:var(--clair)}
+.cuirs .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:end}
+.cuirs h2{font-size:clamp(34px,4.6vw,62px)}
+.cuirs .tete p{color:var(--clair-2)}
+.cuirs-grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:72px;margin-top:72px;align-items:start}
+.peaux{margin:0;width:min(240px,100%);rotate:-3deg;background:var(--clair);padding:10px;border-radius:8px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.peaux img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.tanneries{margin-top:48px}
+.tanneries h3{font-size:26px;color:var(--clair)}
+.tanneries p{color:var(--clair-2);font-size:16.5px;margin-top:12px}
+.tanneries a{color:var(--clair);text-underline-offset:4px;text-decoration-color:rgba(241,234,227,.4)}
+.tanneries a:hover{text-decoration-color:var(--clair)}
+.matieres{list-style:none;margin:0;padding:0;border-top:1px solid rgba(241,234,227,.2)}
+.matieres li{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:28px;padding:22px 0;border-bottom:1px solid rgba(241,234,227,.2)}
+.matieres b{font-family:var(--display);font-size:25px;line-height:1.2;color:var(--clair)}
+.matieres span{color:var(--clair-2);font-size:16.5px}
+
+/* Visite */
+.visite .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:0;align-items:center}
+.facade{margin:0;position:relative}
+.facade img{width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:30% 30%;border-radius:24px;box-shadow:var(--ombre)}
+.carte{position:relative;margin-left:-72px;background:var(--surface);border-radius:22px;padding:44px 46px;box-shadow:var(--ombre-forte)}
+.carte h2{font-size:clamp(32px,3.6vw,48px)}
+.carte .adresse{margin-top:14px;font-size:18px}
+.carte .rdv{margin-top:6px;font-size:16px;color:var(--encre-2)}
+.horaires{margin:22px 0 0;padding:0;list-style:none}
+.horaires li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(43,26,23,.12);font-size:16px}
+.horaires li span:last-child{text-align:right;color:var(--encre-2)}
+.carte .eusko{margin-top:18px;font-size:15.5px;color:var(--encre-2)}
+.carte .boutons{margin-top:26px}
+.carte .mail{display:inline-block;margin-top:16px;font-size:16px;color:var(--encre-2);text-underline-offset:4px;overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:var(--vert);color:var(--clair);padding:80px 0 0}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,.8fr);gap:48px}
+.pied .marque{flex-direction:column;align-items:flex-start;gap:10px}
+.pied .marque b{font-size:38px}
+.pied .marque span{color:var(--clair-2);font-size:15.5px}
+.pied h3{font-family:var(--texte);font-weight:600;font-size:15px;color:var(--clair-2);margin-bottom:12px;letter-spacing:0}
+.pied p,.pied li{font-size:16px;line-height:1.7}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(241,234,227,.25);transition:color .2s,border-color .2s}
+.pied a:hover{color:#F3B9A9;border-color:#F3B9A9}
+.pied .bas{grid-column:1/-1;border-top:1px solid rgba(241,234,227,.14);padding:22px 0 26px;font-size:14px;color:var(--clair-2)}
+.proposition{background:#0D3226;color:#93AFA2;text-align:center;font-size:13px;padding:14px 16px}
+
+/* Apparition */
+.js .apparait{opacity:0;translate:0 26px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.js .apparait{opacity:1;translate:none;transition:none}}
+
+@media (max-width:1080px){
+  .nav a.lien{display:none}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "texte";row-gap:40px}
+  .photo-heros{max-width:640px}
+  .parcours .tete,.sacs .cadre,.mesure .cadre,.cuirs .tete,.cuirs-grille{grid-template-columns:minmax(0,1fr);gap:56px}
+  .frise{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .frise::before{display:none}
+  .bihotza{position:relative;top:auto;max-width:520px}
+  .visite .cadre{grid-template-columns:minmax(0,1fr)}
+  .facade{max-width:640px}
+  .carte{margin:-90px 0 0 auto;width:min(560px,calc(100% - 24px))}
+  .facade .pastille{top:18px;bottom:auto}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .cadre>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  :root{--page:calc(100% - 40px)}
+  body{font-size:17px}
+  .entete .cadre{min-height:64px;gap:12px}
+  .marque b{font-size:25px}
+  .entete .marque span{display:none}
+  .nav a.appel{padding:9px 14px;font-size:14.5px}
+  .heros{padding:32px 0 88px}
+  .heros .cadre{row-gap:26px}
+  .heros h1{font-size:clamp(38px,11.4vw,56px)}
+  .heros .chapo{font-size:17.5px;margin-top:4px}
+  .boutons{margin-top:26px}
+  .photo-heros{padding:20px 0 0 18px}
+  .photo-heros>img{aspect-ratio:4/3.6}
+  .etiquette{left:-10px;width:min(140px,44%)}
+  .cartouche{padding:26px 10px 12px;border-radius:12px}
+  .cartouche::after{border-radius:8px}
+  .cartouche::before{top:9px;width:13px;height:13px;margin-left:-6.5px}
+  .cartouche b{font-size:18px}
+  .cartouche span{font-size:11.5px}
+  .faits ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 20px;padding:28px 0}
+  .faits b{font-size:25px}
+  .faits span{font-size:14.5px}
+  .section{padding:84px 0}
+  .citation{padding:80px 0}
+  .citation blockquote{grid-template-columns:minmax(0,1fr);gap:0}
+  .citation .guillemet{font-size:96px;height:56px}
+  .frise{grid-template-columns:minmax(0,1fr);margin-top:48px;row-gap:28px}
+  .frise li{padding:0 0 0 38px}
+  .frise li::before{top:6px}
+  .mains{grid-template-columns:minmax(0,1fr);margin-top:56px;gap:0}
+  .mains .geste img{aspect-ratio:4/3}
+  .mains .portrait{width:min(170px,52%);margin:-60px 0 0 auto;rotate:3deg;position:relative}
+  .bihotza .fiche{position:relative;right:auto;bottom:auto;margin:-56px 12px 0 auto;max-width:min(300px,86%)}
+  .modeles li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .quatre img{aspect-ratio:4/3}
+  .atelier-duo{padding-bottom:80px}
+  .matieres li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .peaux{width:min(200px,70%)}
+  .carte{margin:-56px 0 0 auto;padding:30px 22px;width:calc(100% - 12px)}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .boutons{flex-direction:column;width:100%}
+  .boutons .btn{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .nav a.appel span{display:none}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Arano, retour en haut"><b>ARANO</b><span>Atelier cuir, Hasparren</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lien" href="#parcours">L'atelier</a>
+      <a class="lien" href="#sacs">Les sacs</a>
+      <a class="lien" href="#sur-mesure">Sur mesure</a>
+      <a class="lien" href="#cuirs">Les cuirs</a>
+      <a class="appel" href="tel:+33674718562"><span>Appeler le </span>06 74 71 85 62</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <h1>Des sacs en cuir faits pour durer</h1>
+      <figure class="photo-heros">
+        <img src="assets/arano-hasparren/sac-seau-vert.webp" width="1600" height="1080" alt="Un sac seau en cuir grainé vert olive à surpiqûres roses sur l'établi de l'atelier, un sac rose et un sac bleu derrière" fetchpriority="high">
+        <div class="etiquette" aria-hidden="true">
+          <svg class="cordon" viewBox="0 0 200 60" fill="none"><path d="M100 58 C 104 34, 128 14, 168 4" stroke="#6E3F1F" stroke-width="3" stroke-linecap="round"/><path d="M100 58 C 108 38, 134 20, 176 12" stroke="#8A4C22" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div class="cartouche"><b>Fait à Hasparren</b><span>Arano, atelier cuir</span></div>
+        </div>
+      </figure>
+      <div class="texte-heros">
+        <p class="chapo">Au cœur du Pays basque, l'atelier-boutique Arano fabrique et expose sur place <strong>ses sacs à main, sa petite maroquinerie et ses créations sur mesure</strong>, dans les cuirs des tanneries d'Espelette et d'Armendaritz.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="#sacs">Découvrir les sacs</a>
+          <a class="btn btn-contour" href="tel:+33674718562"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 74 71 85 62</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="L'atelier en bref">
+    <ul class="cadre">
+      <li><b>Depuis 2008</b><span>d'abord à Itxassou, aujourd'hui à Hasparren</span></li>
+      <li><b>Plus de 20</b><span>modèles de sacs Arano</span></li>
+      <li><b>Plus de 70</b><span>couleurs de cuir</span></li>
+      <li><b>Doublure agneau</b><span>la signature de la maison</span></li>
+    </ul>
+  </section>
+
+  <section class="section parcours" id="parcours">
+    <div class="cadre">
+      <div class="tete">
+        <h2>De la tannerie à l'atelier-boutique</h2>
+        <p>« Je travaille le cuir avec passion et professionnalisme. » Installée à Hasparren, la maroquinière y fabrique et expose tous ses modèles, devant vous.</p>
+      </div>
+      <ol class="frise">
+        <li><span class="quand">Trois ans</span><h3>La Tannerie d'Espelette</h3><p>Elle y apprend à « patiner » le cuir.</p></li>
+        <li><span class="quand">Près d'un an</span><h3>Chez un bottier-maroquinier de Bayonne</h3><p>La formation à la maroquinerie.</p></li>
+        <li><span class="quand">2008</span><h3>L'Atelier Arrano Mendi, à Itxassou</h3><p>La naissance de l'atelier, que célèbre Bihotza, le premier sac.</p></li>
+        <li><span class="quand">Aujourd'hui</span><h3>L'atelier-boutique d'Hasparren</h3><p>Tous les modèles y sont fabriqués et exposés.</p></li>
+      </ol>
+      <div class="mains">
+        <figure class="geste apparait">
+          <img src="assets/arano-hasparren/decoupe-cuir-a-la-regle.webp" width="1600" height="1067" alt="Deux mains découpent une pièce de cuir au tranchet le long d'une règle métallique" loading="lazy">
+          <figcaption class="pastille">La coupe au tranchet, à la règle</figcaption>
+        </figure>
+        <figure class="portrait apparait">
+          <img src="assets/arano-hasparren/artisane-a-l-etabli.webp" width="600" height="500" alt="La maroquinière souriante, assise à son établi près d'une machine à coudre" loading="lazy">
+          <figcaption>À l'établi, à Hasparren</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation" aria-label="L'inspiration">
+    <blockquote class="cadre">
+      <span class="guillemet" aria-hidden="true">“</span>
+      <div>
+        <p>L'idée du sac représente pour moi le voyage, le mélange subtil de l'utile et de l'agréable. Je puise mon inspiration dans les objets, les couleurs, les senteurs de tous les pays que j'ai parcourus, le Cambodge, la Birmanie, la Thaïlande, l'Australie…</p>
+        <cite>La maroquinière de l'atelier Arano</cite>
+      </div>
+    </blockquote>
+  </section>
+
+  <section class="section sacs" id="sacs">
+    <div class="cadre">
+      <figure class="bihotza apparait">
+        <img src="assets/arano-hasparren/sac-beige-sur-machine.webp" width="1146" height="1600" alt="Le sac Bihotza en cuir beige, en forme de cœur, suspendu à la tête d'une machine à coudre" loading="lazy">
+        <figcaption class="fiche"><b>Bihotza</b><span>Le premier modèle, en forme de cœur, pour la naissance de l'atelier en 2008. Cuir de buffle, 35 × 27 × 10&nbsp;cm.</span><span class="prix">370&nbsp;€</span></figcaption>
+      </figure>
+      <div>
+        <h2>Les sacs, et leurs noms basques</h2>
+        <p class="intro">Chaque modèle est une création de l'atelier, et chacun se personnalise selon vos goûts et votre budget. La plupart sont doublés d'agneau « plongé » de Dordogne : une peau souple, fine et soyeuse, la finition la plus prestigieuse.</p>
+        <ul class="modeles">
+          <li><b>Egunero</b><span>« De tous les jours » : le cabas modèle-phare, créé en 2009.</span></li>
+          <li><b>Hordago</b><span>« Je mise tout », au jeu de mus : petit sac en taurillon, deux compartiments.</span></li>
+          <li><b>Lasaia</b><span>De « lasai », la tranquillité : taurillon lisse, doublé agneau, pompon été ou hiver.</span></li>
+          <li><b>Maya</b><span>Né en 2020 d'un sac ancien confié par une amie, dans la maison en face de l'atelier.</span></li>
+          <li><b>Bakarra</b><span>« Unique » : anses en tresses rondes, doublure en tissu du Cameroun.</span></li>
+          <li><b>Uda</b><span>« L'été », en de nombreux coloris et différents cuirs.</span></li>
+        </ul>
+        <p class="autres">Et aussi Herria, Ederra, Luze, Motxila, Llargia, la sacoche Poltsiko, les trousses Rugby, ceintures, porte-monnaie et étuis.</p>
+        <figure class="quatre apparait">
+          <img src="assets/arano-hasparren/quatre-sacs-fond-bleu.webp" width="1600" height="1066" alt="Quatre sacs Arano sur un tissu sombre : un petit sac rouge, un sac noir à anneau, un cabas cognac et une sacoche à rabat avec un pompon rose" loading="lazy">
+          <figcaption class="pastille">Pompons à assortir, avec chaque sac</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mesure" id="sur-mesure">
+    <div class="cadre">
+      <div>
+        <h2>Votre sac, dessiné ensemble</h2>
+        <p class="intro">De la longueur des anses à l'intérieur du sac, tout se fait sur mesure. Nous dessinons ensemble votre prochain sac selon vos goûts, votre budget et vos besoins.</p>
+        <ul class="possibles">
+          <li>Une peau ou un tissu qui vous est cher, intégré au modèle</li>
+          <li>Les fermoirs d'un ancien sac, pour une deuxième vie</li>
+          <li>Une gravure au laser de vos textes ou dessins</li>
+          <li>Ceintures et bracelets de montre, avec vos boucles</li>
+        </ul>
+        <div class="commande"><b>Pour toute commande sur mesure, prenez rendez-vous.</b> La commande est lancée avec un acompte de 50&nbsp;%, comptez généralement 6 à 8 semaines pour un sac. Envoi possible en Colissimo assuré.</div>
+        <p class="avis-client">« Un sac à dos sur mesure, léger, souple, et d'une finition exquise. »<span>Gilles Lauga</span></p>
+      </div>
+      <div class="atelier-duo">
+        <figure class="machine apparait">
+          <img src="assets/arano-hasparren/machine-a-coudre-atelier.webp" width="1500" height="1500" alt="La machine à coudre industrielle de l'atelier, une sangle de cuir marron sous le pied" loading="lazy">
+        </figure>
+        <figure class="etabli apparait">
+          <img src="assets/arano-hasparren/sacs-noir-rouge-etabli.webp" width="1600" height="1129" alt="Sur l'établi, un sac noir doublé rose et un sac rouge à anneaux dorés" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cuirs" id="cuirs">
+    <div class="cadre">
+      <div class="tete">
+        <h2>Il y a cuir… et Cuir</h2>
+        <p>Hasparren fut la cité du cuir. Les peaux d'Arano viennent surtout des tanneries du Pays basque : des cuirs pleine fleur, choisis selon l'article à confectionner, et le choix se fait avec vous, selon votre projet.</p>
+      </div>
+      <div class="cuirs-grille">
+        <div>
+          <figure class="peaux apparait">
+            <img src="assets/arano-hasparren/peaux-de-cuir-couleurs.webp" width="1500" height="1500" alt="Des peaux de cuir entières superposées, marron, bleu roi, beige, corail, rouge et noir" loading="lazy">
+          </figure>
+          <div class="tanneries">
+            <h3>Deux tanneries voisines</h3>
+            <p><a href="https://www.carriat.com/fr/">La tannerie Rémy Carriat</a>, à Espelette, fondée en 1927 : tannage minéral et retannage végétal.</p>
+            <p><a href="http://tannerie-garat.com/fr">La tannerie Garat</a>, à Armendaritz, fondée en 1790 : six générations de tannage végétal, Entreprise du Patrimoine Vivant depuis 2008.</p>
+          </div>
+        </div>
+        <ul class="matieres">
+          <li><b>Le buffle grainé</b><span>L'emblème de Rémy Carriat : foulonné, patiné, satiné, d'une solidité sans pareille. 60 coloris en stock.</span></li>
+          <li><b>Le taurillon</b><span>Une fleur lisse et fine, souple et soyeuse, très résistante à la déchirure. Coloris sur commande.</span></li>
+          <li><b>Le taurillon nubuck</b><span>Légèrement poncé, doux au toucher, et plus résistant aux taches.</span></li>
+          <li><b>L'agneau</b><span>La marque de fabrique d'Arano, pour les doublures : léger, doux, soyeux, de nombreux coloris à l'atelier.</span></li>
+          <li><b>Le galuchat</b><span>Un cuir de poisson, pour les bracelets et la petite maroquinerie.</span></li>
+          <li><b>Les exotiques</b><span>Sur commande, en plus du veau, du chevreau et des autres cuirs de l'atelier.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visite" id="venir">
+    <div class="cadre">
+      <figure class="facade apparait">
+        <img src="assets/arano-hasparren/boutique-facade-hasparren.webp" width="1500" height="1500" alt="La façade de l'atelier-boutique, bandeau rouge Maroquinerie et volets rouges basques" loading="lazy">
+        <figcaption class="pastille">Maroquinerie, bagagerie, créations sur mesure</figcaption>
+      </figure>
+      <div class="carte">
+        <h2>Entrez dans l'atelier</h2>
+        <p class="adresse">66 rue de l'Ursuia, 64240 Hasparren</p>
+        <p class="rdv">Les commandes se prennent directement à l'atelier.</p>
+        <ul class="horaires">
+          <li><span>Lundi, mardi, jeudi, vendredi</span><span>9h-12h et 14h30-18h</span></li>
+          <li><span>Mercredi matin</span><span>9h-12h sur rendez-vous</span></li>
+        </ul>
+        <p class="eusko">L'atelier est présent sur l'Eusko, la monnaie locale du Pays basque.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:+33674718562">06 74 71 85 62</a>
+          <a class="btn btn-contour" href="mailto:arano.creation@gmail.com">Écrire un mail</a>
+        </div>
+        <a class="mail" href="mailto:arano.creation@gmail.com">arano.creation@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="marque"><b>ARANO</b><span>Atelier cuir, maroquinerie et sur mesure à Hasparren</span></div>
+    <div>
+      <h3>L'atelier-boutique</h3>
+      <p>66 rue de l'Ursuia<br>64240 Hasparren</p>
+      <p><a href="tel:+33674718562">06 74 71 85 62</a><br><a href="mailto:arano.creation@gmail.com">arano.creation@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Lundi, mardi, jeudi, vendredi<br>9h-12h et 14h30-18h<br>Mercredi matin sur rendez-vous</p>
+    </div>
+    <div>
+      <h3>Suivre l'atelier</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/arano.atelier/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/cuir64">Facebook</a></li>
+        <li><a href="https://www.pinterest.fr/cuiraranomendi/">Pinterest</a></li>
+        <li><a href="https://www.youtube.com/watch?v=a1BwQOlxxwM">La vidéo de l'atelier</a></li>
+      </ul>
+    </div>
+    <div class="bas">© Arano</div>
+  </div>
+  <div class="proposition">Proposition de Nicolas Masset pour Arano</div>
+</footer>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduit || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.apparait').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
