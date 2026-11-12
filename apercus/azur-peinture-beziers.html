@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Azur Peinture, artisan peintre à Béziers et Montpellier</title>
+<meta name="description" content="Azur Peinture, entreprise de peinture à Béziers, Montpellier et leurs alentours : murs et plafonds, boiseries et ferronneries, dégâts des eaux, fissures, humidité, jointage.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 64V32a28 28 0 0 1 56 0v32z' fill='%23102C47'/%3E%3Ctext x='32' y='50' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23D9A93A'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#E8EFF2; --fond-2:#DCE6EB; --fond-3:#CCDAE1; --surface:#F6F9FA;
+  --encre:#102C47; --encre-2:#3D5368; --encre-douce:#2A5677;
+  --ocre:#D9A93A;
+  --nuit:#102C47; --nuit-2:#18395A; --sur-nuit:#EAF1F4; --sur-nuit-2:#AFC2D1;
+  --display:'Young Serif', Georgia, serif; --texte:'Figtree', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(16,44,71,.5);
+  --ombre-longue:34px 56px 90px -46px rgba(16,44,71,.62), 0 22px 44px -30px rgba(16,44,71,.4);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--ocre);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px, 2.6vw + 14px, 52px);line-height:1.1;letter-spacing:-.01em}
+h3{font-size:clamp(24px, 1vw + 16px, 30px);line-height:1.18}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(232,239,242,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid rgba(16,44,71,.08)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px 0;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.15}
+.marque b{display:block;font-family:var(--display);font-weight:400;font-size:25px}
+.marque span{display:block;font-size:16px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:17px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;padding:10px 20px;border-radius:999px;background:var(--surface);box-shadow:0 10px 24px -16px rgba(16,44,71,.5);text-decoration:none;font-weight:600;font-size:17px;white-space:nowrap;transition:background .25s ease,color .25s ease}
+.appel:hover{background:var(--encre);color:var(--surface)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease}
+.bouton.plein{background:var(--ocre);color:var(--encre);box-shadow:0 16px 30px -18px rgba(16,44,71,.55)}
+.bouton.plein:hover{transform:translateY(-2px);box-shadow:0 22px 36px -18px rgba(16,44,71,.6)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+.nuit .bouton.contour{border-color:var(--sur-nuit);color:var(--sur-nuit)}
+.nuit .bouton.contour:hover{background:var(--sur-nuit);color:var(--encre)}
+
+/* Héros */
+.heros{padding:72px 0 112px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"titre visuel" "suite visuel";column-gap:72px;align-items:start}
+.heros .titre{grid-area:titre;align-self:end;padding-top:40px}
+.heros .suite{grid-area:suite}
+.heros .visuel{grid-area:visuel}
+.lieu{font-size:18px;color:var(--encre-2);margin-bottom:22px}
+.lieu b{font-weight:600;color:var(--encre)}
+h1{font-size:clamp(34px, 4vw + 22px, 80px);line-height:1.04;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--encre-douce)}
+.heros .chapo{margin-top:28px;font-size:20px;line-height:1.6;color:var(--encre-2);max-width:31em}
+.heros .boutons{margin-top:36px}
+.visuel{position:relative;margin:0;width:min(480px, 100%);justify-self:end}
+.visuel::before{content:"";position:absolute;inset:-26px -26px 40px 26px;border-radius:50% 50% 22px 22px / 40% 40% 22px 22px;background:var(--fond-3)}
+.arche{position:relative;aspect-ratio:4/5;border-radius:50% 50% 16px 16px / 40% 40% 16px 16px;overflow:hidden;box-shadow:var(--ombre-longue)}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:62% 28%}
+.etiquette{position:absolute;display:inline-block;padding:8px 14px;border-radius:12px;background:rgba(246,249,250,.95);color:var(--encre);font-size:16px;font-weight:600;line-height:1.3;box-shadow:0 10px 24px -14px rgba(16,44,71,.55)}
+.visuel .etiquette{left:20px;bottom:96px}
+.nuancier{position:absolute;left:50%;bottom:-30px;transform:translateX(-50%);display:flex;gap:8px;padding:10px 12px;border-radius:999px;background:var(--surface);box-shadow:0 22px 40px -22px rgba(16,44,71,.6)}
+.nuancier li{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(16,44,71,.12)}
+
+/* Faits */
+.faits{background:var(--surface);box-shadow:0 1px 0 rgba(16,44,71,.06)}
+.faits ul{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:0}
+.faits li{padding:30px 28px 30px 0}
+.faits li + li{padding-left:28px;border-left:1px solid rgba(16,44,71,.12)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.2}
+.faits span{display:block;margin-top:6px;font-size:16px;color:var(--encre-2)}
+
+/* Prestations */
+.prestations{padding:128px 0 120px}
+.prestations .cadre{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:80px;align-items:start}
+.prestations .intro{position:sticky;top:110px}
+.prestations .intro p{margin-top:22px;color:var(--encre-2);max-width:26em}
+.paire{position:relative;margin-top:48px;height:400px;max-width:420px}
+.paire figure{position:absolute;margin:0;width:58%;border-radius:18px;overflow:hidden;box-shadow:var(--ombre)}
+.paire figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.paire .avant{left:0;top:0;transform:rotate(-3deg)}
+.paire .apres{right:0;top:58px;transform:rotate(2.5deg);box-shadow:var(--ombre-longue)}
+.paire .etiquette{left:12px;bottom:12px}
+.liste-prest li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 20px;padding:36px 0;border-top:1px solid rgba(16,44,71,.18)}
+.liste-prest li:last-child{border-bottom:1px solid rgba(16,44,71,.18)}
+.liste-prest .num{font-family:var(--display);font-size:22px;color:var(--encre-2);padding-top:4px}
+.liste-prest p{margin-top:12px;color:var(--encre-2)}
+.liste-prest .lire{display:inline-block;margin-top:16px;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(16,44,71,.3);transition:border-color .2s ease}
+.liste-prest .lire:hover{border-color:var(--encre)}
+
+/* Réalisations (fond contrasté) */
+.nuit{background:var(--nuit);color:var(--sur-nuit)}
+.realisations{padding:128px 0 136px}
+.realisations .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.realisations .texte p{margin-top:22px;color:var(--sur-nuit-2);max-width:30em}
+.realisations .texte .boutons{margin-top:34px}
+.realisations .texte h2 em{font-style:normal;color:var(--ocre)}
+.chantier{position:relative;margin:0 0 0 40px}
+.chantier .grande{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.chantier .grande img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+.chantier .petite{position:absolute;left:-40px;bottom:-48px;width:44%;border-radius:16px;overflow:hidden;border:6px solid var(--nuit-2);transform:rotate(-4deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.chantier .petite img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.chantier .etiquette.e1{right:16px;top:16px}
+.chantier .petite .etiquette{left:10px;bottom:10px}
+.decales{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:56px}
+.decales figure{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:0 34px 60px -34px rgba(0,0,0,.7)}
+.decales figure:nth-child(2){margin-top:72px}
+.decales img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.decales .etiquette{left:12px;bottom:12px}
+
+/* Méthode */
+.methode{padding:120px 0}
+.methode .entete-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end}
+.methode .entete-section p{color:var(--encre-2)}
+.etapes{margin-top:56px;display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:20px;counter-reset:e}
+.etapes li{background:var(--surface);border-radius:20px;padding:32px 26px 30px;box-shadow:0 24px 50px -36px rgba(16,44,71,.5)}
+.etapes li:nth-child(even){transform:translateY(32px)}
+.etapes .rond{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--fond-2);font-family:var(--display);font-size:20px;margin-bottom:22px}
+.etapes p{margin-top:12px;font-size:17px;color:var(--encre-2)}
+
+/* Avis */
+.avis{padding:136px 0 120px;background:var(--fond-2)}
+.avis .cadre{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:start}
+.grande-citation{margin:0}
+.grande-citation p{font-family:var(--display);font-size:clamp(26px, 1.6vw + 16px, 40px);line-height:1.3;text-wrap:pretty}
+.grande-citation p::before{content:"«\00a0";}
+.grande-citation p::after{content:"\00a0»";}
+.grande-citation figcaption{margin-top:26px;font-size:17px;color:var(--encre-2)}
+.petites-citations{display:grid;gap:20px}
+.petites-citations blockquote{margin:0;background:var(--surface);border-radius:20px;padding:28px 28px 24px;box-shadow:0 24px 50px -36px rgba(16,44,71,.5)}
+.petites-citations p{font-size:17px}
+.petites-citations cite{display:block;margin-top:14px;font-style:normal;font-size:16px;color:var(--encre-2)}
+
+/* Devis */
+.devis{padding:128px 0}
+.devis .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:80px;align-items:start}
+.devis .texte p{margin-top:22px;color:var(--encre-2);max-width:30em}
+.devis .questions{margin-top:30px;display:grid;gap:12px}
+.devis .questions li{display:flex;gap:14px;align-items:baseline;font-size:17px}
+.devis .questions li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--encre);transform:translateY(-1px)}
+.carte-devis{background:var(--surface);border-radius:24px;padding:40px 38px;box-shadow:0 44px 80px -40px rgba(16,44,71,.55)}
+.carte-devis .tel{display:block;font-family:var(--display);font-size:clamp(30px, 1.6vw + 18px, 42px);line-height:1.15;text-decoration:none;white-space:nowrap;margin-top:6px}
+.carte-devis .petit{font-size:16px;color:var(--encre-2)}
+.carte-devis .mail{display:inline-block;margin-top:22px;font-size:18px;text-decoration:none;border-bottom:1.5px solid rgba(16,44,71,.3);overflow-wrap:anywhere}
+.carte-devis .boutons{margin-top:32px}
+.carte-devis .bouton{flex:1 1 220px}
+.carte-devis .delai{margin-top:24px;padding-top:22px;border-top:1px solid rgba(16,44,71,.12);font-size:16px;color:var(--encre-2)}
+
+/* Pied */
+.pied{background:#0B2135;color:var(--sur-nuit);padding:88px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-size:30px;line-height:1.15}
+.pied .devise{margin-top:14px;color:var(--sur-nuit-2);font-size:16px;max-width:22em}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:600;color:var(--sur-nuit-2);margin-bottom:14px}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied li+li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(234,241,244,.3);transition:border-color .2s ease;overflow-wrap:anywhere}
+.pied a:hover{border-color:var(--sur-nuit)}
+.pied-bas{margin-top:64px;padding-top:24px;border-top:1px solid rgba(234,241,244,.14);font-size:16px;color:var(--sur-nuit-2)}
+.proposition{background:#081A2A;color:#8FA5B6;text-align:center;font-size:16px;padding:14px 20px;margin:0}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;transform:none}
+.js .paire .avant.apparait.vu{transform:rotate(-3deg)}
+.js .paire .apres.apparait.vu{transform:rotate(2.5deg)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transition:none}
+  .js .apparait:not(.paire figure){transform:none}
+  .bouton,.appel{transition:none}
+}
+
+/* Tablette */
+@media (max-width: 1060px){
+  .nav a:not(.appel){display:none}
+  .heros .cadre{column-gap:48px}
+  .prestations .cadre,.realisations .cadre,.devis .cadre,.avis .cadre{gap:56px}
+  .etapes{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .etapes li:nth-child(even){transform:none}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid rgba(16,44,71,.12)}
+}
+@media (max-width: 860px){
+  :root{--large:min(1200px, 100% - 40px)}
+  .heros{padding:40px 0 88px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "suite"}
+  .heros .titre{padding-top:0}
+  .visuel{justify-self:center;margin:40px 0 64px;width:min(420px, 100% - 26px)}
+  .prestations .cadre,.realisations .cadre,.devis .cadre,.avis .cadre,.methode .entete-section{grid-template-columns:minmax(0,1fr)}
+  .prestations .intro{position:static}
+  .methode .entete-section{gap:20px}
+  .prestations,.realisations,.methode,.avis,.devis{padding:88px 0}
+  .chantier{margin:0 0 48px 24px}
+  .chantier .petite{left:-24px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width: 560px){
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li,.faits li + li{padding:20px 0;border-left:0}
+  .faits li + li{border-top:1px solid rgba(16,44,71,.12)}
+  .etapes{grid-template-columns:minmax(0,1fr)}
+  .liste-prest li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .paire{height:auto;aspect-ratio:1/1.05}
+  .decales{gap:14px}
+  .decales figure:nth-child(2){margin-top:40px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .carte-devis{padding:30px 22px}
+  .heros .chapo{font-size:18px}
+}
+@media (max-width: 480px){
+  .entete .cadre{gap:10px 12px}
+  .marque b{font-size:22px}
+  .appel{padding:8px 14px;font-size:16px}
+}
+@media (max-width: 420px){
+  .boutons .bouton{width:100%}
+  .appel{white-space:normal}
+  .carte-devis .tel{white-space:normal}
+  .nuancier{gap:6px;padding:8px 10px}
+  .nuancier li{width:28px;height:28px}
+  .visuel .etiquette{bottom:76px;left:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Azur Peinture</b><span>Artisan peintre à Béziers</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#prestations">Prestations</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#avis">Avis</a>
+      <a href="#devis">Devis</a>
+      <a class="appel" href="tel:+33613626159">06&nbsp;13&nbsp;62&nbsp;61&nbsp;59</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div class="titre">
+        <p class="lieu"><b>Entreprise de peinture</b> à Béziers, Montpellier et leurs alentours</p>
+        <h1>Une finition <em>de qualité</em>, du plafond à la ferronnerie.</h1>
+      </div>
+      <figure class="visuel apparait">
+        <div class="arche">
+          <img src="assets/azur-peinture-beziers/cage-escalier-murs-jaunes-repeinte-apres.webp" width="1200" height="1600" alt="Cage d'escalier ancienne repeinte par Azur Peinture : murs jaune pâle, soubassement plus foncé, rampe en fer forgé et fenêtre en pavés de verre" fetchpriority="high">
+        </div>
+        <figcaption class="etiquette">Cage d'escalier, après peinture</figcaption>
+        <ul class="nuancier" aria-label="Teintes relevées sur nos chantiers">
+          <li style="background:#D8BF9F" title="Jaune pâle de la cage d'escalier"></li>
+          <li style="background:#BCA58A" title="Beige sable de la chambre sous pente"></li>
+          <li style="background:#DCC4B7" title="Rose pâle du mur, autour de la porte"></li>
+          <li style="background:#738882" title="Vert d'eau de la chambre"></li>
+          <li style="background:#17526A" title="Bleu pétrole du grand local"></li>
+          <li style="background:#2E4245" title="Vert canard de la porte à moulures"></li>
+        </ul>
+      </figure>
+      <div class="suite">
+        <p class="chapo">Murs et plafonds, boiseries et ferronneries, dégâts des eaux, fissures, humidité, jointage : nous intervenons sur des supports neufs ou à rénover, quelle que soit la surface. Professionnels et passionnés, nous vous garantissons une finition de qualité et un accompagnement personnalisé.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="#devis">Demander un devis</a>
+          <a class="bouton contour" href="tel:+33613626159">Appelez-moi au 06&nbsp;13&nbsp;62&nbsp;61&nbsp;59</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="cadre">
+      <ul>
+        <li><b>48&nbsp;h</b><span>pour vous rappeler après une demande de devis</span></li>
+        <li><b>Béziers, Montpellier</b><span>et leurs alentours</span></li>
+        <li><b>Neuf ou à rénover</b><span>quelle que soit la surface</span></li>
+        <li><b>Chantier propre</b><span>ménage à la fin de chaque journée</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="prestations" id="prestations">
+    <div class="cadre">
+      <div class="intro">
+        <h2>Les prestations que nous proposons</h2>
+        <p>Des volets aux plafonds, chaque étape compte : c'est elle qui fait la tenue de la peinture dans le temps.</p>
+        <div class="paire">
+          <figure class="avant apparait">
+            <img src="assets/azur-peinture-beziers/porte-moulures-poncee-avant.webp" width="1200" height="1600" alt="Porte intérieure à moulures poncée, avant peinture" loading="lazy">
+            <figcaption class="etiquette">Avant</figcaption>
+          </figure>
+          <figure class="apres apparait">
+            <img src="assets/azur-peinture-beziers/porte-moulures-vert-canard-apres.webp" width="1200" height="1600" alt="La même porte à moulures peinte en vert canard satiné" loading="lazy">
+            <figcaption class="etiquette">Après, vert canard</figcaption>
+          </figure>
+        </div>
+      </div>
+      <ol class="liste-prest">
+        <li>
+          <span class="num">01</span>
+          <div>
+            <h3>Peinture murs et plafonds</h3>
+            <p>Protection des sols et de vos meubles, puis un support rendu sain, sec et propre : lessivage, rebouchage, ratissage, ponçage. Viennent l'impression, puis la finition de votre choix, mate, velours, satinée ou brillante.</p>
+            <a class="lire" href="https://azurpeinture.com/peinture-murs-et-plafonds-peintre-beziers/">Lire l'article</a>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div>
+            <h3>Dégâts des eaux, fissures, humidité</h3>
+            <p>Déclarez d'abord le sinistre à votre assureur. Nous évaluons ensuite l'étendue des dégâts (taches, cloques, décollements, moisissures) et la gravité des fissures, puis nous traitons avec des peintures antifongiques ou résistantes à l'eau.</p>
+            <a class="lire" href="https://azurpeinture.com/les-degats-des-eaux-fissures-humidite/">Lire l'article</a>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div>
+            <h3>Boiseries et ferronneries</h3>
+            <p>Volets, portes, fenêtres, abri de jardin, meubles, plinthes ; garde-corps, portail, grille ou barrière. Bois ou métal, à l'intérieur comme à l'extérieur, en bord de mer ou en plein sud : le bon produit pour chaque support.</p>
+            <a class="lire" href="https://azurpeinture.com/peinture-menuiserie-beziers-peinture-ferronnerie-beziers-montpellier/">Lire l'article</a>
+          </div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div>
+            <h3>Jointage et travaux de plâtrerie</h3>
+            <p>La pose de bandes à joint entre les plaques de plâtre, après le plaquiste et avant le peintre, pour une finition de qualité.</p>
+            <a class="lire" href="https://azurpeinture.com/jointage-travaux-de-platrerie-jointeur-beziers/">Lire l'article</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="realisations nuit" id="realisations">
+    <div class="cadre">
+      <figure class="chantier apparait">
+        <div class="grande">
+          <img src="assets/azur-peinture-beziers/chambre-mur-bleu-canard-apres.webp" width="1200" height="1600" alt="Chambre sous poutre, mur du fond peint en bleu canard profond" loading="lazy">
+        </div>
+        <span class="etiquette e1">Après, bleu canard</span>
+        <div class="petite">
+          <img src="assets/azur-peinture-beziers/chambre-murs-taches-avant-peinture.webp" width="1344" height="1600" alt="La même chambre avant peinture, murs blancs tachés et salis" loading="lazy">
+          <span class="etiquette">Avant</span>
+        </div>
+      </figure>
+      <div class="texte">
+        <h2>Avant, <em>après</em> : nos réalisations</h2>
+        <p>Une chambre aux murs tachés passée au bleu canard, une chambre sous pente rendue à la lumière, un grand local repeint en fin de chantier. Professionnels et passionnés, nous sommes soucieux du rendu final.</p>
+        <div class="decales">
+          <figure class="apparait">
+            <img src="assets/azur-peinture-beziers/chambre-sous-pente-beige-parquet-apres.webp" width="1200" height="1600" alt="Chambre mansardée finie, mur beige sable sous rampant, plafond blanc et parquet clair" loading="lazy">
+            <figcaption class="etiquette">Chambre sous pente</figcaption>
+          </figure>
+          <figure class="apparait">
+            <img src="assets/azur-peinture-beziers/grand-local-mur-bleu-plafond-spots.webp" width="1200" height="1600" alt="Grande pièce au mur du fond bleu pétrole et plafond blanc à spots" loading="lazy">
+            <figcaption class="etiquette">Bleu pétrole</figcaption>
+          </figure>
+        </div>
+        <div class="boutons">
+          <a class="bouton contour" href="https://azurpeinture.com/peintre-beziers-artisan-peintre-beziers/">Voir toute la galerie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="methode" aria-labelledby="titre-methode">
+    <div class="cadre">
+      <div class="entete-section">
+        <h2 id="titre-methode">Chaque étape respectée, pour un résultat impeccable</h2>
+        <p>Vivre dans les travaux peut être inconfortable. Nous vous garantissons un chantier propre et une attention particulière aux détails.</p>
+      </div>
+      <ol class="etapes">
+        <li><span class="rond">1</span><h3>Préparation</h3><p>Protection des sols, des meubles et des rideaux, puis traitement de l'humidité, des fissures et des trous.</p></li>
+        <li><span class="rond">2</span><h3>Impression</h3><p>Choisie selon la nature du support, elle le prépare à accueillir la peinture et bloque les fonds.</p></li>
+        <li><span class="rond">3</span><h3>Finition</h3><p>Mate, velours, satinée ou brillante, en glycéro, acrylique ou peinture décorative.</p></li>
+        <li><span class="rond">4</span><h3>Nettoyage</h3><p>Aspiration, poussières et sols chaque soir, déchets enlevés au fur et à mesure.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="avis" id="avis">
+    <div class="cadre">
+      <figure class="grande-citation">
+        <p>Coline est une peintre très sérieuse, qui travaille avec soin et propreté, ce qui n'est pas toujours le cas chez tous les artisans. Elle a réalisé l'ensemble des peintures : plafonds, murs et portes, avec un résultat impeccable.</p>
+        <figcaption>Olivier&nbsp;B., avis Google, septembre 2025</figcaption>
+      </figure>
+      <div class="petites-citations">
+        <blockquote>
+          <p>Réparation de fissures au plafond de mon cabinet médical, sans impacter mon activité. Aucune trace de poussière sur mon matériel médical.</p>
+          <cite>Avis Google, décembre 2025</cite>
+        </blockquote>
+        <blockquote>
+          <p>Le chantier a été réalisé dans les délais avec une grande attention aux finitions. Le résultat est de très grande qualité.</p>
+          <cite>Nora&nbsp;A., avis Google, novembre 2025</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="devis" id="devis">
+    <div class="cadre">
+      <div class="texte">
+        <h2>Demander un devis à Béziers ou Montpellier</h2>
+        <p>Appelez-moi, écrivez-nous ou remplissez le formulaire de devis. Pour vous répondre au plus juste, dites-nous :</p>
+        <ul class="questions">
+          <li>de quel chantier il s'agit : rénovation, construction neuve, dégât des eaux, projet de décoration, jointage ;</li>
+          <li>la superficie concernée, en m² au sol ;</li>
+          <li>les surfaces à peindre : murs, plafonds, ou les deux.</li>
+        </ul>
+      </div>
+      <aside class="carte-devis" aria-label="Coordonnées">
+        <p class="petit">Appelez-moi au</p>
+        <a class="tel" href="tel:+33613626159">06&nbsp;13&nbsp;62&nbsp;61&nbsp;59</a>
+        <a class="mail" href="mailto:contact.azurpeinture@gmail.com?subject=Demande%20de%20devis">contact.azurpeinture@gmail.com</a>
+        <div class="boutons">
+          <a class="bouton plein" href="https://azurpeinture.com/devis-de-peinture-beziers-herault/">Remplir le formulaire de devis</a>
+          <a class="bouton contour" href="mailto:contact.azurpeinture@gmail.com?subject=Demande%20de%20devis">Nous écrire</a>
+        </div>
+        <p class="delai">Nous vous recontactons dans les 48&nbsp;heures pour planifier un rendez-vous et évaluer les travaux à réaliser.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Azur Peinture</p>
+        <p class="devise">Entreprise de peinture et de décoration à Béziers, Montpellier et leurs alentours.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33613626159">06&nbsp;13&nbsp;62&nbsp;61&nbsp;59</a></li>
+          <li><a href="mailto:contact.azurpeinture@gmail.com">contact.azurpeinture@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Prestations</h3>
+        <ul>
+          <li><a href="#prestations">Murs et plafonds</a></li>
+          <li><a href="#prestations">Boiseries et ferronneries</a></li>
+          <li><a href="#prestations">Dégâts des eaux, fissures</a></li>
+          <li><a href="#prestations">Jointage</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suivre nos chantiers</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/azur.peinture/">Instagram</a></li>
+          <li><a href="https://azurpeinture.com/peintre-beziers-artisan-peintre-beziers/">Nos réalisations</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pied-bas">« Il faut être enthousiaste dans son métier pour y exceller. » Denis Diderot</p>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour Azur Peinture</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

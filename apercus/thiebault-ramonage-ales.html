@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Thiebault Ramonage, ramoneur sur Alès et le bassin alésien</title>
+<meta name="description" content="Julien Thiebault, ramoneur à Saint-Christol-lès-Alès depuis 2011 : ramonage de cheminées et poêles à bois, entretien et dépannage de poêles à granulés sur Alès et le bassin alésien. Rendez-vous en ligne.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231D1B1A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-weight='700' font-size='36' text-anchor='middle' fill='%23F5F3F0'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600&family=Public+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#E8E5E1; --fond-2:#DDD9D3; --surface:#F5F3F0;
+  --encre:#1D1B1A; --encre-2:#4F4A46;
+  --braise:#D9622B;
+  --charbon:#1D1B1A; --charbon-2:#2A2725; --sur-charbon:#F2EEE9; --sur-charbon-2:#B9B1A9;
+  --display:'Zilla Slab', Georgia, serif; --texte:'Public Sans', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(29,27,26,.55);
+  --ombre-haute:0 50px 90px -44px rgba(29,27,26,.7);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--braise);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px, 2.8vw + 16px, 58px);line-height:1.04;letter-spacing:-.01em}
+h3{font-size:clamp(22px, 1vw + 15px, 28px);line-height:1.15;font-weight:500}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(232,229,225,.95);border-bottom:1px solid rgba(29,27,26,.09)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 0;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{display:block;font-family:var(--display);font-weight:600;font-size:26px}
+.marque span{display:block;font-size:16px;color:var(--encre-2)}
+.nav{display:flex;align-items:center;gap:28px;font-size:17px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:hover{color:var(--encre)}
+.nav a.rdv{display:inline-flex;align-items:center;padding:10px 20px;border-radius:999px;background:var(--charbon);color:var(--sur-charbon);font-weight:600;white-space:nowrap;transition:transform .25s ease, box-shadow .25s ease}
+.nav a.rdv:hover{color:var(--sur-charbon);transform:translateY(-1px);box-shadow:0 14px 26px -16px rgba(29,27,26,.7)}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease}
+.bouton.plein{background:var(--braise);color:var(--encre);box-shadow:0 16px 30px -18px rgba(29,27,26,.6)}
+.bouton.plein:hover{transform:translateY(-2px);box-shadow:0 22px 36px -18px rgba(29,27,26,.7)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+.sombre .bouton.contour{border-color:var(--sur-charbon);color:var(--sur-charbon)}
+.sombre .bouton.contour:hover{background:var(--sur-charbon);color:var(--encre)}
+
+/* Héros */
+.heros{padding:80px 0 150px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"titre visuel" "suite visuel";column-gap:80px;align-items:start}
+.heros .titre{grid-area:titre;align-self:end;padding-top:24px}
+.heros .suite{grid-area:suite}
+.heros .visuel{grid-area:visuel}
+.lieu{font-size:18px;color:var(--encre-2);margin-bottom:20px}
+h1{font-size:clamp(38px, 3.6vw + 24px, 80px);line-height:1.02;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--braise)}
+.heros .chapo{margin-top:28px;font-size:20px;line-height:1.6;color:var(--encre-2);max-width:31em}
+.heros .boutons{margin-top:36px}
+.visuel{position:relative;margin:24px 0 0;width:min(470px, 100%);justify-self:end}
+.visuel .carre{border-radius:20px;overflow:hidden;transform:rotate(2.5deg);box-shadow:var(--ombre-haute)}
+.visuel .carre img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:40% 50%}
+.etiquette{position:absolute;display:inline-block;padding:8px 14px;border-radius:10px;background:rgba(245,243,240,.95);color:var(--encre);font-size:16px;font-weight:600;line-height:1.3;box-shadow:0 10px 24px -14px rgba(29,27,26,.6)}
+.visuel .etiquette{top:26px;right:22px}
+.depuis{position:absolute;left:-56px;bottom:-62px;width:min(300px, 78%);background:var(--surface);border-radius:18px;padding:22px 24px;box-shadow:0 30px 60px -30px rgba(29,27,26,.6);transform:rotate(-2deg)}
+.depuis b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(28px, 1.6vw + 18px, 40px);line-height:1}
+.depuis span{display:block;margin-top:8px;font-size:16px;line-height:1.4;color:var(--encre-2)}
+
+/* Faits */
+.faits{position:relative;z-index:2}
+.faits ul{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));background:var(--surface);border-radius:22px;box-shadow:0 34px 70px -44px rgba(29,27,26,.6);padding:8px 12px;margin-bottom:-56px}
+.faits li{padding:26px 24px}
+.faits li + li{border-left:1px solid rgba(29,27,26,.1)}
+.faits b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.15}
+.faits span{display:block;margin-top:6px;font-size:16px;color:var(--encre-2)}
+
+/* Services (charbon) */
+.sombre{background:var(--charbon);color:var(--sur-charbon)}
+.services{padding:160px 0 128px}
+.services .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:80px;align-items:start}
+.services .intro p{margin-top:22px;color:var(--sur-charbon-2);max-width:26em}
+.vignette{position:relative;margin:56px 0 0;width:min(230px, 100%);transform:rotate(-3deg)}
+.vignette .v{border-radius:16px;overflow:hidden;border:6px solid var(--charbon-2);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
+.vignette img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.vignette .etiquette{left:12px;bottom:14px;right:12px}
+.liste-s li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;padding:30px 0;border-top:1px solid rgba(242,238,233,.14)}
+.liste-s li:last-child{border-bottom:1px solid rgba(242,238,233,.14)}
+.liste-s .n{font-family:var(--display);font-size:22px;color:var(--sur-charbon-2);padding-top:4px}
+.liste-s h3{font-size:clamp(24px, 1.2vw + 16px, 34px);font-weight:500}
+.liste-s p{margin-top:8px;font-size:17px;color:var(--sur-charbon-2)}
+.services .boutons{margin-top:44px}
+
+/* Sécurité */
+.securite{padding:128px 0 120px}
+.securite .cadre{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:80px;align-items:center}
+.securite .texte > p{margin-top:22px;color:var(--encre-2);max-width:32em}
+.regle{margin-top:40px;background:var(--surface);border-radius:20px;padding:32px 34px;box-shadow:0 30px 60px -40px rgba(29,27,26,.55)}
+.regle h3{font-weight:600}
+.regle p{margin-top:10px;font-size:17px;color:var(--encre-2)}
+.regle a{display:inline-block;margin-top:16px;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(29,27,26,.35);transition:border-color .2s ease}
+.regle a:hover{border-color:var(--encre)}
+.vignettes{position:relative;display:flex;justify-content:center;gap:0;padding:24px 0 40px}
+.vignettes figure{position:relative;margin:0;width:min(230px, 48%);border-radius:16px;overflow:hidden;border:6px solid var(--surface);box-shadow:var(--ombre-haute)}
+.vignettes figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vignettes .g1{transform:rotate(-4deg) translateY(-16px);z-index:1}
+.vignettes .g2{transform:rotate(3deg) translateY(28px);margin-left:-28px;z-index:2}
+.vignettes .etiquette{left:10px;bottom:10px}
+
+/* Julien */
+.julien{padding:120px 0;background:var(--fond-2)}
+.julien .cadre{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:72px;align-items:start}
+.julien .grand{font-family:var(--display);font-weight:500;font-size:clamp(26px, 1.4vw + 18px, 40px);line-height:1.25;margin-top:26px}
+.julien .texte p.suite-j{margin-top:22px;color:var(--encre-2);max-width:34em}
+.julien .signe{margin-top:26px;font-weight:600}
+.conseils{background:var(--surface);border-radius:22px;padding:36px 34px;box-shadow:var(--ombre-haute)}
+.conseils ul{margin-top:18px;display:grid;gap:16px}
+.conseils li{font-size:17px;color:var(--encre-2);padding-top:16px;border-top:1px solid rgba(29,27,26,.1)}
+.conseils li b{display:block;color:var(--encre);font-weight:600;margin-bottom:4px}
+
+/* Avis (charbon) */
+.avis{padding:120px 0}
+.avis h2{max-width:14em}
+.avis .rangee{margin-top:56px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,.8fr);gap:0}
+.avis blockquote{margin:0;padding:0 36px}
+.avis blockquote:first-child{padding-left:0}
+.avis blockquote + blockquote{border-left:1px solid rgba(242,238,233,.16)}
+.avis blockquote p{font-family:var(--display);font-weight:500;font-size:clamp(22px, .8vw + 16px, 28px);line-height:1.3}
+.avis blockquote:first-child p{font-size:clamp(26px, 1.2vw + 18px, 36px)}
+.avis cite{display:block;margin-top:18px;font-style:normal;font-size:16px;color:var(--sur-charbon-2)}
+.avis .source{margin-top:48px;font-size:16px;color:var(--sur-charbon-2)}
+
+/* Zone */
+.zone{padding:128px 0 112px}
+.zone .cadre{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.zone .texte p{margin-top:20px;color:var(--encre-2)}
+.communes{columns:3 12em;column-gap:32px;font-size:17px}
+.communes li{break-inside:avoid;padding:7px 0;border-bottom:1px solid rgba(29,27,26,.1)}
+.zone h3{margin:40px 0 14px;font-size:24px}
+.zone .sud{font-size:17px;color:var(--encre-2)}
+
+/* Contact */
+.contact{padding:24px 0 128px}
+.carte-contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;background:var(--surface);border-radius:28px;padding:64px 64px;box-shadow:0 50px 100px -56px rgba(29,27,26,.7)}
+.carte-contact .texte p{margin-top:18px;color:var(--encre-2);max-width:28em}
+.carte-contact .tel{display:inline-block;margin-top:28px;font-family:var(--display);font-weight:600;font-size:clamp(32px, 2vw + 20px, 52px);line-height:1.05;text-decoration:none;white-space:nowrap}
+.carte-contact .mail{display:block;margin-top:12px;font-size:18px;text-decoration:none;overflow-wrap:anywhere}
+.carte-contact .mail span{border-bottom:1.5px solid rgba(29,27,26,.3)}
+.carte-contact .boutons{margin-top:32px}
+.carte-contact dl{margin:0;display:grid;gap:22px;align-content:start}
+.carte-contact dt{font-size:16px;font-weight:700;color:var(--encre-2)}
+.carte-contact dd{margin:4px 0 0;font-size:18px}
+.carte-contact dd a{text-decoration:none;border-bottom:1.5px solid rgba(29,27,26,.3)}
+
+/* Pied */
+.pied{background:#151312;color:var(--sur-charbon);padding:88px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-weight:600;font-size:32px;line-height:1.1}
+.pied .devise{margin-top:14px;color:var(--sur-charbon-2);font-size:16px;max-width:22em}
+.pied h3{font-family:var(--texte);font-size:16px;font-weight:700;color:var(--sur-charbon-2);margin-bottom:14px}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied li+li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(242,238,233,.3);transition:border-color .2s ease;overflow-wrap:anywhere}
+.pied a:hover{border-color:var(--sur-charbon)}
+.pied-bas{margin-top:64px;padding-top:24px;border-top:1px solid rgba(242,238,233,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:16px;color:var(--sur-charbon-2)}
+.proposition{background:#0E0D0C;color:#9C958E;text-align:center;font-size:16px;padding:14px 20px;margin:0}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;translate:0 26px;transition:opacity .9s ease, translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .bouton,.nav a{transition:none}
+}
+
+/* Tablette */
+@media (max-width: 1080px){
+  .nav a:not(.rdv){display:none}
+  .heros .cadre{column-gap:56px}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .faits li:nth-child(3){border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid rgba(29,27,26,.1)}
+  .services .cadre,.securite .cadre,.julien .cadre,.zone .cadre{gap:56px}
+  .carte-contact{padding:48px 40px}
+}
+@media (max-width: 860px){
+  :root{--large:min(1200px, 100% - 40px)}
+  .heros{padding:40px 0 110px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "suite"}
+  .heros .titre{padding-top:0}
+  .visuel{justify-self:center;margin:36px 0 92px;width:min(420px, 100% - 24px)}
+  .depuis{left:-8px;bottom:-56px;padding:16px 18px;width:min(240px, 72%)}
+  .services .cadre,.securite .cadre,.julien .cadre,.zone .cadre,.carte-contact{grid-template-columns:minmax(0,1fr)}
+  .services{padding:140px 0 88px}
+  .securite,.julien,.avis,.zone{padding:88px 0}
+  .avis .rangee{grid-template-columns:minmax(0,1fr);gap:28px}
+  .avis blockquote,.avis blockquote:first-child{padding:0}
+  .avis blockquote + blockquote{border-left:0;border-top:1px solid rgba(242,238,233,.16);padding-top:28px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width: 560px){
+  .faits ul{grid-template-columns:minmax(0,1fr);padding:4px 20px}
+  .faits li{padding:18px 0}
+  .faits li + li{border-left:0;border-top:1px solid rgba(29,27,26,.1)}
+  .liste-s li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .carte-contact{padding:34px 22px;border-radius:22px}
+  .regle,.conseils{padding:28px 22px}
+  .pied-grille{grid-template-columns:minmax(0,1fr)}
+  .heros .chapo{font-size:18px}
+}
+@media (max-width: 480px){
+  .entete .cadre{gap:10px 12px}
+  .marque b{font-size:22px}
+  .nav a.rdv{padding:8px 14px;font-size:16px}
+}
+@media (max-width: 420px){
+  .boutons .bouton{width:100%}
+  .carte-contact .tel{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>Thiebault Ramonage</b><span>Julien Thiebault, ramoneur</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Mes services</a>
+      <a href="#julien">Qui suis-je</a>
+      <a href="#zone">Zone d'intervention</a>
+      <a href="#contact">Contact</a>
+      <a class="rdv" href="https://thiebaultramonage.openfire.fr/booking">Prendre RDV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div class="titre">
+        <p class="lieu">Thiebault Ramonage, Saint-Christol-lès-Alès</p>
+        <h1>Ramoneur sur Alès et tout le bassin <em>alésien</em>.</h1>
+      </div>
+      <figure class="visuel apparait">
+        <div class="carre">
+          <img src="assets/thiebault-ramonage-ales/sortie-cheminee-tres-encrassee.webp" width="1600" height="720" alt="Sortie de cheminée vue d'en haut sur un toit, conduit et souche couverts d'une épaisse croûte noire de dépôts de combustion" fetchpriority="high">
+        </div>
+        <figcaption class="etiquette">Avant ramonage</figcaption>
+        <p class="depuis"><b>Depuis 2011</b><span>sur Alès et le bassin alésien</span></p>
+      </figure>
+      <div class="suite">
+        <p class="chapo">Ramonage de cheminées et de poêles, entretien et dépannage de poêles à granulés : je vous propose des solutions complètes pour vos besoins de chauffage, pour la sécurité et l'efficacité de votre appareil.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="https://thiebaultramonage.openfire.fr/booking">Prendre rendez-vous en ligne</a>
+          <a class="bouton contour" href="tel:+33783621471">07&nbsp;83&nbsp;62&nbsp;14&nbsp;71</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faits" aria-label="En bref">
+    <div class="cadre">
+      <ul>
+        <li><b>Depuis 2011</b><span>ramonage de cheminées et entretien de poêles</span></li>
+        <li><b>Certificat de ramonage</b><span>à conserver, votre assurance peut vous le demander</span></li>
+        <li><b>Lundi au vendredi</b><span>de 8&nbsp;h à 18&nbsp;h</span></li>
+        <li><b>Rendez-vous en ligne</b><span>choisissez votre créneau</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services sombre" id="services">
+    <div class="cadre">
+      <div class="intro">
+        <h2>Mes services</h2>
+        <p>Du ramonage de cheminée à l'entretien des poêles à granulés, pour les particuliers comme pour les professionnels.</p>
+        <figure class="vignette apparait">
+          <div class="v">
+            <img src="assets/thiebault-ramonage-ales/nid-frelons-dans-conduit-toiture.webp" width="500" height="1111" alt="Chapeau de conduit démonté sur un toit, rempli par un nid de frelons" loading="lazy">
+          </div>
+          <figcaption class="etiquette">Nid de frelons dans un conduit</figcaption>
+        </figure>
+      </div>
+      <div>
+        <ol class="liste-s">
+          <li><span class="n">01</span><div><h3>Ramonage de cheminée et poêle à bois</h3><p>Suie et calcin retirés, conduit dégagé, certificat de ramonage remis.</p></div></li>
+          <li><span class="n">02</span><div><h3>Entretien de poêle à granulés</h3><p>Pour la sécurité et l'efficacité de votre appareil.</p></div></li>
+          <li><span class="n">03</span><div><h3>Dépannage de poêle à granulés</h3><p>Pour la sécurité et l'efficacité de votre appareil.</p></div></li>
+          <li><span class="n">04</span><div><h3>Ramonage de four à pizza, four à pain</h3></div></li>
+          <li><span class="n">05</span><div><h3>Destruction de nid de frelons ou d'abeilles</h3><p>Sous conditions.</p></div></li>
+        </ol>
+        <div class="boutons">
+          <a class="bouton plein" href="https://thiebaultramonage.openfire.fr/booking">Prendre rendez-vous en ligne</a>
+          <a class="bouton contour" href="tel:+33783621471">07&nbsp;83&nbsp;62&nbsp;14&nbsp;71</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="securite" aria-labelledby="titre-securite">
+    <div class="cadre">
+      <div class="texte">
+        <h2 id="titre-securite">Le ramonage est indispensable pour votre sécurité.</h2>
+        <p>Avec l'utilisation continue de l'appareil, suie et calcin s'accumulent et obstruent les conduits. Ils peuvent provoquer des feux de cheminée et une mauvaise évacuation des fumées. Le ramonage supprime ces dépôts, prolonge la durée de vie de l'appareil, prévient les pannes et réduit les risques d'intoxication au monoxyde de carbone.</p>
+        <div class="regle">
+          <h3>Au moins une fois par an</h3>
+          <p>Le décret n°&nbsp;2023-641 rend le ramonage obligatoire au moins une fois par an. Deux ramonages sont recommandés si vous brûlez plus de 6&nbsp;m³ de bûches ou 2,5&nbsp;tonnes de granulés par an.</p>
+          <a href="https://thiebault-ramonage.fr/wp-content/uploads/2024/03/decretramonage.pdf">Lire le décret (PDF, source Légifrance)</a>
+        </div>
+      </div>
+      <div class="vignettes">
+        <figure class="g1 apparait">
+          <img src="assets/thiebault-ramonage-ales/boisseau-fendu-interieur-conduit.webp" width="500" height="1110" alt="Intérieur d'un conduit maçonné couvert de suie, avec un boisseau fendu" loading="lazy">
+          <figcaption class="etiquette">Boisseau fendu</figcaption>
+        </figure>
+        <figure class="g2 apparait">
+          <img src="assets/thiebault-ramonage-ales/conduit-tube-inox-apres-decrassage.webp" width="500" height="1110" alt="Tubage inox vu de dessus, intérieur propre après décrassage" loading="lazy">
+          <figcaption class="etiquette">Après décrassage</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="julien" id="julien">
+    <div class="cadre">
+      <div class="texte">
+        <h2>Julien Thiebault, ramoneur sur le bassin alésien</h2>
+        <p class="grand">Après des années comme salarié dans une entreprise spécialisée dans la pose de cheminées et de poêles, j'ai fondé ma propre entreprise de ramonage.</p>
+        <p class="suite-j">Basée à Saint-Christol-lès-Alès, dans le Gard, elle garantit la sécurité et le bon fonctionnement de vos installations de chauffage. Je vous remets un certificat de ramonage : conservez-le précieusement, votre assurance peut vous le demander en cas de sinistre.</p>
+        <p class="signe">Julien Thiebault</p>
+      </div>
+      <aside class="conseils">
+        <h3>Mes conseils pour encrasser moins</h3>
+        <ul>
+          <li><b>Poêle à bois ou cheminée</b>Un bois sec (moins de 20&nbsp;% d'humidité), fendu, propre et écorcé, ou des bûches de bois densifiées.</li>
+          <li><b>Poêle, insert ou chaudière à granulés</b>Un granulé de bois propre et sans poussière, à 8&nbsp;% d'humidité au plus.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="avis sombre" aria-labelledby="titre-avis">
+    <div class="cadre">
+      <h2 id="titre-avis">Ce que disent mes clients</h2>
+      <div class="rangee">
+        <blockquote>
+          <p>« Personne sérieuse, ponctuelle. La cheminée est dans le salon et tout était propre après son départ. Je recommande. »</p>
+          <cite>Agnès&nbsp;L.</cite>
+        </blockquote>
+        <blockquote>
+          <p>« Je recommande vivement : bons conseils, propreté, très bonne intervention. »</p>
+          <cite>Sandrine&nbsp;B.</cite>
+        </blockquote>
+        <blockquote>
+          <p>« Très professionnel. »</p>
+          <cite>Stéphanie&nbsp;L.</cite>
+        </blockquote>
+      </div>
+      <p class="source">Avis Google.</p>
+    </div>
+  </section>
+
+  <section class="zone" id="zone">
+    <div class="cadre">
+      <div class="texte">
+        <h2>Zone d'intervention</h2>
+        <p>Je me déplace tout autour d'Alès, et jusqu'à Nîmes.</p>
+      </div>
+      <div>
+        <ul class="communes">
+          <li>Alès</li>
+          <li>Anduze</li>
+          <li>Bagard</li>
+          <li>Branoux-les-Taillades</li>
+          <li>Cardet</li>
+          <li>Cendras</li>
+          <li>Deaux</li>
+          <li>Lédignan</li>
+          <li>Les Salles-du-Gardon</li>
+          <li>Lézan</li>
+          <li>Ribaute-les-Tavernes</li>
+          <li>Rousson</li>
+          <li>Saint-Ambroix</li>
+          <li>Saint-Christol-lès-Alès</li>
+          <li>Saint-Florent-sur-Auzonnet</li>
+          <li>Saint-Hilaire-de-Brethmas</li>
+          <li>Saint-Jean-du-Pin</li>
+          <li>Saint-Martin-de-Valgalgues</li>
+          <li>Saint-Privat-des-Vieux</li>
+          <li>Thoiras</li>
+          <li>Vézénobres</li>
+        </ul>
+        <h3>De Saint-Gilles jusqu'à Nîmes</h3>
+        <p class="sud">Saint-Gilles, Générac, Bellegarde, Garons, Caissargues, Nîmes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="carte-contact">
+        <div class="texte">
+          <h2>Une demande particulière ? Contactez-moi.</h2>
+          <p>Réservez votre créneau en ligne, ou appelez-moi du lundi au vendredi.</p>
+          <a class="tel" href="tel:+33783621471">07&nbsp;83&nbsp;62&nbsp;14&nbsp;71</a>
+          <a class="mail" href="mailto:contact@thiebault-ramonage.fr"><span>contact@thiebault-ramonage.fr</span></a>
+          <div class="boutons">
+            <a class="bouton plein" href="https://thiebaultramonage.openfire.fr/booking">Prendre rendez-vous en ligne</a>
+            <a class="bouton contour" href="mailto:contact@thiebault-ramonage.fr?subject=Demande%20de%20ramonage">M'écrire</a>
+          </div>
+        </div>
+        <dl>
+          <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=794A%20Vieille%20Route%20d%27Anduze%2030380%20Saint-Christol-l%C3%A8s-Al%C3%A8s">794A Vieille Route d'Anduze<br>30380 Saint-Christol-lès-Alès</a></dd></div>
+          <div><dt>Horaires</dt><dd>Du lundi au vendredi, de 8&nbsp;h à 18&nbsp;h<br>Fermé le samedi et le dimanche</dd></div>
+          <div><dt>Secteur</dt><dd>Alès, le bassin alésien, de Saint-Gilles jusqu'à Nîmes</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Thiebault Ramonage</p>
+        <p class="devise">Votre partenaire de confiance pour l'entretien de vos cheminées et poêles sur Alès et sa région. <a href="#contact">Contactez-moi</a> pour un service fiable et efficace.</p>
+      </div>
+      <div>
+        <h3>Mes services</h3>
+        <ul>
+          <li><a href="#services">Ramonage de cheminée</a></li>
+          <li><a href="#services">Entretien de poêles</a></li>
+          <li><a href="#services">Dépannage de poêles</a></li>
+          <li><a href="#services">Poêles à granulés</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p>794A Vieille Route d'Anduze<br>30380 Saint-Christol-lès-Alès</p>
+        <p><a href="tel:+33783621471">07&nbsp;83&nbsp;62&nbsp;14&nbsp;71</a></p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <ul>
+          <li>Lundi au vendredi, 8&nbsp;h à 18&nbsp;h</li>
+          <li>Samedi et dimanche, fermé</li>
+          <li><a href="https://thiebaultramonage.openfire.fr/booking">Rendez-vous en ligne</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>Thiebault Julien, SIRET 522&nbsp;443&nbsp;852&nbsp;00036</span>
+      <span><a href="https://thiebault-ramonage.fr/mentions-legales/">Mentions légales</a></span>
+    </div>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour Thiebault Ramonage</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

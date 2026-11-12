@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>A2I, serrurier vitrier menuisier à Montélimar, Drôme et Ardèche</title>
+<meta name="description" content="A2I, serrurerie, vitrerie et menuiserie à Montélimar : ouverture de porte claquée ou bloquée, perte ou vol de clés, effraction, pose de menuiseries extérieures, volets roulants et portes blindées, en Drôme et en Ardèche.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2329201A'/%3E%3Ctext x='32' y='45' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='38' text-anchor='middle' fill='%23C9A15A'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#EAE4DA; --fond-2:#E0D8CB; --surface:#F6F2EC;
+  --encre:#29201A; --encre-2:#54483E; --trait:rgba(41,32,26,.14);
+  --laiton:#A97F33; --laiton-clair:#D3B06C;
+  --brun:#29201A; --brun-2:#382C23; --pied:#1E1712; --sur-brun:#F3EEE6; --sur-brun-2:#C5B9AB;
+  --display:'Bricolage Grotesque', 'Arial Narrow', sans-serif; --texte:'Literata', Georgia, serif;
+  --ombre:0 30px 60px -34px rgba(35,24,14,.5);
+  --ombre-longue:0 56px 96px -44px rgba(35,24,14,.62);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--laiton);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--laiton);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(34px, 4.4vw, 58px);line-height:1}
+h3{font-size:clamp(23px, 2.1vw, 28px);line-height:1.12}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(234,228,218,.95);border-bottom:1px solid var(--trait)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{display:flex;align-items:baseline;gap:12px;text-decoration:none;min-width:0;flex-wrap:wrap;row-gap:0}
+.marque b{font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:700;font-size:30px;line-height:1;letter-spacing:-.02em}
+.marque span{font-size:15px;color:var(--encre-2);line-height:1.3}
+.nav{display:flex;align-items:center;gap:24px;font-family:var(--display);font-size:16px;font-weight:500}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:not(.appel):hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;background:var(--brun);color:var(--sur-brun);text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;transition:background .25s ease}
+.appel:hover{background:var(--brun-2)}
+.appel .court{display:none}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:12px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease}
+.bouton:hover{transform:translateY(-2px)}
+.bouton.plein{background:var(--brun);color:var(--sur-brun);box-shadow:0 16px 30px -18px rgba(35,24,14,.8)}
+.bouton.plein:hover{background:var(--brun-2)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros */
+.heros{padding:64px 0 96px}
+.heros .cadre{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));column-gap:24px;row-gap:0}
+.heros .qui{grid-column:1 / 5;grid-row:1;font-size:18px;font-style:italic;color:var(--encre-2);margin-bottom:20px;align-self:end}
+.heros h1{grid-column:1 / 11;grid-row:2;position:relative;z-index:2;font-size:clamp(46px, 8.2vw, 124px);line-height:.94;letter-spacing:-.025em;font-variation-settings:"wdth" 76}
+.heros h1 .l{background:var(--fond);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .14em 0 0;border-radius:0 10px 10px 0}
+.heros h1 .l.laiton{color:var(--laiton)}
+.porte{grid-column:5 / 13;grid-row:1 / 4;margin:64px 0 0 24px;position:relative;align-self:start}
+.porte img{width:100%;aspect-ratio:20/17;object-fit:cover;object-position:50% 100%;border-radius:14px;box-shadow:var(--ombre-longue)}
+.porte .tag{position:absolute;bottom:18px;padding:7px 16px;border-radius:999px;background:rgba(246,242,236,.95);font-family:var(--display);font-weight:600;font-size:16px;color:var(--encre);display:flex;align-items:center;gap:8px}
+.porte .tag::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--encre-2)}
+.porte .tag.apres::before{background:var(--laiton)}
+.porte .avant{left:18px}
+.porte .apres{left:calc(50% + 18px)}
+.porte figcaption.legende{position:absolute;right:-12px;top:-22px;background:var(--brun);color:var(--sur-brun);font-size:15px;padding:8px 14px;border-radius:8px;rotate:2deg;box-shadow:var(--ombre)}
+.heros-texte{grid-column:1 / 5;grid-row:3;margin-top:34px}
+.heros-texte p{font-size:18px;color:var(--encre-2)}
+.heros-texte .boutons{margin-top:30px}
+
+/* Bandeau des zones */
+.zones{padding:0 0 24px}
+.zones .bloc{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:48px;align-items:center;background:var(--surface);border-radius:20px;padding:34px 40px;box-shadow:var(--ombre)}
+.zones .titre strong{display:block;font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:600;font-size:34px;line-height:1.05}
+.zones .titre span{display:block;margin-top:6px;font-size:16px;color:var(--encre-2)}
+.villes{display:flex;flex-wrap:wrap;gap:8px}
+.villes li{padding:6px 14px;border-radius:999px;background:var(--fond);font-family:var(--display);font-weight:500;font-size:16px}
+.villes li.ici{background:var(--brun);color:var(--sur-brun)}
+.zones .faits{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:16px;color:var(--encre-2)}
+.zones .faits b{color:var(--encre);font-weight:600}
+
+/* Qui sommes-nous */
+.qui-sommes{padding:120px 0 40px}
+.qui-sommes .cadre{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.qui-sommes .texte p{color:var(--encre-2)}
+.qui-sommes .texte p+p{margin-top:14px}
+.citation{padding:72px 0 120px}
+.citation blockquote{margin:0;max-width:1000px}
+.citation p{font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:500;font-size:clamp(32px, 4.6vw, 64px);line-height:1.04;letter-spacing:-.02em}
+.citation p span{color:var(--laiton)}
+.citation small{display:block;margin-top:18px;font-size:17px;color:var(--encre-2)}
+
+/* Serrurerie */
+.serrurerie{background:var(--fond-2);padding:120px 0}
+.serrurerie .cadre{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:80px;align-items:start}
+.serrurerie h2{margin-bottom:22px}
+.serrurerie .intro{color:var(--encre-2);max-width:32em}
+.serrurerie h3{margin:36px 0 14px;font-size:22px}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puces li{padding:7px 14px;border-radius:999px;background:var(--surface);font-size:16px;box-shadow:0 10px 22px -18px rgba(35,24,14,.6)}
+.types{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:12px 28px}
+.types li{font-size:17px;color:var(--encre-2);padding-left:20px;position:relative}
+.types li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;border:2px solid var(--laiton)}
+.types b{color:var(--encre);font-weight:600}
+.serrurerie .lien{display:inline-block;margin-top:32px;font-family:var(--display);font-weight:600;font-size:17px;text-underline-offset:5px}
+.cote{position:relative;padding-top:20px}
+.polaroid{margin:0 0 0 auto;width:min(300px, 100%);background:var(--surface);padding:12px 12px 16px;border-radius:12px;box-shadow:var(--ombre-longue);rotate:2deg}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
+.polaroid figcaption{margin-top:12px;font-size:16px;line-height:1.4;color:var(--encre-2)}
+.blindee{margin-top:48px;background:var(--surface);border-radius:18px;padding:30px 32px;box-shadow:var(--ombre)}
+.blindee h3{margin:0 0 10px;font-size:24px}
+.blindee p{font-size:17px;color:var(--encre-2)}
+.blindee p+p{margin-top:10px}
+
+/* Dépannage, section brun noir */
+.depannage{background:var(--brun);color:var(--sur-brun);padding:128px 0}
+.depannage .haut{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:end}
+.depannage h2{color:var(--sur-brun)}
+.depannage .haut p{margin-top:20px;color:var(--sur-brun-2);max-width:30em}
+.numero{display:block;font-family:var(--display);font-variation-settings:"wdth" 76;font-weight:600;font-size:clamp(42px, 8.6vw, 128px);line-height:.95;letter-spacing:-.02em;color:var(--laiton-clair);text-decoration:none}
+.numero:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:10px}
+.depannage .sous{margin-top:16px;font-size:17px;color:var(--sur-brun-2)}
+.conseils{margin-top:80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-top:1px solid rgba(243,238,230,.16)}
+.conseils div{padding:34px 48px 0 0}
+.conseils div+div{padding:34px 0 0 48px;border-left:1px solid rgba(243,238,230,.16)}
+.conseils h3{color:var(--sur-brun);font-size:24px;margin-bottom:10px}
+.conseils p{font-size:17px;color:var(--sur-brun-2)}
+
+/* Menuiserie */
+.menuiserie{padding:136px 0 112px}
+.menuiserie .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.menuiserie figure{margin:0;position:relative}
+.menuiserie figure img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:22px;box-shadow:var(--ombre-longue)}
+.etiquette{position:absolute;left:18px;bottom:18px;padding:8px 15px;border-radius:999px;background:rgba(246,242,236,.95);font-family:var(--display);font-weight:600;font-size:16px;line-height:1.3;color:var(--encre);max-width:calc(100% - 36px)}
+.menuiserie h2{margin-bottom:22px}
+.menuiserie .texte>p{color:var(--encre-2);max-width:32em}
+.menuiserie .texte>p+p{margin-top:14px}
+.matieres{margin-top:28px;display:grid;grid-template-columns:repeat(3, minmax(0,1fr));border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.matieres li{padding:16px 0;font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:600;font-size:26px;text-align:center}
+.matieres li+li{border-left:1px solid var(--trait)}
+.menuiserie .lien{display:inline-block;margin-top:28px;font-family:var(--display);font-weight:600;font-size:17px;text-underline-offset:5px}
+
+/* Vitrerie et volets */
+.vitres{padding:0 0 136px}
+.vitres .cadre{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:32px;align-items:stretch}
+.plaque{background:var(--surface);border-radius:22px;padding:44px;box-shadow:var(--ombre)}
+.vitrerie{display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:36px;align-items:start}
+.vitrerie img{width:100%;aspect-ratio:1181/943;object-fit:cover;border-radius:12px;box-shadow:var(--ombre);rotate:-1.5deg}
+.plaque h2{font-size:clamp(30px, 3vw, 40px);margin-bottom:14px}
+.plaque p{font-size:17px;color:var(--encre-2)}
+.plaque p+p{margin-top:10px}
+.plaque ul{margin-top:16px;display:grid;gap:6px}
+.plaque ul li{font-size:17px;padding-left:20px;position:relative}
+.plaque ul li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;border:2px solid var(--laiton)}
+.plaque .lien{display:inline-block;margin-top:20px;font-family:var(--display);font-weight:600;font-size:17px;text-underline-offset:5px}
+.volets{background:var(--fond-2);box-shadow:none}
+.volets .paire{display:flex;gap:14px;margin-bottom:26px}
+.volets .paire img{width:min(120px, 46%);aspect-ratio:1/2;object-fit:cover;border-radius:12px;box-shadow:var(--ombre)}
+.volets .paire img+img{margin-top:28px}
+
+/* Contact */
+.contact{padding:0 0 136px}
+.contact .bloc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;border-top:1px solid var(--trait);padding-top:96px}
+.contact h2{margin-bottom:20px}
+.contact .bloc>div>p{color:var(--encre-2);max-width:30em}
+.contact .boutons{margin-top:30px}
+.fiche{background:var(--surface);border-radius:20px;padding:40px 44px;box-shadow:var(--ombre-longue)}
+.fiche dl{margin:0}
+.fiche dl>div{display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:20px;padding:16px 0;border-top:1px solid var(--trait)}
+.fiche dl>div:first-child{border-top:0;padding-top:0}
+.fiche dt{font-family:var(--display);font-weight:600;font-size:16px;color:var(--encre-2)}
+.fiche dd{margin:0;font-size:18px;overflow-wrap:anywhere}
+.fiche dd a{text-underline-offset:4px}
+
+/* Pied de page */
+.pied{background:var(--pied);color:var(--sur-brun);padding:84px 0 40px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-variation-settings:"wdth" 80;font-weight:700;font-size:40px;line-height:1}
+.pied .devise{margin-top:14px;color:var(--sur-brun-2);font-size:16px;max-width:22em}
+.pied h3{font-family:var(--display);font-variation-settings:"wdth" 100;font-size:16px;font-weight:600;color:var(--sur-brun-2);margin-bottom:14px}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied li+li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(243,238,230,.3);overflow-wrap:anywhere;transition:border-color .2s ease}
+.pied a:hover{border-color:var(--laiton-clair)}
+.pied-bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(243,238,230,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:16px;color:var(--sur-brun-2)}
+.proposition{background:#15100C;color:#A49686;text-align:center;font-size:14px;padding:14px 20px;margin:0}
+
+/* Apparitions, photos seulement */
+.js .apparait{opacity:0;translate:0 26px;transition:opacity .9s ease, translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .bouton,.appel{transition:none}
+  .bouton:hover{transform:none}
+}
+
+@media (max-width:1080px){
+  .nav a.secondaire{display:none}
+  .porte{grid-column:6 / 13}
+  .heros-texte,.heros .qui{grid-column:1 / 6}
+  .zones .bloc{grid-template-columns:minmax(0,1fr);gap:22px}
+  .serrurerie .cadre,.menuiserie .cadre,.qui-sommes .cadre,.depannage .haut,.contact .bloc{gap:56px}
+  .vitres .cadre{grid-template-columns:minmax(0,1fr)}
+  .pied-grille{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .nav a:not(.appel){display:none}
+  .heros{padding:32px 0 72px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr)}
+  .heros .qui,.heros h1,.porte,.heros-texte{grid-column:1;grid-row:auto}
+  .heros .qui{margin-bottom:12px}
+  .porte{margin:-10px 0 0;z-index:1}
+  .porte figcaption.legende{right:8px;left:auto;top:auto;bottom:-20px;rotate:1.5deg}
+  .porte .tag{bottom:34px}
+  .heros-texte{margin-top:40px}
+  .qui-sommes .cadre,.serrurerie .cadre,.menuiserie .cadre,.depannage .haut,.contact .bloc,.conseils{grid-template-columns:minmax(0,1fr)}
+  .conseils div,.conseils div+div{padding:28px 0 0;border-left:0}
+  .conseils div+div{margin-top:28px;border-top:1px solid rgba(243,238,230,.16)}
+  .polaroid{margin:0}
+  .qui-sommes{padding-top:88px}
+  .serrurerie,.depannage{padding:96px 0}
+  .menuiserie{padding:96px 0 88px}
+  .contact .bloc{padding-top:72px}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .heros-texte p{font-size:18px}
+  .heros h1{font-size:clamp(44px, 13.4vw, 72px)}
+  .porte .tag{bottom:12px;font-size:15px;padding:6px 12px}
+  .porte .avant{left:10px}
+  .porte .apres{left:calc(50% + 10px)}
+  .zones .bloc{padding:28px 22px}
+  .types{grid-template-columns:minmax(0,1fr)}
+  .blindee{padding:26px 22px}
+  .plaque{padding:30px 22px}
+  .vitrerie{grid-template-columns:minmax(0,1fr)}
+  .vitrerie img{max-width:260px}
+  .matieres li{font-size:22px}
+  .fiche{padding:28px 22px}
+  .fiche dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:420px){
+  .marque b{font-size:26px}
+  .marque span{font-size:14px}
+  .appel{padding:9px 15px}
+  .appel .long{display:none}
+  .appel .court{display:inline}
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut"><b>A2I</b><span>Serrurier, vitrier, menuisier</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#serrurerie">Serrurerie</a>
+      <a href="#vitrerie">Vitrerie</a>
+      <a href="#menuiserie">Menuiserie</a>
+      <a class="secondaire" href="#volets">Volets roulants</a>
+      <a href="#contact">Contact</a>
+      <a class="appel" href="tel:+33621879443"><span class="long">06 21 87 94 43</span><span class="court">Appeler</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <p class="qui">Artisan à Montélimar, en Drôme et en Ardèche</p>
+      <h1><span class="l">Serrurerie,</span><br><span class="l">vitrerie et</span><br><span class="l laiton">menuiserie</span><br><span class="l">à Montélimar.</span></h1>
+      <figure class="porte">
+        <img src="assets/a2i-dm-serrurerie-montelimar/porte-entree-bois-avant-apres-montelimar.webp" alt="Une porte d'entrée remplacée : à gauche l'ancienne porte bordeaux à caissons, à droite la porte neuve en bois verni à deux panneaux" width="1600" height="1600" fetchpriority="high">
+        <span class="tag avant">Avant</span>
+        <span class="tag apres">Après</span>
+        <figcaption class="legende">Rénovation d'une porte d'entrée</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p>Nous intervenons à Montélimar et alentours rapidement pour l'ouverture d'une porte claquée ou bloquée, après une perte ou un vol de clés, une effraction ou un cambriolage. Particuliers ou professionnels, contactez-nous.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+33621879443">Appeler le 06 21 87 94 43</a>
+          <a class="bouton contour" href="#serrurerie">Découvrir nos services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zones" aria-label="Zone d'intervention">
+    <div class="cadre">
+      <div class="bloc">
+        <div class="titre">
+          <strong>Drôme et Ardèche</strong>
+          <span>Montélimar et alentours</span>
+        </div>
+        <div>
+          <ul class="villes">
+            <li class="ici">Montélimar</li>
+            <li>Bollène</li>
+            <li>Pierrelatte</li>
+            <li>Valence</li>
+            <li>Saint-Paul-Trois-Châteaux</li>
+            <li>Livron</li>
+            <li>Loriol</li>
+            <li>Aubenas</li>
+            <li>Le Teil</li>
+            <li>Cruas</li>
+          </ul>
+          <p class="faits"><span><b>Particuliers</b> et <b>professionnels</b></span><span><b>Transparence totale</b> sur les prix</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="qui-sommes" id="services">
+    <div class="cadre">
+      <h2>Qui sommes-nous&nbsp;?</h2>
+      <div class="texte">
+        <p>Artisan en menuiserie, serrurerie et vitrerie, à votre service. Nous nous chargeons de la pose ou du remplacement de tous types de serrures, vitrages, contrôle d'accès, grilles de défense ou portes blindées.</p>
+        <p>Menuisier de métier, nous intervenons également pour le dépannage, la pose ou le remplacement de volets roulants et de toutes les menuiseries extérieures&nbsp;: porte d'entrée, fenêtre, porte de garage, grille de défense.</p>
+        <p>Nous mettons en &#x153;uvre tous les moyens à notre disposition pour la satisfaction de nos clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="citation">
+    <div class="cadre">
+      <blockquote>
+        <p>Transparence totale sur les prix, <span>pas de mauvaise surprise</span>.</p>
+        <small>A2I, Montélimar</small>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="serrurerie" id="serrurerie">
+    <div class="cadre">
+      <div>
+        <h2>Serrurerie</h2>
+        <p class="intro">Basée à Montélimar, A2I met tout son savoir-faire à votre service pour vous dépanner et vous apporter les solutions les plus adéquates&nbsp;: pose de tous types de serrures, dépannages express.</p>
+        <h3>Nous intervenons pour</h3>
+        <ul class="puces">
+          <li>serrure fracturée</li>
+          <li>porte verrouillée</li>
+          <li>porte claquée</li>
+          <li>clé oubliée</li>
+          <li>perte de clé</li>
+          <li>vol de clé</li>
+          <li>clé cassée dans le cylindre</li>
+          <li>clé qui n'entre plus dans la serrure</li>
+        </ul>
+        <h3>Pose ou remplacement de vos serrures</h3>
+        <ul class="types">
+          <li><b>Encastrable</b>, posée dans l'épaisseur de la porte</li>
+          <li><b>En applique</b>, avec un boîtier apparent</li>
+          <li><b>Carénée</b>, qui masque la tringlerie</li>
+          <li><b>Avec poignée</b>, pour les portes intérieures</li>
+          <li><b>Serrure 3 points</b> renforcée</li>
+          <li><b>Poignée anti-effraction</b>, barre de pivot</li>
+          <li><b>Serrure anti-panique</b>, ferme-porte</li>
+          <li><b>Cylindre, barillet</b>, verrou</li>
+        </ul>
+        <a class="lien" href="https://www.a2i-serruriervitrier.fr/serrurerie/">La page Serrurerie</a>
+      </div>
+      <div class="cote">
+        <figure class="polaroid apparait">
+          <img src="assets/a2i-dm-serrurerie-montelimar/serrure-porte-palliere-avant-apres.webp" alt="Avant et après sur une porte en bois : ancienne poignée sur plaque noire, puis serrure neuve avec béquille alu et cylindre" width="1600" height="1600" loading="lazy">
+          <figcaption>Une vieille poignée remplacée par une serrure neuve, plaque et béquille alu.</figcaption>
+        </figure>
+        <div class="blindee">
+          <h3>Porte blindée et blindage de porte</h3>
+          <p>Particulier, vous souhaitez installer une porte blindée ou blinder votre porte d'entrée, en respectant les règles de votre copropriété. Professionnel, vous voulez remplacer une porte de service par un bloc porte blindé.</p>
+          <p>Nous trouvons le produit adapté à votre besoin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="depannage" id="depannage">
+    <div class="cadre">
+      <div class="haut">
+        <div>
+          <h2>Porte claquée, clés perdues, effraction&nbsp;?</h2>
+          <p>Il n'est pas facile d'être sûr de faire appel à un serrurier honnête quand on est dans l'urgence. A2I répond à toutes vos questions par téléphone avant d'arriver sur les lieux.</p>
+        </div>
+        <div>
+          <a class="numero" href="tel:+33621879443">06 21 87 94 43</a>
+          <p class="sous">Montélimar et alentours, en Drôme et en Ardèche.</p>
+        </div>
+      </div>
+      <div class="conseils">
+        <div>
+          <h3>Après un cambriolage</h3>
+          <p>Vous pouvez demander le remboursement de votre facture à votre assurance habitation. Conservez l'ancienne serrure pour prouver à l'expert qu'elle a été fracturée.</p>
+        </div>
+        <div>
+          <h3>Après une perte ou un vol de clés</h3>
+          <p>L'assurance de votre carte bancaire peut prendre en charge les frais liés à l'intervention du serrurier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menuiserie" id="menuiserie">
+    <div class="cadre">
+      <figure class="apparait">
+        <img src="assets/a2i-dm-serrurerie-montelimar/fenetres-alu-posees-chantier-neuf.webp" alt="Quatre fenêtres neuves posées sur un chantier de maison en parpaings, encore protégées par leurs films" width="1600" height="1600" loading="lazy">
+        <figcaption class="etiquette">Neuf&nbsp;: fenêtres posées sur un chantier de maison</figcaption>
+      </figure>
+      <div class="texte">
+        <h2>Menuiserie</h2>
+        <p>Basée à Montélimar, A2I est spécialisée dans la vente et la pose de menuiseries extérieures. Nous installons vos menuiseries neuves ou remplaçons les anciennes, sur mesure, en alliant qualité, performances et esthétique.</p>
+        <p>Porte d'entrée, fenêtre, porte-fenêtre, baie vitrée, galandage, porte de garage sectionnelle, garde-corps. La porte du haut de cette page est l'une de nos rénovations.</p>
+        <ul class="matieres">
+          <li>Bois</li>
+          <li>PVC</li>
+          <li>Alu</li>
+        </ul>
+        <a class="lien" href="https://www.a2i-serruriervitrier.fr/menuiserie/">La page Menuiserie</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vitres">
+    <div class="cadre">
+      <div class="plaque vitrerie" id="vitrerie">
+        <img class="apparait" src="assets/a2i-dm-serrurerie-montelimar/vitre-porte-cassee-avant-apres.webp" alt="Avant et après : le vitrage cassé d'une porte de service, puis le vitrage neuf posé" width="1600" height="1277" loading="lazy">
+        <div>
+          <h2>Vitrerie</h2>
+          <p>Votre artisan vitrier en urgence ou sur rendez-vous à Montélimar (26), pour le remplacement d'une vitre cassée, un dépannage de miroiterie ou le remplacement d'un double vitrage.</p>
+          <p>Une vitrerie sur mesure pour portes en verre, baies vitrées, fenêtres, vitrines&nbsp;:</p>
+          <ul>
+            <li>simple, double ou triple vitrage</li>
+            <li>verre feuilleté de sécurité</li>
+            <li>verre dépoli et opaque</li>
+          </ul>
+          <a class="lien" href="https://www.a2i-serruriervitrier.fr/vitrerie/">La page Vitrerie</a>
+        </div>
+      </div>
+      <div class="plaque volets" id="volets">
+        <div class="paire">
+          <img class="apparait" src="assets/a2i-dm-serrurerie-montelimar/volet-roulant-gris-baie-vitree.webp" alt="Volet roulant gris anthracite à moitié descendu devant une porte-fenêtre" width="800" height="1600" loading="lazy">
+          <img class="apparait" src="assets/a2i-dm-serrurerie-montelimar/rideau-metallique-porte-vitree-local.webp" alt="Rideau métallique remonté au-dessus de la porte vitrée d'un local" width="800" height="1600" loading="lazy">
+        </div>
+        <h2>Volets roulants et rideaux métalliques</h2>
+        <p>Pose, remplacement et dépannage. Votre volet ou votre rideau ne monte plus, ne descend plus, se ferme mais s'ouvre difficilement&nbsp;: nous avons la solution.</p>
+        <a class="lien" href="https://www.a2i-serruriervitrier.fr/volets-roulants-et-rideaux-metalliques/">La page Volets roulants</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <div class="bloc">
+        <div>
+          <h2>Que vous soyez un particulier ou un professionnel, contactez-nous.</h2>
+          <p>Un dépannage, une serrure, une vitre, une porte ou une fenêtre à poser&nbsp;: appelez-nous, ou demandez votre devis par e-mail. Nous vous recontactons le plus rapidement possible.</p>
+          <div class="boutons">
+            <a class="bouton plein" href="tel:+33621879443">Appeler le 06 21 87 94 43</a>
+            <a class="bouton contour" href="mailto:menuiseriea2i@gmail.com?subject=Demande%20de%20devis">Demander un devis</a>
+          </div>
+        </div>
+        <div class="fiche">
+          <dl>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33621879443">06 21 87 94 43</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:menuiseriea2i@gmail.com">menuiseriea2i@gmail.com</a></dd></div>
+            <div><dt>Adresse</dt><dd>Rue Louis Delage<br>26200 Montélimar</dd></div>
+            <div><dt>Devis</dt><dd><a href="https://www.a2i-serruriervitrier.fr/contact/">Le formulaire de devis</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">A2I</p>
+        <p class="devise">Serrurerie, vitrerie et menuiserie à Montélimar, en Drôme et en Ardèche.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33621879443">06 21 87 94 43</a></li>
+          <li><a href="mailto:menuiseriea2i@gmail.com">menuiseriea2i@gmail.com</a></li>
+          <li>Rue Louis Delage, 26200 Montélimar</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nos services</h3>
+        <ul>
+          <li><a href="#serrurerie">Serrurerie</a></li>
+          <li><a href="#vitrerie">Vitrerie</a></li>
+          <li><a href="#menuiserie">Menuiserie</a></li>
+          <li><a href="#volets">Volets roulants et rideaux métalliques</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="https://www.a2i-serruriervitrier.fr/contact/">Demande de devis</a></li>
+          <li><a href="https://www.a2i-serruriervitrier.fr/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>A2I Serrurier Vitrier, Montélimar (26)</span>
+      <span>SIRET 89151075200019</span>
+    </div>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour A2I Serrurier Vitrier</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

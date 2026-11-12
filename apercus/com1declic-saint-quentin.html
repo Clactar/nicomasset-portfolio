@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Com'1 Déclic, Grégory Portelette, photographe professionnel à Saint-Quentin</title>
+<meta name="description" content="Grégory Portelette, photographe professionnel à Saint-Quentin (Aisne) depuis plus de 10 ans : photo d'entreprise, portrait, packshot, reportage, mariage, famille, bébé, grossesse. Studio rue du Poitou, sur rendez-vous.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F1C1A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23F7F5F2'%3EG%3C/text%3E%3Ccircle cx='50' cy='14' r='5' fill='%23A3312B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#ECE9E5; --fond-2:#E3DFD9; --surface:#F7F5F2; --papier:#FBFAF8;
+  --encre:#1F1C1A; --encre-2:#55504B; --laque:#A3312B;
+  --noir:#1A1715; --noir-2:#262220; --noir-3:#312C29; --sur-noir:#EFEBE6; --sur-noir-2:#B4ADA6;
+  --display:'Cormorant', Garamond, Georgia, serif; --texte:'Jost', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -32px rgba(31,28,26,.55);
+  --ombre-longue:0 50px 90px -40px rgba(31,28,26,.6);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+::selection{background:var(--laque);color:var(--papier)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;line-height:1.02;text-wrap:balance}
+h1,h2,h3,.marque b,.faits b,.coord,.pied .nom,.studio-adresse,.case .vue.vide span{font-variant-numeric:lining-nums}
+p{margin:0}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:12px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 26px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease}
+.bouton.plein{background:var(--encre);color:var(--papier);box-shadow:0 14px 28px -18px rgba(31,28,26,.9)}
+.bouton.plein:hover{background:#3A3532;transform:translateY(-2px)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--papier);transform:translateY(-2px)}
+
+/* En-tête */
+.entete{padding:22px 0}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.05}
+.marque b{display:block;font-family:var(--display);font-weight:600;font-size:32px}
+.marque span{display:block;font-size:16px;color:var(--encre-2);margin-top:3px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:hover{color:var(--encre)}
+.nav .tel{background:var(--surface);color:var(--encre);padding:11px 20px;border-radius:999px;font-weight:500;box-shadow:0 10px 24px -18px rgba(31,28,26,.6)}
+
+/* Héros */
+.heros{padding:40px 0 90px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"titre visuel" "suite visuel";column-gap:56px}
+.heros-titre{grid-area:titre;align-self:end}
+.heros-suite{grid-area:suite}
+.heros-visuel{grid-area:visuel;align-self:center}
+.chapeau{font-size:17px;font-weight:500;color:var(--encre-2);margin-bottom:18px}
+.heros h1{font-size:clamp(46px, 7.4vw, 112px);font-weight:500;letter-spacing:-.015em;line-height:.95}
+.heros h1 em{font-style:italic;color:var(--laque)}
+.heros-suite > p{margin-top:28px;font-size:19px;color:var(--encre-2);max-width:32em}
+.heros-suite .boutons{margin-top:30px}
+.fiche{margin-top:30px;display:grid;grid-template-columns:repeat(3, minmax(0,auto));justify-content:start;gap:8px 32px;padding:20px 24px;background:var(--surface);border-radius:18px;box-shadow:0 24px 50px -40px rgba(31,28,26,.6);font-size:16px}
+.fiche small{display:block;color:var(--encre-2);font-size:16px}
+.fiche a{font-weight:500;text-decoration:none;overflow-wrap:anywhere}
+.fiche a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Tirages du héros */
+.tirages{position:relative;width:100%;max-width:560px;margin-inline:auto;aspect-ratio:1/1.02}
+.tirage{position:absolute;margin:0;background:var(--papier);padding:2.4% 2.4% 2.4%;box-shadow:var(--ombre-longue), 0 2px 4px rgba(31,28,26,.08);border-radius:3px}
+.tirage img{width:100%;object-fit:cover;object-position:50% 0}
+.t-nuit{left:0;top:4%;width:58%;transform:rotate(-6deg);z-index:1}
+.t-nuit img{aspect-ratio:800/515}
+.t-danse{right:0;top:0;width:46%;transform:rotate(5deg);z-index:2}
+.t-danse img{aspect-ratio:800/740}
+.t-soleil{left:9%;bottom:2%;width:min(420px, 78%);transform:rotate(-1.5deg);z-index:3}
+.t-soleil img{aspect-ratio:800/515}
+.etiquette{position:absolute;left:5.5%;bottom:7%;background:rgba(251,250,248,.94);color:var(--encre);font-size:16px;font-weight:500;padding:6px 14px;border-radius:999px;line-height:1.3}
+
+/* Bandeau de faits */
+.faits{border-block:1px solid rgba(31,28,26,.12);background:var(--surface)}
+.faits ul{list-style:none;margin:0 auto;padding:28px 0;display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:var(--display);font-weight:600;font-size:34px;line-height:1.05}
+.faits span{font-size:16px;color:var(--encre-2);margin-top:4px}
+
+/* Planche contact, fond chambre noire */
+.chambre{background:var(--noir);color:var(--sur-noir);padding:120px 0 110px}
+.chambre-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end;margin-bottom:56px}
+.chambre h2{font-size:clamp(40px, 5vw, 68px)}
+.chambre-tete p{color:var(--sur-noir-2)}
+.planche{background:var(--noir-2);border-radius:14px;padding:30px 26px;box-shadow:inset 0 0 0 1px rgba(239,235,230,.05), 0 50px 80px -50px rgba(0,0,0,.9);position:relative}
+.planche::before,.planche::after{content:"";position:absolute;left:26px;right:26px;height:8px;background:radial-gradient(circle at 6px 4px, var(--noir) 3px, transparent 3.5px) 0 0/22px 8px repeat-x;opacity:.9}
+.planche::before{top:10px}
+.planche::after{bottom:10px}
+.bande{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8, minmax(0,1fr));gap:14px}
+.case{display:flex;flex-direction:column;position:relative}
+.case .vue{position:relative;aspect-ratio:4/5;background:var(--papier);padding:6px;border-radius:2px;box-shadow:0 18px 30px -18px rgba(0,0,0,.9)}
+.case .vue img{width:100%;height:100%;object-fit:cover}
+.case .vue.vide{display:grid;place-items:center;background:var(--noir-3);padding:10px;text-align:center}
+.case .vue.vide span{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--sur-noir)}
+.case .num{font-size:16px;color:var(--sur-noir-2);margin-top:10px;font-variant-numeric:tabular-nums}
+.case b{font-weight:500;font-size:16px;line-height:1.3;color:var(--sur-noir)}
+.case.entouree .vue::after{content:"";position:absolute;inset:-12px -10px;border:2.5px solid var(--laque);border-radius:48% 52% 46% 54% / 54% 46% 54% 46%;transform:rotate(-4deg);pointer-events:none}
+.textes-specialites{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;margin-top:72px}
+.textes-specialites h3{font-size:34px;margin-bottom:22px}
+.textes-specialites dl{margin:0}
+.textes-specialites dt{font-weight:500;color:var(--sur-noir);margin-top:18px}
+.textes-specialites dt:first-child{margin-top:0}
+.textes-specialites dd{margin:2px 0 0;color:var(--sur-noir-2);font-size:17px}
+.textes-specialites a{color:var(--sur-noir)}
+
+/* Mariage */
+.mariage{padding:130px 0 110px}
+.mariage .cadre{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:80px;align-items:center}
+.mariage h2{font-size:clamp(40px, 5vw, 66px);margin-bottom:28px}
+.mariage-texte p{color:var(--encre-2);max-width:34em}
+.mariage-texte p + p{margin-top:16px}
+.citation{margin:36px 0 0;padding-left:0;font-family:var(--display);font-size:clamp(26px, 2.6vw, 34px);line-height:1.2;color:var(--encre);max-width:20em}
+.mosaique{position:relative;min-height:540px}
+.mosaique figure{position:absolute;margin:0;background:var(--papier);padding:10px;box-shadow:var(--ombre);border-radius:3px}
+.mosaique img{width:100%;object-fit:cover;object-position:50% 0}
+.m1{left:0;top:0;width:min(360px, 70%);transform:rotate(-3deg);z-index:2}
+.m1 img{aspect-ratio:800/515}
+.m2{right:0;top:150px;width:min(330px, 64%);transform:rotate(4deg);z-index:3}
+.m2 img{aspect-ratio:800/500}
+.m3{left:6%;bottom:0;width:min(340px, 66%);transform:rotate(-1deg);z-index:1}
+.m3 img{aspect-ratio:800/515}
+.mosaique .etiquette{left:20px;bottom:20px}
+
+/* Studio */
+.studio{padding:0 0 130px}
+.studio-carte{background:var(--surface);border-radius:28px;padding:64px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;box-shadow:0 40px 80px -60px rgba(31,28,26,.6)}
+.studio-adresse b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(56px, 7vw, 96px);line-height:.9}
+.studio-adresse span{display:block;font-family:var(--display);font-size:clamp(28px, 3vw, 38px);line-height:1.1;margin-top:10px}
+.studio-adresse p{margin-top:22px;color:var(--encre-2)}
+.studio h2{font-size:clamp(34px, 3.8vw, 50px);margin-bottom:20px}
+.studio-texte p{color:var(--encre-2)}
+.studio-texte p + p{margin-top:14px}
+.studio-texte .boutons{margin-top:28px}
+
+/* Contact */
+.contact{padding:0 0 130px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.contact h2{font-size:clamp(40px, 5vw, 66px);margin-bottom:20px}
+.contact-intro p{color:var(--encre-2);max-width:28em}
+.coord{list-style:none;margin:0;padding:0}
+.coord li{padding:22px 0;border-top:1px solid rgba(31,28,26,.14)}
+.coord li:first-child{padding-top:0;border-top:0}
+.coord small{display:block;font-size:16px;color:var(--encre-2)}
+.coord a,.coord strong{font-family:var(--display);font-weight:600;font-size:32px;line-height:1.2;text-decoration:none;overflow-wrap:anywhere}
+.coord a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+
+/* Pied de page */
+.pied{background:var(--noir);color:var(--sur-noir);padding:80px 0 34px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-weight:600;font-size:34px;line-height:1.05}
+.pied .devise{margin-top:14px;color:var(--sur-noir-2);font-size:16px;max-width:22em}
+.pied h3{font-family:var(--texte);font-weight:500;font-size:16px;color:var(--sur-noir-2);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied p,.pied li{font-size:16px;line-height:1.6}
+.pied li + li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(239,235,230,.3);transition:border-color .2s ease}
+.pied a:hover{border-color:var(--sur-noir)}
+.pied-bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(239,235,230,.12);font-size:16px;color:var(--sur-noir-2)}
+.proposition{background:#100E0D;color:#A39C95;text-align:center;font-size:14px;padding:14px 20px;margin:0}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;translate:0 24px;transition:opacity .9s ease, translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .bouton{transition:none}
+  .bouton:hover{transform:none}
+}
+
+/* Tablette */
+@media (max-width:1080px){
+  .bande{grid-template-columns:repeat(4, minmax(0,1fr));row-gap:28px}
+  .fiche{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .studio-carte{padding:48px}
+}
+@media (max-width:860px){
+  .nav a:not(.tel){display:none}
+  .heros{padding:20px 0 72px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "suite"}
+  .heros-visuel{margin-top:28px}
+  .tirages{max-width:480px}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .chambre{padding:84px 0}
+  .chambre-tete,.textes-specialites,.mariage .cadre,.studio-carte,.contact .cadre{grid-template-columns:minmax(0,1fr);gap:28px}
+  .textes-specialites{gap:48px;margin-top:56px}
+  .mariage{padding:90px 0}
+  .mariage .cadre{gap:56px}
+  .mosaique{min-height:0;height:min(120vw, 560px)}
+  .m2{top:30%}
+  .studio-carte{padding:40px 28px;border-radius:24px}
+}
+@media (max-width:520px){
+  body{font-size:17px}
+  .cadre{width:min(1200px, 100% - 36px)}
+  .marque b{font-size:28px}
+  .marque span{display:none}
+  .entete .cadre{flex-wrap:nowrap}
+  .nav .tel{padding:10px 16px}
+  .fiche{grid-template-columns:minmax(0,1fr);padding:18px 20px}
+  .faits ul{gap:18px}
+  .faits b{font-size:28px}
+  .planche{padding:28px 16px}
+  .planche::before,.planche::after{left:16px;right:16px}
+  .bande{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .coord a,.coord strong{font-size:26px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:420px){
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .mosaique{height:132vw}
+  .etiquette{padding:5px 11px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" id="haut">
+      <b>Com'1 Déclic</b>
+      <span>Grégory Portelette, photographe</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#specialites">Spécialités</a>
+      <a href="#mariage">Mariage</a>
+      <a href="#studio">Le studio</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33681455334">06 81 45 53 34</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="heros">
+  <div class="cadre">
+    <div class="heros-titre">
+      <p class="chapeau">Grégory Portelette, photographe professionnel à Saint-Quentin</p>
+      <h1>Des photos qui vous <em>ressemblent</em>.</h1>
+    </div>
+    <div class="heros-visuel">
+      <div class="tirages">
+        <figure class="tirage t-nuit apparait"><img src="assets/com1declic-saint-quentin/maries-nuit-place-sapins-lumineux.webp" width="800" height="565" alt="De nuit, le marié porte la mariée sur une place pavée, devant une mairie illuminée et des sapins de lumière"></figure>
+        <figure class="tirage t-danse apparait"><img src="assets/com1declic-saint-quentin/maries-danse-jardin-maison-briques.webp" width="800" height="800" alt="Le marié fait tourner la mariée sur une pelouse, devant une maison de maître en briques"></figure>
+        <figure class="tirage t-soleil apparait"><img src="assets/com1declic-saint-quentin/maries-coucher-de-soleil-bord-de-l-eau.webp" width="800" height="565" alt="Les mariés enlacés au bord de l'eau au coucher du soleil, la mariée tient un bouquet de roses"><span class="etiquette">Mariage, au coucher du soleil</span></figure>
+      </div>
+    </div>
+    <div class="heros-suite">
+      <p>Avec plus de 10 années d'expérience, je photographie les entreprises (portraits, packshots, publicité, reportage) et les moments importants de la vie des familles&nbsp;: mariage, famille, enfants, bébé, grossesse.</p>
+      <div class="boutons">
+        <a class="bouton plein" href="tel:+33681455334">Appeler le 06 81 45 53 34</a>
+        <a class="bouton contour" href="mailto:com1declic@wanadoo.fr">Écrire un mail</a>
+      </div>
+      <div class="fiche">
+        <div><small>Mobile</small><a href="tel:+33681455334">06 81 45 53 34</a></div>
+        <div><small>Studio</small><a href="tel:+33323053590">03 23 05 35 90</a></div>
+        <div><small>Mail</small><a href="mailto:com1declic@wanadoo.fr">com1declic@wanadoo.fr</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faits" aria-label="En bref">
+  <ul class="cadre">
+    <li><b>Plus de 10 ans</b><span>de métier, photographe professionnel</span></li>
+    <li><b>40&nbsp;m²</b><span>de studio, 31 rue du Poitou</span></li>
+    <li><b>5&nbsp;min</b><span>de la sortie A26</span></li>
+    <li><b>Sur rendez-vous</b><span>uniquement, pour ne pas interrompre les séances</span></li>
+  </ul>
+</section>
+
+<section class="chambre" id="specialites">
+  <div class="cadre">
+    <div class="chambre-tete">
+      <h2>Entreprises et particuliers</h2>
+      <p>Originaire de Saint-Quentin, dans l'Aisne, mes premiers déclics furent des photos sportives&nbsp;; j'en réalise encore pour la presse régionale. Aujourd'hui, je travaille surtout pour les entreprises, et pour les familles aux moments qui comptent.</p>
+    </div>
+    <div class="planche">
+      <ol class="bande">
+        <li class="case"><div class="vue vide"><span>Entreprise</span></div><span class="num">01</span><b>Reportage photo</b></li>
+        <li class="case"><div class="vue vide"><span>Portrait</span></div><span class="num">02</span><b>Portrait corporate</b></li>
+        <li class="case"><div class="vue vide"><span>Packshot</span></div><span class="num">03</span><b>Packshot produit</b></li>
+        <li class="case"><div class="vue vide"><span>Publicité</span></div><span class="num">04</span><b>Photo publicitaire</b></li>
+        <li class="case entouree"><div class="vue apparait"><img src="assets/com1declic-saint-quentin/maries-sortie-nef-eglise.webp" width="800" height="565" alt="Sortie de cérémonie dans la nef d'une église gothique, la mariée lève son bouquet" loading="lazy" style="object-position:40% 50%"></div><span class="num">05</span><b>Mariage</b></li>
+        <li class="case"><div class="vue apparait"><img src="assets/com1declic-saint-quentin/vin-d-honneur-groupe-saut.webp" width="800" height="565" alt="Photo de groupe&nbsp;: les invités et la mariée sautent bras levés sur une pelouse" loading="lazy" style="object-position:55% 40%"></div><span class="num">06</span><b>Mariage, le vin d'honneur</b></li>
+        <li class="case"><div class="vue apparait"><img src="assets/com1declic-saint-quentin/nouveau-ne-endormi-dans-la-main.webp" width="800" height="533" alt="Nouveau-né endormi, la joue posée dans une main" loading="lazy" style="object-position:38% 50%"></div><span class="num">07</span><b>Famille, enfants et bébé</b></li>
+        <li class="case"><div class="vue vide"><span>Grossesse</span></div><span class="num">08</span><b>Grossesse et book</b></li>
+      </ol>
+    </div>
+    <div class="textes-specialites">
+      <div>
+        <h3>Pour les entreprises</h3>
+        <dl>
+          <dt>Portrait corporate</dt>
+          <dd>Vos photos portrait reflètent-elles vraiment ce que vous êtes&nbsp;? Nous prenons le temps de trouver l'image qui vous convient, pour votre entreprise et pour vous&nbsp;: dirigeants, collaborateurs, curriculum vitae, trombinoscopes.</dd>
+          <dt>Packshot et photo publicitaire</dt>
+          <dd>La mise en valeur de vos produits est essentielle pour présenter puis vendre&nbsp;: catalogues, sites marchands, plaquettes. Détourage, plusieurs possibilités de fonds.</dd>
+          <dt>Reportage photo</dt>
+          <dd>Reportage photographique pour les entreprises&nbsp;; et, depuis mes premiers déclics, des clichés sportifs pour la presse régionale.</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Pour les particuliers</h3>
+        <dl>
+          <dt>Mariage</dt>
+          <dd>Toute la journée, en restant discret&nbsp;: <a href="#mariage">voir plus bas</a>.</dd>
+          <dt>Famille, enfants et bébé</dt>
+          <dd>Rendre sur papier les évènements importants qui jalonnent la vie des familles. Parce qu'il est important que ces photos vous ressemblent, je travaille avec vous sur l'univers et les rendus.</dd>
+          <dt>Grossesse et book photo</dt>
+          <dd>Faites-vous plaisir&nbsp;: en couple, pour lui prouver qu'il ou elle est sublime, ou pour votre ado qui adore poser.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mariage" id="mariage">
+  <div class="cadre">
+    <div class="mariage-texte">
+      <h2>Le plus beau jour, à revivre toute une vie</h2>
+      <p>Nous ferons connaissance lors d'un premier rendez-vous au studio, pour bien identifier vos attentes sur vos photos de mariage, voire en créer de nouvelles qui vous ressembleront.</p>
+      <p>Mon objectif est de mettre en image vos souvenirs&nbsp;: cette journée sera si riche en émotions que les photos vous les feront revivre tout au long de votre vie.</p>
+      <p class="citation">«&nbsp;Mon expérience vous accompagnera toute la journée, et je me montrerai discret pour vous laisser vivre pleinement vos émotions.&nbsp;»</p>
+    </div>
+    <div class="mosaique">
+      <figure class="m1 apparait"><img src="assets/com1declic-saint-quentin/preparatifs-coiffure-mariee-roses.webp" width="800" height="565" alt="Préparatifs&nbsp;: chignon de la mariée piqué de roses roses" loading="lazy"></figure>
+      <figure class="m2 apparait"><img src="assets/com1declic-saint-quentin/maries-baiser-cabriolet-ancien.webp" width="800" height="565" alt="Les mariés s'embrassent debout dans un cabriolet ancien bleu clair, sur une route de campagne" loading="lazy"><span class="etiquette">Le cabriolet</span></figure>
+      <figure class="m3 apparait"><img src="assets/com1declic-saint-quentin/sortie-mairie-invites-applaudissent.webp" width="800" height="564" alt="Les mariés sortent de la mairie sous les applaudissements des invités" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="studio" id="studio">
+  <div class="cadre">
+    <div class="studio-carte">
+      <div class="studio-adresse">
+        <b>31</b>
+        <span>rue du Poitou, Saint-Quentin</span>
+        <p>À 5 minutes de la sortie A26. Ne cherchez pas une boutique&nbsp;: c'est un studio photo.</p>
+      </div>
+      <div class="studio-texte">
+        <h2>Un studio de 40&nbsp;m², au calme</h2>
+        <p>Je vous y accueille uniquement sur rendez-vous, pour ne pas interrompre les séances. Toute une gamme d'éclairages permet de créer des ambiances différentes pour vos packshots, photos de publicité et portraits.</p>
+        <p>Et pour plus de créativité, certains flashs de studio peuvent aussi sortir au milieu des champs.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+33681455334">Prendre rendez-vous</a>
+          <a class="bouton contour" href="#contact">Mes coordonnées</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="cadre">
+    <div class="contact-intro">
+      <h2>Parlons de vos photos</h2>
+      <p>Une séance au studio, un mariage, des portraits pour votre équipe&nbsp;: appelez-moi ou écrivez-moi, et nous fixons un rendez-vous.</p>
+    </div>
+    <ul class="coord">
+      <li><small>Mobile</small><a href="tel:+33681455334">06 81 45 53 34</a></li>
+      <li><small>Studio</small><a href="tel:+33323053590">03 23 05 35 90</a></li>
+      <li><small>Mail</small><a href="mailto:com1declic@wanadoo.fr">com1declic@wanadoo.fr</a></li>
+      <li><small>Studio, uniquement sur rendez-vous</small><strong>31 rue du Poitou, Saint-Quentin</strong></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">Com'1 Déclic</p>
+        <p class="devise">Grégory Portelette, photographe professionnel à Saint-Quentin, Aisne.</p>
+      </div>
+      <div>
+        <h3>Studio</h3>
+        <p>31 rue du Poitou<br>Saint-Quentin (02)<br>Sur rendez-vous</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33681455334">06 81 45 53 34</a></li>
+          <li><a href="tel:+33323053590">03 23 05 35 90</a></li>
+          <li><a href="mailto:com1declic@wanadoo.fr">Écrire un mail</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sur cette page</h3>
+        <ul>
+          <li><a href="#specialites">Spécialités</a></li>
+          <li><a href="#mariage">Mariage</a></li>
+          <li><a href="#studio">Le studio</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pied-bas">Photos&nbsp;: © Grégory Portelette, Com'1 Déclic.</p>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour Com'1 Déclic</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

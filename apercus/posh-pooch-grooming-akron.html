@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Posh Pooch Grooming Salon and Boutique · Akron, OH</title>
+<meta name="description" content="Dog grooming in Akron, Ohio, by appointment only. 1143 S Canton Rd. Call (330) 699-4104 to book.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233A1620'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23F3E5E3'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --poudre:#F3E5E3;
+  --poudre-2:#EBD8D5;
+  --surface:#FBF5F3;
+  --encre:#3A1620;
+  --encre-douce:#6E4B53;
+  --caramel:#B97A44;
+  --caramel-fonce:#9A6234;
+  --bordeaux:#3A1620;
+  --bordeaux-2:#4A1F2B;
+  --nuit:#2A0F17;
+  --sur-sombre:#F3E5E3;
+  --sur-sombre-doux:#CFB3B6;
+  --filet:#E0C9C5;
+  --ombre:0 44px 80px -44px rgba(58,22,32,.55), 0 14px 28px -18px rgba(58,22,32,.28);
+  --display:"Marcellus", Georgia, serif;
+  --texte:"Nunito Sans", "Avenir Next", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--poudre);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.62}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--caramel);color:#FFF8F2}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:90px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.marque b{font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.01em}
+.marque span{font-size:14px;color:var(--encre-douce);margin-top:2px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:16px;font-weight:600;color:var(--encre-douce)}
+.nav a:hover{color:var(--encre)}
+.nav .tel{background:var(--encre);color:var(--poudre);padding:11px 22px;border-radius:999px;white-space:nowrap;transition:background .2s ease}
+.nav .tel:hover{background:var(--caramel-fonce);color:#fff}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;text-align:center;transition:background .2s ease,color .2s ease,transform .2s ease}
+.btn-plein{background:var(--encre);color:var(--poudre);box-shadow:0 16px 30px -18px rgba(58,22,32,.8)}
+.btn-plein:hover{background:var(--caramel-fonce);color:#fff;transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--poudre)}
+.btn-caramel{background:var(--caramel);color:#2A0F17}
+.btn-caramel:hover{background:#CB8C55;transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(243,229,227,.6);color:var(--sur-sombre)}
+.btn-clair:hover{background:var(--sur-sombre);color:var(--encre)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Héros */
+.heros{padding:40px 0 0}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:center}
+.lieu{font-size:17px;font-weight:600;color:var(--caramel-fonce)}
+.heros h1{font-size:clamp(42px,5.4vw,78px);margin-top:18px;line-height:1.04}
+.heros .chapo{margin-top:24px;font-size:19.5px;max-width:30em;color:#4E2A33}
+.heros .actions{margin-top:32px}
+.note-ligne{margin-top:22px;display:flex;align-items:center;gap:10px;font-size:16.5px;color:var(--encre-douce)}
+.note-ligne b{font-family:var(--display);font-weight:400;font-size:26px;color:var(--encre);line-height:1}
+.etoiles{color:var(--caramel);letter-spacing:2px;font-size:17px}
+
+.portraits{position:relative;padding:0 0 80px 60px}
+.ovale{margin:0;border-radius:50% / 40%;overflow:hidden;aspect-ratio:4/5.3;box-shadow:0 70px 100px -60px rgba(58,22,32,.7), 0 22px 40px -26px rgba(58,22,32,.4);background:var(--poudre-2)}
+.ovale img{width:100%;height:100%;object-fit:cover;object-position:42% 62%}
+.petit-portrait{position:absolute;left:0;bottom:0;width:44%;margin:0;border-radius:50%;overflow:hidden;aspect-ratio:1/1;border:8px solid var(--surface);box-shadow:0 30px 50px -28px rgba(58,22,32,.6)}
+.petit-portrait img{width:100%;height:100%;object-fit:cover;object-position:62% 46%;transform:scale(1.35);transform-origin:64% 44%}
+.etiquette{position:absolute;right:6%;bottom:118px;background:rgba(251,245,243,.96);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:700;color:var(--encre);box-shadow:0 12px 26px -16px rgba(58,22,32,.55)}
+
+/* Faits */
+.faits{margin-top:72px}
+.faits ul{list-style:none;margin:0;padding:8px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;background:var(--surface);border-radius:999px;box-shadow:var(--ombre)}
+.faits li{padding:18px 24px;text-align:center}
+.faits li + li{border-left:1px solid var(--filet)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1}
+.faits span{display:block;font-size:15px;color:var(--encre-douce);line-height:1.35;margin-top:4px}
+
+/* Bande de chiens décalée */
+.bande{padding:130px 0 120px}
+.bande-tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:end}
+.bande h2{font-size:clamp(38px,4.4vw,60px)}
+.bande-tete p{color:var(--encre-douce);max-width:32em}
+.chiens{margin-top:64px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:start}
+.chien{margin:0;position:relative}
+.chien .photo{border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:3/4}
+.chien img{width:100%;height:100%;object-fit:cover}
+.chien figcaption{margin-top:14px;font-size:16px;color:var(--encre-douce);padding-left:6px}
+.chien figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--encre)}
+.chien:nth-child(2){margin-top:90px}
+.chien:nth-child(3){margin-top:30px}
+.chien:nth-child(4){margin-top:120px}
+.c-doodle img{object-position:62% 55%}
+.c-corgi img{object-position:50% 0;transform:scale(1.45);transform-origin:50% 0}
+.c-shih img{object-position:50% 50%;transform:scale(2.2);transform-origin:52% 28%}
+.c-chat img{object-position:45% 30%}
+
+/* Services */
+.services{padding:0 0 120px}
+.services .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.services h2{font-size:clamp(36px,4vw,54px)}
+.services .chapo{margin-top:16px;color:#4E2A33;max-width:32em}
+.prestations{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+.prestations li{padding:22px 0;border-top:1px solid var(--filet)}
+.prestations h3{font-size:26px}
+.prestations p{margin-top:6px;font-size:16.5px;color:var(--encre-douce)}
+.avant-apres{margin:0;justify-self:center;width:min(400px,100%);background:var(--surface);padding:12px 12px 16px;border-radius:22px;box-shadow:var(--ombre);transform:rotate(1.8deg)}
+.avant-apres img{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.avant-apres figcaption{padding:12px 6px 0;font-size:15.5px;color:var(--encre-douce)}
+.avant-apres figcaption b{color:var(--encre)}
+
+/* Avis */
+.avis{background:var(--poudre-2);padding:110px 0}
+.avis .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.note{position:sticky;top:32px}
+.note .chiffre{font-family:var(--display);font-size:clamp(84px,9vw,128px);line-height:.9}
+.note .etoiles{font-size:24px;letter-spacing:4px;margin-top:10px;display:block}
+.note p{margin-top:12px;color:var(--encre-douce)}
+.note a{display:inline-block;margin-top:16px;font-weight:700;text-underline-offset:3px}
+.citations{display:grid;gap:28px}
+.citations blockquote{margin:0;background:var(--surface);border-radius:28px;padding:40px 44px;box-shadow:0 30px 60px -44px rgba(58,22,32,.6)}
+.citations blockquote:nth-child(2){margin-left:12%}
+.citations p{font-family:var(--display);font-size:clamp(23px,2.3vw,30px);line-height:1.3}
+.citations footer{margin-top:16px;font-size:16px;color:var(--encre-douce)}
+.citations footer b{color:var(--encre)}
+
+/* Rendez-vous, fond bordeaux */
+.rdv{background:var(--bordeaux);color:var(--sur-sombre);padding:120px 0}
+.rdv .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+.rdv h2{font-size:clamp(40px,4.8vw,66px);color:#FBF2EF}
+.rdv .chapo{margin-top:20px;font-size:19px;color:var(--sur-sombre-doux);max-width:30em}
+.rdv .numero{display:inline-block;margin-top:30px;font-family:var(--display);font-size:clamp(40px,5vw,68px);line-height:1;text-decoration:none;white-space:nowrap;color:#FBF2EF}
+.rdv .numero:hover{color:var(--caramel)}
+.rdv .actions{margin-top:30px}
+.visite{background:var(--bordeaux-2);border-radius:28px;padding:40px}
+.visite h3{font-size:30px;color:#FBF2EF}
+.infos{list-style:none;margin:20px 0 0;padding:0}
+.infos li{display:grid;grid-template-columns:minmax(0,7em) minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid rgba(243,229,227,.14);font-size:16.5px}
+.infos .cle{color:var(--sur-sombre-doux)}
+.infos a{text-underline-offset:3px;overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:var(--nuit);color:#E9D6D4;padding:80px 0 36px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque b{color:#FBF2EF}
+.pied .marque span{color:#B99A9F}
+.pied p{margin-top:16px;color:#B99A9F;font-size:16px;max-width:26em}
+.pied h3{font-family:var(--texte);font-weight:700;font-size:15px;color:#B99A9F;margin-bottom:12px;line-height:1.3}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pied a{text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:3px}
+.pied .proposition{max-width:none;width:min(1200px,100% - 48px);margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(233,214,212,.12);font-size:13px;color:#97787D}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s cubic-bezier(.2,.7,.2,1), translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in,.vu .rv{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  *{transition:none !important}
+}
+
+@media (max-width:1000px){
+  .nav a.lien{display:none}
+  .heros .cadre{gap:40px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:28px}
+  .faits li:nth-child(3){border-left:0}
+  .bande-tete,.services .cadre,.avis .cadre,.rdv .cadre{grid-template-columns:minmax(0,1fr);gap:40px}
+  .chiens{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chien:nth-child(3){margin-top:0}
+  .chien:nth-child(4){margin-top:90px}
+  .note{position:static}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .cadre{width:min(1200px,100% - 36px)}
+  .entete .cadre{min-height:68px}
+  .marque b{font-size:23px}
+  .marque span{display:none}
+  .heros{padding-top:14px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros-texte{display:contents}
+  .heros-texte > *, .portraits{grid-column:1}
+  .lieu{order:1;font-size:15.5px}
+  .heros h1{order:2;margin-top:8px}
+  .heros .actions{order:3;margin-top:20px}
+  .portraits{order:4;margin-top:28px;padding:0 0 56px 34px}
+  .heros .chapo{order:5;margin-top:8px}
+  .note-ligne{order:6}
+  .ovale{aspect-ratio:4/4.3}
+  .petit-portrait{width:40%;border-width:6px}
+  .etiquette{bottom:76px;right:4%;font-size:14px;padding:7px 14px}
+  .faits{margin-top:48px}
+  .faits li{padding:16px 10px}
+  .faits b{font-size:24px}
+  .bande{padding:90px 0}
+  .chiens{gap:18px;margin-top:44px}
+  .chien:nth-child(2){margin-top:60px}
+  .chien:nth-child(4){margin-top:60px}
+  .chien figcaption b{font-size:19px}
+  .chien figcaption{font-size:15px}
+  .services{padding-bottom:90px}
+  .prestations{grid-template-columns:minmax(0,1fr)}
+  .avis{padding:90px 0}
+  .citations blockquote{padding:28px 24px;border-radius:22px}
+  .citations blockquote:nth-child(2){margin-left:0}
+  .rdv{padding:90px 0}
+  .visite{padding:30px 22px}
+  .infos li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .nav .tel{padding:9px 14px;font-size:14px}
+  .marque b{font-size:20px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{border-left:0 !important;border-top:1px solid var(--filet)}
+  .faits li:first-child{border-top:0}
+}
+@media (max-width:350px){
+  .marque b{font-size:18px}
+  .rdv .numero{font-size:36px}
+  .chiens{grid-template-columns:minmax(0,1fr)}
+  .chien{margin-top:0 !important}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top" aria-label="The Posh Pooch, back to top"><b>The Posh Pooch</b><span>Grooming Salon and Boutique</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="lien" href="#pups">Our pups</a>
+      <a class="lien" href="#grooming">Grooming</a>
+      <a class="lien" href="#reviews">Reviews</a>
+      <a class="lien" href="#book">Book</a>
+      <a class="tel" href="tel:+13306994104">(330) 699-4104</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <div class="heros-texte">
+        <p class="lieu">Dog grooming in Akron, Ohio</p>
+        <h1 id="titre">Your pet, pampered in a clean and loving atmosphere.</h1>
+        <p class="chapo">Quality grooming at The Posh Pooch, on S Canton Road in Akron. We work by appointment only: call us to book your pet's next visit.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+13306994104">Call to book (330) 699-4104</a>
+          <a class="btn btn-contour" href="https://www.facebook.com/ThePoshPoochGroomingSalon/">Message us on Facebook</a>
+        </div>
+        <p class="note-ligne"><b>4.5</b><span class="etoiles" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>on Google, 101 reviews</span></p>
+      </div>
+      <div class="portraits">
+        <figure class="ovale rv">
+          <img src="assets/posh-pooch-grooming-akron/caniche-abricot-toilette-table.webp" alt="Apricot curly-coated dog freshly groomed, standing on the grooming table with a blue clip in its hair" width="1200" height="1600" fetchpriority="high">
+        </figure>
+        <figure class="petit-portrait rv">
+          <img src="assets/posh-pooch-grooming-akron/bichon-maltais-blanc-toilette-noeud-rose.webp" alt="Small white long-haired dog with a pink harness after grooming" width="1200" height="1600">
+        </figure>
+        <p class="etiquette">Fresh off the table</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits cadre">
+    <ul aria-label="The Posh Pooch at a glance">
+      <li><b>4.5 on Google</b><span>101 reviews</span></li>
+      <li><b>92%</b><span>recommend us on Facebook (16 reviews)</span></li>
+      <li><b>By appointment</b><span>only, call to book</span></li>
+      <li><b>Accessible</b><span>wheelchair entrance and parking</span></li>
+    </ul>
+  </div>
+
+  <section class="bande" id="pups" aria-labelledby="titre-bande">
+    <div class="cadre">
+      <div class="bande-tete">
+        <h2 id="titre-bande">Fresh from the grooming table</h2>
+        <p>A few of the pets we have groomed, photographed in the salon right after. Big doodles, little ones, corgis, and cats too.</p>
+      </div>
+      <div class="chiens">
+        <figure class="chien c-doodle rv">
+          <div class="photo"><img src="assets/posh-pooch-grooming-akron/berger-doodle-noir-blanc-toilette.webp" alt="Large black and white doodle standing in profile on the grooming table" width="1200" height="1600" loading="lazy"></div>
+          <figcaption><b>Black and white curls</b>November 2023</figcaption>
+        </figure>
+        <figure class="chien c-corgi rv">
+          <div class="photo"><img src="assets/posh-pooch-grooming-akron/corgi-toilette-table.webp" alt="Tricolor corgi on the grooming table looking straight at the camera" width="1197" height="1600" loading="lazy"></div>
+          <figcaption><b>All ears</b>May 2024</figcaption>
+        </figure>
+        <figure class="chien c-shih rv">
+          <div class="photo"><img src="assets/posh-pooch-grooming-akron/shih-tzu-toilette-autocollants.webp" alt="Small beige and white dog with a round face and tongue out after a groom" width="1200" height="1600" loading="lazy"></div>
+          <figcaption><b>A round face</b>June 2026</figcaption>
+        </figure>
+        <figure class="chien c-chat rv">
+          <div class="photo"><img src="assets/posh-pooch-grooming-akron/chat-emmaillote-serviette-toilettage.webp" alt="Black and white cat wrapped in a towel after its bath at the salon" width="1200" height="1600" loading="lazy"></div>
+          <figcaption><b>Cats too</b>Wrapped up after the bath</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="grooming" aria-labelledby="titre-services">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-services">Quality grooming, done with care</h2>
+        <p class="chapo">We are open by appointment only, so every visit is booked ahead.</p>
+        <ul class="prestations">
+          <li><h3>Dog grooming</h3><p>Baths and haircuts, from big doodles to little Pomeranians.</p></li>
+          <li><h3>Nail trims</h3><p>Even a dewclaw starting to curl into the paw.</p></li>
+          <li><h3>Cat grooming</h3><p>Cats come in for a bath too.</p></li>
+          <li><h3>Seasonal scents</h3><p>Add a seasonal scent to the groom, like sugar cookie.</p></li>
+        </ul>
+      </div>
+      <figure class="avant-apres rv">
+        <img src="assets/posh-pooch-grooming-akron/loulou-pomeranie-avant-apres.webp" alt="Before and after photos of Stiger, an orange Pomeranian, on the grooming table" width="1600" height="1600" loading="lazy">
+        <figcaption><b>Stiger, before and after.</b> A makeover from April 2026.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="avis" id="reviews" aria-labelledby="titre-avis">
+    <div class="cadre">
+      <div class="note">
+        <h2 id="titre-avis" class="chiffre">4.5</h2>
+        <span class="etoiles" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>Out of 5 on Google, from 101 reviews.</p>
+        <a href="https://www.google.com/maps?cid=6202563924817795184">Read the reviews on Google</a>
+      </div>
+      <div class="citations">
+        <blockquote>
+          <p>“The girls took such great care of my boys! My Aussie's haircut is perfect, his breath smells SO MUCH better, and they both are so soft.”</p>
+          <footer><b>Kaleigh Wilson</b>, Google review</footer>
+        </blockquote>
+        <blockquote>
+          <p>“They always do a fabulous job with Luke and Leia! I know they are well-loved. Leia loves going to the Posh Pooch!”</p>
+          <footer><b>Jennifer Dockery</b>, Google review</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="rdv" id="book" aria-labelledby="titre-rdv">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-rdv">Book your pet's appointment</h2>
+        <p class="chapo">We are open by appointment only. Give us a call to find a time that works for you, or send us a message on Facebook.</p>
+        <a class="numero" href="tel:+13306994104">(330) 699-4104</a>
+        <div class="actions">
+          <a class="btn btn-caramel" href="tel:+13306994104">Call to book</a>
+          <a class="btn btn-clair" href="https://www.facebook.com/ThePoshPoochGroomingSalon/">Message on Facebook</a>
+        </div>
+      </div>
+      <div class="visite">
+        <h3>Visit the salon</h3>
+        <ul class="infos">
+          <li><span class="cle">Address</span><a href="https://www.google.com/maps?cid=6202563924817795184">1143 S Canton Rd<br>Akron, OH 44312</a></li>
+          <li><span class="cle">Phone</span><a href="tel:+13306994104">(330) 699-4104</a></li>
+          <li><span class="cle">Email</span><a href="mailto:tmpetit@yahoo.com">tmpetit@yahoo.com</a></li>
+          <li><span class="cle">Payment</span><span>Credit and debit cards, mobile pay</span></li>
+          <li><span class="cle">Access</span><span>Wheelchair-accessible entrance and parking</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#top"><b>The Posh Pooch</b><span>Grooming Salon and Boutique</span></a>
+      <p>Quality grooming in Akron, Ohio, by appointment only.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+13306994104">(330) 699-4104</a></li>
+        <li><a href="mailto:tmpetit@yahoo.com">tmpetit@yahoo.com</a></li>
+        <li><a href="https://www.facebook.com/ThePoshPoochGroomingSalon/">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Salon</h3>
+      <ul>
+        <li>1143 S Canton Rd</li>
+        <li>Akron, OH 44312</li>
+        <li><a href="#book">Book an appointment</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposal by Nicolas Masset for The Posh Pooch Grooming Salon and Boutique</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('in') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

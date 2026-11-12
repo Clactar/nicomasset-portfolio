@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Four Bridges Painting · Chattanooga Painters</title>
+<meta name="description" content="Four Bridges Painting: exterior, interior, cabinet painting and drywall repair in Chattanooga and Cleveland, TN. Call or text (423) 299-3012.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%231D2846'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23ECE6DD'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pierre:#ECE6DD;
+  --pierre-2:#E3DBCF;
+  --surface:#F7F3ED;
+  --encre:#1D2846;
+  --encre-douce:#4C5470;
+  --sarcelle:#2E7C77;
+  --sarcelle-fonce:#246A65;
+  --sarcelle-clair:#8FCBC4;
+  --indigo:#1D2846;
+  --indigo-2:#283559;
+  --nuit:#131B31;
+  --creme:#F4EFE7;
+  --filet:#D6CCBE;
+  --ombre:0 40px 70px -40px rgba(29,40,70,.55), 0 12px 26px -16px rgba(29,40,70,.3);
+  --display:"DM Serif Display", Georgia, serif;
+  --texte:"Karla", "Trebuchet MS", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pierre);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.6}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--sarcelle);color:#F4EFE7}
+:focus-visible{outline:3px solid var(--sarcelle);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:88px}
+.marque{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marque svg{flex:none}
+.marque b{font-family:var(--display);font-weight:400;font-size:26px;line-height:1}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-weight:500;font-size:16px;color:var(--encre-douce)}
+.nav a:hover{color:var(--encre)}
+.nav .tel{color:var(--creme);background:var(--encre);padding:11px 22px;border-radius:999px;font-weight:600;white-space:nowrap;transition:background .2s ease}
+.nav .tel:hover{background:var(--sarcelle-fonce);color:#fff}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:background .2s ease,color .2s ease,transform .2s ease,border-color .2s ease}
+.btn-plein{background:var(--sarcelle);color:#fff}
+.btn-plein:hover{background:var(--sarcelle-fonce);transform:translateY(-2px)}
+.btn-clair{border:1.5px solid rgba(244,239,231,.75);color:var(--creme)}
+.btn-clair:hover{background:var(--creme);color:var(--encre)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--creme)}
+
+/* Héros centré */
+.heros{padding:8px 0 0}
+.scene{position:relative;margin:0;border-radius:28px;overflow:hidden;box-shadow:0 70px 110px -60px rgba(29,40,70,.75), 0 24px 48px -30px rgba(29,40,70,.45);aspect-ratio:1200/740;background:#9DB3CF}
+.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(19,27,49,.92) 0%, rgba(19,27,49,.78) 26%, rgba(19,27,49,.25) 52%, rgba(19,27,49,0) 66%)}
+.scene-texte{position:absolute;left:0;right:0;bottom:0;z-index:2;text-align:center;padding:0 48px 104px;color:var(--creme)}
+.scene-texte .lieu{font-size:17px;font-weight:500;color:#D8E4E7}
+.scene-texte h1{font-size:clamp(40px,6vw,84px);margin:12px auto 0;max-width:13em;color:#FBF8F3}
+.scene-texte .actions{justify-content:center;margin-top:30px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.etiquette{position:absolute;left:22px;top:22px;z-index:2;background:rgba(247,243,237,.95);color:var(--encre);border-radius:999px;padding:8px 16px;font-size:14.5px;font-weight:600;box-shadow:0 10px 24px -14px rgba(19,27,49,.6)}
+
+.faits{position:relative;z-index:3;margin:-62px auto 0;width:min(1040px,100% - 48px)}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border-radius:20px;box-shadow:var(--ombre)}
+.faits li{padding:26px 28px;text-align:center}
+.faits li + li{border-left:1px solid var(--filet)}
+.faits b{display:block;font-family:var(--display);font-weight:400;font-size:34px;line-height:1.05}
+.faits span{display:block;margin-top:6px;font-size:15.5px;line-height:1.4;color:var(--encre-douce)}
+
+/* Confiance */
+.confiance{padding:130px 0 120px}
+.confiance .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:80px;align-items:center}
+.confiance h2{font-size:clamp(38px,4.4vw,60px)}
+.confiance p{margin-top:22px;max-width:31em;color:#323B57}
+.confiance .actions{margin-top:32px}
+.duo{position:relative;padding:0 0 70px 0}
+.duo .large{margin:0;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);width:88%;margin-left:auto;aspect-ratio:4/3}
+.duo .large img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.duo .detail{position:absolute;left:0;bottom:0;width:40%;margin:0;background:var(--surface);padding:10px 10px 12px;border-radius:14px;box-shadow:0 30px 50px -30px rgba(29,40,70,.6);transform:rotate(-3deg)}
+.duo .detail img{border-radius:8px;aspect-ratio:4/5;object-fit:cover;object-position:52% 50%;width:100%}
+.duo .detail figcaption{font-size:14px;color:var(--encre-douce);padding:8px 4px 0;line-height:1.35}
+
+/* Services */
+.services{padding:0 0 130px}
+.services .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:80px;align-items:start}
+.services h2{font-size:clamp(38px,4.4vw,60px)}
+.services .chapo{margin-top:18px;color:var(--encre-douce);max-width:30em}
+.liste{list-style:none;margin:44px 0 0;padding:0;border-top:1px solid var(--filet)}
+.liste li{padding:28px 0;border-bottom:1px solid var(--filet);display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:24px}
+.liste h3{font-size:30px}
+.liste p{color:#323B57;font-size:17px}
+.liste a{font-weight:600;text-underline-offset:3px;color:var(--sarcelle-fonce)}
+.services-photo{position:sticky;top:32px;margin:0}
+.services-photo .cadre-photo{border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5.2}
+.services-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.services-photo figcaption{margin-top:14px;font-size:15px;color:var(--encre-douce)}
+
+/* Méthode, fond indigo */
+.methode{background:var(--indigo);color:var(--creme);padding:120px 0}
+.methode h2{font-size:clamp(38px,4.6vw,64px);color:#FBF8F3;max-width:12em}
+.methode .chapo{margin-top:16px;color:#C3C9DA;max-width:34em}
+.etapes{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;position:relative;counter-reset:etape}
+.etapes::before{content:"";position:absolute;left:22px;right:22px;top:22px;height:2px;background:linear-gradient(90deg,var(--sarcelle-clair),rgba(143,203,196,.25))}
+.etapes li{position:relative;counter-increment:etape}
+.etapes li::before{content:counter(etape);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--indigo);border:2px solid var(--sarcelle-clair);color:var(--sarcelle-clair);font-family:var(--display);font-size:22px;position:relative}
+.etapes h3{font-size:28px;margin-top:22px;color:#FBF8F3}
+.etapes p{margin-top:10px;font-size:16.5px;color:#C3C9DA}
+.garantie{margin-top:80px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center;background:var(--indigo-2);border-radius:24px;padding:44px 48px}
+.garantie h3{font-size:clamp(32px,3.4vw,46px);color:#FBF8F3}
+.garantie p{color:#D3D8E5}
+
+/* Réalisations */
+.travaux{padding:130px 0 120px}
+.travaux-tete{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.travaux h2{font-size:clamp(38px,4.6vw,64px)}
+.travaux-tete a{font-weight:600;text-underline-offset:3px;color:var(--sarcelle-fonce)}
+.mosaique{margin-top:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.mosaique figure{margin:0;position:relative}
+.mosaique img{width:100%;height:100%;object-fit:cover}
+.m-a{grid-column:1/8;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:16/10.4}
+.m-b{grid-column:8/13;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5;margin-top:64px !important}
+.m-c{grid-column:1/5;border-radius:16px;overflow:hidden;box-shadow:0 24px 40px -28px rgba(29,40,70,.55);aspect-ratio:4/3.4;margin-top:-80px !important}
+.m-d{grid-column:5/9;background:var(--surface);padding:10px;border-radius:16px;box-shadow:0 24px 40px -28px rgba(29,40,70,.55)}
+.m-d img{border-radius:9px;aspect-ratio:4/3.4}
+.m-e{grid-column:9/13;border-radius:16px;overflow:hidden;box-shadow:0 24px 40px -28px rgba(29,40,70,.55);aspect-ratio:4/3.4;margin-top:40px !important}
+.m-a img{object-position:50% 62%}
+.m-b img{object-position:40% 50%}
+.mosaique .pastille{position:absolute;left:16px;bottom:16px;background:rgba(247,243,237,.95);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--encre)}
+.m-d .pastille{left:22px;bottom:22px}
+
+/* Avis */
+.avis{padding:0 0 130px}
+.avis .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.grand-avis{margin:0}
+.grand-avis p{font-family:var(--display);font-size:clamp(30px,3.3vw,44px);line-height:1.18}
+.grand-avis footer{margin-top:22px;color:var(--encre-douce);font-size:16px}
+.grand-avis footer b{color:var(--encre);font-weight:600}
+.autres{display:grid;gap:22px}
+.autres blockquote{margin:0;background:var(--surface);border-radius:20px;padding:28px 30px;box-shadow:0 26px 44px -32px rgba(29,40,70,.5)}
+.autres p{font-size:17px;color:#323B57}
+.autres footer{margin-top:12px;font-size:15px;color:var(--encre-douce)}
+.note-google{margin-top:4px;font-size:16px;color:var(--encre-douce)}
+.note-google b{color:var(--sarcelle-fonce)}
+
+/* Fondateur */
+.fondateur{background:var(--pierre-2);padding:110px 0}
+.fondateur .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:80px;align-items:center}
+.portrait{margin:0;width:min(380px,100%);border-radius:50% 50% 22px 22px / 38% 38% 22px 22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4/5}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:52% 30%}
+.fondateur h2{font-size:clamp(36px,4vw,56px)}
+.fondateur p{margin-top:20px;max-width:34em;color:#323B57}
+
+/* Contact */
+.contact{padding:120px 0 130px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:start}
+.contact h2{font-size:clamp(38px,4.6vw,64px)}
+.contact .chapo{margin-top:18px;color:#323B57;max-width:30em}
+.zones{margin-top:40px}
+.zones h3{font-size:28px}
+.zones p{margin-top:12px;color:#323B57;max-width:32em;line-height:1.75}
+.carte-contact{background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre)}
+.carte-contact .numero{display:inline-block;font-family:var(--display);font-size:clamp(34px,3.6vw,46px);line-height:1.05;text-decoration:none;white-space:nowrap}
+.carte-contact .numero:hover{color:var(--sarcelle-fonce)}
+.carte-contact .sous{font-size:15.5px;color:var(--encre-douce);margin-top:4px}
+.infos{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--filet)}
+.infos li{padding:16px 0;border-bottom:1px solid var(--filet);display:grid;grid-template-columns:minmax(0,7em) minmax(0,1fr);gap:16px;font-size:16.5px}
+.infos span{color:var(--encre-douce)}
+.infos a{text-underline-offset:3px;overflow-wrap:anywhere}
+.carte-contact .actions{margin-top:28px}
+
+/* Pied */
+.pied{background:var(--nuit);color:#D3D8E5;padding:80px 0 36px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr) minmax(0,2fr);gap:40px}
+.pied .marque b{color:#FBF8F3;font-size:28px}
+.pied p{margin-top:16px;font-size:16px;color:#AEB6CC;max-width:24em}
+.pied h3{font-family:var(--texte);font-size:15px;font-weight:600;color:#AEB6CC;margin-bottom:12px;line-height:1.3}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:16px}
+.pied a{text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:3px}
+.pied .proposition{max-width:none;width:min(1200px,100% - 48px);margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(211,216,229,.12);font-size:13px;color:#8C94AB}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s cubic-bezier(.2,.7,.2,1), translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in,.vu .rv{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  *{transition:none !important}
+}
+
+@media (max-width:1000px){
+  .nav a.lien{display:none}
+  .confiance .cadre,.services .cadre,.avis .cadre,.contact .cadre,.fondateur .cadre{grid-template-columns:minmax(0,1fr);gap:48px}
+  .services-photo{position:static;max-width:520px}
+  .etapes{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}
+  .etapes::before{display:none}
+  .garantie{grid-template-columns:minmax(0,1fr);gap:16px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid var(--filet)}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .cadre{width:min(1200px,100% - 32px)}
+  .entete .cadre{min-height:68px}
+  .marque b{font-size:21px}
+  .marque svg{width:30px;height:30px}
+  .heros{padding-top:0}
+  .scene{aspect-ratio:auto;height:min(560px,calc(100svh - 150px));min-height:440px;border-radius:24px}
+  .scene img{object-position:86% 50%}
+  .scene::after{background:linear-gradient(to top, rgba(19,27,49,.94) 0%, rgba(19,27,49,.8) 34%, rgba(19,27,49,0) 64%)}
+  .scene-texte{padding:0 20px 28px}
+  .scene-texte .lieu{font-size:15px}
+  .scene-texte .actions{display:none}
+  .etiquette{left:14px;top:14px;font-size:13px;padding:6px 12px}
+  .actions-tel{display:flex !important;margin-top:20px}
+  .faits{margin-top:20px;width:min(1200px,100% - 32px)}
+  .faits li{padding:20px 14px}
+  .faits b{font-size:28px}
+  .confiance{padding:90px 0}
+  .duo .large{width:100%}
+  .duo .detail{width:46%;left:-4px}
+  .services{padding-bottom:90px}
+  .liste li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .methode{padding:90px 0}
+  .etapes{grid-template-columns:minmax(0,1fr)}
+  .garantie{padding:32px 24px}
+  .travaux{padding:90px 0}
+  .mosaique{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .m-a{grid-column:1/-1}
+  .m-b{grid-column:1/2;margin-top:0 !important}
+  .m-c{grid-column:2/3;margin-top:40px !important}
+  .m-d{grid-column:1/-1}
+  .m-e{grid-column:1/-1;margin-top:0 !important}
+  .avis{padding-bottom:90px}
+  .grand-avis p{font-size:26px}
+  .fondateur{padding:80px 0}
+  .contact{padding:90px 0}
+  .carte-contact{padding:30px 22px}
+  .infos li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .nav .tel{padding:9px 14px;font-size:14px}
+  .marque b{font-size:19px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{border-left:0 !important;border-top:1px solid var(--filet)}
+  .faits li:first-child{border-top:0}
+  .mosaique .pastille{font-size:13px;left:10px;bottom:10px}
+}
+@media (max-width:360px){
+  .marque svg{display:none}
+  .carte-contact .numero{font-size:30px}
+}
+.actions-tel{display:none}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top" aria-label="Four Bridges Painting, back to top">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="18" fill="#1D2846"/><path d="M6 23c3-5 6-5 9 0M15 23c3-5 6-5 9 0M24 23c2-3.5 4-4 6-2" fill="none" stroke="#8FCBC4" stroke-width="2" stroke-linecap="round"/><path d="M6 25.5h24" stroke="#ECE6DD" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <b>Four Bridges Painting</b>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="lien" href="#services">Services</a>
+      <a class="lien" href="#work">Our work</a>
+      <a class="lien" href="#about">About Us</a>
+      <a class="lien" href="#contact">Contact Us</a>
+      <a class="tel" href="tel:+14232993012">(423) 299-3012</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="heros cadre" aria-labelledby="titre">
+    <figure class="scene">
+      <img src="assets/four-bridges-painting-chattanooga/maison-pierre-bardage-gris-garage-double.webp" alt="Stone and shingle house with cream trim and arched garage doors, painted by Four Bridges Painting" width="1600" height="1205" fetchpriority="high">
+      <figcaption class="etiquette">Exterior, from our portfolio</figcaption>
+      <div class="scene-texte">
+        <p class="lieu">Four Bridges Painting, Chattanooga, TN</p>
+        <h1 id="titre">Chattanooga painters who do what they say they will.</h1>
+        <div class="actions">
+          <a class="btn btn-plein" href="#contact">Get a free estimate</a>
+          <a class="btn btn-clair" href="tel:+14232993012">Call or text (423) 299-3012</a>
+        </div>
+      </div>
+    </figure>
+    <div class="actions actions-tel">
+      <a class="btn btn-plein" href="tel:+14232993012">Call or text (423) 299-3012</a>
+      <a class="btn btn-contour" href="#contact">Get a free estimate</a>
+    </div>
+  </section>
+
+  <div class="faits">
+    <ul aria-label="Four Bridges Painting at a glance">
+      <li><b>20+ years</b><span>Eric Trigg in the painting trades</span></li>
+      <li><b>2-year</b><span>painting warranty, interior and exterior</span></li>
+      <li><b>42 reviews</b><span>on Google, rated Excellent</span></li>
+      <li><b>Free</b><span>estimates, no obligation</span></li>
+    </ul>
+  </div>
+
+  <section class="confiance" aria-labelledby="titre-confiance">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-confiance">A painting company you can trust</h2>
+        <p>At Four Bridges Painting, our bottom line is people: our customers come first. You have many choices for painting your home, and you want a company that delivers on its promises. With us, you get a team that does what they say they will, and leaves you thrilled with the results.</p>
+        <p>Our fun, loving and positive team takes pride in turning your vision into reality, and in keeping your project stress-free, whether we paint your exterior, your interior or your cabinets.</p>
+        <div class="actions">
+          <a class="btn btn-contour" href="#about">About Us</a>
+        </div>
+      </div>
+      <div class="duo">
+        <figure class="large rv">
+          <img src="assets/four-bridges-painting-chattanooga/maison-crepi-gris-escalier-pierre.webp" alt="Two-story house in taupe stucco with white trim, double white garage doors and a stone entry staircase" width="1600" height="1204" loading="lazy">
+        </figure>
+        <figure class="detail rv">
+          <img src="assets/four-bridges-painting-chattanooga/facade-board-and-batten-gris-porte-bois.webp" alt="Charcoal board and batten siding with white trim around a stained wood front door" width="1600" height="1205" loading="lazy">
+          <figcaption>Board and batten, white trim</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="titre-services">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-services">What we paint</h2>
+        <p class="chapo">Homes in and around Chattanooga, inside and out, plus the repairs that make the paint look right.</p>
+        <ul class="liste">
+          <li><h3>Exterior painting</h3><div><p>Walls and doors, from wood to brick and stucco, in the finish and color that suit your style. Deck staining, fascia and trim brought back to their original beauty.</p></div></li>
+          <li><h3>Interior painting</h3><div><p>Walls and ceilings repainted for a fresh new look. Real life means handprints, pet paws and scuff marks: eventually, all walls need a fresh coat.</p></div></li>
+          <li><h3>Cabinets</h3><div><p>We paint cabinets too, alongside home exteriors and interiors.</p></div></li>
+          <li><h3>Drywall repair</h3><div><p>Small cracks, holes or larger issues repaired first, then a great coat of paint on top.</p></div></li>
+          <li><h3>Color selection</h3><div><p>Choosing colors that work together is a challenge. We help you find the ones that complement your home's style.</p></div></li>
+        </ul>
+      </div>
+      <figure class="services-photo rv">
+        <div class="cadre-photo">
+          <img src="assets/four-bridges-painting-chattanooga/cuisine-meubles-blancs-ilot-marine.webp" alt="Kitchen with white cabinets, brass pulls and a navy island with a marble top" width="1600" height="1205" loading="lazy">
+        </div>
+        <figcaption>White cabinets and a navy island, from our interior work.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="methode" aria-labelledby="titre-methode">
+    <div class="cadre">
+      <h2 id="titre-methode">Our painting process</h2>
+      <p class="chapo">From the first walk-around to the final walk-through.</p>
+      <ol class="etapes">
+        <li><h3>Estimate</h3><p>A Q&amp;A session, a project walk-around, measurements and an on-the-spot estimate review.</p></li>
+        <li><h3>Color</h3><p>We help you through the abundance of color choices, so you feel confident in your selection.</p></li>
+        <li><h3>Prep</h3><p>A thorough clean, repair and prep of your home's surfaces for the best possible results.</p></li>
+        <li><h3>Paint</h3><p>Our skilled crews apply your selected paint following current industry best practices.</p></li>
+        <li><h3>Review</h3><p>One final quality walk-through, so every standard is met and you are 100% thrilled.</p></li>
+      </ol>
+      <div class="garantie">
+        <h3>Two-Year Painting Warranty</h3>
+        <p>It covers our interior and exterior paint projects. If for any reason you are not happy with your painting job, contact us within two years of the project completion and we will be happy to address the issue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="travaux" id="work" aria-labelledby="titre-travaux">
+    <div class="cadre">
+      <div class="travaux-tete">
+        <h2 id="titre-travaux">Homes we have painted</h2>
+        <a href="https://fourbridgespainting.com/portfolio/">See the full portfolio</a>
+      </div>
+      <div class="mosaique">
+        <figure class="m-a rv">
+          <img src="assets/four-bridges-painting-chattanooga/maison-bleu-marine-porche-blanc.webp" alt="Raised house painted navy blue with a white porch railing and staircase" width="1600" height="1205" loading="lazy">
+          <figcaption class="pastille">Navy with a white porch</figcaption>
+        </figure>
+        <figure class="m-b rv">
+          <img src="assets/four-bridges-painting-chattanooga/couloir-lambris-blanc-murs-bleu-gris.webp" alt="Long hallway with white wainscoting, crown molding and soft blue-gray walls" width="1600" height="1205" loading="lazy">
+        </figure>
+        <figure class="m-c rv">
+          <img src="assets/four-bridges-painting-chattanooga/salle-a-manger-mur-anthracite-plafond-caissons.webp" alt="Dining room with charcoal walls, a white coffered ceiling and a stone fireplace" width="1600" height="1152" loading="lazy">
+        </figure>
+        <figure class="m-d rv">
+          <img src="assets/four-bridges-painting-chattanooga/maison-bleu-roi-split-level.webp" alt="Split-level house painted royal blue, brick included, with white window trim" width="1600" height="1205" loading="lazy">
+          <figcaption class="pastille">Royal blue, brick included</figcaption>
+        </figure>
+        <figure class="m-e rv">
+          <img src="assets/four-bridges-painting-chattanooga/cuisine-ilot-noir-plan-ouvert.webp" alt="Open kitchen with a matte black island and lower cabinets under a steel range hood" width="1600" height="1205" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" aria-labelledby="titre-avis">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-avis" class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Reviews</h2>
+        <blockquote class="grand-avis">
+          <p>“Thirty years I owned and operated Southern Pride Painting. … I was hesitant to call someone else to paint my house. The experience was excellent. For all your future painting needs call Eric Trigg at Four Bridges Painting.”</p>
+          <footer><b>Robert McCreary</b>, Google review, October 2023</footer>
+        </blockquote>
+      </div>
+      <div class="autres">
+        <p class="note-google"><b>Excellent</b>, based on 42 Google reviews</p>
+        <blockquote>
+          <p>“Our house looks amazing. The team worked so hard to make things just how we wanted them. They put in some long days to get it done in a timely manner.”</p>
+          <footer>Kari Matthews, December 2023</footer>
+        </blockquote>
+        <blockquote>
+          <p>“Explained everything before the job and delivered far above what was agreed on. Started on time and finished quickly. … Looks like a new house.”</p>
+          <footer>Sandi Mitchell, October 2023</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="fondateur" id="about" aria-labelledby="titre-fondateur">
+    <div class="cadre">
+      <figure class="portrait rv">
+        <img src="assets/four-bridges-painting-chattanooga/eric-trigg-fondateur-portrait.webp" alt="Eric Trigg, founder of Four Bridges Painting" width="1600" height="1143" loading="lazy">
+      </figure>
+      <div>
+        <h2 id="titre-fondateur">About Us: Eric Trigg, your local painter</h2>
+        <p>Founder Eric Trigg has been in the painting trades for 20+ years. He learned the trade with some of Chattanooga's finest painters, spent the better part of a decade on residential and commercial properties in and around the city, then managed the paint department of a local industrial manufacturer.</p>
+        <p>Four Bridges Painting sits right in the middle, between independent contractors and large companies. We do a limited number of homes each year and keep our overhead low, so our house painting prices stay competitive.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-contact">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-contact">Contact Us for a free estimate</h2>
+        <p class="chapo">In Chattanooga or nearby and in need of a painter? Call or text, or send an email. The estimate is free, with no obligation.</p>
+        <div class="zones">
+          <h3>Areas we serve</h3>
+          <p>Chattanooga, Lookout Mountain, Red Bank, Hixson, Signal Mountain, Soddy Daisy, Harrison, Ooltewah and Collegedale, Apison, McDonald, East Ridge, East Brainard, Cleveland and the surrounding areas.</p>
+        </div>
+      </div>
+      <div class="carte-contact">
+        <a class="numero" href="tel:+14232993012">(423) 299-3012</a>
+        <p class="sous">Call or text us</p>
+        <ul class="infos">
+          <li><span>Email</span><a href="mailto:fourbridgespainting@gmail.com?subject=Free%20estimate">fourbridgespainting@gmail.com</a></li>
+          <li><span>Main office</span><span style="color:inherit">6925 Shallowford Rd, Suite 301-D<br>Chattanooga, TN 37421</span></li>
+          <li><span>Office hours</span><span style="color:inherit">Monday to Friday, 9:00&nbsp;am to 5:30&nbsp;pm<br>Saturday and Sunday, closed</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="mailto:fourbridgespainting@gmail.com?subject=Free%20estimate">Email for an estimate</a>
+          <a class="btn btn-contour" href="https://fourbridgespainting.com/get-a-free-estimate/">Estimate form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#top"><b>Four Bridges Painting</b></a>
+      <p>Exterior and interior painting, cabinets and drywall repair in Chattanooga, Cleveland and the surrounding areas.</p>
+    </div>
+    <div>
+      <h3>Main office</h3>
+      <ul>
+        <li>6925 Shallowford Rd, Suite 301-D</li>
+        <li>Chattanooga, TN 37421</li>
+        <li>Mon to Fri, 9:00&nbsp;am to 5:30&nbsp;pm</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="tel:+14232993012">(423) 299-3012</a></li>
+        <li><a href="mailto:fourbridgespainting@gmail.com">fourbridgespainting@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/fourbridgespainting/">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#work">Our work</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposal by Nicolas Masset for Four Bridges Painting</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('in') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

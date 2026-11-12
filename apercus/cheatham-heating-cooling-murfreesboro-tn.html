@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cheatham Heating &amp; Cooling | Heating and air in Murfreesboro, TN</title>
+<meta name="description" content="Locally owned and operated heating and cooling in Murfreesboro, TN. Repairs, maintenance and new installs. Call or text 615-582-5572 for a free quote.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2344201A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Helvetica, sans-serif' font-weight='700' font-size='38' fill='%236FA9C6'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Rethink+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#F1E7E0;
+  --surface:#FBF6F2;
+  --encre:#44201A;
+  --encre-douce:#6B4238;
+  --glacier:#6FA9C6;
+  --glacier-clair:#A9CDE0;
+  --brique:#4A231B;
+  --brique-nuit:#2C1410;
+  --filet:#E2D3C9;
+  --ombre:0 34px 70px -38px rgba(68,32,26,.55);
+  --ombre-carte:0 40px 80px -42px rgba(68,32,26,.6), 0 2px 6px -2px rgba(68,32,26,.12);
+  --display:"Rethink Sans", "Trebuchet MS", sans-serif;
+  --texte:"Literata", Georgia, serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:1.0625rem;line-height:1.62;font-optical-sizing:auto}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--glacier);color:var(--brique-nuit)}
+:focus-visible{outline:3px solid #2F6F92;outline-offset:3px;border-radius:6px}
+.sombre :focus-visible,.pied :focus-visible{outline-color:var(--glacier-clair)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.04;letter-spacing:-.022em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.nw{white-space:nowrap}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:1.0625rem;line-height:1.2;text-decoration:none;text-align:center;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background-color .25s,color .25s}
+.btn-appel{background:var(--glacier);color:var(--brique-nuit);box-shadow:0 18px 30px -18px rgba(47,111,146,.9)}
+.btn-appel:hover{transform:translateY(-2px);background:#80B5CF;box-shadow:0 22px 34px -18px rgba(47,111,146,.95)}
+.btn-contour{border:1.5px solid currentColor;color:var(--encre);background:transparent}
+.btn-contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+.sombre .btn-contour{color:var(--fond)}
+.sombre .btn-contour:hover{background:var(--fond);color:var(--brique)}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(241,231,224,.96);border-bottom:1px solid transparent;transition:border-color .3s}
+.entete.colle{border-bottom-color:var(--filet)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.marque b{font-family:var(--display);font-weight:600;font-size:1.25rem;letter-spacing:-.015em}
+.marque span{font-size:.875rem;color:var(--encre-douce)}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a.lien{font-family:var(--display);font-weight:500;font-size:1rem;text-decoration:none;color:var(--encre-douce);padding:6px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.nav a.lien:hover{color:var(--encre);border-bottom-color:var(--encre)}
+.nav .btn{min-height:46px;padding:10px 22px;font-size:1rem}
+.court{display:none}
+
+/* Héros */
+.heros{padding:48px 0 0}
+.heros-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.heros-photo{grid-column:5 / 13;grid-row:1;position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:29 / 20;background:#d8c8bd}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.heros-carte{grid-column:1 / 6;grid-row:1;position:relative;z-index:2;background:var(--surface);border-radius:18px;padding:44px 40px 36px;box-shadow:var(--ombre-carte)}
+.heros-carte .metier{font-style:italic;color:var(--encre-douce);font-size:1.0625rem;margin-bottom:16px}
+.heros-carte h1{font-size:clamp(2.125rem,1.1rem + 3.8vw,3.75rem)}
+.heros-carte .chapo{margin-top:20px;font-size:1.125rem;color:var(--encre);max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.heros-carte .btn{padding-inline:22px}
+.note{display:flex;align-items:center;gap:12px;margin-top:28px;padding-top:22px;border-top:1px solid var(--filet);font-size:.975rem;color:var(--encre-douce)}
+.note a{text-decoration-color:rgba(68,32,26,.35);text-underline-offset:3px}
+.note a:hover{text-decoration-color:currentColor}
+.etoiles{display:inline-flex;gap:2px;color:var(--glacier);flex:none}
+.etoiles svg{width:18px;height:18px}
+.note b{font-family:var(--display);font-weight:600;color:var(--encre);font-size:1.0625rem}
+
+/* Étiquette posée sur photo */
+.etiquette{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);background:rgba(251,246,242,.97);color:var(--encre);border-radius:12px;padding:10px 14px;font-family:var(--display);font-weight:500;font-size:.9375rem;line-height:1.3;box-shadow:0 10px 24px -14px rgba(44,20,16,.6)}
+.etiquette small{display:block;font-family:var(--texte);font-weight:400;font-size:.8125rem;color:var(--encre-douce);margin-top:2px}
+.heros-photo .etiquette{left:auto;right:20px;bottom:20px;max-width:min(360px,calc(100% - 40px))}
+
+/* Bandeau de faits */
+.faits{margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--encre);border-bottom:1px solid var(--filet)}
+.fait{padding:24px 24px 26px 0}
+.fait + .fait{padding-left:24px;border-left:1px solid var(--filet)}
+.fait b{display:block;font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em}
+.fait span{display:block;margin-top:6px;font-size:.9375rem;color:var(--encre-douce);line-height:1.45}
+
+section{scroll-margin-top:80px}
+.bloc{padding:128px 0}
+
+/* Services */
+.services-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+.duo{grid-column:1 / 6;position:relative;padding-bottom:120px}
+.duo .grande{margin:0;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);aspect-ratio:4 / 5;position:relative;width:86%}
+.duo .grande .etiquette{top:16px;bottom:auto}
+.duo .grande img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.duo .petite{position:absolute;right:0;bottom:0;width:min(250px,52%);margin:0;background:var(--surface);padding:10px 10px 12px;border-radius:6px;transform:rotate(2.5deg);box-shadow:0 28px 50px -26px rgba(44,20,16,.65)}
+.duo .petite img{width:100%;aspect-ratio:1 / 1;object-fit:cover;border-radius:3px}
+.duo .petite figcaption{font-family:var(--display);font-weight:500;font-size:.875rem;line-height:1.3;padding:10px 4px 0;color:var(--encre)}
+.services-texte{grid-column:7 / 13;padding-top:8px}
+.services-texte h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem)}
+.services-texte .intro{margin-top:20px;font-size:1.1875rem;color:var(--encre)}
+.liste-services{list-style:none;margin:48px 0 0;padding:0}
+.liste-services li{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid var(--filet)}
+.liste-services li:last-child{border-bottom:1px solid var(--filet)}
+.liste-services h3{font-size:1.25rem;line-height:1.25;letter-spacing:-.01em}
+.liste-services p{color:var(--encre-douce);font-size:1rem}
+.garantie{margin-top:12px;display:block;color:var(--encre);font-style:italic}
+
+/* Section sombre */
+.sombre{background:var(--brique);color:var(--fond)}
+.sombre h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem);color:var(--surface)}
+.travaux-tete{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;margin-bottom:56px}
+.travaux-tete h2{grid-column:1 / 7}
+.travaux-tete p{grid-column:8 / 13;color:#E3D1C6}
+.projet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.projet figure{grid-column:1 / 8;margin:0;position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4 / 3;box-shadow:0 40px 70px -40px rgba(0,0,0,.7)}
+.projet figure img{width:100%;height:100%;object-fit:cover}
+.projet-texte{grid-column:8 / 13;padding-left:16px}
+.projet-texte h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);color:var(--surface);line-height:1.12}
+.projet-texte blockquote{margin:20px 0 0;font-size:1.1875rem;line-height:1.6;font-style:italic;color:#F3E6DD}
+.projet-texte .renvoi{margin-top:20px;font-size:.9375rem;color:#D7C2B5}
+.bande{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:96px;align-items:start}
+.bande figure{margin:0;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3 / 4;box-shadow:0 30px 60px -36px rgba(0,0,0,.75)}
+.bande figure:nth-child(even){margin-top:56px}
+.bande figure img{width:100%;height:100%;object-fit:cover}
+.bande .mural{position:absolute;right:12px;top:12px;width:42%;border-radius:10px;border:4px solid var(--surface);box-shadow:0 16px 30px -16px rgba(0,0,0,.7);aspect-ratio:3 / 4;object-fit:cover;object-position:50% 45%;height:auto}
+.travaux-pied{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
+.travaux-pied p{color:#E3D1C6;max-width:40em}
+
+/* Avis */
+.avis-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:48px;align-items:start}
+.avis-note{grid-column:1 / 5;position:sticky;top:120px}
+.avis-note .grand{font-family:var(--display);font-weight:600;font-size:clamp(4.5rem,3rem + 5vw,7.5rem);line-height:.9;letter-spacing:-.04em}
+.avis-note .etoiles svg{width:26px;height:26px}
+.avis-note .etoiles{margin-top:16px}
+.avis-note p{margin-top:16px;color:var(--encre-douce)}
+.avis-note p b{color:var(--encre);font-family:var(--display);font-weight:600}
+.avis-note .btn{margin-top:28px}
+.avis-liste{grid-column:6 / 13}
+.avis-liste h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem);margin-bottom:40px}
+.citation{margin:0}
+.citation p{font-size:clamp(1.25rem,1rem + .9vw,1.625rem);line-height:1.5;font-style:italic}
+.citation footer{margin-top:16px;font-family:var(--display);font-weight:500;font-size:.9375rem;color:var(--encre-douce)}
+.citations-petites{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:48px}
+.citations-petites .citation{background:var(--surface);border-radius:16px;padding:28px 28px 24px;box-shadow:0 24px 50px -40px rgba(68,32,26,.55)}
+.citations-petites .citation p{font-size:1.0625rem;line-height:1.6}
+.facebook-avis{margin-top:32px;font-size:.975rem;color:var(--encre-douce)}
+
+/* Contact */
+.contact{padding:0 0 128px}
+.contact-carte{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));background:var(--surface);border-radius:24px;overflow:hidden;box-shadow:var(--ombre-carte)}
+.contact-texte{grid-column:1 / 8;padding:64px 56px}
+.contact-texte h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem)}
+.contact-texte .intro{margin-top:16px;font-size:1.1875rem}
+.coord{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin:40px 0 0}
+.coord dt{font-family:var(--display);font-weight:600;font-size:.9375rem;color:var(--encre-douce);margin-bottom:4px}
+.coord dd{margin:0;font-size:1.0625rem;overflow-wrap:anywhere}
+.coord dd a{text-underline-offset:3px;text-decoration-color:rgba(68,32,26,.35)}
+.coord dd a:hover{text-decoration-color:currentColor}
+.coord .large{grid-column:1 / -1}
+.contact-photo{grid-column:8 / 13;margin:0;position:relative;min-height:100%}
+.contact-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+
+/* Pied */
+.pied{background:var(--brique-nuit);color:#E8D8CE;padding:72px 0 32px}
+.pied-grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px}
+.pied-marque{grid-column:1 / 6}
+.pied-marque b{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--surface);letter-spacing:-.015em}
+.pied-marque p{margin-top:8px;color:#CBB4A7;max-width:26em}
+.pied-col{grid-column:span 2}
+.pied-col:first-of-type{grid-column:7 / 9}
+.pied-col h3{font-size:.9375rem;font-weight:600;color:var(--glacier-clair);letter-spacing:0;margin-bottom:10px}
+.pied-col p,.pied-col a{font-size:.975rem;line-height:1.6;color:#E8D8CE}
+.pied-col a{text-underline-offset:3px;text-decoration-color:rgba(232,216,206,.35)}
+.pied-col a:hover{text-decoration-color:currentColor}
+.proposition{margin-top:56px;padding-top:24px;border-top:1px solid rgba(232,216,206,.16);font-size:.875rem;color:#B39C8F}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .duo .petite.rv{transform:translateY(18px) rotate(2.5deg)}
+.js .rv.in,.vu .rv{opacity:1;transform:none}
+.js .duo .petite.rv.in,.vu .duo .petite.rv{transform:rotate(2.5deg)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .rv{opacity:1;transform:none}
+  .js .duo .petite.rv{transform:rotate(2.5deg)}
+}
+
+/* Tablette */
+@media (max-width:1080px){
+  .nav{gap:22px}
+  .heros-carte{grid-column:1 / 8;padding:40px 36px 32px}
+  .heros-photo{grid-column:5 / 13}
+  .faits{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fait:nth-child(3){padding-left:0;border-left:0}
+  .fait:nth-child(n+3){border-top:1px solid var(--filet)}
+  .liste-services li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .avis-note{grid-column:1 / 13;position:static}
+  .avis-liste{grid-column:1 / 13}
+}
+@media (max-width:860px){
+  .nav .lien{display:none}
+  .heros-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-carte,.heros-photo{grid-column:1;grid-row:auto}
+  .heros-photo{margin-top:-28px;z-index:1;aspect-ratio:4 / 3}
+  .heros-photo .etiquette{left:14px;right:auto;bottom:14px;max-width:calc(100% - 28px)}
+  .services-grille,.travaux-tete,.projet,.avis-grille,.pied-grille{grid-template-columns:minmax(0,1fr)}
+  .duo,.services-texte,.travaux-tete h2,.travaux-tete p,.projet figure,.projet-texte,.avis-note,.avis-liste,.pied-marque,.pied-col,.pied-col:first-of-type{grid-column:1}
+  .duo{max-width:520px;padding-bottom:96px}
+  .services-texte{margin-top:56px}
+  .travaux-tete{row-gap:16px;margin-bottom:40px}
+  .projet-texte{padding-left:0;margin-top:32px}
+  .bande{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:64px}
+  .bande figure:nth-child(even){margin-top:40px}
+  .contact-carte{grid-template-columns:minmax(0,1fr)}
+  .contact-texte{grid-column:1;padding:40px 28px}
+  .contact-photo{grid-column:1;grid-row:1;min-height:0;aspect-ratio:16 / 10}
+  .citations-petites{grid-template-columns:minmax(0,1fr)}
+}
+/* Téléphone */
+@media (max-width:600px){
+  body{font-size:1rem}
+  .cadre{width:calc(100% - 32px)}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:1.0625rem}
+  .marque span{font-size:.8125rem}
+  .long{display:none}.court{display:inline}
+  .nav .btn{min-height:44px;padding:8px 18px}
+  .heros{padding-top:16px}
+  .heros-carte{padding:26px 22px 24px;border-radius:16px}
+  .heros-carte .metier{font-size:.9375rem;margin-bottom:10px}
+  .heros-carte .chapo{font-size:1rem;margin-top:14px}
+  .actions{margin-top:22px;gap:10px}
+  .note{margin-top:20px;padding-top:16px;font-size:.9375rem}
+  .faits{margin-top:48px;grid-template-columns:minmax(0,1fr)}
+  .fait,.fait + .fait,.fait:nth-child(3){padding:20px 0;border-left:0}
+  .fait + .fait{border-top:1px solid var(--filet)}
+  .bloc{padding:96px 0}
+  .contact{padding-bottom:96px}
+  .bande figure .etiquette{left:8px;bottom:8px;max-width:calc(100% - 16px);padding:7px 9px;font-size:.8125rem;border-radius:9px}
+  .bande figure .etiquette small{font-size:.75rem}
+  .coord{grid-template-columns:minmax(0,1fr);gap:20px}
+  .contact-texte{padding:32px 22px 36px}
+  .citations-petites .citation{padding:22px 20px 20px}
+}
+@media (max-width:420px){
+  .actions .btn,.travaux-pied .btn,.avis-note .btn,.contact-texte .btn{width:100%}
+  .marque span{display:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="entete" id="haut">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Cheatham Heating and Cooling, back to top">
+      <b>Cheatham Heating &amp; Cooling</b>
+      <span>Heating and air, Murfreesboro, TN</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="lien" href="#services">Services</a>
+      <a class="lien" href="#work">Recent work</a>
+      <a class="lien" href="#reviews">Reviews</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn btn-appel" href="tel:+16155825572"><span class="long nw">615-582-5572</span><span class="court">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <div class="heros-grille">
+        <div class="heros-carte">
+          <p class="metier">Heating and cooling in Murfreesboro, Tennessee</p>
+          <h1 id="titre">Stay comfortable year-round.</h1>
+          <p class="chapo">Repairs, maintenance and brand-new systems, from a locally owned and operated shop. Fast response, no pressure upsells.</p>
+          <div class="actions">
+            <a class="btn btn-appel" href="tel:+16155825572">Call <span class="nw">615-582-5572</span></a>
+            <a class="btn btn-contour" href="#work">See recent installs</a>
+          </div>
+          <p class="note">
+            <span class="etoiles" aria-hidden="true"><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+            <span><b>5.0</b> on Google, from <a href="#reviews">63 reviews</a></span>
+          </p>
+        </div>
+        <figure class="heros-photo">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/deux-unites-pompe-a-chaleur-maison-neuve-brique.webp" width="1600" height="1200" fetchpriority="high" alt="Two new outdoor HVAC units side by side on a pad against a brick wall: a split heat pump and a packaged unit.">
+          <figcaption class="etiquette">New construction home, Bradyville<small>3.5 ton Daikin package unit and 3 ton split heat pump</small></figcaption>
+        </figure>
+      </div>
+
+      <div class="faits">
+        <div class="fait"><b>5.0 stars on Google</b><span>63 reviews, and recommended by 100% on Facebook</span></div>
+        <div class="fait"><b>Locally owned &amp; operated</b><span>Based in Murfreesboro, TN</span></div>
+        <div class="fait"><b>Fast response</b><span>No pressure upsells</span></div>
+        <div class="fait"><b>Free quotes</b><span>Call or text <a class="nw" href="tel:+16155825572">615-582-5572</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" id="services" aria-labelledby="t-services">
+    <div class="cadre services-grille">
+      <div class="duo">
+        <figure class="grande rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/chaudiere-gaz-goodman-placard.webp" width="1204" height="1600" loading="lazy" alt="A new Goodman gas furnace in a utility closet, with a stainless flue, insulated ducts and PVC drain lines.">
+          <figcaption class="etiquette">New Goodman gas furnace, Nashville</figcaption>
+        </figure>
+        <figure class="petite rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/gaines-souples-isolees-combles-neuves.webp" width="1204" height="1600" loading="lazy" alt="New insulated flex ducts hung on straps under the roof framing of an attic.">
+          <figcaption>Duct work in the attic, College Grove</figcaption>
+        </figure>
+      </div>
+      <div class="services-texte">
+        <h2 id="t-services">Your home's comfort is our priority.</h2>
+        <p class="intro">Whether you need reliable heating, efficient cooling, expert repairs or a brand-new system installed, we're ready to help. Don't wait until a small issue becomes a costly repair.</p>
+        <ul class="liste-services">
+          <li>
+            <h3>Service and repairs</h3>
+            <p>Not only do we do installs and replacements, we offer service and repairs as well. On our first furnace call of the season in Shelbyville, the control board was bad and the gas valve wasn't opening. We replaced both and got the heat back up and running as it should.</p>
+          </li>
+          <li>
+            <h3>Preventative maintenance</h3>
+            <p>As summer ends and fall comes in, let us service your unit and get it ready for the winter months ahead. It keeps your system running at peak performance.</p>
+          </li>
+          <li>
+            <h3>Professional installations</h3>
+            <p>Split and packaged heat pumps, gas package units and mini splits, including all the duct work.<span class="garantie">Every install comes with a 1 year labor warranty, plus a standard 10 year manufacturer's warranty, or 12 years on Daikin residential units.</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc sombre" id="work" aria-labelledby="t-work">
+    <div class="cadre">
+      <div class="travaux-tete">
+        <h2 id="t-work">Recent installs, job by job.</h2>
+        <p>All of these were posted on our Facebook page. Recent jobs took us to Murfreesboro, Smyrna, Shelbyville, Nolensville, College Grove, Nashville and more.</p>
+      </div>
+
+      <div class="projet">
+        <figure class="rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/centrale-traitement-air-vide-sanitaire.webp" width="1600" height="1200" loading="lazy" alt="A new gray air handler set on a wood platform in a crawl space, with insulated silver ducts above it.">
+          <figcaption class="etiquette">Air handler in the crawl space, Bradyville</figcaption>
+        </figure>
+        <div class="projet-texte">
+          <h3>A new construction home in Bradyville, including all the duct work</h3>
+          <blockquote>We installed a 3.5 ton Daikin heat pump package unit downstairs, and a 3 ton split heat pump for upstairs. Couldn't be happier with the turnout!</blockquote>
+          <p class="renvoi">The two outdoor units at the top of this page are from the same house.</p>
+        </div>
+      </div>
+
+      <div class="bande">
+        <figure class="rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/pompe-a-chaleur-goodman-split-3-tonnes.webp" width="1200" height="1600" loading="lazy" alt="A new dark gray Goodman split heat pump on a pad next to beige siding, with lawn around it.">
+          <figcaption class="etiquette">3 ton Goodman split heat pump<small>Murfreesboro</small></figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/unite-gaz-monobloc-daikin-3-5-tonnes.webp" width="1200" height="1600" loading="lazy" alt="A new Daikin gas package unit against gray siding, next to a white fence post.">
+          <figcaption class="etiquette">3.5 ton Daikin gas package unit</figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/groupe-exterieur-mitsubishi-mini-split.webp" width="1200" height="1600" loading="lazy" alt="A white Mitsubishi mini split outdoor unit mounted on a painted block wall, with a line cover running up the siding.">
+          <img class="mural" src="assets/cheatham-heating-cooling-murfreesboro-tn/split-mural-interieur-atelier.webp" width="1200" height="1600" loading="lazy" alt="The matching indoor wall unit, mounted near the ceiling on a white wall.">
+          <figcaption class="etiquette">2 ton Mitsubishi mini split<small>Nolensville</small></figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="assets/cheatham-heating-cooling-murfreesboro-tn/unite-gaz-monobloc-goodman-brique.webp" width="1200" height="1600" loading="lazy" alt="A new Goodman gas package unit on a pad against a brick house, in the shade of a tree.">
+          <figcaption class="etiquette">New 3.5 ton gas package unit replacement</figcaption>
+        </figure>
+      </div>
+
+      <div class="travaux-pied">
+        <a class="btn btn-contour" href="https://www.facebook.com/cheathamheatingcooling" rel="noopener">See every job on Facebook</a>
+        <p>No job is too big or too small. Give us a call or text anytime for a free quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" id="reviews" aria-labelledby="t-reviews">
+    <div class="cadre avis-grille">
+      <div class="avis-note">
+        <div class="grand">5.0</div>
+        <span class="etoiles" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+        <p><b>63 reviews on Google.</b> Recommended by 100% of reviewers on Facebook (21 reviews).</p>
+        <a class="btn btn-contour" href="https://www.google.com/maps?cid=10160910607997630044" rel="noopener">Read them on Google</a>
+      </div>
+      <div class="avis-liste">
+        <h2 id="t-reviews">What customers say after the call.</h2>
+        <blockquote class="citation">
+          <p>“Dillon came out and provided honest, great service for a maintenance call today. He took his time to carefully inspect, explain, and give feedback for the different parts of my AC unit … Can't recommend enough.”</p>
+          <footer>Michael C., Google review</footer>
+        </blockquote>
+        <div class="citations-petites">
+          <blockquote class="citation">
+            <p>“Dillon is professional, honest, informative and prompt … His crew worked quickly on installing the new unit and I'm happy with the service.”</p>
+            <footer>Billy M., Google review</footer>
+          </blockquote>
+          <blockquote class="citation">
+            <p>“He came out when he said he was going to … He was fast, reliable, reasonably priced and I'll call him again if we need HVAC work in the future.”</p>
+            <footer>Caleb, Google review</footer>
+          </blockquote>
+        </div>
+        <p class="facebook-avis">And on Facebook: “Fast, friendly, honest, and dependable.” Nick T.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="cadre">
+      <div class="contact-carte">
+        <div class="contact-texte">
+          <h2 id="t-contact">Give us a call today to get on our schedule.</h2>
+          <p class="intro">Call or text anytime for a free quote.</p>
+          <div class="actions">
+            <a class="btn btn-appel" href="tel:+16155825572">Call <span class="nw">615-582-5572</span></a>
+            <a class="btn btn-contour" href="mailto:dillon.cheatham@gmail.com">Email Dillon</a>
+          </div>
+          <dl class="coord">
+            <div><dt>Phone, call or text</dt><dd><a class="nw" href="tel:+16155825572">615-582-5572</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:dillon.cheatham@gmail.com">dillon.cheatham@gmail.com</a></dd></div>
+            <div><dt>Address</dt><dd><a href="https://www.google.com/maps?cid=10160910607997630044" rel="noopener">125 Twin Oak Dr<br>Murfreesboro, TN 37130</a></dd></div>
+            <div><dt>Hours</dt><dd>Open 24 hours, every day</dd></div>
+            <div class="large"><dt>Facebook</dt><dd><a href="https://www.facebook.com/cheathamheatingcooling" rel="noopener">Cheatham Heating &amp; Cooling on Facebook</a></dd></div>
+          </dl>
+        </div>
+        <figure class="contact-photo">
+          <img class="rv" src="assets/cheatham-heating-cooling-murfreesboro-tn/condenseur-rheem-dalle-beton-neuf.webp" width="1204" height="1600" loading="lazy" alt="A new gray condenser on a fresh concrete pad against a red brick wall, with a disconnect box above it.">
+          <figcaption class="etiquette">New condenser on a new pad, College Grove</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div class="pied-marque">
+        <b>Cheatham Heating &amp; Cooling</b>
+        <p>Local. Reliable. Comfort you can count on. Heating and cooling in Murfreesboro, TN.</p>
+      </div>
+      <div class="pied-col">
+        <h3>Call or text</h3>
+        <p><a class="nw" href="tel:+16155825572">615-582-5572</a></p>
+        <p><a href="mailto:dillon.cheatham@gmail.com">Email Dillon</a></p>
+      </div>
+      <div class="pied-col">
+        <h3>Find us</h3>
+        <p>125 Twin Oak Dr<br>Murfreesboro, TN 37130</p>
+      </div>
+      <div class="pied-col">
+        <h3>Hours</h3>
+        <p>Open 24 hours, every day</p>
+        <p><a href="https://www.facebook.com/cheathamheatingcooling" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <p class="proposition">Proposal by Nicolas Masset for Cheatham Heating &amp; Cooling</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var entete=document.querySelector('.entete');
+  var maj=function(){entete.classList.toggle('colle',window.scrollY>8)};
+  maj();window.addEventListener('scroll',maj,{passive:true});
+  var photos=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){photos.forEach(function(p){p.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  photos.forEach(function(p){io.observe(p)});
+})();
+</script>
+</body>
+</html>

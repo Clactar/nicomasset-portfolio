@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>A&amp;M Heating and Cooling, LLC, HVAC contractor in Canton, OH</title>
+<meta name="description" content="A&amp;M Heating and Cooling, LLC: furnace and AC installation, heating and AC service, indoor air quality and maintenance plans for homes and businesses in Canton, Akron, Alliance, Louisville and Medina.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A2330'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23F6F7F8'%3EA%3C/text%3E%3Crect x='12' y='50' width='20' height='5' fill='%232E6AD1'/%3E%3Crect x='32' y='50' width='20' height='5' fill='%23CF4527'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#E7E9EC; --fond-2:#DCDFE3; --surface:#F6F7F8;
+  --encre:#1A2330; --encre-2:#4A5566; --trait:rgba(26,35,48,.14);
+  --froid:#2E6AD1; --chaud:#CF4527;
+  --nuit:#1A2330; --nuit-2:#243042; --pied:#121923; --sur-nuit:#EEF0F3; --sur-nuit-2:#AEB6C2;
+  --display:'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif; --texte:'IBM Plex Serif', Georgia, serif;
+  --ombre:0 30px 60px -34px rgba(18,25,35,.5);
+  --ombre-longue:0 60px 100px -46px rgba(18,25,35,.62);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:18px;line-height:1.65}
+::selection{background:var(--encre);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:4px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px, 4.2vw, 54px);line-height:1.04}
+h3{font-size:clamp(22px, 2vw, 26px);line-height:1.15}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(231,233,236,.95);border-bottom:1px solid var(--trait)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{text-decoration:none;line-height:1.1;min-width:0;display:block}
+.marque b{display:block;font-family:var(--display);font-weight:600;font-size:24px}
+.marque span{display:block;font-size:14px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:26px;font-family:var(--display);font-size:17px;font-weight:500}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:not(.appel):hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;background:var(--nuit);color:var(--sur-nuit);text-decoration:none;font-family:var(--display);font-weight:600;font-size:17px;white-space:nowrap;transition:background .25s ease}
+.appel:hover{background:var(--nuit-2)}
+.appel .court{display:none}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:14px 28px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:18px;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease}
+.bouton:hover{transform:translateY(-2px)}
+.bouton.plein{background:var(--nuit);color:var(--sur-nuit);box-shadow:0 18px 32px -20px rgba(18,25,35,.85)}
+.bouton.plein:hover{background:var(--nuit-2)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros */
+.heros{padding:64px 0 96px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px;align-items:center}
+.metier{font-family:var(--texte);font-style:italic;font-size:19px;color:var(--encre-2);margin-bottom:20px}
+.heros h1{font-size:clamp(42px, 6vw, 86px);line-height:.98;letter-spacing:-.02em}
+.heros .intro{margin-top:28px;max-width:30em;font-size:19px;color:var(--encre-2)}
+.heros .boutons{margin-top:34px}
+.cadre-photo{position:relative;margin:0;background:var(--surface);padding:18px;border-radius:14px;box-shadow:var(--ombre-longue)}
+.cadre-photo img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:62% 50%;border-radius:4px}
+.etiquette{position:absolute;left:-22px;bottom:56px;background:var(--surface);color:var(--encre);font-family:var(--display);font-weight:600;font-size:17px;line-height:1.3;padding:12px 18px;border-radius:10px;box-shadow:0 18px 34px -16px rgba(18,25,35,.6);max-width:min(300px, 84%)}
+.etiquette small{display:block;font-family:var(--texte);font-weight:400;font-size:15px;color:var(--encre-2)}
+
+/* Bandeau de faits + filet bicolore */
+.faits ul{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));background:var(--surface);border-radius:14px 14px 0 0;box-shadow:var(--ombre)}
+.faits li{padding:26px 28px}
+.faits li+li{border-left:1px solid var(--trait)}
+.faits b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.15}
+.faits span{display:block;margin-top:4px;font-size:15px;line-height:1.45;color:var(--encre-2)}
+.bicolore{display:grid;grid-template-columns:1fr 1fr;height:6px;border-radius:0 0 6px 6px;overflow:hidden}
+.bicolore i:first-child{background:var(--froid)}
+.bicolore i:last-child{background:var(--chaud)}
+.legende{display:flex;justify-content:space-between;gap:16px;margin-top:10px;font-family:var(--display);font-size:15px;font-weight:500;color:var(--encre-2)}
+
+/* Services : froid / chaud */
+.services{padding:128px 0 120px}
+.services-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:56px}
+.services-tete p{color:var(--encre-2);max-width:30em}
+.deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.colonne{background:var(--surface);border-radius:20px;padding:36px 36px 40px;box-shadow:var(--ombre);position:relative}
+.colonne .sens{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:17px}
+.colonne .sens::before{content:"";width:12px;height:12px;border-radius:50%;background:currentColor}
+.froid .sens{color:var(--froid)}
+.chaud .sens{color:var(--chaud)}
+.colonne h3{margin-top:10px;font-size:clamp(28px, 2.8vw, 36px)}
+.colonne figure{margin:24px 0 0;position:relative}
+.colonne figure img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+.froid figure img{object-position:50% 40%}
+.chaud figure{max-width:300px}
+.chaud figure img{aspect-ratio:4/3}
+.colonne dl{margin:26px 0 0}
+.colonne dt{font-family:var(--display);font-weight:600;font-size:20px;padding-top:18px;border-top:1px solid var(--trait)}
+.colonne dd{margin:4px 0 18px;color:var(--encre-2);font-size:17px}
+.colonne dd:last-child{margin-bottom:0}
+.air{margin-top:32px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:32px;align-items:baseline;padding:28px 36px;border-radius:20px;background:var(--fond-2)}
+.air p{color:var(--encre-2)}
+
+/* Urgences : section nuit, photo de toiture */
+.urgence{background:var(--nuit);color:var(--sur-nuit);padding:120px 0 128px}
+.urgence-haut{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end}
+.urgence h2{color:var(--sur-nuit);font-size:clamp(34px, 4.6vw, 62px)}
+.urgence-haut p{color:var(--sur-nuit-2)}
+.urgence .gros-tel{display:inline-block;margin-top:20px;font-family:var(--display);font-weight:600;font-size:clamp(36px, 4.6vw, 58px);line-height:1;text-decoration:none;white-space:nowrap;color:var(--sur-nuit)}
+.urgence .gros-tel:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
+.toit{margin:64px 0 0;position:relative}
+.toit img{width:100%;aspect-ratio:2048/880;object-fit:cover;object-position:50% 40%;border-radius:20px;box-shadow:0 50px 90px -50px rgba(0,0,0,.85)}
+.toit figcaption{position:absolute;left:20px;bottom:20px;background:var(--surface);color:var(--encre);font-family:var(--display);font-weight:600;font-size:16px;padding:8px 14px;border-radius:999px}
+
+/* Contrats d'entretien : tableau comparatif */
+.plans{padding:128px 0 112px}
+.plans .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:72px;align-items:start}
+.plans h2{font-size:clamp(30px, 3.4vw, 46px)}
+.plans-tete p{margin-top:18px;color:var(--encre-2)}
+.plans-tete .petit{margin-top:14px;font-size:15px}
+.tableau{background:var(--surface);border-radius:20px;box-shadow:var(--ombre-longue);padding:8px 32px 20px;overflow-x:auto}
+.tableau table{width:100%;border-collapse:collapse;font-size:17px}
+.tableau th, .tableau td{padding:16px 12px;text-align:left;vertical-align:top;border-top:1px solid var(--trait)}
+.tableau thead th{border-top:0;font-family:var(--display);font-weight:600;font-size:22px;padding-top:24px}
+.tableau thead th span{display:block;font-size:30px;line-height:1.1;margin-top:4px;white-space:nowrap}
+.tableau thead th span small{font-size:16px;font-weight:500;color:var(--encre-2)}
+.tableau tbody th{font-weight:400;color:var(--encre-2);width:38%}
+.tableau td{font-weight:500}
+.tableau .note-bas{margin-top:12px;font-size:15px;color:var(--encre-2)}
+
+/* Financement */
+.financement{padding:0 0 128px}
+.financement .boite{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center;padding:52px 56px;border-radius:24px;background:var(--fond-2)}
+.financement p{margin-top:14px;color:var(--encre-2);max-width:34em}
+.financement .petit{font-size:15px}
+.financement .boutons{justify-content:flex-end}
+
+/* Avis et équipe */
+.avis{padding:0 0 128px}
+.avis .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.grande-citation{margin:28px 0 0;font-family:var(--texte);font-style:italic;font-size:clamp(22px, 2.3vw, 30px);line-height:1.45}
+.grande-citation cite{display:block;margin-top:16px;font-style:normal;font-family:var(--display);font-weight:600;font-size:17px}
+.petites{margin-top:44px;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:28px}
+.petites blockquote{margin:0;padding-top:18px;border-top:2px solid var(--encre)}
+.petites p{font-size:17px}
+.petites cite{display:block;margin-top:10px;font-style:normal;font-family:var(--display);font-weight:600;font-size:16px}
+.equipe{background:var(--surface);border-radius:20px;padding:36px;box-shadow:var(--ombre)}
+.equipe p{margin-top:10px;color:var(--encre-2);font-size:17px}
+.portraits{margin-top:26px;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:20px}
+.portraits figure{margin:0}
+.portraits img{width:100%;max-width:200px;aspect-ratio:1/1;object-fit:cover;object-position:50% 25%;border-radius:50%;box-shadow:0 20px 34px -20px rgba(18,25,35,.6)}
+.portraits figcaption{margin-top:14px;font-family:var(--display);font-weight:600;font-size:19px;line-height:1.25}
+.portraits figcaption span{display:block;font-family:var(--texte);font-weight:400;font-size:15px;color:var(--encre-2)}
+
+/* Contact */
+.contact{padding:0 0 136px}
+.contact-boite{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);background:var(--surface);border-radius:24px;box-shadow:var(--ombre-longue);overflow:hidden}
+.contact-gauche{padding:56px 56px 52px}
+.contact-gauche p{margin-top:16px;color:var(--encre-2);max-width:28em}
+.contact-gauche .tel{display:inline-block;margin-top:28px;font-family:var(--display);font-weight:600;font-size:clamp(34px, 4.4vw, 56px);line-height:1;text-decoration:none;white-space:nowrap}
+.contact-gauche .tel:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
+.contact-gauche .mail{display:inline-block;margin-top:16px;font-family:var(--display);font-weight:500;font-size:20px;text-underline-offset:5px;overflow-wrap:anywhere}
+.contact-gauche .boutons{margin-top:32px}
+.contact-droite{padding:44px 48px;background:var(--fond-2)}
+.contact-droite dl{margin:0}
+.contact-droite div{padding:16px 0;border-top:1px solid var(--trait)}
+.contact-droite div:first-child{border-top:0}
+.contact-droite dt{font-size:15px;color:var(--encre-2)}
+.contact-droite dd{margin:4px 0 0;font-family:var(--display);font-weight:500;font-size:20px;line-height:1.35}
+
+/* Pied */
+.pied{background:var(--pied);color:var(--sur-nuit);padding:72px 0 28px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) repeat(3, minmax(0,3fr));gap:40px}
+.pied a.nom{font-family:var(--display);font-weight:600;font-size:26px;display:block;text-decoration:none}
+.pied p, .pied li{font-size:16px;color:var(--sur-nuit-2);line-height:1.55}
+.pied p{margin-top:10px}
+.pied h4{margin:0 0 12px;font-family:var(--display);font-size:17px;font-weight:600;color:var(--sur-nuit)}
+.pied li+li{margin-top:6px}
+.pied a{color:var(--sur-nuit);text-decoration-color:rgba(238,240,243,.35);text-underline-offset:4px}
+.pied-bas{grid-column:1 / -1;margin-top:28px;padding-top:22px;border-top:1px solid rgba(238,240,243,.14);font-size:14px}
+.proposition{background:var(--pied);color:#8A94A3;text-align:center;font-size:13px;padding:6px 16px 22px;margin:0}
+
+/* Apparition douce des photos seulement */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu, html.vu .apparait{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .bouton, .appel{transition:none}
+  .bouton:hover{transform:none}
+}
+
+@media (max-width: 1080px){
+  .nav a.secondaire{display:none}
+  .heros .cadre{gap:56px}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .faits li:nth-child(3){border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid var(--trait)}
+  .plans .cadre, .avis .cadre{gap:48px}
+  .financement .boite{grid-template-columns:minmax(0,1fr);gap:24px}
+  .financement .boutons{justify-content:flex-start}
+  .contact-gauche{padding:44px 40px}
+  .contact-droite{padding:36px 36px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width: 760px){
+  body{font-size:17px}
+  .marque b{font-size:20px}
+  .marque span{display:none}
+  .heros{padding:28px 0 64px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros-texte{display:contents}
+  .metier{order:1;font-size:17px;margin-bottom:10px}
+  .heros h1{order:2;font-size:clamp(36px, 11vw, 50px)}
+  .cadre-photo{order:3;margin-top:24px;padding:10px;border-radius:12px}
+  .cadre-photo img{aspect-ratio:4/3;object-position:60% 45%}
+  .etiquette{left:-6px;bottom:24px;font-size:16px;padding:10px 14px}
+  .heros .intro{order:4;font-size:18px;margin-top:24px}
+  .heros .boutons{order:5;margin-top:24px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{padding:18px 22px}
+  .faits li+li{border-left:0;border-top:1px solid var(--trait)}
+  .services{padding:88px 0 80px}
+  .services-tete, .urgence-haut{grid-template-columns:minmax(0,1fr);gap:16px;margin-bottom:32px}
+  .deux{grid-template-columns:minmax(0,1fr);gap:20px}
+  .colonne{padding:28px 22px 30px}
+  .air{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 22px}
+  .urgence{padding:88px 0 96px}
+  .toit{margin-top:36px}
+  .toit img{aspect-ratio:4/3;object-position:30% 50%}
+  .plans{padding:88px 0 80px}
+  .plans .cadre, .avis .cadre{grid-template-columns:minmax(0,1fr);gap:32px}
+  .tableau{padding:4px 16px 16px}
+  .tableau table{font-size:15px}
+  .tableau th, .tableau td{padding:12px 6px}
+  .tableau thead th{font-size:18px}
+  .tableau thead th span{font-size:24px}
+  .financement{padding-bottom:88px}
+  .financement .boite{padding:32px 22px}
+  .avis{padding-bottom:88px}
+  .petites{grid-template-columns:minmax(0,1fr)}
+  .equipe{padding:28px 22px}
+  .contact{padding-bottom:96px}
+  .contact-boite{grid-template-columns:minmax(0,1fr)}
+  .contact-gauche{padding:36px 22px}
+  .contact-droite{padding:24px 22px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 420px){
+  .appel .long{display:none}
+  .appel .court{display:inline}
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+  .urgence .gros-tel, .contact-gauche .tel{white-space:normal;font-size:clamp(30px, 10vw, 40px)}
+  .tableau thead th span{font-size:21px}
+  .tableau thead th span small{display:block;font-size:14px}
+  .tableau tbody th{width:44%}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top" aria-label="A&amp;M Heating and Cooling, back to the top of the page"><b>A&amp;M Heating and Cooling</b><span>HVAC contractor in Canton, OH</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="secondaire" href="#top">Home</a>
+      <a class="secondaire" href="#services">Services</a>
+      <a class="secondaire" href="#plans">Plans</a>
+      <a class="secondaire" href="#financing">Financing</a>
+      <a class="secondaire" href="#reviews">Reviews</a>
+      <a class="secondaire" href="#contact">Contact</a>
+      <a class="appel" href="tel:+13303241328" aria-label="Call A&amp;M Heating and Cooling at (330) 324-1328"><span class="long">(330) 324-1328</span><span class="court">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <div class="heros-texte">
+        <p class="metier">A heating and cooling contractor in Canton, Ohio</p>
+        <h1 id="titre">At A&amp;M we can heat you up or cool you down.</h1>
+        <p class="intro">Our experienced team serves both residential and commercial properties. With over 20 years of experience in the industry, we provide quality HVAC services, and we service all makes and models, no matter who installed them.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+13303241328">Call (330) 324-1328</a>
+          <a class="bouton contour" href="#plans">See maintenance plans</a>
+        </div>
+      </div>
+      <figure class="cadre-photo">
+        <img src="assets/am-heating-and-cooling-canton-oh/technicien-raccordement-groupe-panasonic.webp" alt="A&amp;M technician sitting beside an outdoor Panasonic Inverter unit, gauges and red, blue and yellow hoses connected" width="1600" height="1600" fetchpriority="high">
+        <figcaption class="etiquette">Gauges on, hoses connected<small>An outdoor unit hookup</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="cadre">
+      <ul>
+        <li><b>Over 20 years</b><span>of HVAC experience</span></li>
+        <li><b>24/7/365</b><span>Emergency service, homes and businesses</span></li>
+        <li><b>All makes and models</b><span>No matter who installed them</span></li>
+        <li><b>Financing</b><span>Through Synchrony, subject to credit approval</span></li>
+      </ul>
+      <div class="bicolore" aria-hidden="true"><i></i><i></i></div>
+      <p class="legende"><span>Cooling</span><span>Heating</span></p>
+    </div>
+  </div>
+
+  <section class="services" id="services" aria-labelledby="t-services">
+    <div class="cadre">
+      <div class="services-tete">
+        <h2 id="t-services">Your one stop shop for all your HVAC needs</h2>
+        <p>Installation, repair and service for heating and cooling, for residential and commercial customers. Contact A&amp;M for your free estimate.</p>
+      </div>
+      <div class="deux">
+        <article class="colonne froid">
+          <p class="sens">Cooling</p>
+          <h3>Air conditioning</h3>
+          <figure class="apparait">
+            <img src="assets/am-heating-and-cooling-canton-oh/climatiseur-exterieur-pose-le-long-maison.webp" alt="Clean outdoor AC unit set on a black pad along beige siding, with its disconnect box on the wall" width="1200" height="1600" loading="lazy">
+          </figure>
+          <dl>
+            <dt>AC installation</dt>
+            <dd>We install only high quality and efficient cooling systems.</dd>
+            <dt>AC services</dt>
+            <dd>Repairing your air conditioning is easy with our experienced and professional technicians.</dd>
+          </dl>
+        </article>
+        <article class="colonne chaud">
+          <p class="sens">Heating</p>
+          <h3>Furnaces</h3>
+          <figure class="apparait">
+            <img src="assets/am-heating-and-cooling-canton-oh/chaudiere-gaz-ouverte-entretien.webp" alt="Furnace with its front panels off in a basement, burner and control board visible" width="1600" height="1600" loading="lazy">
+          </figure>
+          <dl>
+            <dt>Furnace installation</dt>
+            <dd>We install only high quality and efficient heating systems.</dd>
+            <dt>Heating service</dt>
+            <dd>It’s not just old furnaces: new furnaces can break down too. At A&amp;M we can service them all.</dd>
+          </dl>
+        </article>
+      </div>
+      <div class="air">
+        <h3>Indoor air quality</h3>
+        <p>Add an indoor air purification system to your home, for both residential and commercial properties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="urgence" aria-labelledby="t-urgence">
+    <div class="cadre">
+      <div class="urgence-haut">
+        <div>
+          <h2 id="t-urgence">Emergency service for homes and businesses.</h2>
+          <a class="gros-tel" href="tel:+13303241328">(330) 324-1328</a>
+        </div>
+        <p>We’re available 24/7/365 for residential and commercial emergencies. Call us now.</p>
+      </div>
+      <figure class="toit apparait">
+        <img src="assets/am-heating-and-cooling-canton-oh/technicien-unite-toiture-trane.webp" alt="Technician kneeling on a flat roof beside a large Trane rooftop unit, Canton houses and a brick building behind" width="1600" height="777" loading="lazy">
+        <figcaption>On the roof, Canton</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="t-plans">
+    <div class="cadre">
+      <div class="plans-tete">
+        <h2 id="t-plans">Save money with a preventative maintenance plan</h2>
+        <p>A&amp;M offers annual maintenance plans to fit your budget.</p>
+        <p class="petit">*Some exclusions apply.</p>
+      </div>
+      <div class="tableau">
+        <table>
+          <thead>
+            <tr><th scope="col"><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Included</span></th><th scope="col">Gold<span>$159 <small>per year</small></span></th><th scope="col">Platinum<span>$199 <small>per year</small></span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Free annual inspection</th><td>1</td><td>2</td></tr>
+            <tr><th scope="row">Off the service call fee</th><td>5%</td><td>15%</td></tr>
+            <tr><th scope="row">Free filter replacement*</th><td>1</td><td>2</td></tr>
+            <tr><th scope="row">Emergency diagnostics</th><td>50% off</td><td>Free</td></tr>
+            <tr><th scope="row">Routine equipment maintenance</th><td>Included</td><td>Included</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="financement" id="financing" aria-labelledby="t-fin">
+    <div class="cadre">
+      <div class="boite">
+        <div>
+          <h2 id="t-fin">Apply today, take time to pay.</h2>
+          <p>A&amp;M has partnered with Synchrony to offer payment options for those unexpected HVAC service needs. With promotional financing, major purchases don’t have to wait: get what you need now and pay over time, for any type of service.</p>
+          <p class="petit">Subject to credit approval.</p>
+        </div>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+13303241328">Ask about financing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" id="reviews" aria-labelledby="t-avis">
+    <div class="cadre">
+      <div>
+        <h2 id="t-avis">What are they saying about A&amp;M?</h2>
+        <blockquote class="grande-citation">
+          <p>“Our house was freezing. … Called them up this morning and they were able to get here within a few hours! … They fixed everything within the hour and showed me how to change the filters.”</p>
+          <cite>Tashiana R.</cite>
+        </blockquote>
+        <div class="petites">
+          <blockquote><p>“Whether we call on a Sunday for emergency calls or just to make sure preventative maintenance is done on our HVAC units, these guys always have us covered!”</p><cite>Nick P.</cite></blockquote>
+          <blockquote><p>“Mike and Anthony are great! They were on time, professional and efficient. Nice guys to do business with.”</p><cite>Jeff M.</cite></blockquote>
+          <blockquote><p>“…after they got it all cleaned out they told us about their service plan and we signed up immediately.”</p><cite>Theresa W.</cite></blockquote>
+          <blockquote><p>“Came in and fixed my old commercial fridge. They will not quit until they figure it out and get the job done!”</p><cite>Aaron R.</cite></blockquote>
+        </div>
+      </div>
+      <aside class="equipe" aria-labelledby="t-equipe">
+        <h3 id="t-equipe">Our team</h3>
+        <p>Our dedicated team of professionals.</p>
+        <div class="portraits">
+          <figure class="apparait">
+            <img src="assets/am-heating-and-cooling-canton-oh/mike-technicien-tenue-m-and-a.webp" alt="Michael Koty in a company polo and cap" width="1205" height="1600" loading="lazy">
+            <figcaption>Michael Koty<span>Owner</span></figcaption>
+          </figure>
+          <figure class="apparait">
+            <img src="assets/am-heating-and-cooling-canton-oh/anthanee-technicien-tenue-m-and-a.webp" alt="Anthanee Streeter in a company beanie and jacket" width="900" height="1600" loading="lazy">
+            <figcaption>Anthanee Streeter<span>Owner</span></figcaption>
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="cadre">
+      <div class="contact-boite">
+        <div class="contact-gauche">
+          <h2 id="t-contact">Call A&amp;M or send us a message</h2>
+          <p>The experienced and professional technicians at A&amp;M can service all models, no matter who installed them.</p>
+          <a class="tel" href="tel:+13303241328">(330) 324-1328</a><br>
+          <a class="mail" href="mailto:A_Mheatingcooling@yahoo.com">A_Mheatingcooling@yahoo.com</a>
+          <div class="boutons">
+            <a class="bouton plein" href="tel:+13303241328">Call for a free estimate</a>
+            <a class="bouton contour" href="mailto:A_Mheatingcooling@yahoo.com">Email us</a>
+          </div>
+        </div>
+        <div class="contact-droite">
+          <dl>
+            <div><dt>Address</dt><dd>2903 5th St NW<br>Canton, OH 44708</dd></div>
+            <div><dt>Business hours</dt><dd>9:00&nbsp;am to 5:00&nbsp;pm</dd></div>
+            <div><dt>Emergencies</dt><dd>24/7/365, residential and commercial</dd></div>
+            <div><dt>Service areas</dt><dd>Akron, Alliance, Canton, Louisville, Medina and more</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="nom" href="#top">A&amp;M Heating and Cooling, LLC</a>
+      <p>We service all makes and models. With over 20 years of HVAC experience, the professionals at A&amp;M can heat you up or cool you down.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+13303241328">(330) 324-1328</a></li>
+        <li><a href="mailto:A_Mheatingcooling@yahoo.com">Email us</a></li>
+        <li>2903 5th St NW, Canton, OH 44708</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service areas</h4>
+      <ul><li>Akron</li><li>Alliance</li><li>Canton</li><li>Louisville</li><li>Medina</li></ul>
+    </div>
+    <div>
+      <h4>On this page</h4>
+      <ul><li><a href="#top">Home</a></li><li><a href="#services">Services</a></li><li><a href="#plans">Maintenance plans</a></li><li><a href="#financing">Financing</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <p class="pied-bas">A&amp;M Heating and Cooling, LLC, Canton, Ohio</p>
+  </div>
+</footer>
+<p class="proposition">Proposal by Nicolas Masset for A&amp;M Heating and Cooling</p>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

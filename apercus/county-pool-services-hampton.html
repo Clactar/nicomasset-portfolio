@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>County Pool Services LLC, pool service in Hampton Roads, VA</title>
+<meta name="description" content="County Pool Services LLC: pool repairs, renovations, leak detection, openings and closings for residential and commercial pools in Hampton, Newport News, Norfolk, Virginia Beach and the rest of Hampton Roads.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230D3A4E'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23E2F0EF'%3EC%3C/text%3E%3Cpath d='M10 52c6-4 10-4 16 0s10 4 16 0 10-4 12-2' stroke='%23EFC54A' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#E2F0EF; --fond-2:#D3E7E6; --surface:#F5FBFA;
+  --encre:#0D3A4E; --encre-2:#3F6474; --trait:rgba(13,58,78,.14);
+  --soleil:#EFC54A; --soleil-clair:#F6DA86;
+  --bleu:#0D3A4E; --bleu-2:#164B63; --pied:#082C3C; --sur-bleu:#E9F5F4; --sur-bleu-2:#A9C7CF;
+  --police:'Albert Sans', 'Helvetica Neue', sans-serif;
+  --ombre:0 30px 60px -34px rgba(8,44,60,.5);
+  --ombre-longue:0 56px 96px -48px rgba(8,44,60,.6);
+  --large:min(1200px, 100% - 48px);
+  --vague:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 700' preserveAspectRatio='none'%3E%3Cpath d='M0 0H600V640C560 612 522 604 480 622S398 676 350 670 270 618 222 614 140 650 96 664 30 670 0 652Z'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--police);font-size:18px;line-height:1.6}
+::selection{background:var(--soleil);color:var(--encre)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+.cadre{width:var(--large);margin-inline:auto}
+h1,h2,h3{font-family:var(--police);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.035em}
+h2{font-size:clamp(32px, 4.2vw, 54px);line-height:1.02}
+h3{font-size:clamp(21px, 1.9vw, 25px);line-height:1.2;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:rgba(226,240,239,.95);border-bottom:1px solid var(--trait)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marque{text-decoration:none;line-height:1.1;min-width:0;display:block}
+.marque b{display:block;font-weight:600;font-size:22px;letter-spacing:-.03em}
+.marque span{display:block;font-size:14px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px;font-weight:500}
+.nav a:not(.appel){text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:not(.appel):hover{color:var(--encre)}
+.appel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;background:var(--bleu);color:var(--sur-bleu);text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;transition:background .25s ease}
+.appel:hover{background:var(--bleu-2)}
+.appel .court{display:none}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .25s ease, background .25s ease, color .25s ease}
+.bouton:hover{transform:translateY(-2px)}
+.bouton.plein{background:var(--bleu);color:var(--sur-bleu);box-shadow:0 18px 32px -20px rgba(8,44,60,.85)}
+.bouton.plein:hover{background:var(--bleu-2)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros : photo à gauche au bord ondulé, texte à droite */
+.heros{padding:56px 0 96px}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+.bassin{grid-column:1;grid-row:1;position:relative;margin:0;filter:drop-shadow(0 40px 40px rgba(8,44,60,.28))}
+.bassin img{width:100%;aspect-ratio:6/7;object-fit:cover;object-position:50% 62%;border-radius:28px 28px 0 0;-webkit-mask-image:var(--vague);mask-image:var(--vague);-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.bouee{position:absolute;right:28px;top:56%;background:var(--soleil);color:var(--encre);font-weight:600;font-size:16px;line-height:1.3;padding:11px 18px;border-radius:999px;box-shadow:0 16px 30px -14px rgba(8,44,60,.6);max-width:min(260px, 80%)}
+.heros-texte{grid-column:2;grid-row:1}
+.region{font-size:18px;font-weight:500;color:var(--encre-2);margin-bottom:18px}
+.heros h1{font-size:clamp(40px, 5.6vw, 80px);line-height:.98;letter-spacing:-.045em;font-weight:600}
+.heros .intro{margin-top:26px;max-width:28em;font-size:20px;color:var(--encre-2)}
+.heros .boutons{margin-top:32px}
+.heros .sous{margin-top:18px;font-size:16px;color:var(--encre-2)}
+
+/* Bandeau de faits */
+.faits .cadre{border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.faits ul{display:grid;grid-template-columns:repeat(4, minmax(0,1fr))}
+.faits li{padding:28px 28px 28px 0}
+.faits li+li{padding-left:28px;border-left:1px solid var(--trait)}
+.faits b{display:block;font-weight:600;font-size:30px;line-height:1.1;letter-spacing:-.035em}
+.faits span{display:block;margin-top:6px;font-size:15px;line-height:1.45;color:var(--encre-2)}
+
+/* Services : trois familles en lignes */
+.services{padding:136px 0 128px}
+.services-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:56px}
+.services-tete p{color:var(--encre-2);max-width:30em}
+.familles{background:var(--surface);border-radius:28px;box-shadow:var(--ombre);padding:8px 48px}
+.famille{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:48px;padding:36px 0;border-top:1px solid var(--trait)}
+.famille:first-child{border-top:0}
+.famille h3{font-size:clamp(24px, 2.4vw, 32px);letter-spacing:-.035em}
+.famille h3 small{display:block;margin-top:6px;font-size:16px;font-weight:400;letter-spacing:0;color:var(--encre-2)}
+.famille ul{display:flex;flex-wrap:wrap;gap:10px}
+.famille li{padding:9px 16px;border-radius:999px;background:var(--fond);font-size:16px;font-weight:500;line-height:1.35}
+
+/* Hivernage : grande photo + vignette posée */
+.hiver{padding:0 0 136px}
+.hiver .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center}
+.hiver-photos{position:relative;padding-bottom:64px}
+.hiver-photos .grande{margin:0}
+.hiver-photos .grande img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:var(--ombre-longue)}
+.hiver-photos .petite{position:absolute;right:-28px;bottom:0;width:min(250px, 44%);margin:0;background:var(--surface);padding:10px;border-radius:16px;box-shadow:0 30px 50px -26px rgba(8,44,60,.65)}
+.hiver-photos .petite img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px}
+.hiver-photos .petite figcaption{font-size:14px;font-weight:600;padding:8px 4px 2px}
+.etiquette{position:absolute;left:18px;top:18px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:8px 14px;border-radius:999px}
+.hiver-texte p{margin-top:18px;color:var(--encre-2)}
+.hiver-texte ul{margin-top:26px;display:grid;gap:12px}
+.hiver-texte li{display:flex;gap:14px;align-items:baseline;font-size:18px;font-weight:500}
+.hiver-texte li::before{content:"";flex:none;width:18px;height:2px;background:var(--encre);transform:translateY(-5px)}
+.hiver-texte .rappel{margin-top:26px;padding:20px 22px;background:var(--surface);border-radius:16px;font-size:16px;color:var(--encre)}
+
+/* Nouvelles piscines : section bleu profond */
+.neuves{background:var(--bleu);color:var(--sur-bleu);padding:128px 0 136px;position:relative}
+.neuves-tete{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:64px}
+.neuves h2{color:var(--sur-bleu)}
+.neuves-tete p{color:var(--sur-bleu-2);max-width:30em}
+.types{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:0;margin-bottom:64px;border-top:1px solid rgba(233,245,244,.18)}
+.types li{padding:22px 24px 0 0;font-size:19px;font-weight:600;line-height:1.3}
+.types li+li{padding-left:24px;border-left:1px solid rgba(233,245,244,.18)}
+.types span{display:block;font-weight:400;font-size:15px;color:var(--sur-bleu-2);margin-top:4px}
+.galerie{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:24px;align-items:end}
+.galerie figure{margin:0;position:relative}
+.galerie img{width:100%;object-fit:cover}
+.g1 img{aspect-ratio:3/4;border-radius:22px 22px 22px 120px;box-shadow:0 50px 90px -50px rgba(0,0,0,.8)}
+.g2{align-self:start}
+.g2 img{aspect-ratio:4/5;border-radius:20px;box-shadow:0 50px 90px -50px rgba(0,0,0,.8)}
+.g3 img{aspect-ratio:3/4;border-radius:18px;box-shadow:0 50px 90px -50px rgba(0,0,0,.8)}
+.galerie .pastille{position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--encre);font-size:15px;font-weight:600;padding:7px 13px;border-radius:999px;line-height:1.3}
+.g1 .pastille{left:auto;right:14px}
+
+/* Contact */
+.contact{padding:128px 0 136px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:72px;align-items:start}
+.contact .chapo{margin-top:18px;color:var(--encre-2);max-width:28em}
+.gros-tel{display:inline-block;margin-top:30px;font-weight:600;font-size:clamp(36px, 5vw, 64px);line-height:1;letter-spacing:-.045em;text-decoration:none;white-space:nowrap}
+.gros-tel:hover{color:var(--bleu-2)}
+.contact .boutons{margin-top:30px}
+.note{display:flex;align-items:center;gap:18px;margin-top:40px;padding-top:28px;border-top:1px solid var(--trait)}
+.note b{font-size:56px;font-weight:600;line-height:1;letter-spacing:-.05em}
+.note p{font-size:16px;color:var(--encre-2);line-height:1.5}
+.note a{font-weight:600;color:var(--encre);text-underline-offset:4px}
+.fiche{background:var(--surface);border-radius:24px;padding:12px 32px;box-shadow:var(--ombre)}
+.fiche dl{margin:0}
+.fiche div{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:16px;padding:20px 0;border-top:1px solid var(--trait)}
+.fiche div:first-child{border-top:0}
+.fiche dt{font-size:15px;color:var(--encre-2);padding-top:2px}
+.fiche dd{margin:0;font-size:17px;line-height:1.5}
+.fiche a{text-underline-offset:4px;overflow-wrap:anywhere}
+
+/* Pied */
+.pied{background:var(--pied);color:var(--sur-bleu);padding:72px 0 28px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) repeat(3, minmax(0,3fr));gap:40px}
+.pied b.nom{font-weight:600;font-size:24px;display:block;letter-spacing:-.03em}
+.pied p, .pied li{font-size:16px;color:var(--sur-bleu-2);line-height:1.55}
+.pied h4{margin:0 0 12px;font-size:16px;font-weight:600;color:var(--sur-bleu)}
+.pied li+li{margin-top:6px}
+.pied a{color:var(--sur-bleu);text-decoration-color:rgba(233,245,244,.35);text-underline-offset:4px}
+.pied-bas{grid-column:1 / -1;margin-top:28px;padding-top:22px;border-top:1px solid rgba(233,245,244,.14);font-size:14px}
+.proposition{background:var(--pied);color:#86A6B0;text-align:center;font-size:13px;padding:6px 16px 22px;margin:0}
+
+/* Apparition douce des photos seulement */
+.js .apparait{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu, html.vu .apparait{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;transform:none;transition:none}
+  .bouton, .appel{transition:none}
+  .bouton:hover{transform:none}
+}
+
+@media (max-width: 1080px){
+  .nav a.secondaire{display:none}
+  .heros .cadre{gap:48px}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid var(--trait)}
+  .familles{padding:8px 32px}
+  .famille{gap:28px}
+  .hiver .cadre, .contact .cadre{gap:48px}
+  .hiver-photos .petite{right:-8px}
+  .types{grid-template-columns:repeat(2, minmax(0,1fr));row-gap:24px}
+  .types li:nth-child(3){padding-left:0;border-left:0}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width: 760px){
+  body{font-size:17px}
+  .marque b{font-size:19px}
+  .marque span{display:none}
+  .heros{padding:28px 0 64px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);gap:0}
+  .heros-texte{display:contents}
+  .region{order:1;font-size:16px;margin-bottom:10px}
+  .heros h1{order:2;font-size:clamp(36px, 11vw, 50px)}
+  .bassin{order:3;grid-column:1;grid-row:auto;margin-top:24px}
+  .bassin img{aspect-ratio:5/4;object-position:50% 60%;border-radius:22px 22px 0 0}
+  .bouee{right:14px;top:auto;bottom:30%;font-size:15px;padding:9px 14px}
+  .heros .intro{order:4;font-size:18px;margin-top:22px}
+  .heros .boutons{order:5;margin-top:24px}
+  .heros .sous{order:6}
+  .faits li, .faits li+li{padding:20px 0;border-left:0}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li+li{border-top:1px solid var(--trait)}
+  .faits b{font-size:25px}
+  .services{padding:88px 0 80px}
+  .services-tete, .neuves-tete{grid-template-columns:minmax(0,1fr);gap:16px;margin-bottom:36px}
+  .familles{padding:4px 20px;border-radius:22px}
+  .famille{grid-template-columns:minmax(0,1fr);gap:16px;padding:28px 0}
+  .famille li{font-size:15px;padding:8px 13px}
+  .hiver{padding-bottom:88px}
+  .hiver .cadre, .contact .cadre{grid-template-columns:minmax(0,1fr);gap:36px}
+  .hiver-photos{padding-bottom:48px}
+  .hiver-photos .petite{right:-6px;width:min(170px, 48%)}
+  .neuves{padding:88px 0 96px}
+  .types{grid-template-columns:minmax(0,1fr);margin-bottom:40px;row-gap:0}
+  .types li, .types li+li{padding:16px 0;border-left:0;border-bottom:1px solid rgba(233,245,244,.18)}
+  .galerie{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+  .g1{grid-column:1 / 3}
+  .g1 img{aspect-ratio:4/3;border-radius:20px 20px 20px 80px}
+  .g2 img, .g3 img{aspect-ratio:3/4}
+  .contact{padding:88px 0 96px}
+  .fiche{padding:6px 20px}
+  .fiche div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 420px){
+  .appel .long{display:none}
+  .appel .court{display:inline}
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+  .gros-tel{white-space:normal;font-size:clamp(32px, 11vw, 42px)}
+  .galerie .pastille{font-size:13px;left:10px;bottom:10px;padding:6px 10px}
+  .g1 .pastille{left:auto;right:10px}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top"><b>County Pool Services</b><span>Pool service in Hampton Roads, VA</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="secondaire" href="#services">Services</a>
+      <a class="secondaire" href="#closing">Pool closing</a>
+      <a class="secondaire" href="#new-pools">New pools</a>
+      <a class="secondaire" href="#contact">Contact</a>
+      <a class="appel" href="tel:+17579202757" aria-label="Call or text County Pool Services at 757-920-2757"><span class="long">757-920-2757</span><span class="court">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <figure class="bassin">
+        <img src="assets/county-pool-services-hampton/piscine-enterree-toboggan-eau-bleue.webp" alt="Inground pool with clear turquoise water, a white slide and a brown concrete deck, under a blue sky" width="1200" height="1600" fetchpriority="high">
+        <figcaption class="bouee">Clear water, slide ready</figcaption>
+      </figure>
+      <div class="heros-texte">
+        <p class="region">Small business in the Hampton Roads area</p>
+        <h1 id="titre">Is your pool leaking, outdated or in need of repairs?</h1>
+        <p class="intro">Let County Pool Services bring it back to life. Repairs, renovations, leak detection, openings and closings, for residential and commercial pools.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+17579202757">Call or text 757-920-2757</a>
+          <a class="bouton contour" href="#services">See all services</a>
+        </div>
+        <p class="sous">Service by appointment. Message us for estimates and availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits">
+    <div class="cadre">
+      <ul>
+        <li><b>4.5 on Google</b><span>54 reviews</span></li>
+        <li><b>Residential and commercial</b><span>Inquiries welcome for both</span></li>
+        <li><b>Hampton Roads</b><span>From Williamsburg to Virginia Beach, and Moyock, NC</span></li>
+        <li><b>Locally owned</b><span>and operated</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="services" id="services" aria-labelledby="t-services">
+    <div class="cadre">
+      <div class="services-tete">
+        <h2 id="t-services">Whether it needs a liner or a complete renovation, we’ve got you covered.</h2>
+        <p>Weekly care, repairs, a new finish: everything a pool asks for over the years, from one local crew.</p>
+      </div>
+      <div class="familles">
+        <div class="famille">
+          <h3>Repairs<small>Find it, fix it</small></h3>
+          <ul><li>Leak detection</li><li>Underground pipe repair</li><li>Structural crack repairs</li><li>Tile and coping repairs</li><li>Fiberglass repairs</li><li>Pump and filter replacements</li><li>Equipment repairs and replacements</li></ul>
+        </div>
+        <div class="famille">
+          <h3>Renovations<small>A pool that looks new</small></h3>
+          <ul><li>Above-ground liner replacements</li><li>Inground liner replacements</li><li>Resurfacing, one-color and two-tone</li><li>Pool painting and refinishing</li><li>Remodeling and renovations</li><li>Salt system conversions</li><li>New equipment installation</li><li>Sand and filter changes</li></ul>
+        </div>
+        <div class="famille">
+          <h3>Care<small>Season after season</small></h3>
+          <ul><li>Weekly residential maintenance</li><li>Commercial pool maintenance</li><li>Pool openings and closings</li><li>Hot tub and spa service</li><li>Lifeguard management</li><li>Winter contracts</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hiver" id="closing" aria-labelledby="t-closing">
+    <div class="cadre">
+      <div class="hiver-photos">
+        <figure class="grande apparait">
+          <img src="assets/county-pool-services-hampton/bache-securite-piscine-bord-de-mer.webp" alt="Gray safety cover stretched tight over an inground pool, with the water and a cloudy sky beyond" width="1600" height="1200" loading="lazy">
+          <figcaption class="etiquette">Safety cover, installed</figcaption>
+        </figure>
+        <figure class="petite apparait">
+          <img src="assets/county-pool-services-hampton/bache-securite-verte-plage-rose.webp" alt="Green safety cover over a rectangular pool with a pink paver deck" width="1600" height="1200" loading="lazy">
+          <figcaption>Inground safety cover</figcaption>
+        </figure>
+      </div>
+      <div class="hiver-texte">
+        <h2 id="t-closing">Protect your pool before the cold weather arrives.</h2>
+        <p>Pool closing and winterization for residential and commercial pools. Message us to request pricing or reserve a date.</p>
+        <ul>
+          <li>Professional pool closing</li>
+          <li>Equipment winterization</li>
+          <li>Cover installation and inspection</li>
+          <li>New inground safety cover measuring and ordering</li>
+        </ul>
+        <p class="rappel">Need a new custom inground safety cover? Order early, so there is enough time for measuring, manufacturing and installation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="neuves" id="new-pools" aria-labelledby="t-new">
+    <div class="cadre">
+      <div class="neuves-tete">
+        <h2 id="t-new">New pools, installed throughout Hampton Roads</h2>
+        <p>Above-ground pool sales and installation, semi-inground pools, and new inground pools in vinyl or fiberglass. Message us for estimates and availability.</p>
+      </div>
+      <ul class="types">
+        <li>Above-ground<span>Including all-aluminum Doughboy Mystic</span></li>
+        <li>Semi-inground<span>Vinyl liner</span></li>
+        <li>Inground vinyl liner<span>Fully inground</span></li>
+        <li>Fiberglass<span>Installation and repairs</span></li>
+      </ul>
+      <div class="galerie">
+        <figure class="g1 apparait">
+          <img src="assets/county-pool-services-hampton/piscine-liner-remplissage-robot.webp" alt="Inground pool with a patterned blue liner being filled, a robot cleaner on the floor" width="1200" height="1600" loading="lazy">
+          <figcaption class="pastille">New liner, filling up</figcaption>
+        </figure>
+        <figure class="g2 apparait">
+          <img src="assets/county-pool-services-hampton/piscine-hors-sol-doughboy-neuve-sable.webp" alt="New round above-ground pool with white wave patterned walls, set on fresh sand among pines" width="1204" height="1600" loading="lazy">
+          <figcaption class="pastille">Above-ground, just set</figcaption>
+        </figure>
+        <figure class="g3 apparait">
+          <img src="assets/county-pool-services-hampton/piscine-hors-sol-ronde-jardin.webp" alt="Round above-ground pool with decorated walls in a fenced backyard" width="1200" height="1600" loading="lazy">
+          <figcaption class="pastille">Backyard install</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="cadre">
+      <div>
+        <h2 id="t-contact">Tell us about your pool</h2>
+        <p class="chapo">Call or text for pricing, or to schedule an estimate. Please include your location, pool size, and pictures if available.</p>
+        <a class="gros-tel" href="tel:+17579202757">757-920-2757</a>
+        <div class="boutons">
+          <a class="bouton plein" href="sms:+17579202757">Text us photos</a>
+          <a class="bouton contour" href="mailto:countypools757@gmail.com">Email us</a>
+        </div>
+        <div class="note">
+          <b>4.5</b>
+          <p>54 reviews on Google.<br><a href="https://www.google.com/maps?cid=8621491747413841109" target="_blank" rel="noopener">Read them on Google</a></p>
+        </div>
+      </div>
+      <div class="fiche">
+        <dl>
+          <div><dt>Phone</dt><dd><a href="tel:+17579202757">757-920-2757</a>, call or text</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:countypools757@gmail.com">countypools757@gmail.com</a></dd></div>
+          <div><dt>Based in</dt><dd>Hampton, VA 23663</dd></div>
+          <div><dt>Service area</dt><dd>Hampton, Newport News, Yorktown, Williamsburg, Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk, and Moyock, NC</dd></div>
+          <div><dt>Schedule</dt><dd>By appointment</dd></div>
+          <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/CountyPools" target="_blank" rel="noopener">Message us on Facebook</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <b class="nom">County Pool Services LLC</b>
+      <p>Pool repairs, renovations, leak detection and maintenance for residential and commercial pools in Hampton Roads.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+17579202757">757-920-2757</a></li>
+        <li><a href="mailto:countypools757@gmail.com">Email us</a></li>
+        <li><a href="https://www.facebook.com/CountyPools" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Based in</h4>
+      <ul><li>Hampton, VA 23663</li><li>By appointment</li></ul>
+    </div>
+    <div>
+      <h4>On this page</h4>
+      <ul><li><a href="#services">Services</a></li><li><a href="#closing">Pool closing</a></li><li><a href="#new-pools">New pools</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <p class="pied-bas">County Pool Services LLC, Hampton, Virginia</p>
+  </div>
+</footer>
+<p class="proposition">Proposal by Nicolas Masset for County Pool Services LLC</p>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var els = [].slice.call(document.querySelectorAll('.apparait'));
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lexington Tree Service Inc. · Tree Service in Lexington, Kentucky</title>
+<meta name="description" content="Tree trimming, removal, treatment, stump removal, storm damage and firewood in Lexington, Kentucky. ISA Certified Arborists on staff. Call (859) 263-2701.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B2119'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23E8DFD0'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#E8DFD0;
+  --kraft-fonce:#DACDB6;
+  --surface:#F4EEE4;
+  --ecorce:#2B2119;
+  --ecorce-douce:#5B4D40;
+  --orange:#D9631C;
+  --orange-bouton:#C4561A;
+  --sapin:#1F2A22;
+  --sapin-2:#2A372D;
+  --sur-sapin:#E6E1D5;
+  --sur-sapin-doux:#B2B8A9;
+  --filet:#CDBEA6;
+  --ombre:0 44px 80px -44px rgba(43,33,25,.62), 0 14px 28px -18px rgba(43,33,25,.32);
+  --display:"Alegreya", Georgia, serif;
+  --texte:"Alegreya Sans", "Gill Sans", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kraft);color:var(--ecorce);font-family:var(--texte);font-size:19px;line-height:1.55}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--orange);color:#FFF6EE}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete{background:var(--kraft-fonce)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:84px}
+.marque{text-decoration:none;line-height:1.05}
+.marque b{display:block;font-family:var(--display);font-weight:800;font-size:27px}
+.marque span{display:block;font-size:15px;color:var(--ecorce-douce)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-weight:500;font-size:17px;color:var(--ecorce-douce)}
+.nav a:hover{color:var(--ecorce)}
+.nav .tel{background:var(--ecorce);color:var(--kraft);padding:10px 20px;border-radius:999px;font-weight:700;white-space:nowrap;transition:background .2s ease}
+.nav .tel:hover{background:var(--orange-bouton);color:#fff}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:13px 28px;border-radius:999px;font-weight:700;font-size:18px;text-decoration:none;text-align:center;transition:background .2s ease,color .2s ease,transform .2s ease}
+.btn-plein{background:var(--orange-bouton);color:#FFF8F2;box-shadow:0 16px 30px -18px rgba(196,86,26,.9)}
+.btn-plein:hover{background:#AA4814;transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--ecorce);color:var(--ecorce)}
+.btn-contour:hover{background:var(--ecorce);color:var(--kraft)}
+.btn-clair{border:1.5px solid rgba(230,225,213,.7);color:var(--sur-sapin)}
+.btn-clair:hover{background:var(--sur-sapin);color:var(--sapin)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Héros : la photo déborde du fond */
+.heros{position:relative;padding:48px 0 0}
+.heros::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(100% - 150px);background:var(--kraft-fonce);z-index:-1}
+.heros{isolation:isolate}
+.heros .cadre{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.heros-photo{grid-column:1/8;grid-row:1;position:relative;margin:0}
+.heros-photo .fenetre{border-radius:20px;overflow:hidden;aspect-ratio:7/7.4;box-shadow:0 70px 100px -60px rgba(43,33,25,.75), 0 22px 40px -26px rgba(43,33,25,.45)}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:90% 40%}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(244,238,228,.96);border-radius:12px;padding:10px 15px;font-size:16px;line-height:1.3;box-shadow:0 12px 26px -16px rgba(43,33,25,.6);max-width:calc(100% - 36px)}
+.etiquette b{display:block}
+.heros-texte{grid-column:8/13;grid-row:1;padding:24px 0 150px 24px}
+.lieu{font-size:18px;color:var(--ecorce-douce)}
+.lieu a{color:var(--ecorce);font-weight:700;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
+.heros h1{font-size:clamp(50px,6.4vw,92px);margin-top:16px;line-height:.98;font-weight:800}
+.heros h1 em{font-style:italic;font-weight:700}
+.heros-texte .chapo{margin-top:22px;font-size:20px;color:#3E3229}
+.heros-texte .actions{margin-top:28px}
+.urgence{margin-top:16px;font-size:17px;color:var(--ecorce-douce)}
+.urgence b{color:var(--ecorce)}
+
+/* Bandeau de faits */
+.faits{margin-top:56px}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--ecorce);border-bottom:1px solid var(--filet)}
+.faits li{padding:22px 24px 24px 0}
+.faits li + li{padding-left:24px;border-left:1px solid var(--filet)}
+.faits b{display:block;font-family:var(--display);font-weight:800;font-size:32px;line-height:1.05}
+.faits span{display:block;font-size:16.5px;color:var(--ecorce-douce);margin-top:4px;line-height:1.35}
+
+/* Services */
+.services{padding:120px 0 110px}
+.services .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.services h2{font-size:clamp(40px,4.6vw,62px)}
+.services .chapo{margin-top:20px;max-width:34em;color:#3E3229}
+.services .chapo a{font-weight:700;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
+.liste{list-style:none;margin:40px 0 0;padding:0;columns:2;column-gap:40px}
+.liste li{break-inside:avoid;padding:13px 0 13px 26px;border-top:1px solid var(--filet);position:relative;font-size:18.5px}
+.liste li::before{content:"";position:absolute;left:2px;top:23px;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+.services-photo{margin:0;position:relative}
+.services-photo .fenetre{aspect-ratio:1/1.1;border-radius:200px 200px 20px 20px;overflow:hidden;box-shadow:var(--ombre)}
+.services-photo img{width:100%;height:100%;object-fit:cover;object-position:100% 0;transform:scale(1.55);transform-origin:100% 0}
+.services-photo figcaption{margin-top:14px;font-size:16.5px;color:var(--ecorce-douce)}
+
+/* Soin des arbres : citation pleine largeur */
+.soin{padding:0 0 120px}
+.soin .bloc{background:var(--surface);border-radius:28px;padding:64px 72px;box-shadow:var(--ombre);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+.soin blockquote{margin:0}
+.soin blockquote p{font-family:var(--display);font-weight:500;font-size:clamp(30px,3.2vw,44px);line-height:1.15}
+.soin blockquote p b{font-weight:800;color:var(--orange-bouton)}
+.soin blockquote footer{margin-top:18px;font-size:17px;color:var(--ecorce-douce)}
+.soin h3{font-size:30px}
+.soin .texte p{margin-top:12px;color:#3E3229}
+.soin ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:6px}
+.soin ul li{padding-left:22px;position:relative}
+.soin ul li::before{content:"";position:absolute;left:0;top:12px;width:12px;height:2px;background:var(--orange)}
+
+/* Tempête : fond sapin */
+.tempete{background:var(--sapin);color:var(--sur-sapin);padding:120px 0}
+.tempete .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:80px;align-items:start}
+.tempete h2{font-size:clamp(40px,4.8vw,66px);color:#F6F1E6}
+.tempete .chapo{margin-top:20px;font-size:20px;color:var(--sur-sapin)}
+.tempete .actions{margin-top:32px}
+.etapes{list-style:none;margin:0;padding:0;counter-reset:e}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding:26px 0;border-top:1px solid rgba(230,225,213,.16)}
+.etapes li:last-child{border-bottom:1px solid rgba(230,225,213,.16)}
+.etapes li::before{content:counter(e);font-family:var(--display);font-weight:800;font-size:44px;line-height:1;color:var(--orange)}
+.etapes h3{font-size:27px;color:#F6F1E6}
+.etapes p{margin-top:6px;color:var(--sur-sapin-doux)}
+
+/* Défrichage et bois */
+.terrain{padding:120px 0 110px}
+.terrain .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px}
+.terrain h2{font-size:clamp(36px,3.8vw,52px)}
+.terrain p{margin-top:16px;color:#3E3229;max-width:32em}
+.terrain .ligne{font-weight:700;color:var(--ecorce)}
+.vignettes{display:flex;gap:18px;margin-top:34px;align-items:flex-start}
+.vignette{margin:0;background:#FBF7F0;padding:9px 9px 12px;border-radius:10px;box-shadow:0 22px 36px -24px rgba(43,33,25,.55);width:min(270px,100%)}
+.vignette img{border-radius:5px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.vignette figcaption{font-size:15px;color:var(--ecorce-douce);padding:8px 3px 0;line-height:1.3}
+.vignette.penche{transform:rotate(-2deg);margin-top:26px}
+.vignette.penche-2{transform:rotate(1.6deg)}
+
+/* Zone et contact */
+.contact{padding:0 0 130px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.zone{padding-top:12px}
+.zone h2{font-size:clamp(38px,4.4vw,60px)}
+.zone .comte{margin-top:18px;font-family:var(--display);font-size:28px;font-weight:700}
+.zone .villes{margin-top:12px;color:#3E3229;line-height:1.75;max-width:34em}
+.zone .assos{margin-top:34px;padding-top:22px;border-top:1px solid var(--filet);font-size:16.5px;color:var(--ecorce-douce);max-width:36em}
+.zone .assos b{color:var(--ecorce);font-weight:700}
+.carte{background:var(--surface);border-radius:24px;padding:40px;box-shadow:var(--ombre)}
+.carte h2{font-size:34px}
+.carte .numero{display:inline-block;margin-top:14px;font-family:var(--display);font-weight:800;font-size:clamp(34px,3.4vw,46px);line-height:1.05;text-decoration:none;white-space:nowrap}
+.carte .numero:hover{color:var(--orange-bouton)}
+.infos{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--filet)}
+.infos li{display:grid;grid-template-columns:minmax(0,6.5em) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--filet);font-size:17.5px}
+.infos .cle{color:var(--ecorce-douce)}
+.infos a{text-underline-offset:3px;overflow-wrap:anywhere}
+.carte .actions{margin-top:26px}
+
+/* Pied */
+.pied{background:var(--ecorce);color:#E5DCCD;padding:80px 0 36px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque b{color:#F6F1E6;font-size:32px}
+.pied .marque span{color:#B9AC9A}
+.pied p{margin-top:16px;color:#B9AC9A;font-size:17px;max-width:26em}
+.pied h3{font-family:var(--texte);font-weight:700;font-size:16px;color:#B9AC9A;margin-bottom:12px;line-height:1.3}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:17px}
+.pied a{text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:3px}
+.pied .proposition{max-width:none;width:min(1200px,100% - 48px);margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(229,220,205,.14);font-size:14px;color:#988B79}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;translate:0 24px;transition:opacity .9s cubic-bezier(.2,.7,.2,1), translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in,.vu .rv{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  *{transition:none !important}
+}
+
+@media (max-width:1000px){
+  .nav a.lien{display:none}
+  .heros .cadre{grid-template-columns:minmax(0,1fr)}
+  .heros-texte{grid-column:1;grid-row:1;padding:0}
+  .heros-photo{grid-column:1;grid-row:2;margin-top:32px}
+  .heros::before{height:calc(100% - 120px)}
+  .heros-photo .fenetre{aspect-ratio:4/3.4}
+  .services .cadre,.tempete .cadre,.terrain .cadre,.contact .cadre{grid-template-columns:minmax(0,1fr);gap:48px}
+  .services-photo{max-width:480px}
+  .soin .bloc{grid-template-columns:minmax(0,1fr);gap:36px;padding:48px 40px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){padding-left:0;border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid var(--filet)}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:18px}
+  .cadre{width:min(1200px,100% - 36px)}
+  .entete .cadre{min-height:68px}
+  .marque b{font-size:22px}
+  .marque span{display:none}
+  .heros{padding-top:26px}
+  .heros h1{margin-top:10px}
+  .heros-texte .chapo{font-size:18.5px;margin-top:16px}
+  .heros-texte .actions{margin-top:20px}
+  .heros-photo{margin-top:24px}
+  .heros-photo .fenetre{aspect-ratio:4/3.6}
+  .heros-photo img{object-position:80% 40%}
+  .etiquette{left:12px;bottom:12px;font-size:15px;padding:8px 12px}
+  .heros-texte.ordre-tel{display:contents}
+  .ordre-tel > *{grid-column:1}
+  .ordre-tel .lieu{order:1}
+  .heros h1{order:2}
+  .ordre-tel .actions{order:3}
+  .heros-photo{grid-row:auto;order:4}
+  .ordre-tel .chapo{order:5;margin-top:26px}
+  .ordre-tel .urgence{order:6}
+  .faits{margin-top:40px}
+  .faits b{font-size:27px}
+  .faits li{padding:18px 14px 18px 0}
+  .faits li + li{padding-left:14px}
+  .services{padding:90px 0}
+  .liste{columns:1}
+  .soin{padding-bottom:90px}
+  .soin .bloc{padding:36px 22px;border-radius:22px}
+  .tempete{padding:90px 0}
+  .etapes li{grid-template-columns:44px minmax(0,1fr);gap:14px}
+  .etapes li::before{font-size:36px}
+  .terrain{padding:90px 0}
+  .contact{padding-bottom:90px}
+  .carte{padding:30px 22px}
+  .infos li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .nav .tel{padding:8px 13px;font-size:15px}
+  .marque b{font-size:19px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{padding-left:0 !important;border-left:0 !important}
+  .faits li + li{border-top:1px solid var(--filet)}
+  .vignettes{flex-direction:column;align-items:stretch}
+  .vignette.penche{margin-top:0}
+}
+@media (max-width:350px){
+  .marque b{font-size:17px}
+  .carte .numero{font-size:30px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top" aria-label="Lexington Tree Service Inc., back to top"><b>Lexington Tree Service</b><span>We Know Trees</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="lien" href="#services">Tree services</a>
+      <a class="lien" href="#storm">Storm damage</a>
+      <a class="lien" href="#firewood">Firewood</a>
+      <a class="lien" href="#area">Location</a>
+      <a class="tel" href="tel:+18592632701">(859) 263-2701</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <figure class="heros-photo rv">
+        <div class="fenetre">
+          <img src="assets/lexington-tree-service-lexington/grue-tronc-lierre-levage-jardin-lexington.webp" alt="An ivy-covered tree trunk lifted by crane over a walled garden while the crew in hard hats watches from below" width="1600" height="1200" fetchpriority="high">
+        </div>
+        <figcaption class="etiquette"><b>Lifting a large tree trunk</b>by crane, over a walled garden</figcaption>
+      </figure>
+      <div class="heros-texte ordre-tel">
+        <p class="lieu">Tree service in <a href="#area">Lexington, Kentucky</a></p>
+        <h1 id="titre">We <em>really</em> know trees.</h1>
+        <p class="chapo">Take care of your trees with ease when you call on our experienced arborists. From tree removal to trimming, Lexington Tree Service Inc. keeps the trees on your property healthy and beautiful.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+18592632701">Call (859) 263-2701</a>
+          <a class="btn btn-contour" href="#contact">Request an estimate</a>
+        </div>
+        <p class="urgence"><b>Emergency services available.</b> Storm damage estimates too.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits cadre">
+    <ul aria-label="Lexington Tree Service at a glance">
+      <li><b>30+ years</b><span>serving central Kentucky, family-owned</span></li>
+      <li><b>2 ISA arborists</b><span>Certified, on staff: KY0669A and KY0668A</span></li>
+      <li><b>Licensed</b><span>and insured professionals</span></li>
+      <li><b>Pre-approved</b><span>by most insurance companies</span></li>
+    </ul>
+  </div>
+
+  <section class="services" id="services" aria-labelledby="titre-services">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-services">Tree trimming, removal and everything around it</h2>
+        <p class="chapo">Add appeal to your property by <a href="#list">trimming your trees</a> or making room for other landscape design elements. Our goal is to preserve, protect, diagnose and care for all of your tree and shrub needs, with a fleet of bucket trucks, grinders and chippers for any job, small or large.</p>
+        <ul class="liste" id="list">
+          <li>Tree trimming, shaping and removal</li>
+          <li>Corrective pruning</li>
+          <li>Shrub and hedge trimming</li>
+          <li>Stump removal and brush chipping</li>
+          <li>Complete tree and shrub spraying</li>
+          <li>Fertilization</li>
+          <li>Treatment for emerald ash borers</li>
+          <li>Systemic treatment for insects and disease</li>
+          <li>Tree cabling and cavity fill</li>
+          <li>Storm damage estimates</li>
+          <li>Lot clearing and excavation</li>
+          <li>Firewood sales</li>
+        </ul>
+      </div>
+      <figure class="services-photo rv">
+        <div class="fenetre">
+          <img src="assets/lexington-tree-service-lexington/grue-branche-coupee-nacelle-lexington.webp" alt="A large cut limb hanging from a crane line against a blue winter sky, next to a bare tree" width="1600" height="1200" loading="lazy">
+        </div>
+        <figcaption>A cut limb on the crane line, high above the street.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="soin" aria-labelledby="titre-soin">
+    <div class="cadre">
+      <div class="bloc">
+        <blockquote>
+          <p>“One of our goals is to save your tree and save you money. After all, a mature 20-year-old tree may cost as much as <b>$10,000</b> to replace.”</p>
+          <footer>Lexington Tree Service Inc.</footer>
+        </blockquote>
+        <div class="texte">
+          <h3 id="titre-soin">Treating your trees</h3>
+          <p>One of our ISA Certified Arborists finds where the trouble comes from and puts together the right treatment plan. Often the solution is as simple as fertilization. Some trees need more:</p>
+          <ul>
+            <li>Systemic injection for insect control</li>
+            <li>Filling a cavity</li>
+            <li>Reinforcing the tree with cabling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tempete" id="storm" aria-labelledby="titre-tempete">
+    <div class="cadre">
+      <div>
+        <h2 id="titre-tempete">Storm damage? We are here when you need us.</h2>
+        <p class="chapo">Lexington Tree Service Inc. has the estimators and the manpower to get to your home or business fast. Our mission is to minimize the damage fallen trees have done to your property, and no job is too big or too small for our team.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+18592632701">Call (859) 263-2701</a>
+          <a class="btn btn-clair" href="#contact">Request an estimate</a>
+        </div>
+      </div>
+      <ol class="etapes">
+        <li><div><h3>You call us</h3><p>Contact us for an estimate when you have storm damage and need immediate service.</p></div></li>
+        <li><div><h3>We file the claim</h3><p>Many major insurance companies have pre-approved us to remove storm damaged trees, so you do not need to file a direct claim yourself.</p></div></li>
+        <li><div><h3>We begin work immediately</h3><p>The claim is filed for you and the work starts right away.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="terrain" id="firewood" aria-label="Lot clearing and firewood">
+    <div class="cadre">
+      <div>
+        <h2>Lot clearing and excavation</h2>
+        <p>Making room for a structure, or simply need more space? We clear the trees and brush, and take on major land excavation with tub grinders, excavators, bulldozers and Bobcats, from brush and stumps to filling in a pond.</p>
+        <div class="vignettes">
+          <figure class="vignette penche-2 rv">
+            <img src="assets/lexington-tree-service-lexington/chargeuse-pelle-tas-branches-defrichage.webp" alt="Lexington Tree Service track loader pushing a pile of brush while an excavator lifts an uprooted shrub" width="640" height="480" loading="lazy">
+            <figcaption>Our track loader on a lot clearing</figcaption>
+          </figure>
+          <figure class="vignette penche rv">
+            <img src="assets/lexington-tree-service-lexington/pelle-broyeur-defrichage-terrain.webp" alt="Excavator loading brush next to a yellow grinder on a site being cleared" width="640" height="480" loading="lazy">
+            <figcaption>Excavator and grinder at work</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <h2>Firewood for sale</h2>
+        <p>The trees we clear are cut into firewood for the community. Stacks of wood for bonfires and home heating, picked up on site or delivered to your home.</p>
+        <p>Specialty firewood for barbecuing too, hickory, apple and more, all kept in storage inside.</p>
+        <p class="ligne">Call for pricing, for pick up or delivery.</p>
+        <div class="vignettes">
+          <figure class="vignette penche rv">
+            <img src="assets/lexington-tree-service-lexington/tas-bois-chauffage-fendu.webp" alt="Large pile of freshly split firewood" width="643" height="480" loading="lazy">
+            <figcaption>Freshly split firewood</figcaption>
+          </figure>
+          <figure class="vignette penche-2 rv">
+            <img src="assets/lexington-tree-service-lexington/cour-stock-bois-chauffage.webp" alt="Wood yard with several piles of split firewood and logs along a dirt lane" width="643" height="480" loading="lazy">
+            <figcaption>Our wood yard</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-zone">
+    <div class="cadre">
+      <div class="zone" id="area">
+        <h2 id="titre-zone">Proudly serving Lexington, Kentucky</h2>
+        <p class="comte">All of Fayette County</p>
+        <p class="villes">Also serving Lexington, Winchester, Richmond, Paris, Cynthiana, Carlisle, Georgetown, Frankfort, Midway, Versailles, Harrisburg, Danville, Lawrenceburg, Nicholasville, Lancaster, Berea, Irvine, Morehead, London and Somerset.</p>
+        <p class="assos"><b>Associations:</b> International Society of Arboriculture, National Arborist Association, American Forestry Association, KY Shade Tree Association, Central KY Ornamental and Turf Association, KY Nurserymen's Association.</p>
+      </div>
+      <div class="carte">
+        <h2>Request an estimate</h2>
+        <a class="numero" href="tel:+18592632701">(859) 263-2701</a>
+        <ul class="infos">
+          <li><span class="cle">Email</span><a href="mailto:suzie@lexingtontreeservice.com?subject=Estimate%20request">suzie@lexingtontreeservice.com</a></li>
+          <li><span class="cle">Visit us</span><span>1113 Winchester Road<br>Lexington, KY</span></li>
+          <li><span class="cle">Hours</span><span>Monday to Friday, 8&nbsp;am to 5&nbsp;pm<br>Saturday, 8&nbsp;am to 12&nbsp;pm<br>Emergency services available</span></li>
+          <li><span class="cle">We accept</span><span>Visa, MasterCard, Discover, American Express</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+18592632701">Call us</a>
+          <a class="btn btn-contour" href="mailto:suzie@lexingtontreeservice.com?subject=Estimate%20request">Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#top"><b>Lexington Tree Service</b><span>Lexington Tree Service Inc.</span></a>
+      <p>Family-owned tree service in Lexington, Kentucky. Certified Arborists on staff (KY0669A and KY0668A), licensed and insured.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+18592632701">(859) 263-2701</a></li>
+        <li><a href="mailto:suzie@lexingtontreeservice.com">suzie@lexingtontreeservice.com</a></li>
+        <li>1113 Winchester Road, Lexington, KY</li>
+        <li><a href="https://www.facebook.com/Lexington-Tree-Service-247558292064207/">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>On this page</h3>
+      <ul>
+        <li><a href="#services">Tree services</a></li>
+        <li><a href="#storm">Storm damage</a></li>
+        <li><a href="#firewood">Lot clearing and firewood</a></li>
+        <li><a href="#area">Location</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposal by Nicolas Masset for Lexington Tree Service Inc.</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('in') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

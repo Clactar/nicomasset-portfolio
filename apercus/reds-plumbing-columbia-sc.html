@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reds Plumbing LLC · Plumber in Columbia, SC</title>
+<meta name="description" content="Reds Plumbing LLC, Columbia, South Carolina. Service plumbing, drain lines, water lines, water heaters and tankless. Call 803-546-4521.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E2226'/%3E%3Ctext x='32' y='47' font-family='Impact,sans-serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23E4574B'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --porcelaine:#EEF1F2;
+  --surface:#F8FAFA;
+  --joint:#D6DDE0;
+  --encre:#1E2226;
+  --encre-douce:#4A5258;
+  --rouge:#A8281E;
+  --rouge-vif:#C23A2E;
+  --nuit:#1E2226;
+  --nuit-2:#272C31;
+  --sur-nuit:#E7EBED;
+  --sur-nuit-doux:#AEB6BB;
+  --ombre:0 34px 70px -34px rgba(22,28,33,.55), 0 10px 24px -14px rgba(22,28,33,.25);
+  --display:"Big Shoulders Display", "Arial Narrow", sans-serif;
+  --texte:"Public Sans", "Segoe UI", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--porcelaine);color:var(--encre);font-family:var(--texte);font-size:17px;line-height:1.6}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--rouge);color:#FBEDEA}
+:focus-visible{outline:3px solid var(--rouge);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;letter-spacing:.005em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.cadre{width:min(1200px,100% - 48px);margin-inline:auto}
+
+/* En-tête */
+.entete{position:sticky;top:0;z-index:20;background:#EEF1F2;border-bottom:1px solid rgba(30,34,38,.07)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marque{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.marque b{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:.01em}
+.marque span{font-size:13px;color:var(--encre-douce);margin-top:4px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--encre-douce)}
+.nav a:hover{color:var(--encre)}
+.nav .tel-entete{color:#FFF6F4;background:var(--rouge);padding:10px 20px;border-radius:999px;font-weight:600;white-space:nowrap;transition:background .2s ease, transform .2s ease}
+.nav .tel-entete:hover{background:var(--rouge-vif);color:#fff;transform:translateY(-1px)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;text-align:center}
+.btn-plein{background:var(--rouge);color:#FFF6F4;box-shadow:0 14px 28px -16px rgba(168,40,30,.8)}
+.btn-plein:hover{background:var(--rouge-vif);transform:translateY(-2px)}
+.btn-contour{border:1.5px solid var(--encre);color:var(--encre)}
+.btn-contour:hover{background:var(--encre);color:var(--surface)}
+
+/* Héros */
+.heros{padding:56px 0 0}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"titre photo" "suite photo";column-gap:72px;align-items:start}
+.heros-titre{grid-area:titre;padding-top:16px}
+.heros-suite{grid-area:suite}
+.heros-photo{grid-area:photo}
+.lieu{font-size:16px;color:var(--encre-douce);margin-bottom:22px}
+.lieu strong{color:var(--encre);font-weight:600}
+.heros h1{font-size:clamp(46px,6.4vw,94px);font-weight:700;line-height:.92;letter-spacing:-.005em}
+.appel{margin-top:24px;display:flex;flex-direction:column;gap:2px}
+.appel small{font-size:15px;color:var(--encre-douce)}
+.numero{font-family:var(--display);font-weight:800;font-size:clamp(52px,6.6vw,96px);line-height:.95;text-decoration:none;white-space:nowrap;letter-spacing:.01em;width:max-content;max-width:100%;background:linear-gradient(var(--rouge),var(--rouge)) 0 100%/0 4px no-repeat;transition:background-size .3s ease, color .2s ease}
+.numero:hover{color:var(--rouge);background-size:100% 4px}
+.heros-suite p{font-size:18px;max-width:34em;margin-top:22px;color:#30373C}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.actions-note{margin-top:16px;font-size:15px;color:var(--encre-douce)}
+.actions-note a{text-underline-offset:3px}
+
+.heros-photo{position:relative;margin:0}
+.heros-photo .fenetre{border-radius:22px;overflow:hidden;aspect-ratio:3/4.6;box-shadow:0 60px 90px -50px rgba(22,28,33,.7), 0 22px 40px -26px rgba(22,28,33,.45);background:#dfe4e6}
+.heros-photo img{width:100%;height:100%;object-fit:cover;object-position:0 20%;transform:scale(1.12);transform-origin:6% 22%}
+.etiquette{position:absolute;left:18px;bottom:18px;background:rgba(248,250,250,.96);color:var(--encre);border-radius:12px;padding:10px 14px;font-size:14px;line-height:1.35;box-shadow:0 10px 24px -14px rgba(22,28,33,.5);max-width:calc(100% - 36px)}
+.etiquette b{display:block;font-weight:600}
+
+/* Bandeau de faits */
+.faits{margin-top:72px;position:relative;z-index:2}
+.faits ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border-radius:18px;box-shadow:var(--ombre);width:100%}
+.faits li{padding:24px 26px;border-left:1px solid var(--joint)}
+.faits li:first-child{border-left:0}
+.faits b{display:block;font-family:var(--display);font-weight:700;font-size:34px;line-height:1}
+.faits span{display:block;margin-top:6px;font-size:14.5px;line-height:1.4;color:var(--encre-douce)}
+.faits b .etoile{display:inline;color:var(--rouge);margin:0;font-size:.8em;vertical-align:.08em}
+
+/* Services sur le carrelage */
+.services{margin-top:120px;padding:110px 0;background-color:#E6EAEC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cg fill='none' stroke='%23D2D9DC' stroke-width='2'%3E%3Cpath d='M0 1H240M0 121H240M1 0V120M121 120V240'/%3E%3C/g%3E%3C/svg%3E");background-size:240px 240px}
+.services .cadre{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.services h2{font-size:clamp(40px,4.6vw,64px)}
+.services .intro p{margin-top:20px;max-width:28em;color:#30373C}
+.services .intro .cite{font-style:italic}
+.carreaux{list-style:none;margin:0;padding:3px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--joint);border-radius:16px;box-shadow:var(--ombre)}
+.carreaux li{background:var(--surface);padding:26px 28px 28px}
+.carreaux li:first-child{border-top-left-radius:13px}
+.carreaux li:nth-child(2){border-top-right-radius:13px}
+.carreaux li:nth-last-child(2){border-bottom-left-radius:13px}
+.carreaux li:last-child{border-bottom-right-radius:13px}
+.carreaux h3{font-size:28px;font-weight:700}
+.carreaux p{margin-top:8px;font-size:16px;color:var(--encre-douce)}
+
+/* Chantiers récents, fond sombre */
+.chantiers{background:var(--nuit);color:var(--sur-nuit);padding:120px 0 130px}
+.chantiers-tete{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.chantiers h2{font-size:clamp(40px,5vw,72px);color:#F4F6F7}
+.chantiers-tete p{max-width:30em;color:var(--sur-nuit-doux)}
+.chantiers-tete a{color:#F4F6F7;text-underline-offset:3px}
+.journal{list-style:none;margin:72px 0 0;padding:0;display:grid;gap:96px}
+.entree{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.entree:nth-child(even){grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.entree:nth-child(even) .entree-texte{order:2}
+.entree time{display:block;font-family:var(--display);font-weight:600;font-size:22px;color:var(--sur-nuit-doux);letter-spacing:.02em}
+.entree h3{font-size:clamp(34px,3.6vw,50px);color:#F4F6F7;margin-top:10px}
+.entree p{margin-top:16px;color:var(--sur-nuit);max-width:30em}
+.entree p.mots{font-style:italic;color:var(--sur-nuit-doux);font-size:16px}
+.photo-sombre{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.85)}
+.photo-sombre img{width:100%;height:100%;object-fit:cover}
+.paysage{aspect-ratio:16/10.5}
+.paire{position:relative;padding-bottom:60px}
+.paire .grande{aspect-ratio:16/10.5;width:86%}
+.paire .grande img{object-position:50% 0}
+.paire .petite{position:absolute;right:0;bottom:0;width:36%;aspect-ratio:3/4;border:6px solid var(--nuit-2);border-radius:18px;transform:rotate(2.5deg)}
+.paire .petite img{object-position:30% 40%}
+.carre{aspect-ratio:1/1;width:min(460px,100%)}
+.carre img{object-position:50% 12%}
+.entree .vignettes{display:flex;gap:18px;align-items:end}
+.vignette{margin:0;border-radius:14px;overflow:hidden;background:var(--nuit-2);padding:6px;width:min(320px,100%)}
+.vignette img{border-radius:9px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.portrait-haut{aspect-ratio:4/5;width:min(520px,100%)}
+.portrait-haut img{object-position:50% 30%}
+.droite{justify-self:end}
+
+/* Citation */
+.parole{padding:130px 0 120px}
+.parole .cadre{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:72px;align-items:end}
+.parole blockquote{margin:0}
+.parole blockquote p{font-family:var(--display);font-weight:600;font-size:clamp(36px,4.4vw,62px);line-height:1.02;color:var(--encre)}
+.parole blockquote footer{margin-top:24px;font-size:16px;color:var(--encre-douce)}
+.avis{background:var(--surface);border-radius:20px;padding:30px 30px 28px;box-shadow:var(--ombre)}
+.note{display:flex;align-items:baseline;gap:12px}
+.note b{font-family:var(--display);font-weight:800;font-size:72px;line-height:.9;color:var(--rouge)}
+.note span{font-size:15px;color:var(--encre-douce);line-height:1.35}
+.avis blockquote{margin:22px 0 0;padding-top:20px;border-top:1px solid var(--joint)}
+.avis blockquote p{font-size:16.5px;font-style:italic}
+.avis blockquote footer{margin-top:10px;font-size:14.5px;color:var(--encre-douce)}
+.avis .lien-avis{display:inline-block;margin-top:18px;font-size:15px;font-weight:600;text-underline-offset:3px}
+
+/* Contact et horaires */
+.contact{padding:0 0 130px}
+.contact .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:stretch}
+.carte-appel{background:var(--surface);border-radius:24px;padding:48px;box-shadow:var(--ombre)}
+.carte-appel h2{font-size:clamp(40px,4.4vw,60px)}
+.carte-appel > p{margin-top:16px;color:#30373C;max-width:30em}
+.carte-appel .numero{margin-top:26px;display:inline-block;font-size:clamp(44px,5.4vw,80px)}
+.coord{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
+.coord li{display:grid;grid-template-columns:minmax(0,7.5em) minmax(0,1fr);gap:16px;font-size:16px}
+.coord span{color:var(--encre-douce)}
+.coord a{text-underline-offset:3px;overflow-wrap:anywhere}
+.horaires{border-radius:24px;padding:44px 44px 40px;background:#E3E8EA}
+.horaires h2{font-size:clamp(34px,3.4vw,46px)}
+.horaires > p{margin-top:12px;color:var(--encre-douce);font-size:15.5px}
+.jours{list-style:none;margin:26px 0 0;padding:0}
+.jours li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--joint);font-size:16px}
+.jours li:last-child{border-bottom:0}
+.jours span:last-child{font-weight:600}
+.horaires .paiement{margin-top:22px;font-size:15px;color:var(--encre-douce)}
+
+/* Pied */
+.pied{background:var(--nuit);color:var(--sur-nuit);padding:80px 0 36px}
+.pied .cadre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:48px}
+.pied .marque b{color:#F4F6F7;font-size:38px}
+.pied .marque span{color:var(--sur-nuit-doux)}
+.pied p{color:var(--sur-nuit-doux);margin-top:18px;max-width:26em;font-size:16px}
+.pied h3{font-family:var(--texte);font-size:14px;font-weight:600;color:var(--sur-nuit-doux);letter-spacing:0;margin-bottom:12px;line-height:1.3}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{text-decoration:underline;text-underline-offset:3px}
+.pied .proposition{max-width:none;margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(231,235,237,.12);font-size:13px;color:#8A9399;width:min(1200px,100% - 48px)}
+
+/* Apparitions des photos */
+.js .rv{opacity:0;translate:0 22px;transition:opacity .8s cubic-bezier(.2,.7,.2,1), translate .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in, .vu .rv{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;translate:none;transition:none}
+  *{transition:none !important}
+}
+
+/* Tablette */
+@media (max-width:980px){
+  .heros .cadre{column-gap:40px}
+  .faits ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faits li:nth-child(3){border-left:0}
+  .faits li:nth-child(n+3){border-top:1px solid var(--joint)}
+  .services .cadre,.parole .cadre,.contact .cadre{grid-template-columns:minmax(0,1fr)}
+  .entree,.entree:nth-child(even){grid-template-columns:minmax(0,1fr);gap:32px}
+  .entree:nth-child(even) .entree-texte{order:0}
+  .droite{justify-self:start}
+  .pied .cadre{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pied .cadre > div:first-child{grid-column:1/-1}
+}
+/* Téléphone */
+@media (max-width:720px){
+  body{font-size:16.5px}
+  .cadre{width:min(1200px,100% - 40px)}
+  .nav a:not(.tel-entete){display:none}
+  .entete .cadre{min-height:64px}
+  .marque b{font-size:26px}
+  .marque span{display:none}
+  .heros{padding-top:28px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "photo" "suite"}
+  .heros-titre{padding-top:0}
+  .lieu{font-size:15px;margin-bottom:14px}
+  .appel{margin-top:18px}
+  .heros-photo{margin-top:24px}
+  .heros-photo .fenetre{aspect-ratio:5/5.3}
+  .heros-photo img{object-position:0 0;transform:scale(1.15);transform-origin:0 0}
+  .heros-suite p{margin-top:26px}
+  .faits{margin-top:40px}
+  .etiquette{left:12px;bottom:12px;font-size:13px;padding:8px 12px}
+  .faits b{font-size:30px}
+  .faits li{padding:20px}
+  .services{margin-top:80px;padding:80px 0}
+  .services .cadre{gap:36px}
+  .carreaux{grid-template-columns:minmax(0,1fr)}
+  .carreaux li{border-radius:0 !important}
+  .carreaux li:first-child{border-top-left-radius:13px !important;border-top-right-radius:13px !important}
+  .carreaux li:last-child{border-bottom-left-radius:13px !important;border-bottom-right-radius:13px !important}
+  .chantiers{padding:84px 0 90px}
+  .journal{gap:72px;margin-top:48px}
+  .paire{padding-bottom:40px}
+  .paire .grande{width:100%}
+  .paire .petite{width:40%;right:0}
+  .parole{padding:90px 0}
+  .parole .cadre{gap:48px}
+  .contact{padding-bottom:90px}
+  .carte-appel,.horaires{padding:32px 24px}
+  .coord li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pied .cadre{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .nav .tel-entete{padding:9px 14px;font-size:14px}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .faits li{border-left:0 !important;border-top:1px solid var(--joint)}
+  .faits li:first-child{border-top:0}
+  .entree .vignettes{flex-direction:column;align-items:stretch}
+}
+@media (max-width:360px){
+  .numero{font-size:46px}
+  .carte-appel .numero{font-size:40px}
+  .marque b{font-size:22px}
+  .nav .tel-entete{font-size:13px;padding:8px 12px}
+}
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#top" aria-label="Reds Plumbing LLC, back to top"><b>Reds Plumbing</b><span>Plumber in Columbia, South Carolina</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#jobs">Recent jobs</a>
+      <a href="#hours">Hours</a>
+      <a class="tel-entete" href="tel:+18035464521">803-546-4521</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="heros" aria-labelledby="titre">
+    <div class="cadre">
+      <div class="heros-titre">
+        <p class="lieu"><strong>Reds Plumbing LLC</strong>, Columbia, South Carolina</p>
+        <h1 id="titre">Drain lines, water lines, water heaters and tankless.</h1>
+        <div class="appel">
+          <small>Call Reds</small>
+          <a class="numero" href="tel:+18035464521">803-546-4521</a>
+        </div>
+      </div>
+      <figure class="heros-photo rv">
+        <div class="fenetre">
+          <img src="assets/reds-plumbing-columbia-sc/douche-carrelage-blanc-robinetterie-noire.webp" alt="Finished shower by Reds Plumbing: large white tile, round black shower head, black hand shower and square black valve" width="1200" height="1600" fetchpriority="high">
+        </div>
+        <figcaption class="etiquette"><b>Plumbing renovation</b>Matte black fixtures, September 2026</figcaption>
+      </figure>
+      <div class="heros-suite">
+        <p>Service plumbing for homes in Columbia, from a leaking spigot to a new sewer line. Google lists Reds as open 24 hours, and emergency calls are part of the job.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+18035464521">Call for a quote</a>
+          <a class="btn btn-contour" href="mailto:redsplumbing803@gmail.com?subject=Plumbing%20quote">Email Reds</a>
+        </div>
+        <p class="actions-note">Prefer to write? <a href="https://www.facebook.com/redsplumbing803" rel="noopener">Message Reds on Facebook</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faits cadre">
+    <ul aria-label="Reds Plumbing at a glance">
+      <li><b><span class="etoile" aria-hidden="true">&#9733;</span> 4.8</b><span>Google rating, 34 reviews</span></li>
+      <li><b>24 hours</b><span>Open every day, per Google</span></li>
+      <li><b>Emergencies</b><span>Taken as well, just call</span></li>
+      <li><b>100%</b><span>Recommend Reds on Facebook (9 reviews)</span></li>
+    </ul>
+  </div>
+
+  <section class="services" id="services" aria-labelledby="titre-services">
+    <div class="cadre">
+      <div class="intro">
+        <h2 id="titre-services">What Reds takes care of</h2>
+        <p class="cite">“Service plumbing, drain lines, water lines, water heaters, and tankless.”</p>
+        <p>That is how Reds sums it up. Here is what it looks like on real jobs, in their own words from the last few months.</p>
+      </div>
+      <ul class="carreaux">
+        <li><h3>Drains</h3><p>Sink drains and drain lines that keep backing up.</p></li>
+        <li><h3>Sewer lines</h3><p>Massive roots pulled back, and the line replaced from the house to the city tap.</p></li>
+        <li><h3>Water lines and repipes</h3><p>Old galvanized pipe swapped out so the water pressure comes back.</p></li>
+        <li><h3>Water heaters and tankless</h3><p>Water heater replacement and tank to tankless conversions.</p></li>
+        <li><h3>Slabs</h3><p>Slab rough-in on new builds, slab leaks rerouted, basement slab work.</p></li>
+        <li><h3>Wells and pressure</h3><p>A 200&nbsp;ft well pulled and replaced, pressure tanks, pressure regulating valves.</p></li>
+        <li><h3>Crawl space checks</h3><p>“Just scared to go under your own house for an inspection? We do that too.”</p></li>
+        <li><h3>Small repairs</h3><p>Shutoff valves, outdoor spigots and water leaks around the house.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chantiers" id="jobs" aria-labelledby="titre-chantiers">
+    <div class="cadre">
+      <div class="chantiers-tete">
+        <h2 id="titre-chantiers">Recent jobs</h2>
+        <p>Straight from the Reds Facebook page, newest first. <a href="https://www.facebook.com/redsplumbing803" rel="noopener">See every post</a>.</p>
+      </div>
+      <ol class="journal" reversed>
+        <li class="entree">
+          <div class="entree-texte">
+            <time datetime="2026-11-05">November 5, 2026</time>
+            <h3>Slab rough-in on a new build</h3>
+            <p>The plumbing set in place in the red clay before the slab is poured, for a good customer of ours.</p>
+          </div>
+          <figure class="photo-sombre paysage rv">
+            <img src="assets/reds-plumbing-columbia-sc/reseau-sous-dalle-construction-neuve.webp" alt="New construction in the pines: red clay pad with wood forms and white PVC stub-ups before the slab is poured" width="1600" height="1200" loading="lazy">
+          </figure>
+        </li>
+        <li class="entree">
+          <div class="entree-texte">
+            <time datetime="2026-10-17">October 17, 2026</time>
+            <h3>Tank to tankless</h3>
+            <p>A small tank water heater swapped for a Rinnai tankless unit, mounted outside on the siding.</p>
+            <p class="mots">“Hit the line for all your plumbing needs and wants.”</p>
+          </div>
+          <figure class="photo-sombre carre droite rv">
+            <img src="assets/reds-plumbing-columbia-sc/conversion-chauffe-eau-instantane-rinnai.webp" alt="White Rinnai tankless water heater installed on beige vinyl siding" width="1200" height="1600" loading="lazy">
+          </figure>
+        </li>
+        <li class="entree">
+          <div class="entree-texte">
+            <time datetime="2026-09-26">September 26, 2026</time>
+            <h3>A plumbing renovation</h3>
+            <p>The shower once the job was done: matte black fixtures, a hexagon mosaic floor, a tiled corner bench and a niche trimmed in black.</p>
+          </div>
+          <div class="paire">
+            <figure class="photo-sombre grande rv">
+              <img src="assets/reds-plumbing-columbia-sc/receveur-douche-mosaique-hexagonale-banc.webp" alt="Looking down into the shower: white hexagon mosaic floor with drain, tiled corner bench and glass block window" width="1600" height="1200" loading="lazy">
+            </figure>
+            <figure class="photo-sombre petite rv">
+              <img src="assets/reds-plumbing-columbia-sc/niche-douche-carrelage-blanc.webp" alt="Recessed shower niche with black trim and hexagon mosaic back, set in white tile" width="1200" height="1600" loading="lazy">
+            </figure>
+          </div>
+        </li>
+        <li class="entree">
+          <div class="entree-texte">
+            <time datetime="2026-08-04">August 4, 2026</time>
+            <h3>Sewer line replacement</h3>
+            <p>Everything was backing up. Reds pulled back some massive roots, then replaced the line from the house to the city tap. No more worrying about it.</p>
+          </div>
+          <figure class="photo-sombre portrait-haut droite rv">
+            <img src="assets/reds-plumbing-columbia-sc/mini-pelle-tranchee-canalisation-egout.webp" alt="Yellow mini excavator beside a brick house, with a long red clay trench and new white PVC sewer pipe" width="1200" height="1600" loading="lazy">
+          </figure>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="parole" aria-label="In their words">
+    <div class="cadre">
+      <blockquote>
+        <p>“At the end of the day we are community helpers, and a lot of plumbers forget that along the way. We will never.”</p>
+        <footer>Reds Plumbing, on Facebook</footer>
+      </blockquote>
+      <aside class="avis" aria-label="Reviews">
+        <div class="note"><b>4.8</b><span>out of 5 on Google<br>34 reviews</span></div>
+        <blockquote>
+          <p>“Has helped me complete multiple jobs from my own home flips to simple shutoff valves.”</p>
+          <footer>Chaka Sellers, Facebook review</footer>
+        </blockquote>
+        <a class="lien-avis" href="https://www.google.com/maps?cid=14808600873636623661" rel="noopener">Read all the reviews on Google</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact" id="hours" aria-labelledby="titre-contact">
+    <div class="cadre">
+      <div class="carte-appel">
+        <h2 id="titre-contact">Need a plumber? Call Reds.</h2>
+        <p>Tell Reds what is going on and ask for a quote. Online estimates are available too.</p>
+        <a class="numero" href="tel:+18035464521">803-546-4521</a>
+        <ul class="coord">
+          <li><span>Email</span><a href="mailto:redsplumbing803@gmail.com">redsplumbing803@gmail.com</a></li>
+          <li><span>Facebook</span><a href="https://www.facebook.com/redsplumbing803" rel="noopener">facebook.com/redsplumbing803</a></li>
+          <li><span>Based in</span>Columbia, South Carolina</li>
+        </ul>
+      </div>
+      <div class="horaires">
+        <h2>Hours</h2>
+        <p>As listed on Google. Holiday hours may differ.</p>
+        <ul class="jours">
+          <li><span>Monday</span><span>Open 24 hours</span></li>
+          <li><span>Tuesday</span><span>Open 24 hours</span></li>
+          <li><span>Wednesday</span><span>Open 24 hours</span></li>
+          <li><span>Thursday</span><span>Open 24 hours</span></li>
+          <li><span>Friday</span><span>Open 24 hours</span></li>
+          <li><span>Saturday</span><span>Open 24 hours</span></li>
+          <li><span>Sunday</span><span>Open 24 hours</span></li>
+        </ul>
+        <p class="paiement">Credit cards and mobile pay accepted.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="#top"><b>Reds Plumbing</b><span>Reds Plumbing LLC</span></a>
+      <p>Service plumbing, drain lines, water lines, water heaters and tankless, in Columbia, South Carolina.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+18035464521">803-546-4521</a></li>
+        <li><a href="mailto:redsplumbing803@gmail.com">redsplumbing803@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/redsplumbing803" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>On this page</h3>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#jobs">Recent jobs</a></li>
+        <li><a href="#hours">Hours and contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="proposition">Proposal by Nicolas Masset for Reds Plumbing LLC</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('in') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AS Hydr'O, plombier chauffagiste à Beauvais</title>
+<meta name="description" content="AS Hydr'O, plombier chauffagiste à Beauvais et alentours (30 km) : plomberie, chauffage, climatisation, salle de bain, chauffe-eau, adoucisseurs, dépannage. 5,0 sur 5 sur Google. Du lundi au samedi, 7 h 30 à 21 h.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230D3A40'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23E5EFEE'%3EA%3C/text%3E%3Ccircle cx='48' cy='48' r='5' fill='%23B0653A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Petrona:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#E5EFEE; --fond-2:#D6E5E3; --surface:#F4F8F7;
+  --encre:#0D3A40; --encre-2:#3E5F63; --cuivre:#B0653A; --cuivre-fonce:#93512B;
+  --canard:#0D3A40; --canard-2:#15494F; --canard-3:#082A2F; --sur-canard:#E5EFEE; --sur-canard-2:#A9C3C2;
+  --display:'Hanken Grotesk', 'Helvetica Neue', sans-serif; --texte:'Petrona', Georgia, serif;
+  --ombre:0 30px 60px -34px rgba(8,42,47,.55);
+  --ombre-longue:0 50px 90px -40px rgba(8,42,47,.6);
+  --large:min(1200px, 100% - 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:var(--texte);font-size:19px;line-height:1.6}
+::selection{background:var(--cuivre);color:var(--surface)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:8px}
+.cadre{width:var(--large);margin-inline:auto}
+
+/* Boutons */
+.boutons{display:flex;flex-wrap:wrap;gap:12px}
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:12px 28px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:17px;text-decoration:none;text-align:center;transition:transform .25s ease, background-color .25s ease, color .25s ease}
+.bouton.plein{background:var(--cuivre);color:#FFF8F2;box-shadow:0 16px 30px -18px rgba(147,81,43,.9)}
+.bouton.plein:hover{background:var(--cuivre-fonce);transform:translateY(-2px)}
+.bouton.contour{border:1.5px solid var(--encre);color:var(--encre)}
+.bouton.contour:hover{background:var(--encre);color:var(--surface);transform:translateY(-2px)}
+
+/* En-tête */
+.entete{padding:22px 0}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.marque{text-decoration:none;line-height:1.1}
+.marque b{display:block;font-family:var(--display);font-weight:600;font-size:28px;letter-spacing:-.02em}
+.marque span{display:block;font-size:16px;color:var(--encre-2);margin-top:2px}
+.nav{display:flex;align-items:center;gap:28px;font-family:var(--display);font-weight:500;font-size:16px}
+.nav a{text-decoration:none;color:var(--encre-2);transition:color .2s ease}
+.nav a:hover{color:var(--encre)}
+.nav .tel{background:var(--encre);color:var(--surface);padding:11px 20px;border-radius:999px}
+.nav .tel:hover{color:var(--surface);background:var(--canard-2)}
+
+/* Héros */
+.heros{padding:40px 0 100px;position:relative}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"titre visuel" "suite visuel";column-gap:72px}
+.heros-titre{grid-area:titre;align-self:end}
+.heros-suite{grid-area:suite}
+.heros-visuel{grid-area:visuel;align-self:center}
+.chapeau{font-family:var(--texte);font-style:italic;font-size:19px;color:var(--encre-2);margin-bottom:20px}
+.heros h1{font-size:clamp(38px, 5.6vw, 80px)}
+.heros-suite > p{margin-top:26px;color:var(--encre-2);max-width:30em}
+.heros-suite .boutons{margin-top:32px}
+.heros-suite .horaires-courts{margin-top:18px;font-size:17px;color:var(--encre-2)}
+.cadre-photo{position:relative;width:min(440px, 100%);margin-left:auto}
+.ondes{position:absolute;right:-90px;top:-70px;width:min(520px, 120%);height:auto;z-index:0;pointer-events:none}
+.photo-principale{position:relative;z-index:1;margin:0}
+.photo-principale img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 72%;border-radius:22px;box-shadow:var(--ombre-longue)}
+.note-google{position:absolute;z-index:3;left:-44px;top:36px;background:var(--surface);border-radius:20px;padding:16px 20px 14px;box-shadow:0 24px 50px -24px rgba(8,42,47,.55);text-decoration:none;display:block;max-width:calc(100% + 44px)}
+.note-google b{display:block;font-family:var(--display);font-weight:600;font-size:30px;line-height:1}
+.note-google .etoiles{display:block;color:var(--cuivre);font-size:18px;letter-spacing:2px;margin:6px 0 2px}
+.note-google span{display:block;font-size:16px;color:var(--encre-2);line-height:1.3}
+.photo-seconde{position:absolute;z-index:2;left:-70px;bottom:-56px;width:min(190px, 44%);margin:0}
+.photo-seconde img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;border:6px solid var(--fond);box-shadow:var(--ombre)}
+.etiquette{white-space:nowrap;position:absolute;left:12px;bottom:12px;right:12px;width:max-content;max-width:calc(100% - 24px);background:rgba(244,248,247,.95);color:var(--encre);font-family:var(--display);font-weight:500;font-size:16px;padding:5px 12px;border-radius:999px;line-height:1.3}
+
+/* Bandeau de faits */
+.faits{background:var(--surface);box-shadow:0 30px 60px -50px rgba(8,42,47,.5)}
+.faits ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:24px}
+.faits li{display:flex;flex-direction:column}
+.faits b{font-family:var(--display);font-weight:600;font-size:30px;line-height:1.1;letter-spacing:-.02em}
+.faits span{font-size:16px;color:var(--encre-2);margin-top:4px}
+
+/* Métiers */
+.metiers{padding:120px 0 100px}
+.metiers-tete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:end;margin-bottom:56px}
+.metiers h2{font-size:clamp(34px, 4.4vw, 58px)}
+.metiers-tete p{color:var(--encre-2)}
+.liste-metiers{list-style:none;margin:0;padding:0}
+.metier{display:grid;grid-template-columns:minmax(0,64px) minmax(0,1fr) minmax(0,1.5fr) minmax(0,150px);gap:32px;align-items:center;padding:28px 0;border-top:1px solid rgba(13,58,64,.15)}
+.metier:last-child{border-bottom:1px solid rgba(13,58,64,.15)}
+.metier .num{font-family:var(--display);font-weight:600;font-size:20px;color:var(--cuivre)}
+.metier h3{font-size:26px}
+.metier p{color:var(--encre-2);font-size:18px}
+.metier img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;box-shadow:var(--ombre)}
+.metier .vide{display:block}
+
+/* Chantier phare, fond bleu canard */
+.phare{background:var(--canard);color:var(--sur-canard);padding:120px 0;position:relative;overflow:clip}
+.phare .cadre{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:center}
+.phare .date{font-family:var(--display);font-weight:500;font-size:17px;color:var(--sur-canard-2);margin-bottom:16px}
+.phare h2{font-size:clamp(34px, 4.2vw, 56px);margin-bottom:24px}
+.phare p{color:var(--sur-canard-2)}
+.programme{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:10px 24px}
+.programme li{position:relative;padding-left:22px;font-size:17px;color:var(--sur-canard)}
+.programme li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;border:2px solid var(--sur-canard-2)}
+.phare blockquote{margin:36px 0 0;font-family:var(--texte);font-style:italic;font-size:clamp(24px, 2.4vw, 30px);line-height:1.3;color:var(--sur-canard)}
+.phare blockquote cite{display:block;font-style:normal;font-family:var(--display);font-weight:500;font-size:16px;color:var(--sur-canard-2);margin-top:10px}
+.phare-photos{position:relative;min-height:620px}
+.phare-photos figure{position:absolute;margin:0}
+.phare-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:22px;box-shadow:0 50px 90px -40px rgba(0,0,0,.7)}
+.pp1{right:0;top:0;width:min(360px, 68%)}
+.pp2{left:0;bottom:0;width:min(270px, 52%)}
+.pp2 img{border:7px solid var(--canard)}
+
+/* Autres chantiers */
+.chantiers{padding:120px 0 110px}
+.chantiers-tete{max-width:640px;margin-bottom:56px}
+.chantiers h2{font-size:clamp(34px, 4.4vw, 58px);margin-bottom:18px}
+.chantiers-tete p{color:var(--encre-2)}
+.frise{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:28px;align-items:start}
+.frise li:nth-child(2){margin-top:72px}
+.frise li:nth-child(3){margin-top:24px}
+.frise li:nth-child(4){margin-top:96px}
+.frise figure{margin:0;position:relative}
+.frise img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px;box-shadow:var(--ombre)}
+.frise figcaption{margin-top:14px}
+.frise figcaption b{display:block;font-family:var(--display);font-weight:600;font-size:19px;line-height:1.25}
+.frise figcaption span{display:block;font-size:16px;color:var(--encre-2);margin-top:2px}
+
+/* Avis */
+.avis{padding:0 0 120px}
+.avis .cadre{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.grande-note{background:var(--surface);border-radius:28px;padding:44px 40px;box-shadow:0 40px 80px -60px rgba(8,42,47,.6)}
+.grande-note b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(72px, 9vw, 120px);line-height:.9;letter-spacing:-.04em}
+.grande-note .sur{font-family:var(--display);font-weight:500;font-size:22px;margin-top:8px}
+.grande-note p{color:var(--encre-2);margin-top:16px;font-size:17px}
+.grande-note .boutons{margin-top:26px}
+.badge{margin-top:24px;padding-top:22px;border-top:1px solid rgba(13,58,64,.14);font-size:17px;color:var(--encre-2)}
+.citations{display:grid;gap:34px;padding-top:12px}
+.citations figure{margin:0}
+.citations blockquote{margin:0;font-size:clamp(22px, 2.2vw, 27px);line-height:1.38;color:var(--encre)}
+.citations figcaption{margin-top:10px;font-family:var(--display);font-weight:500;font-size:16px;color:var(--encre-2)}
+.citations figure + figure{padding-top:34px;border-top:1px solid rgba(13,58,64,.14)}
+
+/* Contact */
+.contact{padding:0 0 130px}
+.carte-contact{background:var(--surface);border-radius:32px;padding:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;box-shadow:0 40px 80px -60px rgba(8,42,47,.6)}
+.carte-contact h2{font-size:clamp(32px, 4vw, 52px);margin-bottom:20px}
+.carte-contact .intro{color:var(--encre-2)}
+.gros-tel{display:inline-block;margin-top:26px;font-family:var(--display);font-weight:600;font-size:clamp(30px, 3.6vw, 46px);letter-spacing:-.02em;text-decoration:none;line-height:1.1}
+.gros-tel:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.carte-contact .boutons{margin-top:24px}
+.carte-contact .whatsapp{margin-top:14px;font-size:17px;color:var(--encre-2)}
+.infos{margin:0}
+.infos dt{font-family:var(--display);font-weight:600;font-size:17px;margin-top:22px}
+.infos dt:first-child{margin-top:0}
+.infos dd{margin:4px 0 0;color:var(--encre-2);font-size:18px}
+.infos a{overflow-wrap:anywhere}
+.semaine{list-style:none;margin:6px 0 0;padding:0;max-width:340px}
+.semaine li{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px dashed rgba(13,58,64,.2);font-size:18px}
+.semaine li span:last-child{color:var(--encre)}
+
+/* Pied de page */
+.pied{background:var(--canard-3);color:var(--sur-canard);padding:80px 0 34px}
+.pied-grille{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3, minmax(0,1fr));gap:48px}
+.pied .nom{font-family:var(--display);font-weight:600;font-size:30px;line-height:1.1;letter-spacing:-.02em}
+.pied .devise{margin-top:14px;color:var(--sur-canard-2);font-size:17px;max-width:22em}
+.pied h3{font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:0;color:var(--sur-canard-2);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied p,.pied li{font-size:17px;line-height:1.6}
+.pied li + li{margin-top:6px}
+.pied a{text-decoration:none;border-bottom:1px solid rgba(229,239,238,.3);transition:border-color .2s ease}
+.pied a:hover{border-color:var(--sur-canard)}
+.pied-bas{margin-top:60px;padding-top:24px;border-top:1px solid rgba(229,239,238,.14);font-size:16px;color:var(--sur-canard-2)}
+.proposition{background:#051E22;color:#94AEAD;text-align:center;font-size:14px;padding:14px 20px;margin:0;font-family:var(--display)}
+
+/* Apparition des photos */
+.js .apparait{opacity:0;translate:0 26px;transition:opacity .9s ease, translate .9s cubic-bezier(.2,.7,.2,1)}
+.js .apparait.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .apparait{opacity:1;translate:0 0;transition:none}
+  .bouton{transition:none}
+  .bouton:hover{transform:none}
+}
+
+/* Tablette */
+@media (max-width:1080px){
+  .heros .cadre{column-gap:48px}
+  .note-google{left:-20px}
+  .photo-seconde{left:-30px}
+  .metier{grid-template-columns:minmax(0,48px) minmax(0,1fr) minmax(0,1.4fr) minmax(0,110px);gap:22px}
+  .pied-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .nav a:not(.tel){display:none}
+  .heros{padding:20px 0 90px}
+  .heros .cadre{grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "visuel" "suite"}
+  .heros-visuel{margin:32px 0 64px}
+  .cadre-photo{margin-inline:auto;width:min(400px, 82%)}
+  .note-google{left:-8%;top:24px}
+  .photo-seconde{left:auto;right:-10%;bottom:-48px;width:40%}
+  .ondes{right:-10%;top:-40px;width:120%}
+  .faits ul{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .metiers{padding:84px 0}
+  .metiers-tete{grid-template-columns:minmax(0,1fr);gap:18px;margin-bottom:36px}
+  .metier{grid-template-columns:minmax(0,1fr) minmax(0,96px);grid-template-areas:"num img" "titre img" "texte texte";gap:8px 20px}
+  .metier .num{grid-area:num}
+  .metier h3{grid-area:titre}
+  .metier p{grid-area:texte;margin-top:8px}
+  .metier .ill{grid-area:img}
+  .phare{padding:90px 0}
+  .phare .cadre{grid-template-columns:minmax(0,1fr);gap:56px}
+  .phare-photos{min-height:0;height:min(130vw, 600px)}
+  .chantiers{padding:84px 0}
+  .frise{grid-template-columns:repeat(2, minmax(0,1fr));gap:22px}
+  .frise li:nth-child(2){margin-top:48px}
+  .frise li:nth-child(3){margin-top:0}
+  .frise li:nth-child(4){margin-top:48px}
+  .avis .cadre{grid-template-columns:minmax(0,1fr);gap:48px}
+  .carte-contact{grid-template-columns:minmax(0,1fr);padding:40px 28px;gap:40px;border-radius:26px}
+}
+@media (max-width:520px){
+  body{font-size:18px}
+  .cadre{width:min(1200px, 100% - 36px)}
+  .marque b{font-size:24px}
+  .marque span{display:none}
+  .entete .cadre{flex-wrap:nowrap}
+  .nav .tel{padding:10px 16px}
+  .faits ul{gap:20px}
+  .faits b{font-size:24px}
+  .programme{grid-template-columns:minmax(0,1fr)}
+  .grande-note{padding:34px 26px}
+  .pied-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:420px){
+  .boutons{flex-direction:column}
+  .bouton{width:100%}
+  .faits ul{grid-template-columns:minmax(0,1fr)}
+  .note-google{padding:12px 14px 10px;left:-6%}
+  .note-google b{font-size:24px}
+  .frise{gap:16px}
+  .frise figcaption b{font-size:17px}
+  .photo-seconde{width:50%}
+  .etiquette{left:6px;bottom:6px;padding:4px 9px}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" id="haut">
+      <b>AS Hydr'O</b>
+      <span>Plombier chauffagiste, Beauvais</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#metiers">Métiers</a>
+      <a href="#chantiers">Chantiers</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+33631145034">06 31 14 50 34</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="heros">
+  <div class="cadre">
+    <div class="heros-titre">
+      <p class="chapeau">Plombier chauffagiste à Beauvais et alentours</p>
+      <h1>Plomberie fiable, devis clair et sans surprise.</h1>
+    </div>
+    <div class="heros-visuel">
+      <div class="cadre-photo">
+        <svg class="ondes" viewBox="0 0 520 520" aria-hidden="true"><g fill="none" stroke="#0D3A40" stroke-opacity=".12" stroke-width="1.5"><circle cx="260" cy="260" r="80"/><circle cx="260" cy="260" r="130"/><circle cx="260" cy="260" r="180"/><circle cx="260" cy="260" r="230"/></g></svg>
+        <figure class="photo-principale apparait">
+          <img src="assets/as-hydro-beauvais/salle-de-bain-renovee-vasque-miroir-rond.webp" width="1200" height="1600" alt="Salle de bain refaite par AS Hydr'O&nbsp;: meuble vasque vert d'eau, miroir rond, faïence blanche et sol gris">
+        </figure>
+        <a class="note-google" href="https://www.google.com/maps?cid=8528525884630041561">
+          <b>5,0 sur 5</b>
+          <span class="etoiles" aria-hidden="true">★★★★★</span>
+          <span>27 avis Google</span>
+        </a>
+        <figure class="photo-seconde apparait">
+          <img src="assets/as-hydro-beauvais/douche-carrelage-bois-colonne-thermostatique.webp" width="1200" height="1600" alt="Douche d'angle refaite, faïence imitation bois et colonne thermostatique" style="object-position:50% 40%">
+          <span class="etiquette">Juin 2026</span>
+        </figure>
+      </div>
+    </div>
+    <div class="heros-suite">
+      <p>Plomberie, chauffage, climatisation, salle de bain, chauffe-eau, adoucisseurs et dépannage&nbsp;: AS Hydr'O intervient à Beauvais et dans ses alentours, jusqu'à 30&nbsp;km.</p>
+      <div class="boutons">
+        <a class="bouton plein" href="tel:+33631145034">Appeler le 06 31 14 50 34</a>
+        <a class="bouton contour" href="https://www.facebook.com/profile.php?id=61572949933567">Voir la page Facebook</a>
+      </div>
+      <p class="horaires-courts">Du lundi au samedi, de 7&nbsp;h&nbsp;30 à 21&nbsp;h.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faits" aria-label="En bref">
+  <ul class="cadre">
+    <li><b>5,0 sur 5</b><span>27 avis Google</span></li>
+    <li><b>30&nbsp;km</b><span>autour de Beauvais</span></li>
+    <li><b>7&nbsp;h&nbsp;30 à 21&nbsp;h</b><span>du lundi au samedi</span></li>
+    <li><b>Avril 2025</b><span>création d'AS Hydr'O</span></li>
+  </ul>
+</section>
+
+<section class="metiers" id="metiers">
+  <div class="cadre">
+    <div class="metiers-tete">
+      <h2>Ce que je fais pour vous</h2>
+      <p>De la fuite à la salle de bain complète, une intervention de qualité et un devis clair, sans surprise.</p>
+    </div>
+    <ul class="liste-metiers">
+      <li class="metier">
+        <span class="num">01</span>
+        <h3>Salle de bain</h3>
+        <p>Rénovation complète (bac de douche plat, faïence, paroi vitrée, vasque, meubles et miroir) ou simple remplacement d'une cabine de douche ou de vos équipements sanitaires.</p>
+        <span class="ill apparait"><img src="assets/as-hydro-beauvais/douche-angle-bac-extra-plat-carrelage-bois.webp" width="1200" height="1600" alt="Douche d'angle avec bac extra-plat et parois coulissantes" loading="lazy"></span>
+      </li>
+      <li class="metier">
+        <span class="num">02</span>
+        <h3>Chauffe-eau</h3>
+        <p>Dépose de l'ancien, installation du nouveau, raccordements et mise en service. Et le détartrage&nbsp;: jusqu'à 20&nbsp;kg de calcaire retirés d'un seul chauffe-eau.</p>
+        <span class="ill apparait"><img src="assets/as-hydro-beauvais/resistance-chauffe-eau-entartree.webp" width="1200" height="1600" alt="Résistance de chauffe-eau couverte de calcaire, sortie de la cuve" loading="lazy" style="object-position:30% 60%"></span>
+      </li>
+      <li class="metier">
+        <span class="num">03</span>
+        <h3>Traitement de l'eau</h3>
+        <p>Pose d'adoucisseurs, filtres et raccords. Formé au traitement de l'eau par BWT.</p>
+        <span class="ill apparait"><img src="assets/as-hydro-beauvais/adoucisseur-altech-garage.webp" width="1200" height="1600" alt="Adoucisseur Altech posé dans un garage, filtre et raccords cuivre neufs" loading="lazy" style="object-position:40% 60%"></span>
+      </li>
+      <li class="metier">
+        <span class="num">04</span>
+        <h3>WC et sanitaires</h3>
+        <p>WC suspendu sur bâti habillé, WC avec lave-mains intégré, remplacement des équipements.</p>
+        <span class="ill apparait"><img src="assets/as-hydro-beauvais/wc-suspendu-bati-habille.webp" width="1200" height="1600" alt="WC suspendu terminé, abattant noir, coffrage blanc" loading="lazy" style="object-position:50% 60%"></span>
+      </li>
+      <li class="metier">
+        <span class="num">05</span>
+        <h3>Chauffage et climatisation</h3>
+        <p>Chauffage, pompe à chaleur, climatisation, désembouage et VMC. Pensez à l'entretien&nbsp;: n'attendez pas la panne pour y penser.</p>
+        <span class="ill vide"></span>
+      </li>
+      <li class="metier">
+        <span class="num">06</span>
+        <h3>Dépannage</h3>
+        <p>Une fuite, plus d'eau chaude, une cabine cassée&nbsp;: appelez, j'interviens à Beauvais et alentours.</p>
+        <span class="ill vide"></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="phare" id="chantiers">
+  <div class="cadre">
+    <div>
+      <p class="date">Chantier du 18 juillet 2026</p>
+      <h2>Une nouvelle salle de bain qui change tout</h2>
+      <p>Après m'avoir confié la rénovation de leur première salle de bain, ces clients m'ont de nouveau sollicité pour transformer la seconde. Un espace plus esthétique, plus pratique et plus lumineux.</p>
+      <ul class="programme">
+        <li>Dépose de l'ancienne cabine de douche</li>
+        <li>Bac de douche plat moderne</li>
+        <li>Pose de la nouvelle faïence</li>
+        <li>Pose d'une paroi vitrée</li>
+        <li>Changement de vasque</li>
+        <li>Montage des meubles et du miroir</li>
+      </ul>
+      <blockquote>«&nbsp;La confiance de mes clients est ma plus belle satisfaction.&nbsp;»<cite>Sébastien, AS Hydr'O</cite></blockquote>
+    </div>
+    <div class="phare-photos">
+      <figure class="pp1 apparait"><img src="assets/as-hydro-beauvais/meuble-vasque-seche-serviettes-noir.webp" width="1200" height="1600" alt="La même salle de bain&nbsp;: meuble vasque vert d'eau, sèche-serviettes noir et fenêtre" loading="lazy"></figure>
+      <figure class="pp2 apparait"><img src="assets/as-hydro-beauvais/douche-paroi-vitree-faience-blanche.webp" width="1200" height="1600" alt="Douche à l'italienne avec bac extra-plat, paroi vitrée à profilé noir et faïence blanche" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chantiers">
+  <div class="cadre">
+    <div class="chantiers-tete">
+      <h2>D'autres chantiers récents</h2>
+      <p>Publiés au fil des interventions sur la page Facebook d'AS Hydr'O.</p>
+    </div>
+    <ul class="frise">
+      <li><figure class="apparait"><img src="assets/as-hydro-beauvais/cabine-douche-quart-de-rond-remplacee.webp" width="1200" height="1600" alt="Cabine de douche quart-de-rond neuve sur sol bleu" loading="lazy"><figcaption><b>Une cabine de douche cassée&nbsp;? On remplace&nbsp;!</b><span>Septembre 2026</span></figcaption></figure></li>
+      <li><figure class="apparait"><img src="assets/as-hydro-beauvais/douche-mosaique-paroi-coulissante.webp" width="1200" height="1600" alt="Douche refaite en mosaïque de pierre, parois vitrées coulissantes" loading="lazy"><figcaption><b>Douche en mosaïque, parois coulissantes</b><span>Janvier 2026</span></figcaption></figure></li>
+      <li><figure class="apparait"><img src="assets/as-hydro-beauvais/adoucisseur-filtre-cave.webp" width="1200" height="1600" alt="Adoucisseur à tête électronique, filtre et tuyauterie cuivre dans un local carrelé" loading="lazy"><figcaption><b>Adoucisseur et filtre à sédiments</b><span>Novembre 2025</span></figcaption></figure></li>
+      <li><figure class="apparait"><img src="assets/as-hydro-beauvais/wc-lave-mains-integre.webp" width="1200" height="1600" alt="WC avec lave-mains intégré sur le réservoir" loading="lazy" style="object-position:50% 40%"><figcaption><b>WC avec lave-mains intégré</b><span>Décembre 2025</span></figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="cadre">
+    <div class="grande-note">
+      <b>5,0</b>
+      <p class="sur">sur 5, 27 avis Google</p>
+      <p>Les mots qui reviennent le plus dans les avis&nbsp;: réactif, prix, rapidité.</p>
+      <div class="boutons"><a class="bouton contour" href="https://www.google.com/maps?cid=8528525884630041561">Lire les avis sur Google</a></div>
+      <p class="badge">Badge «&nbsp;Entrepreneur recommandé&nbsp;» de la Maison des Entrepreneurs Hauts-de-France, mai 2026.</p>
+    </div>
+    <div class="citations">
+      <figure>
+        <blockquote>«&nbsp;Je recommande Monsieur Amand les yeux fermés&nbsp;! Très professionnel, réactif et consciencieux. Il a réalisé un travail de qualité avec beaucoup de sérieux et de soin.&nbsp;»</blockquote>
+        <figcaption>Laura Biarne, avis Google</figcaption>
+      </figure>
+      <figure>
+        <blockquote>«&nbsp;Sébastien a fait un entretien parfait de notre ballon d'eau chaude. Je recommande ses services chaudement&nbsp;!&nbsp;»</blockquote>
+        <figcaption>Étienne P., avis Google</figcaption>
+      </figure>
+      <figure>
+        <blockquote>«&nbsp;Nous sommes très satisfaits de la prestation. Travail très sérieux.&nbsp;»</blockquote>
+        <figcaption>Céline D., avis Google</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="cadre">
+    <div class="carte-contact">
+      <div>
+        <h2>Un projet, une panne&nbsp;? Appelez.</h2>
+        <p class="intro">Un projet de salle de bain, un chauffe-eau qui fatigue, une cabine à remplacer&nbsp;: contactez-moi pour en discuter.</p>
+        <a class="gros-tel" href="tel:+33631145034">06 31 14 50 34</a>
+        <p class="whatsapp">Même numéro sur WhatsApp.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="tel:+33631145034">Appeler maintenant</a>
+          <a class="bouton contour" href="mailto:contact.ashydro@gmail.com">Écrire un mail</a>
+        </div>
+      </div>
+      <dl class="infos">
+        <dt>Horaires</dt>
+        <dd>
+          <ul class="semaine">
+            <li><span>Lundi au samedi</span><span>7&nbsp;h&nbsp;30 à 21&nbsp;h</span></li>
+            <li><span>Dimanche</span><span>Fermé</span></li>
+          </ul>
+        </dd>
+        <dt>Secteur</dt>
+        <dd>Beauvais (Oise) et ses alentours, jusqu'à 30&nbsp;km</dd>
+        <dt>Mail</dt>
+        <dd><a href="mailto:contact.ashydro@gmail.com">contact.ashydro@gmail.com</a></dd>
+        <dt>Devis et paiement</dt>
+        <dd>Devis en ligne possible, paiement par carte.</dd>
+        <dt>Suivre les chantiers</dt>
+        <dd><a href="https://www.facebook.com/profile.php?id=61572949933567">Page Facebook d'AS Hydr'O</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-grille">
+      <div>
+        <p class="nom">AS Hydr'O</p>
+        <p class="devise">Plombier chauffagiste à Beauvais et alentours. Plomberie fiable, intervention de qualité, devis clair et sans surprise.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33631145034">06 31 14 50 34</a></li>
+          <li><a href="mailto:contact.ashydro@gmail.com">Écrire un mail</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <p>Lundi au samedi<br>7&nbsp;h&nbsp;30 à 21&nbsp;h<br>Dimanche fermé</p>
+      </div>
+      <div>
+        <h3>Ailleurs</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=61572949933567">Facebook</a></li>
+          <li><a href="https://www.google.com/maps?cid=8528525884630041561">Fiche Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pied-bas">AS Hydr'O, plomberie, chauffage, climatisation, Beauvais (Oise).</p>
+  </div>
+</footer>
+<p class="proposition">Proposition de Nicolas Masset pour AS Hydr'O</p>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els = document.querySelectorAll('.apparait');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function(e){ e.classList.add('vu') }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('vu'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e) });
+})();
+</script>
+</body>
+</html>
