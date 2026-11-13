@@ -132,21 +132,8 @@ h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
 .nature .moutons{position:absolute;left:-40px;bottom:0;width:66%;border-radius:18px;aspect-ratio:16/7;object-fit:cover;border:8px solid var(--sombre);box-shadow:0 30px 60px -26px rgba(0,0,0,.8)}
 .nature span{position:absolute;right:18px;top:18px;background:var(--surface);color:var(--encre);font-size:14px;padding:8px 14px;border-radius:999px}
 
-/* Salons */
-.salons{padding:128px 0 64px}
-.salons-haut{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 48px;margin-bottom:44px}
-.salons-haut p{color:var(--doux);margin:0;max-width:44ch}
-.dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.date{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;background:var(--surface);border-radius:24px;padding:30px 34px;box-shadow:var(--ombre)}
-.jour{display:flex;flex-direction:column;align-items:center;justify-content:center;width:112px;height:112px;border-radius:50%;background:var(--rouge-pale);color:var(--rouge-fonce);text-align:center;line-height:1}
-.jour b{font-family:var(--display);font-weight:600;font-size:32px;letter-spacing:-.02em}
-.jour span{font-size:14px;margin-top:6px}
-.date h3{font-size:25px;margin-bottom:6px}
-.date p{margin:0;font-size:15.5px;color:var(--doux)}
-.salons-bas{margin-top:26px;font-size:15.5px;color:var(--doux)}
-
 /* Visite */
-.visite{padding:64px 0 128px}
+.visite{padding:128px 0}
 .visite .cadre{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:32px;align-items:stretch}
 .visite-texte{padding:48px 24px 48px 0}
 .visite-texte p{color:var(--doux);max-width:50ch}
@@ -186,7 +173,6 @@ h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
   .appellations > li{grid-template-columns:minmax(0,1fr);gap:14px}
   .generations{grid-template-columns:repeat(2,minmax(0,1fr))}
   .generations li:nth-child(n){margin-top:0}
-  .dates{grid-template-columns:minmax(0,1fr)}
   .histoire-haut figure{justify-self:start}
   .nature .moutons{left:-12px}
   .pied-grille{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -218,11 +204,7 @@ h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
   .devise{margin-bottom:56px}
   .nature{padding-bottom:100px}
   .nature .moutons{width:78%}
-  .salons{padding:88px 0 40px}
-  .date{grid-template-columns:minmax(0,1fr);gap:18px;padding:26px 22px}
-  .jour{width:96px;height:96px}
-  .jour b{font-size:28px}
-  .visite{padding:40px 0 88px}
+  .visite{padding:88px 0}
   .visite-texte{padding:0}
   .coord{padding:34px 22px}
   .coord h3{font-size:28px;padding-right:90px}
@@ -244,7 +226,7 @@ h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
       <a href="#vins">Nos vins</a>
       <a href="#histoire">Histoire</a>
       <a href="#ethique">Éthique</a>
-      <a href="#salons">Salons</a>
+      <a href="#visite">Visite</a>
       <a class="appel nowrap" href="tel:+33490343534">04 90 34 35 34</a>
     </nav>
   </div>
@@ -355,26 +337,6 @@ h3{font-size:26px;font-weight:500;letter-spacing:-.005em}
           <span>Une coccinelle sur le sainfoin</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="salons" id="salons">
-    <div class="cadre">
-      <div class="salons-haut">
-        <h2>Où nous rencontrer en novembre</h2>
-        <p>Le domaine présente ses vins sur les salons. Les prochaines dates :</p>
-      </div>
-      <div class="dates">
-        <article class="date apparait">
-          <div class="jour"><b>6-9</b><span>novembre</span></div>
-          <div><h3>Salon Mer et Vigne</h3><p>Lyon, La Palmeraie, du 6 au 9&nbsp;novembre 2026</p></div>
-        </article>
-        <article class="date apparait">
-          <div class="jour"><b>10-11</b><span>novembre</span></div>
-          <div><h3>Marché des Vins et du Terroir</h3><p>Villefranche-sur-Saône, les 10 et 11&nbsp;novembre 2026</p></div>
-        </article>
-      </div>
-      <p class="salons-bas">Les autres rendez-vous du domaine : <a class="lien" href="https://www.lajaufrette.com/blog.html" target="_blank" rel="noopener">toute l'actualité</a></p>
     </div>
   </section>
 
